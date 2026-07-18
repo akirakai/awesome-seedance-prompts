@@ -20,6 +20,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Action short](#9-grounded-cinematic-action)
   - [Emotional micro-story](#10-emotional-micro-story)
   - [Mechanical bloom](#11-mechanical-bloom--one-take-macro)
+  - [Paper-camera screen transformation](#12-paper-camera-screen-transformation)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -440,6 +441,69 @@ resonant tone at full bloom; no narration.
 
 Adapted from ByteDance / Volcano Ark's official Seedance 2.5 preview, documented in the [official model showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5) and the [traceable prompt archive](https://github.com/renoise-ai/awesome-seedance-2-5-prompts#mechanical-bloom).
 
+
+### 12. Paper-camera screen transformation
+
+**Verified model:** Seedance 2.0 — confirmed by the public prompt-gallery
+metadata and linked original creator post
+
+**Use case:** mixed-media transitions, travel reels, illustration reveals,
+screen-within-screen effects  
+**Mode:** text-to-video  
+**Suggested settings:** 15s, 9:16
+
+```text
+15-second vertical first-person phone video with nostalgic Japanese summer
+texture. A handmade red-and-yellow paper digital camera is held in one hand
+throughout. Its shape, buttons, LCD border, scale, and hand grip remain
+unchanged across every shot.
+
+The real environment always stays live action. Only the rectangular image
+inside the paper camera's LCD may change style. At the beginning of each shot,
+the LCD shows the same live scene aligned with the background. When the thumb
+presses the shutter, a clear camera click occurs and the pixels strictly inside
+the LCD transform into a simple, charming hand-drawn 2D illustration of the
+same subject. Nothing outside the LCD changes.
+
+[0–3s] Tokyo Tower at night, seen beyond the paper camera. Press the shutter;
+the tower and city lights inside the LCD become a warm children's-book drawing.
+
+[3–7s] Clean cut to summer-festival fireworks. Re-establish the live LCD view,
+then press the shutter; only the fireworks inside the screen become flat
+watercolor shapes and ink lines.
+
+[7–11s] Clean cut to a bright sunflower field. The camera is held at the same
+foreground distance. On the click, the LCD becomes a soft yellow-and-green
+hand-drawn illustration while the real flowers continue moving in the breeze.
+
+[11–15s] Clean cut to a seaside view through a moving train window. On the final
+click, the LCD turns the sea, sky, and passing poles into a nostalgic 2D anime
+background. Hold long enough to compare the illustrated screen with the moving
+live-action world around it.
+
+Authentic handheld POV, mild phone exposure changes, soft summer color,
+consistent paper texture and natural fingers. Maintain exact LCD boundaries,
+matching composition, perspective, and subject placement before and after each
+shutter press. The illustrated content may move subtly but must remain clipped
+to the screen.
+
+No full-frame style change, no illustration leaking beyond the LCD, no floating
+overlay, no warped camera body, no extra fingers, no changing screen size, and
+no mismatch between the LCD subject and the real background.
+Audio: location ambience for each scene, paper handling, four distinct shutter
+clicks, distant train rhythm in the final shot; no narration.
+```
+
+**Why it works:** the prompt defines two simultaneous visual domains—live
+action outside the prop and illustration inside it—and repeatedly states the
+LCD as a hard spatial boundary. Re-establishing the live view before every
+shutter click also gives each transformation a visible cause and reset.
+
+Adapted from [GENEL's original paper-camera prompt and result](https://x.com/genel_ai/status/2078044912168341890).
+The Seedance 2.0 attribution, prompt, preview, and original-source mapping are
+preserved in the [traceable gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7437).
+
+
 ---
 
 ## Reusable templates
@@ -647,6 +711,7 @@ Community examples and techniques referenced in this README:
 - [@maxprokopp — camera blocking with a 3D reference](https://x.com/maxprokopp/status/2071658167453515933)
 - [@PeterT69358109 — concise stability advice](https://x.com/PeterT69358109/status/2021143749263597854)
 - [@johnAGI168 — Seedance 2.0 full-frame occlusion transformation](https://x.com/johnAGI168/status/2077631766374822080)
+- [GENEL — Seedance 2.0 paper-camera LCD transformation](https://x.com/genel_ai/status/2078044912168341890)
 - [@maybeegreen — subject/action/environment/camera structure](https://x.com/maybeegreen/status/2042226474422297010)
 - [@RetroValix — focus image-to-video prompts on movement](https://x.com/RetroValix/status/2074231054567866617)
 - [ByteDance / Volcano Ark — Seedance 2.5 official preview showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5)
