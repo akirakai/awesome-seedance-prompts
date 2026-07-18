@@ -19,6 +19,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Reference-video camera transfer](#8-reference-video-camera-transfer)
   - [Action short](#9-grounded-cinematic-action)
   - [Emotional micro-story](#10-emotional-micro-story)
+  - [Mechanical bloom](#11-mechanical-bloom--one-take-macro)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -395,6 +396,50 @@ cue, no swelling fantasy light, no extra dialogue, no face drift, no changing
 coat, no discontinuous hand positions.
 ```
 
+### 11. Mechanical bloom — one-take macro
+
+**Use case:** technology branding, material showcase, abstract product film  
+**Mode:** text-to-video or image-to-video  
+**Suggested settings:** 15–30s, 16:9, 24fps
+
+```text
+A continuous macro one-take for a premium technology brand. Begin in near
+darkness on a closed mechanical flower bud made from brushed titanium,
+smoked glass, and fine copper conductors. One narrow moving highlight reveals
+the outer silhouette while the background remains black.
+
+[0–6s] The camera performs a slow, centered macro push-in. The outer metal
+petals unlock in a clear mechanical sequence: tension builds in the hinges,
+micro-gears rotate, and each petal opens only after the previous latch releases.
+Movement is delicate and physically plausible, never explosive.
+
+[6–16s] Without cutting, the camera passes between two opening petals and
+enters the flower's inner mechanism. Focus transfers from the front edge to
+nested glass membranes, tiny bearings, and current flowing through copper
+traces. Reflections and refractions remain consistent with the same moving
+light source.
+
+[16–24s] The inner structure expands like a camera iris. Warm light grows from
+the center and travels outward through the translucent parts. The camera slows
+and gently pulls back as the full flower reaches its final geometry.
+
+[24–30s] Hold a symmetrical hero composition. A soft pulse of light moves once
+from the core to every petal tip, then settles. No logo or subtitle.
+
+Real macro cinematography, stable central composition, coherent mechanism,
+fine machining marks, accurate metal weight, glass thickness and refraction,
+restrained bloom and cinematic grading. Keep every component attached and
+preserve its material across the transformation. No liquid-metal morphing,
+random floating parts, duplicated petals, impossible interpenetration, sudden
+speed ramp, camera cut, or synthetic game-CGI surface.
+Audio: tiny latch clicks, quiet gear movement, low electrical hum, one soft
+resonant tone at full bloom; no narration.
+```
+
+**Why it works:** the prompt treats the reveal as a causal mechanical process—latch, rotation, opening, illumination—and uses one evolving light source to preserve spatial and material continuity.
+
+Adapted from ByteDance / Volcano Ark's official Seedance 2.5 preview, documented in the [official model showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5) and the [traceable prompt archive](https://github.com/renoise-ai/awesome-seedance-2-5-prompts#mechanical-bloom).
+
 ---
 
 ## Reusable templates
@@ -457,6 +502,42 @@ At [TIMESTAMP OR EVENT], [SOUND CHANGE] motivates [VISUAL CHANGE].
 No narration, extra speech, canned audience noise, or overpowering music.
 ```
 
+### Long-form one-take continuity template
+
+For 20–30 second generations, define a small set of invariants before adding
+scene changes. The surroundings may transform, but the camera path and spatial
+anchors should not.
+
+```text
+[DURATION], one continuous shot with no cuts, jump cuts, or hidden transitions.
+
+INVARIANTS
+The protagonist keeps [IDENTITY / WARDROBE] unchanged.
+The camera follows [DIRECTION AND DISTANCE] at [CONSTANT OR PLANNED SPEED].
+Every zone preserves [SHARED ARCHITECTURAL ANCHORS].
+Light in each zone is motivated by [WINDOW / PRACTICAL SOURCE].
+The protagonist always crosses thresholds from [SCREEN DIRECTION].
+
+TIMELINE
+[0–5s] Zone 1: [VISUAL RULE], [ONE ACTION], [ONE SOUND CUE].
+[5–10s] Cross a visible doorway while [TRANSFORMATION MECHANISM].
+[10–15s] Zone 2: [NEW RULE], preserving all invariants.
+[15–20s] Cross the next threshold; prepare the emotional or visual turn.
+[20–25s] Zone 3: [PAYOFF].
+[25–30s] Decelerate, settle into [FINAL COMPOSITION], and hold.
+
+CONTINUITY
+Doors remain connected; floor level, window positions, walking pace, camera
+height, screen direction, and body scale remain coherent. Transform style only
+after the subject fully crosses a threshold. No camera teleportation, looping
+hallway, duplicated subject, skipped room, or transformation before the doorway.
+```
+
+This “fixed invariants + threshold-triggered transformations” pattern is adapted
+from the official Seedance 2.5 six-room one-take preview. See the
+[Volcano Ark showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5)
+and [archived full prompt](https://github.com/renoise-ai/awesome-seedance-2-5-prompts#six-room-one-take-transition).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -516,6 +597,8 @@ Community examples and techniques referenced in this README:
 - [@PeterT69358109 — concise stability advice](https://x.com/PeterT69358109/status/2021143749263597854)
 - [@maybeegreen — subject/action/environment/camera structure](https://x.com/maybeegreen/status/2042226474422297010)
 - [@RetroValix — focus image-to-video prompts on movement](https://x.com/RetroValix/status/2074231054567866617)
+- [ByteDance / Volcano Ark — Seedance 2.5 official preview showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5)
+- [Renoise AI — traceable archive of 12 official Seedance 2.5 preview prompts](https://github.com/renoise-ai/awesome-seedance-2-5-prompts)
 
 Official model references:
 
