@@ -489,6 +489,57 @@ Natural physics, temporal consistency, no geometry drift, no face or label
 change, no new objects, no sudden zoom, no automatic slow motion.
 ```
 
+### Occlusion-assisted transformation template
+
+**Verified model:** Seedance 2.0 — explicitly identified by the original creator
+
+Use this when an object, photo, doorway, or effect must reveal a full-size person
+or a radically different scene. Do not ask the source object to morph directly
+into the target. Build a brief, motivated full-frame occlusion and change states
+only while the source and target are completely hidden.
+
+```text
+[DURATION], [ASPECT RATIO], one transformation with a physically motivated
+hidden cut.
+
+[0–Xs] BEFORE STATE
+[SUBJECT] interacts with [SOURCE OBJECT] in [LOCATION]. Establish the source,
+target scale, camera position, lighting, and background clearly. Keep the
+target absent.
+
+[X–Ys] OCCLUSION TRIGGER
+[TRIGGER ACTION] releases [SMOKE / STEAM / CLOTH / DUST / FOREGROUND OBJECT]
+from a believable source. It expands toward the lens until it covers 100% of
+the frame, including the subject, source object, hands, floor, and background.
+Do not reveal any part of the target before full coverage.
+
+At the single fully occluded frame, hide one hard cut. Replace the before state
+with the complete after state behind the occluder. Keep camera position, lens,
+light direction, background geometry, and subject identity anchors unchanged.
+
+[Y–Zs] AFTER STATE
+The occluder clears naturally to reveal [COMPLETE TARGET] already at correct
+human scale and with normal anatomy. Show a short physical reaction, recovery,
+or interaction that proves the target occupies the scene. Settle into a stable
+final composition and hold.
+
+Continuity: one source object, one target, consistent location and lighting.
+The target appears whole behind the occlusion—not by stretching, growing,
+crawling out, or passing through the source object.
+No partial body, scale drift, fused anatomy, premature reveal, weak coverage,
+source-object deformation, camera jump, or background change.
+Audio: [TRIGGER], [OCCLUDER MOVEMENT], [REVEAL FOLEY], continuous room tone.
+```
+
+**Why it works:** the prompt separates the effect into two stable states and
+assigns the impossible change to a frame where no geometry is visible. The
+occluder also gives the model a causal transition and preserves the spatial
+anchors needed for a convincing reveal.
+
+Adapted from [@johnAGI168's complete Seedance 2.0 popcorn-machine prompt](https://x.com/johnAGI168/status/2077631766374822080),
+which uses expanding smoke to conceal the state change before revealing a
+full-size character.
+
 ### Native-audio template
 
 ```text
@@ -595,6 +646,7 @@ Community examples and techniques referenced in this README:
 - [@op7418 — reference-video camera and edit transfer](https://x.com/op7418/status/2026325142398529926)
 - [@maxprokopp — camera blocking with a 3D reference](https://x.com/maxprokopp/status/2071658167453515933)
 - [@PeterT69358109 — concise stability advice](https://x.com/PeterT69358109/status/2021143749263597854)
+- [@johnAGI168 — Seedance 2.0 full-frame occlusion transformation](https://x.com/johnAGI168/status/2077631766374822080)
 - [@maybeegreen — subject/action/environment/camera structure](https://x.com/maybeegreen/status/2042226474422297010)
 - [@RetroValix — focus image-to-video prompts on movement](https://x.com/RetroValix/status/2074231054567866617)
 - [ByteDance / Volcano Ark — Seedance 2.5 official preview showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5)
