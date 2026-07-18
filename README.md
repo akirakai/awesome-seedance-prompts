@@ -21,6 +21,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Emotional micro-story](#10-emotional-micro-story)
   - [Mechanical bloom](#11-mechanical-bloom--one-take-macro)
   - [Paper-camera screen transformation](#12-paper-camera-screen-transformation)
+  - [Layered-reference launch sequence](#13-layered-reference-launch-sequence)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -504,6 +505,81 @@ The Seedance 2.0 attribution, prompt, preview, and original-source mapping are
 preserved in the [traceable gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7437).
 
 
+### 13. Layered-reference launch sequence
+
+**Verified model:** Seedance 2.0 — explicitly identified by the original
+creator and confirmed by the linked prompt-gallery metadata
+
+**Use case:** mecha or vehicle launch scenes, fast commissioning montages,
+multi-reference animation  
+**Mode:** multi-reference image-to-video  
+**Suggested settings:** 15s, 16:9, 480p
+
+```text
+15-second theatrical 2D animated launch sequence with clean linework,
+precise mechanical drawing, restrained cel shading, and rapid insert shots.
+
+REFERENCE ROLES
+@Image1 defines only the pilot: face, hair, eyewear, suit, body proportions.
+@Image2 defines only the crewed machine: head, armor, palette, wings, rear
+unit, thrusters, light color, and scale.
+@Image3 defines only the cockpit: seat, controls, displays, UI, interior
+geometry, and color scheme.
+Keep all three designs unchanged and do not mix one reference's job with
+another. Do not invent weapons, transformations, or equipment.
+
+[0–2s] In the dark cockpit, a fingertip approaches and presses the ignition.
+A clean electronic click triggers a ring of light in @Image2's accent color.
+Cut briefly to the pilot's profile as the glow reflects in the eyes.
+
+[2–4s] Displays wake in layers: radar, machine diagram, and output gauges.
+Use short inserts of both hands gripping the controls, one safety switch
+releasing, and UI light moving across the pilot's unchanged face and suit.
+
+[4–6s] A communications window confirms that launch checks are complete.
+Keep the line short and clearly spoken. If no operator reference is supplied,
+use a visually distinct generic operator and never duplicate the pilot.
+
+[6–8s] Low-angle wide shot in the hangar: the complete machine from @Image2
+stands in its restraints. Cables disconnect, service arms withdraw, cooling
+vapor vents, and warning lights sweep across the original armor geometry.
+
+[8–10s] Rapid mechanical inserts: foot lock, armor vibration, spinning
+thruster interior, wing or rear-unit readiness, and sensor illumination.
+Show only mechanisms already visible in @Image2.
+
+[10–12s] Back in the cockpit, the pilot nods, tightens both hands on the
+controls, and announces: "[MACHINE NAME], launching." If the reference
+does not provide a reliable name, say: "Unit ready, launching." Push the
+main control forward as the output gauge rises.
+
+[12–13s] Extreme close-up of the machine's head. Both eyes ignite in the
+exact reference color, synchronized to one sharp power-up tone.
+
+[13–15s] Restraints clear and all visible thrusters fire. The machine
+accelerates along the launch rail and exits into open sky or space. End on
+a low three-quarter full-body view with a brief light trail and no title card.
+
+No shot lasts longer than two seconds. Bind every visible state change to a
+specific click, lock release, warning tone, power surge, or engine sound.
+Begin with low machinery and breathing; add restrained piano and strings
+after ignition, then percussion and brass for launch. Dialogue stays clear.
+
+No identity drift, alternate machine design, cockpit redesign, extra pilot,
+missing eyewear, added weapon, extra finger, garbled UI text, combat, enemy,
+impact, explosion, or launch delayed beyond 15 seconds.
+```
+
+**Why it works:** each reference has one non-overlapping responsibility, so
+the model can preserve three complex designs while the timeline changes
+scale rapidly. Sub-two-second inserts keep the commissioning montage legible;
+audio-event binding supplies causality, and the fallback line prevents an
+unknown machine name from turning into unstable text or dialogue.
+
+Adapted from [Kuma to kuma's original complete Seedance 2.0 prompt and result](https://x.com/Kumatokuma1/status/2078268822688063715),
+published July 18, 2026. The model attribution, publication date, and
+original-source mapping are also preserved in the [traceable YouMind entry](https://youmind.com/zh-CN/video-prompts/robot-anime-launch-sequence-cinematic-7441).
+
 ---
 
 ## Reusable templates
@@ -712,6 +788,8 @@ Community examples and techniques referenced in this README:
 - [@PeterT69358109 — concise stability advice](https://x.com/PeterT69358109/status/2021143749263597854)
 - [@johnAGI168 — Seedance 2.0 full-frame occlusion transformation](https://x.com/johnAGI168/status/2077631766374822080)
 - [GENEL — Seedance 2.0 paper-camera LCD transformation](https://x.com/genel_ai/status/2078044912168341890)
+- [Kuma to kuma — Seedance 2.0 layered-reference launch sequence](https://x.com/Kumatokuma1/status/2078268822688063715)
+- [YouMind — version metadata and full-source mapping for the launch sequence](https://youmind.com/zh-CN/video-prompts/robot-anime-launch-sequence-cinematic-7441)
 - [@maybeegreen — subject/action/environment/camera structure](https://x.com/maybeegreen/status/2042226474422297010)
 - [@RetroValix — focus image-to-video prompts on movement](https://x.com/RetroValix/status/2074231054567866617)
 - [ByteDance / Volcano Ark — Seedance 2.5 official preview showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5)
