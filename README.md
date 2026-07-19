@@ -44,6 +44,11 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Pocket-watch locomotive](#28-time-reversed-pocket-watch-locomotive)
   - [Beat-delayed physics rap](#29-beat-delayed-physics-rap-performance)
   - [Handheld dialogue power shift](#30-handheld-dialogue-power-shift)
+  - [Bioluminescent reef typography](#31-bioluminescent-reef-typography)
+  - [Floating desert gallery](#32-floating-desert-gallery--exterior-to-interior-one-take)
+  - [Theatre of Oceanic Civilizations](#33-theatre-of-oceanic-civilizations)
+  - [Mini-DV dorm move-in montage](#34-mini-dv-dorm-move-in-montage)
+  - [Momentum-conversion anime descent](#35-momentum-conversion-anime-descent)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -1504,6 +1509,277 @@ the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=
 
 ---
 
+### 31. Bioluminescent reef typography
+
+**Verified model:** Seedance 2.5 — official ByteDance / Volcano Ark showcase
+
+**Use case:** underwater worlds, coordinated group motion, environmental text VFX  
+**Mode:** text-to-video  
+**Suggested settings:** 15s, 1:1, 24fps
+
+```text
+15-second photoreal underwater nature film in a healthy tropical reef. Blue
+water shifts gradually toward grey with distance; overhead sunlight becomes
+soft volumetric shafts. Branching coral, brain coral, sea fans, suspended
+particles, and small tropical fish establish scale. Use one exact short word:
+“[WORD]”. Preserve its spelling and capitalization.
+
+[0–4s] Begin in a medium-wide reef view and push forward slowly. Fish cross at
+three depths without colliding; soft coral bends with one shared current while
+hard coral and the seabed remain fixed. Sound: muted current, distant reef
+clicks, sparse bubbles.
+
+[4–9s] Eight to twelve translucent lavender jellyfish emerge from the darker
+background in a loose ascending spiral. Keep their count, size range, spacing,
+umbrella anatomy, and soft violet glow stable. Tentacles lag naturally behind
+each pulse. Two jellyfish pass close to the lens and create only a restrained
+optical halo.
+
+[9–13s] Each jellyfish releases one narrow bubble stream. The streams curve
+together above the reef and assemble the exact word “[WORD]” from real bubbles,
+one letter at a time from left to right. Each letter becomes complete before
+the next begins; the jellyfish continue rising below it. Camera decelerates to
+a near lock as the word becomes readable.
+
+[13–15s] Hold the complete bubble word for one second. A final fish crosses
+behind it to prove depth, then the bubbles begin drifting upward without losing
+the letters before the cut.
+
+Natural water attenuation, soft bioluminescence, believable buoyancy, caustics,
+refraction, and scale. Keep reef layout, current direction, jellyfish count,
+word spelling, and camera axis consistent. No neon glow, duplicated jellyfish,
+tentacle fusion, fish passing through coral, boiling water, random glyph,
+misspelled word, flat overlay text, or abrupt camera move.
+```
+
+**Why it works:** reef motion, animal motion, and typography have separate
+physical rules. The camera nearly locks during letter formation, giving the
+model enough visual stability to form readable text without flattening it into
+an overlay.
+
+Adapted from ByteDance / Volcano Ark's official Seedance 2.5
+[model showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5),
+published June 23, 2026; the complete official prompt is preserved in the
+[traceable archive entry](https://github.com/renoise-ai/awesome-seedance-2-5-prompts#deep-sea-coral-reef-world).
+
+### 32. Floating desert gallery — exterior-to-interior one-take
+
+**Verified model:** Seedance 2.5 — official ByteDance / Volcano Ark showcase
+
+**Use case:** architecture films, art installations, surreal luxury campaigns  
+**Mode:** text-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+```text
+15-second continuous live-action architectural shot at early morning. A single
+minimal white-stone gallery floats two meters above layered golden dunes. Its
+height, footprint, material, orientation, and soft shadow on the sand remain
+unchanged. One adult figure in a plain white robe waits inside. Real stone,
+silk, sand, glass, skin, and sunlight; surreal premise, physically credible
+materials.
+
+[0–4s] Start on a 24mm ultra-wide desert panorama at human eye height. Dolly
+forward toward the gallery along one straight axis. Fine sand crosses the lower
+frame in the wind; warm sunlight through dust creates restrained volumetric
+rays. The building grows through perspective only—no scale change or zoom.
+
+[4–8s] Continue through the open entrance without a cut. Exposure adapts from
+bright desert to the cooler interior over one second. Pass suspended stone
+sculptures and translucent silk panels; each hangs from a visible support or
+stable suspension point and moves gently in the same wind direction.
+
+[8–12s] Curve once into a slow half-orbit around the still figure, maintaining
+the desert entrance behind them as a geographic anchor. Robe and silk respond
+to the same airflow. Do not complete a full 360-degree orbit.
+
+[12–15s] Stop the orbit at a front three-quarter view. The wall behind the
+figure separates into two heavy panels and slides outward on concealed tracks,
+revealing the huge sky and dunes. Light expands naturally across the floor and
+robe. End on a stable symmetrical composition and hold.
+
+Audio: low desert wind, sand against stone, quiet fabric movement, deep wall
+mechanism, then open-air hush. Preserve building geometry, floating height,
+figure identity, installation count, wind direction, sun direction, and the
+continuous camera path. No cut, teleportation, weightless stone, melting wall,
+changing doorway, impossible orbit, extra person, glossy CGI, or moving horizon.
+```
+
+**Why it works:** one forward path connects exterior and interior, while the
+entrance remains an anchor during the turn. A mechanically described wall
+opening provides the final reveal without asking the architecture to morph.
+
+Adapted from ByteDance / Volcano Ark's official Seedance 2.5
+[model showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5),
+published June 23, 2026; the complete official prompt is preserved in the
+[traceable archive entry](https://github.com/renoise-ai/awesome-seedance-2-5-prompts#floating-desert-art-gallery).
+
+### 33. Theatre of Oceanic Civilizations
+
+**Verified model:** Seedance 2.5 — official ByteDance / Volcano Ark showcase
+
+**Use case:** characterless science fiction, world-building trailers, monumental scale  
+**Mode:** text-to-video  
+**Suggested settings:** 30s, 16:9, 24fps
+
+```text
+30-second characterless science-fiction sequence about an ancient ocean world
+awakening. No human, creature, dialogue, title, logo, or recognizable franchise
+design. One continuous visual language: blue-black ocean, eroded pale stone,
+translucent mineral, coral growth, restrained cyan energy, sacred scale.
+
+[0–5s] Aerial wide descends vertically through cloud and sea mist toward a dark
+ocean. The surface behaves like heavy water, not metal; sunlight breaks into
+irregular shafts. End with the lens touching the water.
+
+[5–10s] Match the downward direction beneath the surface. Reveal one connected
+ruin complex: broken rings, stone domes, and geometric platforms on the same
+seabed. Particles and small debris drift slowly; structures remain motionless.
+
+[10–15s] Slow half-orbit around a monumental faceless sculpture made from white
+stone and translucent mineral segments. Coral and seaweed follow its contours.
+Keep the sculpture non-human and inert; establish surrounding pillars and the
+central circular floor before anything activates.
+
+[15–20s] Cyan lines ignite sequentially inside the sculpture from base to crown.
+Only after the final line lights, submerged pillars rise vertically from visible
+sockets and lock into one circular theatre. Water and debris react to each heavy
+movement; no object floats into position without force.
+
+[20–25s] Cut above the surface on the same vertical axis. A colossal stone-and-
+mineral temple vessel rises from the ocean, shedding waterfalls and attached
+sea growth. Camera cranes upward beside it; clouds part around one natural sun
+shaft. Preserve the ruin motifs and material language from below.
+
+[25–30s] Wide spiral pullback reveals the theatre below water, vessel at the
+surface, and sunlit cloud layer in one vertical composition. Rotate no more than
+half a turn, decelerate, and hold as the final cyan line fades to one point.
+
+Deep pressure ambience, water movement, stone friction, low mineral resonance,
+waterfalls, then near silence. Preserve vertical axis, ruin map, sculpture and
+vessel motifs, material age, light direction, and activation order. No random
+city, biological face, second vessel, instant reconstruction, weightless stone,
+explosion, game UI, excessive glow, camera teleportation, or unresolved ending.
+```
+
+**Why it works:** the same vertical axis and architectural motifs connect sky,
+surface, ruins, sculpture, and vessel. Activation follows a visible cause-and-
+effect order, making the climax feel like one civilization rather than a montage
+of unrelated spectacle.
+
+Adapted from ByteDance / Volcano Ark's official Seedance 2.5
+[model showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5),
+published June 23, 2026; the complete official prompt is preserved in the
+[traceable archive entry](https://github.com/renoise-ai/awesome-seedance-2-5-prompts#theatre-of-oceanic-civilizations).
+
+### 34. Mini-DV dorm move-in montage
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public
+prompt-gallery metadata and its direct mapping to the creator's original post
+
+**Use case:** authentic UGC, progress montages, lifestyle ASMR  
+**Mode:** text-to-video  
+**Suggested settings:** 15s, 9:16, 24–30fps
+
+```text
+15-second vertical move-in vlog filmed on one consumer Mini-DV camcorder by an
+adult college student in her early twenties. Oversized plain hoodie, ponytail,
+minimal jewelry. One small dorm room only: twin bed, desk, bare wall, window,
+six labeled moving boxes. Preserve her identity, wardrobe, box count, room
+layout, and object locations as the room changes from empty to lived-in.
+
+LOOK AND CAMERA
+Soft tape texture, mild grain, small handheld shake, occasional focus hunting,
+imperfect reframing, short optical zoom corrections, mixed window daylight and
+fluorescent light, realistic auto-exposure. Each shot has one camera behavior.
+
+[0–2s] Camera propped on the desk, medium-wide. She enters, surveys the empty
+room, and says, “First day in my room.”
+
+[2–5s] Two tactile inserts: tape peels from one box; fitted sheet snaps over the
+near mattress corner. Keep hand anatomy and bed orientation clear.
+
+[5–8s] Handheld medium as she hangs one strand of warm string lights, then hard
+cut to books sliding onto the shelf. Sound bridges the cut.
+
+[8–11s] Close detail of poster tape pressed flat, pens placed into one cup, and
+the desk drawer closing. Use three fast cuts on the object-contact sounds.
+
+[11–13s] Propped medium-wide matching the opening angle. She switches on the
+desk lamp; the finished arrangement is visible without furniture teleporting.
+
+[13–15s] She sits on the made bed, gives one satisfied breath, says, “Feels like
+mine,” then reaches forward until her palm naturally covers the lens.
+
+Audio leads the montage: cardboard, tape peel, sheet snap, light strand, books,
+drawer, lamp switch, quiet room tone; dialogue remains casual and dry. No music,
+commercial polish, beauty filter, impossible time-lapse morph, changing room,
+new furniture, duplicated prop, random text, dialogue from off screen, or cut
+before the lens is fully covered.
+```
+
+**Why it works:** the opening and ending share one camera angle, so accumulated
+changes are legible. Object-contact sounds carry continuity while short inserts
+compress the work without turning the room into an unexplained transformation.
+
+Adapted from [Strength04_X's original post](https://x.com/Strength04_X/status/2077853003009372639),
+published July 16, 2026; Seedance 2.0 attribution and the complete source prompt
+are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7330).
+
+### 35. Momentum-conversion anime descent
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public
+prompt-gallery metadata and its direct mapping to the creator's original post
+
+**Use case:** anime action, parkour, kinetic cause-and-effect choreography  
+**Mode:** image-to-video or text-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+```text
+15-second high-density 2D anime action sequence in a shuttered night shopping
+arcade. One adult bicycle courier with a black bob haircut, yellow rain jacket,
+messenger bag, and no weapon. If @Image1 is supplied, use it only for identity,
+outfit, and drawing style; build a new location and pose. Keep character design,
+bag, jacket, screen direction, and arcade geography unchanged.
+
+[0–3s] Wide low angle: a damaged fire escape tilts and the courier drops toward
+the alley. She turns her hips, plants one shoe against a vertical shop sign,
+compresses the leg, and pushes away diagonally. The sign lights only after foot
+contact. Camera tilts down with the fall; no cut before the push completes.
+
+[3–7s] Side-tracking wide follows three alternating wall kicks in one zigzag
+descent. Each contacted sign illuminates behind her and stays lit, creating a
+clear path. Show approach, sole contact, surface compression, push-off, flight,
+and preparation for the next landing; no weightless hovering.
+
+[7–10s] She reaches one long wall, runs horizontally for three steps, and gives
+a quick wave to an adult shopkeeper behind a window. Camera remains side-on so
+both foot contacts and the window eyeline stay readable.
+
+[10–13s] The wall ends. She drops, lands on both feet with knee compression,
+places one hand down, converts forward momentum into a shoulder roll, and exits
+the roll already facing the original travel direction.
+
+[13–15s] Low rear tracking as she accelerates into a sprint beneath the chain
+of newly lit signs. She glances back once and says, “Still faster than the
+stairs.” End on a stable long perspective of the illuminated route.
+
+Sharp key poses, controlled smears only between poses, consistent cel shading,
+rain-slick reflections, fabric and bag lag, exact Japanese dialogue lip sync if
+localized, impacts and sign relays timed to percussion. No child, extra limb,
+repeated pose, wall penetration, wrong-way roll, floating body, changing outfit,
+premature sign light, random camera orbit, unreadable action, or game UI.
+```
+
+**Why it works:** every spectacular beat converts existing momentum instead of
+resetting it. Contact-triggered signs make the action path visible and provide a
+second cause-and-effect layer synchronized with sound.
+
+Adapted from [Ayasan's original Seedance 2.0 wall-running post](https://x.com/aiehon_aya/status/2077875932535099705),
+published July 16, 2026; the full source and model mapping are preserved in the
+[versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7351).
+
+---
+
 ## Reusable templates
 
 ### Single-shot template
@@ -1907,6 +2183,11 @@ Community examples and techniques referenced in this README:
 - [PiNKICK — Seedance 2.0 beat-delayed cause-and-effect performance](https://x.com/pinkick/status/2077901565713867110)
 - [Syed Abuthahir — Seedance 2.0 handheld dialogue power shift](https://x.com/abulu8/status/2077916857135501378)
 - [BMX — Seedance 2.0 cause–contact–reaction–recovery physics](https://x.com/bmx_ai13/status/2078210630935335363)
+- [ByteDance / Volcano Ark — Seedance 2.5 bioluminescent reef typography](https://github.com/renoise-ai/awesome-seedance-2-5-prompts#deep-sea-coral-reef-world)
+- [ByteDance / Volcano Ark — Seedance 2.5 floating desert gallery](https://github.com/renoise-ai/awesome-seedance-2-5-prompts#floating-desert-art-gallery)
+- [ByteDance / Volcano Ark — Seedance 2.5 oceanic-civilization theatre](https://github.com/renoise-ai/awesome-seedance-2-5-prompts#theatre-of-oceanic-civilizations)
+- [Strength04_X — Seedance 2.0 Mini-DV dorm move-in montage](https://x.com/Strength04_X/status/2077853003009372639)
+- [Ayasan — Seedance 2.0 momentum-conversion anime descent](https://x.com/aiehon_aya/status/2077875932535099705)
 - [@maybeegreen — subject/action/environment/camera structure](https://x.com/maybeegreen/status/2042226474422297010)
 - [@RetroValix — focus image-to-video prompts on movement](https://x.com/RetroValix/status/2074231054567866617)
 - [ByteDance / Volcano Ark — Seedance 2.5 official preview showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5)
