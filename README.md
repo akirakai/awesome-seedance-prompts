@@ -69,6 +69,12 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Neon-district drift character intro](#53-neon-district-drift-character-intro)
   - [Dual-scale grassland battle](#54-dual-scale-grassland-battle)
   - [One-second observer-time delivery montage](#55-one-second-observer-time-delivery-montage)
+  - [First-person kitchen feeding dialogue](#56-first-person-kitchen-feeding-dialogue)
+  - [Ground-to-sky night-market one-take](#57-ground-to-sky-night-market-one-take)
+  - [Poster-breach subway horror](#58-poster-breach-subway-horror)
+  - [Brutalist pencil-city collapse](#59-brutalist-pencil-city-collapse)
+  - [Storyboard-guided mushroom-city heist](#60-storyboard-guided-mushroom-city-heist)
+  - [Cockpit-POV port-city flight](#61-cockpit-pov-port-city-flight)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -2293,6 +2299,154 @@ Adapted from [Meem's original Seedance 2.0 super-speed courier post](https://x.c
 
 ---
 
+### 56. First-person kitchen feeding dialogue
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** intimate native-dialogue acting · **Mode:** image-to-video · **Settings:** 10 seconds, 16:9, one continuous POV shot
+
+```text
+Use @Image1 only for the adult woman's identity, hairstyle and wardrobe; keep them unchanged. Ten-second photoreal home-kitchen scene from another adult's eye-level POV, one continuous take, no music.
+
+[0–3s] Begin two steps behind her at the stove. The camera approaches slowly with natural breathing sway while she fries an egg. One POV hand lifts a strawberry from a bowl and brings it beside her mouth; keep the hot pan and hand on separate sides of frame.
+[3–6s] She turns only her head, bites the strawberry once, smiles and says softly in Mandarin, “好吃。” Keep her lips visible and hold the camera nearly still during the line.
+[6–8s] She turns toward the lens. The POV hand wipes one drop of juice from the corner of her lip; she follows the hand with her eyes and gives a restrained laugh.
+[8–10s] The hand leaves frame. She turns back, flips the egg once and settles it in the pan. End over her shoulder on the steam and completed egg.
+
+Natural window light, real skin and food texture, sizzling oil, utensil contact, room tone and one quiet laugh. Preserve stove geography, bowl position, hand ownership and eyeline. No cut, subtitle, extra hand, unsafe pan contact, repeated bite, changed face, robotic lip sync or background music.
+```
+
+**Why it works:** the camera pauses for the only spoken line, while every hand action has a clear owner and endpoint. Separating the food interaction from the hot pan reduces hand and prop collisions.
+
+Adapted from [Changning Liu's original Seedance 2.0 kitchen-POV post](https://x.com/ChangningL29508/status/2038387739503337723), published March 29, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=2295).
+
+---
+
+### 57. Ground-to-sky night-market one-take
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** impossible camera travel with motivated occlusion · **Mode:** text-to-video · **Settings:** 15 seconds, 16:9, one uninterrupted shot
+
+```text
+Fifteen-second photoreal one-take through a crowded Southeast Asian night market after rain. The camera follows one continuous vertical path; warm lanterns, wet stone and practical cooking fire remain spatial anchors.
+
+[0–3s] Start 20 cm above the pavement on a 24 mm lens, gliding between adult shoppers' feet. Rise toward a wok as a brief gas flare fills the entire frame; pass through the orange occlusion without cutting.
+[3–6s] Emerge at counter height, skim past hanging lanterns, then dip under a stall table where an elderly vendor quietly counts coins. Slow for one beat while the market sound becomes muffled.
+[6–10s] Rise through a dense plume from a charcoal grill. The smoke fully covers the lens, then clears above the awnings as the camera cranes upward to reveal the market as an amber river stretching across the block.
+[10–13s] Descend in one smooth curve toward the same vendor at the market edge; preserve the red lantern above the stall as the navigation target.
+[13–15s] Settle on the final coin, then tilt to the vendor's face. The vendor notices the lens. Hold eye contact as the lantern sways once and cut to black.
+
+Audio follows altitude: wet footsteps and calls below, muffled breath under the table, broad crowd hum above, one clean coin click at the end. Real fire and smoke, plausible clearance and acceleration. No hidden edit except full-frame flare/smoke occlusion, no collision, teleport, repeated stall, floating camera shadow, duplicated crowd or changing lantern layout.
+```
+
+**Why it works:** two full-frame occlusions hide the most difficult scale changes, and a single red lantern lets the audience recognize the return path. The sound perspective reinforces camera height.
+
+Adapted from [Changning Liu's original Seedance 2.0 night-market camera experiment](https://x.com/ChangningL29508/status/2038291358965022974), published March 29, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=2292).
+
+---
+
+### 58. Poster-breach subway horror
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** 2D-to-3D boundary transition · **Mode:** text-to-video · **Settings:** 12 seconds, 16:9, photoreal supernatural horror
+
+```text
+Twelve-second photoreal supernatural sequence in a brightly lit, fictional subway station. A generic monster in a printed horror poster crosses into physical space, then returns with an adult commuter trapped in the new poster image. No gore.
+
+[0–2s] Locked medium-wide: the commuter poses beside the train-door poster. Fluorescent light, clean platform geometry and the poster frame are clearly established.
+[2–4s] Slow push-in. Fine cracks spread only through the printed monster; paper fibers lift and cast real shadows. A flat grey hand gains thickness as it presses through the paper plane.
+[4–7s] Cut wide as the fully three-dimensional creature lands with weight. The commuter runs left-to-right; camera tracks at shoulder height while nearby adults clear a believable path.
+[7–9s] The creature catches the commuter's jacket and pulls them into a rippling silver surface on the train wall. Their body flattens progressively from contact point to trailing hand.
+[9–12s] Return to the exact opening camera. The wall becomes ordinary paper again. The poster now shows the commuter behind the creature, palm pressed against the printed surface. One eye in the poster turns toward camera; train doors close and end frame.
+
+Sound: station hum, paper tearing, one heavy landing, running steps, metallic suction, door chime. Preserve train, poster border, commuter wardrobe and screen direction. No blood, extra victim, instant full-body morph, rubber limbs, changing station, illegible random text or creature duplication.
+```
+
+**Why it works:** the opening and ending share the same locked composition, making the altered poster easy to read. The transition describes thickness, contact order and material sound instead of asking for an unexplained morph.
+
+Adapted from [Nexora's original Seedance 2.0 poster-monster post](https://x.com/frametheory058/status/2037752421074846042), published March 28, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=2210).
+
+---
+
+### 59. Brutalist pencil-city collapse
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** product geometry hidden in environmental design · **Mode:** product-reference-to-video · **Settings:** 15 seconds, 16:9, luxury architectural commercial
+
+```text
+Use @Image1 as the sole source of truth for a generic technical drafting pencil: preserve its silhouette, red accent ring, clip, tip and proportions; do not invent or render brand text. Fifteen-second photoreal luxury commercial built from raw concrete, exposed steel and one precise red guide line.
+
+[0–3s] Black frame. A red line draws forward. Camera tracks 10 cm behind it as concrete walls rise exactly where the line passes, each slab settling with weight.
+[3–7s] The line leads a smooth 24 mm flight through a brutalist city of bridges, towers and circular voids. Repeat the pencil's taper and clip angle subtly in the architecture without revealing the object.
+[7–10s] Crane above the city. Buildings detach in ordered layers — outer slabs, bridges, then steel cores — exposing the complete pencil plan from overhead.
+[10–13s] Concrete and steel spiral inward once and compact into the rigid product from @Image1. End the assembly before the camera reaches it; no soft morphing.
+[13–15s] Locked three-quarter macro hero shot in white space. Dust falls, the red ring catches one narrow light and the mechanism clicks once. Hold the unchanged product.
+
+Low industrial pulse, concrete resonance, structural groans, final silence and mechanical click. Restrained grey palette, volumetric dust, real mass and fracture. No logo generation, changing tip, extra clip, floating debris after assembly, liquid concrete, repeated transformation or camera orbit during the hero hold.
+```
+
+**Why it works:** the environment previews the product's proportions before the reveal, while ordered disassembly gives every material a destination. Locking the last shot protects fragile product geometry.
+
+Adapted from [Ege's original Seedance 2.0 brutalist drafting-pencil commercial](https://x.com/egeberkina/status/2060458879369216202), published May 29, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=5455).
+
+---
+
+### 60. Storyboard-guided mushroom-city heist
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** storyboard-to-animation with identity and prop locks · **Mode:** multi-reference-to-video · **Settings:** 15 seconds, 16:9, premium 2D anime
+
+```text
+REFERENCE ROLES
+@Image1 controls the adult thief's face, blue hood, outfit and basket.
+@Image2 controls only shot order, blocking and route through the mushroom city. Never render panels, borders, paper, arrows or annotations.
+
+Create a 15-second hand-drawn anime chase during a crowded lantern festival built on giant mushroom platforms.
+
+[0–3s] Overhead establishing shot descends toward the thief in the crowd. Match cut to her hand lifting one glowing mushroom from a guarded display; its cap shape and blue-green glow become the prop lock.
+[3–6s] Tight face shot: she notices pursuit, gives one delighted half-smile and pivots into a run. Camera whip-pans to preserve left-to-right screen direction.
+[6–11s] Three brisk cuts following @Image2: shoulder-level tracking as she slips between adults; low angle as she vaults a stall roof; overhead as she uses one hanging cloth to swing to the next platform. Each landing carries momentum into the next shot.
+[11–15s] Side tracking across a high bridge. She places the unchanged mushroom in the basket, glances back once, then disappears behind a curtain of festival ribbons. End on the ribbons settling while pursuers stop at the gap.
+
+Top-tier cel animation, vivid practical lantern light, moving confetti and crowded depth, footsteps, cloth snaps, crowd reactions and percussion matched to landings. Keep identity, hood, basket, mushroom, festival geography and travel direction stable. No slideshow, panel artifacts, duplicated thief, teleport, missing prop, random costume change, frozen crowd, text, subtitles or logo.
+```
+
+**Why it works:** each reference receives one job, and a single glowing prop links the theft to the escape. Ending every cut on carried momentum turns a static storyboard into continuous action.
+
+Adapted from [Ryuki Yano's original Seedance 2.0 storyboard-led mushroom-city chase](https://x.com/Ryuki_Yano/status/2060316111569096883), published May 29, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=5469).
+
+---
+
+### 61. Cockpit-POV port-city flight
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** route-annotation-to-camera-path transfer · **Mode:** image/reference-to-video · **Settings:** 15 seconds, 16:9, cinematic anime flight
+
+```text
+Use @Image1 for the white aircraft, adult pilot, white-and-gold port-city layout and intended route only. Treat every red line, arrow and handwritten mark as invisible guidance; render none of them.
+
+Create a 15-second high-end anime flight with one continuous first-person cockpit camera until the final reaction shot.
+
+[0–4s] Approach from the mountain side at high speed, slightly above the harbor. Keep the central gold tower ahead-right while the sea, white roofs and docks expand below.
+[4–8s] Bank left and descend in one broad arc to two metres above the water. Reflections and wakes sweep beneath the nose; yachts and piers pass with safe, consistent clearance.
+[8–12s] Level out toward the central tower, pass through the marked corridor between buildings, then pitch into a steep climb beside the spire. Tower detail flows downward to show speed; the horizon rotates only with the aircraft bank.
+[12–14s] Crest the spire and enter open blue sky. Hold the port panorama below for one breath.
+[14–15s] One motivated cut to a cockpit medium close-up: the same pilot relaxes her grip and smiles once in the reflected sky light.
+
+Smooth anime camera motion, readable banking physics, restrained motion blur, bright water reflections, deep clouds, engine pitch rising with speed and wind pressure near the water. Preserve aircraft shape, tower position, route continuity and pilot identity. No visible route marks, UI, text, impossible building collision, random roll, scale jump, extra aircraft or pilot change.
+```
+
+**Why it works:** the route reference controls navigation without leaking annotations into the render. Fixed landmarks and altitude-dependent sound make the fast camera path legible.
+
+Adapted from [妖精アーヤさん's original Seedance 2.0 first-person flight post](https://x.com/aiehon_aya/status/2060843701866258836), published May 30, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=5504).
+
+---
+
 ## Reusable templates
 
 ### Single-shot template
@@ -2773,6 +2927,12 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 Community examples and techniques referenced in this README:
 
+- [Changning Liu — Seedance 2.0 first-person kitchen dialogue](https://x.com/ChangningL29508/status/2038387739503337723)
+- [Changning Liu — Seedance 2.0 ground-to-sky night-market one-take](https://x.com/ChangningL29508/status/2038291358965022974)
+- [Nexora — Seedance 2.0 poster-breach subway horror](https://x.com/frametheory058/status/2037752421074846042)
+- [Ege — Seedance 2.0 brutalist drafting-pencil commercial](https://x.com/egeberkina/status/2060458879369216202)
+- [Ryuki Yano — Seedance 2.0 storyboard-guided mushroom-city heist](https://x.com/Ryuki_Yano/status/2060316111569096883)
+- [妖精アーヤさん — Seedance 2.0 cockpit-POV port-city flight](https://x.com/aiehon_aya/status/2060843701866258836)
 - [TechHalla — Seedance 2.0 practical B-movie double transformation](https://x.com/techhalla/status/2078257690980274386)
 - [Ivanna — Seedance 2.0 match-cut morning departure](https://x.com/ivanka_humeniuk/status/2077856012502012413)
 - [mayv — Seedance 2.0 neon-district drift character intro](https://x.com/haruuraeadss/status/2077854576729043204)
