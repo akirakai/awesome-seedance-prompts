@@ -39,6 +39,11 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Miniature convenience-store parkour](#23-miniature-convenience-store-parkour)
   - [Oil-on-paper blizzard](#24-oil-on-paper-blizzard)
   - [Opera-craft inheritance](#25-opera-craft-inheritance)
+  - [Living nomadic landscape](#26-living-nomadic-landscape--reference-continuity)
+  - [Rainy school pickup](#27-rainy-school-pickup--smartphone-pov)
+  - [Pocket-watch locomotive](#28-time-reversed-pocket-watch-locomotive)
+  - [Beat-delayed physics rap](#29-beat-delayed-physics-rap-performance)
+  - [Handheld dialogue power shift](#30-handheld-dialogue-power-shift)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -1248,6 +1253,257 @@ the complete official prompt is preserved in the
 
 ---
 
+### 26. Living nomadic landscape — reference continuity
+
+**Verified model:** Seedance 2.0 — explicitly named in the original creator's
+post and confirmed by the versioned public prompt-gallery metadata
+
+**Use case:** reference-driven landscape films, travel atmosphere, animated documentaries  
+**Mode:** image-to-video or reference-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+```text
+15-second three-shot landscape film. Use @Image1 only for the visual medium,
+palette, camp layout, yurt designs, river path, and mountain silhouette. Keep
+those anchors unchanged in every shot.
+
+MOTION HIERARCHY
+Immovable layer: mountains, yurts, banks, paths, and solid ground remain fixed.
+Continuous layer: grass bends in broad wind waves; thin smoke curls upward;
+the river flows and catches light; cloud, mist, and soft cloud shadows cross
+the valley at steady speed.
+Living layer: horses lower and lift their heads, take short steps, flick ears
+and tails; sheep mill slowly without duplicating or crossing through one another.
+
+[0–5s] Handheld wide at eye level, yurts on the lower-left third, river on the
+right third, low horizon, mountains dominating the upper frame. Only calm
+breathing sway and tiny human corrections; no gimbal glide.
+
+[5–10s] Hard cut to a medium-wide view near the camp. Track laterally less than
+one meter while holding one doorway and the nearest herd as spatial anchors.
+Let foreground flowers briefly occlude the lower frame.
+
+[10–15s] Hard cut to an extreme wide from the same valley side. The camp is
+small in the lower-left corner and the river stays on frame right. Hold for the
+last second as a cloud shadow clears the camp but not the mountains.
+
+Natural directional daylight, tactile felt, grass, water, snow, and smoke.
+Audio across all shots: mountain wind, river trickle, soft bleats, hoof movement,
+and distant birds; no music or dialogue. Preserve geography, scale, palette,
+light direction, herd count, and animation style. No frozen-card look, sliding
+mountains, moving yurts, boiling vegetation, cloned animals, jitter, or camera
+teleportation.
+```
+
+**Why it works:** motion is divided into immovable, continuous, and intermittent
+layers. Three shot scales can change while the river, camp, and mountains keep
+the same screen relationship, so the scene feels alive without spatial drift.
+
+Adapted from [MAX's original Seedance 2.0 post](https://x.com/maxxmalist/status/2078190909490114622),
+published July 17, 2026; the complete prompt and model mapping are preserved in
+the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7397).
+
+### 27. Rainy school pickup — smartphone POV
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public
+prompt-gallery metadata and its direct mapping to the creator's original post
+
+**Use case:** authentic UGC, family moments, phone-camera realism  
+**Mode:** text-to-video  
+**Suggested settings:** 14s, 9:16, 24–30fps
+
+```text
+14-second vertical smartphone video from the driver's seat of a parked minivan
+during a rainy school pickup. 26mm phone-lens perspective, overcast daylight,
+wet windshield, ordinary dashboard clutter, coffee cup, and the school entrance
+visible through the glass. One child in a red raincoat; no other foreground
+subject.
+
+[0–5s] Mostly steady handheld POV resting near the steering wheel. Rain beads
+merge and crawl downward. One wiper pass briefly reveals children leaving under
+the covered walkway, then droplets begin rebuilding the soft distortion.
+Sound: rain on the roof, rubber wiper squeak, very low talk radio.
+
+[5–10s] The red-coated child breaks from the line, runs across the wet crossing,
+tries to clear one puddle, and lands at its edge. The splash follows the shoe
+contact and wets the lower trouser leg. The filmer gives one quiet laugh while
+keeping the camera inside the vehicle.
+
+[10–14s] The side door opens off frame. Whip-pan once toward the rear seat as
+the child climbs in, lowers the dripping hood, and grins. Phone auto-exposure
+settles gradually from the bright wet exterior to the darker cabin; rain becomes
+muffled only after the door closes. End on a seat-belt click and a short stable
+two-shot reflection in the rear-view mirror.
+
+Real smartphone exposure, focus breathing, windshield refraction, water and
+cloth physics, and casual family timing. Keep vehicle geometry, weather, child,
+coat, backpack, and screen direction stable. No commercial polish, impossible
+camera position, dry clothing after the splash, traffic danger, extra child,
+slow motion, or sudden weather change.
+```
+
+**Why it works:** the wiper, door, and exposure shift create three motivated
+visual transitions, while the sound moves from open rain to enclosed cabin at
+the exact physical moment the door closes.
+
+Adapted from [Heather Cooper's original post](https://x.com/HBCoop_/status/2078125161358799222),
+published July 17, 2026; Seedance 2.0 attribution and the complete source prompt
+are recorded in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7418).
+
+### 28. Time-reversed pocket-watch locomotive
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public
+prompt-gallery metadata and its direct mapping to the creator's original post
+
+**Use case:** mechanical fantasy, macro product films, assembly transformations  
+**Mode:** text-to-video  
+**Suggested settings:** 15s, 1:1, 24fps
+
+```text
+15-second square mechanical-fantasy film. One open-face antique pocket watch
+lies flat on a polished walnut desk, crown and suspension loop at 12 o'clock,
+thin chain visible. Its outer case, thickness, glass, crown, loop, chain, angle,
+and desk position remain identical from first frame to last. No character,
+music, narration, logo, or generated text.
+
+[0–2s] Diagonal overhead hero view, then a controlled macro push toward the
+curved glass. Warm desk lamp, dark workshop bokeh, crisp brass and black iron.
+
+[2–4s] The hands reverse and the connected gear train follows in correct
+mechanical order. Amber light rises beneath the dial. Use two short macro cuts:
+hands and escapement, then meshing gears. Each movement has a matching tick.
+
+[4–9s] Inside the glass only, thin rails lock into the dial; wheels, chassis,
+boiler, pistons, cab, and chimney assemble in that order with fast, precise
+metal contacts. Every part travels directly to one socket, seats firmly, and
+stops. The interior remains a shallow watch mechanism, not a deep miniature room.
+
+[9–12s] The completed locomotive moves chimney-first along the internal rail.
+Wheels and pistons cycle together; two small steam puffs fog the inner glass
+briefly without escaping the case. Track beside it through the glass.
+
+[12–15s] Pull back to the original diagonal overhead composition. The complete
+watch is still flat, thin, and palm-sized; crown, loop, and chain remain visible.
+Hold as the inner gears turn and one final steam puff fades.
+
+Sound effects only: reverse ticking, gear clicks, metal seating, piston rhythm,
+tiny wheel-on-rail sound, soft steam. No floating magic parts, thickening case,
+upright clock, added stand, locomotive outside the glass, backward train,
+changing engraving, disconnected gears, duplicate wheel, or camera jump.
+```
+
+**Why it works:** the exterior is an explicit invariant while only the shallow
+interior changes. Ordered assembly verbs give every part a destination, contact,
+and endpoint instead of asking for a vague magical morph.
+
+Adapted from [AI Lifehack's original post](https://x.com/ai_lifehack55/status/2077944966408745164),
+published July 17, 2026; the full source and Seedance 2.0 mapping are preserved
+in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7433).
+
+### 29. Beat-delayed physics rap performance
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public
+prompt-gallery metadata and its direct mapping to the creator's original post
+
+**Use case:** music videos, native-audio synchronization, rule-based VFX  
+**Mode:** reference-to-video  
+**Suggested settings:** 15s, 21:9, 24fps
+
+```text
+Use @Image1 only for the adult performer's identity, hair, and jewelry; @Image2
+only for the licensed outfit; @Image3 only for the fenced basketball-court
+layout and golden-hour light. @Audio1 is an authorized master track and the
+only music and vocal source. Do not invent lyrics. Mouth motion follows the
+audible vocal exactly and remains closed during instrumental gaps.
+
+15-second handheld anamorphic performance built around one rule: every object
+on the court completes its motion exactly one beat after its visible cause.
+Track laterally with the performer at walking speed, keep the lips readable,
+and stage each event in a different horizontal band of the wide frame.
+
+[0–3s] A ball circles the rim without falling. The performer enters from frame
+right, delivers the first vocal phrase, and glances at the hoop; one beat later
+the ball drops cleanly through. The shooter reacts only after the drop.
+
+[3–7s] Continue past a row of upright plastic bottles. Her boot taps the ground
+on a vocal accent; one beat later the bottles topple in a single ordered wave,
+each collision producing one clink in a gap between words.
+
+[7–11s] A jump rope hangs at the top of its arc. She lowers one raised hand;
+one beat later the rope resumes and passes behind her without touching her.
+A tossed cap remains suspended in the far third, then lands on its owner on the
+next accent.
+
+[11–15s] At center court she raises one hand; one beat later the crowd becomes
+silent and still. She lowers it; one beat later every head nods once. End as the
+same ball rolls to her boot on the final sound. Hold the deadpan face for half a
+second.
+
+Warm flare, tactile court, natural crowd spacing, restrained effect integration.
+Preserve identity, outfit, jewelry, court geography, one-beat delay, and audio
+alignment. No extra song, generated text, random dance, premature reaction,
+event without a cause, off-beat Foley, floating object drift, face change, or
+camera orbit.
+```
+
+**Why it works:** one measurable delay rule governs ball, bottles, rope, cap,
+crowd, camera blocking, and Foley. The effects feel designed rather than random,
+and the authorized audio remains the timing source of truth.
+
+Adapted from [PiNKICK's original post](https://x.com/pinkick/status/2077901565713867110),
+published July 16, 2026; Seedance 2.0 attribution and the complete source prompt
+are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7348).
+
+### 30. Handheld dialogue power shift
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public
+prompt-gallery metadata and its direct mapping to the creator's original post
+
+**Use case:** dialogue scenes, acting tests, dramatic micro-stories  
+**Mode:** text-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+```text
+15-second live-action dialogue scene in a mid-century producer's office:
+walnut walls, old film posters, blue carpet, leather chairs, cluttered desk,
+overcast windows, warm circular ceiling lights. Two fictional adults only: a
+young East Asian woman with a messy high bun and headphones pushed back, and an
+older bald producer with a short grey beard. Keep their seats, eyelines, props,
+wardrobe, and the 180-degree line unchanged.
+
+[0–5s] Loose handheld medium on the woman. The frame breathes slightly as she
+rolls a pen once, stops it with her thumb, leans forward, and says quietly,
+“I have a way to make it work.” She holds his gaze; let one second of room tone
+remain after the line.
+
+[5–10s] Cut over her shoulder to the producer. He places one palm flat on the
+desk, pushes his chair back a few centimeters, rubs his brow, then says,
+“Generated voices in a real film? That's not a plan.” The handheld camera drifts
+closer with his frustration but never crosses the eyeline.
+
+[10–15s] Cut back to the woman and push slowly from medium close-up to close-up.
+She becomes physically still, lowers the pen onto the desk, lets her shoulders
+drop, and says one calm word: “Watch.” The producer's raised hand stops in the
+soft foreground. As control shifts to her, the camera's sway gradually settles.
+End on her steady face, not a reaction cut.
+
+Soft window daylight mixed with warm practical light, natural skin, restrained
+shallow depth, audible room tone, chair leather, pen tap, breath, and exact
+English lip sync. No background extra, improvised dialogue, overlapping lines,
+melodramatic gestures, random smile, gaze at camera, desk rearrangement,
+continuity jump, excessive shake, or synthetic beauty lighting.
+```
+
+**Why it works:** playable gestures replace abstract emotion, pauses protect
+lip sync, and the handheld motion itself changes from restless to stable as the
+power in the conversation moves from one speaker to the other.
+
+Adapted from [Syed Abuthahir's original post](https://x.com/abulu8/status/2077916857135501378),
+published July 17, 2026; the complete source and Seedance 2.0 mapping appear in
+the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7395).
+
+---
+
 ## Reusable templates
 
 ### Single-shot template
@@ -1294,6 +1550,59 @@ explicitly changes it.
 Natural physics, temporal consistency, no geometry drift, no face or label
 change, no new objects, no sudden zoom, no automatic slow motion.
 ```
+
+### Cause–contact–reaction–recovery template
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public
+prompt-gallery metadata and its direct mapping to the creator's original post
+
+Use this for a harmless fall, stumble, catch, collision, sports miss, or practical
+stunt where physical credibility matters more than spectacle. Direct the full
+causal chain instead of showing only an impact.
+
+```text
+[DURATION], [ASPECT RATIO], one uninterrupted [PHONE / DOCUMENTARY / CINEMATIC]
+shot in [LOCATION]. [ONE ADULT SUBJECT] approaches [SURFACE / PROP / HAZARD]
+while [ONE WITNESS] remains at [FIXED POSITION].
+
+SETUP — [0–25%]
+Establish footwear, surface material, moisture or friction, walking direction,
+camera distance, and the witness's original task. Keep the hazard visible but
+unemphasized. Camera: [ONE SIMPLE MOVE OR MOSTLY LOCKED HANDHELD].
+
+CAUSE AND LOSS OF CONTROL — [25–50%]
+[BODY PART / PROP] contacts [SURFACE / HAZARD]. Show the exact cause: [SLIP /
+CATCH / COLLISION / MISSED GRIP]. Momentum carries the torso [DIRECTION]; arms
+and free leg counterbalance; clothing and carried objects respond after the
+body changes direction.
+
+CONTACT — [50–65%]
+The subject makes one anatomically plausible, non-injurious contact at
+[HIP / HAND / KNEE / PADDED SURFACE]. Show weight compression, one short skid
+or bounce, and a complete stop. The prop moves only according to the contact it
+receives. Sound lands on the visible contact frame.
+
+REACTION AND RECOVERY — [65–100%]
+The subject checks [HAND / CLOTHING / PROP], exhales, then changes from
+[INITIAL MICRO-REACTION] to [FINAL EXPRESSION]. The witness notices only after
+the impact, stops the original task, approaches by a clear path, and offers one
+specific help action. End on [HAND CLASP / STANDING RECOVERY / SHARED LAUGH /
+RESET PROP] and hold briefly.
+
+Preserve identity, anatomy, wardrobe, surface, hazard position, screen direction,
+camera side, and witness position. Use real friction, gravity, inertia, delayed
+reaction, cloth movement, and contact sound. No injury, impossible twist,
+teleporting helper, reaction before impact, floating prop, repeated fall,
+slow-motion insert, extra person, camera cut, or reset before the endpoint.
+```
+
+**Why it works:** preparation explains the accident, contact proves weight, and
+the delayed witness response prevents the scene from feeling staged. A defined
+recovery also stops the action from looping at the fall.
+
+Adapted from [BMX's original Seedance 2.0 smartphone-fall prompt](https://x.com/bmx_ai13/status/2078210630935335363),
+published July 17, 2026; the complete prompt and model mapping are recorded in
+the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7391).
 
 ### Gaze–light–action continuation template
 
@@ -1592,6 +1901,12 @@ Community examples and techniques referenced in this README:
 - [Oogie — Seedance 2.0 miniature convenience-store parkour](https://x.com/oggii_0/status/2077652652641681568)
 - [Aleena Amir — Seedance 2.0 oil-on-paper blizzard](https://x.com/aleenaamiir/status/2078075943906889874)
 - [Aaliya — Seedance 2.0 gaze–light–action continuation](https://x.com/AIwithAliya/status/2078028109790707806)
+- [MAX — Seedance 2.0 motion-layered nomadic landscape](https://x.com/maxxmalist/status/2078190909490114622)
+- [Heather Cooper — Seedance 2.0 rainy school-pickup phone POV](https://x.com/HBCoop_/status/2078125161358799222)
+- [AI Lifehack — Seedance 2.0 pocket-watch locomotive assembly](https://x.com/ai_lifehack55/status/2077944966408745164)
+- [PiNKICK — Seedance 2.0 beat-delayed cause-and-effect performance](https://x.com/pinkick/status/2077901565713867110)
+- [Syed Abuthahir — Seedance 2.0 handheld dialogue power shift](https://x.com/abulu8/status/2077916857135501378)
+- [BMX — Seedance 2.0 cause–contact–reaction–recovery physics](https://x.com/bmx_ai13/status/2078210630935335363)
 - [@maybeegreen — subject/action/environment/camera structure](https://x.com/maybeegreen/status/2042226474422297010)
 - [@RetroValix — focus image-to-video prompts on movement](https://x.com/RetroValix/status/2074231054567866617)
 - [ByteDance / Volcano Ark — Seedance 2.5 official preview showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5)
