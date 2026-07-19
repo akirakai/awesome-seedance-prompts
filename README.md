@@ -86,6 +86,11 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Interrupted painting material-continuity story](#70-interrupted-painting-material-continuity-story)
   - [Mass-cinema Wi-Fi password family comedy](#71-mass-cinema-wi-fi-password-family-comedy)
   - [Shutter-timed three-person photo-booth comedy](#72-shutter-timed-three-person-photo-booth-comedy)
+  - [Baton-mapped ocean symphony](#73-baton-mapped-ocean-symphony)
+  - [Multi-reference coastal scooter memory](#74-multi-reference-coastal-scooter-memory)
+  - [Controlled roller-skate rail bail](#75-controlled-roller-skate-rail-bail)
+  - [Mechanical-stroke title assembly](#76-mechanical-stroke-title-assembly)
+  - [Pinch-harmonic contact-and-audio sync](#77-pinch-harmonic-contact-and-audio-sync)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -2784,6 +2789,211 @@ hard shoving, face swaps, clones, missing limbs, outfit changes, or generated pr
 
 ---
 
+### 73. Baton-mapped ocean symphony
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** fantasy spectacle, gesture-to-environment causality, large-scale water simulation  
+**Mode:** text-to-video  
+**Settings:** 15 seconds, 16:9, cinematic multi-shot sequence
+
+```text
+Photoreal fantasy at golden dusk above an open ocean. One adult conductor in a
+long black performance coat hovers several meters above the water, holding one
+slender baton. Keep her face, clothing, height, baton hand, sunset direction,
+horizon, and sea color consistent.
+
+0–3 s: Extreme wide, very slow push-in. The sea is nearly still and the conductor
+is a small readable silhouette. She raises the baton; wind and water ambience
+fall to near silence.
+3–6 s: Medium side track. Her first downward beat creates one circular swell
+directly beneath her. A leftward stroke raises a wave wall on screen-left; a
+rightward stroke raises a matching wall on screen-right. Each response begins
+after its corresponding gesture, never before.
+6–10 s: Rising 270-degree orbit as her tempo accelerates. Four wave columns rise
+in ordered sequence around her, not simultaneously. Spray catches the same warm
+backlight; her coat and hair react to the outward wind.
+10–13 s: Front medium. She closes her fist and stops the baton. All four columns
+hold for one breath; she then strikes one final vertical beat and they release
+upward together while the camera pulls rapidly to a wide scale reveal.
+13–15 s: Locked wide. Water falls as fine golden mist, the sea settles, and she
+lowers the baton on the final orchestral chord.
+
+Audio begins with wind and distant surf, adds low strings with the first swell,
+then maps one percussion accent to every baton event. Preserve one conductor,
+one baton, ordered gesture-response timing, realistic water mass and gravity.
+No duplicated waves, random motion before a cue, changing sunset, floating
+cloth, unreadable tiny subject, city, ship, generated text, or game-CGI water.
+```
+
+**Why it works:** Every environmental event is assigned to one visible baton cue, so the spectacle has a readable control system. The camera expands only after the gesture map is established, preserving both causality and scale.
+
+**Source:** [John on X](https://x.com/johnAGI168/status/2060926390204010936), published May 31, 2026. The complete storyboard and Seedance 2.0 attribution are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=5483).
+
+---
+
+### 74. Multi-reference coastal scooter memory
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** vehicle continuity, relationship lifestyle film, reference-role separation  
+**Mode:** multi-reference image-to-video  
+**Settings:** 12 seconds, 16:9, four-segment vintage-film sequence
+
+```text
+@Image1 defines the adult passenger's identity and outfit only. @Image2 defines
+the adult driver's identity and outfit only. @Image3 defines one mint-green
+vintage scooter with brown saddle and chrome mirrors. @Image4 defines the
+coastal road, downhill curve, railway crossing, orange convex mirror, sea and
+travel direction. Never exchange these roles.
+
+0–3.5 s — handheld roadside wide: Start with both adults already riding downhill.
+@Image2 drives with both hands on the grips; @Image1 sits behind with both arms
+around the driver's waist. The scooter leans gently through the curve and passes
+the crossing while the sea remains beyond the road.
+3.5–6.5 s — hard cut to a following-vehicle close two-shot: The passenger leans
+near the driver's shoulder and says something inaudible; the driver laughs
+without looking away from the road. Hair, cap and clothing stream backward in
+one wind direction.
+6.5–8.5 s — insert: Her interlaced hands tighten once over his waist as the
+suspension compresses over a road seam. Keep the scooter body and saddle visible.
+8.5–12 s — hard cut to a wide framed behind the orange convex mirror: Their
+reflection crosses the mirror first; the real scooter then enters, passes and
+recedes along the water in the same direction. Engine sound fades naturally.
+
+Soft aged-16mm rendering, lifted blacks, gentle gate weave, roadside handheld
+micro-correction in every segment, no modern gimbal polish. Real combined rider
+weight, tire contact, suspension and optical reflection. Preserve two people,
+driver/passenger roles, scooter geometry, height difference, road map and
+screen direction. No rider swap, empty first frame, unclasped passenger, extra
+scooter, teleporting route, unsafe stunt, readable brand, dialogue track or
+changing weather.
+```
+
+**Why it works:** Each reference receives one non-overlapping job, while fixed rider roles and a mapped route survive the cuts. The final convex-mirror pass verifies direction and vehicle continuity instead of serving as decorative B-roll.
+
+**Source:** [WasifAI on X](https://x.com/doctorwasif/status/2077976875608269159), published July 17, 2026. The reference contract, route map and Seedance 2.0 attribution appear in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7385).
+
+---
+
+### 75. Controlled roller-skate rail bail
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** sports-documentary physics, failed-action continuity, safe recovery  
+**Mode:** text-to-video or image-to-video  
+**Settings:** 15 seconds, 16:9, one stationary smartphone-style wide shot
+
+```text
+One continuous wide phone recording at a supervised outdoor skate plaza in warm
+late-afternoon light. An adult quad skater wears a helmet, wrist guards, elbow
+pads and knee pads. A low, broad practice rail slopes gently toward a clear flat
+runout; a padded landing mat lies beside its lower end.
+
+0–3 s: She rolls into position, looks down the rail, checks the empty runout,
+bends both knees and raises her arms. Keep the full rail, both skates and mat
+visible.
+3–6 s: She rolls forward, compresses, jumps and turns slightly sideways. Both
+skates contact the rail together in a deep crouch; metal scrape begins only at
+contact.
+6–9 s: She slides successfully for one beat. Arms counterbalance, clothing and
+ponytail lag behind her momentum, and the phone operator makes one small late
+reframe without zooming.
+9–12 s: Her rear skate slips outward. Hips rotate first, then shoulders. She
+releases the rail, tucks her chin and converts the fall into one controlled
+shoulder roll onto the mat; her cap lands separately after her body.
+12–15 s: She ends on one side, pauses, then sits up and gives one embarrassed
+thumbs-up. The camera never cuts or approaches.
+
+Real gravity, friction, body weight, protective arm placement, fabric and hair
+lag. Audio: wheel rumble, rail scrape, padded impact, cap tap, one relieved
+exhale and ordinary plaza ambience. No high rail, stairs below the fall, blood,
+head impact, impossible recovery, floating body, rubber limbs, repeated fall,
+slow motion, dramatic music, spectators entering the runout or camera cut.
+```
+
+**Why it works:** The entire attempt stays inside one wide frame, allowing preparation, contact, instability, fall and recovery to remain one causal chain. Protective gear and a visible mat keep the failure readable without turning it into injury spectacle.
+
+**Source:** [BMX on X](https://x.com/bmx_ai13/status/2078179601134813536), published July 17, 2026. The full action progression and Seedance 2.0 attribution are mapped in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7416).
+
+---
+
+### 76. Mechanical-stroke title assembly
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** title reveal, motion graphics, material-driven typography  
+**Mode:** text-to-video  
+**Settings:** 12 seconds, 16:9, fixed centered camera
+
+```text
+Create an original three-character Chinese title: [TITLE]. Pure black background,
+fixed camera, centered composition. The exact three characters remain unchanged
+once formed; no other words, subtitle, logo or small print.
+
+0–2 s: In darkness, faint orange energy grains converge into one narrow vertical
+heat band. Distant gears engage; small steel flakes rotate near the band.
+2–5 s: A white-hot beam crosses left to right. The first character assembles
+stroke by stroke from separate dark armor plates. Each plate folds, aligns and
+locks before the next appears; orange light travels only inside completed strokes.
+5–8 s: A titanium column rises under the second character. Its main vertical
+stroke locks first, followed by horizontal and diagonal plates in correct writing
+order. Each contact produces one metallic click and a brief blue arc.
+8–10 s: The third character descends as a helmet-like frame: outer structure,
+inner strokes, then final central lock. All three characters stay front-facing,
+equally spaced and fully legible.
+10–12 s: Mechanical motion stops. Loose fragments settle, glow reduces to a
+restrained orange-metal edge light, and the completed [TITLE] holds for two
+seconds against clean black.
+
+Hard manufactured steel, visible seams, real plate thickness, contact shadows,
+controlled orange and cool-blue accents. Exactly three target characters and
+one construction pass. No misspelling, extra radical, mirrored stroke, random
+Latin letter, melted calligraphy, changing kerning, camera move, screen shake,
+explosion, illegible overglow or added tagline.
+```
+
+**Why it works:** Character formation follows visible stroke order and a single material grammar—plate, align, lock—so the title remains the subject rather than being buried under particles. The clean final hold also makes typography errors easy to assess.
+
+**Source:** [John on X](https://x.com/john87445528/status/2027508223012749314), published February 27, 2026. The original mecha-type sequence and Seedance 2.0 attribution are archived in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=692).
+
+---
+
+### 77. Pinch-harmonic contact-and-audio sync
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** musical technique close-up, hand-object contact, native audio fidelity  
+**Mode:** text-to-video or character image-to-video  
+**Settings:** 15 seconds, 16:9, realistic studio documentary
+
+```text
+An adult guitarist sits in a compact recording studio with one black electric
+guitar and a microphone at frame-left. Preserve the same face, clothing, guitar
+body, six strings, fret layout, cable and seated position. No wall text or logo.
+Audio consists only of the performed guitar, amplifier response and quiet room tone.
+
+0–3 s: Medium close-up, slow push toward the neck. The left hand frets one high
+note on the third string; at 2.2 seconds the pick and outer thumb edge contact
+that same vibrating string in one motion, producing a clear pinch harmonic.
+3–7 s: Cut to an extreme close-up of the picking hand. Show the pick attack,
+brief thumb-node touch and immediate release. The left hand adds narrow vibrato;
+only the contacted string vibrates strongly while neighboring strings stay damped.
+7–11 s: Arc slowly toward the fretting hand as the note sustains. The guitarist
+presses the whammy bar once for a shallow pitch dip, releases it to neutral and
+lets amplifier feedback bloom without another pick attack.
+11–15 s: Pull back to medium. The right palm mutes the strings once, the sound
+decays to silence, both hands relax and the performer gives the camera a small nod.
+
+24 fps documentary motion, tactile metal strings, realistic fingertips, tendon
+movement, pick flex and shallow lens breathing. Every sound begins at its visible
+contact and stops at the visible mute. No extra fingers, fused hand, string count
+change, impossible fret position, self-playing strings, pre-contact sound, fake
+lyrics, background music, duplicated guitar, generated captions or exaggerated
+stage lighting.
+```
+
+**Why it works:** The prompt treats the sound as the result of a specific pick–thumb–string contact sequence, then separately maps vibrato, whammy movement and muting. That gives Seedance observable physical events for every audible change.
+
+**Source:** [TheYudayVerse on X](https://x.com/yuday9909/status/2048949262109880363), published April 28, 2026. The technique timeline and Seedance 2.0 attribution are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=3826).
+
+---
+
 ## Reusable templates
 
 ### Single-shot template
@@ -3268,6 +3478,47 @@ from the official Seedance 2.5 six-room one-take preview. See the
 [Volcano Ark showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5)
 and [archived full prompt](https://github.com/renoise-ai/awesome-seedance-2-5-prompts#six-room-one-take-transition).
 
+### Map-anchored route handoff template
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+```text
+Create clip {N} of {TOTAL} for a continuous walking route from {START} to {END}.
+Duration {DURATION}; aspect ratio {RATIO}. This clip covers {ROUTE_STEP}.
+
+REFERENCE ROLES
+@Image1 = the same adult guide's identity and outfit only.
+@Image2 = the real location plate for this route step only.
+Preserve recognizable sidewalk direction, building massing, entrances, signs,
+crosswalk position, daylight and the landmark that connects to the next clip.
+
+START STATE
+The guide is already on the legal pedestrian path, slightly ahead of camera,
+facing the direction inherited from clip {N-1}. Begin with {PREVIOUS_LANDMARK}
+visible at {SCREEN_POSITION}; do not start on an unrelated establishing shot.
+
+ACTION AND CAMERA
+At a natural walking pace, the guide turns halfway toward camera, points once
+toward {NEXT_DIRECTION}, then continues forward. Follow with a stable handheld
+walking push—no orbit, drone move or jumpy zoom. Keep the horizon level and the
+guide near one frame edge so the route itself remains readable.
+
+END STATE
+During the final second, face {NEXT_LANDMARK} and let it occupy the same side of
+frame required by clip {N+1}. The guide stays near the opposite edge, still
+pointing or walking forward. Hold long enough for a clean edit.
+
+CONTINUITY
+Same guide, outfit, bag, walking speed, weather, sun direction and screen travel.
+Do not invent another city, move buildings, enter traffic lanes, block entrances,
+reverse direction, replace real signage with random text, add a tour group, hide
+the handoff landmark, or end facing backward.
+```
+
+**Technique:** Treat every clip as a route-state handoff: inherit one landmark and travel vector, perform one navigation action, then deliver the next landmark in a predefined screen position. This prevents separately generated segments from becoming a sequence of unrelated streets.
+
+Adapted from [Michael Guo's original route-guide structure](https://x.com/Michaelzsguo/status/2048966649982669053), published April 28, 2026. Its Seedance 2.0 mapping is preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=3835).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -3315,6 +3566,12 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 Community examples and techniques referenced in this README:
 
+- [John — Seedance 2.0 baton-mapped ocean symphony](https://x.com/johnAGI168/status/2060926390204010936)
+- [WasifAI — Seedance 2.0 coastal scooter memory](https://x.com/doctorwasif/status/2077976875608269159)
+- [BMX — Seedance 2.0 roller-skate rail bail](https://x.com/bmx_ai13/status/2078179601134813536)
+- [John — Seedance 2.0 mechanical-stroke title assembly](https://x.com/john87445528/status/2027508223012749314)
+- [TheYudayVerse — Seedance 2.0 pinch-harmonic performance](https://x.com/yuday9909/status/2048949262109880363)
+- [Michael Guo — Seedance 2.0 map-anchored route guide](https://x.com/Michaelzsguo/status/2048966649982669053)
 - [MapleShaw — Seedance 2.0 fixed access-control rejection loop](https://x.com/msjiaozhu/status/2026629230583337211)
 - [SYD — Seedance 2.0 speed-versus-economy anime dojo duel](https://x.com/SYDxStudio/status/2027058995731607571)
 - [Min Choi — Seedance 2.0 airliner-to-mecha transformation](https://x.com/minchoi/status/2026510205345763536)
