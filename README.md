@@ -75,6 +75,11 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Brutalist pencil-city collapse](#59-brutalist-pencil-city-collapse)
   - [Storyboard-guided mushroom-city heist](#60-storyboard-guided-mushroom-city-heist)
   - [Cockpit-POV port-city flight](#61-cockpit-pov-port-city-flight)
+  - [Pencak Silat count-map one-take](#62-pencak-silat-count-map-one-take)
+  - [Mountain-bike cliff-to-flight transition](#63-mountain-bike-cliff-to-flight-transition)
+  - [Downhill skiing sports-documentary coverage](#64-downhill-skiing-sports-documentary-coverage)
+  - [1880s palace selfie vlog](#65-1880s-palace-selfie-vlog)
+  - [Raw iPhone airplane snack offer](#66-raw-iphone-airplane-snack-offer)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -2447,6 +2452,130 @@ Adapted from [妖精アーヤさん's original Seedance 2.0 first-person flight 
 
 ---
 
+### 62. Pencak Silat count-map one-take
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** reference choreography without rendering the guide · **Mode:** multi-reference-to-video · **Settings:** 15 seconds, 16:9, continuous non-contact martial-arts demonstration
+
+```text
+REFERENCE ROLES
+@Image1 controls the adult performer's face, red rolled-sleeve shirt, beige trousers and white shoes.
+@Image2 is a 16-panel Pencak Silat count map. Transfer only pose order, weight shifts and hand paths; never render its grid, captions, arrows, paper or illustration style.
+
+Create a 15-second photoreal studio demonstration in one uninterrupted medium-wide shot. The performer stays fully visible on a worn wooden floor against a neutral wall. Camera tracks laterally less than one metre, matching his centre without orbiting.
+
+[0–3s] Begin grounded: knees bent, left palm guarding. Step forward into an outward block, continue directly into an inside rising sweep.
+[3–6s] Rotate the hips into one straight punch; recover the fist before shifting sideways into a two-palm push.
+[6–9s] Chamber the right knee, extend one controlled front kick, retract along the same path and step back into crossed-arm cover.
+[9–12s] Drop into a low block, rise through a hook punch, then pivot once into a forward palm strike. Feet remain planted during the strike.
+[12–15s] Lower into one circular sweep without touching the floor, rise into a stable locking pose, then finish with hands together at the chest. Hold the salute for the last half-second.
+
+Soft diffused daylight, realistic breath, cloth drag, shoe friction and quiet exhalations; no music. Preserve stance width, left-right ownership, balance and uninterrupted momentum. No opponent, contact, cut, speed ramp, floating foot, swapped limbs, repeated move, guide marks, text or changing clothes.
+```
+
+**Why it works:** the pose sheet supplies action order but not visual style. Retraction and planted-foot instructions make each technique finish before the next begins, preventing blended limbs.
+
+Adapted from [Zaroon's original Seedance 2.0 Pencak Silat choreography post](https://x.com/Xaroon_x/status/2049493027031515174), published April 29, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=3879).
+
+---
+
+### 63. Mountain-bike cliff-to-flight transition
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** physics-led sports-to-flight escalation · **Mode:** text-to-video · **Settings:** 15 seconds, 16:9, photoreal action adventure
+
+```text
+Fifteen-second photoreal action sequence following three adult mountain bikers down a steep alpine grass trail. Bright midday sun, real suspension movement, protective helmets and consistent rider colours: lead rider red, second blue, third black.
+
+[0–4s] Low rear chase camera follows one bike-length behind. Tires compress over rocks, rear suspension rebounds once per impact and dirt sprays only after wheel contact. The red rider pulls ahead as the trail narrows.
+[4–7s] Side tracking close-up on the lead bike: two rigid carbon wings unfold from the frame in hinged stages and lock with two audible clicks. Compact thrusters ignite only after full lock; heat bends nearby grass.
+[7–10s] Return behind the group as all three reach the cliff. Wheels leave the ground in order — red, blue, black. Camera dives over the lip after them, revealing the valley below; their bodies absorb the weightless transition instead of freezing.
+[10–13s] Stabilized aerial follow. Bikes pitch gradually into glide attitude while wheels keep spinning; riders form a shallow V with safe separation.
+[13–15s] Wide side profile as they pass a cloud edge and level toward the sun. End with the red rider retracting elbows into a stable flying posture.
+
+Sound evolves from chains, tire impacts and helmet wind to mechanical locks, ignition pressure and broad airborne wind. Natural motion blur only at frame edges, correct wheel rotation and bike geometry. No collision, rider duplication, instant soft morph, wing before hinge opens, flame touching riders, random roll, changing valley or frozen debris.
+```
+
+**Why it works:** the transformation has a mechanical dependency — unfold, lock, ignite — and the riders cross the cliff edge sequentially. Visible suspension and wind consequences keep the fantasy grounded.
+
+Adapted from [ShaHid WaNii's original Seedance 2.0 mountain-bike flight post](https://x.com/meng_dagg695/status/2048684297465569616), published April 27, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=3780).
+
+---
+
+### 64. Downhill skiing sports-documentary coverage
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** multi-camera sports coverage with geography lock · **Mode:** text-to-video · **Settings:** 12 seconds, 16:9, photoreal documentary
+
+```text
+Twelve-second premium sports documentary of one adult professional skier descending a steep empty alpine face. Lock the same cobalt jacket, black helmet, white skis and continuous downhill route. Bright high-altitude daylight, crisp snow, natural sound only.
+
+[0–2s] Rear gimbal follow at waist height. The skier completes one left carve and one right carve; snow leaves the downhill ski after each edge bite.
+[2–4s] Cut to an extreme low rear three-quarter camera beside the skis. Show edge angle, knee compression and crystals striking past the lens while travel remains screen-left to screen-right.
+[4–6s] Parallel side tracking: the skier extends out of the turn, crosses the fall line and compresses into the next carve. Keep torso quiet and legs active.
+[6–8s] Low front three-quarter camera placed farther downhill. The skier approaches, cuts across frame without looking at camera and exits right.
+[8–10s] Overhead drone reveals the previous S-curves connecting cleanly to the current position; no unexplained tracks.
+[10–12s] Return to a tighter rear follow as the slope eases. The skier stands slightly taller, releases the final edge and glides into a stable finish path.
+
+Audio perspective matches distance: sharp edge scrape and breathing close, softer wind from the drone. Stable anatomy, correct pole ownership, continuous light and gravity. No crowd, logo, text, camera collision, duplicated skier, reversed slope, reset tracks, stretched body, impossible edge change or decorative slow motion.
+```
+
+**Why it works:** every cut inherits downhill direction and already-carved tracks, so multiple viewpoints still describe one run. The final posture change gives the action a readable completion.
+
+Adapted from [Zaroon's original Seedance 2.0 skiing-documentary post](https://x.com/Xaroon_x/status/2059939135196930468), published May 28, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=5383).
+
+---
+
+### 65. 1880s palace selfie vlog
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** anachronistic historical UGC with native dialogue · **Mode:** image-to-video · **Settings:** 15 seconds, 9:16, handheld creator short
+
+```text
+Use @Image1 as the identity and wardrobe reference for one fictional adult French noblewoman; preserve her face, blonde hair, pale-pink 1880s gown, crown and jewellery. Create a playful 15-second vertical selfie vlog inside a historically inspired royal palace. The phone-camera viewpoint is an intentional fantasy; everything else has photographed period realism.
+
+[0–4s] Front-facing handheld medium close-up as she walks from a sunlit bedroom toward a tall mirror. Exposure adapts to the window. She smiles into the lens and says, “Good morning — get ready with me at the palace.”
+[4–8s] Match her hand covering the lens into a dressing-room angle. Two adult attendants adjust one sleeve and fasten a necklace while she keeps holding the camera. She glances at the mirror and says, “These sleeves take forever.”
+[8–12s] Match on a pink rose to the palace garden. She walks beside a fountain, lifts the same rose into frame and says, “This is my quiet route before breakfast.”
+[12–15s] She turns the camera toward an adult rider arriving at the distant gate, then back to herself. She laughs, says, “He is late again,” and ends by lowering the camera while still walking.
+
+Warm natural sunlight, silk and marble texture, gentle phone shake, clipped footsteps, fountain water, fabric movement and clean lip sync. Keep crown, necklace, rose, palace light direction and her hand holding the camera consistent. No modern object visible, extra attendant, changing gown, duplicated jewellery, warped mirror, subtitle, logo or cinematic crane shot.
+```
+
+**Why it works:** lens-cover and rose match transitions move between locations while preserving the creator-video grammar. One wardrobe and three recurring props prevent the historical scene from resetting at each cut.
+
+Adapted from [Kelly Jones's original Seedance 2.0 1880s-princess vlog](https://x.com/kellyyjjones/status/2060601909342589082), published May 30, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=5494).
+
+---
+
+### 66. Raw iPhone airplane snack offer
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** phone-camera imperfections plus reactive dialogue · **Mode:** image-to-video · **Settings:** 10 seconds, 9:16, unedited handheld realism
+
+```text
+Use @Image1 only for the adult window-seat traveller's identity and casual outfit. Ten-second raw rear-iPhone recording in an economy cabin, shot by the adult companion in the aisle seat. Automatic exposure, autofocus and white balance; no grade, music or beauty filter.
+
+[0–2s] Begin on the shared tray table: sealed snack pouch, iced coffee and phone remain fixed. Camera tilts naturally to the traveller as she lowers her phone and opens the pouch.
+[2–4s] Autofocus searches briefly between the pouch and her face, then locks. She notices the camera, pauses with one snack in hand and looks directly into the lens.
+[4–6s] Hold a slightly imperfect medium close-up. She raises the snack and asks quietly, “Want one?” Keep her mouth unobstructed and cabin noise below the line.
+[6–8s] The camera makes one small left-right refusal gesture. She reads it, nods once, smiles and takes the snack herself.
+[8–10s] She places the pouch back in its original tray position, turns toward the window and watches sunlight move across the wing. End as exposure adjusts from cabin shade to the bright window.
+
+Authentic engine hum, faint adult passenger chatter, seat fabric and pouch crinkle. Preserve seat row, tray objects, hand ownership and eyeline. No foot-focused framing, extra hand, changing cup, spilled drink, repeated dialogue, false stabilization, rack-focus effect, subtitle, logo or abrupt cinematic move.
+```
+
+**Why it works:** the camera's refusal becomes a visible performance cue, so the dialogue has a reaction instead of floating independently. Controlled autofocus and exposure errors create phone realism without sacrificing the face.
+
+Adapted from [John's original Seedance 2.0 iPhone-cabin post](https://x.com/john87445528/status/2060530376448123287), published May 30, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=5503).
+
+---
+
 ## Reusable templates
 
 ### Single-shot template
@@ -2828,6 +2957,57 @@ Adapted from [@johnAGI168's complete Seedance 2.0 popcorn-machine prompt](https:
 which uses expanding smoke to conceal the state change before revealing a
 full-size character.
 
+### Ordered phase-change transformation template
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+Use this when a character, creature or product must be visibly built in several materially distinct phases. Give every phase one irreversible endpoint; do not ask all layers to appear at once.
+
+```text
+REFERENCE ROLES
+@Image1 controls the final [IDENTITY / PRODUCT GEOMETRY].
+@Image2 controls the final [WARDROBE / SURFACE FINISH], if provided.
+References define the completed state only; do not copy their background or pose.
+
+[DURATION], [ASPECT RATIO], transformation on one fixed platform in [LOCATION].
+Keep [CAMERA A] locked until the identity phase; use only one [SLOW PUSH / CUT]
+for the final reveal.
+
+PHASE 1 — SOURCE MATERIAL [0–20%]
+[LIQUID / PARTICLES / FOLDED PARTS / RAW MATERIAL] gathers toward [ANCHOR POINT].
+Show one force and its consequence: [MAGNETIC PULL → RIPPLES / GRAVITY → PILE /
+HINGE FORCE → PANEL ROTATION]. End with all material collected.
+
+PHASE 2 — LOAD-BEARING STRUCTURE [20–45%]
+Assemble in named order: [CORE], then [JOINTS], then [LIMBS / OUTER FRAME].
+Every component aligns, locks and stops before the next begins. End on a complete
+rigid silhouette that already matches @Image1 proportions.
+
+PHASE 3 — SURFACE AND IDENTITY [45–70%]
+Cover the structure from [START POINT] toward [END POINT]. Material gains
+[TEXTURE / SKIN / PAINT / LABEL] only behind the moving boundary. Reveal the
+identity-critical features last and preserve them from this frame onward.
+
+PHASE 4 — WARDROBE OR FINISH [70–85%]
+Attach [CLOTHING / ARMOUR / CAP / PRODUCT PARTS] as separate physical pieces;
+do not grow them from the body. End when all seams, fasteners and labels stop.
+
+PHASE 5 — PROOF OF COMPLETION [85–100%]
+The finished subject performs one small test: [FLEX FINGERS / TURN HEAD /
+MECHANICAL CLICK / TAKE ONE STEP], then [FINAL GESTURE OR SHORT DIALOGUE].
+Hold the unchanged final state for [0.5–1 SECOND].
+
+Audio assigns one material family to each phase and leaves room for the final
+gesture. Preserve platform, scale, centre point, identity and final geometry.
+No simultaneous phases, regression, soft-body melting after lock, duplicate
+parts, hidden jump, camera orbit during assembly, clothing fused to skin,
+changing face, unstable label or repeated transformation.
+```
+
+**Why it works:** a strict dependency graph — material, structure, surface, finish, proof — stops later features from appearing before they have physical support. The final test demonstrates continuity rather than triggering another transformation.
+
+Adapted from [KANA's original Seedance 2.0 liquid-metal character assembly framework](https://x.com/KanaWorks_AI/status/2026198620861849621), published February 24, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=619).
+
 ### Native-audio template
 
 ```text
@@ -2927,6 +3107,12 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 Community examples and techniques referenced in this README:
 
+- [Zaroon — Seedance 2.0 Pencak Silat count-map choreography](https://x.com/Xaroon_x/status/2049493027031515174)
+- [ShaHid WaNii — Seedance 2.0 mountain-bike cliff-to-flight transition](https://x.com/meng_dagg695/status/2048684297465569616)
+- [Zaroon — Seedance 2.0 downhill skiing sports documentary](https://x.com/Xaroon_x/status/2059939135196930468)
+- [Kelly Jones — Seedance 2.0 1880s palace selfie vlog](https://x.com/kellyyjjones/status/2060601909342589082)
+- [John — Seedance 2.0 raw iPhone airplane snack offer](https://x.com/john87445528/status/2060530376448123287)
+- [KANA — Seedance 2.0 ordered phase-change transformation](https://x.com/KanaWorks_AI/status/2026198620861849621)
 - [Changning Liu — Seedance 2.0 first-person kitchen dialogue](https://x.com/ChangningL29508/status/2038387739503337723)
 - [Changning Liu — Seedance 2.0 ground-to-sky night-market one-take](https://x.com/ChangningL29508/status/2038291358965022974)
 - [Nexora — Seedance 2.0 poster-breach subway horror](https://x.com/frametheory058/status/2037752421074846042)
