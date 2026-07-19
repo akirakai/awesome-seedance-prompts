@@ -54,6 +54,11 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Locked-off ravine dragon reveal](#38-locked-off-ravine-dragon-reveal)
   - [Audience-phone kinetic top championship](#39-audience-phone-kinetic-top-championship)
   - [Astronaut amusement-park mystery](#40-astronaut-amusement-park-mystery)
+  - [Piano-keyhole FPV one-take](#41-piano-keyhole-fpv-one-take)
+  - [Cutless festival selfie reveal](#42-cutless-festival-selfie-reveal)
+  - [Silent anger-meter anime gag](#43-silent-anger-meter-anime-gag)
+  - [Ruined jungle-lab mantis escape](#44-ruined-jungle-lab-mantis-escape)
+  - [Shockwave-motivated orbital-station collapse](#45-shockwave-motivated-orbital-station-collapse)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -1911,6 +1916,123 @@ Adapted from [LudovicCreator's original Seedance 2.0 astronaut post](https://x.c
 
 ---
 
+### 41. Piano-keyhole FPV one-take
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** scale-changing cinematic one-take · **Mode:** text-to-video · **Settings:** 15 seconds, 16:9, photoreal virtual FPV
+
+```text
+Create one uninterrupted 15-second photorealistic FPV shot around an adult pianist performing on a black grand piano at a windy cliff overlook above a sea of clouds.
+
+[0–4s] Begin below the cliff edge and bank upward through moving cloud wisps. Reveal the pianist from behind and sweep toward the keyboard; keep the horizon, piano position, performer identity, dress, and warm late-afternoon light stable.
+[4–7s] Accelerate beside her moving hands, then align precisely with the open piano lid. Her playing, hair, fabric, and nearby grass all respond to the same gust direction.
+[7–10s] Pass through the real gap between felt hammers and copper-wound strings. Ramp to 40% speed only inside the instrument. Show each hammer striking its matching string, dust vibrating from resonance, and shallow macro focus traveling with the camera.
+[10–13s] Exit through the far side of the piano, return smoothly to normal speed, skim past the pianist's shoulder, and rise behind her.
+[13–15s] Settle into a wide reveal of the complete cliff, piano, performer, and cloud sea. End with the final chord, her hands lifting, and the camera coming to rest together.
+
+35 mm film texture, realistic optical flare, motivated depth-of-field changes, continuous spatial direction and light. Audio follows distance: wind outside, louder mechanical key and hammer detail inside, full piano tone after exit. No cuts, teleportation, piano deformation, fake extra keys, hand drift, changing weather, random particles, or speed ramp outside the instrument.
+```
+
+**Why it works:** The piano interior acts as a physical scale gate. The lens, speed, focus, and audio all change at the same threshold, making an otherwise impossible move read as one designed camera path rather than unrelated spectacle.
+
+Adapted from [Muse's original Seedance 2.0 cliff-pianist post](https://x.com/projectmuse_ai/status/2077857114618564849), published July 16, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7353).
+
+---
+
+### 42. Cutless festival selfie reveal
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** native-audio UGC with a face-to-environment reveal · **Mode:** reference-to-video · **Settings:** 8 seconds, 9:16, front-camera realism
+
+```text
+Use @Image1 only for the adult woman's face, hair, festival coat, and headband. Create an 8-second continuous front-camera selfie at a crowded summer street festival just after sunset.
+
+[0–2s] Arm's-length chest-up framing. She walks with the procession, looks directly into the lens, laughs once, then says “わっしょい、わっしょい！” in time with the surrounding chant. Keep real-time speed and her mouth fully visible for accurate Japanese lip-sync.
+[2–5s] Without cutting, she extends and tilts the phone down and outward to reveal the decorated portable shrine beside her, moving carriers, food stalls, and red paper lanterns. Use one fast but physically handheld arc; motion blur appears only during the swing. The chant grows louder as the crowd enters frame.
+[5–8s] Arc the same phone back to her face. She catches her breath, raises one fist on the final chant, and ends with a natural smile while the procession continues behind her.
+
+Authentic phone exposure, slight rolling shutter, modest autofocus correction, warm practical lantern light, real crowd spacing and perspiration. Preserve her identity, clothes, procession direction, lantern placement, and phone-arm geometry. No cut, third-person camera, beauty filter, floating shrine, lip movement during silence, slow motion on dialogue, repeated crowd faces, or artificial commercial polish.
+```
+
+**Why it works:** A single arm movement supplies both transition and geography. Dialogue is isolated at real-time speed, while camera blur, crowd volume, and framing change together during the outward reveal.
+
+Adapted from [Northimage's original Seedance 2.0 festival-vlog post](https://x.com/NorthImage/status/2078070232137297951), published July 17, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7439).
+
+---
+
+### 43. Silent anger-meter anime gag
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** readable anime comedy built around one escalating visual rule · **Mode:** text-to-video · **Settings:** 15 seconds, 16:9, hand-drawn 2D anime
+
+```text
+Create a 15-second hand-drawn 2D anime comedy in an after-hours office. One calm adult employee listens while an overly talkative colleague explains a trivial mistake. A semicircular stress gauge floats above the listener; it has colored zones and a needle but no written text.
+
+[0–3s] Medium two-shot. Each new excuse makes the needle jump one segment. The listener maintains a polite smile; only one eyebrow and one finger twitch.
+[3–6s] Alternating close-ups. The colleague keeps talking off-screen. Warning light and soft beep accelerate while the listener's smile stays fixed and a single sweat drop appears.
+[6–9s] Extreme close-up on the gauge. The needle reaches red, pauses, then rotates one complete extra turn. Hairline cracks spread across the glass in sync with three tiny clicks.
+[9–12s] Wide frame. The gauge pops apart with a small burst of sparks; its parts fall like harmless confetti. The listener does not explode or shout — they blink once in total silence.
+[12–15s] A fresh, larger gauge appears with an absurdly extended scale. The listener looks at it, then calmly resumes taking notes as the colleague continues. End on the needle immediately jumping to halfway.
+
+Consistent character design, office layout, line weight, cel shading, and gauge position. Let shot size escalate while the protagonist's performance becomes quieter. Office ambience and gauge Foley only; no music, subtitles, watermarks, photoreal elements, random symbols, character morphing, or uncontrolled explosion.
+```
+
+**Why it works:** Comedy comes from opposing curves: the graphic device grows louder and more extreme while the character becomes stiller. Removing written UI makes the visual rule portable across languages and reduces text-rendering failure.
+
+Adapted from [妖精アーヤさん's original Seedance 2.0 anger-meter post](https://x.com/aiehon_aya/status/2078238320564597018), published July 17, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7436).
+
+---
+
+### 44. Ruined jungle-lab mantis escape
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** photoreal creature thriller with three causal action beats · **Mode:** image-to-video · **Settings:** 15 seconds, 2.39:1, 24fps
+
+```text
+Use @Image1 only for the adult field scientist's identity, hair, khaki clothing, safety glasses, and utility belt. Use @Image2 only for the geography of an overgrown ruined laboratory: observation window at rear, two steel benches at center, exit door frame-right, specimen tanks along the left wall.
+
+A four-meter praying mantis has green-brown segmented chitin, black compound eyes, twitching antennae, and two heavy spiked forearms. Preserve its anatomy and scale.
+
+[0–5s] Slow 35 mm push behind the scientist as her flashlight searches the lab. Rack focus past her shoulder: the mantis unfolds beside the rear window, rising behind a bench. Its joints click before she turns.
+[5–10s] Low side angle. One forearm strikes the bench; she dives beneath it only after seeing the wind-up. Steel bends and glass jumps from the impact. During recovery she slides a loose tray across the floor, drawing the creature's gaze left.
+[10–15s] Track with her sprint toward the right-side exit. A sparking cable already hanging beside the door touches the wet floor after she pulls it down; the arc blocks the mantis's path without injuring the scientist. She escapes and slams the door as its silhouette hits the frosted glass once.
+
+Cold flickering fluorescent base light, humid green window spill, warm electrical sparks, practical haze, restrained 1980s creature-feature grade. Audio: drips, fluorescent buzz, insect clicks, metal impact, shoes, breathing, electrical crackle, door slam. Preserve geography, identity, prop locations, creature size, eyelines, and cause-before-reaction timing. No teleporting cable, extra limbs, goo, gore, random fire, chaotic shake, strobing motion, or glossy CGI creature.
+```
+
+**Why it works:** Every escape beat uses a previously established object and readable geography. The creature winds up before impact, the distraction precedes its gaze shift, and the cable exists beside the destination before it becomes the final barrier.
+
+Adapted from [Ciri's original Seedance 2.0 jungle-lab post](https://x.com/Ciri_ai/status/2077984010706518120), published July 17, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7405).
+
+---
+
+### 45. Shockwave-motivated orbital-station collapse
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** large-scale sci-fi destruction with camera handoff · **Mode:** reference-to-video · **Settings:** 15 seconds, 16:9, one continuous shot
+
+```text
+Use @Image1 for the battered six-wheel exploration hauler and masked adult rider; use @Image2 for the colossal ring-shaped orbital station. Preserve both designs. Create one unbroken 15-second photorealistic shot on an alien plain filled with giant bioluminescent fungi at violet twilight.
+
+[0–5s] Medium-wide lateral tracking beside the hauler as it moves left-to-right through a clear path. Tires compress wet soil and release glowing spores. Far behind it, the station enters atmosphere at a shallow angle, trailing plasma and dark smoke. Keep both subjects readable at different depths.
+[5–9s] The camera gradually lets the hauler exit frame-right and tilts up along the same motion line to inherit the station. One internal power core ruptures. Show structural flex and blue electrical arcs before the outer ring begins to split.
+[9–12s] The visible pressure wave crosses distant mushroom caps first, then reaches the camera. Only at contact add one heavy shake, exposure pulse, bent stalks, rider clothing snap, and a delayed low-frequency impact.
+[12–15s] Continue into a stable telephoto push on the broken ring. Large beams twist at real joints; smaller debris separates according to momentum and burns only after meeting denser air. End before any fragment reaches camera.
+
+Deep indigo environment, green and cyan fungal practicals, orange plasma as the small accent, 180-degree-shutter motion blur, atmospheric depth. Preserve station scale, descent direction, truck route, light sources, and debris hierarchy. No cuts, random camera shake, weightless wreckage, duplicated station, instant explosion, debris changing direction, game-engine gloss, or object collision with the lens.
+```
+
+**Why it works:** The foreground vehicle gives the shot motion and scale before the camera hands attention to the station. Effects arrive in physical order — failure, deformation, debris, distant wave, camera contact — so spectacle remains causal.
+
+Adapted from [Strength04_X's original Seedance 2.0 station-crash post](https://x.com/Strength04_X/status/2077970673960657129), published July 17, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7393).
+
+---
+
 ## Reusable templates
 
 ### Single-shot template
@@ -2048,6 +2170,38 @@ No identity swaps, merged bodies, duplicate people, shared limbs, costume transf
 **Why it works:** Reference ownership prevents one image from contaminating unrelated layers. The identity, spatial, and beat maps turn a crowded scene into explicit role assignments, while the priority order tells the model which details must survive if complexity rises.
 
 Adapted into a safe adult ensemble structure from [TSUBAKI's original Seedance 2.0 multi-character choreography post](https://x.com/AI__TSUBAKI/status/2078057124350005603), published July 17, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7417).
+
+### Episode handoff and state-carry template
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+Use this when a new clip must begin exactly where an accepted episode or shot ended. Treat the last usable frame as a binding state rather than restaging a summary, then carry unresolved emotion, prop ownership, screen direction, and audio into the first new action.
+
+```text
+Continue directly from @Video1. Generate [DURATION], [ASPECT RATIO], [STYLE].
+
+HANDOFF FRAME
+Use the final accepted frame of @Video1 as the exact opening composition. Begin with the same camera height, lens feel, subject scale, focus plane, lighting direction, time of day, weather, location geometry, and left-to-right arrangement. Do not replay or summarize the previous action.
+
+STATE LEDGER AT CUT
+CHARACTER A: [IDENTITY / WARDROBE], at [POSITION], facing [DIRECTION], holding [PROP] in [HAND], breathing [STATE], emotion [UNRESOLVED EMOTION].
+CHARACTER B: [IDENTITY / WARDROBE], at [POSITION], facing [DIRECTION], owns [PROP / LINE / ACTION].
+ENVIRONMENT: [OPEN DOOR / DAMAGED OBJECT / MOVING VEHICLE / LIGHT STATE] remains exactly as left.
+AUDIO TAIL: carry [LAST SOUND / REVERB / MUSIC NOTE] for [DURATION], then motivate the new sound.
+
+[0–Xs] Hold the inherited frame for [0.2–0.8s]. Resume the unfinished motion from its current velocity; no reset pose. CHARACTER A completes [RECOVERY / LOOK / BREATH] before beginning anything new.
+[X–Ys] New beat: [EVENT] occurs within the established geography. Camera [ONE MOVE] while preserving screen direction and eyelines.
+[Y–End] Escalate through [CAUSE → REACTION → DECISION]. End on one new unresolved state: [VISUAL HOOK], with its prop ownership and final positions clearly specified for the next continuation.
+
+CONTINUITY PRIORITY
+1. Face and body identity. 2. Wardrobe and prop ownership. 3. Final pose, velocity, and eyeline. 4. Geography and screen direction. 5. Light and grade. 6. Dialogue and audio tail.
+
+No recap montage, opening reframe, pose reset, reversed travel direction, prop teleportation, healed damage, wardrobe change, emotional reset, duplicated character, repeated dialogue, audio discontinuity, or end card unless explicitly requested.
+```
+
+**Why it works:** The handoff is defined as state plus velocity, not just a similar-looking frame. A written ledger makes invisible continuity — ownership, emotion, motion and sound decay — as enforceable as identity, while the final hook prepares the following generation.
+
+Adapted from [Shami's original Seedance 2.0 serialized sports-thriller prompt](https://x.com/ShamiWeb3/status/2077989765753033115), published July 17, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7420).
 
 ### Gaze–light–action continuation template
 
@@ -2322,6 +2476,12 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 Community examples and techniques referenced in this README:
 
+- [Muse — Seedance 2.0 piano-keyhole FPV one-take](https://x.com/projectmuse_ai/status/2077857114618564849)
+- [Northimage — Seedance 2.0 cutless festival selfie](https://x.com/NorthImage/status/2078070232137297951)
+- [妖精アーヤさん — Seedance 2.0 silent anger-meter anime gag](https://x.com/aiehon_aya/status/2078238320564597018)
+- [Ciri — Seedance 2.0 ruined jungle-lab mantis escape](https://x.com/Ciri_ai/status/2077984010706518120)
+- [Strength04_X — Seedance 2.0 orbital-station collapse](https://x.com/Strength04_X/status/2077970673960657129)
+- [Shami — Seedance 2.0 episode handoff and state carry](https://x.com/ShamiWeb3/status/2077989765753033115)
 - [simeon-sanai — Seedance 2.0 POV product texture proof](https://x.com/Naiknelofar788/status/2077738468898431380)
 - [Smiling Khan — Seedance 2.0 market-to-kitchen continuity](https://x.com/AIwithkhan/status/2077777335693279482)
 - [Yunan Helmy A — Seedance 2.0 locked-off dragon reveal](https://x.com/unxinstudio/status/2077745227935461881)
