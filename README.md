@@ -59,6 +59,11 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Silent anger-meter anime gag](#43-silent-anger-meter-anime-gag)
   - [Ruined jungle-lab mantis escape](#44-ruined-jungle-lab-mantis-escape)
   - [Shockwave-motivated orbital-station collapse](#45-shockwave-motivated-orbital-station-collapse)
+  - [Pocket-cam late-night tea diary](#46-pocket-cam-late-night-tea-diary)
+  - [Heat-versus-cold floating-bottle magic](#47-heat-versus-cold-floating-bottle-magic)
+  - [Single-room four-look wardrobe challenge](#48-single-room-four-look-wardrobe-challenge)
+  - [Ink-drop erase-and-redraw landscape](#49-ink-drop-erase-and-redraw-landscape)
+  - [Cloud-edge sequential flight formation](#50-cloud-edge-sequential-flight-formation)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -2033,6 +2038,132 @@ Adapted from [Strength04_X's original Seedance 2.0 station-crash post](https://x
 
 ---
 
+### 46. Pocket-cam late-night tea diary
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** deliberately unpolished lifestyle UGC · **Mode:** text-to-video · **Settings:** 15 seconds, 9:16, consumer pocket camera
+
+```text
+Create a 15-second intimate late-night diary filmed by the same adult woman on a small consumer pocket camera inside her modest apartment. She wears an oversized charcoal sweatshirt, loose lounge trousers, loosely tied hair, and no styled makeup. Preserve her identity and clothes.
+
+[0–3s] Handheld selfie as she walks from a dim living room into the warm kitchen. The camera adjusts exposure after crossing the doorway. She says quietly, “Still awake. Tea might help.” Her gaze drifts naturally between lens and kettle.
+[3–7s] She places the camera on the counter; keep this new low fixed viewpoint. In one continuous action she adds loose leaves to a mug and pours hot water. Steam briefly softens autofocus, which corrects only after the mug is set down.
+[7–11s] Handheld again as she carries the mug to the sofa. Small step-synchronized bounce, real one-handed framing, rain visible at the window. Ceramic, fabric, footsteps, and rain remain louder than room tone.
+[11–15s] Set the camera on the coffee table. She sits cross-legged, wraps both hands around the mug, opens a book, then looks toward the rain instead of performing to camera. End when she reaches forward and gently lowers the lens toward the cushion.
+
+Consumer-camera color, slight dark-area noise, modest rolling shutter, occasional breathing focus, practical lamp light only. Keep steam direction, mug, book, room layout, camera ownership, and hand continuity. No beauty filter, cinema lighting, perfect gimbal, commercial posing, wardrobe change, duplicated mug, impossible steam, dialogue while her mouth is hidden, or music.
+```
+
+**Why it works:** The prompt treats camera imperfections as event-driven behavior: exposure shifts at the doorway, focus softens behind steam, and shake follows footsteps. Three explicit camera placements also prevent the “self-filmed” viewpoint from becoming an unexplained third-person shot.
+
+Adapted from [Jack's original Seedance 2.0 late-night diary post](https://x.com/j_smeaton99/status/2077756976852070535), published July 16, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7332).
+
+---
+
+### 47. Heat-versus-cold floating-bottle magic
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** grounded magical product reveal with practical-light logic · **Mode:** text-to-video · **Settings:** 12 seconds, 16:9, photoreal live action
+
+```text
+Create a 12-second photorealistic magical encounter on an empty city street at harsh midday. An exhausted adult pedestrian walks toward camera-right through visible heat shimmer. Six meters ahead, one unbranded aluminum drink bottle floats at chest height.
+
+[0–3s] Hip-height handheld follow from behind. The pedestrian slows after noticing the object. Arc 60 degrees into a low medium profile while keeping both person and bottle in frame.
+[3–6s] Push past the near shoulder toward the bottle. It rotates slowly around its vertical axis, covered in real condensation and a thin curl of cold mist. Its restrained white glow creates a small cool reflection on nearby asphalt; hot sunlight remains the dominant light.
+[6–9s] The pedestrian approaches and raises an open hand. The bottle stops rotating before descending. Keep the gap, eyeline, hand position, and bottle scale measurable throughout.
+[9–12s] The bottle makes one weighted metallic contact with the palm. At contact, the glow and hum stop together; condensation remains and a droplet runs over the fingers. Tilt to the pedestrian's relieved reaction, then rack focus back to the ordinary bottle.
+
+Natural anamorphic flare, fine grain, real street haze, restrained handheld weight. Audio only: distant traffic, wind, footsteps, breathing, quiet harmonic hum, mist hiss, soft descent whoosh, metal-to-skin tap, then ordinary ambience. No brand text, music, extra bottle, invisible hand, teleportation, changing rotation direction, neon beam, CGI gloss, frozen fingers, or glow after contact.
+```
+
+**Why it works:** Warm environmental light and cool object light remain separate, giving the magic a physical footprint. The bottle follows a four-state ledger — drift, stop, descend, ordinary contact — with sound and light ending on the same event.
+
+Adapted from [Marco's original Seedance 2.0 floating-bottle post](https://x.com/maarcoofdezz/status/2078162454744346803), published July 17, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7384).
+
+---
+
+### 48. Single-room four-look wardrobe challenge
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** reference-locked fashion transformations for short-form video · **Mode:** image-to-video · **Settings:** 15 seconds, 9:16, phone vlog
+
+```text
+Use @Image1 only for the adult performer's face, body proportions, hair, and original outfit. Use @Image2 only for the dressing-room layout, mirror, vanity bulbs, door, and daylight direction. Create a playful 15-second phone-vlog wardrobe challenge in this one unchanged room.
+
+LOOK LEDGER
+ORIGINAL: @Image1 outfit.
+LOOK A: pastel knit, pleated trousers, small silver earrings.
+LOOK B: black tailored jacket, white shirt, narrow tie.
+LOOK C: long ivory evening dress, hair still identical to @Image1.
+LOOK D: oversized patterned robe and comically large sunglasses.
+Only clothing, earrings, tie, and sunglasses may change. Face, hair, body, room, phone, and lighting never change.
+
+[0–3s] Original look, handheld mirror selfie. She says, “Four looks, one minute,” then covers the lens fully with her palm.
+[3–6s] Reveal LOOK A in the identical pose and framing. One finger-heart, then a full lens cover with the sleeve.
+[6–9s] Reveal LOOK B. She turns one shoulder and adjusts only the tie; a fast whip-pan ends on the unchanged vanity mirror.
+[9–12s] The returning whip-pan reveals LOOK C. She makes one slow half-turn; the dress hem passes across the lens as a complete wipe.
+[12–15s] Reveal LOOK D, exaggerates one runway pose, laughs, then snaps back to ORIGINAL on a final full-frame hand cover. End on the same opening pose for a clean loop.
+
+Real phone autofocus and exposure, natural fabric weight, readable mirror reflections, no beauty filter. Preserve transformation order and require 100% frame coverage at every change. No partial morph, blended garments, face or hairstyle change, new furniture, reflection mismatch, extra fingers, floating accessories, background reset, or camera teleport.
+```
+
+**Why it works:** Each transformation is hidden by an object already owned by the performer, while a closed wardrobe ledger limits what is allowed to change. Matching the first and last pose also turns the sequence into a reusable loop.
+
+Adapted from [Sania's original Seedance 2.0 style-swap post](https://x.com/saniaspeaks_/status/2078101726221959402), published July 17, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7386).
+
+---
+
+### 49. Ink-drop erase-and-redraw landscape
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** material-driven 2D landscape transformation · **Mode:** text-to-video · **Settings:** 15 seconds, 16:9, ink wash and watercolor
+
+```text
+Create a 15-second cinematic animation on visible off-white xuan paper. The same mountain-lake composition passes through three material states without changing geography: colored landscape, blank paper, then ink-and-watercolor reconstruction.
+
+GEOGRAPHY LOCK: two tall karst peaks left, lower ridge right, circular lake center, small pavilion on the inner shore, waterfall descending from the left peak. Preserve these positions in every state.
+
+[0–3s] Begin with the complete colored landscape. Mist drifts through reserved white space; waterfall and lake move subtly while the virtual camera performs a very slow pull-back.
+[3–6s] One black ink drop lands at the center of the lake. Capillary branches spread through paper fibers until black ink covers the full frame. The liquid then recedes outward, leaving clean damp paper — use the full-frame ink as the only transition.
+[6–11s] Rebuild in causal brush order: mountain contours first, rock texture strokes second, pavilion and trees third, waterfall and lake last. Every stroke grows from a visible wet brush tip; ink edges feather naturally into paper.
+[11–15s] Muted mineral watercolor blooms inside the dry ink boundaries: blue-green mountains, pale ochre pavilion, restrained cinnabar blossoms. Mist returns and the pull-back completes on the same original composition, now visibly hand-painted.
+
+Traditional brush rhythm, real capillary diffusion, layered transparency, paper grain and restrained pigment. Sound: distant water and wind, ink drop, wet brush drag, paper absorption; no dialogue or music. No 3D objects, glossy digital paint, random new mountains, changing lake shape, hard cut, backward-growing stroke, text, seals, or over-saturated neon color.
+```
+
+**Why it works:** A geography lock separates composition from material, while the rebuild follows the actual dependency order of a painting. The full-frame ink phase hides the reset without abandoning the same landscape.
+
+Adapted from [NoorAI's original Seedance 2.0 Shan Shui post](https://x.com/noorwithwifi/status/2077866128328831423), published July 16, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7324).
+
+---
+
+### 50. Cloud-edge sequential flight formation
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** surreal fashion choreography with ordered group motion · **Mode:** text-to-video · **Settings:** 15 seconds, 2.39:1, photoreal one-take
+
+```text
+Create one continuous 15-second photorealistic fashion-film shot above a bright cloud sea. Six distinct adult performers stand single-file on one broad cloud platform, facing frame-right. Assign each a fixed silhouette and color: white long coat, brown suit, cream dress, red jacket, charcoal tunic, pale-blue cape. Preserve order and identity.
+
+[0–4s] Wide lateral track parallel to the line. Establish every full body, the platform edge, and deep blue sky. Clothing moves in one consistent crosswind; feet compress the cloud surface slightly without sinking.
+[4–9s] The lead performer takes two steps and dives from the edge. After a precise half-second interval, each remaining performer follows from front to back. Do not launch anyone early. The camera continues sideways so every takeoff point remains visible.
+[9–12s] Bank over the edge and descend beside them. Each fall converts into forward flight only after the body becomes horizontal; fabric and vapor trails bend according to speed. Maintain the original front-to-back order.
+[12–15s] Arc into a frontal wide as the six form a shallow V, the original leader at its point. They pass through one thin cloud layer and re-emerge in the same formation. End with the camera matching their speed, not pulling away.
+
+Natural daylight, realistic skin and fabric, atmospheric depth, restrained editorial color, coherent wind and gravity. Audio: high wind, sequential footfalls and cloth snaps, then a fuller air rush in flight. No cuts, superhero costume, duplicate person, order swap, simultaneous jump, standing flight pose, weightless fabric, solid-cloud debris, random camera roll, or vanishing performer.
+```
+
+**Why it works:** The group is controlled through color, line order and a measurable launch interval. Flight begins only after a readable fall-to-horizontal conversion, so the impossible action retains momentum and causal body mechanics.
+
+Adapted from [NoorAI's original Seedance 2.0 cloud-flight post](https://x.com/noorwithwifi/status/2077739174812357115), published July 16, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7315).
+
+---
+
 ## Reusable templates
 
 ### Single-shot template
@@ -2476,6 +2607,11 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 Community examples and techniques referenced in this README:
 
+- [Jack — Seedance 2.0 pocket-cam late-night tea diary](https://x.com/j_smeaton99/status/2077756976852070535)
+- [Marco — Seedance 2.0 heat-versus-cold floating-bottle magic](https://x.com/maarcoofdezz/status/2078162454744346803)
+- [Sania — Seedance 2.0 single-room wardrobe challenge](https://x.com/saniaspeaks_/status/2078101726221959402)
+- [NoorAI — Seedance 2.0 ink-drop Shan Shui reconstruction](https://x.com/noorwithwifi/status/2077866128328831423)
+- [NoorAI — Seedance 2.0 sequential cloud-flight formation](https://x.com/noorwithwifi/status/2077739174812357115)
 - [Muse — Seedance 2.0 piano-keyhole FPV one-take](https://x.com/projectmuse_ai/status/2077857114618564849)
 - [Northimage — Seedance 2.0 cutless festival selfie](https://x.com/NorthImage/status/2078070232137297951)
 - [妖精アーヤさん — Seedance 2.0 silent anger-meter anime gag](https://x.com/aiehon_aya/status/2078238320564597018)
