@@ -22,6 +22,14 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Mechanical bloom](#11-mechanical-bloom--one-take-macro)
   - [Paper-camera screen transformation](#12-paper-camera-screen-transformation)
   - [Layered-reference launch sequence](#13-layered-reference-launch-sequence)
+  - [Liquid-porcelain couture transformation](#14-liquid-porcelain-couture-transformation)
+  - [Harvest-to-table sensory ASMR](#15-harvest-to-table-sensory-asmr)
+  - [Beat-locked street rap MV](#16-beat-locked-street-rap-mv)
+  - [Calm-anchor flood reveal](#17-calm-anchor-flood-reveal)
+  - [Micro-expression performance score](#18-micro-expression-performance-score)
+  - [Effect-only reference injection](#19-effect-only-reference-injection)
+  - [Parametric multilingual FPV descent](#20-parametric-multilingual-fpv-descent)
+  - [Rock-color origin-story commercial](#21-rock-color-origin-story-commercial)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -580,6 +588,409 @@ Adapted from [Kuma to kuma's original complete Seedance 2.0 prompt and result](h
 published July 18, 2026. The model attribution, publication date, and
 original-source mapping are also preserved in the [traceable YouMind entry](https://youmind.com/zh-CN/video-prompts/robot-anime-launch-sequence-cinematic-7441).
 
+
+### 14. Liquid-porcelain couture transformation
+
+**Verified model:** Seedance 2.0 — confirmed by the public Seedance 2.0
+prompt-gallery metadata and its mapping to the original creator post
+
+**Use case:** fashion films, material transformations, fantasy branding  
+**Mode:** text-to-video or image-to-video  
+**Suggested settings:** 15s, 9:16, 24fps
+
+```text
+15-second surreal couture film. Keep one adult model, one blue-and-white
+liquid-porcelain gown, and one shallow mirror plain beneath a bright clouded
+sky consistent through all three shots.
+
+Shot 1 (0–5s): Low-angle medium-long tracking shot as the model walks toward
+camera. The gown behaves like heavy flexible porcelain: blue glaze patterns
+flow slowly across the white surface, the hem displaces a thin layer of water,
+and each step produces a restrained ceramic chime. End with the model stopped
+and centered.
+
+Shot 2 (5–10s): Cut to a stable chest-up portrait. The model raises one hand
+and snaps once. Starting at the lower hem, the gown separates into hundreds
+of small ink-painted swallows carrying droplets and blue pigment. The flock
+spirals upward around the unchanged body without covering the face, then exits
+toward the mirrored ground behind the model.
+
+Shot 3 (10–15s): Overhead shot descending in one slow spiral. The swallows
+strike their reflections and dissolve into liquid ink; concentric blue-black
+rings spread across the mirror, then pull the model's reflection and the cloud
+reflection into one deep vortex. The real model remains intact at the edge of
+the final frame while the vortex settles.
+
+Use fibrous ink edges, glazed ceramic highlights, real fluid weight, restrained
+wind, and one consistent sun direction. Sound: footsteps in shallow water,
+small ceramic resonance, one dry finger snap, wings, droplets, then a low liquid
+pull. Preserve face, hair, body proportions, and garment palette. No second
+model, body transformation, random costume change, weightless fragments,
+material change before the snap, or full-frame ink covering the final image.
+```
+
+**Why it works:** every change has a visible trigger and a material consequence.
+The same blue pigment travels from gown to birds to water, so three large visual
+states still read as one causal transformation.
+
+Adapted from [@johnAGI168's original prompt and result](https://x.com/johnAGI168/status/2025849650654122348),
+published February 23, 2026. The Seedance 2.0 attribution and complete
+source mapping are preserved in the [traceable gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=594).
+
+
+### 15. Harvest-to-table sensory ASMR
+
+**Verified model:** Seedance 2.0 — confirmed by the public Seedance 2.0
+prompt-gallery metadata and its mapping to the original creator post
+
+**Use case:** food, hospitality, slow living, tactile brand stories  
+**Mode:** text-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+```text
+15-second live-action harvest-to-table film in one modern rural home. Natural
+late-afternoon light, quiet observational pacing, no dialogue and no music.
+Keep the same adult cook, linen shirt, tomatoes, kitchen, and garden geography.
+
+Shot 1 (0–5s) — freshness: Backlit macro view of a hand twisting one ripe
+tomato from the vine. Fine leaf hairs, dew, and skin texture remain sharp.
+The stem releases with a small snap; one droplet rolls over the thumb. The
+camera makes a five-centimeter lateral slide and ends on the tomato in hand.
+Sound: leaves, insects, stem snap, fingertip on wet skin.
+
+Shot 2 (5–10s) — craft: Interior macro shot follows the knife, not the face.
+The cook completes two deliberate cuts; juice and seeds move only from blade
+contact. Cut once to the pan as the pieces land and sizzle, with steam bending
+toward the open window. Sound: board contact, knife, one pan sizzle, low fire.
+
+Shot 3 (10–15s) — rest: Medium-wide locked frame at the garden table. The same
+cook sets down the finished bowl, tucks one loose strand of hair behind the ear,
+takes one quiet bite, and pauses to watch steam cross the sunlight. End on the
+settled table and surrounding breeze. Sound widens to birds, cloth, cutlery,
+wind, and distant kitchen fire.
+
+Real food photography, natural hand anatomy, believable moisture and heat,
+consistent ingredient quantity and clothing. Progress from macro detail to a
+wider human moment. No glamour-food CGI, impossible knife path, extra fingers,
+instant cooked food within a shot, continuity jump, narration, or loud score.
+```
+
+**Why it works:** each shot owns one sensory idea and one completed action.
+Widening the frame and sound field turns detail into process, then process into
+a calm payoff without overloading any single beat.
+
+Adapted from [@johnAGI168's original rural ASMR prompt and result](https://x.com/johnAGI168/status/2021818021354848258),
+published February 12, 2026. The Seedance 2.0 attribution and complete
+source mapping are preserved in the [traceable gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=288).
+
+
+### 16. Beat-locked street rap MV
+
+**Verified model:** Seedance 2.0 — confirmed by the public Seedance 2.0
+prompt-gallery metadata and its mapping to the original creator post
+
+**Use case:** short music videos, performance reels, character-led campaigns  
+**Mode:** text-to-video or image-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+```text
+15-second street-performance music video featuring one fictional 80-year-old
+woman with silver hair, a black leather jacket, and simple metal jewelry.
+Night exterior under blue and violet practical lights. Use an original sparse
+90-BPM hip-hop beat; do not imitate an existing song or performer.
+
+Shot 1 (0–3s): Medium tracking move through a small circle of onlookers. The
+performer raises the microphone on the first kick and meets camera with a calm,
+self-possessed look. End when the beat is fully established.
+
+Shot 2 (3–7s): Locked medium close-up for accurate lip movement. She performs
+one short original line: “I outlived the noise; now the beat keeps time.”
+One pointing gesture lands on “beat”; a small head nod lands on the final word.
+Lower the music beneath the vocal and keep the face nearly frontal.
+
+Shot 3 (7–11s): Full-body wide frame. No new lyric. On four downbeats she
+performs a readable sequence: two grounded bounce steps, one brief freeze,
+one restrained body wave, then returns both feet to a stable stance. Cut only
+after the recovery is complete.
+
+Shot 4 (11–15s): Slow push from medium shot to close-up as the rhythm strips
+down to bass and finger snaps. She turns one shoulder toward camera, says
+“Still here,” then holds a quiet half-smile. The final bass hit and camera stop
+occur together.
+
+Keep the same face, age, silver hair, jacket, microphone, crowd size, and street
+direction. Mouth moves only during the two quoted lines. Natural elderly body
+mechanics, clear hands, full feet in the dance shot, no age change, face drift,
+extra jewelry, copied celebrity likeness, frenetic camera, random dance loop,
+garbled lyric, or music overpowering speech.
+```
+
+**Why it works:** the beat is the only timing system. Lip-sync, one hand gesture,
+four dance accents, the final line, and the camera stop each receive their own
+musical landmark instead of competing on every beat.
+
+Adapted from [松果先森's original Seedance performance prompt and result](https://x.com/songguoxiansen/status/2033175478765289598),
+published March 15, 2026. The Seedance 2.0 attribution and complete source
+mapping are preserved in the [traceable gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=1403).
+
+
+### 17. Calm-anchor flood reveal
+
+**Verified model:** Seedance 2.0 — confirmed by the public Seedance 2.0
+prompt-gallery metadata and its mapping to the original creator post
+
+**Use case:** scale reveals, surreal comedy, disaster-film hooks  
+**Mode:** text-to-video or image-to-video  
+**Suggested settings:** 12–15s, 16:9, 24fps
+
+```text
+One continuous live-action shot with no cuts. Begin at water level inside a
+modern office that is already deeply flooded. A calm adult swimmer wearing
+plain goggles is the visual anchor; surrounding coworkers provide escalating
+chaos without blocking the anchor for more than a moment.
+
+The camera pullback is already moving on the first frame. Start on an extreme
+close view of churning water as the swimmer's face rises through the surface
+during the same backward motion—do not stage the emergence first and begin the
+camera move afterward. Keep pulling back and rising at one continuous speed
+from eye-level close-up to a slightly elevated medium-wide view.
+
+As the frame widens, reveal floating keyboards, chairs, papers, and coworkers
+trying to reach desks. Foreground splashes and people may briefly occlude the
+lens, but the calm swimmer stays near center, breathes naturally, and looks once
+toward the surrounding panic. End with the entire flooded office readable while
+the swimmer's face remains large enough to recognize; settle for one second
+without reversing or restarting the move.
+
+35mm live-action perspective, cool fluorescent practical light, realistic water
+volume, buoyancy, wet cloth, reflections, and object collisions. Sound begins
+with breath and close splashes, then expands into alarms, distant voices, water,
+and floating objects as the space is revealed. No second pullback, speed jump,
+tiny unreadable anchor, dry clothing, duplicated people, floating objects with
+no buoyancy, face drift, camera cut, or polished game-CGI water.
+```
+
+**Why it works:** subject emergence and camera movement begin concurrently, so
+the reveal never stalls. A calm central performer gives the expanding chaos a
+stable scale reference, while the final-size constraint prevents over-pulling.
+
+Adapted from [Jouhatsu's original prompt and result](https://x.com/Jouhatsu_ai/status/2078241030021824983),
+published July 17, 2026. The Seedance 2.0 attribution and complete source
+mapping are preserved in the [traceable gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7443).
+
+
+### 18. Micro-expression performance score
+
+**Verified model:** Seedance 2.0 — confirmed by the public Seedance 2.0
+prompt-gallery metadata and its mapping to the original creator post
+
+**Use case:** actor direction, dialogue reactions, intimate portrait scenes  
+**Mode:** image-to-video  
+**Suggested settings:** 15s, 16:9 or 9:16, 24fps
+
+```text
+Use @Image1 only as the source of truth for the adult performer's identity,
+hair, wardrobe, background, composition, and light. Preserve them exactly.
+Animate a restrained 15-second reaction in a locked chest-up portrait with
+natural breathing. No dialogue and no music.
+
+0–2s: Eyes lowered; a small closed-mouth smile and relaxed jaw.
+2–4s: The smile recedes. The eyes lift slowly toward frame right while the head
+moves only a few degrees.
+4–6s: Brows rise slightly; eyes open a little wider; lips part as if a sentence
+might begin, then stop.
+6–8s: Gaze falls. The lower lip firms and the chin tucks, showing contained
+disappointment without tears.
+8–10s: Eyes close for one measured breath. One corner of the mouth forms a
+brief self-aware smile, then relaxes.
+10–12s: The performer raises the gaze toward the key light; posture straightens
+by a few centimeters and the eyes become more alert.
+12–15s: Hold a quiet, moist-eyed look into camera. The lips move once as if
+choosing not to speak, then become still. End on the held gaze; do not fade.
+
+Restrict motion to eyes, eyelids, brows, mouth corners, jaw, chin, breathing,
+and a very small head angle. Preserve facial geometry, skin texture, eye color,
+hairline, clothing, camera, and light direction. No spoken words, tears,
+exaggerated grimace, beauty-filter skin, head turn, body sway, face drift,
+blinking loop, sudden emotion switch, or camera movement.
+```
+
+**Why it works:** abstract emotion becomes seven observable muscular changes.
+The locked camera and narrow motion budget protect identity while the breathing
+and held endpoint keep the performance from feeling like a sequence of poses.
+
+Adapted from [Loriel.AI's original facial-performance timeline](https://x.com/ou_zhen599/status/2078137477425172769),
+published July 17, 2026. The Seedance 2.0 attribution and complete source
+mapping are preserved in the [traceable gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7422).
+
+
+### 19. Effect-only reference injection
+
+**Verified model:** Seedance 2.5 — official ByteDance / Volcano Ark showcase
+
+**Use case:** adding one controlled VFX layer to an existing performance  
+**Mode:** edit or multi-reference video-to-video  
+**Suggested settings:** inherit @Video1 duration, aspect ratio, cuts, and timing
+
+```text
+REFERENCE ROLES
+@Video1 is the source clip and controls the performer, face, body, wardrobe,
+jungle environment, composition, camera path, action, edit rhythm, and duration.
+Preserve every one of those layers unchanged.
+@Image1 controls only the silhouette, blue-white palette, and energy texture of
+a magical bow and arrow. Do not transfer its person, pose, background, camera,
+lighting, or any other object.
+
+CHANGE ONLY THE EFFECT LAYER
+Before the performer's empty hand begins the drawing action, faint blue-white
+arcs gather around that hand and connect into a translucent bow with stable
+grip placement. As the opposite hand pulls backward, one luminous arrow
+condenses continuously between string and bow; the string tension, arm motion,
+and growing light intensity share the same timing as @Video1.
+
+On the exact release frame in @Video1, the string straightens, the arrow leaves
+the hand, and one sharp continuous light trail follows its real flight path.
+The trail bends only with the arrow trajectory, illuminates nearby skin, cloth,
+leaves, and haze, then dissipates into small particles before the source clip
+ends. Keep the bow attached to the grip until the action is complete.
+
+Use restrained electrical filaments, fine particles, a bright core, soft bloom,
+and motivated blue-white spill. Sound: low charge, rising tension tone, one
+release snap, fast air pass, short electrical decay. Do not alter the source
+performance, anatomy, timing, framing, camera, environment, or clip length.
+No extra weapon, free-floating bow, early arrow, hand intersection, copied
+identity from @Image1, explosive screen flash, effect covering the face, or
+new cut.
+```
+
+**Why it works:** the prompt freezes every source-video channel except one and
+gives the new layer its own attachment points, causal stages, release frame,
+environmental interaction, and dissipation endpoint.
+
+Adapted from ByteDance / Volcano Ark's official Seedance 2.5
+[model showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5);
+the complete official prompt is preserved in the
+[traceable archive entry](https://github.com/renoise-ai/awesome-seedance-2-5-prompts#energy-bow-vfx-imagevideo-reference).
+
+
+### 20. Parametric multilingual FPV descent
+
+**Verified model:** Seedance 2.5 — official ByteDance / Volcano Ark showcase
+
+**Use case:** destination films, multilingual campaigns, continuous aerial reveals  
+**Mode:** text-to-video  
+**Suggested settings:** 30s, 16:9, 30fps
+
+```text
+30-second continuous FPV descent with no cuts, hidden transitions, teleporting,
+or reverse motion. Begin above bright clouds and end hovering two meters above
+a city plaza. Use one uninterrupted downhill flight path through six connected
+zones. Each zone contains exactly one correctly spelled greeting and no other
+letters, numbers, captions, signs, or logos.
+
+0–5s — “HELLO”: descend through cloud vapor shaped by sunlight into the word.
+Speed 4 m/s; pitch down 12 degrees; roll below 3 degrees. The letters disperse
+into mist as the camera passes through them.
+
+5–10s — “你好”: accelerate through a green valley toward a waterfall. The two
+characters appear only in the waterfall mist, then dissolve into spray. Speed
+rises smoothly from 6 to 12 m/s; one gentle 20-degree yaw follows the river.
+
+10–15s — “こんにちは”: skim above a blue lake. The exact characters form from
+one continuous line of reflected sunlight on the water, then break into ripples
+behind the camera. Peak speed 15 m/s; height remains two meters above water.
+
+15–20s — “HOLA”: cross a flower field where the five letters are formed by
+five continuous planted color bands. Climb only enough to read the whole word;
+no separate floating typography. Speed eases to 10 m/s.
+
+20–25s — “BONJOUR”: enter the city along one avenue. The exact word appears as
+warm window lights across a single connected facade, never as a subtitle.
+Decelerate from 10 to 5 m/s and level the horizon.
+
+25–30s — “안녕하세요”: arrive above the plaza. The exact Korean greeting is
+drawn by embedded ground lights as the camera settles to a stable hover.
+Decelerate to 2 m/s, pitch returns to zero, roll below 2 degrees, then hold.
+
+Preserve continuous geography, forward direction, time of day, wind direction,
+and exposure. Every word belongs physically to its environment and disappears
+before the next appears. Sound moves continuously from high wind to waterfall,
+lake rush, flowers and insects, city traffic, then plaza ambience. No hard cut,
+camera collision, repeated zone, mixed languages in one zone, misspelling,
+floating caption, unreadable tiny text, sudden speed change, or unstable horizon.
+```
+
+**Why it works:** the route, equal event slots, exclusive text zones, physical
+text carriers, and explicit speed-orientation curve give a long one-take both
+creative variety and measurable continuity anchors.
+
+Adapted from ByteDance / Volcano Ark's official Seedance 2.5
+[model showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5);
+the complete official prompt is preserved in the
+[traceable archive entry](https://github.com/renoise-ai/awesome-seedance-2-5-prompts#fpv-multilingual-one-take-descent).
+
+
+### 21. Rock-color origin-story commercial
+
+**Verified model:** Seedance 2.5 — official ByteDance / Volcano Ark showcase
+
+**Use case:** ingredient provenance, regional brands, heritage product films  
+**Mode:** text-to-video  
+**Suggested settings:** 30s, 3:4, 24fps
+
+```text
+30-second flat rock-color animation on fibrous paper. Mineral-pigment texture,
+layered mural composition, restrained parallax, cinnabar red, malachite green,
+lapis blue, sand gold, and warm paper beige. A single pomegranate is the visual
+anchor across six shots. Keep its crown shape and red-gold palette recognizable.
+
+Shot 1 (0–5s) — origin: A pomegranate ripens on a branch in an orchard painted
+with granular mineral pigment. One shaft of morning light travels across the
+skin; the fruit becomes fully red as the branch bends under its weight. Slow
+rostrum-camera push; leaves and cloth move as separate paper layers.
+
+Shot 2 (5–10s) — harvest: A hand twists the same fruit free and places it into
+a woven basket. The circular crown fills frame at the end and becomes a graphic
+match point. Sound: leaves, basket fiber, one small bell.
+
+Shot 3 (10–15s) — journey: Match cut from the crown shape to a sun above an
+ancient desert trade road. A camel caravan carries baskets with the same red
+fruit visible at the top. Track laterally across mural-like mountains; dust
+moves as translucent pigment washes, not 3D particles.
+
+Shot 4 (15–20s) — time bridge: The caravan passes behind a painted gate. Its
+geometric border slides across frame and becomes the patterned edge of a modern
+kitchen counter. The same pomegranate rolls gently into a waiting hand. Preserve
+screen direction and size through the transition.
+
+Shot 5 (20–25s) — craft: Top-down close-up. A knife completes one clean cut;
+ruby seeds appear in a flat jewel-like arrangement. Pressing the seeds produces
+one ribbon of red juice that follows an ancient-road motif across the paper
+toward a clear glass.
+
+Shot 6 (25–30s) — payoff: An adult lifts the glass in a quiet contemporary
+courtyard. The camera pulls back as orchard branches, trade-road lines, and the
+glass align into one poster-like composition. End with clean negative space,
+the whole fruit, cut fruit, and drink visible; hold for one second, no generated
+brand copy.
+
+Maintain hand-painted line quality, paper grain, flat depth, character design,
+fruit geometry, palette, and left-to-right journey. Sound connects each era:
+orchard wind, basket, caravan bells, gate slide, knife, seeds, pour, final sip.
+No photorealism, glossy 3D fruit, changing ingredient, floating product, random
+historical costume, illegible text, broken transition direction, or extra logo.
+```
+
+**Why it works:** one product anchor travels through origin, transport, craft,
+use, and final key visual. The match shapes and consistent screen direction
+turn a historical montage into a continuous provenance story rather than six
+unrelated pictures.
+
+Adapted from ByteDance / Volcano Ark's official Seedance 2.5
+[model showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5);
+the complete official prompt is preserved in the
+[traceable archive entry](https://github.com/renoise-ai/awesome-seedance-2-5-prompts#rock-color-silk-road-animation).
+
 ---
 
 ## Reusable templates
@@ -790,6 +1201,12 @@ Community examples and techniques referenced in this README:
 - [GENEL — Seedance 2.0 paper-camera LCD transformation](https://x.com/genel_ai/status/2078044912168341890)
 - [Kuma to kuma — Seedance 2.0 layered-reference launch sequence](https://x.com/Kumatokuma1/status/2078268822688063715)
 - [YouMind — version metadata and full-source mapping for the launch sequence](https://youmind.com/zh-CN/video-prompts/robot-anime-launch-sequence-cinematic-7441)
+- [@johnAGI168 — Seedance 2.0 liquid-porcelain couture transformation](https://x.com/johnAGI168/status/2025849650654122348)
+- [@johnAGI168 — Seedance 2.0 harvest-to-table sensory ASMR](https://x.com/johnAGI168/status/2021818021354848258)
+- [松果先森 — Seedance 2.0 beat-locked street rap performance](https://x.com/songguoxiansen/status/2033175478765289598)
+- [Jouhatsu — Seedance 2.0 calm-anchor flood reveal](https://x.com/Jouhatsu_ai/status/2078241030021824983)
+- [Loriel.AI — Seedance 2.0 micro-expression performance score](https://x.com/ou_zhen599/status/2078137477425172769)
+- [YouMind OpenLab — Seedance 2.0 prompt, preview, author, and source metadata](https://github.com/YouMind-OpenLab/awesome-seedance-2-prompts)
 - [@maybeegreen — subject/action/environment/camera structure](https://x.com/maybeegreen/status/2042226474422297010)
 - [@RetroValix — focus image-to-video prompts on movement](https://x.com/RetroValix/status/2074231054567866617)
 - [ByteDance / Volcano Ark — Seedance 2.5 official preview showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5)
