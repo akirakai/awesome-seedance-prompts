@@ -80,6 +80,12 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Downhill skiing sports-documentary coverage](#64-downhill-skiing-sports-documentary-coverage)
   - [1880s palace selfie vlog](#65-1880s-palace-selfie-vlog)
   - [Raw iPhone airplane snack offer](#66-raw-iphone-airplane-snack-offer)
+  - [Fixed access-control rejection loop](#67-fixed-access-control-rejection-loop)
+  - [Speed-versus-economy anime dojo duel](#68-speed-versus-economy-anime-dojo-duel)
+  - [Bystander-phone airliner-to-mecha test landing](#69-bystander-phone-airliner-to-mecha-test-landing)
+  - [Interrupted painting material-continuity story](#70-interrupted-painting-material-continuity-story)
+  - [Mass-cinema Wi-Fi password family comedy](#71-mass-cinema-wi-fi-password-family-comedy)
+  - [Shutter-timed three-person photo-booth comedy](#72-shutter-timed-three-person-photo-booth-comedy)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -2576,6 +2582,208 @@ Adapted from [John's original Seedance 2.0 iPhone-cabin post](https://x.com/john
 
 ---
 
+### 67. Fixed access-control rejection loop
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** deadpan comedy, fixed-camera acting, surveillance realism  
+**Mode:** image-to-video or text-to-video  
+**Settings:** 12 seconds, 9:16, one continuous locked shot
+
+```text
+Use @Image1 only for the adult woman's identity and clothing when supplied.
+
+A fixed access-control camera watches a quiet office entrance. Slight wide-angle
+distortion, ordinary overhead light, restrained sensor noise, and no cinematic
+beautification. The woman stands on the recognition mark and tries three times.
+
+0–3 s: She faces the scanner with a polite smile. A short electronic beep rejects
+the first attempt; the smile freezes and she glances at the screen.
+3–7 s: She smooths her hair, rises onto her toes, and leans closer. A second reject
+beep lands; she steps back, confused, then checks her phone camera.
+7–10 s: She carefully squares her shoulders and tries once more. The third reject
+beep sounds. She closes her eyes, presses two fingers to her forehead, and exhales.
+10–12 s: She looks directly into the security lens for one dry comic beat.
+
+Keep the camera, doorway, scanner, lighting, and body proportions unchanged.
+Exactly three attempts and three beeps; no cuts, zooms, extra people, face drift,
+or exaggerated slapstick.
+```
+
+**Why it works:** The unchanging surveillance frame turns repetition into a performance score. Each identical machine response is paired with a larger but still believable human reaction, so the model has a clean escalation ladder.
+
+**Source:** [MapleShaw on X](https://x.com/msjiaozhu/status/2026629230583337211), published February 25, 2026. The complete prompt and Seedance 2.0 attribution are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=643).
+
+---
+
+### 68. Speed-versus-economy anime dojo duel
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** anime action choreography, two-character role separation, readable counters  
+**Mode:** multi-reference image-to-video  
+**Settings:** 7 seconds, 16:9, fast three-beat exchange
+
+```text
+@Image1 defines adult Fighter A only. @Image2 defines adult Defender B only.
+@Image3 defines the dojo layout only. Preserve both identities, costumes, relative
+height, left-right orientation, and distance.
+
+0–2 s: Fighter A launches a fast high roundhouse. Defender B blocks with one compact
+forearm movement; A's momentum carries past the center line before recovery.
+2–3.5 s: A immediately drives a side kick. B redirects it with a small circular hand
+motion and barely shifts stance.
+3.5–5 s: A sweeps low. B simply lifts the lead foot, lets the sweep pass, and sets it
+back on the same mark.
+5–7 s: Cut close on A's stunned expression, then hold B calm and motionless behind.
+
+Give A sharp speed lines and brief directional motion blur; keep B's silhouette and
+face crisp. Taiko pulse under the exchange, with one THUD, WHOOSH, and SWISH aligned
+to the three contacts, then sudden silence. No extra strikes, teleporting, limb
+merging, identity swap, injury, or blood.
+```
+
+**Why it works:** The prompt assigns opposite movement grammars to the two references—large, fast attacks versus minimal, economical counters—making action ownership and personality readable even at high speed.
+
+**Source:** [SYD on X](https://x.com/SYDxStudio/status/2027058995731607571), published February 26, 2026. The full choreography and Seedance 2.0 attribution are archived in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=659).
+
+---
+
+### 69. Bystander-phone airliner-to-mecha test landing
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** giant-scale transformation, smartphone eyewitness realism, mechanical continuity  
+**Mode:** text-to-video  
+**Settings:** 15 seconds, 9:16, handheld phone footage
+
+```text
+Vertical bystander-phone video beside a closed desert test runway. A decommissioned,
+uncrewed wide-body test aircraft approaches low over the centerline; no passengers,
+crowd, city, or active traffic.
+
+0–3 s: The phone operator tracks the aircraft imperfectly as landing gear lowers.
+Autofocus breathes once and exposure reacts naturally to the bright sky.
+3–7 s: Just above the runway, wings hinge backward, engine pods rotate into shoulders,
+and fuselage panels separate along visible seams. Every aircraft part keeps its
+material, color, and mechanical ownership—hard articulated assembly, never soft morphing.
+7–10 s: Legs lock beneath the body and the machine lands upright. Suspension compresses;
+a low dust wave rolls outward while the runway stays intact.
+10–13 s: The mecha rises to full height and takes one heavy stabilizing step. The phone
+operator reflexively backs away, adding believable shake and a clipped gasp.
+13–15 s: It stops in a calm test pose as dust clears around its feet.
+
+Use distant turbine whine, servo locks, metal impacts, one deep landing boom, and wind
+on the phone microphone. Maintain scale, part continuity, and runway geography. No
+destruction, weapons, falling debris, logos, impossible extra parts, or city damage.
+```
+
+**Why it works:** Part ownership is stated before the transformation, and the phone operator's imperfect response supplies scale without replacing mechanical causality with spectacle.
+
+**Source:** [Min Choi on X](https://x.com/minchoi/status/2026510205345763536), published February 25, 2026. The original aircraft-transformation prompt and Seedance 2.0 attribution are mapped in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=625).
+
+---
+
+### 70. Interrupted painting material-continuity story
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** quiet cinematic narrative, prop-state continuity, subtle acting  
+**Mode:** text-to-video  
+**Settings:** 15 seconds, 16:9, naturalistic single-scene coverage
+
+```text
+An adult painter works beside a north-facing studio window on a nearly finished canvas.
+Warm wood, used brushes, three paint tubes, linen texture, restrained natural light.
+
+0–4 s: Begin medium-wide and slowly push in as she paints one final colored area. Brush
+scrape and room tone are intimate; the unfinished pale patch remains visible at the
+lower-right of the canvas.
+4–7 s: The active paint tube gives only air. She squeezes once more, then checks the two
+other tubes in order; both are visibly empty and remain on the same table positions.
+7–11 s: Move to an over-shoulder view that reconnects her gaze to the exact unfinished
+patch. Her expression shifts from concentration to concern, then quiet calculation.
+11–15 s: She cleans the brush, wraps it in a damp cloth, and writes a small mixing note
+in her sketchbook. End on her calm look back at the unfinished canvas: paused, not defeated.
+
+Preserve the painting design, the location and shape of the missing patch, tube count,
+handedness, wardrobe, daylight direction, and studio layout. No magical completion,
+vanishing props, duplicate brushes, tears, melodrama, or generated captions.
+```
+
+**Why it works:** The unchanged missing patch and ordered prop inventory give the model concrete continuity anchors, while the emotional turn is expressed through small actions rather than exposition.
+
+**Source:** [Soulful Ai on X](https://x.com/soulful__ai/status/2049385314649805028), published April 29, 2026. The complete scene and Seedance 2.0 attribution appear in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=3858).
+
+---
+
+### 71. Mass-cinema Wi-Fi password family comedy
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** dialogue comedy, reaction montage, escalating camera rhythm  
+**Mode:** text-to-video  
+**Settings:** 15 seconds, 16:9, photorealistic comic mass-cinema style
+
+```text
+All characters are adults in a lively family living room. Keep the room geography and
+character positions consistent through rapid editorial cuts.
+
+0–3 s: A guest casually asks, “What’s the Wi-Fi password?” Conversation stops. Hold
+half a second of total stillness, then land one low bass hit.
+3–6 s: Five very fast extreme close-up zooms—guest's eyes, aunt's raised eyebrow,
+brother lowering his teacup, router status light, grandmother looking up. Each zoom
+returns to the same screen direction; no new characters appear.
+6–10 s: Grandmother rises in slow motion as a table fan lifts the curtain behind her.
+She says solemnly, “Only one person knows.” Everyone turns toward the doorway.
+10–13 s: A dramatic push-in reveals the father adjusting his glasses in the doorway.
+The music swells, then cuts completely.
+13–15 s: He whispers, “Family First.” The router light turns green and the family erupts
+in relieved applause while the guest tries not to laugh.
+
+Natural lip sync, clean dialogue, comic percussion, realistic skin and fabric. No title
+card, captions, warped faces, identity swaps, extra relatives, duplicated props, or
+unmotivated wind.
+```
+
+**Why it works:** A trivial question is staged with an escalating hierarchy of reaction shots, sound drops, and a final anticlimax. The repeated screen direction keeps the fast montage spatially coherent.
+
+**Source:** [Ege on X](https://x.com/egeberkina/status/2060761615423664371), published May 30, 2026. The full prompt and Seedance 2.0 attribution are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=5495).
+
+---
+
+### 72. Shutter-timed three-person photo-booth comedy
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** fixed-camera ensemble blocking, identity separation, beat-synced comedy  
+**Mode:** multi-reference image-to-video  
+**Settings:** 15 seconds, 16:9, fixed photo-booth lens
+
+```text
+@Image1 defines three adult friends and their distinct faces, hairstyles, outfit colors,
+and left-center-right starting order. @Image2 supplies timing and composition only;
+do not copy identities or wardrobe from it.
+
+The entire clip stays inside one cramped photo booth, seen through its fixed front lens.
+A warning beep and white shutter flash occur every three seconds.
+
+0–3 s: Establish all three shoulder-to-shoulder in the assigned left-center-right order.
+They begin a formal pose; first beep and flash.
+3–6 s: The right friend ducks forward into center just before the second flash. The other
+two react but remain visible and keep their identities.
+6–9 s: The left friend smoothly claims the center on the next countdown; the previous
+center leans back rather than disappearing. Third flash.
+9–12 s: The center friend pulls both companions inward for a deliberately chaotic pose.
+Hands stay attached to the correct bodies; all three faces remain readable. Fourth flash.
+12–15 s: They settle back into the original order, laugh, and hold a balanced final pose
+for the last flash and one-second freeze.
+
+Fixed lens, consistent booth walls and seat, mild flash overexposure, realistic fabric
+contact and friendly body language. Exactly three people and five flashes; no camera exit,
+hard shoving, face swaps, clones, missing limbs, outfit changes, or generated print text.
+```
+
+**Why it works:** The shutter is a visible and audible clock, while permanent color and position anchors keep three identities separable through overlapping movement.
+
+**Source:** [Ryuki Yano on X](https://x.com/Ryuki_Yano/status/2060263464069947742), published May 29, 2026. The full reference-driven prompt and Seedance 2.0 attribution are archived in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=5465).
+
+---
+
 ## Reusable templates
 
 ### Single-shot template
@@ -3107,6 +3315,12 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 Community examples and techniques referenced in this README:
 
+- [MapleShaw — Seedance 2.0 fixed access-control rejection loop](https://x.com/msjiaozhu/status/2026629230583337211)
+- [SYD — Seedance 2.0 speed-versus-economy anime dojo duel](https://x.com/SYDxStudio/status/2027058995731607571)
+- [Min Choi — Seedance 2.0 airliner-to-mecha transformation](https://x.com/minchoi/status/2026510205345763536)
+- [Soulful Ai — Seedance 2.0 interrupted painting continuity story](https://x.com/soulful__ai/status/2049385314649805028)
+- [Ege — Seedance 2.0 Wi-Fi password family comedy](https://x.com/egeberkina/status/2060761615423664371)
+- [Ryuki Yano — Seedance 2.0 shutter-timed photo-booth comedy](https://x.com/Ryuki_Yano/status/2060263464069947742)
 - [Zaroon — Seedance 2.0 Pencak Silat count-map choreography](https://x.com/Xaroon_x/status/2049493027031515174)
 - [ShaHid WaNii — Seedance 2.0 mountain-bike cliff-to-flight transition](https://x.com/meng_dagg695/status/2048684297465569616)
 - [Zaroon — Seedance 2.0 downhill skiing sports documentary](https://x.com/Xaroon_x/status/2059939135196930468)
