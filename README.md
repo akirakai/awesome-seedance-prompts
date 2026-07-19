@@ -105,6 +105,14 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Under-skin countdown bathroom thriller](#89-under-skin-countdown-bathroom-thriller)
   - [Photochemical crowd-corridor arrival](#90-photochemical-crowd-corridor-arrival)
   - [Gesture-controlled fire choreography](#91-gesture-controlled-fire-choreography)
+  - [Paint-splash mixed-media city battle](#92-paint-splash-mixed-media-city-battle)
+  - [Audio-locked laundromat rap performance](#93-audio-locked-laundromat-rap-performance)
+  - [Cabin-window dragon escalation](#94-cabin-window-dragon-escalation)
+  - [Butterfly-to-parrot macro bullet-time one-take](#95-butterfly-to-parrot-macro-bullet-time-one-take)
+  - [Cause-linked rope-bridge escape](#96-cause-linked-rope-bridge-escape)
+  - [Earbuds UGC-to-product-hero review](#97-earbuds-ugc-to-product-hero-review)
+  - [Wide-field anime aero-city ally convergence](#98-wide-field-anime-aero-city-ally-convergence)
+  - [Animated treasure-map expedition comedy](#99-animated-treasure-map-expedition-comedy)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -359,6 +367,7 @@ Inspired by [@impaulxyz's handheld luxury-villa prompt](https://x.com/impaulxyz/
 
 ### 7. Supernatural city POV
 
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
 **Use case:** mystery, fantasy POV, viral narrative hook  
 **Mode:** text-to-video  
 **Suggested settings:** 10–15s, 9:16
@@ -387,7 +396,7 @@ no duplicated pedestrians, no face morphing, no frozen background. Audio:
 traffic and footsteps, gradual high-frequency tone, then precise silence.
 ```
 
-Inspired by [@Strength04_X's supernatural-mystery Seedance prompt](https://x.com/Strength04_X/status/2078157151428816974).
+**Source:** [M on X](https://x.com/Strength04_X/status/2078157151428816974), published July 17, 2026. The original spirit-vision city prompt and Seedance 2.0 attribution are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7406).
 
 ### 8. Reference-video camera transfer
 
@@ -3584,6 +3593,334 @@ giant opaque vortex hiding the face, frozen particles, text or logo.
 
 ---
 
+### 92. Paint-splash mixed-media city battle
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** hybrid live-action/3D anime action, colour ownership, effect transitions  
+**Mode:** multi-reference image-to-video  
+**Settings:** 15 seconds, 16:9, eight-shot high-energy montage
+
+```text
+@Image1, @Image2 and @Image3 define three adult cel-shaded fighters: yellow,
+blue and pink. Preserve each face, outfit, weapon and colour ownership. @Image4
+defines one real residential district—crosswalk, alley, rail path, stone bridge
+and side street. Characters stay stylized; architecture remains photoreal.
+
+0–2 s: Whip-pan into a low wide as Yellow lands on the crosswalk. Only yellow
+paint splashes from the contact point; one droplet covers the lens for the cut.
+2–4 s: Dolly toward a triangular standoff. Rack focus Yellow→Blue→Pink while each
+readies one unchanged paint tool. Pink fires across lens to transition.
+4–7 s: Side tracking in the alley. Blue and Yellow pass once; their paint strikes
+the walls and restores colour along physically connected wet paths. Briefly slow
+only at closest contact, then return to speed.
+7–9 s: Yellow rolls one wave along the rail path. Camera rises from one to six
+metres to reveal the wave colouring sleepers, poles and ground outward from the
+impact—not ahead of it.
+9–11 s: At the bridge, Blue redirects a yellow arc into the river; ripples inherit
+only the two contacting colours.
+11–13 s: Pink enters from the side street, kicks off one pole and crosses two
+spray ribbons in front of lens.
+13–15 s: Return to the crosswalk. One 180-degree orbit as all three streams meet
+overhead, then pull wide through falling paint to the same town layout.
+
+Use opaque liquid with weight, droplets, runoff and wet reflections. Audio maps
+footfalls, tool release, liquid impact and one music beat per cut. No colour swap,
+duplicate fighter, extra weapon, paint before contact, full-screen strobe, melted
+architecture, unreadable action, blood, text, logo or video-game UI.
+```
+
+**Why it works:** Assigning one colour and one tool to each fighter keeps a complex mixed-media montage readable. Paint-cover transitions and return-to-origin geography link multiple real locations without losing action ownership.
+
+**Source:** [Nina on X](https://x.com/ni_naai/status/2078497644721447190), published July 18, 2026. The original eight-shot paint battle and Seedance 2.0 attribution are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7509).
+
+---
+
+### 93. Audio-locked laundromat rap performance
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** native-audio music video, precise lip sync, beat-mapped camera accents  
+**Mode:** performer image plus finished audio reference  
+**Settings:** 15 seconds, 9:16, five-shot performance edit
+
+```text
+@Image1 fixes one adult performer's face, hair, jewellery and green-denim outfit.
+@Audio1 is the sole master audio: preserve its vocal, instrumental, timing and
+duration exactly. Invent no words, melody, ad-libs or replacement voice. Before
+generation, divide @Audio1 into INTRO, VERSE-A, HOOK, VERSE-B and END-HOLD at its
+natural phrase boundaries.
+
+Night inside a narrow neighbourhood laundromat: two steel washer rows, folding
+tables, wire carts and cool fluorescent practicals. Two background dancers only.
+
+INTRO: Symmetrical wide down the aisle; performer sits at the far folding table.
+On the first vocal phoneme, crash-zoom to a sharp face.
+VERSE-A: Performer raps seated, articulating every syllable. Keep mouth and eyes
+visible; never cut, occlude or defocus during a word.
+HOOK: Both dancers rise together only on the first accent. Performer steps down
+and advances while camera retreats; carts glide alongside on snare hits.
+VERSE-B: Tight washer-window composition, then one slow orbit at aisle centre.
+Use brief zoom punches only in gaps between phrases. Dancers repeat one leg-cross
+and hair-turn pattern on the mapped beats without blocking the lead.
+END-HOLD: Vocal ends, performer closes one washer door on the last percussion
+hit and holds eye contact for the remaining instrumental frames.
+
+Natural fluorescent flicker occurs once on a mapped hat roll; no decorative neon.
+Audio stays perfectly synchronized. No invented lyric, mouth lag, cut mid-word,
+duplicate lead, extra dancer, changing jewellery, washer geometry drift, random
+cart path, overexposed face, particle effect, subtitle, logo or watermark.
+```
+
+**Why it works:** Treating the supplied track as an immutable timeline prevents audio invention. Camera accents are placed between phrases, so visual energy increases without sacrificing the face visibility required for reliable lip sync.
+
+**Source:** [Frame Theory on X](https://x.com/frametheory058/status/2077996810334027812), published July 17, 2026. The original audio-locked laundromat performance and Seedance 2.0 attribution are documented in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7392).
+
+---
+
+### 94. Cabin-window dragon escalation
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** contained disaster POV, reaction performance, full-frame practical transition  
+**Mode:** character-reference image-to-video  
+**Settings:** 12 seconds, 16:9, one continuous cinematic cabin shot
+
+```text
+@Image1 fixes one adult passenger's identity and casual outfit. One airplane
+window, seat, armrest and cabin row remain unchanged. Begin with a mostly static
+handheld camera across the aisle framing the passenger and the entire window;
+cool daylight, natural film grain and believable aircraft vibration.
+
+0–3 s: Passenger laughs softly, then looks through the window at a bright level
+cloud deck. Engine hum is steady; cup, hair and clothing show only minor cruise
+vibration.
+3–6 s: Turbulence arrives as one downward jolt followed by two smaller rebounds.
+The passenger grips the armrest, stops laughing and follows several birds rising
+from the cloud layer. Their gaze and pointing hand terminate at the visible birds.
+6–9 s: Exterior daylight dims gradually as storm cloud overtakes the aircraft.
+Lightning reveals one huge dragon flying parallel outside—not inside the cabin.
+Camera pushes past the passenger toward the glass while a second distant shape
+establishes scale.
+9–12 s: The nearest dragon banks toward the aircraft. Its open mouth approaches
+along one continuous exterior path until the dark mouth covers the window and
+then 100% of frame. Cut to black exactly on the strongest cabin jolt.
+
+Audio: constant engine bed, seat rattle, turbulence rumble, passenger breath,
+distant wing buffeting and final low impact. Preserve pressurized glass and cabin
+geometry; no broken window, gore, dragon inside cabin, instant weather switch,
+floating passenger, duplicated creature, pointing away from window, random
+camera cut, fisheye, subtitle or logo.
+```
+
+**Why it works:** The threat is revealed through the fixed window, so scale and screen direction remain anchored. The final mouth occlusion supplies a motivated full-frame ending without requiring implausible cabin destruction.
+
+**Source:** [Unxin Studio on X](https://x.com/unxinstudio/status/2078428858966319150), published July 18, 2026. The original cabin escalation prompt and Seedance 2.0 attribution appear in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7473).
+
+---
+
+### 95. Butterfly-to-parrot macro bullet-time one-take
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** wildlife macro, speed-to-bullet-time transition, continuous camera path  
+**Mode:** text-to-video or species-reference image-to-video  
+**Settings:** 10 seconds, 16:9, one uninterrupted photoreal take
+
+```text
+Bright natural forest, one butterfly and one parrot only. One continuous shot:
+no edit, hidden cut, teleport or viewpoint reset.
+
+0–4.5 s: Begin 25 cm behind a vivid butterfly. Camera chases at wing height as it
+weaves left of one trunk, under a sunlit leaf and right through a narrow foliage
+gap. Maintain the same wing pattern and travel direction; motion blur belongs to
+background and wing tips, not the body centre.
+4.5–5.5 s: A parrot enters from screen-right on one curved intercept path. Camera
+pans with the encounter as its beak gently catches the outer edge of one wing.
+The contact is non-gory and does not tear the wing.
+5.5–9.5 s: The same camera decelerates into near-frozen macro and arcs 120 degrees
+around the contact. Butterfly powder and a few iridescent scales continue moving
+at one-twentieth speed; resolve wing veins, beak texture, feather barbs and the
+parrot's fixed eye. Keep beak, wing and both bodies attached to the original
+contact point.
+9.5–10 s: Hold the final macro with only drifting particles and tiny feather
+movement; do not return to the chase.
+
+Dappled daylight maintains one direction, shallow depth resolves progressively,
+and focus transitions from butterfly thorax to contact point. Audio changes from
+fast wing flutter and forest air to a stretched feather rush and near-silence.
+No injury, blood, duplicate animal, changing species or colour, beak passing
+through wing, impossible orbit jump, frozen background before contact, artificial
+spark, title, logo or documentary narration.
+```
+
+**Why it works:** The camera path, animal paths and slowdown all share one contact event. Specifying which details retain motion during bullet time avoids a lifeless freeze while keeping the macro point stable.
+
+**Source:** [Arminn on X](https://x.com/Arminn_Ai/status/2078285642912461274), published July 18, 2026. The original continuous wildlife chase and Seedance 2.0 attribution are archived in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7494).
+
+---
+
+### 96. Cause-linked rope-bridge escape
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** grounded disaster action, two-person rescue, progressive structural failure  
+**Mode:** text-to-video or two-character reference-to-video  
+**Settings:** 15 seconds, 16:9, four-shot hyper-real action
+
+```text
+Daylight over a deep canyon. Exactly two adult explorers cross one old rope
+bridge toward the far ledge. Lock each outfit, body scale, bridge anchor, river
+direction and left-to-right progress. No face close-up.
+
+0–3 s: Wide side view establishes full bridge, both anchors and river far below.
+The explorers move three planks apart while wind creates a readable shared sway.
+3–7 s: Tracking parallel. One lower support rope frays, stretches, then snaps at
+the near anchor. Only after the snap does the deck drop and twist; both explorers
+grab the same handrail and lower their centres of gravity.
+7–10 s: Oblique wide. Two adjacent planks detach and fall. The bridge rotates
+toward the far cliff and becomes a steep hanging ladder. Both characters change
+from walking to climbing; the lead reaches upward while the second follows below.
+10–13 s: The hanging deck swings once into the rock. The lower explorer loses one
+foot but keeps one hand. The lead braces both boots, catches their forearm and
+helps restore two-hand contact before climbing resumes.
+13–15 s: They reach the same ledge in order, roll clear, then turn toward the
+remaining bridge as one final plank falls. Hold wide with the ruined structure
+still swinging.
+
+Real rope tension propagates from anchor to deck; wood, dust, clothing and bodies
+respond after each cause. Audio: wind, rope fibres, wood crack, falling-plank
+delay, cliff impact, breath. No simultaneous random failures, elastic limbs,
+instant cliff arrival, position swap, falling person, severed body, blood,
+weightless bridge, camera teleport, excessive shake, slow motion, text or logo.
+```
+
+**Why it works:** Each failure has a visible precursor and delayed structural reaction. Fixed spacing between the two explorers lets the rescue beat remain understandable even while the bridge changes orientation.
+
+**Source:** [DeCat on X](https://x.com/DeCat2025/status/2078551597882466767), published July 18, 2026. The original canyon-bridge action and Seedance 2.0 attribution are recorded in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7486).
+
+---
+
+### 97. Earbuds UGC-to-product-hero review
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** creator commerce, wearable continuity, hybrid UGC/product advertising  
+**Mode:** product plus creator reference-to-video  
+**Settings:** 15 seconds, 9:16, natural smartphone-commercial hybrid
+
+```text
+@Image1 fixes one adult creator; @Image2 fixes the earbuds, charging case, colour,
+hinge, indicator and logo. Bright real living room adjoining a small kitchen.
+Recent-smartphone handheld texture, natural window light and direct phone-mic
+dialogue.
+
+0–3 s: Creator enters holding the closed case at chest height, faces camera and
+says, “These became my everyday pair.” Camera walks backward with mild breathing
+sway; keep product large enough to identify.
+3–5 s: Medium close-up. Creator opens the same case once, removes left then right
+earbud and seats each naturally. Do not hide the hinge or change product colour.
+5–10 s: Three hard-cut activity inserts: typing at the nearby laptop, making one
+coffee, then walking outside. Preserve outfit, both earbuds, left/right placement
+and time-of-day. Each insert begins after the previous action has clearly ended.
+10–13 s: Back in the living room, creator removes the right earbud, rotates it
+between two fingers and says, “Secure, comfortable, and still charged.”
+13–15 s: Match cut from the hand to a stable tabletop hero shot: both earbuds
+returned to the open case, label facing camera, one soft window reflection moving
+across the surface. No generated on-screen copy.
+
+Audio preserves dialogue, case click, room tone, keyboard, coffee and light street
+ambience; music stays below speech. No product redesign, duplicate earbud, wrong
+ear, floating case, warped fingers, fake interface, beauty-filter skin, impossible
+room change, invented specification, subtitle, logo mutation or watermark.
+```
+
+**Why it works:** The prompt treats the product as one continuous prop whose state changes—closed, opened, worn, removed and returned. The final match cut keeps authentic creator footage connected to a polished hero image.
+
+**Source:** [Goodman Protocol on X](https://x.com/Goodmanprotocol/status/2078490755958780363), published July 18, 2026. The original earbuds review and Seedance 2.0 attribution are available in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7480).
+
+---
+
+### 98. Wide-field anime aero-city ally convergence
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** theatrical anime action, allied-character separation, wide environment coverage  
+**Mode:** multi-character reference image-to-video  
+**Settings:** 15 seconds, 1:1, high-density theatrical animation
+
+```text
+@Image1 fixes one adult cyborg fighter; @Image2 fixes one allied robot. Preserve
+their faces or sensors, armour, weapons, back structures and separate colour
+palettes. They never merge, transform, duplicate or exchange colours. Bright
+coastal aero-city with sea, white terminal decks, glass corridors, bridges and
+vertical gaps. Keep wide sky and architecture visible even in square format.
+
+0–2 s: Ultra-wide. Small graphite drones enter from three distant routes. Cyborg
+deploys from an upper corridor while robot launches from a lower deck.
+2–5 s: Two alternating wide cuts. Cyborg crosses one diagonal using three readable
+key poses—brace, short tension, contact—while robot clears a separate bridge in a
+crescent arc. Each owns its effects and enemies.
+5–8 s: Camera dives through a building gap, then climbs. Cyborg reverses height
+behind an opaque foreground colour plane; robot rebounds from one fixed wall.
+Use short hit holds, not constant-speed blur.
+8–10 s: One large unmanned craft enters and casts a moving shadow across terminal,
+sea and both allies. They notice it from separate positions.
+10–13 s: Robot arrives first and breaks one armour panel; the cyborg descends from
+above one beat later and strikes the exposed mark. Preserve screen directions and
+never hide both allies at once.
+13–15 s: Enemy separates into outlined colour planes and inert fragments, not a
+fireball. Camera passes through debris to a wide observation deck as the allies
+land at different times and continue in parallel.
+
+Effects are opaque palette-matched strokes, chips and tail threads—no generic
+blue laser. Audio assigns different motion and impact signatures to each ally.
+No cramped room, extra hero, identity swap, weapon merge, friendly collision,
+civilian vehicle joining combat, long slow motion, UI, subtitle or logo.
+```
+
+**Why it works:** Separate staging and effect ownership establish both allies before the convergence. The enemy's moving shadow becomes the shared cue that joins their timelines without blending identities or weapons.
+
+**Source:** [AI Lifehack on X](https://x.com/ai_lifehack55/status/2078317742021898651), published July 18, 2026. The original wide-field ally battle and Seedance 2.0 attribution are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7507).
+
+---
+
+### 99. Animated treasure-map expedition comedy
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** stylized 3D character comedy, ensemble timing, prop continuity  
+**Mode:** multi-character reference-to-video  
+**Settings:** 15 seconds, 16:9, six-shot feature-animation sequence
+
+```text
+High-end stylized 3D animation in a bright overgrown jungle temple. Keep exactly
+three main creatures: one shaggy orange explorer with backpack, one small blue
+dragon carrying a glowing parchment map, and one tall moss-covered tree creature.
+One tiny green observer may remain in foreground only. Preserve scale, colours,
+voices, backpack and the single map across every cut.
+
+0–2.5 s: Medium push-in. Orange explorer bounces once and announces, “Today is
+the day.” Blue dragon studies the map; tree creature waits behind.
+2.5–5 s: Close-up on the same map in the dragon's claws. One route symbol glows;
+the dragon taps it, looks toward the temple and says, “The chamber is real.”
+5–7 s: Wide group reaction. Dragon points with the free claw while still holding
+the map; Orange leans forward and Tree smiles. The green observer rises from one
+fern after their gasp.
+7–10 s: Side tracking. The trio rushes three steps toward the ruins. Leaves respond
+to foot contact; the dragon secures the map to its chest rather than dropping it.
+10–12.5 s: Low insert. Tree creature lifts one mossy foot, revealing a small
+golden chest already compressed into the ground beneath it. Light leaks only
+after the foot clears the lid.
+12.5–15 s: Wide. Orange and Dragon stop with one-step overshoot, then look from
+chest to Tree. Tree gives one embarrassed wave and says, “Was that important?”
+The green observer covers its face; hold the group tableau.
+
+Warm dappled light, expressive but weighted motion, distinct fur, scales, moss,
+paper and stone. Audio: jungle, leaf kick, parchment, chest hum and clean dialogue.
+No named franchise style, fourth main character, map duplication, changing scale,
+teleport, random treasure, mouth-speech mismatch, overlapping dialogue, text,
+logo or watermark.
+```
+
+**Why it works:** Each shot transfers attention through a visible object or gaze: explorer to map, map to temple, movement to foot, foot to chest. That attention chain gives a crowded ensemble a clean comedic setup and payoff.
+
+**Source:** [Tran Mau Tri Tam on X](https://x.com/tranmautritam/status/2078465535780823296), published July 18, 2026. The original six-shot jungle expedition and Seedance 2.0 attribution are documented in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7485).
+
+---
+
 ## Reusable templates
 
 ### Single-shot template
@@ -4156,6 +4493,14 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 Community examples and techniques referenced in this README:
 
+- [Nina — Seedance 2.0 mixed-media paint battle](https://x.com/ni_naai/status/2078497644721447190)
+- [Frame Theory — Seedance 2.0 audio-locked laundromat rap](https://x.com/frametheory058/status/2077996810334027812)
+- [Unxin Studio — Seedance 2.0 cabin-window dragon escalation](https://x.com/unxinstudio/status/2078428858966319150)
+- [Arminn — Seedance 2.0 butterfly-and-parrot macro one-take](https://x.com/Arminn_Ai/status/2078285642912461274)
+- [DeCat — Seedance 2.0 cause-linked rope-bridge escape](https://x.com/DeCat2025/status/2078551597882466767)
+- [Goodman Protocol — Seedance 2.0 earbuds UGC review](https://x.com/Goodmanprotocol/status/2078490755958780363)
+- [AI Lifehack — Seedance 2.0 aero-city ally convergence](https://x.com/ai_lifehack55/status/2078317742021898651)
+- [Tran Mau Tri Tam — Seedance 2.0 animated treasure-map expedition](https://x.com/tranmautritam/status/2078465535780823296)
 - [Sam Aoteman — Seedance 2.0 miniature harbour-island assembly](https://x.com/samaote/status/2078435244123062591)
 - [mayv — Seedance 2.0 single-spear delayed-follow-up RPG duel](https://x.com/haruuraeadss/status/2078077558416167004)
 - [WAKA WAKKA — Seedance 2.0 same-pose ship-to-desert one-take](https://x.com/wakawakkachan/status/2078243803866202396)
