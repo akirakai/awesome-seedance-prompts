@@ -91,6 +91,12 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Controlled roller-skate rail bail](#75-controlled-roller-skate-rail-bail)
   - [Mechanical-stroke title assembly](#76-mechanical-stroke-title-assembly)
   - [Pinch-harmonic contact-and-audio sync](#77-pinch-harmonic-contact-and-audio-sync)
+  - [Palace parrot-alibi ensemble comedy](#78-palace-parrot-alibi-ensemble-comedy)
+  - [Five-stop Egypt travel vlog](#79-five-stop-egypt-travel-vlog)
+  - [Mirror-gated body-and-consciousness swap](#80-mirror-gated-body-and-consciousness-swap)
+  - [Fixed-cockpit three-dog rally comedy](#81-fixed-cockpit-three-dog-rally-comedy)
+  - [Beat-locked hand-dance coverage](#82-beat-locked-hand-dance-coverage)
+  - [Eye-level horseback route one-take](#83-eye-level-horseback-route-one-take)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -2994,6 +3000,254 @@ stage lighting.
 
 ---
 
+### 78. Palace parrot-alibi ensemble comedy
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** animated ensemble comedy, dialogue timing, setup-and-payoff storytelling  
+**Mode:** text-to-video  
+**Settings:** 15 seconds, 16:9, stylized cinematic animal satire
+
+```text
+A fictional red-and-gold palace hall with symmetrical columns and one raised
+throne. Exactly five role groups remain consistent: one nervous orange-cat
+official in dark court robes, one hyena ruler on the throne, two white-rabbit
+attendants with fans, two grey-rabbit guards, and one green parrot hidden at
+first. Do not add a crowd.
+
+0–2 s: Locked symmetrical wide. The cat walks down the center aisle with a
+strangely rounded robe while the attendants fan in perfect unison. Footsteps
+echo; the ruler watches.
+2–4 s: Snap zoom to the ruler striking one armrest: “Why were you in the private
+garden?” The fans stop on the same beat.
+4–6 s: Medium on the cat dropping to both knees: “Someone kept calling for help.”
+The cat glances once at the bulging robe; guards exchange a suspicious look.
+6–9 s: The ruler throws one red apple. Follow its left-to-right arc in brief slow
+motion; the cat catches it cleanly with one hand. Silence.
+9–12 s: The cat reaches inside the robe and reveals the parrot. It flaps once and
+calls, “Help! Help!” The cause of the rounded robe is now visually clear.
+12–15 s: Return to the opening wide. Attendants, guards and ruler break into
+laughter in that order. The cat looks into camera and says dryly, “I told you.”
+Hold the deadpan face for the final half-second.
+
+Clear dialogue and species-specific voices, restrained comic percussion, one
+whoosh and one catch sound. Preserve character count, wardrobe, throne geography,
+apple ownership, parrot concealment and reaction order. No real historical
+figure, extra animal, disappearing prop, identity swap, random laughter before
+the reveal, illegible caption, face melt or frantic camera movement.
+```
+
+**Why it works:** The wide master shot establishes every role, while the apple provides a timed interruption before the concealed prop resolves the accusation. Ordered reactions prevent a multi-character scene from collapsing into simultaneous noise.
+
+**Source:** [The Anxious Mind on X](https://x.com/drjoetw/status/2048996625654354333), published April 28, 2026. The complete comedy structure and Seedance 2.0 attribution are archived in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=3816).
+
+---
+
+### 79. Five-stop Egypt travel vlog
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** travel campaign, character-consistent montage, location progression  
+**Mode:** character image-to-video  
+**Settings:** 15 seconds, 9:16, five-shot photoreal travel diary
+
+```text
+@Image1 defines one adult traveler's face, dark wavy hair, black round glasses,
+beige embroidered top and small shoulder bag. Preserve the same identity,
+wardrobe, bag, makeup and warm late-afternoon light across all five shots.
+
+0–3 s — Old Cairo street selfie: Natural rear-phone framing and slight walking
+bob. She brushes one windblown strand aside, smiles into lens and says, “Come
+with me.” Keep pedestrians behind her moving normally.
+3–6 s — Nile ferry: Match cut on her hand lowering from the lens to the railing.
+Side profile as a sailboat passes left-to-right; rack focus from her face to the
+sunlit water and back.
+6–9 s — pyramid reveal: Begin close behind her shoulder, then pull sideways to
+show one pyramid at true scale. She turns only her head toward camera and quietly
+says, “This is unreal.”
+9–12 s — lantern market: Handheld follow through one clear aisle. She touches one
+hanging brass lantern; it swings after contact while warm reflections move across
+her glasses. Do not change her outfit or bag.
+12–15 s — riverside café: She sets down the same glasses for the first time,
+raises a clear tea glass toward camera, and smiles as a boat crosses the sunset
+background in the established direction. End on a steady intimate medium shot.
+
+Real skin and hair, authentic crowd spacing, location-specific ambience joined
+by one restrained musical bed. Preserve travel chronology, sun direction,
+left-to-right river motion and character scale. No instant wardrobe change,
+duplicated traveler, empty landmark composite, random landmark, tourist logo,
+generated subtitle, beauty-filter skin, overexposed sky or dialogue outside the
+two assigned lines.
+```
+
+**Why it works:** Five locations are linked by a repeated hand gesture, one light window and a persistent wardrobe rather than unrelated beauty shots. Each stop contains one action and one camera idea, leaving enough time for its landmark to read.
+
+**Source:** [Heisenberg on X](https://x.com/rovvmut_/status/2060211469401362497), published May 29, 2026. The original travel timeline and Seedance 2.0 attribution appear in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=5441).
+
+---
+
+### 80. Mirror-gated body-and-consciousness swap
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** identity-swap narrative, reference-role separation, magical transition  
+**Mode:** multi-reference image-to-video  
+**Settings:** 15 seconds, 16:9, four-beat fantasy drama
+
+```text
+@Image1 defines adult Scholar A's body, face, hair and blue travelling clothes.
+@Image2 defines adult Regent B's body, face, hair and black-gold court clothes.
+@Image3 defines the rain-soaked courtyard and circular water mirror. Bodies and
+wardrobes never morph or exchange; only gaze, posture, voice and behavior reveal
+which consciousness is inside.
+
+0–4 s: Scholar A approaches the mirror in @Image3. Slow push-in as the reflection
+moves half a beat late. A touches the water with the right index finger; ripples
+spread from that exact contact while rain continues outside the mirror.
+4–7 s: The surface fractures into blue light. Match cut from A's widening eye to
+B's eye opening in a throne room. No face blend: B's body and clothing remain
+exactly @Image2, but the frightened breathing and right-hand habit belong to A.
+7–11 s: Slow lateral track as officials bow. A-inside-B tries to imitate a formal
+stance, hides the trembling right hand inside one sleeve, and answers in B's
+voice after a visible pause. Keep every official secondary and out of close-up.
+11–15 s: Cut back to the courtyard mirror. Scholar A's unchanged body now carries
+B's rigid posture and controlled expression. B-inside-A raises the left hand;
+in the reflection, A-inside-B raises the right hand. A crack of light separates
+their palms and holds as the cliffhanger endpoint.
+
+Rain, restrained pulse, water resonance and two distinct voices. Preserve both
+bodies, clothing, handed behavior, mirror geometry and room identities. No face
+swap, costume swap, third body, merged anatomy, simultaneous location melt,
+random rune text, repeated transfer, lip-sync mismatch or explanation caption.
+```
+
+**Why it works:** Appearance is locked to the body references while consciousness is encoded through handedness, breathing and posture. The mirrored final gesture lets the audience verify the swap without relying on exposition or unstable face morphing.
+
+**Source:** [Soulful Ai on X](https://x.com/soulful__ai/status/2049094162134532477), published April 28, 2026. The four-stage soul-switch prompt and Seedance 2.0 attribution are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=3824).
+
+---
+
+### 81. Fixed-cockpit three-dog rally comedy
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** animal comedy, fixed-camera ensemble roles, vehicle vibration  
+**Mode:** text-to-video or multi-reference image-to-video  
+**Settings:** 12 seconds, 16:9, one continuous dashboard shot
+
+```text
+One fixed wide dashboard camera inside a rally car on a closed forest course.
+Exactly three expressive dogs occupy permanent roles: fluffy white dog driving
+at screen-right, black-and-white husky navigating at screen-left with headset
+and paper map, brown dog secured in the rear-center seat. No humans.
+
+0–3 s: The car is already moving. The white dog grips the wheel with both front
+paws and makes small serious corrections; the husky studies an upside-down map;
+the rear dog braces against the seat as all three bodies bounce from the same
+road vibration.
+3–6 s: The husky confidently points left while the visible road bends right.
+The driver gives one disbelieving side-eye but follows the road. The map folds
+back over the husky's face and stays attached to its paws.
+6–9 s: The car crosses one small crest. Suspend the cabin for a brief weightless
+beat, then land with one shared downward compression. The rear dog's ears rise
+and fall with delayed inertia; nothing leaves its seat.
+9–12 s: The driver accidentally taps the horn, all three freeze for half a beat,
+then exchange looks without breaking their assigned positions. End as the husky
+quietly rotates the map upright and pretends nothing happened.
+
+Photoreal fur and car materials with gently stylized expressions. Camera mount
+stays fixed; exterior trees move consistently through windows. Audio: engine,
+gravel, suspension, map rustle, one horn and dog vocal reactions—no dialogue or
+music. No crash, unsafe loose animal, extra paw, role swap, duplicated dog,
+steering-wheel deformation, changing interior, map disappearance, outside cut,
+subtitle, logo or human hand.
+```
+
+**Why it works:** Permanent screen positions make three performers easy to track, while one shared vibration field binds fur, ears, map and suspension to the vehicle. The joke escalates entirely inside a fixed composition.
+
+**Source:** [BMX on X](https://x.com/bmx_ai13/status/2060752343738843140), published May 30, 2026. The original fixed-cockpit team concept and Seedance 2.0 attribution are mapped in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=5502).
+
+---
+
+### 82. Beat-locked hand-dance coverage
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** dance performance, edit-to-audio synchronization, hand-detail continuity  
+**Mode:** reference-to-video  
+**Settings:** 15 seconds, 9:16, five-shot live-action performance
+
+```text
+@Image1 defines one adult dancer's identity, hairstyle and fitted black performance
+outfit. @Audio1 is the authorized master beat and the only music source. Lock
+gaze to camera, preserve hand anatomy, outfit and left-right orientation, and
+place every pose change on the specified audible accent.
+
+0–3 s — face close-up: Both hands sweep from beside the cheeks to one crossed
+point before the chest, landing on the first heavy beat. Slow uniform push-in;
+keep all fingertips visible.
+3–6 s — upper-body medium: Three alternating forearm cuts and shoulder accents,
+one per light beat. Camera slides gently right while the dancer stays centered
+and eyes never leave lens.
+6–9 s — full-body wide: Hands complete one outward circle as the torso performs
+one controlled wave and the feet take two small side steps. Pull back early
+enough to keep head and shoes inside frame; finish the wave on the heavy beat.
+9–12 s — hand-detail insert: Follow one precise sequence—open palm, two-finger
+point, wrist turn, closed pose—without cutting away from either hand. Every
+shape holds until the next light beat.
+12–15 s — full body to close: Begin wide on the final stance, push rapidly but
+smoothly to the face as hands lock before the chest. One eyebrow lift and small
+confident smile land on the last beat; hold three frames.
+
+Neutral studio wall, soft ring key and one side light, realistic skin and fabric,
+24 fps. No invented lyric, off-beat gesture, extra finger, fused hands, reversed
+choreography, cropped extremity, body reshaping, outfit change, random camera
+orbit, beauty-filter skin, background dancer, text or flicker.
+```
+
+**Why it works:** The prompt separates coverage by body scale while carrying gaze, screen direction and beat ownership across every cut. The hand-detail insert uses discrete held shapes, which is more stable than requesting continuous finger improvisation.
+
+**Source:** [AYi on X](https://x.com/AYi_AInotes/status/2049047545435889883), published April 28, 2026. The complete five-part choreography and Seedance 2.0 attribution are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=3832).
+
+---
+
+### 83. Eye-level horseback route one-take
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** first-person travel, route-image transfer, embodied camera physics  
+**Mode:** route-reference image-to-video  
+**Settings:** 15 seconds, 16:9, uninterrupted live-action POV
+
+```text
+@Image1 defines the village route from START to STOP only. Do not render its
+arrows, labels or map marks. The camera is permanently the adult rider's eye-level
+view from one walking horse—never third-person, aerial or detached FPV.
+
+0–4 s: Begin already moving from START. The horse's ears, upper neck and loose
+reins occupy the lower frame. Follow the mapped stone lane at walking pace;
+camera sway combines vertical hoof rhythm, subtle shoulder roll and small rein
+corrections.
+4–9 s: Pass two villagers beside the lane. The rider's right gloved hand enters
+once for a short wave, then returns to the rein. Villagers respond only after
+seeing the gesture. Preserve buildings, intersections and forward direction
+from @Image1.
+9–12 s: The STOP landmark appears ahead. Rein tension increases gradually, hoof
+cadence slows in three readable steps, and the horse stops beside—not beyond—
+the landmark. Ambient motion continues while the camera settles.
+12–15 s: The rider dismounts on the left. Viewpoint lowers through a continuous
+human body arc, the left boot contacts ground, then the camera steadies at standing
+eye height beside the horse. End with one hand still holding the same reins and
+the STOP landmark readable ahead.
+
+Natural daylight, live-action medieval village materials, real horse weight,
+hoof sound, leather creak, villagers and distant workshop ambience. Preserve one
+horse, one route, eye-level embodiment and landmark order. No visible rider body
+except hands/boot during dismount, no route overlay, teleport, horse gallop,
+floating camera, third-person cut, drone view, reversed lane, invented city,
+duplicated villager, HUD, subtitle or game-engine look.
+```
+
+**Why it works:** The camera is tied to a physical rider rather than a generic floating POV. Hoof cadence, rein tension and the lowering dismount arc explain every change in speed and camera height along the referenced route.
+
+**Source:** [Tanabe on X](https://x.com/tanabe_fragm/status/2060173342943117462), published May 29, 2026. The original route-constrained horseback POV and Seedance 2.0 attribution are archived in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=5471).
+
+---
+
 ## Reusable templates
 
 ### Single-shot template
@@ -3566,6 +3820,12 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 Community examples and techniques referenced in this README:
 
+- [The Anxious Mind — Seedance 2.0 palace parrot-alibi comedy](https://x.com/drjoetw/status/2048996625654354333)
+- [Heisenberg — Seedance 2.0 Egypt travel vlog](https://x.com/rovvmut_/status/2060211469401362497)
+- [Soulful Ai — Seedance 2.0 mirror-gated consciousness swap](https://x.com/soulful__ai/status/2049094162134532477)
+- [BMX — Seedance 2.0 three-dog rally cockpit comedy](https://x.com/bmx_ai13/status/2060752343738843140)
+- [AYi — Seedance 2.0 beat-locked hand dance](https://x.com/AYi_AInotes/status/2049047545435889883)
+- [Tanabe — Seedance 2.0 horseback route POV](https://x.com/tanabe_fragm/status/2060173342943117462)
 - [John — Seedance 2.0 baton-mapped ocean symphony](https://x.com/johnAGI168/status/2060926390204010936)
 - [WasifAI — Seedance 2.0 coastal scooter memory](https://x.com/doctorwasif/status/2077976875608269159)
 - [BMX — Seedance 2.0 roller-skate rail bail](https://x.com/bmx_ai13/status/2078179601134813536)
