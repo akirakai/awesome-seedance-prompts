@@ -64,6 +64,11 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Single-room four-look wardrobe challenge](#48-single-room-four-look-wardrobe-challenge)
   - [Ink-drop erase-and-redraw landscape](#49-ink-drop-erase-and-redraw-landscape)
   - [Cloud-edge sequential flight formation](#50-cloud-edge-sequential-flight-formation)
+  - [Practical B-movie double transformation](#51-practical-b-movie-double-transformation)
+  - [Match-cut morning departure](#52-match-cut-morning-departure)
+  - [Neon-district drift character intro](#53-neon-district-drift-character-intro)
+  - [Dual-scale grassland battle](#54-dual-scale-grassland-battle)
+  - [One-second observer-time delivery montage](#55-one-second-observer-time-delivery-montage)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -2164,6 +2169,130 @@ Adapted from [NoorAI's original Seedance 2.0 cloud-flight post](https://x.com/no
 
 ---
 
+### 51. Practical B-movie double transformation
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** deliberately campy live-action transformation montage · **Mode:** image-to-video · **Settings:** 15 seconds, 4:3, practical 1980s look
+
+```text
+Use @Image1 only for the adult performer's face, muscular build, wild blond hair, gold sequin costume, pink feather trim, jewelry, and starburst chest emblem. Use @Image2 only for the same large yellow housecat. Preserve both identities until their specified changes.
+
+Create a fast 15-second practical-effects transformation inside a low-budget 1980s disco set: painted flats, visible haze, pink tube lights, mirror ball, wind machine, enthusiastic adult extras. The production should feel handmade and photographed, not digitally perfect.
+
+[0–4s] Four rapid inserts: performer's determined face; hand gripping a chunky plastic power prop; cat watching nervously; extras stepping back. End as the prop rises overhead.
+[4–8s] Pink and gold practical flashes fire in separate pulses. On each pulse, one readable change occurs: hair gains volume, sequins brighten, striped sunglasses appear, feather trim lifts in the wind. Keep face, body, costume base and emblem unchanged.
+[8–12s] Intercut performer power poses with the cat transforming through three anatomical states: larger feline skeleton, emerging striped coat, then a full adult tiger. Preserve eye color and yellow-gold coat lineage; show feet bearing increasing weight against the floor.
+[12–15s] Wide hero frame of performer and tiger side-by-side. Extras react only after the tiger plants all four paws. Sparks stop, wind eases, mirror ball continues. Hold a slightly awkward triumphant pose for the camp payoff.
+
+Hard cuts, real lens bloom, optical star filters, smoke, fans, reflective foil and pyrotechnic-safe spark fountains. No sleek CGI aura, face swap, emblem change, extra animal, rubber anatomy, instant cat-to-tiger jump, weightless paws, frightened stampede, modern LED wall, gore, or polished superhero aesthetic.
+```
+
+**Why it works:** The intentionally cheap production design is treated as a coherent visual system. Splitting both transformations into observable state changes prevents the performer and animal from simply morphing between unrelated designs.
+
+Adapted from [TechHalla's original Seedance 2.0 B-movie transformation post](https://x.com/techhalla/status/2078257690980274386), published July 17, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7413).
+
+---
+
+### 52. Match-cut morning departure
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** quiet character montage with pet and location continuity · **Mode:** image-to-video · **Settings:** 15 seconds, 16:9, soft live-action drama
+
+```text
+Use @Image1 for the same adult woman's identity, dark wavy low pigtails, navy cardigan, white shirt, green striped tie, plaid trousers, and pastel-pink backpack. Use @Image2 for one fluffy white long-haired cat. Use @Image3 for the small pink bedroom, dollhouse, window, curtains and morning-light direction.
+
+[0–5s] Three tight match cuts, all centered on her right hand moving left-to-right: press a muted lip tint once; tighten the tie knot once; pull the backpack strap onto the shoulder. Match hand position and movement across cuts while preserving face, outfit and light.
+[5–9s] Medium shot beside the dollhouse. The cat is already sitting on top. She cups its cheek, touches noses briefly, then exits frame-left. Slow push-in; the cat follows her with its eyes before moving.
+[9–12s] Cut only after she leaves. The cat jumps from dollhouse to window sill in one complete arc, compressing before takeoff and landing with all four paws. Curtains react after contact.
+[12–15s] Locked view from inside the room through the same window. Outside, the woman walks away along the street in the same clothes and backpack, back to camera. Foreground cat raises one paw against the glass; she does not see it. End on the separation in depth.
+
+Soft natural window light, lifted blacks, fine 35 mm grain, restrained pastel palette, realistic cat movement and room tone. Preserve left-to-right departure, window geography, cat identity, backpack shape and light direction. No extra cat, human-like cat wave, outfit change, reversed street direction, dollhouse teleportation, beauty-filter skin, subtitle, dialogue, or sentimental slow motion.
+```
+
+**Why it works:** The three inserts share one hand vector, so the montage reads as purposeful editing. The later cat action respects preparation, takeoff and landing, while the final deep composition resolves human and pet movement without an artificial reaction.
+
+Adapted from [Ivanna's original Seedance 2.0 getting-ready post](https://x.com/ivanka_humeniuk/status/2077856012502012413), published July 16, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7323).
+
+---
+
+### 53. Neon-district drift character intro
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** stylized game-character reveal through vehicle action · **Mode:** reference-to-video · **Settings:** 12 seconds, 16:9, cel-shaded 3D animation
+
+```text
+Use @Image1 only for the adult driver's face, eyes, hairstyle, outfit, jewelry, body proportions and graphic color accents. Use @Image2 only for one graphite compact sports coupe. Keep both designs identical throughout. Render premium cel-shaded 3D animation with hand-painted light accents, not photoreal car footage.
+
+FIXED LOCATION: one wet nighttime shopping intersection, glass storefront frame-left, unreadable abstract billboards rear, crosswalk center, narrow exit street frame-right. Maintain the same geometry and rain direction.
+
+[0–2s] Ground-level track across a puddle reflection as the unchanged coupe approaches from frame-left. Tilt up only when the front wheel crosses the reflection.
+[2–5s] Wide three-quarter view. The driver initiates one clockwise drift around the center crosswalk; show steering input, front-wheel counter-steer, rear slip, tire spray and deceleration in order. Camera tracks outside the turn, never crossing the car's path.
+[5–8s] Pass through the side window into a close interior profile. The same driver keeps both hands on the wheel through recovery; hair and one loose garment edge lag with the turn. Rack focus from eyes to the exit street.
+[8–10s] Return to a low exterior angle as the coupe straightens and accelerates into frame-right. A restrained colored reflection matching the character palette trails on wet asphalt, not in the air.
+[10–12s] The car stops in a marked bay. Glide over the hood to the windshield; the driver adjusts one collar edge and gives a calm look to camera. End before any door opens.
+
+Stable 24fps animation, readable wheel rotation, coherent reflections, controlled motion blur and tire audio. No new car, face change, impossible steering, instant stop, floating light trail, illegible branded text, camera through solid metal, random orbit, extra passenger, game UI, or photoreal style drift.
+```
+
+**Why it works:** The location is treated as a fixed map and the drift as a sequence of mechanical causes, while the camera moves from reflected vehicle to driver identity and back. The final gesture makes the action serve a character introduction rather than becoming generic racing footage.
+
+Adapted from [mayv's original Seedance 2.0 urban-drift post](https://x.com/haruuraeadss/status/2077854576729043204), published July 16, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7350).
+
+---
+
+### 54. Dual-scale grassland battle
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** large battle spectacle with a simultaneous miniature story · **Mode:** multi-reference image-to-video · **Settings:** 15 seconds, 2.39:1, photoreal fantasy
+
+```text
+Use @Image1 for the dawn grassland and distant white citadel; @Image2 for silver-armored forest guardians; @Image3 for massive iron-clad raiders. @Image4 and @Image5 define two palm-sized clockwork knights: one green-brass, one pale stone. References own only the named layer.
+
+SCALE LAW: adult armies remain human scale. The two clockwork knights remain palm-sized and fight only each other among grass blades. Never enlarge or merge them with the armies.
+
+[0–3s] Low close-up of one iron-clad raider roaring, citadel and sunrise fixed behind. Cut on the first heavy footstep.
+[3–7s] FPV dive beside the charging armies, then descend through grass to ground level. Giant boots cross far behind while the two miniature knights enter foreground from opposite sides. No boot may contact them.
+[7–11s] Macro side-on shot of the miniature duel: green-brass shield deflects one stone blade; both separate and recover. In soft background, one silver guardian blocks a raider's downward strike. Keep both action layers readable and synchronized by the same metal impact.
+[11–15s] Rise continuously from macro to an extreme wide showing the full clash, citadel and sun direction. The miniature pair remain visible as two tiny contrasting silhouettes at the bottom edge, still separated. End before either side wins.
+
+Cold dawn mist, warm rim light, real grass, dew, cloth, iron and stone textures, diegetic battle audio only. Preserve four reference designs, army sides, citadel position, scale ratio and screen direction. No arrows, gore, duplicated hero, miniature growth, giant hand interaction, boot collision, camera teleport, flicker, game UI, or unreadable dust wall.
+```
+
+**Why it works:** A written scale law and separate opponents prevent cross-contamination between two concurrent battles. The camera descends and rises through real grass, using one shared impact sound to connect macro and wide action without collapsing their scale.
+
+Adapted from [Mad Mask's original Seedance 2.0 dual-scale battle post](https://x.com/mad_mask/status/2077928857634508938), published July 17, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7412).
+
+---
+
+### 55. One-second observer-time delivery montage
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** super-speed storytelling without energy trails · **Mode:** text-to-video · **Settings:** 15 seconds, 16:9, photoreal time dilation
+
+```text
+Create a 15-second photorealistic sequence built around two clocks: less than one second passes for a homeowner at a suburban front door, while an adult courier completes a citywide delivery route in expanded subjective time.
+
+ANCHOR FRAME: locked 35 mm medium-wide of the door. Homeowner frame-left opening it; courier frame-right holding one small parcel with both hands. Morning light, leaf positions and door angle establish the observer state.
+
+[0–3s] The door begins to open. At the first hinge sound, the courier exits in a directional blur caused only by real motion. Freeze neither person; the homeowner continues the same slow door movement.
+[3–10s] Four 1.75-second route shots connected by full-frame foreground wipes: sprint past row houses; place parcels at an apartment desk; cross a footbridge; scan the final parcel at a shop. Preserve face, uniform, scanner, parcel count and left-to-right travel. Environmental reactions occur after passage — papers lift, leaves turn, loose fabric snaps — with no lightning or glow.
+[10–12s] Use the courier's shoulder filling frame as the final wipe back to the exact anchor camera. Match the original body position and remaining parcel.
+[12–15s] The door finishes opening. The courier completes the interrupted handoff and says, “Right on time.” The homeowner notices fresh dust on the courier's shoe, looks down, then back up. End on the courier's restrained smile.
+
+Natural daylight, physically accurate directional blur, documentary skin and fabric, ordinary city sound stretched during route shots. The hinge tone continues quietly across the montage and resolves on return. No duplicate courier, simultaneous copies, energy trail, teleport flash, moving sun, reset door, changing parcel, impossible handoff, news-screen exposition, random slow motion, or more than one observer-time second.
+```
+
+**Why it works:** The door hinge is a continuous observer-time clock, while foreground wipes allow expanded subjective travel. Returning to the exact anchor pose, parcel and door angle sells impossible speed through continuity instead of visual effects.
+
+Adapted from [Meem's original Seedance 2.0 super-speed courier post](https://x.com/mehvishs25/status/2077795278690930964), published July 16, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7314).
+
+---
+
 ## Reusable templates
 
 ### Single-shot template
@@ -2333,6 +2462,43 @@ No recap montage, opening reframe, pose reset, reversed travel direction, prop t
 **Why it works:** The handoff is defined as state plus velocity, not just a similar-looking frame. A written ledger makes invisible continuity — ownership, emotion, motion and sound decay — as enforceable as identity, while the final hook prepares the following generation.
 
 Adapted from [Shami's original Seedance 2.0 serialized sports-thriller prompt](https://x.com/ShamiWeb3/status/2077989765753033115), published July 17, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7420).
+
+### Multimodal asset-role contract template
+
+**Verified model:** Seedance 2.0 — confirmed by the original creator's explicitly versioned Seedance 2.0 prompting guide
+
+Use this before the shot list when combining several images, videos, and audio files. Assign each asset a single authority, state what it must not contribute, then resolve conflicts through a written priority order.
+
+```text
+[DURATION], [ASPECT RATIO], [OUTPUT STYLE].
+
+ASSET ROLE CONTRACT
+@Image1 owns [FACE / PRODUCT SHAPE / FIRST FRAME] only. Preserve [CRITICAL FEATURES]. Do not inherit [BACKGROUND / POSE / LIGHT].
+@Image2 owns [WARDROBE / MATERIAL / PROP] only. Do not copy its person, camera or setting.
+@Image3 owns [LOCATION GEOMETRY / PALETTE / LIGHT DIRECTION] only. Rebuild the subject according to @Image1.
+@Video1 owns [CAMERA PATH / BODY MOTION / TRANSITION RHYTHM] only. Transfer timing and blocking, not its people, wardrobe, objects, text or background.
+@Audio1 owns [VOICE / MUSIC / BEAT / AMBIENCE] and is the only source for [VOCAL / MUSIC]. Do not invent additional words or melody.
+
+CONFLICT PRIORITY
+1. @Image1 identity or product geometry.
+2. @Image2 wardrobe, material and owned props.
+3. @Image3 spatial layout and motivated light.
+4. @Video1 motion path and timing.
+5. @Audio1 synchronization.
+6. Text instructions below.
+If a lower-priority asset conflicts with a higher-priority layer, preserve the higher-priority layer and adapt only the lower one.
+
+SHOT PLAN
+[0–Xs] [SHOT SIZE]: [SUBJECT] performs [ACTION]. Camera follows @Video1's [SPECIFIC MOVE]. @Audio1 cue [CUE] triggers [VISIBLE EVENT].
+[X–Ys] [NEXT BEAT]. Preserve the ownership rules above.
+[Y–End] [PAYOFF / HOLD], ending on [FINAL STATE].
+
+No asset blending, face from wardrobe reference, background from motion reference, camera copied from a still image, invented lyric, unauthorized text, priority reversal, identity drift, prop reassignment, or unstated style transfer.
+```
+
+**Why it works:** Upload count is not control. The contract converts references into non-overlapping jobs and supplies a deterministic conflict rule, so adding more assets reduces ambiguity instead of increasing it.
+
+Adapted from [ChatCut's original Seedance 2.0 multimodal prompting guide](https://x.com/chatcutapp/status/2041763561333264865), published April 8, 2026.
 
 ### Gaze–light–action continuation template
 
@@ -2607,6 +2773,12 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 Community examples and techniques referenced in this README:
 
+- [TechHalla — Seedance 2.0 practical B-movie double transformation](https://x.com/techhalla/status/2078257690980274386)
+- [Ivanna — Seedance 2.0 match-cut morning departure](https://x.com/ivanka_humeniuk/status/2077856012502012413)
+- [mayv — Seedance 2.0 neon-district drift character intro](https://x.com/haruuraeadss/status/2077854576729043204)
+- [Mad Mask — Seedance 2.0 dual-scale grassland battle](https://x.com/mad_mask/status/2077928857634508938)
+- [Meem — Seedance 2.0 observer-time delivery montage](https://x.com/mehvishs25/status/2077795278690930964)
+- [ChatCut — Seedance 2.0 multimodal asset-role guide](https://x.com/chatcutapp/status/2041763561333264865)
 - [Jack — Seedance 2.0 pocket-cam late-night tea diary](https://x.com/j_smeaton99/status/2077756976852070535)
 - [Marco — Seedance 2.0 heat-versus-cold floating-bottle magic](https://x.com/maarcoofdezz/status/2078162454744346803)
 - [Sania — Seedance 2.0 single-room wardrobe challenge](https://x.com/saniaspeaks_/status/2078101726221959402)
