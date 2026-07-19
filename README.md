@@ -97,6 +97,14 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Fixed-cockpit three-dog rally comedy](#81-fixed-cockpit-three-dog-rally-comedy)
   - [Beat-locked hand-dance coverage](#82-beat-locked-hand-dance-coverage)
   - [Eye-level horseback route one-take](#83-eye-level-horseback-route-one-take)
+  - [Premium miniature harbour assembly](#84-premium-miniature-harbour-assembly)
+  - [Single-spear delayed-follow-up RPG duel](#85-single-spear-delayed-follow-up-rpg-duel)
+  - [Same-pose ship-to-desert one-take](#86-same-pose-ship-to-desert-one-take)
+  - [Rainy-station distant goodbye](#87-rainy-station-distant-goodbye)
+  - [Hurricane lighthouse beacon recovery](#88-hurricane-lighthouse-beacon-recovery)
+  - [Under-skin countdown bathroom thriller](#89-under-skin-countdown-bathroom-thriller)
+  - [Photochemical crowd-corridor arrival](#90-photochemical-crowd-corridor-arrival)
+  - [Gesture-controlled fire choreography](#91-gesture-controlled-fire-choreography)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -3248,6 +3256,334 @@ duplicated villager, HUD, subtitle or game-engine look.
 
 ---
 
+### 84. Premium miniature harbour assembly
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** architectural visualization, diorama animation, environment assembly  
+**Mode:** reference image-to-video  
+**Settings:** 15 seconds, 1:1, cinematic miniature realism
+
+```text
+@Image1 is the final layout of a premium handcrafted harbour-island diorama.
+Match its coastline, districts, canals, bridge positions, lighthouse, roof colours
+and terrain. No prominent people.
+
+0–3 s: High aerial wide over the empty island and bright sea. Coastline, hills,
+roads, harbour walls, canals and bridge foundations rise and lock into place.
+Camera descends slowly toward the main harbour while the entire island remains
+readable.
+3–7 s: Piers extend; stone streets, stairs, warehouses and layered red, blue and
+white rooflines assemble from waterfront to hillside. Components slide and click
+with believable weight rather than appearing by dissolve.
+7–10 s: Harbour-level tracking reveals boats lowering into water, mooring ropes
+connecting, cranes, lamps and seawalls completing in foreground, midground and
+background. Preserve the larger district in frame.
+10–13 s: Orbit the lighthouse as its stone shaft, lantern room, rail and rotating
+mechanism assemble; the last bridges and hillside homes finish behind it.
+13–15 s: Grand aerial pullback to the completed island. Boats rock, flags move,
+waves touch the quay and the beacon rotates; do not freeze the ending.
+
+Bright coastal daylight, painted wood and stone, practical-model craftsmanship,
+subtle miniature depth of field. Audio: precise wood clicks, stone slides, rope
+creak, water, gulls and restrained adventure music. No cheap plastic, macro-only
+coverage, random layout, oversized humans, floating parts, instant pop-in, dark
+weather, text, logo or watermark.
+```
+
+**Why it works:** It builds from terrain to architecture to operational details, so each scale has its own causal assembly pass. The camera progressively descends, then pulls back to verify that local details still preserve the reference's island-wide geometry.
+
+**Source:** [Sam Aoteman on X](https://x.com/samaote/status/2078435244123062591), published July 18, 2026. The complete reference-driven construction prompt and Seedance 2.0 attribution are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7479).
+
+---
+
+### 85. Single-spear delayed-follow-up RPG duel
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** theatrical 3D anime combat, prop ownership, readable hit timing  
+**Mode:** character-reference image-to-video  
+**Settings:** 12–15 seconds, 16:9, four-cut 3D toon sequence
+
+```text
+@Image1 defines one adult protagonist's face, hair, build, outfit, palette and
+silhouette. Adapt the arena to that palette but do not inherit the image's pose,
+background, framing or text. High-density 3D toon/cel look, delicate line colour,
+two-to-three-stage shading and distinct cloth, metal and stone roughness.
+
+Keep exactly one protagonist, one giant non-human guardian, one straight long
+spear and one continuous follow-up element: a tail, ribbon, chain or single band
+of magic. The spear never splits, duplicates or changes length; the follow-up
+element never branches or becomes a second weapon.
+
+Cut 1: Low diagonal-front medium shot. The protagonist steps through the hips and
+shoulders and sweeps the spear across the guardian's single glowing torso mark.
+Hold two frames at contact; a circular light wave expands from that exact point.
+Cut 2: Contact close-up, no face cutaway. The delayed follow-up element travels
+root-to-tip in one low horizontal arc and strikes the same mark once. Hold one
+brief impact frame; armour and cloth react outward from contact.
+Cut 3: Medium-long view. The guardian loses balance in two heavy steps, drops to
+one knee, then settles intact and motionless on the floor.
+Cut 4: Ultra-low angle with the fallen guardian at one edge. The protagonist
+drives the same spear into empty floor with a visible safety gap from the body.
+Sparks, a small crack ring and sound stop on the final contact frame.
+
+Audio maps one-to-one: wind cut, first impact, heavier delayed impact, floor
+collapse, sharp spear contact and abrupt silence. No extra fighter, duplicate
+weapon, gore, disappearing enemy, strike through the fallen body, UI, title,
+logo, mixed live-action style or victory pose.
+```
+
+**Why it works:** Explicit prop ownership prevents the common extra-weapon failure, while contact holds and a single delayed secondary element make the combo legible. Ending on empty floor preserves a forceful composition without confusing the final target.
+
+**Source:** [mayv on X](https://x.com/haruuraeadss/status/2078077558416167004), published July 17, 2026. The original single-spear choreography and Seedance 2.0 attribution are documented in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7427).
+
+---
+
+### 86. Same-pose ship-to-desert one-take
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** in-camera world transition, wardrobe change, identity continuity  
+**Mode:** multi-reference image-to-video  
+**Settings:** 15 seconds, 16:9, uninterrupted one-take
+
+```text
+@Image1 fixes the adult sailor's identity and ship-deck wardrobe. @Image2 is the
+same face in desert clothing. @Image3 fixes the damaged wooden ship and sea;
+@Image4 fixes the pale-gold dune world. Use each environment only in its assigned
+half. One continuous shot—no visible cut.
+
+0–5 s: Handheld follow behind the sailor crossing a damaged deck toward a cabin
+door. A blast lands left; the sailor recoils right and falls. A second blast lands
+right as the sailor rises; they duck behind one fixed timber, then sprint again.
+Keep the destination door background-centre and preserve left/right geography.
+5–8 s: Two steps before the door, a white flash kicks the camera. Dust, smoke and
+small debris cover 100% of the lens for 1.5 seconds; no silhouette or background
+may remain readable.
+8–12 s: The moving dust changes from warm grey to bright neutral haze and clears
+onto @Image4. Reveal the same person in @Image2's desert wardrobe, half-crouched
+with arms shielding the head in exactly the pose held before the whiteout.
+12–15 s: Camera motion settles from battle-handheld to slow lateral drift. The
+traveller lowers both arms, stands, makes one cautious turn and remains small
+against the dunes.
+
+Match face, body scale and pose across the hidden transition. Audio moves from
+timber, fire, footfalls and two directional blasts to muffled ringing inside the
+dust, then dry wind and cloth. No partial morph, mixed costumes, ship fragment in
+desert, premature desert reveal, teleport pop, extra person, camera cut, reversed
+blast direction, text or logo.
+```
+
+**Why it works:** The full-frame particulate wipe hides the discontinuity, but the retained crouch and arm position make the new world feel causally connected rather than randomly substituted. Camera energy and sound also transform in stages.
+
+**Source:** [WAKA WAKKA on X](https://x.com/wakawakkachan/status/2078243803866202396), published July 17, 2026. The original multi-reference one-take and explicit Seedance 2.0 record appear in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7431).
+
+---
+
+### 87. Rainy-station distant goodbye
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** restrained emotional storytelling, distant blocking, reference continuity  
+**Mode:** multi-reference image-to-video  
+**Settings:** 14 seconds, 16:9, four-shot 1990s film-print drama
+
+```text
+@Image1 fixes the adult woman, @Image2 fixes the adult man, and @Image3 fixes the
+small seaside platform, blue bench, yellow tactile strip and cream-orange train.
+Keep both faces, height difference, suitcase, umbrella and platform geography
+stable. Every composition stays distant, full-body and diagonally off-axis;
+normal lens, camera 12–20 metres away, no close-up.
+
+0–3.5 s: Handheld long view down the wet platform. He holds a black umbrella fully
+over her; her blue suitcase stays beside her right foot. The open train waits
+screen-left and the rain-hazed sea remains behind.
+3.5–8 s, hard cut: From a second diagonal, she steps into an embrace. He releases
+the umbrella so both arms can close around her. It drops once, bounces and rocks
+upturned; wet clothing darkens gradually.
+8–11 s, hard cut: Angle along the train. She is now behind one rain-streaked
+window and gives a small wave. He has recovered the same umbrella and answers
+from the platform; keep both figures in the frame.
+11–14 s, hard cut: Reverse long view. The heavy train starts slowly and leaves;
+he continues waving until its tail clears, then lowers his hand beside the blue
+bench.
+
+Soft overcast daylight, desaturated blue-grey 1990s print, coarse moving grain,
+gate weave, gentle shoulder sway and late human reframes. Audio: roof rain,
+umbrella impact, soaked fabric, train brake release, wheel spray and fading rail
+sound. No gimbal smoothness, glamour close-up, new prop, identity swap, suitcase
+movement, dry clothing after exposure, instant train acceleration, vignette,
+subtitle or music-video polish.
+```
+
+**Why it works:** Emotional performance is readable through silhouette, spacing and prop state instead of close-ups. The umbrella's drop and recovery, plus the train's mass and fixed platform map, carry continuity across the hard cuts.
+
+**Source:** [Smiling Khan on X](https://x.com/AIwithkhan/status/2078086757795635381), published July 17, 2026. The full distant-coverage prompt and Seedance 2.0 attribution are retained in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7470).
+
+---
+
+### 88. Hurricane lighthouse beacon recovery
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** environmental action, readable escalation, task-based suspense  
+**Mode:** text-to-video or character-reference image-to-video  
+**Settings:** 15 seconds, 16:9, hyper-real live action
+
+```text
+Night on a remote rocky coast during a violent hurricane. One adult lighthouse
+keeper in safety gear must climb the exterior ladder and reactivate the dark
+emergency beacon. Keep tower, ladder, platform, beacon and coastline spatially
+stable; the keeper's face is never shown in a clear close-up.
+
+0–3 s: Wide low coastal view. The keeper exits onto the wet exterior and begins
+climbing as sideways rain crosses the frame and a wave strikes the tower base.
+Camera cranes upward just enough to establish the beacon far above.
+3–7 s: Parallel tracking from outside the ladder. Clothing and safety line pull
+consistently downwind. One gust breaks the keeper's rhythm; a boot slips, the
+harness catches tension, and both hands recover the same rung before climbing
+continues.
+7–10 s: Side medium-wide near the upper platform. A lightning flash reveals the
+dark beacon. Another wave impact reaches the structure one beat later as a small
+vibration; do not shake before the cause.
+10–13 s: The keeper pulls onto the platform, stays clipped to the same line and
+crosses low against the wind. One hand braces the housing while the other seats
+a loose connector and locks its cover.
+13–15 s: The beacon powers on, accelerates to a steady rotation and throws one
+bright beam through rain. Pull wide to the keeper holding the rail while the
+light, waves and storm remain active.
+
+Hyper-real wet stone, metal friction, heavy water and strong sense of height.
+Audio: wind pressure, rain, ladder ring, harness snap, delayed wave impact,
+connector click, motor start. No flying body, broken anatomy, weightless water,
+random camera roll, premature light, duplicate keeper, collapsing tower, slow
+motion, text, logo or celebrity likeness.
+```
+
+**Why it works:** The suspense is attached to a concrete task with visible intermediate states—climb, slip, harness catch, connector seat, motor start. Delaying structural shake until after the wave preserves cause and effect in the storm.
+
+**Source:** [DeCat on X](https://x.com/DeCat2025/status/2078284800083857734), published July 18, 2026. The original hurricane rescue prompt and Seedance 2.0 attribution are available in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7492).
+
+---
+
+### 89. Under-skin countdown bathroom thriller
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** psychological sci-fi, performance escalation, motivated light  
+**Mode:** text-to-video or character-reference image-to-video  
+**Settings:** 12 seconds, 16:9, grounded handheld thriller
+
+```text
+One adult alone in a small apartment bathroom at night. Cold fluorescent tube,
+mirror, sink and shallow drawers remain fixed. A compact red countdown display
+appears beneath the skin at one temple, beginning at 10; use clean stable numerals
+only and decrement once per second.
+
+0–3 s: Tight mirror over-shoulder. The person notices the red reflection, touches
+the exact spot, then looks between skin and mirror. Camera eases closer; breath
+shortens and sweat begins naturally.
+3–6 s: Handheld medium close-up. They splash water, open the top drawer, find
+nothing, then press a folded towel over the temple. The same red display remains
+visible as a soft glow through the fabric; do not duplicate it in the mirror.
+6–9 s: The fluorescent hum bends lower as the count reaches 4. The tube flickers
+twice and fails. Hold close: the countdown is now the only red key light, with
+real falloff across wet skin and sink porcelain.
+9–12 s: At 1, all ambience cuts to silence. The numeral freezes instead of
+reaching zero, then fades beneath the skin. The fluorescent tube returns softly;
+the person lowers the towel and watches the unchanged mirror, still trembling.
+
+Real skin texture, restrained acting that grows from confusion to panic, shallow
+depth of field and subtle focus breathing. Audio is fluorescent hum, water, drawer
+slide, towel friction, breath, silence, then power return. No gore, open wound,
+floating HUD, random glyph, duplicate timer, timer on towel surface, distorted
+face, changing bathroom, explosive ending, extra person, dialogue, title or logo.
+```
+
+**Why it works:** The timer is treated as a physical light source with one location and a strict state progression. Each desperate action fails visibly, while the sudden audio vacuum supplies the climax without requiring destructive spectacle.
+
+**Source:** [DeCat on X](https://x.com/DeCat2025/status/2060542994873196852), published May 30, 2026. The complete thriller prompt and Seedance 2.0 attribution are archived in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=5501).
+
+---
+
+### 90. Photochemical crowd-corridor arrival
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** ensemble blocking, period noir, practical-light cinematography  
+**Mode:** character-reference image-to-video  
+**Settings:** 15 seconds, 2.39:1, seven-shot 1980s 35 mm sequence
+
+```text
+@Image1 fixes one adult lead's face and silhouette. A fictional 1982 rain street
+with wet cobbles, brick storefronts, tungsten windows, steam and one idling black
+period sedan. Photochemical 35 mm grain, mild anamorphic flare, practical light
+only, weathered natural faces and no digital-clean finish.
+
+0–3 s: Low wide. The lead and two companions emerge from deep background. Eight
+pedestrians notice them and part outward in two waves, creating a centre corridor;
+nobody vanishes or crosses back through the trio.
+3–5 s: Tight profile. Hat brim shadows the eyes while breath and street steam pass
+between face and lens. Preserve skin texture and the exact rain direction.
+5–8 s: Slow lateral track. The trio advances at one pace while four attendants
+form a stable rear wall. Background pedestrians remain at their established
+edges and continue small natural reactions.
+8–10 s: Insert of one gloved hand closing a coat button; match walking phase and
+screen direction across the cut.
+10–12 s: Low wide on the same sedan. Its rear door opens only after the trio
+arrives; amber storefront light reflects across the roof.
+12–14 s: Profile close shot as the lead pauses, looks once toward the parted crowd
+and enters. The same door closes.
+14–15 s: Wide hold as the sedan leaves into rain and the crowd slowly relaxes
+without filling the corridor instantly.
+
+Audio: rain, distant traffic, leather shoes, coat cloth, engine idle, door latch
+and tyre spray; restrained low strings only. No weapon, crime act, duplicate
+lead, crowd teleport, modern car, LED sign, artificial beauty skin, frozen extra,
+random smoke source, day-to-night shift, title or logo.
+```
+
+**Why it works:** The crowd is directed as two timed spatial waves instead of an undifferentiated mass. Matching the lead's screen direction, step phase and practical-light reflections makes the insert shots belong to one photographed event.
+
+**Source:** [WasifAI on X](https://x.com/doctorwasif/status/2060382063317102961), published May 29, 2026. The original photochemical ensemble prompt and Seedance 2.0 attribution are recorded in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=5432).
+
+---
+
+### 91. Gesture-controlled fire choreography
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** fantasy performance, effect-to-body synchronization, music cueing  
+**Mode:** text-to-video or performer-reference image-to-video  
+**Settings:** 15 seconds, 16:9, four-shot cinematic performance
+
+```text
+One adult fire performer stands centred in an open ancient-stone courtyard at
+night, surrounded by safe empty space. Dark sky, practical ember bowls and a light
+wind establish the only fire sources. Keep the same performer, costume, courtyard
+axis and wind direction across all shots.
+
+0–3 s: Slow frontal push from wide to medium-wide. The performer breathes once,
+raises both empty hands and holds; only a few existing embers drift past.
+3–6 s: Hand close-up. One deliberate finger path ignites a thin orange trail that
+follows 6 cm behind the fingertips, never leading or touching skin. Cut on the
+completed arc.
+6–10 s: Low wide orbit. On one full-body spin and the music's first deep beat, a
+single fire ring expands symmetrically from the marked ground circle. As the
+performer stops, the ring also settles; flames retain wind-driven shape.
+10–13 s: Medium low angle. Both hands rise together; two narrow streams follow
+their paths, join above the head and become one controlled spiral. Keep the face
+visible below the effect and do not grow extra limbs or flame sources.
+13–15 s: Hands lower slowly. The spiral collapses downward into harmless embers,
+the ring extinguishes from far side to near side, and camera eases back to the
+original axis. End on the still silhouette while embers continue moving.
+
+Warm firelight supplies changing key and rim light with real falloff on stone and
+fabric. Audio: distant wind, fabric, small ignition, one bass cue, fire rush and
+ember crackle. No body ignition, unsafe contact, uncontrolled explosion, fire
+before its gesture, effect lag reversal, duplicate performer, random camera cut,
+giant opaque vortex hiding the face, frozen particles, text or logo.
+```
+
+**Why it works:** Every visual effect has a bodily trigger, a small delay and a defined shutdown gesture. That event ownership keeps the choreography readable and lets firelight change the performer and architecture causally.
+
+**Source:** [Ai Doctor on X](https://x.com/DoctorAmna11/status/2060342535822979429), published May 29, 2026. The original gesture-driven performance and Seedance 2.0 attribution are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=5451).
+
+---
+
 ## Reusable templates
 
 ### Single-shot template
@@ -3820,6 +4156,14 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 Community examples and techniques referenced in this README:
 
+- [Sam Aoteman — Seedance 2.0 miniature harbour-island assembly](https://x.com/samaote/status/2078435244123062591)
+- [mayv — Seedance 2.0 single-spear delayed-follow-up RPG duel](https://x.com/haruuraeadss/status/2078077558416167004)
+- [WAKA WAKKA — Seedance 2.0 same-pose ship-to-desert one-take](https://x.com/wakawakkachan/status/2078243803866202396)
+- [Smiling Khan — Seedance 2.0 rainy-station distant goodbye](https://x.com/AIwithkhan/status/2078086757795635381)
+- [DeCat — Seedance 2.0 hurricane lighthouse beacon recovery](https://x.com/DeCat2025/status/2078284800083857734)
+- [DeCat — Seedance 2.0 under-skin countdown thriller](https://x.com/DeCat2025/status/2060542994873196852)
+- [WasifAI — Seedance 2.0 photochemical crowd-corridor arrival](https://x.com/doctorwasif/status/2060382063317102961)
+- [Ai Doctor — Seedance 2.0 gesture-controlled fire choreography](https://x.com/DoctorAmna11/status/2060342535822979429)
 - [The Anxious Mind — Seedance 2.0 palace parrot-alibi comedy](https://x.com/drjoetw/status/2048996625654354333)
 - [Heisenberg — Seedance 2.0 Egypt travel vlog](https://x.com/rovvmut_/status/2060211469401362497)
 - [Soulful Ai — Seedance 2.0 mirror-gated consciousness swap](https://x.com/soulful__ai/status/2049094162134532477)
