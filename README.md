@@ -49,6 +49,11 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Theatre of Oceanic Civilizations](#33-theatre-of-oceanic-civilizations)
   - [Mini-DV dorm move-in montage](#34-mini-dv-dorm-move-in-montage)
   - [Momentum-conversion anime descent](#35-momentum-conversion-anime-descent)
+  - [POV product texture-proof unboxing](#36-pov-product-texture-proof-unboxing)
+  - [Market-to-kitchen lifestyle continuity](#37-market-to-kitchen-lifestyle-continuity)
+  - [Locked-off ravine dragon reveal](#38-locked-off-ravine-dragon-reveal)
+  - [Audience-phone kinetic top championship](#39-audience-phone-kinetic-top-championship)
+  - [Astronaut amusement-park mystery](#40-astronaut-amusement-park-mystery)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -1780,6 +1785,132 @@ published July 16, 2026; the full source and model mapping are preserved in the
 
 ---
 
+### 36. POV product texture-proof unboxing
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** tactile food or small-product advertising · **Mode:** text-to-video · **Settings:** 15 seconds, 16:9, realistic tabletop macro
+
+```text
+Create a 15-second photorealistic tabletop product film from the viewer's seated POV.
+
+[0–3s] Two natural adult hands place a sealed [PRODUCT PACKAGE] at the center of a clean café table. Hold a steady chest-level view; keep the label readable and the package proportions exact.
+[3–6s] The hands open the flap and remove one individually wrapped [PRODUCT]. Use a gentle push-in. Let cardboard friction and wrapper crinkle dominate the sound.
+[6–10s] Tear the wrapper and place the product on a small neutral plate. Cut to a 50 mm close-up; preserve its size, color, coating, and crumbs.
+[10–13s] Break it once to reveal the real cross-section: [FILLING / MATERIAL LAYERS]. Capture the snap, soft interior movement, and a few physically plausible crumbs; no exaggerated slow motion.
+[13–15s] Rack focus from the opened product to the upright package behind it. End on a clean hero composition with intact, legible branding.
+
+Warm window light, restrained commercial color, shallow but believable depth of field. Authentic room tone and close ASMR foley only. No extra fingers, floating crumbs, changing package text, rubbery food, duplicated product, or glossy CGI surfaces.
+```
+
+**Why it works:** The sequence proves the product through successive states — sealed, opened, plated, and broken — while assigning one camera behavior and one signature sound to each state. That makes the tactile payoff reusable without depending on a particular brand.
+
+Adapted from [simeon-sanai's original Seedance 2.0 ASMR product post](https://x.com/Naiknelofar788/status/2077738468898431380), published July 16, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7316).
+
+---
+
+### 37. Market-to-kitchen lifestyle continuity
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** cinematic lifestyle montage with persistent character and props · **Mode:** text-to-video · **Settings:** 15 seconds, 9:16, naturalistic handheld
+
+```text
+Create a 15-second photorealistic lifestyle montage following the same adult woman from apartment to neighborhood market and back home.
+
+IDENTITY LOCK: East Asian woman, late 20s, shoulder-length black hair, cream cardigan, blue jeans, canvas tote. Keep her face, hair, outfit, body proportions, and tote unchanged in every shot.
+
+[0–2s] Wide apartment entryway. She picks up the empty tote and leaves. Slow handheld follow.
+[2–5s] Match cut to the market entrance as the same tote swings forward. Morning street ambience bridges the cut.
+[5–8s] Medium tracking shot beside a produce stall. She selects tomatoes and herbs; after each action, the correct item remains visibly inside the tote.
+[8–10s] Tight insert of her hand paying, then a sound bridge from register beep to the apartment door latch.
+[10–13s] Home kitchen, same daylight direction. She places the now-filled tote on the counter and removes the same tomatoes and herbs — no new groceries appear.
+[13–15s] Medium two-shot as she shares a simple finished dish with a friend; one brief smile, natural room tone, no posing to camera.
+
+Documentary 35 mm realism, soft daylight, modest handheld drift, ordinary lived-in locations. Preserve screen direction, time of day, item count, and tote state across cuts. No wardrobe changes, face swaps, teleporting props, beauty-filter skin, commercial gloss, or impossible food preparation.
+```
+
+**Why it works:** A persistent identity lock is paired with an explicit prop-state ledger: empty tote, selected items, filled tote, same items removed. Sound bridges hide location changes while the inventory constraints prevent continuity drift.
+
+Adapted from [Smiling Khan's original Seedance 2.0 grocery-lifestyle post](https://x.com/AIwithkhan/status/2077777335693279482), published July 16, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7335).
+
+---
+
+### 38. Locked-off ravine dragon reveal
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** photoreal creature-scale reveal with physical cause and effect · **Mode:** text-to-video · **Settings:** 15 seconds, 16:9, locked camera
+
+```text
+Create a 15-second photorealistic fantasy encounter from one locked-off camera on a rocky ravine ledge.
+
+[0–3s] A weathered adult explorer enters close foreground, looks toward the ravine, then quietly signals for silence. The distant valley and tree line establish scale.
+[3–6s] The explorer sits at the edge, still facing away. Loose grit shifts below; birds abruptly leave the trees. Keep the camera perfectly fixed.
+[6–10s] A colossal, anatomically coherent dragon slowly raises its head from behind the opposite ridge. Reveal it through real occlusion by rock and mist; its head must remain several times wider than the nearby trees.
+[10–13s] Its weight settles against the slope. Only now, physically caused ground vibration adds a faint camera tremor, falling dust, and ripples in a puddle near the lens.
+[13–15s] The dragon releases one deep roar. The pressure wave reaches foreground a moment later: coat fabric snaps, grass bends, dust crosses frame, and the explorer braces without changing identity.
+
+Overcast natural light, real rock and skin texture, restrained color, deep atmospheric perspective. Sound progresses from quiet wind to displaced stone, sub-bass vibration, roar, then delayed echo. No camera move except vibration caused by the creature, no glowing magic, rubbery anatomy, size drift, morphing terrain, or weightless dust.
+```
+
+**Why it works:** The fixed viewpoint and tree-line anchors make scale measurable. Every secondary effect has a stated cause and delay, so camera shake, dust, fabric, and sound reinforce mass instead of becoming generic spectacle.
+
+Adapted from [Yunan Helmy A's original Seedance 2.0 dragon-encounter post](https://x.com/unxinstudio/status/2077745227935461881), published July 16, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7338).
+
+---
+
+### 39. Audience-phone kinetic top championship
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** small-object action choreography from a spectator POV · **Mode:** text-to-video · **Settings:** 12 seconds, 9:16, smartphone realism
+
+```text
+Create a 12-second photorealistic smartphone video filmed by a spectator beside a circular precision-top arena.
+
+Two distinct metal spinning tops compete: TOP A is cobalt with three silver fins; TOP B is crimson with a brass ring. Preserve their colors, shapes, spin direction, and ownership throughout.
+
+[0–2s] Both adult competitors launch simultaneously. The phone camera dips to catch the tops entering the bowl, with imperfect autofocus and real crowd noise.
+[2–6s] The camera pans around the rim while the tops make three readable contacts: glancing hit, separation, then a harder center collision. Each impact produces the correct metallic click and brief spark; no fantasy creatures or energy beams.
+[6–9s] TOP B begins to wobble while TOP A remains stable. The operator makes a quick handheld push-in but never loses both tops from frame.
+[9–11s] Final rim impact ejects TOP B onto the padded safety edge; TOP A continues spinning in the bowl.
+[11–12s] The crowd reacts a fraction late. Hold on the winning top while the camera breathes and exposure recovers.
+
+Indoor sports lighting, genuine phone compression, rolling-shutter wobble only during fast pans, physically credible momentum and friction. No top swapping, duplicated objects, changing arena geometry, impossible rebounds, instant crowd reaction, floating camera, or polished broadcast look.
+```
+
+**Why it works:** Color-and-geometry locks separate two fast objects, while the three-contact escalation and delayed audience reaction make the action legible. The phone-camera flaws are tied to specific movements rather than applied as a generic filter.
+
+Adapted from [Shore Lyn's original Seedance 2.0 spinning-top post](https://x.com/Shorelyn_/status/2078057629134569804), published July 17, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7394).
+
+---
+
+### 40. Astronaut amusement-park mystery
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+**Use case:** atmospheric live-action mystery with an environmental trigger · **Mode:** text-to-video · **Settings:** 15 seconds, 2.39:1, one continuous shot
+
+```text
+Create a 15-second photorealistic cinematic mystery in one continuous shot at an abandoned amusement park before dawn.
+
+An adult astronaut in a worn white EVA suit walks away from camera along a damp midway. Keep the suit, backpack, helmet scratches, body proportions, and gait unchanged. The camera follows slowly from waist height on a stabilized 35 mm lens, never overtaking the astronaut.
+
+[0–5s] Pass shuttered game stalls and rain-dark pavement. Only boot steps, fabric movement, distant wind, and a loose sign tapping.
+[5–9s] As the astronaut crosses beneath a broken arch, the Ferris wheel ahead activates one section at a time. Its motor starts first, then bulbs flicker outward around the rim; wet pavement catches the same moving reflections.
+[9–12s] A warped carnival melody emerges from one distant speaker. The astronaut stops and turns only the helmet toward the wheel. Keep the body facing forward.
+[12–15s] Continue the slow push until the wheel appears reflected across the scratched visor. One empty gondola swings after the wheel stops; cut to black on its final metal creak.
+
+Cold blue ambient dawn, weak sodium practicals, realistic moisture, restrained grain, no stylized fog. Preserve park geography and light direction. No suit redesign, face reveal, sudden day-night change, floating props, random camera orbit, bright sci-fi glow, or extra people.
+```
+
+**Why it works:** The arch supplies a clear spatial trigger, and the effect unfolds in a causal order — motor, lamps, reflections, music, reaction. The final visor reflection pays off the slow follow without breaking the one-shot geography.
+
+Adapted from [LudovicCreator's original Seedance 2.0 astronaut post](https://x.com/LudovicCreator/status/2077694836845465993), published July 16, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7318).
+
+---
+
 ## Reusable templates
 
 ### Single-shot template
@@ -1879,6 +2010,44 @@ recovery also stops the action from looping at the fall.
 Adapted from [BMX's original Seedance 2.0 smartphone-fall prompt](https://x.com/bmx_ai13/status/2078210630935335363),
 published July 17, 2026; the complete prompt and model mapping are recorded in
 the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7391).
+
+### Multi-character identity separation template
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
+
+Use this for adult ensemble dialogue, dance, rehearsal, or non-graphic action when several characters must remain visually and spatially distinct. Give every reference one job, define non-reference characters by disjoint traits, and state who owns each beat before describing motion.
+
+```text
+[DURATION], [ASPECT RATIO], [STYLE], featuring [NUMBER] adult characters in [LOCATION].
+
+REFERENCE OWNERSHIP — highest priority
+@Image1 controls CHARACTER A's face, hair, age, and body proportions only.
+@Image2 controls CHARACTER A's wardrobe only; do not copy its face or setting.
+@Image3 controls the location, layout, lighting base, and camera height only.
+
+IDENTITY MAP
+CHARACTER A: [FACE / HAIR / BUILD], wearing [WARDROBE], begins at [POSITION].
+CHARACTER B: [CONTRASTING SILHOUETTE / HAIR / COLOR], begins at [POSITION].
+CHARACTER C: [DIFFERENT HEIGHT / ACCESSORY / COLOR], begins at [POSITION].
+Each identity belongs to one body. Never transfer a face, hairstyle, garment, accessory, voice, or action to another character.
+
+SPATIAL MAP
+Fix screen direction and starting order: [LEFT-TO-RIGHT ORDER]. Keep [LANDMARK] behind CHARACTER A and [LANDMARK] beside CHARACTER B. If characters cross, specify the crossing path and their new order.
+
+BEAT OWNERSHIP
+[0–Xs] CHARACTER A performs [ACTION / LINE]; B and C remain [REACTION / HOLD]. Camera [ONE MOVE].
+[X–Ys] CHARACTER B performs [ACTION / LINE]; A and C remain [REACTION / HOLD]. Camera [ONE MOVE].
+[Y–End] [GROUP BEAT], ending with the identities and left-to-right order still readable.
+
+CONTINUITY PRIORITY
+1. Faces and bodies. 2. Wardrobe and signature props. 3. Position and eyeline. 4. Assigned action and voice. 5. Background detail.
+
+No identity swaps, merged bodies, duplicate people, shared limbs, costume transfer, unassigned dialogue, teleporting positions, inconsistent eyelines, or camera moves that hide who performs the key action.
+```
+
+**Why it works:** Reference ownership prevents one image from contaminating unrelated layers. The identity, spatial, and beat maps turn a crowded scene into explicit role assignments, while the priority order tells the model which details must survive if complexity rises.
+
+Adapted into a safe adult ensemble structure from [TSUBAKI's original Seedance 2.0 multi-character choreography post](https://x.com/AI__TSUBAKI/status/2078057124350005603), published July 17, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7417).
 
 ### Gaze–light–action continuation template
 
@@ -2153,6 +2322,12 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 Community examples and techniques referenced in this README:
 
+- [simeon-sanai — Seedance 2.0 POV product texture proof](https://x.com/Naiknelofar788/status/2077738468898431380)
+- [Smiling Khan — Seedance 2.0 market-to-kitchen continuity](https://x.com/AIwithkhan/status/2077777335693279482)
+- [Yunan Helmy A — Seedance 2.0 locked-off dragon reveal](https://x.com/unxinstudio/status/2077745227935461881)
+- [Shore Lyn — Seedance 2.0 kinetic-top championship](https://x.com/Shorelyn_/status/2078057629134569804)
+- [LudovicCreator — Seedance 2.0 astronaut amusement-park mystery](https://x.com/LudovicCreator/status/2077694836845465993)
+- [TSUBAKI — Seedance 2.0 multi-character identity separation](https://x.com/AI__TSUBAKI/status/2078057124350005603)
 - [@miilesus — frozen-time celebration](https://x.com/miilesus/status/2046298278539763814)
 - [@OlivioSarikas — timed perfume commercial](https://x.com/OlivioSarikas/status/2044656318297129321)
 - [@egeberkina — iPhone documentary realism](https://x.com/egeberkina/status/2042738773054886152)
