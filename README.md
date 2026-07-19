@@ -4,6 +4,11 @@ A curated collection of production-ready prompts, reusable structures, and pract
 
 > The examples below are adapted and rewritten from publicly shared creator experiments on X. They are not verbatim copies. Each example links to its source of inspiration so you can study the original post and result.
 
+> **Verification rule:** only entries explicitly labeled **Verified model** count
+> toward the 100-entry target. Legacy entries without a model label remain for
+> reference but are excluded until their Seedance 2.0-or-newer provenance is
+> confirmed.
+
 ## Contents
 
 - [Quick start](#quick-start)
@@ -30,6 +35,10 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Effect-only reference injection](#19-effect-only-reference-injection)
   - [Parametric multilingual FPV descent](#20-parametric-multilingual-fpv-descent)
   - [Rock-color origin-story commercial](#21-rock-color-origin-story-commercial)
+  - [Motion-masked night racing](#22-motion-masked-night-racing)
+  - [Miniature convenience-store parkour](#23-miniature-convenience-store-parkour)
+  - [Oil-on-paper blizzard](#24-oil-on-paper-blizzard)
+  - [Opera-craft inheritance](#25-opera-craft-inheritance)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -407,6 +416,9 @@ coat, no discontinuous hand positions.
 ```
 
 ### 11. Mechanical bloom — one-take macro
+
+**Verified model:** Seedance 2.5 — official ByteDance / Volcano Ark showcase
+
 
 **Use case:** technology branding, material showcase, abstract product film  
 **Mode:** text-to-video or image-to-video  
@@ -991,6 +1003,249 @@ Adapted from ByteDance / Volcano Ark's official Seedance 2.5
 the complete official prompt is preserved in the
 [traceable archive entry](https://github.com/renoise-ai/awesome-seedance-2-5-prompts#rock-color-silk-road-animation).
 
+
+### 22. Motion-masked night racing
+
+**Verified model:** Seedance 2.0 — confirmed by the public Seedance 2.0
+prompt-gallery metadata and its mapping to the original creator post
+
+**Use case:** vehicle ads, racing teasers, high-speed editorial sequences  
+**Mode:** text-to-video or vehicle image-to-video  
+**Suggested settings:** 12s, 16:9, 24fps
+
+```text
+12-second live-action night time-trial on a closed urban circuit. One unbranded
+high-performance car, one adult driver, no passengers, pedestrians, traffic, or
+other vehicles. Wet asphalt, practical sodium and cyan track lights, realistic
+windshield reflections, restrained exposure bloom.
+
+Shot 1 (0–2s): Tight interior profile. The driver's breathing is controlled;
+the right hand closes around the gear selector while dashboard vibration rises.
+Camera stays locked to the passenger-side mount. End on the completed shift.
+A passing pillar briefly blacks out the whole frame and masks the cut.
+
+Shot 2 (2–4s): Over-the-shoulder view of the empty course. The car exits a
+tunnel and the driver presses one plain boost switch. A fast left-to-right whip
+pan follows the road edge; cut only inside the peak directional blur.
+
+Shot 3 (4–7s): Exterior side-tracking shot moving at exactly the car's speed.
+The car surges forward, suspension compresses, rear tires load, and spray trails
+from the contact patches. A foreground barrier sweeps across the lens and masks
+the next cut while screen direction remains left-to-right.
+
+Shot 4 (7–9s): Ultra-low three-quarter wheel shot, camera safely outside the
+vehicle path. Reflections and lane lights streak backward; wheel rotation,
+brake hardware, road spray, and body vibration stay mechanically coherent.
+A bright track light fills the lens for one frame and carries the cut.
+
+Shot 5 (9–12s): High rear tracking view as the same car takes one tightening
+curve, settles after a small controlled slide, crosses the timing line, and
+returns to straight travel. Decelerate camera and car together; hold a stable
+rear three-quarter end frame for half a second.
+
+Every transition inherits motion direction, light color, car geometry, driver,
+weather, and road position from the previous shot. Sound is continuous across
+cuts: engine pitch, one gear click, turbo intake, tire spray, brief tire scrub,
+then engine release. No public-road danger, collision, drifting through people,
+changing car model, extra driver, warped wheels, impossible camera teleport,
+random speed ramp, reversed screen direction, logo, subtitle, or generated text.
+```
+
+**Why it works:** each cut is hidden by a motivated full-frame event—pillar,
+whip blur, foreground barrier, or light flare—while screen direction and engine
+pitch continue across the edit. The result feels like one accelerating flow
+without asking the camera to perform an impossible continuous path.
+
+Adapted from [Pierrick Chevallier's original Seedance racing prompt and result](https://x.com/CharaspowerAI/status/2039651574297792688),
+published April 2, 2026. The Seedance 2.0 attribution and complete source
+mapping are preserved in the [traceable gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=2530).
+
+
+### 23. Miniature convenience-store parkour
+
+**Verified model:** Seedance 2.0 — confirmed by the public Seedance 2.0
+prompt-gallery metadata and its mapping to the original creator post
+
+**Use case:** miniature FX, viral action, retail and snack campaigns  
+**Mode:** text-to-video or character image-to-video  
+**Suggested settings:** 15s, 9:16, 24fps
+
+```text
+15-second photoreal miniature parkour film inside a bright convenience store.
+One athletic adult woman remains exactly 1:15 scale, with the same face,
+hairstyle, adventure jacket, cargo trousers, shoes, backpack, and body size.
+All packages are generic colored shapes with no readable labels or logos.
+Use macro optics, shallow depth of field, realistic fluorescent reflections,
+and physically correct mass, friction, momentum, and landing recovery.
+
+Shot 1 (0–3s) — swing: From a giant snack bag, she sprints three steps, jumps,
+grabs the lower edge of a hanging price card with both hands, swings once, and
+releases onto the next shelf. The card bends and continues swinging after
+release. Fast side-tracking macro camera; end with both feet planted.
+
+Shot 2 (3–6s) — precision landing: She runs along a narrow shelf lip and jumps
+onto one loose bottle cap. The cap tilts under her weight but does not slide.
+She lowers into a crouch, regains balance, then forward-rolls onto a stable box.
+Camera tracks parallel at miniature eye level.
+
+Shot 3 (6–9s) — zipline: She clips a small hook to a taut promotional cord,
+slides above stacked cups, releases at the lowest safe point, and lands inside
+an empty moving shopping basket. Overhead camera descends to a low angle.
+The cord vibrates behind her and the basket wheels keep rolling.
+
+Shot 4 (9–12s) — rolling prop: One unopened soda can rolls across the basket.
+She steps onto its upper surface, balances with both arms, then rides it down a
+fallen cardboard strip onto the polished floor. Ultra-low macro tracking keeps
+the can, both feet, and floor contact visible; shoppers appear only as distant
+out-of-focus shoes outside her path.
+
+Shot 5 (12–15s) — finish: The rolling can meets a small rubber floor stop and
+becomes a launch ramp. She jumps, catches a freezer handle with both hands,
+swings once, climbs onto the freezer top, raises one fist, and holds. Slow
+pullback reveals the store scale while keeping her large enough to recognize.
+
+Sound assigns one material to each obstacle: plastic card flex, bottle-cap
+clink, cord whistle, basket wheels, metal roll, rubber impact, handle creak,
+landing breath. Preserve one character, one scale, left-to-right travel, prop
+positions, and completed-action handoffs. No size change, duplicate performer,
+floating jump, extra limb, foot sliding through props, changing outfit,
+unreadable anatomy, branded package, victory text, sparkle overlay, or cartoon
+rendering.
+```
+
+**Why it works:** scale is declared as an invariant, and every oversized object
+has one readable mechanical job. Showing deformation, vibration, rolling,
+contact, and recovery makes the miniature relationship measurable rather than
+merely decorative.
+
+Adapted from [Oogie's original miniature-parkour prompt and result](https://x.com/oggii_0/status/2077652652641681568),
+published July 16, 2026. The Seedance 2.0 attribution and complete source
+mapping are preserved in the [traceable gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7339).
+
+
+### 24. Oil-on-paper blizzard
+
+**Verified model:** Seedance 2.0 — confirmed by the public Seedance 2.0
+prompt-gallery metadata and its mapping to the original creator post
+
+**Use case:** painterly animation, survival drama, weather and material studies  
+**Mode:** text-to-video or multi-reference image-to-video  
+**Suggested settings:** 12s, 16:9, 12fps animation cadence
+
+```text
+12-second hand-painted 2D sequence: oil pigment on coarse paper, visible
+brushstrokes, slight outline boil, twelve distinct drawings per second, each
+pose held for two display frames. Figures, fabric, footsteps, and camera poses
+advance in deliberate stepped increments—no smooth interpolation, 3D render,
+motion-blur smear, clay, puppet, or glossy digital surface.
+
+One exhausted adult mother and one school-age child cross a snowbound pine
+forest at night. Keep their faces, layered dark-blue robes, head cloths, height
+difference, and single leather satchel identical. Visibility never exceeds
+three meters. One pale moon above frame left is the only light source, giving
+the same cold rim direction to faces, cloth, snow, trees, and breath.
+
+Shot 1 (0–4s): Side-on wide composition. They lean their whole bodies into a
+horizontal gust and complete three difficult steps through knee-deep snow.
+Each foot compresses a hole, pushes snow backward, and leaves a stable track.
+The mother holds the child's wrist; loose cloth snaps rightward. Locked rostrum
+camera with only a slow paper-layer drift.
+
+Shot 2 (4–8s): Medium close-up from the shadow side. The child hides inside a
+collar and cries without speaking. The mother shields both faces with one
+forearm, looks frightened for a beat, then steadies the child by tightening the
+handhold and nodding once. Breath appears, stretches rightward, and disappears
+into the same wind as the snow.
+
+Shot 3 (8–12s): Low rear view. They continue along the established tracks as a
+small warm shelter light becomes visible through fog at frame left. The mother
+points once; the child straightens slightly, and together they complete one
+more step toward it. End before arrival, with the light stable and readable.
+
+Palette: 60% snow blue, 30% near-black trunks and clothing shadow, 10% muted
+amber shelter light. Snow accumulates gradually on shoulders and head cloths.
+Sound: dry paper-like wind texture, cloth snaps, compressed snow, breath, one
+distant wooden chime; no music or dialogue. No changing light direction,
+smoothly interpolated bodies, floating flakes unaffected by wind, footprints
+before contact, identity drift, dry clothing, extra person, sudden clear sky,
+photoreal live action, CGI depth, or camera cut that reverses travel direction.
+```
+
+**Why it works:** medium, cadence, weather, and physics are separated into
+explicit layers. One light source and one wind vector unify every shot, while
+the warm endpoint adds narrative direction without breaking the restricted
+palette.
+
+Adapted from [Aleena Amir's original oil-on-paper storm prompt and result](https://x.com/aleenaamiir/status/2078075943906889874),
+published July 17, 2026. The Seedance 2.0 attribution and complete source
+mapping are preserved in the [traceable gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7400).
+
+
+### 25. Opera-craft inheritance
+
+**Verified model:** Seedance 2.5 — official ByteDance / Volcano Ark showcase
+
+**Use case:** cultural heritage, craft documentaries, mentor-apprentice stories  
+**Mode:** text-to-video  
+**Suggested settings:** 30s, 16:9, 24fps
+
+```text
+30-second restrained live-action heritage short inside one traditional opera
+workshop connected to a dim backstage corridor. One elderly headwear artisan
+and one adult apprentice. Warm workbench lamp from frame left, cooler stage
+spill from the corridor, quiet natural performances, respectful documentary
+detail, no narration, subtitle, logo, or generated title.
+
+Shot 1 (0–5s) — material: Locked macro frame on the master's hands threading
+one pearl through red silk and securing it to an unfinished opera headdress.
+Show needle entry, thread tension, knot, and release. Sound: silk, bead, wood
+table, distant rehearsal percussion.
+
+Shot 2 (5–10s) — observation: Medium two-shot. The apprentice watches the same
+hand movement, copies it slowly on a separate small piece, makes one imperfect
+loop, stops, and looks to the master. A gentle lateral slider keeps both hands
+and their eyeline relationship visible.
+
+Shot 3 (10–15s) — transfer: Close-up on the master loosening the incorrect loop,
+placing the tool back into the apprentice's palm, and guiding one complete
+stitch without taking over. End when the apprentice tightens the knot alone.
+Keep screen direction, tool hand, bead count, and workbench layout unchanged.
+
+Shot 4 (15–20s) — preparation: At the dressing mirror, the master sets the
+finished headwear onto the apprentice, checks its centerline, straightens one
+embroidered collar, then withdraws both hands. The apprentice meets the mirror
+with one controlled breath. Camera makes a slow push from medium to close.
+
+Shot 5 (20–25s) — threshold: Rear tracking shot as the fully dressed apprentice
+walks through the backstage corridor toward the stage entrance. Fabric, beads,
+and tassels respond to each step with believable weight. Stage light grows
+gradually; rehearsal instruments become clearer.
+
+Shot 6 (25–30s) — inheritance: Side wide frame at the curtain. The apprentice
+stops in the pool of stage light, settles into the first precise pose, and holds.
+The master remains several meters behind in shadow, gives one almost invisible
+nod, and watches. End before the performance begins.
+
+Preserve faces, age, costume construction, headwear geometry, work-in-progress
+state, tools, workshop geography, and light direction across cuts. Use tactile
+silk, wood, metal, paint, embroidery, and bead reflections rather than glossy
+costume CGI. Sound connects workshop and stage: thread, tools, cloth, breath,
+wooden floor, distant strings and percussion. No caricature, magical costume
+change, random extra artisan, impossible handwork, duplicated bead, changing
+headdress, melodramatic crying, applause before entry, on-screen text, or
+modern object in frame.
+```
+
+**Why it works:** the emotional turn is expressed through a physical handoff:
+watch, attempt, correction, independent completion, dressing, then release to
+the stage. The same crafted object links intimate macro work to the final wide
+performance threshold.
+
+Adapted from ByteDance / Volcano Ark's official Seedance 2.5
+[model showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5);
+the complete official prompt is preserved in the
+[traceable archive entry](https://github.com/renoise-ai/awesome-seedance-2-5-prompts#peking-opera-heritage-short).
+
 ---
 
 ## Reusable templates
@@ -1039,6 +1294,129 @@ explicitly changes it.
 Natural physics, temporal consistency, no geometry drift, no face or label
 change, no new objects, no sudden zoom, no automatic slow motion.
 ```
+
+### Gaze–light–action continuation template
+
+**Verified model:** Seedance 2.0 — confirmed by the public Seedance 2.0
+prompt-gallery metadata and its mapping to the original creator post
+
+Use this when continuing an accepted clip around one interactive prop. Give the
+source video ownership of every static identity layer, then synchronize the
+performer's gaze, expression curve, motivated effect light, and sound to the
+prop's continuous action.
+
+```text
+Use @Video1 as the source clip and continue within the same scene.
+
+SOURCE LOCKS
+@Video1 controls [IDENTITY], [MAKEUP / HAIR], [WARDROBE], [PROP DESIGN],
+[LOCATION], [CAMERA POSITION], [LIGHTING BASE], and [COLOR GRADE].
+Preserve them exactly. Do not restart the previous action or invent a new angle.
+
+CONTINUATION SHOT
+[DURATION], one locked [SHOT SIZE] with no cuts.
+[PROP] performs [ONE CONTINUOUS REPEATING ACTION] for the entire shot, beginning
+on the first frame and never stopping or changing speed.
+
+GAZE
+[PERFORMER] looks only at [PROP / MOVING DETAIL]. The eyes follow its movement
+along [DIRECTION OR RANGE], with natural complete blinks. The performer never
+looks at camera or outside the defined gaze path.
+
+PERFORMANCE CURVE
+Begin with [VISIBLE NEUTRAL STATE]. Over the shot, change gradually through
+[MICRO-BEAT 1] → [MICRO-BEAT 2] → [FINAL EXPRESSION]. Keep lips [CLOSED /
+SHORT EXACT LINE], head movement below [SMALL RANGE], and breathing visible.
+End by holding [FINAL EXPRESSION] for [HOLD TIME].
+
+SYNCHRONIZED LIGHT
+[PROP EFFECT] is the only new light. Each [PROP EVENT] produces one
+[COLOR / INTENSITY] pulse on [FACE PLANES / HANDS / CLOTH]. The pulse timing
+matches the prop exactly, returns to the base light between events, and never
+changes the background or overall exposure.
+
+SOUND
+One continuous [PROP FOLEY] supplies the rhythm. Add [LOW AMBIENCE] and one
+[BREATH / EXHALE] at [EMOTIONAL TURN]. No music unless it has a separate,
+non-competing role.
+
+Keep identity, prop geometry, grip, gaze target, action speed, camera, and base
+light stable. No gaze at camera, stopped action, sudden smile, teeth unless
+specified, random lip movement, effect light without a prop event, exposure
+pumping, new object, camera drift, face drift, wardrobe change, or cut.
+```
+
+**Why it works:** one physical event becomes the clock for four systems—prop
+motion, eye movement, light, and Foley—while the expression changes on a slower
+curve. Positive locks describe the desired continuous state instead of relying
+only on exclusions.
+
+Adapted from [Aaliya's original glowing-notebook continuation prompt](https://x.com/AIwithAliya/status/2078028109790707806),
+published July 17, 2026. The Seedance 2.0 attribution and complete source
+mapping are preserved in the [traceable gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7410).
+
+
+### Spectacle-to-tactile fourth-wall ad template
+
+**Verified model:** Seedance 2.5 — official ByteDance / Volcano Ark showcase
+
+Use this for 20–30 second fashion, automotive, hospitality, or product films
+that need a memorable surreal opening without losing material credibility.
+Alternate scale with tactile evidence, reveal the production apparatus once,
+then return to a quiet product-centered endpoint.
+
+```text
+[DURATION], [ASPECT RATIO], high-end live-action concept film for
+[PRODUCT / MATERIAL / BRAND WORLD]. No generated logo or on-screen copy.
+
+[0–20%] IMPOSSIBLE OPENING
+Begin with one coherent spatial impossibility: [INVERTED GRAVITY / ROTATING
+HORIZON / OVERSCALE LANDSCAPE]. [SUBJECT] completes one simple action while the
+camera performs [ONE MOVE]. Keep material weight, contact, hair, and clothing
+physics believable even though the world rule is surreal.
+
+[20–35%] TACTILE PROOF
+Cut to two or three macro inserts, one material per insert:
+[PRODUCT SURFACE] + [PHYSICAL INTERACTION] + [ONE SOUND].
+Show grain, abrasion, condensation, stitching, dust adhesion, reflection, or
+flex under contact. Each insert ends on a completed touch or material response.
+
+[35–55%] HUMAN SCALE
+Return to [ONE OR TWO ADULT PERFORMERS] in [ENVIRONMENT]. Use restrained
+performance and one readable movement. Carry [COLOR / SHAPE / SOUND MOTIF]
+from the opening into wardrobe, light, or production design.
+
+[55–70%] FOURTH-WALL REVEAL
+The camera widens or changes angle to reveal that one spectacular environment
+is a controlled film set: [LED WALL / LIGHT RIG / WIND MACHINE / FLOOR MARK /
+CAMERA CRANE]. The reveal happens once, is physically plausible, and does not
+change performer or product identity. Crew may appear only as background
+silhouettes without stealing focus.
+
+[70–100%] RETURN AND ENDPOINT
+Slow the rhythm. Return to [PRODUCT / MATERIAL] in a quiet close or medium shot.
+[PERFORMER] performs one final tactile action, and [MOTIF] resolves into
+[STABLE HERO COMPOSITION]. Hold clean negative space for post-produced copy.
+
+CONTINUITY
+Keep product geometry, performer identity, palette, light motivation, and motif
+consistent across spectacle, inserts, set reveal, and endpoint. Sound evolves
+from [OPENING BED] to detailed Foley, briefly exposes set mechanics, then ends
+on [ONE SIGNATURE SOUND]. No hollow montage, random second surreal rule,
+unmotivated set reveal, texture change, copied logo, unreadable generated text,
+extra product, identity drift, or ending before the hero hold.
+```
+
+**Why it works:** spectacle earns attention, macro evidence restores physical
+credibility, and the set reveal becomes a structural turn rather than a random
+behind-the-scenes shot. Returning to one tactile gesture keeps the ending useful
+as an advertisement.
+
+Adapted from ByteDance / Volcano Ark's official Seedance 2.5
+[model showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5);
+the complete official prompt is preserved in the
+[traceable archive entry](https://github.com/renoise-ai/awesome-seedance-2-5-prompts#high-end-brand-concept-film).
+
 
 ### Occlusion-assisted transformation template
 
@@ -1105,6 +1483,9 @@ No narration, extra speech, canned audience noise, or overpowering music.
 ```
 
 ### Long-form one-take continuity template
+
+**Verified model:** Seedance 2.5 — official ByteDance / Volcano Ark showcase
+
 
 For 20–30 second generations, define a small set of invariants before adding
 scene changes. The surroundings may transform, but the camera path and spatial
@@ -1207,6 +1588,10 @@ Community examples and techniques referenced in this README:
 - [Jouhatsu — Seedance 2.0 calm-anchor flood reveal](https://x.com/Jouhatsu_ai/status/2078241030021824983)
 - [Loriel.AI — Seedance 2.0 micro-expression performance score](https://x.com/ou_zhen599/status/2078137477425172769)
 - [YouMind OpenLab — Seedance 2.0 prompt, preview, author, and source metadata](https://github.com/YouMind-OpenLab/awesome-seedance-2-prompts)
+- [Pierrick Chevallier — Seedance 2.0 motion-masked night racing](https://x.com/CharaspowerAI/status/2039651574297792688)
+- [Oogie — Seedance 2.0 miniature convenience-store parkour](https://x.com/oggii_0/status/2077652652641681568)
+- [Aleena Amir — Seedance 2.0 oil-on-paper blizzard](https://x.com/aleenaamiir/status/2078075943906889874)
+- [Aaliya — Seedance 2.0 gaze–light–action continuation](https://x.com/AIwithAliya/status/2078028109790707806)
 - [@maybeegreen — subject/action/environment/camera structure](https://x.com/maybeegreen/status/2042226474422297010)
 - [@RetroValix — focus image-to-video prompts on movement](https://x.com/RetroValix/status/2074231054567866617)
 - [ByteDance / Volcano Ark — Seedance 2.5 official preview showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5)
