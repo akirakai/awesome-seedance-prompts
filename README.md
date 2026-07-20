@@ -113,6 +113,11 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Earbuds UGC-to-product-hero review](#97-earbuds-ugc-to-product-hero-review)
   - [Wide-field anime aero-city ally convergence](#98-wide-field-anime-aero-city-ally-convergence)
   - [Animated treasure-map expedition comedy](#99-animated-treasure-map-expedition-comedy)
+  - [One-way-state anime mapo-tofu process](#100-one-way-state-anime-mapo-tofu-process)
+  - [Local-gravity cuboid-city camera roll](#101-local-gravity-cuboid-city-camera-roll)
+  - [Parallel-control dam rescue](#102-parallel-control-dam-rescue)
+  - [Closing-gate neon-canal chase](#103-closing-gate-neon-canal-chase)
+  - [Tear-flood anime state loop](#104-tear-flood-anime-state-loop)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -3921,6 +3926,206 @@ logo or watermark.
 
 ---
 
+### 100. One-way-state anime mapo-tofu process
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** anime food process, irreversible material-state continuity, tool and ingredient consistency  
+**Mode:** text-to-video  
+**Settings:** 15 seconds, 16:9, twelve-shot hand-drawn 2D anime sequence
+
+```text
+Warm hand-drawn Japanese 2D anime kitchen. Show only adult hands, one wok, one
+ladle, one board, one knife and the ingredients for mapo tofu. Soft pencil lines,
+restrained cel shading, rising steam and glossy red oil. Every shot has one action.
+The state path is irreversible: intact white tofu → red-oil coating → thick glossy
+sauce → finished simmer. Never return to an earlier state.
+
+0–1.25 s: Close-up. A steady palm supports tofu while a knife makes even cubes.
+1.25–2.5 s: Top-down. The cubes slide into neat rows on the same board.
+2.5–3.75 s: Side medium. Minced meat browns in the wok; fat turns translucent.
+3.75–5 s: Macro. Bean paste meets the meat and red oil blooms outward once.
+5–6.25 s: 45-degree view. Garlic, ginger and scallion enter and are folded through.
+6.25–7.5 s: Side view. Stock raises the liquid level; small bubbles begin.
+7.5–8.75 s: Top-down. The board tips; tofu enters with corners still intact.
+8.75–10 s: Macro. The back of the ladle nudges, never chops, the cubes through sauce.
+10–11.25 s: Slurry spirals in; viscosity increases and the sauce clings to each cube.
+11.25–12.5 s: Slow large bubbles break the glossy surface; steam travels upward.
+12.5–13.75 s: Chili oil and pepper settle on top without resetting the sauce.
+13.75–15 s: Stable overhead finish in the original wok; hold the quiet simmer.
+
+Camera changes position between shots like a cook moving around one stove, but is
+calm inside each shot. Lock wok, ladle, board, cube count and ingredient quantity.
+Tofu may darken only by coating; sauce may only deepen in colour and thicken.
+Natural recipe order, gravity and liquid flow. Audio: knife, board, sizzle, pour,
+bubbles and ladle contact; no narration or music. No face, eating, finished dish
+before the last shot, reverse cooking, restored ingredient, floating utensil,
+extra finger, morphing cookware, caption, label, logo or watermark.
+```
+
+**Why it works:** Treating colour, viscosity and ingredient location as one-way state variables prevents a process montage from silently undoing earlier steps. One action per shot also gives hands, tools and food less opportunity to drift.
+
+**Source:** [オズ on X](https://x.com/ozuozuai99/status/2078854293818622124), published July 19, 2026. The original twelve-stage cooking process and Seedance 2.0 attribution are documented in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7562).
+
+---
+
+### 101. Local-gravity cuboid-city camera roll
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** impossible architecture, camera-orientation transfer, readable spatial VFX  
+**Mode:** text-to-video or architecture-reference image-to-video  
+**Settings:** 15 seconds, 16:9, four-beat photoreal tracking sequence
+
+```text
+A monumental hollow cuboid city suspended in a dark studio-like void. Each inner
+wall owns a separate gravity plane: traffic stays planted on its current surface
+and follows roads across 90-degree corners. Lock the cube, central void, road
+network, one yellow taxi and one tiny motionless observer outside the structure.
+
+0–4 s: Wide establishing push toward the central void. Show traffic moving on all
+four inner faces at once so the gravity rule is readable before the camera enters.
+4–8 s: Smooth FPV dive into the void. Align the camera horizon with the left wall;
+only after alignment does that wall read as the ground and cars pass the lens.
+8–12 s: Track the yellow taxi toward one internal corner. The taxi follows the
+curved road from wall to ceiling without jumping. Roll the camera exactly 90
+degrees at the same rate, keeping the taxi visually upright and its wheels attached.
+12–15 s: Pull straight backward through a suspended bridge frame and exit the cube.
+Finish on the original wide orientation with the observer still in place.
+
+Photoreal materials, hard directional light, deep scale cues and smooth drone
+motion. Preserve traffic direction and vehicle count. No global gravity flip,
+floating car, wheel separation, camera teleport, extra city face, changing cube
+geometry, horizon snap, landmark duplication, text, logo or cut during the roll.
+Audio: distant layered traffic, rising wind during the dive, tyre hum at the
+corner and a low architectural resonance on the final reveal.
+```
+
+**Why it works:** The viewer first learns the impossible rule, then the camera adopts one surface's orientation. Synchronizing the taxi's cornering with a single measured camera roll makes a complex gravity change legible instead of chaotic.
+
+**Source:** [Gadgetify on X](https://x.com/Gdgtify/status/2078861670437548286), published July 19, 2026. The original multi-gravity city flight and Seedance 2.0 attribution are archived in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7535).
+
+---
+
+### 102. Parallel-control dam rescue
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** creature disaster, parallel action, pre-staged environmental rescue  
+**Mode:** text-to-video  
+**Settings:** 15 seconds, 16:9, five-shot cinematic action sequence
+
+```text
+Storm-bright daylight at one concrete dam. Behind it: one grey-green reservoir,
+one maintenance boat, one giant crocodile, one wall ladder ten metres left of the
+boat and one glass control room above. Below: one spillway. Lock this geography,
+the worker's orange jacket, the officer's blue jacket and left-to-right direction.
+
+0–3 s: Water-level tracking. The crocodile grips the stern and drags the boat
+backward toward the dam. Loose gear slides in the same direction. The lone worker
+radios, “It's pulling me in—I'm jumping.”
+3–6 s: Cut to the control room. Through the glass, the officer sees boat, ladder
+and spillway in one composition. His hand moves from the scheduled-release panel
+to the gate controls. He answers, “Ladder, ten metres left. Jump now.”
+6–9 s: Handheld along the wall. The worker dives, swims left and starts climbing.
+Only after the worker clears the water does the empty boat crumple; the crocodile
+then glides above the submerged gates.
+9–13 s: The officer pulls the gate levers. Gates open from left to right; water
+forms a widening current that separates crocodile from wall and carries it safely
+down the spillway. Keep the ladder and worker outside the strongest flow.
+13–15 s: Return to real-time wide. The worker holds above the spray, the empty boat
+spins in the reservoir and the officer watches from the same control-room window.
+
+Grounded live-action scale, readable cause before reaction, believable water mass
+and restrained camera shake. Audio bridges cuts: radio, hull strain, dive, alarm,
+gate machinery and flood roar. No blood, creature dismemberment, worker in the
+spillway, gate opening before the lever, changing ladder position, duplicate boat,
+teleport, reverse current, random explosion, dialogue overlap, logo or caption.
+```
+
+**Why it works:** The rescue mechanism, escape route and operator are established before the payoff. Cross-cutting preserves one geography, while explicit safety ordering stops the flood response from endangering the person it is meant to save.
+
+**Source:** [Rahul Nanda on X](https://x.com/rahulnanda86/status/2078902067377451205), published July 19, 2026. The original dam-control action sequence and Seedance 2.0 attribution are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7546).
+
+---
+
+### 103. Closing-gate neon-canal chase
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** vehicle pursuit, obstacle escalation, speed with readable geography  
+**Mode:** text-to-video  
+**Settings:** 15 seconds, 16:9, five-beat night action sequence
+
+```text
+Night in a futuristic city built around one network of narrow neon canals. One
+small speedboat travels forward through dark water. Establish wet concrete walls,
+low bridges, moored boats, a side channel and three flood gates on the same route.
+Preserve boat design, travel direction, water level and obstacle positions.
+
+0–3 s: Wide low tracking. The boat enters the main canal at speed; reflections
+stretch behind it and the first low bridge is visible ahead.
+3–6 s: Parallel follow. It makes one hard left and one hard right, banking under
+the bridge with spray pushed outward by each turn. Warning lights activate ahead.
+6–9 s: Side view. Gate one begins lowering. The boat diverts into the established
+side channel, clears one moored boat, then rejoins the main canal without reversing.
+9–13 s: Forward chase. Gates two and three close in sequence, never simultaneously.
+The boat passes under one lower bridge, aligns with the shrinking final gap and
+crosses the threshold before gate three reaches the water.
+13–15 s: Rear wide in a larger canal. The gate seals behind the boat; its wake and
+spray continue forward while mist and neon remain spatially consistent.
+
+Hyper-real night photography, dynamic yet readable camera, real hull banking,
+weighty impacts and no slow motion. Audio: engine pitch follows acceleration,
+water slap, warning pulse, gate motors and one heavy closure behind the boat.
+No new pursuer, impossible lateral jump, obstacle teleport, dry hull, reversed
+wake, bridge or gate changing scale, collision through solid geometry, face
+close-up, text, brand, logo or cartoon rendering.
+```
+
+**Why it works:** The route is introduced before it becomes a trap, and each gate closes in a clear order. Matching engine, wake and hull lean to speed preserves urgency without sacrificing spatial comprehension.
+
+**Source:** [DeCat on X](https://x.com/DeCat2025/status/2078946474826633529), published July 19, 2026. The original neon-canal escape and Seedance 2.0 attribution are recorded in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7529).
+
+---
+
+### 104. Tear-flood anime state loop
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** anime visual gag, escalating liquid state, setup–reset–aftermath comedy  
+**Mode:** text-to-video or character-reference image-to-video  
+**Settings:** 15 seconds, 16:9, seven-shot hand-drawn 2D anime sequence
+
+```text
+Full-colour hand-drawn 2D anime in one private karaoke room. One adult viewer
+watches the same emotional film throughout. Lock face, outfit, television, sofa,
+window, swim ring, slippers and drink positions. Detailed backgrounds, smooth
+in-betweens and ambient sound only; no music.
+
+0–2 s: Corridor-to-room long shot. One tear hits the floor with an outsized pool
+splash; the viewer never looks away from the screen.
+2–4 s: Medium. Tears continue and water rises from ankle to knee height. Slippers
+begin floating only after the water reaches them.
+4–6 s: Wider side view. The same viewer now floats in the established swim ring,
+still facing the screen; room objects drift according to depth and buoyancy.
+6–8 s: Underwater view. Slippers and light objects remain above heavier items;
+muffled sobbing comes from the stable surface overhead.
+8–10.5 s: At the film's climax, the tear stream grows into a waterfall that exits
+through the open window. Camera follows the flow outward for one beat.
+10.5–13 s: End credits appear only on the in-scene television. Water recedes
+through the same window path; objects settle in place and the room dries.
+13–15 s: Close reaction. Red-eyed viewer tastes the unchanged drink, realizes it
+is salty and says, “I'm watching it again.” Hold the exhausted determination.
+
+Water volume changes monotonically within each phase: rise, breach, then drain.
+Keep surface level horizontal and carry wetness, object position and eye redness
+forward until the explicit reset. No second viewer, water appearing above the
+surface, instant dry room before drainage, changing outfit, duplicated prop,
+object sinking against buoyancy, rainbow, external subtitle, watermark or logo.
+```
+
+**Why it works:** A surreal gag still needs a physical ledger. Ordering water height, buoyancy, drainage and the salty-drink residue makes the final joke feel caused by everything before it rather than appended at random.
+
+**Source:** [妖精アーヤさん on X](https://x.com/aiehon_aya/status/2078963095259562017), published July 19, 2026. The original seven-shot tear-flood sequence and Seedance 2.0 attribution are documented in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7566).
+
+---
+
 ## Reusable templates
 
 ### Single-shot template
@@ -4493,6 +4698,11 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 Community examples and techniques referenced in this README:
 
+- [オズ — Seedance 2.0 one-way-state mapo-tofu process](https://x.com/ozuozuai99/status/2078854293818622124)
+- [Gadgetify — Seedance 2.0 local-gravity cuboid-city camera roll](https://x.com/Gdgtify/status/2078861670437548286)
+- [Rahul Nanda — Seedance 2.0 parallel-control dam rescue](https://x.com/rahulnanda86/status/2078902067377451205)
+- [DeCat — Seedance 2.0 closing-gate neon-canal chase](https://x.com/DeCat2025/status/2078946474826633529)
+- [妖精アーヤさん — Seedance 2.0 tear-flood anime state loop](https://x.com/aiehon_aya/status/2078963095259562017)
 - [Nina — Seedance 2.0 mixed-media paint battle](https://x.com/ni_naai/status/2078497644721447190)
 - [Frame Theory — Seedance 2.0 audio-locked laundromat rap](https://x.com/frametheory058/status/2077996810334027812)
 - [Unxin Studio — Seedance 2.0 cabin-window dragon escalation](https://x.com/unxinstudio/status/2078428858966319150)
