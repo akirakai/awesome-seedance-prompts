@@ -118,6 +118,9 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Parallel-control dam rescue](#102-parallel-control-dam-rescue)
   - [Closing-gate neon-canal chase](#103-closing-gate-neon-canal-chase)
   - [Tear-flood anime state loop](#104-tear-flood-anime-state-loop)
+  - [Live-broadcast football-glove farce](#105-live-broadcast-football-glove-farce)
+  - [Aurora sugar-ice binaural ASMR](#106-aurora-sugar-ice-binaural-asmr)
+  - [VHS orbital-station dark-Earth reveal](#107-vhs-orbital-station-dark-earth-reveal)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -4126,6 +4129,120 @@ object sinking against buoyancy, rainbow, external subtitle, watermark or logo.
 
 ---
 
+### 105. Live-broadcast football-glove farce
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** live sports broadcast grammar, large ensemble comedy, native crowd audio  
+**Mode:** text-to-video  
+**Settings:** 15 seconds, 16:9, four-shot photoreal television coverage
+
+```text
+Authentic live football television feed in a sunlit packed stadium. One team wears
+sky-blue-and-white stripes; the other wears solid red. Lock kit colours, player
+numbers, pitch direction and the generic HOME 0–0 AWAY scoreboard. Use broadcast
+lenses, restrained live-feed sharpening, ordinary daylight and no cinematic grade.
+
+0–4 s — high wide: Normal play stops when sky-blue player 9 puts on one pair of
+oversized foam boxing gloves. Red player 4 notices; nearby players form a loose
+circle. Make the gag readable before the crowd reacts.
+4–8 s — pitch-level tracking: Player 9 throws only harmless air punches while
+players dodge, stumble and theatrically appeal. No blow lands. Two coaches and the
+referee enter from the established touchline; keep the ball motionless behind them.
+8–12 s — long-lens close coverage: The referee whistles repeatedly while teammates
+pull player 9 backward. Assistant referees and stewards build one human barrier.
+Intercut reaction faces only within the same live-broadcast event; preserve positions.
+12–15 s — wide reset: The referee shows one yellow card to player 9. Both teams
+separate, the foam gloves rise toward the laughing crowd and the score remains 0–0.
+
+Audio is native and continuous: commentator surprise, crowd swell, whistles, boot
+scrapes and sideline shouting, with stadium echo and no music. Real sports-camera
+zoom, mild shoulder vibration and plausible group spacing. No logo, real federation
+mark, scoreboard mutation, jersey swap, duplicate player, extra glove, landed punch,
+injury, crowd on the pitch, impossible fall, cinematic lens flare or subtitle.
+```
+
+**Why it works:** The joke is staged as one legible live event rather than a montage of unrelated chaos. Stable kits, player numbers, scoreboard and touchline geography let a large cast escalate while authentic camera and audio cues keep the result recognizably televised sport.
+
+**Source:** [Ankit Patel on X](https://x.com/Ankit_patel211/status/2079286938373419028), published July 20, 2026. The original football-broadcast comedy prompt and Seedance 2.0 attribution are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7602).
+
+---
+
+### 106. Aurora sugar-ice binaural ASMR
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** native-audio ASMR, macro material detail, environment-triggered payoff  
+**Mode:** character-reference image-to-video  
+**Settings:** 15 seconds, 9:16, three-shot photoreal influencer sequence
+
+```text
+Use @Image1 only for one adult host's face, hair, pink outfit, necklace and body
+proportions. Lock them in every shot. Night inside one warm transparent igloo on an
+Antarctic-style ice field; green-violet aurora and blue glaciers remain outside.
+On the table: one glass bowl of thin, rounded translucent sugar-glass wafers made to
+look like ice and two small binaural microphones. They are safe edible candy, not
+real ice. Cool ambient light outside, soft pink face fill inside, realistic skin.
+
+0–5 s: Start outside on a 24 mm view and push through the clear igloo wall without
+a cut, settling into a 50 mm medium shot. Wind becomes muffled at the boundary.
+The host whispers, “Tonight, aurora ice,” then lifts one wafer with silver tongs.
+5–11 s: Macro cut. She taps the wafer once beside each microphone—left, then right.
+Show trapped bubbles, a melting-looking surface sheen and fine fracture lines. She
+takes one small bite; record a clean layered crackle, then a quiet satisfied breath.
+Keep crumbs below the mouth and the face unobstructed. No sticky chewing.
+11–15 s: Return to a medium close-up. She whispers, “So crisp,” takes a second small
+bite and the established aurora brightens in direct response to that single crunch.
+She glances back, then gives the camera one wink while holding the remaining wafer.
+
+Continuous binaural room tone: faint exterior wind, close whisper, tong contact,
+left/right taps, two crisp bites and breath; no music. Keep microphones, bowl, wafer
+count and aurora direction fixed. No dangerous hard ice, tooth strain, swallowing
+whole pieces, costume change, face swap, flying shards, doubled utensil, microphone
+teleport, aurora indoors, beauty-filter skin, subtitle, package, logo or watermark.
+```
+
+**Why it works:** The prompt separates the environment, character and sound objects, then gives every audible event a visible contact. Replacing literal ice with thin sugar glass keeps the crystalline macro look and crisp foley while making the action safer and easier to stage.
+
+**Source:** [John on X](https://x.com/johnAGI168/status/2079181605793370180), published July 20, 2026. The original Antarctic aurora ASMR sequence and Seedance 2.0 attribution are documented in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7620).
+
+---
+
+### 107. VHS orbital-station dark-Earth reveal
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** analog-found-footage horror, zero-gravity continuity, reveal by environmental contradiction  
+**Mode:** text-to-video  
+**Settings:** 12 seconds, 4:3, one-take retro sci-fi drift
+
+```text
+One continuous 4:3 maintenance-camera drift through a 1980s orbital station. Preserve
+one corridor, one sealed airlock at its far end, three floating tools, two taped
+family photographs, a string of frozen water droplets and the same left-wall warning
+lamps. Slow zero-gravity motion only. Build the analog look from low chroma, soft
+tube-camera detail, head-switching noise, tracking lines and a burned-in timecode.
+
+0–2 s: Float forward at walking speed. Lamps blink left to right; cables and tools
+drift with inertia. The distant airlock is closed. Only ventilation hum and tape hiss.
+At 2 s: One brief horizontal tracking tear crosses the frame. When it clears, the
+same corridor is subtly longer, but every prop remains in the same order and direction.
+2–8 s: The far airlock unlocks by itself. Continue forward past tools, photographs
+and frozen droplets; each object moves only from prior momentum. Warning lamps stop
+one by one behind the camera, leaving the foreground darker without changing layout.
+8–12 s: Enter the open airlock and rotate no more than ten degrees toward its window.
+Earth occupies the expected position and size but has no city light, cloud or sunlit
+rim—one completely dark sphere. Hold for two seconds as the timecode freezes while
+tape hiss and the station hum continue.
+
+No hard cut, creature, astronaut, jump scare, camera teleport, modern digital glitch,
+prop duplication, changing corridor side, normal-gravity fall, starfield rotation,
+visible sunlight on Earth, legible brand, caption, music or polished cinematic grade.
+```
+
+**Why it works:** A fixed prop order makes the impossible corridor extension visible without sacrificing geography. The horror comes from two controlled violations—the stretched passage and dark Earth—while zero-gravity inertia and era-specific tape defects remain consistent.
+
+**Source:** [LudovicCreator on X](https://x.com/LudovicCreator/status/2079265271080984756), published July 20, 2026. The original VHS orbital-station horror prompt and Seedance 2.0 attribution are archived in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7579).
+
+---
+
 ## Reusable templates
 
 ### Single-shot template
@@ -4697,6 +4814,10 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Ankit Patel — Seedance 2.0 live football-broadcast farce](https://x.com/Ankit_patel211/status/2079286938373419028)
+- [John — Seedance 2.0 aurora sugar-ice binaural ASMR](https://x.com/johnAGI168/status/2079181605793370180)
+- [LudovicCreator — Seedance 2.0 VHS orbital-station dark-Earth reveal](https://x.com/LudovicCreator/status/2079265271080984756)
 
 - [オズ — Seedance 2.0 one-way-state mapo-tofu process](https://x.com/ozuozuai99/status/2078854293818622124)
 - [Gadgetify — Seedance 2.0 local-gravity cuboid-city camera roll](https://x.com/Gdgtify/status/2078861670437548286)
