@@ -121,6 +121,9 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Live-broadcast football-glove farce](#105-live-broadcast-football-glove-farce)
   - [Aurora sugar-ice binaural ASMR](#106-aurora-sugar-ice-binaural-asmr)
   - [VHS orbital-station dark-Earth reveal](#107-vhs-orbital-station-dark-earth-reveal)
+  - [Rainy-night 4K sports-car texture benchmark](#108-rainy-night-4k-sports-car-texture-benchmark)
+  - [Controlled-fire 4K jewelry macro](#109-controlled-fire-4k-jewelry-macro)
+  - [Near-to-far 4K urban-disaster escalation](#110-near-to-far-4k-urban-disaster-escalation)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -4243,6 +4246,122 @@ visible sunlight on Earth, legible brand, caption, music or polished cinematic g
 
 ---
 
+### 108. Rainy-night 4K sports-car texture benchmark
+
+**Verified model:** Seedance 2.0 — identified by the publishing platform as a native-4K Seedance 2.0 real test case  
+**Use case:** automotive commercials, high-detail motion, wet-surface realism  
+**Mode:** text-to-video  
+**Settings:** 10 seconds, 16:9, native 4K, five-shot photoreal commercial
+
+```text
+Unbranded graphite sports coupe on a closed elevated test road at night after rain.
+Native 4K final render. Preserve one exact body silhouette, four matching wheels,
+headlight shape, paint colour, travel direction and the same blue-red neon lighting.
+No pedestrians or other traffic. Commercial realism, not game-engine gloss.
+
+0–1 s — 100 mm macro: Raindrops crawl along the front fender while one blue neon
+line bends cleanly across the wet paint. Keep panel gaps and reflection direction fixed.
+1–3 s — tight wheel detail: The car begins moving. Wheel rotation accelerates
+continuously; brake disc, tyre tread and thrown droplets remain separately readable.
+3–6 s — low 35 mm tracking: Follow alongside as the coupe crosses the wet road.
+Lock the body line and wheelbase while guardrails and lamps show believable parallax.
+6–8 s — restrained side orbit: Arc no more than 25 degrees. Cold streetlight and red
+taillight reflections travel across the same panels without changing the car geometry.
+8–10 s — 50% slow motion: The front tyres enter one shallow puddle; layered sheets,
+beads and mist rise from contact, then fall under gravity. End on a stable three-quarter
+hero frame with the car still moving forward.
+
+Audio: deep restrained electronic pulse, realistic engine rise, tyre hiss and one
+puddle impact; no dialogue or voice-over. No real marque, logo, text, watermark,
+wheel wobble, tyre sliding, body morph, random dent, mirrored steering, frozen spray,
+water passing through panels, camera teleport, exposure pumping or extra vehicle.
+```
+
+**Why it works:** Each shot assigns 4K detail to one material test—droplets, rotating hardware, body stability, moving reflections or splash layers. A closed road and locked vehicle geometry keep the benchmark controlled instead of hiding errors inside traffic.
+
+**Source:** [Marcus Cole / Seedance2Pro’s Seedance 2.0 4K test guide](https://www.seedance2pro.net/blog/seedance-2-4k-guide), published July 21, 2026. The platform presents the rainy-car sequence as a native-4K Seedance 2.0 real test case; this version restructures it as a production-ready commercial benchmark.
+
+---
+
+### 109. Controlled-fire 4K jewelry macro
+
+**Verified model:** Seedance 2.0 — identified by the publishing platform as a native-4K Seedance 2.0 real test case  
+**Use case:** jewelry advertising, macro material proof, controlled specular highlights  
+**Mode:** multi-reference image-to-video  
+**Settings:** 8 seconds, 1:1, native 4K, four-shot luxury product film
+
+```text
+Use @Image1–@Image4 only as front, side, rear and setting-detail references for one
+unbranded platinum solitaire ring. Lock the exact gemstone cut, facet map, six-prong
+count, band thickness and metal colour. Black studio, charcoal velvet pedestal, one
+narrow white key light and soft skin-toned fill. Native 4K final render.
+
+0–1 s — 120 mm extreme macro: Hold on the crown. Facet edges and all six prongs are
+sharp; the stone remains transparent rather than turning into a white glowing blob.
+1–3 s — locked close-up: Sweep one narrow light beam from frame left to right.
+Diamond fire appears as brief controlled colour points that follow the moving beam;
+protect highlight detail and keep the setting motionless.
+3–5 s — 85 mm medium macro: Rotate the ring exactly 120 degrees clockwise on its
+pedestal. The camera stays fixed. Geometry transitions through the supplied angles
+without inventing a new setting or changing the stone.
+5–6 s — extreme macro: Rack focus from visible velvet fibres to polished band
+micro-reflections, then return focus to the prongs.
+6–8 s — slow wearing action: One anatomically correct adult hand slides the ring onto
+the ring finger in a single continuous motion. Freeze only after the ring seats fully;
+hold a clean final hero frame.
+
+Audio: restrained strings, soft velvet contact and one quiet metal touch. No dialogue,
+voice-over, text, logo or watermark. No extra gem, lost prong, changing cut, melted
+band, clipped sparkle, glitter cloud, plastic surface, doubled finger, wrong finger,
+floating ring, hand morph, abrupt rotation, moving pedestal or unstable background.
+```
+
+**Why it works:** Multiple angle references protect the object during rotation, while a moving light—not random sparkle—drives the fire. The prompt separates facets, velvet, metal and skin into distinct focus tasks so native 4K serves material proof rather than indiscriminate sharpness.
+
+**Source:** [Marcus Cole / Seedance2Pro’s Seedance 2.0 4K test guide](https://www.seedance2pro.net/blog/seedance-2-4k-guide), published July 21, 2026. The platform documents jewelry as a native-4K Seedance 2.0 real test case; this adaptation adds reference roles, highlight control and geometry locks.
+
+---
+
+### 110. Near-to-far 4K urban-disaster escalation
+
+**Verified model:** Seedance 2.0 — identified by the publishing platform as a native-4K Seedance 2.0 real test case  
+**Use case:** disaster trailers, multi-scale continuity, environmental and facial detail  
+**Mode:** text-to-video  
+**Settings:** 6 seconds, 16:9, native 4K, four-shot fictional blockbuster sequence
+
+```text
+Fictional modern business district during a strong earthquake, hard afternoon light
+filtered through layered gray-yellow dust. Native 4K final render. Establish one
+corner office overlooking the same glass tower and street used in the wide shot.
+One adult pregnant woman in practical office clothing is the reaction character.
+No gore, visible injury or falling person.
+
+0–1 s — 100 mm extreme close-up: A ceramic coffee cup vibrates across a desk without
+tipping. Tiny droplets clear the rim and land on paper; window blinds begin rattling.
+1–2 s — 50 mm close-up: One crack branches across the adjacent plaster wall and sheds
+fine dust. Keep the desk, window direction and afternoon light consistent.
+2–4 s — 24 mm extreme wide from outside: Reveal the same business district shaking.
+Sections of the established tower façade fracture and fall into a secured empty zone
+while small street figures flee along clear routes away from it. Dust expands from
+each impact with near-to-far depth; no person is struck.
+4–6 s — 85 mm facial close-up back in the office: The adult woman braces beside the
+desk, one hand supporting her belly and the other gripping a fixed rail. Fingers
+tremble; dust and one tear track remain visible. She steadies her breathing and
+looks toward the same window. End on a held expression, not another collapse.
+
+Audio remains one continuous event: ceramic chatter, low structural rumble, glass
+fracture, distant alarms, crowd shouts and close breathing; no music, dialogue or
+subtitle. No landmark or real company, blood, crushed body, falling baby, sensational
+injury, duplicated crowd, rubber building, random explosion, reversed debris, changing
+office layout, face swap, extra fingers, weightless dust, watermark or abrupt time jump.
+```
+
+**Why it works:** The escalation moves from a droplet to a wall, a district and finally a human reaction, making both micro- and macro-detail purposeful. Reusing the office, window and tower across scales keeps the sequence spatially coherent while explicit safe zones prevent spectacle from becoming unreadable harm.
+
+**Source:** [Marcus Cole / Seedance2Pro’s Seedance 2.0 4K test guide](https://www.seedance2pro.net/blog/seedance-2-4k-guide), published July 21, 2026. The platform presents the urban-disaster sequence as a native-4K Seedance 2.0 real test case; this rewrite adds geography, continuity, audio and harm-control constraints.
+
+---
+
 ## Reusable templates
 
 ### Single-shot template
@@ -4768,6 +4887,61 @@ the handoff landmark, or end facing backward.
 
 Adapted from [Michael Guo's original route-guide structure](https://x.com/Michaelzsguo/status/2048966649982669053), published April 28, 2026. Its Seedance 2.0 mapping is preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=3835).
 
+### Draft-to-4K detail-budget escalation template
+
+**Verified model:** Seedance 2.0 — distilled from the publishing platform’s native-4K Seedance 2.0 test workflow
+
+```text
+DELIVERY TARGET
+{DURATION}, {ASPECT_RATIO}, final native 4K for {PLATFORM_OR_PLACEMENT}.
+One hero subject: {SUBJECT}. One main visual idea: {IDEA}.
+
+PASS 1 — STANDARD-QUALITY MOTION PROOF
+Generate at standard quality. Test only:
+- start and end state: {START_STATE} → {END_STATE}
+- subject action: {ONE_ACTION}
+- camera: {ONE_SLOW_MOVE}
+- scene geography: {FIXED_LAYOUT}
+- failure gate: reject if {TOP_MOTION_FAILURES}.
+Do not spend prompt budget on micro-texture yet.
+
+REFERENCE GATE
+Choose the cleanest successful frame or reference. For a rotating object, assign
+@Image1 front, @Image2 side, @Image3 rear and @Image4 critical detail. State which
+attributes each reference controls; do not ask one view to invent hidden geometry.
+
+MOTION LOCK
+Carry forward the approved duration, action path, camera path, screen direction,
+rotation amount, contact timing and final composition without alteration.
+
+FINAL 4K DETAIL CONTRACT
+Keep sharp and temporally stable:
+- geometry and edges: {EDGE_PRIORITIES}
+- material response: {MATERIAL_AND_TEXTURE_PRIORITIES}
+- reflections/highlights: {LIGHT_BEHAVIOUR}
+- human detail, if present: {FACE_HAND_OR_EXPRESSION_PRIORITIES}
+- depth layers: {FOREGROUND_MIDGROUND_BACKGROUND}
+Reveal these details with {MACRO_OR_SLOW_SHOT}; do not add extra action.
+
+FINAL RENDER
+Generate native 4K only after the motion proof passes. Use a slow push, controlled
+orbit, gentle track or locked hero frame. End with {STATIC_FINAL_FRAME} held for
+{HOLD_DURATION} so crops and edits have a clean delivery point.
+
+FAILURE CONTROL
+No {GEOMETRY_CHANGES}, {MATERIAL_MORPHING}, {REFERENCE_CONFLICTS}, fast camera,
+overloaded scene, clipped highlights, hidden hero subject, unstable final frame,
+random text, logo or watermark.
+
+DELIVERY PLAN
+Protect the central action and safe margins for {16:9 / 9:16 / 1:1 CROPS}.
+Use the final 4K master for publishing; keep standard drafts only for iteration.
+```
+
+**Technique:** Spend inexpensive generations on idea, motion and camera validation, then freeze those decisions before allocating 4K prompt budget to named edges, materials, reflections, expressions and depth. This prevents higher resolution from merely exposing an unresolved action or reference conflict.
+
+Adapted from [Marcus Cole / Seedance2Pro’s Seedance 2.0 4K workflow](https://www.seedance2pro.net/blog/seedance-2-4k-guide), published July 21, 2026. The platform’s rule is to test at standard quality and reserve native 4K for a direction that is ready to publish.
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -4814,6 +4988,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Marcus Cole / Seedance2Pro — Seedance 2.0 native-4K real tests and draft-to-final workflow](https://www.seedance2pro.net/blog/seedance-2-4k-guide)
 
 - [Ankit Patel — Seedance 2.0 live football-broadcast farce](https://x.com/Ankit_patel211/status/2079286938373419028)
 - [John — Seedance 2.0 aurora sugar-ice binaural ASMR](https://x.com/johnAGI168/status/2079181605793370180)
