@@ -124,6 +124,12 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Rainy-night 4K sports-car texture benchmark](#108-rainy-night-4k-sports-car-texture-benchmark)
   - [Controlled-fire 4K jewelry macro](#109-controlled-fire-4k-jewelry-macro)
   - [Near-to-far 4K urban-disaster escalation](#110-near-to-far-4k-urban-disaster-escalation)
+  - [Frozen-moon ice-canyon escape](#111-frozen-moon-ice-canyon-escape)
+  - [Three-location architecture FPV handoff](#112-three-location-architecture-fpv-handoff)
+  - [Summit-to-lake reverse-dolly product reveal](#113-summit-to-lake-reverse-dolly-product-reveal)
+  - [Five-character hierarchy reveal one-take](#114-five-character-hierarchy-reveal-one-take)
+  - [Candle-memory smoke-loop product story](#115-candle-memory-smoke-loop-product-story)
+  - [Single-prop crocodile return gag](#116-single-prop-crocodile-return-gag)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -4362,6 +4368,254 @@ office layout, face swap, extra fingers, weightless dust, watermark or abrupt ti
 
 ---
 
+### 111. Frozen-moon ice-canyon escape
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and its direct mapping to the creator's original post  
+**Use case:** vehicle action, environmental destruction, chase geography, ice physics  
+**Mode:** text-to-video  
+**Settings:** 12 seconds, 16:9, one continuous pursuit shot
+
+```text
+Photoreal live-action science-fiction chase on a frozen moon. One low, wedge-shaped
+racing vehicle with cyan running lights travels forward through a blue ice canyon.
+Keep its silhouette, damage state and screen direction unchanged. The pursuing
+avalanche is always behind it and advances only through already established space.
+
+0–2 s — Start inches above the frozen river, tracking behind the racer as it enters
+a narrow trench. Powder streams from the tires; a distant glacier fractures with a
+deep crack and begins falling into the route behind.
+2–5 s — Accelerate beside the left flank, then bank through one intact ice arch.
+The racer drifts around two fixed crystal pillars. The avalanche reaches the previous
+bend and throws granular snow and fist-sized ice fragments forward without overtaking.
+5–8 s — Rise into a three-quarter orbit as the vehicle jumps one visible crevasse.
+Show suspension extension, nose-down correction and a weighted landing; the same
+crack remains below and the canyon walls keep their relative positions.
+8–10 s — Drop back to surface-level FPV. A bridge collapses only after the racer
+clears it, cutting off the largest debris while the vehicle squeezes through the
+last marked gap.
+10–12 s — Burst onto a broad plateau and arc to a front three-quarter hero view.
+The vehicle decelerates naturally. Behind it, snow pours from the canyon mouth and
+settles rather than appearing ahead. End on stable vehicle detail against cold sun.
+
+IMAX-scale realism, hard blue-white light, translucent ice, accurate traction,
+suspension and debris inertia. Audio: turbine whine, tire chatter, ice stress,
+avalanche rumble and one heavy landing; no music or dialogue. No cuts, teleporting
+camera, changing vehicle, duplicated racer, rubber ice, reversed debris, avalanche
+ahead of the vehicle, impossible gap, weightless landing, unreadable motion blur,
+logo, subtitle or watermark.
+```
+
+**Why it works:** The avalanche advances through a fixed route while every obstacle has a visible before-and-after state. A single vehicle, one screen direction and a complete jump cycle keep the spectacle readable instead of turning it into unrelated action fragments.
+
+**Source:** [Alexandra Aisling's original post](https://x.com/AllaAisling/status/2079745336935936433), published July 22, 2026; the complete prompt and Seedance 2.0 mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7663). This rewrite adds a timed route, causal destruction and failure controls.
+
+---
+
+### 112. Three-location architecture FPV handoff
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and its direct mapping to the creator's original post  
+**Use case:** multi-reference architecture, continuous FPV, occlusion transitions, location preservation  
+**Mode:** multi-image reference-to-video  
+**Settings:** 15 seconds, 16:9, one unbroken FPV route
+
+```text
+@Image1, @Image2 and @Image3 are three different real architectural locations.
+Each image owns only its location's geometry, material, color and local lighting.
+Do not blend buildings between references or redesign any landmark. No people are
+required.
+
+15-second high-speed wide-angle FPV shot, constant forward velocity, one visible
+camera path and no cut.
+
+0–5 s — Begin in @Image1, skimming 20 cm above [SURFACE]. Hold [LANDMARK A] ahead,
+climb toward [APERTURE A] and pass completely through it. Its dark interior fills
+the frame for the location handoff.
+5–10 s — Emerge into @Image2 with its original light direction. Bank right across
+[OPEN SPACE B], then weave once between [LEFT PILLAR B] and [RIGHT PILLAR B].
+Keep their spacing rigid. Let the second pillar briefly occlude the full frame,
+then reveal the approach to [RAMP / RIDGE B].
+10–15 s — Crest into @Image3, preserving its skyline and terrain. Spiral once
+around [SUMMIT FEATURE C], nose over the far edge and finish on the wide panorama
+with [FINAL LANDMARK C] centered. Ease only during the final half-second.
+
+Transitions occur only inside the aperture, pillar occlusion and ridge crest.
+Audio is continuous diegetic wind, with each location adding one local layer:
+[AMBIENCE A], [AMBIENCE B], then [AMBIENCE C]. Photoreal materials and real drone
+inertia. No visible drone, jump cut, speed ramp, slow motion, backward flight,
+warped façade, fused location, repeated landmark, changing sun within one location,
+collision, text, logo or watermark.
+```
+
+**Why it works:** Each reference has a narrow responsibility, and every location change is hidden by a physical occluder already present in the route. Naming entry and exit landmarks makes three environments feel like one planned flight rather than a morphing slideshow.
+
+**Source:** [madpencil_'s original post](https://x.com/madpencil_/status/2079575678216016316), published July 21, 2026; the full reusable structure and Seedance 2.0 mapping are recorded in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7672). This version normalizes asset ownership, handoff gates and geometry controls.
+
+---
+
+### 113. Summit-to-lake reverse-dolly product reveal
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and its direct mapping to the creator's original post  
+**Use case:** beverage ads, landscape-to-product scale change, reverse-dolly one-takes  
+**Mode:** image/reference-to-video  
+**Settings:** 12 seconds, 16:9, one continuous descending pull-back
+
+```text
+Use @Image1 as the exact product source for one slim sparkling-drink can: preserve
+its proportions, cucumber-lime palette, gold rim and label. Use @Image2 for the
+jagged mountain silhouette, @Image3 for the snowy pine corridor and @Image4 for
+the turquoise glacial lake. One red-orange inflatable ring carries the can.
+
+0–3 s — Open tight on the mountain summit. Begin one steady backward-and-downward
+camera move; the summit never changes shape and simply becomes smaller. Wind pulls
+spindrift away from the peak in one consistent direction.
+3–7 s — Continue descending to ground level between two rows of tall snow-laden
+pines. Trunks pass close on both sides with correct parallax. One branch sheds a
+small amount of snow after the camera passes; nothing touches the lens.
+7–10 s — Exit the trees backward and glide 30 cm above the lake. Reveal the same
+mountain centered in the far background and the product ring drifting ahead in
+the camera's travel direction, but slower, so the camera gains on it.
+10–12 s — Settle at water level into a centered hero frame. The ring rocks once
+and damps; the can rotates from left three-quarter to front label. Sun glints on
+the rim and water, then hold the sharp label for the final second.
+
+Cold, crisp premium realism. Camera motion remains backward and downward until
+the final ease; no forward correction or hidden cut. Water has gentle current
+ripples only. Audio: mountain wind narrowing between trees, soft snow fall, then
+lake water and one clean tonal resolve. No changing mountain, duplicate tree,
+branch collision, glass-still water, foam around the ring, sinking product,
+wrong label, extra can, floating shadow, sudden orbit, morph, subtitle or watermark.
+```
+
+**Why it works:** The same mountain remains a visual anchor while foreground scale progresses from summit to trunks, water and finally the can. Specifying relative camera and product speeds makes the reveal physically possible, and the damped ring motion produces a usable hero endpoint.
+
+**Source:** [HongshuG's original post](https://x.com/H0ngshuG/status/2079578495840092249), published July 21, 2026; the full prompt and Seedance 2.0 mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7687). This adaptation separates reference roles and tightens motion, label and water constraints.
+
+---
+
+### 114. Five-character hierarchy reveal one-take
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and its direct mapping to the creator's original post  
+**Use case:** ensemble introductions, character consistency, spatially staged one-takes  
+**Mode:** multi-image reference-to-video  
+**Settings:** 15 seconds, 16:9, five-character continuous shot
+
+```text
+Dark live-action underworld tribunal, minimalist gray stone hall, restrained cold
+top light, faint red floor reflection and very light haze. No dialogue or music.
+Five adult characters occupy fixed positions from frame one, 1.5–2 m apart:
+@Ref1 White Envoy front-left with white token; @Ref2 Black Envoy mid-right with
+black token; @Ref3 Ox Guard rear-left with horns and chain; @Ref4 Horse Guard
+rear-right with ears and rope; @Ref5 Magistrate deepest center with black book.
+Each reference owns one identity, costume and prop only. Never exchange them.
+
+0–3 s — Begin on @Ref1's token hand near lens, rack focus to the complete face,
+then pull to a medium view that includes the readable token.
+3–5 s — Orbit past @Ref1's shoulder as a natural foreground wipe and accelerate
+toward @Ref2. Decelerate on @Ref2's face; the second token lowers without crossing
+another body.
+5–7 s — Pan left to @Ref3, stopping between eyes and horns. The chain drops under
+gravity and swings once while the guard remains on the established mark.
+7–9.5 s — Arc around @Ref3's outside shoulder. Follow @Ref4's rope upward from
+foreground to face, then hold long enough to read the ears, hair silhouette and eyes.
+9.5–11.5 s — Glide low along the rope toward the deepest light boundary. Reveal
+@Ref5 in profile, focus briefly on the closed black book, then push to a frontal
+expression as the magistrate turns only the head.
+11.5–15 s — Orbit and retreat while all four earlier characters re-enter according
+to their original coordinates. Finish with @Ref5 front-center, guards on outer
+rear edges and envoys between them. Full heads, faces, bodies, shoes and props remain
+unobstructed. All look to camera on the same final beat; hold 0.8 s.
+
+One continuous collision-free camera path with smooth fast-slow curves. No cut,
+mask cut, wall penetration, body overlap, identity swap, costume transfer,
+teleportation, sliding mark, extra character, duplicated prop, blocked face,
+unreadable token, excessive smoke, horror gore, subtitle or watermark.
+```
+
+**Why it works:** Fixed coordinates and reference ownership solve identity before camera choreography begins. Each foreground wipe is tied to a real shoulder or prop, while the final retreat proves that all five characters remained in the room throughout the reveal.
+
+**Source:** [Lc玩AI's original post](https://x.com/acupofai/status/2079553899413807402), published July 21, 2026; the complete prompt and Seedance 2.0 mapping are archived in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7689). This rewrite compresses the long source into a reusable identity, coordinate and camera-speed map.
+
+---
+
+### 115. Candle-memory smoke-loop product story
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and its direct mapping to the creator's original post  
+**Use case:** emotional product ads, particle transformation, narrative-to-hero-frame closure  
+**Mode:** image/reference-to-video  
+**Settings:** 15 seconds, 16:9, stylized 3D animation, one continuous shot
+
+```text
+Use @Image1 for one adult woman's animated identity and teal floral dress. Use
+@Image2 for one clear glass candle jar labeled "SOFT MEMORIES." Cozy living room
+at blue-hour dusk: teal sofa, dark coffee table, warm floor lamp and cool window.
+The candle remains on the same table mark and is the sole source of magical smoke.
+
+0–4 s — Static medium frame. The woman leans toward the candle without touching it.
+The flame flickers and warm light moves subtly across her face; all other props hold.
+4–9 s — Begin a very slow widening move. One ribbon of luminous translucent smoke
+rises from the flame and coherently forms a small, stylized childhood-memory figure
+with matching hair cues. The figure takes one playful loop around the table while
+the seated woman follows it with her eyes and softens into a smile.
+9–12 s — The memory figure stops facing the woman, waves once and dissolves from
+fingertips to body into the same smoke ribbon. Particles travel back along a visible
+path and re-enter the flame; none remain elsewhere in the room.
+12–15 s — Reverse the camera direction into one smooth push toward the jar. The
+woman and room fall softly out of focus. End with the unchanged label front-facing,
+the flame stable and one last warm reflection crossing the glass; hold 0.8 s.
+
+Tender premium 3D animation, restrained particles, readable silhouette and consistent
+warm-cool lighting. Audio: quiet room tone, low candle crackle, one airy motif that
+rises with the figure and resolves when smoke returns; no dialogue. No cut, second
+child figure, identity drift, physical touch, smoke from another object, particle
+residue, changing furniture, extra candle, warped jar, misspelled label, fire spread,
+abrupt zoom, subtitle or watermark.
+```
+
+**Why it works:** The effect has a closed material loop—flame to smoke, smoke to memory, memory back to flame—so the transformation cannot spawn unrelated particles. The emotional beat resolves into a stable product frame instead of competing with it.
+
+**Source:** [Ima Studio's original post](https://x.com/ImaStudio_ai/status/2079527859400667249), published July 21, 2026; the complete prompt and Seedance 2.0 mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7680). This adaptation clarifies asset ownership, state transitions and the final label hold.
+
+---
+
+### 116. Single-prop crocodile return gag
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and its direct mapping to the creator's original post  
+**Use case:** absurd mobile comedy, animal interaction, single-prop continuity  
+**Mode:** image/reference-to-video  
+**Settings:** 13 seconds, 3:4 vertical, one handheld phone shot
+
+```text
+Generated absurdist phone-video comedy in daylight beside a rural pond. One adult
+performer from @Image1 stands on the muddy bank. One clearly artificial crocodile-like
+creature begins 8 m away in shallow water. One soft orange ball is the only prop.
+Wide phone lens, modest hand shake and one continuous shot; no real animal handling.
+
+0–2 s — Keep the performer foreground-left and creature background-center. The adult
+throws the ball once; follow its complete arc until it splashes between them.
+2–5 s — Reframe without cutting as the creature turns, retrieves that same ball
+with its mouth and swims toward the marked shore point. Water wake follows the body.
+5–8 s — The creature rises into a deliberately surreal upright pose, transfers the
+ball once from mouth to front limb and winds up. The camera operator reacts with one
+small backward step but keeps both subjects visible.
+8–10 s — The creature throws the same ball back. Track its return arc; it lands at
+the performer's feet and bounces once. The adult jumps back after the landing sound.
+10–13 s — Tilt from the ball to the performer's stunned look, then pan to the creature
+sinking calmly into the same water. Hold the empty ripple and ball together at end.
+
+Audio: live pond ambience, splash, water movement, one off-camera "Look!", soft-ball
+impact and the performer's short surprised breath; no score. Preserve one performer,
+one creature and one ball through every state. No cut, second throw, duplicated ball,
+prop color change, creature teleportation, real-world attack, contact with person,
+blood, injury, missing return arc, reaction before landing, reversed splash, extra
+limb, crowd, subtitle or watermark.
+```
+
+**Why it works:** Explicit custody of a single ball—performer, water, creature, air, ground—turns an impossible gag into an easy-to-follow causal chain. Delaying the human reaction until the return impact preserves comic timing and prevents action-order errors.
+
+**Source:** [小宇Chengzi's original post](https://x.com/Chengzilhy/status/2079597289165967452), published July 21, 2026; the full prompt and Seedance 2.0 mapping are archived in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7695). This rewrite strengthens prop custody, safe staging and reaction timing.
+
+---
+
 ## Reusable templates
 
 ### Single-shot template
@@ -4988,6 +5242,13 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Alexandra Aisling — Seedance 2.0 frozen-moon ice-canyon escape](https://x.com/AllaAisling/status/2079745336935936433)
+- [madpencil_ — Seedance 2.0 three-location architecture FPV handoff](https://x.com/madpencil_/status/2079575678216016316)
+- [HongshuG — Seedance 2.0 summit-to-lake product reveal](https://x.com/H0ngshuG/status/2079578495840092249)
+- [Lc玩AI — Seedance 2.0 five-character underworld one-take](https://x.com/acupofai/status/2079553899413807402)
+- [Ima Studio — Seedance 2.0 candle-memory product story](https://x.com/ImaStudio_ai/status/2079527859400667249)
+- [小宇Chengzi — Seedance 2.0 single-prop crocodile return gag](https://x.com/Chengzilhy/status/2079597289165967452)
 
 - [Marcus Cole / Seedance2Pro — Seedance 2.0 native-4K real tests and draft-to-final workflow](https://www.seedance2pro.net/blog/seedance-2-4k-guide)
 
