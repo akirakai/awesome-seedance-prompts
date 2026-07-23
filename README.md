@@ -130,6 +130,11 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Five-character hierarchy reveal one-take](#114-five-character-hierarchy-reveal-one-take)
   - [Candle-memory smoke-loop product story](#115-candle-memory-smoke-loop-product-story)
   - [Single-prop crocodile return gag](#116-single-prop-crocodile-return-gag)
+  - [Fog-platform samurai boss reveal](#117-fog-platform-samurai-boss-reveal)
+  - [Live-action-to-cel mirror role swap](#118-live-action-to-cel-mirror-role-swap)
+  - [One-way Margherita assembly commercial](#119-one-way-margherita-assembly-commercial)
+  - [Birthday-candle fire-breath poster payoff](#120-birthday-candle-fire-breath-poster-payoff)
+  - [YAML-locked city parkour sequence](#121-yaml-locked-city-parkour-sequence)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -4616,6 +4621,264 @@ limb, crowd, subtitle or watermark.
 
 ---
 
+
+### 117. Fog-platform samurai boss reveal
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** multi-reference action choreography, armor assembly, scale reveal  
+**Mode:** multi-reference image-to-video  
+**Settings:** 15 seconds, 16:9, live-action sci-fi
+
+```text
+@Image1 controls the adult warrior's face only. @Image2 controls the complete
+white-black-gold mechanical samurai armor, finned helmet and material finish.
+Keep face geometry stable while the helmet closes; after closure, never expose
+or redesign the face. One red energy sword is the only warm light source.
+
+IMAX-scale live-action texture, cool cyan industrial fog, 35 mm lens character,
+restrained handheld movement, sound effects only.
+
+0–3 s: Tight face push-in. Helmet plates assemble from back to front and lock
+without crossing through the face. Cut to the open right palm: red particles
+spiral into one hilt; the hand closes and one translucent blade ignites.
+3–5 s: Rear medium-wide. Six black crustacean creatures emerge in a readable
+circle around the warrior. Pull back just enough to establish platform, rails
+and overhead crane cables; do not begin combat before all six positions read.
+5–9 s: Side-tracking wide holds complete bodies. The first attacker charges;
+one horizontal cut sends it into the rail. A second enters from screen left;
+the return stroke disarms it. Two more enter from screen right; one planted
+spin-kick knocks them together. Show approach, contact, recoil and recovery.
+9–11 s: The fifth attacks from behind. The warrior reverses grip, blocks, turns,
+then throws it into the sixth. Keep the sword in the right hand and the enemy
+count decreasing only once per completed impact.
+11–13 s: Overhead hold: six defeated creatures, one warrior, one sword. Footsteps
+shake the platform; cables sway before two enormous red eyes appear in the fog.
+13–15 s: Low tilt reveals a four-armed boss ten times the warrior's height. Push
+into the helmet reflection, then the warrior launches forward and freeze on the
+first stride—not on an unearned impact.
+
+Mechanical locks, energy hum, carapace impacts, filtered breathing, cable creaks
+and the boss's final roar. No music, gore, extra creature, duplicated sword,
+teleporting attacker, hidden contact, rubber limbs, armor color drift, face warp,
+random cutaway, weightless fall or boss-size change.
+```
+
+**Why it works:** The prompt treats the six attackers as a countable state, assigns one readable camera to each combat cluster, and delays the boss until the platform's vibration motivates the scale reveal.
+
+Adapted from [料到Ai's original Seedance 2.0 samurai sequence](https://x.com/liaodaoai/status/2080176246995181958), published July 23, 2026. The complete source and model mapping are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7735).
+
+---
+
+### 118. Live-action-to-cel mirror role swap
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** mixed-media dance, mirror transitions, style and identity separation  
+**Mode:** image-to-video  
+**Settings:** 12 seconds, 9:16, photoreal room plus flat 2D animation
+
+```text
+@Image1 defines one adult performer's face, hair, proportions and opening pink
+dress. In the real room she is always photoreal; inside the black-framed mirror
+her reflection is always clean-line cel animation with flat colors. When either
+version crosses the mirror boundary, keep that version's assigned medium. Never
+blend the two rendering styles or create a second identity.
+
+0–1 s: Close portrait. The live-action performer smiles, points over one shoulder
+and motivates a fast pan to the full-length mirror.
+1–4 s: Fixed medium-wide contains the real body and complete reflection. They
+perform the same three-beat phrase—point, side kick, hair touch. The reflected
+cel version mirrors timing but adds one small elastic recoil after each stop.
+4–5.5 s: On one bass hit, the cel figure steps through the frame into the real
+room while remaining drawn; simultaneously the live performer appears wholly
+inside the mirror and reacts. Keep their screen sides and costume unchanged.
+5.5–8 s: On the next hit they cross back through the same boundary. Both switch
+to the same grey streetwear look only after the crossing completes, then perform
+two synchronized crossover steps. Face and hair identity remain @Image1.
+8–11 s: Third beat changes both to the same cream dress. The real performer holds
+a hip-sway pose while the cel reflection answers with one exaggerated hop; both
+arrive at the same final silhouette.
+11–12 s: The cel figure steps into foreground, gives one wink and “shh” gesture.
+The live performer stays visible inside the mirror and waves. Freeze immediately
+after the gesture; no fade.
+
+Light pop beat, one heavy hit per crossing or outfit change, soft pop and swish
+effects. Preserve mirror geometry, room layout, identity, costume agreement and
+reflection direction. No style leakage, half-drawn face, extra reflection,
+independent costume, body merge, missing mirror frame, off-beat swap, text,
+logo or camera cut during a boundary crossing.
+```
+
+**Why it works:** Medium, location and identity are separate state variables. Every crossing changes location only; every wardrobe beat changes clothing only, so the model has no reason to merge the live and drawn bodies.
+
+Adapted from [John's original Seedance 2.0 mixed-reality mirror post](https://x.com/johnAGI168/status/2080168687072379128), published July 23, 2026. The full prompt and model mapping are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7740).
+
+---
+
+### 119. One-way Margherita assembly commercial
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** food advertising, magical assembly, irreversible ingredient states  
+**Mode:** image-to-video  
+**Settings:** 15 seconds, 16:9, premium tabletop photography
+
+```text
+Use @Image1 only as the final composition, light, color and ingredient-placement
+target. Begin with one empty terracotta plate on a white table. Keep the plate
+center, camera axis and soft key-light direction fixed across cuts. Every food
+state advances once—nothing returns to an earlier form.
+
+0–2 s — locked overhead: one parchment square unfolds across the plate and lies
+flat. Hold until its corners stop moving.
+2–5 s — slow overhead push: flour gathers above the parchment, compacts into one
+dough ball, lands, spins and stretches into a round base. The rim inflates last.
+5–7.5 s — macro overhead: three tomatoes liquefy into one sauce stream that paints
+an outward spiral while leaving the rim clean. Garlic and seasoning settle only
+after the spiral completes.
+7.5–10 s — controlled 45-degree arc: mozzarella pieces descend and stop in even
+positions; basil follows; one thin ribbon of olive oil crosses the surface.
+No topping floats after contact.
+10–12.5 s — crust-level macro track: a visible heat wave travels once around the
+pizza. Dough browns behind it, char spots remain fixed, sauce bubbles and cheese
+melts without changing placement. Basil may tremble but does not burn away.
+12.5–15 s — return overhead: rise into the exact @Image1 hero composition as the
+supporting ingredients slide into their reference positions around the finished
+pizza. Steam rises; hold the complete plate for the final second.
+
+Paper rustle, flour whoosh, soft dough contact, sauce movement, oil hiss, gentle
+bubbling and crust crackle; no dialogue or music. Photoreal food texture and
+plausible mass. No hands, person, second pizza, ingredient reset, duplicated
+topping, dirty plate, reverse cooking, flying food at the hold, text, logo or
+composition drift.
+```
+
+**Why it works:** The final reference is used as a destination rather than a first-frame cage. One-way material states and contact-before-settle rules keep the magical assembly legible and prevent ingredients from repeatedly respawning.
+
+Adapted from [airina's original Seedance 2.0 Margherita assembly](https://x.com/airina_xyz/status/2079999693380051042), published July 22, 2026. The complete source and model mapping are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7727).
+
+---
+
+### 120. Birthday-candle fire-breath poster payoff
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** social comedy, single-prop continuity, effect-timed freeze frame  
+**Mode:** character-reference image-to-video  
+**Settings:** 15 seconds, 9:16, realistic party short
+
+```text
+Use @Image1 as the only identity and wardrobe reference: close view controls the
+adult performer's face and makeup; front and rear views control garment structure,
+body proportions and silver crown. One curved white birthday candle and one cake
+persist through the entire clip. Warm restaurant-bar interior, dark wine cabinets,
+amber practical lights.
+
+0–2 s: Medium shot. The performer sits behind the cake and places the crown on
+their head. Settle both hands before the cut.
+2–5 s: Close insert. They lift the unlit candle, hold it between the lips like a
+movie cigarette and bring one lighter flame to the wick. Keep flame away from the
+face and hair; one wick ignites once.
+5–7 s: Side close-up. They remove the same lit candle with the right hand, plant
+it upright in the cake and release it only after it stands stable.
+7–10 s: Return to the opening medium. They lean forward, inhale, then purse the
+lips to blow. Hold the cake, crown and background positions unchanged.
+10–13 s: At the first exhale, replace the expected air with one controlled plume
+of stylized fire traveling above the cake and away from the performer. The candle
+goes dark only after the plume passes; guests remain off camera.
+13–15 s: Cut at the plume's widest silhouette to a high-contrast monochrome poster
+freeze of the same pose. Preserve facial identity and the visible crown; add no
+type or graphic border.
+
+Room murmur, lighter click, small wick flare, inhale, short fire rush, then one
+camera-shutter hit into silence. No second candle, relit wick, face burn, smoke
+covering identity, crown jump, clothing change, extra hand, real-world injury,
+unmotivated explosion, background guest, caption, logo or color leaking into the
+final black-and-white frame.
+```
+
+**Why it works:** The gag depends on a single candle surviving four states—unlit, lit, planted and extinguished—before the effect occurs. Delaying the monochrome freeze until the plume reaches a readable silhouette gives the ending a clean editorial trigger.
+
+Adapted from [小宇Chengzi's original Seedance 2.0 birthday-fire post](https://x.com/Chengzilhy/status/2080140918704029967), published July 23, 2026. The full prompt and model mapping are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7746).
+
+---
+
+### 121. YAML-locked city parkour sequence
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** structured action prompting, reference locking, physics-readable parkour  
+**Mode:** character-reference image-to-video  
+**Settings:** 15 seconds, 16:9, five-shot anime–photoreal hybrid
+
+```yaml
+meta:
+  duration: 15s
+  reference_lock:
+    identity_outfit: strict
+    art_direction: strict
+  continuity:
+    travel_direction: left_to_right
+    gravity: grounded
+    final_state: rooftop_freeze
+
+subject:
+  adult_athlete:
+    appearance: preserve @Image1 face, hair, outfit and body proportions
+    motion: elite but physically readable
+    simulation: reactive hair and cloth, no body or costume morph
+
+environment:
+  route:
+    - sunset city street
+    - construction stair
+    - connected rooftops
+    - tallest roof at blue hour
+  invariants:
+    - same skyline and weather
+    - obstacles stay fixed after contact
+    - pedestrians remain background only
+
+timeline:
+  - time: 0-3s
+    camera: low rear tracking, 28mm
+    action: accelerate, sidestep one pedestrian, vault one barrier, recover
+  - time: 3-6s
+    camera: side-tracking wide, full body visible
+    action: rail vault, three-step wall run, two-foot rooftop landing
+  - time: 6-9s
+    camera: three-quarter wide, brief speed ramp only after takeoff
+    action: kong vault, precision landing, one tic-tac push, front flip, compression
+  - time: 9-12s
+    camera: restrained FPV chase from behind and above
+    action: beam swing, narrow-edge run, pipe slide, long gap jump
+  - time: 12-15s
+    camera: crane pull-back
+    action: plant on highest roof, stand, look to skyline, leap and freeze after takeoff
+
+physics_rules:
+  - show preparation, contact, surface response, flight and recovery
+  - center of gravity follows the support foot or hand
+  - landings compress knees and transfer momentum forward
+  - no floating, foot sliding, skipped contact or midair direction reset
+
+render:
+  style: AAA anime-photoreal hybrid
+  light: warm sunset transitioning continuously to blue hour
+  optics: 24-35mm, readable body mechanics, restrained bloom
+  forbid:
+    - extra athlete
+    - identity drift
+    - outfit change
+    - impossible roof relocation
+    - hidden landing
+    - random slow motion
+    - duplicated obstacle
+    - text or logo
+```
+
+**Why it works:** The YAML hierarchy separates immutable reference rules from route, shot timing and physics. Each phase has one camera and a completed landing, keeping a dense action sequence auditable instead of becoming a list of disconnected tricks.
+
+Adapted from [YUDO's original Seedance 2.0 YAML parkour post](https://x.com/yudotanaka/status/2079900274064490842), published July 22, 2026. The complete source and model mapping are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7748).
+
+---
+
 ## Reusable templates
 
 ### Single-shot template
@@ -5242,6 +5505,12 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [料到Ai — Seedance 2.0 fog-platform samurai boss reveal](https://x.com/liaodaoai/status/2080176246995181958)
+- [John — Seedance 2.0 live-action-to-cel mirror role swap](https://x.com/johnAGI168/status/2080168687072379128)
+- [airina — Seedance 2.0 one-way Margherita assembly](https://x.com/airina_xyz/status/2079999693380051042)
+- [小宇Chengzi — Seedance 2.0 birthday-candle fire-breath poster payoff](https://x.com/Chengzilhy/status/2080140918704029967)
+- [YUDO — Seedance 2.0 YAML-locked city parkour](https://x.com/yudotanaka/status/2079900274064490842)
 
 - [Alexandra Aisling — Seedance 2.0 frozen-moon ice-canyon escape](https://x.com/AllaAisling/status/2079745336935936433)
 - [madpencil_ — Seedance 2.0 three-location architecture FPV handoff](https://x.com/madpencil_/status/2079575678216016316)
