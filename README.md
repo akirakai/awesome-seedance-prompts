@@ -135,6 +135,12 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [One-way Margherita assembly commercial](#119-one-way-margherita-assembly-commercial)
   - [Birthday-candle fire-breath poster payoff](#120-birthday-candle-fire-breath-poster-payoff)
   - [YAML-locked city parkour sequence](#121-yaml-locked-city-parkour-sequence)
+  - [Stadium crowd-control live report](#122-stadium-crowd-control-live-report)
+  - [Manhole-note rhythm anime traversal](#123-manhole-note-rhythm-anime-traversal)
+  - [Water-slide haunted-house surprise](#124-water-slide-haunted-house-surprise)
+  - [Avalanche-tunnel rally one-take](#125-avalanche-tunnel-rally-one-take)
+  - [Resort yoga-mat use-to-hero commercial](#126-resort-yoga-mat-use-to-hero-commercial)
+  - [1990 textile-factory shift-change archive](#127-1990-textile-factory-shift-change-archive)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -4879,6 +4885,267 @@ Adapted from [YUDO's original Seedance 2.0 YAML parkour post](https://x.com/yudo
 
 ---
 
+
+### 122. Stadium crowd-control live report
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** live-news simulation, ensemble blocking, native ambient audio  
+**Mode:** text-to-video  
+**Settings:** 15 seconds, 16:9, realistic shoulder-camera broadcast
+
+```text
+Live sports-news report outside a packed stadium at 8:05 p.m. One adult
+field reporter in a plain dark jacket holds a wireless microphone near the
+main gates. Floodlights flare into the lens; bent but intact barricades,
+security staff and one parked ambulance define three stable depth layers.
+
+0–4 s: Shoulder camera walks backward at the crowd edge while the reporter
+states, “The gates have paused entry while staff reduce pressure.” Keep the
+reporter centered but allow shoulders and signs to briefly occlude frame edges.
+4–8 s: Pan to two security teams reinforcing one barricade, then settle on one
+adult attendee saying, “We cannot move near the front.” Return to the reporter
+through the same crowd gap; do not teleport the camera across the barrier.
+8–12 s: One barricade shifts several centimeters. A whistle sounds, security
+opens a side lane and the nearest people step backward in a visible wave. The
+reporter is jostled once, regains footing and urges viewers to remain calm.
+12–15 s: Pull to a wider live composition showing the reporter, reopened lane,
+security line and ambulance. End while crowd-control work continues; no staged
+resolution or dramatic cutaway.
+
+Only location sound: crowd chants, shoes, whistles, megaphone instructions,
+breath and lightly compressed reporter audio. Authentic broadcast exposure,
+minor autofocus correction and restrained shoulder shake. Preserve reporter
+identity, crowd direction, gate layout and personnel count. No music, riot,
+stampede, injury, gore, collapsing structure, duplicated responder, readable
+team logo, subtitle, sensational graphic or camera inside the compressed crowd.
+```
+
+**Why it works:** The crowd is treated as a directional pressure field rather than random motion. A visible security response motivates the only state change, while the reporter remains a stable narrative anchor.
+
+Adapted from [Strength04_X's original Seedance 2.0 live-report post](https://x.com/Strength04_X/status/2080494784104616383), published July 24, 2026. The complete source and exact model mapping are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7767).
+
+---
+
+### 123. Manhole-note rhythm anime traversal
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** anime action, rule-based traversal, motion-synchronized native audio  
+**Mode:** text-to-video  
+**Settings:** 15 seconds, 16:9, high-density 2D animation
+
+```text
+Japanese full-color 2D animation. An adult bicycle courier with a black bob,
+yellow rain jacket and empty messenger bag crosses a shuttered shopping street
+on foot. The pavement between seven fixed manhole covers becomes flat black
+negative space; only the covers support weight. Each cover emits one different
+pitched metal note on contact, and the seven notes must form one short melody.
+No background music.
+
+0–2 s: Overhead wide establishes all seven covers and the destination curb.
+The first missed test-step makes nearby pavement sink into blackness; the
+courier retracts the foot before weight transfers.
+2–5 s: Ground-level side track. Three precise cover landings create the first
+three notes. Each cover glows only from contact until toe-off; footprints do
+not appear on unsupported ground.
+5–8 s: Front three-quarter view. Covers four and five are farther apart. Show
+one running step, takeoff, airborne travel and a compressed single-foot landing.
+The black surface ripples below but never touches the body.
+8–11 s: Parallel tracking wide holds the full silhouette as the courier uses
+cover six, redirects momentum and jumps toward the final cover. Preserve screen
+direction and messenger-bag inertia.
+11–14 s: Both feet land together on cover seven, producing the final chord.
+The seven contact points illuminate in order and replay the melody once.
+14–15 s: The pavement closes from destination to origin. The courier steps onto
+the real curb, exhales and smiles; hold the restored street for the last frame.
+
+Detailed background art, smooth in-betweening and readable body mechanics.
+Audio is footsteps, seven tuned metal notes, jacket movement, breath and distant
+city ambience. No child, extra cover, changed cover position, foot on black
+space, floating, repeated note, off-contact glow, camera rotation that changes
+gravity, subtitle, watermark or melody before a landing.
+```
+
+**Why it works:** Support surfaces, light and pitch share the same seven-item state map. Contact triggers every visual and audio event, so a stylized traversal still has auditable physics and rhythm.
+
+Adapted from [妖精アーヤさん's original Seedance 2.0 manhole-rhythm animation](https://x.com/aiehon_aya/status/2080412643056386471), published July 23, 2026. The complete prompt and model mapping are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7788).
+
+---
+
+### 124. Water-slide haunted-house surprise
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** reference-locked comedy, POV transition, environment contrast  
+**Mode:** character-reference image-to-video  
+**Settings:** 15 seconds, 16:9, photoreal theme-park short
+
+```text
+@Image1 defines one adult performer's face, hair, body proportions and simple
+one-piece swimwear. Keep identity and clothing unchanged when moving from the
+bright water park to the indoor attraction. Real water, wet hair and skin,
+natural reactions, 24 fps.
+
+0–3 s: Bright exterior medium tracking shot. The performer waves once to an
+attendant, sits into the open slide and pushes off. Camera leads diagonally,
+showing the smile, water contact and entrance to the enclosed tube.
+3–8.5 s: Cut on full-frame blue water to first-person view inside the opaque
+tube. Only both legs and the slide surface are visible. Bank left, right, then
+down; blue-white service lights pass in a physically consistent sequence.
+Droplets strike the lens and a warm exit light grows continuously ahead.
+8.5–10 s: Cross the exit without a hidden cut and return to a pulled-back
+third-person view. The same performer splashes into a shallow runout inside a
+full-scale old-house attraction, stands and notices the lighting change.
+10–13 s: Broken furniture, paper screens and three distant costumed ghosts
+become visible one at a time as practical lamps sway. They approach slowly but
+never touch or block the exit. Hold enough width to read all positions.
+13–15 s: The performer tries one wrong door, spots an illuminated exit, then
+runs out of frame while suppressing a scream. End on the three ghosts exchanging
+a confused look.
+
+Sound moves continuously from outdoor cheers and rushing water to tube echo,
+splash, floor creaks and restrained attraction effects; no music or dialogue.
+Keep the surprise playful, not grotesque. No outside view inside the tube,
+teleportation, dry hair after exit, outfit change, duplicate performer, extra
+limb, real injury, underwater hold, gore, logo, subtitle or spatially impossible
+ghost appearance.
+```
+
+**Why it works:** A growing exit light and uninterrupted water sound bridge two radically different environments. Re-establishing the same wet performer before revealing the ghosts protects identity and makes the comic reversal readable.
+
+Adapted from [Nao Neko Samurai's original Seedance 2.0 water-slide surprise](https://x.com/Naonekozamurai/status/2080405090394071089), published July 23, 2026. The complete prompt and exact model mapping are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7791).
+
+---
+
+### 125. Avalanche-tunnel rally one-take
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** vehicle action, continuous camera path, cause-and-effect escalation  
+**Mode:** text-to-video or vehicle-reference image-to-video  
+**Settings:** 15 seconds, 16:9, photoreal live-action one-take
+
+```text
+One true continuous 15-second shot on a narrow alpine cliff road in cold
+daylight. One unbranded dark-red rally car must reach a concrete tunnel before
+an avalanche crosses the road. Preserve car geometry, road topology, travel
+direction and the tunnel's position; no cut, morph or reset.
+
+0–3 s: Begin high and wide behind the car, revealing two switchbacks, the sheer
+drop, tunnel ahead and a powder fracture starting on the upper slope. Descend
+along the road axis rather than flying through terrain.
+3–6 s: Ease into left-side tracking. The car completes one controlled drift
+around the first hairpin; tires remain on asphalt, suspension loads outward
+and loose snow sprays only after tire contact.
+6–9 s: Drop near the rear wheel, then rise over the roof to reveal the avalanche
+entering the previous switchback. Snow strikes signs and guardrail in sequence;
+the wave never jumps ahead of its visible front.
+9–12 s: Arc to a front-facing backward track as the car straightens. A small
+slab falls onto the road behind it and motivates one correction, not a jump.
+Keep camera clearance and a physically traversable path.
+12–15 s: The car crosses the tunnel threshold one body length before the snow
+reaches the entrance. Camera follows inside, exposure adapts, and the avalanche
+fills the opening behind without overtaking the car. Hold on brake lights and
+settling powder.
+
+Engine load, gear changes, tire scrub, wind, rock impacts and deep snow rumble;
+no song or dialogue. Real vehicle mass, restrained motion blur and photographed
+snow. No second car, changing paint, floating wheels, impossible grip, crushed
+occupant, cliff fall, camera passing through car or mountain, repeated corner,
+instant avalanche, explosion, logo, text or hidden transition.
+```
+
+**Why it works:** The camera route follows the same road as the action, while the avalanche advances through already established landmarks. That shared geography creates urgency without sacrificing continuity.
+
+Adapted from [Brent Lynch's original Seedance 2.0 avalanche rally one-take](https://x.com/BrentLynch/status/2080359232160120942), published July 23, 2026. The original prompt and model mapping are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7765).
+
+---
+
+### 126. Resort yoga-mat use-to-hero commercial
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** premium product advertising, material deformation, use-to-pack transition  
+**Mode:** multi-reference image-to-video  
+**Settings:** 15 seconds, 16:9, quiet luxury sports commercial
+
+```text
+@Image1 controls one adult athlete's face, hair, proportions and pale-blue
+long-sleeve training outfit. @Image2 controls one unbranded caramel-brown yoga
+mat: exact color, thickness, edge cut, surface grain and rolled diameter.
+Morning courtyard of a high-end resort, light stone floor, trimmed lawn and
+softly defocused pool; no other person or distracting object.
+
+0–3 s: Low glide begins at mat height and rises from the unrolled edge to the
+athlete beginning one standing stretch. Keep the entire mat readable and its
+corners flat. Quiet line: “Let’s begin.”
+3–7 s: One low semicircle follows a controlled lunge into downward dog. Show
+hands, toes and knees applying pressure in order; the surface compresses locally
+and recovers after release without stretching, sliding or changing thickness.
+7–10 s: Macro on one hand tracing the edge, then rack focus to the athlete's
+calm profile and slowing breath. Quiet line: “Perfect balance.”
+10–12.5 s: Side macro tracks the mat as the athlete rolls it from one end in a
+single continuous action. The roll grows by one layer at a time; both edges stay
+aligned and the product never duplicates or snaps into its final state.
+12.5–15 s: The athlete places the same roll at a two-thirds angle on a pale
+stone pedestal, releases both hands and walks into background. Focus remains on
+the sharp product while the figure softens. Final voice-over: “Made to move.”
+
+Natural morning light, restrained contrast, precise negative space, real skin,
+cloth and product texture. Audio: birds, breath, fabric, palms on mat, soft roll
+and stone contact. No sales-presenter gesture, extreme pose, malformed joint,
+mat under the floor, wrong color, changing edge, hovering roll, extra product,
+brand mark, label, oversaturation, plastic CGI sheen or generic ecommerce setup.
+```
+
+**Why it works:** The product stays central through three observable states—flat under load, recovering, then rolled. Showing pressure and release before the hero shot proves function instead of merely displaying a reference image.
+
+Adapted from [Loriel.AI's original Seedance 2.0 yoga-mat commercial](https://x.com/ou_zhen599/status/2080343369637839009), published July 23, 2026. The complete source and exact model mapping are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7782).
+
+---
+
+### 127. 1990 textile-factory shift-change archive
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** historical photo animation, ensemble continuity, observational soundscape  
+**Mode:** multi-reference image-to-video  
+**Settings:** 15 seconds, 4:3, 1990 color-film documentary
+
+```text
+Use @Images1–4 as a single documentary evidence set for a Shanghai state-owned
+textile factory at shift change in 1990. Preserve the referenced adult workers'
+faces, dark-blue or grey uniforms, cloth caps, aprons and proportions, plus the
+red-brick gate, bicycle parking, handcart and machinery layout. Do not beautify,
+modernize or make anyone perform for camera.
+
+0–3 s: Handheld wide walks slowly toward the iron gate as the end-of-shift bell
+fades. Workers push old road bicycles outward in one direction; one fabric cart
+crosses behind them without changing scale.
+3–6 s: Medium observation of three loom operators. One removes a lint-covered
+cap, one wipes the neck with a damp towel and one places an enamel lunchbox in
+a bicycle basket. Movements are small, tired and unsynchronized.
+6–9 s: Close inserts connected by natural eyelines: cotton lint on fingers,
+a thermos stopper, a handwritten handover log and a wrench entering a tool bag.
+Every object remains with its owner after the cut.
+9–12 s: Through high factory windows, belts and spinning machinery coast down.
+A maintenance worker closes one metal equipment-room door while evening air
+moves hanging cloth and electrical wire.
+12–15 s: Return to a wider gate view. Two colleagues begin riding together as
+the cart wheels cross cracked concrete and the iron gate starts to close. Hold
+before it fully shuts, preserving an ordinary unfinished workday rhythm.
+
+Authentic 35 mm color-film texture: visible fine grain, slightly faded warm
+tones, soft contrast, mild flicker, imperfect exposure and occasional dust.
+Restrained walking-camera shake, focus breathing and natural motion blur; no
+gimbal or dramatic move. Only site sound: Mandarin and Shanghainese conversation,
+machinery rumble, cart wheels, gate metal, bicycle bells, enamel clink, footsteps
+and breeze. No music, narration, subtitle, modern vehicle, LED sign, contemporary
+clothing, pristine machinery, staged wave, identity drift, duplicated worker,
+object teleportation, digital sharpening, glossy commercial light or AI sheen.
+```
+
+**Why it works:** Period accuracy is expressed through ownership, labor and material details rather than a generic vintage filter. Returning to the same gate turns many quiet micro-actions into one spatially continuous shift change.
+
+Adapted from [Loriel.AI's original Seedance 2.0 Shanghai textile-factory documentary](https://x.com/ou_zhen599/status/2080248779081744454), published July 23, 2026. The complete source and model mapping are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7779).
+
+---
+
 ## Reusable templates
 
 ### Single-shot template
@@ -5506,6 +5773,12 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 Community examples and techniques referenced in this README:
 
+- [Strength04_X — Seedance 2.0 stadium crowd-control live report](https://x.com/Strength04_X/status/2080494784104616383)
+- [妖精アーヤさん — Seedance 2.0 manhole-note rhythm traversal](https://x.com/aiehon_aya/status/2080412643056386471)
+- [Nao Neko Samurai — Seedance 2.0 water-slide haunted-house surprise](https://x.com/Naonekozamurai/status/2080405090394071089)
+- [Brent Lynch — Seedance 2.0 avalanche-tunnel rally one-take](https://x.com/BrentLynch/status/2080359232160120942)
+- [Loriel.AI — Seedance 2.0 resort yoga-mat commercial](https://x.com/ou_zhen599/status/2080343369637839009)
+- [Loriel.AI — Seedance 2.0 1990 textile-factory documentary](https://x.com/ou_zhen599/status/2080248779081744454)
 - [料到Ai — Seedance 2.0 fog-platform samurai boss reveal](https://x.com/liaodaoai/status/2080176246995181958)
 - [John — Seedance 2.0 live-action-to-cel mirror role swap](https://x.com/johnAGI168/status/2080168687072379128)
 - [airina — Seedance 2.0 one-way Margherita assembly](https://x.com/airina_xyz/status/2079999693380051042)
