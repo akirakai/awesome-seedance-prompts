@@ -141,6 +141,11 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Avalanche-tunnel rally one-take](#125-avalanche-tunnel-rally-one-take)
   - [Resort yoga-mat use-to-hero commercial](#126-resort-yoga-mat-use-to-hero-commercial)
   - [1990 textile-factory shift-change archive](#127-1990-textile-factory-shift-change-archive)
+  - [Store-interior flashlight zombie reveal](#128-store-interior-flashlight-zombie-reveal)
+  - [Desert revolver escape beat chain](#129-desert-revolver-escape-beat-chain)
+  - [Bullet-time monowheel collision](#130-bullet-time-monowheel-collision)
+  - [Calligraphy-brush martial-arts dragon transformation](#131-calligraphy-brush-martial-arts-dragon-transformation)
+  - [Zero-gravity black-and-white apartment study](#132-zero-gravity-black-and-white-apartment-study)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -5146,6 +5151,214 @@ Adapted from [Loriel.AI's original Seedance 2.0 Shanghai textile-factory documen
 
 ---
 
+
+### 128. Store-interior flashlight zombie reveal
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** horror escalation, one-take geography, foreground boundary control  
+**Mode:** text-to-video or image-to-video  
+**Settings:** 15 seconds, 16:9, realistic live action
+
+```text
+One continuous shot from inside a looted convenience store on a rainy night.
+The camera, survivor and every zombie must remain on their assigned side of the
+glass: camera and survivor inside; the horde outside. Keep the chained shopping
+carts and chairs visible in foreground whenever the street is shown.
+
+0–4 s: From behind a tired adult survivor, track slowly through a dark aisle as
+he steps around fallen cans and torn packaging. A low flashlight beam sweeps the
+floor; flickering fluorescent tubes reveal wet footprints but no other person.
+4–8 s: He reaches the barricaded storefront and raises the light through the
+glass. Settle into an over-the-shoulder frame with chains and cart handles sharp
+in the near foreground; rain and abandoned cars remain beyond the reflections.
+8–12 s: Pan the flashlight left to right. It reveals first three wandering
+figures, then dozens, then a street filled deep into the background. They shuffle
+independently and never notice the store; scale and density increase only because
+the beam exposes farther distance, not because bodies appear from nowhere.
+12–15 s: He lowers the flashlight and his shoulders sink. Hold on his silhouette
+against the moving horde while the fluorescent light fails once, then returns.
+
+Cold blue-green practical light, muted color, gritty fine grain, restrained
+handheld breathing and natural focus falloff. Audio only: rain on glass,
+fluorescent buzz, shoes on wrappers, distant uneven footsteps and the survivor's
+controlled breath. No cut, exterior camera, broken barricade, attack, sudden
+zombie turn, duplicated body, teleportation, gore, text, logo or polished CGI.
+```
+
+**Why it works:** A repeated foreground boundary makes the inside/outside geography unambiguous, while a motivated flashlight sweep escalates scale without cuts or arbitrary spawning.
+
+Adapted from [Joseph's original Seedance 2.0 convenience-store horror one-take](https://x.com/josephweb3/status/2080895825442750580), published July 25, 2026. The complete source and model mapping are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7809).
+
+---
+
+### 129. Desert revolver escape beat chain
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** survival action, identity continuity, cause-linked stunt progression  
+**Mode:** reference-image-to-video  
+**Settings:** 15 seconds, 2.39:1, live-action blockbuster
+
+```text
+Use @Image1 only for the same adult warrior's face, hair, skin tone, scarf and
+dust-worn clothing. Build one readable escape path across a desert battlefield;
+every move must begin from the recovery position of the previous move.
+
+0–3 s: Extreme close-up. Sand taps her sweaty face as distant blasts reflect in
+her eyes. She looks toward frame right; camera makes a slow ten-centimeter push.
+3–6 s: A blast lands behind-left and throws sand forward. In the same reaction
+she drops her center of gravity, takes one smoking revolver from the ground and
+rolls once to frame right. Bullets strike the exact place she just left.
+6–9 s: Side-tracking medium-wide. She rises out of the roll and runs along the
+same screen direction, firing three separated shots at off-screen threats. Each
+shot has preparation, recoil and arm recovery; muzzle flashes briefly light the
+same face without changing the weapon or hand.
+9–12 s: A military truck emerges from dust parallel to her route. She catches
+one side rail, plants a foot on the step, crosses the hood in one controlled
+slide and drops behind its far wheel as a second blast showers the lens.
+12–15 s: Smoke clears in a slow forward track. She stands from that cover,
+checks the cylinder, raises the revolver toward the unseen threat and holds a
+steady final eyeline as wind pulls the scarf toward frame left.
+
+Practical explosions, dense airborne sand, warm backlight, real skin pores,
+anamorphic flare only from the sun and grounded stunt weight. Audio: wind,
+breath, three distinct shots, truck engine, metal contact and debris impacts.
+No 360-degree orbit during a sprint, floating shell, endless ammunition, extra
+weapon, reversed travel, repeated explosion, identity drift, broken anatomy,
+weightless landing, game HUD, subtitle, logo or synthetic CGI sheen.
+```
+
+**Why it works:** Each beat leaves a physical state that motivates the next—look, blast, roll, run, truck contact, cover—so spectacle does not erase geography or character identity.
+
+Adapted from [Yazdan's original Seedance 2.0 desert survival sequence](https://x.com/AIwithYazdan/status/2080885095234437505), published July 25, 2026. The complete source and model mapping are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7826).
+
+---
+
+### 130. Bullet-time monowheel collision
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** vehicle impact, speed-ramp choreography, debris-state continuity  
+**Mode:** text-to-video or multi-reference image-to-video  
+**Settings:** 12 seconds, 16:9, practical-effects wasteland action
+
+```text
+Golden-hour wasteland collision between two adult riders: Rider A drives a
+wood-and-bone cart and carries one long-handled axe; Rider B controls one giant
+scrap-metal monowheel with headlamp, belts and exposed engine. Lock vehicle
+geometry, rider identity, approach lanes and left-to-right screen direction.
+
+0–2 s: FPV chase ten centimeters above sand, aligned beside the monowheel axle.
+Both vehicles converge on one collision point. Wheel rotation, belt vibration,
+axe preparation and thrown sand remain physically readable as speed ramps down.
+2–5 s: The axe strikes the monowheel's side shield. At contact, slow to near
+stillness and orbit only 120 degrees around the fixed impact point. Sparks,
+one snapped strap, wood fragments and dust continue along their original force
+vectors. Brief debris occlusion disturbs focus; recover focus on Rider B's
+goggle reflection, which still shows the collision behind camera.
+5–8 s: Return abruptly to real speed. The monowheel skids sideways, its lower
+edge digs a continuous trench and Rider B separates from the saddle only after
+the wheel tilts. Track the fall downward; helmet and goggles stay attached.
+8–10 s: Ground impact sends dust across the lens as a motivated wipe. Push
+through the same cloud to reveal Rider A stepping from the stopped cart, axe
+lowered, with the damaged monowheel still spinning in the distant background.
+10–12 s: Hold a medium-wide hero frame. Both riders recover on opposite sides of
+the established impact point; no new attack begins before the shot ends.
+
+Photoreal practical metal, wood, leather and dust; natural sunset backlight,
+real inertia and restrained impact shake. Audio moves from engine roar to a
+brief low-frequency vacuum at contact, then metal crash, sand scrape and wind.
+No unexplained vehicle rebuild, second axe, random debris, airborne pose reset,
+full orbit that crosses geography, extra rider, gore, HUD, text or CGI gloss.
+```
+
+**Why it works:** The speed ramp is attached to a single contact event, and every fragment, rider and vehicle carries the collision's state into the crash and recovery instead of resetting for a hero shot.
+
+Adapted from [Tbros6868's original Seedance 2.0 wasteland collision study](https://x.com/tbros6868/status/2080881408994857035), published July 25, 2026. The complete source and model mapping are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7810).
+
+---
+
+### 131. Calligraphy-brush martial-arts dragon transformation
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** martial-arts dance, ink-medium transformation, gesture-to-effect mapping  
+**Mode:** text-to-video or reference-image-to-video  
+**Settings:** 12 seconds, 9:16, monochrome ink-wash fantasy
+
+```text
+A modern-traditional adult dancer stands barefoot in a shallow black-ink pool
+within a misty monochrome mountain landscape. She carries one oversized
+calligraphy brush engraved with a single gold dragon. Preserve her identity,
+costume, brush length, handedness and the pool's circular boundary.
+
+0–3 s: Low medium-wide push. She plants the brush tip in the pool, turns through
+one grounded martial stance and draws a complete black circle. Ink splashes only
+where feet or brush contact the surface; droplets follow the direction of force.
+3–6 s: Side track with her second movement. A horizontal brush cut lifts one
+ribbon of ink from the completed circle. The ribbon follows the brush tip with
+a short delay and curls behind her without hiding the body or creating a new
+brush.
+6–9 s: She pivots upward and finishes one rising calligraphic stroke. Gold lines
+on the brush illuminate from handle to tip; the existing ribbon thickens,
+develops a head and four limbs in ordered stages, then becomes one Chinese
+dragon. The dancer remains visible below, holding the unchanged brush.
+9–12 s: Crane gently upward as the dragon coils once around the drawn circle,
+then climbs into cloud. Its tail reconnects visually to the final wet stroke.
+She lowers into a stable finishing stance; ripples settle and gold light fades.
+
+High-contrast ink on textured paper, volumetric white mist, restrained gold
+accent, fluid but legible martial timing and real splash physics. Audio: bare
+feet in water, brush friction, cloth, low drum, ink surge and one distant dragon
+breath. No instant dragon pop-in, extra creature, duplicated brush, broken
+stroke continuity, floating dancer, costume change, random color, text, seal,
+logo or muddy full-frame ink occlusion.
+```
+
+**Why it works:** Every effect is assigned to a visible contact and completed gesture; the dragon grows from one persistent ribbon rather than appearing as an unrelated final spectacle.
+
+Adapted from [Kaito's original Seedance 2.0 calligraphy martial-arts dance](https://x.com/kaito_present_/status/2080876203129348181), published July 25, 2026. The complete source and model mapping are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7835).
+
+---
+
+### 132. Zero-gravity black-and-white apartment study
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post  
+**Use case:** quiet surrealism, microgravity physics, monochrome continuity  
+**Mode:** text-to-video or image-to-video  
+**Settings:** 15 seconds, 16:9, 24 fps, photoreal black and white
+
+```text
+A calm black-and-white film inside one modern high-rise apartment on a cloudy
+afternoon. One gloved adult and a few loose household objects are already in
+microgravity. Preserve the same person, clothing, furniture layout, window
+light and slow clockwise body rotation across every cut.
+
+0–2 s: Macro of the relaxed gloved hand. Fingers close slightly as a loose paper
+clip drifts past at constant velocity; neither object drops.
+2–6 s: Wide room view. The person floats twenty centimeters above the sofa,
+continuing a slow clockwise turn. Hair and fabric lag gently behind the body;
+a cushion moves away only after a knee makes contact.
+6–9 s: From the doorway, track laterally as the same drift carries the person
+toward the window. No swimming motion or invisible acceleration.
+9–11 s: Macro of a chrome faucet. One droplet grows, detaches and becomes a
+spherical bead that travels straight until it touches the gloved fingertip.
+11–13 s: Close insert of a mechanical flip clock mounted to the wall. Its card
+changes once with a quiet click while another small object crosses foreground.
+13–15 s: Return to the wide view. The person reaches a relaxed seated-like pose
+near the window but continues rotating slowly; hold as the water bead reflects
+the skyline and exits frame.
+
+Natural window light, deep shadows, fine organic grain, soft highlight roll-off
+and quiet independent-film restraint. Audio: distant city room tone, fabric,
+one faucet creak, water contact, clock click and low ambient electronics. No
+downward-falling object, fantasy glow, sudden stop, repeated prop, room change,
+danger, rapid camera, weightless hair frozen in place, text, logo or watermark.
+```
+
+**Why it works:** Motion is governed by persistent velocity, delayed fabric response and contact-based force. Correcting the droplet into a free-floating sphere makes the surreal premise feel observed rather than decorated.
+
+Adapted from [BMX's original Seedance 2.0 zero-gravity apartment film](https://x.com/bmx_ai13/status/2080867889952022953), published July 25, 2026. The complete source and model mapping are preserved in the [versioned prompt-gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7827).
+
+---
+
 ## Reusable templates
 
 ### Single-shot template
@@ -5772,6 +5985,12 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Joseph — Seedance 2.0 store-interior flashlight zombie reveal](https://x.com/josephweb3/status/2080895825442750580)
+- [Yazdan — Seedance 2.0 desert revolver escape](https://x.com/AIwithYazdan/status/2080885095234437505)
+- [Tbros6868 — Seedance 2.0 bullet-time monowheel collision](https://x.com/tbros6868/status/2080881408994857035)
+- [Kaito — Seedance 2.0 calligraphy martial-arts dragon transformation](https://x.com/kaito_present_/status/2080876203129348181)
+- [BMX — Seedance 2.0 zero-gravity black-and-white apartment](https://x.com/bmx_ai13/status/2080867889952022953)
 
 - [Strength04_X — Seedance 2.0 stadium crowd-control live report](https://x.com/Strength04_X/status/2080494784104616383)
 - [妖精アーヤさん — Seedance 2.0 manhole-note rhythm traversal](https://x.com/aiehon_aya/status/2080412643056386471)
