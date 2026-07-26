@@ -151,6 +151,9 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Reference-locked paragliding launch](#135-reference-locked-paragliding-launch)
   - [Two-character lane-locked parkour relay](#136-two-character-lane-locked-parkour-relay)
   - [Push-to-chair salon transformation](#137-push-to-chair-salon-transformation)
+  - [Hard-cut multi-style face collapse](#138-hard-cut-multi-style-face-collapse)
+  - [Leaf-triggered wuxia duel rhythm](#139-leaf-triggered-wuxia-duel-rhythm)
+  - [Floating-cup mechanism reveal](#140-floating-cup-mechanism-reveal)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -5593,6 +5596,141 @@ swish and one restrained final music accent.
 
 Adapted from [KreviX's original salon-transformation commercial](https://x.com/LadyyEth/status/2080960631180570913), published July 25, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7860).
 
+### 138. Hard-cut multi-style face collapse
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** experimental edit, mixed media, glitch teaser, deliberate identity release  
+**Mode:** text-to-video or image-to-video  
+**Suggested settings:** 10s, 9:16 or 16:9, 24fps
+
+```text
+10-second experimental portrait film built entirely from hard edits. Start from
+one centered face, but deliberately release facial-identity consistency after
+the opening frame; the continuity anchor is composition and rhythm, not likeness.
+
+[0–3s] Make six incremental punch-ins, one every 0.5 seconds. Each step is a
+true jump cut with a short chromatic-aberration crack and one dry digital click.
+Never interpolate or smoothly zoom between scales.
+
+[3–8s] Replace the complete rendering medium every 0.5–1 second while keeping
+the eyes near the same screen coordinates: low-poly 3D → raw live action →
+early-2000s cel anime → four-color pixel art → clay stop motion → monochrome
+photocopy. Each state must arrive in one frame; silhouettes may change sharply.
+
+[8–10s] The apparent browser window fails under the accumulated versions.
+Duplicate panels offset by a few pixels, error boxes stack from the corners,
+block noise eats the portrait, and the final frame collapses to a single black
+rectangle with a short signal cut.
+
+Editing policy: hard cuts and total style swaps only. No optical flow, dissolve,
+crossfade, smooth morph, elastic face interpolation, continuous dolly, stable
+beauty retouch, readable brand logo or random subtitle. Keep the portrait
+centered until the final collapse so the discontinuity feels intentional.
+Audio: six clicks, then a faster sequence of medium-specific texture sounds,
+buffer stutter, one overloaded digital crunch and abrupt silence.
+```
+
+**Technique:** State explicitly that identity is allowed to break while screen position and edit rhythm remain locked. This turns a normal consistency failure into the governing visual rule.
+
+Adapted from [Ushizaru's original multi-dimension glitch experiment](https://x.com/Ushizaru_LAB/status/2081258810405175362), published July 26, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7896).
+
+### 139. Leaf-triggered wuxia duel rhythm
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** live-action wuxia, action choreography, fast/slow rhythm contrast, native audio  
+**Mode:** multi-reference image-to-video or text-to-video  
+**Suggested settings:** 15s, 2.39:1, 24fps
+
+```text
+15-second photorealistic wuxia duel in a late-autumn golden forest. @Image1
+locks the black-robed straight-sword fighter; @Image2 locks the red-robed
+flexible-sword fighter. Preserve each face, weapon, robe color and screen side.
+Natural backlight through leaves, physical silk and hair, restrained film grain.
+
+[0–2s] Slow push through falling leaves toward the two fighters standing ten
+paces apart. Wind and birds fade. Insert one macro shot of a leaf tip touching
+the ground; that contact is the only start signal.
+
+[2–5s] Complete exactly eight readable cuts in three seconds: blade contact;
+soft-sword deflection; low foot advance; sleeve wrap and release; back-to-back
+pass; tree-assisted vault; hairpin knocked free; whip counter that cuts one
+black sleeve. Give every cut a distinct contact point and preserve accumulated
+damage—loose hair, torn gauze and slit sleeve never reset.
+
+[5–7s] Both leap and pass at different depths. Switch to slow motion while the
+camera rises through a restrained half-orbit. Robes, hair and leaves suspend
+with plausible inertia; reduce sound to cloth, breath and one line of wind.
+
+[7–11s] Return to real speed in a low lateral follow. They land back-to-back,
+turn, and trade three grounded attacks while moving toward one clearing.
+Footfalls compress the leaf carpet; blade impacts shake leaves from nearby trees.
+
+[11–15s] Both retreat one step and gather for one final crossing strike. Vacuum
+the ambience just before contact. Freeze motion for half a beat, then reveal:
+the black sword breaks at mid-blade and the red shoulder seam is cut. Neither
+fighter attacks again. They exchange one respectful nod as the camera cranes
+up over the gold canopy.
+
+No gore, teleporting, weapon swap, extra fighter, impossible blade path, reset
+damage, random explosion, weightless cloth, reversed screen direction, constant
+slow motion or game-CGI surface. Audio is diegetic only: leaves, breath, feet,
+layered sword rings, cloth tears, brief near-silence and the final metal snap.
+```
+
+**Technique:** Use a tiny physical event as the action trigger, compress the central exchange into an enumerated contact montage, then carry visible damage forward as state. The fast/slow contrast remains legible because every rhythm change has an audio rule.
+
+Adapted from [John's original golden-forest wuxia duel](https://x.com/johnAGI168/status/2081251381894078663), published July 26, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7885).
+
+### 140. Floating-cup mechanism reveal
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** product ad, practical illusion, one-take reveal, reference-video camera transfer  
+**Mode:** reference-video-to-video or text-to-video  
+**Suggested settings:** 15s, 9:16, 24fps
+
+```text
+15-second native-iPhone one-take on a bright city sidewalk. @Video1 supplies
+only the timing and camera path: front-on illusion first, then a right-side
+bypass that exposes the mechanism. Do not copy its people, location or text.
+
+Two adult friends stand in front of a matte pale wall. From frame one, exactly
+one rigid gray horizontal arm extends from Friend B's waist toward camera;
+a blue-and-white coffee cup is fixed to its front tip. Friend B stands directly
+behind the cup so the arm is hidden only by perspective. Friend A stands left.
+The arm, cup attachment and body positions must exist before the trick begins.
+
+[0–3s] Front medium shot. Friend A circles both hands around the apparently
+floating cup without touching it, then looks into lens with a playful smile.
+Friend B remains aligned behind the cup and keeps the rigid arm level.
+
+[3–6s] Move straight forward until lens is about 45 cm from the cup. Keep the
+cup centered, maintain normal phone autofocus breathing and let one distant
+passerby cross at least four meters behind.
+
+[6–10s] Without cutting, arc exactly 70 degrees to camera-right. Preserve cup
+scale while parallax gradually separates Friend B, the arm and the cup. The
+mechanism must become continuously visible—no pop-in, morph or late invention.
+
+[10–13s] Hold the three-quarter view. Friend A taps the real support once and
+laughs; Friend B shrugs. The cup and arm respond as one rigid assembly with no
+independent floating or bending.
+
+[13–15s] Make a short lateral settle into a clean side product frame. Friend A
+lifts the cup off the fixed tip in one visible action and holds it beside her
+face. End before she drinks.
+
+One continuous take; stable identities, arm length, cup geometry, sunlight and
+sidewalk layout. No edit, jump cut, transition, hidden second support, changing
+logo, extra hand, arm clipping, floating after detachment, reflective reveal,
+crowd attention or polished CGI. Audio: street room tone, sleeve movement, one
+support tap, natural laughter and a soft cup-release click; no music.
+```
+
+**Technique:** Declare the concealed mechanism as immutable from frame one, then reveal it through parallax. The camera move uncovers existing geometry instead of asking the model to invent an explanation halfway through.
+
+Adapted from [John's original floating-cup illusion](https://x.com/john87445528/status/2081170488114463018), published July 26, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7891).
+
+
 ## Reusable templates
 
 ### Single-shot template
@@ -6370,6 +6508,10 @@ Community examples and techniques referenced in this README:
 - [@RetroValix — focus image-to-video prompts on movement](https://x.com/RetroValix/status/2074231054567866617)
 - [ByteDance / Volcano Ark — Seedance 2.5 official preview showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5)
 - [Renoise AI — traceable archive of 12 official Seedance 2.5 preview prompts](https://github.com/renoise-ai/awesome-seedance-2-5-prompts)
+
+- [Ushizaru — Seedance 2.0 hard-cut multi-style face collapse](https://x.com/Ushizaru_LAB/status/2081258810405175362)
+- [John — Seedance 2.0 golden-forest wuxia duel](https://x.com/johnAGI168/status/2081251381894078663)
+- [John — Seedance 2.0 floating-cup mechanism reveal](https://x.com/john87445528/status/2081170488114463018)
 
 Official model references:
 
