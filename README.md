@@ -146,6 +146,11 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Bullet-time monowheel collision](#130-bullet-time-monowheel-collision)
   - [Calligraphy-brush martial-arts dragon transformation](#131-calligraphy-brush-martial-arts-dragon-transformation)
   - [Zero-gravity black-and-white apartment study](#132-zero-gravity-black-and-white-apartment-study)
+  - [Bus-wipe strobe night pursuit](#133-bus-wipe-strobe-night-pursuit)
+  - [Fence-painting persuasion continuity](#134-fence-painting-persuasion-continuity)
+  - [Reference-locked paragliding launch](#135-reference-locked-paragliding-launch)
+  - [Two-character lane-locked parkour relay](#136-two-character-lane-locked-parkour-relay)
+  - [Push-to-chair salon transformation](#137-push-to-chair-salon-transformation)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -5359,6 +5364,235 @@ Adapted from [BMX's original Seedance 2.0 zero-gravity apartment film](https://x
 
 ---
 
+
+### 133. Bus-wipe strobe night pursuit
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** action teaser, music video, motivated transition, night chase  
+**Mode:** text-to-video  
+**Suggested settings:** 10s, 16:9, 24fps
+
+\`\`\`text
+10-second live-action night chase in light rain, photographed with hard practical
+streetlights, wet glass reflections and restrained handheld instability.
+
+[0–2.5s] Extreme close-up of one exhausted runner reflected in a rain-covered bus
+shelter panel. Keep the real face partly visible behind the reflection. The runner
+breathes hard while distant traffic bends through the droplets; make a very slow
+lateral creep rather than a zoom.
+
+[2.5–4s] A city bus crosses close to lens until its dark body fully occludes the
+frame. Continue the same camera pan behind the bus. When its rear clears, reveal
+the same runner already accelerating along the opposite pavement, still moving in
+the established left-to-right direction. Treat the bus as a physical wipe, not a
+magical change of location.
+
+[4–7s] Whip across two traffic barriers and recover the runner near the edge of
+frame as if the operator nearly lost them. A failing overhead lamp produces
+exactly three hard flashes on the beat; each flash freezes a different continuous
+stride pose without resetting position or speed.
+
+[7–10s] On the third flash, cut to a low rear chase angle. Follow the runner down
+a narrow fluorescent stair entrance until the silhouette disappears below street
+level. Hold the empty entrance for the final half-second.
+
+One runner only; stable identity, clothing, travel direction and rain level.
+Natural foot contact, breathing and momentum. No teleport outside the bus wipe,
+no duplicated runner, random vehicles, reversed screen direction, floating rain,
+constant shake or synthetic game-CGI surfaces.
+Audio: close breath, tire spray, bus air rush, three electrical clicks locked to
+the flashes, accelerating footsteps, then fluorescent hum below ground.
+\`\`\`
+
+**Technique:** Use a real foreground object to hide the only spatial discontinuity, then make rhythmic light flashes sample a single continuous movement rather than creating unrelated poses.
+
+Adapted from [BMX's original night-pursuit experiment](https://x.com/bmx_ai13/status/2081091640857702427), published July 25, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7867).
+
+### 134. Fence-painting persuasion continuity
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** dialogue comedy, period narrative, two-character blocking, prop continuity  
+**Mode:** text-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+\`\`\`text
+15-second live-action period comedy on a sunny morning outside a small
+nineteenth-century Missouri house. A cheerful twelve-year-old in a straw hat is
+painting a long fence; another boy approaches eating one red apple. Natural
+daylight, modest production design, no music.
+
+[0–4s] Establish the fence line in a medium-wide two-shot. The painter works
+slowly at frame left with exaggerated care while the visitor enters from frame
+right, laughs and asks, “Punishment?” Keep the white paint bucket beside the
+painter's right foot.
+
+[4–8s] Stay on the same side of the action axis. Alternate a restrained over-
+shoulder pair: the painter studies one brushstroke and answers, “Not everyone
+gets trusted with this fence.” The visitor stops chewing and looks from the
+brush to the clean boards.
+
+[8–12s] Return to the two-shot. The visitor offers the partly eaten apple with
+his left hand. Show one clear exchange: apple to painter, brush to visitor.
+Neither prop changes hand off-screen. The painter steps backward into shade as
+the visitor eagerly starts painting the next unpainted board.
+
+[12–15s] Slow push toward the relaxed painter taking one bite while the visitor
+works in the background. End on the painter's small knowing smile.
+
+Preserve both faces, clothing, relative height, screen side, sun direction,
+painted-board boundary, apple bite and brush/bucket positions. Respect the
+180-degree rule. No third child, modern object, disappearing paint, swapped
+identities, random subtitle, jump in fence progress or dialogue overlap.
+Audio: birds, brush on wood, light footsteps, short natural dialogue and one
+crisp apple bite; no score.
+\`\`\`
+
+**Technique:** Lock the action axis and track the apple, brush, paint bucket and painted boundary as explicit state variables; the joke lands because the exchange is spatially readable.
+
+Adapted from [AIrina / Virtual Media Net's original fence-painting scene](https://x.com/airina_xyz/status/2081078057386021026), published July 25, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7873).
+
+### 135. Reference-locked paragliding launch
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** travel vlog, reference-image consistency, procedural sports realism  
+**Mode:** reference-image-to-video  
+**Suggested settings:** 15s, 9:16, 24fps
+
+\`\`\`text
+15-second vertical live-action travel vlog at a real tropical coastal paragliding
+launch in clear morning light. Use @Image1 as the exact traveler identity and
+wardrobe reference: same face, maroon layered hair, white certified helmet,
+navy wind shell, black tandem harness, dark trousers, gloves and hiking boots.
+Keep every buckle, strap and garment continuous.
+
+[0–3s] Handheld medium follow as the traveler walks toward the grassy launch
+edge. Reveal turquoise water and cliffs over one shoulder without orbiting.
+
+[3–6s] Two concise safety inserts: fingers fasten the chin strap; the instructor
+checks the closed chest and leg buckles. Return to the traveler's face for one
+calm nod. Do not invent loose or missing harness parts.
+
+[6–10s] Side-on wide shot. The wing inflates from behind in one smooth sequence:
+lines tension, canopy rises, traveler holds the brake toggles correctly, then
+both people run downhill together. Wind drives hair, jacket and grass in the
+same direction.
+
+[10–13s] Low rear tracking as the loaded canopy becomes stable overhead and the
+feet leave the slope only after several grounded running steps. Show believable
+weight transfer and harness support; no sudden vertical lift.
+
+[13–15s] Cut to a wide coastal view as the pair glides away on a shallow,
+controlled path. Hold the complete wing silhouette and coastline for one second.
+
+Documentary phone texture mixed with only two clean cinematic wides, practical
+sunlight, realistic canopy flex and wind physics. No CGI gloss, wardrobe change,
+identity drift, missing instructor, tangled lines, open buckles, backward canopy,
+teleporting takeoff, unsafe cliff jump or duplicated equipment.
+Audio: coastal wind, fabric and line tension, footfalls, brief safety confirmation,
+canopy inflation and distant surf; no heavy score.
+\`\`\`
+
+**Technique:** Prompt the launch as an ordered mechanical procedure—secure, tension, inflate, run, load, glide—and make wind direction a shared continuity constraint across person, grass, lines and canopy.
+
+Adapted from [Saul Goodman's original coastal paragliding vlog](https://x.com/Goodmanprotocol/status/2081028788771815678), published July 25, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7866).
+
+### 136. Two-character lane-locked parkour relay
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** multi-character action, reference locking, cut-to-cut identity control  
+**Mode:** multi-reference image-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+\`\`\`text
+15-second live-action urban freerunning relay. @Image1 defines Runner A only;
+@Image2 defines Runner B only. Preserve each face, hairstyle, height, build and
+outfit through every cut. A begins on the left lane and B on the right lane.
+They may cross once at the marked wall-run beat, then retain their new lanes.
+
+[0–2.2s] Low rear tracking: A and B accelerate side by side and perform separate
+kong vaults over two aligned obstacles. Both land with visible knee compression.
+
+[2.2–4.5s] Front low wide: A wall-runs on frame left, B on frame right; both
+tic-tac inward, pass at different depths without touching, and land on the
+opposite lanes. This is the only lane exchange.
+
+[4.5–7s] Lateral tracking: two precision jumps followed by one cat leap to the
+same high wall. A climbs first; B follows half a beat later. Keep the height
+difference and hand placement readable.
+
+[7–9.5s] Rooftop three-quarter view: A clears a low rail with a dash vault while
+B uses a webster over the adjacent gap. They recover forward without pausing.
+
+[9.5–12.2s] Handheld retreat: A passes under a horizontal bar; B performs one
+side flip beside it. Maintain separate silhouettes and forward momentum.
+
+[12.2–15s] Wide climax: both leap one rooftop gap, each makes a single controlled
+corkscrew, lands on a different marked edge, then runs away in parallel. Camera
+arcs only 30 degrees while airborne and stops moving before landing.
+
+World-class but physically plausible freerunning, sharp readable geography,
+natural center-of-gravity shifts, muscle loading, cloth lag and landing impact.
+No face swap, feature mixing, lane reset, body fusion, duplicate, extra limb,
+floating, obstacle penetration, impossible landing, outfit change, CG style or
+motion-blur concealment of contact.
+Audio: shoes, wall contacts, breath and city ambience; use one percussion accent
+per landing, not continuous trailer music.
+\`\`\`
+
+**Technique:** Give each referenced person a persistent identity slot and screen lane, then declare the single legal crossing point. This prevents face mixing and makes dense multi-character choreography auditable cut by cut.
+
+Adapted from [Nexlow's original two-runner parkour sequence](https://x.com/NexlowX/status/2080982143568949500), published July 25, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7868).
+
+### 137. Push-to-chair salon transformation
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** beauty commercial, match-cut transformation, one-way state progression  
+**Mode:** text-to-video or reference-image-to-video  
+**Suggested settings:** 15s, 9:16, 24fps
+
+\`\`\`text
+15-second ultra-realistic salon transformation commercial. If @Image1 is
+provided, it locks the woman's facial identity and body proportions before and
+after styling. The makeover is a one-way progression: casual state → salon work
+→ finished red-carpet state. Never revert to an earlier state.
+
+[0–2s] Static front medium shot in a bright plain studio. A tired woman in an
+oversized gray T-shirt and round glasses faces camera. Two black-gloved stylist
+hands press gently against her shoulders and push her backward until her torso
+fills frame.
+
+[2–4s] Match the backward motion into a dark premium salon: she lands naturally
+in the chair at the same scale and angle, now wearing a closed black cape.
+Camera becomes the stylist's POV. Preserve face and hair length at the cut.
+
+[4–8s] Four fast, contact-motivated inserts: shampoo foam wiped by a towel;
+comb crossing lens into a precise trim; round brush crossing lens into a smooth
+blow-dry; curling iron leaving one finished wave. Each tool occludes frame before
+the next state appears. Hair changes only where the tool has already passed.
+
+[8–11s] Macro beauty sequence: makeup brush passes once across cheek, eyeliner
+finishes one wing, lip applicator completes glossy red lips, earrings fasten
+behind each lobe. Keep hands anatomical and the same makeup symmetrical.
+
+[11–13s] The cape is pulled upward across the lens. When it clears, reveal a red
+evening dress and fully finished hair. The chair makes one controlled half-turn;
+jewelry and dress remain fixed.
+
+[13–15s] Chair returns front. Slow push into a confident smile as she lifts her
+chin. Hold the final beauty frame for one second.
+
+Premium practical salon light, natural skin pores, realistic hair strands and
+tool contact. No identity replacement, instant unexplained morph, state reversal,
+extra hands, missing cape, changing jewelry, floating tools, face retouch flicker,
+wardrobe instability, text, logo or speed-ramp shake.
+Audio: chair catch, water and towel, scissors, dryer, soft tool contacts, cape
+swish and one restrained final music accent.
+\`\`\`
+
+**Technique:** Hide each irreversible state advance behind the tool that causes it. The occlusion becomes both an edit and a causal proof, so the transformation reads as work performed rather than arbitrary morphing.
+
+Adapted from [KreviX's original salon-transformation commercial](https://x.com/LadyyEth/status/2080960631180570913), published July 25, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7860).
+
 ## Reusable templates
 
 ### Single-shot template
@@ -5985,6 +6219,12 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [BMX — Seedance 2.0 bus-wipe strobe night pursuit](https://x.com/bmx_ai13/status/2081091640857702427)
+- [AIrina / Virtual Media Net — Seedance 2.0 fence-painting persuasion continuity](https://x.com/airina_xyz/status/2081078057386021026)
+- [Saul Goodman — Seedance 2.0 reference-locked paragliding launch](https://x.com/Goodmanprotocol/status/2081028788771815678)
+- [Nexlow — Seedance 2.0 two-character lane-locked parkour relay](https://x.com/NexlowX/status/2080982143568949500)
+- [KreviX — Seedance 2.0 push-to-chair salon transformation](https://x.com/LadyyEth/status/2080960631180570913)
 
 - [Joseph — Seedance 2.0 store-interior flashlight zombie reveal](https://x.com/josephweb3/status/2080895825442750580)
 - [Yazdan — Seedance 2.0 desert revolver escape](https://x.com/AIwithYazdan/status/2080885095234437505)
