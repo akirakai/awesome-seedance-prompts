@@ -154,6 +154,12 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Hard-cut multi-style face collapse](#138-hard-cut-multi-style-face-collapse)
   - [Leaf-triggered wuxia duel rhythm](#139-leaf-triggered-wuxia-duel-rhythm)
   - [Floating-cup mechanism reveal](#140-floating-cup-mechanism-reveal)
+  - [Recursive mirror-lag identity horror](#141-recursive-mirror-lag-identity-horror)
+  - [Fixed-frame irreversible interior renovation](#142-fixed-frame-irreversible-interior-renovation)
+  - [Live-action flat-sticker kitchen prank](#143-live-action-flat-sticker-kitchen-prank)
+  - [Torn-seal phone-store contract trap](#144-torn-seal-phone-store-contract-trap)
+  - [Nested hollow-world traversal](#145-nested-hollow-world-traversal)
+  - [Waterline stone-pillar xianxia reveal](#146-waterline-stone-pillar-xianxia-reveal)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -5731,6 +5737,295 @@ support tap, natural laughter and a soft cup-release click; no music.
 Adapted from [John's original floating-cup illusion](https://x.com/john87445528/status/2081170488114463018), published July 26, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7891).
 
 
+### 141. Recursive mirror-lag identity horror
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** psychological horror, reflection choreography, identity branching, native audio  
+**Mode:** image-to-video or text-to-video  
+**Suggested settings:** 12s, 2.39:1, 24fps
+
+```text
+12-second photorealistic psychological-horror sequence. If @Image1 is supplied,
+use it as the first frame and lock the adult man's face, dark blazer, black shirt,
+hair and body proportions. A tall ornate mirror stands in total darkness under
+one cold overhead spotlight. Preserve the mirror frame and left-right screen axis.
+
+[0–2s] Locked symmetrical medium shot: the real man stands left and his reflection
+stands right. The man remains expressionless. The reflection alone tilts its head
+and forms a slow grin, then mouths "You're not me" one beat after the man's deep,
+metallic-reverb voice. Build one dissonant string tone; keep the camera still.
+
+[2–5s] On a single bass hit, the man punches the exact center of the mirror.
+Shift to extreme slow motion only at contact. One radial crack grows outward from
+his knuckles; thin white light leaks through it. Separate shards toward camera,
+and let each shard contain one clearly different reflection state—laughing,
+screaming, calm or looking away—while the real man's identity stays unchanged.
+
+[5–9s] He steps through the already-broken frame into an infinite mirrored void.
+A smooth lateral dolly follows as thousands of copies repeat his walk one beat
+late, producing a readable cascade. After two steps, selected copies stop, turn
+or dissolve into dust; the hero continues forward without reacting.
+
+[9–12s] He stops and faces camera. Every remaining copy stops, then turns toward
+him. Drop to silence for half a beat. All copies shatter simultaneously and the
+fragments stream past lens while he remains untouched. End on the man alone in
+darkness; one final shard crosses foreground and its smiling reflection winks.
+Hard cut to black.
+
+Reflection policy: before impact, only the mirror image may disobey the subject;
+inside the void, copy delays and divergences must follow the stated beat map.
+No random duplicate before the mirror breaks, mismatched punch point, repaired
+glass, changing wardrobe, face drift in the hero, gore, extra person, daylight,
+unmotivated cut or continuous slow motion. Audio: low strings, delayed voice,
+glass contact, crack propagation, echoing steps, sudden silence and one final
+shatter.
+```
+
+**Technique:** Assign identity divergence to a specific visual layer—the reflection—then give every copy a timing offset. The hero can remain stable while controlled inconsistency becomes the narrative engine.
+
+Adapted from [Nexus AI's original surreal mirror-horror sequence](https://x.com/Nexustechai1/status/2081527386508611807), published July 26, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7909).
+
+### 142. Fixed-frame irreversible interior renovation
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** architectural visualization, construction timelapse, one-way state change, spatial locking  
+**Mode:** text-to-video or image-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+```text
+15-second seamless architectural-renovation timelapse. Start in one unfinished
+rectangular room with exposed concrete, raw floor, visible ceiling services and
+no furniture. Lock the camera position, lens, horizon, perspective and framing
+for the full clip. Walls, windows, doors, ceiling height and room dimensions are
+immutable; there is no pan, tilt, zoom, orbit, shake, crop or reframing.
+
+[0–3s] Dust settles, then the finished floor installs continuously from left to
+right. Every covered patch stays finished; no tile vanishes or returns to raw
+concrete. Keep window light and room geometry unchanged.
+
+[3–6s] Plaster and creamy-white paint advance across the walls while ceiling
+channels, wood panels, built-in storage and one feature wall assemble in their
+correct planes. Parts travel by short plausible installation paths instead of
+popping in. Nothing clips through the fixed shell.
+
+[6–9s] Add skirting boards, door and window trim, switches, sockets, recessed
+fixtures and warm hidden LEDs. Power on each completed circuit once. Retain
+balanced daylight so the room does not jump from day to night.
+
+[9–12s] Place sofa, table, rug, curtains, plants, artwork, cushions and books in a
+clear back-to-front sequence. Each object settles once, keeps its final scale and
+never swaps material or position.
+
+[12–15s] Complete only small styling adjustments, let airborne dust clear and
+hold the finished premium interior perfectly still for the final second.
+
+Ultra-realistic photographed materials, credible construction order, consistent
+contact shadows and physically plausible lighting. No camera motion, wall shift,
+window replacement, changing room size, reverse transformation, object reset,
+duplicate furniture, floating decor, interpenetration, abrupt daylight change,
+workers appearing, text or logo. Audio: distant room tone, measured installation
+impacts, material slides, electrical clicks and a soft final ambience; no speech.
+```
+
+**Technique:** A fixed camera is not enough—also make the room shell immutable and every renovation step irreversible. Ordered material layers turn a morph into believable construction.
+
+Adapted from [simeon-sanai's original fixed-camera renovation timelapse](https://x.com/Naiknelofar788/status/2081371164728041980), published July 26, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7911).
+
+### 143. Live-action flat-sticker kitchen prank
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** mixed media, first-person comedy, 2D/real-world compositing, layer consistency  
+**Mode:** text-to-video or image-to-video  
+**Suggested settings:** 10s, 9:16, 24fps
+
+```text
+10-second vertical mixed-media kitchen comedy. The environment and adult human
+hands are photorealistic live action; Lulu is a hand-drawn flat 2D capybara
+sticker, about half the height of the black stir-fry pan. Lock Lulu's pale-yellow
+body, orange shorts, yellow apron, tiny orange head ornament, bean-shaped paws,
+thick outline and paper-flat shading. Never convert the sticker into fur, plush,
+3D CGI or realistically lit volume.
+
+[0–3s] First-person overhead handheld view of beef and greens sizzling in a real
+home kitchen. Lulu sits on one small wooden stool at lower center and tips one
+oversized glass salt jar into the pan, creating a clearly visible white mound.
+The adult's right hand continues stirring. One main action: the pour.
+
+[3–5s] Stay in the same POV and scale. The right hand removes the jar; the left
+hand gives Lulu one harmless, cartoon-light tap with the flat spatula. A red 2D
+bump and two spring lines appear only on the sticker layer. One main action: tap.
+
+[5–8s] Tighten slightly without changing camera side. Lulu samples one grain,
+its eyes spin and two blue paper tears spray sideways while the real steam, pan
+and hands keep natural depth and lighting. The salt mound remains in the pan;
+the stool and jar stay where they were left. One main action: taste and reaction.
+
+[8–10s] Lulu stiffens, shows X-shaped eyes and falls safely backward onto the
+counter in one flat hinged motion. Four bean paws point upward, three drawn stars
+orbit the bump, and the frame freezes cleanly on the harmless cartoon knockout.
+The real kitchen continues moving for two frames before the freeze.
+
+Layer contract: the kitchen receives realistic perspective, reflections, steam
+and contact shadows; Lulu keeps constant flat colors, outline width, sticker
+scale and screen-space attachment. Human hands may occlude the sticker correctly,
+but cannot merge with it. No third-person shot, realistic animal anatomy, 3D
+lighting on Lulu, extra hand, changing costume, moving background, disappearing
+salt, prop reset, violent injury, dialogue, subtitle, watermark or logo. Audio:
+pan sizzle, salt rustle, one soft metal "boing," paper-tear squeak and a small
+comic thud.
+```
+
+**Technique:** Write separate rendering contracts for the live-action plate and the flat character, then specify how they can occlude and contact each other. This prevents the model from averaging both media into generic 3D.
+
+Adapted from [Soranlan's original 2D-sticker capybara kitchen gag](https://x.com/Soranlan/status/2081386564525953050), published July 26, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7927).
+
+### 144. Torn-seal phone-store contract trap
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** handheld dialogue comedy, prop-state continuity, reaction timing, causal reveal  
+**Mode:** text-to-video  
+**Suggested settings:** 15s, 9:16, 24fps
+
+```text
+15-second vertical deadpan comedy in a generic neighborhood phone shop. Native
+iPhone handheld look, 24–28mm lens, neutral exposure, modest focus breathing and
+natural store ambience. Four distinct adults: Seller A behind the counter left,
+Seller B behind the counter right, Customer C in front center and Customer D one
+step behind C. Keep faces, wardrobe, positions and screen direction stable.
+
+Key prop: exactly one plain white phone box with one intact paper seal across its
+lid at frame one. The seal may change state only once: intact → visibly torn and
+detached. It can never reattach, duplicate, disappear or move to another edge.
+
+[0–2s] Medium two-shot. Sellers A and B take turns pretending they cannot open
+the sealed box, using restrained effort and quick glances toward Customer C.
+
+[2–4s] Reverse medium shot. Customer C becomes impatient; Customer D watches
+skeptically and does not touch the box.
+
+[4–6s] Return to the counter. Seller B offers the same box. Customer C takes it
+with one hand while Seller A lets go completely.
+
+[6–8s] Close insert on the box. Customer C tears the paper seal once; show the
+fibers separating and the loose strip remaining in C's fingers. Place the loud
+tear exactly on visible contact.
+
+[8–10s] Medium shot. Customer C gives a smug half-smile and sets the now-open box
+on the counter. The torn strip remains beside it.
+
+[10–13s] Seller B calmly reveals a previously hidden one-page store policy:
+"OPENED BOX = PURCHASE." Customer D turns to C with one silent raised eyebrow.
+No one grabs money or forces contact.
+
+[13–15s] Seller A slides over a pen. Customer C freezes, then looks from the torn
+seal to the policy as the two sellers exchange one tiny satisfied nod. End before
+any signature so the joke lands on realization.
+
+No brand logo, theft, coercion, extra customer, box swap, repaired seal, contract
+visible before its cue, repeated tear, missing paper strip, teleporting hand,
+wild overacting, camera-axis flip, subtitle or canned laughter. Audio is diegetic:
+air conditioner, faint street noise, cardboard rub, one sharp seal tear, paper
+unfold and pen slide.
+```
+
+**Technique:** Make one irreversible prop change carry the plot. Keeping the torn strip in frame gives every later reaction a visible cause and blocks the model from silently resetting the box.
+
+Adapted from [John's original phone-store seal comedy](https://x.com/john87445528/status/2081367975207080026), published July 26, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7925).
+
+### 145. Nested hollow-world traversal
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** science fantasy, non-Euclidean environment, continuous traversal, world-rule control  
+**Mode:** text-to-video  
+**Suggested settings:** 12s, 2.39:1, 24fps
+
+```text
+12-second one-take science-fantasy flight inside a vast hollow world. Local
+gravity always points outward toward the inner shell: rivers follow the curved
+ground and climb what looks like a wall, forests remain rooted to overhead land,
+and mountains grow inward from the ceiling toward a small central sun. Establish
+these rules from frame one; never flip the world or change gravity mid-shot.
+
+Two compact traversal craft fly ahead in fixed formation, Craft A front-left and
+Craft B rear-right. Preserve their size, color, spacing and exhaust direction.
+The camera is a third chase vehicle with real acceleration, banking and inertia.
+
+[0–4s] Race one meter above rolling inner-shell terrain. The horizon bends upward
+on both sides while a river continuously follows that curvature. Pass beneath an
+overhead forest without reorienting the camera; distant downward mountains frame
+the central sun.
+
+[4–8s] The craft bank together and climb the shell toward the sun. Camera lags
+slightly on acceleration, then catches up. Water, vegetation and loose particles
+stay attached to their local surface; exhaust trails curve naturally through the
+shared atmosphere.
+
+[8–12s] Follow both craft through one bright atmospheric aperture near the sun.
+Without a cut, reveal a sky containing hundreds of nested hollow worlds, each
+visible through the next like concentric transparent shells. Keep the original
+world receding behind while the craft continue forward and the camera slowly
+widens for scale.
+
+No ordinary convex planet, flat horizon, gravity flip, upside-down object that is
+not rooted to a surface, teleport, craft swap, formation reversal, duplicated
+sun, random portal, water falling into space, discontinuous camera path, text or
+logo. Audio: fast air rush, two distinct engines, low geological resonance and a
+thin harmonic bloom during the nested-world reveal; no dialogue.
+```
+
+**Technique:** Describe the local gravity vector and surface behavior before the spectacle. A continuous camera path can then prove the impossible geometry instead of hiding contradictions behind edits.
+
+Adapted from [Alexandra Aisling's original inverted hollow-world flight](https://x.com/AllaAisling/status/2081200833631502418), published July 26, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7908).
+
+### 146. Waterline stone-pillar xianxia reveal
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** live-action xianxia comedy, occluded mechanism, spatial reveal, native dialogue  
+**Mode:** multi-reference image-to-video or text-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+```text
+15-second photorealistic xianxia deadpan comedy at one lotus pond in dawn mist.
+@Image1 locks the adult senior sister in white embroidered hanfu, half-up black
+hair and white jade hairpin. @Image2 locks the adult junior sister in turquoise
+linen hanfu and braided hair. Preserve both faces, costumes and body proportions.
+
+From frame one, a row of square stone pillars exists just below the water surface,
+aligned left-to-right across the pond. Ripples and reflections conceal them from
+the opening camera angle, but each senior-sister footfall must land on one fixed
+pillar. The pond, willow, pavilion, lotus leaves and shore positions never move.
+
+[0–5s] Low full-body side track as the senior sister crosses left-to-right with
+restrained, weightless-looking steps. Her white boots touch apparently empty
+water; small ripples mark each hidden support. The junior sister follows along
+the shore, watching with sincere admiration. Guqin, breeze, birds and water only.
+
+[5–10s] Continue in a medium side track without crossing the axis. The junior
+sister asks in Mandarin, "Senior Sister, is this truly traceless water-walking?"
+The senior sister replies calmly, "When the heart is clear, water bears the body."
+Accurate lip sync; the feet continue matching the same concealed pillar row.
+
+[10–13s] Lower the camera smoothly to water level, then slightly below it. The
+existing pillars become visible through clear water one after another, perfectly
+aligned beneath the previous steps. On shore, the junior sister lifts the one
+remaining spare pillar with both hands.
+
+[13–15s] The junior sister asks flatly, "Should we move the rest again tonight?"
+Stop the guqin instantly. Hard cut to the senior sister's close-up: one eyebrow
+twitch, frozen smile and a tiny sweat bead. End on one distant frog croak.
+
+Comedy stays restrained. No modern object, magic glow, changing pond geography,
+pillar pop-in, foot missing its support, walking-direction reversal, extra
+person, costume drift, exaggerated fall, disappearing lotus, wrong lip sync,
+subtitle, watermark or electronic sound. Use realistic silk, mist, reflections,
+water transparency and pillar refraction.
+```
+
+**Technique:** Declare the hidden mechanism at frame one and leave physical clues before the reveal. Lowering the camera uncovers existing geometry, so the punchline feels causal rather than like a late morph.
+
+Adapted from [Soranlan's original water-walking xianxia reversal](https://x.com/Soranlan/status/2081379282442420321), published July 26, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7928).
+
+
 ## Reusable templates
 
 ### Single-shot template
@@ -6357,6 +6652,13 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Nexus AI — Seedance 2.0 recursive mirror-lag identity horror](https://x.com/Nexustechai1/status/2081527386508611807)
+- [simeon-sanai — Seedance 2.0 fixed-frame interior renovation](https://x.com/Naiknelofar788/status/2081371164728041980)
+- [Soranlan — Seedance 2.0 live-action flat-sticker kitchen prank](https://x.com/Soranlan/status/2081386564525953050)
+- [John — Seedance 2.0 torn-seal phone-store contract trap](https://x.com/john87445528/status/2081367975207080026)
+- [Alexandra Aisling — Seedance 2.0 nested hollow-world traversal](https://x.com/AllaAisling/status/2081200833631502418)
+- [Soranlan — Seedance 2.0 waterline stone-pillar xianxia reveal](https://x.com/Soranlan/status/2081379282442420321)
 
 - [BMX — Seedance 2.0 bus-wipe strobe night pursuit](https://x.com/bmx_ai13/status/2081091640857702427)
 - [AIrina / Virtual Media Net — Seedance 2.0 fence-painting persuasion continuity](https://x.com/airina_xyz/status/2081078057386021026)
