@@ -160,6 +160,10 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Torn-seal phone-store contract trap](#144-torn-seal-phone-store-contract-trap)
   - [Nested hollow-world traversal](#145-nested-hollow-world-traversal)
   - [Waterline stone-pillar xianxia reveal](#146-waterline-stone-pillar-xianxia-reveal)
+  - [Present–flashback–silence swordfighter aftermath](#147-presentflashbacksilence-swordfighter-aftermath)
+  - [Identity-locked parallel lives hard cuts](#148-identity-locked-parallel-lives-hard-cuts)
+  - [Storyboard-conditioned solo temple choreography](#149-storyboard-conditioned-solo-temple-choreography)
+  - [Stateful classroom-prop action one-take](#150-stateful-classroom-prop-action-one-take)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -6026,6 +6030,191 @@ water transparency and pillar refraction.
 Adapted from [Soranlan's original water-walking xianxia reversal](https://x.com/Soranlan/status/2081379282442420321), published July 26, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7928).
 
 
+### 147. Present–flashback–silence swordfighter aftermath
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** cinematic aftermath, nonlinear editing, action memory, sound-contrast storytelling  
+**Mode:** text-to-video or reference image-to-video  
+**Suggested settings:** 10s, 16:9, 24fps
+
+```text
+10-second cinematic aftermath with one adult swordfighter in the same ruined
+courtyard across present time and memory. Keep the same face, weathered indigo
+coat, tied hair, sword, courtyard geometry and left-to-right action direction.
+The present is desaturated color with an 85mm shallow-focus look; the memory is
+hard-contrast monochrome. Non-graphic signs of the finished clash—torn banners,
+discarded scabbards and drifting dust—remain fixed in the present.
+
+[0–2s | present] Begin on a slow, stable push toward the motionless fighter.
+Their sword hangs loosely, shoulders rise with heavy breathing, eyes stay down.
+Audio is low wind, cloth movement and one distant wooden creak.
+
+[2–5s | memory] A single hard white flash opens five unmistakably separate
+micro-shots: horizontal parry; eye close-up; sidestep and counter; overhead view
+of crossing paths; final downward strike stopped just before impact. Use the same
+performer and courtyard. Fast cuts, controlled handheld shake, short motion blur,
+metal clashes and distant shouts; no graphic injury.
+
+[5–7s | present] Hard cut back to color from the identical body position. Remove
+all battle audio instantly. Continue the push from closer range; one hand trembles
+and recognition registers without dialogue.
+
+[7–10s | release] The fighter opens their fingers. The sword falls in readable
+slow motion, strikes stone once and produces a long metallic echo. Hold on the
+lowered head and settling dust.
+
+Do not blend time periods, recolor the present, change identity or wardrobe,
+duplicate the sword, reverse screen direction, reuse one memory shot, add a
+visible opponent in the present, show gore, float the dropped sword, add subtitles
+or hide the final impact behind a cut.
+```
+
+**Technique:** Give the present and memory different color, camera and sound grammars, then return from the flashback on a matched body position. The instant silence makes the temporal reset legible before the final physical payoff.
+
+Adapted from [auqib's original battle-aftermath flashback](https://x.com/auqibhabib/status/2081999646969446547), published July 28, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8020).
+
+### 148. Identity-locked parallel lives hard cuts
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** character consistency, wardrobe and location changes, beat editing, vertical short-form  
+**Mode:** single-reference image-to-video  
+**Suggested settings:** 10s, 9:16, 24fps
+
+```text
+Use @Image1 as the immutable identity source for one adult lead. Across eight
+parallel-life portraits, preserve the exact face, apparent age, skin tone, eye
+spacing, body proportions and chest-up face scale. Change only wardrobe, hair
+styling details, prop, environment, lighting and performance. Fixed centered
+camera, identical headroom and lens perspective in every shot.
+
+Each blink, head turn, raised prop or brief lens occlusion ends on a clean
+single-frame hard cut exactly on the beat. The next life begins with the matching
+motion already in progress. No dissolves, white flashes, particles or morphs.
+Give the lead one natural micro-action per life:
+
+[0.0–1.2s] Commuter in a gray suit lowers a phone in a softly blurred station.
+[1.2–2.4s] Street photographer raises a camera at warm sunset.
+[2.4–3.6s] Night rider tightens one glove beside rain-reflected parking lights.
+[3.6–4.8s] Seaside café owner places a cup toward lens in morning light.
+[4.8–6.0s] Mountain traveler exhales visible breath and looks off-frame.
+[6.0–7.2s] Small-stage singer closes their eyes on one sustained note.
+[7.2–8.4s] Laboratory researcher rotates a test tube, then meets the camera.
+[8.4–10.0s] Island retiree removes sunglasses and gives a relieved small smile.
+
+Upbeat electronic percussion; every cut gets one crisp click. Layer only the
+matching short ambience under each portrait: station, shutter, rain, surf, wind,
+room vocal, laboratory hum and birds. Optional labels must be short, centered,
+correctly spelled and limited to one per life; omit them if text cannot stay clean.
+
+No face swap, age drift, changing facial geometry, camera jump, face-scale drift,
+body-size change, frozen pose, melting clothing, prop carryover between lives,
+mixed environments, duplicated limb, plastic skin, over-smoothing, logo, watermark
+or extra subtitle.
+```
+
+**Technique:** Lock composition as tightly as identity. Motion-matched, beat-level hard cuts let clothing and world change while the unchanged face proves that every life belongs to the same person.
+
+Adapted from [Xuekai Gao's original parallel-lives showcase](https://x.com/XuekaiGao/status/2081997048749138266), published July 28, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8018).
+
+### 149. Storyboard-conditioned solo temple choreography
+
+**Verified model:** Seedance 2.0 — explicitly named in the creator's complete storyboard-to-video prompt and preserved in the versioned gallery mapping  
+**Use case:** action choreography, storyboard control, reference consistency, grounded elemental VFX  
+**Mode:** multi-reference image-to-video using character sheet plus storyboard  
+**Suggested settings:** 15s, 16:9, 24fps
+
+```text
+Use @Image1 as the fixed identity and costume sheet for one adult martial artist.
+Use @Image2 as a 12-panel black-and-white previs sheet. Treat its panels as ordered
+keyframes—not as one visible collage—and preserve their shot order, body direction,
+framing, camera arrows and escalation. Start mid-action; no preparation pose.
+Only this performer appears in a vast worn-stone temple.
+
+[0–4s] Enter already airborne in a diagonal kick, land into a close palm sweep,
+then complete a full-body spin. Camera order: aggressive wide, handheld close,
+orbiting wide. Wind pressure and dust respond after each motion.
+
+[4–8s] Low-angle impact palm, compressed side-profile spinning kick, top-down
+aerial turn, then a heavy floor stomp. Alternate quick attacks with one sustained
+airborne hold. Stone chips lift only after contact; fabric and hair keep momentum.
+
+[8–12s] Slide through a floor-level sweep, rise into an elbow–palm–backfist
+combination, settle briefly into a low rooted stance, then release into a turning
+energy spiral. Camera drops, rises and changes angle only where the storyboard
+specifies; screen direction stays continuous.
+
+[12–15s] Accelerate into the final twisting jump. Wind, dust, small stone fragments,
+a water-like floor ripple and restrained fire-colored trails converge around the
+physical movement. Freeze the last frame while the performer is still airborne,
+before impact, with a strong readable silhouette.
+
+Movement logic: heavy and bound on landings; light and free in jumps; direct in
+strikes; indirect only during turns. Elemental accents remain ritual, atmospheric
+and contact-driven—not superhero beams. Audio: breath, cloth snap, foot impact,
+stone grit, air pressure and a low rising temple resonance; no dialogue.
+
+Do not redraw the face or costume, reorder panels, begin calmly, invent an enemy,
+add extra people, display the storyboard, labels or arrows, hide weak choreography
+behind random cuts, repeat a pose, float debris before contact, over-glow the VFX,
+change temple geometry, end after landing, add logo, subtitle or watermark.
+```
+
+**Technique:** Separate three control tracks—ordered body keyframes, camera instructions and contact-triggered effects—then recombine them on a timeline. This keeps storyboard fidelity without turning the previs sheet into a literal frame.
+
+Adapted from [Ciri's original Tibetan-kung-fu storyboard workflow](https://x.com/Ciri_ai/status/2081976392712118780), published July 28, 2026. The creator names Seedance 2.0 in the video stage, and the complete source record is preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7982).
+
+### 150. Stateful classroom-prop action one-take
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** one-take action, environmental choreography, prop continuity, close camera tracking  
+**Mode:** reference image-to-video  
+**Suggested settings:** 12s, 16:9, 24fps
+
+```text
+12-second premium live-action rehearsal in one after-hours classroom set. All four
+performers are adults: @Image1 locks the lead; three adult stunt partners wear
+distinct gray, navy and tan training jackets. The fixed room map contains four
+desk rows, chairs tucked in, one backpack on the second-row desk, chalkboard at
+front, sliding windows camera-right and loose papers near the rear. Stage the
+sequence as safe choreography with readable reactions and recoveries.
+
+One uninterrupted handheld shot—no edit, hidden cut or teleport. Stay within two
+meters of the lead while maintaining a continuous, collision-free camera path.
+
+[0–3s] Track backward between desk rows as the lead slips past gray's first strike,
+turns around a fixed desk corner and redirects navy into an empty chair. The chair
+slides once and remains displaced.
+
+[3–6s] Arc camera-left. Tan swings a padded practice mitt; the lead catches the
+existing backpack as a shield, absorbs one impact, drops it beside the same desk
+and steps onto the adjacent tabletop. The backpack never returns to the desk.
+
+[6–9s] Rise with the lead's tabletop vault, pass beneath one fluorescent fixture,
+then drop low as the lead lands and performs a controlled sweep. Papers react to
+the landing air and stay scattered; overturned furniture keeps its new state.
+
+[9–12s] Circle tightly while the lead redirects the final two attacks, then settle
+into a wide composition proving all four adult performers, the used props and the
+unchanged room geography. Stunt partners recover safely; the lead ends breathing
+hard, not frozen.
+
+Audio is continuous room tone, shoes on wood, desk scrape, backpack thud, cloth
+movement, controlled impacts and breath. Warm late-afternoon window light mixes
+with practical fluorescent light; natural skin, grounded physics and modest
+handheld imperfection.
+
+No cut, speed-ramp disguise, prop reset, duplicated desk, changing opponent jacket,
+unsafe head impact, broken anatomy, rubber motion, floating furniture, ghosting,
+unstable face, impossible camera passage through solids, repeated paper burst,
+excessive shake, glossy game-engine finish, superhero VFX, subtitle, logo or
+watermark.
+```
+
+**Technique:** Treat the room as a state machine. Assign every prop one irreversible change and let the final wide shot audit those states; environmental continuity becomes part of the choreography rather than background decoration.
+
+Adapted from [auqib's original classroom environmental-action one-take](https://x.com/auqibhabib/status/2081946621060030586), published July 28, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7989).
+
+
 ## Reusable templates
 
 ### Single-shot template
@@ -6652,6 +6841,11 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [auqib — Seedance 2.0 present–flashback–silence swordfighter aftermath](https://x.com/auqibhabib/status/2081999646969446547)
+- [Xuekai Gao — Seedance 2.0 identity-locked parallel lives hard cuts](https://x.com/XuekaiGao/status/2081997048749138266)
+- [Ciri — Seedance 2.0 storyboard-conditioned solo temple choreography](https://x.com/Ciri_ai/status/2081976392712118780)
+- [auqib — Seedance 2.0 stateful classroom-prop action one-take](https://x.com/auqibhabib/status/2081946621060030586)
 
 - [Nexus AI — Seedance 2.0 recursive mirror-lag identity horror](https://x.com/Nexustechai1/status/2081527386508611807)
 - [simeon-sanai — Seedance 2.0 fixed-frame interior renovation](https://x.com/Naiknelofar788/status/2081371164728041980)
