@@ -164,6 +164,10 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Identity-locked parallel lives hard cuts](#148-identity-locked-parallel-lives-hard-cuts)
   - [Storyboard-conditioned solo temple choreography](#149-storyboard-conditioned-solo-temple-choreography)
   - [Stateful classroom-prop action one-take](#150-stateful-classroom-prop-action-one-take)
+  - [Single-hand relay mixed-media cooking chaos](#151-single-hand-relay-mixed-media-cooking-chaos)
+  - [Scheduled-defect Gwangjang Market night walk](#152-scheduled-defect-gwangjang-market-night-walk)
+  - [Scale-locked Yamato general assault](#153-scale-locked-yamato-general-assault)
+  - [Bicycle sword-array reversal comedy](#154-bicycle-sword-array-reversal-comedy)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -6215,6 +6219,218 @@ watermark.
 Adapted from [auqib's original classroom environmental-action one-take](https://x.com/auqibhabib/status/2081946621060030586), published July 28, 2026. Its Seedance 2.0 mapping and complete source record are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=7989).
 
 
+### 151. Single-hand relay mixed-media cooking chaos
+
+**Verified model:** Seedance 2.0 — explicitly named in the creator-linked versioned prompt record  
+**Use case:** first-person cooking, mixed-media compositing, hand-orientation control, irreversible prop state  
+**Mode:** text-to-video or reference-guided image-to-video  
+**Suggested settings:** 10s, 16:9, 24fps
+
+```text
+10-second horizontal comedy in one continuous first-person cooking shot. Keep the
+camera slightly above one black wok positioned left of center; a small wooden stool
+and Tang Tang remain fully visible on the right. The kitchen, food, steam, glass
+chili jar and adult hands are photorealistic. Tang Tang is always a flat two-head-
+tall 2D paper sticker with pigtails, striped shirt, pink apron, teal overalls and a
+white cutout border—never volumetric or realistically shaded.
+
+HIGHEST-PRIORITY HAND CONTRACT
+Only one real hand may be visible at a time. The RIGHT hand enters only from the
+bottom-right, back of hand toward camera and thumb screen-left. It alone owns the
+single wooden-handled metal spatula. The LEFT hand enters only from upper-left,
+back of hand toward camera and thumb screen-right. It enters empty and may only
+remove the chili jar. Never mirror, duplicate or show both hands together.
+
+[0.0–3.0s] The right hand continuously stir-fries with the only spatula. Tang
+Tang, using her two visible flat sticker hands, independently lifts and tips the
+real glass jar; chili flakes form one readable mound in the wok. No real fingers
+touch or support the jar.
+
+[3.0–3.2s] After the stream stops, the right hand places the spatula flat inside
+the wok and completely exits. Hold one empty-hand beat.
+
+[3.2–3.8s] Only the empty left hand enters, receives the jar from Tang Tang and
+exits upper-left. It never approaches the spatula.
+
+[3.8–5.2s] Only after the left hand disappears, the same right hand returns,
+retrieves the same spatula and gives Tang Tang one impossibly light cartoon tap.
+A flat red bump and one vertical paper bounce appear on contact.
+
+[5.2–8.0s] The right hand scoops one bite with that spatula. Tang Tang tastes it,
+spiral eyes and two flat blue tear streams appear, then she fans her mouth. Steam,
+food and the wok remain real; her effects remain flat.
+
+[8.0–10.0s] Tang Tang folds briefly like paper, springs upright, points at the
+chili mound and gives an indignant gap-tooth stare. End with the spatula back in
+the wok and every prop in its latest state.
+
+Audio: continuous sizzle, dry chili pour, jar pickup, one light DUANG, paper
+rustle, tiny cartoon spring and a final comedic sting. No dialogue or subtitles.
+No cut, simultaneous hands, swapped roles, wrong thumb orientation, floating
+wrist, second spatula, jar teleport, 3D sticker body, realistic sticker shadow,
+blocked subject, reset prop, changing kitchen, logo or watermark.
+```
+
+**Technique:** Treat hand visibility as a mutually exclusive relay with explicit entry edges, thumb directions and prop ownership. The empty beat between owners prevents mirrored hands and duplicated utensils, while the real-versus-flat material contract keeps the composite readable.
+
+Adapted from [Oggii's original first-person cooking experiment](https://x.com/oggii_0/status/2082342525570879887), published July 29, 2026. Its complete Seedance 2.0 source mapping is preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8065).
+
+### 152. Scheduled-defect Gwangjang Market night walk
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** smartphone realism, reference identity, wardrobe state, controlled camera imperfections  
+**Mode:** single-reference image-to-video  
+**Suggested settings:** 15s, 9:16, 24fps
+
+```text
+Use @Image1 only for the adult lead's exact face, skin tone and facial proportions.
+Do not inherit its white top. For all 15 seconds use low-tied hair, black turtleneck,
+dark-brown leather jacket, black straight jeans and black boots. The jacket changes
+state only twice: removed onto the lap at 6–8s, worn again at 10–12s.
+
+Vertical iPhone night walk through Gwangjang Market. Natural pores, baby hairs,
+skin oil, mixed practical light and mild sensor noise; no beauty filter or polished
+cinema grade. Cuts last 0.5–2 seconds except the final hold. Background people are
+soft silhouettes. Every sign, menu and price board stays unreadably out of focus.
+No dialogue, captions, reflection shot or knife close-up.
+
+Schedule each phone-camera flaw once and nowhere else:
+- 0–2s: exposure takes one beat to recover while entering the bright arcade.
+- 2–4s: autofocus hunts twice, then locks on the face.
+- 10–12s: one digital zoom visibly reduces image quality.
+All other shots remain sharp and correctly exposed.
+
+[0–2s] Walk from dark exterior beneath incandescent bulbs. Tilt up to rusted
+trusses and wiring, then lower to the face as the delayed exposure settles.
+[2–4s] Front-follow through the narrow passage; fluorescent stalls mix color
+temperatures while focus searches past blurred shoulders and returns to the lead.
+[4–6s] Stop at a hot plate. Macro oil and steam, then the lead squints, leans back
+and wipes their nose; preserve screen direction and stall geography.
+[6–8s] Sit once, remove the jacket and place it on the lap. A bare bulb stretches
+across the steel counter; the chair slides back once and stays displaced.
+[8–10s] In the same seat, take one hot bite, part the lips and exhale. Insert an
+empty plastic chair swaying beyond the canopy, then return without changing state.
+[10–12s] Stand, fully put the same jacket back on, then re-enter the passage.
+Alternating red warmer and blue refrigerator light cross the face; apply the
+single degraded digital zoom toward the distant red practical.
+[12–15s] Full-body hold at the arcade vanishing point. Only slight handheld drift;
+look into lens for half a second, glance aside, remain still.
+
+Audio: quiet lo-fi bed, griddle sizzle, ventilation hum, bowl and ladle clinks,
+distant nonverbal crowd wash. No outfit substitution, jacket reset, hairstyle
+change, reflection-owned face, readable lettering, repeated exposure pulse,
+continuous focus breathing, extra digital zoom, missing shot, merged shot,
+beauty smoothing, golden-hour light, subtitle, logo or watermark.
+```
+
+**Technique:** Camera defects become timed events rather than global style words. Assigning exposure lag, focus hunt and digital degradation to separate beats creates credible phone footage without sacrificing legibility; the jacket and chair act as a small state ledger across the edit.
+
+Adapted from [Shore Lyn's original Gwangjang Market walk](https://x.com/Shorelyn_/status/2082315151982915843), published July 29, 2026. Its complete Seedance 2.0 prompt and creator mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8030).
+
+### 153. Scale-locked Yamato general assault
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** large-scale action, historical war cinema, multi-axis coverage, cumulative damage control  
+**Mode:** text-to-video  
+**Suggested settings:** 15s, 1:1, 24fps
+
+```text
+15-second bright live-action historical war-film sequence over blue-green open sea.
+The battleship Yamato is the fixed scale anchor: approximately 263 meters long,
+broad dark-gray hull, massive main turrets and tall tower bridge. Carrier aircraft
+remain visibly much smaller. Depict a non-graphic general assault with no visible
+injury. Damage accumulates continuously; the single terminal explosion is forbidden
+before 12.2 seconds.
+
+[0.0–2.1s] High front-left diagonal wide. Keep bow, stern and full hull length
+readable while small aircraft cross rapidly from several directions. Irregular
+bomb splashes, anti-aircraft fire and white water columns surround the ship.
+Do not pan after any plane.
+
+[2.1–4.2s] Closer high right-side wide, still showing the entire hull. Separate
+foreground, midground and background formations; fires and black smoke increase
+without changing the ship's scale or orientation.
+
+[4.2–5.8s] Fixed near-vertical overhead. One small dive bomber descends from frame
+top, releases one bomb and exits sideways immediately. Hold the ship as the dominant
+shape throughout.
+
+[5.8–8.3s] Cut to a sea-skimming straight-line camera path. Spray reaches the lens
+as one white torpedo wake approaches the port waterline; keep the torpedo body
+small. One impact raises a water column taller than the hull.
+
+[8.3–12.2s] Return to a high front-left diagonal wide and keep it continuous.
+More aircraft cross rather than being tracked. Torpedo wakes, direct hits, nearby
+blasts and anti-aircraft fire accumulate along the long hull. Increase fire, smoke,
+visible damage and speed loss only; do not trigger the fatal event.
+
+[12.2–15.0s] Preserve the same camera side and battle flow. One final center-hull
+hit releases a single connected orange-white eruption, horizontal shockwave,
+black smoke and water spray from that exact origin. Keep hull and origin together
+in frame and finish on a slightly wider panorama.
+
+Sound effects only: layered propeller passes, wind, anti-aircraft bursts, bombs,
+water impacts, steel strain and one final low explosion. No music or narration.
+No rear-diagonal view, aircraft-following camera, oversized plane, modern jet,
+missile, repeated overhead angle, reordered cut, early terminal blast, separated
+fireballs, multi-stage detonation, attack pause, capsizing, hull break, miniature
+or toy scale, gore, night scene, subtitle, logo or watermark.
+```
+
+**Technique:** Use one giant object as a persistent scale reference, cross smaller threats through layered depth, and reserve the irreversible terminal state for an exact timestamp. The result reads as cumulative assault instead of six unrelated explosions.
+
+Adapted from [AI Lifehack's original Yamato sequence](https://x.com/ai_lifehack55/status/2082300959913632057), published July 29, 2026. Its complete Seedance 2.0 record is preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8083).
+
+### 154. Bicycle sword-array reversal comedy
+
+**Verified model:** Seedance 2.0 — explicitly named in the creator's complete prompt and its versioned gallery mapping  
+**Use case:** multi-reference characters, coordinated rigid props, native dialogue, sound-triggered comedy  
+**Mode:** two-character reference image-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+```text
+15-second restrained live-action xianxia reversal comedy on a modern rooftop bicycle
+platform at sunset. @Image1 locks Sword Sister's adult face, long black hair, white
+silk Hanfu, silver ornaments and one sword. @Image2 locks Bike Sister's adult face,
+ponytail, clothing and one bicycle. Faces, outfits, voices and owned props never
+transfer.
+
+Before action, place six parked background bicycles in a readable shallow arc
+behind Bike Sister. Each has one frame, two wheels and one fixed slot. They may
+vibrate, rise and orbit but never merge, multiply, change design or replace either
+character's owned prop.
+
+[0–5s | low wide, slow track] Sword Sister floats exactly half a meter above the
+roof, proud and composed, while her single sword rotates around her. Bike Sister
+enters on foot pushing her own bicycle and looks up in sincere awe. Wind affects
+hair and wide sleeves after body motion; wheels roll only from physical contact.
+
+[5–10s | medium, slow orbit] Bike Sister asks in natural Mandarin, “Sister, can
+you really ride a sword?” Sword Sister replies calmly, “A little.” Bike Sister
+rings her bicycle bell once. After that visible contact, the six parked bicycles
+vibrate in place and answer with six crisp bell notes in left-to-right order.
+Do not begin the response early.
+
+[10–15s | wide to close-up] The six background bicycles rise together into one
+large circular array behind Bike Sister while keeping their individual frames,
+wheel pairs and evenly spaced slots. She steps onto her own floating bicycle,
+says, “I usually commute with this,” and glides away on one stable path. Sword
+Sister's rotating sword retreats behind her legs. Push to her frozen smile and
+one small eyelid twitch; hold for the final beat.
+
+Audio: rooftop wind, cloth, rolling tires, two voices, one call bell, six spatially
+ordered response bells, restrained levitation resonance and a brief deadpan stop.
+Accurate lip-sync and no subtitles. No extra character, seventh background bicycle,
+duplicate sword, fused wheels, rubber frame, prop swap, premature lift, unsynchronized
+bells, teleport, face drift, costume change, superhero beam, unsafe fall, logo or
+watermark.
+```
+
+**Technique:** Give each repeated prop a fixed slot and preserved geometry, then use one visible sound cue as the causal trigger for the group motion. The call-and-response timing makes both the rigid-body coordination and the punchline easier to read.
+
+Adapted from [Soran's original bicycle-array comedy](https://x.com/Soranlan/status/2082278216383746196), published July 29, 2026. The creator names Seedance 2.0 and the complete source mapping is preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8076).
+
+
 ## Reusable templates
 
 ### Single-shot template
@@ -6841,6 +7057,11 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Oggii — Seedance 2.0 single-hand relay mixed-media cooking](https://x.com/oggii_0/status/2082342525570879887)
+- [Shore Lyn — Seedance 2.0 scheduled-defect Gwangjang Market walk](https://x.com/Shorelyn_/status/2082315151982915843)
+- [AI Lifehack — Seedance 2.0 scale-locked Yamato general assault](https://x.com/ai_lifehack55/status/2082300959913632057)
+- [Soran — Seedance 2.0 bicycle sword-array reversal comedy](https://x.com/Soranlan/status/2082278216383746196)
 
 - [auqib — Seedance 2.0 present–flashback–silence swordfighter aftermath](https://x.com/auqibhabib/status/2081999646969446547)
 - [Xuekai Gao — Seedance 2.0 identity-locked parallel lives hard cuts](https://x.com/XuekaiGao/status/2081997048749138266)
