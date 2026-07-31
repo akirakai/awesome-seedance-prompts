@@ -168,6 +168,9 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Scheduled-defect Gwangjang Market night walk](#152-scheduled-defect-gwangjang-market-night-walk)
   - [Scale-locked Yamato general assault](#153-scale-locked-yamato-general-assault)
   - [Bicycle sword-array reversal comedy](#154-bicycle-sword-array-reversal-comedy)
+  - [Dual-ledger iced-coffee UGC arc](#155-dual-ledger-iced-coffee-ugc-arc)
+  - [Human-scale mecha versus titan charge collision](#156-human-scale-mecha-versus-titan-charge-collision)
+  - [Camera-owned puppy-meet selfie vlog](#157-camera-owned-puppy-meet-selfie-vlog)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -6431,6 +6434,155 @@ watermark.
 Adapted from [Soran's original bicycle-array comedy](https://x.com/Soranlan/status/2082278216383746196), published July 29, 2026. The creator names Seedance 2.0 and the complete source mapping is preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8076).
 
 
+
+### 155. Dual-ledger iced-coffee UGC arc
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** UGC product ad, character consistency, packaging continuity, macro liquid cinematography  
+**Mode:** character-and-product reference image-to-video  
+**Suggested settings:** 15s, 9:16, 24fps
+
+```text
+15-second photorealistic vertical UGC commercial inside one warm modern apartment.
+@Image1 locks the same adult creator's face, hair, skin tone, makeup, body proportions,
+cream knit top and small gold earrings. @Image2 locks one chilled iced-coffee bottle:
+same silhouette, cap, label placement, brand colors, printed geometry and fill level.
+Treat the actor and bottle as two independent continuity ledgers; neither may drift.
+
+[0–2.5s | phone-like close medium] The creator holds the unopened bottle beside her
+face, smiles directly into lens and gives one natural presenting gesture. Soft window
+light, mild handheld breathing and realistic skin texture; keep the label front-facing.
+
+[2.5–5.0s | tabletop macro] Match-cut to the same bottle on a wooden table. Condensation
+moves downward under gravity. Her right hand enters once, grips the same cap and twists
+until the seal visibly breaks; the cap remains in that hand.
+
+[5.0–8.0s | extreme macro] Pour the coffee in one continuous stream over four clear ice
+cubes. Ice shifts from impact and clinks once. A small milk pour creates readable
+brown-and-cream marbling without changing the bottle label or glass geometry.
+
+[8.0–11.5s | close reaction] Back in the same seat, she takes one sip, lowers the glass,
+briefly closes her eyes, then gives a restrained satisfied smile and one thumbs-up.
+The opened bottle sits label-forward beside the laptop; its cap stays off.
+
+[11.5–15.0s | product hero] She places the glass beside the bottle and says naturally,
+“Good coffee, better mood.” Slowly push toward the bottle while her hand rests outside
+the label area. End on condensation, roasted beans and warm rim light.
+
+Audio: room tone, seal crack, cap twist, ice clink, liquid pour, quiet sip and one clean
+spoken line; no music over the product sounds. Accurate lip-sync. No second actor,
+face swap, wardrobe change, duplicate bottle, repaired seal, reappearing cap, changing
+label, invented text, liquid clipping, floating ice, deformed fingers, beauty-filter
+skin, jump in fill level, subtitle, added logo or watermark.
+```
+
+**Technique:** Maintain separate state ledgers for the performer and the package. The bottle progresses irreversibly from sealed to opened to partly poured, while repeated label-forward proofs catch branding drift across UGC, macro and hero shots.
+
+Adapted from [Smiling Khan's original iced-coffee UGC sequence](https://x.com/AIwithkhan/status/2083049970597577156), published July 31, 2026. Its complete Seedance 2.0 prompt and creator mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8113).
+
+
+### 156. Human-scale mecha versus titan charge collision
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** giant-creature action, scale control, storyboard reference, synchronized charge and impact  
+**Mode:** character reference plus storyboard-guided image-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+```text
+15-second ultra-photorealistic live-action battle in a ruined megacity, shot with
+large-format anamorphic cinema language. @Image1 locks one 2.2-meter human-scale
+powered-armor fighter: preserve helmet, armor panels, proportions, colors and rail
+cannon. @Image2 controls framing and shot order only; it must not redesign either
+subject. The titan dragon is vastly taller than the skyline. Cars, doors and street
+lamps remain visible scale witnesses so the armor never grows into a giant robot.
+
+[0–3s | low street tracking] The armored fighter lands between abandoned cars, cracks
+the asphalt and rises to full height. Track past a car roof to prove the 2.2-meter
+scale; dust and fragments fall once and remain on the ground.
+
+[3–6s | rise into over-shoulder wide] Lift behind the fighter and reveal the dragon
+above distant towers. The cannon unfolds from the fighter's right arm while the
+dragon braces against two buildings; preserve their screen sides and distance.
+
+[6–10s | alternating charge inserts] Blue-white magnetic coils compress plasma only
+inside the rail cannon. The dragon forms one orange molten core only inside its jaws.
+Nearby loose metal tilts toward the cannon; cloud light responds to the dragon. At
+9.5 seconds, remove music for a half-second of tense electrical silence. Neither
+attack fires early.
+
+[10–13s | locked diagonal wide] Both beams launch simultaneously from their correct
+origins and meet at one stable point above the avenue. The collision expands into a
+single plasma sphere and one outward shockwave; windows fail progressively from near
+to far while the camera absorbs a short physical shake.
+
+[13–15s | aerial pull-back] The blue-white rail beam pierces through the collision
+point and the dragon's chest, causing one connected distant eruption. Pull high enough
+to re-prove the tiny human-scale fighter standing among cars, smoke and damaged towers.
+
+Audio: armor landing, servo locks, magnetic whine, electrical crackle, dragon breath,
+half-second silence, two distinct beam launches, one sonic boom, glass cascade and
+low final impact. No giantized armor, toy scale, character redesign, extra weapon,
+wrong beam origin, swapped colors, early firing, multiple collision spheres, detached
+fireballs, instant building reset, weightless debris, anime rendering, glossy game
+CG, gore, subtitle, logo or watermark.
+```
+
+**Technique:** Keep ordinary objects in frame as scale witnesses, assign each energy source a fixed body origin and reserve a short silence before simultaneous release. These constraints prevent scale creep and turn two unrelated effects into one readable causal collision.
+
+Adapted from [zayan's original human-mecha versus titan-dragon battle](https://x.com/HustleXR/status/2083046696196722984), published July 31, 2026. Its complete Seedance 2.0 prompt and creator mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8118).
+
+
+### 157. Camera-owned puppy-meet selfie vlog
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** smartphone selfie realism, character–animal interaction, autofocus control, diegetic ending  
+**Mode:** single-character reference image-to-video  
+**Suggested settings:** 15s, 9:16, 24fps
+
+```text
+15-second photorealistic smartphone selfie vlog in one sunny neighborhood park.
+@Image1 locks the same adult woman's face, short dark hair and natural skin texture;
+use one pale-blue overshirt, white T-shirt and dark jeans throughout. She owns and
+holds the recording phone in her right hand for the entire take. The phone itself
+stays outside frame, but the arm angle, eye line and camera distance must remain
+physically compatible with a front-facing selfie camera.
+
+One continuous take with authentic phone stabilization, small walking bob, rolling
+exposure and one scheduled autofocus event. No beauty filter, cinematic gimbal or
+external-camera angle.
+
+[0–3s] She walks toward camera at arm's length, speaks casually in Korean and glances
+once at the path. A small golden puppy enters from the deep background and follows
+behind her; it must approach on the ground without appearing suddenly.
+
+[3–6s] She notices movement over her shoulder, turns her torso and lets the camera arc
+with the phone-owning right arm. Autofocus shifts to the puppy once, then returns to
+her face. She laughs, crouches and asks, “너 어디서 왔어?”
+
+[6–10s] Keeping the phone in her right hand, she pets the puppy only with her left.
+The puppy leans into the contact, wags its tail and steps beside her. She stands
+without picking it up; preserve the puppy's size, coat pattern and collar state.
+
+[10–13s] They walk three steps together. The puppy stops and licks her open left hand
+once. Her laugh interrupts naturally; camera shake increases briefly from the reaction
+and then settles.
+
+[13–15s] She looks into lens and says, “오늘 새 친구가 생겼어요. 안녕!” She waves with
+her free left hand, then brings that hand toward the lens until it fully occludes the
+frame, ending exactly like a user stopping the recording.
+
+Audio only: park wind, birds, soft footsteps, distant nonverbal voices, puppy paws,
+one bark, Korean dialogue and spontaneous laughter. No background music. No cut,
+third-person view, visible floating phone, hand swap, extra arm, two-handed petting,
+puppy teleport, duplicated animal, changing coat or collar, face drift, focus pumping
+outside the scheduled event, artificial skin smoothing, subtitle, logo or watermark.
+```
+
+**Technique:** Declare who physically owns the camera, which hand remains free, and how the take ends. The final lens occlusion validates the selfie viewpoint, while a single scheduled focus handoff and one-handed contact make the human–animal interaction easier to keep coherent.
+
+Adapted from [Aqsa's original smartphone puppy-meet vlog](https://x.com/Aqsahere_/status/2083026795683586313), published July 31, 2026. Its complete Seedance 2.0 prompt and creator mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8124).
+
+
 ## Reusable templates
 
 ### Single-shot template
@@ -7057,6 +7209,10 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Smiling Khan — Seedance 2.0 dual-ledger iced-coffee UGC arc](https://x.com/AIwithkhan/status/2083049970597577156)
+- [zayan — Seedance 2.0 human-scale mecha versus titan collision](https://x.com/HustleXR/status/2083046696196722984)
+- [Aqsa — Seedance 2.0 camera-owned puppy-meet selfie vlog](https://x.com/Aqsahere_/status/2083026795683586313)
 
 - [Oggii — Seedance 2.0 single-hand relay mixed-media cooking](https://x.com/oggii_0/status/2082342525570879887)
 - [Shore Lyn — Seedance 2.0 scheduled-defect Gwangjang Market walk](https://x.com/Shorelyn_/status/2082315151982915843)
