@@ -5398,7 +5398,7 @@ Adapted from [BMX's original Seedance 2.0 zero-gravity apartment film](https://x
 **Mode:** text-to-video  
 **Suggested settings:** 10s, 16:9, 24fps
 
-\`\`\`text
+```text
 10-second live-action night chase in light rain, photographed with hard practical
 streetlights, wet glass reflections and restrained handheld instability.
 
@@ -5428,7 +5428,7 @@ no duplicated runner, random vehicles, reversed screen direction, floating rain,
 constant shake or synthetic game-CGI surfaces.
 Audio: close breath, tire spray, bus air rush, three electrical clicks locked to
 the flashes, accelerating footsteps, then fluorescent hum below ground.
-\`\`\`
+```
 
 **Technique:** Use a real foreground object to hide the only spatial discontinuity, then make rhythmic light flashes sample a single continuous movement rather than creating unrelated poses.
 
@@ -5441,7 +5441,7 @@ Adapted from [BMX's original night-pursuit experiment](https://x.com/bmx_ai13/st
 **Mode:** text-to-video  
 **Suggested settings:** 15s, 16:9, 24fps
 
-\`\`\`text
+```text
 15-second live-action period comedy on a sunny morning outside a small
 nineteenth-century Missouri house. A cheerful twelve-year-old in a straw hat is
 painting a long fence; another boy approaches eating one red apple. Natural
@@ -5471,7 +5471,7 @@ painted-board boundary, apple bite and brush/bucket positions. Respect the
 identities, random subtitle, jump in fence progress or dialogue overlap.
 Audio: birds, brush on wood, light footsteps, short natural dialogue and one
 crisp apple bite; no score.
-\`\`\`
+```
 
 **Technique:** Lock the action axis and track the apple, brush, paint bucket and painted boundary as explicit state variables; the joke lands because the exchange is spatially readable.
 
@@ -5484,7 +5484,7 @@ Adapted from [AIrina / Virtual Media Net's original fence-painting scene](https:
 **Mode:** reference-image-to-video  
 **Suggested settings:** 15s, 9:16, 24fps
 
-\`\`\`text
+```text
 15-second vertical live-action travel vlog at a real tropical coastal paragliding
 launch in clear morning light. Use @Image1 as the exact traveler identity and
 wardrobe reference: same face, maroon layered hair, white certified helmet,
@@ -5516,7 +5516,7 @@ identity drift, missing instructor, tangled lines, open buckles, backward canopy
 teleporting takeoff, unsafe cliff jump or duplicated equipment.
 Audio: coastal wind, fabric and line tension, footfalls, brief safety confirmation,
 canopy inflation and distant surf; no heavy score.
-\`\`\`
+```
 
 **Technique:** Prompt the launch as an ordered mechanical procedure—secure, tension, inflate, run, load, glide—and make wind direction a shared continuity constraint across person, grass, lines and canopy.
 
@@ -5529,7 +5529,7 @@ Adapted from [Saul Goodman's original coastal paragliding vlog](https://x.com/Go
 **Mode:** multi-reference image-to-video  
 **Suggested settings:** 15s, 16:9, 24fps
 
-\`\`\`text
+```text
 15-second live-action urban freerunning relay. @Image1 defines Runner A only;
 @Image2 defines Runner B only. Preserve each face, hairstyle, height, build and
 outfit through every cut. A begins on the left lane and B on the right lane.
@@ -5563,7 +5563,7 @@ floating, obstacle penetration, impossible landing, outfit change, CG style or
 motion-blur concealment of contact.
 Audio: shoes, wall contacts, breath and city ambience; use one percussion accent
 per landing, not continuous trailer music.
-\`\`\`
+```
 
 **Technique:** Give each referenced person a persistent identity slot and screen lane, then declare the single legal crossing point. This prevents face mixing and makes dense multi-character choreography auditable cut by cut.
 
@@ -5576,7 +5576,7 @@ Adapted from [Nexlow's original two-runner parkour sequence](https://x.com/Nexlo
 **Mode:** text-to-video or reference-image-to-video  
 **Suggested settings:** 15s, 9:16, 24fps
 
-\`\`\`text
+```text
 15-second ultra-realistic salon transformation commercial. If @Image1 is
 provided, it locks the woman's facial identity and body proportions before and
 after styling. The makeover is a one-way progression: casual state → salon work
@@ -5613,7 +5613,7 @@ extra hands, missing cape, changing jewelry, floating tools, face retouch flicke
 wardrobe instability, text, logo or speed-ramp shake.
 Audio: chair catch, water and towel, scissors, dryer, soft tool contacts, cape
 swish and one restrained final music accent.
-\`\`\`
+```
 
 **Technique:** Hide each irreversible state advance behind the tool that causes it. The occlusion becomes both an edit and a causal proof, so the transformation reads as work performed rather than arbitrary morphing.
 
@@ -6597,7 +6597,7 @@ Adapted from [Aqsa's original smartphone puppy-meet vlog](https://x.com/Aqsahere
 **Mode:** text-to-video  
 **Suggested settings:** 15s, 16:9, 24fps
 
-\`\`\`text
+```text
 15-second photorealistic sci-fi action scene inside one compact cargo portal chamber.
 One courier, one control console, two fixed wall portals and one emergency door. Keep
 the room layout, portal sides, clothing, cargo positions and screen direction stable.
@@ -6625,7 +6625,7 @@ from right, boots, strap tension, alarm, release clank and a final wet impact. N
 courier, new room, swapped portals, weather emerging from the wrong side, intersecting
 walls, teleport, weightless liquid, duplicated cargo, premature door opening, cutaway,
 subtitle, logo or watermark.
-\`\`\`
+```
 
 **Technique:** Assign each portal a fixed side, climate and sound field, then let their
 forces meet at one spatial boundary. The final residue proves that both environments
@@ -6641,7 +6641,7 @@ Adapted from [DeCat's original dual-portal courier sequence](https://x.com/DeCat
 **Mode:** text-to-video  
 **Suggested settings:** 15s, 16:9, 24fps
 
-\`\`\`text
+```text
 15-second grounded live-action escape inside one storm-lit medieval clock tower. One
 thief descends from the upper bell chamber toward a visible stair exit below. Lock the
 geography: swinging bell above, narrow platform center, ladder on the right, turning
@@ -6667,7 +6667,7 @@ Audio: storm, wood strain, bell doppler, rope tension, rung snap, linked gear sl
 chain scrape, landing and distant collapse. No extra thief, impossible jump, changing
 tower layout, disconnected hazard motion, instant gear stop, rubber metal, floating
 debris, reset platform, slow-motion pose, gore, subtitle, logo or watermark.
-\`\`\`
+```
 
 **Technique:** Establish the whole vertical route before the close action, then make
 each escape beat alter the next hazard. A rung jams a gear and a chain removes a
@@ -6683,7 +6683,7 @@ Adapted from [DeCat's original clock-tower escape](https://x.com/DeCat2025/statu
 **Mode:** single-character reference image-to-video  
 **Suggested settings:** 14s, 9:16, 30fps
 
-\`\`\`text
+```text
 14-second vertical native-phone fashion challenge in one plain fitting room. @Image1
 locks the same adult woman's face, hair, body proportions and natural skin. Automatic
 exposure, ceiling light, mild focus hunting and handheld framing; no beauty filter or
@@ -6712,7 +6712,7 @@ Audio: room tone, fabric swish with material-specific texture, bag rustle, mirro
 shoe steps and a final phone-stop click; no dialogue or music. No face drift, repeated
 outfit, skipped state, partial-cover transformation, transparent blocker, third hand,
 extra person, body morph, changing room, artificial flash, subtitle, logo or watermark.
-\`\`\`
+```
 
 **Technique:** Treat every outfit as an irreversible numbered state and every blocker
 as a matched edit gate. Requiring full optical coverage and object continuity hides
@@ -6728,7 +6728,7 @@ Adapted from [John's original nine-look obstruction storyboard](https://x.com/jo
 **Mode:** text-to-video or character reference image-to-video  
 **Suggested settings:** 15s, 16:9, 24fps
 
-\`\`\`text
+```text
 15-second photorealistic desert-scrapyard action take. One adult courier stands on the
 roof of the lead armored freight vehicle in a three-vehicle convoy moving left to right.
 Keep convoy order, speed, vehicle scale, courier clothing and one overhead magnetic
@@ -6756,7 +6756,7 @@ drone rotor, two landings and scrap cascade. No teleport, changing convoy order,
 instant roof detachment, magnetic pull on nonmetal clothing, weightless swing, hovering
 courier, duplicated drone, unrelated explosion, reversed direction, elastic vehicle,
 gore, subtitle, logo or watermark.
-\`\`\`
+```
 
 **Technique:** Move the camera onto the object whose physics matter most, and preserve
 the convoy as a constant screen-direction ledger. The panel, drone and second vehicle
@@ -6772,7 +6772,7 @@ Adapted from [DeCat's original magnetic-trainyard chase](https://x.com/DeCat2025
 **Mode:** character reference image-to-video  
 **Suggested settings:** 30s, 16:9, 24fps
 
-\`\`\`text
+```text
 30-second full-color 2D anime cooking short, exactly 30 one-second cuts. @Image1 locks
 one adult character's face, short pink bob, blue eyes, ear-shaped accessories, white
 camisole and striped shorts. Keep the same midnight kitchen, cookware and ingredient
@@ -6804,7 +6804,7 @@ clear sound per cut: refrigerator motor, shell crack, whisk, mixer, spatula, foo
 pan hiss, lid, steam, plate, sugar, berries, syrup, fork and bite. No missing or repeated
 cut, time reversal, raw batter after cooking, changing outfit, extra hand, merged tool,
 food morph, sexualized framing, realistic 3D skin, subtitle, logo or watermark.
-\`\`\`
+```
 
 **Technique:** A long generation can support very dense editing when every cut advances
 one irreversible process ledger. One action and one sound per second keep the sequence
@@ -6820,7 +6820,7 @@ Adapted from [妖精アーヤさん's original 30-cut soufflé process](https://
 **Mode:** single-performer reference image-to-video  
 **Suggested settings:** 30s, 16:9, 24fps
 
-\`\`\`text
+```text
 30-second photorealistic sold-out arena concert documentary. @Image1 locks the same
 adult female performer's face, dark hair, body proportions, stage outfit, microphone
 and in-ear monitors. Sony A7S III documentary texture, practical stage lighting,
@@ -6853,7 +6853,7 @@ must not restart the song. No duplicate performer, changing outfit or microphone
 false lip-sync, impossible stage teleport, random lighting discontinuity, repeated
 confetti launch, generated signage, plastic skin, studio-polished vocal, subtitle,
 logo or watermark.
-\`\`\`
+```
 
 **Technique:** Declare one continuous song and state ledger underneath the coverage.
 Camera perspective may cut freely, but vocal time, lighting cues, microphone ownership,
