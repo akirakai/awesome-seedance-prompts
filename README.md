@@ -171,6 +171,12 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Dual-ledger iced-coffee UGC arc](#155-dual-ledger-iced-coffee-ugc-arc)
   - [Human-scale mecha versus titan charge collision](#156-human-scale-mecha-versus-titan-charge-collision)
   - [Camera-owned puppy-meet selfie vlog](#157-camera-owned-puppy-meet-selfie-vlog)
+  - [Dual-portal weather-front escape](#158-dual-portal-weather-front-escape)
+  - [Clock-tower bell-and-gear escape](#159-clock-tower-bell-and-gear-escape)
+  - [Nine-state lens-occlusion quick change](#160-nine-state-lens-occlusion-quick-change)
+  - [Magnet-crane convoy traversal](#161-magnet-crane-convoy-traversal)
+  - [Thirty-cut soufflé-pancake process](#162-thirty-cut-soufflé-pancake-process)
+  - [Arena-concert multi-camera documentary](#163-arena-concert-multi-camera-documentary)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -6583,6 +6589,279 @@ outside the scheduled event, artificial skin smoothing, subtitle, logo or waterm
 Adapted from [Aqsa's original smartphone puppy-meet vlog](https://x.com/Aqsahere_/status/2083026795683586313), published July 31, 2026. Its complete Seedance 2.0 prompt and creator mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8124).
 
 
+
+### 158. Dual-portal weather-front escape
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** environmental action, cross-portal physics, single-room continuity, native sound  
+**Mode:** text-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+\`\`\`text
+15-second photorealistic sci-fi action scene inside one compact cargo portal chamber.
+One courier, one control console, two fixed wall portals and one emergency door. Keep
+the room layout, portal sides, clothing, cargo positions and screen direction stable.
+
+[0–4s | wide push-in] The courier hits the wrong control. The left portal opens onto a
+night ocean storm; rain, cold spray and wind enter from frame left. She anchors one
+hand to the console as loose papers and straps move only with that wind.
+
+[4–8s | lateral track] The right portal opens onto a lightning desert. Hot sand blows
+from frame right and collides with the wet air at the room center, forming one readable
+spiraling weather front. Lightning briefly exposes the same cargo geometry. She ducks
+under a sliding container and moves toward the emergency door.
+
+[8–12s | low tracking chase] A wave surges through the left portal while the sand gust
+pushes back from the right. She uses the opposing forces: steps onto the briefly
+water-slick floor, grabs a hanging cargo strap, swings across the central turbulence
+and kicks the emergency release once.
+
+[12–15s | locked wide payoff] The door opens. She dives through; both portals collapse
+in left-then-right order. Water and sand already inside obey momentum, strike the
+closed door and settle as a muddy line through the center. Hold the empty chamber.
+
+Audio: two distinct portal tones, ocean wind and rain from left, dry gust and thunder
+from right, boots, strap tension, alarm, release clank and a final wet impact. No second
+courier, new room, swapped portals, weather emerging from the wrong side, intersecting
+walls, teleport, weightless liquid, duplicated cargo, premature door opening, cutaway,
+subtitle, logo or watermark.
+\`\`\`
+
+**Technique:** Assign each portal a fixed side, climate and sound field, then let their
+forces meet at one spatial boundary. The final residue proves that both environments
+affected the same room rather than becoming unrelated cuts.
+
+Adapted from [DeCat's original dual-portal courier sequence](https://x.com/DeCat2025/status/2083435058396844250), published August 1, 2026. Its complete Seedance 2.0 prompt and creator mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8201).
+
+
+### 159. Clock-tower bell-and-gear escape
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** action choreography, moving hazards, vertical geography, causal destruction  
+**Mode:** text-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+\`\`\`text
+15-second grounded live-action escape inside one storm-lit medieval clock tower. One
+thief descends from the upper bell chamber toward a visible stair exit below. Lock the
+geography: swinging bell above, narrow platform center, ladder on the right, turning
+gear train below and exit at lower left.
+
+[0–3s | high wide tilt-down] A giant bell swings across the platform. The thief ducks
+under its first pass, plants both feet and watches the return arc; the camera tilts far
+enough to show the exit and the vertical drop in the same shot.
+
+[3–7s | side tracking] On the return swing, she grabs one bell rope and rides its arc
+to the right ladder. Her weight stretches the rope; boots strike the ladder. A loose
+rung breaks only after contact and falls into the gears below.
+
+[7–11s | gear-mounted low angle] The fallen rung jams one cog, slowing the connected
+mechanism rather than stopping every gear instantly. She crosses a rotating axle,
+keeps three points of contact and releases before the next bell passes behind her.
+
+[11–15s | descending follow] A chain tears one platform support. She slides down the
+chain, lands at the lower stair and rolls through the exit as the abandoned platform
+collapses into the gear train. The bell continues swinging with decreasing amplitude.
+
+Audio: storm, wood strain, bell doppler, rope tension, rung snap, linked gear slowdown,
+chain scrape, landing and distant collapse. No extra thief, impossible jump, changing
+tower layout, disconnected hazard motion, instant gear stop, rubber metal, floating
+debris, reset platform, slow-motion pose, gore, subtitle, logo or watermark.
+\`\`\`
+
+**Technique:** Establish the whole vertical route before the close action, then make
+each escape beat alter the next hazard. A rung jams a gear and a chain removes a
+support, producing a continuous mechanical cause-and-effect chain.
+
+Adapted from [DeCat's original clock-tower escape](https://x.com/DeCat2025/status/2083394763659555079), published August 1, 2026. Its complete Seedance 2.0 prompt and creator mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8188).
+
+
+### 160. Nine-state lens-occlusion quick change
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** fashion transitions, physical wipes, irreversible wardrobe state, phone realism  
+**Mode:** single-character reference image-to-video  
+**Suggested settings:** 14s, 9:16, 30fps
+
+\`\`\`text
+14-second vertical native-phone fashion challenge in one plain fitting room. @Image1
+locks the same adult woman's face, hair, body proportions and natural skin. Automatic
+exposure, ceiling light, mild focus hunting and handheld framing; no beauty filter or
+cinematic grade. Nine outfits appear in a declared one-way order and never return.
+
+Start in outfit A. Every change must happen only while one real foreground object
+covers 100% of the lens; the object that closes one shot must be the first object
+leaving the next. No dissolve, morph or uncovered mid-change frame.
+
+[0–4s] A → B when her closed fist fills the lens; B → C when a trouser leg is pulled
+over the lens. Preserve her pose, distance and free-hand position across both cuts.
+
+[4–8s] C → D behind a garment bag; D → E behind a large folded jacket; E → F behind
+a round mirror turned dark-side toward camera. Each blocker makes visible contact
+with the frame edge before full black.
+
+[8–12s] F → G behind a clean white bandage roll; G → H behind an opaque shopping bag;
+H → I behind both palms. Give every revealed outfit one readable full-body beat and
+one small pose before the next cover begins.
+
+[12–14s] In final outfit I, she steps back, shows empty hands, turns once and approaches
+until one palm covers the lens to stop recording. Hold full occlusion for the last
+three frames.
+
+Audio: room tone, fabric swish with material-specific texture, bag rustle, mirror tap,
+shoe steps and a final phone-stop click; no dialogue or music. No face drift, repeated
+outfit, skipped state, partial-cover transformation, transparent blocker, third hand,
+extra person, body morph, changing room, artificial flash, subtitle, logo or watermark.
+\`\`\`
+
+**Technique:** Treat every outfit as an irreversible numbered state and every blocker
+as a matched edit gate. Requiring full optical coverage and object continuity hides
+the cut while preventing clothing from melting visibly between states.
+
+Adapted from [John's original nine-look obstruction storyboard](https://x.com/john87445528/status/2083339290935705831), published August 1, 2026. Its complete Seedance 2.0 prompt and creator mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8209).
+
+
+### 161. Magnet-crane convoy traversal
+
+**Verified model:** Seedance 2.0 — confirmed by the versioned prompt-gallery metadata and direct creator-post mapping  
+**Use case:** action choreography, moving platforms, magnet physics, object-mounted camera  
+**Mode:** text-to-video or character reference image-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+\`\`\`text
+15-second photorealistic desert-scrapyard action take. One adult courier stands on the
+roof of the lead armored freight vehicle in a three-vehicle convoy moving left to right.
+Keep convoy order, speed, vehicle scale, courier clothing and one overhead magnetic
+crane consistent. Real stunt weight, heat haze, dust and hard noon light.
+
+[0–4s | low parallel track] The crane magnet activates above vehicle one. Loose bolts
+lift first, then the roof panel flexes upward. The courier drives one steel hook into
+that same panel and braces before it tears free; no other vehicle is affected.
+
+[4–8s | camera bolted to roof panel] The detached panel swings on the crane cable above
+the convoy. The horizon rotates with the panel while her body lags from inertia. One
+enemy drone approaches on a straight collision path from frame right.
+
+[8–11s | continuous wide] At the nearest safe point she kicks off the panel, plants
+both boots on the drone for one second and forces its nose down. Use the drone only as
+a temporary step; it does not become a rideable vehicle.
+
+[11–15s | chase crane-back] She leaps onto vehicle two, rolls and catches a roof rail.
+Behind her, the drone hits one scrap tower, which collapses progressively away from
+the convoy. The magnet keeps carrying the empty roof panel overhead as all vehicles
+continue forward in the original order.
+
+Audio: diesel engines, tire grit, magnet hum, bending steel, hook impact, cable strain,
+drone rotor, two landings and scrap cascade. No teleport, changing convoy order,
+instant roof detachment, magnetic pull on nonmetal clothing, weightless swing, hovering
+courier, duplicated drone, unrelated explosion, reversed direction, elastic vehicle,
+gore, subtitle, logo or watermark.
+\`\`\`
+
+**Technique:** Move the camera onto the object whose physics matter most, and preserve
+the convoy as a constant screen-direction ledger. The panel, drone and second vehicle
+form three consecutive supports with visible contact at every handoff.
+
+Adapted from [DeCat's original magnetic-trainyard chase](https://x.com/DeCat2025/status/2083300857886507307), published August 1, 2026. Its complete Seedance 2.0 prompt and creator mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8191).
+
+
+### 162. Thirty-cut soufflé-pancake process
+
+**Verified model:** Seedance 2.5 — expressly identified in the creator's complete prompt and versioned gallery mapping  
+**Use case:** 30-second generation, dense editing, anime character consistency, process-state continuity  
+**Mode:** character reference image-to-video  
+**Suggested settings:** 30s, 16:9, 24fps
+
+\`\`\`text
+30-second full-color 2D anime cooking short, exactly 30 one-second cuts. @Image1 locks
+one adult character's face, short pink bob, blue eyes, ear-shaped accessories, white
+camisole and striped shorts. Keep the same midnight kitchen, cookware and ingredient
+quantities. Flat cyan outlines and pastel fills; no realistic rendering or style drift.
+No dialogue, captions or music—only synchronized kitchen ambience.
+
+Cuts 1–5: open refrigerator and remove one egg; separate white and yolk; mix yolk,
+milk and flour; whip the white; prove one standing meringue peak in macro.
+
+Cuts 6–10: adjust one ear accessory; fold meringue into batter in three additions;
+walk to stove; place two equal batter mounds in the pan; close one lid. The bowl level
+decreases irreversibly and discarded shell never returns.
+
+Cuts 11–15: wait at low heat; peek through the lid gap; show the side rising; slide one
+spatula beneath pancake one; flip it once and let it wobble. Preserve left/right pancake
+positions and do not duplicate the spatula.
+
+Cuts 16–20: close lid; react naturally to heat; reopen after steam builds; plate both
+pancakes; stack them in the same order. Track cooked-side color and thickness.
+
+Cuts 21–25: sift powdered sugar from one sieve; add three berries; pour syrup in one
+continuous spiral; macro the gloss; set one fork beside the plate. Added toppings stay.
+
+Cuts 26–30: carry plate to the small table; sit; cut one bite; taste and soften into a
+quiet smile; finish on the remaining stack, one missing bite and steam fading upward.
+
+Change composition in every cut but keep screen geography legible. Audio assigns one
+clear sound per cut: refrigerator motor, shell crack, whisk, mixer, spatula, footsteps,
+pan hiss, lid, steam, plate, sugar, berries, syrup, fork and bite. No missing or repeated
+cut, time reversal, raw batter after cooking, changing outfit, extra hand, merged tool,
+food morph, sexualized framing, realistic 3D skin, subtitle, logo or watermark.
+\`\`\`
+
+**Technique:** A long generation can support very dense editing when every cut advances
+one irreversible process ledger. One action and one sound per second keep the sequence
+readable while testing whether identity and ingredient state survive 30 compositions.
+
+Adapted from [妖精アーヤさん's original 30-cut soufflé process](https://x.com/aiehon_aya/status/2083175095133237600), published August 1, 2026. The creator explicitly tests Seedance 2.5, with the complete source preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8219).
+
+
+### 163. Arena-concert multi-camera documentary
+
+**Verified model:** Seedance 2.5 — confirmed by the versioned gallery's exact-model label and direct creator-post mapping  
+**Use case:** 30-second generation, live performance, multi-camera continuity, native concert audio  
+**Mode:** single-performer reference image-to-video  
+**Suggested settings:** 30s, 16:9, 24fps
+
+\`\`\`text
+30-second photorealistic sold-out arena concert documentary. @Image1 locks the same
+adult female performer's face, dark hair, body proportions, stage outfit, microphone
+and in-ear monitors. Sony A7S III documentary texture, practical stage lighting,
+organic handheld focus and restrained grain. Keep stage layout, band positions,
+microphone hand and song continuity stable across all cuts.
+
+[0–5s] Tight handheld face close-up during the same lyric phrase; she briefly laughs
+without dropping the performance. Cut to a low pit angle as she crosses downstage.
+Audience hands remain below the barrier and do not touch the lens.
+
+[5–11s] Side-stage medium tracking: follow her past the drummer, then rack focus from
+one cymbal strike back to her. Lighting moves from blue to amber only on the programmed
+beat; wardrobe and sweat level advance naturally.
+
+[11–17s] Long-lens crowd shot from the rear of the arena proves scale. On her sustained
+note, phone lights rise progressively from front rows to upper tiers instead of
+appearing at once. Keep her recognizable on the center screen without inventing text.
+
+[17–23s] Shoulder-mounted stage orbit during the chorus. She transfers the microphone
+to the other hand once to greet the crowd, then returns it before singing; lip-sync
+and breath continue through the handoff. One confetti cue fires after the downbeat.
+
+[23–30s] Crane from behind her over the audience, cut to one candid wing close-up as
+she finishes, breathes and smiles, then return to a stable wide bow. Confetti falls
+under gravity and does not reset between cuts.
+
+Audio is one uninterrupted live take: lead vocal, band, crowd response, breath,
+footsteps, cymbal strike and arena reflections. Camera cuts may change perspective but
+must not restart the song. No duplicate performer, changing outfit or microphone,
+false lip-sync, impossible stage teleport, random lighting discontinuity, repeated
+confetti launch, generated signage, plastic skin, studio-polished vocal, subtitle,
+logo or watermark.
+\`\`\`
+
+**Technique:** Declare one continuous song and state ledger underneath the coverage.
+Camera perspective may cut freely, but vocal time, lighting cues, microphone ownership,
+confetti and performer fatigue continue forward across the full 30 seconds.
+
+Adapted from [CHASE's original arena-concert documentary](https://x.com/CHAseUnre/status/2083089496917340232), published August 1, 2026. Its source is labeled Seedance 2.5 and mapped to the complete prompt in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8225).
+
+
 ## Reusable templates
 
 ### Single-shot template
@@ -7209,6 +7488,13 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [DeCat — Seedance 2.0 dual-portal weather-front escape](https://x.com/DeCat2025/status/2083435058396844250)
+- [DeCat — Seedance 2.0 clock-tower bell-and-gear escape](https://x.com/DeCat2025/status/2083394763659555079)
+- [John — Seedance 2.0 nine-state lens-occlusion quick change](https://x.com/john87445528/status/2083339290935705831)
+- [DeCat — Seedance 2.0 magnet-crane convoy traversal](https://x.com/DeCat2025/status/2083300857886507307)
+- [妖精アーヤさん — Seedance 2.5 thirty-cut soufflé-pancake process](https://x.com/aiehon_aya/status/2083175095133237600)
+- [CHASE — Seedance 2.5 arena-concert multi-camera documentary](https://x.com/CHAseUnre/status/2083089496917340232)
 
 - [Smiling Khan — Seedance 2.0 dual-ledger iced-coffee UGC arc](https://x.com/AIwithkhan/status/2083049970597577156)
 - [zayan — Seedance 2.0 human-scale mecha versus titan collision](https://x.com/HustleXR/status/2083046696196722984)
