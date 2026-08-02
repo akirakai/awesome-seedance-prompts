@@ -177,6 +177,12 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Magnet-crane convoy traversal](#161-magnet-crane-convoy-traversal)
   - [Thirty-cut soufflé-pancake process](#162-thirty-cut-soufflé-pancake-process)
   - [Arena-concert multi-camera documentary](#163-arena-concert-multi-camera-documentary)
+  - [Silhouette-locked weapon evolution](#164-silhouette-locked-weapon-evolution-match-cuts)
+  - [Buddha-city altitude-to-altar one-take](#165-buddha-city-altitude-to-altar-one-take)
+  - [Voice-command reality state transform](#166-voice-command-reality-state-transform)
+  - [Diner freeze, rewind, and prevention loop](#167-diner-freeze-rewind-and-prevention-loop)
+  - [Downwind paper-bird reversal comedy](#168-downwind-paper-bird-reversal-comedy)
+  - [Lantern-shadow scale-reversal comedy](#169-lantern-shadow-scale-reversal-comedy)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -6862,6 +6868,272 @@ confetti and performer fatigue continue forward across the full 30 seconds.
 Adapted from [CHASE's original arena-concert documentary](https://x.com/CHAseUnre/status/2083089496917340232), published August 1, 2026. Its source is labeled Seedance 2.5 and mapped to the complete prompt in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8225).
 
 
+### 164. Silhouette-locked weapon evolution match cuts
+
+**Verified model:** Seedance 2.5 — explicitly identified in the versioned gallery record linked to the creator's original post  
+**Use case:** historical evolution montage, momentum-preserving match cuts, era progression, native sound design  
+**Mode:** text-to-video  
+**Suggested settings:** 30s, 21:9, 24fps
+
+```text
+30-second hyper-realistic historical-to-space evolution film in 21:9. Every
+transition is a one-frame match cut, never a morph. One flying object remains
+centered at the same screen position while direction, silhouette angle, spin
+phase and forward momentum continue across every cut. Keep the object sharp;
+let only the era-specific background carry high-speed motion blur.
+
+[0–4s | launch] On a windswept ancient plain, an adult East Asian warrior plants
+her feet, twists through the hips and throws one rough stone from right to left.
+Track beside the stone at a stable distance. Cloth and hair lag behind the body;
+the stone rotates irregularly with believable mass.
+
+[4–17s | material lineage] Cut only when outlines overlap: stone -> fiber-bound
+stone hammer -> oxidized bronze spear -> Qin/Han crossbow bolt -> Song fire
+arrow -> heavy cast-iron thunder bomb -> Ming wooden rocket crow. Preserve the
+same center, travel direction and inherited momentum, but change inertia
+correctly: the hammer tumbles eccentrically, spear and bolt align to airflow,
+the bomb turns slowly, and rocket exhaust pushes only backward. Upgrade the
+background in order from tribal camp to bronze-age battlefield, frontier fort,
+walled Song city and Ming defense line. No title cards.
+
+[17–24s | atmosphere exit] At a wing-shaped occlusion, cut the rocket crow into
+one matte-gray delta-wing aircraft on the same vector above misty karst valleys.
+At the next matching silhouette, cut to a reusable crewed spacecraft; keep nose
+angle and screen position fixed while clouds give way to Earth's blue limb.
+
+[24–30s | deep-space payoff] Use the spacecraft exhaust circle as the cut mask
+for the central thruster of a massive industrial starship. Pull back to reveal
+jade-white ceramic armor, dark metal ribs and restrained axial symmetry. Blue-
+white engines ignite from the center outward; the ship accelerates with visible
+mass and becomes one point against a red-blue nebula.
+
+Audio evolves with the technology: breath and cloth, air whistles, bronze hum,
+fin vibration, fire and fuse, rocket roar, jet pressure, atmospheric rumble,
+then sub-bass engine charge. No narration or music. No floating weapons, rubber
+deformation, early explosion, magical morph, logo, caption or watermark.
+```
+
+**Technique:** Treat screen position, outline, rotation phase and momentum as a four-field continuity ledger. Change material and era only on a matching silhouette; update mass and sound after the cut so the sequence reads as one evolving object.
+
+Adapted from [John's original weapon-to-starship sequence](https://x.com/john87445528/status/2083760993222426625), published August 2, 2026. The exact Seedance 2.5 mapping and complete source prompt are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8295).
+
+### 165. Buddha-city altitude-to-altar one-take
+
+**Verified model:** Seedance 2.0 — platform metadata maps the complete prompt and creator post to the Seedance 2.0 gallery  
+**Use case:** fantasy-world traversal, start/end reference binding, scale reveal, obstacle-gated one-take  
+**Mode:** multi-reference image-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+```text
+15-second photorealistic oriental-fantasy one-take. @Image1 owns the opening
+moon, two colossal palm-shaped statues and water-city layout. @Image2 owns the
+altar, ordered crowd and final framing. @Image3 owns only the adult grandmaster's
+face, white robe, shoulder armor and crossed silver blades. Do not transfer
+backgrounds or identities between references.
+
+[0–3s | high dive] Begin above a pale moon and dive between two hundred-meter
+stone palms. Red lantern strings, prayer flags and cloud layers establish
+parallax and scale. Roll no more than 25 degrees, then level out over turquoise
+canals, stilt houses, bridges and small boats.
+
+[3–7s | vertical route] Thread one carved opening, spiral down the statue's
+external walkway and avoid three readable obstacles in order: lantern string,
+incense plume, passing boat mast. Skim the canal so water sprays the lens, then
+submerge without a cut into a transparent viewing corridor. Ruined pillars and
+koi pass on opposite depth planes.
+
+[7–11s | water-to-crowd handoff] Rise through the central fountain and let its
+water sheet wipe the frame. Flip once, settle into a low forward glide and pass
+between two fixed lanes of black-clad warriors. Every person keeps one slot and
+faces the altar; no crowd multiplication.
+
+[11–15s | altar resolve] Climb the cloud-patterned steps between two bronze
+burners, orbit 180 degrees, then stop on @Image2's axis. Reveal @Image3's
+grandmaster centered with blades crossed behind him. Slowly pull back to show
+crowd, canals, statues and moon in one final hierarchy. Hold the last half-second.
+
+Audio follows the route continuously: high wind -> flags and bells -> water
+impact and muffled underwater tone -> fountain burst -> synchronized cloth and
+foot movement -> burner fire and one low ceremonial drum. No edit, teleport,
+camera reset, scale drift, extra hero, duplicated landmark, text or watermark.
+```
+
+**Technique:** Give an ambitious one-take a short ordered route of physical gates. Each gate supplies an occlusion, depth cue and audio handoff, while the start and end references lock the world instead of asking the model to invent a new layout at every beat.
+
+Adapted from [奶白的雪子（AI版）'s original fantasy-city traversal](https://x.com/fa168198/status/2083785401047957896), published August 2, 2026. See the [complete Seedance 2.0 gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8296).
+
+### 166. Voice-command reality state transform
+
+**Verified model:** Seedance 2.0 — explicitly described as a Seedance 2.0 scene-editing prompt in the platform record linked to the original post  
+**Use case:** one-take environment editing, native dialogue triggers, cumulative weather and lighting states  
+**Mode:** reference-guided image-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+```text
+15-second ultra-realistic one-take on a professional film set. @Image1 locks the
+same adult actress, outfit and hairstyle. A director stands one meter screen-left
+and speaks six short commands. Changes begin only after the matching audible
+word; neither person teleports and the camera never cuts.
+
+[0–2s | baseline] Medium two-shot in neutral daylight. The director says,
+“Golden hour.” Over one second, sunlight warms from camera-right; shadows rotate
+consistently and one restrained lens flare appears.
+
+[2–5s | weather state] He says, “Rain.” Rain builds from sparse drops to steady
+fall. Puddles form in low points, reflections inherit the warm light, hair and
+clothing gain believable weight. Preserve the golden-hour state.
+
+[5–8s | set state] He says, “Neon city.” Practical walls transform outward from
+the background into a wet futuristic street with fog and distant traffic. Keep
+the two people, their floor positions, rain direction and reflection geometry
+unchanged; do not rebuild their bodies.
+
+[8–11s | camera state] He says, “Close-up.” Dolly smoothly toward the actress's
+eyes while the director exits only by frame crop. Maintain focus and screen axis.
+He then says, “Slow motion”; only rain, hair and cloth adopt graceful high-speed-
+camera motion while facial anatomy remains natural.
+
+[11–15s | lighting payoff] He says, “Night.” Warm sky fades to moonlit blue while
+neon reflections stay active. End on the actress looking into lens; hold one
+second with rain continuing.
+
+Native production audio: six clean commands, rain increasing by state, distant
+traffic, cloth and quiet set ambience. No command response before speech ends,
+hard cut, identity drift, dry clothing after rain, disappearing puddle, camera
+jump, extra actor, subtitle, logo or watermark.
+```
+
+**Technique:** Write edits as a cumulative state machine: trigger, transition window, inherited state, and forbidden reset. This prevents each command from becoming an unrelated new shot.
+
+Adapted from [Meem's original voice-directed film-set test](https://x.com/mehvishs25/status/2083539354849611921), published August 1, 2026. See the [complete Seedance 2.0 gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8261).
+
+### 167. Diner freeze, rewind, and prevention loop
+
+**Verified model:** Seedance 2.0 — the platform's versioned record maps the complete prompt and original post to Seedance 2.0  
+**Use case:** frozen-time physics, selective motion, reversible state restoration, causal payoff  
+**Mode:** text-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+```text
+15-second photorealistic 1950s diner sequence: chrome counter, red vinyl booths,
+checkerboard floor, warm practical neon, soft window light and tactile 35mm grain.
+Keep one seated woman, one waitress, one older patron, one tray, one coffee pot,
+one plate and the same diner geometry throughout.
+
+[0–2s | stable baseline, medium wide] The seated woman calmly drinks a milkshake.
+The waitress approaches behind her carrying breakfast and coffee. The older
+patron begins to stand into the waitress's path.
+
+[2–5s | collision, tracking orbit] Contact occurs visibly. Tray, plate, food and
+coffee lift into slow motion with believable arcs. Orbit 120 degrees and freeze
+time exactly at peak separation. Every person and airborne object stops; only
+the seated woman continues moving.
+
+[5–10s | inspection, slow orbit] Glide through suspended coffee ribbons and
+droplets. The woman takes one unhurried sip. On her small finger turn, reverse
+the accident continuously: droplets rejoin the pot, food returns to the plate,
+tray settles, limbs and clothing retrace their paths. Never crossfade or morph.
+
+[10–13s | prevention, medium] Rewind lands on the exact opening positions. Before
+the older patron rises again, the woman raises two fingers and softly calls the
+waitress. The waitress turns toward her; the patron stands without collision.
+
+[13–15s | knowing payoff, close-up] The woman takes one final sip and gives a
+small private smile. Creamy neon bokeh; hold the last half-second.
+
+Audio freezes with time, rewinds spatially during restoration, then resumes from
+the baseline ambience. Preserve object count and liquid volume. No duplicate
+droplet mass, partial rewind, moving background extra during the freeze, changed
+wardrobe, broken anatomy, text, logo or watermark.
+```
+
+**Technique:** Record a baseline state before the accident, freeze at one measurable apex, rewind every affected object to that baseline, then change exactly one cause. The final avoided collision proves that the temporal logic completed.
+
+Adapted from [Strength04_X's original frozen-diner sequence](https://x.com/Strength04_X/status/2083600094906187999), published August 1, 2026. See the [complete Seedance 2.0 gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8286).
+
+### 168. Downwind paper-bird reversal comedy
+
+**Verified model:** Seedance 2.0 Fast — explicitly required in the creator's complete prompt  
+**Use case:** two-character comedy, reverse-motion scheduling, persistent prop ownership, native Mandarin dialogue  
+**Mode:** two-reference image-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+```text
+Generate with Seedance 2.0 Fast: a 15-second restrained live-action xianxia
+comedy in three clean shots. @Image1 locks the adult senior sword cultivator's
+face, half-tied black hair, white embroidered Hanfu and jade ornaments. @Image2
+locks the adult junior's face, braided hair, green linen Hanfu and one strand of
+wooden prayer beads. One glowing paper messenger bird persists; identities,
+voices, clothing and owned props never transfer.
+
+[0–5s | wide] On a mountain message platform above clouds, wind moves strongly
+left-to-right. The senior releases the bird facing into the wind. It flies one
+meter, loops back and sticks flat to her forehead. She holds her proud posture;
+the junior watches without speaking.
+
+[5–10s | medium] After checking whether the junior noticed, the senior rotates
+two fingers. Reverse all affected motion together: bird path, sleeve flutter,
+hair, banner and loose incense smoke return to their exact earlier states; the
+bird settles into her palm. Ambient wind also reverses audibly. She repeats the
+release and gets the same forehead result. The junior advances exactly one bead.
+
+[10–15s | close to reaction] Before a third reversal, the junior turns the bird
+downwind and says in Mandarin, “Senior, messages should follow the wind.” The
+senior releases it; it glides away cleanly and does not return. She answers, “I
+was testing you.” The junior clicks two more beads: “That makes three tests.”
+End on the senior's fixed smile and one tiny eyelid twitch.
+
+Keep wind direction readable, reverse motion continuous rather than crossfaded,
+one bird only, two characters only, native Mandarin voices and spatial wind.
+No subtitle, cut glitch, prop disappearance, changed face, costume transfer,
+extra character, duplicated bird, logo or watermark.
+```
+
+**Technique:** Comedy survives complex reversal when a witness maintains an irreversible counter. The environment rewinds, but the junior's bead count advances, preserving evidence and making the final line legible.
+
+Adapted from [Soran's original paper-bird time-reversal comedy](https://x.com/Soranlan/status/2083549436869791892), published August 1, 2026. The exact Fast-mode requirement and full prompt are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8299).
+
+### 169. Lantern-shadow scale-reversal comedy
+
+**Verified model:** Seedance 2.0 — explicitly named in the creator's complete reference-guided prompt  
+**Use case:** mixed-media compositing, controllable shadow physics, scale illusion, prop-driven comedy  
+**Mode:** character + scene + audio reference-to-video  
+**Suggested settings:** 15s, 9:16, 24fps
+
+```text
+15-second vertical cinematic comedy combining one flat cel-shaded chibi swordswoman
+with a photoreal traditional-opera backstage. @Image1 locks her thick ink outline,
+round proportions, red-and-gold robe, white boots and miniature straight sword;
+she always remains a rigid paper-thin sticker with no realistic skin or volume.
+@Image2 locks the wooden beams, hanging costumes, translucent veil and one floor
+lantern. @Audio1 supplies a restrained three-beat opera drum pattern.
+
+[0–5s | wide, slow push] The tiny sticker character stands beside the lantern.
+Warm light projects her sword-bearing shadow across the veil at ten times her
+height. Cool backstage fill preserves the real set; shadow feet connect exactly
+to her flat feet and the lantern defines one consistent light ray.
+
+[5–10s | lateral track] She performs three readable actions on the drum beats:
+step, turn, diagonal slash. One realistic adult hand pushes the lantern closer
+to her, so the projected shadow expands smoothly into a towering heroine.
+Shadow sleeves and sword follow her joints with no lag or independent motion.
+
+[10–15s | close payoff] The hand accidentally pulls the lantern away; the giant
+shadow collapses to a tiny silhouette. She pauses, narrows her dot eyes, hooks
+the lantern ring with her miniature sword and drags it back. The shadow grows to
+its original heroic scale. She holds a solemn pose, then gives the lens one proud
+side-eye on the final drum hit.
+
+Audio: lantern scrape, paper-light footsteps, robe rustle and three deep drum
+beats; no dialogue. Keep one chibi, one hand, one lantern and one shadow. No
+character extrusion, shadow detachment, second light source, wrong inverse-square
+scale, disappearing prop, morph, animal, caption, logo or watermark.
+```
+
+**Technique:** Make the practical light a visible control handle. Lantern distance changes shadow scale through one understandable physical rule, while the character's unchanged tiny body supplies the comic contrast.
+
+Adapted from [Soran's original paper-cutout shadow performance](https://x.com/Soranlan/status/2083560099503612083), published August 1, 2026. See the [complete Seedance 2.0 gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8304).
+
 ## Reusable templates
 
 ### Single-shot template
@@ -7489,6 +7761,12 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 Community examples and techniques referenced in this README:
 
+- [John — Seedance 2.5 silhouette-locked weapon evolution](https://x.com/john87445528/status/2083760993222426625)
+- [奶白的雪子（AI版） — Seedance 2.0 Buddha-city altitude-to-altar one-take](https://x.com/fa168198/status/2083785401047957896)
+- [Meem — Seedance 2.0 voice-command reality state transform](https://x.com/mehvishs25/status/2083539354849611921)
+- [Strength04_X — Seedance 2.0 diner freeze, rewind, and prevention loop](https://x.com/Strength04_X/status/2083600094906187999)
+- [Soran — Seedance 2.0 Fast downwind paper-bird reversal comedy](https://x.com/Soranlan/status/2083549436869791892)
+- [Soran — Seedance 2.0 lantern-shadow scale-reversal comedy](https://x.com/Soranlan/status/2083560099503612083)
 - [DeCat — Seedance 2.0 dual-portal weather-front escape](https://x.com/DeCat2025/status/2083435058396844250)
 - [DeCat — Seedance 2.0 clock-tower bell-and-gear escape](https://x.com/DeCat2025/status/2083394763659555079)
 - [John — Seedance 2.0 nine-state lens-occlusion quick change](https://x.com/john87445528/status/2083339290935705831)
