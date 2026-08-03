@@ -183,6 +183,10 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Diner freeze, rewind, and prevention loop](#167-diner-freeze-rewind-and-prevention-loop)
   - [Downwind paper-bird reversal comedy](#168-downwind-paper-bird-reversal-comedy)
   - [Lantern-shadow scale-reversal comedy](#169-lantern-shadow-scale-reversal-comedy)
+  - [Gravity-reveal cliff-walk illusion](#170-gravity-reveal-cliff-walk-illusion)
+  - [One-way balcony repotting diary](#171-one-way-balcony-repotting-diary)
+  - [Native-audio samgyupsal table vlog](#172-native-audio-samgyupsal-table-vlog)
+  - [Dual-path coffee-maker UGC proof](#173-dual-path-coffee-maker-ugc-proof)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -7134,6 +7138,181 @@ scale, disappearing prop, morph, animal, caption, logo or watermark.
 
 Adapted from [Soran's original paper-cutout shadow performance](https://x.com/Soranlan/status/2083560099503612083), published August 1, 2026. See the [complete Seedance 2.0 gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8304).
 
+
+### 170. Gravity-reveal cliff-walk illusion
+
+**Verified model:** Seedance 2.0 Fast — explicitly required in the creator's complete prompt  
+**Use case:** forced-perspective comedy, camera-roll reveal, world-geometry locking, native dialogue  
+**Mode:** two-reference image-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+```text
+Generate with Seedance 2.0 Fast: a 15-second photorealistic xianxia deadpan
+comedy in three shots. @Image1 owns the adult senior cultivator's face, long
+half-tied hair, white embroidered Hanfu, jade hairpin and white boots. @Image2
+owns the adult junior's round face, braided hair, teal linen Hanfu and dark
+shoes. Keep one cliff, one stone walkway, one pine and one distant pavilion;
+identities, clothing and spatial landmarks never transfer.
+
+[0–5s | false wide] Rotate the displayed frame 90 degrees clockwise so the
+vertical cliff reads as level ground. The senior appears to stroll upright with
+hands behind her back while the junior appears to cling beneath her. Preserve
+true world gravity: hair, sleeves, mist and pine needles all fall toward the
+real abyss, supplying subtle evidence without deforming either body.
+
+[5–10s | sustained medium] Hold the false horizon and the same landmark layout.
+The junior looks up and asks in Mandarin, “师姐，这是踏壁登天吗？” The senior
+continues at an even pace and replies, “心正，天地自平。” Do not correct the
+camera, change anatomy or move the stone platform during this exchange.
+
+[10–15s | reveal and reaction] Roll the camera smoothly 90 degrees
+counter-clockwise, keeping both characters and the pine continuously visible.
+The true horizon reveals the senior walking normally on a flat ledge beside a
+low wall; the junior is merely leaning on the pine. She says, “天地平了，镜头还
+是歪的。” Cut to the senior's close reaction: her dignified smile locks, one
+eyebrow twitches, and she answers, “这是考你的眼力。” End on one dry guqin
+pluck followed by a pine cone striking stone.
+
+Native Mandarin only. Keep gravity direction, face, costume, cliff topology and
+screen positions continuous through the roll. No teleport, body rotation used
+to fake the reveal, background rebuild, extra person, subtitle, logo or
+watermark.
+```
+
+**Technique:** Separate world gravity from screen orientation. The first two shots protect the false horizon; the final controlled roll reveals unchanged geometry, so the camera movement—not a morph or failed effect—delivers the joke.
+
+Adapted from [Soran's original cliff-walk visual-illusion comedy](https://x.com/Soranlan/status/2084150357601443916), published August 3, 2026. The exact Fast-mode instruction and full source prompt are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8377).
+
+### 171. One-way balcony repotting diary
+
+**Verified model:** Seedance 2.0 — the versioned platform record maps the complete creator prompt to Seedance 2.0  
+**Use case:** home-video UGC, irreversible process continuity, reference identity, tactile native audio  
+**Mode:** single-reference image-to-video  
+**Suggested settings:** 15s, 9:16, 24fps
+
+```text
+15-second photorealistic one-handed phone diary in seven short shots. @Image1
+owns only the same adult woman's face and hairstyle; do not copy its background,
+pose or clothing. She wears a faded denim overshirt, white tank and soil-marked
+canvas apron on one narrow sunny balcony. She is the only visible person.
+
+Lock one cracked nursery pot, one root-bound plant, one empty terracotta pot,
+one soil bag and one metal watering can. The plant follows one irreversible
+state chain: trapped -> removed -> roots loosened -> centered -> soil packed ->
+leaves cleaned -> watered. Never return to an earlier state.
+
+[0–2s | waist-level handheld] She taps and squeezes the cracked pot and quietly
+says in Korean, “자, 나와 줘.”
+[2–4s | overhead] She slides out the intact root ball and loosens only the outer
+coils; dry soil crumbs fall onto the work mat.
+[4–6s | close] She centers the plant in the terracotta pot and fills the visible
+gap with fresh soil, saying, “훨씬 낫다.”
+[6–8s | side close] She presses the soil once, straightens the stem and brushes
+soil from two leaves.
+[8–10s | reaction insert] She wipes both hands on the apron and gives one small
+approving nod.
+[10–13s | low close] She waters in one continuous pour. The soil darkens outward
+from the stream and stays dark; no overflowing or magically vanishing water.
+[13–15s | medium] She sets the can down, leans against the railing, admires the
+finished plant and exhales.
+
+No music: plastic taps, roots and soil, leaf rustle, fabric, metal can, pouring
+water, breeze, birds and restrained Korean speech. Preserve pot count, plant
+orientation, dirt accumulation and wet-soil state. No clean-hand reset, duplicated
+tool, reverse growth, second person, subtitle, logo or watermark.
+```
+
+**Technique:** Give an everyday process an explicit one-way state ledger. Every cut must inherit the changed plant, soil, hands and tools from the prior shot, preventing an attractive montage from becoming seven unrelated takes.
+
+Adapted from [WasifAI's original balcony repotting vlog](https://x.com/doctorwasif/status/2084144145912770846), published August 3, 2026. See the [complete Seedance 2.0 gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8354).
+
+### 172. Native-audio samgyupsal table vlog
+
+**Verified model:** Seedance 2.0 — platform metadata links the complete prompt and original creator post to the Seedance 2.0 gallery  
+**Use case:** food UGC, native dialogue, off-screen hand ownership, cooking-state continuity  
+**Mode:** single-reference image-to-video  
+**Suggested settings:** 15s, 9:16, 24fps
+
+```text
+15-second photorealistic handheld phone vlog in seven cuts at one rustic Korean
+samgyupsal table. @Image1 owns only the same adult woman's face and hairstyle.
+She wears an olive cotton shirt and always remains seated on the same side facing
+camera. The grill attendant never appears beyond the same pair of hands.
+
+Keep one charcoal grill, one strip of pork belly, one pair of tongs, one pair of
+scissors, lettuce, garlic, ssamjang, napkins and one frosty drink. Food state is
+one-way: raw pork -> browned pork -> cut piece -> wrapped bite -> eaten. Steam
+and smoke remain light enough to preserve her face.
+
+[0–2s | table-level pullback] Attendant hands place the pork on the grill. It
+sizzles immediately; she leans closer and says, “오, 소리 봐.”
+[2–4s | overhead] She cuts the browned strip with scissors while tongs hold it;
+no raw color returns after the cut.
+[4–6s | close] She builds one lettuce wrap with pork, garlic and ssamjang, eats
+it, closes her eyes briefly and says, “음, 대박.”
+[6–8s | chopstick close] She blows once on one hot piece, tastes it and gives a
+small surprised smile.
+[8–10s | natural insert] She wipes fingertips and mouth while the remaining pork
+continues cooking in the background.
+[10–13s | medium] The attendant hands place one frosty glass. She raises it
+toward the lens and says, “캬, 이거지.”
+[13–15s | held reaction] She takes a sip, returns the glass to the same coaster
+and leans back satisfied as the grill continues to sizzle.
+
+No music. Use spatial grill sizzle, scissors, tongs, chewing, glass, quiet room
+chatter and lip-synced Korean. Preserve seat side, hand ownership, utensil count,
+food doneness and table layout. No visible attendant face, regenerated raw meat,
+duplicate bite, exaggerated acting, subtitle, text, logo or watermark.
+```
+
+**Technique:** Combine a food-state ledger with an appearance boundary: the diner owns face and dialogue, while the attendant owns only off-screen hands. This keeps both continuity and camera authorship legible in a crowded UGC scene.
+
+Adapted from [Tensor's original samgyupsal phone vlog](https://x.com/QAiStudio/status/2084151938221007100), published August 3, 2026. See the [complete Seedance 2.0 gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8349).
+
+### 173. Dual-path coffee-maker UGC proof
+
+**Verified model:** Seedance 2.0 — the versioned platform entry maps the complete creator prompt and original post to Seedance 2.0  
+**Use case:** reference-locked product ad, dual-function demonstration, UGC voiceover, product-state continuity  
+**Mode:** product-reference image-to-video  
+**Suggested settings:** 15s, 9:16, 24fps
+
+```text
+15-second premium-but-believable smartphone UGC ad for the dual-path coffee
+maker in @Image1. The reference owns only exact product geometry, stainless
+finish, controls, display, glass carafe and colored travel mug. Never redesign,
+mirror, resize or relabel it. One adult creator appears naturally in the same
+morning kitchen; identity and outfit remain fixed.
+
+[0–2s | control macro] One finger presses Program once; the display changes only
+after contact. Voiceover: “This finally made my mornings predictable.”
+[2–4s | layout proof] Pull back to show the carafe on the batch-brew side and the
+travel mug under the single-serve outlet at the same time. Voiceover: “One cup
+when I’m rushing, a full pot when I’m not.”
+[4–6s | material macro] A measured scoop of grounds enters the open filter. Show
+dry granular texture; close the basket before brewing.
+[6–8s | batch state] Coffee flows only from the batch outlet into the empty
+carafe. Steam rises lightly and the carafe fill level increases continuously.
+[8–10s | human proof] The creator pours from that same filled carafe into one
+clear cup, tastes it and gives a restrained nod. Voiceover: “Same easy routine,
+actually good coffee.”
+[10–12s | second-path proof] Return the carafe to its plate. Start a separate
+single-serve cycle; coffee enters only the travel mug. No liquid exits both
+outlets simultaneously.
+[12–15s | hero resolve] Slow handheld arc around the unchanged machine, filled
+travel mug and warm cup. The creator lifts the mug and says, “That’s the whole
+morning sorted.” End with the Program button and both vessels readable.
+
+Natural window light, small autofocus correction, restrained handheld motion,
+button click, grounds, pump, liquid, steam and kitchen room tone. Preserve
+product proportions, outlet ownership, vessel fill states and liquid volume.
+No CGI gloss, mirrored controls, simultaneous conflicting brew, changing mug,
+floating text, subtitle, extra product, logo invention or watermark.
+```
+
+**Technique:** Demonstrate a multifunction product with two separate state ledgers: which outlet is active, and which vessel gains liquid. A shared product-identity lock plus mutually exclusive brew paths makes the feature claim visually provable.
+
+Adapted from [Sarah's original dual coffee-maker UGC advertisement](https://x.com/SyntheSarah/status/2084134579309293615), published August 3, 2026. See the [complete Seedance 2.0 gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8342).
+
 ## Reusable templates
 
 ### Single-shot template
@@ -7760,6 +7939,11 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Soran — Seedance 2.0 Fast gravity-reveal cliff-walk illusion](https://x.com/Soranlan/status/2084150357601443916)
+- [WasifAI — Seedance 2.0 one-way balcony repotting diary](https://x.com/doctorwasif/status/2084144145912770846)
+- [Tensor — Seedance 2.0 native-audio samgyupsal table vlog](https://x.com/QAiStudio/status/2084151938221007100)
+- [Sarah — Seedance 2.0 dual-path coffee-maker UGC proof](https://x.com/SyntheSarah/status/2084134579309293615)
 
 - [John — Seedance 2.5 silhouette-locked weapon evolution](https://x.com/john87445528/status/2083760993222426625)
 - [奶白的雪子（AI版） — Seedance 2.0 Buddha-city altitude-to-altar one-take](https://x.com/fa168198/status/2083785401047957896)
