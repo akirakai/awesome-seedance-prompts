@@ -187,6 +187,9 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [One-way balcony repotting diary](#171-one-way-balcony-repotting-diary)
   - [Native-audio samgyupsal table vlog](#172-native-audio-samgyupsal-table-vlog)
   - [Dual-path coffee-maker UGC proof](#173-dual-path-coffee-maker-ugc-proof)
+  - [Sword-array portrait-lighting misdirection](#174-sword-array-portrait-lighting-misdirection)
+  - [Pressure-wave wake and organic-canopy landing](#175-pressure-wave-wake-and-organic-canopy-landing)
+  - [Product-geometry-locked burger UGC](#176-product-geometry-locked-burger-ugc)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -7313,6 +7316,142 @@ floating text, subtitle, extra product, logo invention or watermark.
 
 Adapted from [Sarah's original dual coffee-maker UGC advertisement](https://x.com/SyntheSarah/status/2084134579309293615), published August 3, 2026. See the [complete Seedance 2.0 gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8342).
 
+
+### 174. Sword-array portrait-lighting misdirection
+
+**Verified model:** Seedance 2.0 — explicitly named in the creator's complete prompt and versioned gallery record  
+**Use case:** wuxia comedy, lighting choreography, multi-reference character lock, reveal structure  
+**Mode:** two-character reference-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+```text
+15-second photorealistic live-action wuxia fashion comedy on one modern rooftop
+at blue hour. @Image1 owns only the adult sword immortal's face, hairstyle,
+white embroidered Hanfu and jade accessories. @Image2 owns only the adult
+model's face, hairstyle, teal streetwear and bicycle. Keep both identities,
+costumes and the rooftop geography fixed.
+
+[0–5s | false-threat medium] Behind the model, the immortal slowly draws one
+sword while the camera creeps sideways. Frame the blade near—but never touching—
+the model's shoulder so it reads as a solemn execution ritual. The model remains
+calm and faces the skyline. Audio: restrained low strings, one clean scabbard
+scrape, rooftop wind.
+
+[5–10s | mechanism reveal] On a precise wrist turn, the sword divides into seven
+distinct floating blades. Each stops at a stable, non-overlapping position:
+two soft frontal fills, two side rims, one hair light and two background accents.
+Their cool reflected light must visibly appear on the model's face, clothing,
+hair edge and bicycle chrome. She changes through three deliberate editorial
+poses while the immortal conducts the blades with small finger movements.
+
+[10–15s | ownership reveal] Pull back and arc to expose a phone on a tripod
+recording the portrait session. The model checks the screen and says in Mandarin,
+“再暖一点，脸侧还不够亮。” The immortal deadpans, “七把飞剑，全给你补光了。”
+One blade warms slightly; the model smiles and resumes posing. End on the phone
+screen showing the same live composition.
+
+Native Mandarin, synchronized mouth movement, sword hum and phone shutter.
+Preserve blade count, lighting roles, screen direction, faces, clothing and
+bicycle geometry. No blade contact, injury, threat payoff, sword duplication,
+light-source drift, costume transfer, subtitle, logo or watermark.
+```
+
+**Technique:** Let the same prop change narrative ownership without changing geometry. Stable blade positions and explicit photographic lighting roles convert an apparent attack into a credible lighting rig; the final phone reveal explains the entire setup.
+
+Adapted from [Soran's original sword-light portrait-session comedy](https://x.com/Soranlan/status/2084451902855467131), published August 4, 2026. The exact Seedance 2.0 attribution and complete source prompt are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8455).
+
+### 175. Pressure-wave wake and organic-canopy landing
+
+**Verified model:** Seedance 2.0 — the versioned platform record maps the complete creator prompt and original post to Seedance 2.0  
+**Use case:** creature suspense, vehicle physics, expedition montage, aerodynamic failure control  
+**Mode:** text-to-video or character-reference video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+```text
+15-second grounded live-action desert-expedition sequence with two causally
+separate action ledgers: the convoy wakes a dormant creature; its airborne scout
+lands beneath an organic canopy. One sun-bleached basin, one weathered blue
+camper, one enormous foreground creature and one adult scout. Restrained color,
+subtle grain, hard afternoon sun, accurate dust and weight.
+
+[0–3s | approach] From asphalt height on a 40mm lens, hold nearly locked as the
+camper approaches along cracked center lines. Wheel rotation, suspension bounce,
+heat shimmer and shadow speed agree with its forward motion. A short interior
+insert shows the same occupants reacting to rough road; do not introduce anyone
+who was not visible in the establishing view.
+
+[3–8s | pressure-wave cause] Return beside several dormant shell-and-root
+creatures lying clear of the tires. The camper passes behind them without
+contact. Its pressure wave reaches loose grit first, then dry fibers, then the
+foreground creature: one claw twitches, gravel shifts, jointed legs compress
+under weight and the armored head rises last. Push in subtly only after the eye
+opens. Audio follows the same order—engine, grit, fibers, shell creak, breath.
+
+[8–12s | second ledger] Hard cut to a distant long-lens view in the same basin.
+The scout descends beneath one giant black four-petal membrane canopy. Four
+tendril groups connect continuously to four harness points. Crosswind deforms
+the canopy asymmetrically; clothing, legs and suspended body lag behind each
+gust. The creature never appears in this airspace.
+
+[12–15s | landing and recovery] Track laterally near ground as the scout skims
+behind one shrub, reappears, touches down heel-to-toe, stumbles twice and braces.
+Only after body weight settles do the tendrils slacken and the canopy collapse
+behind him. End with dust overtaking the frame, not a new event.
+
+Maintain basin landmarks, sun direction, vehicle scale, creature anatomy,
+canopy-to-harness ownership and the scout's identity. No van-creature collision,
+instant acceleration, weightless monster, rigid canopy, severed lines, duplicate
+traveler, teleport, morph, gore, text, logo or watermark.
+```
+
+**Technique:** Keep two physics ledgers explicit. The creature wake is delayed by a traveling pressure wave; the landing is governed by wind, line tension, body lag and recovery. Ordering those micro-causes prevents spectacle from becoming weightless motion.
+
+Adapted from [BMX's original desert-survival sequence](https://x.com/bmx_ai13/status/2084489756121891024), published August 4, 2026. See the [complete Seedance 2.0 gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8421).
+
+### 176. Product-geometry-locked burger UGC
+
+**Verified model:** Seedance 2.0 — the versioned platform entry maps the complete creator prompt and original post to Seedance 2.0  
+**Use case:** food UGC, product-reference consistency, bite-state continuity, authentic phone aesthetics  
+**Mode:** product-and-character reference-to-video  
+**Suggested settings:** 15s, 9:16, 24fps
+
+```text
+15-second authentic one-handed phone review of the gourmet burger in @Image1.
+The product reference owns the bun diameter and browning, patty thickness,
+cheese placement, lettuce, tomato, sauce and box geometry. @Image2 owns only the
+same adult creator's face and hairstyle. She wears one cream sweatshirt in one
+warm apartment; no other person is visible.
+
+[0–2s | sealed state] Selfie medium shot: she holds the closed box beside her
+face and says, “Burger night.” Natural arm-length perspective and slight shake.
+[2–4s | first reveal] Place the same box on the table and open it once. The
+burger begins intact, centered and matching @Image1.
+[4–6s | geometry proof] One quick autofocus correction into a close-up. Orbit
+less than 20 degrees so bun, patty, cheese and vegetables stay readable and do
+not reorder.
+[6–8s | lift] Her two hands lift that same burger. Cheese stretches only between
+the patty and its original cheese edge; the box below becomes empty.
+[8–10s | irreversible bite] She takes one clear bite, pulls away, chews and says,
+“Okay… that’s incredible.” A single bite mark now remains on the near-right edge
+for every later shot.
+[10–12s | texture insert] Close detail of the persistent bite cross-section,
+then her free hand takes one fry from the same tray. Do not restore the burger.
+[12–15s | recommendation] Return to selfie framing. She presents the bitten
+burger toward lens without hiding her face and says, “You need this.” Hold the
+final frame for one second with room tone and a small focus breath.
+
+Raw phone color, practical apartment light, modest sensor noise, imperfect
+handheld framing, box rustle, crisp bite and natural chewing. Preserve face,
+hands, ingredients, bite mark, box state and food volume. No commercial dolly,
+studio gloss, CGI food, fake cheese flow, perfect stabilization, changing
+ingredients, restored bite, distorted fingers, floating copy, subtitle, logo
+invention or watermark.
+```
+
+**Technique:** Treat eating as an irreversible product-state sequence: intact → lifted → bitten → persistent cross-section. Locking both ingredient order and bite history makes a fast UGC montage prove the food instead of silently regenerating it.
+
+Adapted from [Feyber's original gourmet-burger UGC vlog](https://x.com/woleswoosh/status/2084505236602015796), published August 4, 2026. See the [complete Seedance 2.0 gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8452).
+
 ## Reusable templates
 
 ### Single-shot template
@@ -7939,6 +8078,10 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Soran — Seedance 2.0 sword-array portrait-lighting misdirection](https://x.com/Soranlan/status/2084451902855467131)
+- [BMX — Seedance 2.0 pressure-wave wake and organic-canopy landing](https://x.com/bmx_ai13/status/2084489756121891024)
+- [Feyber — Seedance 2.0 product-geometry-locked burger UGC](https://x.com/woleswoosh/status/2084505236602015796)
 
 - [Soran — Seedance 2.0 Fast gravity-reveal cliff-walk illusion](https://x.com/Soranlan/status/2084150357601443916)
 - [WasifAI — Seedance 2.0 one-way balcony repotting diary](https://x.com/doctorwasif/status/2084144145912770846)
