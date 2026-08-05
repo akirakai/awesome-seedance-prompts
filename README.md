@@ -190,6 +190,11 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Sword-array portrait-lighting misdirection](#174-sword-array-portrait-lighting-misdirection)
   - [Pressure-wave wake and organic-canopy landing](#175-pressure-wave-wake-and-organic-canopy-landing)
   - [Product-geometry-locked burger UGC](#176-product-geometry-locked-burger-ugc)
+  - [Delayed-dowel cabinet collapse comedy](#177-delayed-dowel-cabinet-collapse-comedy)
+  - [Wing-shielded dragon-nest de-escalation](#178-wing-shielded-dragon-nest-de-escalation)
+  - [Six-shot terrace emotional escalation](#179-six-shot-terrace-emotional-escalation)
+  - [Knee-height rainy-Tokyo route one-take](#180-knee-height-rainy-tokyo-route-one-take)
+  - [Rear-locked celestial-fleet weave and landing](#181-rear-locked-celestial-fleet-weave-and-landing)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -7452,6 +7457,241 @@ invention or watermark.
 
 Adapted from [Feyber's original gourmet-burger UGC vlog](https://x.com/woleswoosh/status/2084505236602015796), published August 4, 2026. See the [complete Seedance 2.0 gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8452).
 
+
+### 177. Delayed-dowel cabinet collapse comedy
+
+**Verified model:** Seedance 2.0 — explicitly named in the creator's complete prompt and versioned gallery record  
+**Use case:** two-character physical comedy, multi-prop choreography, delayed mechanical payoff, native dialogue  
+**Mode:** two-reference image-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+\`\`\`text
+15-second photorealistic xianxia deadpan comedy in one half-furnished apartment.
+@Image1 owns only the adult sword immortal's face, hair, white embroidered
+Hanfu, jade hairpin and silver sword. @Image2 owns only the adult cyclist's
+face, ponytail, casual outfit and bicycle. Keep one flat-pack cabinet kit, one
+diagram manual, one toolbox, one bicycle and one apartment layout. Hardware
+removed from the floor must remain installed unless the final collapse exposes it.
+
+[0–5s | low wide setup] Cabinet boards, hinges, screws and wooden dowels lie in
+readable groups. The immortal studies them and says in Mandarin, “区区木阵。”
+The cyclist rings the bicycle bell once as the start signal. Both remain calm;
+do not begin assembly before the bell.
+
+[5–10s | lateral-orbit assembly] The silver sword separates into exactly four
+small tool blades. Assign each one a single job—align side panel, hold crossbeam,
+turn screws, seat dowels—while the cyclist reads the same manual, hands over one
+hinge and catches one shelf. Every contact precedes the corresponding board
+movement. Build a rhythmic audio chain from blade whistle, screw turns, wood
+clicks and restrained heroic percussion. The cabinet ends upright with no loose
+panel visibly floating.
+
+[10–15s | proof, omission, delayed failure] Both step back and exchange one
+contained victory nod. The cyclist notices one leftover dowel on the floor,
+holds it up and asks, “这个装哪儿？” The immortal replies, “备用的。” Hold a
+half-second silence. Then one long wood groan begins; the cabinet folds sideways
+in three legible stages—top shelf slips, side panel hinges, body settles flat—
+without touching either person. Neither character changes pose. End on the
+bicycle bell ringing once by vibration as the music stops.
+
+Mandarin lip-sync and spatial foley only. Preserve faces, garments, blade count,
+board count, bicycle position, sunlight and apartment geography. Use believable
+wood weight, hinge rotation, cloth lag and settling dust. No injury, magic
+failure flash, instant disassembly, missing hardware, duplicate prop, extra
+person, identity transfer, subtitle, logo or watermark.
+\`\`\`
+
+**Technique:** Establish a complete object ledger, then leave one small part outside it. The half-second pause and three-stage, gravity-driven collapse turn that omission into a readable causal payoff instead of an arbitrary destruction effect.
+
+Adapted from [Soran's original sword-immortal furniture-assembly comedy](https://x.com/Soranlan/status/2084880712847540614), published August 5, 2026. The exact Seedance 2.0 instruction and complete source prompt are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8523).
+
+### 178. Wing-shielded dragon-nest de-escalation
+
+**Verified model:** Seedance 2.0 Fast — explicitly required in the creator's complete prompt  
+**Use case:** xianxia suspense, creature-count continuity, motivated reveal, native-dialogue tonal reversal  
+**Mode:** two-character reference-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+\`\`\`text
+Generate with Seedance 2.0 Fast: a 15-second photorealistic xianxia short in
+three connected shots at one cliffside cave at dusk. @Image1 owns the adult
+senior cultivator's face, half-up black hair, white embroidered Hanfu, jade
+hairpin and one silver sword. @Image2 owns the adult junior's face, braids,
+lime-green Hanfu and dark shoes. Only one adult black-scaled dragon and exactly
+three cubs exist. Preserve cave entrance, ancient pine, broken pillars, firelight
+and screen direction.
+
+[0–5s | low tracking wide] The senior advances toward the cave; the junior
+follows three steps behind. A roar shakes grit from the cliff before two golden
+eyes open inside. Keep the adult dragon mostly hidden and all three cubs unseen.
+Audio: wind, footsteps, falling dust, then one weighty roar.
+
+[5–10s | medium confrontation] The same adult dragon lowers its head and exhales
+smoke. The senior draws the one sword, shields the junior and calls in Mandarin,
+“恶龙，离开此地！” The dragon opens only its near wing. Airflow reaches mist
+first, then loose hair and sleeves; both women brace without sliding or changing
+places. Sword hum and low drums rise but no attack occurs.
+
+[10–15s | motivated orbit and reversal] Orbit behind that same wing without a
+cut that loses its edge. Reveal a warm nest containing exactly three sleeping
+cubs. The adult folds the wing around them and whispers, “小声点，刚哄睡。”
+One cub sneezes one tiny spark and settles back. The junior gently lowers the
+senior's sword arm and says, “师姐，它只是在护崽。” The senior sheathes the
+sword; her expression softens. End on the adult dragon's exhausted parental
+sigh, not a new threat.
+
+Keep identities, clothes, one-sword ownership, one-adult/three-cub count, nest
+position and wing side stable. Native synchronized Mandarin; realistic scale
+weight, wing pressure, smoke, mist, silk, hair and dust. No extra creature,
+hatching egg, attack, teleport, size change, modern object, subtitle, text,
+logo or watermark.
+\`\`\`
+
+**Technique:** Use one persistent wing as both occluder and story evidence. Locking the creature count before the reveal lets the camera orbit change the audience's interpretation—threat to protection—without changing geography or inventing a new event.
+
+Adapted from [Soran's original xianxia dragon-family short](https://x.com/Soranlan/status/2084840546107871533), published August 5, 2026. The exact Fast-mode instruction and complete prompt are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8516).
+
+### 179. Six-shot terrace emotional escalation
+
+**Verified model:** Seedance 2.5 — the versioned platform record maps the complete creator prompt to Seedance 2.5  
+**Use case:** dialogue drama, two-reference identity lock, escalating performance score, close-up priority  
+**Mode:** two-character reference-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+\`\`\`text
+15-second naturalistic phone-shot dialogue scene on one modern Kyiv terrace at
+overcast evening. @Image1 owns only Tetiana's adult face, grey-green eyes and
+black dress. @Image2 owns only Vova's adult face, brown eyes and suit. Maintain
+their same screen sides and eyelines through six cuts. Visual treatment:
+high-detail phone raw, restrained handheld micro-shake, deep focus, soft
+highlight diffusion, neutral graphite shadows and desaturated color. Preserve
+real skin texture, increasing redness and accumulated tears.
+
+[0–2s | two-shot geography] Establish both adults at conversational distance,
+Tetiana frame-left and Vova frame-right. Wind moves clothing lightly; neither
+crosses the axis.
+[2–4s | Tetiana close] She begins quietly, trying to smile: “Vova, I want a red
+panda.” Her shoulders remain lifted with nervous hope.
+[4–6s | Vova close] He answers with controlled disbelief: “We already have a
+cat and a Labrador.” Keep volume low and his body mostly still.
+[6–9s | Tetiana tightening close] Her breath shortens, jaw sets and voice rises:
+“It's my dream. Why don't you care?” This is the first peak; prioritize accurate
+mouth movement and a believable transition from pleading to anger.
+[9–11s | Vova firm medium] He holds eye contact and replies once: “Tania, a red
+panda is not a pet.” No gesture toward camera, no smile and no interruption.
+[11–15s | held breakdown close] Return to Tetiana. Anger drains into shock;
+breathing catches, lower eyelids redden, tears gather before one tear travels
+down the cheek. She does not repeat the argument. Hold the final second on her
+attempt to regain composure while Vova remains a soft, correctly positioned
+presence behind her.
+
+Use direct terrace ambience, light wind, cloth and precisely synchronized
+dialogue; no score. Emotional state is one-way: hopeful -> challenged -> angry
+-> stunned -> crying. Preserve identity, wardrobe, tear history, light direction
+and axis. No melodramatic flailing, instant tears, beauty-filter skin, swapped
+line, extra person, animal reveal, subtitle, logo or watermark.
+\`\`\`
+
+**Technique:** Treat emotion as an irreversible state chain and assign the two performance-priority shots before generation. The fixed axis and reaction carry-over keep six fast cuts feeling like one exchange rather than unrelated portraits.
+
+Adapted from [Vladimir Cherner's original terrace-drama prompt](https://x.com/vladimircherner/status/2084847646615703652), published August 5, 2026. See the [complete Seedance 2.5 gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8522).
+
+### 180. Knee-height rainy-Tokyo route one-take
+
+**Verified model:** Seedance 2.0 — versioned platform metadata maps the complete creator prompt and original post to Seedance 2.0  
+**Use case:** fixed-height FPV, occlusion transitions, indoor/outdoor route continuity, atmospheric native audio  
+**Mode:** text-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+\`\`\`text
+15-second ultra-photorealistic continuous route through rainy Tokyo at night.
+The invisible camera races forward but never rises above adult knee height.
+There are no edits: every location change must be caused by a full-frame
+occluder and continuous forward velocity. Lock rain direction, wet-surface
+reflection logic and a cyan-magenta-amber neon palette.
+
+[0–3s | Shibuya pavement] Skim centimeters above wet crossing tiles. Pedestrian
+legs and umbrella edges pass without collision while billboard light reflects
+in puddles. The route remains centered and the camera height stays fixed.
+
+[3–6s | umbrella tunnel] Approach one large black umbrella from behind and pass
+beneath it. Its wet fabric and metal ribs fill the entire frame long enough to
+hide the boundary. Rain becomes muffled before the next space appears; do not
+teleport while any street landmark remains visible.
+
+[6–10s | ramen-counter passage] Emerge at the same forward speed into a narrow
+warm ramen shop aisle, then decelerate toward one steaming bowl on a wooden
+counter. Keep the lens below the counter lip until the final small tilt makes
+the bowl readable. Steam catches amber light; footsteps and rain give way to
+room murmur, broth simmer and ceramic clink.
+
+[10–13s | vending-machine occlusion] Continue past a dark divider that fills the
+frame and reveals a blue-lit vending-machine bay. Track parallel to one row of
+condensed aluminum cans; no label needs to be legible. Machine hum replaces the
+shop ambience gradually.
+
+[13–15s | neon acceleration] Use the machine's black side panel as the last
+full-frame wipe. Re-enter a wet street canyon and accelerate straight ahead
+until reflections stretch into motion blur and neon bokeh. End on forward
+motion, not a cut.
+
+Maintain one unbroken camera path, low-height invariant, forward screen
+direction, natural parallax, rain, reflections and sound bridges. No jump cut,
+camera above knees, collision, impossible doorway, repeated pedestrian, readable
+brand invention, floating bowl, warped can, text overlay, logo or watermark.
+\`\`\`
+
+**Technique:** Make camera height a hard invariant and give every environment boundary a visible occluder plus an audio bridge. Those two contracts preserve the feeling of one route even when the scene crosses street, shop and vending bay.
+
+Adapted from [Feyber's original rainy-Tokyo low-POV sequence](https://x.com/woleswoosh/status/2084836384163152020), published August 5, 2026. The complete prompt and Seedance 2.0 mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8504).
+
+### 181. Rear-locked celestial-fleet weave and landing
+
+**Verified model:** Seedance 2.0 — versioned platform metadata maps the complete creator prompt and original post to Seedance 2.0  
+**Use case:** uninterrupted flight choreography, scale-by-parallax, camera-subject tether, controlled deceleration  
+**Mode:** text-to-video or single-character reference-to-video  
+**Suggested settings:** 10s, 16:9, 24fps
+
+\`\`\`text
+10-second ultra-photorealistic epic one-take above sunrise clouds. Follow one
+adult Roman woman in ceremonial robes with a close third-person camera slightly
+above and behind her. If @Image1 is supplied, it owns only her face, hair,
+bracelets and robe design. The camera-subject offset stays constant until the
+final reveal; never overtake, orbit or cut away.
+
+[0–2s | dive and scale setup] She accelerates downward toward a fleet of colossal
+white-marble galleys. Establish at least three depth layers: near rigging crosses
+fast, mid-distance hulls move moderately, far ships drift slowly. Her sleeves
+and hair lag behind the acceleration; camera shake remains subtle.
+
+[2–6s | committed weave] She banks through one continuous slalom between fixed
+obstacles—mast to frame-left, gold oar bank to frame-right, one marble
+figurehead below—without any ship changing lane to make room. Body roll begins
+before each turn; fabric, bracelets and motion blur respond a fraction later.
+The rear camera traces the same path and preserves her full silhouette.
+
+[6–8s | temple approach] After clearing the final sail, she aims at one colossal
+cloud temple. Its arches grow through perspective rather than a zoom. Pass
+through the central arch into an open marble courtyard while warm sunrise
+direction and cloud level remain continuous.
+
+[8–10s | deceleration and landing] Reduce speed visibly: motion streaks shorten,
+robes settle, torso rises and feet extend. She touches down toe-to-heel, takes
+two small forward steps and reaches a complete stop. Only then may the camera
+ease back slightly to reveal the sanctuary. End on cloth and jewelry finishing
+their motion.
+
+Use wind rise, stone pass-bys, fabric snap, fading air rush and two grounded
+footfalls; no dialogue. Preserve one woman, fleet layout, temple axis,
+camera tether and sunlight. No collision, ship teleport, weightless landing,
+instant stop, robe reset, scale shrink, extra flyer, cut, subtitle, logo or
+watermark.
+\`\`\`
+
+**Technique:** Prove speed and scale with layered parallax while treating camera and subject as a tethered pair. A staged deceleration ledger—blur, cloth, posture, feet, camera—prevents the final landing from snapping out of high-speed flight.
+
+Adapted from [PixelAigc's original Roman celestial-flight prompt](https://x.com/PixelAigc/status/2084816503086661860), published August 5, 2026. The complete prompt and Seedance 2.0 mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8515).
+
 ## Reusable templates
 
 ### Single-shot template
@@ -8078,6 +8318,12 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Soran — Seedance 2.0 delayed-dowel cabinet collapse comedy](https://x.com/Soranlan/status/2084880712847540614)
+- [Soran — Seedance 2.0 Fast wing-shielded dragon-nest de-escalation](https://x.com/Soranlan/status/2084840546107871533)
+- [Vladimir Cherner — Seedance 2.5 six-shot terrace emotional escalation](https://x.com/vladimircherner/status/2084847646615703652)
+- [Feyber — Seedance 2.0 knee-height rainy-Tokyo route one-take](https://x.com/woleswoosh/status/2084836384163152020)
+- [PixelAigc — Seedance 2.0 rear-locked celestial-fleet weave](https://x.com/PixelAigc/status/2084816503086661860)
 
 - [Soran — Seedance 2.0 sword-array portrait-lighting misdirection](https://x.com/Soranlan/status/2084451902855467131)
 - [BMX — Seedance 2.0 pressure-wave wake and organic-canopy landing](https://x.com/bmx_ai13/status/2084489756121891024)
