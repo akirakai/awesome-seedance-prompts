@@ -195,6 +195,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Six-shot terrace emotional escalation](#179-six-shot-terrace-emotional-escalation)
   - [Knee-height rainy-Tokyo route one-take](#180-knee-height-rainy-tokyo-route-one-take)
   - [Rear-locked celestial-fleet weave and landing](#181-rear-locked-celestial-fleet-weave-and-landing)
+  - [Scale-ledger miniature skincare carry-through](#182-scale-ledger-miniature-skincare-carry-through)
+  - [Alarm-bell archive-return reversal](#183-alarm-bell-archive-return-reversal)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -7465,7 +7467,7 @@ Adapted from [Feyber's original gourmet-burger UGC vlog](https://x.com/woleswoos
 **Mode:** two-reference image-to-video  
 **Suggested settings:** 15s, 16:9, 24fps
 
-\`\`\`text
+```text
 15-second photorealistic xianxia deadpan comedy in one half-furnished apartment.
 @Image1 owns only the adult sword immortal's face, hair, white embroidered
 Hanfu, jade hairpin and silver sword. @Image2 owns only the adult cyclist's
@@ -7499,7 +7501,7 @@ board count, bicycle position, sunlight and apartment geography. Use believable
 wood weight, hinge rotation, cloth lag and settling dust. No injury, magic
 failure flash, instant disassembly, missing hardware, duplicate prop, extra
 person, identity transfer, subtitle, logo or watermark.
-\`\`\`
+```
 
 **Technique:** Establish a complete object ledger, then leave one small part outside it. The half-second pause and three-stage, gravity-driven collapse turn that omission into a readable causal payoff instead of an arbitrary destruction effect.
 
@@ -7512,7 +7514,7 @@ Adapted from [Soran's original sword-immortal furniture-assembly comedy](https:/
 **Mode:** two-character reference-to-video  
 **Suggested settings:** 15s, 16:9, 24fps
 
-\`\`\`text
+```text
 Generate with Seedance 2.0 Fast: a 15-second photorealistic xianxia short in
 three connected shots at one cliffside cave at dusk. @Image1 owns the adult
 senior cultivator's face, half-up black hair, white embroidered Hanfu, jade
@@ -7545,7 +7547,7 @@ position and wing side stable. Native synchronized Mandarin; realistic scale
 weight, wing pressure, smoke, mist, silk, hair and dust. No extra creature,
 hatching egg, attack, teleport, size change, modern object, subtitle, text,
 logo or watermark.
-\`\`\`
+```
 
 **Technique:** Use one persistent wing as both occluder and story evidence. Locking the creature count before the reveal lets the camera orbit change the audience's interpretation—threat to protection—without changing geography or inventing a new event.
 
@@ -7558,7 +7560,7 @@ Adapted from [Soran's original xianxia dragon-family short](https://x.com/Soranl
 **Mode:** two-character reference-to-video  
 **Suggested settings:** 15s, 16:9, 24fps
 
-\`\`\`text
+```text
 15-second naturalistic phone-shot dialogue scene on one modern Kyiv terrace at
 overcast evening. @Image1 owns only Tetiana's adult face, grey-green eyes and
 black dress. @Image2 owns only Vova's adult face, brown eyes and suit. Maintain
@@ -7590,7 +7592,7 @@ dialogue; no score. Emotional state is one-way: hopeful -> challenged -> angry
 -> stunned -> crying. Preserve identity, wardrobe, tear history, light direction
 and axis. No melodramatic flailing, instant tears, beauty-filter skin, swapped
 line, extra person, animal reveal, subtitle, logo or watermark.
-\`\`\`
+```
 
 **Technique:** Treat emotion as an irreversible state chain and assign the two performance-priority shots before generation. The fixed axis and reaction carry-over keep six fast cuts feeling like one exchange rather than unrelated portraits.
 
@@ -7603,7 +7605,7 @@ Adapted from [Vladimir Cherner's original terrace-drama prompt](https://x.com/vl
 **Mode:** text-to-video  
 **Suggested settings:** 15s, 16:9, 24fps
 
-\`\`\`text
+```text
 15-second ultra-photorealistic continuous route through rainy Tokyo at night.
 The invisible camera races forward but never rises above adult knee height.
 There are no edits: every location change must be caused by a full-frame
@@ -7639,7 +7641,7 @@ Maintain one unbroken camera path, low-height invariant, forward screen
 direction, natural parallax, rain, reflections and sound bridges. No jump cut,
 camera above knees, collision, impossible doorway, repeated pedestrian, readable
 brand invention, floating bowl, warped can, text overlay, logo or watermark.
-\`\`\`
+```
 
 **Technique:** Make camera height a hard invariant and give every environment boundary a visible occluder plus an audio bridge. Those two contracts preserve the feeling of one route even when the scene crosses street, shop and vending bay.
 
@@ -7652,7 +7654,7 @@ Adapted from [Feyber's original rainy-Tokyo low-POV sequence](https://x.com/wole
 **Mode:** text-to-video or single-character reference-to-video  
 **Suggested settings:** 10s, 16:9, 24fps
 
-\`\`\`text
+```text
 10-second ultra-photorealistic epic one-take above sunrise clouds. Follow one
 adult Roman woman in ceremonial robes with a close third-person camera slightly
 above and behind her. If @Image1 is supplied, it owns only her face, hair,
@@ -7686,11 +7688,112 @@ footfalls; no dialogue. Preserve one woman, fleet layout, temple axis,
 camera tether and sunlight. No collision, ship teleport, weightless landing,
 instant stop, robe reset, scale shrink, extra flyer, cut, subtitle, logo or
 watermark.
-\`\`\`
+```
 
 **Technique:** Prove speed and scale with layered parallax while treating camera and subject as a tethered pair. A staged deceleration ledger—blur, cloth, posture, feet, camera—prevents the final landing from snapping out of high-speed flight.
 
 Adapted from [PixelAigc's original Roman celestial-flight prompt](https://x.com/PixelAigc/status/2084816503086661860), published August 5, 2026. The complete prompt and Seedance 2.0 mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=8515).
+
+### 182. Scale-ledger miniature skincare carry-through
+
+**Verified model:** Seedance 2.0 — the versioned platform record explicitly labels the creator's complete prompt as Seedance 2.0  
+**Use case:** miniature spokesperson, multi-container match cuts, product-geometry continuity, deliberate scale handoff  
+**Mode:** text-to-video or product-reference video  
+**Suggested settings:** 14s, 9:16, 24fps
+
+```text
+14-second photoreal luxury skincare commercial. One palm-height adult woman in
+a plain white silk dress and one clear serum bottle travel through five
+consumer contexts before a final full-size product hero. If @Image1 is
+supplied, it owns only the bottle silhouette, cap, label layout and liquid
+color. The woman, bottle and every container keep their screen direction.
+
+SIZE LEDGER: shots 1–5 use the same miniature woman and the same miniature
+bottle at a fixed 4:1 height ratio. Only the flower wipe at 10 seconds may
+replace the miniature bottle with one full-size hero bottle. Never show both
+scales together.
+
+[0–2s | taupe handbag macro] Track along one leather zipper as it opens. The
+miniature woman steps out, lifts the bottle once and catches a restrained gold
+glint. Leather grain, zipper teeth and her foot contact establish scale.
+
+[2–4s | watch-face match cut] Match the zipper's circular pull to one silver
+watch face. She now stands on the glass with the same bottle at her right side;
+the second hand passes behind her without intersection.
+
+[4–6s | grocery-bag reveal] A paper-bag handle wipes frame. Reveal her seated
+inside one grocery bag beside the bottle while produce stays soft in the
+background. Preserve dress folds, bottle orientation and left-to-right gaze.
+
+[6–8s | cream-bag opening] Two adult hands open one cream leather bag. The same
+pair is already inside; the woman steadies herself before the bottle moves.
+Do not invent a second hand, person or product.
+
+[8–10s | marble display] A white shopping bag descends onto marble. She steps
+out and places the miniature bottle between two clear crystals. One white
+flower crosses the lens and fills the frame completely.
+
+[10–14s | single authorized scale handoff] Emerge from the flower wipe on one
+full-size bottle centered on a clear pedestal with aloe, white flowers and
+suspended water droplets. The miniature woman is no longer visible. Make one
+slow half-orbit, then hold the label plane square to camera for the last
+second; keep lettering geometry stable without inventing new claims.
+
+Bright white studio light with soft silver reflections, clean macro depth of
+field and restrained sparkle. Audio progresses from zipper, watch tick, paper
+and leather foley to one soft glass chime and water tone. Preserve one woman,
+one product identity, prop order and the single scale transition. No size
+drift, duplicate bottle, warped label, bag mutation, floating person, hand
+intersection, random text, subtitle, logo replacement or watermark.
+```
+
+**Technique:** Separate miniature continuity from the final product scale with an explicit size ledger and one full-frame handoff. That makes the repeated bag and watch reveals feel like controlled match cuts instead of accidental cloning or scale drift.
+
+Adapted from [Avelyrah's original miniature skincare commercial](https://x.com/AvelyrahnAI/status/2085232751699968019), published August 6, 2026. The complete prompt and explicit Seedance 2.0 attribution are preserved in the [versioned gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8549).
+
+### 183. Alarm-bell archive-return reversal
+
+**Verified model:** Seedance 2.0 — explicitly named in the creator's complete prompt  
+**Use case:** two-character xianxia comedy, suspense-to-ordinary reversal, persistent-prop causality, native dialogue  
+**Mode:** two-reference image-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+```text
+Generate with Seedance 2.0: a 15-second photorealistic xianxia deadpan comedy
+outside one sect archive at midnight. @Image1 owns only the adult senior
+swordswoman's face, half-tied black hair, jade hairpin and white embroidered
+Hanfu. @Image2 owns only the adult junior's face, braids and green linen Hanfu.
+Keep wet paving, paper windows, two stone lions, one wooden return box, one
+sealed bamboo scroll and exactly three bronze alarm bells on the same red cord.
+
+[0–5s | low tracking setup] The senior leads the junior through alternating
+lantern light and shadow. The junior grips the same sealed scroll; neither
+draws a weapon. Track toward the archive while insects, wind, careful
+footsteps and restrained wood percussion build a forbidden-mission mood.
+
+[5–10s | medium lateral proof] All three bells begin to sway. The senior raises
+two fingers; their motion stops in sequence from nearest to farthest, each
+clapper settling after its bell. She whispers in Mandarin, “别惊动守阁长老。”
+The junior nods and they pass beneath the same cord toward the return box.
+
+[10–15s | prop payoff and sound callback] The junior places the same scroll
+inside the box and releases it before any reply. An unseen elder says calmly,
+“《剑术入门》，逾期三日。” The junior turns only her head toward the senior:
+“师姐，你还看入门？” The senior answers, “温故知新。” Hold a half-second on
+her formal smile stiffening. Then exactly one of the three bells rings by
+itself and the music stops.
+
+Use native synchronized Mandarin, directionally clear off-screen elder voice,
+realistic wet stone, silk lag, incense, bell inertia and scroll weight. Preserve
+identity, wardrobe, bell count, cord position, scroll state and archive
+geography. Only the two women may be visible. No combat, extra elder, opening
+scroll, teleport, spontaneous prop, costume swap, face morph, subtitle, text,
+logo or watermark.
+```
+
+**Technique:** Let one prop perform three jobs in order: obstacle, proof of supernatural control, then audio punch line. Keeping the same three-bell ledger and the same returned scroll makes the tonal reversal causal rather than a disconnected gag.
+
+Adapted from [Soran's original midnight archive-infiltration comedy](https://x.com/Soranlan/status/2085188995818860602), published August 6, 2026. Its complete prompt and explicit Seedance 2.0 generation mode are preserved in the [versioned gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8575).
 
 ## Reusable templates
 
@@ -8522,6 +8625,9 @@ Community examples and techniques referenced in this README:
 - [Ushizaru — Seedance 2.0 hard-cut multi-style face collapse](https://x.com/Ushizaru_LAB/status/2081258810405175362)
 - [John — Seedance 2.0 golden-forest wuxia duel](https://x.com/johnAGI168/status/2081251381894078663)
 - [John — Seedance 2.0 floating-cup mechanism reveal](https://x.com/john87445528/status/2081170488114463018)
+
+- [Avelyrah — Seedance 2.0 miniature skincare commercial](https://x.com/AvelyrahnAI/status/2085232751699968019)
+- [Soran — Seedance 2.0 midnight archive-infiltration comedy](https://x.com/Soranlan/status/2085188995818860602)
 
 Official model references:
 
