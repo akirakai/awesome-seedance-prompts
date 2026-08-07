@@ -197,6 +197,10 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Rear-locked celestial-fleet weave and landing](#181-rear-locked-celestial-fleet-weave-and-landing)
   - [Scale-ledger miniature skincare carry-through](#182-scale-ledger-miniature-skincare-carry-through)
   - [Alarm-bell archive-return reversal](#183-alarm-bell-archive-return-reversal)
+  - [Defect-ledger seven-stop smartphone morning vlog](#184-defect-ledger-seven-stop-smartphone-morning-vlog)
+  - [World-coordinate freeze on a revolving restaurant floor](#185-world-coordinate-freeze-on-a-revolving-restaurant-floor)
+  - [Exercise-bike cavalry-charge audio misdirection](#186-exercise-bike-cavalry-charge-audio-misdirection)
+  - [Subway-car close-quarters phase map](#187-subway-car-close-quarters-phase-map)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -7795,6 +7799,226 @@ logo or watermark.
 
 Adapted from [Soran's original midnight archive-infiltration comedy](https://x.com/Soranlan/status/2085188995818860602), published August 6, 2026. Its complete prompt and explicit Seedance 2.0 generation mode are preserved in the [versioned gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8575).
 
+### 184. Defect-ledger seven-stop smartphone morning vlog
+
+**Verified model:** Seedance 2.5 — the versioned platform record explicitly labels the creator's complete prompt as Seedance 2.5  
+**Use case:** smartphone realism, multi-location identity consistency, native ambience, camera-ownership handoffs  
+**Mode:** single-character reference-to-video  
+**Suggested settings:** 15s, 9:16, native audio
+
+\`\`\`text
+15-second photorealistic phone vlog following one adult woman through a relaxed
+morning. @Image1 owns her face, hair, skin tone, body proportions and base
+wardrobe. Keep the same coffee cup and small shoulder bag wherever they remain
+visible. The recording must feel made by one ordinary smartphone, not a cinema
+camera.
+
+PHONE-DEFECT LEDGER: use mild hand tremor in every selfie shot; permit one brief
+autofocus hunt in the bakery, one small exposure correction when exiting it,
+and one hurried crop when the phone changes hands. These defects are scheduled,
+not random. No crane, dolly, drone, impossible orbit, beauty filter or slow
+motion.
+
+[0–2s | bakery exterior, selfie] She walks toward a neighborhood bakery with the
+cup in her free hand, turns the phone toward herself and says, “Good morning.”
+Morning traffic and birds remain behind her voice.
+
+[2–4s | pastry counter, rear camera] She turns the same phone toward the pastry
+case, chooses one item and laughs as focus briefly shifts from the glass
+reflection to the pastry. Preserve the bakery's warm light and her sleeve at
+frame edge to prove camera ownership.
+
+[4–6s | doorway handoff] She pushes the door open, returns to selfie view and
+takes one sip outside. Let exposure settle from warm interior to cool daylight
+over half a second; do not hide the transition with a cinematic cut.
+
+[6–8s | park bench] From seated eye level, she records birds and flowers, then
+rotates the phone back toward her face. Keep the cup at her left side and match
+the direction of the path behind her.
+
+[8–10s | weekend stall] A vendor briefly holds the phone while she examines one
+handmade object. The framing is slightly late, then steadies; the unseen vendor
+does not speak or appear.
+
+[10–12s | riverside walk] She owns the phone again and walks beside the water.
+Cyclists pass behind her without repeating or crossing through her body; wind
+moves hair and trees in the same direction.
+
+[12–15s | viewpoint sign-off] She stops, waves once and says, “See you next
+time.” Her hand approaches and fully covers the lens to end the recording.
+
+Use only synchronized location sound: footsteps, bakery room tone, cups,
+distant conversation, birds, bicycles, breeze and water. Dialogue stays dry and
+close to the phone microphone; no score or voice-over. Preserve one woman, one
+phone, identity, wardrobe, cup continuity and left-right geography. No
+teleporting prop, duplicated hand, camera visible in a mirror, perfect gimbal
+motion, repeated extra, subtitle, logo or watermark.
+\`\`\`
+
+**Technique:** Treat low-fi phone behavior as a small defect budget. Assign each focus, exposure and framing imperfection to one motivated handoff, so the vlog reads as authentic without letting “handheld” become uncontrolled jitter.
+
+Adapted from [Simply Annisa's original seven-scene smartphone lifestyle vlog](https://x.com/SimplyAnnisa/status/2085576554134827482), published August 7, 2026. The complete prompt and explicit Seedance 2.5 label are preserved in the [versioned gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8624).
+
+### 185. World-coordinate freeze on a revolving restaurant floor
+
+**Verified model:** Seedance 2.0 — versioned platform metadata maps the complete creator prompt and original post to Seedance 2.0  
+**Use case:** layered physics, world-coordinate freeze, obstacle choreography, fixed-prop payoff  
+**Mode:** character-and-location reference-to-video  
+**Suggested settings:** 15s, 1:1, 24fps
+
+\`\`\`text
+15-second photoreal live-action emergency inside a high-rise revolving
+restaurant at night. @Image1 is a reference sheet: portrait panels own one adult
+floor manager's identity, hair, proportions and uniform; the restaurant panel
+owns only the room, panoramic night view, tables and lighting. Never render the
+sheet, borders or labels.
+
+LAYER CONTRACT:
+A) the skyline, horizon, building shell, central column and camera never rotate;
+B) only the circular floor, tables and chairs rotate after the alarm;
+C) plates, glasses and liquid become frozen in world coordinates only after
+they visibly jump;
+D) the woman, her clothing and the camera always move at normal time.
+The emergency control is one black horizontal lever on a yellow-black plate
+fixed to the central column. Its shape and location never change.
+
+[0–2.5s | cause before effect] Fixed wide view. Begin with every object resting
+on a table and the floor still. At 1.4 seconds, vibration and alarm start
+together; dishes lift, then lock motionless in the air. Only after the freeze
+does the floor begin turning. She braces and runs toward the lever.
+
+[2.5–9.5s | long obstacle proof] Pan horizontally from the fixed-column side.
+The floor pattern and furniture travel right-to-left against an unmoving
+skyline. She loses ground, releases one chair back, ducks beneath a frozen
+plate, threads between two tables and changes direction around a crossing
+chair. Her position and scale in frame must keep changing; the room cannot read
+as a stationary treadmill. End with the accelerating floor sweeping her
+sideways about five metres from the column.
+
+[9.5–12s | one authorized support] She touches the fixed column once for less
+than half a second, converts that contact into forward momentum, releases it,
+then pulls the same black lever fully down with both hands. Braking throws her
+two grounded steps sideways. Show the lever locked in its lowered state.
+
+[12–15s | ordered release] Floor and furniture stop first. At 12.5 seconds,
+frozen-object time resumes and all suspended items fall under gravity together.
+She moves away from the column and shelters beside a table. End wide with the
+lowered lever, stopped floor, fallen dishes, fixed skyline and the same woman
+all readable.
+
+No music or dialogue. Use quiet room tone, alarm, drive acceleration, footfalls,
+furniture friction, one column tap, heavy lever clunk, brake impact, brief
+silence and the synchronized dish fall. No objects airborne at frame one,
+skyline rotation, screen roll, object following the floor while frozen,
+long pole embrace, red button, lever mutation, duplicated woman, new liquid,
+slow motion, subtitle, logo or watermark.
+\`\`\`
+
+**Technique:** Split the image into four coordinate and time layers, then state the only legal transfer between them. The alarm, airborne freeze, floor rotation, lever and gravity release form an ordered state machine that makes a difficult physics gag inspectable.
+
+Adapted from [AI Lifehack's original revolving-restaurant floor-manager sequence](https://x.com/ai_lifehack55/status/2085570677223117114), published August 7, 2026. Its complete prompt and Seedance 2.0 mapping are preserved in the [versioned gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8644).
+
+### 186. Exercise-bike cavalry-charge audio misdirection
+
+**Verified model:** Seedance 2.0 — explicitly named in the creator's complete prompt  
+**Use case:** dual-character consistency, native Mandarin dialogue, sound-led visual misdirection, shared-reaction comedy  
+**Mode:** two-character reference-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+\`\`\`text
+Generate with Seedance 2.0: a 15-second deadpan sports comedy in one dim premium
+indoor-cycling studio. @Image1 owns the adult sword-immortal woman's face, long
+black hair, jade hairpin, white embroidered Hanfu and silver accessories.
+@Image2 owns the adult cyclist's face, ponytail, fitted training clothes and
+shoes. Keep them on two neighboring fixed exercise bikes with the same
+left-right order. The instructor platform stays empty.
+
+[0–5s | cavalry illusion] Low full-body push between the bikes. Both women pedal
+hard with solemn battle-ready expressions. Red-blue light streaks and mirror
+reflections suggest a vast charge, but the studio, towels, bottles and fixed
+bike feet remain clearly real. Build wheel chain, breathing and pedal rhythm
+under hoof-like percussion and restrained heroic strings.
+
+[5–10s | commitment] Side medium track without crossing their axis. The cyclist
+leans forward and calls in synchronized Mandarin, “最后十秒，冲！” The
+sword-immortal rises over the pedals; her sleeves and hair stream backward from
+the fan while both bikes stay bolted to the floor. Their cadence, sweat,
+shoulder vibration, wheel speed and reflections agree. Let the score peak as if
+an army is about to break through a line; do not materialize horses or troops.
+
+[10–15s | ordinary reveal and shared dignity] Heroic music cuts instantly and
+plain white ceiling lights switch on. An unseen instructor says, “热身结束，
+现在正式开始。” Both women stop pedaling at the same moment, slowly look at
+each other, then hold their exhausted posture while the rear wheels continue
+spinning down. The sword-immortal raises one trembling hand: “修炼要循序渐进。”
+The cyclist nods once: “同意。” Finish on their equally serious faces and the
+two empty-spinning wheels.
+
+Use exact Mandarin lip sync, localized instructor voice, chain noise, breathing,
+fan, fabric and wheel run-down. The joke must punish neither character: their
+reaction timing and dignity are matched. Preserve faces, costumes, bike
+positions, wheel count, room geography and lighting change. No visible
+instructor, cavalry apparition, bike movement, fall, magic failure, garment
+swap, identity blend, random foreground person, caption, logo or watermark.
+\`\`\`
+
+**Technique:** Let audio over-promise a genre that the props never literally enter, then remove the score and lighting illusion in one frame. Matching both characters' reaction timing turns the reveal into a shared punch line rather than a continuity-breaking transformation.
+
+Adapted from [Soran's original indoor-cycling cavalry misdirection](https://x.com/Soranlan/status/2085292366143934941), published August 6, 2026. The complete prompt names Seedance 2.0 in the [versioned gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8642).
+
+### 187. Subway-car close-quarters phase map
+
+**Verified model:** Seedance 2.0 — the creator's complete structured prompt declares \`"model": "seedance-2.0"\`  
+**Use case:** confined action choreography, multi-opponent state tracking, reactive handheld camera, diegetic audio  
+**Mode:** single-character reference-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+\`\`\`text
+15-second grounded close-quarters action scene inside one moving subway car.
+@Image1 owns one adult East Asian woman's face, chin-length orange-red hair,
+dark bomber jacket, white shirt, jeans, boots and wired earphones. Exactly three
+adult attackers begin standing in distinct zones: A by the doors, B beside the
+left seat row, C at the rear pole. Preserve their clothing, positions and
+downed states; no replacement attacker may enter.
+
+CAMERA CONTRACT: reactive shoulder-height handheld coverage stays on the same
+side of the aisle. It may drop briefly to hip height for one low exchange, pan
+quickly on impacts and pull back for the pole-assisted move, but it never jumps
+through a wall, reverses screen direction or cuts outside the car.
+
+[0–3s | trigger and separation] With the train rattling, A reaches for her
+shoulder from behind. She pivots inside the grip, breaks contact and sends A
+into the empty right seat row. Her earphones remain attached; the loose wire
+swings after the turn.
+
+[3–7s | pole-assisted beat] B advances from frame-left. She plants one boot,
+uses the central grab pole for a compact assisted kick and lands with both feet
+before following with one controlled body strike. B falls across the left
+seats and remains there. The chrome pole does not bend or move.
+
+[7–11s | train-lurch counter] C attacks as the carriage sways. She absorbs the
+lurch with a low stance, redirects C into the closed doors, then uses the
+overhead rail for one short knee strike. A attempts to rise in the background;
+she blocks him with one backward heel action without changing targets or
+creating a fourth person.
+
+[11–15s | state proof and exit] A, B and C are all visibly down in their assigned
+zones. She reconnects one displaced earbud, checks the closing doors, and walks
+toward the next car at normal pace. End wide enough to read the three distinct
+aftermath positions and her unchanged wardrobe.
+
+Use diegetic sound only: rail rumble, wheel squeal, carriage sway, impacts,
+chrome contact, seat shells, clothing friction, earphone tap and a muffled
+station announcement. Keep force, recoil, landing balance and train motion
+believable; no gore. No opponent clone, recovery after a downed state, pole
+teleport, impossible aerial pause, face morph, hair reset, broken carriage,
+spectator crowd, subtitle, logo or watermark.
+\`\`\`
+
+**Technique:** Assign every opponent a start zone and terminal state, then let the camera prove those states instead of hiding them with cuts. This phase map prevents the common action failure where attackers disappear, duplicate or reset between beats.
+
+Adapted from [Zunaira Saeed's original structured subway-fight prompt](https://x.com/ZunairaSaeedAi/status/2085172792551686401), published August 6, 2026. The full source prompt and declared Seedance 2.0 model are preserved in the [versioned gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8631).
+
 ## Reusable templates
 
 ### Single-shot template
@@ -8421,6 +8645,11 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Simply Annisa — Seedance 2.5 defect-ledger smartphone morning vlog](https://x.com/SimplyAnnisa/status/2085576554134827482)
+- [AI Lifehack — Seedance 2.0 revolving-restaurant world-coordinate freeze](https://x.com/ai_lifehack55/status/2085570677223117114)
+- [Soran — Seedance 2.0 exercise-bike cavalry-charge misdirection](https://x.com/Soranlan/status/2085292366143934941)
+- [Zunaira Saeed — Seedance 2.0 subway-car close-quarters phase map](https://x.com/ZunairaSaeedAi/status/2085172792551686401)
 
 - [Soran — Seedance 2.0 delayed-dowel cabinet collapse comedy](https://x.com/Soranlan/status/2084880712847540614)
 - [Soran — Seedance 2.0 Fast wing-shielded dragon-nest de-escalation](https://x.com/Soranlan/status/2084840546107871533)
