@@ -8645,6 +8645,143 @@ Use the final 4K master for publishing; keep standard drafts only for iteration.
 
 Adapted from [Marcus Cole / Seedance2Pro’s Seedance 2.0 4K workflow](https://www.seedance2pro.net/blog/seedance-2-4k-guide), published July 21, 2026. The platform’s rule is to test at standard quality and reserve native 4K for a direction that is ready to publish.
 
+### Six-second seam-concealment template
+
+**Verified model:** Seedance 2.5 — explicitly tested by the original creator through both Flova and Dreamina multimodal-to-video
+
+Use this for a 20–30 second shot that should read as one take even when the model
+internally regenerates the clip in roughly six-second segments. Direct the seam
+instead of repeatedly asking the model not to cut.
+
+```text
+[DURATION], [ASPECT RATIO], one perceived continuous take.
+
+CONTINUITY LEDGER
+Keep [IDENTITY / WARDROBE / PROP], camera height, lens feel, travel direction,
+subject velocity, light direction and scene geometry unchanged across every beat.
+
+[0–6s] Perform [ACTION 1]. During the final 0.3–0.6 seconds, let [PILLAR /
+DARK DOORWAY / PASSING OBJECT / SUBJECT'S COAT] completely fill the frame.
+[6–12s] Emerge from the same occluder with the same camera vector and body pose;
+perform [ACTION 2]. End behind [SECOND FULL-FRAME DARK OR OPAQUE OCCLUDER].
+[12–18s] Resume with unchanged screen direction and speed; perform [ACTION 3].
+End on [THIRD OCCLUSION OR NEAR-BLACK AREA].
+[18–END] Emerge into [PAYOFF COMPOSITION], decelerate and hold.
+
+SEAM CONTRACT
+At each boundary preserve camera position relative to the subject, body phase,
+prop ownership, exposure direction and motion speed. The occluder must cover the
+entire frame before the next beat begins. No exposed mid-frame seam, direction
+reversal, pose reset, scale jump, new background or identity change.
+```
+
+**Technique:** The source's 25-second tests found frame-precise internal boundaries
+at 6, 12 and 18 seconds; placing full-frame darkness or occlusion there made the
+seams visually disappear. Adapted from the [original Seedance 2.5 behavior log](https://github.com/Mr-Salticidae/knowledge-base/blob/b4e3ee10feab033a9dbdb3eda7d5120064e43dc0/02_%E5%8F%82%E6%95%B0%E8%A1%8C%E4%B8%BA%E6%A1%A3%E6%A1%88/Seedance2_5_%E8%A1%8C%E4%B8%BA%E8%A7%84%E5%BE%8B_v1.md).
+
+### Camera-amplitude and edge-visibility guard template
+
+**Verified model:** Seedance 2.5 — explicitly tested by the original creator through both Flova and Dreamina multimodal-to-video
+
+Use this when a slow push, orbit or rise must add motion without cropping the
+subject or destroying the intended shot size.
+
+```text
+[DURATION], [ASPECT RATIO], begin in [EXACT SHOT SIZE] from [CAMERA POSITION].
+
+COMPOSITION INVARIANTS
+- [SUBJECT] remains at [SCREEN POSITION].
+- The frame always includes [TOP OF HEAD / BOTH SHOULDERS / BOTH HANDS / FOOT CONTACT].
+- [LEFT EDGE ANCHOR], [RIGHT EDGE ANCHOR] and [BACKGROUND LANDMARK] stay visible.
+- The shot never becomes tighter than [MAXIMUM SHOT SIZE].
+
+CAMERA
+Move at a constant [SLOW PUSH / ARC / VERTICAL RISE] for at most [DISTANCE OR
+PERCENT OF FRAME]. If continuing would hide any listed invariant, stop before
+that boundary and hold; preserving the composition is more important than
+completing the full camera move.
+
+CONTINUITY
+Keep lens, horizon, camera side, subject scale, light direction and screen
+direction unchanged. No acceleration, reframing jump, clipped anatomy, edge
+anchor loss or push until the subject fills the frame.
+```
+
+**Technique:** Position locks alone did not limit push distance in the creator's
+tests; listing what must remain visible and an explicit stop condition protected
+the framing. Adapted from the [original Seedance 2.5 behavior log](https://github.com/Mr-Salticidae/knowledge-base/blob/b4e3ee10feab033a9dbdb3eda7d5120064e43dc0/02_%E5%8F%82%E6%95%B0%E8%A1%8C%E4%B8%BA%E6%A1%A3%E6%A1%88/Seedance2_5_%E8%A1%8C%E4%B8%BA%E8%A7%84%E5%BE%8B_v1.md).
+
+### Small-scale identity re-anchor template
+
+**Verified model:** Seedance 2.5 — explicitly tested by the original creator through both Flova and Dreamina multimodal-to-video
+
+Use this when a character moves from a close previous shot into a wider or faster
+shot. Treat the previous tail frame as a spatial bridge, not as sufficient face
+identity evidence.
+
+```text
+REFERENCE ROLES
+@Image1 = canonical identity reference for the same adult character: face, age,
+hairline, brows, cheek volume, jaw shape and skin detail.
+@Image2 = previous clip's tail frame for location, light, wardrobe, body pose and
+screen direction only. Do not rebuild the face from @Image2.
+
+[DURATION], [ASPECT RATIO]. Continue from @Image2 in [LOCATION].
+[CHARACTER] performs [RUN / SHOUT / TURN / DODGE] while the camera [MOVE].
+
+IDENTITY LOCK
+The character remains the same [AGE RANGE] adult from @Image1: [FACE SHAPE],
+[CHEEK VOLUME], [JAWLINE], [BROW SHAPE], [HAIR DENSITY], [DISTINCTIVE FEATURE].
+While moving quickly, becoming smaller in frame, turning sideways or changing
+expression, the face must remain the same person. Preserve wardrobe from @Image2.
+
+END STATE
+Finish at [POSITION / SCALE / SCREEN DIRECTION] required by the next clip.
+No older-looking replacement, hollow cheeks, new jaw, new hairline, face swap,
+identity drift, pose reset, wardrobe change or duplicated character.
+```
+
+**Technique:** A clear close-up tail frame still failed when the next shot made
+the face small and dynamic; adding the canonical character asset restored identity.
+Adapted from the [original Seedance 2.5 behavior log](https://github.com/Mr-Salticidae/knowledge-base/blob/b4e3ee10feab033a9dbdb3eda7d5120064e43dc0/02_%E5%8F%82%E6%95%B0%E8%A1%8C%E4%B8%BA%E6%A1%A3%E6%A1%88/Seedance2_5_%E8%A1%8C%E4%B8%BA%E8%A7%84%E5%BE%8B_v1.md).
+
+### Native-text size-routing template
+
+**Verified model:** Seedance 2.5 — explicitly tested by the original creator through both Flova and Dreamina multimodal-to-video
+
+Choose the text lane before generation according to its planned on-screen height
+in a 720p composition; do not waste prompt iterations on text that is structurally
+too small to resolve.
+
+```text
+TEXT PLAN
+Exact copy: "[TEXT]".
+Carrier: [SIGN / LABEL / SCREEN / NAMEPLATE].
+Final text height: [PX] pixels, approximately [PERCENT]% of frame height.
+
+LANE A — NATIVE TEXT, planned height at least about 6%
+Render the exact text once, large and front-facing, with high figure-ground
+contrast. Keep the carrier inside frame and preserve glyph shape, spacing,
+perspective, material response and lighting throughout the shot.
+
+LANE B — TEST ZONE, roughly 2.8–6%
+Generate one short proof with a locked carrier and no fast camera. Accept only if
+two separated frames show identical, correct glyphs; otherwise switch to Lane C.
+
+LANE C — POST-PRODUCTION PLATE, about 2.8% or smaller
+Render a physically blank [CARRIER] with clean surface, stable perspective,
+unchanged lighting and enough tracking detail for later compositing. Do not
+generate placeholder letters, symbols or pseudo-text.
+
+CAMERA
+Keep the carrier visible for [HOLD DURATION]. If the move would push it out before
+the text becomes readable, prioritize the blank plate and post-production lane.
+```
+
+**Technique:** Across six 1280×720 samples, the source found text height more
+predictive than character count: about 45 px or 6% succeeded, while 20 px or
+roughly 2.8% and below failed. Adapted from the [original Seedance 2.5 behavior log](https://github.com/Mr-Salticidae/knowledge-base/blob/b4e3ee10feab033a9dbdb3eda7d5120064e43dc0/02_%E5%8F%82%E6%95%B0%E8%A1%8C%E4%B8%BA%E6%A1%A3%E6%A1%88/Seedance2_5_%E8%A1%8C%E4%B8%BA%E8%A7%84%E5%BE%8B_v1.md).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -8692,6 +8829,7 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 Community examples and techniques referenced in this README:
 
+- [Mr-Salticidae — Seedance 2.5 internal-seam, camera-amplitude, small-face identity and native-text behavior tests](https://github.com/Mr-Salticidae/knowledge-base/blob/b4e3ee10feab033a9dbdb3eda7d5120064e43dc0/02_%E5%8F%82%E6%95%B0%E8%A1%8C%E4%B8%BA%E6%A1%A3%E6%A1%88/Seedance2_5_%E8%A1%8C%E4%B8%BA%E8%A7%84%E5%BE%8B_v1.md)
 - [Simply Annisa — Seedance 2.5 defect-ledger smartphone morning vlog](https://x.com/SimplyAnnisa/status/2085576554134827482)
 - [AI Lifehack — Seedance 2.0 revolving-restaurant world-coordinate freeze](https://x.com/ai_lifehack55/status/2085570677223117114)
 - [Soran — Seedance 2.0 exercise-bike cavalry-charge misdirection](https://x.com/Soranlan/status/2085292366143934941)
