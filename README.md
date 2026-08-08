@@ -8085,6 +8085,74 @@ Adapted from Higgsfield AI's official [Seedance 2.5 VFX-challenge video](https:/
 
 ## Reusable templates
 
+### Model-aware reference-media duration gate
+
+**Verified model:** Seedance 2.5 — confirmed by the official BytePlus input
+contract, deployed model-specific validation, upstream boundary tests, and a
+successful production generation
+
+Use this before writing shots whenever a workflow can attach videos or audio.
+Keep the asset library permissive until a model is chosen, then bind every file
+to the selected model and mode twice: once when attached and again immediately
+before submission.
+
+```text
+MODEL AND MODE — choose exactly one
+A. Seedance 2.5 / multimodal reference
+B. Seedance 2.0 or 2.0 Fast / multimodal reference
+C. Seedance 2.5 / edit or extend
+
+UNBOUND INGEST
+If no model is selected yet, accept reference video or audio only within the
+widest supported interval, 2–30 seconds. Record measured duration to one decimal
+place, media type, dimensions, codec, and a stable asset ID. Do not silently
+apply a 2.0 limit at this stage.
+
+MODEL-BOUND GATE
+A — 2.5 reference:
+- Up to 30 images, 10 videos, and 10 audio clips.
+- Each video or audio clip must be 2–30 seconds.
+- Total reference-video duration must be at most 30 seconds.
+- Total reference-audio duration must be at most 30 seconds.
+- Audio may be used without an image or video.
+
+B — 2.0 / 2.0 Fast reference:
+- Up to 9 images, 3 videos, and 3 audio clips.
+- Each video or audio clip must be 2–15 seconds.
+- Total reference-video duration must be at most 15 seconds.
+- Total reference-audio duration must be at most 15 seconds.
+- Audio requires at least one image or video.
+
+C — 2.5 edit or extend:
+- Accept exactly one source video, 4–30 seconds.
+- Reject reference images and audio for this route.
+- Use the source video's geometry and timing as the edit/extension authority.
+
+PRE-SUBMIT RECHECK
+Repeat the same model-and-mode gate on the server immediately before creating
+the task. Return a specific correction, for example:
+"Seedance 2.0 accepts 2–15-second reference video; this file is [N.N] seconds."
+Do not truncate a file, switch models, drop an asset, or reinterpret edit as
+reference generation without explicit approval.
+
+BOUNDARY-PROBE SAFETY
+Treat the published integer range as the user-facing contract. If checking an
+unknown upstream cap, use an obviously invalid disposable file and require a
+validation error with no task ID. Never probe with a boundary value that might
+be accepted and create a paid task. Keep any measured decoder tolerance internal
+and do not advertise it as extra usable duration.
+```
+
+**Why it works:** upload-time validation cannot know a future model, while
+submission-time validation alone gives late and costly failures. The two-stage
+gate preserves reusable assets, produces model-specific corrections, prevents
+front-end/server drift, and separates safe validation tests from billable task
+creation.
+
+Adapted from the [FlashMuse v1.0.0.90 implementation and measured upstream tests](https://github.com/lookxun/FlashMuse_Agent/commit/212606c7190eb90991160c924c93bbf68e8676ff),
+published August 9, 2026, and cross-checked against the official
+[BytePlus Seedance 2.5 input contract](https://docs.byteplus.com/en/docs/ModelArk/2607688).
+
 ### Single-shot template
 
 ```text
@@ -9149,6 +9217,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [FlashMuse — Seedance 2.5 model-aware reference-media duration gate and safe cap probing](https://github.com/lookxun/FlashMuse_Agent/commit/212606c7190eb90991160c924c93bbf68e8676ff) ([official BytePlus input contract](https://docs.byteplus.com/en/docs/ModelArk/2607688))
 
 - [Dirk Teubert — Seedance 2.5 storyboard preflight, moving hook, and render inspection](https://github.com/dirkteu/blaulicht-leitstand/commit/df1248e250e70d6281e5076199df54cf0334ab43)
 
