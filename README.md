@@ -201,6 +201,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [World-coordinate freeze on a revolving restaurant floor](#185-world-coordinate-freeze-on-a-revolving-restaurant-floor)
   - [Exercise-bike cavalry-charge audio misdirection](#186-exercise-bike-cavalry-charge-audio-misdirection)
   - [Subway-car close-quarters phase map](#187-subway-car-close-quarters-phase-map)
+  - [Hard-stop waterfall-dragon breach](#188-hard-stop-waterfall-dragon-breach)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -8019,6 +8020,69 @@ spectator crowd, subtitle, logo or watermark.
 
 Adapted from [Zunaira Saeed's original structured subway-fight prompt](https://x.com/ZunairaSaeedAi/status/2085172792551686401), published August 6, 2026. The full source prompt and declared Seedance 2.0 model are preserved in the [versioned gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=8631).
 
+### 188. Hard-stop waterfall-dragon breach
+
+**Verified model:** Seedance 2.5 — Higgsfield AI's official VFX-challenge workflow labels the generated shots as Seedance 2.5 and publishes the complete production prompt  
+**Use case:** delayed creature reveal, hard camera endpoint, one-take scale transition, dense-water interaction  
+**Mode:** multi-reference image-to-video  
+**Suggested settings:** 15s, 16:9, 24fps
+
+```text
+15-second photoreal live-action fantasy shot, one continuous take in real time.
+
+REFERENCE ROLES
+@Image1 owns the cave-behind-a-waterfall environment: wet rock recess, cliff lip,
+dense falling water, mist and the open air beyond. Preserve its geography.
+@Image2 owns one adult rider's face, hair, build and hiking clothes.
+@Image3 owns one enormous four-limbed, two-winged dragon: head proportions, horn
+layout, scale pattern, wing membrane and color. Exactly one rider and one dragon.
+
+CAMERA CONTRACT
+Begin shoulder-height, handheld, about two metres behind the running rider.
+Follow only until he clears the cliff. At the instant his feet leave the edge,
+the camera stops at the lip and becomes a locked tripod frame for the rest of
+the take: no tilt down, pan, drift, push, zoom or attempt to follow his fall.
+
+[0–2s | approach and disappearance]
+The rider sprints from the rock recess toward the gap between the cliff and the
+waterfall, takes one committed step and dives outward. He gives one short scream,
+falls completely below frame and does not reappear by himself. The camera reaches
+the cliff edge and locks on the now-empty air corridor.
+
+[2–3s | empty proof]
+Hold one full second with no person or creature visible. Only the waterfall,
+mist, wet rock and airborne droplets move. Preserve the water roar and the fixed
+composition; do not preview the dragon with a shadow, wing tip or camera cue.
+
+[3–5s | vertical reveal]
+The dragon surges upward from below frame with the same rider already seated and
+secure on its back. Two forceful wing strokes carry both bodies through the
+centre of the locked frame. Match rider identity, clothing and scale to @Image2;
+do not create a second falling rider.
+
+[5–6s | momentum conversion]
+Without hovering, the dragon pitches from its vertical climb into a fast forward
+line aimed directly at the densest part of the waterfall. The rider braces with
+believable inertia while the dragon keeps its anatomy and wing count unchanged.
+
+[6–15s | water breach and exit]
+The dragon enters the opaque torrent at speed. Its body physically parts the
+falling water, disappears behind it, then exits on the far side shedding heavy
+sheets, ropes and spray. The waterfall closes naturally behind the moving volume.
+The pair continues away until scale and mist obscure them; the camera remains
+absolutely fixed at the original cliff lip.
+
+Diegetic audio only: footfalls on wet rock, breath, one scream, waterfall roar,
+wing pressure, displaced water, scale and harness movement. Natural gravity,
+inertia, spray occlusion and real-time speed. No cut, slow motion, orbit, camera
+follow after the jump, premature dragon reveal, duplicated rider, extra creature,
+hover, dry passage through water, anatomy drift, face change, subtitle or logo.
+```
+
+**Technique:** A hard camera endpoint plus a deliberately empty beat separates disappearance from reveal. Keeping the lens fixed while the subject changes from runner to mounted dragon makes the transformation legible, and requiring the waterfall to close behind a moving volume turns the final pass into a physics test rather than a flat overlay.
+
+Adapted from Higgsfield AI's official [Seedance 2.5 VFX-challenge video](https://www.youtube.com/watch?v=Hn8A8D4-SpQ). The complete source prompt and official generation links are preserved in the [versioned production playbook](https://github.com/nick-choudhary/higgsfield-ai-youtube-skills/blob/d497dfa72258359dc1a8021d87993fdb5fe41c87/i-challenged-a-vfx-artist-to-beat-ai/PLAYBOOK.md), archived August 8, 2026.
+
 ## Reusable templates
 
 ### Single-shot template
@@ -8782,6 +8846,60 @@ the text becomes readable, prioritize the blank plate and post-production lane.
 predictive than character count: about 45 px or 6% succeeded, while 20 px or
 roughly 2.8% and below failed. Adapted from the [original Seedance 2.5 behavior log](https://github.com/Mr-Salticidae/knowledge-base/blob/b4e3ee10feab033a9dbdb3eda7d5120064e43dc0/02_%E5%8F%82%E6%95%B0%E8%A1%8C%E4%B8%BA%E6%A1%A3%E6%A1%88/Seedance2_5_%E8%A1%8C%E4%B8%BA%E8%A7%84%E5%BE%8B_v1.md).
 
+### Protected-plate frame-for-frame character replacement template
+
+**Verified model:** Seedance 2.5 — used for the generated video-to-video replacement shots in Higgsfield AI's official VFX challenge
+
+```text
+VIDEO-TO-VIDEO CHARACTER REPLACEMENT
+
+SOURCE ROLES
+@Video1 is the immutable plate master for duration, frame rate, camera, crop,
+focus, exposure, background, lighting, texture, grain, motion path and timing.
+@Image1 owns only the replacement adult character's face, hair, body proportions,
+wardrobe and accessories.
+
+EDIT TARGET
+Replace the single original performer inside @Video1 with the character from
+@Image1. Keep the shot's story and endpoint unchanged:
+[DESCRIBE THE ORIGINAL PERFORMANCE FROM INITIAL POSE THROUGH FINAL STATE].
+
+PERFORMANCE INHERITANCE
+For every frame, transfer the source performer's body position, screen position,
+scale, eyeline, expression timing, limb trajectory, acceleration, motion blur,
+occlusion and exit timing to the replacement. The new character begins on the
+same frame, reaches each pose on the same frame and fully clears the image on the
+same frame as the original. Preserve any final empty-background hold for its full
+source duration; do not bring either performer back.
+
+BOUNDARY CONTRACT
+Treat the moving performer silhouette and its physically necessary edge effects
+as the only editable region. Keep all pixels outside that region visually
+equivalent to @Video1, including background geometry, shadows not cast by the
+performer, practical light, lens behavior, noise and compression texture.
+Rebuild only contact shadows, reflections and occlusion edges required to seat
+the replacement naturally in the plate.
+
+IDENTITY AND WARDROBE
+Match @Image1 consistently through front, profile, blur and partial occlusion.
+Use one adult character only. Preserve [FACE LANDMARKS], [HAIR], [OUTFIT],
+[ACCESSORIES] and [BODY SCALE]; do not inherit the original performer's identity
+or clothing.
+
+POSITIVE LOCKS
+Same camera and crop. Same focus pulls and exposure changes. Same background and
+object positions. Same performance rhythm and end frame. Only the performer is
+replaced.
+
+No camera regeneration, reframing, retiming, background redraw, new prop, extra
+person, identity blend, wardrobe swap, floating feet, altered motion blur,
+premature exit, shortened empty hold, subtitle, logo or watermark.
+```
+
+**Technique:** Declare the input clip as an immutable plate and limit generation to a time-varying performer mask. Frame-indexed motion inheritance and an explicit empty-background terminal state prevent the model from quietly reshooting the scene, retiming the action or filling the subject's exit with a new object.
+
+Adapted from the frame-for-frame character-replacement workflow in Higgsfield AI's official [Seedance 2.5 VFX challenge](https://www.youtube.com/watch?v=Hn8A8D4-SpQ); the full source prompt is preserved in its [versioned playbook](https://github.com/nick-choudhary/higgsfield-ai-youtube-skills/blob/d497dfa72258359dc1a8021d87993fdb5fe41c87/i-challenged-a-vfx-artist-to-beat-ai/PLAYBOOK.md).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -8828,6 +8946,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Higgsfield AI — Seedance 2.5 frame-for-frame character replacement and hard-stop waterfall-dragon VFX challenge](https://www.youtube.com/watch?v=Hn8A8D4-SpQ) ([versioned prompt archive](https://github.com/nick-choudhary/higgsfield-ai-youtube-skills/blob/d497dfa72258359dc1a8021d87993fdb5fe41c87/i-challenged-a-vfx-artist-to-beat-ai/PLAYBOOK.md))
 
 - [Mr-Salticidae — Seedance 2.5 internal-seam, camera-amplitude, small-face identity and native-text behavior tests](https://github.com/Mr-Salticidae/knowledge-base/blob/b4e3ee10feab033a9dbdb3eda7d5120064e43dc0/02_%E5%8F%82%E6%95%B0%E8%A1%8C%E4%B8%BA%E6%A1%A3%E6%A1%88/Seedance2_5_%E8%A1%8C%E4%B8%BA%E8%A7%84%E5%BE%8B_v1.md)
 - [Simply Annisa — Seedance 2.5 defect-ledger smartphone morning vlog](https://x.com/SimplyAnnisa/status/2085576554134827482)
