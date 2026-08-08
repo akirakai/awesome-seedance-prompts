@@ -8946,6 +8946,70 @@ defined above.
 Adapted from Wael Osama Helmi's Seedance 2.5 [production failure log and corrective implementation](https://github.com/waelosamahelmi/helmies-studio/commit/d1bc28c8f9286f19635bdc7ff5c64c8dc70764a3), published August 8, 2026; the reported generations padded a static person and an empty room to eight seconds and a two-word line to four seconds.
 
 
+### Nine-reference identity stack with policy-aware version routing
+
+**Verified model:** Seedance 2.5 — live-tested on the public fal
+`reference-to-video` and `image-to-video` endpoints with the same adult
+real-person references that Seedance 2.0 rejected
+
+Use this when a shot starts from one approved keyframe but needs several
+multi-angle photographs to keep one adult subject recognizable. Treat the
+keyframe and identity pack as different evidence, keep the pack at nine images
+or fewer, and route by the returned failure type instead of deleting references
+at random.
+
+```text
+MODEL AND MODE
+Seedance 2.5, reference-to-video, [DURATION], [ASPECT RATIO].
+Use no more than nine images total: one opening keyframe plus up to eight
+supporting identity references of the same consenting adult.
+
+REFERENCE OWNERSHIP
+@Image1 is the exact opening composition, pose, camera height, lens feel,
+lighting direction, wardrobe state, prop state, and background geometry.
+@Image2–@Image[N] define only the same adult subject's stable identity from
+clean, genuinely different angles: face shape, hairline, eye spacing, nose,
+mouth, skin tone, and body proportions.
+Do not copy the supporting images' backgrounds, crops, lighting, poses,
+wardrobe variants, or camera angles into the shot. Do not average the subject
+with another person. If fewer clean views exist, use fewer references; never
+duplicate an image merely to fill the budget.
+
+MOTION
+Begin from @Image1 without restaging it. [SUBJECT] performs [ONE FINITE ACTION]
+through [PREPARATION → ACTION → RECOVERY]. Camera: [ONE MOTIVATED MOVE].
+Environment motion: [ONE OR TWO SECONDARY MOTIONS]. End on [EXACT VISIBLE STATE].
+
+IDENTITY PRIORITY
+1. Same face and body across every frame.
+2. @Image1 wardrobe, prop ownership, composition, and light.
+3. Natural anatomy, gaze, contact, inertia, and recovery.
+4. Background detail.
+
+No face averaging, identity swap, age drift, duplicated subject, wardrobe
+transfer, pose reset, geometry drift, extra person, or unrequested cut.
+```
+
+**Failure-control gate:** On the cited fal endpoints, the creator's identical
+real-person inputs were rejected by Seedance 2.0 at 9, 5, 3, and 2 images with
+the same `content_policy_violation`, while Seedance 2.5 accepted both modes and
+accepted nine images. For that exact failure shape, changing the reference count
+was not the fix: verify consent and platform policy, then route the job to the
+tested 2.5 endpoint. Do not generalize this observation to other hosts or use it
+to bypass a safety decision.
+
+**Technique:** A keyframe-first stack separates shot state from identity
+evidence; a hard nine-image budget keeps the request within the measured
+contract. Recording the error text distinguishes a count/schema failure from a
+version-specific policy refusal, preventing an expensive cascade from retrying
+the same impossible route.
+
+Adapted from [hkk009008-svg's live Seedance 2.0/2.5 reference-cap and
+policy-routing probe](https://github.com/hkk009008-svg/content/commit/7ffe1866da47e27d525a98d8a906951b0a056fc2),
+published August 9, 2026. The author reports paid live requests with identical
+real-person inputs; the result record confirms acceptance and endpoint behavior,
+not a public showcase clip.
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -8992,6 +9056,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [hkk009008-svg — Seedance 2.5 nine-reference cap and policy-aware version routing](https://github.com/hkk009008-svg/content/commit/7ffe1866da47e27d525a98d8a906951b0a056fc2)
 
 - [Wael Osama Helmi — Seedance 2.5 dialogue-paced shot-duration failure control](https://github.com/waelosamahelmi/helmies-studio/commit/d1bc28c8f9286f19635bdc7ff5c64c8dc70764a3)
 
