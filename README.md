@@ -8900,6 +8900,52 @@ premature exit, shortened empty hold, subtitle, logo or watermark.
 
 Adapted from the frame-for-frame character-replacement workflow in Higgsfield AI's official [Seedance 2.5 VFX challenge](https://www.youtube.com/watch?v=Hn8A8D4-SpQ); the full source prompt is preserved in its [versioned playbook](https://github.com/nick-choudhary/higgsfield-ai-youtube-skills/blob/d497dfa72258359dc1a8021d87993fdb5fe41c87/i-challenged-a-vfx-artist-to-beat-ai/PLAYBOOK.md).
 
+### Dialogue-paced shot-duration routing template
+
+**Verified model:** Seedance 2.5 — the original creator reports padded generated shots, then validates this one-way duration correction in the production pipeline
+
+```text
+PRE-GENERATION SHOT-DURATION ROUTER
+
+Measure what each planned shot must contain before sending it to Seedance 2.5.
+Choose the provider's live accepted duration value closest to the calculated need.
+
+1. SPOKEN BEAT
+Count every spoken word across all dialogue lines in this shot.
+Target seconds = ceil([DIALOGUE WORD COUNT] / 2) + 1.
+The final second is the total allowance for breath, delivery and the reaction beat;
+do not add a separate second after every line.
+
+2. FINITE SILENT ACTION
+If the shot contains one finite action and no deliberate hold, request the shortest
+provider-accepted duration that can complete [ACTION]. End as soon as the action
+reaches [END STATE]; do not append idle footage.
+
+3. INTENTIONAL HOLD
+If the brief explicitly says hold, silence, slowly, linger, motionless, stare, wait
+or gradual, preserve [DECLARED HOLD DURATION]. State what remains alive during the
+hold: [BREATH / EYE MOVEMENT / FABRIC / AMBIENCE / CAMERA MICRO-MOTION].
+
+4. ONE-WAY CORRECTION
+If [PLANNED DURATION] exceeds the calculated need, shorten it. If it is already
+shorter, do not lengthen automatically: flag the shot for review because physical
+action timing cannot be inferred safely from dialogue word count.
+
+SHOT HANDOFF
+[SHOT ID] | [DIALOGUE WORDS] | [FINITE ACTION] | [HOLD CUE OR NONE] |
+[REQUESTED DURATION] | [EXACT END STATE]
+
+PROMPT ENDING
+End exactly when [DIALOGUE / ACTION] resolves. No unmotivated frozen tail, repeated
+gesture, invented pause or post-action filler. Preserve only the intentional hold
+defined above.
+```
+
+**Technique:** Route duration before generation from measurable dialogue and finite action, then make shortening a one-way operation. An explicit hold-cue exception prevents the router from destroying deliberate silence, while the exact endpoint clause gives Seedance a visible terminal state instead of unused seconds to fill.
+
+Adapted from Wael Osama Helmi's Seedance 2.5 [production failure log and corrective implementation](https://github.com/waelosamahelmi/helmies-studio/commit/d1bc28c8f9286f19635bdc7ff5c64c8dc70764a3), published August 8, 2026; the reported generations padded a static person and an empty room to eight seconds and a two-word line to four seconds.
+
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -8946,6 +8992,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Wael Osama Helmi — Seedance 2.5 dialogue-paced shot-duration failure control](https://github.com/waelosamahelmi/helmies-studio/commit/d1bc28c8f9286f19635bdc7ff5c64c8dc70764a3)
 
 - [Higgsfield AI — Seedance 2.5 frame-for-frame character replacement and hard-stop waterfall-dragon VFX challenge](https://www.youtube.com/watch?v=Hn8A8D4-SpQ) ([versioned prompt archive](https://github.com/nick-choudhary/higgsfield-ai-youtube-skills/blob/d497dfa72258359dc1a8021d87993fdb5fe41c87/i-challenged-a-vfx-artist-to-beat-ai/PLAYBOOK.md))
 
