@@ -8085,6 +8085,68 @@ Adapted from Higgsfield AI's official [Seedance 2.5 VFX-challenge video](https:/
 
 ## Reusable templates
 
+### Schema-locked silent end-frame loop
+
+**Verified model:** Seedance 2.5 — confirmed by the exact
+`bytedance/seedance-2.5/image-to-video` endpoint's live OpenAPI schema
+
+Use this when the opening image must also be the closing state of a silent,
+seamless hero loop. Lock the request to the selected endpoint's current schema
+before writing motion; do not infer controls from another model or from marketing
+copy.
+
+```text
+ENDPOINT PREFLIGHT
+Endpoint: bytedance/seedance-2.5/image-to-video
+Start frame: bind @Image1 to the endpoint's start-image field.
+End frame: bind the same @Image1 to end_image_url.
+Aspect ratio: inherit @Image1; do not crop silently.
+Duration: [VALUE PRESENT IN THE LIVE DURATION ENUM].
+Resolution: 720p.
+generate_audio: false.
+Seed: unavailable — disable seed control and do not promise an identical rerun.
+
+PROMPT
+Create a [DURATION] silent seamless loop from @Image1.
+Preserve [IDENTITY / PRODUCT GEOMETRY], the complete background layout,
+camera position, framing, lens feel, light direction, exposure, and color.
+
+[SUBJECT] performs one closed motion cycle:
+1. leaves the opening pose through [PREPARATION],
+2. completes [ONE CYCLIC MICRO-ACTION],
+3. settles naturally back into the exact opening pose.
+
+Environmental motion also closes its cycle: [CLOTH / HAIR / STEAM / LIGHT /
+PARTICLES] returns to its starting position and intensity. The final frame must
+match @Image1 in subject position, silhouette, scale, composition, lighting,
+geometry, and visible object count.
+
+No cut, camera drift, new object, identity change, geometry change, exposure
+jump, incomplete cycle, reverse-motion artifact, duplicate frame pause, or audio.
+
+RUN LEDGER
+Record endpoint ID, schema retrieval date or hash, input asset hash, prompt,
+duration, resolution, generate_audio value, and output URL or hash.
+Treat an accepted output as an immutable baseline. Each retry is a new
+stochastic sample, not a reproducible replay.
+
+FAILURE CONTROL
+If endpoint prose conflicts with an enum, obey the enum.
+If a required control is absent, show it disabled with the reason.
+Never auto-switch endpoints, invent a seed, extend beyond the exposed enum,
+enable audio, or silently alter the source aspect ratio.
+```
+
+**Why it works:** the repeated start/end frame gives the model a concrete loop
+closure target, while a single cyclic action reduces temporal ambiguity. Schema
+locking catches the endpoint's important operational traps: audio defaults on,
+resolution stops at 720p, the duration enum is narrower than its prose
+description, and no seed exists for exact replay.
+
+Adapted from [Michael Wilhelmsen's live-schema-verified model-selection commit](https://github.com/michaelwilhelmsen/ideo/commit/17da13bbf2a8ba40bc1d2fdc178394f321393306)
+and its [looping and capability-gating specification](https://github.com/michaelwilhelmsen/ideo/blob/17da13bbf2a8ba40bc1d2fdc178394f321393306/docs/prd/ideo-prd.md),
+published August 9, 2026.
+
 ### Model-aware reference-media duration gate
 
 **Verified model:** Seedance 2.5 — confirmed by the official BytePlus input
@@ -9217,6 +9279,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Michael Wilhelmsen — Seedance 2.5 schema-locked silent end-frame loop and no-seed run ledger](https://github.com/michaelwilhelmsen/ideo/commit/17da13bbf2a8ba40bc1d2fdc178394f321393306) ([looping and capability-gating specification](https://github.com/michaelwilhelmsen/ideo/blob/17da13bbf2a8ba40bc1d2fdc178394f321393306/docs/prd/ideo-prd.md))
 
 - [FlashMuse — Seedance 2.5 model-aware reference-media duration gate and safe cap probing](https://github.com/lookxun/FlashMuse_Agent/commit/212606c7190eb90991160c924c93bbf68e8676ff) ([official BytePlus input contract](https://docs.byteplus.com/en/docs/ModelArk/2607688))
 
