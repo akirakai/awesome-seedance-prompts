@@ -9010,6 +9010,81 @@ published August 9, 2026. The author reports paid live requests with identical
 real-person inputs; the result record confirms acceptance and endpoint behavior,
 not a public showcase clip.
 
+### Storyboard-to-short parameter preflight and moving-hook template
+
+**Verified model:** Seedance 2.5 — confirmed by the creator's paid 30-second
+`omni_reference` run, returned file metadata, and documented failure review
+
+Use this when one storyboard sheet must drive a vertical multi-shot short. Lock
+the paid-job parameters before generation, make the first panel describe visible
+motion rather than a pose, and treat the rendered file—not the storyboard or
+prompt—as the acceptance artifact.
+
+```text
+PAID-JOB PREFLIGHT — verify each value separately before submitting
+Model: Seedance 2.5
+Mode: omni_reference
+Aspect ratio: 9:16
+Duration: 30 seconds
+Resolution: 720p
+Generate audio: false
+Reference input: @Image1 = the approved 15-panel storyboard sheet
+
+REFERENCE OWNERSHIP
+Read @Image1 only as shot instructions, moving from the upper-left panel to the
+lower-right panel. Never render the paper, grid, borders, panel numbers,
+captions, timecodes, arrows, or title block. If @Image2 is supplied, it defines
+[VEHICLE / PRODUCT / CHARACTER] identity and proportions only; the storyboard
+continues to own framing, order, action, and environment.
+
+TIMING AND HOOK
+Use approximately two seconds per panel from 00:00 to 00:30.
+Panel 1 must already contain visible motion: [SUBJECT ENTERS FRAME / CAMERA
+TRACKS / PROP ACTIVATES]. Do not open on a posed still or an empty hold.
+Each later panel contains one readable action and one camera move. Do not add
+extra cuts inside a panel.
+
+FILM DIRECTION
+Convert the sheet into one continuous [PHOTOREALISTIC DOCUMENTARY / CINEMATIC]
+sequence with [LIGHTING], [COLOR TEMPERATURE], [LENS FEEL], and [CAPTURE
+TEXTURE]. Keep [IDENTITY / LIVERY / PRODUCT GEOMETRY] stable in every shot.
+For interiors and detail shots, describe the identity-bearing geometry that
+must remain visible and crop away any logo or feature that must not appear.
+
+AUDIO AND TEXT
+No generated music or dialogue. Preserve only intentional silent visual action;
+sound will be added in post. No titles, captions, interface, readable plates,
+invented emblems, watermarks, or on-screen text.
+
+ENDPOINT
+The last panel completes [FINAL ACTION] and holds on [EXACT VISIBLE END STATE]
+without replaying earlier panels or inventing an extra outro.
+```
+
+**Acceptance pass:** Inspect the returned dimensions and audio streams first;
+reject a horizontal or audio-bearing file before judging aesthetics. Then make a
+one-frame-per-second contact sheet and check the opening motion, panel order,
+missing or repeated shots, identity, logos, faces, and readable text. A prompt
+request is not proof that the parameter reached the renderer.
+
+**Failure-control notes:** In the documented failed run, unset defaults produced
+1280×720 landscape video plus audio, despite a vertical storyboard, and the
+static first panel became about 2.5 seconds of near-frozen footage. A branded
+vehicle's interior close-up also drifted to another manufacturer's steering
+wheel. Explicit job parameters, a moving first panel, and identity-bearing
+detail constraints address three different failure layers.
+
+**Technique:** Separate API-state validation, prompt direction, and render
+inspection. The preflight prevents expensive parameter mistakes; the moving
+hook prevents the model from interpreting the opening panel as a still image;
+the contact sheet reveals omissions and duplications that a fluent full-speed
+preview can hide.
+
+Adapted from Dirk Teubert's Seedance 2.5 [paid-run failure review, corrected
+storyboard handoff, and render checks](https://github.com/dirkteu/blaulicht-leitstand/commit/df1248e250e70d6281e5076199df54cf0334ab43),
+published August 9, 2026. The source's cross-run look-master reference remains
+excluded here because its generation-time effect was explicitly unverified.
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -9056,6 +9131,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Dirk Teubert — Seedance 2.5 storyboard preflight, moving hook, and render inspection](https://github.com/dirkteu/blaulicht-leitstand/commit/df1248e250e70d6281e5076199df54cf0334ab43)
 
 - [hkk009008-svg — Seedance 2.5 nine-reference cap and policy-aware version routing](https://github.com/hkk009008-svg/content/commit/7ffe1866da47e27d525a98d8a906951b0a056fc2)
 
