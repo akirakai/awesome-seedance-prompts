@@ -8946,69 +8946,87 @@ defined above.
 Adapted from Wael Osama Helmi's Seedance 2.5 [production failure log and corrective implementation](https://github.com/waelosamahelmi/helmies-studio/commit/d1bc28c8f9286f19635bdc7ff5c64c8dc70764a3), published August 8, 2026; the reported generations padded a static person and an empty room to eight seconds and a two-word line to four seconds.
 
 
-### Nine-reference identity stack with policy-aware version routing
+### Mode-exclusive reference preflight with face-prominence fallback
 
-**Verified model:** Seedance 2.5 — live-tested on the public fal
-`reference-to-video` and `image-to-video` endpoints with the same adult
-real-person references that Seedance 2.0 rejected
+**Verified model:** Seedance 2.5 — live-tested through BytePlus Ark and the
+public fal proxy with paid, polled outputs from the same adult-subject project
 
-Use this when a shot starts from one approved keyframe but needs several
-multi-angle photographs to keep one adult subject recognizable. Treat the
-keyframe and identity pack as different evidence, keep the pack at nine images
-or fewer, and route by the returned failure type instead of deleting references
-at random.
+Use this when a shot has one approved opening keyframe plus a separate portrait
+or multi-angle identity pack. Decide between start-frame and reference mode
+before generation, validate policy failures without blind paid retries, and
+never assume that an accepted image count means every image type is accepted.
 
 ```text
-MODEL AND MODE
-Seedance 2.5, reference-to-video, [DURATION], [ASPECT RATIO].
-Use no more than nine images total: one opening keyframe plus up to eight
-supporting identity references of the same consenting adult.
+MODEL
+Seedance 2.5, [DURATION], [RESOLUTION], generated audio [ON / OFF].
 
-REFERENCE OWNERSHIP
-@Image1 is the exact opening composition, pose, camera height, lens feel,
-lighting direction, wardrobe state, prop state, and background geometry.
-@Image2–@Image[N] define only the same adult subject's stable identity from
-clean, genuinely different angles: face shape, hairline, eye spacing, nose,
-mouth, skin tone, and body proportions.
-Do not copy the supporting images' backgrounds, crops, lighting, poses,
-wardrobe variants, or camera angles into the shot. Do not average the subject
-with another person. If fewer clean views exist, use fewer references; never
-duplicate an image merely to fill the budget.
+MODE GATE — choose exactly one
+
+A. START-FRAME MODE — composition continuity is the priority
+@Image1 is the approved opening frame and the only image input.
+Begin on its exact pose, camera height, lens feel, wardrobe, prop state,
+lighting direction, and background geometry.
+Do not add identity images, reference video, or reference audio.
+Let the output ratio follow @Image1; do not send a separate ratio parameter
+when the endpoint forbids it in first-frame mode.
+
+B. REFERENCE MODE — several non-conflicting references are required
+Use no more than nine images total. @Image1 is the approved keyframe and
+consumes one slot; @Image2–@Image[N] define only the allowed supporting
+appearance, object, wardrobe, or environment evidence.
+Do not also mark @Image1 as first_frame. Do not send reference video or
+reference audio on an endpoint that rejects those roles.
+
+INPUT PREFLIGHT
+For a consenting adult subject, check every proposed portrait or face panel
+against the selected endpoint before the paid render. If a face-prominent real
+photo or generated panel returns
+`InputImageSensitiveContentDetected.PrivacyInformation`,
+`content_policy_violation`, or `partner_validation_failed`, stop using that
+identity pack. Do not crop, blur, rename, duplicate, or reduce the count merely
+to evade the platform decision. Route to the approved medium/wide keyframe
+alone in start-frame mode, or choose another policy-compatible engine.
 
 MOTION
-Begin from @Image1 without restaging it. [SUBJECT] performs [ONE FINITE ACTION]
-through [PREPARATION → ACTION → RECOVERY]. Camera: [ONE MOTIVATED MOVE].
-Environment motion: [ONE OR TWO SECONDARY MOTIONS]. End on [EXACT VISIBLE STATE].
+From the accepted opening state, [SUBJECT] performs [ONE FINITE ACTION] through
+[PREPARATION → ACTION → RECOVERY]. Camera: [ONE MOTIVATED MOVE].
+Environment: [ONE OR TWO SECONDARY MOTIONS].
+End on [EXACT VISIBLE STATE], with no restaging, identity swap, pose reset,
+extra person, unrequested cut, or frozen filler.
 
-IDENTITY PRIORITY
-1. Same face and body across every frame.
-2. @Image1 wardrobe, prop ownership, composition, and light.
-3. Natural anatomy, gaze, contact, inertia, and recovery.
-4. Background detail.
-
-No face averaging, identity swap, age drift, duplicated subject, wardrobe
-transfer, pose reset, geometry drift, extra person, or unrequested cut.
+RETRY AND BILLING GATE
+If rejection occurs before a task ID is issued and the platform confirms zero
+charge, permit one mode-correct fallback. If a task ID exists, poll that task
+instead of resubmitting; a timeout or missing download URL may still be billed.
 ```
 
-**Failure-control gate:** On the cited fal endpoints, the creator's identical
-real-person inputs were rejected by Seedance 2.0 at 9, 5, 3, and 2 images with
-the same `content_policy_violation`, while Seedance 2.5 accepted both modes and
-accepted nine images. For that exact failure shape, changing the reference count
-was not the fix: verify consent and platform policy, then route the job to the
-tested 2.5 endpoint. Do not generalize this observation to other hosts or use it
-to bypass a safety decision.
+**Measured failure controls:** The original cap probe established that the Ark
+reference contract can render nine images, but a follow-up with one adult
+character found that all four face-filling photographs and a face-filling
+generated panel were rejected while a 1024×576 medium-shot keyframe with a
+smaller face was accepted. The same provider decision surfaced directly and
+through fal, under different wrapper errors. This is a documented failure
+pattern from one project, not a universal promise that every medium shot will
+pass or every portrait will fail.
 
-**Technique:** A keyframe-first stack separates shot state from identity
-evidence; a hard nine-image budget keeps the request within the measured
-contract. Recording the error text distinguishes a count/schema failure from a
-version-specific policy refusal, preventing an expensive cascade from retrying
-the same impossible route.
+**Mode result:** In the cited comparison, start-frame mode matched the approved
+opening composition at 0.9896, while reference mode measured 0.4026 and
+0.5972 / 0.1933 on reruns. Both arms used Seedance 2.5; the modes differed, so
+the result supports mode routing rather than a claim that one provider is
+higher quality.
 
-Adapted from [hkk009008-svg's live Seedance 2.0/2.5 reference-cap and
-policy-routing probe](https://github.com/hkk009008-svg/content/commit/7ffe1866da47e27d525a98d8a906951b0a056fc2),
-published August 9, 2026. The author reports paid live requests with identical
-real-person inputs; the result record confirms acceptance and endpoint behavior,
-not a public showcase clip.
+**Technique:** Separate three questions that are easy to conflate: how many
+images the endpoint accepts, whether a particular image passes policy, and
+whether the opening frame must be literal. A mode-exclusive gate prevents an
+invalid first-frame-plus-reference request; policy-aware fallback preserves an
+approved composition without trying to circumvent the rejection; task-ID-aware
+retry logic avoids double spending.
+
+Adapted from hkk009008-svg's [initial live reference-cap and version-routing
+probe](https://github.com/hkk009008-svg/content/commit/7ffe1866da47e27d525a98d8a906951b0a056fc2)
+and [corrective BytePlus Ark / fal mode comparison and face-prominence
+tests](https://github.com/hkk009008-svg/content/commit/0014c61cc899337fb2744e08e51b867598dedba5),
+published August 9, 2026.
 
 ### Storyboard-to-short parameter preflight and moving-hook template
 
@@ -9134,7 +9152,7 @@ Community examples and techniques referenced in this README:
 
 - [Dirk Teubert — Seedance 2.5 storyboard preflight, moving hook, and render inspection](https://github.com/dirkteu/blaulicht-leitstand/commit/df1248e250e70d6281e5076199df54cf0334ab43)
 
-- [hkk009008-svg — Seedance 2.5 nine-reference cap and policy-aware version routing](https://github.com/hkk009008-svg/content/commit/7ffe1866da47e27d525a98d8a906951b0a056fc2)
+- [hkk009008-svg — Seedance 2.5 reference cap, mode exclusivity, face-prominence fallback, and retry boundary](https://github.com/hkk009008-svg/content/commit/0014c61cc899337fb2744e08e51b867598dedba5) ([initial probe](https://github.com/hkk009008-svg/content/commit/7ffe1866da47e27d525a98d8a906951b0a056fc2))
 
 - [Wael Osama Helmi — Seedance 2.5 dialogue-paced shot-duration failure control](https://github.com/waelosamahelmi/helmies-studio/commit/d1bc28c8f9286f19635bdc7ff5c64c8dc70764a3)
 
