@@ -8226,6 +8226,52 @@ No asset blending, face from wardrobe reference, background from motion referenc
 
 Adapted from [ChatCut's original Seedance 2.0 multimodal prompting guide](https://x.com/chatcutapp/status/2041763561333264865), published April 8, 2026.
 
+
+### Emotion-to-performance task-router template
+
+**Verified model:** Seedance 2.0 — explicitly versioned and published by the original template author
+
+Use this when a narrative may be generated from text, driven by references, edited, extended, or assembled from several inputs. Route the operation first, then translate emotion into visible and audible performance instead of relying on abstract labels.
+
+```text
+TASK ROUTE — choose exactly one
+TEXT TO VIDEO: Generate [DURATION] from [STORY BEAT].
+MULTIMODAL REFERENCE: Use <ImageN> for [IDENTITY/SETTING] and <VideoN> for [MOTION/CAMERA] only; generate [NEW SCENE].
+EDIT: Strictly edit <VideoN>: change [OLD STATE] to [NEW STATE]; preserve [IDENTITY/CAMERA/ACTION/SETTING].
+EXTEND: Extend <VideoN> [FORWARD/BACKWARD]: inherit [LAST/FIRST FRAME STATE], then perform [NEW BEAT].
+COMBINATION: Use <ImageN> for [DIMENSION]; strictly edit <VideoN> by [CHANGE].
+
+SUBJECT BINDINGS
+Define each subject once with 2–3 stable visible traits.
+<Subject1> = [IDENTITY + CLOTHING + DISTINGUISHING DETAIL].
+<Subject2> = [IDENTITY + CLOTHING + DISTINGUISHING DETAIL].
+Bind every image or video input to one job; do not let one asset silently control identity, motion and style at once.
+
+EMOTION CURVE
+START — [EMOTION] becomes [EYES] + [JAW/MOUTH] + [BREATH] + [HANDS/SHOULDERS] + [POSTURE].
+TRANSITION — trigger [CAUSE]; begin with [MICRO-EXPRESSION], then spread into [FULL-BODY CHANGE].
+PEAK — [MAXIMUM VISIBLE PERFORMANCE] while preserving identity, line ownership and prop ownership.
+RECOVERY — [RESIDUAL BREATH/GAZE/POSTURE]; do not snap back to neutral.
+
+SIX-BLOCK DIRECTOR BRIEF
+1. AUDIOVISUAL LIMITS — [DURATION, ASPECT RATIO, REAL-TIME/SLOW MOTION, CUT RULE, NATIVE AUDIO].
+2. LANGUAGE — [DIALOGUE LANGUAGE, EXACT LINES, SPEAKER, LIP-SYNC, SUBTITLE RULE].
+3. CAMERA — [SHOT SIZE, LENS FEEL, PATH, FOCUS, SCREEN DIRECTION].
+4. STYLE/LIGHT — [GENRE, PALETTE, KEY SOURCE, TEXTURE].
+5. CHARACTERS/SCENE — [SUBJECT BINDINGS, WARDROBE, PROPS, LOCATION, WEATHER].
+6. TIMELINE
+   [0–Xs] [ACTION + CAMERA + VISIBLE EMOTION + SOUND].
+   [X–Ys] [CAUSE + REACTION + STATE CHANGE].
+   [Y–END] [PEAK/RECOVERY + ENDING FRAME].
+
+FAILURE CONTROL
+Use literal, filmable descriptions. Preserve subject bindings, line ownership, prop ownership, screen direction, light source and audio continuity. No metaphor, undefined subject, emotion word without visible performance, gesture before cause, duplicate dialogue, identity swap, conflicting camera commands, or "reference <VideoN>" wording when the intended task is editing or extension.
+```
+
+**Why it works:** selecting one operation verb prevents edit and extension requests from being mistaken for loose reference generation. The emotion curve gives the model an actor's score—eyes, breath, facial muscles, hands and posture—while the timed blocks keep each performance change causally motivated.
+
+**Source:** Adapted from [Kira4094's original Seedance 2.0 Emotion Director v3.0 skill](https://github.com/kira4094/my-skills/blob/44f44c5f054bb348d5fafc4126b0469a80be297c/skills/movie-emotional-director/SKILL.md), published August 8, 2026.
+
 ### Gaze–light–action continuation template
 
 **Verified model:** Seedance 2.0 — confirmed by the public Seedance 2.0
@@ -8857,6 +8903,8 @@ Community examples and techniques referenced in this README:
 
 - [Avelyrah — Seedance 2.0 miniature skincare commercial](https://x.com/AvelyrahnAI/status/2085232751699968019)
 - [Soran — Seedance 2.0 midnight archive-infiltration comedy](https://x.com/Soranlan/status/2085188995818860602)
+
+- [Kira4094 — Seedance 2.0 Emotion Director v3.0](https://github.com/kira4094/my-skills/blob/44f44c5f054bb348d5fafc4126b0469a80be297c/skills/movie-emotional-director/SKILL.md)
 
 Official model references:
 
