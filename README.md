@@ -208,6 +208,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Endpoint-preserving mahjong-to-city dive bridge](#192-endpoint-preserving-mahjong-to-city-dive-bridge)
   - [Cold-email disappearance true-crime parody](#193-cold-email-disappearance-true-crime-parody)
   - [Start-frame-chained void-to-city materialization walk](#194-start-frame-chained-void-to-city-materialization-walk)
+  - [Event-coupled bedroom slice-of-life](#195-event-coupled-bedroom-slice-of-life)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -8447,6 +8448,84 @@ shot prompts](https://github.com/vovalukashov/render-seedance-prompts/blob/872ea
 published August 9, 2026. The repository records four 10–12 second source
 generations and a 28-second assembled result.
 
+### 195. Event-coupled bedroom slice-of-life
+
+**Verified model:** Seedance 2.5 — the creator explicitly identifies the model in
+the original post and publishes the complete prompt beside its media preview
+
+**Use case:** candid domestic narrative, multi-shot phone dialogue, pet interaction,
+motivated handheld imperfection  
+**Mode:** single-character reference-to-video  
+**Suggested settings:** 15s, 16:9, native audio
+
+```text
+Create a 15-second, seven-shot candid bedroom sequence with one adult woman from
+@Image1, one black smartphone, one house cat, one lived-in bed and one bedroom.
+Preserve her identity, cotton pajama set, bare feet, phone ownership, cat
+appearance, bed geometry and door direction across every cut. The result should
+feel accidentally observed, not staged for an advertisement.
+
+CAPTURE CONTRACT
+Handheld documentary camera, soft window light, realistic skin and bedding,
+slight grain, shallow depth of field and restrained performance. Imperfections
+must follow events: the cat's landing causes one small impact jolt; the ringtone
+causes a late reframe toward the phone; the doorbell makes the operator turn
+toward the door a fraction too late, then recover to her rising movement. Allow
+gentle exposure breathing and one brief autofocus settle, but no random shake.
+
+[0–2s | mattress-edge glide] She is already scrolling a shopping page while her
+feet sway behind her. She quietly wonders in Korean what she meant to buy.
+Keep the phone, both hands and her thinking expression readable.
+
+[2–4s | impact reaction] The cat jumps onto the mattress, visibly compressing
+the blanket and meowing once. The camera jolts from the contact, then reframes
+over her shoulder to include her face, phone, hand and cat.
+
+[4–6s | tactile close-up] She turns to the cat, strokes once from forehead to
+shoulders and greets it affectionately in Korean. Push through the cat's softly
+blurred foreground; synchronize lips, hand contact and purring.
+
+[6–8s | call pickup] One short ringtone. She checks the caller, swipes once and
+lifts the same phone to her ear. A loose semicircle follows the whole action
+without hiding the handoff behind a cut.
+
+[8–11s | listening reaction] Hold her profile and phone in one focal plane. Her
+expression progresses from confusion to disbelief, then one brief natural
+laugh while the cat kneads the blanket. A faint authorized friend voice remains
+inside the phone speaker; do not create another visible person.
+
+[11–13s | interruption] One doorbell stops the laugh. Woman and cat turn toward
+the same door. She plants one hand on the mattress; the camera reacts late
+toward the door, then corrects back to her as she begins to stand.
+
+[13–15s | exit state] Still on the call, she says in Korean that her food has
+arrived, ends the call with her thumb, steps off the bed and moves toward the
+door while the cat follows across the blanket. Finish on the continuous upward
+tilt of her standing motion; do not reset the phone, cat or bedding.
+
+SOUND LEDGER
+No music. Use only bedding rustle, breathing, phone taps, mattress impact, one
+meow, faint purring, one ringtone, call-connect tone, filtered friend voice,
+four short Korean lines with accurate lip sync, one laugh, one doorbell,
+call-end tap and cat footsteps. No subtitle, translated text, logo or watermark.
+
+FAILURE CONTROL
+No reference sheet, duplicate woman or cat, wardrobe drift, phone swap, extra
+caller, floating animal, uncompressed mattress, repeated sound cue, perfect
+gimbal motion, arbitrary focus pumping, beauty-filter skin, commercial gloss or
+cut that breaks the cause-to-camera reaction.
+```
+
+**Technique:** Bind every low-fi camera defect to a visible or audible cause.
+The operator becomes a delayed participant in the scene: impact, ringtone and
+doorbell each produce one specific jolt or reframe. That causal ledger creates
+documentary realism without using uncontrolled “handheld” noise.
+
+Adapted from
+[FarReputationAI's original Seedance 2.5 bedroom slice-of-life post](https://www.reddit.com/r/seedance2pro/comments/1vj5vd8/how_to_create_a_candid_bedroom_sliceoflife_videos/),
+published August 9, 2026; the original page contains the complete seven-shot
+prompt and its media preview.
+
 ## Reusable templates
 
 
@@ -9927,6 +10006,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [FarReputationAI — Seedance 2.5 event-coupled bedroom slice-of-life](https://www.reddit.com/r/seedance2pro/comments/1vj5vd8/how_to_create_a_candid_bedroom_sliceoflife_videos/)
 
 - [gitroom / Agent Media — Seedance 2.0 temporal-connector repair for a production split-panel failure](https://github.com/gitroomhq/agent-media-app/commit/f7c779eed03042c56f821a6f707e7e409964ecb0) ([final prompt builder](https://github.com/gitroomhq/agent-media-app/blob/705f86f718b58ce42763da19ba6a2e7b80293e71/services/media-worker-v2/src/v2/crazy-look-pipeline.js#L206-L228))
 
