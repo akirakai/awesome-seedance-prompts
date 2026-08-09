@@ -8450,6 +8450,70 @@ generations and a 28-second assembled result.
 ## Reusable templates
 
 
+### Temporal-connective anti-panel one-take
+
+**Verified model:** Seedance 2.0 — confirmed by the creator's first production
+`seedance-2.0-reference-to-video` job, its recorded stacked-panel failure, and
+the versioned prompt-builder repair
+
+Use this when one character must pass through several expression or action
+states in a single uninterrupted shot. Avoid labels that can also describe a
+visual layout: Seedance may render numbered beats as simultaneous panels
+instead of successive moments.
+
+```text
+SHOT CONTRACT
+[DURATION] seconds, [ASPECT RATIO], ONE continuous unbroken [CAPTURE STYLE]
+shot of ONE [SUBJECT]. [FRAMING]. Camera [LOCKED / NEARLY STATIC / ONE MOVE].
+The frame remains one full-bleed image at all times.
+
+TEMPORAL ARC
+The performance is never static. Every change happens one after another IN
+TIME, inside the same continuous shot.
+
+The subject opens on: [START STATE].
+Then [MICRO-ACTION 1].
+Then [MICRO-ACTION 2].
+Then [MICRO-ACTION 3, if needed].
+The subject ends on: [FINAL STATE].
+[The changes are smooth and gradual / distinct punchy beats / fast and jittery].
+
+LAYOUT FAILURE CONTROL
+No split-screen, grid, collage, side-by-side panel, picture-in-picture,
+storyboard, contact sheet, montage cut, duplicate subject, or simultaneous
+display of different states.
+
+IDENTITY AND SOUND
+Keep the same face, hair, wardrobe, body proportions, framing, background,
+light direction, and screen position throughout.
+Audio: [DIEGETIC AMBIENCE ONLY / SPECIFIED SOUND]. No unintended speech,
+voiceover, music, or captions.
+
+VARIATION CONTROL
+If generating a series, vary only one ledger at a time:
+- state arc: [START → MICRO-ACTIONS → END]
+- intensity: [LOW / MEDIUM / HIGH]
+- framing: [FULL FACE / EYES / MOUTH / NOSE-UP / MEDIUM]
+Do not vary framing, camera motion, identity, and action order simultaneously.
+
+ACCEPTANCE GATE
+Reject any take that turns temporal states into panels, shows two versions of
+the subject at once, freezes between beats, changes identity, cuts away, or
+fails to reach the named final state. If panels appear, remove all numbered
+beat labels and section headers from the generation prompt; retain only
+temporal connectors such as "Then" and repeat the single-shot exclusions.
+```
+
+**Why it works:** words such as "Beat 2" and "Beat 3" can be interpreted as
+graphic labels or storyboard cells. Temporal connectors express order without
+suggesting layout, while the full-bleed and anti-panel clauses explicitly keep
+all states on one timeline. The source production's clean start frame became a
+stacked layout only after video generation, isolating the failure to prompt
+grammar rather than the reference image.
+
+Adapted from gitroom's [production failure and repair commit](https://github.com/gitroomhq/agent-media-app/commit/f7c779eed03042c56f821a6f707e7e409964ecb0)
+and the final [Seedance 2.0 prompt builder](https://github.com/gitroomhq/agent-media-app/blob/705f86f718b58ce42763da19ba6a2e7b80293e71/services/media-worker-v2/src/v2/crazy-look-pipeline.js#L206-L228),
+published August 9, 2026.
 ### Log-ramped seam concealment and continuous re-score
 
 **Verified model:** Seedance 2.0 — validated on four chained Seedance 2.0
@@ -9863,6 +9927,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [gitroom / Agent Media — Seedance 2.0 temporal-connector repair for a production split-panel failure](https://github.com/gitroomhq/agent-media-app/commit/f7c779eed03042c56f821a6f707e7e409964ecb0) ([final prompt builder](https://github.com/gitroomhq/agent-media-app/blob/705f86f718b58ce42763da19ba6a2e7b80293e71/services/media-worker-v2/src/v2/crazy-look-pipeline.js#L206-L228))
 
 - [Vova Lukashov — Seedance 2.0 start-frame world build, scale anchors, hidden speed-ramp seams, and continuous re-score](https://github.com/vovalukashov/render-seedance-prompts/commit/872ea65e64732a2316a60113294098dbc85c3179)
 
