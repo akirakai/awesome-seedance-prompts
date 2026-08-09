@@ -207,6 +207,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [MOV-locked pollination macro extension](#191-mov-locked-pollination-macro-extension)
   - [Endpoint-preserving mahjong-to-city dive bridge](#192-endpoint-preserving-mahjong-to-city-dive-bridge)
   - [Cold-email disappearance true-crime parody](#193-cold-email-disappearance-true-crime-parody)
+  - [Start-frame-chained void-to-city materialization walk](#194-start-frame-chained-void-to-city-materialization-walk)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -8369,8 +8370,156 @@ The [generation record and QA report](https://github.com/GroupX-ai/ad-creative/b
 identify the 480p master, seed `1710683338`, consistent 30-second result, and
 word-for-word transcript; published August 9, 2026.
 
+
+### 194. Start-frame-chained void-to-city materialization walk
+
+**Verified model:** Seedance 2.0 — the creator identifies Higgsfield
+Seedance 2.0 std 1080p, publishes all four generated-shot prompts and settings,
+and supplies the scripts used to assemble the final 28-second film  
+**Use case:** progressive world building, character consistency, multi-clip
+continuation, invisible editorial seams  
+**Mode:** image-to-video sequence with one identity element and chained start
+frames  
+**Suggested settings:** source clips 10s / 12s / 12s / 10s, 16:9, 1080p,
+24fps; final vertical master approximately 28s
+
+```text
+GLOBAL IDENTITY AND MOTION LOCK
+@Hero is the same adult in every shot: oversized burnt-orange chore jacket over
+a plain white T-shirt, wide black cargo trousers, chunky grey-and-white skate
+shoes. Keep face, hair, body proportions, garment cut, colors, walking direction,
+stride length, and pace unchanged. In shots 1–3 use a stabilized 35mm backward
+track at constant distance while @Hero walks directly toward camera.
+
+The world must stay at full architectural scale. Door openings are taller than
+@Hero; each streetlight is about three times human height; upper building edges
+leave the top of frame. Never make a miniature, tabletop city, or diorama.
+
+SHOT 1 — WIREFRAME VOID | 10s | no start frame
+A matte clay-grey infinite void with a faint ground grid and ankle-high mist.
+@Hero is the only textured, colored object. As each foot lands, thin white
+contours draw outward across the ground, rise into full-height doors, streetlight
+outlines, and multi-storey building edges. Keep everything pure wireframe:
+no walls, surface texture, glass, signs, light sources, vehicles, or people.
+Dry footsteps, low empty hum, faint pencil scratch synchronized to new lines.
+
+SHOT 2 — MASS AND MATERIAL | 12s | start from Shot 1's actual final frame
+Continue the identical camera, stride, heading, composition, fog, and line
+positions with no reset. Wireframes first extrude into blank clay-grey volumes.
+Only after each volume is stable do brick, glass, and asphalt spread across its
+surface from near to far. One streetlight flickers twice, stays on, and creates
+the first grounded shadow. Half the street remains grey and unfinished at the
+end. No pedestrians yet. Footsteps gain natural wall reflections as surfaces
+appear.
+
+SHOT 3 — COLOR AND LIFE | 12s | start from Shot 2's actual final frame
+Continue the same track and walking rhythm. Complete the remaining materials,
+then let warm neon and window light activate progressively against cool dusk.
+Translucent pedestrian silhouettes appear already mid-stride and become solid;
+one cyclist crosses behind @Hero from left to right; steam begins at one street
+vent. Color and city ambience spread as a single wave centered on the walker's
+path. Do not instantly replace the entire frame with a finished city.
+
+SHOT 4 — ARRIVAL | 10s | start from Shot 3's actual final frame
+The city is now complete. @Hero slows naturally and stops at frame center while
+pedestrians keep flowing on both sides. He raises his head and looks around.
+Only now change the camera path: crane upward and backward from medium framing
+to a high wide reveal of the full living street. Hold the last composition with
+@Hero as the still point inside the moving crowd.
+
+CHAIN ACCEPTANCE
+Generate in order and select a take before starting the next shot. The first
+frame of every continuation must match its supplied start frame; reject any take
+that redesigns it. Reject scale collapse, identity drift, pace change, premature
+texture or pedestrians, backward state regression, camera-direction reversal,
+instant whole-frame transformation, duplicate person, readable text, logo, or
+watermark.
+```
+
+**Technique:** the identity element controls the person while each selected
+final frame controls the next scene state. Explicit architectural ratios prevent
+the untextured void from being interpreted as a miniature, and the one-way
+wireframe → mass → material → light → population ledger stops the model from
+jumping straight to the finished city.
+
+Adapted from Vova Lukashov's [complete Seedance 2.0 production record and four
+shot prompts](https://github.com/vovalukashov/render-seedance-prompts/blob/872ea65e64732a2316a60113294098dbc85c3179/README.md),
+published August 9, 2026. The repository records four 10–12 second source
+generations and a 28-second assembled result.
+
 ## Reusable templates
 
+
+### Log-ramped seam concealment and continuous re-score
+
+**Verified model:** Seedance 2.0 — validated on four chained Seedance 2.0
+generations with published source durations, seam times, motion-blur bands,
+audio-layer automation, and final assembly scripts
+
+Use this when several continuation clips must read as one uninterrupted take,
+but small differences in composition, motion, and native room tone expose each
+generation boundary.
+
+```text
+GENERATION CHAIN
+1. Lock identity with the same character reference and repeat the same wardrobe
+   language in every shot.
+2. Keep camera axis, subject direction, stride, and intended base speed constant.
+3. Choose the approved take before continuing. Decode its true final frame and
+   assign that exact image as the next shot's start frame.
+4. Reject a continuation whose first frame redraws the supplied boundary.
+   Do not expect editing to repair different walking directions or rhythms.
+
+VISUAL NORMALIZATION
+For each approved shot record:
+- base speed: [1.00 / ...]
+- center crop or zoom: [100% / ...]
+- outgoing ramp source duration: [D_OUT]
+- incoming ramp source duration: [D_IN]
+- peak speed: [P]
+
+Use only a small center zoom to align subject scale. Then accelerate the end of
+shot N logarithmically to P, cut at peak speed, and decelerate the start of shot
+N+1 logarithmically back to its base speed. A useful tested starting point is
+four source seconds out, three source seconds in, and an 8× peak.
+
+Do not merely drop frames during the ramp. Divide it into increasing speed bands
+and average approximately as many neighboring frames as the local acceleration:
+for an 8× peak, test 2 / 4 / 5 / 7-frame blends. Blur must grow toward the seam
+and shrink after it; clean frames at maximum speed reveal stutter.
+
+CONTINUOUS AUDIO BED
+Native audio from independent generations has unrelated room tone. Replace it
+with full-film layers rather than crossfading four incompatible tracks:
+- [STATE A ambience] spanning the opening
+- [TRANSFORMATION texture] spanning all build shots
+- [STATE B ambience] entering before the final world is fully visible
+- one transition whoosh instance per visual seam
+- optional continuous restrained music bed
+
+Place each whoosh by its measured waveform peak, not by the file start:
+whoosh_start = seam_time - peak_offset. Vary repeated copies subtly in pitch.
+Compress uneven generated effects before gain; if raising a quiet file exposes
+noise, regenerate it instead. Deliver the final master near the platform target
+rather than relying on automatic normalization.
+
+ACCEPTANCE GATE
+Review each seam frame by frame and at normal speed. Confirm no pose duplicate,
+scale pulse, direction reversal, exposure reset, cadence jump, blur discontinuity,
+room-tone cut, late whoosh, clipped peak, or state regression. Preserve a clean
+master before vertical reframing.
+```
+
+**Why it works:** the start frame makes geometry continuous, while the
+logarithmic speed ramp temporarily reduces the viewer's ability to inspect the
+boundary. Speed-proportional frame averaging restores the motion blur absent
+from accelerated source footage, and a single continuous sound bed prevents
+independent Seedance generations from sounding like different rooms.
+
+Adapted from the verified production's [video assembly script](https://github.com/vovalukashov/render-seedance-prompts/blob/872ea65e64732a2316a60113294098dbc85c3179/build-video.sh),
+[audio automation](https://github.com/vovalukashov/render-seedance-prompts/blob/872ea65e64732a2316a60113294098dbc85c3179/build-audio.sh),
+and [generation/acceptance notes](https://github.com/vovalukashov/render-seedance-prompts/blob/872ea65e64732a2316a60113294098dbc85c3179/README.md),
+published August 9, 2026.
 
 ### Anti-gloss dialogue ad with transcript QA
 
@@ -9714,6 +9863,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Vova Lukashov — Seedance 2.0 start-frame world build, scale anchors, hidden speed-ramp seams, and continuous re-score](https://github.com/vovalukashov/render-seedance-prompts/commit/872ea65e64732a2316a60113294098dbc85c3179)
 
 - [GroupX — Seedance 2.5 anti-gloss dialogue ads, exact prompts, generated masters, and transcript-driven QA](https://github.com/GroupX-ai/ad-creative/commit/d21b8ebe9acf56568a3705a3b993fa35931dd6c2)
 
