@@ -202,6 +202,10 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Exercise-bike cavalry-charge audio misdirection](#186-exercise-bike-cavalry-charge-audio-misdirection)
   - [Subway-car close-quarters phase map](#187-subway-car-close-quarters-phase-map)
   - [Hard-stop waterfall-dragon breach](#188-hard-stop-waterfall-dragon-breach)
+  - [Clay-blocked bedroom-to-cosmos dream flight](#189-clay-blocked-bedroom-to-cosmos-dream-flight)
+  - [Identity-locked decades-of-aging emotion edit](#190-identity-locked-decades-of-aging-emotion-edit)
+  - [MOV-locked pollination macro extension](#191-mov-locked-pollination-macro-extension)
+  - [Endpoint-preserving mahjong-to-city dive bridge](#192-endpoint-preserving-mahjong-to-city-dive-bridge)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -8083,7 +8087,286 @@ hover, dry passage through water, anatomy drift, face change, subtitle or logo.
 
 Adapted from Higgsfield AI's official [Seedance 2.5 VFX-challenge video](https://www.youtube.com/watch?v=Hn8A8D4-SpQ). The complete source prompt and official generation links are preserved in the [versioned production playbook](https://github.com/nick-choudhary/higgsfield-ai-youtube-skills/blob/d497dfa72258359dc1a8021d87993fdb5fe41c87/i-challenged-a-vfx-artist-to-beat-ai/PLAYBOOK.md), archived August 8, 2026.
 
+### 189. Clay-blocked bedroom-to-cosmos dream flight
+
+**Verified model:** Seedance 2.5 — published in the official BytePlus prompt guide with the clay-blocking input, stage keyframes, generated output, and synchronized comparison video  
+**Use case:** 3D clay-model motion transfer, keyframe-owned art direction, 30-second narrative, camera-blocking preservation  
+**Mode:** multimodal reference-to-video  
+**Suggested settings:** 30s, 16:9
+
+```text
+Create a 30-second warm, dreamlike 3D animated short. @Video1 is a simplified
+clay-model previs and owns only shot order, shot sizes, camera positions,
+camera paths, pacing, character blocking, and motion trajectories. Never copy
+its grey materials, primitive geometry, guide marks, or unfinished visual
+content.
+
+@Image1 owns the opening bedroom and its overhead return composition.
+@Image2 owns the same young heroine, her face, proportions, clothes, and toy
+airplane. @Image3–@Image10 each own the character state, environment, and
+costume visible in their assigned stage. A keyframe may define appearance but
+must not override @Video1's movement logic.
+
+[0–3s | launch]
+Overhead wide view of the bedroom; follow @Video1's slow push. The girl rises
+from the carpet and throws the toy airplane left-to-right. Its soft throw sound
+grows continuously into a real engine tone.
+
+[3–8s | room to sky]
+Side-follow the plane past hanging stars. One foreground bird wipe reveals the
+girl riding it through sunset clouds. Orbit according to @Video1 while the
+mythical animals from the assigned keyframes join at readable depths.
+
+[8–10s | sky to sea]
+Move behind the plane, then dive toward the water. The girl crosses the surface
+once; bubbles occlude the costume change into the referenced oxygen helmet.
+
+[10–19s | ocean to rift]
+Follow her and one manta ray deeper through the same travel direction. Build
+wonder into apprehension as a fractured-mirror space-time opening grows ahead.
+Pull her through it without a cut or spatial reset.
+
+[19–23s | cosmic payoff]
+Use the spacesuit keyframe. She bounds across small planets, reaches forward,
+and catches one luminous star. Freeze only at full contact.
+
+[23–24s | foreground flip]
+The frozen heroine and planets turn forward like one illustrated page and
+dissolve. Behind them, @Image1's overhead bedroom is already aligned.
+
+[24–28s | waking-world return]
+Continue the inherited overhead push. She is asleep on the carpet in the same
+star-catching hand pose. Her father enters from lower-left and covers her with
+one blanket as dusk cools naturally into moonlight.
+
+[28–30s | book closure]
+Push toward the open space-themed picture book. The father's right hand closes
+it once; hold the closed cover as the final frame.
+
+Keep the heroine's identity and proportions stable inside each keyframe-defined
+state. Let transitions inherit velocity, screen direction, light direction, and
+audio tails. No new shot, reordered beat, camera improvisation, clay material,
+guide line, unexplained duplicate, identity drift, abrupt costume pop, hard cut,
+subtitle, logo, or watermark.
+```
+
+**Technique:** a low-detail previs owns time and movement while stage keyframes
+own appearance. Separating those authorities prevents the clay reference from
+contaminating the final look and lets a long fantasy journey preserve deliberate
+camera blocking.
+
+Adapted from the official [BytePlus Seedance 2.5 clay-model workflow](https://docs.byteplus.com/en/docs/ModelArk/2607689#whitemodel-reference);
+the complete inputs and outputs are retained in the [versioned English snapshot](https://github.com/Jdaroro/awesome-seedance-2x-prompts/blob/626cdfa2fb9284806c259174117d7dfb8f1da58f/docs/third-party/Dreamina-Seedance-2.5-Prompt-Guide-and-Skill.md#3d-clay-model-video-reference-and-rendering),
+published August 9, 2026.
+
+### 190. Identity-locked decades-of-aging emotion edit
+
+**Verified model:** Seedance 2.5 — published as an official BytePlus instruction-edit example with source and generated output  
+**Use case:** video instruction editing, gradual age progression, micro-expression arc, identity preservation  
+**Mode:** locked video edit  
+**Suggested settings:** inherit source ratio; `ratio=adaptive`, `duration=-1`, MOV output
+
+```text
+EDIT @Video1. Keep its complete duration, composition, camera position, lens,
+lighting, background, wardrobe, body movement, and performance rhythm unchanged.
+Modify only the adult female lead's visible age and facial emotion.
+
+[0–25%]
+Begin with her original identity in her twenties. Preserve facial proportions,
+gaze direction, head angle, and skin tone. Her expression is controlled and
+tearful; breathing is small and restrained.
+
+[25–70%]
+Age the same face continuously through the intervening decades. Introduce
+changes in one direction only: fine lines, then deeper expression lines, subtle
+soft-tissue change, and naturally greying hair. Her eyes gradually soften while
+one tear travels past the outer corner. Do not replace her with a different face
+or reset any earlier age state.
+
+[70–100%]
+Settle at approximately sixty years old. The same mouth corners slowly rise
+until she smiles through tears. End on a calm, fully resolved expression and
+hold it for the source shot's final beat.
+
+This remains one continuous shot. No cut, temporal jump, cross-dissolve,
+flicker, face swap, identity drift, sudden wrinkle overlay, changing hairstyle,
+wardrobe edit, lighting change, background change, subtitle, logo, or watermark.
+```
+
+**Technique:** a one-way age ledger and an independent emotion curve give the
+edit two measurable transformations without allowing the source performance or
+camera to drift.
+
+Adapted from the official [BytePlus Seedance 2.5 instruction-edit example](https://docs.byteplus.com/en/docs/ModelArk/2607689#video-instruction-edit);
+the source/output pair is preserved in the [versioned English snapshot](https://github.com/Jdaroro/awesome-seedance-2x-prompts/blob/626cdfa2fb9284806c259174117d7dfb8f1da58f/docs/third-party/Dreamina-Seedance-2.5-Prompt-Guide-and-Skill.md#video-instruction-editing),
+published August 9, 2026.
+
+### 191. MOV-locked pollination macro extension
+
+**Verified model:** Seedance 2.5 — published as an official BytePlus extension example with input, generated MOV output, and stitched seam check  
+**Use case:** forward continuation, macro nature action, audio-visual seam continuity, transition inspection  
+**Mode:** locked video extension  
+**Suggested settings:** extend 5s; `ratio=adaptive`; MOV input and output
+
+```text
+Extend @Video1 forward by exactly 5 seconds. Begin from its final accepted frame
+with the same flower, species, petal geometry, camera height, lens, focus plane,
+light direction, wind, color grade, ambience, and audio level. Do not replay the
+source action.
+
+[0–1s | arrival]
+One bee enters on a continuous flight path and lands on the existing flower.
+Match wing buzz, wind, stem movement, and focus transition across the join.
+
+[1–2.4s | macro proof]
+Move into a macro close-up without teleporting the camera. Show the bee's legs
+and abdomen collecting fine golden pollen from the visible anthers. Keep bee
+anatomy, leg count, flower structure, and contact points stable.
+
+[2.4–3.5s | departure]
+The bee beats its wings, lifts cleanly from the first flower, and flies toward
+another flower of the same species. Follow one readable path; preserve screen
+direction and natural motion blur.
+
+[3.5–5s | pollination payoff]
+Use restrained slow motion only for the final approach. Pollen releases from
+the bee's fine hairs and reaches the second flower's stamen at visible contact.
+End after the transfer, not mid-flight.
+
+Carry source ambience and perceived volume through the seam. Use MOV for both
+input and output. No join flash, frozen duplicate frame, color shift, volume
+jump, new flower species, bee mutation, floating pollen before contact, reverse
+motion, hard cut, subtitle, logo, or watermark.
+```
+
+**Technique:** the first new frame inherits a complete handoff state, while the
+five-second continuation has its own cause-contact-payoff chain. MOV parity and
+an explicit seam audit protect both picture and audio continuity.
+
+Adapted from the official [BytePlus Seedance 2.5 video-extension example](https://docs.byteplus.com/en/docs/ModelArk/2607689#video-extend);
+the input, output, and stitched comparison are preserved in the [versioned English snapshot](https://github.com/Jdaroro/awesome-seedance-2x-prompts/blob/626cdfa2fb9284806c259174117d7dfb8f1da58f/docs/third-party/Dreamina-Seedance-2.5-Prompt-Guide-and-Skill.md#video-extension),
+published August 9, 2026.
+
+### 192. Endpoint-preserving mahjong-to-city dive bridge
+
+**Verified model:** Seedance 2.5 — published as an official BytePlus seamless-transition example with both source videos and generated bridge  
+**Use case:** video-to-video transition, camera-path handoff, geometric match transformation, endpoint protection  
+**Mode:** two-video transition generation  
+**Suggested settings:** 5s bridge, source aspect inherited
+
+```text
+Generate only a 5-second missing bridge between @Video1 and @Video2. Treat both
+uploaded videos as immutable endpoints: do not redraw, shorten, restyle, or
+retime their existing frames.
+
+[0–1.2s | leave endpoint A]
+Continue the exact terminal motion, lens, color, and audio tail of @Video1.
+Accelerate the camera upward from the mahjong table until the tile layout becomes
+a compact geometric pattern below.
+
+[1.2–2.4s | crest and turn]
+At the top of the rise, perform one fast, continuous turn-back. Preserve camera
+roll direction and momentum; do not cut or pause at the apex.
+
+[2.4–4.2s | matched transformation]
+Dive vertically. During the descent, map each tile footprint, orientation, and
+spacing onto a corresponding building mass. Tile faces become roofs, edges
+stretch into façades, and table gaps become streets. Transform progressively
+from near to far; never replace the whole frame at once.
+
+[4.2–5s | enter endpoint B]
+Converge on @Video2's opening camera position, heading, speed, exposure, skyline
+geometry, and first audible beat. The final generated frame must hand off to
+@Video2 without a flash, duplicate frame, or speed discontinuity.
+
+No modification to either source video, unrelated object, lateral camera escape,
+second inversion, instant city pop, geometry boil, scale jump, lighting reset,
+audio dropout, subtitle, logo, or watermark.
+```
+
+**Technique:** a single camera trajectory supplies the transition's causal
+spine, while tile-to-building correspondence turns a visual metaphor into a
+trackable geometric morph. Immutable endpoints make the bridge responsible for
+alignment instead of allowing the sources to drift.
+
+Adapted from the official [BytePlus Seedance 2.5 seamless-transition example](https://docs.byteplus.com/en/docs/ModelArk/2607689#video-transition);
+both inputs and the generated bridge are preserved in the [versioned English snapshot](https://github.com/Jdaroro/awesome-seedance-2x-prompts/blob/626cdfa2fb9284806c259174117d7dfb8f1da58f/docs/third-party/Dreamina-Seedance-2.5-Prompt-Guide-and-Skill.md#seamless-video-transition),
+published August 9, 2026.
+
 ## Reusable templates
+
+### Locked-versus-unlocked task router
+
+**Verified model:** Seedance 2.5 — confirmed by the official BytePlus task
+contract and its parameter-locking table
+
+Use this before composing any edit, first/last-frame, extension, storyboard,
+keyframe, or semantic-reference request. Decide whether the uploaded media is a
+literal part of the output timeline or only evidence for the model, then bind
+parameters and prompt language to that route.
+
+```text
+ROUTE A — LOCKED VIDEO EDIT
+Use when @Video1's timeline must survive and only named content changes.
+Roles: reference_video plus any reference_image/reference_audio.
+Parameters: ratio=adaptive; duration=-1; output_format=mov.
+Prompt must begin with an edit trigger:
+"Edit @Video1. Change only [A] into [B] during [TIME RANGE].
+Keep [COMPOSITION / CAMERA / PERFORMANCE / AUDIO / EVERYTHING ELSE] unchanged."
+Expect duration to track the source approximately; allow a small frame-processing
+difference. Never request a conflicting manual ratio or duration.
+
+ROUTE B — LOCKED FIRST / LAST FRAME
+Use when uploaded images are literal boundary frames.
+Roles: first_frame and, if supplied, last_frame.
+Parameters: ratio=adaptive; duration=[USER-CHOSEN SUPPORTED VALUE].
+Use first and last images with the same aspect ratio; otherwise the last image
+may stretch.
+Prompt:
+"Begin exactly from @Image1 and arrive exactly at @Image2 through
+[ONE CAUSAL MOTION PATH]. Preserve [IDENTITY / GEOMETRY / CAMERA AXIS]."
+
+ROUTE C — LOCKED VIDEO EXTENSION
+Use when new time continues before or after @Video1.
+Role: reference_video.
+Parameters: ratio=adaptive; duration=[NEW SEGMENT LENGTH]; output_format=mov.
+Prompt must use an extension trigger:
+"Extend @Video1 [FORWARD / BACKWARD] by [DURATION].
+Inherit its boundary-frame state and audio tail, then [NEW CAUSAL BEAT]."
+Audit the stitched seam for frame repetition, exposure shift, motion reset, and
+volume discontinuity.
+
+ROUTE D — UNLOCKED SEMANTIC REFERENCE
+Use when images, video, or audio guide identity, motion, scene, style, or voice
+without becoming literal output frames.
+Roles: reference_image / reference_video / reference_audio.
+Parameters: ratio=[USER CHOICE]; duration=[USER CHOICE].
+Prompt:
+"@Asset1 controls only [ROLE]. @Asset2 controls only [ROLE].
+Generate [NEW SCENE] while preserving [PRIORITY FEATURES]."
+
+ROUTE E — UNLOCKED STORYBOARD OR KEYFRAMES
+Storyboard: use a simple panel sheet for high-level plot, shot order, and rhythm;
+write missing action, camera, sound, and style in the prompt. Do not demand exact
+pixel alignment to every panel.
+Keyframes: upload separate images and map each one to a stage; expect closer
+visual alignment than a combined storyboard. Ratio and duration remain
+user-defined unless an image is explicitly assigned first_frame/last_frame.
+
+PRE-SUBMIT FAILURE CONTROL
+Name one route before submitting. Validate every asset role, ratio, duration,
+format, and trigger phrase against that route. Reject mixed locked/unlocked
+assumptions; do not silently change ratio, duration, mode, asset role, or model.
+```
+
+**Why it works:** Seedance 2.5 treats timeline-bound media differently from
+semantic references. Routing first prevents prompts from fighting automatic
+ratio or duration locks and clarifies when a storyboard is a loose plan versus
+when separate keyframes are visual anchors.
+
+Adapted from the official [BytePlus Seedance 2.5 task contract](https://docs.byteplus.com/en/docs/ModelArk/2607689#task-usage);
+the full locking table and examples are preserved in the [versioned English snapshot](https://github.com/Jdaroro/awesome-seedance-2x-prompts/blob/626cdfa2fb9284806c259174117d7dfb8f1da58f/docs/third-party/Dreamina-Seedance-2.5-Prompt-Guide-and-Skill.md#task-instructions),
+published August 9, 2026.
 
 ### Schema-locked silent end-frame loop
 
@@ -9279,6 +9562,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [BytePlus — official Seedance 2.5 task locking, 3D clay-model motion transfer, instruction editing, extension, and video-transition examples](https://docs.byteplus.com/en/docs/ModelArk/2607689) ([versioned English snapshot](https://github.com/Jdaroro/awesome-seedance-2x-prompts/blob/626cdfa2fb9284806c259174117d7dfb8f1da58f/docs/third-party/Dreamina-Seedance-2.5-Prompt-Guide-and-Skill.md))
 
 - [Michael Wilhelmsen — Seedance 2.5 schema-locked silent end-frame loop and no-seed run ledger](https://github.com/michaelwilhelmsen/ideo/commit/17da13bbf2a8ba40bc1d2fdc178394f321393306) ([looping and capability-gating specification](https://github.com/michaelwilhelmsen/ideo/blob/17da13bbf2a8ba40bc1d2fdc178394f321393306/docs/prd/ideo-prd.md))
 
