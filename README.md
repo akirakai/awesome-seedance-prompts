@@ -206,6 +206,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Identity-locked decades-of-aging emotion edit](#190-identity-locked-decades-of-aging-emotion-edit)
   - [MOV-locked pollination macro extension](#191-mov-locked-pollination-macro-extension)
   - [Endpoint-preserving mahjong-to-city dive bridge](#192-endpoint-preserving-mahjong-to-city-dive-bridge)
+  - [Cold-email disappearance true-crime parody](#193-cold-email-disappearance-true-crime-parody)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -8293,7 +8294,158 @@ Adapted from the official [BytePlus Seedance 2.5 seamless-transition example](ht
 both inputs and the generated bridge are preserved in the [versioned English snapshot](https://github.com/Jdaroro/awesome-seedance-2x-prompts/blob/626cdfa2fb9284806c259174117d7dfb8f1da58f/docs/third-party/Dreamina-Seedance-2.5-Prompt-Guide-and-Skill.md#seamless-video-transition),
 published August 9, 2026.
 
+
+### 193. Cold-email disappearance true-crime parody
+
+**Verified model:** Seedance 2.5 — the creator records the exact
+`bytedance/seedance-2.5/text-to-video` endpoint, seed, generated master,
+frame review, and dialogue transcript  
+**Use case:** native-feeling product ad, deadpan comedy, dialogue-led narrative,
+anti-gloss failure control  
+**Mode:** text-to-video  
+**Suggested settings:** 30s, 9:16, 480p or 720p, 24fps, native audio
+
+```text
+Create a 30-second vertical late-night true-crime documentary parody. Everyone
+plays the premise completely straight. It must feel like a real low-budget
+documentary segment, not a polished advertisement.
+
+CAPTURE
+Use restrained interview grammar: a long lens, shallow focus, one soft practical
+key from camera-left, deep untreated shadow, ordinary sensor noise, and a nearly
+static operator. The reconstruction insert must look like older footage:
+handheld, cooler, grainier, slightly soft, and visibly captured on different
+equipment. No beauty light or commercial color grade.
+
+PLACE AND CAST
+A cramped suburban home office at night: dark wood panelling, ring binders, a
+dead plant, paper stacked on an inkjet printer, half-closed vertical blinds.
+The interviewee is an unshaven office worker in a plain grey polo, seated slightly
+off axis with clasped hands and tired eyes. The investigator is a matter-of-fact
+middle-aged woman beside a corkboard of paper clues. Ordinary faces, imperfect
+teeth, cheap wardrobe, underplayed delivery, natural pauses and breaths.
+
+TIMELINE
+[0–5s] Hold a medium interview frame. The man swallows and says quietly:
+"Tuesday. Four thousand messages left this room."
+
+[5–10s] He studies his hands: "Not one appeared where it was supposed to."
+Do not cut away until the pause has finished.
+
+[10–15s] Cut to the degraded reconstruction: a hand clicks a mouse in a dark
+room. A monitor lights the face but its display is blank and unreadable.
+
+[15–20s] Cut to the investigator at the corkboard. Without drama she says:
+"We located every one of them."
+
+[20–24s] She taps one paper clue twice: "Promotions. Third page."
+
+[24–27s] Return to the interview. His eyes wet but performance restrained:
+"They never left the inbox."
+
+[27–30s] Hold while he looks away. A calm narrator delivers one approved brand
+line: "[BRAND]. Cold email that lands in Primary."
+
+AUDIO
+Quiet room tone, wall-clock tick, monitor hum, distant dog, chair creak, and
+natural unperformed speech. No music, riser, sting, whoosh, or synthetic impact.
+
+FAILURE CONTROL
+No readable screen, title, subtitle, caption, logo, watermark, lower third,
+floating interface, product UI, invented statistic, glamorous actor, smiling
+spokesperson, glass office, drone, crane, orbit, slow motion, speed ramp, rack-
+focus flourish, lens flare, particle effect, teal-orange grade, or pretty
+cutaway montage. Keep faces and wardrobe stable across the interview shots.
+Add accurate captions and any end card only in post.
+```
+
+**Technique:** declaring a familiar non-ad genre before specifying imperfect
+capture conditions suppresses generic commercial polish. Blank screens avoid
+native-text failures, while sparse dialogue leaves room for pauses and lets the
+final product line function as the only explicit sales beat.
+
+Adapted from GroupX's [exact Seedance 2.5 prompt and three-prompt test batch](https://github.com/GroupX-ai/ad-creative/blob/d21b8ebe9acf56568a3705a3b993fa35931dd6c2/_scripts/seedance-prompts.mjs).
+The [generation record and QA report](https://github.com/GroupX-ai/ad-creative/blob/d21b8ebe9acf56568a3705a3b993fa35931dd6c2/emailchaser/2026-08-08-seedance-video/README.md)
+identify the 480p master, seed `1710683338`, consistent 30-second result, and
+word-for-word transcript; published August 9, 2026.
+
 ## Reusable templates
+
+
+### Anti-gloss dialogue ad with transcript QA
+
+**Verified model:** Seedance 2.5 — validated across three 30-second
+`bytedance/seedance-2.5/text-to-video` outputs with recorded seeds, masters,
+contact-sheet review, and speech transcripts
+
+Use this when a product ad should read as a native comedy or documentary scene
+and exact dialogue matters more than conventional advertising polish.
+
+```text
+FORMAT CONTRACT
+[duration] vertical [DOCUMENTARY / SUPPORT GROUP / PARANORMAL TV / OTHER
+NON-AD GENRE], played completely straight. State: "This is not an advertisement
+and must not look like one."
+
+CAPTURE REALISM
+Name one plausible capture device and operator position.
+Use [HANDHELD DRIFT / LOCKED TRIPOD / SOFT FOCUS / SENSOR NOISE /
+FLUORESCENT FLICKER / IMPERFECT EXPOSURE] only when motivated.
+Practical light only; ordinary, unflattering color.
+
+MUNDANE SET
+Specify one real, slightly shabby location and 4–6 concrete props:
+[WALL MATERIAL], [FLOOR], [SEATING], [APPLIANCE], [CLUTTER], [BACKGROUND SOUND].
+Do not use a generic glass office or luxury set.
+
+CAST AND PERFORMANCE
+[CHARACTER 1: age, cheap wardrobe, tired demeanor]
+[CHARACTER 2: age, role, understated reaction]
+Ordinary faces, real skin, imperfect teeth, natural pauses, breaths, hesitations,
+and deadpan delivery. Nobody performs toward the lens unless a timed beat says so.
+
+TIMED DIALOGUE
+[0–Xs] Establish place and problem.
+[X–Ys] Character states the pain in one short line.
+[Y–Zs] A physical or audio event changes the scene.
+[Z–As] Second character reveals the product truth without a sales pitch.
+[A–END] Hold the reaction; speak one approved brand line.
+Budget roughly 40–55 spoken words for 30 seconds so silence survives.
+
+DIEGETIC AUDIO
+List room tone and 3–5 source sounds. No score, riser, whoosh, or impact sting.
+
+HARD EXCLUSIONS
+No generated text, caption, title, logo, watermark, readable monitor, invented
+number, beauty light, commercial grade, smiling model, drone, crane, orbit,
+speed ramp, slow motion, lens flare, hologram, particle effect, or decorative
+cutaway. Composite captions, logo, and end card only after generation.
+
+POST-GENERATION ACCEPTANCE GATE
+1. Extract a 10-frame contact sheet. Check location, blocking, identity,
+   blank screens, absence of logos/text, and the final visual payoff.
+2. Extract audio and transcribe it. Compare every claim, number, brand name,
+   and approved line against the prompt; do not trust pronunciation by ear alone.
+3. For an unusual proper name, confirm the isolated word with a second
+   transcription engine. Never repair wrong audio by merely spelling the caption
+   correctly.
+4. If only the final brand line fails, cut during the last clean speech gap and
+   add a branded end card. Otherwise reroll with the name written phonetically
+   as separate syllables, then repeat steps 1–3.
+5. Burn timed captions from the verified transcript in post, not in the model.
+```
+
+**Why it works:** the prompt separates genre, optics, set, performance, timing,
+sound, and bans, while the acceptance gate treats the generated clip as an
+untrusted production asset. In the source batch, two brand names passed exactly;
+a numeral-led name lost a syllable, and the documented safe recovery was to trim
+the defective tail rather than disguise it with a corrected caption.
+
+Adapted from GroupX's [three complete Seedance 2.5 prompts](https://github.com/GroupX-ai/ad-creative/blob/d21b8ebe9acf56568a3705a3b993fa35931dd6c2/_scripts/seedance-prompts.mjs)
+and the creator's QA records for [VoiceDrop](https://github.com/GroupX-ai/ad-creative/blob/d21b8ebe9acf56568a3705a3b993fa35931dd6c2/voicedrop/2026-08-08-seedance-video/README.md),
+[Emailchaser](https://github.com/GroupX-ai/ad-creative/blob/d21b8ebe9acf56568a3705a3b993fa35931dd6c2/emailchaser/2026-08-08-seedance-video/README.md),
+and [1Lookup](https://github.com/GroupX-ai/ad-creative/blob/d21b8ebe9acf56568a3705a3b993fa35931dd6c2/1lookup/2026-08-08-seedance-video/README.md),
+published August 9, 2026.
 
 ### Locked-versus-unlocked task router
 
@@ -9562,6 +9714,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [GroupX — Seedance 2.5 anti-gloss dialogue ads, exact prompts, generated masters, and transcript-driven QA](https://github.com/GroupX-ai/ad-creative/commit/d21b8ebe9acf56568a3705a3b993fa35931dd6c2)
 
 - [BytePlus — official Seedance 2.5 task locking, 3D clay-model motion transfer, instruction editing, extension, and video-transition examples](https://docs.byteplus.com/en/docs/ModelArk/2607689) ([versioned English snapshot](https://github.com/Jdaroro/awesome-seedance-2x-prompts/blob/626cdfa2fb9284806c259174117d7dfb8f1da58f/docs/third-party/Dreamina-Seedance-2.5-Prompt-Guide-and-Skill.md))
 
