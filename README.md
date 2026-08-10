@@ -9960,6 +9960,77 @@ storyboard handoff, and render checks](https://github.com/dirkteu/blaulicht-leit
 published August 9, 2026. The source's cross-run look-master reference remains
 excluded here because its generation-time effect was explicitly unverified.
 
+
+### Style-seeded adjacent-boundary storyboard chain
+
+**Verified model:** Seedance 2.5 — confirmed by the creator's August 10
+BytePlus update stating that the video-generation examples were tested and
+working with model endpoint dreamina-seedance-2-5-260628
+
+Use this when a story is easier to control as four approved keyframes than as
+one long free-form prompt. One image becomes the global style seed; every
+adjacent pair then becomes literal first and last frames for a separate
+transition clip.
+
+```text
+STORYBOARD PASS
+Split [STORY] into exactly three causal scene transitions and four visible
+boundary states: K1 → K2 → K3 → K4. Each keyframe must describe an achieved
+state, not an action that is still ambiguous.
+
+STYLE-SEED PASS
+Generate K1 alone at [IMAGE SIZE].
+Generate K2, K3 and K4 in one batch. For all three, use K1 only as the art-style,
+palette and character-design reference. Each prompt must describe its new scene
+and ending state explicitly. Do not copy K1's pose, composition or background
+unless the story requires them.
+
+VIDEO PAIRING
+Create exactly three Seedance 2.5 tasks in one batch:
+- V1: first frame K1, last frame K2, duration [D1]
+- V2: first frame K2, last frame K3, duration [D2]
+- V3: first frame K3, last frame K4, duration [D3]
+
+For each task, prompt one causal motion path from its supplied first state to
+its supplied last state. Preserve [CHARACTER DESIGN], [PROP STATE],
+[SCREEN DIRECTION], [LIGHT LOGIC] and [STYLE ANCHOR]. Do not redraw either
+boundary, restart the previous action, add an unrelated cut, or arrive early
+and fill the remaining time with frozen motion.
+
+DURATION GATE
+Every duration is an explicit integer from 4 to 30 seconds.
+Default: D1=D2=D3=10.
+If a total duration is requested, allocate D1+D2+D3 to match it, then validate
+all three values before submission. Reject totals that cannot fit the supported
+per-clip range instead of silently clipping or padding.
+
+BATCH AND URL INTEGRITY
+Submit all three tasks together so the same routing and settings apply.
+Keep every returned image and video URL byte-for-byte intact, including query
+parameters. Download V1–V3, verify first/last-frame matches and chronological
+order, then concatenate in that order. Retry merge or upload at most twice;
+never regenerate a paid video merely because a signed download URL was altered
+or truncated.
+
+ACCEPTANCE GATE
+Reject a clip if its opening frame redraws Ki, its closing frame misses Ki+1,
+identity or art style changes, motion reverses, a prop resets, or a segment
+contains an unrequested hard cut. Inspect the three seams before judging the
+merged film.
+```
+
+**Why it works:** K1 gives the image pass one shared visual authority, while
+adjacent boundary pairing gives every video clip a measurable start and finish.
+Batch submission reduces configuration drift, and URL-integrity plus seam
+checks separate transport failures from generation failures.
+
+Adapted from jdp-just-does-projects' BytePlus AgentKit
+[working Seedance 2.5 update](https://github.com/jdp-just-does-projects/agentkit-examples/commit/38cff2868a730ae9f62a829a43dc73887114002a),
+published August 10, 2026. The exact endpoint is recorded in
+[consts.py](https://github.com/jdp-just-does-projects/agentkit-examples/blob/38cff2868a730ae9f62a829a43dc73887114002a/byteplus/video_gen/consts.py);
+the style-seed, adjacent-pair, batch, duration and retry contract is preserved in
+[agent.yaml](https://github.com/jdp-just-does-projects/agentkit-examples/blob/38cff2868a730ae9f62a829a43dc73887114002a/byteplus/video_gen/agent.yaml).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -10006,6 +10077,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [jdp-just-does-projects — tested BytePlus AgentKit Seedance 2.5 style-seeded adjacent-boundary storyboard chain](https://github.com/jdp-just-does-projects/agentkit-examples/commit/38cff2868a730ae9f62a829a43dc73887114002a) ([workflow contract](https://github.com/jdp-just-does-projects/agentkit-examples/blob/38cff2868a730ae9f62a829a43dc73887114002a/byteplus/video_gen/agent.yaml))
 
 - [FarReputationAI — Seedance 2.5 event-coupled bedroom slice-of-life](https://www.reddit.com/r/seedance2pro/comments/1vj5vd8/how_to_create_a_candid_bedroom_sliceoflife_videos/)
 
