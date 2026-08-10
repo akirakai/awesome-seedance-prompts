@@ -10246,6 +10246,84 @@ Adapted from Nick Athens' [live Seedance 2.5 boundary correction and tests](http
 published August 10, 2026. The complete measured guide is preserved in the
 [versioned source file](https://github.com/nickathens/MyOldMachine/blob/66e62ba19358345672f53c0c5e61099932488137/skills/image-gen/models/seedance-2-5.md).
 
+### Typed reference-order scene compiler with conditional boundary reuse
+
+**Verified model:** Seedance 2.5 — confirmed by the original creator's
+versioned Seedance 2.5 upgrade, executable prompt builder, and generated-result
+showcase
+
+Use this for a multi-scene film when each shot receives several character and
+backdrop images, but only genuinely continuous adjacent shots should inherit
+the previous shot's last frame. Keep transport order, prompt tags, and semantic
+roles identical so the model never has to guess which image owns which layer.
+
+```text
+CONTINUITY GATE
+Before compiling shot N, compare shot N-1 with shot N:
+- shared backdrop: [YES / NO]
+- explicit continuation cue in either scene: [YES / NO]
+- shared on-screen character plus a continuation cue: [YES / NO]
+
+Reuse shot N-1's decoded final frame only when the backdrop overlaps and one
+continuity condition is true. Otherwise begin from the ordinary reference pack.
+Never chain merely because the shots are adjacent. If chaining, place the
+decoded boundary image first and label it FIRST FRAME; do not substitute a
+thumbnail or an estimated frame.
+
+ORDERED REFERENCE MAP
+The following tags must match the exact upload order:
+@Image1 = [FIRST FRAME, only when the gate passes / CHARACTER NAME / BACKDROP NAME]
+@Image2 = [CHARACTER NAME / BACKDROP NAME]
+...
+@ImageN = [CHARACTER NAME / BACKDROP NAME]
+
+Each CHARACTER image controls only that character's face, body design, wardrobe,
+and stable voice identity. Each BACKDROP image controls only its named location,
+layout, material and light logic. FIRST FRAME controls the opening composition
+and state, but does not replace the character or backdrop references.
+Deduplicate identical URLs before submission; never renumber the prompt tags
+without renumbering the uploaded content in the same order.
+
+COMPILED SHOT PROMPT
+[If gated: Begin from @Image1 as this shot's exact first-frame reference.]
+Combine [CHARACTER TAGS] for the named on-screen cast with [BACKDROP TAGS] for
+the named setting.
+
+Style: [VISUAL MEDIUM, CAPTURE TEXTURE, PALETTE].
+Use backdrop: [BACKDROP NAME + MATCHING TAG].
+Scene action: [ONE COMPLETE CAUSAL BEAT].
+Dialogue / narration: [EXACT LINES, SPEAKER, ORDER, PAUSES / NONE].
+Character action: [BLOCKING, GESTURE, PROP CONTACT].
+Mood: [EMOTIONAL AND ENVIRONMENTAL STATE].
+Camera: [SHOT SIZE, ANGLE, ONE MOTIVATED MOVE].
+On-screen cast: [CHARACTER NAME + MATCHING TAG, ...].
+
+Preserve each principal character's voice across every scene. Keep the frame
+free of subtitles and prevent invented readable signs. If the user supplies an
+explicit music instruction, preserve only that instruction; otherwise state:
+"No background music." Retain dialogue, breath, prop sounds and environment
+ambience as specified.
+
+ACCEPTANCE GATE
+Reject and regenerate if reference tags do not match upload order, a character
+or backdrop borrows another reference's identity, an unrelated scene inherits
+the prior boundary frame, a continuous scene redraws its opening state, voices
+drift between shots, dialogue order changes, music appears without instruction,
+or subtitles and invented signage appear.
+```
+
+**Why it works:** this separates two decisions that are often conflated:
+whether a previous frame belongs on the next shot's timeline, and what every
+other image is allowed to control. The explicit order ledger keeps API content
+and prompt tags synchronized, while the continuity gate prevents a useful
+boundary-frame technique from forcing unrelated locations into the same visual
+state.
+
+Adapted from Alex Wang's [Seedance 2.5 release commit](https://github.com/wanglongxiao/seedance-drama-maker/commit/74ab38b33607b0f46d4c18e2a629d7206e17b2a7)
+and its versioned [video prompt builder](https://github.com/wanglongxiao/seedance-drama-maker/blob/74ab38b33607b0f46d4c18e2a629d7206e17b2a7/app/agents/video_agent.py),
+published August 10, 2026. The same release documents the generated-result
+showcase and identifies SeeDance 2.5 as its storyboard video model.
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -10292,6 +10370,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Alex Wang — Seedance 2.5 typed reference-order scene compiler and conditional boundary reuse](https://github.com/wanglongxiao/seedance-drama-maker/commit/74ab38b33607b0f46d4c18e2a629d7206e17b2a7) ([executable prompt builder](https://github.com/wanglongxiao/seedance-drama-maker/blob/74ab38b33607b0f46d4c18e2a629d7206e17b2a7/app/agents/video_agent.py))
 
 - [Nick Athens — live Seedance 2.5 Unicode prompt-ceiling boundary and preflight correction](https://github.com/nickathens/MyOldMachine/commit/66e62ba19358345672f53c0c5e61099932488137) ([measured guide](https://github.com/nickathens/MyOldMachine/blob/66e62ba19358345672f53c0c5e61099932488137/skills/image-gen/models/seedance-2-5.md))
 
