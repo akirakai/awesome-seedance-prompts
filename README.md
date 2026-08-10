@@ -209,6 +209,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Cold-email disappearance true-crime parody](#193-cold-email-disappearance-true-crime-parody)
   - [Start-frame-chained void-to-city materialization walk](#194-start-frame-chained-void-to-city-materialization-walk)
   - [Event-coupled bedroom slice-of-life](#195-event-coupled-bedroom-slice-of-life)
+  - [Causal-state mechanical-temple one-take](#196-causal-state-mechanical-temple-one-take)
+  - [Single-prop autonomous-sword extraction](#197-single-prop-autonomous-sword-extraction)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -8526,6 +8528,155 @@ Adapted from
 published August 9, 2026; the original page contains the complete seven-shot
 prompt and its media preview.
 
+### 196. Causal-state mechanical-temple one-take
+
+**Verified model:** Seedance 2.5 — the versioned gallery record labels the
+creator-mapped generation as Seedance 2.5 and preserves its complete prompt and
+playable result
+
+**Use case:** continuous adventure, reference-role separation, obstacle causality,
+persistent costume damage and unique-prop transfer  
+**Mode:** multi-reference image-to-video continuation  
+**Suggested settings:** 30s, 16:9, one uninterrupted real-time shot, native audio
+
+```text
+Create a 30-second photorealistic one-take adventure using three independent
+references: @Character locks the same adult explorer's identity; @Wardrobe locks
+her white ceremonial outfit, lavender heels and jewelry; @Environment supplies
+only the bamboo, shallow pools, mossy timber temple, yellow industrial machinery,
+satellite dish, cables and morning mist. Do not borrow a person, text or fixed
+composition from @Environment. Fuse all three references into one physical space.
+
+CONTINUOUS-SHOT CONTRACT
+One real-time stabilized walking shot with no edit, occlusion cut, montage, time
+jump or teleport. The explorer always advances screen-left to screen-right while
+the camera changes position through visible travel: rear three-quarter → waterline
+side-track → corridor profile → low pursuit → final front three-quarter. Keep one
+worn brown cross-body bag, one cat-sized white-ceramic mechanical fox and one
+golden seed. Cloth, hair, bag and earrings obey inertia.
+
+ONE-WAY STATE LEDGER
+- outfit: clean → wet hem after the water → dusty after the folding bridge;
+  neither mark may vanish
+- seed: inside the fox's chest through 24s → transferred once to her left palm;
+  never duplicate or appear early
+- route: open behind her → stepping discs sink → cable corridor remains active →
+  bridge folds away → round door seals; no obstacle resets
+
+[0–5s | pressure-plate wake]
+Track behind her along wet stones. Her second heel depresses one brass pressure
+plate with a readable click. Nearby guardian statues tremble; exactly one ceramic
+fox wakes, jumps down and runs right, then pauses on the steps to invite pursuit.
+
+[5–11s | disappearing stepping discs]
+Arc continuously down to water level. Six mossy mechanical discs rise in sequence.
+The fox stays one disc ahead; each disc sinks only after it leaves. She watches the
+next landing, makes low forefoot jumps, bends her knees on impact and pushes real
+ripples outward. Her gauze hem becomes wet and remains wet.
+
+[11–17s | timed cable corridor]
+Slide past a yellow support into profile. Three heavy cable loops sweep on fixed
+cycles. She observes once, then uses stop–dash–stop timing: duck under the first,
+press against the support for the second, lean back under the third. Air pressure
+moves hair and cloth; no cable passes through her body.
+
+[17–24s | folding-bridge pursuit]
+Travel visibly to a low rear three-quarter angle. The fox triggers a seal and the
+bridge folds from the rear toward them. She sprints with short forefoot steps,
+slips once, recovers by pulling on the rail, then jumps through the narrowing round
+door and shoulder-rolls. The door closes behind her; add dust to the already-wet
+hem and keep both marks.
+
+[24–30s | voluntary handoff]
+Rise with her into the core courtyard. The fox opens its ceramic chest around
+visible brass gears and exposes the only golden seed. She relaxes, unclips the bag
+and extends her gloved left palm without grabbing. The fox deliberately pushes the
+seed into it. On contact, one soft mechanical heartbeat starts a causal wake-up
+wave: dish turns, amber machinery lights in order, vines stir, then distant gears
+answer. End with the seed only in her palm and the fox seated behind it.
+
+AUDIO AND FAILURE CONTROL
+Diegetic bamboo, water, birds, footfalls, wet cloth, brass paws, gears, motor hum,
+cable wind, folding timber, breath and one mechanical heartbeat; no score, speech
+or narration. No hidden transition, center drift, face or wardrobe change, bag-side
+swap, magically cleaned fabric, weightless jump, cable/body intersection, real or
+cartoon fox, duplicate seed, premature environment activation, extra person, text,
+logo, UI or watermark.
+```
+
+**Technique:** Assign every obstacle a predecessor, a terminal state and a visible
+carry-over. The pressure plate → fox → discs → cables → bridge → seed chain prevents
+a long prompt from becoming disconnected spectacle, while the wet/dust ledger makes
+time accumulate inside a supposedly continuous shot.
+
+Adapted from [John's original mechanical-temple one-take](https://x.com/john87445528/status/2086552293848301810),
+published August 10, 2026. The complete prompt, Seedance 2.5 mapping and generated
+[WebM result](https://media.beatapi.io/prompt-gallery/seedance-2-5/video-prompt-case-301810/video-6ec8310326831d3e.webm)
+are preserved in the [source-backed gallery record](https://github.com/BeatAPI/awesome-seedance-2-5-prompts/blob/62a82dea8e3ad3195f58636789e092a57ed69478/prompts/use-cases/stories-films.md).
+
+### 197. Single-prop autonomous-sword extraction
+
+**Verified model:** Seedance 2.5 — the creator's complete prompt explicitly declares
+Seedance 2.5, and the source-backed gallery preserves the mapped playable result
+
+**Use case:** supernatural prop physics, continuation, two-character restraint,
+irreversible object state and native dialogue  
+**Mode:** reference-to-video continuation  
+**Suggested settings:** 10s, 16:9, three clean shots, native Mandarin audio
+
+```text
+Continue directly from the supplied prior clip. Preserve the same two adult women,
+their white and sage hanfu, the open meadow, forest slope, vertical cliff, distant
+cliff temple, moss, valley mist, right-side light, weather, scale and travel
+direction. Exactly one silver sword begins fully inside its one waist scabbard.
+
+PHYSICAL-PROP CONTRACT
+The sword is the only anomaly. At frame one, blade, guard and hilt belong to one
+sheathed object. The senior woman's two hands stay visible and far from the hilt.
+The scabbard remains attached and stationary during extraction. The blade can leave
+only by continuous travel through the scabbard mouth: hilt moves outward → blade
+gradually appears → whole blade clears → same sword hovers. No teleport, duplicate,
+glow, magic particles, energy trail or second blade.
+
+[0–3s | wide]
+Immediately after the senior woman says, “Something is wrong,” the meadow sound
+falls quiet. The complete sheathed assembly vibrates with a low metal resonance;
+the blade remains entirely hidden. Both women stay alert but restrained.
+
+[3–7s | medium]
+She looks down without touching the sword. Increase the vibration, stop it sharply
+and hold one silent beat. Keep the scabbard fixed while the hilt begins its own
+visible outward displacement. Show the entire uninterrupted extraction. The same
+sword settles horizontally half a metre in front of her, solid and inertial. The
+junior woman quietly asks in Mandarin, “Senior sister, did it sense it too?”
+
+[7–10s | close]
+The hovering sword slowly turns its point toward the distant mountain mist, gives
+one contained metal chime, flies forward several metres and stops as if sensing the
+path. The senior woman watches rather than commands it and says, “Let it scout
+ahead.” Rack focus once from the stationary blade to her eyes, then cut immediately.
+
+ORDER AND FAILURE CONTROL
+Silence → whole sheathed object vibrates → full stop → one-beat pause → fixed
+scabbard → continuous extraction → hover → point turns → forward flight → stop →
+final line → focus transfer. Preserve exactly two people, one sword and one matching
+scabbard. No hand on hilt, early blade exposure, sword appearing beside the sheath,
+scabbard flying away, second weapon, casting gesture, panic, extra character, spirit
+animal, modern object, subtitle, logo or watermark. Audio is localized wind, valley
+space, low sheath resonance, real metal friction, restrained hover tone and chime.
+```
+
+**Technique:** Treat the supernatural beat as a conservative physics problem:
+one object, one allowed exit path and an irreversible state change. Showing both
+empty hands and fixing the scabbard removes the two easiest shortcuts—an invisible
+pull and a newly generated duplicate.
+
+Adapted from [Soranlan's original autonomous-sword continuation](https://x.com/Soranlan/status/2086591561874235705),
+published August 10, 2026. The original prompt explicitly declares Seedance 2.5;
+its complete record and generated
+[WebM result](https://media.beatapi.io/prompt-gallery/seedance-2-5/creative-video-235705-235705/video-cf71e162629508f0.webm)
+are preserved in the [source-backed gallery entry](https://github.com/BeatAPI/awesome-seedance-2-5-prompts/blob/62a82dea8e3ad3195f58636789e092a57ed69478/prompts/use-cases/action-fantasy.md).
+
 ## Reusable templates
 
 
@@ -10077,6 +10228,10 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [John — Seedance 2.5 causal-state mechanical-temple one-take](https://x.com/john87445528/status/2086552293848301810) ([complete prompt and playable result](https://github.com/BeatAPI/awesome-seedance-2-5-prompts/blob/62a82dea8e3ad3195f58636789e092a57ed69478/prompts/use-cases/stories-films.md))
+
+- [Soranlan — Seedance 2.5 single-prop autonomous-sword extraction](https://x.com/Soranlan/status/2086591561874235705) ([complete prompt and playable result](https://github.com/BeatAPI/awesome-seedance-2-5-prompts/blob/62a82dea8e3ad3195f58636789e092a57ed69478/prompts/use-cases/action-fantasy.md))
 
 - [jdp-just-does-projects — tested BytePlus AgentKit Seedance 2.5 style-seeded adjacent-boundary storyboard chain](https://github.com/jdp-just-does-projects/agentkit-examples/commit/38cff2868a730ae9f62a829a43dc73887114002a) ([workflow contract](https://github.com/jdp-just-does-projects/agentkit-examples/blob/38cff2868a730ae9f62a829a43dc73887114002a/byteplus/video_gen/agent.yaml))
 
