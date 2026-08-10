@@ -214,6 +214,10 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Fireline granary raid aerial reveal](#198-fireline-granary-raid-aerial-reveal)
   - [Snow-gate courtesy-to-warm-window push](#199-snow-gate-courtesy-to-warm-window-push)
   - [White-horse rescue pursuit with infant-audio contrast](#200-white-horse-rescue-pursuit-with-infant-audio-contrast)
+  - [Mechanical-beast debug, repair and retest](#201-mechanical-beast-debug-repair-and-retest)
+  - [Nested-hearth recursion and returning light](#202-nested-hearth-recursion-and-returning-light)
+  - [Halving search with persistent discarded space](#203-halving-search-with-persistent-discarded-space)
+  - [Breadth-first stone-maze light wave](#204-breadth-first-stone-maze-light-wave)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -8835,7 +8839,275 @@ The complete API prompt and exact model ID remain in the
 
 ---
 
+
+### 201. Mechanical-beast debug, repair and retest
+
+**Verified model:** Seedance 2.0 Mini (`doubao-seedance-2-0-mini-260615`) —
+the original creator generated the committed master with this single exact
+model endpoint
+
+**Use case:** educational animation, mechanical causality, failure diagnosis,
+repair verification  
+**Mode:** text-to-video  
+**Settings:** 10 seconds, 16:9, 720p, silent delivery
+
+```text
+Ten-second child-friendly hand-drawn animation in a warm-gold Three Kingdoms
+workshop. Preserve one wooden clockwork beast, one adult healer-engineer, the
+same workbench, one articulated foreleg and one tiny dark defect. Keep the
+illustrated linework, flat painted shading and object proportions stable.
+
+[0–2s | visible failure]
+The clockwork beast walks two steps, its front leg catches, and the entire
+mechanism stops. Hold long enough to show that the jam belongs to that one leg;
+gears elsewhere settle instead of continuing to spin.
+
+[2–5s | isolate the cause]
+At lamplight, the healer opens only the stuck foreleg panel and examines each
+joint in order. Use a controlled push-in to reveal one dark corroded spot deep
+inside the hinge. Do not introduce several possible faults.
+
+[5–7s | one repair]
+She removes the spot with a small silver tool, wipes the hinge clean and closes
+the same panel. Show contact, removal and closure as separate readable actions.
+
+[7–10s | verification]
+Return to the original side view. The beast restarts, repeats the previously
+failed step cleanly and walks with an even rhythm. The healer relaxes only after
+the successful retest.
+
+FAILURE CONTROL
+Failure → inspection → single root cause → repair → repeat test → recovery.
+No instant self-healing, hidden repair behind a cut, changing machine design,
+extra defect, human transformation, live-action or glossy 3D materials,
+unrequested text, logo or watermark. Deliver without audio.
+```
+
+**Technique:** preserve the failing action and replay it after repair. Matching
+the before-and-after test turns “debugging” into a visible causal story rather
+than a generic workshop montage.
+
+**Source:** Alex Wang's August 10, 2026
+[batch-generation commit](https://github.com/lmq3030/wolong-academy/commit/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9),
+the committed [generated master](https://github.com/lmq3030/wolong-academy/blob/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9/public/assets/videos/concepts/concept-debug.mp4),
+and the [complete prompt plus exact endpoint](https://github.com/lmq3030/wolong-academy/blob/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9/scripts/generate-item-videos.py).
+
+---
+
+### 202. Nested-hearth recursion and returning light
+
+**Verified model:** Seedance 2.0 Mini (`doubao-seedance-2-0-mini-260615`) —
+the original creator generated the committed master with this single exact
+model endpoint
+
+**Use case:** recursive visual metaphor, nested-scale animation, reversible
+cause propagation  
+**Mode:** text-to-video  
+**Settings:** 10 seconds, 16:9, 720p, silent delivery
+
+```text
+Ten-second child-friendly hand-drawn animation in a warm-gold military camp.
+Build one earthen cooking hearth containing a smaller concentric hearth, which
+contains another, continuing down to one bowl-sized innermost chamber. Lock the
+camp layout, ring count, clay texture, illustrated linework and top-down axis.
+
+[0–5s | descend through levels]
+Begin above the largest unlit hearth. The camera pushes down its center as the
+outer floor opens to reveal a smaller complete hearth below. Repeat the same
+single operation level by level: open one ring, descend to the next smaller
+ring, keep all previous rings dark and spatially nested. Reach the smallest
+chamber only once.
+
+[5–6s | base case]
+At the innermost bowl-sized hearth, one spark lands and becomes one steady flame.
+Pause briefly so this terminal event is unmistakable.
+
+[6–10s | return through levels]
+Reverse the camera path without a cut. Light travels outward from the smallest
+ring to its parent, then to the next parent, illuminating exactly one level at a
+time until the original outer hearth glows. Previously lit inner rings stay lit.
+
+STATE LEDGER
+large dark → descend inward → smallest spark → outward light return → all rings
+lit. No skipped level, duplicated spark, simultaneous ignition, endless tunnel,
+ring-count change, camera teleport, live-action texture, glossy 3D render,
+person, caption, logo or watermark. Deliver without audio.
+```
+
+**Technique:** assign opposite visual directions to recursion and return:
+camera motion goes inward while the result propagates outward. The base-case
+pause prevents a nested-scale prompt from becoming an arbitrary zoom tunnel.
+
+**Source:** Alex Wang's August 10, 2026
+[batch-generation commit](https://github.com/lmq3030/wolong-academy/commit/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9),
+the committed [generated master](https://github.com/lmq3030/wolong-academy/blob/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9/public/assets/videos/concepts/concept-recursion.mp4),
+and the [complete prompt plus exact endpoint](https://github.com/lmq3030/wolong-academy/blob/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9/scripts/generate-item-videos.py).
+
+---
+
+### 203. Halving search with persistent discarded space
+
+**Verified model:** Seedance 2.0 Mini (`doubao-seedance-2-0-mini-260615`) —
+the original creator generated the committed master with this single exact
+model endpoint
+
+**Use case:** binary-search visualization, ordered elimination, tabletop
+continuity  
+**Mode:** text-to-video  
+**Settings:** 10 seconds, 16:9, 720p, silent delivery
+
+```text
+Ten-second child-friendly hand-drawn strategy-room animation. Across one long
+wooden table, arrange an ordered row of bamboo tokens from smallest at screen
+left to largest at screen right. One strategist may point, but never reorder the
+tokens. A hidden tiger tally behind a folding screen is the single target.
+
+[0–3s | first midpoint]
+Start in a high three-quarter view where the entire ordered row is readable.
+The strategist taps the exact middle token. An assistant signals that the answer
+is larger; the complete left half slides into a dim inactive zone and stays
+there.
+
+[3–6s | second midpoint]
+Reframe only enough to keep the surviving right interval centered. Tap its
+middle token. The assistant now signals that the answer is smaller; the complete
+right half of this surviving interval moves into a second inactive zone. All
+previously discarded tokens remain visible but dim.
+
+[6–10s | terminal check]
+Only two or three active tokens remain. Tap their midpoint once. A thin golden
+line connects that token to the hidden tiger tally; the folding screen opens and
+reveals the tally without moving any discarded token.
+
+ORDER LOCK
+ordered row → midpoint → discard one contiguous half → new midpoint → discard
+one contiguous half → final check → reveal. No random token removal, restored
+half, token duplication, reshuffle, linear one-by-one search, instant answer,
+changing table, live-action or glossy 3D style, readable modern text, logo or
+watermark. Deliver without audio.
+```
+
+**Technique:** keep rejected regions on screen as dim spatial history. That
+makes every halving operation auditable and prevents the model from silently
+reshuffling the search space between beats.
+
+**Source:** Alex Wang's August 10, 2026
+[batch-generation commit](https://github.com/lmq3030/wolong-academy/commit/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9),
+the committed [generated master](https://github.com/lmq3030/wolong-academy/blob/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9/public/assets/videos/concepts/concept-binary-search.mp4),
+and the [complete prompt plus exact endpoint](https://github.com/lmq3030/wolong-academy/blob/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9/scripts/generate-item-videos.py).
+
+---
+
+### 204. Breadth-first stone-maze light wave
+
+**Verified model:** Seedance 2.0 Mini (`doubao-seedance-2-0-mini-260615`) —
+the original creator generated the committed master with this single exact
+model endpoint
+
+**Use case:** breadth-first search visualization, wavefront choreography,
+shortest-path reveal  
+**Mode:** text-to-video  
+**Settings:** 10 seconds, 16:9, 720p, silent delivery
+
+```text
+Ten-second child-friendly hand-drawn animation of a courtyard stone maze viewed
+from a stable high angle. Lock one entrance at lower center, one exit at upper
+right, all walls, junctions and lantern positions. Every reachable junction has
+one unlit lantern; no wall or route may change.
+
+[0–2s | origin]
+The entrance lantern lights once in warm gold. Hold the complete maze in frame
+so its scale and the exit position are established before expansion begins.
+
+[2–7s | level-order wave]
+All lanterns one edge away light together as the first ring. After that ring is
+complete, all still-unlit lanterns one additional edge away light together as
+the second ring. Continue outward in discrete concentric graph levels: finish
+one level before starting the next, branch simultaneously within a level and
+never jump across a wall.
+
+[7–10s | first exit and trace-back]
+The first wave that reaches the exit stops further expansion. From that exit,
+one narrow luminous route traces backward through already lit parent junctions
+to the entrance. Keep non-path lanterns softly lit while the shortest route
+becomes brighter.
+
+WAVEFRONT LOCK
+origin → complete level 1 → complete level 2 → later levels → first exit contact
+→ backward route trace. No depth-first wandering beam, skipped level, moving
+wall, second exit, several final routes, extinguished visited node, camera cut,
+live-action or glossy 3D treatment, modern text, logo or watermark. Deliver
+without audio.
+```
+
+**Technique:** separate discovery from explanation: a synchronized level wave
+finds the exit, then a narrower backward trace identifies the route. Locking the
+maze and retaining visited lights makes the algorithm's history visible.
+
+**Source:** Alex Wang's August 10, 2026
+[batch-generation commit](https://github.com/lmq3030/wolong-academy/commit/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9),
+the committed [generated master](https://github.com/lmq3030/wolong-academy/blob/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9/public/assets/videos/concepts/concept-bfs.mp4),
+and the [complete prompt plus exact endpoint](https://github.com/lmq3030/wolong-academy/blob/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9/scripts/generate-item-videos.py).
+
+---
+
 ## Reusable templates
+
+### First-frame illustration-lock and accelerated micro-loop template
+
+**Verified model:** Seedance 2.0 Mini (`doubao-seedance-2-0-mini-260615`) —
+derived from the creator's committed 70-item image-to-video run after the
+text-only route produced rejected glossy 3D results
+
+Use this for a short gallery, collectible, product-card or icon animation when
+the supplied illustration must remain the visual source of truth. Describe only
+the motion; let the first frame define appearance.
+
+```text
+INPUT
+@FirstFrame is the exact first frame and the only authority for [OBJECT],
+illustration technique, outline weight, shading, palette, composition, camera
+angle and background.
+
+MOTION-ONLY INSTRUCTION
+Animate the existing [OBJECT] with one compact cycle:
+[PRIMARY MOTION].
+Then [SECONDARY MATERIAL RESPONSE].
+End in [POSE / ORIENTATION] that can return cleanly to the supplied first frame.
+
+STYLE LOCK
+Preserve @FirstFrame's hand-drawn illustration style, coarse outlines, flat
+painted shading, geometry, proportions, palette and composition exactly.
+Do not redesign or add a person. Do not convert the artwork into photorealism,
+CGI, glossy 3D, a toy render or a different camera view.
+
+GENERATION SETTINGS
+Seedance 2.0 Mini, image-to-video with @FirstFrame assigned as first_frame,
+adaptive source aspect ratio, 480p, 5 seconds, watermark off.
+
+ACCEPTANCE
+Reject if frame one differs from @FirstFrame, the object changes shape, the
+background is rebuilt, a person appears, materials become volumetric 3D, the
+motion has no readable start/contact/recovery, or the ending cannot cycle.
+
+DELIVERY LOOP
+After selecting a take, remove audio, accelerate the 5-second master to about
+2.5 seconds, encode H.264 with fast-start metadata and test the last-to-first
+cut. Keep the original speed if the action becomes unreadable.
+```
+
+**Why it works:** the source production first tried text-to-video and received
+a shiny 3D interpretation that broke the collection's art direction. Supplying
+the existing artwork as the first frame and restricting the prompt to motion
+held the hand-drawn style across 70 separate objects; post-generation speed-up
+then created lightweight card loops without asking the model to compress the
+motion itself.
+
+Adapted from Alex Wang's August 10, 2026
+[70-item generated batch](https://github.com/lmq3030/wolong-academy/commit/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9),
+the [complete image-to-video and ffmpeg workflow](https://github.com/lmq3030/wolong-academy/blob/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9/scripts/generate-item-videos.py),
+and an example committed [generated loop](https://github.com/lmq3030/wolong-academy/blob/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9/public/assets/videos/items/chi-tu-ma.mp4).
+
 
 
 ### Temporal-connective anti-panel one-take
@@ -10528,6 +10800,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Alex Wang / Wolong Academy — 37 Seedance 2.0 Mini algorithm-metaphor teaching films and 70 first-frame-locked illustration loops](https://github.com/lmq3030/wolong-academy/commit/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9) ([complete prompts, exact endpoint and batch/post-production workflow](https://github.com/lmq3030/wolong-academy/blob/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9/scripts/generate-item-videos.py))
 
 - [Alex Wang — three Seedance 2.0 Mini native-audio historical-film generations](https://github.com/lmq3030/wolong-academy/commit/11cb7531f20b825d519308fe6b8d342e65cf6744) ([complete prompts and exact model ID](https://github.com/lmq3030/wolong-academy/blob/11cb7531f20b825d519308fe6b8d342e65cf6744/scripts/generate-videos.py))
 
