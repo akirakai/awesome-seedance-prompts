@@ -225,6 +225,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Black-and-white-to-color infomercial reset](#209-black-and-white-to-color-infomercial-reset)
   - [Observation-glass twin-subject AB test](#210-observation-glass-twin-subject-ab-test)
   - [Security-scanner data-validation line](#211-security-scanner-data-validation-line)
+  - [Live-call car-selfie proof](#212-live-call-car-selfie-proof)
+  - [Promotions-folder founder confession](#213-promotions-folder-founder-confession)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -9443,6 +9445,131 @@ and [committed generated deliverable](https://github.com/GroupX-ai/ad-creative/b
 
 ---
 
+### 212. Live-call car-selfie proof
+
+**Verified model:** Seedance 2.5 — GroupX's committed runner uses
+`bytedance/seedance-2.5/text-to-video`; its generation log records a successful
+native-720p render and seed, and the creator publishes the complete prompt,
+generated masters, frame review and word-perfect transcript QA
+
+**Use case:** high-energy UGC ad, live proof beat, phone-camera realism, native
+dialogue  
+**Mode:** text-to-video  
+**Settings:** 15 seconds, 9:16, native 720p, native audio
+
+```text
+Vertical phone-shot selfie from the driver's seat of an ordinary parked used
+car. It must feel like a salesperson's spontaneous social post, not an ad.
+Rear phone camera at arm's length, slightly low and off-centre; constant small
+hand drift, one natural reframe, close-lens distortion, daylight only, real
+pores and stubble, no beauty smoothing or color grade.
+
+A pleased but slightly sweaty salesperson in an open-collar shirt holds the
+recording phone in one hand and a second phone in the other. Keep the performance
+fast, animated and conversational: contractions, one tiny stumble, active
+eyebrows and hands. He looks into the lens throughout.
+
+BEATS
+[0–4s] Open mid-sentence with no establishing shot or silence. He says he
+stopped cold calling three weeks ago.
+[4–6s] He grins, raises the second phone beside his face and says, "Watch."
+[6–8s] That phone lights and rings. He tips his head toward it, delighted.
+[8–12s] Gesturing with the ringing phone, he explains that one voicemail went
+straight to inboxes and now a lead is calling him.
+[12–15s] He drops the phone into his lap, opens both hands in a shrug and gives
+one concise line: stop chasing leads; let them call you.
+
+SPEECH ALLOWLIST
+Only the quoted or paraphrased lines assigned above may be spoken. No narration,
+counting, muttered directions or improvised claims.
+
+AUDIO
+Close, slightly clipped phone-mic voice; low traffic hum, seat creak and the
+second phone's ordinary ringtone. No music.
+
+FAILURE CONTROL
+No text overlay, caption, logo, end card or readable interface. Hold the second
+phone screen-edge-on or show only two unlabeled answer/decline circles. No
+studio light, polished camera move, montage, slow motion, floating graphic or
+commercial gloss.
+```
+
+**Technique:** start with speech already underway, then make the proof object
+perform on camera by second six. The screen-edge control incorporates the
+creator's documented render defect: tiny caller-name glyphs appeared only under
+3× inspection even though the original prompt requested a blank screen.
+
+**Source:** GroupX's August 10, 2026
+[corrective-batch commit](https://github.com/GroupX-ai/ad-creative/commit/624bec6b295144ff40c18fc54d007067655f2b59),
+[complete source prompt](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/_scripts/seedance-prompts-b3.mjs),
+[exact-model run ledger](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/_scripts/seedance-run-log-2026-08-09-seedance-ugc-b3.json),
+[frame-and-transcript QA](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/_scripts/BATCH-2026-08-09-b3.md),
+and [committed generated result](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/voicedrop/2026-08-09-seedance-ugc-b3/voicedrop-c45-ugc-watch-this-720p.mp4).
+
+---
+
+### 213. Promotions-folder founder confession
+
+**Verified model:** Seedance 2.5 — the creator's complete prompt, successful
+`bytedance/seedance-2.5/text-to-video` run ledger, committed native-720p master
+and frame-plus-transcript QA form a traceable primary-source generation record
+
+**Use case:** founder UGC, problem-to-product turn, deliberately unreadable
+screen, fast native dialogue  
+**Mode:** text-to-video  
+**Settings:** 15 seconds, 9:16, native 720p, native audio
+
+```text
+Vertical founder selfie in a cramped home-office corner, made on a modern
+phone's rear camera and posted without ad polish. Prop the phone just below eye
+level for a slightly low, imperfect frame. Allow subtle handheld drift, mild
+close-lens distortion, available light, real skin texture and no beauty filter.
+
+A tired founder in a hoodie sits close to the lens at a cheap desk. Her hair is
+pushed back and she is genuinely exasperated in a funny, energetic way. Behind
+her: radiator, skirting board, mug with teabag string, tangled charger and an
+open laptop angled away so its screen is never readable.
+
+BEATS
+[0–4s] Begin mid-thought with no lead-in. Looking directly into the lens and
+holding one hand up, she says: "Four thousand emails. Zero replies. Zero."
+[4–7s] She turns the laptop toward camera for exactly one second. Its display
+is a featureless blown-out white rectangle, then she turns it back and says she
+went looking.
+[7–11s] Both hands hit the desk; she leans close, eyebrows raised, and says the
+messages were all in promotions, unseen.
+[11–15s] She sits back, exhales and gives one quick plain line: the new tool
+lands cold email in primary; start free.
+
+PERFORMANCE AND SPEECH
+Fast friend-to-friend delivery with contractions, a half-swallowed word, one
+small stumble, moving hands and eyebrows. Only the assigned lines are spoken;
+no narration, counting, stage directions or extra product claims.
+
+AUDIO
+Boxy phone-mic room tone, radiator tick, chair creak, mug touching desk and a
+brief breath near the mic. No score.
+
+FAILURE CONTROL
+No readable screen, email UI, overlay, title, subtitle, caption, logo, end card
+or brand mark. No studio lighting, glossy grade, dolly, orbit, cutaway montage,
+slow motion, stock-footage look or advertising performance.
+```
+
+**Technique:** expose a text-heavy digital problem without asking the model to
+render UI. A one-second, fully blown-out screen supplies the causal reveal while
+the dialogue carries the data; opening on the first complaint places the turn
+inside six seconds rather than delaying it behind an establishing shot.
+
+**Source:** GroupX's August 10, 2026
+[corrective-batch commit](https://github.com/GroupX-ai/ad-creative/commit/624bec6b295144ff40c18fc54d007067655f2b59),
+[complete source prompt](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/_scripts/seedance-prompts-b3.mjs),
+[exact-model run ledger](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/_scripts/seedance-run-log-2026-08-09-seedance-ugc-b3.json),
+[frame-and-transcript QA](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/_scripts/BATCH-2026-08-09-b3.md),
+and [committed generated result](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/emailchaser/2026-08-09-seedance-ugc-b3/emailchaser-c17-ugc-promotions-720p.mp4).
+
+---
+
 ## Reusable templates
 
 ### First-frame illustration-lock and accelerated micro-loop template
@@ -11192,6 +11319,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [GroupX — two native-720p Seedance 2.5 UGC corrective generations with complete prompts, run seeds, committed masters and frame-plus-transcript QA](https://github.com/GroupX-ai/ad-creative/commit/624bec6b295144ff40c18fc54d007067655f2b59) ([complete prompts](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/_scripts/seedance-prompts-b3.mjs), [QA ledger](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/_scripts/BATCH-2026-08-09-b3.md))
 
 - [GroupX — fourteen Seedance 2.5 dialogue-ad generations with complete prompts, committed deliverables and frame-plus-transcript QA](https://github.com/GroupX-ai/ad-creative/commit/856ba1b7593730534c4b74827a06005d03628022) ([batch ledger and defect record](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/BATCH-2026-08-09-b2.md))
 
