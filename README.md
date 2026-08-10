@@ -10182,6 +10182,70 @@ published August 10, 2026. The exact endpoint is recorded in
 the style-seed, adjacent-pair, batch, duration and retry contract is preserved in
 [agent.yaml](https://github.com/jdp-just-does-projects/agentkit-examples/blob/38cff2868a730ae9f62a829a43dc73887114002a/byteplus/video_gen/agent.yaml).
 
+### Unicode-safe 4,000-character prompt-budget preflight
+
+**Verified model:** Seedance 2.5 — live boundary probes on August 10, 2026
+accepted exactly 4,000 Unicode characters and rejected 4,001 on the tested
+Higgsfield CLI 1.1.23 route
+
+Use this before submitting a dense multilingual Seedance 2.5 prompt through the
+tested route. The ceiling is route-specific until another provider publishes or
+repeats the same boundary; do not present it as a universal ByteDance API limit.
+
+```text
+PROMPT-BUDGET PREFLIGHT
+
+1. Assemble the exact final prompt after reference labels, dialogue, negatives
+   and wrapper-added text are resolved. Count what will actually be submitted,
+   not an earlier draft.
+
+2. Count Unicode characters, not bytes, tokens or words.
+   PASS: character_count <= 4000
+   REJECT LOCALLY: character_count > 4000
+
+3. If the prompt is over budget, compress in this order:
+   a. remove repeated quality adjectives and duplicate style phrases;
+   b. replace repeated visual descriptions with one declared reference duty;
+   c. collapse long negative lists to the three-to-five likely failure modes;
+   d. merge repeated continuity rules into one state ledger;
+   e. shorten prose without deleting subject, ordered action, camera, audio,
+      reference ownership, terminal state or safety-critical exclusions.
+
+4. Recount after every rewrite. Do not assume an accepted cost estimate proves
+   the prompt is valid: the tested estimator quoted an over-length prompt while
+   the generation endpoint rejected it.
+
+5. Record the preflight beside the job:
+   model = Seedance 2.5
+   route = [PROVIDER / WRAPPER / VERSION]
+   unicode_character_count = [N]
+   limit_used = 4000
+   count_method = Unicode characters
+   result = PASS / LOCAL REJECT
+
+LOCAL CHECK
+Save the exact submitted text as prompt.txt, then run:
+wc -m < prompt.txt
+
+Use wc -m, never wc -c. The latter counts encoded bytes and can severely
+over-count Chinese, Greek, accented text, curly quotes and em dashes.
+```
+
+**Acceptance gate:** The measured probe accepted 4,000 characters and returned
+`prompt: String should have at most 4000 characters` at 4,001. A 4,000-character
+Greek test string occupied 7,525 bytes yet remained valid, demonstrating why a
+byte counter would destroy usable prompt detail. Re-check the schema after a
+provider or wrapper version change.
+
+**Technique:** Treat prompt length as a reproducible API preflight rather than a
+writing preference. Route/version logging prevents a measured wrapper constraint
+from becoming folklore, while ordered compression preserves directing information
+instead of blindly trimming the prompt tail.
+
+Adapted from Nick Athens' [live Seedance 2.5 boundary correction and tests](https://github.com/nickathens/MyOldMachine/commit/66e62ba19358345672f53c0c5e61099932488137),
+published August 10, 2026. The complete measured guide is preserved in the
+[versioned source file](https://github.com/nickathens/MyOldMachine/blob/66e62ba19358345672f53c0c5e61099932488137/skills/image-gen/models/seedance-2-5.md).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -10228,6 +10292,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Nick Athens — live Seedance 2.5 Unicode prompt-ceiling boundary and preflight correction](https://github.com/nickathens/MyOldMachine/commit/66e62ba19358345672f53c0c5e61099932488137) ([measured guide](https://github.com/nickathens/MyOldMachine/blob/66e62ba19358345672f53c0c5e61099932488137/skills/image-gen/models/seedance-2-5.md))
 
 - [John — Seedance 2.5 causal-state mechanical-temple one-take](https://x.com/john87445528/status/2086552293848301810) ([complete prompt and playable result](https://github.com/BeatAPI/awesome-seedance-2-5-prompts/blob/62a82dea8e3ad3195f58636789e092a57ed69478/prompts/use-cases/stories-films.md))
 
