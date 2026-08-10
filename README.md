@@ -218,6 +218,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Nested-hearth recursion and returning light](#202-nested-hearth-recursion-and-returning-light)
   - [Halving search with persistent discarded space](#203-halving-search-with-persistent-discarded-space)
   - [Breadth-first stone-maze light wave](#204-breadth-first-stone-maze-light-wave)
+  - [Llama-sheriff surrender beat](#205-llama-sheriff-surrender-beat)
+  - [Simultaneous Medusa-poster subject and typography activation](#206-simultaneous-medusa-poster-subject-and-typography-activation)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -9051,6 +9053,107 @@ and the [complete prompt plus exact endpoint](https://github.com/lmq3030/wolong-
 
 ---
 
+### 205. Llama-sheriff surrender beat
+
+**Verified model:** Seedance 2.5 — the ComfyUI partner-node workflow selects
+`Seedance 2.5`, preserves the full prompt and parameters, and ships a generated
+MP4 result
+
+**Use case:** live-action comedy, compact narrative reversal, character timing,
+native music  
+**Mode:** text-to-video  
+**Settings:** 5 seconds, 16:9, 720p, audio enabled
+
+```text
+Five-second live-action spaghetti-western comedy at golden hour in a dusty
+desert town. Preserve one readable geography: bank doors in the background,
+open street in the middle and a single llama sheriff blocking the foreground.
+Warm faded film color, long shadows and dry wind.
+
+[0–1.4s | confident escape]
+Two bank robbers burst through the doors carrying one cash sack each and hurry
+toward camera. Keep both sacks and both robbers distinct; do not introduce a
+crowd or getaway vehicle.
+
+[1.4–3.0s | absurd obstacle]
+Reveal the llama sheriff already planted in their path, wearing one cowboy hat
+and one sheriff star. The llama calmly tips its hat once. Hold a clean reaction
+beat as both robbers stop.
+
+[3.0–5.0s | surrender]
+In one causal action, the robbers drop the two sacks, then raise both hands.
+Finish on the composed standoff rather than cutting away.
+
+TIMING LOCK
+escape → sheriff blocks → one hat tip → robbers stop → sacks drop → hands rise.
+No weapon firing, chase, duplicated character, extra llama, changing costume,
+black frame, title or text overlay. Audio: sparse Morricone-inspired guitar,
+boots on dust, two sack impacts and a short desert-wind tail.
+```
+
+**Technique:** place the comic reveal in a fixed three-depth composition, then
+reserve a visible pause between the sheriff's tiny gesture and the robbers'
+larger response. The contrast makes the reversal legible within five seconds.
+
+**Source:** ComfyUI's August 10, 2026
+[Seedance 2.5 partner-node tutorial commit](https://github.com/Comfy-Org/docs/commit/047b9eeff2f8190348cd6fbe606d7069cddadafb),
+the [complete exact-model workflow](https://github.com/Comfy-Org/workflow_templates/blob/f1604424815ffde8fed20543ac38bf245807fbca/templates/api_seedance2_5_t2v.json),
+and its [generated MP4](https://github.com/Comfy-Org/workflow_templates/blob/f1604424815ffde8fed20543ac38bf245807fbca/output/api_seedance2_5_t2v.mp4).
+
+---
+
+### 206. Simultaneous Medusa-poster subject and typography activation
+
+**Verified model:** Seedance 2.5 — the ComfyUI partner-node reference workflow
+selects `Seedance 2.5`, binds the supplied poster image, retains the complete
+prompt and ships a generated MP4 result
+
+**Use case:** poster animation, image-to-video, subject/background concurrency,
+layout preservation  
+**Mode:** reference-to-video from one image  
+**Settings:** 5 seconds, 720p, adaptive aspect ratio, audio enabled
+
+```text
+Use @image1 as the immutable poster layout. It contains a crimson marble Medusa
+statue in front of red typography. Preserve the crop, statue material, face,
+letter positions, palette and negative space throughout; animate the existing
+poster rather than redesigning it.
+
+[0–1.3s | restrained awakening]
+Begin on an exact visual match to @image1. A faint stone resonance starts. The
+statue's eyelids open slowly while the head and shoulders remain almost still.
+
+[1.3–3.8s | two synchronized layers]
+The Medusa looks directly toward camera as the snakes already present in her
+hair rise and sway with different small delays. At the same time—not in a later
+shot—the existing red background letters dissolve one by one into fine drifting
+red particles. Keep every non-dissolving poster element locked.
+
+[3.8–5.0s | resolved living poster]
+Let the last particles pass behind the statue while her gaze holds. End with the
+same composition and crimson-marble identity, now alive.
+
+PRESERVATION LOCK
+one statue, original snakes only, original camera and poster crop, subject
+motion plus typography dissolution occurring concurrently. No camera cut,
+replacement face, added limbs, new words, reflowed type, full-background
+collapse, black frame or unrelated content. Audio: low stone hum, fine granular
+particle hiss and subtle snake movement; no dialogue.
+```
+
+**Technique:** assign motion to two named visual layers and explicitly overlap
+their time windows. A separate preservation ledger for crop, material, face and
+unaffected graphics prevents “animate the poster” from becoming a wholesale
+poster redesign.
+
+**Source:** ComfyUI's August 10, 2026
+[Seedance 2.5 partner-node tutorial commit](https://github.com/Comfy-Org/docs/commit/047b9eeff2f8190348cd6fbe606d7069cddadafb),
+the [complete reference workflow and prompt](https://github.com/Comfy-Org/workflow_templates/blob/f1604424815ffde8fed20543ac38bf245807fbca/templates/api_seedance2_5_r2v.json),
+the [reference poster](https://github.com/Comfy-Org/workflow_templates/blob/f1604424815ffde8fed20543ac38bf245807fbca/input/medusa_poster.png),
+and its [generated MP4](https://github.com/Comfy-Org/workflow_templates/blob/f1604424815ffde8fed20543ac38bf245807fbca/output/api_seedance2_5_r2v.mp4).
+
+---
+
 ## Reusable templates
 
 ### First-frame illustration-lock and accelerated micro-loop template
@@ -10800,6 +10903,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [ComfyUI — official partner-node Seedance 2.5 T2V and reference-to-video examples](https://github.com/Comfy-Org/docs/commit/047b9eeff2f8190348cd6fbe606d7069cddadafb) ([complete workflows and generated results](https://github.com/Comfy-Org/workflow_templates/tree/f1604424815ffde8fed20543ac38bf245807fbca))
 
 - [Alex Wang / Wolong Academy — 37 Seedance 2.0 Mini algorithm-metaphor teaching films and 70 first-frame-locked illustration loops](https://github.com/lmq3030/wolong-academy/commit/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9) ([complete prompts, exact endpoint and batch/post-production workflow](https://github.com/lmq3030/wolong-academy/blob/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9/scripts/generate-item-videos.py))
 
