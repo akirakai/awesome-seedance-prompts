@@ -220,6 +220,11 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Breadth-first stone-maze light wave](#204-breadth-first-stone-maze-light-wave)
   - [Llama-sheriff surrender beat](#205-llama-sheriff-surrender-beat)
   - [Simultaneous Medusa-poster subject and typography activation](#206-simultaneous-medusa-poster-subject-and-typography-activation)
+  - [Recording-booth scale reveal](#207-recording-booth-scale-reveal)
+  - [Locked-off callback avalanche](#208-locked-off-callback-avalanche)
+  - [Black-and-white-to-color infomercial reset](#209-black-and-white-to-color-infomercial-reset)
+  - [Observation-glass twin-subject AB test](#210-observation-glass-twin-subject-ab-test)
+  - [Security-scanner data-validation line](#211-security-scanner-data-validation-line)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -9154,6 +9159,290 @@ and its [generated MP4](https://github.com/Comfy-Org/workflow_templates/blob/f16
 
 ---
 
+### 207. Recording-booth scale reveal
+
+**Verified model:** Seedance 2.5 — the creator's runner calls
+\`bytedance/seedance-2.5/text-to-video\`; the batch ledger marks this complete
+prompt's generated, upscaled and captioned result defect-free after frame and
+transcript review
+
+**Use case:** dialogue-led product ad, fly-on-the-wall documentary, scale reveal,
+native audio  
+**Mode:** text-to-video  
+**Settings:** 30 seconds, 9:16, 480p Seedance master, 1080p upscale, native audio
+
+\`\`\`text
+Deadpan fly-on-the-wall documentary inside a cheap converted-office recording
+booth. It must feel observed, not advertised. Handheld camera stays slightly too
+close and sometimes peers through smudged booth glass. Use only a desk lamp and
+mixing-console glow; retain shadow grain, imperfect focus and ordinary surfaces.
+
+A self-conscious middle-aged speaker wears one headphone and reads from a phone.
+A bored engineer remains outside at a cluttered desk and uses the talkback.
+
+[0–5s] The speaker leans too close to the microphone, clears his throat and
+records one stiff callback message.
+[5–10s] After an awkward silence, the engineer says the take is usable.
+[10–15s] Relieved, the speaker removes the headphones and asks how many people
+will receive it.
+[15–20s] Without looking up, the engineer answers: about forty thousand.
+[20–25s] Hold on the speaker freezing halfway out of the chair, then sitting
+down again.
+[25–30s] He quietly asks whether to record another take. The engineer replies
+that the point is for the message to sound like him, then gives one short brand
+line about a single voice reaching many inboxes.
+
+SPEECH ALLOWLIST
+Only the callback sentence, the engineer's approval, the audience-size exchange,
+the retake question and the final reply may be spoken. No narration, counting,
+muttered action labels or improvised sales copy.
+
+AUDIO
+Dead booth acoustics, faint headphone spill, chair creak and talkback clicks.
+Flat everyday voices; no music.
+
+CONTROL
+One booth, one speaker, one engineer, continuous session geography. No glossy
+commercial lighting, heroic framing, crowd, text overlay, captions, logo,
+unmotivated cutaway or added prop.
+\`\`\`
+
+**Technique:** build the sales claim as a delayed conversational reveal rather
+than voice-over. The long physical freeze gives the number consequence, while
+the speech allowlist applies the creator's tested fix for improvised narration
+and spoken stage directions.
+
+**Source:** GroupX's August 10, 2026
+[Seedance 2.5 batch commit](https://github.com/GroupX-ai/ad-creative/commit/856ba1b7593730534c4b74827a06005d03628022),
+[complete source prompt](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/seedance-prompts-b2.mjs),
+[exact-model runner](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/seedance-generate.mjs),
+[frame-and-transcript QA ledger](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/BATCH-2026-08-09-b2.md),
+and [committed generated deliverable](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/voicedrop/2026-08-09-seedance-video-b2/voicedrop-c41-recording-booth-1080p-captioned.mp4).
+
+---
+
+### 208. Locked-off callback avalanche
+
+**Verified model:** Seedance 2.5 — the creator's exact-model runner, complete
+prompt, committed generated video and QA ledger identify this as a defect-free
+\`bytedance/seedance-2.5/text-to-video\` result
+
+**Use case:** one-take office comedy, escalating prop count, native-audio rhythm,
+product ad  
+**Mode:** text-to-video  
+**Settings:** 30 seconds, 9:16, 480p Seedance master, 1080p upscale, native audio
+
+\`\`\`text
+One deadpan workplace-comedy take, framed like unremarkable office surveillance
+rather than an ad. Lock a mildly wide camera at seated eye level for all thirty
+seconds: no pan, tilt, zoom, reframing or cut. Flat fluorescent light, soft
+corners and visible grain.
+
+Show a small sales office with two joined desks, faded whiteboard marks, vertical
+blinds, a tired plant and a water cooler. One salesperson sits rigidly at the
+first desk; a coworker at the second calmly eats cereal from a mug.
+
+[0–5s] One phone rings. The salesperson stares at it without answering.
+[5–11s] A second ring starts elsewhere, then a third. She turns her head slowly;
+the coworker keeps eating.
+[11–17s] More phones are now visible across the desks and ring independently,
+never in rhythm. She presses both palms flat on the desktop.
+[17–22s] She quietly says that callers keep coming in.
+[22–26s] Still chewing and never looking up, the coworker says this is the new
+normal.
+[26–30s] She finally looks toward camera while the ringing continues; the
+coworker delivers one short line about letting leads call you.
+
+AUDIO
+Water-cooler glug, spoon against ceramic and ordinary asynchronous ringtones.
+Never turn the ringing into music; no score.
+
+CONTINUITY AND SPEECH LOCK
+The camera and furniture never move. Phones may only accumulate in plausible
+desk positions and never merge. Only the two brief exchanges and final product
+line may be spoken. No narration, muttering, subtitles, logos or glossy ad
+lighting.
+\`\`\`
+
+**Technique:** hold every visual variable except the accumulating phones. The
+static frame makes each new ring readable, and deliberately asynchronous native
+audio turns escalation into structure without a montage.
+
+**Source:** GroupX's August 10, 2026
+[Seedance 2.5 batch commit](https://github.com/GroupX-ai/ad-creative/commit/856ba1b7593730534c4b74827a06005d03628022),
+[complete source prompt](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/seedance-prompts-b2.mjs),
+[frame-and-transcript QA ledger](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/BATCH-2026-08-09-b2.md),
+and [committed generated deliverable](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/voicedrop/2026-08-09-seedance-video-b2/voicedrop-c42-callback-avalanche-1080p-captioned.mp4).
+
+---
+
+### 209. Black-and-white-to-color infomercial reset
+
+**Verified model:** Seedance 2.5 — the creator publishes the complete prompt,
+exact \`bytedance/seedance-2.5/text-to-video\` runner, committed output and a QA
+ledger that marks the result defect-free
+
+**Use case:** retro product ad, format transition, before/after contrast,
+controlled performance change  
+**Mode:** text-to-video  
+**Settings:** 30 seconds, 9:16, 480p Seedance master, 1080p upscale, native audio
+
+\`\`\`text
+Parody a cheap late-1990s direct-response infomercial, played sincerely. Preserve
+period standard-definition softness, clipped highlights, warm-yellow cast,
+slight chromatic smear, hard wall shadow and an overlit three-point setup. One
+locked camera may make a single clumsy zoom.
+
+Use a fake domestic-office set: pine desk, beige tower computer, powered-off
+monitor, floral wallpaper, artificial window and a wicker basket of plain
+envelopes. A neatly groomed middle-aged presenter wears a tucked polo.
+
+[0–6s | monochrome problem] In black and white, he tries to stuff envelopes,
+drops an armful and appeals to camera with exaggerated frustration.
+[6–12s | failure peak] Stay monochrome. Make the one awkward zoom as the basket
+tips over; he puts his head in his hands.
+[12–17s | state reset] Hard cut to full color in the identical composition. The
+light is warmer and cleaner, the basket upright and empty, and the presenter
+perfectly calm with folded hands.
+[17–23s] In an ordinary voice, he says he only had to send once.
+[23–27s] Hold a small shrug and glance toward the empty basket.
+[27–30s] He finishes with one concise line explaining that later follow-ups run
+automatically.
+
+AUDIO
+Boxy period room sound, envelopes sliding and basket striking wood. A thin,
+unpleasant tone exists only in the monochrome section; the color section is
+quiet. No modern music.
+
+LOCKS
+Same actor, set, camera and wardrobe across the cut. The transition changes only
+color, lighting mood, prop state and performance energy. No contemporary device,
+readable screen, captions, logo, extra presenter or modern commercial polish.
+\`\`\`
+
+**Technique:** make the transition a four-variable state reset—monochrome to
+color, messy to ordered, frantic to calm, noisy to quiet—while locking actor,
+set and camera. The product benefit becomes visible before it is explained.
+
+**Source:** GroupX's August 10, 2026
+[Seedance 2.5 batch commit](https://github.com/GroupX-ai/ad-creative/commit/856ba1b7593730534c4b74827a06005d03628022),
+[complete source prompt](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/seedance-prompts-b2.mjs),
+[frame-and-transcript QA ledger](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/BATCH-2026-08-09-b2.md),
+and [committed generated deliverable](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/emailchaser/2026-08-09-seedance-video-b2/emailchaser-c13-infomercial-1080p-captioned.mp4).
+
+---
+
+### 210. Observation-glass twin-subject A/B test
+
+**Verified model:** Seedance 2.5 — the creator's complete prompt and exact-model
+runner map to a committed generated deliverable that the batch ledger marks
+defect-free after visual and dialogue QA
+
+**Use case:** split-screen-within-one-frame staging, product metaphor, controlled
+reaction contrast, native dialogue  
+**Mode:** text-to-video  
+**Settings:** 30 seconds, 9:16, 480p Seedance master, 1080p upscale, native audio
+
+\`\`\`text
+Dry scientific-observation parody with no modern ad gloss. Lock the camera in a
+dark room behind one long observation window; retain a faint reflection on the
+glass. On the bright side, show two identical white test rooms side by side.
+Each contains one plain table, moulded chair and closed laptop. Clinical light
+is harsh, flat and shadowless. No camera movement.
+
+Two similar adult subjects wear matching grey shirts and begin in mirrored
+postures, one per room. A researcher is seen only from behind in the dark
+foreground, holding a clipboard.
+
+[0–6s] Hold both rooms. The researcher identifies the left subject as receiving
+message variant A.
+[6–12s] The left subject opens the laptop, reads, shows no reaction and closes it.
+The researcher introduces variant B.
+[12–18s] The right subject opens the laptop, immediately leans forward and types.
+[18–23s] The researcher makes exactly one clipboard mark and quietly records the
+faster response.
+[23–27s] Preserve the contrast: left subject still, right subject still typing.
+[27–30s] Without turning around, the researcher gives one restrained line about
+testing subject-line variants.
+
+AUDIO
+Air-handling hum, pen on clipboard and muffled keyboard taps through glass.
+Quiet unperformed voices; no music.
+
+EXPERIMENT LOCK
+Rooms, wardrobe, laptops, framing and initial poses are identical. After reading,
+only the named reactions diverge. Screens remain unreadable. No third subject,
+camera move, narration, floating graph, caption, logo or invented metric.
+\`\`\`
+
+**Technique:** stage the comparison as two controlled cells inside one locked
+frame. An explicit shared-state ledger makes the single behavioral difference
+causal and legible, avoiding an ordinary before/after edit.
+
+**Source:** GroupX's August 10, 2026
+[Seedance 2.5 batch commit](https://github.com/GroupX-ai/ad-creative/commit/856ba1b7593730534c4b74827a06005d03628022),
+[complete source prompt](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/seedance-prompts-b2.mjs),
+[frame-and-transcript QA ledger](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/BATCH-2026-08-09-b2.md),
+and [committed generated deliverable](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/emailchaser/2026-08-09-seedance-video-b2/emailchaser-c14-twin-study-1080p-captioned.mp4).
+
+---
+
+### 211. Security-scanner data-validation line
+
+**Verified model:** Seedance 2.5 — GroupX's runner names
+\`bytedance/seedance-2.5/text-to-video\`, while the complete prompt, committed
+generated output and batch ledger verify this defect-free render
+
+**Use case:** service metaphor, conveyor choreography, privacy-safe prop design,
+native audio  
+**Mode:** text-to-video  
+**Settings:** 30 seconds, 9:16, 480p Seedance master, 1080p upscale, native audio
+
+\`\`\`text
+Deadpan observational documentary at a tired security checkpoint, never styled
+as an ad. Shoot handheld from behind a queue at shoulder height; allow people to
+briefly cross the lens and let the operator adjust to see around them. Use cold
+fluorescent light, a slightly wide lens, grain and mild motion blur.
+
+The checkpoint has a conveyor, grey trays, scanner arch, folding table, scuffed
+queue tape and plastic chair. A bored officer in blue gloves works quickly.
+Instead of luggage, trays carry plain cards representing phone, email or network
+identifiers. Card faces always point away or blur in motion; no value is legible.
+
+[0–6s] Cards move through the scanner one tray at a time. The officer watches an
+off-camera display whose glow reaches her face; never show the screen.
+[6–12s] She waves three trays through with two fingers, then stops one and lifts
+its card.
+[12–17s] After one-second inspection, she labels it disconnected.
+[17–21s] She drops it into an already half-full rejection bin.
+[21–26s] Without breaking rhythm, she removes the next failed card and labels
+the mailbox invalid.
+[26–30s] She waves the queue forward and states one short line about instantly
+validating phone, email and IP data.
+
+AUDIO
+Conveyor motor, trays knocking, one flat scanner beep, queue shuffle and low
+murmur. Officer speaks only the two rejection labels and final service line.
+No narration or music.
+
+CONTROL
+The belt moves continuously; every accepted tray exits and every rejected card
+enters the same bin. No readable personal data, airline branding, uniform badge,
+shown interface, alarm, confrontation, subtitles, logo or extra sales copy.
+\`\`\`
+
+**Technique:** translate an invisible API decision into a monotonous physical
+sorting line. Off-camera UI and turned-away cards preserve privacy and suppress
+native-text failures, while the pass/reject state has a single visible route.
+
+**Source:** GroupX's August 10, 2026
+[Seedance 2.5 batch commit](https://github.com/GroupX-ai/ad-creative/commit/856ba1b7593730534c4b74827a06005d03628022),
+[complete source prompt](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/seedance-prompts-b2.mjs),
+[frame-and-transcript QA ledger](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/BATCH-2026-08-09-b2.md),
+and [committed generated deliverable](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/1lookup/2026-08-09-seedance-video-b2/1lookup-c5-security-scanner-1080p-captioned.mp4).
+
+---
+
 ## Reusable templates
 
 ### First-frame illustration-lock and accelerated micro-loop template
@@ -10903,6 +11192,9 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [GroupX — fourteen Seedance 2.5 dialogue-ad generations with complete prompts, committed deliverables and frame-plus-transcript QA](https://github.com/GroupX-ai/ad-creative/commit/856ba1b7593730534c4b74827a06005d03628022) ([batch ledger and defect record](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/BATCH-2026-08-09-b2.md))
+
 
 - [ComfyUI — official partner-node Seedance 2.5 T2V and reference-to-video examples](https://github.com/Comfy-Org/docs/commit/047b9eeff2f8190348cd6fbe606d7069cddadafb) ([complete workflows and generated results](https://github.com/Comfy-Org/workflow_templates/tree/f1604424815ffde8fed20543ac38bf245807fbca))
 
