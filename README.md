@@ -11854,6 +11854,81 @@ Adapted from Shawn's August 11, 2026
 the [corrected prompt routes and occlusion rules](https://github.com/ShawnatWOW/wow-artwork-engine/blob/2d93072ef0654641d4de7665484ed1520bca6b16/server/src/services/generation/prompts.js),
 and the [first-frame-only plate implementation](https://github.com/ShawnatWOW/wow-artwork-engine/blob/2d93072ef0654641d4de7665484ed1520bca6b16/server/src/services/orchestrator.js).
 
+### Self-anchored I2V loop with offline seam fusion
+
+**Verified model:** Seedance 2.0 — the original creator records the exact
+`model_bytedance-seedance-2-0` image-to-video route, two generated MP4 loops,
+the first/last-frame conditioning method, and measured raw-versus-fused seam
+error
+
+Use this when a still illustration, product tableau or environmental plate
+needs subtle life while returning cleanly to its own opening frame. Let
+Seedance create only bounded motion already implied by the image, then bake
+the remaining wrap correction into one delivered file.
+
+```text
+INPUT CONTRACT
+Use one approved still as both `image` and `lastFrameImage`. The still owns
+composition, geometry, subject identity, palette and all object positions.
+Generate a [5–6]-second image-to-video clip with no cut and no audio.
+
+MOTION ALLOWLIST
+Animate only [2–4 EXISTING SOURCES OF MOTION], for example:
+- a lamp flame changing shape inside its fixture
+- firelight flickering across nearby surfaces
+- individual window panes breathing at slightly different intensities
+- tiny dust or smoke already visible in the plate
+
+Add one nearly imperceptible camera drift or push of about [1–2%]. Everything
+else remains still. Motion must stay local to its named source and may change
+brightness, shape or reflection without inventing new objects.
+
+RETURN CONDITION
+The movement completes a calm cycle and returns to the supplied plate at the
+final frame. Preserve the same crop, scale, perspective, edges, silhouettes,
+furniture, background structures and light-source locations. Do not pose or
+freeze early in anticipation of the ending.
+
+FAILURE CONTROLS
+No new fog bank, orbiting ribbon, floating glow trail, extra flame, altered
+architecture, displaced prop, reframing, global pulse, camera cut or texture
+repaint. If an atmospheric effect becomes a separate object or changes the
+silhouette, remove that effect from the generation prompt and add it later as
+a deterministic layer.
+```
+
+After generation, finish the loop as a delivery operation:
+
+1. Preserve the raw master and compare the final-to-first boundary against an
+   ordinary adjacent frame pair in the middle of the clip.
+2. Reject and regenerate if the boundary contains structural repainting, a
+   crop/scale jump or a moving object that cannot be paired across the wrap.
+3. Fuse a short boundary window offline—for the source test, the last 12
+   frames were blended into the first 12—then encode one self-contained loop.
+4. Inspect the fused boundary at normal speed and frame by frame. Measure mean
+   RGB difference and the percentage of pixels above a small motion threshold;
+   the wrap should approach the clip's ordinary adjacent-frame noise.
+5. Deliver one video file with native looping. Do not rely on two browser video
+   copies held half a cycle apart, because their continuously different light
+   states create a permanent double exposure.
+
+**Why it works:** supplying the same plate at both endpoints makes the model
+solve a closed motion path rather than asking post-production to hide a large
+visual reset. The offline boundary pass then corrects only the small residual
+timing difference. In the published room test, the raw wrap measured 1.19 mean
+RGB with 3.0% of pixels moving above the test threshold; the fused wrap fell
+to 0.27 mean RGB and 0.27%, close to an ordinary 0.13 adjacent-frame step.
+The paired street test also exposes the key failure mode: mentioning fog made
+Seedance invent a white plume, so nonessential atmosphere was moved out of the
+generation prompt.
+
+Adapted from Sam Z.'s August 11, 2026
+[Seedance 2.0 living-plate experiment](https://github.com/senjenz-portal/gaslight-remake/commit/29cff81b402d8bd68fade470d8f4a00fb56edf49),
+including the [method, model ID and seam measurements](https://github.com/senjenz-portal/gaslight-remake/blob/29cff81b402d8bd68fade470d8f4a00fb56edf49/king-demo/living-plate/index.html)
+and the two generated masters:
+[interior plate](https://github.com/senjenz-portal/gaslight-remake/blob/29cff81b402d8bd68fade470d8f4a00fb56edf49/king-demo/living-plate/breathed-room.mp4)
+and [street plate](https://github.com/senjenz-portal/gaslight-remake/blob/29cff81b402d8bd68fade470d8f4a00fb56edf49/king-demo/living-plate/breathed-street.mp4).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -11900,6 +11975,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Sam Z. / Gaslight Remake — measured Seedance 2.0 self-anchored living-plate loops with offline seam fusion](https://github.com/senjenz-portal/gaslight-remake/commit/29cff81b402d8bd68fade470d8f4a00fb56edf49) ([method, exact model and seam measurements](https://github.com/senjenz-portal/gaslight-remake/blob/29cff81b402d8bd68fade470d8f4a00fb56edf49/king-demo/living-plate/index.html), [interior master](https://github.com/senjenz-portal/gaslight-remake/blob/29cff81b402d8bd68fade470d8f4a00fb56edf49/king-demo/living-plate/breathed-room.mp4), [street master](https://github.com/senjenz-portal/gaslight-remake/blob/29cff81b402d8bd68fade470d8f4a00fb56edf49/king-demo/living-plate/breathed-street.mp4))
 
 - [Shawn / WOW Artwork Engine — live-validated Seedance 2.5 full-width route and first-frame-only border-plate correction](https://github.com/ShawnatWOW/wow-artwork-engine/commit/2d93072ef0654641d4de7665484ed1520bca6b16) ([corrected prompt routes](https://github.com/ShawnatWOW/wow-artwork-engine/blob/2d93072ef0654641d4de7665484ed1520bca6b16/server/src/services/generation/prompts.js), [delivery implementation](https://github.com/ShawnatWOW/wow-artwork-engine/blob/2d93072ef0654641d4de7665484ed1520bca6b16/server/src/services/orchestrator.js))
 
