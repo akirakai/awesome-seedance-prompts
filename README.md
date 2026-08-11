@@ -11273,6 +11273,90 @@ and its versioned [video prompt builder](https://github.com/wanglongxiao/seedanc
 published August 10, 2026. The same release documents the generated-result
 showcase and identifies SeeDance 2.5 as its storyboard video model.
 
+
+### 2×2 marketing-board reference donor for one continuous ad
+
+**Verified model:** Seedance 2.5 (`doubao-seedance-2-5-260628`) — confirmed by the
+official Volcano Engine AgentKit sample's tested commit, exact model default,
+and executable reference-image-to-video workflow
+
+Use this when a product brief needs four marketing beats but the final deliverable
+must be one coherent video rather than a visible storyboard, collage, or set of
+separately stitched clips. Build one 2×2 board to organize the story, then give
+that board to Seedance as a reference donor—not as a literal opening or closing
+frame.
+
+```text
+PRODUCT LEDGER
+Product: [NAME]
+Identity reference: [PUBLIC PRODUCT IMAGE URL / NONE]
+Geometry that cannot change: [PACKAGE SHAPE, CAP, LABEL ZONES, MATERIAL]
+Primary colors: [COLORS]
+Audience and need: [AUDIENCE + PROBLEM]
+Selling proof: [INGREDIENT / TEXTURE / MECHANISM / USE RESULT]
+Visual language: [FRESH / CLEAN / QUIET PREMIUM / OTHER]
+Format: [9:16 DEFAULT / USER RATIO], [15s DEFAULT / 4–30s]
+
+MARKETING-BOARD PASS
+Generate exactly one image containing one clean 2×2 storyboard:
+- upper-left — HOOK: product already visible inside an attention-grabbing
+  atmosphere or action;
+- upper-right — NEED: the target user enters a recognizable use situation;
+- lower-left — PROOF: one close view makes the selling point physically legible;
+- lower-right — PAYOFF: stable product hero state and purchase-motivating finish.
+
+All four panels share one product identity, palette, lighting family and campaign
+world. If a product image is supplied, it owns packaging structure and main
+colors. The board is one planning asset, not four unrelated images.
+
+REFERENCE-DONOR CONTRACT
+@Image1 is the approved 2×2 marketing board. Supply it through the endpoint's
+reference_images role. Do not send it as first_frame or last_frame.
+
+Read @Image1 only for product appearance, visual style, scene atmosphere and the
+ordered four-beat story. Never reproduce the complete board in the video. Never
+show its grid, borders, simultaneous panels, contact-sheet layout or duplicated
+product views. The first video frame is a natural scene from the hook, not the
+storyboard sheet.
+
+CONTINUOUS VIDEO COMPILATION
+Generate one complete Seedance 2.5 video:
+[0–3s] HOOK — [VISIBLE MOTION + CAMERA MOVE], establish product and atmosphere.
+[3–7s] NEED — flow naturally into [USER / USE SITUATION] with one motivated
+transition; preserve product geometry and screen direction.
+[7–11s] PROOF — move close enough to show [SELLING PROOF] through physical
+action, material response or use result rather than unsupported on-screen text.
+[11–15s] PAYOFF — resolve into [PRODUCT HERO STATE / USER RESULT], then hold a
+clean final composition without replay, frozen filler or an extra outro.
+
+The four beats may use motivated cuts or transitions, but they belong to one
+campaign film with consistent product, color, light logic, pacing and emotion.
+Audio: [DIEGETIC SOUNDS], [MUSIC / NONE], [DIALOGUE / NONE].
+No invented claims, unreadable label mutation, split screen, visible storyboard,
+duplicate package, package redesign, identity drift, random extra scene, caption,
+logo replacement or watermark.
+
+ACCEPTANCE GATE
+Reject and rerun if the output opens on the 2×2 sheet, exposes panel borders,
+omits or reorders a beat, treats panels as four simultaneous views, changes
+package geometry or colors, invents a fifth story beat, or reaches the payoff
+early and pads the remaining duration. Preserve every returned media URL exactly,
+including query parameters.
+```
+
+**Why it works:** the board separates campaign planning from literal boundary
+control. Four panels give the model a compact story, product and style donor,
+while the explicit reference-only contract prevents the common failure where a
+planning collage is copied into the rendered frame. One paid video task also
+avoids cross-clip configuration and seam drift.
+
+Adapted from Volcano Engine AgentKit's [tested Seedance 2.5 ad-video sample
+commit](https://github.com/jdp-just-does-projects/agentkit-examples/commit/3a1629b908946fca7d20c4f130ff760f629e90c2),
+published August 11, 2026. The complete official workflow is preserved in
+[prompt.py](https://github.com/jdp-just-does-projects/agentkit-examples/blob/3a1629b908946fca7d20c4f130ff760f629e90c2/volcengine/ad_video_gen/prompt.py);
+the exact model ID is recorded in
+[consts.py](https://github.com/jdp-just-does-projects/agentkit-examples/blob/3a1629b908946fca7d20c4f130ff760f629e90c2/volcengine/ad_video_gen/consts.py).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -11319,6 +11403,9 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+
+- [Volcano Engine AgentKit — tested Seedance 2.5 2×2 marketing-board reference donor for one continuous product video](https://github.com/jdp-just-does-projects/agentkit-examples/commit/3a1629b908946fca7d20c4f130ff760f629e90c2) ([official executable prompt](https://github.com/jdp-just-does-projects/agentkit-examples/blob/3a1629b908946fca7d20c4f130ff760f629e90c2/volcengine/ad_video_gen/prompt.py), [exact model default](https://github.com/jdp-just-does-projects/agentkit-examples/blob/3a1629b908946fca7d20c4f130ff760f629e90c2/volcengine/ad_video_gen/consts.py))
 
 - [GroupX — two native-720p Seedance 2.5 UGC corrective generations with complete prompts, run seeds, committed masters and frame-plus-transcript QA](https://github.com/GroupX-ai/ad-creative/commit/624bec6b295144ff40c18fc54d007067655f2b59) ([complete prompts](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/_scripts/seedance-prompts-b3.mjs), [QA ledger](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/_scripts/BATCH-2026-08-09-b3.md))
 
