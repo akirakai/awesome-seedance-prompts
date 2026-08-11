@@ -11357,6 +11357,97 @@ published August 11, 2026. The complete official workflow is preserved in
 the exact model ID is recorded in
 [consts.py](https://github.com/jdp-just-does-projects/agentkit-examples/blob/3a1629b908946fca7d20c4f130ff760f629e90c2/volcengine/ad_video_gen/consts.py).
 
+
+### AIDA candidate tournament with first-frame-to-video selection
+
+**Verified model:** Seedance 2.5 (`doubao-seedance-2-5-260628`) — confirmed by
+Volcano Engine AgentKit's completed test commit, exact model configuration, and
+official executable generation-and-evaluation pipeline
+
+Use this for a multi-shot product ad when one generation per shot is too fragile.
+Treat every shot as a small tournament: create several possible opening frames,
+select one, create several Seedance clips from that frame, then select and stitch
+only the strongest clip.
+
+```text
+CAMPAIGN CONTRACT
+Product: [NAME]
+Audience and need: [AUDIENCE + NEED]
+Selling proof: [INGREDIENT / TEXTURE / MECHANISM / USE RESULT]
+Identity reference: [ONE APPROVED PRODUCT IMAGE / NONE]
+Output: four-shot [RATIO] campaign, [5–10s PER SHOT DEFAULT]
+Candidates: [N FIRST FRAMES PER SHOT, DEFAULT 2] and
+[N VIDEOS PER SHOT, DEFAULT 2]
+Shared invariants: [PACKAGE GEOMETRY, LABEL ZONES, COLORS, MATERIAL, GRADE]
+
+AIDA SHOT LEDGER
+1. ATTENTION — product already visible in [HOOK SCENE].
+   Frame: [SHOT SCALE, SUBJECT, BACKGROUND, LIGHT].
+   Motion: [ONE ORDERED ACTION + ONE MOTIVATED CAMERA MOVE].
+2. INTEREST — show [AUDIENCE] encountering [RECOGNIZABLE NEED / USE MOMENT].
+   Frame: [SHOT SCALE, PERSON / PRODUCT RELATIONSHIP, ENVIRONMENT].
+   Motion: [VISIBLE RESPONSE + CAMERA MOVE].
+3. DESIRE — make [SELLING PROOF] physically legible in close or macro detail.
+   Frame: [INGREDIENT / TEXTURE / MECHANISM, LIGHT, COLOR].
+   Motion: [ONE-WAY MATERIAL ACTION + CAMERA MOVE].
+4. ACTION — return to stable packaging in [PURCHASE-MOTIVATING HERO SCENE].
+   Frame: [PACKAGE POSITION, CLEAN BACKGROUND, FINAL LIGHT].
+   Motion: [CONTROLLED REVEAL + SHORT SETTLE].
+
+FIRST-FRAME TOURNAMENT
+For each shot:
+1. Generate [N] distinct first-frame candidates from its frame brief.
+2. Keep the approved product image as the only product-identity authority.
+3. Score every candidate separately:
+   - aesthetics — composition, palette, light, originality;
+   - technical quality — clarity, texture, integrity, absence of distortion;
+   - reference consistency — package shape, label zones, colors and placement.
+4. Select exactly one highest-scoring frame. If scores tie, choose the lower
+   candidate index; never merge tied candidates.
+
+SEEDANCE VIDEO TOURNAMENT
+For each winning frame, write one concise motion prompt:
+[SHOT SCALE / PERSPECTIVE]. [SUBJECT] performs [ACTION 1], then [ACTION 2].
+[ENVIRONMENTAL RESPONSE]. Camera [ONE MOTIVATED MOVE].
+Preserve [PRODUCT AND SCENE INVARIANTS].
+Audio: very light incidental action sound only; no human voice, narration,
+background music or designed sound effects.
+--rs [RESOLUTION] --rt [RATIO] --dur [4–30] --fps 24 --wm true --seed [SEED]
+
+Use the winning frame as first_frame. Create [N] independent Seedance tasks per
+shot, but submit the complete task list in one batch rather than one tool call per
+clip. Preserve every returned media code or URL exactly.
+
+VIDEO SELECTION
+Score every returned clip against its winning frame on:
+- aesthetics and commercial readability;
+- technical image quality and temporal integrity;
+- consistency with the product, first frame and requested action.
+Choose exactly one highest-scoring clip per shot; use the lower candidate index
+for a tie.
+
+RELEASE GATE
+Stitch winners in AIDA order only after all four shots pass. Reject or regenerate
+a shot if product geometry drifts, the selected clip contradicts its first frame,
+the action order changes, a candidate is missing or timed out, a score lacks
+reference comparison, a tie produces multiple winners, or the final sequence
+omits or reorders an AIDA stage.
+```
+
+**Why it works:** generation variance is isolated inside each shot instead of
+being discovered after the full ad is assembled. The first tournament protects
+composition and product identity; the second tests motion and temporal integrity.
+A fixed N-to-one gate also makes selection reproducible and prevents an evaluator
+from quietly combining incompatible candidates.
+
+Adapted from Volcano Engine AgentKit's [completed Seedance 2.5 sequential-ad
+test](https://github.com/jdp-just-does-projects/agentkit-examples/commit/2164eae6b8ac13d9b013745ed2a7dc80adcf6168),
+published August 11, 2026. The official sample records the exact model and tested
+pipeline in its [README](https://github.com/jdp-just-does-projects/agentkit-examples/blob/2164eae6b8ac13d9b013745ed2a7dc80adcf6168/volcengine/ad_video_gen_seq/README.md),
+with the reusable [storyboard contract](https://github.com/jdp-just-does-projects/agentkit-examples/blob/2164eae6b8ac13d9b013745ed2a7dc80adcf6168/volcengine/ad_video_gen_seq/app/storyboard/prompt.py),
+[Seedance generation contract](https://github.com/jdp-just-does-projects/agentkit-examples/blob/2164eae6b8ac13d9b013745ed2a7dc80adcf6168/volcengine/ad_video_gen_seq/app/video/prompt.py),
+and [media-scoring rubric](https://github.com/jdp-just-does-projects/agentkit-examples/blob/2164eae6b8ac13d9b013745ed2a7dc80adcf6168/volcengine/ad_video_gen_seq/app/eval/prompt.py).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -11403,6 +11494,9 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+
+- [Volcano Engine AgentKit — tested Seedance 2.5 AIDA candidate tournament with first-frame and video N-to-one selection](https://github.com/jdp-just-does-projects/agentkit-examples/commit/2164eae6b8ac13d9b013745ed2a7dc80adcf6168) ([official workflow and exact model](https://github.com/jdp-just-does-projects/agentkit-examples/blob/2164eae6b8ac13d9b013745ed2a7dc80adcf6168/volcengine/ad_video_gen_seq/README.md), [generation contract](https://github.com/jdp-just-does-projects/agentkit-examples/blob/2164eae6b8ac13d9b013745ed2a7dc80adcf6168/volcengine/ad_video_gen_seq/app/video/prompt.py), [evaluation rubric](https://github.com/jdp-just-does-projects/agentkit-examples/blob/2164eae6b8ac13d9b013745ed2a7dc80adcf6168/volcengine/ad_video_gen_seq/app/eval/prompt.py))
 
 
 - [Volcano Engine AgentKit — tested Seedance 2.5 2×2 marketing-board reference donor for one continuous product video](https://github.com/jdp-just-does-projects/agentkit-examples/commit/3a1629b908946fca7d20c4f130ff760f629e90c2) ([official executable prompt](https://github.com/jdp-just-does-projects/agentkit-examples/blob/3a1629b908946fca7d20c4f130ff760f629e90c2/volcengine/ad_video_gen/prompt.py), [exact model default](https://github.com/jdp-just-does-projects/agentkit-examples/blob/3a1629b908946fca7d20c4f130ff760f629e90c2/volcengine/ad_video_gen/consts.py))
