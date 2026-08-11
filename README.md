@@ -11657,6 +11657,103 @@ and the three native generated masters:
 [double-problem hook](https://github.com/GroupX-ai/ad-creative/blob/875b54672aad62eb92536c96cc831ea44a1be4ca/voicedrop/2026-08-10-seedance-ugc-b4/voicedrop-c47-they-hate-dialling-720p.mp4),
 and [direct-command hook](https://github.com/GroupX-ai/ad-creative/blob/875b54672aad62eb92536c96cc831ea44a1be4ca/emailchaser/2026-08-10-seedance-ugc-b4/emailchaser-c18-check-your-promotions-720p.mp4).
 
+### Role-cast causal arc with anticipation-separated surges
+
+**Verified model:** Seedance 2.5 — the original creator records a live
+approximately $16, 30.0-second single-pass render and describes its readable
+progression from a poised establishing state through discovery and
+region-by-region bloom to the hero flyby payoff
+
+Use this for a long, highly kinetic one-take whose characters must still read
+as a story. Assign each subject a stable dramatic job, make every action cause
+a visible reaction, and place a brief poised beat before each surge.
+
+```text
+FORMAT AND INPUT
+20–30-second image-to-video master from one approved opening frame.
+One unbroken shot. Do not supply an end-frame anchor; describe the ending as
+moving action so the model is free to reach the payoff without braking early.
+
+ROLE CAST
+KEEPER — [LARGE OR ROOTED SUBJECT] at the scene's emotional or visual center.
+HERO — [AGILE PROTAGONIST] that owns the near-camera flybys and scale surges.
+COMPANION — [SECONDARY MOVER] that observes, chases, mirrors or assists.
+
+These three are the only living subjects. Keep their identities, materials,
+relative scale and roles distinct. At every story beat, exactly one character
+leads while the others visibly react.
+
+OPENING ENERGY
+Begin below the climax: the keeper is softly active at the center, the
+companion moves gently at another depth, and the distant hero leans toward the
+first source of change. Use drifting light or subtle environmental motion to
+create anticipation, not a frozen tableau or an explosion already in progress.
+
+CAMERA
+Fixed camera, locked framing for the entire clip: no dolly, push-in, pull-back,
+zoom, pan or reframing. The viewpoint remains outside the scene. Subjects may
+rush toward the frame plane, grow rapidly through real depth travel and cross
+the near foreground, but the camera does not follow them.
+
+THREE-MOVEMENT STORY
+[Opening ~10s — SETUP]
+[HERO] enters from [DISTANT EDGE / DEEP BACKGROUND] and notices [KEEPER /
+OBJECT / EVENT]. The hero's approach causes [KEEPER REACTION]. [COMPANION]
+notices that reaction and [CLEAR RESPONSE]. After a short poised beat, the hero
+makes the first near-camera pass.
+
+[Middle ~12s — TURN]
+The hero returns with a new intention and leads the companion across the full
+width and depth of the scene. Each completed pass causes one new region to
+[LIGHT / BLOOM / TRANSFORM / WAKE]. Show the transformation propagating in the
+same order as their travel so cause and effect remain readable.
+
+[Final ~8s — ARC-SPECIFIC PAYOFF]
+Resolve the story's own promise rather than inserting a generic climax:
+[KEEPER COMPLETES THE CHANGE], enabling [HERO'S DECISIVE ACTION], while
+[COMPANION COMPLETES A SUPPORTING RESPONSE]. End at maximum speed and
+brilliance with the hero crossing toward the viewer; do not slow down, pose or
+settle into a still.
+
+MOTION PHRASING
+Characters travel with purpose and claim new ground. The center is territory
+they cross, not a place they orbit. Do not use circling, spiralling,
+figure-eight, hovering or repeated center loops. Before each major burst, allow
+one breath of poised anticipation; then make the next surge larger than the
+last.
+
+AMBIENT RESPONSE
+Use small particles, secondary light and environmental details between lead
+actions. They react to the characters' causes and paths instead of churning
+continuously on their own.
+
+BOUNDARY AND COLOR
+Keep every subject, trail and effect inside the image bounds. If a physical or
+painted border exists, it remains fixed and unchanged while foreground
+subjects may occlude it. Preserve rich saturation throughout; intentional
+story transformations are allowed, but no gradual fading, greying or unrelated
+color drift.
+
+REJECTION GATE
+Reject if several characters lead simultaneously, a reaction precedes its
+cause, the opening begins at peak intensity, the middle becomes an orbit,
+characters hover around center frame, the ambient layer obscures the lead,
+the camera moves, the clip brakes for an implied end frame, or the final
+movement is a generic spectacle unrelated to the setup.
+```
+
+**Why it works:** the source pipeline's earlier high-motion version was judged
+unnatural and insufficiently story-like because everyone moved at once. Fixed
+keeper/hero/companion responsibilities make the eye know whom to follow;
+ordered cause-and-reaction beats make transformation legible; short
+anticipation intervals give the following burst contrast. The creator's live
+Seedance 2.5 validation produced a readable poised-jungle-to-discovery arc
+without sacrificing the peak-speed ending.
+
+Adapted from Shawn's August 11, 2026
+[live-tested Seedance 2.5 revision](https://github.com/ShawnatWOW/wow-artwork-engine/commit/00e2e1452186d0187f7ca69ede1402aea35451d9)
+and its [complete deterministic prompt constructor](https://github.com/ShawnatWOW/wow-artwork-engine/blob/00e2e1452186d0187f7ca69ede1402aea35451d9/server/src/services/generation/prompts.js).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -11703,6 +11800,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Shawn / WOW Artwork Engine — live-validated Seedance 2.5 role-cast causal arc for a 30-second single pass](https://github.com/ShawnatWOW/wow-artwork-engine/commit/00e2e1452186d0187f7ca69ede1402aea35451d9) ([complete deterministic prompt constructor](https://github.com/ShawnatWOW/wow-artwork-engine/blob/00e2e1452186d0187f7ca69ede1402aea35451d9/server/src/services/generation/prompts.js))
 
 
 - [Aniket Shahane / Flick — three rendered Seedance 2.5 interface-safe phone-to-TV concept shots](https://github.com/AniketShahane/Flick/commit/cdbdf28a028afeb4540506f938d1356104d0de6a) ([complete prompts and actual 720p/audio behavior](https://github.com/AniketShahane/Flick/blob/cdbdf28a028afeb4540506f938d1356104d0de6a/docs/launch/reviewer-video-prompt.md))
