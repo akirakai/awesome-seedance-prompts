@@ -11675,7 +11675,7 @@ One unbroken shot. Do not supply an end-frame anchor; describe the ending as
 moving action so the model is free to reach the payoff without braking early.
 
 ROLE CAST
-KEEPER — [LARGE OR ROOTED SUBJECT] at the scene's emotional or visual center.
+KEEPER — [LARGE OR ROOTED SUBJECT] anchored in the left or right third, never dead center.
 HERO — [AGILE PROTAGONIST] that owns the near-camera flybys and scale surges.
 COMPANION — [SECONDARY MOVER] that observes, chases, mirrors or assists.
 
@@ -11684,9 +11684,9 @@ relative scale and roles distinct. At every story beat, exactly one character
 leads while the others visibly react.
 
 OPENING ENERGY
-Begin below the climax: the keeper is softly active at the center, the
-companion moves gently at another depth, and the distant hero leans toward the
-first source of change. Use drifting light or subtle environmental motion to
+Begin below the climax: the keeper is softly active in one off-center third,
+the companion moves gently at another depth, and the hero enters from the
+opposite named edge toward the first source of change. Use drifting light or subtle environmental motion to
 create anticipation, not a frozen tableau or an explosion already in progress.
 
 CAMERA
@@ -11697,16 +11697,19 @@ the near foreground, but the camera does not follow them.
 
 THREE-MOVEMENT STORY
 [Opening ~10s — SETUP]
-[HERO] enters from [DISTANT EDGE / DEEP BACKGROUND] and notices [KEEPER /
-OBJECT / EVENT]. The hero's approach causes [KEEPER REACTION]. [COMPANION]
-notices that reaction and [CLEAR RESPONSE]. After a short poised beat, the hero
-makes the first near-camera pass.
+[HERO] enters from the edge opposite [KEEPER], crosses the full width through
+named foreground and depth zones, and notices [KEEPER / OBJECT / EVENT]. The
+hero's arrival causes [KEEPER REACTION]. [COMPANION] notices that reaction and
+[CLEAR RESPONSE]. After a short poised beat, the hero makes the first
+near-camera pass and ends at a named edge or depth.
 
 [Middle ~12s — TURN]
 The hero returns with a new intention and leads the companion across the full
-width and depth of the scene. Each completed pass causes one new region to
-[LIGHT / BLOOM / TRANSFORM / WAKE]. Show the transformation propagating in the
-same order as their travel so cause and effect remain readable.
+width and depth of the scene. Each beat starts exactly where the previous one ended, uses a different depth
+layer, and never retraces the same path. Each completed pass causes one new
+region to [LIGHT / BLOOM / TRANSFORM / WAKE]. Show the transformation
+propagating strip by strip in the same order as travel so cause and effect
+remain readable.
 
 [Final ~8s — ARC-SPECIFIC PAYOFF]
 Resolve the story's own promise rather than inserting a generic climax:
@@ -11754,6 +11757,103 @@ Adapted from Shawn's August 11, 2026
 [live-tested Seedance 2.5 revision](https://github.com/ShawnatWOW/wow-artwork-engine/commit/00e2e1452186d0187f7ca69ede1402aea35451d9)
 and its [complete deterministic prompt constructor](https://github.com/ShawnatWOW/wow-artwork-engine/blob/00e2e1452186d0187f7ca69ede1402aea35451d9/server/src/services/generation/prompts.js).
 
+### First-frame-only border plate and endpoint-ledger traversal
+
+**Verified model:** Seedance 2.5 — the original creator records a second live
+approximately $16 production render after correcting two observed failures:
+foreground characters hidden behind a post-composited frame and the hero
+circling a centered subject instead of traversing the scene
+
+Use this for framed trompe-l'oeil, portal or fourth-wall animation where a
+subject must cross in front of a border and travel across a wide composition.
+Separate first-frame geometry control from final-video compositing, then write
+every beat as an endpoint-to-endpoint route.
+
+```text
+INPUT AND LAYER OWNERSHIP
+Create and approve one still containing the exact matte border or portal
+geometry. If a programmatic border plate is needed for precision, composite it
+onto this STILL only, then use that plated still as the image-to-video input.
+
+Do not stamp the same opaque border, shadow or letterbox over every generated
+video frame after motion generation. During the clip, the model owns the
+painted border and its occlusion order. A foreground character must be able to
+cover the near border while the framed world remains visible behind it.
+
+Conform the generated video to the target dimensions with exact scaling. Do
+not center-crop a painted perimeter, because cropping changes border thickness.
+
+SCREEN MAP
+KEEPER: [SUBJECT] fixed primarily in the [LEFT / RIGHT] third, not dead center.
+HERO: [SUBJECT] begins at the opposite outer edge.
+COMPANION: [SUBJECT] begins at [OTHER THIRD] and [DEPTH LAYER].
+PAYOFF EXIT: [LEFT / RIGHT OF CENTER] at the near frame plane.
+
+ROUTE LEDGER
+Beat 1 starts at [EDGE A / DEPTH A] and ends at [THIRD B / DEPTH B].
+Beat 2 starts exactly at Beat 1's endpoint and ends at [EDGE C / DEPTH C].
+Beat 3 reverses screen direction through a different depth layer.
+Beat 4 begins deep and grows through real forward travel to the payoff exit.
+
+No beat may reset position, teleport to its start, reuse the same path, or
+leave its endpoint ambiguous.
+
+THREE-MOVEMENT EXAMPLE
+[0–10s — FULL-WIDTH APPROACH]
+The hero enters at [EDGE A], crosses the whole width toward the off-center
+keeper, first through [FOREGROUND ZONE] and then through [DEEP ZONE]. On
+arrival, the hero triggers [KEEPER REACTION]. A wave travels from the keeper's
+third to the opposite edge. The hero banks at that edge and makes one
+near-frame pass, ending at [NAMED ENDPOINT].
+
+[10–22s — DIFFERENT-LAYER RETURN]
+The hero re-enters from that endpoint and leads the companion in the opposite
+screen direction. The outward leg uses the near foreground; the return leg
+uses deep background. Each newly crossed strip transforms in their wake, so
+the transformation visibly follows the route instead of happening everywhere
+at once.
+
+[22–30s — DEEP-TO-FOREGROUND PAYOFF]
+The keeper launches a final change across the full width. The hero starts small
+at a named deep endpoint, outruns the change, grows naturally through forward
+travel and crosses the portal or border near [PAYOFF EXIT]. The companion
+supports from a separate upper or lateral path. End at peak motion.
+
+OCCLUSION PROMPT
+The border remains crisp, straight, fixed and the same width to the final
+frame. It is the nearest layer except when a character crosses the opening:
+then the character is visibly IN FRONT of the border, covers part of it and
+casts a moving shadow onto it. All bodies and effects still remain inside the
+outer image bounds.
+
+CAMERA AND PATH GUARDS
+Locked camera; no pan, dolly, zoom, push-in, pull-back or reframing.
+Characters cross left-to-right or right-to-left through named thirds and depth
+layers. Do not orbit a central subject, circle the middle, hover, retrace a
+route or convert forward motion into a stationary scale-up.
+
+POST-GENERATION CHECK
+Inspect the source generation before adding graphics. Reject if the border
+covers a supposed foreground subject, the hero remains around center frame,
+any beat starts somewhere unrelated to the previous endpoint, the same route
+is reused, transformation precedes travel, border thickness changes, or exact
+conforming crops the perimeter.
+```
+
+**Why it works:** the source's first failure was not a generation error:
+Seedance had drawn the pop-out correctly, but an opaque frame plate added
+afterward buried it. Limiting the plate to the conditioning still preserves
+precise frame-one geometry without destroying later occlusion. The second
+failure came from placing the keeper at the heart of every beat; explicit
+thirds, edges, endpoint carryover and non-retracing depth layers remove that
+gravity well. The follow-up live render achieved full-width travel,
+region-by-region transformation and characters visibly in front of the frame.
+
+Adapted from Shawn's August 11, 2026
+[second live Seedance 2.5 correction](https://github.com/ShawnatWOW/wow-artwork-engine/commit/2d93072ef0654641d4de7665484ed1520bca6b16),
+the [corrected prompt routes and occlusion rules](https://github.com/ShawnatWOW/wow-artwork-engine/blob/2d93072ef0654641d4de7665484ed1520bca6b16/server/src/services/generation/prompts.js),
+and the [first-frame-only plate implementation](https://github.com/ShawnatWOW/wow-artwork-engine/blob/2d93072ef0654641d4de7665484ed1520bca6b16/server/src/services/orchestrator.js).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -11800,6 +11900,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Shawn / WOW Artwork Engine — live-validated Seedance 2.5 full-width route and first-frame-only border-plate correction](https://github.com/ShawnatWOW/wow-artwork-engine/commit/2d93072ef0654641d4de7665484ed1520bca6b16) ([corrected prompt routes](https://github.com/ShawnatWOW/wow-artwork-engine/blob/2d93072ef0654641d4de7665484ed1520bca6b16/server/src/services/generation/prompts.js), [delivery implementation](https://github.com/ShawnatWOW/wow-artwork-engine/blob/2d93072ef0654641d4de7665484ed1520bca6b16/server/src/services/orchestrator.js))
 
 - [Shawn / WOW Artwork Engine — live-validated Seedance 2.5 role-cast causal arc for a 30-second single pass](https://github.com/ShawnatWOW/wow-artwork-engine/commit/00e2e1452186d0187f7ca69ede1402aea35451d9) ([complete deterministic prompt constructor](https://github.com/ShawnatWOW/wow-artwork-engine/blob/00e2e1452186d0187f7ca69ede1402aea35451d9/server/src/services/generation/prompts.js))
 
