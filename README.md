@@ -11448,6 +11448,88 @@ with the reusable [storyboard contract](https://github.com/jdp-just-does-project
 [Seedance generation contract](https://github.com/jdp-just-does-projects/agentkit-examples/blob/2164eae6b8ac13d9b013745ed2a7dc80adcf6168/volcengine/ad_video_gen_seq/app/video/prompt.py),
 and [media-scoring rubric](https://github.com/jdp-just-does-projects/agentkit-examples/blob/2164eae6b8ac13d9b013745ed2a7dc80adcf6168/volcengine/ad_video_gen_seq/app/eval/prompt.py).
 
+### Mid-gesture hook and gear-change CTA for native-audio UGC
+
+**Verified model:** Seedance 2.5 — the creator's runner records the exact
+`bytedance/seedance-2.5/text-to-video` endpoint, three successful native-720p
+masters, complete source prompts, and frame-plus-transcript QA
+
+Use this when a short selfie ad needs immediate stopping power without losing
+the unpolished phone-video feel. Treat the first half-second and final three
+seconds as explicit performance states rather than leaving them to the general
+dialogue direction.
+
+```text
+FORMAT
+15-second vertical native-audio UGC. Rear phone camera at arm's length or
+propped slightly below eye level. Imperfect off-centre framing, mild wide-lens
+distortion, small handheld drift, available light, real pores and no beauty
+smoothing, color grade, studio polish or stock-footage finish.
+
+SUBJECT AND PLACE
+[PERSON, AGE RANGE, ROLE, EVERYDAY CLOTHING]
+[ORDINARY LOCATION + 4–6 PHYSICAL DETAILS]
+Performance: quick, animated and conversational, with contractions, one tiny
+stumble or half-swallowed word, active eyebrows and natural hand movement.
+
+SPEECH ALLOWLIST
+Only dialogue inside quotation marks may be spoken. Never vocalize directions,
+timings, labels or constraints; add no narration, counting or improvised claim.
+
+HOOK STATE — 0.0–0.5s
+Start at full energy on frame one. The subject is already leaning toward the
+lens and caught mid-gesture; the first syllable lands inside 0.5 seconds.
+There is no establishing beat, inhale, greeting or silence. Open with either:
+- a number fragment: "[NUMBER / RESULT]. [SHORT CONTEXT]."
+- a double problem: "[AUDIENCE] hates [ACTION]. [CUSTOMER] hates [REACTION]."
+- a direct command: "[DO THIS]. Right now. [OPTIONAL HUMAN ASIDE]."
+
+MIDDLE PROOF — 0.5–12s
+[0.5–5s] Explain the problem through one visible action and one short line.
+[5–9s] Let a physical prop or reaction demonstrate the mechanism; keep any
+digital screen blank, blown out or edge-on rather than asking for readable UI.
+[9–12s] State the benefit in plain speech while preserving fast performance.
+
+CTA STATE RESET — 12–15s
+Change gear deliberately. The subject puts the prop down, stops gesturing,
+settles, locks eye contact straight into the lens and delivers the final line
+noticeably slower and clearer than the rest. Name the offer aloud, then make
+exactly one point toward the lens on the last words:
+"[BRAND / PRODUCT]. [BENEFIT]. [VERIFIED OFFER OR ACTION]."
+
+PRONUNCIATION AND PROP GUARDS
+For an easily mispronounced brand, give only its correct positive phonetic
+construction; never list wrong pronunciations. If a phone screen must appear,
+show only simple unlabeled answer/decline circles on a dark background—no
+caller name, number, app, logo or text.
+
+AUDIO
+Close, slightly imperfect phone-mic voice plus 2–4 location-specific sounds:
+[ROOM TONE], [PROP CONTACT], [DISTANT AMBIENCE]. No music.
+
+REJECTION GATE
+Reject and rerun if speech begins after 0.5 seconds, the subject starts still,
+the CTA keeps the middle's frantic pace, eye contact drifts during the close,
+more than one pointing gesture appears, a screen invents text, the brand is
+mispronounced, directions are spoken, or the result looks professionally lit.
+```
+
+**Why it works:** the open and close use opposite performance states. Motion,
+speed and interrupted syntax create the hook before context arrives; stillness,
+slower diction and direct gaze make the offer legible at the end. The pattern
+was repeated across three successful renders, while the screen and phonetic
+guards preserve fixes the creator verified by zoom inspection and multi-engine
+transcription.
+
+Adapted from GroupX's [three-render Seedance 2.5 batch commit](https://github.com/GroupX-ai/ad-creative/commit/875b54672aad62eb92536c96cc831ea44a1be4ca),
+published August 11, 2026. See the [complete tested prompts](https://github.com/GroupX-ai/ad-creative/blob/875b54672aad62eb92536c96cc831ea44a1be4ca/_scripts/seedance-prompts-b4.mjs),
+[QA and failure ledger](https://github.com/GroupX-ai/ad-creative/blob/875b54672aad62eb92536c96cc831ea44a1be4ca/_scripts/BATCH-2026-08-10-b4.md),
+[exact-model run record](https://github.com/GroupX-ai/ad-creative/blob/875b54672aad62eb92536c96cc831ea44a1be4ca/_scripts/seedance-run-log-2026-08-10-seedance-ugc-b4.json),
+and the three native generated masters:
+[number-fragment hook](https://github.com/GroupX-ai/ad-creative/blob/875b54672aad62eb92536c96cc831ea44a1be4ca/voicedrop/2026-08-10-seedance-ugc-b4/voicedrop-c46-before-my-coffee-720p.mp4),
+[double-problem hook](https://github.com/GroupX-ai/ad-creative/blob/875b54672aad62eb92536c96cc831ea44a1be4ca/voicedrop/2026-08-10-seedance-ugc-b4/voicedrop-c47-they-hate-dialling-720p.mp4),
+and [direct-command hook](https://github.com/GroupX-ai/ad-creative/blob/875b54672aad62eb92536c96cc831ea44a1be4ca/emailchaser/2026-08-10-seedance-ugc-b4/emailchaser-c18-check-your-promotions-720p.mp4).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -11495,6 +11577,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 Community examples and techniques referenced in this README:
 
+
+- [GroupX — three native-720p Seedance 2.5 UGC generations testing mid-gesture hooks and gear-change CTAs](https://github.com/GroupX-ai/ad-creative/commit/875b54672aad62eb92536c96cc831ea44a1be4ca) ([complete prompts](https://github.com/GroupX-ai/ad-creative/blob/875b54672aad62eb92536c96cc831ea44a1be4ca/_scripts/seedance-prompts-b4.mjs), [exact-model run record](https://github.com/GroupX-ai/ad-creative/blob/875b54672aad62eb92536c96cc831ea44a1be4ca/_scripts/seedance-run-log-2026-08-10-seedance-ugc-b4.json), [QA ledger](https://github.com/GroupX-ai/ad-creative/blob/875b54672aad62eb92536c96cc831ea44a1be4ca/_scripts/BATCH-2026-08-10-b4.md))
 
 - [Volcano Engine AgentKit — tested Seedance 2.5 AIDA candidate tournament with first-frame and video N-to-one selection](https://github.com/jdp-just-does-projects/agentkit-examples/commit/2164eae6b8ac13d9b013745ed2a7dc80adcf6168) ([official workflow and exact model](https://github.com/jdp-just-does-projects/agentkit-examples/blob/2164eae6b8ac13d9b013745ed2a7dc80adcf6168/volcengine/ad_video_gen_seq/README.md), [generation contract](https://github.com/jdp-just-does-projects/agentkit-examples/blob/2164eae6b8ac13d9b013745ed2a7dc80adcf6168/volcengine/ad_video_gen_seq/app/video/prompt.py), [evaluation rubric](https://github.com/jdp-just-does-projects/agentkit-examples/blob/2164eae6b8ac13d9b013745ed2a7dc80adcf6168/volcengine/ad_video_gen_seq/app/eval/prompt.py))
 
