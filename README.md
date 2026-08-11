@@ -227,6 +227,9 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Security-scanner data-validation line](#211-security-scanner-data-validation-line)
   - [Live-call car-selfie proof](#212-live-call-car-selfie-proof)
   - [Promotions-folder founder confession](#213-promotions-folder-founder-confession)
+  - [Distance-first phone-to-TV concept frame](#214-distance-first-phone-to-tv-concept-frame)
+  - [Matched-color device handshake](#215-matched-color-device-handshake)
+  - [Single-ribbon direct-transfer visualization](#216-single-ribbon-direct-transfer-visualization)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -9568,6 +9571,130 @@ inside six seconds rather than delaying it behind an establishing shot.
 [frame-and-transcript QA](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/_scripts/BATCH-2026-08-09-b3.md),
 and [committed generated result](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/emailchaser/2026-08-09-seedance-ugc-b3/emailchaser-c17-ugc-promotions-720p.mp4).
 
+
+### 214. Distance-first phone-to-TV concept frame
+
+**Verified model:** Seedance 2.5 — the creator states that this complete prompt
+was rendered with Higgsfield's exact `seedance_2_5` model; the returned clip
+was 720p with native audio enabled by the provider default
+
+**Use case:** app-concept explainer, device relationship, compositing-safe screen
+design  
+**Mode:** text-to-video  
+**Settings:** 6–8 seconds, 16:9, 720p, native audio generated
+
+```text
+A calm cinematic wide shot in a warm modern living room at dusk. One adult sits
+low on a sofa and holds a smartphone in both hands. Its screen is only a soft
+cool glow that lights the face and chest. Across the room, a large television
+rests switched off on a low wooden console.
+
+Make the physical gap between the small phone and large television the subject:
+keep both devices clearly visible, with uncluttered negative space connecting
+them. Use a 35 mm lens, shallow depth of field and a very slow push-in of only a
+few centimetres. Warm practical lamps shape the room; the phone supplies the
+only cool accent. Photorealistic skin and materials, subtle film grain, gentle
+highlight roll-off, muted teal shadows and amber highlights.
+
+Do not render an app interface. The phone contains no readable text, icon,
+button or logo, and the television stays completely black. No captions,
+watermarks, brand marks, cables, router, floating panel, hologram, extra person,
+distorted hands or abrupt camera move.
+```
+
+**Technique:** communicate a two-device system through composition before
+showing any transfer. Treating screens as light sources rather than generated UI
+also leaves a truthful plate for later compositing with real screen capture.
+
+**Source:** Aniket Shahane's August 11, 2026
+[primary generation-evidence commit](https://github.com/AniketShahane/Flick/commit/cdbdf28a028afeb4540506f938d1356104d0de6a)
+and [complete prompt record](https://github.com/AniketShahane/Flick/blob/cdbdf28a028afeb4540506f938d1356104d0de6a/docs/launch/reviewer-video-prompt.md).
+
+---
+
+### 215. Matched-color device handshake
+
+**Verified model:** Seedance 2.5 — the original creator explicitly identifies
+this as one of three prompts rendered with `seedance_2_5`, producing a 720p
+clip with the model's default native audio
+
+**Use case:** abstract connection metaphor, over-shoulder device staging,
+interface-free product explainer  
+**Mode:** text-to-video  
+**Settings:** 6–8 seconds, 16:9, 720p, native audio generated
+
+```text
+Cinematic medium shot from behind and slightly over one shoulder. An adult holds
+a smartphone at chest height while the dark television across the same living
+room remains visible and sharp beyond it.
+
+The television wakes first: one even field of deep blue blooms across the panel
+and spills softly onto the wall and console. A beat later, the phone changes
+from cool white to exactly the same deep blue. Make this color match the single
+readable event; nothing travels between the devices and no graphic appears.
+
+Use a 50 mm lens, shallow depth of field and restrained handheld
+micro-movement. Preserve the person's pose, both device shapes and the room
+layout while the screens change state. Keep the room warm and photorealistic so
+the paired cool screens separate clearly.
+
+Both displays contain pure color and light only—no text, numbers, icons,
+buttons, menus, progress bars, app UI, logos or recognisable imagery. No extra
+device, router, cable, hologram, floating panel, cut, zoom or distorted hand.
+```
+
+**Technique:** replace fragile native UI with one synchronized visual invariant:
+the same color on two differently sized screens. The ordered state change makes
+“pairing” legible without asking the model to invent product behavior.
+
+**Source:** Aniket Shahane's August 11, 2026
+[primary generation-evidence commit](https://github.com/AniketShahane/Flick/commit/cdbdf28a028afeb4540506f938d1356104d0de6a)
+and [complete prompt record](https://github.com/AniketShahane/Flick/blob/cdbdf28a028afeb4540506f938d1356104d0de6a/docs/launch/reviewer-video-prompt.md).
+
+---
+
+### 216. Single-ribbon direct-transfer visualization
+
+**Verified model:** Seedance 2.5 — the creator reports this complete prompt among
+the first three actual `seedance_2_5` renders and records the resulting 720p,
+audio-on model behavior
+
+**Use case:** data-transfer metaphor, locked-off VFX plate, direct-path
+visualization  
+**Mode:** text-to-video  
+**Settings:** 8–10 seconds, 16:9, 720p, native audio generated
+
+```text
+Lock a cinematic wide camera in the same warm living room. Place a glowing
+smartphone on the sofa arm in the foreground and a large television across the
+room. The television shows only a warm, softly defocused field of film-like
+color and motion—no recognisable scene, face, text or interface.
+
+One thin ribbon of cool cyan light emerges from the phone and travels to the
+television in a single clean, unbroken arc. Its direction is phone to TV only.
+Keep it elegant and continuous, with no branching, particles, pulses, labels or
+detour toward any other object. The room, devices and camera remain fixed while
+the ribbon completes the path, then hold the connected composition briefly.
+
+Premium but restrained photorealism: believable furniture and screen spill,
+warm ambient light contrasted by the cyan ribbon, slow confident timing and no
+camera movement.
+
+No router, set-top box, visible cable, multiple beam, network diagram, floating
+panel, sci-fi HUD, text, logo, watermark, lens-flare clutter, extra person or
+changing device geometry.
+```
+
+**Technique:** constrain an abstract effect by topology rather than decorative
+language: one source, one destination, one uninterrupted curve and no alternate
+route. The locked camera and stable props make directionality easy to verify.
+
+**Source:** Aniket Shahane's August 11, 2026
+[primary generation-evidence commit](https://github.com/AniketShahane/Flick/commit/cdbdf28a028afeb4540506f938d1356104d0de6a)
+and [complete prompt record](https://github.com/AniketShahane/Flick/blob/cdbdf28a028afeb4540506f938d1356104d0de6a/docs/launch/reviewer-video-prompt.md).
+
+---
+
 ---
 
 ## Reusable templates
@@ -11576,6 +11703,9 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+
+- [Aniket Shahane / Flick — three rendered Seedance 2.5 interface-safe phone-to-TV concept shots](https://github.com/AniketShahane/Flick/commit/cdbdf28a028afeb4540506f938d1356104d0de6a) ([complete prompts and actual 720p/audio behavior](https://github.com/AniketShahane/Flick/blob/cdbdf28a028afeb4540506f938d1356104d0de6a/docs/launch/reviewer-video-prompt.md))
 
 
 - [GroupX — three native-720p Seedance 2.5 UGC generations testing mid-gesture hooks and gear-change CTAs](https://github.com/GroupX-ai/ad-creative/commit/875b54672aad62eb92536c96cc831ea44a1be4ca) ([complete prompts](https://github.com/GroupX-ai/ad-creative/blob/875b54672aad62eb92536c96cc831ea44a1be4ca/_scripts/seedance-prompts-b4.mjs), [exact-model run record](https://github.com/GroupX-ai/ad-creative/blob/875b54672aad62eb92536c96cc831ea44a1be4ca/_scripts/seedance-run-log-2026-08-10-seedance-ugc-b4.json), [QA ledger](https://github.com/GroupX-ai/ad-creative/blob/875b54672aad62eb92536c96cc831ea44a1be4ca/_scripts/BATCH-2026-08-10-b4.md))
