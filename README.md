@@ -12077,9 +12077,87 @@ Contributions are welcome. A useful submission should include:
 
 Please submit prompts you wrote yourself or have permission to redistribute. When adapting a public example, rewrite it, link the source, and explain the reusable technique instead of copying the post wholesale.
 
+
+### Positive-trajectory compiler for exclusion-heavy action
+
+**Verified model:** Seedance 2.5 — the original creator records a real generation
+in which global “do not jump / do not become airborne” instructions produced an
+unwanted stair-climbing substitute, then checkpoints the exact positive
+trajectory and constraint rewrite used for the next revision
+
+Use this when an action prompt has accumulated many broad “no,” “never,” or
+“do not” clauses. Keep exclusions only for story-breaking invariants; express
+motion style, physics and camera behavior as visible positive evidence.
+
+```text
+SUBJECT AND INTENT
+[CHARACTER] performs [CLEAR ACTION CLASS] with [TEMPO / SKILL / EMOTION].
+Begin already in [ACTIVE MOTION STATE]. The route progresses from [START
+ANCHOR] to [END ANCHOR].
+
+POSITIVE TRAJECTORY
+Move through [ORDERED ENVIRONMENTAL SUPPORTS OR WAYPOINTS].
+Between adjacent supports, use [NAMED TRANSITION] over [SHORT / MEASURABLE
+RANGE], followed immediately by [GRAB / FOOT PLANT / BODY RECOVERY].
+Every transition points toward a visible next contact; the centre of mass
+continues [DIRECTION] without resetting to a different locomotion style.
+
+SCREEN EVIDENCE FOR PHYSICS
+Show preparation before each transfer, contact at the named support, weight
+loading after contact, and one readable recovery beat. Establish scale with
+[FLOOR / WINDOW / RAIL / PERSON-SIZED ANCHOR]. Let clothing, dust and nearby
+objects react after the body impulse.
+
+CAMERA SERVICE RULE
+The camera [TRACKS / RISES / PANS] along the route at [DISTANCE / LENS
+CHARACTER]. It makes only the corrections required to keep both the performer
+and the next support readable. The subject, route and contacts remain the
+visual priority.
+
+GUIDED FREEDOM
+Allow Seedance to choose natural micro-timing, breathing, cloth motion and
+small balance corrections between the locked contacts.
+
+LOCAL HARD LOCKS
+Preserve only the invariants whose failure would break the scene:
+- same [IDENTITY / COSTUME / REQUIRED PROP]
+- remain on [CANONICAL SIDE / ROUTE / SPATIAL TOPOLOGY]
+- reach [REQUIRED FINAL STATE]
+- exclude [ONE SPECIFIC CATASTROPHIC ERROR] while stating its positive
+  replacement: “[DESIRED STATE] remains visible throughout.”
+
+NEGATION REWRITE CHECK
+Before generation, replace style-level negatives with observable targets:
+- “do not fly” → “each airborne transfer is brief and ends at the next visible
+  handhold or foothold”
+- “no superhero landing” → “momentum carries one half-step forward; knees
+  compress and one hand may touch down before recovery”
+- “camera does not orbit” → “camera rises beside the route and corrects only
+  enough to keep the next contact in frame”
+Do not leave both the old global prohibition and its positive replacement in
+the final prompt.
+```
+
+**Why it works:** a global prohibition can accidentally remove the transition
+needed to express the intended action, leaving the model to satisfy the words
+with a visually wrong substitute. Positive route, contact and recovery evidence
+defines what must appear on screen while a short local lock list still protects
+identity, topology and terminal state. This is a failure-derived control
+pattern, not a universal claim about every negation: the source marks the causal
+explanation as unresolved, so compare the positive rewrite against a minimally
+negated control before generalising it.
+
+Adapted from vxz2datoubo's August 12, 2026
+[Seedance 2.5 constraint-ledger checkpoint](https://github.com/vxz2datoubo/eustia-ai-film/commit/8d1ed87efe8e1dcea275be55351caaf471e5f582)
+and the companion
+[model-specific negation evidence record](https://github.com/vxz2datoubo/eustia-ai-film/commit/a56e11e02c78f7cc7c1bc475d77b1ddb179ee5b2).
+
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+
+- [vxz2datoubo / Eustia AI Film — Seedance 2.5 observed global-negation failure and positive-trajectory constraint rewrite](https://github.com/vxz2datoubo/eustia-ai-film/commit/8d1ed87efe8e1dcea275be55351caaf471e5f582) ([companion unresolved-knowledge record](https://github.com/vxz2datoubo/eustia-ai-film/commit/a56e11e02c78f7cc7c1bc475d77b1ddb179ee5b2))
 
 - [Penny Huang / Virtual KOL Studio — Seedance 2.5 identity-anchored omni-reference micro-action clip with five-point QA](https://github.com/pennyhuang-oss/Virtual_KOL_Studio/commit/cb0f2c447bec755e3030e3317021e3bd6f68d6ae) ([method and task evidence](https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/cb0f2c447bec755e3030e3317021e3bd6f68d6ae/kols/iris-chen/generation_notes.md), [generated delivery](https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/cb0f2c447bec755e3030e3317021e3bd6f68d6ae/kols/iris-chen/videos/daily_reel_music_r1/iris_daily_reel_r1.mp4))
 
