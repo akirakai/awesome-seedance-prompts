@@ -12378,6 +12378,54 @@ and the companion
 [model-specific negation evidence record](https://github.com/vxz2datoubo/eustia-ai-film/commit/a56e11e02c78f7cc7c1bc475d77b1ddb179ee5b2).
 
 
+### Duration-stratified draft and asynchronous dispatch for paid long takes
+
+**Verified model:** Seedance 2.5 (`bytedance/seedance-2.5/text-to-video`) — the original creator publishes five successful 4-second probes, successful 8-second 720p and 12-second runs, and a paid 30-second attempt whose result was discarded by an undersized client timeout
+
+Use this when a 10–30 second single-pass take is expensive enough that creative validation, runtime calibration, and disconnect recovery must be explicit. It complements the long-form one-take continuity template above by controlling how the master is bought and retrieved.
+
+```text
+LONG-TAKE BRIEF
+Model: Seedance 2.5 / [T2V | I2V | REF2V]
+Master: [10–30] seconds, [ASPECT], [RESOLUTION], native audio [ON/OFF].
+Keep one continuous space and complete one camera move.
+Action arc: [BEGINNING] → [MIDDLE] → [EXACT VISIBLE END STATE].
+If the brief needs a location jump or concealed edit, route it to a multi-clip workflow.
+
+IDENTICAL-PROMPT DRAFT GATE
+Submit the same creative prompt first at 4 seconds and the cheapest supported draft resolution.
+Change only duration and resolution.
+Check that subject, space, camera vector, and endpoint can exist without a cut.
+If the draft invents a cut or loses the endpoint, revise the prompt before buying the master.
+
+SPEND AND DURATION GATE
+Calculate [RATE × MASTER DURATION] and compare it with the hard budget ceiling.
+Send duration in the route's required string form.
+Do not use automatic duration for a capped paid run.
+
+DISPATCH GATE
+Do not derive the master's timeout from a short probe alone.
+Use measured latency from jobs at comparable duration and resolution, then add headroom.
+If the client cannot hold that connection, submit asynchronously, persist the job ID immediately,
+and poll that same job until terminal status.
+A local abort is not upstream cancellation or a refund.
+
+RECOVERY
+After a task ID exists, do not resubmit merely because the client timed out or a download URL is delayed.
+Resume polling the original task.
+Do not silently fall back to a model whose duration limit cannot satisfy the request.
+On terminal failure, return the original error, task ID, elapsed time, and charge state.
+
+ACCEPTANCE
+Confirm one continuous clip, synchronized audio, preserved identity and space,
+one completed camera move, and the specified visible endpoint.
+Create crops and short cutdowns only from the accepted master.
+```
+
+**Why it works:** The short draft tests creative continuity cheaply, while duration-matched latency data prevents a long master from inheriting a short-job timeout. Persisting the asynchronous job ID makes a client disconnect recoverable instead of turning it into a second paid submission. The source records 5/5 successful 4-second probes, successful 8-second 720p and 12-second renders, and a billed 30-second job discarded at the old timeout; a follow-up seven-day audit found 80 billed renders discarded across routes and added the recovery guard.
+
+**Source:** [Livepeer Storyboard — Seedance 2.5 capability commit](https://github.com/livepeer/storyboard/commit/d408240062c1bffa1b5a7d212989e1645a1e48e2) ([complete one-take playbook](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/public/playbooks/one-take-30s-spot.md), [8-second 720p showcase](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-showcase-master-2026-08-12.md), [4-second 5/5 probe](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-t2v-smoke-2026-08-12.md), [12-second duration probe](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-duration-scaling-2026-08-12.md), [paid 30-second timeout](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-t2v-30s-master-2026-08-12.md), [billed-discard audit and recovery fix](https://github.com/livepeer/storyboard/commit/832d5232158f1b54a03bfd3eac1a64628733c509))
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -12426,6 +12474,7 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 Community examples and techniques referenced in this README:
 
+- [Livepeer Storyboard — Seedance 2.5 paid-long-take draft, duration scaling, and asynchronous recovery](https://github.com/livepeer/storyboard/commit/d408240062c1bffa1b5a7d212989e1645a1e48e2) ([playbook](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/public/playbooks/one-take-30s-spot.md), [successful 8-second master](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-showcase-master-2026-08-12.md), [paid-timeout evidence](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-t2v-30s-master-2026-08-12.md), [recovery fix](https://github.com/livepeer/storyboard/commit/832d5232158f1b54a03bfd3eac1a64628733c509))
 - [Adir Kol / Backend Hub — Seedance 2.0 live-smoke of project-scoped private-asset retry for consenting-adult person-media I2V](https://github.com/adirkol/backend-hub/commit/1b26f444f3a45c15a6d24e3c163607deb39933fe) ([main-line merge](https://github.com/adirkol/backend-hub/commit/5ae7f1f254700d96afbcda6e1772ebb5eab7e3bd))
 
 - [Dima Vasiliu / TimrX — Seedance 2.5 one-variable live probe separating a 4,000-UTF-8-byte prompt fault from accepted 30-second duration](https://github.com/DimaVasiliu/timrx-3d-print/commit/034b6d13fb7179a93ed23304151254379a5b2015) ([companion duration correction](https://github.com/DimaVasiliu/TimrX--Frontend/commit/2dc5ee324c9fb6dfb17252247c3e0a2f00f21b7c))
