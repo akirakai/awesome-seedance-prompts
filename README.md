@@ -11436,6 +11436,69 @@ published August 10, 2026. The exact endpoint is recorded in
 the style-seed, adjacent-pair, batch, duration and retry contract is preserved in
 [agent.yaml](https://github.com/jdp-just-does-projects/agentkit-examples/blob/38cff2868a730ae9f62a829a43dc73887114002a/byteplus/video_gen/agent.yaml).
 
+### One-variable validation probe for false duration errors
+
+**Verified model:** Seedance 2.5 — the original creator's August 12, 2026
+PiAPI validation probes accepted a 30-second `seedance-2.5` request after
+isolating a separate 4,000-UTF-8-byte prompt failure
+
+Use this when a provider returns one generic 400 response to a request that
+changes several fields at once. Diagnose the transport contract before rewriting
+the creative prompt or reducing a duration that the model actually accepts.
+
+```text
+ONE-VARIABLE PROBE
+
+ROUTE LOCK
+Record provider, endpoint, exact model identifier, date and wrapper version.
+Keep every field fixed unless the current step names it.
+
+1. DURATION CANARY
+   Replace the creative prompt with a short ASCII sentence:
+   "An adult walks across a quiet room. Static camera."
+   Keep mode, references, aspect ratio and resolution unchanged.
+   Submit one known-safe duration, then the disputed duration.
+   If both are accepted, do not blame duration for the original failure.
+
+2. PROMPT-UNIT CANARY
+   Restore one accepted duration and remove references.
+   Submit an ASCII prompt just below the advertised ceiling.
+   Then repeat with curly quotes, em dashes, accented text or CJK while logging
+   both Unicode-character count and UTF-8-byte count.
+   Change no other field.
+
+3. ERROR ATTRIBUTION
+   Capture HTTP status and the complete validation body for every probe.
+   Attribute the failure only to the one field changed between adjacent tests.
+   Never infer the bad field from the UI label or the last control touched.
+
+ROUTE-SPECIFIC PRODUCTION PREFLIGHT — TESTED PIAPI ROUTE
+- model: seedance-2.5
+- duration: integer from 4 through 30 seconds
+- final serialized prompt: at most 4,000 UTF-8 bytes
+- if over budget, encode to UTF-8, trim to 4,000 bytes, then drop any incomplete
+  trailing code point; do not slice the Unicode string at 4,000 characters
+- re-run the short canary after any provider or wrapper version change
+
+ACCEPTANCE LEDGER
+Store request field changed, prompt characters, prompt bytes, duration, status,
+provider error text and task ID. Promote a boundary to production only after an
+otherwise identical request crosses it successfully.
+```
+
+**Why it works:** A short ASCII canary removes prompt encoding as a hidden
+variable, while adjacent one-field changes make the error attributable. On the
+tested route, a 4,000-character prompt containing em dashes serialized to 4,022
+bytes and failed; once that byte-limit error was isolated, the same live API
+accepted 30 seconds. This does not override the separately measured
+character-count contract on other Seedance 2.5 routes.
+
+Adapted from Dima Vasiliu's [primary Seedance 2.5 live-validation correction](https://github.com/DimaVasiliu/timrx-3d-print/commit/034b6d13fb7179a93ed23304151254379a5b2015),
+published August 12, 2026. The companion
+[frontend correction](https://github.com/DimaVasiliu/TimrX--Frontend/commit/2dc5ee324c9fb6dfb17252247c3e0a2f00f21b7c)
+records the restored 20/25/30-second options after the prompt-byte fault was
+separated from duration.
+
 ### Unicode-safe 4,000-character prompt-budget preflight
 
 **Verified model:** Seedance 2.5 — live boundary probes on August 10, 2026
@@ -12298,6 +12361,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Dima Vasiliu / TimrX — Seedance 2.5 one-variable live probe separating a 4,000-UTF-8-byte prompt fault from accepted 30-second duration](https://github.com/DimaVasiliu/timrx-3d-print/commit/034b6d13fb7179a93ed23304151254379a5b2015) ([companion duration correction](https://github.com/DimaVasiliu/TimrX--Frontend/commit/2dc5ee324c9fb6dfb17252247c3e0a2f00f21b7c))
 
 
 - [JR Academy Omni / Brisbane Freshers Festival — three exact Seedance 2.5 returned-last-frame action continuations with successful task manifests](https://github.com/JR-Academy-Omni/orientation-festival/commit/8c34210836bc6b57344adbb1b165e586158fe0dd)
