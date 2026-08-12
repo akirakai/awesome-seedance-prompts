@@ -12034,50 +12034,6 @@ and [generated delivery](https://github.com/pennyhuang-oss/Virtual_KOL_Studio/bl
 The source's music was explicitly unlicensed and internal-only; this reusable
 version therefore requires owned or licensed replacement audio before release.
 
-## Camera language
-
-| Goal | Useful direction | Common failure to avoid |
-|---|---|---|
-| Reveal scale | slow crane down, pull back, foreground occlusion | instant zoom-out |
-| Follow a person | lateral tracking or camera walks backward at subject speed | orbiting without motivation |
-| Product hero shot | macro push-in, small controlled arc, locked label focus | full 360° spin |
-| Tension | slow dolly-in, restrained focus shift, held composition | constant shake and fast zoom |
-| UGC realism | mild handheld breathing, imperfect reframing, gradual auto-exposure | polished gimbal-commercial look |
-| Action clarity | side-on wide shot, consistent screen direction | rapid cuts that hide choreography |
-| Subjective POV | motivated POV transition, natural head movement | floating camera |
-| Emotional intimacy | static medium shot, subtle push, longer hold | excessive close-ups and melodrama |
-
-One camera move per shot is a strong default. Combine moves only when the path is physically clear, such as “track backward while gently lowering from eye level to chest level.”
-
-## Realism and consistency
-
-Prefer positive physical direction over long negative lists:
-
-- Write the preparation, action, impact, and recovery—not only the impact.
-- State what is fixed: face, outfit, product label, prop hand, light direction.
-- Keep action complexity proportional to clip length.
-- Use a wide or medium-wide shot when limb interaction matters.
-- Let practical sources motivate light: window, lamp, streetlight, phone screen.
-- Ask for real capture characteristics: exposure adaptation, focus breathing, rolling-shutter restraint, lens depth—not just “photorealistic.”
-- Describe only the three to five most likely failure modes. Huge negative lists can dilute the direction.
-- If a reference image already defines appearance, focus the prompt on motion and sound.
-- If using a reference video, explicitly separate what to inherit from what not to copy.
-
-## Contributing
-
-Contributions are welcome. A useful submission should include:
-
-- The prompt
-- Seedance version and mode
-- Duration and aspect ratio
-- Input references, if any
-- A result link or preview
-- What worked and what still failed
-- Attribution to the original creator or source
-
-Please submit prompts you wrote yourself or have permission to redistribute. When adapting a public example, rewrite it, link the source, and explain the reusable technique instead of copying the post wholesale.
-
-
 ### Positive-trajectory compiler for exclusion-heavy action
 
 **Verified model:** Seedance 2.5 — the original creator records a real generation
@@ -12151,6 +12107,51 @@ Adapted from vxz2datoubo's August 12, 2026
 [Seedance 2.5 constraint-ledger checkpoint](https://github.com/vxz2datoubo/eustia-ai-film/commit/8d1ed87efe8e1dcea275be55351caaf471e5f582)
 and the companion
 [model-specific negation evidence record](https://github.com/vxz2datoubo/eustia-ai-film/commit/a56e11e02c78f7cc7c1bc475d77b1ddb179ee5b2).
+
+
+## Camera language
+
+| Goal | Useful direction | Common failure to avoid |
+|---|---|---|
+| Reveal scale | slow crane down, pull back, foreground occlusion | instant zoom-out |
+| Follow a person | lateral tracking or camera walks backward at subject speed | orbiting without motivation |
+| Product hero shot | macro push-in, small controlled arc, locked label focus | full 360° spin |
+| Tension | slow dolly-in, restrained focus shift, held composition | constant shake and fast zoom |
+| UGC realism | mild handheld breathing, imperfect reframing, gradual auto-exposure | polished gimbal-commercial look |
+| Action clarity | side-on wide shot, consistent screen direction | rapid cuts that hide choreography |
+| Subjective POV | motivated POV transition, natural head movement | floating camera |
+| Emotional intimacy | static medium shot, subtle push, longer hold | excessive close-ups and melodrama |
+
+One camera move per shot is a strong default. Combine moves only when the path is physically clear, such as “track backward while gently lowering from eye level to chest level.”
+
+## Realism and consistency
+
+Prefer positive physical direction over long negative lists:
+
+- Write the preparation, action, impact, and recovery—not only the impact.
+- State what is fixed: face, outfit, product label, prop hand, light direction.
+- Keep action complexity proportional to clip length.
+- Use a wide or medium-wide shot when limb interaction matters.
+- Let practical sources motivate light: window, lamp, streetlight, phone screen.
+- Ask for real capture characteristics: exposure adaptation, focus breathing, rolling-shutter restraint, lens depth—not just “photorealistic.”
+- Describe only the three to five most likely failure modes. Huge negative lists can dilute the direction.
+- If a reference image already defines appearance, focus the prompt on motion and sound.
+- If using a reference video, explicitly separate what to inherit from what not to copy.
+
+## Contributing
+
+Contributions are welcome. A useful submission should include:
+
+- The prompt
+- Seedance version and mode
+- Duration and aspect ratio
+- Input references, if any
+- A result link or preview
+- What worked and what still failed
+- Attribution to the original creator or source
+
+Please submit prompts you wrote yourself or have permission to redistribute. When adapting a public example, rewrite it, link the source, and explain the reusable technique instead of copying the post wholesale.
+
 
 ## Sources
 
