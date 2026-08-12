@@ -231,6 +231,9 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Matched-color device handshake](#215-matched-color-device-handshake)
   - [Single-ribbon direct-transfer visualization](#216-single-ribbon-direct-transfer-visualization)
   - [Cross-model twin-car motion benchmark](#217-cross-model-twin-car-motion-benchmark)
+  - [Drain-save card handoff](#218-drain-save-card-handoff)
+  - [Card-to-crowd continuation](#219-card-to-crowd-continuation)
+  - [Tent-wipe festival payoff](#220-tent-wipe-festival-payoff)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -9733,6 +9736,145 @@ and [rendered comparison video](https://github.com/convergeai-labs/framia-exampl
 
 ---
 
+
+### 218. Drain-save card handoff
+
+**Verified model:** Seedance 2.5 (`doubao-seedance-2-5-260628`) — the original
+creator committed the complete prompt, a successful Volcano Ark task record,
+task ID `cgt-20260812222037-v9w8p`, and the returned video and last-frame URLs
+
+**Use case:** fast social-ad hook, object-led rescue beat, motivated shot handoff  
+**Mode:** first-frame image-to-video with native ambience and returned last frame  
+**Settings:** 6 seconds, 9:16, 720p, 24fps
+
+```text
+Six-second vertical, single-take live-action ad. Begin exactly from the supplied
+first frame. From an extremely low 24 mm position beside a rolling black
+suitcase, track forward quickly as a blank teal student card slips from its side
+pocket, flips twice in sunlight and skids toward a curb drain.
+
+Just before the card enters the grate, a white sneaker stops it. A friendly
+Asian woman in her early twenties bends immediately and picks it up. Whip-tilt
+with the card from ground level to her hand and face, then reveal the surprised
+male freshman catching up. She extends the card toward camera; their brief eye
+contact changes from alarm to relief.
+
+End with the teal card moving close enough to cover most of the lens, creating a
+clean physical handoff for the next clip. Warm Brisbane daylight, a believable
+Sunnybank plaza and natural student traffic. Keep the movement fast and legible,
+not shaky.
+
+Native ambience only: suitcase wheels, card impact, shoe scrape and distant
+crowd. No intelligible dialogue or music. No text, subtitle, logo, QR code,
+watermark, staged slow motion, direct-to-camera posing, surreal effect, malformed
+fingers or changing card geometry.
+```
+
+**Technique:** give the hook one small object with an irreversible jeopardy path
+(drop → slide → interception → return), then make that same object the
+full-frame exit. The returned last frame is both the completed payoff and the
+literal start-state asset for the continuation.
+
+**Source:** JR Academy Omni's August 12, 2026
+[primary Seedance 2.5 generation-evidence commit](https://github.com/JR-Academy-Omni/orientation-festival/commit/8c34210836bc6b57344adbb1b165e586158fe0dd),
+which includes the original prompt, successful task manifest and generated
+delivery workflow.
+
+---
+
+### 219. Card-to-crowd continuation
+
+**Verified model:** Seedance 2.5 (`doubao-seedance-2-5-260628`) — the original
+creator fed the previous task's returned last frame into a second successful
+Volcano Ark task, `cgt-20260812222315-f275n`, and published the complete prompt
+and result manifest
+
+**Use case:** identity-preserving continuation, social-proof escalation,
+foreground-occlusion transition  
+**Mode:** returned-last-frame image-to-video with native ambience  
+**Settings:** 6 seconds, 9:16, 720p, 24fps
+
+```text
+Continue seamlessly from the supplied first frame: the teal card still fills
+most of the lens. Preserve the same Asian male freshman in an oversized dark-teal
+T-shirt, light-grey trousers and cream canvas bag; preserve the same woman who
+retrieved the card, the warm Brisbane light and the camera direction.
+
+Pull back quickly as she lowers the card. Smiling, she points toward the busy
+freshers-festival entrance. He hesitates for one beat, then nods and follows.
+She raises the suitcase handle and walks; he catches up while the stabilised
+camera retreats through moving students. Let wristbands, tote bags and flags
+briefly cross the foreground as real depth cues.
+
+A third student offers a blank coloured wristband while everyone keeps walking.
+The freshman accepts it and the three share their first relaxed laugh. End when
+a coral tent panel sweeps right-to-left and fully covers the lens, preparing the
+next reveal. Keep action continuous and layered; nobody stops to queue or pose.
+
+Use footsteps, suitcase wheels, crowd wash and fabric movement only. No
+intelligible dialogue or music. No text, subtitle, logo, QR code, watermark,
+neon portal, slow motion, plastic skin or identity change.
+```
+
+**Technique:** inherit the exact boundary frame, identity ledger, light and
+screen direction, but advance the social state once: stranger → invitation →
+joining. A second physical cover replaces the first, so the clip resolves its
+incoming card occlusion while manufacturing a different outgoing seam.
+
+**Source:** JR Academy Omni's August 12, 2026
+[primary Seedance 2.5 generation-evidence commit](https://github.com/JR-Academy-Omni/orientation-festival/commit/8c34210836bc6b57344adbb1b165e586158fe0dd),
+including the chained request, exact model response and returned last frame.
+
+---
+
+### 220. Tent-wipe festival payoff
+
+**Verified model:** Seedance 2.5 (`doubao-seedance-2-5-260628`) — the original
+creator used task two's returned last frame as task three's first frame and
+published successful task `cgt-20260812222532-4cjz9`, its complete prompt and
+the generated-video manifest
+
+**Use case:** reveal from full-frame occlusion, multi-person continuity,
+earned emotional payoff  
+**Mode:** returned-last-frame image-to-video with native ambience  
+**Settings:** 7 seconds, 9:16, 720p, 24fps
+
+```text
+Continue seamlessly as the coral tent fabric sweeps away from the supplied first
+frame, revealing a lively but believable Brisbane freshers festival. Preserve
+the same male freshman, the same woman, the newly joined student, their wardrobe,
+faces, warm light and direction of travel.
+
+Push through the tent entrance, then make one fluid half-orbit around the three.
+The woman places a blank school sticker on the freshman's chest. The other two
+point to their own blank stickers and react naturally when they realise they
+come from different schools. A coloured soft ball enters from offscreen; the
+freshman catches it reflexively and a small nearby group waves him into a casual
+game.
+
+Follow the ball from close-up into the group, then rise slightly to show stalls,
+gift bags, conversations and Brisbane afternoon light. Finish as three or four
+students lean in naturally for a selfie and the formerly guarded freshman breaks
+into a genuine laugh. Hold the emotional payoff, not an advertising pose.
+
+Native ambience: tent fabric, crowd laughter, ball contact and one light cheer.
+No intelligible dialogue or music. No readable text, subtitle, logo, QR code,
+watermark, branded prize, nightclub excess, intoxication, malformed hands,
+face drift or sudden crowd duplication.
+```
+
+**Technique:** open on the previous clip's full-frame wipe, then spend the shot
+on one causally ordered inclusion arc: badge contact → shared recognition →
+ball contact → group invitation → laugh. Prop contacts make every new person
+legible, while the returning cast, light and direction preserve the chained
+boundary.
+
+**Source:** JR Academy Omni's August 12, 2026
+[primary Seedance 2.5 generation-evidence commit](https://github.com/JR-Academy-Omni/orientation-festival/commit/8c34210836bc6b57344adbb1b165e586158fe0dd),
+including the exact chained input and successful model output.
+
+---
+
 ## Reusable templates
 
 ### First-frame illustration-lock and accelerated micro-loop template
@@ -12156,6 +12298,9 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+
+- [JR Academy Omni / Brisbane Freshers Festival — three exact Seedance 2.5 returned-last-frame action continuations with successful task manifests](https://github.com/JR-Academy-Omni/orientation-festival/commit/8c34210836bc6b57344adbb1b165e586158fe0dd)
 
 
 - [vxz2datoubo / Eustia AI Film — Seedance 2.5 observed global-negation failure and positive-trajectory constraint rewrite](https://github.com/vxz2datoubo/eustia-ai-film/commit/8d1ed87efe8e1dcea275be55351caaf471e5f582) ([companion unresolved-knowledge record](https://github.com/vxz2datoubo/eustia-ai-film/commit/a56e11e02c78f7cc7c1bc475d77b1ddb179ee5b2))
