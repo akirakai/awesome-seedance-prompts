@@ -230,6 +230,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Distance-first phone-to-TV concept frame](#214-distance-first-phone-to-tv-concept-frame)
   - [Matched-color device handshake](#215-matched-color-device-handshake)
   - [Single-ribbon direct-transfer visualization](#216-single-ribbon-direct-transfer-visualization)
+  - [Cross-model twin-car motion benchmark](#217-cross-model-twin-car-motion-benchmark)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -9695,6 +9696,41 @@ and [complete prompt record](https://github.com/AniketShahane/Flick/blob/cdbdf28
 
 ---
 
+### 217. Cross-model twin-car motion benchmark
+
+**Verified model:** Seedance 2.0 Mini — the original creator ran this complete
+benchmark prompt through Seedance 2.0 Mini, published the generated clip and
+contact sheet, and verified the model label against the production canvas
+
+**Use case:** controlled model comparison, cyberpunk action, motion-quality
+benchmarking  
+**Mode:** text-to-video  
+**Settings:** 5 seconds, 9:16, 720p
+
+```text
+Five-second vertical cyberpunk racing benchmark at night. Keep exactly two
+distinct futuristic cars beside one another: the left car glows magenta and the
+right car glows cyan. They accelerate in parallel along a rain-wet neon avenue.
+
+Track both cars from wheel height with a low moving camera, keeping both vehicles
+in frame while reflections streak beneath them. Add restrained tire sparks,
+clean light trails and believable speed blur. Preserve each car's color, shape
+and lane order for the whole shot.
+
+No captions, logos, watermark, third vehicle, lane swap, camera cut or identity
+merge.
+```
+
+**Technique:** hold the prompt, duration, aspect ratio and visual invariants
+constant when comparing models. The two fixed colors and lane positions create
+simple pass/fail checks for subject separation, motion coherence and continuity;
+run a cheap probe first, then send the exact same text to every comparison model.
+
+**Source:** convergeai-labs' August 12, 2026
+[primary generation-evidence commit](https://github.com/convergeai-labs/framia-examples/commit/94cbc9168f4872dcb2213649f7b970515f203fbd),
+[complete original prompt](https://github.com/convergeai-labs/framia-examples/blob/94cbc9168f4872dcb2213649f7b970515f203fbd/ai-model-showdown/assets/prompt.txt),
+and [rendered comparison video](https://github.com/convergeai-labs/framia-examples/blob/94cbc9168f4872dcb2213649f7b970515f203fbd/ai-model-showdown/video/ai-model-showdown-framia.mp4).
+
 ---
 
 ## Reusable templates
@@ -11975,6 +12011,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [convergeai-labs / Framia Examples — Seedance 2.0 Mini same-prompt twin-car benchmark with generated clip and acceptance checks](https://github.com/convergeai-labs/framia-examples/commit/94cbc9168f4872dcb2213649f7b970515f203fbd) ([complete original prompt](https://github.com/convergeai-labs/framia-examples/blob/94cbc9168f4872dcb2213649f7b970515f203fbd/ai-model-showdown/assets/prompt.txt), [rendered comparison video](https://github.com/convergeai-labs/framia-examples/blob/94cbc9168f4872dcb2213649f7b970515f203fbd/ai-model-showdown/video/ai-model-showdown-framia.mp4))
 
 - [Sam Z. / Gaslight Remake — measured Seedance 2.0 self-anchored living-plate loops with offline seam fusion](https://github.com/senjenz-portal/gaslight-remake/commit/29cff81b402d8bd68fade470d8f4a00fb56edf49) ([method, exact model and seam measurements](https://github.com/senjenz-portal/gaslight-remake/blob/29cff81b402d8bd68fade470d8f4a00fb56edf49/king-demo/living-plate/index.html), [interior master](https://github.com/senjenz-portal/gaslight-remake/blob/29cff81b402d8bd68fade470d8f4a00fb56edf49/king-demo/living-plate/breathed-room.mp4), [street master](https://github.com/senjenz-portal/gaslight-remake/blob/29cff81b402d8bd68fade470d8f4a00fb56edf49/king-demo/living-plate/breathed-street.mp4))
 
