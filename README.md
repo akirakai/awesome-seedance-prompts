@@ -11208,6 +11208,68 @@ defined above.
 Adapted from Wael Osama Helmi's Seedance 2.5 [production failure log and corrective implementation](https://github.com/waelosamahelmi/helmies-studio/commit/d1bc28c8f9286f19635bdc7ff5c64c8dc70764a3), published August 8, 2026; the reported generations padded a static person and an empty room to eight seconds and a two-word line to four seconds.
 
 
+### Provider-approved private-asset retry for person-media I2V
+
+**Verified model:** Seedance 2.0 (`dreamina-seedance-2-0`) — the original
+creator's August 12, 2026 live BytePlus smoke covered a rejected adult-person
+image, the private-asset retry, and a successful image-to-video task
+
+Use this only on a BytePlus ModelArk route whose private asset library is
+enabled for the same project. It is a transport fallback for consenting-adult
+media that the provider permits through its documented asset workflow, not a
+way to bypass a content-policy rejection.
+
+```text
+PROMPT AND REFERENCE LEDGER
+
+@Image1 defines only [SCENE / COMPOSITION].
+@Image2 defines only the consenting adult subject's [FACE / HAIR / WARDROBE].
+The adult in Image 2 performs [ONE FINITE ACTION] through
+[PREPARATION → ACTION → RECOVERY].
+Camera: [ONE MOTIVATED MOVE].
+Preserve the positional labels Image 1 and Image 2 throughout the request.
+Never place an internal asset ID in the creative prompt.
+
+DIRECT ATTEMPT
+Submit the original media URLs once. Log the exact ordered content array,
+model ID, HTTP status, provider error code, error text, task ID and charge state.
+
+NARROW RETRY GATE
+Proceed only when all conditions are true:
+- no task ID was issued and the failed submit was not charged;
+- the provider returns its specific person-media input rejection, such as
+  InputImageSensitiveContentDetected.PrivacyInformation;
+- the same project has access to the documented private asset library;
+- the media itself is allowed and belongs to, or is authorized by, the user.
+
+Register only the content[N] item named by the provider. Keep every other media
+URL and the complete creative prompt unchanged. Wait until that asset reaches
+Active, replace only its transport URL with asset://[ID], and retry exactly once.
+The prompt must still say Image 2; the transport identifier never becomes a
+semantic reference label.
+
+LIFECYCLE AND STOP CONDITIONS
+Keep the asset Active while the task runs. At SUCCEEDED or FAILED, delete the
+temporary asset and its group unless retention was explicitly requested.
+If registration, preprocessing or the one retry fails, surface the original
+provider error and stop. Do not crop, blur, rename, duplicate, re-encode or
+repeatedly resubmit the person media to force acceptance.
+```
+
+**Why it works:** The creative ledger remains stable while only the rejected
+transport item changes. In the cited live test, a frame taken from Seedance's
+own output was rejected when supplied directly, but the identical image was
+accepted after project-scoped registration and produced a task. Restricting the
+retry to the named `content[N]` item prevents an unrelated scene reference from
+being silently rebound, and terminal cleanup keeps temporary identity media
+from becoming an unmanaged asset collection.
+
+Adapted from Adir Kol's [primary Seedance 2.0 live-smoke and implementation
+commit](https://github.com/adirkol/backend-hub/commit/1b26f444f3a45c15a6d24e3c163607deb39933fe),
+published August 12, 2026; the
+[merge commit](https://github.com/adirkol/backend-hub/commit/5ae7f1f254700d96afbcda6e1772ebb5eab7e3bd)
+preserves the tested provider fallback on the main line.
+
 ### Mode-exclusive reference preflight with face-prominence fallback
 
 **Verified model:** Seedance 2.5 — live-tested through BytePlus Ark and the
@@ -11244,10 +11306,12 @@ For a consenting adult subject, check every proposed portrait or face panel
 against the selected endpoint before the paid render. If a face-prominent real
 photo or generated panel returns
 `InputImageSensitiveContentDetected.PrivacyInformation`,
-`content_policy_violation`, or `partner_validation_failed`, stop using that
-identity pack. Do not crop, blur, rename, duplicate, or reduce the count merely
-to evade the platform decision. Route to the approved medium/wide keyframe
-alone in start-frame mode, or choose another policy-compatible engine.
+`content_policy_violation`, or `partner_validation_failed`, do not crop, blur,
+rename, duplicate, or reduce the count merely to evade the platform decision.
+For the exact ModelArk person-media error only, a provider-approved private asset
+route may be used under the preceding template. Otherwise stop using that
+identity pack, route to the approved medium/wide keyframe alone in start-frame
+mode, or choose another policy-compatible engine.
 
 MOTION
 From the accepted opening state, [SUBJECT] performs [ONE FINITE ACTION] through
@@ -12361,6 +12425,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Adir Kol / Backend Hub — Seedance 2.0 live-smoke of project-scoped private-asset retry for consenting-adult person-media I2V](https://github.com/adirkol/backend-hub/commit/1b26f444f3a45c15a6d24e3c163607deb39933fe) ([main-line merge](https://github.com/adirkol/backend-hub/commit/5ae7f1f254700d96afbcda6e1772ebb5eab7e3bd))
 
 - [Dima Vasiliu / TimrX — Seedance 2.5 one-variable live probe separating a 4,000-UTF-8-byte prompt fault from accepted 30-second duration](https://github.com/DimaVasiliu/timrx-3d-print/commit/034b6d13fb7179a93ed23304151254379a5b2015) ([companion duration correction](https://github.com/DimaVasiliu/TimrX--Frontend/commit/2dc5ee324c9fb6dfb17252247c3e0a2f00f21b7c))
 
