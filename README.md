@@ -11965,6 +11965,75 @@ and the two generated masters:
 [interior plate](https://github.com/senjenz-portal/gaslight-remake/blob/29cff81b402d8bd68fade470d8f4a00fb56edf49/king-demo/living-plate/breathed-room.mp4)
 and [street plate](https://github.com/senjenz-portal/gaslight-remake/blob/29cff81b402d8bd68fade470d8f4a00fb56edf49/king-demo/living-plate/breathed-street.mp4).
 
+
+### Identity-anchored micro-action clip with licensed-audio replacement
+
+**Verified model:** Seedance 2.5 (`seedance_2_5`) — the original creator
+completed an eight-second `omni_reference` generation from an approved start
+frame, recorded the job ID and output metadata, and passed five-point visual QA
+
+Use this when a supplied character image should become a quiet lifestyle or UGC
+clip, but no reference video's motion should be cloned. Keep the visual
+generation deliberately small, then replace the generated audio offline with a
+licensed track.
+
+```text
+INPUT AND MODE
+Model: Seedance 2.5
+Mode: omni_reference
+@StartFrame = approved identity and scene anchor
+Duration: [6–10 seconds]
+Aspect ratio: [9:16 / SOURCE RATIO]
+
+IDENTITY OWNERSHIP
+Preserve @StartFrame's face shape, hair, accessories, clothing, body
+proportions, room layout and key props. The reference defines appearance only;
+do not invent a second subject or redesign the scene.
+
+SEQUENTIAL MICRO-ACTIONS
+Begin in the supplied pose.
+First, [SMALL HEAD / EYE ACTION].
+Then [HAIR / FABRIC / BREATH RESPONSE].
+Then [ONE HAND-TO-PROP ACTION] with visible preparation, contact and recovery.
+End in [QUIET FINAL POSE].
+Perform these actions one after another, not simultaneously. No dance,
+large-body choreography or motion copied from another video.
+
+CAMERA AND LIGHT
+Keep the camera nearly fixed with only gentle handheld breathing. Preserve
+framing and lens distance. Allow subtle natural [WINDOW / PRACTICAL] light
+variation without exposure pumping or scene relighting.
+
+FAILURE CONTROL
+No face drift, hair replacement, collage, split screen, duplicate subject,
+instant prop teleport, jump cut, aggressive camera move, lip-sync claim,
+unrequested dance or changing room geometry.
+
+VISUAL ACCEPTANCE
+Inspect at least five evenly spaced frames. Reject if identity changes, the prop
+action skips preparation/contact/recovery, an intended micro-action becomes a
+large gesture, or the reference composition is rebuilt.
+
+AUDIO DELIVERY
+Treat model audio as temporary. Preserve the generated visual master; replace
+its audio offline with a track you own or are licensed to use. Map video from
+the Seedance output and audio from the licensed source, encode the new audio
+track, and trim to the shorter stream. Recheck duration, sync and rights before
+publication.
+```
+
+**Why it works:** removing the motion-driver video eliminates a competing source
+of face, hair and scene identity. A first-frame anchor plus one-at-a-time
+micro-actions gives Seedance a small continuity problem, while offline audio
+replacement keeps visual generation independent from music rights and timing.
+
+Adapted from Penny Huang's August 12, 2026
+[Seedance 2.5 generation-evidence commit](https://github.com/pennyhuang-oss/Virtual_KOL_Studio/commit/cb0f2c447bec755e3030e3317021e3bd6f68d6ae),
+[method, settings, task evidence and five-point QA](https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/cb0f2c447bec755e3030e3317021e3bd6f68d6ae/kols/iris-chen/generation_notes.md#step-2動態短片生成非-motion-control用-generate_video--參考圖),
+and [generated delivery](https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/cb0f2c447bec755e3030e3317021e3bd6f68d6ae/kols/iris-chen/videos/daily_reel_music_r1/iris_daily_reel_r1.mp4).
+The source's music was explicitly unlicensed and internal-only; this reusable
+version therefore requires owned or licensed replacement audio before release.
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -12011,6 +12080,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Penny Huang / Virtual KOL Studio — Seedance 2.5 identity-anchored omni-reference micro-action clip with five-point QA](https://github.com/pennyhuang-oss/Virtual_KOL_Studio/commit/cb0f2c447bec755e3030e3317021e3bd6f68d6ae) ([method and task evidence](https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/cb0f2c447bec755e3030e3317021e3bd6f68d6ae/kols/iris-chen/generation_notes.md), [generated delivery](https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/cb0f2c447bec755e3030e3317021e3bd6f68d6ae/kols/iris-chen/videos/daily_reel_music_r1/iris_daily_reel_r1.mp4))
 
 - [convergeai-labs / Framia Examples — Seedance 2.0 Mini same-prompt twin-car benchmark with generated clip and acceptance checks](https://github.com/convergeai-labs/framia-examples/commit/94cbc9168f4872dcb2213649f7b970515f203fbd) ([complete original prompt](https://github.com/convergeai-labs/framia-examples/blob/94cbc9168f4872dcb2213649f7b970515f203fbd/ai-model-showdown/assets/prompt.txt), [rendered comparison video](https://github.com/convergeai-labs/framia-examples/blob/94cbc9168f4872dcb2213649f7b970515f203fbd/ai-model-showdown/video/ai-model-showdown-framia.mp4))
 
