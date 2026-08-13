@@ -12827,6 +12827,68 @@ complex location or celebrity likeness.
 **Source:** [Lava IG Console — Seedance 2.5 faceless studio one-take, reusable prompt structure and first-run verification](https://github.com/MuxiLiu512/lava-ig-console/commit/4e5897cef16dd31e3af0c876de258978f142c8a7)
 
 
+### Primary-speaker phrase ownership and quote-only speech gate
+
+**Verified model:** Seedance 2.5 (`bytedance/seedance-2.5/text-to-video`) —
+derived from the creator's five delivered native-audio ads and nine-render
+failure log, with every roll transcribed and the visible card checked frame by
+frame
+
+Use this when a short ad must pronounce a long brand, product or category phrase
+inside a scene with more than one speaking character.
+
+~~~text
+CAST
+Primary speaker: [OWNER / PRESENTER], described once with stable wardrobe.
+Secondary speaker: [AGENT / CUSTOMER / FRIEND].
+Exact required phrase: "[MULTI-WORD PHRASE]".
+The primary speaker alone owns the required phrase.
+
+TIMELINE
+[0–HOOK END] Primary speaker: "[SHORT HOOK]."
+[QUESTION START–ANSWER END] Secondary speaker: "[GENERIC QUESTION THAT DOES NOT
+CONTAIN THE REQUIRED PHRASE]." Primary speaker immediately answers:
+"[SHORT ANSWER CONTAINING THE EXACT REQUIRED PHRASE ONCE]."
+[PROOF START–PROOF END] Show [VISIBLE ACTION OR PROP PROOF]. If another line is
+essential, give it only to the primary speaker: "[ONE SHORT LINE]."
+[FINAL BEAT] Nobody speaks. End on [WARM REACTION / PRODUCT USE / NATURAL ACTION],
+not a spoken pitch or frozen end card.
+
+SPEECH BOUNDARY
+The only spoken words in the entire video are inside quotation marks above,
+spoken by the character named for each line. Everything outside quotation marks
+is silent stage direction. Never narrate, read, whisper, count or improvise it.
+
+PHRASE OWNERSHIP
+Only [PRIMARY SPEAKER] says "[MULTI-WORD PHRASE]". The secondary speaker never
+repeats, completes or paraphrases it. Keep the exchange to one question and one
+answer. Say the phrase clearly as ordinary language; do not abbreviate it or add
+unwritten filler.
+
+VISUAL AND AUDIO LOCKS
+[PROP] keeps [SIMPLE EXHAUSTIVE GEOMETRY] with no invented readable text.
+Use [DIEGETIC SOUNDS]; [MUSIC RULE]. No generated subtitle, caption, overlay,
+logo, watermark, end card or extra speaker.
+
+POST-RENDER ACCEPTANCE GATE
+1. Transcribe the generated audio.
+2. Compare every spoken line word for word with the approved quoted script.
+3. Reject any missing, substituted or stage-direction word.
+4. Inspect the phrase-bearing frames and the entire prop for visual drift.
+5. Re-roll only the failed take. If the phrase keeps failing, remove secondary
+dialogue or another scene change before adding more pronunciation instructions.
+~~~
+
+**Technique:** phrase ownership reduces both speaker ambiguity and the amount of
+dialogue competing for fifteen seconds. The quote-only boundary handles a
+separate observed failure—stage direction spoken aloud—while the transcript gate
+treats audio correctness as an acceptance criterion rather than a prompt wish.
+The creator found that increasingly elaborate phonetic bans did not repair a
+secondary-speaker failure; moving the phrase and simplifying the exchange did.
+
+**Source:** GroupX's
+[Seedance 2.5 prompts, generators, delivered clips and three-round failure analysis](https://github.com/GroupX-ai/ad-creative/commit/3b0ea58a0355dc26a9951315b54901cd31e9b91d).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -12874,6 +12936,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [GroupX — Seedance 2.5 primary-speaker phrase ownership, quote-only speech control, delivered clips and transcription QA](https://github.com/GroupX-ai/ad-creative/commit/3b0ea58a0355dc26a9951315b54901cd31e9b91d) ([complete prompts](https://github.com/GroupX-ai/ad-creative/blob/3b0ea58a0355dc26a9951315b54901cd31e9b91d/esacard/prompts-approved-batch.mjs), [exact model generator](https://github.com/GroupX-ai/ad-creative/blob/3b0ea58a0355dc26a9951315b54901cd31e9b91d/esacard/2026-08-14-approved/generate.mjs), [failure and QA ledger](https://github.com/GroupX-ai/ad-creative/blob/3b0ea58a0355dc26a9951315b54901cd31e9b91d/esacard/2026-08-14-approved/README.md))
 
 - [Livepeer Storyboard — Seedance 2.5 paid-long-take draft, duration scaling, and asynchronous recovery](https://github.com/livepeer/storyboard/commit/d408240062c1bffa1b5a7d212989e1645a1e48e2) ([playbook](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/public/playbooks/one-take-30s-spot.md), [successful 8-second master](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-showcase-master-2026-08-12.md), [paid-timeout evidence](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-t2v-30s-master-2026-08-12.md), [recovery fix](https://github.com/livepeer/storyboard/commit/832d5232158f1b54a03bfd3eac1a64628733c509))
 - [Adir Kol / Backend Hub — Seedance 2.0 live-smoke of project-scoped private-asset retry for consenting-adult person-media I2V](https://github.com/adirkol/backend-hub/commit/1b26f444f3a45c15a6d24e3c163607deb39933fe) ([main-line merge](https://github.com/adirkol/backend-hub/commit/5ae7f1f254700d96afbcda6e1772ebb5eab7e3bd))
