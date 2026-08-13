@@ -234,6 +234,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Drain-save card handoff](#218-drain-save-card-handoff)
   - [Card-to-crowd continuation](#219-card-to-crowd-continuation)
   - [Tent-wipe festival payoff](#220-tent-wipe-festival-payoff)
+  - [Ink-glyph derivation trailer](#221-ink-glyph-derivation-trailer-with-literal-object-guard)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -9875,6 +9876,81 @@ including the exact chained input and successful model output.
 
 ---
 
+### 221. Ink-glyph derivation trailer with literal-object guard
+
+**Verified model:** Seedance 2.0 Mini (`seedance_2_0_mini`) — the original
+creator rendered all seven 10-second clips, published their successful job IDs
+and assembled output, reconciled the live credit spend, and inspected sampled
+frames from the finished draft
+
+**Use case:** multi-clip editorial trailer, style-key continuity, abstract
+calligraphy animation, literal-object failure control  
+**Mode:** reference-image-to-video clips assembled in sequence  
+**Settings:** 7 × 10 seconds, 9:16, 480p draft, silent generation
+
+```text
+Create seven separate 10-second vertical clips in one flat 2D ink-wash world.
+Attach the same supplied character-and-scroll style key to every clip. Preserve
+the three characters, robe colours, glasses, props, pale silk, restrained
+palette and brush texture. Generate no audio. Begin visible motion on frame one
+and keep a slow camera move, drifting ink grain or changing light through every
+held composition so neither endpoint freezes.
+
+Shared visual object: a descending column of hand-brushed glyph-like marks.
+Each mark must grow directly from the wet ink stroke above it and be joined only
+by one hairline of black ink. It is writing on silk, never hardware. No metal
+links, rings, cable, rope, jewellery, restraint or physical chain.
+
+Clip 1 — A tall hanging scroll unrolls downward. The brushed column writes
+itself rapidly toward and beyond the lower edge while untouched silk remains
+above the first mark. Slow push-in.
+
+Clip 2 — In a vertical audience chamber, the gold-robed ruler snaps open a white
+fan across frame. Behind him, only three brushed marks have appeared on the
+scroll. Keep his thin round glasses and face stable.
+
+Clip 3 — At the foot of the scroll, the blue-robed scholar holds an open bamboo
+text like a tablet. Three new marks grow one after another from the previous
+wet strokes while her hands remain still. Let the ink, not the actor, perform
+the transformation.
+
+Clip 4 — Make a clean moving plate for a quotation card: pale silk, the brushed
+column continuing diagonally below, camera drifting upward into a wide untouched
+field. Do not generate letters; typography will be added in post.
+
+Clip 5 — The cinnabar-robed examiner lifts a wax tablet, removes one brushed
+mark from the drawn sequence and watches the whole structure lose coherence.
+It must collapse into loose ink flecks and calligraphic strokes across the silk,
+not into solid pieces. Keep the optional hand drum visible only through the
+reference image; do not mention music or rhythm.
+
+Clip 6 — A single acupuncture needle rests flat beside the completed writing.
+A hand withdraws, then the camera travels upward along the descending brushwork
+until it reaches the untouched silk above the first mark. No patient, anatomy,
+body, metallic chain or restraint imagery.
+
+Clip 7 — Produce a plain end-card plate with slow ink wash and subtle light
+movement. No generated text; add the disclaimer and credit during finishing.
+
+Across all clips: text-free plates, no anatomy, no face drift, no frozen opening
+or tail, no extra limbs, no sudden style change and no literal interpretation of
+the connected writing as a manufactured object.
+```
+
+**Technique:** the creator's draft made the ambiguous phrase “chain of links”
+materialise as interlocking metal rings in one sampled frame, while a shot
+described as “loose brush strokes” remained correctly calligraphic. Replace the
+category noun with observable construction — glyph, wet stroke, hairline ink —
+and explicitly exclude the competing material ontology. Render a cheap draft,
+sample every motif-bearing shot, and promote only after the metaphor survives.
+
+**Source:** tmjoLnir's August 13, 2026
+[primary Seedance 2.0 Mini render and production-record commit](https://github.com/tmjoLnir/huangdi-neijing/commit/b90c1a36bb0ab2c81c4fc224ab41420359478cc6),
+including complete shot prompts, successful job IDs, assembled outputs and
+visual QA of the literal-object failure.
+
+---
+
 ## Reusable templates
 
 ### First-frame illustration-lock and accelerated micro-loop template
@@ -12762,6 +12838,8 @@ Community examples and techniques referenced in this README:
 - [Soran — Seedance 2.0 midnight archive-infiltration comedy](https://x.com/Soranlan/status/2085188995818860602)
 
 - [Kira4094 — Seedance 2.0 Emotion Director v3.0](https://github.com/kira4094/my-skills/blob/44f44c5f054bb348d5fafc4126b0469a80be297c/skills/movie-emotional-director/SKILL.md)
+
+- [tmjoLnir — Seedance 2.0 Mini seven-shot ink-glyph trailer, render evidence and literal-object failure analysis](https://github.com/tmjoLnir/huangdi-neijing/commit/b90c1a36bb0ab2c81c4fc224ab41420359478cc6)
 
 Official model references:
 
