@@ -12502,6 +12502,84 @@ Create crops and short cutdowns only from the accepted master.
 
 **Source:** [Livepeer Storyboard — Seedance 2.5 capability commit](https://github.com/livepeer/storyboard/commit/d408240062c1bffa1b5a7d212989e1645a1e48e2) ([complete one-take playbook](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/public/playbooks/one-take-30s-spot.md), [8-second 720p showcase](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-showcase-master-2026-08-12.md), [4-second 5/5 probe](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-t2v-smoke-2026-08-12.md), [12-second duration probe](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-duration-scaling-2026-08-12.md), [paid 30-second timeout](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-t2v-30s-master-2026-08-12.md), [billed-discard audit and recovery fix](https://github.com/livepeer/storyboard/commit/832d5232158f1b54a03bfd3eac1a64628733c509))
 
+### Contact-peak route switch for reference-executed interaction
+
+**Verified model:** Seedance 2.0 (`bytedance/seedance-2.0/reference-to-video`) —
+the original creator first paid for and delivered a successful reference-driven
+kiss shot, reporting real lip contact held for about four seconds, then committed
+the selective routing and same-model job-retrieval workflow
+
+Use this when a character interaction contains one story-critical contact peak
+that an endpoint-anchored image-to-video interpolation repeatedly approaches but
+never completes. Keep ordinary motion on the cheaper route; isolate only the
+failed contact block and let character references define identity while the
+prompt defines the action.
+
+```text
+ROUTE DECISION
+Render the surrounding setup and recovery shots with the normal image-to-video
+workflow. Route only the contact block below to Seedance 2.0 reference-to-video.
+Do not provide a first frame that already encodes a visible gap as an immutable
+endpoint.
+
+REFERENCE MAP
+@Image1 shows [CHARACTER A]: exact face, hair, wardrobe and proportions.
+@Image2 shows [CHARACTER B]: exact face, hair, wardrobe and proportions.
+[Optional @Image3] defines only the set, light direction and camera height.
+Preserve these identities and the same setting; do not copy their reference poses.
+
+CONTACT BLOCK — [4–12] SECONDS, [ASPECT RATIO]
+Begin with A and B already at conversational distance in [FRAMING].
+
+Preparation: [A / BOTH] makes one small readable approach—[eye-line change,
+head turn, hand rising, step or weight shift]. B visibly receives and answers
+that movement.
+
+Contact: their [EXACT BODY PARTS / PROP SURFACES] meet at [SCREEN POSITION].
+Show an unambiguous shared contact boundary, correct body spacing and natural
+weight transfer. Hold the completed contact for [DURATION OR STORY BEAT]; do
+not stop at a near-contact gap.
+
+Recovery: they separate once along the reverse path while preserving identity.
+End with [FOREHEADS / HANDS / PROP / SHOULDERS] still touching or with one
+clearly described final gap and eye-line. No second attempt.
+
+CAMERA AND PHYSICS
+Use one [LOCKED / SLOW PUSH / SHORT LATERAL TRACK] camera move. Keep both
+contact surfaces visible before, during and after impact. Hair and fabric react
+after body motion; hands retain correct ownership and do not merge.
+
+FAILURE CONTROL
+No almost-contact pause, invisible gap at the peak, face fusion, identity swap,
+extra hand, crossed anatomy, teleport into contact, repeated contact loop, cut
+away during the peak, sudden reframing or contact hidden outside the crop.
+
+ACCEPTANCE GATE
+Inspect frames immediately before contact, at full contact, during the hold and
+after separation. Accept only if the named surfaces visibly meet, both identities
+survive the hold, the contact lasts for the required beat and recovery starts
+from the achieved contact state.
+```
+
+**Routing pattern:** first run a minimal one-variable probe on the failed block:
+keep references, duration, aspect ratio and prompt fixed while switching only
+from image-to-video to reference-to-video. If the contact becomes complete, keep
+the expensive route local to that block. Persist the exact model alongside the
+task ID and query results through that same model's queue; polling a reference-
+to-video task through the image-to-video route can return 404 and turn a valid
+paid generation into an apparent timeout.
+
+**Evidence boundary:** the published successful test validates a kiss shot after
+three image-led attempts retained an approximately one-centimetre gap. Hugs,
+grapples, catches and handoffs are plausible extensions of the same routing
+pattern, but should each pass their own fixed-input route-switch probe before
+being treated as verified.
+
+Adapted from SAGAIA's August 13, 2026
+[primary Seedance 2.0 contact-generation and routing commit](https://github.com/biochemsa28-hub/SAGAIA/commit/3bea598a707d9c1a235a421cc1d6dfe3fd6559f2),
+which records the delivered result, repeated near-contact failure, exact route,
+cost comparison and queue-retrieval correction.
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -12840,6 +12918,8 @@ Community examples and techniques referenced in this README:
 - [Kira4094 — Seedance 2.0 Emotion Director v3.0](https://github.com/kira4094/my-skills/blob/44f44c5f054bb348d5fafc4126b0469a80be297c/skills/movie-emotional-director/SKILL.md)
 
 - [tmjoLnir — Seedance 2.0 Mini seven-shot ink-glyph trailer, render evidence and literal-object failure analysis](https://github.com/tmjoLnir/huangdi-neijing/commit/b90c1a36bb0ab2c81c4fc224ab41420359478cc6)
+
+- [SAGAIA — Seedance 2.0 reference-to-video contact proof and selective route-switch workflow](https://github.com/biochemsa28-hub/SAGAIA/commit/3bea598a707d9c1a235a421cc1d6dfe3fd6559f2)
 
 Official model references:
 
