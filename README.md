@@ -235,6 +235,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Card-to-crowd continuation](#219-card-to-crowd-continuation)
   - [Tent-wipe festival payoff](#220-tent-wipe-festival-payoff)
   - [Ink-glyph derivation trailer](#221-ink-glyph-derivation-trailer-with-literal-object-guard)
+  - [Poster-matched facade hero loop](#222-poster-matched-facade-parallax-hero-loop)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -9951,6 +9952,51 @@ visual QA of the literal-object failure.
 
 ---
 
+### 222. Poster-matched facade parallax hero loop
+
+**Verified model:** Seedance 2.0 (`seedance_2_0`) — the original creator
+committed the full motion brief, two generated masters, the compressed delivery
+video, and the matching poster frame
+
+Use this for a restrained website or property-ad hero where the existing still
+must remain the immediate visual contract and the animation should feel like the
+same photograph becoming alive rather than a new shot.
+
+```text
+INPUT
+@FirstFrame is the exact opening frame and poster image: a modern three-storey
+apartment building in a northern European town, paved path, clipped hedges,
+young birch trees and bright overcast daylight.
+
+SHOT — 5 SECONDS, 16:9, 24 FPS
+Begin on @FirstFrame without a visible composition, exposure or geometry jump.
+Make one slow, even camera track to the right along the facade.
+Create gentle, physically coherent parallax between the foreground birch and
+the building. Add only slight natural leaf movement in the overcast air.
+Keep the architecture, path, hedges, window layout, materials, sky and cool
+documentary colour unchanged.
+
+CAMERA AND SUBJECT LIMITS
+No zoom, shake, sudden acceleration, reframing, people, vehicles, signs, text,
+logo or watermark. Do not bend walls, move windows, invent doors, relight the
+scene or turn the documentary image into a glossy CGI property render.
+
+END AND DELIVERY
+Finish while the same rightward motion is still calm enough to loop or dissolve
+back to the supplied poster. Export a silent 720p H.264 master, then create a
+fast-start web delivery copy. Confirm that the poster is the exact first video
+frame so loading the motion layer produces no flash or spatial jump.
+```
+
+**Why it works:** the first frame owns every architectural invariant while the
+prompt spends its limited motion budget on one camera vector, one parallax
+relationship and one environmental response. Matching the poster to frame one
+also separates generation quality from web delivery: users see a stable image
+immediately, and the video can fade over it only after it is ready.
+
+**Source:** [ARIZU — exact Seedance 2.0 motion prompt, generated masters and delivered hero video](https://github.com/Ds9001-1983/arizu/commit/cab73a6d7530dd49052ac7cdbfaf219d78b20ed3)
+
+
 ## Reusable templates
 
 ### First-frame illustration-lock and accelerated micro-loop template
@@ -12648,6 +12694,68 @@ returning unrelated stock media as if Seedance had generated it.
 **Source:** [Livepeer Storyboard — verified Seedance 2.5 heartbeat-stream render and named-model fallback guard](https://github.com/livepeer/storyboard/commit/5f99f90440e22b6d88f290f74e4daaceb847ff87)
 
 
+### Frozen-subject fifteen-stage camera excursion and iconic return
+
+**Verified model:** Seedance 2.5 (`seedance_2_5`, `omni_reference`) — the
+creator documents a completed 15.04-second, 24 fps, 1470×630 run with AAC
+audio, exact submitted prompt structure, paid credit movement and an ordered
+six-frame identity check
+
+Use this when one image has a highly recognizable pose, expression or visual
+joke that would drift if the subject were asked to perform. Treat the image as
+identity evidence rather than a first frame, freeze the subject, and spend the
+whole duration on a subject-specific camera journey that returns to the iconic
+composition.
+
+```text
+REFERENCE CONTRACT
+@meme_reference is the only semantic and visual evidence for [SUBJECT],
+[DEFINING POSE], [EXPRESSION], [WARDROBE / MARKINGS], [SUPPORTING HAND OR PROP]
+and [ICONIC FRAMING].
+Restage those exact elements inside one believable [PHYSICAL WORLD].
+Do not display the uploaded image, borders, captions, watermark, UI, typography
+or compression artifacts.
+
+IDENTITY AND MOTION LOCK
+The subject remains almost completely frozen in the exact pose and expression.
+Only the camera moves. Environmental motion is limited to [WIND / DUST /
+FABRIC / LIGHT RESPONSE] and must not rebuild the subject.
+No music; use only [SHORT DIEGETIC SOUND BED].
+
+15-SECOND CAMERA SCORE
+Write exactly fifteen consecutive one-second stages.
+Each stage must contain:
+- continuation from the preceding achieved frame;
+- one camera action aimed at one subject-specific detail;
+- one explicit end composition.
+
+Stage 1: extreme close-up of the single most defining detail.
+Stages 2–6: progressively reveal [FACE / MARKING / PROP CONTACT / POSE DETAIL].
+Stages 7–10: change angle and depth while the subject remains frozen; include
+one focus transfer that reveals the physical world.
+Stages 11–13: one wide scale reveal, one dynamic lateral or orbital move, and
+one final texture detail. Every move must name a real feature from the reference.
+Stage 14: settle into a three-quarter master.
+Stage 15: snap to a stable centered master matching the original iconic framing.
+
+FAILURE CONTROL
+Do not substitute a generic orbit/dolly checklist for subject-specific details.
+Do not animate the face, mouth, limbs or defining prop relationship.
+Do not turn @meme_reference into the literal first-frame JPEG.
+Reject if identity becomes more generic over time, the pose changes, a stage
+repeats without new visual information, or the final master fails to recover the
+original image's readable silhouette and composition.
+```
+
+**Why it works:** facial and pose drift accumulate when a long prompt gives the
+model fifteen seconds of subject performance. Holding the subject static turns
+identity preservation into an invariant and uses Seedance's temporal capacity
+for camera movement instead. The close-up-to-world-to-iconic-return structure
+creates escalation without asking the character to change.
+
+**Source:** [Meme Scene Explorer — completed Seedance 2.5 run and verification](https://github.com/AIEngineerX/meme-scene-explorer/commit/1624d8139d84e01b9ff73401e20381a5f965b9f5) ([complete submitted prompt](https://github.com/AIEngineerX/meme-scene-explorer/blob/1624d8139d84e01b9ff73401e20381a5f965b9f5/examples/filled-prompt.puppy.txt), [prompt contract](https://github.com/AIEngineerX/meme-scene-explorer/blob/1624d8139d84e01b9ff73401e20381a5f965b9f5/references/prompt-contract.md), [ordered run frames](https://github.com/AIEngineerX/meme-scene-explorer/blob/1624d8139d84e01b9ff73401e20381a5f965b9f5/examples/example-frames.jpg))
+
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -12990,6 +13098,9 @@ Community examples and techniques referenced in this README:
 - [SAGAIA — Seedance 2.0 reference-to-video contact proof and selective route-switch workflow](https://github.com/biochemsa28-hub/SAGAIA/commit/3bea598a707d9c1a235a421cc1d6dfe3fd6559f2)
 
 - [Livepeer Storyboard — Seedance 2.5 heartbeat-stream render and named-model truth gate](https://github.com/livepeer/storyboard/commit/5f99f90440e22b6d88f290f74e4daaceb847ff87)
+
+- [ARIZU — Seedance 2.0 poster-matched facade parallax hero](https://github.com/Ds9001-1983/arizu/commit/cab73a6d7530dd49052ac7cdbfaf219d78b20ed3)
+- [Meme Scene Explorer — Seedance 2.5 frozen-subject camera excursion](https://github.com/AIEngineerX/meme-scene-explorer/commit/1624d8139d84e01b9ff73401e20381a5f965b9f5)
 
 Official model references:
 
