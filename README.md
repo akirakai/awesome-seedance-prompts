@@ -12756,6 +12756,77 @@ creates escalation without asking the character to change.
 **Source:** [Meme Scene Explorer — completed Seedance 2.5 run and verification](https://github.com/AIEngineerX/meme-scene-explorer/commit/1624d8139d84e01b9ff73401e20381a5f965b9f5) ([complete submitted prompt](https://github.com/AIEngineerX/meme-scene-explorer/blob/1624d8139d84e01b9ff73401e20381a5f965b9f5/examples/filled-prompt.puppy.txt), [prompt contract](https://github.com/AIEngineerX/meme-scene-explorer/blob/1624d8139d84e01b9ff73401e20381a5f965b9f5/references/prompt-contract.md), [ordered run frames](https://github.com/AIEngineerX/meme-scene-explorer/blob/1624d8139d84e01b9ff73401e20381a5f965b9f5/examples/example-frames.jpg))
 
 
+### Faceless symbolic studio one-take with exposed production grammar
+
+**Verified model:** Seedance 2.5 (`seedance_2_5`, text-to-video) — the
+original creator records a first-take usable 10-second, 9:16, 720×1280 render
+with no audio, a roughly three-minute generation time and an actual charge of
+65 credits
+
+Use this for a branded social film that needs human presence without facial
+identity risk. Let posture, distance and a minimal prop relationship carry the
+story while an exposed cyclorama and visible production equipment make the
+constructed nature of the scene part of the visual language.
+
+```text
+SHOT CONTRACT
+Seedance 2.5, text-to-video, [8–12] seconds, 9:16, 24 fps, 720p,
+[GENERATED AUDIO OFF / MINIMAL STUDIO AMBIENCE].
+One continuous unbroken take in one physical white cyclorama studio.
+
+SYMBOLIC CAST AND ACTION
+Show [ONE / TWO] anonymous adult figures in [BEIGE / BLACK / WARM WHITE]
+wardrobe. Keep both heads turned away from camera or outside the crop.
+Their relationship is expressed only through [DISTANCE], [POSTURE] and
+[ONE SIMPLE PROP RELATIONSHIP: phones on a bench / hands separated by a phone /
+two chairs turned apart / two phones face-down on a table].
+Give each figure at most one small, ordered action. No dialogue.
+
+CONSTRUCTED-STUDIO WORLD
+Use a vast empty white cyclorama, plain concrete floor and generous negative
+space. Deliberately reveal selected production apparatus at the frame edges:
+one C-stand, one equipment cart and a small section of overhead lighting truss.
+The equipment remains stationary, plausible and secondary; it must read as an
+intentional studio set, not clutter or a backstage accident.
+
+CAMERA PATH
+Make one slow, smooth orbital arc at constant subject distance.
+Remain entirely inside the rear hemisphere: begin at [REAR THREE-QUARTER LEFT /
+REAR THREE-QUARTER RIGHT], pass behind the figures, and finish at the opposite
+rear three-quarter angle.
+Do not cross either face plane. If a face could become visible, stop the arc
+earlier rather than rotating through the front.
+
+LOOK
+Muted beige, black, warm white and grey; low saturation.
+Soft directional key light from [LEFT / RIGHT], restrained shadow contrast,
+shallow depth of field and subtle 35 mm film grain.
+No glossy showroom CGI, high-saturation colour, dramatic VFX or location change.
+
+FAILURE CONTROL
+No face, facial reflection, mirror, portrait, close-up, reverse angle, cut,
+montage, camera-distance change, text, caption, logo or watermark.
+No extra person or duplicate body. Preserve anatomically correct hands and the
+exact prop count. Do not let studio equipment move, multiply or block the
+symbolic action.
+
+ACCEPTANCE
+The clip is one continuous arc with no hidden edit; no face is visible in any
+frame; the cyclorama, C-stand and rigging remain coherent; the prop relationship
+is readable without text; and the final posture creates one clear emotional
+difference from the opening.
+```
+
+**Why it works:** removing the face avoids the identity drift and portrait
+performance that often reveal an AI render, but the figures still provide human
+scale and emotional tension. Restricting the orbit to the rear hemisphere makes
+“no face” a camera-path invariant rather than a negative wish. Sparse props and
+visible studio hardware create narrative and authorship without requiring a
+complex location or celebrity likeness.
+
+**Source:** [Lava IG Console — Seedance 2.5 faceless studio one-take, reusable prompt structure and first-run verification](https://github.com/MuxiLiu512/lava-ig-console/commit/4e5897cef16dd31e3af0c876de258978f142c8a7)
+
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -13101,6 +13172,8 @@ Community examples and techniques referenced in this README:
 
 - [ARIZU — Seedance 2.0 poster-matched facade parallax hero](https://github.com/Ds9001-1983/arizu/commit/cab73a6d7530dd49052ac7cdbfaf219d78b20ed3)
 - [Meme Scene Explorer — Seedance 2.5 frozen-subject camera excursion](https://github.com/AIEngineerX/meme-scene-explorer/commit/1624d8139d84e01b9ff73401e20381a5f965b9f5)
+
+- [Lava IG Console — Seedance 2.5 faceless symbolic studio one-take](https://github.com/MuxiLiu512/lava-ig-console/commit/4e5897cef16dd31e3af0c876de258978f142c8a7)
 
 Official model references:
 
