@@ -12580,6 +12580,74 @@ Adapted from SAGAIA's August 13, 2026
 which records the delivered result, repeated near-contact failure, exact route,
 cost comparison and queue-retrieval correction.
 
+### Heartbeat-stream long-render and named-model truth gate
+
+**Verified model:** Seedance 2.5 (`seedance-25-t2v`) — the original creator
+reproduced a paid 20-second render that the plain request lost at 301 seconds,
+then completed the same Seedance request over the heartbeat stream in 388
+seconds
+
+Use this after the duration-stratified long-take template when the provider
+returns the final media on a long-lived HTTP request instead of a separately
+pollable task. It keeps a valid long render alive without disguising failure as
+an empty response, a duplicate paid dispatch, or unrelated fallback footage.
+
+```text
+ROUTE LOCK
+Record provider, endpoint, exact Seedance model identifier, mode, duration,
+resolution, request timeout, request ID and charge state.
+Keep the creative payload byte-for-byte identical while testing transport.
+If the provider offers an asynchronous task ID, persist and poll that task
+instead; use this stream path only when the terminal result is delivered by SSE.
+
+TRANSPORT DECISION
+For a request whose permitted runtime can cross the HTTP client's idle wall,
+send the same body to the provider's heartbeat-stream endpoint.
+The stream must emit a heartbeat more frequently than both the time-to-headers
+and between-body-chunks limits.
+Keep short requests on the ordinary endpoint; choose the stream threshold from
+the actual client wall with a safety margin, not from the model duration alone.
+
+TERMINAL-EVENT CONTRACT
+Consume and discard only events explicitly marked running.
+Return success only after one terminal event contains terminal status, the
+requested Seedance capability and a non-empty video URL or provider task result.
+A stream that ends after heartbeats with no terminal event is a failure.
+A terminal error remains an error; never convert an empty object into success.
+
+RETRY AND COMPATIBILITY GATE
+Fall back to the ordinary endpoint only when the stream route itself is absent
+(for example, a confirmed 404 from an older provider build).
+Do not retry a 5xx, terminal error or broken in-flight stream on the plain route:
+the original render may still be running and billable.
+If a plain request repeatedly dies near a fixed client wall, do not resend it
+unchanged. Use the stream, shorten or split the take, or recover the original
+task by its persisted ID.
+
+NAMED-MODEL TRUTH GATE
+When the caller explicitly selected Seedance 2.5, success must identify that
+model and return its generated result.
+Do not silently substitute stock footage, another model or an auto-routed clip.
+Stock fallback is allowed only for a request explicitly marked AUTO-ROUTED and
+must be labelled as fallback rather than Seedance output.
+
+ACCEPTANCE
+The terminal record identifies Seedance 2.5, contains the expected media URL,
+matches the original request ID, and was dispatched once.
+Logs distinguish provider rejection, missing terminal event, client idle wall
+and caller cancellation, and preserve elapsed time plus charge state.
+```
+
+**Why it works:** a configured 600-second application timeout cannot help when
+the underlying HTTP client silently enforces a shorter idle limit. Frequent SSE
+heartbeats keep the connection active while the model runs; requiring a real
+terminal event prevents a billed but empty response from becoming a false
+success. The named-model gate separately prevents orchestration recovery from
+returning unrelated stock media as if Seedance had generated it.
+
+**Source:** [Livepeer Storyboard — verified Seedance 2.5 heartbeat-stream render and named-model fallback guard](https://github.com/livepeer/storyboard/commit/5f99f90440e22b6d88f290f74e4daaceb847ff87)
+
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -12920,6 +12988,8 @@ Community examples and techniques referenced in this README:
 - [tmjoLnir — Seedance 2.0 Mini seven-shot ink-glyph trailer, render evidence and literal-object failure analysis](https://github.com/tmjoLnir/huangdi-neijing/commit/b90c1a36bb0ab2c81c4fc224ab41420359478cc6)
 
 - [SAGAIA — Seedance 2.0 reference-to-video contact proof and selective route-switch workflow](https://github.com/biochemsa28-hub/SAGAIA/commit/3bea598a707d9c1a235a421cc1d6dfe3fd6559f2)
+
+- [Livepeer Storyboard — Seedance 2.5 heartbeat-stream render and named-model truth gate](https://github.com/livepeer/storyboard/commit/5f99f90440e22b6d88f290f74e4daaceb847ff87)
 
 Official model references:
 
