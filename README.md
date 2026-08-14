@@ -13121,6 +13121,106 @@ and committed replacement clips
 [11](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/assets/episodes/ep6/clips/shot11.mp4).
 
 
+
+### Per-tile motion-handoff repair for mechanical all-at-once animation
+
+**Verified model:** Seedance 2.0 Mini (`Artlist Seedance 2.0 Mini`) — the
+creator replaced eleven rejected LTX shots with Seedance renders, committed all
+eleven replacement MP4s and records that every clip passed a per-tile
+edge-desertion judge
+
+Use this when a clip technically contains motion but feels mechanical because
+every actor, prop and effect starts together, then large parts of the frame go
+dead. Rewrite the shot as a chain of visible handoffs: one motion creates the
+cue for the next, while quiet regions retain small, motivated world motion.
+
+```text
+REJECTION SIGNAL
+Reject the current clip if:
+- unrelated actors or effects all begin on the same beat;
+- the main action completes early and the remaining frame merely coasts;
+- a subject exits one region and nothing inherits attention there;
+- ambient motion is uniform, decorative or disconnected from the story beat.
+
+MOTION-HANDOFF MAP
+A = [PRIMARY SUBJECT OR FORCE]
+B = [SECONDARY CHARACTER / PROP]
+C = [ENVIRONMENTAL RESPONSE]
+Emotional turn = [VISIBLE CHANGE IN GAZE / BREATH / POSTURE]
+Final settle = [ONE STABLE, READABLE END STATE]
+
+Write the causal order before writing camera language:
+A prepares -> A commits -> B reacts only after the visible cue ->
+C carries the consequence across the frame -> emotion lands -> settle.
+
+COMPLETE SHOT PROMPT
+[STYLE, PERIOD, LOCATION, TIME AND LIGHT]. [DURATION / ASPECT / RESOLUTION].
+Keep [IDENTITY, COSTUME, OBJECT COUNT AND SCREEN DIRECTION] unchanged.
+
+CAMERA — one continuous [PUSH / TRACK / ORBIT / LOCKED LIVING FRAME],
+starting on [COMPOSITION] and ending on [COMPOSITION].
+
+0–[T1] — [A] begins with a readable preparation: [BREATH / WEIGHT SHIFT /
+HAND OR EYE MOVEMENT]. [BACKGROUND MOTION 1] continues in the quiet side of
+the frame.
+
+[T1]–[T2] — [A] completes [PRIMARY ACTION]. Only after [VISIBLE CONTACT OR
+CUE], [B] performs [REACTION]. Do not launch both motions together.
+
+[T2]–end — let the consequence travel through [C]: [SMOKE / CLOTH / WATER /
+CROWD / LIGHT / LEAVES] moves from [REGION] toward [REGION]. [A OR B] then
+shows the emotional turn through [ONE SPECIFIC MICRO-PERFORMANCE] and settles
+into [FINAL STATE].
+
+PERFORMANCE — play the change in three stages:
+[INITIAL MASK] -> [CUE REGISTERED] -> [AFTER-EFFECT].
+Keep breathing, gaze and posture alive between the larger actions.
+
+WORLD MOTION — assign each ambient element a different job and onset:
+[AMBIENT 1] establishes continuity; [AMBIENT 2] reacts to the main action;
+[AMBIENT 3] carries motion through the final hold.
+
+NEGATIVE — no simultaneous all-cast start, synchronized decorative swaying,
+early completed action, frozen empty region, repeated gesture, action reset,
+teleport, duplicate subject, extra prop, camera jump, subtitle, logo or
+watermark.
+
+PER-TILE ACCEPTANCE
+Review the frame as spatial regions, not only as a full image. Every region
+should contain either the active subject, a motivated reaction, continuous
+world motion or intentional stillness with visible breath. Motion must pass
+between regions in causal order; the final beat must settle without the frame
+becoming inert.
+
+EXAMPLE PATCH
+Lamplit interior, restrained historical live action. Slow push toward two
+people arguing across a table. One speaker's pointing hand holds while the
+other finishes a breath; only then does the unfinished accusation die in the
+speaker's open mouth and the hand lower to the tabletop. Tea steam keeps
+curling between them. After the hand lands, a distant glow reaches the window;
+the first person turns toward it, then the second follows one beat later.
+End with both faces held on the window and the argument visibly abandoned.
+No simultaneous head turn, frozen background, repeated pointing or new person.
+```
+
+**Why it works:** the prompt converts a flat list of movements into a causal
+sequence and gives each part of the image a job before, during or after the
+main action. The source batch is unusually strong evidence for this repair:
+eleven earlier cuts rejected for “mechanical all-at-once motion” were replaced
+by clips whose exact shot components stagger preparation, reaction,
+environmental carry and emotional release; all eleven replacements were
+committed after the stated spatial judge passed.
+
+Adapted from Leon Harris's
+[eleven-shot Seedance 2.0 Mini repair commit](https://github.com/Leonkharris/nextframe-site/commit/ce60d3476d1eb919d13e67a16ee5d86c809b9035),
+the
+[complete episode prompt components](https://github.com/Leonkharris/nextframe-site/blob/ce60d3476d1eb919d13e67a16ee5d86c809b9035/ProjectKinmuku/episodes_data.js)
+and representative committed results:
+[delayed protective reaction](https://github.com/Leonkharris/nextframe-site/blob/ce60d3476d1eb919d13e67a16ee5d86c809b9035/ProjectKinmuku/assets/episodes/ep3/clips/shot11.mp4),
+[interrupted argument](https://github.com/Leonkharris/nextframe-site/blob/ce60d3476d1eb919d13e67a16ee5d86c809b9035/ProjectKinmuku/assets/episodes/ep8/clips/shot04.mp4) and
+[weight-to-recovery performance](https://github.com/Leonkharris/nextframe-site/blob/ce60d3476d1eb919d13e67a16ee5d86c809b9035/ProjectKinmuku/assets/episodes/ep8/clips/shot05.mp4).
+
+
 ### Fast-variant latency envelope with positional endpoint and route-truth gate
 
 **Verified model:** Seedance 2.0 Fast (`bytedance/seedance-2.0-fast` via
@@ -13311,6 +13411,9 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+
+- [Leon Harris / Project Kinmuku — eleven Seedance 2.0 Mini replacements for mechanical all-at-once motion, accepted by a per-tile edge-desertion judge](https://github.com/Leonkharris/nextframe-site/commit/ce60d3476d1eb919d13e67a16ee5d86c809b9035) ([complete prompt components](https://github.com/Leonkharris/nextframe-site/blob/ce60d3476d1eb919d13e67a16ee5d86c809b9035/ProjectKinmuku/episodes_data.js), [ep3 shot 11](https://github.com/Leonkharris/nextframe-site/blob/ce60d3476d1eb919d13e67a16ee5d86c809b9035/ProjectKinmuku/assets/episodes/ep3/clips/shot11.mp4), [ep8 shot 04](https://github.com/Leonkharris/nextframe-site/blob/ce60d3476d1eb919d13e67a16ee5d86c809b9035/ProjectKinmuku/assets/episodes/ep8/clips/shot04.mp4), [ep8 shot 05](https://github.com/Leonkharris/nextframe-site/blob/ce60d3476d1eb919d13e67a16ee5d86c809b9035/ProjectKinmuku/assets/episodes/ep8/clips/shot05.mp4))
 
 
 - [Leon Harris / Project Kinmuku — Seedance 2.0 Mini four-anchor rejection repair, exact shot prompts and committed replacement clips](https://github.com/Leonkharris/nextframe-site/commit/84ccbb79dedc3ec413e5e9c86218f583da128495) ([prompt components](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/episodes_data.js), [shot 01](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/assets/episodes/ep6/clips/shot01.mp4), [shot 02](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/assets/episodes/ep6/clips/shot02.mp4), [shot 07](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/assets/episodes/ep6/clips/shot07.mp4), [shot 11](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/assets/episodes/ep6/clips/shot11.mp4))
