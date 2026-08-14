@@ -13121,6 +13121,68 @@ and committed replacement clips
 [11](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/assets/episodes/ep6/clips/shot11.mp4).
 
 
+### Fast-variant latency envelope with positional endpoint and route-truth gate
+
+**Verified model:** Seedance 2.0 Fast (`bytedance/seedance-2.0-fast` via
+Replicate) — the integration author reports live local Gen E2E verification of
+480p routing, first/last-frame media delivery, optional synchronized audio,
+MP4 tracks, billing, exact cache replay and burst behavior; repeated Fast 720p
+runs exceeded 120 seconds, so that tier was deliberately excluded
+
+Use this for a short synchronous shot whose opening and ending compositions are
+both important. Treat Fast as a narrow production route rather than a generic
+alias for the full Seedance 2.0 family.
+
+```text
+ROUTE PREFLIGHT
+Exact model = bytedance/seedance-2.0-fast
+Duration = [4 OR 5] seconds
+Resolution = 480p
+Aspect ratio = [16:9 / 4:3 / 1:1 / 3:4 / 9:16 / 21:9]
+Generated audio = [ON / OFF]
+
+If the brief needs more than 5 seconds or more than 480p, stop this request.
+Create a new task on an explicitly named compatible model; never alias, clamp,
+or silently fall back while reporting the result as Fast.
+
+POSITIONAL INPUTS
+image[0] = literal opening frame: composition, subject scale and start state
+image[1] = literal ending frame: composition, subject scale and completed state
+Do not swap the two slots. Convert and deliver both assets through the same
+provider-approved media path before prediction.
+
+PROMPT
+Begin exactly from image[0]: [SUBJECT AND OPENING STATE].
+Over [4 / 5] seconds, perform one continuous causal action:
+[PREPARATION] -> [PRIMARY MOTION] -> [SETTLE].
+End exactly on image[1], with [END-STATE INVARIANTS] already completed.
+Keep identity, wardrobe, object count, environment and light direction stable.
+Use one camera move only: [LOCKED / DOLLY / PAN / ORBIT].
+Audio: [SHORT DIEGETIC SOUND PLAN]; no unintended speech or music.
+No cut, montage, extra subject, state reset, text, logo or watermark.
+
+POST-RUN TRUTH GATE
+- returned actual model is exactly bytedance/seedance-2.0-fast
+- output is 480p and 4–5 seconds, with no hidden model substitution
+- frame 0 matches image[0] and the final beat resolves toward image[1]
+- MP4 contains a video track and, when requested, an audio track
+- record prediction ID, elapsed time, billed output seconds and cache status
+- reject a cached replay if its bytes or accounting differ from the original
+```
+
+**Why it works:** the route is constrained to the capability and latency
+envelope that was actually exercised. Positional endpoint ownership prevents a
+two-image request from becoming an unordered style bundle, while the
+post-render model and container checks keep a fast response from concealing a
+fallback, missing audio track or stale cache object. The observed 720p timeout
+is handled before spending on a request that falls outside the proven envelope.
+
+**Source:** Pollinations
+[Seedance 2.0 Mini/Fast live E2E record and capability decision](https://github.com/pollinations/pollinations/pull/13366)
+and the
+[merged implementation](https://github.com/pollinations/pollinations/commit/e21c5f771b7667e6f375a8a93084137cd7a55b6e).
+
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -13476,6 +13538,8 @@ Community examples and techniques referenced in this README:
 
 - [Recoupable — Seedance 2.5 time-scoped scene plate, face-reference rejection and primary run log](https://github.com/recoupable/skills/commit/638ca5cd72591525ffe5232c4edf6facea8399a2)
 - [NovoAds — Seedance 2.0 mode-scoped leading-silence measurements](https://github.com/novoads/claude-code-ads/commit/bf4697cdecf29c997a2ef70a4678cc1282734ba3)
+
+- [Pollinations — Seedance 2.0 Fast live E2E capability envelope, positional keyframes and no-fallback routing](https://github.com/pollinations/pollinations/pull/13366)
 
 Official model references:
 
