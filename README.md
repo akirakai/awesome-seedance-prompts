@@ -13046,6 +13046,81 @@ Adapted from NovoAds'
 [mode-scoped measurement correction](https://github.com/novoads/claude-code-ads/commit/bf4697cdecf29c997a2ef70a4678cc1282734ba3).
 
 
+### Four-anchor canon repair for rejected storyboard shots
+
+**Verified model:** Seedance 2.0 Mini (`Artlist Seedance 2.0 Mini`) — the
+creator re-rendered four rejected 5-second, 16:9 shots at 480p and committed
+the replacement MP4s with the exact shot directions, reference plan and
+delivery specs
+
+Use this when a storyboard shot fails for the wrong subject, scale, framing or
+character canon while the rest of the sequence is already approved. Repair
+only that shot with four references whose jobs do not overlap.
+
+```text
+INPUTS
+@Image1 = approved keyframe, bound as the literal first frame
+@Image2 = character board: identity, costume, proportions and palette only
+@Image3 = motion + emotion board: pose progression and performance intensity
+@Video1 = scene reference: camera path, timing and environmental motion only
+
+SHOT CONTRACT
+Start exactly on @Image1; frame 0 must preserve its crop, subject scale,
+screen position and silhouette.
+Keep @Image2's face, horns/hair, costume, body proportions and colors unchanged.
+Take action rhythm and emotional progression from @Image3 without copying its
+layout.
+Take only camera and world motion from @Video1; do not import its subject,
+identity, wardrobe or story event.
+
+PROMPT
+[STYLE AND PERIOD]. [ASPECT RATIO].
+CAMERA — [ONE PRECISE CAMERA MOVE AND FRAMING].
+ACTION — [PREPARATION -> MOTION -> SETTLE ACROSS THE CLIP].
+PERFORMANCE — [VISIBLE BREATH / GAZE / POSTURE CHANGE].
+WORLD MOTION — [TWO OR THREE CONTINUOUS AMBIENT MOTIONS].
+CANON — one [NAMED SUBJECT]; preserve @Image2 throughout.
+NEGATIVE — wrong subject, duplicate character, changed costume, changed scale,
+incorrect first-frame crop, static slideshow, text, logo, watermark.
+
+TARGET
+[5] seconds; [16:9]; [480p]; preserve the accepted sequence's codec, frame
+rate and audio/container contract.
+
+REJECTION-SPECIFIC PATCH
+If an effect is read as a reflection, collage or replacement subject, rewrite
+only that beat as one continuous physical surface and state where the image
+originates:
+"One unbroken [SURFACE] fills the frame. [MEMORY / LIGHT / IMAGE] glows from
+within it, then ripples apart and re-forms as [PHYSICAL MOTION] travels."
+
+ACCEPTANCE
+Frame 0 matches @Image1; one correct character remains on model; @Video1
+contributes motion but not identity; the requested action completes and
+settles; duration, aspect ratio, codec/fps and audio match adjacent approved
+clips. Replace only the rejected shot after all gates pass.
+```
+
+**Why it works:** the four anchors separate composition, canon, performance and
+camera instead of asking one reference to control everything. In the source
+run, four previously rejected shots were regenerated with this bundle; the
+committed replacements kept the episode's delivery contract and added real AAC
+ambient audio. The water-memory shot also documents a useful failure repair:
+changing an ambiguous stack of “memory images” into one continuous water
+surface with the older scene glowing from within restored the intended subject
+and framing.
+
+Adapted from Leon Harris's
+[four-shot Seedance 2.0 Mini re-render commit](https://github.com/Leonkharris/nextframe-site/commit/84ccbb79dedc3ec413e5e9c86218f583da128495),
+including the
+[complete episode prompt components](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/episodes_data.js)
+and committed replacement clips
+[01](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/assets/episodes/ep6/clips/shot01.mp4),
+[02](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/assets/episodes/ep6/clips/shot02.mp4),
+[07](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/assets/episodes/ep6/clips/shot07.mp4) and
+[11](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/assets/episodes/ep6/clips/shot11.mp4).
+
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -13093,6 +13168,9 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+
+- [Leon Harris / Project Kinmuku — Seedance 2.0 Mini four-anchor rejection repair, exact shot prompts and committed replacement clips](https://github.com/Leonkharris/nextframe-site/commit/84ccbb79dedc3ec413e5e9c86218f583da128495) ([prompt components](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/episodes_data.js), [shot 01](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/assets/episodes/ep6/clips/shot01.mp4), [shot 02](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/assets/episodes/ep6/clips/shot02.mp4), [shot 07](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/assets/episodes/ep6/clips/shot07.mp4), [shot 11](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/assets/episodes/ep6/clips/shot11.mp4))
 
 - [GroupX — Seedance 2.5 primary-speaker phrase ownership, quote-only speech control, delivered clips and transcription QA](https://github.com/GroupX-ai/ad-creative/commit/3b0ea58a0355dc26a9951315b54901cd31e9b91d) ([complete prompts](https://github.com/GroupX-ai/ad-creative/blob/3b0ea58a0355dc26a9951315b54901cd31e9b91d/esacard/prompts-approved-batch.mjs), [exact model generator](https://github.com/GroupX-ai/ad-creative/blob/3b0ea58a0355dc26a9951315b54901cd31e9b91d/esacard/2026-08-14-approved/generate.mjs), [failure and QA ledger](https://github.com/GroupX-ai/ad-creative/blob/3b0ea58a0355dc26a9951315b54901cd31e9b91d/esacard/2026-08-14-approved/README.md))
 
