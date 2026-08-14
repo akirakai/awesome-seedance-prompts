@@ -13183,6 +13183,87 @@ and the
 [merged implementation](https://github.com/pollinations/pollinations/commit/e21c5f771b7667e6f375a8a93084137cd7a55b6e).
 
 
+### Published-capability media gate for prompt-routed public R2V
+
+**Verified model:** Seedance 2.5
+(`seedance-2-5-reference-to-video-basic`, public R2V tier in the captured
+Carpe Diem/Venice operator catalog) — the original integrator records the exact
+catalog flags `video_input: false` and `audio_input: true`; a clip-led
+`Extend <Video 1>` request was routed as a different Seedance operation and
+still billed
+
+Use this when a provider groups several Seedance directions and service tiers
+under one visible family. Resolve the exact backend variant first, then expose
+only the reference media and prompt openings that its published constraints
+can actually honor.
+
+```text
+CATALOG TRUTH
+Resolved model ID = seedance-2-5-reference-to-video-basic
+Published media flags:
+- video_input = false
+- audio_input = true
+
+An explicit false is a hard prohibition. A missing flag means unknown, not
+false, and must follow a separately verified rule for that exact tier.
+Do not infer clip support from "reference-to-video", a family guide or an ID.
+
+WORKFLOW GATE
+For this exact public variant, offer only the image-led reference workflow:
+"Refer to <Image 1>..."
+Disable every clip-led opening before the request is queued:
+- "Strictly edit <Video 1>..."
+- "Extend <Video 1>..."
+- "<Video 1> + <Video 2>..."
+
+If a user switches from a clip-capable family, visibly remove the stale clips
+and require prompt review. Never silently drop the clips only at submission.
+
+REFERENCE INPUTS
+<Image 1> = [SUBJECT / PRODUCT / ENVIRONMENT / STYLE REFERENCE]
+<Audio 1> = optional [VOICE / TIMBRE / AUDIO CHARACTER REFERENCE]
+Reference audio may accompany a photo but may not be the only reference.
+Do not send reference_video_urls for this model.
+
+PROMPT
+Refer to <Image 1> for [EXACT REFERENCE ROLE].
+[SUBJECT] performs [ONE ORDERED ACTION ARC] in [ENVIRONMENT].
+Camera: [ONE SHOT SIZE AND ONE CAMERA MOVE].
+Preserve [IDENTITY / PRODUCT GEOMETRY / PALETTE / LIGHT DIRECTION].
+Use <Audio 1> only for [VOICE / TIMBRE ROLE]; generate [DIEGETIC AUDIO PLAN].
+No extra subject, state reset, unintended speech, text, logo or watermark.
+
+PRE-QUEUE BODY GATE
+- resolved model still equals seedance-2-5-reference-to-video-basic
+- prompt contains <Image 1> and no <Video N> mention
+- reference_image_urls is present
+- reference_video_urls is absent
+- reference_audio_urls is present only with a photo reference
+- total encoded request body remains inside the provider limit
+- face-media attestation covers every person-bearing photo or clip
+
+POST-RUN TRUTH GATE
+Record resolved model, prompt opening, queued operation and charge.
+Reject the take if the operation differs from the declared image-led reference
+workflow, unsupported media was silently removed, or the result came from a
+different model route.
+```
+
+**Why it works:** Seedance chooses among reference, edit, extend and stitch from
+the prompt opening, not from a separate operation parameter. Capability-first
+gating therefore prevents an unsupported `<Video 1>` instruction from becoming
+a valid but unintended paid render. Keeping explicit `false` distinct from an
+absent flag also avoids disabling working inputs on a separately verified full
+tier.
+
+**Source:** Irdanwen's
+[capability-gated Seedance R2V repair and billed misrouting record](https://github.com/Irdanwen/sub-rosa/commit/e50817aa404e01454be474fb800d1dbe40d3663e),
+the
+[accepted capability-source decision](https://github.com/Irdanwen/sub-rosa/blob/e50817aa404e01454be474fb800d1dbe40d3663e/docs/adr/0022-model-inputs-follow-published-constraints.md)
+and the
+[live-catalog-derived exact model fixture](https://github.com/Irdanwen/sub-rosa/blob/e50817aa404e01454be474fb800d1dbe40d3663e/src/test/fixtures/seedance-catalog.ts).
+
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -13540,6 +13621,8 @@ Community examples and techniques referenced in this README:
 - [NovoAds — Seedance 2.0 mode-scoped leading-silence measurements](https://github.com/novoads/claude-code-ads/commit/bf4697cdecf29c997a2ef70a4678cc1282734ba3)
 
 - [Pollinations — Seedance 2.0 Fast live E2E capability envelope, positional keyframes and no-fallback routing](https://github.com/pollinations/pollinations/pull/13366)
+
+- [Irdanwen / Sub Rosa — Seedance 2.5 public R2V capability flags and billed prompt-misrouting repair](https://github.com/Irdanwen/sub-rosa/commit/e50817aa404e01454be474fb800d1dbe40d3663e)
 
 Official model references:
 
