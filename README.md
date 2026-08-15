@@ -13364,6 +13364,82 @@ and the
 [live-catalog-derived exact model fixture](https://github.com/Irdanwen/sub-rosa/blob/e50817aa404e01454be474fb800d1dbe40d3663e/src/test/fixtures/seedance-catalog.ts).
 
 
+### Production-design-sheet comparison probe before shot-by-shot lock
+
+**Verified model:** Seedance 2.0 (`element2video` via OpenArt Smart Shot) — the
+original creator ran the sheet's suggested route at 720p with audio for 400
+credits, then published the production-design sheet and resulting comparison
+render
+
+Use this before committing a multi-shot product or narrative film to separate
+renders. Build one reviewable production-design sheet that owns spatial layout,
+visual identity, storyboard order and lighting; submit it once as a short
+Seedance probe, then decide from the rendered pacing whether the sequence can
+remain one clip or must be split into anchor-locked shots.
+
+```text
+PRE-PRODUCTION INPUT
+Subject / product references = [APPROVED VISUAL REFERENCES]
+Scene premise = [ONE-SENTENCE STORY]
+Beat list = [BEAT 1] -> [BEAT 2] -> [BEAT 3] -> [PAYOFF]
+Set geometry = [ENTRANCES, AXES, SUBJECT POSITIONS AND SCREEN DIRECTION]
+Lighting = [KEY DIRECTION, CONTRAST, PALETTE AND PRACTICAL SOURCES]
+Camera intent = [SHOT SIZE / PATH / TRANSITION LOGIC]
+Audio intent = [DIEGETIC EVENTS, SILENCE, MUSIC OR NO MUSIC]
+
+SHEET REQUIREMENTS
+Create one wide production-design sheet containing:
+- clean subject / product reference views;
+- the approved set design and palette;
+- a top-down floor plan with camera and subject paths;
+- ordered storyboard frames for every beat;
+- lighting and lens notes.
+Keep panels readable and mutually consistent. The sheet is an instruction board,
+not something that may appear inside the video.
+
+SEEDANCE COMPARISON PROBE
+@Image1 = the approved production-design sheet.
+Use @Image1 only for subject geometry, set layout, camera path, beat order and
+lighting. Do not render the sheet, borders, captions, arrows or floor plan.
+
+Generate one [4–6]-second comparison clip at [RESOLUTION] with audio
+[ON / OFF]. Preserve [IDENTITY / PRODUCT GEOMETRY / PALETTE] across the whole
+take. Execute no more than [ONE OR TWO] fully readable beats:
+[OPENING STATE] -> [VISIBLE CHANGE] -> [FINAL HOLD].
+Camera follows the floor-plan path: [MOVE].
+Audio: [SPECIFIC DIEGETIC PLAN]. No invented logo, text, extra beat, reset,
+generic trailer score or unmotivated cut.
+
+ACCEPTANCE / ROUTING
+- The first beat reads without consulting the sheet.
+- Spatial relations match the floor plan.
+- Product / character geometry survives every camera angle.
+- Each requested beat has preparation, action and hold.
+- Audio events land on their visible causes.
+- The last state can anchor a following shot.
+
+If three or more beats are compressed, transitions blur, or the payoff has no
+hold, keep the sheet as pre-production evidence but reject the one-clip route.
+Split the film into separately generated shots from a shared anchor frame and
+use the same sheet only to preserve layout, light and transition geometry.
+```
+
+**Why it works:** The sheet separates planning truth from render truth. Unlike a
+storyboard-only reference, it combines subject views, set geometry, floor plan,
+lighting and shot order, while the paid one-clip render is treated as a routing
+test rather than a master. The source creator's five-second, four-beat
+comparison was useful for judging staging but too compressed for the intended
+pace, motivating the one-or-two-beat limit and shot-by-shot fallback.
+
+**Source:** ZYNTH / Shane Caulfield's
+[paid Seedance 2.0 Smart Shot comparison and production notes](https://github.com/zanezynthbrain/zynth-brain/commit/b277d4bffffceac7011036927d482bd96abaa892),
+the
+[full spec](https://github.com/zanezynthbrain/zynth-brain/blob/b277d4bffffceac7011036927d482bd96abaa892/deliverables/spec/2026-08-15_SpecFilm_KitKat_The-Break-Line_v3.md),
+the
+[production-design sheet](https://cdn.openart.ai/openart-ai/production/2026-08/create-image/zQlwAWg6g9rSn0INEuso/gpt-image-2-responses-image_1786813667683_9e6d5043.png)
+and the
+[one-clip result](https://cdn.openart.ai/openart-ai/production/2026-08/create-video/zQlwAWg6g9rSn0INEuso/02178681399974800000000000000000000ffffc0a88538fdfb15_1786814135218_b94406a1.mp4).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -13412,6 +13488,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 Community examples and techniques referenced in this README:
 
+
+- [ZYNTH / Shane Caulfield — Seedance 2.0 Smart Shot production-design-sheet comparison, paid 720p audio render and one-clip pacing verdict](https://github.com/zanezynthbrain/zynth-brain/commit/b277d4bffffceac7011036927d482bd96abaa892) ([full production notes](https://github.com/zanezynthbrain/zynth-brain/blob/b277d4bffffceac7011036927d482bd96abaa892/deliverables/spec/2026-08-15_SpecFilm_KitKat_The-Break-Line_v3.md), [shot-plan sheet](https://cdn.openart.ai/openart-ai/production/2026-08/create-image/zQlwAWg6g9rSn0INEuso/gpt-image-2-responses-image_1786813667683_9e6d5043.png), [Seedance result](https://cdn.openart.ai/openart-ai/production/2026-08/create-video/zQlwAWg6g9rSn0INEuso/02178681399974800000000000000000000ffffc0a88538fdfb15_1786814135218_b94406a1.mp4))
 
 - [Leon Harris / Project Kinmuku — eleven Seedance 2.0 Mini replacements for mechanical all-at-once motion, accepted by a per-tile edge-desertion judge](https://github.com/Leonkharris/nextframe-site/commit/ce60d3476d1eb919d13e67a16ee5d86c809b9035) ([complete prompt components](https://github.com/Leonkharris/nextframe-site/blob/ce60d3476d1eb919d13e67a16ee5d86c809b9035/ProjectKinmuku/episodes_data.js), [ep3 shot 11](https://github.com/Leonkharris/nextframe-site/blob/ce60d3476d1eb919d13e67a16ee5d86c809b9035/ProjectKinmuku/assets/episodes/ep3/clips/shot11.mp4), [ep8 shot 04](https://github.com/Leonkharris/nextframe-site/blob/ce60d3476d1eb919d13e67a16ee5d86c809b9035/ProjectKinmuku/assets/episodes/ep8/clips/shot04.mp4), [ep8 shot 05](https://github.com/Leonkharris/nextframe-site/blob/ce60d3476d1eb919d13e67a16ee5d86c809b9035/ProjectKinmuku/assets/episodes/ep8/clips/shot05.mp4))
 
