@@ -9999,6 +9999,60 @@ immediately, and the video can fade over it only after it is ready.
 
 ## Reusable templates
 
+### Reference-identity / prompt-scene split with first-frame handoff
+
+**Verified model:** Seedance 2.0 — the original developer records a Seedance
+render that began in the reference photos' car instead of the prompted supermarket
+and distorted the actor during the match cut, then commits this bounded repair
+
+Use this when several character or product references carry backgrounds that
+conflict with the opening location in the motion prompt. Build one clean start
+frame first, then hand only that frame and a separate motion contract to Seedance.
+
+```text
+REFERENCE ROLE
+Treat @Reference1…@ReferenceN only as appearance and identity evidence.
+Person locks: [FACE / HAIR / SKIN TONE / EYES / DISTINCTIVE FEATURES].
+Product locks: [SHAPE / LABEL / COLOR / MATERIAL].
+Never inherit a reference photo's room, vehicle, lighting or camera position
+unless the motion brief explicitly chooses it as the opening location.
+
+FIRST-FRAME COMPOSITION
+Create one photorealistic [ASPECT] image showing only the opening instant of:
+[FULL SCENE AND STORY PROMPT].
+Place the locked people and products inside [FIRST LOCATION] in the starting
+blocking and action state. If the story later cuts or transitions elsewhere,
+do not preview that later location in this image.
+One unified scene, coherent perspective and lighting; no collage, split screen,
+grid, border, generated text or watermark.
+
+SEEDANCE MOTION HANDOFF
+Use the composed image as the sole first frame.
+[TIMED ACTION, CAMERA AND TRANSITION INSTRUCTIONS].
+Preserve the exact same person for the entire clip: same face, hair, skin tone,
+eyes and facial structure as frame one. Identity never morphs, swaps, distorts,
+ages or beautifies; hands stay natural. Preserve the product's locked geometry.
+
+FAILURE CONTROL
+A cross-location match cut is a known high-risk identity boundary. If the face
+still drifts, generate each location as a separate identity-anchored shot and
+perform the match cut in editing rather than adding more conflicting prose.
+
+ACCEPTANCE
+Reject if frame one copies a reference background instead of [FIRST LOCATION],
+shows a later story beat, omits a reference subject, changes product geometry,
+or lets identity drift before or after the transition.
+```
+
+**Why it works:** it separates three jobs that otherwise compete in one request:
+references define appearance, the composed start frame defines scene and blocking,
+and Seedance defines motion. The explicit first-location rule fixes reference
+background leakage, while the split-shot fallback acknowledges that a hard
+cross-location transition can exceed an identity lock's reliable control.
+
+Adapted from Axel's August 17, 2026
+[Seedance 2.0 render failure and committed repair](https://github.com/axelskt/AvatarAds/commit/c7fa381d194d98286764981f97e7e797a5672526).
+
 ### First-frame illustration-lock and accelerated micro-loop template
 
 **Verified model:** Seedance 2.0 Mini (`doubao-seedance-2-0-mini-260615`) —
@@ -13639,6 +13693,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [AvatarAds / Axel — Seedance 2.0 reference-identity versus prompt-scene split, first-frame handoff and match-cut drift fallback](https://github.com/axelskt/AvatarAds/commit/c7fa381d194d98286764981f97e7e797a5672526)
 
 - [Manus UGC engine — live-validated Seedance 2.0 raw-phone one-take, anti-stabilization pair, curly-brace dialogue and source-active prop physics](https://github.com/Manus-anus-spec/ugc-/commit/09b10f465532aa266027987d4789dcd791963fc0) ([complete prompting record](https://github.com/Manus-anus-spec/ugc-/blob/09b10f465532aa266027987d4789dcd791963fc0/docs/VIDEO-MODEL-PROMPTING.md))
 
