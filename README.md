@@ -13520,6 +13520,78 @@ the complete
 and its bounded
 [evidence ledger](https://github.com/Anelse0/ai-character-performance-director/blob/b332542297f9b9cbac4e59629f98b0c05902f15c/references/evidence-ledger.md).
 
+### Live-validated raw-phone one-shot with source-active prop physics
+
+**Verified model:** Seedance 2.0 — the original creator records an August 17,
+2026 live hose-and-watermelon session that re-validated the one-take structure,
+curly-brace dialogue and the load-bearing anti-stabilization pair on Seedance
+2.0
+
+Use this for a 5–15 second UGC or candid-phone scene whose action must feel like
+one imperfectly filmed event rather than several polished generations. Keep the
+look lock, phase choreography, camera behavior and prop source in separate
+contracts so the model cannot hide a physics discontinuity behind a cut.
+
+```text
+FIT
+Seedance 2.0, 5–15 seconds, ONE continuous scene, ONE generated take.
+If the source edit contains several cuts within the same scene, generate the
+whole action once and recreate those cuts later by slicing this master. Split
+generation only at a real A-roll/B-roll change or when the action exceeds 15s.
+
+LOOK LOCK — FIRST
+The supplied first frame defines identity, wardrobe, place and composition.
+Raw handheld iPhone footage, all camera settings automatic, no color grading,
+flat natural daylight, deep focus, imperfect framing and natural hand jitter.
+NOT cinematic; no film look, no smoothness, no stabilization.
+
+SOURCE-ACTIVE PROP CONTRACT
+Before motion starts, name and show the physical source of every emitted,
+poured, cut or released material. The source is already active in frame 1:
+[VISIBLE NOZZLE / OPEN CONTAINER / CUT FACE / DISPENSER] is visible and
+[WATER / LIQUID / CONTENT] is already [RUNNING / POURING / EMERGING].
+Do not spawn a hidden tool, new opening, detached stream or unexplained object.
+
+CONTINUOUS CHOREOGRAPHY
+First, [PHASE 1 ACTION].
+Camera: [ONE PHONE-CAMERA BEHAVIOR FOR PHASE 1].
+
+Then, without a cut, [PHASE 2 ACTION CAUSED BY PHASE 1].
+Camera: [ONE DIFFERENT OR CONTINUED BEHAVIOR FOR PHASE 2].
+
+Finally, [PHASE 3 PAYOFF AND PHYSICAL SETTLE].
+Camera: [ONE BEHAVIOR FOR PHASE 3], then hold the residual motion.
+
+DIALOGUE AND SOUND
+Put delivery outside braces and only the spoken words inside:
+[SUBJECT] says [TONE] {[SHORT LINE]}.
+If the mouth is occupied by eating or drinking, move the line to labeled
+OFF-CAMERA VO instead of forcing lip sync.
+Record [LOCATION AMBIENCE], prop sound and imperfect close phone-mic texture.
+
+FINAL CONSTRAINTS
+One continuous take; action and camera stay causally connected. Preserve the
+first-frame look. No gimbal glide, beauty polish, subtitle, caption or watermark.
+
+ACCEPTANCE
+Reject if the camera becomes stabilized, the same camera sentence is repeated
+across every phase, a stream appears without a visible source, the prop activates
+late without cause, a mouth-busy subject lip-syncs, or the action reads as
+separate generated clips.
+```
+
+**Why it works:** the creator's live comparison found that removing the explicit
+anti-smoothness pair let Seedance 2.0 drift toward gimbal movement. Putting an
+already-active, visible prop source in the first frame gives emitted material a
+physical origin, while the first/then/finally sheet assigns only one camera
+behavior to each causal action phase. Generating one master also keeps identity
+and prop state continuous when the final edit needs several source-style cuts.
+
+Adapted from the creator's August 17, 2026
+[live-validated Seedance 2.0 one-shot engine release](https://github.com/Manus-anus-spec/ugc-/commit/09b10f465532aa266027987d4789dcd791963fc0)
+and its complete
+[model-prompting record](https://github.com/Manus-anus-spec/ugc-/blob/09b10f465532aa266027987d4789dcd791963fc0/docs/VIDEO-MODEL-PROMPTING.md).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -13567,6 +13639,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Manus UGC engine — live-validated Seedance 2.0 raw-phone one-take, anti-stabilization pair, curly-brace dialogue and source-active prop physics](https://github.com/Manus-anus-spec/ugc-/commit/09b10f465532aa266027987d4789dcd791963fc0) ([complete prompting record](https://github.com/Manus-anus-spec/ugc-/blob/09b10f465532aa266027987d4789dcd791963fc0/docs/VIDEO-MODEL-PROMPTING.md))
 
 - [Anelse / AI Character Performance Director — user-verified Seedance 2.5 30-second farewell monologue and five-layer performance scaffold](https://github.com/Anelse0/ai-character-performance-director/commit/b332542297f9b9cbac4e59629f98b0c05902f15c) ([complete reusable template](https://github.com/Anelse0/ai-character-performance-director/blob/b332542297f9b9cbac4e59629f98b0c05902f15c/references/longform-performance-pattern.md), [bounded evidence record](https://github.com/Anelse0/ai-character-performance-director/blob/b332542297f9b9cbac4e59629f98b0c05902f15c/references/evidence-ledger.md))
 
