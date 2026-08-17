@@ -9999,6 +9999,57 @@ immediately, and the video can fade over it only after it is ready.
 
 ## Reusable templates
 
+### Net-displacement endpoint conflict gate
+
+**Verified model:** Seedance 2.0 — the original creator reports that binding the
+same keyframe as both first and last frame left the figure merely shifting its
+weight, while the committed Seedance 2.0 rerender walks through the doorway
+
+Use this before any image-to-video shot where the subject must finish somewhere
+other than its starting position. Decide whether the action is a loop or a
+one-way displacement before assigning endpoint images.
+
+```text
+STATE TEST
+Start state S0: [SUBJECT POSE / SCREEN POSITION / OWNED PROP / ENVIRONMENT].
+Required end state S1: [NEW POSE / NEW POSITION / PROP STATE / EXIT OR ARRIVAL].
+Net displacement: [YES / NO].
+
+ROUTING
+If S1 differs from S0, never bind the same still as both first and last frame.
+Choose one route:
+
+A — OPEN ENDPOINT
+Use @StartFrame only. It is the exact opening composition and identity anchor.
+[SUBJECT] performs [ONE CAUSAL ACTION PATH] from [S0] to [S1].
+Show [CONTACT / STEP / CROSSING] clearly; finish after [VISIBLE END CONDITION].
+Do not return, reset, reverse, loop, hover near the start or merely shift weight.
+
+B — DISTINCT ENDPOINT
+Use @StartFrame for S0 and a separately designed @EndFrame for S1.
+Move continuously from the supplied start state to the visibly different end
+state through [PHYSICAL PATH]. Do not redraw either boundary or arrive early.
+
+LOOP EXCEPTION
+Reuse one still at both endpoints only when the intended motion is genuinely
+cyclical and returns to the same pose, position, prop state and composition.
+
+ACCEPTANCE
+Reject a one-way shot if the subject remains rooted, only sways, snaps back to
+S0, walks without crossing [LANDMARK], or reaches S1 and then reverses.
+```
+
+**Why it works:** endpoint images are hard spatial contracts. Reusing the start
+image at the end silently asks for zero net motion, contradicting a walk-through,
+exit or handoff. The state test removes that conflict before generation; a
+first-frame-only route leaves Seedance free to complete displacement, while a
+distinct endpoint preserves precise arrival control.
+
+Adapted from Hogan & Crown's August 17, 2026
+[Seedance 2.0 rerender commit and failure comparison](https://github.com/angelwingscomms/hgc/commit/a2e411b9e8c87bbabc808286eaa0b57b48ef5077),
+with the [complete scene contract](https://github.com/angelwingscomms/hgc/blob/a2e411b9e8c87bbabc808286eaa0b57b48ef5077/marketing/tiktok/bond.json)
+and [committed result](https://github.com/angelwingscomms/hgc/blob/a2e411b9e8c87bbabc808286eaa0b57b48ef5077/marketing/tiktok/out/hgc-bond.mp4).
+
 ### Reference-identity / prompt-scene split with first-frame handoff
 
 **Verified model:** Seedance 2.0 — the original developer records a Seedance
@@ -13693,6 +13744,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Hogan & Crown — Seedance 2.0 net-displacement rerender after same-start/end-frame motion lock](https://github.com/angelwingscomms/hgc/commit/a2e411b9e8c87bbabc808286eaa0b57b48ef5077) ([complete scene contract](https://github.com/angelwingscomms/hgc/blob/a2e411b9e8c87bbabc808286eaa0b57b48ef5077/marketing/tiktok/bond.json), [generated result](https://github.com/angelwingscomms/hgc/blob/a2e411b9e8c87bbabc808286eaa0b57b48ef5077/marketing/tiktok/out/hgc-bond.mp4))
 
 - [AvatarAds / Axel — Seedance 2.0 reference-identity versus prompt-scene split, first-frame handoff and match-cut drift fallback](https://github.com/axelskt/AvatarAds/commit/c7fa381d194d98286764981f97e7e797a5672526)
 
