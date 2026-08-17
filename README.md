@@ -13440,6 +13440,86 @@ the
 and the
 [one-clip result](https://cdn.openart.ai/openart-ai/production/2026-08/create-video/zQlwAWg6g9rSn0INEuso/02178681399974800000000000000000000ffffc0a88538fdfb15_1786814135218_b94406a1.mp4).
 
+### Five-layer restrained-monologue arc with closing performance lock
+
+**Verified model:** Seedance 2.5 — the original skill author records a
+user-verified 30-second, image-referenced one-take farewell monologue and limits
+the finding to the same model, duration, reference and performance conditions
+
+Use this for one adult subject carrying a restrained emotional monologue or
+goodbye across a long take. The five layers separate global truths from timed
+performance so later dialogue beats do not erase identity, lighting or the
+scene's emotional direction.
+
+```text
+FIT
+Seedance 2.5, 30 seconds, image/reference-to-video, ONE continuous take,
+ONE adult speaking subject, low-action restrained performance.
+@Image1 is the sole identity reference; @Image2 fixes wardrobe.
+
+L1 — IDENTITY CONTRACT
+Keep the same face structure, features, hair, skin tone, visual age, build,
+wardrobe and overall presence for the full take. The subject remains the only
+sharp, readable face.
+
+L2 — SCENE AND CAMERA CONTRACT
+At [TIME] in [SIMPLE LOCATION], [SUBJECT] performs a restrained [EMOTIONAL
+SITUATION]. Use [LIGHT DIRECTION + TEMPERATURE + CONTRAST] so [VISIBLE FACIAL
+DETAILS] remain readable. Begin [OVER-SHOULDER / DIRECT-TO-CAMERA] at a medium
+close-up and make only one slow push toward an extreme close-up. Keep focus on
+the subject's face; the listening person, if needed, is only a soft anonymous
+shoulder with no readable face.
+
+L3 — SINGLE EMOTIONAL FACT
+The whole take follows one causal truth:
+the subject still [X], has already decided [Y], and is forcing themself to [Z].
+Layer only [THREE TO SIX COMPATIBLE FEELINGS], including vulnerable resolve.
+Do not introduce a second emotional storyline.
+
+L4 — FOUR PROGRESSIVE PERFORMANCE BEATS
+These labels divide time inside the same unbroken take; they are not cuts.
+Beat 1 — gathering courage, medium close-up:
+[PREPARATION ACTION] → [HESITATION] → one short line: "[DIALOGUE]" →
+[POST-LINE PHYSICAL REACTION].
+Beat 2 — admission, closer framing:
+[NEW PHYSIOLOGICAL ACTION] → one short line → [REACTION].
+Beat 3 — almost losing control, close-up:
+one irreversible small event such as a single tear falling without being wiped
+away → one short line → held silence.
+Beat 4 — resolve without closure, extreme close-up:
+[FINAL SMALL ACTION OR BREATH] → final short line → stop before the breakdown.
+End with the emotion unresolved; do not return to a neutral expression.
+
+For every line, place dialogue between a visible preparation and a visible
+after-reaction. Prefer breath, gaze, throat, jaw, eyelid, shoulder and finger
+changes over abstract labels such as "very sad" or large theatrical movement.
+
+L5 — CLOSING PERFORMANCE LOCK
+Across all four beats, preserve the L1 identity and wardrobe, the L2 light,
+focus relationship and single camera move, and the L3 causal truth. Keep the
+performance restrained and continuous. No identity drift, new face, camera
+reset, emotional reset, melodramatic collapse, subtitle, caption or watermark.
+
+ACCEPTANCE
+Reject if identity or wardrobe changes, a hidden listener becomes a second
+readable character, the camera restarts between beats, dialogue has no physical
+preparation or aftermath, framing fails to tighten with the emotion, or the
+ending resolves instead of holding residual tension.
+```
+
+**Why it works:** one causal emotional fact gives the model a throughline;
+placing each line between preparation and reaction turns internal emotion into
+filmable behavior. The progressive framing makes camera distance follow
+emotional pressure, while the final lock restates scene-level truths after the
+timeline so the long take does not treat them as expired opening instructions.
+
+Adapted from Anelse's August 17, 2026
+[user-verified Seedance 2.5 performance release](https://github.com/Anelse0/ai-character-performance-director/commit/b332542297f9b9cbac4e59629f98b0c05902f15c),
+the complete
+[five-layer scaffold](https://github.com/Anelse0/ai-character-performance-director/blob/b332542297f9b9cbac4e59629f98b0c05902f15c/references/longform-performance-pattern.md),
+and its bounded
+[evidence ledger](https://github.com/Anelse0/ai-character-performance-director/blob/b332542297f9b9cbac4e59629f98b0c05902f15c/references/evidence-ledger.md).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -13487,6 +13567,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Anelse / AI Character Performance Director — user-verified Seedance 2.5 30-second farewell monologue and five-layer performance scaffold](https://github.com/Anelse0/ai-character-performance-director/commit/b332542297f9b9cbac4e59629f98b0c05902f15c) ([complete reusable template](https://github.com/Anelse0/ai-character-performance-director/blob/b332542297f9b9cbac4e59629f98b0c05902f15c/references/longform-performance-pattern.md), [bounded evidence record](https://github.com/Anelse0/ai-character-performance-director/blob/b332542297f9b9cbac4e59629f98b0c05902f15c/references/evidence-ledger.md))
 
 
 - [ZYNTH / Shane Caulfield — Seedance 2.0 Smart Shot production-design-sheet comparison, paid 720p audio render and one-clip pacing verdict](https://github.com/zanezynthbrain/zynth-brain/commit/b277d4bffffceac7011036927d482bd96abaa892) ([full production notes](https://github.com/zanezynthbrain/zynth-brain/blob/b277d4bffffceac7011036927d482bd96abaa892/deliverables/spec/2026-08-15_SpecFilm_KitKat_The-Break-Line_v3.md), [shot-plan sheet](https://cdn.openart.ai/openart-ai/production/2026-08/create-image/zQlwAWg6g9rSn0INEuso/gpt-image-2-responses-image_1786813667683_9e6d5043.png), [Seedance result](https://cdn.openart.ai/openart-ai/production/2026-08/create-video/zQlwAWg6g9rSn0INEuso/02178681399974800000000000000000000ffffc0a88538fdfb15_1786814135218_b94406a1.mp4))
