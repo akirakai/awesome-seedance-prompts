@@ -13697,6 +13697,79 @@ Adapted from the creator's August 17, 2026
 and its complete
 [model-prompting record](https://github.com/Manus-anus-spec/ugc-/blob/09b10f465532aa266027987d4789dcd791963fc0/docs/VIDEO-MODEL-PROMPTING.md).
 
+### Declared omni-reference subtask and prompt-intent agreement gate
+
+**Verified model:** Seedance 2.5 — Griptape's maintainers manually generated and
+played a 1080p text-to-video result against the BytePlus proxy, confirmed an
+unaffected 720p run in the same session, and verified that the explicit
+`omni_reference_task_type` reached the provider
+
+Use this when one Seedance 2.5 endpoint serves reference-to-video, editing and
+extension. Declare the intended subtask in the request and make the prompt say
+the same operation explicitly; the declaration moves ratio and duration errors
+to submission time, while the wording prevents a later prompt-intent mismatch.
+
+```text
+ROUTE CONTRACT
+Exact model = Seedance 2.5
+Chosen operation = [REFERENCE / EDIT / EXTEND]
+Do not leave the omni-reference subtask on auto when the workflow already knows
+the operation.
+
+REFERENCE
+omni_reference_task_type = reference
+Attach at least one reference image, video or audio; a reference task with no
+asset is actually text-to-video and must be rejected before submission.
+Prompt opening:
+"Refer to @Image 1 for [IDENTITY / PRODUCT / STYLE ROLE]."
+Then describe [ONE ACTION ARC], [CAMERA], [AUDIO] and [PRESERVATION LOCKS].
+Keep ratio and duration within the provider's reference-task choices.
+
+EDIT
+omni_reference_task_type = edit
+Attach the source clip and use an explicit edit verb:
+"Edit @Video 1: [REMOVE / ADD / DELETE / MODIFY / REPLACE / CHANGE] [TARGET].
+Preserve [UNTOUCHED SUBJECTS, TIMING, CAMERA AND AUDIO]."
+Use adaptive ratio and smart duration; do not request a fixed edit duration.
+
+EXTEND
+omni_reference_task_type = extend
+Attach the source clip and use an explicit continuation verb:
+"Extend @Video 1 [FORWARD / BACKWARD]. Continue from the boundary with
+[CAUSALLY NEXT ACTION], preserving [IDENTITY, MOTION VECTOR, CAMERA, LIGHT AND
+AUDIO BED]."
+Use adaptive ratio and a supported 4–30 second duration.
+
+PROMPT–ROUTE AGREEMENT
+Before queueing, require all three to agree:
+1. the UI operation selected by the user;
+2. omni_reference_task_type in the payload;
+3. the prompt's opening verb and referenced media.
+
+Reject locally if a reference request has no asset, an edit prompt lacks an edit
+verb, an extension prompt lacks "extend" or "continue", or incidental wording
+would describe a different operation. Never silently reclassify or fall back.
+
+OUTPUT GATE
+Supported resolution = [480p / 720p / 1080p].
+For 1080p, expect 10-bit H.265/HEVC; test playback in an HEVC-capable player
+before treating a black or unreadable preview as a failed generation.
+After rendering, record declared subtask, accepted settings, actual resolution,
+codec and result URL. Reject if the provider executed a different operation.
+```
+
+**Why it works:** Seedance 2.5 now accepts an explicit reference subtask, but it
+still interprets the prompt during processing. The two signals are complementary:
+the payload declaration prevents incidental words such as "add" or "change" from
+reclassifying a reference request, while an operation-specific opening keeps the
+model's later intent check aligned. Local media, ratio and duration gates stop a
+known bad request before it queues and incurs wait time.
+
+**Source:** Griptape's
+[manual 1080p Seedance 2.5 E2E and task-routing pull request](https://github.com/griptape-ai/griptape-nodes-library-standard/pull/537)
+and the
+[merged provider-payload implementation](https://github.com/griptape-ai/griptape-nodes-library-standard/commit/a366bbbd7a4099c249aec7933fbd9a8b39e75326).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -14069,6 +14142,8 @@ Community examples and techniques referenced in this README:
 - [Pollinations — Seedance 2.0 Fast live E2E capability envelope, positional keyframes and no-fallback routing](https://github.com/pollinations/pollinations/pull/13366)
 
 - [Irdanwen / Sub Rosa — Seedance 2.5 public R2V capability flags and billed prompt-misrouting repair](https://github.com/Irdanwen/sub-rosa/commit/e50817aa404e01454be474fb800d1dbe40d3663e)
+
+- [Griptape Nodes — Seedance 2.5 manual 1080p E2E and explicit omni-reference task routing](https://github.com/griptape-ai/griptape-nodes-library-standard/pull/537)
 
 Official model references:
 
