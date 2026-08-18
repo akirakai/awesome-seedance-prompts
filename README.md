@@ -14657,6 +14657,97 @@ and the committed
 [format-routing and measured stream contract](https://github.com/productionkhu-tech/freewill-seedance/blob/dcac55a11c17d4ac3ab9a12c1e3cd3a6146e81d3/src/store.ts).
 
 
+
+### Account-scoped resolution re-probe and immutable model-ceiling gate
+
+**Verified model:** Seedance 2.5
+(\`dreamina-seedance-2-5-260628\`) — the original developer submitted live
+tasks at each resolution tier on August 18, 2026, recorded 480p, 720p and
+1080p as accepted, retained the provider's 4K model-limit error, and noted that
+the accepted tasks proceeded to billing
+
+Use this when available resolutions depend on both the model and the provider
+account. Keep the immutable model ceiling separate from the account's current
+entitlement, and re-probe only a tier whose account-scoped status may have
+changed.
+
+\`\`\`text
+CAPABILITY IDENTITY
+Provider = [PROVIDER / REGION].
+Account or resource pack = [ACCOUNT-SCOPED IDENTIFIER].
+Exact model = [EXACT PROVIDER MODEL ID].
+Task mode = [T2V / I2V / REFERENCE / EDIT / EXTEND].
+Probe date = [UTC DATE AND TIME].
+
+KNOWN ENVELOPE
+Lowest known-good tier = [480p / 720p / OTHER].
+Uncertain account-scoped tier = [1080p / OTHER].
+Immutable model-invalid tier = [4K / OTHER], backed by the provider's explicit
+"not valid for model" response rather than by analogy with another model.
+
+MINIMUM-COST RE-PROBE
+1. Estimate the billable cost before submitting anything.
+2. Do not rerun tiers already known good. Submit the shortest supported task
+   only at the uncertain account-scoped tier.
+3. If the provider accepts it, mark that tier available for this account and
+   timestamp the evidence. Accepted jobs may become billable even when the
+   purpose is only capability discovery.
+4. If it returns "not supported for this account and model", keep it disabled
+   for this account but schedule a future re-probe after a plan, resource-pack
+   or provider-policy change.
+5. Do not repeatedly probe a tier returning "not valid for model". Treat that
+   as the model ceiling until the exact model version changes or the provider
+   publishes contrary primary evidence.
+6. Cancel an accepted probe immediately when supported, but assume cancellation
+   can lose a race with execution; include the potential render cost.
+
+TWO-INDEPENDENT-CEILINGS
+model_ceiling = highest tier the exact model can ever accept.
+account_ceiling = highest tier this account currently accepts.
+grant_ceiling = highest tier the user or workspace is allowed to request.
+
+effective_ceiling = minimum(model_ceiling, account_ceiling, grant_ceiling).
+
+A user grant must never open a tier above the model ceiling. An old
+account-ceiling cache must never hide a tier that a fresh live probe accepted.
+
+STATE RECORD
+For every tier store:
+- state = accepted / account_refused / model_invalid / unknown;
+- exact provider error or task-acceptance response;
+- probed_at;
+- account and model identity;
+- mode used;
+- estimated and actual cost;
+- whether the accepted job completed, failed or was cancelled.
+
+RE-PROBE TRIGGERS
+Re-probe account_refused after [PLAN CHANGE / RESOURCE-PACK CHANGE /
+PROVIDER NOTICE / EXPLICIT ADMIN ACTION / TTL]. Never re-probe automatically
+on every picker open or generation attempt.
+
+ACCEPTANCE GATE
+The UI, pricing estimator, request validator and production catalog must derive
+their resolution ladder from the same effective ceiling. Test an uppercase
+resolution token, a stale over-generous user grant and an old account cache.
+Reject a release if any layer offers a tier the live route rejects, or if a
+mutable account refusal is encoded as an immutable model fact.
+\`\`\`
+
+**Why it works:** “unsupported” can describe two different constraints. The
+source account refused 1080p on August 13, then accepted it on August 18 without
+a model-ID change; 4K continued to return a model-invalid error. Separating
+those states permits capability recovery without allowing user grants or stale
+catalog data to overrule a true model ceiling. Probing only the uncertain tiers
+also avoids the source run's unnecessary accepted 480p and 720p jobs.
+
+**Source:** Aayush-hoichoi's August 18, 2026
+[live Seedance 2.5 resolution re-probe commit](https://github.com/Aayush-hoichoi/Seedance2.0/commit/f1df73ca60a2567b36418944474b0df3222b90f9),
+the
+[provider capability record](https://github.com/Aayush-hoichoi/Seedance2.0/blob/f1df73ca60a2567b36418944474b0df3222b90f9/lib/seedance/constants.js),
+and the
+[model-versus-grant ceiling regression tests](https://github.com/Aayush-hoichoi/Seedance2.0/blob/f1df73ca60a2567b36418944474b0df3222b90f9/tests/resolutionCeiling.test.mjs).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -15053,6 +15144,9 @@ Community examples and techniques referenced in this README:
 
 - [ComfyUI / ByteDance — Seedance 2.5 1080p courtroom closing-argument workflow and generated result](https://github.com/Comfy-Org/workflow_templates/commit/f79d2604ad3f93a22877b86deee45d8dfeb72245)
 - [ComfyUI / ByteDance — Seedance 2.5 1080p reference-locked alien-ring workflow and generated result](https://github.com/Comfy-Org/workflow_templates/commit/f79d2604ad3f93a22877b86deee45d8dfeb72245)
+
+
+- [Aayush-hoichoi — Seedance 2.5 account-scoped 1080p re-probe and immutable 4K model ceiling](https://github.com/Aayush-hoichoi/Seedance2.0/commit/f1df73ca60a2567b36418944474b0df3222b90f9)
 
 Official model references:
 
