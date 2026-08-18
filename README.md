@@ -238,6 +238,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Poster-matched facade hero loop](#222-poster-matched-facade-parallax-hero-loop)
   - [Triggered-layer argument](#223-triggered-layer-argument-with-quietest-line-climax)
   - [Layered-motion bakery-tree storybook opening](#224-layered-motion-bakery-tree-storybook-opening)
+  - [Two-AM whisper-shout UGC gear change](#225-two-am-whisper-shout-ugc-gear-change)
+  - [Silent-polygraph contradiction beat](#226-silent-polygraph-contradiction-beat)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -10154,6 +10156,183 @@ continued leaf and steam motion prevents the closing beat from freezing.
 [first-frame illustration](https://github.com/WilliamwangADA/crow-bakery-for-ada/blob/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c/assets/scenes/s01_tree.jpg),
 and [committed generated result](https://github.com/WilliamwangADA/crow-bakery-for-ada/blob/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c/assets/video/intro.mp4).
 
+---
+
+### 225. Two-AM whisper-shout UGC gear change
+
+**Verified model:** Seedance 2.5
+(`bytedance/seedance-2.5/text-to-video`) — the original creator committed the
+complete prompt, 720p generated master, finished vertical deliverable, run log
+and transcript-led QA on August 18, 2026
+
+**Use case:** authentic UGC, constrained-volume comedy, native dialogue,
+high-energy hooks, quiet CTA contrast  
+**Mode:** text-to-video  
+**Settings:** 15 seconds requested, 9:16, 720p Seedance master, native audio
+
+```text
+Create a vertical phone selfie recorded by one adult man in his small kitchen
+at two in the morning. It must feel posted immediately, not produced as an ad:
+slightly low and off-centre framing, mild close-lens distortion, constant
+handheld drift, two natural reframes, available light, real pores and stubble,
+no beauty smoothing or colour grade.
+
+LOCATION
+A cooker-hood bulb is the only initial light. Show a draining rack, kettle,
+fruit bowl, tea towel and a dark hallway. The refrigerator may add a second
+motivated light only while its door is open. No visible phone or screen.
+
+PERFORMANCE RULE
+His body is at maximum excitement but his voice cannot rise above a strained
+whisper because someone is asleep nearby. Put the energy into huge silent hand
+gestures, shoulders, eyes, suppressed laughter and quick checks toward the
+hallway. Open already mid-gesture and mid-whisper: the first syllable lands
+inside the first quarter-second. No lead-in or establishing pause.
+
+0–3 s: Face close to lens, one hand braced on the counter, he whisper-shouts:
+"It's two in the morning and I finally have proof."
+
+3–7 s: He grips the counter, shakes with silent triumph, buries one soundless
+yell in the tea towel, checks the hallway and returns to the lens:
+"Nobody ever believes me."
+
+7–11 s: He opens the refrigerator; its light crosses his face. On three small
+finger taps he says:
+"Now it is public. Time-stamped. Locked."
+
+11–15 s: He closes the door and the room dims. His movement stops. He changes
+gear into an ordinary quiet voice, holds eye contact and delivers the final
+call slowly:
+"[PRODUCT OR ACTION]. Free. Try one."
+
+SPEECH OWNERSHIP
+Only the four quoted lines are spoken. Action descriptions are never narrated.
+No ad-lib, mutter, counting, background voice or spoken stage direction.
+
+AUDIO
+Night-quiet room tone, refrigerator hum, bare feet on lino, one dish shifting,
+cloth movement and close breathing. No music. Preserve the whisper-level volume
+while keeping every word intelligible.
+
+CONTROL
+Every garment is plain single-colour fabric with no mark or writing. No text,
+caption, logo, watermark, visible display, generated interface, polished
+commercial light, gimbal, dolly, orbit, speed ramp, slow motion or extra person.
+
+QA
+Transcribe the entire output, not only the intended dialogue. Reject or repair
+any narrated action. If a stray phrase sits wholly between genuine speech gaps,
+mute only that bounded window and re-transcribe; otherwise rerender with physical
+actions separated from the dialogue block. Add captions and end card in post.
+```
+
+**Why it works:** the circumstance prevents “high energy” from collapsing into
+generic shouting. Vocal restraint transfers intensity into the face and hands,
+where close phone framing reads it clearly, while the final stillness and slower
+voice create a hard, legible CTA gear change. The source result also revealed
+that a speech allowlist is not sufficient by itself: transcript QA caught one
+spoken stage direction that visual review could not, and a gap-bounded repair
+restored the intended script without damaging dialogue.
+
+**Source:** GroupX's August 18, 2026
+[eight-ad Seedance 2.5 production commit](https://github.com/GroupX-ai/ad-creative/commit/87fbc5476be6f7c75841320eebf5ceaa7c181d2a),
+the
+[complete prompt and shared control blocks](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/_scripts/seedance-prompts-b10-bitpredict.mjs),
+[QA and repair ledger](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/_scripts/BATCH-2026-08-18-b10-bitpredict-viral.md),
+and the committed
+[Seedance master](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/bitpredict/2026-08-18-viral-b10/bitpredict-c8-two-am-whisper-720p.mp4)
+and
+[repaired deliverable](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/bitpredict/2026-08-18-viral-b10/bitpredict-c8-two-am-whisper-1080p-fixed-captioned.mp4).
+
+---
+
+### 226. Silent-polygraph contradiction beat
+
+**Verified model:** Seedance 2.5
+(`bytedance/seedance-2.5/text-to-video`) — the original creator committed the
+complete prompt, generated 720p master and captioned deliverable, then confirmed
+through transcription and full-resolution QA that the deliberate silent beat,
+blank chart and speech ownership all held on August 18, 2026
+
+**Use case:** dialogue comedy, visual contradiction, deliberate silence,
+two-character timing, native mechanical sound  
+**Mode:** text-to-video  
+**Settings:** 15 seconds requested, 9:16, 720p Seedance master, native audio
+
+```text
+Create a vertical lie-detector parody played completely straight, filmed
+handheld in a real room rather than as a polished advertisement. Practical
+fluorescent light, subtle operator drift, one brief focus hunt, real shadow
+noise and natural skin texture.
+
+LOCATION AND CAST
+One bare grey examination room: scuffed desk, stacking chair, wall clock,
+half-closed blind and an old boxy polygraph with a rolling paper drum and one
+ink needle. Exactly two adults:
+- EXAMINER, seated sideways, bored, holding an unused pen;
+- SUBJECT, upright in the chair, sensor straps visible, initially confident.
+Keep each actor, chair, strap, machine and screen side unchanged.
+
+PERFORMANCE
+Start at full conversational volume on frame one. The examiner is dry and
+unimpressed; the subject begins certain, then breaks into audible panic. The
+examiner's lack of reaction is the contrast, not low overall energy.
+
+0–2 s: The examiner is already asking without looking up:
+"Did you really predict it?"
+
+2–4 s: The subject lifts his chin and answers:
+"Absolutely."
+
+4–7 s — COMPLETE SILENCE:
+Nobody speaks, mouths words, hums or narrates. The needle whips into a violent
+scribble, the blank paper unspools and heaps on the floor. The examiner watches
+the pile grow, then slowly looks back at the subject without changing expression.
+Let needle scratch, drum rotation, paper and room tone carry the full beat.
+
+7–10 s: The subject strains against the straps, hands raised, voice cracking:
+"It was a feeling! It was a feeling!"
+
+10–15 s: The examiner turns to lens and says slowly:
+"Confidence is not evidence. Put it on the record."
+
+SPEECH AND PROP LOCKS
+Only the four quoted lines may be spoken, owned by the named actor. The chart is
+plain white paper carrying only the needle's wavering ink trace: no words,
+numbers, grid labels, dates or logos. Every garment is one flat colour and
+entirely blank. No readable screen, sign, seal, caption, brand or watermark.
+
+AUDIO
+Fluorescent hum, pen movement without writing, needle scratch accelerating,
+paper drum, paper landing on lino, straps and chair creak. No music, narrator,
+background chatter or improvised reaction.
+
+ACCEPTANCE
+Transcribe the complete output and confirm the 4–7 second interval contains
+only non-speech sounds. Inspect the paper at full resolution. Reject if the
+machine invents labels, the silent beat gains words, dialogue ownership swaps,
+the examiner becomes expressive during the contradiction, or the paper motion
+starts before the confident answer ends.
+```
+
+**Why it works:** the joke is a causal audiovisual proof: confident claim,
+three seconds with no language, then one machine contradicting it. Positively
+assigning the silence to needle, drum and paper prevents the model from filling
+dead air with narration. Restricting the chart to a single permitted ink trace
+also removes the usual invitation to generate broken labels and numbers. In the
+source batch, this silence rule held cleanly and the blank-paper rule passed
+full-resolution inspection.
+
+**Source:** GroupX's August 18, 2026
+[Seedance 2.5 production commit](https://github.com/GroupX-ai/ad-creative/commit/87fbc5476be6f7c75841320eebf5ceaa7c181d2a),
+the
+[complete source prompt](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/_scripts/seedance-prompts-b10-bitpredict.mjs),
+[transcript and visual QA record](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/_scripts/BATCH-2026-08-18-b10-bitpredict-viral.md),
+and the committed
+[Seedance master](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/bitpredict/2026-08-18-viral-b10/bitpredict-c13-the-needle-720p.mp4)
+and
+[finished deliverable](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/bitpredict/2026-08-18-viral-b10/bitpredict-c13-the-needle-1080p-captioned.mp4).
+
 ## Reusable templates
 
 ### Net-displacement endpoint conflict gate
@@ -14391,6 +14570,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [GroupX / BitPredict — eight exact-model Seedance 2.5 UGC and parody generations with complete prompts, committed masters, transcript QA and full-resolution prop checks](https://github.com/GroupX-ai/ad-creative/commit/87fbc5476be6f7c75841320eebf5ceaa7c181d2a) ([prompt suite](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/_scripts/seedance-prompts-b10-bitpredict.mjs), [QA ledger](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/_scripts/BATCH-2026-08-18-b10-bitpredict-viral.md))
 
 - [freetag369 — three Seedance 2.5 center-safe terminal-freeze intros, retry measurement and exact 192-frame handoff](https://github.com/freetag369/tiktok-live-stats/commit/4b233c0a0c2568040d8a2a8c6b98ab193f190530) ([complete generation and validation record](https://github.com/freetag369/tiktok-live-stats/blob/4b233c0a0c2568040d8a2a8c6b98ab193f190530/src/renderer/assets/fx/CREDITS.md))
 
