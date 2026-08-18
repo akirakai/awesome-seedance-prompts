@@ -14838,6 +14838,90 @@ that a UI label cannot prove. The measured 640×640 result also prevents a
 and the committed
 [reference-cropping, model-route and pixel-budget implementation](https://github.com/iliqn8/shopify-agent/blob/22cf41c6c5de077251f5170b61eb694bbf300d01/clip_studio.py).
 
+
+### Reference-input graph serialization preflight
+
+> **Type:** Reusable template / failure-control technique  
+> **Verified model:** Seedance 2.5 (`bytedance/seedance-2.5` through OpenRouter `/videos`) — the original developer's committed workflow fixes a 5-second, 720p, 9:16 request and preserves the source shot instruction; a follow-up primary commit records a successful generated video in which the supplied photoreal character sheet was visibly reflected.
+
+Use this when a node-based or hand-authored workflow appears connected in JSON but Seedance ignores the reference, invents a new subject, or behaves like text-to-video. It separates a missing graph edge from prompt drift before another paid run.
+
+```text
+AUTHORIZED REFERENCE
+Use only an owned, licensed or explicitly authorized adult subject/reference.
+Reference asset = @Image1.
+Record its filename, SHA-256, dimensions, content type and provenance.
+
+CANARY SHOT
+@Image1 is the only character identity. Preserve the same adult face, hair,
+wardrobe and proportions. The character sits beside a bright café window, looks
+toward the camera and gives one natural wave. Vertical upper-body composition,
+soft natural daylight, shallow depth of field and a lively but realistic mood.
+One continuous shot; no second person, identity replacement, wardrobe change,
+face drift, cut, subtitle, logo or watermark.
+
+FIXED REQUEST
+Model = bytedance/seedance-2.5.
+Route = OpenRouter /videos.
+Duration = 5 seconds.
+Resolution = 720p.
+Aspect ratio = 9:16.
+Reference role = input_references, not first frame unless that is the intended
+mode.
+
+GRAPH ROUND-TRIP
+1. Connect the prompt output and the reference output by current input name and
+   type, never by a remembered socket ordinal.
+2. Save the workflow through the live UI, close it, reload it and save it again.
+3. Confirm the reference edge still terminates at the node's reference input
+   after each round-trip. A visible line before serialization is not proof.
+4. Export the submitted payload and assert that input_references exists, is
+   non-empty and contains the intended provider-readable HTTPS image URL.
+5. Confirm the URL returns the recorded image content type and hash immediately
+   before submission. Use a short-lived, non-indexed authorized asset URL where
+   the provider permits it; remove the object after verification.
+6. Log workflow version, node version, socket names, model, payload hash, job ID,
+   returned asset URL and billed duration.
+
+CHEAP CANARY
+Submit only the fixed five-second shot. Do not change prompt, model, duration,
+reference transport and graph wiring in the same test.
+
+ACCEPTANCE
+Pass only if:
+- the serialized request contains the intended reference exactly once;
+- the returned first frames visibly preserve @Image1's identity and wardrobe;
+- the wave occurs without a second subject or a cut;
+- the output is 720p, 9:16 and approximately five seconds;
+- a reload of the saved workflow preserves the same reference edge.
+
+FAILURE ROUTING
+- Missing edge after reload: rebuild the link from the current node definition
+  and re-export; do not spend another generation first.
+- Empty input_references despite a visible edge: treat it as serializer or
+  optional-input order drift and inspect the emitted payload.
+- Unreachable URL, redirect or wrong MIME type: repair asset delivery, then
+  repeat the identical canary.
+- Content-policy or likeness rejection: stop. Do not change transport to bypass
+  the decision; remove the disallowed reference or use an authorized,
+  policy-compliant subject and route.
+- Reference present in the payload but identity absent in output: classify it as
+  model adherence, then simplify to one identity and one action before changing
+  any infrastructure.
+```
+
+**Why it works:** hand-written node graphs can encode links by positional input
+order while the live frontend serializes optional IMAGE and STRING sockets in a
+different order. The source integrator observed that mismatch silently discard
+a link on load. A UI save/reload plus an emitted-payload assertion proves the
+reference reached Seedance; the five-second identity canary then tests model
+adherence separately from graph transport.
+
+**Sources:** huskyhoochu's August 18, 2026
+[committed R2-reference workflow, model, request settings and source shot instruction](https://github.com/huskyhoochu/dotfiles/commit/1e9b5f08b98ae0c8ac56d94354f58d8bd2fc1995),
+followed by the August 19, 2026
+[successful Seedance 2.5 character-sheet transfer record and serialization warning](https://github.com/huskyhoochu/dotfiles/commit/fedd0fe5775e817832799cfa63833a168b5a943b).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -15240,6 +15324,8 @@ Community examples and techniques referenced in this README:
 
 
 - [iliqn8 — Seedance 2.5 reference-derived aspect and measured square pixel-budget workflow](https://github.com/iliqn8/shopify-agent/commit/22cf41c6c5de077251f5170b61eb694bbf300d01)
+
+- [huskyhoochu — Seedance 2.5 reference-input graph round-trip and successful character-sheet transfer](https://github.com/huskyhoochu/dotfiles/commit/fedd0fe5775e817832799cfa63833a168b5a943b)
 
 Official model references:
 
