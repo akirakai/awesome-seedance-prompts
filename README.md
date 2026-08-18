@@ -242,6 +242,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Silent-polygraph contradiction beat](#226-silent-polygraph-contradiction-beat)
   - [Courtroom closing-argument impact beat](#227-courtroom-closing-argument-impact-beat)
   - [Reference-locked alien-ring passage](#228-reference-locked-alien-ring-passage)
+  - [Quantified locked isometric city interaction plate](#229-quantified-locked-isometric-city-interaction-plate)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -10467,6 +10468,108 @@ the
 and its
 [generated 1080p MP4](https://github.com/Comfy-Org/workflow_templates/blob/f79d2604ad3f93a22877b86deee45d8dfeb72245/output/api_seedance2_5_i2v_1080p.mp4).
 
+
+---
+
+### 229. Quantified locked isometric city interaction plate
+
+**Verified model:** Seedance 2.5 (`seedance_2_5`) — the original developer
+committed the exact still/video generation sheet, the resulting 720p clip and a
+241-frame analysis showing only 0.4–0.8 MAE/255 in static regions
+
+**Use case:** interactive web hero, isometric city map, locked-camera ambient
+plate, deterministic hotspots, loop recovery  
+**Mode:** omni-reference image-to-video  
+**Settings:** 10 seconds, 16:9, 720p, high bitrate, audio disabled; the approved
+city still is assigned as both start and end reference
+
+```text
+REFERENCE PLATE — CREATE AND APPROVE BEFORE VIDEO
+A crisp high-angle isometric miniature city occupies one square floating land
+tile, centred against a clean pale-concrete void with generous safe margin on
+all four sides. Perspective is nearly orthographic, as if photographed through
+a long lens at a forty-five-degree downward angle.
+
+Make six districts instantly distinguishable by shape and boundary:
+1. compact glass towers near the centre;
+2. terracotta-roof housing in a low grid;
+3. a green park, lake and curved paths;
+4. an industrial harbour with warehouses, containers and cranes;
+5. a marina on a teal channel;
+6. an open stadium with a running track.
+Roads or water visibly separate every district. A slim elevated railway circles
+the tile; tiny cars and boats supply future motion cues.
+
+Keep one readable lighting system: soft key from upper left, long consistent
+shadows and cool fill that retains detail. Palette: deep slate, pale concrete,
+terracotta, restrained park green, water teal and small amber accents. No baked
+labels, street names, logos, interface, watermark or visible face. Regenerate
+the still until every district is identifiable and survives a vertical crop.
+
+VIDEO REQUEST
+Use the approved city plate as both start_image and end_image.
+
+The camera is mechanically locked for the complete ten seconds. Preserve the
+exact source framing, projection, crop, tile scale and horizon. No pan, tilt,
+roll, dolly, orbit, zoom, lens breathing, handheld motion, reframing or cut.
+The island, roads, buildings and district boundaries never move, rotate, bend
+or scale.
+
+Animate only small ambient systems:
+- tiny cars travel steadily along existing roads;
+- one elevated train makes a single circuit and aims to finish where it began;
+- boats trace slow arcs inside the existing teal water and return near their
+  opening positions;
+- park foliage and the lake surface move very subtly;
+- dock cranes make one small swing and settle;
+- thin cloud shadows cross the tile and leave the far edge.
+
+Hold sun direction, shadow length, exposure and palette constant. Keep every
+district border unobscured and every planned interaction zone readable. Motion
+must stay small enough that a fixed click target remains attached to the same
+building throughout. Single continuous silent take. No added district, moving
+building, camera drift, new text, label, logo, UI or watermark.
+
+ACCEPTANCE — CAMERA LOCK
+Sample static void and tile-edge regions across all returned frames. Pass the
+take only when their mean absolute difference remains at codec-noise scale and
+no landmark walks away from its normalized screen coordinate. Plot fixed
+district hitboxes over the first, middle and final frames; reject if any target
+slides off its intended block.
+
+LOOP TEST AND RECOVERY
+Do not assume that binding the same start and end image guarantees a loop.
+Measure the first frame against every candidate frame in the final half of the
+clip and inspect the largest moving objects, especially the train.
+
+If no clean return exists, preserve the locked plate and build a short overlap
+crossfade from the beginning into the end. Re-measure the seam and reject it if
+a train, car or boat appears doubled. The crossfade is allowed only because the
+camera and architecture remain fixed; regenerate instead if the camera drifts.
+
+INTERACTION HANDOFF
+Keep the animated 720p plate for the wide living map. On district open, crossfade
+to the high-resolution approved still with identical framing before zooming.
+All names, hover states, click targets and accessibility labels remain DOM or
+application layers, never generated pixels.
+```
+
+**Why it works:** the prompt separates immutable navigation geometry from
+low-amplitude ambient motion, then proves the claimed lock numerically rather
+than trusting “static camera” wording. The source run measured only codec-level
+movement in static zones, so normalized hotspots could remain deterministic.
+It also showed that identical start/end references did not make the train
+return; an overlap crossfade reduced the measured seam while preserving the
+fixed architecture. Switching to the aligned high-resolution still during zoom
+keeps detail without asking a 720p video to carry the close view.
+
+**Sources:** MehediHasan27's August 18, 2026
+[primary generation, measurement and implementation commit](https://github.com/MehediHasan27/Citymap/commit/7d63d84c49f5096f746fa70a096eed672c36de4b),
+the committed
+[complete Seedance 2.5 generation sheet](https://github.com/MehediHasan27/Citymap/blob/7d63d84c49f5096f746fa70a096eed672c36de4b/CITY-MAP-PROMPTS.md),
+and the
+[resulting web-ready Seedance clip](https://github.com/MehediHasan27/Citymap/blob/7d63d84c49f5096f746fa70a096eed672c36de4b/public/media/city-iso.web.mp4).
+
 ## Reusable templates
 
 ### Net-displacement endpoint conflict gate
@@ -15326,6 +15429,8 @@ Community examples and techniques referenced in this README:
 - [iliqn8 — Seedance 2.5 reference-derived aspect and measured square pixel-budget workflow](https://github.com/iliqn8/shopify-agent/commit/22cf41c6c5de077251f5170b61eb694bbf300d01)
 
 - [huskyhoochu — Seedance 2.5 reference-input graph round-trip and successful character-sheet transfer](https://github.com/huskyhoochu/dotfiles/commit/fedd0fe5775e817832799cfa63833a168b5a943b)
+
+- [MehediHasan27 — Seedance 2.5 quantified locked isometric-city interaction plate](https://github.com/MehediHasan27/Citymap/commit/7d63d84c49f5096f746fa70a096eed672c36de4b)
 
 Official model references:
 
