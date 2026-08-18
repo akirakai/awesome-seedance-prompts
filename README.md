@@ -237,6 +237,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Ink-glyph derivation trailer](#221-ink-glyph-derivation-trailer-with-literal-object-guard)
   - [Poster-matched facade hero loop](#222-poster-matched-facade-parallax-hero-loop)
   - [Triggered-layer argument](#223-triggered-layer-argument-with-quietest-line-climax)
+  - [Layered-motion bakery-tree storybook opening](#224-layered-motion-bakery-tree-storybook-opening)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -10105,6 +10106,54 @@ the
 and its bounded
 [evidence record](https://github.com/Anelse0/ai-character-performance-director/blob/af324b73f807d344d9f0c7658cc1ec55477e2029/references/evidence-ledger.md).
 
+
+---
+
+### 224. Layered-motion bakery-tree storybook opening
+
+**Verified model:** Seedance 2.5 (`doubao-seedance-2-5-260628`) — the original
+creator identifies the exact enabled model, commits the complete image-to-video
+script and first-frame illustration, and ships the generated 5-second master on
+August 18, 2026
+
+**Use case:** children's-story opening, illustrated establishing shot, restrained
+single-image animation  
+**Mode:** image-to-video  
+**Settings:** 5 seconds, 16:9, generated at 1080p; delivered as H.264 720p
+
+```text
+Use @Image1 as the exact opening composition and visual source of truth. Create a
+five-second 16:9 establishing shot in the same warm, tranquil 1970s Japanese
+hand-painted picture-book watercolor style.
+
+Begin moving immediately. The camera makes one very slow push through the forest
+morning mist toward the giant tree that contains the bakery. Preserve the tree
+silhouette, bakery facade, branch layout, windows, palette, paper texture and
+painted linework.
+
+Animate separate depth layers with small, readable motion: foreground leaves and
+vines sway gently in the breeze; a few birds cross from screen-left behind that
+foreground foliage; faint white steam rises continuously from the chimney. During
+the final two seconds, the bakery windows gradually warm to a soft amber glow
+while the leaves and steam keep moving. End closer to the tree with the lights on,
+not on a frozen pose.
+
+No new building, branch, character, sign, caption, logo, readable text, hard cut,
+fast zoom, 3D depth extrusion, glossy CGI surface, boiling foliage, sliding layer,
+warped window or change of illustration style.
+```
+
+**Why it works:** the still is divided into camera, foreground, mid-distance and
+background motion responsibilities instead of asking the whole illustration to
+"come alive" at once. The window-light change supplies a clear endpoint, while
+continued leaf and steam motion prevents the closing beat from freezing.
+
+**Source:** William Wang's August 18, 2026
+[Seedance 2.5 generation commit](https://github.com/WilliamwangADA/crow-bakery-for-ada/commit/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c),
+[complete generation script](https://github.com/WilliamwangADA/crow-bakery-for-ada/blob/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c/tools/gen_intro_video.mjs),
+[first-frame illustration](https://github.com/WilliamwangADA/crow-bakery-for-ada/blob/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c/assets/scenes/s01_tree.jpg),
+and [committed generated result](https://github.com/WilliamwangADA/crow-bakery-for-ada/blob/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c/assets/video/intro.mp4).
+
 ## Reusable templates
 
 ### Net-displacement endpoint conflict gate
@@ -14207,6 +14256,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [William Wang / Crow Bakery — Seedance 2.5 layered-motion storybook-tree opening](https://github.com/WilliamwangADA/crow-bakery-for-ada/commit/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c) ([complete generation script](https://github.com/WilliamwangADA/crow-bakery-for-ada/blob/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c/tools/gen_intro_video.mjs), [first-frame illustration](https://github.com/WilliamwangADA/crow-bakery-for-ada/blob/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c/assets/scenes/s01_tree.jpg), [generated result](https://github.com/WilliamwangADA/crow-bakery-for-ada/blob/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c/assets/video/intro.mp4))
 
 - [Hogan & Crown — Seedance 2.0 net-displacement rerender after same-start/end-frame motion lock](https://github.com/angelwingscomms/hgc/commit/a2e411b9e8c87bbabc808286eaa0b57b48ef5077) ([complete scene contract](https://github.com/angelwingscomms/hgc/blob/a2e411b9e8c87bbabc808286eaa0b57b48ef5077/marketing/tiktok/bond.json), [generated result](https://github.com/angelwingscomms/hgc/blob/a2e411b9e8c87bbabc808286eaa0b57b48ef5077/marketing/tiktok/out/hgc-bond.mp4))
 
