@@ -240,6 +240,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Layered-motion bakery-tree storybook opening](#224-layered-motion-bakery-tree-storybook-opening)
   - [Two-AM whisper-shout UGC gear change](#225-two-am-whisper-shout-ugc-gear-change)
   - [Silent-polygraph contradiction beat](#226-silent-polygraph-contradiction-beat)
+  - [Courtroom closing-argument impact beat](#227-courtroom-closing-argument-impact-beat)
+  - [Reference-locked alien-ring passage](#228-reference-locked-alien-ring-passage)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -10333,6 +10335,138 @@ and the committed
 and
 [finished deliverable](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/bitpredict/2026-08-18-viral-b10/bitpredict-c13-the-needle-1080p-captioned.mp4).
 
+---
+
+### 227. Courtroom closing-argument impact beat
+
+**Verified model:** Seedance 2.5 — ComfyUI's official ByteDance partner-node
+workflow explicitly selects \`Seedance 2.5\`, retains the complete prompt and
+1080p parameters, and ships the corresponding generated MP4
+
+**Use case:** live-action comedy, performance choreography, impact reaction,
+native score  
+**Mode:** text-to-video  
+**Settings:** 5 seconds, 16:9, 1080p, audio enabled
+
+\`\`\`text
+Create a five-second live-action 1990s American courtroom drama with restrained
+absurdist comedy. Wood-panelled courtroom, warm dusty sunlight cut by venetian
+blinds, practical film grain and a tense period courtroom score. Maintain one
+continuous low heroic camera angle and one stable room layout.
+
+CAST AND PROP LOCK
+Exactly one hippo lawyer in a dark pinstripe suit at the counsel table, one tiny
+bird witness on the stand, one jury in the background, one water jug and one
+pair of glasses. Preserve every character's side of frame, scale, wardrobe and
+identity.
+
+[0–1.4 s | controlled preparation]
+The hippo lawyer faces the jury and slowly straightens his tie. Keep the
+performance contained and let the score build without a cut.
+
+[1.4–2.7 s | physical punctuation]
+He slams one paw onto the table exactly once. The impact makes the nearby water
+jug jump and settle; no other object moves. Hold long enough for the cause and
+reaction to read.
+
+[2.7–4.1 s | accusation]
+Without changing position, he points dramatically at the tiny bird witness and
+delivers the final words of his closing argument in heightened slow motion.
+His jowls respond naturally to the speech while the bird remains on the stand.
+
+[4.1–5.0 s | satisfied release]
+He lowers the paw, adjusts his glasses once and finishes with a small satisfied
+nod. Resolve on the same low-angle composition.
+
+ORDER LOCK
+tie straightens → one table slam → jug jumps and settles → one point toward the
+bird → closing words → glasses adjustment → nod. No repeated slam, spilled
+water, flying furniture, duplicate lawyer or witness, changing animal scale,
+camera cut, black frame, caption, title, logo or text overlay.
+\`\`\`
+
+**Why it works:** the gag is built from nested action–reaction pairs rather than
+a list of gestures. The table hit owns the jug response, the accusation owns
+the slow-motion speech, and the glasses adjustment supplies a quiet final beat.
+A locked cast and prop ledger protects the extreme hippo-versus-bird scale
+contrast that makes the shot readable.
+
+**Source:** ComfyUI's August 18, 2026
+[official 1080p Seedance 2.5 documentation commit](https://github.com/Comfy-Org/docs/commit/5c4d55740280b26df11441b10bc90c51aea23a02),
+the
+[workflow-and-output release commit](https://github.com/Comfy-Org/workflow_templates/commit/f79d2604ad3f93a22877b86deee45d8dfeb72245),
+the
+[complete exact-model workflow](https://github.com/Comfy-Org/workflow_templates/blob/f79d2604ad3f93a22877b86deee45d8dfeb72245/templates/api_seedance2_5_t2v_1080p.json),
+and its
+[generated 1080p MP4](https://github.com/Comfy-Org/workflow_templates/blob/f79d2604ad3f93a22877b86deee45d8dfeb72245/output/api_seedance2_5_t2v_1080p.mp4).
+
+---
+
+### 228. Reference-locked alien-ring passage
+
+**Verified model:** Seedance 2.5 — ComfyUI's official ByteDance reference node
+explicitly selects \`Seedance 2.5\`, binds the supplied \`cosmoscape.png\`
+image, preserves the full prompt and 1080p parameters, and ships the generated
+MP4
+
+**Use case:** image-to-video, hard-sci-fi one-take, scale reveal, rotating
+mechanism, reference preservation  
+**Mode:** reference-to-video from one image  
+**Settings:** 5 seconds, adaptive aspect ratio, 1080p, audio enabled
+
+\`\`\`text
+Use @image1 as the immutable opening composition: one lone astronaut on a rocky
+cliff beside one colossal segmented alien ring, twin suns, orange circuit
+lines, deep-space structures, atmospheric mist and golden god rays. Preserve
+the astronaut's suit and scale, the cliff silhouette, ring geometry, twin-sun
+placement, palette and horizon. Animate the supplied world; do not redesign it.
+
+ONE CONTINUOUS FIVE-SECOND SHOT
+
+[0–1.3 s | exact handoff]
+Begin on a close visual match to @image1. The astronaut starts moving slowly
+toward the ring. Camera follows from behind at a smooth low angle with a gentle
+dolly push; establish weight and immense scale before the machinery changes.
+
+[1.3–3.2 s | coupled mechanism]
+The ring begins one slow rotation around its fixed central axis. Its segmented
+hexagonal panels shift only by small coordinated increments while the existing
+orange circuit lines pulse along the frame. The astronaut continues forward at
+the same measured pace. Keep the ring rooted and the camera movement smooth.
+
+[3.2–5.0 s | threshold and expansion]
+The astronaut passes through the open centre of the ring. Without a cut, the
+camera's forward motion reveals the larger cosmic construction beyond:
+massive orbital frameworks, distant mechanical spires, suspended dust and
+layered volumetric mist extending into deep space. End on the expanded view
+while retaining the astronaut as a scale anchor.
+
+CONTINUITY LOCK
+one astronaut, one ring, one forward route, one slow axial rotation and one
+low-angle dolly. Ring geometry remains coherent; the astronaut never teleports
+or deforms. No fast movement, jerky camera, orbit, reverse travel, scene cut,
+collapsing structure, added vehicle, replacement sky, black frame, title, logo
+or text overlay. Audio: low mechanical rotation, muted suit steps, distant
+wind and a restrained sub-bass spatial tone; no dialogue.
+\`\`\`
+
+**Why it works:** the reference frame supplies identity and composition while
+the prompt spends its detail budget on motion ownership. Separating the
+astronaut's forward displacement, the ring's axial rotation and the camera's
+dolly prevents all three from collapsing into generic motion. The final
+reveal preserves the astronaut in frame as a persistent scale ruler.
+
+**Source:** ComfyUI's August 18, 2026
+[official 1080p Seedance 2.5 documentation commit](https://github.com/Comfy-Org/docs/commit/5c4d55740280b26df11441b10bc90c51aea23a02),
+the
+[workflow-and-output release commit](https://github.com/Comfy-Org/workflow_templates/commit/f79d2604ad3f93a22877b86deee45d8dfeb72245),
+the
+[complete reference workflow](https://github.com/Comfy-Org/workflow_templates/blob/f79d2604ad3f93a22877b86deee45d8dfeb72245/templates/api_seedance2_5_i2v_1080p.json),
+the
+[supplied reference image](https://github.com/Comfy-Org/workflow_templates/blob/f79d2604ad3f93a22877b86deee45d8dfeb72245/input/cosmoscape.png),
+and its
+[generated 1080p MP4](https://github.com/Comfy-Org/workflow_templates/blob/f79d2604ad3f93a22877b86deee45d8dfeb72245/output/api_seedance2_5_i2v_1080p.mp4).
+
 ## Reusable templates
 
 ### Net-displacement endpoint conflict gate
@@ -14915,6 +15049,10 @@ Community examples and techniques referenced in this README:
 
 
 - [Daniel Lamb — Seedance 2.0 state-safe ambient room loops beneath static interaction layers](https://github.com/Daniel-Lamb/Escape-Room/commit/fcf1c572e4ae3504ee696ae807af888cfb8ed65d)
+
+
+- [ComfyUI / ByteDance — Seedance 2.5 1080p courtroom closing-argument workflow and generated result](https://github.com/Comfy-Org/workflow_templates/commit/f79d2604ad3f93a22877b86deee45d8dfeb72245)
+- [ComfyUI / ByteDance — Seedance 2.5 1080p reference-locked alien-ring workflow and generated result](https://github.com/Comfy-Org/workflow_templates/commit/f79d2604ad3f93a22877b86deee45d8dfeb72245)
 
 Official model references:
 
