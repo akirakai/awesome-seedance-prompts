@@ -13770,6 +13770,135 @@ known bad request before it queues and incurs wait time.
 and the
 [merged provider-payload implementation](https://github.com/griptape-ai/griptape-nodes-library-standard/commit/a366bbbd7a4099c249aec7933fbd9a8b39e75326).
 
+
+### Profile locomotion source and cycle-recovery contract
+
+**Verified model:** Seedance 2.5 — the original creator ran the exact Dreamina
+CLI model, committed both generated walk and run MP4s, and published the
+cycle-recovery measurements and failure notes on August 18, 2026
+
+Use this when the generated video is motion evidence for animation, rotoscoping
+or pose extraction rather than the final beauty shot. First make depth and
+camera motion deliberately boring; then recover a clean gait cycle
+programmatically instead of asking the model to deliver a perfect loop.
+
+```text
+GENERATION CONTRACT
+Exact model = Seedance 2.5
+Purpose = side-view locomotion reference, not a cinematic shot.
+Duration = 6 seconds; 16:9; 720p.
+
+One [ADULT / CREATURE] [WALKS / RUNS] naturally across flat level ground at a
+steady pace. Keep the entire body visible from head to feet for the whole clip.
+Exact 90-degree side profile. Locked static camera. Constant subject scale and
+one screen direction. Clear separation between both legs and both arms.
+
+Neutral readable background, even light, ordinary realistic timing. No cuts,
+pan, tilt, dolly, zoom, orbit, close-up, perspective change, camera tracking,
+pose montage or change of direction. Do not ask for "running in place": let the
+subject travel through the frame while remaining fully visible.
+
+CAPTURE GATE
+Reject before pose extraction if the body leaves frame, the view departs from
+true profile, the camera follows the subject, or limb crossings are unreadable.
+
+CYCLE RECOVERY
+1. Track both ankles and use their signed front–back separation as the phase
+   signal.
+2. Search autocorrelation from the shortest plausible gait onward and choose
+   the first genuine local peak, not the global maximum near the window edge.
+3. Start at a consistent zero crossing and extract one full walk cycle.
+4. If the run arrives in slow motion, isolate one step, swap front/back limbs
+   to mirror the other half, join them into a full cycle, then time-scale to the
+   intended cadence; the source test used about 0.35 seconds per running step.
+5. Reassign crossed limbs by frame-to-frame continuity before smoothing. Trim
+   any frames after the subject exits instead of trusting hallucinated points.
+```
+
+**Why it works:** a strict profile and locked frame reduce pose recovery to a
+mostly planar problem. The creator's successful walk produced a 1.49-second
+cycle, while the run arrived as roughly two seconds per step; treating that
+slow result as recoverable motion data was more reliable than repeatedly asking
+for an ideal loop. First-peak autocorrelation avoids mistaking a long planted
+phase for the gait period, and continuity-based limb assignment prevents
+crossing legs from being averaged into one track.
+
+**Source:** BentleyBlanks' August 18, 2026
+[Seedance 2.5 walk/run generation and cycle-recovery commit](https://github.com/BentleyBlanks/bentleyblanks.github.io/commit/0ebd80fd7b90fcf7b8fdac73f8c0ffd3fb7892d6),
+including the committed source MP4s, comparison sheets and
+[full rig notes](https://github.com/BentleyBlanks/bentleyblanks.github.io/blob/0ebd80fd7b90fcf7b8fdac73f8c0ffd3fb7892d6/TunnelLight1943/docs/Rig.md).
+
+### Four-slot reference-mascot boost with compositor-owned countdown
+
+**Verified model:** Seedance 2.5 (`seedance_2_5`, Higgsfield
+`omni_reference`) — the original creator published all four complete prompts,
+committed the generated MP4s, and documented exact frame counts, post-processing
+and visual checks on August 18, 2026
+
+Use this for a live-event or game-overlay package that needs one identity-locked
+mascot across an entrance, countdown, sustained interaction window and result.
+Give each slot a different temporal job, and keep frame-accurate numbers in the
+compositor instead of asking the video model to draw them.
+
+```text
+REFERENCE LOCK — ALL FOUR SLOTS
+The mascot exactly matches @Image 1: [SHAPE], [FACE], [COLORS], [SIGNATURE
+DETAILS]. Ignore [REFERENCE BACKDROP / UI CHROME]; it is not part of the
+character. Any label area is a blank [COLOR] patch with no writing.
+Widescreen 16:9, opaque full-frame motion graphics, [COLOR A] + [COLOR B]
+theme, no people, logos, captions or watermark.
+
+SLOT 1 — INTRO / [5 SECONDS]
+The mascot emerges from [THEMED MEDIUM], performs one readable
+[squash / stretch / leap / roar] action, then sends one [COLOR] shockwave
+toward camera. Energy builds to a bright flare at the endpoint.
+Audio: one character sound, one material sound, escalating riser.
+
+SLOT 2 — COUNTDOWN PLATE / GENERATE 4 SECONDS, USE 3
+Mascot held large but rim-lit; push bright energy to the frame edges and keep
+the exact center dark, clean and low-detail for a later overlay. Continuous
+charging motion from start to finish. Strictly no text, numbers or letters.
+Audio: escalating bed with one clearly separated pulse per second.
+After generation, composite 3, 2 and 1 as graphics at exact one-second
+boundaries; the model owns atmosphere, never the digits.
+
+SLOT 3 — INTERACTION WINDOW / AT LEAST [WINDOW + SAFETY] SECONDS
+High-energy celebration at constant intensity from the first frame to the last:
+loop-compatible motion, no fade-in, fade-out, cadence or ending climax.
+[OPTIONAL SINGLE ALLOWED WORD] is the only text; spell it letter by letter in
+the prompt. No other writing. Audio: constant-energy festival bed with no final
+cadence. Make the source longer than the maximum live window so users never see
+the seam.
+
+SLOT 4 — RESULT / [4 SECONDS]
+Mascot lands out of one flash, squashes, rebounds and holds a triumphant pose.
+The spectacle peaks in the first half; during the last second, particles fall
+away, rays dim and sound decays. End dark, quiet and stable for UI recovery.
+
+FRAME AND PLAYBACK GATE
+Probe the returned stream rather than trusting requested duration. If a
+24-fps endpoint returns `requested_seconds × 24 + 1` frames, remove the first
+extra frame and trim by frame number. For the countdown, discard the first
+second and keep exactly 72 frames for a 3.000-second plate; switch overlays with
+half-open time ranges so boundary frames never contain two digits. Verify slot
+duration, frame rate, audio presence, watermark state and the countdown's
+1.000/2.000-second change points before shipping.
+```
+
+**Why it works:** the four clips no longer compete for one vague "exciting"
+shape. The intro has a terminal flare, the countdown preserves a compositing
+zone, the live window deliberately refuses an ending, and the result spends its
+last second settling. Explicitly excluding the reference screenshot's backdrop
+and declaring a blank label prevent UI debris and broken lettering from being
+absorbed into the mascot. The committed Seedance 2.5 outputs also expose a
+repeatable one-extra-frame behavior, so delivery length becomes a measurable
+frame contract rather than a prompt hope.
+
+**Source:** freetag369's August 18, 2026
+[four-stage Seedance 2.5 boost commit](https://github.com/freetag369/tiktok-live-stats/commit/3679d380bf80056a25bbafc609b7d6bd5d56eb9a)
+and its
+[complete prompts, parameters, trims and validation notes](https://github.com/freetag369/tiktok-live-stats/blob/3679d380bf80056a25bbafc609b7d6bd5d56eb9a/src/renderer/assets/fx/CREDITS.md).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -14144,6 +14273,9 @@ Community examples and techniques referenced in this README:
 - [Irdanwen / Sub Rosa — Seedance 2.5 public R2V capability flags and billed prompt-misrouting repair](https://github.com/Irdanwen/sub-rosa/commit/e50817aa404e01454be474fb800d1dbe40d3663e)
 
 - [Griptape Nodes — Seedance 2.5 manual 1080p E2E and explicit omni-reference task routing](https://github.com/griptape-ai/griptape-nodes-library-standard/pull/537)
+
+- [BentleyBlanks — Seedance 2.5 profile locomotion generation and cycle recovery](https://github.com/BentleyBlanks/bentleyblanks.github.io/commit/0ebd80fd7b90fcf7b8fdac73f8c0ffd3fb7892d6)
+- [freetag369 — Seedance 2.5 four-slot reference-mascot boost package](https://github.com/freetag369/tiktok-live-stats/commit/3679d380bf80056a25bbafc609b7d6bd5d56eb9a)
 
 Official model references:
 
