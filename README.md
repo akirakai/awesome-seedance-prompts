@@ -14748,6 +14748,96 @@ the
 and the
 [model-versus-grant ceiling regression tests](https://github.com/Aayush-hoichoi/Seedance2.0/blob/f1df73ca60a2567b36418944474b0df3222b90f9/tests/resolutionCeiling.test.mjs).
 
+
+### Reference-derived aspect and pixel-budget preflight
+
+**Verified model:** Seedance 2.5
+(`bytedance/seedance-2.5/image-to-video` on fal) — the original developer
+completed a paid four-second image-to-video run on August 18, 2026, confirmed
+that the cropped reference controlled the square output, and measured the
+returned 480p clip at 640×640 with an audio track
+
+Use this when one approved reference must produce several delivery shapes.
+Treat the starting frame as the image-to-video aspect contract, then estimate
+and validate cost from the returned pixel budget rather than interpreting a
+resolution label as literal width and height.
+
+```text
+CAPABILITY IDENTITY
+Provider = [PROVIDER].
+Exact model route = bytedance/seedance-2.5/image-to-video.
+Source reference = [APPROVED IMAGE AND VERSION].
+Requested duration = [4–30 WHOLE SECONDS].
+Resolution label = [480p / 720p / 1080p].
+Target delivery aspect = [16:9 / 1:1 / 9:16].
+Audio = [ON / OFF].
+
+REFERENCE-SHAPE CONTRACT
+For this image-to-video route, do not send a contradictory aspect_ratio field.
+Create a new reference derivative at the target aspect before upload, because
+the starting frame determines the output shape.
+
+Choose one crop policy and record it:
+- center crop for a centered subject with safe margins;
+- subject-aware crop when a face, product or action lies off center;
+- manual art-directed crop when a logo, hand path or environmental landmark
+  must survive.
+
+Never stretch the reference. Avoid padding unless visible bars are intentionally
+part of the scene, because the model may animate them. Keep the approved source
+untouched and create one named derivative per delivery aspect.
+
+IMAGE-TO-VIDEO PROMPT
+Begin exactly from @Image1 and preserve its crop, subject identity, product
+geometry, wardrobe, environment, camera height, perspective and lighting.
+Animate only [ONE SUBJECT ACTION] and [ONE CAMERA MOVE].
+Keep [CRITICAL SAFE-ZONE ELEMENTS] inside the frame throughout.
+End on [TESTABLE END STATE].
+Audio: [AMBIENCE / EFFECT / SHORT LINE].
+No reframing that clips [FACE / PRODUCT / LOGO / HAND PATH], no stretched
+geometry, invented border, added bar, duplicate subject, new cut or aspect
+change.
+
+PIXEL-BUDGET COST GATE
+Do not price a square "480p" request as 480×480. Use the provider's real output
+dimensions or its documented equal-pixel-budget rule. The verified source run
+returned 640×640 for 480p square, nearly the same total pixels as 854×480.
+Estimate cost from pixel count × duration × the provider rate; show the estimate
+before submission and retain the actual charge after completion.
+
+RETURNED-ASSET GATE
+After generation, record:
+- requested label and actual width × height;
+- actual aspect ratio and whether it matches the prepared reference;
+- duration, frame rate and frame count;
+- video codec, audio presence and file size;
+- source-reference derivative and prompt version;
+- estimated and actual cost.
+
+Reject or reroute the take if the returned shape differs from the prepared
+reference, a protected element is cropped, the model introduces visible padding,
+the audio request is not honored, or billing was estimated from nominal labels
+instead of actual pixels.
+
+MULTI-ASPECT RELEASE
+Repeat from the untouched approved source for every other aspect. Do not crop a
+generated landscape video into vertical and call it equivalent: regenerate from
+the corresponding reference derivative so composition, motion and safe zones
+are evaluated in that shape.
+```
+
+**Why it works:** the source run separates three values that interfaces often
+collapse: a resolution label, an aspect ratio and an actual pixel count.
+Pre-cropping makes the first frame and requested composition agree before any
+billable generation, while the returned-asset gate catches provider behavior
+that a UI label cannot prove. The measured 640×640 result also prevents a
+44-percent square-cost underestimate caused by assuming 480×480.
+
+**Source:** ilyqn8's August 18, 2026
+[live Seedance 2.5 Clip Studio commit](https://github.com/iliqn8/shopify-agent/commit/22cf41c6c5de077251f5170b61eb694bbf300d01)
+and the committed
+[reference-cropping, model-route and pixel-budget implementation](https://github.com/iliqn8/shopify-agent/blob/22cf41c6c5de077251f5170b61eb694bbf300d01/clip_studio.py).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -15147,6 +15237,9 @@ Community examples and techniques referenced in this README:
 
 
 - [Aayush-hoichoi — Seedance 2.5 account-scoped 1080p re-probe and immutable 4K model ceiling](https://github.com/Aayush-hoichoi/Seedance2.0/commit/f1df73ca60a2567b36418944474b0df3222b90f9)
+
+
+- [ilyqn8 — Seedance 2.5 reference-derived aspect and measured square pixel-budget workflow](https://github.com/iliqn8/shopify-agent/commit/22cf41c6c5de077251f5170b61eb694bbf300d01)
 
 Official model references:
 
