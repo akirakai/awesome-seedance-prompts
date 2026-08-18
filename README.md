@@ -14082,6 +14082,84 @@ and the generated
 and
 [matched closing MP4](https://github.com/tasarimmaniayapayzeka/estezone-demo/blob/2c8aba4079c71ccff714de6fe62dcc800a154577/kaynak/sunum/sahne-6.mp4).
 
+
+### State-safe ambient plate loop under static interaction layers
+
+**Verified model:** Seedance 2.0 — the original creator explicitly identifies
+Seedance 2.0 image-to-video, commits 15 generated room-background MP4s with
+their source plates, documents the complete layering and loop process, and
+records successful in-browser playback and overlap checks on August 18, 2026
+
+Use this when a game, interactive story, virtual set or product configurator
+needs a living environment without letting video generation alter clickable
+objects, exact counts, readable clues or state-dependent props. Animate only
+the empty background plate; keep every load-bearing element in deterministic
+layers above it.
+
+```text
+LAYER CONTRACT
+Layer 1 — @BackgroundPlate: one approved photoreal 16:9 empty environment.
+Layer 2 — interactive and state-dependent props rendered separately.
+Layer 3 — deterministic text, numerals, counts and puzzle marks.
+Layer 4 — optional procedural glow, fog or particles that the application owns.
+
+SEEDANCE 2.0 IMAGE-TO-VIDEO PROMPT
+Begin exactly from @BackgroundPlate. Preserve its architecture, camera height,
+lens, crop, perspective, palette, fixed furniture, entrances, walls, floor and
+lighting direction.
+
+Animate only low-amplitude environmental motion appropriate to the room:
+[FLAME FLICKER / WATER RIPPLE / DRIFTING FOG / DUST IN LIGHT / CURTAIN OR
+FOLIAGE SWAY]. Keep one locked camera and constant exposure. Motion must remain
+subtle enough that a static interactive layer placed above the video still
+appears physically attached to the same scene.
+
+The following zones are reserved for application-owned overlays:
+[PROP ZONE A], [PROP ZONE B], [TEXT OR COUNT ZONE], [UI SAFE ZONE].
+Keep them plain, dark and geometrically stable. Do not add people, creatures,
+letters, numbers, labels, signs, inventory items, puzzle pieces, doors changing
+state, camera movement, zoom, cuts, new light sources or redesigned fixtures.
+No logo or watermark.
+
+End on a calm environmental phase with the same composition and no terminal
+event. Do not create a narrative climax, fade-out or completed state change.
+
+LOOP ASSEMBLY
+1. Keep the approved plate as the exact poster and loading fallback.
+2. Convert the generated clip into a forward-then-reverse boomerang loop; avoid
+   duplicating the turn frame at either join.
+3. Compress a web delivery copy while preserving the exact 16:9 crop.
+4. Place the loop as the bottom visual layer. Restore interactive props,
+   collectible states, hotspots and crisp SVG text/counts above it.
+5. If a generated fixture conflicts with a load-bearing overlay, regenerate the
+   empty plate or clip; never move the authoritative gameplay object to fit AI
+   imagery.
+
+ACCEPTANCE GATE
+Confirm the poster and first video frame do not flash or jump; the video reaches
+a playable state and advances; the forward/reverse joins do not stutter; no
+background object crosses an interaction zone; every hotspot and state variant
+remains unchanged; generated text is absent; deterministic counts and labels
+remain crisp; console and overlap checks are clean.
+```
+
+**Why it works:** Seedance is responsible only for atmosphere, where small
+variation is useful. Exact interaction state stays in code and separate sprites,
+so a beautiful take cannot silently change a clue, item count or click target.
+The boomerang pass creates a reliable loop without requiring the generated last
+frame to match the first, while the original plate guarantees a stable poster
+and fallback. The cited production shipped 15 such loops at 168–439 KB each
+with static props verified above the playing videos.
+
+**Source:** Daniel Lamb's August 18, 2026
+[15-room Seedance 2.0 animated-background commit](https://github.com/Daniel-Lamb/Escape-Room/commit/fcf1c572e4ae3504ee696ae807af888cfb8ed65d),
+the
+[layering and refinement rules](https://github.com/Daniel-Lamb/Escape-Room/blob/fcf1c572e4ae3504ee696ae807af888cfb8ed65d/docs/upgrade/REFINEMENT-PLAN.md),
+the
+[generated-asset and validation ledger](https://github.com/Daniel-Lamb/Escape-Room/blob/fcf1c572e4ae3504ee696ae807af888cfb8ed65d/docs/upgrade/MASTER-ASSET-LIST.md),
+and a representative
+[Seedance room loop](https://github.com/Daniel-Lamb/Escape-Room/blob/fcf1c572e4ae3504ee696ae807af888cfb8ed65d/public/pilgrims-road/art/oubliette.mp4).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -14463,6 +14541,9 @@ Community examples and techniques referenced in this README:
 
 
 - [Estezone — Seedance 2.0 independently keyed six-state brand-story ring](https://github.com/tasarimmaniayapayzeka/estezone-demo/commit/2c8aba4079c71ccff714de6fe62dcc800a154577)
+
+
+- [Daniel Lamb — Seedance 2.0 state-safe ambient room loops beneath static interaction layers](https://github.com/Daniel-Lamb/Escape-Room/commit/fcf1c572e4ae3504ee696ae807af888cfb8ed65d)
 
 Official model references:
 
