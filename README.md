@@ -14833,7 +14833,7 @@ billable generation, while the returned-asset gate catches provider behavior
 that a UI label cannot prove. The measured 640×640 result also prevents a
 44-percent square-cost underestimate caused by assuming 480×480.
 
-**Source:** ilyqn8's August 18, 2026
+**Source:** iliqn8's August 18, 2026
 [live Seedance 2.5 Clip Studio commit](https://github.com/iliqn8/shopify-agent/commit/22cf41c6c5de077251f5170b61eb694bbf300d01)
 and the committed
 [reference-cropping, model-route and pixel-budget implementation](https://github.com/iliqn8/shopify-agent/blob/22cf41c6c5de077251f5170b61eb694bbf300d01/clip_studio.py).
@@ -15239,7 +15239,7 @@ Community examples and techniques referenced in this README:
 - [Aayush-hoichoi — Seedance 2.5 account-scoped 1080p re-probe and immutable 4K model ceiling](https://github.com/Aayush-hoichoi/Seedance2.0/commit/f1df73ca60a2567b36418944474b0df3222b90f9)
 
 
-- [ilyqn8 — Seedance 2.5 reference-derived aspect and measured square pixel-budget workflow](https://github.com/iliqn8/shopify-agent/commit/22cf41c6c5de077251f5170b61eb694bbf300d01)
+- [iliqn8 — Seedance 2.5 reference-derived aspect and measured square pixel-budget workflow](https://github.com/iliqn8/shopify-agent/commit/22cf41c6c5de077251f5170b61eb694bbf300d01)
 
 Official model references:
 
