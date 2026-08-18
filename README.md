@@ -14007,6 +14007,81 @@ frame contract rather than a prompt hope.
 and its
 [complete prompts, parameters, trims and validation notes](https://github.com/freetag369/tiktok-live-stats/blob/3679d380bf80056a25bbafc609b7d6bd5d56eb9a/src/renderer/assets/fx/CREDITS.md).
 
+
+### Independently keyed six-state brand-story ring
+
+**Verified model:** Seedance 2.0 — the original creator explicitly identifies
+the model, commits six generated MP4s beside their six start frames, publishes
+the complete six-state narrative map, and records successful browser playback
+verification on August 18, 2026
+
+Use this for a short brand, product or campaign story whose middle scenes need
+different compositions but whose opening and ending should read as one visual
+before/after loop. Build every shot from its own approved keyframe inside one
+shared world, then reserve the same camera move for the first and last states.
+
+```text
+WORLD BIBLE
+Lock [LOCATION / ARCHITECTURE], [PRODUCT FAMILY], [PALETTE], [LIGHTING LOGIC],
+[ERA], [LENS LANGUAGE] and [RECURRING SUBJECT OR PROP]. Generate six approved
+start frames from this same bible. Each frame may change blocking and time, but
+must preserve the named world invariants.
+
+SIX-STATE STORY MAP
+1. BASELINE PROBLEM — [PLACE OR SYSTEM] is present but quiet, dark or unused.
+2. MISSED DEMAND — [INTENDED CUSTOMER] searches, approaches or asks but cannot
+   find, reach or understand it.
+3. INTERVENTION — show the concrete build, repair or reorganization beginning.
+4. DISCOVERY PROOF — the improved destination becomes visible and usable.
+5. DIRECTED REACH — the right audience receives one clear signal or invitation.
+6. TRANSFORMED BASELINE — return to State 1's location and camera relationship,
+   now active, lit and inhabited by the intended outcome.
+
+PER-SHOT SEEDANCE CONTRACT
+For each state, supply only its approved start frame to Seedance 2.0.
+Create one short clip with:
+- one finite primary action;
+- one motivated camera move;
+- no unplanned location, identity, product or architecture change;
+- a readable settled endpoint that can cut cleanly into the next state.
+Generate and approve each shot independently; do not force Seedance to invent
+all six locations or transitions in one request.
+
+BOOKEND MATCH
+Shots 1 and 6 use the same lens, camera height, screen direction and movement
+curve. Change only the authored result variables: [LIGHTS], [OCCUPANCY],
+[ACTIVITY], [SIGNAGE STATE WITHOUT GENERATED TEXT] and [AMBIENT SOUND].
+The final shot should visually answer the opening rather than merely repeat it.
+
+ASSEMBLY
+Cut in causal order 1 → 2 → 3 → 4 → 5 → 6. Use hard cuts or one consistent
+matched-motion rule; never hide continuity failures under unrelated effects.
+When the piece loops, cut from Shot 6 back to Shot 1 on the matching camera
+phase. Keep a poster for every clip so lazy loading cannot leave an empty panel.
+
+REJECTION GATE
+Reject a take if it redesigns a locked world element, introduces a second
+product or lead, performs more than one story state, changes the bookend camera
+axis, ends before the action settles, or relies on generated readable text.
+```
+
+**Why it works:** independent start frames let each scene own a clear composition
+without asking one generation to preserve six locations. The closed state map
+turns a broad marketing claim into visible cause and effect, while the matched
+first/last camera move makes the outcome measurable: the viewer sees the same
+place before and after the intervention. This differs from continuation chaining
+because adjacent clips need not share a literal boundary frame; continuity comes
+from the world bible and state ledger.
+
+**Source:** Estezone's August 18, 2026
+[six-scene Seedance 2.0 production commit](https://github.com/tasarimmaniayapayzeka/estezone-demo/commit/2c8aba4079c71ccff714de6fe62dcc800a154577),
+the committed
+[complete state map](https://github.com/tasarimmaniayapayzeka/estezone-demo/blob/2c8aba4079c71ccff714de6fe62dcc800a154577/sunum-yap.js),
+and the generated
+[opening](https://github.com/tasarimmaniayapayzeka/estezone-demo/blob/2c8aba4079c71ccff714de6fe62dcc800a154577/kaynak/sunum/sahne-1.mp4)
+and
+[matched closing MP4](https://github.com/tasarimmaniayapayzeka/estezone-demo/blob/2c8aba4079c71ccff714de6fe62dcc800a154577/kaynak/sunum/sahne-6.mp4).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -14385,6 +14460,9 @@ Community examples and techniques referenced in this README:
 
 - [BentleyBlanks — Seedance 2.5 profile locomotion generation and cycle recovery](https://github.com/BentleyBlanks/bentleyblanks.github.io/commit/0ebd80fd7b90fcf7b8fdac73f8c0ffd3fb7892d6)
 - [freetag369 — Seedance 2.5 four-slot reference-mascot boost package](https://github.com/freetag369/tiktok-live-stats/commit/3679d380bf80056a25bbafc609b7d6bd5d56eb9a)
+
+
+- [Estezone — Seedance 2.0 independently keyed six-state brand-story ring](https://github.com/tasarimmaniayapayzeka/estezone-demo/commit/2c8aba4079c71ccff714de6fe62dcc800a154577)
 
 Official model references:
 
