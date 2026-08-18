@@ -14209,6 +14209,141 @@ the
 and a representative
 [Seedance room loop](https://github.com/Daniel-Lamb/Escape-Room/blob/fcf1c572e4ae3504ee696ae807af888cfb8ed65d/public/pilgrims-road/art/oubliette.mp4).
 
+### Center-safe terminal freeze-frame handoff
+
+**Verified model:** Seedance 2.5 (`seedance_2_5`, Higgsfield `t2v`) —
+the original creator committed three generated 8-second masters, published the
+shared prompt structure and exact settings, and measured the successful
+freeze-frame repair against the failed dragon take on August 18, 2026
+
+Use this when a generated intro must hand off into a deterministic reel, UI,
+title card or still without motion leaking across the boundary. Compose for the
+narrowest downstream crop, then turn the end of the clip into a measurable
+paused frame rather than a vague slow-down.
+
+```text
+DELIVERY CONTRACT
+Seedance 2.5 text-to-video; [DURATION] seconds; 16:9; 720p; native audio.
+The full frame may be shown on widescreen, but the center [SAFE WIDTH] must
+survive a vertical cover crop. The next deterministic state is
+[NEXT REEL / UI / STILL], so the generated ending must be motionless.
+
+SCENE ARC
+A cinematic [GENRE] game intro on a pure black background.
+[SUBJECT] appears through [ONE MATERIAL OR ENERGY REVEAL].
+Keep the subject strictly centered, symmetrical and facing the viewer.
+Use one slow, steady push-in; never orbit or let the subject drift off axis.
+
+TERMINAL FREEZE
+Before [FREEZE START TIME], complete the reveal and camera move.
+For the final [N] seconds, show a completely frozen still image:
+- [SUBJECT] holds one readable front-facing pose;
+- the subject, camera, flames, particles, embers, cloth, hair, rays and
+  background stop moving;
+- no flicker, breathing, settling, zoom, shake or exposure change;
+- the last frame looks exactly like a paused freeze-frame.
+Do not fade to black because the following state needs the held pose.
+
+AUDIO
+Build rising orchestral tension toward one [IMPACT] and [SUBJECT SOUND].
+Complete the hit before the visual freeze; let the tail settle without adding
+new beats after the held pose begins.
+
+EXCLUSIONS
+No text, letters, numbers, logos, watermark, subtitles, UI or people.
+No off-center reveal, profile turn, moving terminal particles or dark ending.
+
+FRAME AND HANDOFF GATE
+Probe the returned file. At 24 fps, trim by frame number to exactly
+[DURATION × 24] frames rather than using a keyframe-rounded time seek.
+Resample audio and normalize only after the picture trim. Measure consecutive
+frames across the freeze window; reject any take whose subject, effects or
+camera still move. Preview the vertical center crop, then cut directly from the
+held pose into [NEXT STATE].
+```
+
+**Why it works:** “hold the pose” can stop the character while fire, particles
+and camera motion continue. Naming every motion channel that must stop turns the
+ending into a testable state. The source dragon retry reduced mean terminal
+frame difference from 5.99 to 0.013 after expanding the freeze instruction,
+while the center lock protected the same master from a vertical cover crop.
+Frame-number trimming also removed the endpoint's extra returned frame without
+letting keyframe rounding shift the handoff.
+
+**Source:** freetag369's August 18, 2026
+[three-intro Seedance 2.5 production commit](https://github.com/freetag369/tiktok-live-stats/commit/4b233c0a0c2568040d8a2a8c6b98ab193f190530)
+and its
+[complete generation, retry, trim and validation record](https://github.com/freetag369/tiktok-live-stats/blob/4b233c0a0c2568040d8a2a8c6b98ab193f190530/src/renderer/assets/fx/CREDITS.md).
+
+
+### Generation-time container and codec delivery gate
+
+**Verified model:** Seedance 2.5
+(`dreamina-seedance-2-5-260628`) — the original developer generated matching
+1080p MOV and MP4 takes, inspected their real streams and verified both in the
+target Electron decoder with zero dropped frames on August 18, 2026
+
+Use this before a Seedance 2.5 generation whose master must serve either a
+high-fidelity finishing pipeline or broad playback. Treat the container as a
+generation parameter: choose it before rendering, then validate the returned
+codec truth instead of presenting a fictional “download as” switch.
+
+```text
+DESTINATION FIRST
+Primary destination = [COLOR FINISH / COMPOSITING / GENERAL PLAYBACK /
+EDITOR / BROWSER / CLIENT DELIVERY].
+Required decoder or editor = [TARGET APPLICATION AND VERSION].
+Required chroma = [4:4:4 / 4:2:0 ACCEPTABLE].
+Required audio = [LOSSLESS PCM / AAC ACCEPTABLE].
+
+GENERATION ROUTE
+Exact model = dreamina-seedance-2-5-260628 (Seedance 2.5).
+Prompt, references, duration, aspect ratio, resolution and audio setting remain
+identical between format tests.
+
+Choose exactly one output_format before generation:
+- mov — use when the destination accepts a high-fidelity 4:4:4 HEVC master and
+  lossless PCM audio;
+- mp4 — use when broad decoder/editor compatibility matters more than 4:4:4
+  chroma and lossless audio.
+
+Never carry a stored format onto a model that does not offer that parameter.
+Do not label this as a download choice: changing an existing result requires a
+local transcode and cannot restore information absent from the generated file.
+
+STREAM-TRUTH GATE
+After generation, inspect the actual returned URL and stream. Record:
+[CONTAINER], [VIDEO CODEC], [PROFILE], [PIXEL FORMAT], [BIT DEPTH],
+[CHROMA], [VIDEO BITRATE], [AUDIO CODEC], [AUDIO BITRATE],
+[RESOLUTION], [DURATION] and [FILE SIZE].
+Derive the download extension from the returned file, not from the request.
+
+PLAYBACK GATE
+Decode the whole result in [TARGET APPLICATION]. Verify loaded dimensions,
+decoded frames, dropped frames, canvas/readback if needed and audio playback.
+Do not reject a playable HEVC file only because a MIME capability probe returns
+an empty or conservative answer.
+
+DECISION
+Keep MOV as the finishing master only if every downstream tool opens its
+HEVC Rext 4:4:4 stream. Otherwise regenerate MP4 at the API so the delivered
+master uses HEVC Main 10 4:2:0 with AAC; do not create a second-generation
+compatibility copy unless the workflow explicitly accepts that transcode.
+```
+
+**Why it works:** container names conceal materially different streams. In the
+source's matched 1080p pair, MOV returned HEVC Rext, `yuv444p10le` and
+1,024-kbps PCM, while MP4 returned HEVC Main 10, `yuv420p10le` and 129-kbps
+AAC; both remained 10-bit and both decoded without drops in the target app.
+Choosing at generation time preserves the intended trade-off and prevents an
+unsupported 4:4:4 master from being mistaken for a failed render.
+
+**Source:** productionkhu-tech's August 18, 2026
+[Seedance 2.5 MOV/MP4 generation and decoder comparison](https://github.com/productionkhu-tech/freewill-seedance/commit/dcac55a11c17d4ac3ab9a12c1e3cd3a6146e81d3)
+and the committed
+[format-routing and measured stream contract](https://github.com/productionkhu-tech/freewill-seedance/blob/dcac55a11c17d4ac3ab9a12c1e3cd3a6146e81d3/src/store.ts).
+
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -14256,6 +14391,10 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [freetag369 — three Seedance 2.5 center-safe terminal-freeze intros, retry measurement and exact 192-frame handoff](https://github.com/freetag369/tiktok-live-stats/commit/4b233c0a0c2568040d8a2a8c6b98ab193f190530) ([complete generation and validation record](https://github.com/freetag369/tiktok-live-stats/blob/4b233c0a0c2568040d8a2a8c6b98ab193f190530/src/renderer/assets/fx/CREDITS.md))
+
+- [productionkhu-tech / freewill-seedance — matched Seedance 2.5 MOV/MP4 generations, measured codec/chroma/audio trade-off and decoder verification](https://github.com/productionkhu-tech/freewill-seedance/commit/dcac55a11c17d4ac3ab9a12c1e3cd3a6146e81d3) ([format-routing and measured stream contract](https://github.com/productionkhu-tech/freewill-seedance/blob/dcac55a11c17d4ac3ab9a12c1e3cd3a6146e81d3/src/store.ts))
 
 - [William Wang / Crow Bakery — Seedance 2.5 layered-motion storybook-tree opening](https://github.com/WilliamwangADA/crow-bakery-for-ada/commit/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c) ([complete generation script](https://github.com/WilliamwangADA/crow-bakery-for-ada/blob/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c/tools/gen_intro_video.mjs), [first-frame illustration](https://github.com/WilliamwangADA/crow-bakery-for-ada/blob/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c/assets/scenes/s01_tree.jpg), [generated result](https://github.com/WilliamwangADA/crow-bakery-for-ada/blob/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c/assets/video/intro.mp4))
 
