@@ -236,6 +236,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Tent-wipe festival payoff](#220-tent-wipe-festival-payoff)
   - [Ink-glyph derivation trailer](#221-ink-glyph-derivation-trailer-with-literal-object-guard)
   - [Poster-matched facade hero loop](#222-poster-matched-facade-parallax-hero-loop)
+  - [Triggered-layer argument](#223-triggered-layer-argument-with-quietest-line-climax)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -9997,6 +9998,113 @@ immediately, and the video can fade over it only after it is ready.
 **Source:** [ARIZU — exact Seedance 2.0 motion prompt, generated masters and delivered hero video](https://github.com/Ds9001-1983/arizu/commit/cab73a6d7530dd49052ac7cdbfaf219d78b20ed3)
 
 
+
+---
+
+### 223. Triggered-layer argument with quietest-line climax
+
+**Verified model:** Seedance 2.5 — the original author preserves the complete
+30-second image-referenced prompt as a regression fixture and records that the
+user verified the generated relationship-argument result as highly successful
+on August 18, 2026
+
+**Use case:** emotional dialogue, relationship drama, externally triggered
+performance changes, native audio, long-form character consistency  
+**Mode:** image/reference-to-video, five-shot performance sequence  
+**Settings:** 30 seconds, one female lead, nighttime interior, over-the-shoulder
+coverage
+
+```text
+REFERENCES AND IDENTITY
+@Image 1 is the only female lead. Preserve her face, hair, skin tone, apparent
+age, build and recognizability through every shot. @Image 2 fixes her wardrobe.
+@Image 3 fixes the nighttime room. Do not inherit unrelated people or UI from
+the references.
+
+GLOBAL SCENE
+Create a 30-second argument between the woman and an unseen partner. The camera
+occupies the partner's position; keep only a soft shoulder edge in the
+foreground and hold focus on her face and upper body. Warm, dim practical light
+with clear facial shadow. Close handheld coverage with restrained breathing
+motion: move slightly closer only when pressure rises, and become still during
+silence.
+
+One emotional truth must remain visible throughout: she is furious because she
+still cares and has spent too long feeling unheard. Surface emotion may change,
+but pain remains underneath every angry beat.
+
+SHOT 1 — CONTROLLED ACCUSATION
+She holds eye contact without speaking, jaw set and fingers slowly tightening.
+After two heavy breaths she says, quietly:
+"You keep hearing my words without listening to what they mean."
+She waits. The unseen partner gives an inadequate answer. A brief bitter smile
+appears, then disappears.
+
+SHOT 2 — FIRST SURGE
+That answer triggers the change. She takes one step forward, touches her own
+chest and raises her voice:
+"How many times do I have to explain this before it matters to you?"
+Her next sentence accelerates, then trembles near the end. Shoulders rise with
+her breath; she looks away for one beat and returns immediately.
+
+SHOT 3 — HURT EXPOSED
+She stops as suddenly as she surged. Movement and volume shrink. Her eyes are
+red and wet, and her gaze becomes less steady:
+"Do you know how exhausting it is to ask for the same care again and again?"
+A tear gathers but does not fall. She inhales to contain it while the camera
+makes its slowest push toward a close-up.
+
+SHOT 4 — REIGNITION BY RESPONSE
+The unseen partner says, "That isn't what I meant."
+Only after hearing it, she snaps her eyes back up and interrupts:
+"Then tell me what you did mean."
+Hold the silence. Sharp anger drains into recognition and disappointment; she
+gives one small involuntary nod.
+
+SHOT 5 — QUIETEST, HEAVIEST LINE
+The room becomes still. She does not raise her voice again. One tear falls as
+she says the most consequential line at the lowest volume:
+"I should never have to beg someone I love to care."
+Keep eye contact after the line. No further explanation. Only uneven breathing,
+a slight lip tremor and the last traces of anger fading into exhaustion. She
+finally looks away, and the tight close-up lingers on the unresolved feeling.
+
+PERFORMANCE ARC
+suppressed anger → triggered outburst → hurt revealed → response-triggered
+reignition → exhausted disappointment
+
+Make each transition causal: the first escalation follows the inadequate reply;
+the second follows the quoted defensive line. Use a rising-then-falling gesture
+envelope: restrained hands, one forward step and clearer gesture, shrinking
+movement, then complete stillness. Progress eye moisture from dry tension to
+redness, gathered tear and one final falling tear; do not begin already crying.
+
+SOUND
+Chinese dialogue from the woman; the unseen partner owns only the two short
+off-camera responses. Preserve quiet room tone, changing breath, one footstep
+and subtle clothing movement. No BGM, narration, subtitles, captions, text,
+logos, watermark or UI.
+
+CONTINUITY
+Same woman, wardrobe, room, night lighting, screen axis and partner-camera
+position throughout. Do not turn the partner into a visible second performer.
+Do not make every beat louder; the final line must be the quietest.
+```
+
+**Why it works:** the performance does not rely on a generic instruction to
+“become more emotional.” Each surface-layer change has a visible or audible
+trigger, while the invariant emotional truth prevents the character from
+becoming five unrelated moods. Alternating loud and quiet phases creates a
+descending oscillation, and reserving the softest delivery for the most damaging
+line gives the final silence more weight than another climax shout.
+
+**Source:** Anelse0's August 18, 2026
+[user-verified Seedance 2.5 release](https://github.com/Anelse0/ai-character-performance-director/commit/af324b73f807d344d9f0c7658cc1ec55477e2029),
+the
+[complete verified prompt fixture](https://github.com/Anelse0/ai-character-performance-director/blob/af324b73f807d344d9f0c7658cc1ec55477e2029/tests/fixtures/seedance25-30s-argument-oscillating.verified.md)
+and its bounded
+[evidence record](https://github.com/Anelse0/ai-character-performance-director/blob/af324b73f807d344d9f0c7658cc1ec55477e2029/references/evidence-ledger.md).
+
 ## Reusable templates
 
 ### Net-displacement endpoint conflict gate
@@ -13954,6 +14062,7 @@ Community examples and techniques referenced in this README:
 - [Manus UGC engine — live-validated Seedance 2.0 raw-phone one-take, anti-stabilization pair, curly-brace dialogue and source-active prop physics](https://github.com/Manus-anus-spec/ugc-/commit/09b10f465532aa266027987d4789dcd791963fc0) ([complete prompting record](https://github.com/Manus-anus-spec/ugc-/blob/09b10f465532aa266027987d4789dcd791963fc0/docs/VIDEO-MODEL-PROMPTING.md))
 
 - [Anelse / AI Character Performance Director — user-verified Seedance 2.5 30-second farewell monologue and five-layer performance scaffold](https://github.com/Anelse0/ai-character-performance-director/commit/b332542297f9b9cbac4e59629f98b0c05902f15c) ([complete reusable template](https://github.com/Anelse0/ai-character-performance-director/blob/b332542297f9b9cbac4e59629f98b0c05902f15c/references/longform-performance-pattern.md), [bounded evidence record](https://github.com/Anelse0/ai-character-performance-director/blob/b332542297f9b9cbac4e59629f98b0c05902f15c/references/evidence-ledger.md))
+- [Anelse / AI Character Performance Director — user-verified Seedance 2.5 30-second triggered-layer relationship argument](https://github.com/Anelse0/ai-character-performance-director/commit/af324b73f807d344d9f0c7658cc1ec55477e2029) ([complete verified prompt](https://github.com/Anelse0/ai-character-performance-director/blob/af324b73f807d344d9f0c7658cc1ec55477e2029/tests/fixtures/seedance25-30s-argument-oscillating.verified.md), [bounded evidence record](https://github.com/Anelse0/ai-character-performance-director/blob/af324b73f807d344d9f0c7658cc1ec55477e2029/references/evidence-ledger.md))
 
 
 - [ZYNTH / Shane Caulfield — Seedance 2.0 Smart Shot production-design-sheet comparison, paid 720p audio render and one-clip pacing verdict](https://github.com/zanezynthbrain/zynth-brain/commit/b277d4bffffceac7011036927d482bd96abaa892) ([full production notes](https://github.com/zanezynthbrain/zynth-brain/blob/b277d4bffffceac7011036927d482bd96abaa892/deliverables/spec/2026-08-15_SpecFilm_KitKat_The-Break-Line_v3.md), [shot-plan sheet](https://cdn.openart.ai/openart-ai/production/2026-08/create-image/zQlwAWg6g9rSn0INEuso/gpt-image-2-responses-image_1786813667683_9e6d5043.png), [Seedance result](https://cdn.openart.ai/openart-ai/production/2026-08/create-video/zQlwAWg6g9rSn0INEuso/02178681399974800000000000000000000ffffc0a88538fdfb15_1786814135218_b94406a1.mp4))
