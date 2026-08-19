@@ -14401,6 +14401,76 @@ crossing legs from being averaged into one track.
 including the committed source MP4s, comparison sheets and
 [full rig notes](https://github.com/BentleyBlanks/bentleyblanks.github.io/blob/0ebd80fd7b90fcf7b8fdac73f8c0ffd3fb7892d6/TunnelLight1943/docs/Rig.md).
 
+### Endpoint-anchored side-profile pose-transition plate
+
+**Verified model:** Seedance 2.5 — the original creator explicitly identifies
+the Dreamina model, commits both successful six-second source MP4s, publishes
+four extracted transition tracks, and records two failed squat attempts on
+August 19, 2026
+
+Use this when Seedance supplies motion evidence for a non-looping transition
+into or out of a deterministic animation pose. Generate one readable
+stand–action–stand plate, split it into down and rise tracks, then force both
+tracks to meet the exact static-pose endpoints instead of accepting a visual
+jump at the handoff.
+
+```text
+MOTION-PLATE CONTRACT
+Exact model = Seedance 2.5.
+Purpose = side-profile pose-transition evidence, not a cinematic final shot.
+Duration = 6 seconds; 16:9; 720p.
+
+One adult begins standing neutrally on flat level ground, performs exactly one
+[KNEEL / BEND TO PICK UP AN OBJECT / OTHER TARGET POSE], briefly reaches the
+complete target pose, then returns naturally to the same neutral standing pose.
+Show preparation, weight transfer, joint compression, contact and recovery in
+ordinary real-time human motion.
+
+Exact 90-degree side profile. Locked static camera. Keep the full body visible
+from head to feet with a small safety margin throughout. Constant subject scale,
+unchanged screen direction, even light and a plain high-contrast background.
+Keep the near-side limbs readable and separate from the torso.
+
+No cut, pan, tilt, zoom, orbit, close-up, front view, camera tracking, pose
+montage, extra action, slow-motion flourish or change of direction.
+
+CAPTURE GATE
+Reject before extraction if the head or feet leave frame, the camera changes
+axis, the intended pose becomes a different action, or key joints are unreadable.
+Treat profile accuracy and full-body clearance as separate checks; revise only
+the failed constraint on the next attempt.
+
+TRANSITION RECOVERY
+1. Split the source around the completed pose into a stand-to-pose down track
+   and a pose-to-stand rise track.
+2. Time-scale each half to believable observed human cadence.
+3. Anchor the first and last keyframes to the exact deterministic standing and
+   target-pose values. Use enough samples for the anchor blend; the successful
+   source workflow used roughly 18–22 fps.
+4. If an occluded far-side limb produces impossible jumps rather than noise,
+   exclude that channel and interpolate it between the two anchors. Do not
+   smooth a false measurement into the track.
+5. Let the transition track override the static pose only while entering or
+   leaving it. Do not replay entry motion for a character that starts in the
+   pose, interrupt another active track, keep the track while walking, or run
+   it inside a shot framed only for the final pose.
+```
+
+**Why it works:** the generated plate contributes the physically observed
+process that a static pose cannot contain, while endpoint anchoring makes the
+extracted motion meet the animation rig exactly. Separating bad occlusion data
+from ordinary jitter prevents extreme far-limb estimates from contaminating
+the usable near-side motion. The source produced kneel-down/rise tracks of
+1.61/1.19 seconds and bend-down/rise tracks of 0.87/0.80 seconds; two squat
+attempts were correctly rejected for cropping, the wrong action and a lost
+profile axis.
+
+**Source:** BentleyBlanks' August 19, 2026
+[Seedance 2.5 pose-transition generation and integration commit](https://github.com/BentleyBlanks/bentleyblanks.github.io/commit/69fe9f458966564df0d4eeef833f1655c46f5476),
+with the [complete extraction and state-boundary method](https://github.com/BentleyBlanks/bentleyblanks.github.io/blob/69fe9f458966564df0d4eeef833f1655c46f5476/TunnelLight1943/docs/Rig.md),
+[kneel source MP4](https://github.com/BentleyBlanks/bentleyblanks.github.io/blob/69fe9f458966564df0d4eeef833f1655c46f5476/TunnelLight1943/_mocap/tr_kneel.mp4)
+and [bend/pick source MP4](https://github.com/BentleyBlanks/bentleyblanks.github.io/blob/69fe9f458966564df0d4eeef833f1655c46f5476/TunnelLight1943/_mocap/tr_pick.mp4).
+
 ### Four-slot reference-mascot boost with compositor-owned countdown
 
 **Verified model:** Seedance 2.5 (`seedance_2_5`, Higgsfield
@@ -15431,6 +15501,8 @@ Community examples and techniques referenced in this README:
 - [huskyhoochu — Seedance 2.5 reference-input graph round-trip and successful character-sheet transfer](https://github.com/huskyhoochu/dotfiles/commit/fedd0fe5775e817832799cfa63833a168b5a943b)
 
 - [MehediHasan27 — Seedance 2.5 quantified locked isometric-city interaction plate](https://github.com/MehediHasan27/Citymap/commit/7d63d84c49f5096f746fa70a096eed672c36de4b)
+
+- [BentleyBlanks — Seedance 2.5 endpoint-anchored side-profile pose-transition plates](https://github.com/BentleyBlanks/bentleyblanks.github.io/commit/69fe9f458966564df0d4eeef833f1655c46f5476) ([full extraction and state-boundary method](https://github.com/BentleyBlanks/bentleyblanks.github.io/blob/69fe9f458966564df0d4eeef833f1655c46f5476/TunnelLight1943/docs/Rig.md), [kneel source MP4](https://github.com/BentleyBlanks/bentleyblanks.github.io/blob/69fe9f458966564df0d4eeef833f1655c46f5476/TunnelLight1943/_mocap/tr_kneel.mp4), [bend/pick source MP4](https://github.com/BentleyBlanks/bentleyblanks.github.io/blob/69fe9f458966564df0d4eeef833f1655c46f5476/TunnelLight1943/_mocap/tr_pick.mp4))
 
 Official model references:
 
