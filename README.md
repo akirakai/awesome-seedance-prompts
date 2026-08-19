@@ -15095,6 +15095,86 @@ adherence separately from graph transport.
 followed by the August 19, 2026
 [successful Seedance 2.5 character-sheet transfer record and serialization warning](https://github.com/huskyhoochu/dotfiles/commit/fedd0fe5775e817832799cfa63833a168b5a943b).
 
+### Style-locked image-plus-audio lip-sync micro-performance
+
+**Verified model:** Seedance 2.5 (Artlist `modelId 3002`,
+`multi-to-video`) — the original developer generated and committed a
+six-second image-plus-audio talking-character result, documented the working
+style-lock formula, and recorded the model route and cost
+
+Use this for a short illustrated character line when the reference image's flat
+2D design must survive native audio-driven lip sync. Put the style contract
+before the performance request, give image and audio separate roles, and keep
+the animation budget deliberately small.
+
+```text
+ROUTE CONTRACT
+Exact model = Artlist Seedance 2.5, modelId 3002, multi-to-video.
+@Image1 = the authorized character identity and complete visual-style reference.
+@Audio1 = the approved dialogue recording, voice, timing and pronunciation.
+Target duration = the length of @Audio1, preferably one short line.
+Do not substitute text-to-speech or a different model silently.
+
+STYLE LOCK — state this first
+Render a flat 2D vector cartoon that matches @Image1 exactly.
+Preserve its simple flat colors, bold clean black outlines, line weight,
+character proportions, facial geometry, costume shapes and palette.
+No photorealism, 3D rendering, volumetric shading, realistic skin, material
+reconstruction, painterly restyle or extra texture.
+
+PERFORMANCE
+One locked [CLOSE-UP / MEDIUM CLOSE-UP] of the same character in the same
+framing and background as @Image1.
+The character speaks the full line from @Audio1 with mouth shapes synchronized
+to the recording. Animate only the mouth and natural eye blinks unless one
+additional micro-action is explicitly approved: [SMALL HEAD TILT / BROW CHANGE].
+Keep the body silhouette, camera, background and object count fixed.
+No cut, camera move, new character, new prop, subtitle, caption or logo.
+
+TERMINAL IDENTITY LOCK
+At the end of the prompt, restate only the invariants:
+"The character design, proportions, colors, outline style and framing remain
+identical to @Image1 for the whole clip; only the approved facial motion changes."
+
+PRE-SUBMIT GATE
+1. Confirm @Image1 and @Audio1 are both attached and mapped to different roles.
+2. Confirm the dialogue fits the requested duration without time compression.
+3. Estimate cost from the provider's current per-second rate and require approval
+   before using this route for more than one showcase line.
+4. Log modelId, prompt, reference hashes, audio duration, estimated credits and
+   returned asset URL.
+
+ACCEPTANCE
+Pass only if the output:
+- preserves the same flat 2D design, palette, outlines and proportions;
+- contains no photorealistic or 3D conversion;
+- follows @Audio1's words and timing with readable lip sync;
+- keeps the shot, background and object count stable;
+- adds no unrequested motion, text, cut or camera move.
+
+FAILURE ROUTING
+If style drifts, move the style lock to the first sentence and simplify the
+performance before rerunning. If lip sync drifts but style passes, shorten the
+audio to one clean phrase; do not change style, model and audio simultaneously.
+If both references are not present in the submitted payload, repair attachment
+mapping before spending another generation.
+```
+
+**Why it works:** the source run found that an unqualified prompt let the model
+reinterpret a flat cartoon as photorealistic or 3D. A front-loaded style
+contract plus a matching terminal identity lock confines the expensive native
+audio pass to mouth and eye motion. The short-line gate also reflects the
+measured economics: the creator recorded roughly 500 credits per second, or
+about 3,000 credits for the verified six-second clip, so this route was kept as
+a showcase rather than scaled blindly across an episode library.
+
+**Sources:** ukaya17-jpg's August 19, 2026
+[Artlist Seedance 2.5 generation and integration commit](https://github.com/ukaya17-jpg/AI-Animation-Studio/commit/9bb5e6f66d225b8d66ab69ce128a9beb9a4a26f5),
+the committed
+[working style-lock formula and cost record](https://github.com/ukaya17-jpg/AI-Animation-Studio/blob/9bb5e6f66d225b8d66ab69ce128a9beb9a4a26f5/docs/ses-rehberi.md),
+and the
+[generated six-second MP4](https://github.com/ukaya17-jpg/AI-Animation-Studio/blob/9bb5e6f66d225b8d66ab69ce128a9beb9a4a26f5/backend/app/static/characters/talking_samples/kurnaz_demo.mp4).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -15503,6 +15583,8 @@ Community examples and techniques referenced in this README:
 - [MehediHasan27 — Seedance 2.5 quantified locked isometric-city interaction plate](https://github.com/MehediHasan27/Citymap/commit/7d63d84c49f5096f746fa70a096eed672c36de4b)
 
 - [BentleyBlanks — Seedance 2.5 endpoint-anchored side-profile pose-transition plates](https://github.com/BentleyBlanks/bentleyblanks.github.io/commit/69fe9f458966564df0d4eeef833f1655c46f5476) ([full extraction and state-boundary method](https://github.com/BentleyBlanks/bentleyblanks.github.io/blob/69fe9f458966564df0d4eeef833f1655c46f5476/TunnelLight1943/docs/Rig.md), [kneel source MP4](https://github.com/BentleyBlanks/bentleyblanks.github.io/blob/69fe9f458966564df0d4eeef833f1655c46f5476/TunnelLight1943/_mocap/tr_kneel.mp4), [bend/pick source MP4](https://github.com/BentleyBlanks/bentleyblanks.github.io/blob/69fe9f458966564df0d4eeef833f1655c46f5476/TunnelLight1943/_mocap/tr_pick.mp4))
+
+- [ukaya17-jpg — Artlist Seedance 2.5 style-locked image-plus-audio lip-sync generation](https://github.com/ukaya17-jpg/AI-Animation-Studio/commit/9bb5e6f66d225b8d66ab69ce128a9beb9a4a26f5) ([working formula and cost record](https://github.com/ukaya17-jpg/AI-Animation-Studio/blob/9bb5e6f66d225b8d66ab69ce128a9beb9a4a26f5/docs/ses-rehberi.md), [generated MP4](https://github.com/ukaya17-jpg/AI-Animation-Studio/blob/9bb5e6f66d225b8d66ab69ce128a9beb9a4a26f5/backend/app/static/characters/talking_samples/kurnaz_demo.mp4))
 
 Official model references:
 
