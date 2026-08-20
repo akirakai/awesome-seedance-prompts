@@ -243,6 +243,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Courtroom closing-argument impact beat](#227-courtroom-closing-argument-impact-beat)
   - [Reference-locked alien-ring passage](#228-reference-locked-alien-ring-passage)
   - [Quantified locked isometric city interaction plate](#229-quantified-locked-isometric-city-interaction-plate)
+  - [Eight-beat Dubai host documentary](#230-eight-beat-dubai-host-documentary)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -10570,6 +10571,97 @@ the committed
 and the
 [resulting web-ready Seedance clip](https://github.com/MehediHasan27/Citymap/blob/7d63d84c49f5096f746fa70a096eed672c36de4b/public/media/city-iso.web.mp4).
 
+---
+
+### 230. Eight-beat Dubai host documentary
+
+**Verified model:** Seedance 2.5 (`dreamina-seedance-2-5-260628`) — the
+original creator ran this text-only prompt on August 19, 2026 and records a
+successful 720×1280 result, 30.08-second H.264/AAC master, returned final-frame
+PNG and one stable human identity across all eight cuts
+
+**Use case:** long-form vertical travel film, single-host identity continuity,
+native narration, day-to-night montage  
+**Mode:** text-to-video, no visual references  
+**Settings:** 30 seconds, 9:16, 720p, 24 fps, native English voice, city ambience
+and music; `return_last_frame: true`
+
+```text
+Create a photoreal vertical travel documentary following one Emirati host
+through Dubai from sunrise to night. The same man speaks directly to the viewer
+in every segment while recognizable places carry the journey forward.
+
+HOST LOCK
+One Emirati man, early thirties, warm brown complexion, neatly trimmed short
+black beard, alert friendly eyes, white kandura, white ghutra and black agal.
+Keep one face, body, age, wardrobe and voice for the full film. His manner is
+calm and welcoming: relaxed walking pace, open hand gestures and an easy smile.
+Frame him chest-up or as a complete standing figure.
+
+VISUAL AND SOUND SYSTEM
+Live-action 35 mm travel-film texture with fine grain, warm controlled grade,
+natural skin, shallow depth of field and restrained lens flare. Movement feels
+gimbal-smooth with a small amount of human breathing. Let dawn gold evolve into
+blue-hour contrast and warm night reflections. Use real location ambience below
+a light orchestral-and-oud score. All narration is clear English in one warm,
+unhurried Emirati-accented male voice.
+
+0–4 s — Museum of the Future plaza, golden morning. Track backward at the
+host's walking speed, eye-level medium framing. Silver calligraphy and the
+Sheikh Zayed Road skyline sit behind him. He says: "Each morning, this city
+wakes up reaching a little higher."
+
+4–8 s — Dubai Creek. Hold a wide rule-of-thirds composition as he rides a
+wooden abra, one hand on the rail, with dhows and wind-tower houses in haze.
+He says: "Long before the towers, traders crossed this creek."
+
+8–12 s — Old souk. Make a restrained medium-close arc around him among spice
+sacks, gold displays and striped light from the timber roof. He says: "The
+water is the same, and so is the welcome."
+
+12–16 s — Burj Khalifa at twilight. Place the camera extremely low and wide;
+the host opens his arms at the base while the tower fills the vertical frame.
+He says: "Look up—we built this within one lifetime."
+
+16–20 s — Dubai Fountain. Rise slowly above the boardwalk as illuminated
+plumes climb behind him and mist catches amber light. He says: "At night, even
+the water performs for everyone who arrives."
+
+20–24 s — Marina promenade. Follow beside him in a steady medium shot; yachts,
+curved towers and neon reflections slide across dark water. He says: "People
+from two hundred nations live here, and home never feels far away."
+
+24–28 s — Moonlit desert. Push gently toward his back as he faces cool blue
+dunes, with only a narrow band of city glow on the horizon. He says: "The
+desert where it began is still beside us."
+
+28–30 s — Palm coastline. Lock a centered medium close-up. He turns to lens,
+smiles and opens his arms while the coast glitters behind him. He says: "I am
+Emirati. This is my home. Come and see it."
+
+CONTINUITY AND FAILURE CONTROL
+Use exactly one camera move in each segment and maintain a continuous,
+unhurried rhythm between cuts. Assign every spoken line only to HOST; synchronize
+his mouth accurately and keep silent background people indistinct. Preserve
+natural anatomy, stable walking, one wardrobe and one identity throughout.
+Exclude subtitles, captions, logos, watermarks, miniature tilt-shift, animation,
+illustration, plastic CGI skin, blown highlights, flicker and distorted crowd
+faces.
+```
+
+**Why it works:** one prose identity sheet carries the host through eight
+locations without a reference image, while the repeated wardrobe and speaker
+label reinforce that state at every cut. Whole-second beats tile the actual
+30-second request, each shot owns one camera move, and the day-to-night route
+creates visual progression without asking the host to transform. The successful
+source run specifically confirmed that the explicit 9:16 text-to-video request
+stayed in the intended task class and held a single identity across all cuts.
+
+**Source:** Ahmad Raza's August 19, 2026
+[Seedance 2.5 director release](https://github.com/ahmadsamii/seedance-2-5-director/commit/f2715d5dd3b189a787a18dbcc43b3d1c344d6d05)
+and the
+[complete prompt with successful-run metadata](https://github.com/ahmadsamii/seedance-2-5-director/blob/f2715d5dd3b189a787a18dbcc43b3d1c344d6d05/examples/30s-vertical-documentary.md).
+
 ## Reusable templates
 
 ### Net-displacement endpoint conflict gate
@@ -15222,6 +15314,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Ahmad Raza / Seedance 2.5 Director — live-rendered 30-second vertical Dubai documentary with exact prompt, eight-cut identity lock and returned-frame metadata](https://github.com/ahmadsamii/seedance-2-5-director/commit/f2715d5dd3b189a787a18dbcc43b3d1c344d6d05) ([complete prompt and successful-run record](https://github.com/ahmadsamii/seedance-2-5-director/blob/f2715d5dd3b189a787a18dbcc43b3d1c344d6d05/examples/30s-vertical-documentary.md))
 
 - [GroupX / BitPredict — eight exact-model Seedance 2.5 UGC and parody generations with complete prompts, committed masters, transcript QA and full-resolution prop checks](https://github.com/GroupX-ai/ad-creative/commit/87fbc5476be6f7c75841320eebf5ceaa7c181d2a) ([prompt suite](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/_scripts/seedance-prompts-b10-bitpredict.mjs), [QA ledger](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/_scripts/BATCH-2026-08-18-b10-bitpredict-viral.md))
 
