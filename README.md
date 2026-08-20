@@ -15267,6 +15267,90 @@ the committed
 and the
 [generated six-second MP4](https://github.com/ukaya17-jpg/AI-Animation-Studio/blob/9bb5e6f66d225b8d66ab69ce128a9beb9a4a26f5/backend/app/static/characters/talking_samples/kurnaz_demo.mp4).
 
+
+### Performance-and-voice-locked world replacement
+
+> **Type:** Reusable template / video-to-video editing technique  
+> **Verified model:** Seedance 2.5 — the original creator's August 21, 2026 direct account test replaced a car and the entire location while preserving the source performer's motion and voice
+
+Use this when the source performance is approved but its vehicle, set or
+environment must change. It is the inverse of character replacement: the
+performer, timing and recorded voice are protected, while only named world
+layers may be regenerated.
+
+```text
+AUTHORIZED INPUTS
+@Video1 = the approved source performance and native-audio master.
+@Image1 = the exact target [VEHICLE / PRODUCT / PROP] design.
+@Image2 = the exact target [LOCATION / SET / ENVIRONMENT] design.
+Record the owner, license, hash, duration and dimensions of every input.
+
+EDIT ROUTE
+Use Seedance 2.5 video-to-video edit mode deliberately.
+Source duration and aspect ratio remain locked to @Video1.
+Replace only [ORIGINAL VEHICLE / PROP] with @Image1 and
+[ORIGINAL LOCATION / SET] with @Image2.
+
+PROTECTED PERFORMANCE
+@Video1 owns the same adult performer, face, body, wardrobe, expression,
+eyeline, lip movement, gesture, contact timing, screen position, camera path,
+edit rhythm, duration and complete spoken-audio track.
+Preserve every word, pronunciation, pause, breath and voice characteristic
+from @Video1. Do not redub, translate, synthesize or rewrite the dialogue.
+
+INLINE ROLE BINDING — repeat this inside every beat
+[0–Xs] @Video1 supplies only [PERFORMANCE / MOTION / VOICE / CAMERA] for this
+beat. @Image1 supplies only [TARGET OBJECT GEOMETRY / MATERIAL / COLOR].
+@Image2 supplies only [TARGET WORLD LAYOUT / LIGHT / WEATHER].
+[Describe the action, contact and camera event; do not redescribe appearances
+already carried by an image.]
+[X–Ys] Repeat all three bindings with their exact roles, then describe only the
+new staging, motion, interaction and causal change for this beat.
+[Continue for each beat in the source.]
+
+WORLD REBUILD
+Seat the unchanged performance naturally inside the new world. Rebuild only
+contact shadows, reflections, occlusion edges, tire or foot contact, cast light
+and environmental sound required by the replacement. Keep body mechanics and
+voice timing frame-aligned with @Video1.
+
+LANGUAGE GATE
+If the required spoken language is not already present in @Video1, stop the
+native-voice-preservation route. Supply an approved speaking video in the target
+language or plan a separate voice-over; do not ask the model to invent a new
+language track while also protecting the original performance.
+
+ACCEPTANCE
+Pass only if:
+- the person, motion, lip timing and complete voice track match @Video1;
+- @Image1's target object replaces only the named object and keeps fine detail;
+- @Image2's environment replaces the old location without leaking its geometry;
+- every beat repeats reference ownership inline, not only in a header;
+- camera, duration and action endpoints remain aligned with the source;
+- no identity drift, voice change, dialogue rewrite, extra performer, unintended
+  edit, object blend, old-location residue, subtitle, logo or watermark appears.
+
+FAILURE ROUTING
+If face or object detail drifts, use a front-facing identity/product reference
+and simplify to one replacement layer before retrying. If the old world leaks
+through, tighten the editable layer and repeat the inline role bindings. If
+motion or voice changes, restore @Video1 as their sole owner and remove any text
+that redescribes the protected performance.
+```
+
+**Why it works:** Seedance receives a time-varying performance master rather
+than trying to reconstruct action and speech from prose. Explicitly assigning
+the video to motion, timing and voice while images own only the new object and
+world makes the editable boundary testable. Repeating those contracts at the
+beat where each asset is used addresses the creator's observed face drift from
+header-only reference lists; omitting redundant visual prose prevents text from
+fighting the bound images.
+
+**Source:** Hossam Daoud's August 21, 2026
+[Seedance 2.5 account-test commit](https://github.com/HossamDaoud83/CPS-Plugins-Official/commit/a9cbf6fce1c4f2fa380dad48ccbdf93d1fb2161b) and
+[versioned field notes with the successful motion-and-voice-preserving
+world-replacement result](https://github.com/HossamDaoud83/CPS-Plugins-Official/blob/a9cbf6fce1c4f2fa380dad48ccbdf93d1fb2161b/plugins/studio/skills/cinema-pipeline/references/field-notes.md).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -15314,6 +15398,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Hossam Daoud — Seedance 2.5 direct account test of performance-and-voice-locked vehicle and world replacement, inline beat binding and native-language routing](https://github.com/HossamDaoud83/CPS-Plugins-Official/commit/a9cbf6fce1c4f2fa380dad48ccbdf93d1fb2161b) ([versioned field notes](https://github.com/HossamDaoud83/CPS-Plugins-Official/blob/a9cbf6fce1c4f2fa380dad48ccbdf93d1fb2161b/plugins/studio/skills/cinema-pipeline/references/field-notes.md))
 
 - [Ahmad Raza / Seedance 2.5 Director — live-rendered 30-second vertical Dubai documentary with exact prompt, eight-cut identity lock and returned-frame metadata](https://github.com/ahmadsamii/seedance-2-5-director/commit/f2715d5dd3b189a787a18dbcc43b3d1c344d6d05) ([complete prompt and successful-run record](https://github.com/ahmadsamii/seedance-2-5-director/blob/f2715d5dd3b189a787a18dbcc43b3d1c344d6d05/examples/30s-vertical-documentary.md))
 
