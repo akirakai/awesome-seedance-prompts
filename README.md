@@ -10827,6 +10827,89 @@ and the
 
 ## Reusable templates
 
+### Measured failure-boundary ping-pong motion harvest
+
+**Verified model:** Seedance 2.5 (`seedance_2_5`, 6 seconds, 1080p,
+9:16) — the original creator committed the generated master, its approved
+merchant-render start frame, 49 retained frames, the measured over-inflation
+boundary and the shipped scroll interaction
+
+Use this when a one-direction image-to-video transformation succeeds before a
+later deformation failure, and the valid prefix can truthfully play backward as
+the opposite state change. Pneumatic inflation and release are a good fit;
+tearing, spills, debris, human contact and other irreversible actions are not.
+
+```text
+SOURCE CONTRACT
+@Image1 = [OFFICIAL OR AUTHORISED PRODUCT RENDER].
+The reference is the exact first frame; do not regenerate a separate keyframe.
+Exact model = seedance_2_5.
+Duration = 6 seconds. Resolution = 1080p. Aspect ratio = 9:16.
+Goal = one monotonic, physically reversible transformation.
+
+GENERATION BRIEF
+Begin exactly from @Image1. Preserve product geometry, branding, materials,
+proportions, background, camera, framing and lighting.
+
+Locked camera. [PRODUCT MECHANISM] activates in physical order from
+[START REGION] to [END REGION], one segment at a time. Show restrained,
+continuous pressure or state change while the product stays centred and fully
+visible. Finish near the strongest structurally valid state.
+
+No release phase in the generation. No cut, camera move, label drift, added
+part, background change, geometry ballooning, text or logo alteration.
+
+FAILURE-BOUNDARY LEDGER
+Decode the returned master to numbered frames.
+Last unquestionably valid frame: [FRAME N].
+First visible failure: [FRAME M] — [IDENTITY DRIFT / OVER-INFLATION /
+GEOMETRY COLLAPSE / EXTRA PART / BACKGROUND CHANGE].
+Delivery safety frame: [FRAME S], chosen before M with a small visual margin.
+Retain frames 0 through S; quarantine the failed suffix rather than describing
+it as intentional motion.
+
+PING-PONG DELIVERY
+For interaction progress p in [0, 1]:
+t = 2p when p < 0.5; otherwise t = 2(1 - p).
+Displayed frame = round(t × S).
+
+Forward playback communicates [STATE A -> STATE B].
+Reverse playback communicates [STATE B -> STATE A].
+Use contain rather than cover when the complete product must remain visible.
+Sample the delivery background from a retained frame so the canvas handoff does
+not expose a colour seam.
+
+REVERSIBILITY GATE
+Approve reverse playback only if:
+- the mechanism is visually symmetric in time;
+- no material is destroyed, spilled, detached or newly introduced;
+- gravity, human contact and one-way causal cues do not make reversal false;
+- the terminal valid frame can change direction without a visible jump.
+Otherwise deliver the valid prefix as a one-way clip.
+
+ACCEPTANCE GATE
+[ ] Frame 0 matches the authorised reference.
+[ ] The useful prefix changes monotonically and preserves identity.
+[ ] S is safely before the first deformation failure.
+[ ] 0 -> S -> 0 has no endpoint jump or duplicate-frame stall.
+[ ] Forward and reverse meanings are physically credible.
+[ ] Master, retained sequence, S/M ledger and exact model metadata are archived.
+```
+
+Why it works: a stochastic render can contain a production-quality motion arc
+before its failed ending. Measuring that boundary turns partial success into a
+deterministic asset, while a truthful ping-pong map yields a complete reversible
+interaction without asking the model to solve a second phase. In the verified
+case, an official product render locked identity, frames 0–48 carried a clean
+foot-to-thigh compression build, and later sleeve ballooning was excluded.
+
+**Source:** [Ankit / WOD Armour redesign — generated Seedance 2.5 master,
+documented failure boundary and shipped ping-pong implementation](https://github.com/ankitstage21/wodarmour-redesign/commit/e4477e30408d78c326971154d3bd856ea7d06f76)
+([generated clip](https://github.com/ankitstage21/wodarmour-redesign/blob/e4477e30408d78c326971154d3bd856ea7d06f76/assets/inflate.mp4),
+[approved start frame](https://github.com/ankitstage21/wodarmour-redesign/blob/e4477e30408d78c326971154d3bd856ea7d06f76/refs/start_9x16.jpg),
+[retained frames](https://github.com/ankitstage21/wodarmour-redesign/tree/e4477e30408d78c326971154d3bd856ea7d06f76/assets/inf-frames),
+[delivery code](https://github.com/ankitstage21/wodarmour-redesign/blob/e4477e30408d78c326971154d3bd856ea7d06f76/normatec-2.js))
+
 ### Provider-aware generation-time bitrate-mode gate
 
 **Verified model:** Seedance 2.5 — Venice's official queue documentation exposes
@@ -15879,6 +15962,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Ankit / WOD Armour redesign — Seedance 2.5 product-inflation master, measured deformation boundary and 49-frame ping-pong delivery](https://github.com/ankitstage21/wodarmour-redesign/commit/e4477e30408d78c326971154d3bd856ea7d06f76) ([generated clip](https://github.com/ankitstage21/wodarmour-redesign/blob/e4477e30408d78c326971154d3bd856ea7d06f76/assets/inflate.mp4), [approved start frame](https://github.com/ankitstage21/wodarmour-redesign/blob/e4477e30408d78c326971154d3bd856ea7d06f76/refs/start_9x16.jpg), [retained frames](https://github.com/ankitstage21/wodarmour-redesign/tree/e4477e30408d78c326971154d3bd856ea7d06f76/assets/inf-frames), [delivery code](https://github.com/ankitstage21/wodarmour-redesign/blob/e4477e30408d78c326971154d3bd856ea7d06f76/normatec-2.js))
 
 - [Jordan Urbs / Venice Video Harness — measured Seedance 2.5 high-bitrate generation routing, model-family isolation and provenance capture](https://github.com/jordanurbs/venice-video-harness/commit/d56659e1a31c486075ec5b56ad3a43303825a546) ([queue implementation](https://github.com/jordanurbs/venice-video-harness/blob/d56659e1a31c486075ec5b56ad3a43303825a546/src/venice/video.ts), [official Venice bitrate documentation](https://github.com/veniceai/api-docs/commit/082ce65cc7dd82b24d13175c399402a0be4c21f1))
 
