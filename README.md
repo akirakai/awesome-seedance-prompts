@@ -244,6 +244,9 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Reference-locked alien-ring passage](#228-reference-locked-alien-ring-passage)
   - [Quantified locked isometric city interaction plate](#229-quantified-locked-isometric-city-interaction-plate)
   - [Eight-beat Dubai host documentary](#230-eight-beat-dubai-host-documentary)
+  - [Iris-reflection gaze collision](#231-iris-reflection-gaze-collision)
+  - [Against-current procession abandonment](#232-against-current-procession-abandonment)
+  - [Grooming-mask micro-expression rupture](#233-grooming-mask-micro-expression-rupture)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -10662,6 +10665,166 @@ stayed in the intended task class and held a single identity across all cuts.
 and the
 [complete prompt with successful-run metadata](https://github.com/ahmadsamii/seedance-2-5-director/blob/f2715d5dd3b189a787a18dbcc43b3d1c344d6d05/examples/30s-vertical-documentary.md).
 
+
+---
+
+### 231. Iris-reflection gaze collision
+
+**Verified model:** Seedance 2.0 — the original creator committed the complete
+shot prompt and the corresponding Seedance 2.0 render on August 21, 2026
+
+**Use case:** recognition reveal, macro eye performance, in-frame reflected
+character, suspense without a reverse shot  
+**Mode:** cinematic text-to-video  
+**Settings:** one short 16:9 live-action period-fantasy shot, native ambience,
+no dialogue or captions
+
+```text
+Create one uninterrupted extreme macro shot at night. A child's single eye is
+pressed close to a narrow moonlit split in a worn paper door. The wet iris,
+eyelashes and rough paper fibres are sharply readable; the surrounding room
+falls into soft darkness. Inside the curved iris reflection, a distant horned
+oni stands in the passing moonlight.
+
+0–2.5 s — Begin close enough to read the eye, door edge and reflected figure.
+Push forward almost imperceptibly. The child holds completely still while the
+lashes and paper edge expand naturally with the camera move. Keep the reflected
+oni small, optically curved and locked to the iris surface.
+
+2.5–5 s — The pupil contracts and the child blinks exactly once. During that
+blink, let the reflected oni slowly turn its head toward the camera, but keep
+that action visible only inside the iris. A thin band of moonlight flickers
+across both the door slit and the reflection.
+
+5–7 s — Stop the push at an intimate macro distance. Hold on recognition rather
+than fear: the eyelid settles, the gaze stays fixed and the child does not
+flinch. The oni remains facing outward in the reflection.
+
+Continuity locks: one eye, one reflected figure and one continuous camera move.
+Do not cut to the oni, place an extra face outside the iris, detach or enlarge
+the reflection, change the child's identity, morph the eye, add tears, text,
+logos or a jump scare. Preserve physically plausible reflection perspective
+through the push and blink.
+
+Sound is sparse: paper fibres creaking softly, distant procession footsteps,
+night wind and one controlled breath.
+```
+
+**Why it works:** the reveal and reaction occupy different spatial layers of
+the same shot. Assigning the child the blink and pupil change while the reflected
+oni owns the head turn gives Seedance two unambiguous motion channels and avoids
+a continuity-breaking reverse angle.
+
+**Sources:** Leon Harris / Project Kinmuku's August 21, 2026
+[Seedance 2.0 render commit](https://github.com/Leonkharris/nextframe-site/commit/f6e63e53b1c6a33ae86566113d37c5c6fe1caa62),
+the committed
+[complete episode prompt data](https://github.com/Leonkharris/nextframe-site/blob/f6e63e53b1c6a33ae86566113d37c5c6fe1caa62/ProjectKinmuku/episodes_data.js),
+and the
+[resulting shot 04 MP4](https://github.com/Leonkharris/nextframe-site/blob/f6e63e53b1c6a33ae86566113d37c5c6fe1caa62/ProjectKinmuku/assets/episodes/ep1/clips/shot04.mp4).
+
+---
+
+### 232. Against-current procession abandonment
+
+**Verified model:** Seedance 2.0 — the original creator committed the complete
+shot prompt and the corresponding Seedance 2.0 render on August 21, 2026
+
+**Use case:** abandonment beat, crowd-versus-hero motion contrast, restrained
+fantasy acting, wide environmental storytelling  
+**Mode:** cinematic text-to-video  
+**Settings:** one 7–10 second 16:9 live-action period-fantasy shot, native
+ambience, no dialogue or captions
+
+```text
+Create one wide rear-view night shot on a mountain road. A lone horned oni in a
+heavy robe stands motionless near the centre foreground. A shadowy procession
+of travellers, banners and dim lanterns flows around him, follows the bend and
+continues away into mist. Cold moonlight outlines his horns and shoulders while
+small amber lanterns recede into the distance.
+
+Use a single very slow push toward the oni's back. The camera never overtakes or
+orbits him. The procession owns the large motion: walkers pass on both sides,
+cloth and lanterns sway, and the line steadily empties into the bend. Passing
+wind streams the oni's hair in the same direction, but his robe retains weight.
+
+Give the oni only three restrained actions across the shot: his shoulders lower
+by a few centimetres, his head tilts a fraction toward the departing line, and
+one visible hand gradually closes. He never turns around, steps forward, waves,
+chases the group or collapses. Finish with more empty road visible between him
+and the last lantern than at the start.
+
+Continuity locks: preserve one road bend, one moon direction, one horn shape,
+one costume and a coherent procession path. Do not duplicate walkers, reverse
+the crowd, make figures pass through the oni, move the landscape, cut, zoom
+abruptly, add dialogue, subtitles, logos or melodramatic crying.
+
+Sound begins with layered footsteps, cloth and low night wind, then lets the
+footsteps and lantern rattle recede until the oni's breath is the nearest sound.
+```
+
+**Why it works:** abandonment is expressed as relative motion rather than facial
+exposition. The crowd, wind and camera advance while the lead remains rooted;
+the three small acting beats preserve readability without competing with the
+procession or asking the model to invent a close-up.
+
+**Sources:** Leon Harris / Project Kinmuku's August 21, 2026
+[Seedance 2.0 render commit](https://github.com/Leonkharris/nextframe-site/commit/f6e63e53b1c6a33ae86566113d37c5c6fe1caa62),
+the committed
+[complete episode prompt data](https://github.com/Leonkharris/nextframe-site/blob/f6e63e53b1c6a33ae86566113d37c5c6fe1caa62/ProjectKinmuku/episodes_data.js),
+and the
+[resulting shot 06 MP4](https://github.com/Leonkharris/nextframe-site/blob/f6e63e53b1c6a33ae86566113d37c5c6fe1caa62/ProjectKinmuku/assets/episodes/ep1/clips/shot06.mp4).
+
+---
+
+### 233. Grooming-mask micro-expression rupture
+
+**Verified model:** Seedance 2.0 — the original creator committed the complete
+shot prompt and the corresponding Seedance 2.0 render on August 21, 2026
+
+**Use case:** villain taunt reaction plate, concealed emotional injury, precise
+micro-performance, creature-character continuity  
+**Mode:** cinematic text-to-video  
+**Settings:** one 6–8 second 16:9 live-action fantasy shot, native ambience,
+silent performance plate
+
+```text
+Create one medium-close night shot of a poised cat-yokai seated above a quiet
+street in a black kimono. Moonlight makes a clean rim along her cheek, ear and
+shoulder. One hand is raised as she slowly grooms a single claw; her tail curls
+behind her and gives occasional controlled flicks. Keep her expression elegant,
+amused and deliberately unhurried.
+
+Move the camera in a restrained arc of less than thirty degrees. During the
+first half, she performs effortless superiority: one measured tongue-to-claw
+contact, half-lidded eyes and a small knowing smile. At the midpoint, stop the
+grooming for less than half a second. Her eyes flatten and the smile almost
+disappears, revealing that an old insult landed. She immediately covers the
+rupture: the smile returns a little sharper, the tail flicks once and she resumes
+grooming with slightly greater pressure until the end.
+
+Do not turn the moment into anger or surprise. She never bares her teeth,
+lunges, looks into camera, changes pose or speaks. Preserve one face, two cat
+ears, one tail, one raised hand and the same claw throughout. Prevent extra
+fingers, duplicated tongues, fur-to-skin morphs, wardrobe drift, a full orbit,
+cuts, captions, logos or exaggerated anime symbols.
+
+Sound is only high night wind, distant street ambience, a soft cloth movement
+and the faint claw-grooming contact. Add any taunting dialogue later in post so
+the generated plate remains focused on the facial rupture.
+```
+
+**Why it works:** the prompt treats composure as a timed performance with one
+brief violation, then a stronger cover. The grooming pause, eye flattening and
+single tail flick are separate, countable cues; limiting the arc and anatomy
+reduces the usual creature-character drift.
+
+**Sources:** Leon Harris / Project Kinmuku's August 21, 2026
+[Seedance 2.0 render commit](https://github.com/Leonkharris/nextframe-site/commit/f13c1875812bd3dbcf2c0c7b0ac679f89d493380),
+the committed
+[complete episode prompt data](https://github.com/Leonkharris/nextframe-site/blob/f13c1875812bd3dbcf2c0c7b0ac679f89d493380/ProjectKinmuku/episodes_data.js),
+and the
+[resulting shot 08 MP4](https://github.com/Leonkharris/nextframe-site/blob/f13c1875812bd3dbcf2c0c7b0ac679f89d493380/ProjectKinmuku/assets/episodes/ep2/clips/shot08.mp4).
+
 ## Reusable templates
 
 ### Net-displacement endpoint conflict gate
@@ -15641,6 +15804,9 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Leon Harris / Project Kinmuku — three newly rendered Seedance 2.0 character-performance shots: iris-layered recognition, stillness-against-procession abandonment and grooming-mask rupture](https://github.com/Leonkharris/nextframe-site/commit/f6e63e53b1c6a33ae86566113d37c5c6fe1caa62) ([second render commit](https://github.com/Leonkharris/nextframe-site/commit/f13c1875812bd3dbcf2c0c7b0ac679f89d493380), [complete episode prompt data](https://github.com/Leonkharris/nextframe-site/blob/f13c1875812bd3dbcf2c0c7b0ac679f89d493380/ProjectKinmuku/episodes_data.js))
+
 
 - [Vlad Yasko / stopscroll-hero — production Seedance 2.0 nine-panel hero, observed beat adherence and rendered-frame chapter remapping](https://github.com/yasikvlad/stopscroll-hero/commit/48044439b7a433d14045371368b18d0b8a1c286e) ([complete prompts](https://github.com/yasikvlad/stopscroll-hero/blob/48044439b7a433d14045371368b18d0b8a1c286e/references/prompts.md), [full delivery workflow](https://github.com/yasikvlad/stopscroll-hero/blob/48044439b7a433d14045371368b18d0b8a1c286e/SKILL.md))
 
