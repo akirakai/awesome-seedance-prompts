@@ -15504,6 +15504,96 @@ detectable at this cheaper boundary.
 and the committed
 [complete endpoint derivation, contact-sheet and readiness-gate method](https://github.com/ronyantonydev/agentic-video-pipeline/blob/4db306cac227f7d8ed7fb46a5ada52ed4f8a5972/.claude/skills/plan-video/SKILL.md).
 
+### Nine-panel scroll-scrub hero with rendered-beat remapping
+
+**Verified model:** Seedance 2.0 (`seedance_2_0`, 15 seconds, 1080p,
+standard mode, high bitrate, audio off) — the original creator publishes the
+complete production route, reports its observed six-to-seven-beat adherence,
+and documents a shipped 44-second, seven-chapter scroll-scrub implementation
+
+Use this when a landing-page hero will be explored by scrolling rather than
+watched linearly. Give Seedance a clean opening frame plus a compact 3×3 visual
+plan, but derive all interactive chapter boundaries from the returned video.
+
+```text
+INPUT CONTRACT
+@StartFrame = the approved clean, full-bleed opening photograph.
+@Image1 = the authorized identity and wardrobe reference.
+@Image2 = one approved 3×3 storyboard, nine panels read left-to-right and
+top-to-bottom. Panel numbers are planning marks only.
+Model = seedance_2_0.
+Duration = 15 seconds.
+Resolution = 1080p.
+Mode = standard.
+Bitrate = high.
+Generated audio = off.
+
+REFERENCE OWNERSHIP
+@StartFrame owns the exact opening composition, person, pose, location and light.
+@Image1 owns the same adult identity, face, body proportions and wardrobe in
+every beat.
+@Image2 owns only shot order, framing intent, action progression and visual
+rhythm. Never render its grid, gutters, number badges or all nine panels at once.
+
+TIMELINE
+[0.0–1.6s] Beat 1 — [VISIBLE HOOK ACTION] with [ONE CAMERA MOVE].
+[1.6–3.2s] Beat 2 — [ACTION / LOCATION CHANGE] joined by [MATCH CUT].
+[3.2–4.8s] Beat 3 — [ONE READABLE EVENT].
+[4.8–6.4s] Beat 4 — [ONE READABLE EVENT].
+[6.4–8.0s] Beat 5 — [ONE READABLE EVENT].
+[8.0–9.4s] Beat 6 — [ONE READABLE EVENT].
+[9.4–10.8s] Beat 7 — [ONE READABLE EVENT].
+[10.8–12.8s] Beat 8 — [OPTIONAL SUPPORTING EVENT].
+[12.8–15.0s] Beat 9 — [CALM FINAL COMPOSITION]; motion decelerates into a
+stable near-still suitable for the terminal page state.
+
+VISUAL LOCK
+Use [CINEMA-PRIME / DOCUMENTARY] optics, [PALETTE], natural skin and one coherent
+light logic. Camera movement is smooth and motivated. Preserve identity and
+wardrobe through every realized beat.
+No text, caption, subtitle, interface, logo, watermark, visible storyboard,
+split screen, letterbox, face morph, extra limb or unplanned duplicate person.
+
+ADHERENCE EXPECTATION
+Nine requested beats are a planning ceiling, not a promise. Do not reject an
+otherwise coherent take merely because Seedance merges two adjacent panels.
+The required minimum is [6 / 7] distinct, ordered, useful visual states plus the
+stable final state. Reject only if the narrative order breaks, identity drifts,
+the opening ignores @StartFrame, or no terminal hold exists.
+
+RENDERED-BEAT REMAPPING
+1. Decode the returned master and record its real frame rate and total frames.
+2. Extract an evenly sampled 3×3 contact sheet.
+3. Mark the exact first and last frame of each visually distinct realized beat.
+4. Convert every boundary to normalized progress:
+   progress = frame_index / (total_frames - 1).
+5. Assign page chapters only to those observed ranges; leave a 0.02–0.03
+   progress gap between adjacent text chapters.
+6. Never copy prompt timecodes directly into the page. If Beats 5 and 6 merged,
+   merge or rewrite their chapter copy instead of forcing an absent boundary.
+7. For reverse scrolling, deliver a WebP frame sequence rather than depending
+   on random seeking inside the encoded video.
+
+ACCEPTANCE
+Pass only if the opening matches @StartFrame, at least [MINIMUM BEATS] useful
+states appear in order, the same person persists, the final frame is calm, and
+each chapter appears solely over the visual state verified on the contact sheet.
+Retain the clean video master, contact sheet, boundary ledger and frame sequence.
+```
+
+**Why it works:** a dense storyboard helps Seedance cover more visual territory,
+but exact prompt timecodes are not reliable enough to drive an interface. The
+returned-frame ledger turns stochastic timing into deterministic page behavior:
+merged beats become an editorial choice, reverse scroll stays responsive, and
+the terminal hold supplies a stable final CTA instead of a mid-motion freeze.
+
+**Source:** Vlad Yasko's August 21, 2026
+[Seedance 2.0 production workflow commit](https://github.com/yasikvlad/stopscroll-hero/commit/48044439b7a433d14045371368b18d0b8a1c286e),
+the committed
+[complete nine-panel and Seedance prompt suite](https://github.com/yasikvlad/stopscroll-hero/blob/48044439b7a433d14045371368b18d0b8a1c286e/references/prompts.md),
+and the
+[full generation, contact-sheet remapping and delivery method](https://github.com/yasikvlad/stopscroll-hero/blob/48044439b7a433d14045371368b18d0b8a1c286e/SKILL.md).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -15551,6 +15641,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Vlad Yasko / stopscroll-hero — production Seedance 2.0 nine-panel hero, observed beat adherence and rendered-frame chapter remapping](https://github.com/yasikvlad/stopscroll-hero/commit/48044439b7a433d14045371368b18d0b8a1c286e) ([complete prompts](https://github.com/yasikvlad/stopscroll-hero/blob/48044439b7a433d14045371368b18d0b8a1c286e/references/prompts.md), [full delivery workflow](https://github.com/yasikvlad/stopscroll-hero/blob/48044439b7a433d14045371368b18d0b8a1c286e/SKILL.md))
 
 - [ronyantonydev / Agentic Video Pipeline — paid Seedance 2.0 endpoint-frame review, parent-derived last frame and pre-generation contact-sheet gate](https://github.com/ronyantonydev/agentic-video-pipeline/commit/4db306cac227f7d8ed7fb46a5ada52ed4f8a5972) ([complete planning and readiness method](https://github.com/ronyantonydev/agentic-video-pipeline/blob/4db306cac227f7d8ed7fb46a5ada52ed4f8a5972/.claude/skills/plan-video/SKILL.md))
 
