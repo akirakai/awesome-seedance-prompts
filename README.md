@@ -10827,6 +10827,81 @@ and the
 
 ## Reusable templates
 
+### Provider-aware generation-time bitrate-mode gate
+
+**Verified model:** Seedance 2.5 — Venice's official queue documentation exposes
+`bitrate_mode: "standard" | "high"` for every public Seedance 2.5 variant, and
+the original harness author reports that real `high` renders encode at roughly
+five to six times the standard bitrate with visibly fewer compression artifacts
+
+Use this before queueing a detail-sensitive Seedance render. It controls the
+encoder that creates the returned asset; a later transcode cannot recover detail
+already discarded by the standard generation encode.
+
+```text
+MODEL AND ENDPOINT
+Exact model: [SEEDANCE 2.5 T2V / I2V / R2V MODEL ID].
+Queue endpoint: [PROVIDER VIDEO QUEUE ENDPOINT].
+Live capability check confirms bitrate_mode is accepted: [YES / NO].
+
+DELIVERY INTENT
+Master or finishing render: [YES / NO].
+Fine-detail risk: [HAIR / TEXTURE / PARTICLES / FOLIAGE / FAST MOTION / GRAIN].
+File-size priority: [QUALITY FIRST / SMALLER DELIVERY FILE].
+
+ROUTING
+If exact model is Seedance 2.5 and the endpoint exposes bitrate_mode:
+- quality-first or finishing render -> send bitrate_mode = "high";
+- draft, proxy or storage-constrained render -> send bitrate_mode = "standard".
+If the field is unsupported or belongs to another model family, omit it.
+Never forward a Seedance-only field to Wan, Kling, Veo, LTX or an unknown
+fallback merely because the original request selected Seedance.
+
+QUEUE BODY
+{
+  "model": "[EXACT SEEDANCE 2.5 MODEL ID]",
+  "prompt": "[COMPLETE VIDEO PROMPT]",
+  "duration": "[VALID DURATION]",
+  "resolution": "[VALID RESOLUTION]",
+  "aspect_ratio": "[VALID ASPECT RATIO WHEN ACCEPTED]",
+  "bitrate_mode": "[high | standard]"
+}
+
+PROVENANCE
+Record beside the generation:
+- requested model and returned model;
+- provider and endpoint;
+- bitrate_mode actually sent;
+- queue ID;
+- resolution, duration and generation timestamp.
+
+RETURNED-ASSET GATE
+Inspect the downloaded stream rather than trusting the request:
+[WIDTH × HEIGHT], [CODEC], [VIDEO BITRATE], [FILE SIZE], [DURATION].
+For a controlled comparison, hold prompt, references, model, duration and
+resolution constant; vary only bitrate_mode. Keep "high" only when its returned
+stream is materially larger and the intended detail survives inspection.
+Do not describe an ordinary standard encode as high when the field was omitted,
+stripped by routing or sent to a fallback model.
+```
+
+**Why it works:** bitrate is a generation-time delivery control, not a prompt
+adjective. Binding it to the exact Seedance model and provider prevents silent
+loss through fallback routing; writing it into provenance makes a visually soft
+result diagnosable. Venice documents that the field changes file quality and
+size without changing queue price, while the production harness reports the
+observed bitrate increase and defaults Seedance 2.5 to `high`.
+
+Adapted from Jordan Urbs's August 21, 2026
+[Seedance 2.5 production-harness release and measured comparison](https://github.com/jordanurbs/venice-video-harness/commit/d56659e1a31c486075ec5b56ad3a43303825a546),
+the
+[model-aware bitrate resolver](https://github.com/jordanurbs/venice-video-harness/blob/d56659e1a31c486075ec5b56ad3a43303825a546/src/venice/models.ts),
+the
+[queue-body implementation](https://github.com/jordanurbs/venice-video-harness/blob/d56659e1a31c486075ec5b56ad3a43303825a546/src/venice/video.ts),
+and Venice's
+[official Seedance bitrate documentation commit](https://github.com/veniceai/api-docs/commit/082ce65cc7dd82b24d13175c399402a0be4c21f1).
+
+
 ### Net-displacement endpoint conflict gate
 
 **Verified model:** Seedance 2.0 — the original creator reports that binding the
@@ -15804,6 +15879,9 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Jordan Urbs / Venice Video Harness — measured Seedance 2.5 high-bitrate generation routing, model-family isolation and provenance capture](https://github.com/jordanurbs/venice-video-harness/commit/d56659e1a31c486075ec5b56ad3a43303825a546) ([queue implementation](https://github.com/jordanurbs/venice-video-harness/blob/d56659e1a31c486075ec5b56ad3a43303825a546/src/venice/video.ts), [official Venice bitrate documentation](https://github.com/veniceai/api-docs/commit/082ce65cc7dd82b24d13175c399402a0be4c21f1))
+
 
 - [Leon Harris / Project Kinmuku — three newly rendered Seedance 2.0 character-performance shots: iris-layered recognition, stillness-against-procession abandonment and grooming-mask rupture](https://github.com/Leonkharris/nextframe-site/commit/f6e63e53b1c6a33ae86566113d37c5c6fe1caa62) ([second render commit](https://github.com/Leonkharris/nextframe-site/commit/f13c1875812bd3dbcf2c0c7b0ac679f89d493380), [complete episode prompt data](https://github.com/Leonkharris/nextframe-site/blob/f13c1875812bd3dbcf2c0c7b0ac679f89d493380/ProjectKinmuku/episodes_data.js))
 
