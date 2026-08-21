@@ -15351,6 +15351,82 @@ fighting the bound images.
 [versioned field notes with the successful motion-and-voice-preserving
 world-replacement result](https://github.com/HossamDaoud83/CPS-Plugins-Official/blob/a9cbf6fce1c4f2fa380dad48ccbdf93d1fb2161b/plugins/studio/skills/cinema-pipeline/references/field-notes.md).
 
+
+### Reason-free lower-third caption reserve
+
+> **Type:** Reusable template / text-artifact failure control  
+> **Verified model:** Seedance 2.0 — the original developer states that this project's videos use Seedance 2.0, records two firsthand failures where explaining a subtitle reserve caused the model to render an unwanted caption layer, and commits the corrected production rule
+
+Use this when captions will be burned in after generation. Reserve composition
+without positively naming the thing the empty space is for; keep typography and
+its timing in the edit contract, not the visual-generation brief.
+
+```text
+OWNERSHIP
+Seedance owns the clean picture plate only.
+The editor owns every subtitle, caption, lower third, title, logo and end card.
+Do not send the post-production text content to the generation model.
+
+COMPOSITION
+[SHOT SIZE AND CAMERA]. Place [FACE / ACTION / CRITICAL PROP] in the middle or
+upper visual field with comfortable headroom.
+Lower third of frame kept clean and unobstructed.
+Continue with [SUBJECT ACTION], [ENVIRONMENT CHANGE], [CAMERA MOVE], [LIGHT]
+and [SOUND].
+
+Do not write "space for subtitles," "caption-safe area," "text goes here" or
+any equivalent positive explanation inside the prompt. Those phrases introduce
+the visual concept that the clean zone is supposed to exclude.
+
+DOCUMENT AND SCREEN HANDLING
+If a contract, report, phone or monitor must appear, show [PAGE EDGE / SIGNING
+HAND / SCREEN GLOW / OUT-OF-FOCUS LAYOUT] without legible copy. Preserve the
+physical object and interaction; create all readable content separately in post.
+
+TEXT-SUPPRESSION TAIL
+No subtitles, no captions, no on-screen text, no watermark, no logo.
+
+POST-PRODUCTION HANDOFF
+After the clean plate passes, burn [APPROVED CAPTION FILE] into the reserved
+lower third with [FONT / SIZE / SAFE MARGIN / TIMING]. Keep the generated master
+unchanged and retain a clean version without text.
+
+INTENTIONAL-TEXT EXCEPTION
+If the shot truly requires one native slogan, route it as a separate text-bearing
+shot. Specify the exact slogan, time, position, reveal and style; replace the
+tail with "no other on-screen text besides the approved slogan." Never weaken
+the text lock for ordinary dialogue captions.
+
+ACCEPTANCE
+Pass only if:
+- the lower third remains visually quiet for the whole shot;
+- faces, hands, actions and critical props never enter the caption footprint;
+- no letters, pseudo-letters, subtitle bar, title, logo or watermark are rendered;
+- documents and screens contain no accidentally readable invented copy;
+- the clean plate and post-captioned master are both retained.
+
+FAILURE ROUTING
+If text appears, remove every positive mention of subtitles, captions, overlays,
+titles and lower thirds except the neutral sentence "Lower third of frame kept
+clean and unobstructed," then repeat the identical shot with the suppression
+tail. If the composition is still crowded, move the subject upward or widen the
+shot; do not explain the caption workflow to the model.
+```
+
+**Why it works:** a positive explanation such as "kept clean for subtitles"
+activates both halves of the phrase: the requested clean zone and the very text
+concept that should be absent. A neutral spatial instruction reserves the same
+pixels without priming typography, while the short negative tail sets an
+explicit rejection test. Separating generation from caption burn-in also
+preserves a reusable clean master.
+
+**Sources:** xingke2023's August 21, 2026
+[Seedance 2.0 production-rule commit](https://github.com/xingke2023/seedance/commit/56bd1ba01d6dd4dbee84f093ba733155b4162e7b),
+the committed
+[complete caption-safe-area rule](https://github.com/xingke2023/seedance/blob/56bd1ba01d6dd4dbee84f093ba733155b4162e7b/backend/src/prompt/skills/subtitle-safe-area.md),
+and the
+[firsthand two-failure provenance record](https://github.com/xingke2023/seedance/blob/56bd1ba01d6dd4dbee84f093ba733155b4162e7b/backend/src/prompt/skills/SOURCES.md).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -15398,6 +15474,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [xingke2023 — Seedance 2.0 lower-third reserve corrected after two unwanted native-caption generations](https://github.com/xingke2023/seedance/commit/56bd1ba01d6dd4dbee84f093ba733155b4162e7b) ([complete safe-area rule](https://github.com/xingke2023/seedance/blob/56bd1ba01d6dd4dbee84f093ba733155b4162e7b/backend/src/prompt/skills/subtitle-safe-area.md), [failure provenance](https://github.com/xingke2023/seedance/blob/56bd1ba01d6dd4dbee84f093ba733155b4162e7b/backend/src/prompt/skills/SOURCES.md))
 
 - [Hossam Daoud — Seedance 2.5 direct account test of performance-and-voice-locked vehicle and world replacement, inline beat binding and native-language routing](https://github.com/HossamDaoud83/CPS-Plugins-Official/commit/a9cbf6fce1c4f2fa380dad48ccbdf93d1fb2161b) ([versioned field notes](https://github.com/HossamDaoud83/CPS-Plugins-Official/blob/a9cbf6fce1c4f2fa380dad48ccbdf93d1fb2161b/plugins/studio/skills/cinema-pipeline/references/field-notes.md))
 
