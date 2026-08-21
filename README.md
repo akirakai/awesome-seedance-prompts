@@ -15427,6 +15427,83 @@ the committed
 and the
 [firsthand two-failure provenance record](https://github.com/xingke2023/seedance/blob/56bd1ba01d6dd4dbee84f093ba733155b4162e7b/backend/src/prompt/skills/SOURCES.md).
 
+### Parent-derived endpoint-pair review gate
+
+**Verified model:** Seedance 2.0 (`seedance_2_0`) — the original creator's
+revised paid-production contract assigns this exact route to anchor shots,
+quantifies endpoint review across 27 planned shots, and records two full-clip
+failures whose defects were already visible in unreviewed endpoint frames
+
+Use this before a first-and-last-frame generation when independently authored
+endpoints may describe different shots instead of two instants from one shot.
+Derive the end from the approved start, then review every pair before submitting
+any billable video.
+
+```text
+SHOT RECORD
+Shot ID = [STABLE UNIQUE ID].
+Video model = seedance_2_0.
+Duration = [SECONDS].
+Narrative job = [ONE MOMENT / ACTION / TRANSITION].
+Camera contract = [SHOT SIZE / LENS FEEL / HEIGHT / ANGLE / AXIS].
+Continuity locks = [IDENTITY / WARDROBE / PROP / LOCATION / LIGHT / PALETTE].
+Required action delta = [VISIBLE CHANGE POSSIBLE WITHIN SECONDS].
+
+START FRAME
+Create @StartFrame as the exact first instant of the shot:
+[SUBJECT BLOCKING, PROP STATE, ENVIRONMENT AND CAMERA CONTRACT].
+No later story stage, completed action, alternate angle or payoff.
+
+PARENT-DERIVED END FRAME
+Use the approved @StartFrame as image_references input.
+Create @EndFrame by changing only:
+- subject action delta: [SMALL PHYSICALLY REACHABLE CHANGE];
+- prop or environment delta: [ONE CAUSAL RESULT];
+- expression delta: [MICRO-EXPRESSION, IF NEEDED].
+
+Preserve the identical person, wardrobe, prop design, location geometry,
+camera position, lens, framing, screen direction, light direction and palette.
+@EndFrame is only [SECONDS] later in the SAME shot. It is not a new setup,
+later scene, different stage of progress, wider angle or reset composition.
+
+PAIR REVIEW — FREE GATE BEFORE VIDEO
+Place @StartFrame and @EndFrame side by side with Shot ID and duration.
+Reject the pair if:
+- camera position, focal feel, crop or subject scale changes;
+- the subject jumps across the room, stands from a seated setup without the
+  duration to perform it, or reaches a later narrative stage;
+- face, wardrobe, hand count, prop ownership, layout, weather or light changes;
+- the two frames are identical although net motion is required;
+- either frame contradicts the shot prompt.
+
+Regenerate only the failed endpoint. Do not submit video until every pair passes.
+
+VIDEO HANDOFF
+Bind @StartFrame as first frame and @EndFrame as last frame.
+Between them, perform only [CONTINUOUS ACTION PATH] with [CONTACT / CAUSAL BEAT].
+Preserve the reviewed camera and continuity locks throughout.
+No cut, reframing, teleport, identity drift, premature arrival, reversal or
+extra story beat.
+
+DELIVERY LOG
+Store Shot ID, both frame prompts and hashes, pair-review decision, exact model,
+video prompt, job ID, cost and returned asset URL. A downloaded file is not an
+accepted shot; compare its first and last decoded frames with the approved pair.
+```
+
+**Why it works:** two text-only endpoint generations can each look plausible
+while belonging to different camera setups. Parenting the end frame from the
+approved start converts identity, set and composition into image evidence, and
+the contact-sheet gate exposes impossible state jumps before the expensive
+video interpolation. The source production measured 54 review frames at
+$3.38 against $29.22 of video and found that two paid failures were already
+detectable at this cheaper boundary.
+
+**Source:** ronyantonydev's August 21, 2026
+[paid-production planning correction and failure record](https://github.com/ronyantonydev/agentic-video-pipeline/commit/4db306cac227f7d8ed7fb46a5ada52ed4f8a5972)
+and the committed
+[complete endpoint derivation, contact-sheet and readiness-gate method](https://github.com/ronyantonydev/agentic-video-pipeline/blob/4db306cac227f7d8ed7fb46a5ada52ed4f8a5972/.claude/skills/plan-video/SKILL.md).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -15474,6 +15551,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [ronyantonydev / Agentic Video Pipeline — paid Seedance 2.0 endpoint-frame review, parent-derived last frame and pre-generation contact-sheet gate](https://github.com/ronyantonydev/agentic-video-pipeline/commit/4db306cac227f7d8ed7fb46a5ada52ed4f8a5972) ([complete planning and readiness method](https://github.com/ronyantonydev/agentic-video-pipeline/blob/4db306cac227f7d8ed7fb46a5ada52ed4f8a5972/.claude/skills/plan-video/SKILL.md))
 
 - [xingke2023 — Seedance 2.0 lower-third reserve corrected after two unwanted native-caption generations](https://github.com/xingke2023/seedance/commit/56bd1ba01d6dd4dbee84f093ba733155b4162e7b) ([complete safe-area rule](https://github.com/xingke2023/seedance/blob/56bd1ba01d6dd4dbee84f093ba733155b4162e7b/backend/src/prompt/skills/subtitle-safe-area.md), [failure provenance](https://github.com/xingke2023/seedance/blob/56bd1ba01d6dd4dbee84f093ba733155b4162e7b/backend/src/prompt/skills/SOURCES.md))
 
