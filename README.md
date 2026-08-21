@@ -15425,6 +15425,82 @@ and the committed
 [reference-cropping, model-route and pixel-budget implementation](https://github.com/iliqn8/shopify-agent/blob/22cf41c6c5de077251f5170b61eb694bbf300d01/clip_studio.py).
 
 
+### Endpoint-pair adaptive-aspect routing gate
+
+**Verified model:** Seedance 2.5 (`bytedance/seedance-2-5` through kie.ai,
+480p and 720p routes) — the original developer recorded the paid production
+route, the provider's live validation failure for a first-plus-last-frame
+request with an explicit aspect ratio, and the corrected request builder
+
+Use this when Seedance must interpolate between an approved opening frame and
+an approved closing frame. In this mode, make the two images own the delivery
+shape and route the request with `aspect_ratio: "adaptive"`; do not leave an
+apparently active aspect picker that the provider will reject or ignore.
+
+```text
+MODEL AND TASK CONTRACT
+Provider = [PROVIDER].
+Exact model = bytedance/seedance-2-5.
+Task = image-to-video with first frame + last frame.
+Resolution = [480p / 720p].
+Duration = [4–30 WHOLE SECONDS].
+Audio = [ON / OFF].
+Delivery aspect = derived from the endpoint pair, not a separate selector.
+
+ENDPOINT-PAIR PREFLIGHT
+@Image1 = approved first frame.
+@Image2 = approved last frame.
+
+Before submission:
+- make @Image1 and @Image2 the same pixel dimensions and aspect ratio;
+- preserve the same subject identity, product geometry, camera axis, lens
+  family, environment layout and light direction across both endpoints;
+- encode the intended delivery shape in both images;
+- reject a stretched, padded or differently cropped endpoint;
+- disable the manual aspect picker and label the job "frame-derived aspect."
+
+PROMPT
+Begin exactly from @Image1 and arrive exactly at @Image2.
+Preserve [IDENTITY / PRODUCT / WARDROBE / SET / CAMERA AXIS] throughout.
+Interpolate one continuous [SUBJECT ACTION OR CAMERA MOVE] from the opening
+state to the closing state with natural acceleration, contact and settling.
+No cut, detour, third composition, reframing, aspect change, duplicated subject,
+invented object, geometry drift or endpoint substitution.
+
+REQUEST ROUTING
+If both endpoint frames are present:
+  first_frame_url = @Image1
+  last_frame_url = @Image2
+  aspect_ratio = "adaptive"
+  resolution = [480p / 720p]
+  duration = [SECONDS]
+
+Never reuse the text-to-video or single-reference aspect payload unchanged.
+Inspect the serialized request immediately before submission. Fail closed if a
+literal 16:9, 9:16 or 1:1 value survives beside the endpoint pair.
+
+RETURNED-ASSET GATE
+Read the delivered stream dimensions and compare them with the endpoint ratio.
+Approve only when the returned shape, opening frame and closing state match the
+contract. If they do not, retain the failed request and provider response; do
+not silently crop the paid output or claim that the disabled UI selection was
+honored.
+```
+
+**Why it works:** the endpoint images and the API field stop competing for
+ownership of composition. The source captured the provider rejection that
+first-plus-last-frame tasks support only adaptive aspect routing, then made the
+request builder and UI share that rule. This complements the single-reference
+crop-and-pixel-budget preflight above: that template prepares one reference for
+multiple shapes, while this one prevents a two-endpoint request from failing or
+misreporting its shape.
+
+**Source:** bioauraio's
+[Seedance 2.5 endpoint-aspect correction commit](https://github.com/bioauraio/rap-clips-studio/commit/70100393704d6f08cd221d2815a2ab2f5a83595d)
+and the committed
+[exact-model request builder and frame-derived aspect gate](https://github.com/bioauraio/rap-clips-studio/blob/70100393704d6f08cd221d2815a2ab2f5a83595d/backend/mediagen.py).
+
+
 ### Reference-input graph serialization preflight
 
 > **Type:** Reusable template / failure-control technique  
@@ -15962,6 +16038,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [bioauraio / Rap Clips Studio — Seedance 2.5 first-plus-last-frame adaptive-aspect correction, live provider rejection and exact request builder](https://github.com/bioauraio/rap-clips-studio/commit/70100393704d6f08cd221d2815a2ab2f5a83595d) ([model registry and request-routing implementation](https://github.com/bioauraio/rap-clips-studio/blob/70100393704d6f08cd221d2815a2ab2f5a83595d/backend/mediagen.py))
 
 - [Ankit / WOD Armour redesign — Seedance 2.5 product-inflation master, measured deformation boundary and 49-frame ping-pong delivery](https://github.com/ankitstage21/wodarmour-redesign/commit/e4477e30408d78c326971154d3bd856ea7d06f76) ([generated clip](https://github.com/ankitstage21/wodarmour-redesign/blob/e4477e30408d78c326971154d3bd856ea7d06f76/assets/inflate.mp4), [approved start frame](https://github.com/ankitstage21/wodarmour-redesign/blob/e4477e30408d78c326971154d3bd856ea7d06f76/refs/start_9x16.jpg), [retained frames](https://github.com/ankitstage21/wodarmour-redesign/tree/e4477e30408d78c326971154d3bd856ea7d06f76/assets/inf-frames), [delivery code](https://github.com/ankitstage21/wodarmour-redesign/blob/e4477e30408d78c326971154d3bd856ea7d06f76/normatec-2.js))
 
