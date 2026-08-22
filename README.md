@@ -13717,6 +13717,88 @@ Adapted from SAGAIA's August 13, 2026
 which records the delivered result, repeated near-contact failure, exact route,
 cost comparison and queue-retrieval correction.
 
+### Function-weighted reference-transfer acceptance gate
+
+**Verified model:** Seedance 2.0 (video-conditioned) — the H2R-Bench authors
+evaluated 120 egocentric demonstrations against two target robot embodiments,
+and published six source/Seedance output pairs with per-clip functional scores
+on August 22, 2026
+
+Use this when a reference video is meant to transfer an action's function to a
+different character, hand, robot, product or tool. Define the required state
+changes and contacts before generation, then judge the returned video against
+those events instead of accepting a polished but causally incorrect imitation.
+
+```text
+INPUT CONTRACT
+@Video1 = the authorized source demonstration, including its full preparation,
+contact and recovery phases.
+@Target = the approved target identity or embodiment reference.
+Exact model = Seedance 2.0, video-conditioned.
+Task family = [RIGID TRANSPORT / ARTICULATED CHANGE / INSERTION / DEFORMABLE /
+BULK TRANSFER / SURFACE CHANGE].
+Target goal state = [VISIBLE FINAL OBJECT STATE].
+Required ordered events =
+1. [APPROACH / GRASP / ALIGN]
+2. [FUNCTIONAL CONTACT BETWEEN NAMED SURFACES]
+3. [OBJECT RESPONSE CAUSED BY THAT CONTACT]
+4. [RELEASE / WITHDRAW / CLOSE / RECOVER].
+
+TRANSFER BRIEF
+Reperform @Video1's manipulation with @Target as the only acting embodiment.
+Preserve the demonstrated event order, object identities and functional result.
+Keep the active end effector and every contact boundary visible at each required
+event. Object motion must begin only after the named contact supplies a visible
+cause. Preserve physically plausible grip, support, force direction and release.
+
+Do not retain the source human hand, substitute another tool, skip an event,
+change an object without visible interaction, fake completion through a cut,
+hide the contact outside frame, merge the embodiment with the object, or end in
+a visually plausible but functionally different state.
+
+FUNCTION-FIRST CONTACT SHEET
+Build checkpoints from @Video1 at each required event and at the final state.
+Extract the corresponding returned frames; do not compare only the first and
+last frame. Score each dimension from 0 to 1:
+M1 Goal-state completion
+M2 Required action-event completion
+M3 Functional contact transfer
+M4 Target-embodiment correctness
+M5 Task-agnostic video quality
+
+H2RCore = 100 × (0.15*M1 + 0.15*M2 + 0.30*M3 + 0.30*M4 + 0.10*M5)
+
+HARD GATES
+Reject regardless of beauty score if the original human hand survives, the
+wrong end effector performs the task, any required contact is missing, the
+object changes without supported interaction, or the final state differs from
+the declared goal. Set the project pass threshold before reviewing variants;
+rank passing takes by H2RCore, then use M5 only as the tie-breaker.
+
+RETRY ROUTING
+Label the first failed dimension and change one cause:
+- M1/M2 fail: simplify the event ledger or split the task.
+- M3 fail: expose and lengthen the contact phase.
+- M4 fail: strengthen the target reference and forbid source anatomy.
+- M5-only fail: preserve the functional prompt and adjust camera or lighting.
+Never repair a functional failure by selecting the prettiest take.
+```
+
+**Why it works:** H2R-Bench found generic video quality and transfer validity
+nearly rank-independent (Spearman rho 0.14). Seedance 2.0 led the published
+video-conditioned comparison at 77.3 for a parallel-jaw gripper and 84.6 for a
+dexterous hand, yet the benchmark still exposes failures that ordinary visual
+review misses. Giving contact and embodiment 60% of the score prevents clean
+footage from hiding the wrong actor, unsupported object response or a missing
+action event.
+
+**Sources:** the H2R-Bench authors'
+[Seedance 2.0 transfer-gallery commit](https://github.com/Rongdingyi/H2R-Bench/commit/6549ae11bb9b361c8690dbb460ea3a67f590460d),
+[benchmark definition and five weighted metrics](https://github.com/Rongdingyi/H2R-Bench/blob/6549ae11bb9b361c8690dbb460ea3a67f590460d/README.md),
+and the paired
+[human source](https://github.com/Rongdingyi/H2R-Bench/blob/6549ae11bb9b361c8690dbb460ea3a67f590460d/docs/static/videos/gallery/f1-human.mp4) /
+[Seedance 2.0 result](https://github.com/Rongdingyi/H2R-Bench/blob/6549ae11bb9b361c8690dbb460ea3a67f590460d/docs/static/videos/gallery/f1-seedance.mp4).
+
 ### Heartbeat-stream long-render and named-model truth gate
 
 **Verified model:** Seedance 2.5 (`seedance-25-t2v`) — the original creator
@@ -16188,6 +16270,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [H2R-Bench — Seedance 2.0 video-conditioned human-to-robot transfer gallery and function-weighted H2RCore acceptance method](https://github.com/Rongdingyi/H2R-Bench/commit/6549ae11bb9b361c8690dbb460ea3a67f590460d) ([benchmark metrics](https://github.com/Rongdingyi/H2R-Bench/blob/6549ae11bb9b361c8690dbb460ea3a67f590460d/README.md), [human source](https://github.com/Rongdingyi/H2R-Bench/blob/6549ae11bb9b361c8690dbb460ea3a67f590460d/docs/static/videos/gallery/f1-human.mp4), [Seedance result](https://github.com/Rongdingyi/H2R-Bench/blob/6549ae11bb9b361c8690dbb460ea3a67f590460d/docs/static/videos/gallery/f1-seedance.mp4))
 
 - [semoji-ai / Auto Kairos — Seedance 2.0 mixed-response PNG-as-MP4 diagnosis, result-URL classification and byte-signature quarantine gate](https://github.com/semoji-ai/auto_kairos/commit/40e0ce7c78cdf3d97c35f54d1c141e12b3e972d6) ([versioned implementation](https://github.com/semoji-ai/auto_kairos/blob/40e0ce7c78cdf3d97c35f54d1c141e12b3e972d6/adobe/backend/video.py))
 
