@@ -10933,6 +10933,84 @@ and the
 
 ## Reusable templates
 
+### Framing-feasibility and prop-entry preflight
+
+**Verified model:** Seedance 2.5 — the original creator derived the checks from
+paid productions whose failed shots forced an off-screen phone into an 85 mm
+face close-up and asked already-occupied hands to perform a second action
+
+Use this before generating any beat that combines a tight shot, a prop, more
+than one subject, or sequential hand actions. It prevents a physically
+impossible brief from being “solved” through warped scale, extra limbs or
+teleporting objects.
+
+```text
+BEAT PREFLIGHT
+
+Beat [ID], [START–END].
+Declared frame: [SHOT SIZE] on [SUBJECT], [LENS FEEL].
+Core action: [ONE ACTION].
+Camera: [ONE MOVE].
+Visible terminal state: [WHAT THIS FRAME CAN ACTUALLY SHOW].
+
+1. FRAME-CAPACITY GATE
+List everything the beat asks the viewer to see:
+[FACE / SECOND PERSON / PROP / HANDS / ENVIRONMENT / END STATE].
+Approve only if all required evidence fits the declared shot size.
+If a face close-up also needs a distant prop or a second full subject, split the
+evidence into separate shots or widen the framing; never let the model invent a
+foreground shortcut.
+
+2. PROP-ENTRY GATE
+For every prop first appearing in this beat, declare one visible route:
+- already established at [SCREEN POSITION];
+- handed in by [CHARACTER] from [DIRECTION];
+- revealed by a motivated pan, tilt or rack focus.
+If no route exists, establish the prop in an earlier shot. Do not write “it
+suddenly appears” or “it lights up” while it is outside the frame.
+
+3. BODY-OCCUPANCY LEDGER
+At beat start:
+left hand = [FREE / HOLDING / COVERING / SUPPORTING];
+right hand = [FREE / HOLDING / COVERING / SUPPORTING];
+body = [POSE / LOAD / CONTACT].
+For each new action, name the limb that performs it and where its previous
+object goes. Reject simultaneous incompatible duties; insert a release, handoff
+or placement beat before reusing that limb.
+
+4. CURRENT-FRAME END-STATE GATE
+The terminal state may describe only visible evidence in this shot.
+A face close-up may end on [GAZE / MOUTH / BREATH / MICRO-EXPRESSION], not on
+the full positions of two people across a room. Move spatial facts to a medium
+or wide shot.
+
+5. AMPLITUDE GATE
+When the beat contains emotion, prescribe only two to four small cues in order,
+then cap their amplitude:
+[SUBTLE EYE CHANGE] → [MOUTH RELAXES].
+Everything else remains nearly still; no widened eyes, deep brow movement,
+open-mouth exaggeration or large shoulder gesture.
+
+APPROVAL ROW
+[BEAT ID] | [FRAME FIT PASS/FAIL] | [PROP ROUTE] |
+[LEFT/RIGHT HAND STATE] | [VISIBLE END STATE] | [FIX BEFORE GENERATION]
+
+Do not submit any row marked FAIL.
+```
+
+**Why it works:** Seedance will often render an impossible instruction rather
+than reject it. Converting composition and anatomy into a pre-generation ledger
+removes contradictions before they consume a paid attempt. The terminal-state
+gate also stops a close-up from being burdened with off-screen geography, while
+the amplitude cap keeps a useful micro-expression sequence from becoming
+melodrama.
+
+**Source:** Jacob Ye's [Seedance 2.5 production-failure review and v1.7
+method commit](https://github.com/jacobye2017-afk/jacob-ye-seedance-prompt/commit/b16cde84e8565697fcde10d8ca4cf54e903c0d82),
+published August 22, 2026; the
+[complete method](https://github.com/jacobye2017-afk/jacob-ye-seedance-prompt/blob/b16cde84e8565697fcde10d8ca4cf54e903c0d82/FORMULA.md#18-%E7%94%BB%E6%A1%86%E7%89%A9%E7%90%86%E5%8F%AF%E8%A1%8C%E6%80%A7%E4%B8%8E%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E7%BA%AA%E5%BE%8Bv17--%E7%83%A7%E7%A7%AF%E5%88%86%E6%8D%A2%E6%9D%A5%E7%9A%84)
+records the actual framing and occupied-hand failures.
+
 ### Measured failure-boundary ping-pong motion harvest
 
 **Verified model:** Seedance 2.5 (`seedance_2_5`, 6 seconds, 1080p,
@@ -16860,6 +16938,8 @@ Community examples and techniques referenced in this README:
 - [BentleyBlanks — Seedance 2.5 endpoint-anchored side-profile pose-transition plates](https://github.com/BentleyBlanks/bentleyblanks.github.io/commit/69fe9f458966564df0d4eeef833f1655c46f5476) ([full extraction and state-boundary method](https://github.com/BentleyBlanks/bentleyblanks.github.io/blob/69fe9f458966564df0d4eeef833f1655c46f5476/TunnelLight1943/docs/Rig.md), [kneel source MP4](https://github.com/BentleyBlanks/bentleyblanks.github.io/blob/69fe9f458966564df0d4eeef833f1655c46f5476/TunnelLight1943/_mocap/tr_kneel.mp4), [bend/pick source MP4](https://github.com/BentleyBlanks/bentleyblanks.github.io/blob/69fe9f458966564df0d4eeef833f1655c46f5476/TunnelLight1943/_mocap/tr_pick.mp4))
 
 - [ukaya17-jpg — Artlist Seedance 2.5 style-locked image-plus-audio lip-sync generation](https://github.com/ukaya17-jpg/AI-Animation-Studio/commit/9bb5e6f66d225b8d66ab69ce128a9beb9a4a26f5) ([working formula and cost record](https://github.com/ukaya17-jpg/AI-Animation-Studio/blob/9bb5e6f66d225b8d66ab69ce128a9beb9a4a26f5/docs/ses-rehberi.md), [generated MP4](https://github.com/ukaya17-jpg/AI-Animation-Studio/blob/9bb5e6f66d225b8d66ab69ce128a9beb9a4a26f5/backend/app/static/characters/talking_samples/kurnaz_demo.mp4))
+
+- [Jacob Ye — Seedance 2.5 framing-feasibility, prop-entry and body-occupancy production review](https://github.com/jacobye2017-afk/jacob-ye-seedance-prompt/commit/b16cde84e8565697fcde10d8ca4cf54e903c0d82)
 
 Official model references:
 
