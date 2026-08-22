@@ -14838,6 +14838,73 @@ without disturbing the approved edit.
 [complete first-frame/omni workflow and measured failure note](https://github.com/llm011/ethan-agent/blob/917a3316f586369778d75ee1adf1363d218b4087/ethan/defaults/skills/article-to-video/references/seedance-presenter-pipeline.md),
 and the
 [executable routing and splice implementation](https://github.com/llm011/ethan-agent/blob/917a3316f586369778d75ee1adf1363d218b4087/ethan/defaults/skills/article-to-video/scripts/seedance_presenter_pipeline.py).
+### Provider-response media-type authentication and quarantine gate
+
+**Verified model:** Seedance 2.0 (`seedance_2_0`) — the original developer
+generated scene 99 through the exact Higgsfield job type, then used `ffprobe`
+to establish that the saved `.mp4` was actually a 1792×1024 PNG returned
+alongside the real video candidates
+
+Use this after any successful Seedance task whose response may contain the input
+frame, poster image, thumbnail and generated video together. Treat the result
+object as untrusted routing data: identify a likely video before download, then
+authenticate the bytes before attaching the asset to a scene or marking the job
+complete.
+
+```text
+SUBMISSION RECORD
+Exact model = Seedance 2.0
+Record job ID, submitted prompt, input-frame IDs and the raw provider response.
+Do not discard the response merely because the provider reports success.
+
+CANDIDATE ROUTING
+Walk every returned field without assuming that the first key containing "url"
+is the generated video.
+1. Strong candidates: URLs whose path ends in .mp4, .mov, .m4v or .webm after
+   removing query and fragment components.
+2. Reject known image paths: .png, .jpg, .jpeg, .webp, .gif or .avif, even when
+   their field name contains "url".
+3. Weak fallback: an extensionless URL only when its field name or path states
+   that it is video.
+Preserve the full selected URL, including its signed query string.
+If no candidate survives, fail visibly with "no video result"; never substitute
+the submitted first frame or a preview image.
+
+BYTE-LEVEL ACCEPTANCE
+Download the candidate to a temporary path.
+Accept ISO-BMFF video only when bytes 4–7 equal "ftyp".
+Accept WebM only when the first four bytes equal 1A 45 DF A3.
+Then probe the stream and record container, codec, width, height and duration.
+Do not trust the destination suffix or HTTP Content-Type by itself.
+
+QUARANTINE AND STATE GATE
+If the signature or probe is not video:
+- move the bytes to [NAME].notvideo without deleting the evidence;
+- report the observed Content-Type and detected media kind;
+- leave the scene's video reference unset;
+- mark the generation/download step failed, even if the provider task said
+  completed.
+Only attach the asset and expose playback after both candidate routing and
+byte-level validation pass.
+
+RETRY RULE
+Retry selection from the untouched raw response, preferring the next strong
+video candidate. Do not spend credits on a new Seedance generation until all
+returned candidates have been classified.
+```
+
+**Why it works:** a provider can complete generation correctly while a client
+chooses the wrong sibling URL. The measured failure looked valid in project
+state because a PNG carried an MP4 filename; separating URL classification from
+container authentication converts that silent false success into a recoverable
+transport error and preserves the paid generation for another selection pass.
+
+**Sources:** semoji-ai's
+[live Seedance 2.0 failure diagnosis and fix](https://github.com/semoji-ai/auto_kairos/commit/40e0ce7c78cdf3d97c35f54d1c141e12b3e972d6)
+and the
+[versioned result-selection, signature-check and quarantine implementation](https://github.com/semoji-ai/auto_kairos/blob/40e0ce7c78cdf3d97c35f54d1c141e12b3e972d6/adobe/backend/video.py).
+
+
 ### Profile locomotion source and cycle-recovery contract
 
 **Verified model:** Seedance 2.5 — the original creator ran the exact Dreamina
@@ -16119,6 +16186,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [semoji-ai / Auto Kairos — Seedance 2.0 mixed-response PNG-as-MP4 diagnosis, result-URL classification and byte-signature quarantine gate](https://github.com/semoji-ai/auto_kairos/commit/40e0ce7c78cdf3d97c35f54d1c141e12b3e972d6) ([versioned implementation](https://github.com/semoji-ai/auto_kairos/blob/40e0ce7c78cdf3d97c35f54d1c141e12b3e972d6/adobe/backend/video.py))
 
 - [llm011 / Ethan Agent — Seedance 2.0 stable-midframe presenter splice, first-frame/omni routing and measured dashboard-value corruption](https://github.com/llm011/ethan-agent/commit/917a3316f586369778d75ee1adf1363d218b4087) ([complete workflow and failure note](https://github.com/llm011/ethan-agent/blob/917a3316f586369778d75ee1adf1363d218b4087/ethan/defaults/skills/article-to-video/references/seedance-presenter-pipeline.md), [executable pipeline](https://github.com/llm011/ethan-agent/blob/917a3316f586369778d75ee1adf1363d218b4087/ethan/defaults/skills/article-to-video/scripts/seedance_presenter_pipeline.py))
 
