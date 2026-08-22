@@ -12713,6 +12713,97 @@ published August 10, 2026. The exact endpoint is recorded in
 the style-seed, adjacent-pair, batch, duration and retry contract is preserved in
 [agent.yaml](https://github.com/jdp-just-does-projects/agentkit-examples/blob/38cff2868a730ae9f62a829a43dc73887114002a/byteplus/video_gen/agent.yaml).
 
+### Direction-monotonic last-frame scroll-world chain
+
+**Verified model:** Seedance 2.0 (`seedance_2_0`) — the original creator
+committed three rebuilt landscape masters and three native portrait companions,
+then measured both adjacent seams in each chain on August 22, 2026
+
+Use this for a scroll-driven journey through photoreal rooms, corridors or
+architectural worlds. Make every clip a forward leg of the journey and seed the
+next leg from the previous render's actual last frame; do not insert a pull-back
+connector that reverses camera direction at every boundary.
+
+```text
+ARCHITECTURE DECISION
+World type = [PHOTOREAL INTERIOR / MINIATURE OR DIORAMA].
+If photoreal interior, choose a direction-monotonic chain:
+L1 -> L2 -> L3, with every leg moving forward.
+Reserve dive-in / pull-out / aerial connectors for clearly miniature worlds
+where a scale reveal is intentional. Never mix the two camera grammars inside
+one chain.
+
+LANE CONTRACT
+Desktop lane = native [16:9 / LANDSCAPE], full Seedance 2.0, 1080p.
+Mobile lane = native 9:16, full Seedance 2.0; generate a separate chain.
+Do not center-crop the landscape master into the mobile lane.
+Keep model, identity, grade and forward screen direction fixed within each lane.
+
+LEG 1
+@StartFrame = the approved opening frame for [WORLD 1].
+Begin exactly from @StartFrame. The camera advances continuously through
+[ROOM / CORRIDOR] toward [VISIBLE THRESHOLD]. Pass [ONE OR TWO LANDMARKS] with
+realistic parallax and stable architecture. Finish still moving forward with
+the threshold centered and enough visual evidence to enter [WORLD 2].
+
+No pull-back, reverse dolly, orbit, turn-around, aerial reset, cut, dissolve,
+teleport, duplicated doorway, structural melt or early stop.
+
+BOUNDARY HANDOFF
+Decode the returned L1 master.
+Extract L1's actual final frame at its native dimensions; do not redraw,
+re-prompt or substitute the original concept still.
+Use that exact frame as L2's first-frame input.
+Repeat the same operation from L2 to L3 independently in each aspect lane.
+
+LEG N
+Begin pixel-aligned from the supplied last frame. Continue the same forward
+velocity across the visible threshold and let the next world emerge through
+occlusion and parallax. Preserve the previous frame's camera height, lens,
+vanishing point, exposure, dominant colors and architectural edges during the
+handoff, then reveal [NEXT WORLD] progressively.
+
+Do not back away to show the old room, reverse direction after crossing,
+invent a fly-over connector, repeat the previous approach, or hard-cut to the
+new environment. The leg itself is the transition.
+
+SEAM AND DELIVERY GATE
+1. Compare decoded frame N:last against frame N+1:first at native size.
+2. Record PSNR plus a visual overlay; treat PSNR as a calibration signal, not a
+   universal pass threshold.
+3. Reject on visible spatial jump, camera-direction reversal, exposure flash,
+   vanishing-point shift or missing architectural continuation.
+4. Use only a minimal playback crossfade after frame-lock; the source delivery
+   used 0.08 rather than a separate connector clip.
+5. Derive each chapter poster from that clip's own decoded frame zero, never
+   from an earlier concept still.
+6. For scroll scrubbing, encode the portrait delivery with a short GOP; the
+   verified mobile chain used GOP 4.
+
+ACCEPTANCE
+Both lanes move only forward; each new first frame matches the preceding actual
+last frame; the architecture remains causal through the threshold; posters
+match playback frame zero; and mobile composition was generated natively rather
+than cropped from desktop.
+```
+
+**Why it works:** a dive followed by an aerial pull-out reverses motion at every
+seam and reads as a rewind in photoreal space. Actual-last-frame chaining turns
+each stochastic output into the next clip's literal boundary, while native
+portrait generation avoids crop loss and landscape-to-portrait poster flashes.
+The delivered chains measured 25.1 and 22.4 dB at desktop seams, and 25.7 and
+27.8 dB in portrait; composition review confirmed all four despite the score
+spread, which is why the metric remains diagnostic rather than a sole gate.
+
+**Sources:** Abdullah Akbar Khalid's
+[Seedance 2.0 rebuild and measurement commit](https://github.com/akbar-33/journey/commit/800ff4ae8ca14ce97553a98e4cec4ade7870f0d7),
+the committed landscape
+[first](https://github.com/akbar-33/journey/blob/800ff4ae8ca14ce97553a98e4cec4ade7870f0d7/assets/vid/scene1.mp4) /
+[second](https://github.com/akbar-33/journey/blob/800ff4ae8ca14ce97553a98e4cec4ade7870f0d7/assets/vid/scene2.mp4) /
+[third](https://github.com/akbar-33/journey/blob/800ff4ae8ca14ce97553a98e4cec4ade7870f0d7/assets/vid/scene3.mp4)
+masters, and the
+[native portrait chain](https://github.com/akbar-33/journey/tree/800ff4ae8ca14ce97553a98e4cec4ade7870f0d7/assets/vid).
+
 ### One-variable validation probe for false duration errors
 
 **Verified model:** Seedance 2.5 — the original creator's August 12, 2026
@@ -16270,6 +16361,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Abdullah Akbar Khalid / Journey — Seedance 2.0 actual-last-frame, direction-monotonic desktop and native-portrait scroll-world chains with measured seams](https://github.com/akbar-33/journey/commit/800ff4ae8ca14ce97553a98e4cec4ade7870f0d7) ([landscape masters](https://github.com/akbar-33/journey/tree/800ff4ae8ca14ce97553a98e4cec4ade7870f0d7/assets/vid), [delivery architecture](https://github.com/akbar-33/journey/blob/800ff4ae8ca14ce97553a98e4cec4ade7870f0d7/world.html))
 
 - [H2R-Bench — Seedance 2.0 video-conditioned human-to-robot transfer gallery and function-weighted H2RCore acceptance method](https://github.com/Rongdingyi/H2R-Bench/commit/6549ae11bb9b361c8690dbb460ea3a67f590460d) ([benchmark metrics](https://github.com/Rongdingyi/H2R-Bench/blob/6549ae11bb9b361c8690dbb460ea3a67f590460d/README.md), [human source](https://github.com/Rongdingyi/H2R-Bench/blob/6549ae11bb9b361c8690dbb460ea3a67f590460d/docs/static/videos/gallery/f1-human.mp4), [Seedance result](https://github.com/Rongdingyi/H2R-Bench/blob/6549ae11bb9b361c8690dbb460ea3a67f590460d/docs/static/videos/gallery/f1-seedance.mp4))
 
