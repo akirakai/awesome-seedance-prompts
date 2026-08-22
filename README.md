@@ -248,6 +248,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Against-current procession abandonment](#232-against-current-procession-abandonment)
   - [Grooming-mask micro-expression rupture](#233-grooming-mask-micro-expression-rupture)
   - [Six-gate neon-citadel ascent](#234-six-gate-neon-citadel-ascent)
+  - [Reference-brand café meet-cute handoff](#235-reference-brand-café-meet-cute-handoff)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -10931,6 +10932,74 @@ and the
 
 ---
 
+### 235. Reference-brand café meet-cute handoff
+
+**Verified model:** Seedance 2.5 — the original creator committed a complete
+website prompt and a corresponding 5.1-second, 16:9 one-shot with dialogue
+audio; the creator records that Seedance reproduced the uploaded icon and exact
+ImprovTalk wordmark in the generated outro on August 22, 2026
+
+**Use case:** native-dialogue app commercial, live-action-to-brand transition,
+reference-driven end card, micro-performance  \
+**Mode:** icon-reference text-to-video on the Seedance 2.5 website  \
+**Settings:** source prompt: 15 seconds, 9:16, audio on, highest quality;
+documented returned take: 5.1 seconds, 16:9, audio
+
+```text
+REFERENCE CONTRACT
+@BrandIcon is the authority for the final icon geometry, orange-to-magenta-to-
+deep-blue palette and exact wordmark spelling. Do not borrow shapes or colours
+from unrelated marks. Use no other text.
+
+Create one continuous premium live-action app commercial in a bright modern
+specialty café at golden hour. Warm low sun enters through tall windows; a trace
+of purple dusk remains outside. A stylish adult man in an olive overshirt and
+white tee stands beside an adult woman's table while she reads beside a flat
+white. Preserve the same two faces, hair, clothing, table and café geometry.
+
+0–5 s — Start in a medium two-shot. With a nervous but genuine smile, he says:
+"We don't know each other, but... I couldn't leave without saying hi." Keep the
+delivery warm and imperfect, with a small breath before the second clause.
+
+5–12 s — She looks up, holds one real beat of surprise, then smiles and answers
+playfully. He laughs and relaxes; she closes the book and leans in slightly.
+Build easy conversation through eye contact, tiny laughs, natural pauses and
+restrained gestures. Never make either performance theatrical.
+
+12–15 s — Let the café light wash gradually into the purple-to-blue gradient
+from @BrandIcon, with one warm orange accent from the upper left. Fade their
+laughter softly while the camera defocuses the couple into that clean colour
+field. Reveal @BrandIcon centred, crisp and unaltered; place the exact wordmark
+"ImprovTalk" beneath it in clean white type. Hold long enough to read it.
+
+Use one smooth stabilized arc and slow push from the medium two-shot toward an
+intimate framing; do not cut or reset the camera. Natural café ambience and both
+voices remain audible until the outro fade. Keep realistic skin, hair, hands,
+motion blur and object contact. No morphing, duplicate person, wardrobe change,
+logo deformation, misspelled wordmark, subtitle, caption, watermark or extra
+text.
+```
+
+**Why it works:** the prompt assigns the reference two narrow jobs—palette and
+brand identity—while observable dialogue beats govern the live-action scene.
+The final light wash, defocus and audio fade create a motivated handoff instead
+of asking the model to jump directly from people to a graphic card. The source
+also exposes an important surface constraint: its committed prompt targets
+15-second vertical output, while the documented Seedance website return is
+5.1 seconds at 16:9, so delivery should be checked against the actual returned
+stream rather than the requested UI settings.
+
+**Sources:** Davit Gadyan's August 22, 2026
+[primary Seedance 2.5 generation commit](https://github.com/DavitGadyan/AIVideo_Generation_higgsfield/commit/32666b37dfa064b6b33d55648e0c533d9dca55e5),
+the committed
+[complete website prompt](https://github.com/DavitGadyan/AIVideo_Generation_higgsfield/blob/32666b37dfa064b6b33d55648e0c533d9dca55e5/docs/generation-prompt-website.txt),
+the
+[model/result record](https://github.com/DavitGadyan/AIVideo_Generation_higgsfield/blob/32666b37dfa064b6b33d55648e0c533d9dca55e5/docs/README.md),
+and the
+[generated MP4](https://github.com/DavitGadyan/AIVideo_Generation_higgsfield/blob/32666b37dfa064b6b33d55648e0c533d9dca55e5/docs/videos/seedance.mp4).
+
+---
+
 ## Reusable templates
 
 ### Framing-feasibility and prop-entry preflight
@@ -16545,6 +16614,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Davit Gadyan / SocialForge — Seedance 2.5 café dialogue one-shot with uploaded-icon brand transition, complete website prompt and generated audio result](https://github.com/DavitGadyan/AIVideo_Generation_higgsfield/commit/32666b37dfa064b6b33d55648e0c533d9dca55e5) ([complete prompt](https://github.com/DavitGadyan/AIVideo_Generation_higgsfield/blob/32666b37dfa064b6b33d55648e0c533d9dca55e5/docs/generation-prompt-website.txt), [result record](https://github.com/DavitGadyan/AIVideo_Generation_higgsfield/blob/32666b37dfa064b6b33d55648e0c533d9dca55e5/docs/README.md), [generated MP4](https://github.com/DavitGadyan/AIVideo_Generation_higgsfield/blob/32666b37dfa064b6b33d55648e0c533d9dca55e5/docs/videos/seedance.mp4))
 
 - [Leon Harris / Next-Frame Agency — Seedance 2.5 thirty-second six-gate cyberpunk-anime cut with complete bilingual story and shot data](https://github.com/Leonkharris/nextframe-site/commit/d3d199a839a68ba548af9776f10cdcd422b3cfc0) ([prompt data](https://github.com/Leonkharris/nextframe-site/blob/d3d199a839a68ba548af9776f10cdcd422b3cfc0/xsino/data.js), [generated MP4](https://github.com/Leonkharris/nextframe-site/blob/d3d199a839a68ba548af9776f10cdcd422b3cfc0/xsino/assets/videos/07/take1_the_six_gates.mp4))
 
