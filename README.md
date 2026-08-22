@@ -14757,6 +14757,87 @@ and the
 [merged provider-payload implementation](https://github.com/griptape-ai/griptape-nodes-library-standard/commit/a366bbbd7a4099c249aec7933fbd9a8b39e75326).
 
 
+### Stable-midframe presenter splice with numeric-integrity routing
+
+**Verified model:** Seedance 2.0 — the original developer documents a live
+BytePlus ModelArk presenter workflow and a measured two-reference failure in
+which an on-stage value changed from `8.13x` to `3.164` consistently across
+sampled frames
+
+Use this when a presenter must move over a deterministic dashboard, chart,
+captioned slide or other stage whose visible information must stay exact.
+Choose the transport by content risk before submitting: a combined first frame
+for data-bearing stages; two independent references only for non-data motion
+harvests such as a clean or green-screen presenter plate.
+
+```text
+ROUTE GATE
+Does the stage contain exact digits, prices, percentages, axes, labels,
+typography, diagrams, UI state or legally approved copy?
+- YES -> FIRST-FRAME LANE.
+- NO  -> OMNI-REFERENCE LANE may be used for a clean presenter plate.
+Never send a data-bearing stage through the omni lane merely to gain freedom
+over character placement.
+
+STABLE-FRAME PREPARATION
+Render the stage deterministically before video generation.
+Export one combined presenter-plus-stage frame from the stable middle of the
+scene: all reveal animations complete, no exit fade started, every value and
+label already in its final approved state.
+Do not use the scene's literal opening frame when cards, charts or UI are still
+assembling; Seedance may preserve that incomplete layout for the whole clip.
+
+FIRST-FRAME LANE — DATA-BEARING STAGE
+@Image1 is the exact first frame and the authority for composition.
+Animate only the presenter's restrained breathing, gaze, mouth and one clear
+gesture toward [TARGET]. Preserve face, outfit, body proportions and position.
+Keep camera, stage geometry, chart, axes, values, labels, colours, spacing and
+all existing glyphs unchanged for the entire shot.
+Dialogue: "{APPROVED LINE}"
+Locked camera or minimal motion that never crosses the data surface.
+No new text, subtitle, watermark, value, icon, panel or chart element.
+
+OMNI-REFERENCE LANE — NON-DATA MOTION HARVEST
+@Image1 = clean decorative stage or clean plate.
+@Image2 = authorised presenter identity and wardrobe reference.
+Place the presenter at [POSITION] and perform [ACTION / EXPRESSION / DIALOGUE].
+Preserve identity from @Image2 and broad composition from @Image1.
+The plate contains no exact copy or numerical information that must survive
+model reconstruction.
+
+AUDIO AND TIMELINE OWNERSHIP
+Keep the editor's approved TTS or production voice as the master audio.
+Generate native audio only when needed as a lip-motion guide; discard it at
+assembly. Fit the generated segment to the original [START, DURATION] window,
+normalise frame rate, resolution and pixel format, then splice it into the
+stage master without moving the original narration.
+
+DATA-INTEGRITY ACCEPTANCE
+Extract a contact sheet across the whole generated interval.
+Compare every protected value and label against @Image1, not just frame zero.
+Reject on any digit substitution, decimal change, glyph drift, added panel,
+layout freeze from an unfinished frame, or presenter overlap with protected data.
+
+FAILURE ROUTING
+If the first-frame lane still alters protected information, stop regenerating
+the full stage. Generate an isolated presenter motion plate with no readable
+data, then composite that presenter over the deterministic original stage.
+Do not describe a corrupted number as a stylistic variation.
+```
+
+**Why it works:** The stable middle frame prevents an unfinished reveal from
+becoming the visual anchor. More importantly, the routing rule separates
+semantic reference generation from pixel-critical delivery: the measured
+two-reference run reconstructed the dashboard and changed a value consistently,
+showing that visual stability is not data fidelity. Keeping narration and
+timing outside generation also makes a failed presenter take replaceable
+without disturbing the approved edit.
+
+**Sources:** llm011's
+[Seedance 2.0 presenter-pipeline commit](https://github.com/llm011/ethan-agent/commit/917a3316f586369778d75ee1adf1363d218b4087),
+[complete first-frame/omni workflow and measured failure note](https://github.com/llm011/ethan-agent/blob/917a3316f586369778d75ee1adf1363d218b4087/ethan/defaults/skills/article-to-video/references/seedance-presenter-pipeline.md),
+and the
+[executable routing and splice implementation](https://github.com/llm011/ethan-agent/blob/917a3316f586369778d75ee1adf1363d218b4087/ethan/defaults/skills/article-to-video/scripts/seedance_presenter_pipeline.py).
 ### Profile locomotion source and cycle-recovery contract
 
 **Verified model:** Seedance 2.5 — the original creator ran the exact Dreamina
@@ -16038,6 +16119,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [llm011 / Ethan Agent — Seedance 2.0 stable-midframe presenter splice, first-frame/omni routing and measured dashboard-value corruption](https://github.com/llm011/ethan-agent/commit/917a3316f586369778d75ee1adf1363d218b4087) ([complete workflow and failure note](https://github.com/llm011/ethan-agent/blob/917a3316f586369778d75ee1adf1363d218b4087/ethan/defaults/skills/article-to-video/references/seedance-presenter-pipeline.md), [executable pipeline](https://github.com/llm011/ethan-agent/blob/917a3316f586369778d75ee1adf1363d218b4087/ethan/defaults/skills/article-to-video/scripts/seedance_presenter_pipeline.py))
 
 - [bioauraio / Rap Clips Studio — Seedance 2.5 first-plus-last-frame adaptive-aspect correction, live provider rejection and exact request builder](https://github.com/bioauraio/rap-clips-studio/commit/70100393704d6f08cd221d2815a2ab2f5a83595d) ([model registry and request-routing implementation](https://github.com/bioauraio/rap-clips-studio/blob/70100393704d6f08cd221d2815a2ab2f5a83595d/backend/mediagen.py))
 
