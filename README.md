@@ -247,6 +247,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Iris-reflection gaze collision](#231-iris-reflection-gaze-collision)
   - [Against-current procession abandonment](#232-against-current-procession-abandonment)
   - [Grooming-mask micro-expression rupture](#233-grooming-mask-micro-expression-rupture)
+  - [Six-gate neon-citadel ascent](#234-six-gate-neon-citadel-ascent)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -10825,6 +10826,111 @@ the committed
 and the
 [resulting shot 08 MP4](https://github.com/Leonkharris/nextframe-site/blob/f13c1875812bd3dbcf2c0c7b0ac679f89d493380/ProjectKinmuku/assets/episodes/ep2/clips/shot08.mp4).
 
+### 234. Six-gate neon-citadel ascent
+
+**Verified model:** Seedance 2.5 — the original creator identified the committed
+30-second long-form cut as Seedance 2.5 and mounted the generated MP4 beside the
+complete bilingual story and shot data on August 22, 2026
+
+**Use case:** long-form anime trailer, six-beat vertical narrative, multi-character
+reference continuity, delayed palette payoff, native narration  
+**Mode:** character-reference text-to-video  
+**Settings:** one 30-second 9:16 cyberpunk-anime generation, six five-second
+beats, one narrator, no subtitles
+
+```text
+REFERENCE AND PALETTE CONTRACT
+@Kairo = adult hero: warm dark-brown skin, athletic build, silver-blue swept
+undercut, cyan earring, short stubble, black techwear jacket edged in cyan and
+magenta, red waist accent, cyan-lit eyes and energy.
+@Vega = composed Wheel Keeper: pale skin, long straight black hair with vivid
+violet streaks, blunt fringe, clear rectangular glasses, black satin jacket,
+silver chain and restrained red oni embroidery.
+@Nyx = rival gatekeeper: pale skin, chin-length silver bob, acid-green light
+marks across face and collarbone, black choker and harness beneath an
+iridescent sheer jacket.
+@Fortuna = cyber-angel spirit: glossy black armour with orange-red seams, cyan
+hexagon at the sternum, pale ice-blue hair, orange-red irises ringed in cyan,
+temple modules and a tilted cyan-particle halo.
+
+Keep every identity, face, silhouette, outfit and colour assignment stable.
+Use high-detail cel-shaded shonen animation with painterly texture, neon rim
+light and deep near-black negative space. Magenta, cyan and violet may dominate;
+do not spend warm gold before the final unresolved luck cue. Use one warm,
+cinematic narrator, concise enough that every line finishes inside its beat.
+
+0–5 s — Establish the six-gate climb.
+Rise slowly through drifting fog past six immense neon gates stacked toward a
+citadel in the night sky. Cut once to Kairo at the first gate and make a gentle
+front dolly toward his lifted face. He is tired but still upright, eyes fixed on
+the distant summit. Narration: "Six gates rise above the city. Others climbed
+higher; none arrived whole."
+
+5–10 s — Cross Bronze and reveal the judge.
+The Bronze Gate grinds open with sparks and visible mechanical weight. Follow
+Kairo from a low angle as he walks through without looking back. Dissolve to
+Vega, completely still above the dark Wheel Room, while the camera cranes
+between violet and muted-red beams. Narration: "The first gate asks only that
+you do not hesitate. Six gates hide one question."
+
+10–15 s — Compress four trials without identity drift.
+Use four clean, causally ordered flashes: Silver, Sapphire, Platinum, then
+Obsidian. In every flash Kairo advances in the same direction. Add damage
+progressively—heavier breath, one new scrape, then a torn jacket edge—but never
+reset or redesign him. Keep the camera close and energetic while each gate
+opens only after his forward action. Narration: "Every gate takes something.
+He climbs because he refuses to let go."
+
+15–20 s — Let doubt become the obstacle.
+Nyx resolves from magenta flares at the Diamond Gate and occupies the centre of
+the passage. Pull back just enough to show that she blocks the route without
+touching Kairo. Cut to his close response: he holds her gaze, takes one small
+step and closes one cyan-lit hand into a fist. No attack occurs. Narration:
+"The last keeper closes no door with force. She closes it with doubt."
+
+20–25 s — Yield, then disclose scale.
+Nyx moves only half a step aside, lips tight and eyes briefly averted. Glide
+past her from a low angle as the Diamond Gate opens behind her. Continue the
+same forward screen direction into the chamber, then crane back to reveal the
+colossal Wheel turning slowly above tiny, motionless Kairo. Narration: "He does
+not defeat the keeper. He refuses to agree with her."
+
+25–30 s — End on the unanswered touch.
+Move from the wide scale reveal to an extreme close view of Kairo's hand
+approaching the Wheel rim. Do not let him touch it yet. Fortuna emerges from the
+rotation in controlled cyan and orange-red light; Kairo's fingers tremble once,
+then steady. Introduce one narrow warm-gold glint at the rim but do not reveal a
+prize or result. Narration: "Fortuna promises no reward—only an answer." End on
+the suspended gap between hand and Wheel.
+
+AUDIO AND FAILURE CONTROL
+Carry one rising orchestral-synth score across all six beats. Layer gate motors,
+neon electrical hum, boots on stone and a deep rotational bass pulse; thin the
+mix around the final hand gap. Keep dialogue assigned only to the narrator.
+Maintain forward travel, cumulative damage and gate order. No backward gate,
+duplicate guardian, costume repair, premature gold wash, contact before the
+last frame, outcome reveal, victory claim, sudden zoom, anatomy warp, captions,
+logos or watermarks.
+```
+
+**Why it works:** six equal time cells turn a dense 30-second anime trailer into
+an executable state chain: each gate opens only after forward motion, damage
+accumulates instead of resetting, and the two guardians perform different
+blocking functions. Repeating compact reference identities at the top protects
+four-character continuity, while withholding gold and physical contact makes
+the cliffhanger measurable in the final frame. The source commit verifies that
+the creator rendered and mounted the corresponding first 30-second, six-beat
+cut rather than publishing prompt text alone.
+
+**Sources:** Leon Harris / Next-Frame Agency's August 22, 2026
+[Seedance 2.5 generation commit](https://github.com/Leonkharris/nextframe-site/commit/d3d199a839a68ba548af9776f10cdcd422b3cfc0),
+the committed
+[complete bilingual story and shot data](https://github.com/Leonkharris/nextframe-site/blob/d3d199a839a68ba548af9776f10cdcd422b3cfc0/xsino/data.js),
+and the
+[resulting 30-second MP4](https://github.com/Leonkharris/nextframe-site/blob/d3d199a839a68ba548af9776f10cdcd422b3cfc0/xsino/assets/videos/07/take1_the_six_gates.mp4).
+
+---
+
 ## Reusable templates
 
 ### Measured failure-boundary ping-pong motion harvest
@@ -16361,6 +16467,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Leon Harris / Next-Frame Agency — Seedance 2.5 thirty-second six-gate cyberpunk-anime cut with complete bilingual story and shot data](https://github.com/Leonkharris/nextframe-site/commit/d3d199a839a68ba548af9776f10cdcd422b3cfc0) ([prompt data](https://github.com/Leonkharris/nextframe-site/blob/d3d199a839a68ba548af9776f10cdcd422b3cfc0/xsino/data.js), [generated MP4](https://github.com/Leonkharris/nextframe-site/blob/d3d199a839a68ba548af9776f10cdcd422b3cfc0/xsino/assets/videos/07/take1_the_six_gates.mp4))
 
 - [Abdullah Akbar Khalid / Journey — Seedance 2.0 actual-last-frame, direction-monotonic desktop and native-portrait scroll-world chains with measured seams](https://github.com/akbar-33/journey/commit/800ff4ae8ca14ce97553a98e4cec4ade7870f0d7) ([landscape masters](https://github.com/akbar-33/journey/tree/800ff4ae8ca14ce97553a98e4cec4ade7870f0d7/assets/vid), [delivery architecture](https://github.com/akbar-33/journey/blob/800ff4ae8ca14ce97553a98e4cec4ade7870f0d7/world.html))
 
