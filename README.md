@@ -14838,6 +14838,8 @@ without disturbing the approved edit.
 [complete first-frame/omni workflow and measured failure note](https://github.com/llm011/ethan-agent/blob/917a3316f586369778d75ee1adf1363d218b4087/ethan/defaults/skills/article-to-video/references/seedance-presenter-pipeline.md),
 and the
 [executable routing and splice implementation](https://github.com/llm011/ethan-agent/blob/917a3316f586369778d75ee1adf1363d218b4087/ethan/defaults/skills/article-to-video/scripts/seedance_presenter_pipeline.py).
+
+
 ### Provider-response media-type authentication and quarantine gate
 
 **Verified model:** Seedance 2.0 (`seedance_2_0`) — the original developer
