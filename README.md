@@ -11002,6 +11002,77 @@ and the
 
 ## Reusable templates
 
+### Semantic no-text contradiction gate and shot-level patch
+
+**Verified model:** Seedance 2.5 (`byte-plus-seedance-2-5`) — the original
+creator generated a 20-second 1080p opening, traced one shot's invented
+letterforms to a contradictory prompt, then generated and visually verified a
+clean 5.056-second 1080×1920 replacement
+
+Use this when a shot must communicate a text-bearing object—calendar, notebook,
+form, sign or screen—without asking Seedance to render readable language.
+Remove every positive instruction that still requires lettering, then replace
+only the failed interval instead of rerolling the whole sequence.
+
+```text
+NO-TEXT SEMANTIC PREFLIGHT
+
+Target meaning: [BUSY CALENDAR / USED NOTEBOOK / FILLED FORM / OTHER STATE].
+Carrier: [PAPER / BOARD / SCREEN], seen at [ANGLE AND FOCUS].
+Required non-text evidence: [DENSITY CONTRAST / EMPTY REGION / PEN CONTACT /
+COLOUR BLOCKS / CHECK SHAPES / PHYSICAL WEAR].
+
+1. CONTRADICTION GATE
+If readable language is forbidden, delete every positive phrase that asks the
+model to create it: handwriting, notes, labels, weekday names, headings,
+captions, signatures, form fields or signage.
+A negative line such as "no text" does not cancel a positive request for
+"dense handwriting."
+
+2. REPRESENTABILITY-SAFE REWRITE
+Show [TARGET MEANING] through abstract visual structure:
+- ink appears only as soft, irregular [GREY / COLOURED] marks;
+- marks vary in density and length but never form alphabetic glyphs or words;
+- the carrier plane stays slightly out of focus while the hand or pen remains
+  readable;
+- preserve [CROWDED LEFT / EMPTY RIGHT] or another spatial contrast that carries
+  the story without language.
+If real numerals are necessary, allow only [EXACT NUMERALS] and ban alphabetic
+tokens, day names and invented labels. Otherwise prohibit letters, numbers and
+symbols together.
+
+3. SHOT-LEVEL PATCH CONTRACT
+Failed interval = [IN–OUT TIMECODE].
+Generate only the shortest replacement that covers that interval.
+Match aspect ratio, resolution, frame rate, camera angle, light direction,
+colour grade, hand entry and terminal composition to the surrounding edit.
+Do not reroll approved shots.
+
+4. ACCEPTANCE GATE
+Extract frames near the start, middle and end of the patch and inspect them at
+full size.
+Reject any legible invented word, alphabetic fragment, unstable numeral or
+semantic contrast loss.
+Accept only when the non-text meaning, prop interaction and entry/exit states
+survive. Archive the failed prompt, repaired prompt, model, job ID and charged
+cost beside the patch.
+```
+
+**Why it works:** Seedance must satisfy positive visual requests, so “dense
+handwriting” gives it a reason to invent letterforms even when a negative line
+forbids text. Abstract marks and deliberate carrier defocus remove that
+representational obligation while preserving the scene's meaning. In the
+verified run, the clean five-second patch retained the crowded-versus-empty
+calendar contrast and pen contact, removed all invented words, and cost 1,445
+credits versus 5,774 for a full reroll.
+
+**Sources:** Ido Marhaim's
+[Seedance 2.5 generation and failure diagnosis](https://github.com/idomarhaim/Android_Final_Project/commit/8ad800d4f4f4dbe64f48d29f8b5e92faec276a48),
+the
+[visually verified patch result and measured cost](https://github.com/idomarhaim/Android_Final_Project/commit/5771bbd96f211972eb8770bd578bf4a99959ac9e),
+and the
+[complete five-shot source brief](https://github.com/idomarhaim/Android_Final_Project/blob/5771bbd96f211972eb8770bd578bf4a99959ac9e/docs/marketing/explainer-video-brief.md#5--google-flow-prompts--the-opening-b-roll-only).
+
 ### Framing-feasibility and prop-entry preflight
 
 **Verified model:** Seedance 2.5 — the original creator derived the checks from
@@ -16786,6 +16857,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Ido Marhaim / GoalPilot — Seedance 2.5 contradictory no-text calendar failure, abstract-mark defocus repair and visually verified shot-level patch](https://github.com/idomarhaim/Android_Final_Project/commit/5771bbd96f211972eb8770bd578bf4a99959ac9e) ([initial generation and diagnosis](https://github.com/idomarhaim/Android_Final_Project/commit/8ad800d4f4f4dbe64f48d29f8b5e92faec276a48), [complete source brief](https://github.com/idomarhaim/Android_Final_Project/blob/5771bbd96f211972eb8770bd578bf4a99959ac9e/docs/marketing/explainer-video-brief.md#5--google-flow-prompts--the-opening-b-roll-only))
 
 - [Jacob Ye — Seedance 2.5 form-locked identity card and text-only transient-state method, derived from a measured six-variable sick-card identity failure](https://github.com/jacobye2017-afk/jacob-ye-seedance-prompt/commit/4f91f2cb9bfbf3f4d9647bce96cdc983ae06a574) ([complete rule](https://github.com/jacobye2017-afk/jacob-ye-seedance-prompt/blob/4f91f2cb9bfbf3f4d9647bce96cdc983ae06a574/FORMULA.md#1811-%EF%B8%8F-%E5%8D%A1%E9%94%81%E5%BD%A2%E6%96%87%E5%AD%97%E9%94%81%E6%80%81%E6%94%B9%E5%8F%98%E8%84%B8%E5%9E%8B%E7%9A%84%E7%8A%B6%E6%80%81%E7%BB%9D%E4%B8%8D%E8%83%BD%E7%94%A8%E6%94%B9%E5%9B%BE))
 
