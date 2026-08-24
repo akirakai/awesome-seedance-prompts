@@ -16654,6 +16654,91 @@ same problem.
 [paid Seedance 2.5 presenter test, silent-fallback diagnosis and four-level
 lip-sync recovery method](https://github.com/cindylearn/ai-content-course-C-simple/commit/413fff576f2c54a995271385543bf33a79bb15ac).
 
+### Form-locked identity card with text-only transient-state overlay
+
+**Verified model:** Seedance 2.5 — the creator identifies the repository as a
+paid-production Seedance 2.5 framework and records a firsthand failure in which
+editing six illness and weight-loss attributes into a character card changed
+the actor into a different person
+
+Use this when a stable character must appear temporarily ill, exhausted, wet,
+older, heavier or thinner. Keep facial form in the already approved identity
+card; express the current condition as bounded text cues that do not ask the
+reference image to become a new face.
+
+```text
+STATE CLASSIFICATION — BEFORE MAKING A NEW REFERENCE
+Invariant form = facial proportions, face outline, eye spacing, nose, mouth,
+hairline and other identity geometry.
+Safe card edits = [HAIR STYLE / WARDROBE / BACKGROUND] only when they do not
+alter the face or hairline.
+Transient state = [ILLNESS / FATIGUE / WEATHER EXPOSURE / AGE IMPRESSION /
+WEIGHT IMPRESSION / EMOTIONAL AFTERMATH].
+If a requested state changes cheeks, jaw, skull, eye sockets or feature spacing,
+do not create an edited identity card for it.
+
+REFERENCE CONTRACT
+@Image1 is the approved healthy identity card.
+Use only @Image1's face, facial proportions, face outline and hairline as the
+immutable identity source. Ignore its background and wardrobe when those are
+assigned elsewhere.
+Do not attach a second face card representing the temporary condition.
+
+TEXT-ONLY STATE OVERLAY
+The same person is currently [TRANSIENT CONDITION].
+Preserve @Image1's exact facial proportions and face shape.
+Show the condition only through surface, performance and styling cues:
+- complexion: [PALE / FLUSHED / WEATHERED] without reshaping the face;
+- eyes: [UNDER-EYE SHADOW / REDNESS / HEAVY LIDS] without deeper sockets;
+- lips and skin: [DRYNESS / REDUCED COLOR / SWEAT / RAIN];
+- hair: [SLIGHTLY DISORDERED / DAMP / LOWER SHINE];
+- wardrobe fit: [LOOSER / DAMP / WRINKLED] to imply body-state change;
+- movement: [SLOWER BREATH / GUARDED POSTURE / LOWER ENERGY];
+- voice and timing: [MEASURED PERFORMANCE CUES].
+The condition is a temporary state layered onto one identity, not a replacement
+person or redesigned character.
+
+SHOT CONTRACT
+[SHOT SIZE, LENS, CAMERA AND ACTION].
+Keep the face readable long enough to compare with @Image1.
+Limit each shot to [ONE OR TWO] new state cues plus one performance cue.
+Preserve identity, wardrobe ownership, prop state, camera axis and light
+direction across adjoining shots.
+
+NO-GEOMETRY LOCK
+No altered face width, sharper jaw, enlarged cheekbones, deeper eye sockets,
+changed eye spacing, different nose or mouth, shifted hairline, face swap,
+identity blend or newly generated sick/old/thin face card.
+
+ACCEPTANCE
+Compare the clearest face frame with @Image1.
+Pass only if invariant geometry still matches while the temporary condition is
+readable through surface, styling and performance. Record which cues were used;
+do not approve a take merely because it looks convincingly ill or aged.
+
+FAILURE ROUTING
+If identity drifts:
+1. remove every condition-specific face reference and return to @Image1;
+2. restore the explicit facial-proportion and face-shape lock;
+3. reduce the state overlay to one or two surface variables;
+4. move body-state evidence into wardrobe fit, posture and movement;
+5. if needed, extract a clear frontal frame from an already accepted Seedance
+   take of the same character and use that as the sole identity card.
+Never repair drift by adding several competing face references.
+```
+
+**Why it works:** weight loss, aging and illness are semantically associated
+with structural facial change, so an edited state card can contradict the
+identity card it was meant to protect. Separating invariant geometry from
+temporary surface and performance cues gives the model one face to preserve and
+one bounded state to act.
+
+**Sources:** Jacob Ye's August 23, 2026
+[Seedance 2.5 production-framework update and measured identity-drift
+failure](https://github.com/jacobye2017-afk/jacob-ye-seedance-prompt/commit/4f91f2cb9bfbf3f4d9647bce96cdc983ae06a574)
+and the committed
+[complete form-versus-state rule](https://github.com/jacobye2017-afk/jacob-ye-seedance-prompt/blob/4f91f2cb9bfbf3f4d9647bce96cdc983ae06a574/FORMULA.md#1811-%EF%B8%8F-%E5%8D%A1%E9%94%81%E5%BD%A2%E6%96%87%E5%AD%97%E9%94%81%E6%80%81%E6%94%B9%E5%8F%98%E8%84%B8%E5%9E%8B%E7%9A%84%E7%8A%B6%E6%80%81%E7%BB%9D%E4%B8%8D%E8%83%BD%E7%94%A8%E6%94%B9%E5%9B%BE).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -16701,6 +16786,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Jacob Ye — Seedance 2.5 form-locked identity card and text-only transient-state method, derived from a measured six-variable sick-card identity failure](https://github.com/jacobye2017-afk/jacob-ye-seedance-prompt/commit/4f91f2cb9bfbf3f4d9647bce96cdc983ae06a574) ([complete rule](https://github.com/jacobye2017-afk/jacob-ye-seedance-prompt/blob/4f91f2cb9bfbf3f4d9647bce96cdc983ae06a574/FORMULA.md#1811-%EF%B8%8F-%E5%8D%A1%E9%94%81%E5%BD%A2%E6%96%87%E5%AD%97%E9%94%81%E6%80%81%E6%94%B9%E5%8F%98%E8%84%B8%E5%9E%8B%E7%9A%84%E7%8A%B6%E6%80%81%E7%BB%9D%E4%B8%8D%E8%83%BD%E7%94%A8%E6%94%B9%E5%9B%BE))
 
 - [cindylearn — Seedance 2.5 clone-voice plus three-photo presenter test, explicit omni-reference media-role authentication and staged lip-sync recovery](https://github.com/cindylearn/ai-content-course-C-simple/commit/413fff576f2c54a995271385543bf33a79bb15ac)
 
