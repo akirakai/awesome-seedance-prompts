@@ -16567,6 +16567,93 @@ the committed
 and the
 [full generation, contact-sheet remapping and delivery method](https://github.com/yasikvlad/stopscroll-hero/blob/48044439b7a433d14045371368b18d0b8a1c286e/SKILL.md).
 
+### Audio-first omni-reference presenter with payload and lip-sync recovery gate
+
+**Verified model:** Seedance 2.5 (`seedance_2_5`, `omni_reference`) — the
+original creator reports a paid clone-voice-plus-three-photo test and a
+24-credit failure in which omitting the reference mode silently reduced the job
+to text-to-video and discarded both image and audio inputs
+
+Use this for a talking-head clip driven by approved voice audio and a small
+identity pack. Freeze the cheap audio first, authenticate every media role in
+the submitted and returned payload, and exhaust measured post-production fixes
+before paying for another generation.
+
+```text
+INPUT CONTRACT
+@Image1 = clear frontal identity reference.
+@Image2 = three-quarter or slight-profile identity reference.
+@Image3 = natural-expression identity reference.
+@Audio1 = approved final voice performance.
+Model = seedance_2_5.
+Mode = omni_reference.
+Resolution = 480p for the first acceptance run.
+Aspect ratio = 9:16.
+Duration = @Audio1 length rounded up to a supported whole second; pad the audio
+with silence to that exact duration rather than stretching speech.
+
+AUDIO-FIRST GATE
+Approve wording, pronunciation, pace and pauses in @Audio1 before generating
+picture. Cheap audio edits happen first; any later script or voice change
+invalidates the expensive video take.
+
+REFERENCE OWNERSHIP
+@Image1–3 jointly own the same adult face, skin, hair and stable identity.
+@Audio1 owns every spoken word, timing, pause and vocal inflection.
+Generate one natural [PRESENTER ACTION / SETTING / WARDROBE] performance around
+those assets. Keep mouth and jaw visible during speech, use restrained head and
+hand movement, and preserve realistic skin texture.
+Do not invent, paraphrase, repeat or reorder dialogue. No second speaker,
+subtitle, beauty-filter skin, identity drift, hidden mouth or background music.
+
+REQUEST AUTHENTICATION — BEFORE QUEUEING
+Confirm the serialized request contains all of:
+- exact model `seedance_2_5`;
+- exact mode `omni_reference`;
+- three image media entries and one audio media entry;
+- duration equal to the padded audio duration;
+- the approved resolution and aspect ratio.
+Run the provider's cost preflight if available. Reject locally if mode or any
+media role is absent; never allow an automatic text-to-video fallback.
+
+RETURN AUTHENTICATION
+Inspect the accepted job record before treating the queue event as valid.
+Require `params.medias` to contain three `role: image` records and one
+`role: audio` record. Log the model, mode, media count, duration, cost, job ID
+and returned asset URL.
+
+LIP-SYNC RECOVERY LADDER
+1. Classify the error before changing anything.
+2. Constant offset from start to end → shift @Audio1 earlier or later.
+3. Drift that grows over time → adjust picture speed by a small measured amount.
+4. Early section correct, later section wrong → split at a natural pause and
+   correct only the failed section.
+5. Direction unclear → render two small timing variants in each direction and
+   compare them; do not guess.
+6. Change one variable per variant and label every file with that difference.
+7. If only a short passage fails, cover it with authorized B-roll while keeping
+   the approved voice.
+8. Regenerate only after offset, speed, split and B-roll fixes fail; for a
+   critical line, shorten the utterance and generate it as a separate clip.
+
+ACCEPTANCE
+Pass only if the returned job retained all four references, identity remains
+stable, dialogue and duration match @Audio1, mouth timing is acceptable after
+documented correction, and no extra speech or text appears. Retain the original
+take, every timing variant and the final audio/video offset ledger.
+```
+
+**Why it works:** a visually convincing presenter is still an invalid result if
+the provider silently ignored the identity pack or approved voice. Payload
+authentication catches that routing failure, audio-first approval avoids
+invalidating an expensive take, and symptom-based timing correction separates a
+constant offset from cumulative drift instead of repeatedly regenerating the
+same problem.
+
+**Source:** cindylearn's August 24, 2026
+[paid Seedance 2.5 presenter test, silent-fallback diagnosis and four-level
+lip-sync recovery method](https://github.com/cindylearn/ai-content-course-C-simple/commit/413fff576f2c54a995271385543bf33a79bb15ac).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -16614,6 +16701,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [cindylearn — Seedance 2.5 clone-voice plus three-photo presenter test, explicit omni-reference media-role authentication and staged lip-sync recovery](https://github.com/cindylearn/ai-content-course-C-simple/commit/413fff576f2c54a995271385543bf33a79bb15ac)
 
 - [Davit Gadyan / SocialForge — Seedance 2.5 café dialogue one-shot with uploaded-icon brand transition, complete website prompt and generated audio result](https://github.com/DavitGadyan/AIVideo_Generation_higgsfield/commit/32666b37dfa064b6b33d55648e0c533d9dca55e5) ([complete prompt](https://github.com/DavitGadyan/AIVideo_Generation_higgsfield/blob/32666b37dfa064b6b33d55648e0c533d9dca55e5/docs/generation-prompt-website.txt), [result record](https://github.com/DavitGadyan/AIVideo_Generation_higgsfield/blob/32666b37dfa064b6b33d55648e0c533d9dca55e5/docs/README.md), [generated MP4](https://github.com/DavitGadyan/AIVideo_Generation_higgsfield/blob/32666b37dfa064b6b33d55648e0c533d9dca55e5/docs/videos/seedance.mp4))
 
