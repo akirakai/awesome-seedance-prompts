@@ -11002,6 +11002,90 @@ and the
 
 ## Reusable templates
 
+### Motion-family feasibility triage and wrong-neighbor exclusion
+
+**Verified model:** Seedance 2.0 Mini (`seedance_2_0_mini`, 480p) — the
+original creator reviewed 402 generated exercise demonstrations as five-frame
+motion strips, then regenerated 19 severe free-weight/body/band failures with
+targeted exclusions; 13 were corrected, one improved partially, and five kept
+their original take
+
+Use this before spending prompt iterations on a movement-heavy shot. First
+decide whether the failure is prompt-fixable at all. Then describe the requested
+motion together with the nearest plausible but wrong motion that must not
+appear. Judge the full movement, not an attractive first frame.
+
+```text
+MOTION-FAMILY PREFLIGHT
+
+Requested action: [ACTION].
+Subject and camera: [IDENTITY, FULL-BODY OR LIMB-FRAMING, VIEW ANGLE].
+Required equipment: [PROP / ANCHOR / SUPPORT], visible from [START] to [END].
+
+1. FEASIBILITY ROUTE
+Classify the action before prompting:
+- apparatus-dependent: a specialised machine, cable/pulley path, Smith track or
+  unfamiliar mechanical geometry;
+- common-prop: dumbbell, barbell, plate, resistance band, bench or floor;
+- body-only/cardio: no specialised apparatus.
+
+If the action depends on equipment geometry the model repeatedly substitutes,
+route it to filmed footage or a verified reference-video workflow. Do not keep
+adding prose to an unsupported visual category.
+Continue with generation only when the action can be identified from common
+props, body contacts and a visible movement path.
+
+2. MOVEMENT LEDGER
+Start state: [BODY ORIENTATION, FOOT/HAND CONTACTS, PROP POSITION].
+Active joint: [JOINT]; permitted change: [FLEX / EXTEND / HINGE / ROTATE].
+Locked joints and body parts: [MUST REMAIN STILL].
+Movement plane and direction: [FORWARD / LATERAL / VERTICAL / ARC], relative to
+[THE TORSO / FLOOR / CAMERA].
+End state: [VISIBLE TERMINAL POSE AND RANGE].
+Equipment invariants: [COUNT, SHAPE, LOAD, ANCHOR HEIGHT, CONTACT POINTS].
+
+3. WRONG-NEIGHBOUR EXCLUSION
+The nearest likely substitution is [WRONG ACTION].
+State the observable distinction:
+- requested: [POSITIVE PATH, JOINT CHANGE AND CONTACT];
+- forbidden: [WRONG PATH, WRONG JOINT CHANGE OR WRONG CONTACT].
+Write one literal exclusion: "This is [REQUESTED ACTION], not [WRONG ACTION];
+[FORBIDDEN FEATURE] never appears."
+
+4. GENERATION BRIEF
+In a stable [SHOT SIZE] from [VIEW], [SUBJECT] begins in [START STATE].
+They move [PROP/BODY PART] [DIRECTION AND PATH] by changing only [ACTIVE JOINT]
+until [END STATE], then return under control. [LOCKED PARTS] remain still.
+[PROP/ANCHOR] stays connected and unchanged in every frame.
+This is not [WRONG ACTION]: never show [WRONG OBSERVABLE FEATURE].
+No camera move or crop may hide the start, peak range, contacts or apparatus.
+
+5. MOTION AUDIT
+Extract at least five frames spanning setup, early motion, midpoint, peak range
+and return. Judge the action strip rather than frame zero.
+Reject as severe if the action family changes, the prop/anchor topology breaks,
+the movement uses the wrong plane or joint, or a defining contact disappears.
+Regenerate only severe failures that belong to a supported motion family.
+Record the original prompt, exclusion, model, outcome and retained take.
+```
+
+**Why it works:** A visually plausible neighbouring action can satisfy a vague
+brief while still being functionally wrong. The explicit exclusion converts the
+difference into visible geometry—joint, plane, contact and endpoint—while the
+feasibility route prevents wasted retries on apparatus the model does not
+reliably represent. In the creator's audit, severe errors were about 42% for
+machine/pulley/Smith movements versus 6% for free-weight, bodyweight and cardio
+movements; pre-existing descriptive tips did not materially change the former
+failure rate.
+
+**Sources:** AutoCare's
+[original frame-by-frame audit and regeneration commit](https://github.com/AutoCare-1/trainos/commit/d4a7caafb15d15756c46f530beb9aa68ea035d19),
+the
+[complete 19-prompt correction set](https://github.com/AutoCare-1/trainos/blob/d4a7caafb15d15756c46f530beb9aa68ea035d19/backend-laravel/database/dicas_demonstracao.php),
+and the
+[402-video motion review](https://github.com/AutoCare-1/trainos/blob/d4a7caafb15d15756c46f530beb9aa68ea035d19/backend-laravel/database/revisao_demonstracoes_2026-08-25.md),
+published August 25, 2026.
+
 ### Semantic no-text contradiction gate and shot-level patch
 
 **Verified model:** Seedance 2.5 (`byte-plus-seedance-2-5`) — the original
@@ -17260,6 +17344,8 @@ Community examples and techniques referenced in this README:
 - [ukaya17-jpg — Artlist Seedance 2.5 style-locked image-plus-audio lip-sync generation](https://github.com/ukaya17-jpg/AI-Animation-Studio/commit/9bb5e6f66d225b8d66ab69ce128a9beb9a4a26f5) ([working formula and cost record](https://github.com/ukaya17-jpg/AI-Animation-Studio/blob/9bb5e6f66d225b8d66ab69ce128a9beb9a4a26f5/docs/ses-rehberi.md), [generated MP4](https://github.com/ukaya17-jpg/AI-Animation-Studio/blob/9bb5e6f66d225b8d66ab69ce128a9beb9a4a26f5/backend/app/static/characters/talking_samples/kurnaz_demo.mp4))
 
 - [Jacob Ye — Seedance 2.5 framing-feasibility, prop-entry and body-occupancy production review](https://github.com/jacobye2017-afk/jacob-ye-seedance-prompt/commit/b16cde84e8565697fcde10d8ca4cf54e903c0d82)
+
+- [AutoCare — Seedance 2.0 Mini motion-family feasibility audit and wrong-neighbour exclusions](https://github.com/AutoCare-1/trainos/commit/d4a7caafb15d15756c46f530beb9aa68ea035d19) ([complete correction prompts](https://github.com/AutoCare-1/trainos/blob/d4a7caafb15d15756c46f530beb9aa68ea035d19/backend-laravel/database/dicas_demonstracao.php), [402-video frame review](https://github.com/AutoCare-1/trainos/blob/d4a7caafb15d15756c46f530beb9aa68ea035d19/backend-laravel/database/revisao_demonstracoes_2026-08-25.md))
 
 Official model references:
 
