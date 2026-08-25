@@ -11002,6 +11002,100 @@ and the
 
 ## Reusable templates
 
+### Asymmetric single-image orbit feasibility and mirror-dodge gate
+
+**Verified model:** Seedance 2.5 (480P) — Motiofy founder Celeste Deng ran
+the same single-image eight-second orbit prompt across three products and four
+models, published every first-take clip, and recorded Seedance 2.5's asymmetric
+phone result: the camera reached a side profile, then returned through a mirrored
+copy of the back instead of ever revealing the front screen
+
+Use this before asking one product photograph to produce a full turntable or
+camera orbit. Decide whether the unseen faces are knowable from the supplied
+references, write a face-by-face topology ledger, and audit cardinal angles
+instead of approving a smooth-looking loop at playback speed.
+
+```text
+ASYMMETRIC SINGLE-IMAGE ORBIT GATE
+
+Product: [OBJECT].
+Input references: [@IMAGE1 FRONT / @IMAGE2 BACK / @IMAGE3 SIDE, IF AVAILABLE].
+Requested move: [CLOCKWISE / COUNTERCLOCKWISE] [ARC DEGREES] in [DURATION].
+Delivery goal: [SEAMLESS LOOP / NON-LOOPING REVEAL / PRODUCT DETAIL].
+
+1. FEASIBILITY ROUTE
+Classify the product before generation:
+- rotationally symmetric: every hidden face is materially equivalent;
+- appearance-symmetric: silhouette is symmetric, but labels, controls or seams
+  differ by face;
+- asymmetric: front and back have different topology, such as a phone screen
+  versus camera housing.
+
+A lone image may drive a full orbit only for a rotationally symmetric product
+or when invented hidden surfaces are explicitly acceptable.
+For appearance-symmetric or asymmetric products, choose one:
+A. supply verified front, back and useful side references;
+B. reduce the move to a [45–120]-degree arc that never exposes unknown geometry;
+C. replace the orbit with a push-in, lateral slide or restrained parallax.
+Do not promise a factual 360-degree proof from one visible face.
+
+2. CARDINAL-FACE LEDGER
+Write the required evidence before the prompt:
+0%: [KNOWN START FACE AND DISTINCTIVE DETAILS].
+25%: [SIDE A, THICKNESS, PORTS, SEAMS OR PROFILE].
+50%: [OPPOSITE FACE AND DETAILS THAT MUST DIFFER FROM START].
+75%: [SIDE B AND ITS NON-MIRRORED DETAILS].
+100%: exact return to [START FACE] only if a loop is required.
+
+Protected geometry: [SILHOUETTE, CAP, BUTTONS, CAMERA BUMP, LABEL ZONES].
+Unknown surfaces that may remain blank: [AREAS].
+Forbidden shortcut: reusing, mirroring or horizontally flipping the start face
+at the 50% position.
+
+3. GENERATION BRIEF
+Use the uploaded product references as exact geometry and material evidence.
+The camera travels once [DIRECTION] around the stationary product over
+[DURATION]; the product does not spin in place.
+At one quarter, reveal [SIDE A]. At halfway, clearly reveal [OPPOSITE FACE] with
+[DIAGNOSTIC DETAILS]. At three quarters, reveal [SIDE B]. Return to the original
+view only in the final beat.
+Preserve [LOCKS]. Unseen packaging carries [NO TEXT / ONLY PROVIDED APPROVED
+MARKS]. No mirrored back, repeated start face, self-cut, geometry morph, invented
+label, sudden reversal or hidden midpoint.
+
+4. FIVE-FRAME ORBIT AUDIT
+Extract frames at 0%, 25%, 50%, 75% and 100%.
+Reject the take if:
+- the 0% and 50% frames show the same face or a horizontal mirror;
+- left/right details swap without passing around the object;
+- the opposite face never appears;
+- the camera reverses after a side profile;
+- a label, port, button, seam or asymmetric protrusion migrates;
+- a smooth loop conceals a topology failure.
+
+5. FAILURE ROUTING
+If a single-image asymmetric orbit mirror-dodges, stop rerolling the same
+contract. Add opposite-face references or reduce the arc.
+For a symmetric package, a restrained blank hidden face can pass only when the
+brief permits it and the five-frame audit confirms stable geometry and no
+fabricated text.
+Record input count, model tier, prompt, five audit frames and pass/fail reason.
+```
+
+**Why it works:** a loop request rewards matching start and end frames, so a
+model can satisfy the visible motion and closure cues by reaching an edge and
+mirroring the known face. Cardinal-angle acceptance turns an attractive loop
+into a topology test. In Motiofy's controlled run, Seedance 2.5 preserved a
+clean, text-free hidden surface better than the comparison models, but its
+single-image phone orbit still failed the required front-versus-back state
+change.
+
+**Source:** Celeste Deng / Motiofy's August 24–25, 2026
+[21-render same-input benchmark with exact prompts, complete videos and the
+Seedance 2.5 mirror-dodge diagnosis](https://motiofy.ai/blog/ai-product-video-model-comparison).
+
+---
+
 ### Motion-family feasibility triage and wrong-neighbor exclusion
 
 **Verified model:** Seedance 2.0 Mini (`seedance_2_0_mini`, 480p) — the
@@ -16941,6 +17035,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Celeste Deng / Motiofy — Seedance 2.5 single-image product-orbit benchmark, exact prompts, all first-take clips and asymmetric-phone mirror-dodge audit](https://motiofy.ai/blog/ai-product-video-model-comparison)
 
 - [Ido Marhaim / GoalPilot — Seedance 2.5 contradictory no-text calendar failure, abstract-mark defocus repair and visually verified shot-level patch](https://github.com/idomarhaim/Android_Final_Project/commit/5771bbd96f211972eb8770bd578bf4a99959ac9e) ([initial generation and diagnosis](https://github.com/idomarhaim/Android_Final_Project/commit/8ad800d4f4f4dbe64f48d29f8b5e92faec276a48), [complete source brief](https://github.com/idomarhaim/Android_Final_Project/blob/5771bbd96f211972eb8770bd578bf4a99959ac9e/docs/marketing/explainer-video-brief.md#5--google-flow-prompts--the-opening-b-roll-only))
 
