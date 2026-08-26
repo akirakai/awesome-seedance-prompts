@@ -11002,6 +11002,81 @@ and the
 
 ## Reusable templates
 
+### Hand-topology positive pin and silhouette-redraw suppression gate
+
+**Verified model:** Seedance 2.0 Mini (`seedance_2_0_mini`, 480p, 4 seconds) —
+the original creator reran two hand panels against verified source plates after
+a sixth digit escaped an earlier QC pass. For one panel, the creator removed
+“the fingers flexing slightly”; for both, the creator added the positive
+topology pin “four fingers and one thumb, five digits.” Full-resolution review
+of all eight audited clip frames plus four extractions from the rebuilt master
+found one opposed thumb and four fingers throughout.
+
+Use this when a correct source hand gains, loses or fuses digits during
+image-to-video motion. Treat the failure as a temporal silhouette-redraw
+problem, not only as a generic anatomy problem: freeze nonessential finger
+articulation, state the required topology positively, and verify the whole
+motion span.
+
+```text
+HAND-TOPOLOGY REPAIR GATE
+
+Failed shot: [SHOT / PANEL ID].
+Model and settings: [EXACT MODEL], [RESOLUTION], [DURATION], [MODE].
+Verified source plate: [@IMAGE1].
+Hand in frame: [LEFT / RIGHT], seen from [ANGLE], performing [ESSENTIAL ACTION].
+Observed failure interval: [TIMECODE / FRAME RANGE].
+Failure: [EXTRA / MISSING / FUSED / SPLIT] digit.
+
+1. SILHOUETTE-REDRAW TEST
+Compare the source plate, the last correct frame and the first failed frame.
+List every requested local hand change: [FINGER FLEX / GRIP CHANGE / WAVE /
+WRIST TURN / OBJECT CONTACT].
+If a small finger motion is not necessary to the story and its onset coincides
+with the topology error, remove that motion. Do not ask the model to redraw a
+stable hand silhouette merely to make the frame feel alive.
+Keep life in [BREATH / EYES / HAIR / FABRIC / LIGHT / CAMERA] instead.
+
+2. POSITIVE TOPOLOGY PIN
+The visible [LEFT / RIGHT] hand keeps one palm, four fingers and one opposed
+thumb—five digits total—from the first frame to the last. Every digit originates
+once from the same palm and remains naturally attached, with stable spacing and
+joint direction. No extra digit, duplicated fingertip, split finger, fused pair
+or disappearing thumb.
+
+3. REGENERATION BRIEF
+Use @Image1 as the exact identity, wardrobe, composition and hand-pose authority.
+Preserve [LOCKED BODY / PROP / BACKGROUND / CAMERA].
+The essential motion is only [ACTION]. The fingers remain [STILL / IN THE
+SOURCE GRIP]; do not add flexing, tapping, waving or grip adjustment.
+Animate [SAFE MOTION CARRIERS] while keeping the hand silhouette and five-digit
+topology unchanged.
+
+4. FULL-SPAN AUDIT
+Inspect the source plate and dense frames across setup, motion onset, midpoint,
+peak and end at full resolution. Count four fingers plus one opposed thumb in
+every frame where the hand is readable. Also inspect frames extracted from the
+final edited master, not only the isolated replacement clip.
+Reject the repair if any digit appears, disappears, branches or fuses, even for
+one frame. Record the removed motion phrase, positive topology pin, model,
+settings, audited frames and final retained clip.
+```
+
+**Why it works:** “no extra fingers” names the defect but still permits the
+model to redraw a changing hand silhouette. Removing nonessential articulation
+reduces the redraw demand; the positive pin supplies an explicit, countable
+target. In the verified repair, the combination corrected both panels and also
+caught a false earlier acceptance through full-span rather than thumbnail-only
+review.
+
+**Sources:** Leon Harris / Next-Frame Agency's August 26, 2026
+[Seedance 2.0 Mini repair and master-rebuild commit](https://github.com/Leonkharris/nextframe-site/commit/de9ea60177dd894c0e367d8376fd80bbddffdc5d),
+with the generated
+[p21 clip](https://github.com/Leonkharris/nextframe-site/blob/de9ea60177dd894c0e367d8376fd80bbddffdc5d/lucifergamingmv/clips/p21.mp4),
+[p58 clip](https://github.com/Leonkharris/nextframe-site/blob/de9ea60177dd894c0e367d8376fd80bbddffdc5d/lucifergamingmv/clips/p58.mp4)
+and
+[rebuilt 64-panel master](https://github.com/Leonkharris/nextframe-site/blob/de9ea60177dd894c0e367d8376fd80bbddffdc5d/lucifergamingmv/MOTION-PASS.mp4).
+
 ### Tonal-contrast event-carrier preflight and payload swap
 
 **Verified model:** Seedance 2.5 (`star-video2.5`, 1080p) — the original
@@ -17160,6 +17235,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Leon Harris / Next-Frame Agency — Seedance 2.0 Mini five-digit hand repair through nonessential finger-motion removal, positive topology pinning and full-span master QA](https://github.com/Leonkharris/nextframe-site/commit/de9ea60177dd894c0e367d8376fd80bbddffdc5d) ([p21 repair](https://github.com/Leonkharris/nextframe-site/blob/de9ea60177dd894c0e367d8376fd80bbddffdc5d/lucifergamingmv/clips/p21.mp4), [p58 repair](https://github.com/Leonkharris/nextframe-site/blob/de9ea60177dd894c0e367d8376fd80bbddffdc5d/lucifergamingmv/clips/p58.mp4), [rebuilt master](https://github.com/Leonkharris/nextframe-site/blob/de9ea60177dd894c0e367d8376fd80bbddffdc5d/lucifergamingmv/MOTION-PASS.mp4))
 
 - [Celeste Deng / Motiofy — Seedance 2.5 single-image product-orbit benchmark, exact prompts, all first-take clips and asymmetric-phone mirror-dodge audit](https://motiofy.ai/blog/ai-product-video-model-comparison)
 
