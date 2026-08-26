@@ -17291,6 +17291,89 @@ failure](https://github.com/jacobye2017-afk/jacob-ye-seedance-prompt/commit/4f91
 and the committed
 [complete form-versus-state rule](https://github.com/jacobye2017-afk/jacob-ye-seedance-prompt/blob/4f91f2cb9bfbf3f4d9647bce96cdc983ae06a574/FORMULA.md#1811-%EF%B8%8F-%E5%8D%A1%E9%94%81%E5%BD%A2%E6%96%87%E5%AD%97%E9%94%81%E6%80%81%E6%94%B9%E5%8F%98%E8%84%B8%E5%9E%8B%E7%9A%84%E7%8A%B6%E6%80%81%E7%BB%9D%E4%B8%8D%E8%83%BD%E7%94%A8%E6%94%B9%E5%9B%BE).
 
+### Earliest-failure isolation and single-variable patch ledger
+
+**Verified model:** Seedance 2.5 — the original creator generated five intact
+Dreamina exports with Seedance 2.5 selected, including complete 12-second and
+30-second prompts, then published this symptom-routed troubleshooting method on
+August 26, 2026
+
+Use this when one early defect produces several later symptoms. Freeze the
+baseline, locate the first unusable frame, change only the control that owns that
+failure, and compare the same interval before touching anything downstream.
+
+```text
+BASELINE FREEZE
+Record the exact model, mode, prompt, reference set and role map, duration,
+ratio, resolution, audio setting, seed when exposed, job ID and returned asset.
+Keep the failed result. A diagnosis without its original inputs is not evidence.
+
+FIRST-FAILURE PASS
+1. Watch the whole clip once at normal speed without editing.
+2. Review frame by frame and mark the earliest unusable frame or audio event.
+3. Record the last accepted state immediately before it:
+   [IDENTITY / POSE / PROP / CAMERA AXIS / BACKGROUND / AUDIO STATE].
+4. Ignore later defects until this first boundary is repaired; they may be
+   consequences rather than independent causes.
+
+CONTROL ROUTER
+- Face, hair, clothing or silhouette changes before the action:
+  patch only the identity anchors; remove conflicting references.
+- Camera spins, reverses or reframes:
+  patch only camera ownership; keep one movement on one axis and add its stop.
+- Body or object jumps between states:
+  patch only the action chain as trigger -> preparation -> movement -> contact
+  -> reaction -> settle, or remove a beat that cannot fit the duration.
+- The ending starts another action:
+  patch only the terminal state; name final framing, pose, prop, background,
+  light and a motionless settle interval.
+- Sound leads or trails the visible event:
+  patch only audio timing; bind each sound to its visible cause and state what
+  ambience continues underneath.
+
+SINGLE-VARIABLE PATCH
+Copy the baseline request. Keep every unrelated word, reference, setting and
+delivery parameter unchanged. Replace only [ONE DIAGNOSED CONTROL].
+Do not simultaneously improve identity, camera, motion, ending and audio.
+If the provider exposes no deterministic seed, label the comparison stochastic
+and require more than one matched variant before attributing the change.
+
+PATCH LEDGER
+V[NUMBER]
+First failed frame/time: [FRAME / TIMECODE].
+Last accepted state: [STATE].
+Observed symptom: [ONE OBSERVABLE FAILURE].
+Diagnosed owner: [IDENTITY / CAMERA / ACTION / END STATE / AUDIO].
+Single change: [EXACT OLD TEXT -> EXACT NEW TEXT].
+Comparison interval: [START-END].
+Result: [REPAIRED / MOVED / UNCHANGED / NEW REGRESSION].
+
+BOUNDARY ROUTING
+If the clip remains valid until a second independent action, location, costume,
+camera move, dialogue line or sound sequence begins, stop expanding the prompt.
+End the accepted shot before that boundary and move the later job into a new
+storyboard shot. Preserve the approved endpoint as the handoff reference.
+
+ACCEPTANCE
+Pass only if the original first-failure interval is repaired, the state before
+it remains unchanged, and no earlier regression appears. Recheck the full clip
+after the local pass. Retain the baseline, every one-variable variant, the
+ledger and the accepted prompt; never keep only the prettier result.
+```
+
+**Why it works:** the first visible break is usually closer to the causal
+instruction than the cascade that follows. A stable baseline plus one-variable
+patch makes the comparison interpretable, while the boundary route prevents a
+late independent beat from forcing a wholesale regeneration of an otherwise
+accepted shot. This generalizes the source's separate identity, camera, action,
+ending and audio repairs without merging them into another overloaded prompt.
+
+**Sources:** Sonya / MkAnime's August 26, 2026
+[observable-symptom troubleshooting guide](https://mkanime.ai/guides/fix-seedance-2-5-character-camera-ending)
+and the creator's
+[five exact-model Dreamina tests, intact exports and complete structured
+prompts](https://mkanime.ai/guides/seedance-2-5-anime-test).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -17338,6 +17421,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Sonya / MkAnime — Seedance 2.5 earliest-failure isolation, symptom-to-control routing and single-variable patch ledger](https://mkanime.ai/guides/fix-seedance-2-5-character-camera-ending) ([five creator-generated Dreamina tests, intact exports and complete structured prompts](https://mkanime.ai/guides/seedance-2-5-anime-test))
 
 - [charbel2y16 / FujiLift — Seedance 2.5 shaft-travel generation rejected for interactive scrubbing after measured direction reversals, speed instability and cut-like jumps](https://github.com/charbel2y16-pixel/fujilift-web/commit/b3df5d6249bbfddceb45d681a2554168d1173c8f) ([executable direction/rate/cut/stall/net-travel audit](https://github.com/charbel2y16-pixel/fujilift-web/commit/33bd3bcfa06ea6b9e789671cb972babf8902b3c9), [archived rejected master](https://github.com/charbel2y16-pixel/fujilift-web/blob/b3df5d6249bbfddceb45d681a2554168d1173c8f/video/higgsfield-shaft-15s.mp4))
 
