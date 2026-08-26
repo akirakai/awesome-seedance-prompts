@@ -249,6 +249,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Grooming-mask micro-expression rupture](#233-grooming-mask-micro-expression-rupture)
   - [Six-gate neon-citadel ascent](#234-six-gate-neon-citadel-ascent)
   - [Reference-brand café meet-cute handoff](#235-reference-brand-café-meet-cute-handoff)
+  - [Three-reference Shibuya reunion CM](#236-three-reference-shibuya-reunion-cm)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -11000,6 +11001,89 @@ and the
 
 ---
 
+### 236. Three-reference Shibuya reunion CM
+
+**Verified model:** Seedance 2.0 — AICU and the credited notebook creator
+published the exact three input references, the complete R2V generation prompt,
+the corresponding 15-second audio result and the ComfyUI API workflow together;
+the August 26, 2026 notebook update makes the model-to-result chain explicit
+
+**Use case:** two-character anime dialogue, photoreal-background integration,
+storyboard-conditioned coverage, reunion micro-story  \
+**Mode:** reference-to-video with two character sheets and one image board  \
+**Settings:** 15 seconds, documented 1254×720 result, native Japanese dialogue
+
+```text
+REFERENCE CONTRACT
+@Image1 is the sole identity and wardrobe authority for Mei: pale-aqua
+twin-tails, black ribbons, pink eyes and a white frilled dress.
+@Image2 is the sole identity and wardrobe authority for Rizu: warm skin, blue
+eyes, a pink-blonde side ponytail, orange hoodie, shorts and sneakers.
+@Image3 controls only the Shibuya geography, shot order, framing and overall
+mood. It must not redesign either character.
+
+Create a bright 15-second character-introduction commercial at the Hachiko
+meeting area. Render the plaza, crowd and city photorealistically, but render
+only Mei and Rizu as clean cel-shaded anime characters. Make their contact
+shadows, light direction and sunny midday colour temperature agree with the
+real environment. Keep both designs unchanged through every angle.
+
+0–4 s — Establish absence and concern.
+Open wide enough to identify the Hachiko-side plaza and the scramble-crossing
+atmosphere, then settle into a medium view of Mei holding her phone alone. She
+searches the moving crowd with restrained worry and says softly in Japanese:
+"リズ、まだかな……" Do not let passers-by obscure her face for more than a
+moment.
+
+4–6 s — Introduce the late friend in motion.
+Cut to Rizu running through the same crowd while looking for Mei. Track beside
+her at walking height so her speed reads without camera shake. Her breath is
+audible; she remains upbeat rather than distressed.
+
+6–10 s — Make recognition the emotional turn.
+Rizu sees Mei first and raises one hand above the crowd, calling in Japanese:
+"メイ、こっち！" Match her eyeline into a close reaction of Mei. Mei's
+expression changes in order—recognition, relief, then a small bright smile—and
+she answers with one shy wave. Preserve screen direction so the two shots feel
+spatially connected.
+
+10–15 s — Complete contact and leave together.
+Rizu reaches Mei and takes her hand naturally; show fingers making one clean
+contact rather than merging. Mei exhales, smiles and lightly scolds her in
+Japanese: "待ち合わせ、ここって言ったよね。" Rizu laughs and replies:
+"ごめん、急いだんだよ！" End from behind at three-quarter height as the same
+two characters walk side by side toward the city, suggesting the day is only
+starting.
+
+Carry real plaza ambience, footsteps and both voices across the edit. Keep
+Japanese lip movement aligned to the assigned speaker. Use a clear progression
+of establishing view, motion medium, reaction close-up, reunion two-shot and
+walking-away finish. No third anime lead, identity swap, changed costume,
+fantasy effect, manga symbol, romantic staging, subtitle, caption, logo,
+watermark, malformed hand contact, heavy shake or unmotivated location reset.
+```
+
+**Why it works:** each reference has one non-overlapping responsibility: two
+character sheets lock separate identities while the image board supplies
+geography and coverage. The prompt then repeats observable character anchors
+only where angle and action change, and uses an eyeline match plus ordered
+micro-expression states to make the reunion readable. Separating the
+photorealistic environment from the cel-shaded leads while explicitly sharing
+light and contact shadows prevents the common pasted-on-character look. The
+published sample verifies the entire prompt/reference/result chain rather than
+showing an unattributed output alone.
+
+**Sources:** AICU and credited notebook creator Zasuko's August 26, 2026
+[example-and-workflow publication commit](https://github.com/aicuai/Book-SG26/commit/32f2cdf7020e7fc3b0490c85556c41a5277efa96),
+the
+[complete Seedance 2.0 R2V prompt](https://github.com/aicuai/Book-SG26/blob/32f2cdf7020e7fc3b0490c85556c41a5277efa96/prompts/chap5/README.md#5-4-5),
+the
+[three-reference notebook record](https://github.com/aicuai/Book-SG26/blob/32f2cdf7020e7fc3b0490c85556c41a5277efa96/SG26_SD2_R2V.ipynb),
+and the
+[15-second audio sample](https://github.com/aicuai/Book-SG26/blob/32f2cdf7020e7fc3b0490c85556c41a5277efa96/prompts/chap5/Seedance2.0_R2V%E2%80%97Movie_720p_SAMPLE.mp4).
+
+---
+
 ## Reusable templates
 
 ### Monotonic scrub-readiness motion audit and rejection gate
@@ -17421,6 +17505,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [AICU / Zasuko — Seedance 2.0 three-reference Shibuya reunion CM with complete R2V prompt, character sheets, image board and generated audio result](https://github.com/aicuai/Book-SG26/commit/32f2cdf7020e7fc3b0490c85556c41a5277efa96) ([complete prompt](https://github.com/aicuai/Book-SG26/blob/32f2cdf7020e7fc3b0490c85556c41a5277efa96/prompts/chap5/README.md#5-4-5), [reference notebook](https://github.com/aicuai/Book-SG26/blob/32f2cdf7020e7fc3b0490c85556c41a5277efa96/SG26_SD2_R2V.ipynb), [generated MP4](https://github.com/aicuai/Book-SG26/blob/32f2cdf7020e7fc3b0490c85556c41a5277efa96/prompts/chap5/Seedance2.0_R2V%E2%80%97Movie_720p_SAMPLE.mp4))
 
 - [Sonya / MkAnime — Seedance 2.5 earliest-failure isolation, symptom-to-control routing and single-variable patch ledger](https://mkanime.ai/guides/fix-seedance-2-5-character-camera-ending) ([five creator-generated Dreamina tests, intact exports and complete structured prompts](https://mkanime.ai/guides/seedance-2-5-anime-test))
 
