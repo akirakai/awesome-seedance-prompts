@@ -11002,6 +11002,81 @@ and the
 
 ## Reusable templates
 
+### Tonal-contrast event-carrier preflight and payload swap
+
+**Verified model:** Seedance 2.5 (`star-video2.5`, 1080p) — the original
+creator ran one 30.08-second image-to-video take from the archived source image,
+retained the complete prompt and task ID, and measured the requested white-breath
+event in the rendered frames: local luminance rose from 87.6 at 14 seconds to
+92.0 at 15 seconds and remained 93–95 through 27 seconds, proving execution even
+though the event was almost invisible against the cold-white fog
+
+Use this before assigning the narrative beat to smoke, breath, mist, snow,
+sparks, liquid, cloth or another moving carrier. Separate “the model performed
+the event” from “the audience can read the event at delivery size,” then swap
+the carrier instead of spending retries on stronger wording.
+
+```text
+TONAL-CONTRAST EVENT PREFLIGHT
+
+SOURCE FRAME
+Reference: @Image1
+Delivery composition: [SHOT SIZE / SUBJECT POSITION / ASPECT RATIO]
+Event zone: [SCREEN REGION where the key event must appear]
+Local background behind that zone: [HIGH-KEY / MID-KEY / LOW-KEY], approximately
+[LOCAL LUMINANCE OR VISUAL VALUE RANGE]
+Planned event: [BREATH / MIST / DUST / SPARKS / FABRIC / HAIR / REFLECTION]
+Planned event value: [WHITE / LIGHT / MID / DARK]
+Readable at full-frame delivery size before motion: [YES / NO]
+
+CARRIER GATE
+If the event and its immediate background occupy the same tonal family, do not
+use that event as the only story payload. Choose one recovery before generation:
+A. move the event across a contrasting background region;
+B. change the event to a darker or brighter physical carrier;
+C. keep the event as atmosphere but transfer the beat to a high-contrast element;
+D. introduce one motivated rim, specular or silhouette edge that separates it.
+
+For a high-key frame, assign motion first to [DARK HAIR / DARK CLOTH / SHADOW
+EDGE], [HARD SPECULAR HIGHLIGHTS] and [STRUCTURAL FIBRES OR PARTICLES]. White
+breath, pale fog or snow may remain secondary atmosphere, never the sole payoff.
+For a low-key frame, pale smoke, breath or mist may carry the event only if its
+edge remains separated from practical lights and clipped highlights.
+
+VIDEO REQUEST
+Use @Image1 as the immutable identity, wardrobe, palette and opening-composition
+reference. Keep [FACE / HAIR / ACCESSORY / PROP COUNT] unchanged.
+
+One continuous [DURATION]-second shot. The key beat is [VISIBLE PHYSICAL EVENT].
+Its primary carrier is [HIGH-CONTRAST ELEMENT] moving through [CONTRASTING
+BACKGROUND REGION]. Secondary response: [SPECULAR / FIBRE / SHADOW EVENT].
+Preserve [CAMERA RULE] and end with [VISIBLE RESIDUAL STATE] so the event leaves
+a readable consequence.
+
+READABILITY QA
+Inspect the full frame at intended delivery size, then crop the event zone at
+[PRE-EVENT / ONSET / PEAK / HOLD / RELEASE]. Record both:
+- execution: did pixels in the event zone change at the requested time?
+- communication: can a viewer identify the event without crop, labels or replay?
+
+Pass only when both are true. If the crop proves execution but the full frame
+does not communicate it, classify TONAL-DESIGN FAILURE, preserve the reference,
+identity and camera, and rerender only after swapping the event carrier.
+```
+
+**Technique:** The source prompt successfully produced a long-held white breath,
+but white breath against a white fog field had almost no figure-ground contrast.
+The creator therefore moved the final video's motion payload to black flyaway
+hair, hard pearl highlights and individually readable feather fibres. This gate
+prevents a physically correct but visually absent event from being mistaken for
+an instruction-following failure.
+
+Adapted from the original creator's August 26, 2026
+[Seedance 2.5 comparison-run commit](https://github.com/Mr-Salticidae/aigc-creative-archive/commit/daa61c2be4cfb1ced7d659f1e459926f53416272),
+[complete 30-second source prompt](https://github.com/Mr-Salticidae/aigc-creative-archive/blob/daa61c2be4cfb1ced7d659f1e459926f53416272/65_%E8%BF%87%E9%A3%8E_%E9%9B%AA%E9%9B%BE%E7%8F%8D%E7%8F%A0%E4%BA%BA%E5%83%8F_H3%E5%8A%A8%E6%80%81%E5%86%99%E7%9C%9F/03_%E5%88%B6%E4%BD%9C/prompt_%E5%AF%B9%E7%85%A7_Seedance2.5_30s.txt)
+and
+[task ledger, measured QA and creator review](https://github.com/Mr-Salticidae/aigc-creative-archive/blob/daa61c2be4cfb1ced7d659f1e459926f53416272/65_%E8%BF%87%E9%A3%8E_%E9%9B%AA%E9%9B%BE%E7%8F%8D%E7%8F%A0%E4%BA%BA%E5%83%8F_H3%E5%8A%A8%E6%80%81%E5%86%99%E7%9C%9F/03_%E5%88%B6%E4%BD%9C/%E5%88%B6%E4%BD%9C%E6%89%8B%E5%86%8C.md).
+
 ### Asymmetric single-image orbit feasibility and mirror-dodge gate
 
 **Verified model:** Seedance 2.5 (480P) — Motiofy founder Celeste Deng ran
@@ -12686,71 +12761,121 @@ Use the final 4K master for publishing; keep standard drafts only for iteration.
 
 Adapted from [Marcus Cole / Seedance2Pro’s Seedance 2.0 4K workflow](https://www.seedance2pro.net/blog/seedance-2-4k-guide), published July 21, 2026. The platform’s rule is to test at standard quality and reserve native 4K for a direction that is ready to publish.
 
-### Six-second seam-concealment template
+### Detected-seam concealment fallback
 
-**Verified model:** Seedance 2.5 — explicitly tested by the original creator through both Flova and Dreamina multimodal-to-video
+**Verified model:** Seedance 2.5 — the original creator's earlier Flova and
+Dreamina multimodal-to-video tests exposed regular boundaries near six-second
+intervals, while a later direct LibTV `star-video2.5` 30.08-second run produced
+zero detected cuts and a smooth monotonic luminance curve; seam timing is
+therefore provider/orchestration evidence, not a universal Seedance behavior
 
-Use this for a 20–30 second shot that should read as one take even when the model
-internally regenerates the clip in roughly six-second segments. Direct the seam
-instead of repeatedly asking the model not to cut.
+Use this only after a clean pilot from the current provider reveals repeatable
+boundaries. Do not add artificial occlusions or six-second beats when the actual
+direct output is continuous.
 
 ```text
+PROVIDER SEAM PROBE
+Generate one clean [20–30 SECOND] take with a simple continuous action, steady
+light and no intentional cut, wipe, flash, full-frame occluder or abrupt camera
+change.
+
+Inspect the returned file for scene-score spikes and visible discontinuities.
+Record each confirmed boundary as [B1 / B2 / B3]. Repeat once with the same
+provider, model alias and duration. Enter the concealment lane only when the
+boundary pattern repeats; otherwise keep the original continuous-shot prompt.
+
+DETECTED-SEAM CONCEALMENT LANE
 [DURATION], [ASPECT RATIO], one perceived continuous take.
 
 CONTINUITY LEDGER
 Keep [IDENTITY / WARDROBE / PROP], camera height, lens feel, travel direction,
 subject velocity, light direction and scene geometry unchanged across every beat.
 
-[0–6s] Perform [ACTION 1]. During the final 0.3–0.6 seconds, let [PILLAR /
-DARK DOORWAY / PASSING OBJECT / SUBJECT'S COAT] completely fill the frame.
-[6–12s] Emerge from the same occluder with the same camera vector and body pose;
-perform [ACTION 2]. End behind [SECOND FULL-FRAME DARK OR OPAQUE OCCLUDER].
-[12–18s] Resume with unchanged screen direction and speed; perform [ACTION 3].
-End on [THIRD OCCLUSION OR NEAR-BLACK AREA].
-[18–END] Emerge into [PAYOFF COMPOSITION], decelerate and hold.
+Before [B1], let [PILLAR / DARK DOORWAY / PASSING OBJECT / SUBJECT'S COAT]
+naturally fill the complete frame for 0.3–0.6 seconds.
+After [B1], emerge from the same occluder with the same camera vector, body phase
+and exposure; perform [ACTION 2].
+
+Repeat only at confirmed [B2 / B3]. Resume with unchanged screen direction and
+speed, then emerge into [PAYOFF COMPOSITION], decelerate and hold.
 
 SEAM CONTRACT
-At each boundary preserve camera position relative to the subject, body phase,
-prop ownership, exposure direction and motion speed. The occluder must cover the
-entire frame before the next beat begins. No exposed mid-frame seam, direction
-reversal, pose reset, scale jump, new background or identity change.
+At each measured boundary preserve camera position relative to the subject,
+body phase, prop ownership, exposure direction and motion speed. The motivated
+occluder covers the full frame before the next beat begins. No exposed seam,
+direction reversal, pose reset, scale jump, new background or identity change.
+
+RECHECK
+Run the same scene-score and frame review on the rerender. If the provider stops
+producing the measured seams, retire this lane instead of preserving obsolete
+timings.
 ```
 
-**Technique:** The source's 25-second tests found frame-precise internal boundaries
-at 6, 12 and 18 seconds; placing full-frame darkness or occlusion there made the
-seams visually disappear. Adapted from the [original Seedance 2.5 behavior log](https://github.com/Mr-Salticidae/knowledge-base/blob/b4e3ee10feab033a9dbdb3eda7d5120064e43dc0/02_%E5%8F%82%E6%95%B0%E8%A1%8C%E4%B8%BA%E6%A1%A3%E6%A1%88/Seedance2_5_%E8%A1%8C%E4%B8%BA%E8%A7%84%E5%BE%8B_v1.md).
+**Technique:** Occlusion can hide an observed provider boundary, but a fixed
+six-second schedule must not be attributed to Seedance 2.5 itself. The creator's
+direct 30-second `star-video2.5` control had no cuts at 6, 12, 18 or 24 seconds,
+correcting the earlier model-level conclusion.
 
-### Camera-amplitude and edge-visibility guard template
+Corrected with the original creator's August 26, 2026
+[direct-run production notebook](https://github.com/Mr-Salticidae/aigc-creative-archive/blob/daa61c2be4cfb1ced7d659f1e459926f53416272/65_%E8%BF%87%E9%A3%8E_%E9%9B%AA%E9%9B%BE%E7%8F%8D%E7%8F%A0%E4%BA%BA%E5%83%8F_H3%E5%8A%A8%E6%80%81%E5%86%99%E7%9C%9F/03_%E5%88%B6%E4%BD%9C/%E5%88%B6%E4%BD%9C%E6%89%8B%E5%86%8C.md)
+and
+[model-attribution correction commit](https://github.com/Mr-Salticidae/knowledge-base/commit/c517bf1c3e9b83175ee8304a6bd6ee7ee4623ebc).
 
-**Verified model:** Seedance 2.5 — explicitly tested by the original creator through both Flova and Dreamina multimodal-to-video
+### Camera-amplitude guard with locked-frame escalation
 
-Use this when a slow push, orbit or rise must add motion without cropping the
-subject or destroying the intended shot size.
+**Verified model:** Seedance 2.5 (`star-video2.5`) — the original creator's
+earlier Flova/Dreamina tests and later direct 30.08-second LibTV run show that
+edge-visibility instructions can reduce framing loss but do not hard-lock a
+moving camera: both shoulders and the lowest pearl strand survived, while the
+top hairline still left frame by 29 seconds
+
+Use this when a slow push, orbit or rise is optional. Treat composition
+invariants as a soft guard; when every edge must survive, choose a locked camera
+or begin wider and verify sampled frames before accepting the take.
 
 ```text
 [DURATION], [ASPECT RATIO], begin in [EXACT SHOT SIZE] from [CAMERA POSITION].
 
-COMPOSITION INVARIANTS
-- [SUBJECT] remains at [SCREEN POSITION].
-- The frame always includes [TOP OF HEAD / BOTH SHOULDERS / BOTH HANDS / FOOT CONTACT].
-- [LEFT EDGE ANCHOR], [RIGHT EDGE ANCHOR] and [BACKGROUND LANDMARK] stay visible.
-- The shot never becomes tighter than [MAXIMUM SHOT SIZE].
+COMPOSITION LEDGER
+- [SUBJECT] begins at [SCREEN POSITION].
+- Required edges: [TOP OF HEAD / BOTH SHOULDERS / BOTH HANDS / FOOT CONTACT].
+- Required anchors: [LEFT EDGE OBJECT / RIGHT EDGE OBJECT / BACKGROUND LANDMARK].
+- Tightest acceptable framing: [MAXIMUM SHOT SIZE].
+- Hardness: [SOFT — SMALL LOSS TOLERABLE / HARD — EVERY ITEM MUST SURVIVE].
 
-CAMERA
-Move at a constant [SLOW PUSH / ARC / VERTICAL RISE] for at most [DISTANCE OR
-PERCENT OF FRAME]. If continuing would hide any listed invariant, stop before
-that boundary and hold; preserving the composition is more important than
-completing the full camera move.
+CAMERA ROUTER
+If hardness is HARD:
+Mount the camera on a locked tripod. Preserve the exact first-frame crop, lens,
+horizon, subject scale and all required edges from first frame to last. Create
+motion only through [SUBJECT / HAIR / CLOTH / PROP / LIGHT], not reframing.
+
+If hardness is SOFT:
+Move at a constant [SLOW PUSH / ARC / VERTICAL RISE] for no more than [DISTANCE
+OR PERCENT OF FRAME]. Stop before the first required edge reaches its safe
+margin, then hold. Preserving composition outranks completing the move.
 
 CONTINUITY
-Keep lens, horizon, camera side, subject scale, light direction and screen
-direction unchanged. No acceleration, reframing jump, clipped anatomy, edge
-anchor loss or push until the subject fills the frame.
+Keep lens, horizon, camera side, light direction and screen direction unchanged.
+No acceleration, reframing jump, clipped anatomy, anchor replacement, lens
+breathing or late push after the hold begins.
+
+ACCEPTANCE
+Sample [START / 25% / 50% / 75% / FINAL] frames and mark every required edge.
+A HARD take fails after one loss. A SOFT take passes only when every essential
+edge survives and any optional loss remains inside the declared tolerance.
+Do not infer a lock from smooth average luminance or stable shoulders alone.
 ```
 
-**Technique:** Position locks alone did not limit push distance in the creator's
-tests; listing what must remain visible and an explicit stop condition protected
-the framing. Adapted from the [original Seedance 2.5 behavior log](https://github.com/Mr-Salticidae/knowledge-base/blob/b4e3ee10feab033a9dbdb3eda7d5120064e43dc0/02_%E5%8F%82%E6%95%B0%E8%A1%8C%E4%B8%BA%E6%A1%A3%E6%A1%88/Seedance2_5_%E8%A1%8C%E4%B8%BA%E8%A7%84%E5%BE%8B_v1.md).
+**Technique:** Explicit edge lists and stop conditions are useful prompts, not
+deterministic camera controls. In the direct Seedance 2.5 test they protected
+two of three stated boundaries but failed the top hairline. Routing hard
+composition requirements to a truly locked-camera prompt prevents “partial
+success” from being approved as a full framing lock.
+
+Corrected with the original creator's
+[complete 30-second prompt](https://github.com/Mr-Salticidae/aigc-creative-archive/blob/daa61c2be4cfb1ced7d659f1e459926f53416272/65_%E8%BF%87%E9%A3%8E_%E9%9B%AA%E9%9B%BE%E7%8F%8D%E7%8F%A0%E4%BA%BA%E5%83%8F_H3%E5%8A%A8%E6%80%81%E5%86%99%E7%9C%9F/03_%E5%88%B6%E4%BD%9C/prompt_%E5%AF%B9%E7%85%A7_Seedance2.5_30s.txt)
+and
+[measured framing review](https://github.com/Mr-Salticidae/aigc-creative-archive/blob/daa61c2be4cfb1ced7d659f1e459926f53416272/65_%E8%BF%87%E9%A3%8E_%E9%9B%AA%E9%9B%BE%E7%8F%8D%E7%8F%A0%E4%BA%BA%E5%83%8F_H3%E5%8A%A8%E6%80%81%E5%86%99%E7%9C%9F/03_%E5%88%B6%E4%BD%9C/%E5%88%B6%E4%BD%9C%E6%89%8B%E5%86%8C.md).
 
 ### Small-scale identity re-anchor template
 
@@ -17177,7 +17302,7 @@ Community examples and techniques referenced in this README:
 
 - [Higgsfield AI — Seedance 2.5 frame-for-frame character replacement and hard-stop waterfall-dragon VFX challenge](https://www.youtube.com/watch?v=Hn8A8D4-SpQ) ([versioned prompt archive](https://github.com/nick-choudhary/higgsfield-ai-youtube-skills/blob/d497dfa72258359dc1a8021d87993fdb5fe41c87/i-challenged-a-vfx-artist-to-beat-ai/PLAYBOOK.md))
 
-- [Mr-Salticidae — Seedance 2.5 internal-seam, camera-amplitude, small-face identity and native-text behavior tests](https://github.com/Mr-Salticidae/knowledge-base/blob/b4e3ee10feab033a9dbdb3eda7d5120064e43dc0/02_%E5%8F%82%E6%95%B0%E8%A1%8C%E4%B8%BA%E6%A1%A3%E6%A1%88/Seedance2_5_%E8%A1%8C%E4%B8%BA%E8%A7%84%E5%BE%8B_v1.md)
+- [Mr-Salticidae — Seedance 2.5 behavior tests and corrected model/provider attribution](https://github.com/Mr-Salticidae/knowledge-base/commit/c517bf1c3e9b83175ee8304a6bd6ee7ee4623ebc) ([direct 30-second comparison run, exact prompt and measured QA](https://github.com/Mr-Salticidae/aigc-creative-archive/commit/daa61c2be4cfb1ced7d659f1e459926f53416272))
 - [Simply Annisa — Seedance 2.5 defect-ledger smartphone morning vlog](https://x.com/SimplyAnnisa/status/2085576554134827482)
 - [AI Lifehack — Seedance 2.0 revolving-restaurant world-coordinate freeze](https://x.com/ai_lifehack55/status/2085570677223117114)
 - [Soran — Seedance 2.0 exercise-bike cavalry-charge misdirection](https://x.com/Soranlan/status/2085292366143934941)
