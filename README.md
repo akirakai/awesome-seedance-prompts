@@ -14478,7 +14478,7 @@ and the companion
 
 ### Duration-stratified draft and asynchronous dispatch for paid long takes
 
-**Verified model:** Seedance 2.5 (`bytedance/seedance-2.5/text-to-video`) — the original creator publishes five successful 4-second probes, successful 8-second 720p and 12-second runs, and a paid 30-second attempt whose result was discarded by an undersized client timeout
+**Verified model:** Seedance 2.5 (`bytedance/seedance-2.5/text-to-video`; Ark `doubao-seedance-2-5-260628`) — primary sources publish successful 4-, 8-, 12-, and 30-second work plus an Ark task that succeeded with 173,335 billed tokens even though the create response exceeded the client's timeout
 
 Use this when a 10–30 second single-pass take is expensive enough that creative validation, runtime calibration, and disconnect recovery must be explicit. It complements the long-form one-take continuity template above by controlling how the master is bought and retrieved.
 
@@ -14504,15 +14504,26 @@ Do not use automatic duration for a capped paid run.
 DISPATCH GATE
 Do not derive the master's timeout from a short probe alone.
 Use measured latency from jobs at comparable duration and resolution, then add headroom.
+Give create-task POST its own timeout; do not reuse the shorter polling timeout.
+Before POST, persist a caller-generated safety identifier with the exact model,
+normalized request fingerprint, submission window, and charge state.
 If the client cannot hold that connection, submit asynchronously, persist the job ID immediately,
 and poll that same job until terminal status.
 A local abort is not upstream cancellation or a refund.
 
+SUBMISSION-UNKNOWN GATE
+If the create transport times out before returning a task ID, mark submission_unknown—not failed.
+Never issue a second POST while submission state is unknown.
+Query the provider's official task list by the persisted safety identifier.
+If that field is unavailable, search only the narrow submission window and require exact model
+plus matching provenance. Recover only one unique candidate; zero or multiple candidates remain unknown.
+Persist the recovered task ID and recovery evidence before polling, downloading, or writing the artifact.
+
 RECOVERY
-After a task ID exists, do not resubmit merely because the client timed out or a download URL is delayed.
-Resume polling the original task.
+After a task ID exists or is uniquely recovered, do not resubmit merely because the client timed out
+or a download URL is delayed. Resume polling the original task.
 Do not silently fall back to a model whose duration limit cannot satisfy the request.
-On terminal failure, return the original error, task ID, elapsed time, and charge state.
+On terminal failure, return the original error, task ID, elapsed time, recovery provenance, and charge state.
 
 ACCEPTANCE
 Confirm one continuous clip, synchronized audio, preserved identity and space,
@@ -14520,9 +14531,9 @@ one completed camera move, and the specified visible endpoint.
 Create crops and short cutdowns only from the accepted master.
 ```
 
-**Why it works:** The short draft tests creative continuity cheaply, while duration-matched latency data prevents a long master from inheriting a short-job timeout. Persisting the asynchronous job ID makes a client disconnect recoverable instead of turning it into a second paid submission. The source records 5/5 successful 4-second probes, successful 8-second 720p and 12-second renders, and a billed 30-second job discarded at the old timeout; a follow-up seven-day audit found 80 billed renders discarded across routes and added the recovery guard.
+**Why it works:** The short draft tests creative continuity cheaply, while duration-matched latency data prevents a long master from inheriting a short-job timeout. Persisting the asynchronous job ID handles disconnects after acknowledgement; the safety identifier closes the harder gap where the provider created the task but the client never received its ID. The original Ark reproduction recovered successful task `cgt-20260826193248-8mp84` after a 30-second create timeout, and the repaired path then completed three real Seedance 2.5 runs with one create each and successful artifact writeback. This complements the earlier 4/8/12/30-second probes and the seven-day audit of billed renders discarded by client timeouts.
 
-**Source:** [Livepeer Storyboard — Seedance 2.5 capability commit](https://github.com/livepeer/storyboard/commit/d408240062c1bffa1b5a7d212989e1645a1e48e2) ([complete one-take playbook](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/public/playbooks/one-take-30s-spot.md), [8-second 720p showcase](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-showcase-master-2026-08-12.md), [4-second 5/5 probe](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-t2v-smoke-2026-08-12.md), [12-second duration probe](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-duration-scaling-2026-08-12.md), [paid 30-second timeout](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-t2v-30s-master-2026-08-12.md), [billed-discard audit and recovery fix](https://github.com/livepeer/storyboard/commit/832d5232158f1b54a03bfd3eac1a64628733c509))
+**Source:** [Livepeer Storyboard — Seedance 2.5 capability commit](https://github.com/livepeer/storyboard/commit/d408240062c1bffa1b5a7d212989e1645a1e48e2) ([complete one-take playbook](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/public/playbooks/one-take-30s-spot.md), [8-second 720p showcase](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-showcase-master-2026-08-12.md), [4-second 5/5 probe](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-t2v-smoke-2026-08-12.md), [12-second duration probe](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-duration-scaling-2026-08-12.md), [paid 30-second timeout](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-t2v-30s-master-2026-08-12.md), [billed-discard audit and recovery fix](https://github.com/livepeer/storyboard/commit/832d5232158f1b54a03bfd3eac1a64628733c509)); [ShotFlow — Ark create-timeout reproduction and submission-unknown recovery contract](https://github.com/windzu/shotflow/issues/12) ([three real single-submit recovery regressions](https://github.com/windzu/shotflow/issues/12#issuecomment-5425350427))
 
 ### Contact-peak route switch for reference-executed interaction
 
@@ -17400,6 +17411,7 @@ Community examples and techniques referenced in this README:
 - [GroupX — Seedance 2.5 primary-speaker phrase ownership, quote-only speech control, delivered clips and transcription QA](https://github.com/GroupX-ai/ad-creative/commit/3b0ea58a0355dc26a9951315b54901cd31e9b91d) ([complete prompts](https://github.com/GroupX-ai/ad-creative/blob/3b0ea58a0355dc26a9951315b54901cd31e9b91d/esacard/prompts-approved-batch.mjs), [exact model generator](https://github.com/GroupX-ai/ad-creative/blob/3b0ea58a0355dc26a9951315b54901cd31e9b91d/esacard/2026-08-14-approved/generate.mjs), [failure and QA ledger](https://github.com/GroupX-ai/ad-creative/blob/3b0ea58a0355dc26a9951315b54901cd31e9b91d/esacard/2026-08-14-approved/README.md))
 
 - [Livepeer Storyboard — Seedance 2.5 paid-long-take draft, duration scaling, and asynchronous recovery](https://github.com/livepeer/storyboard/commit/d408240062c1bffa1b5a7d212989e1645a1e48e2) ([playbook](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/public/playbooks/one-take-30s-spot.md), [successful 8-second master](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-showcase-master-2026-08-12.md), [paid-timeout evidence](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-t2v-30s-master-2026-08-12.md), [recovery fix](https://github.com/livepeer/storyboard/commit/832d5232158f1b54a03bfd3eac1a64628733c509))
+- [ShotFlow — Seedance 2.5 Ark task succeeded despite create-response timeout; safety-identifier recovery verified on three later real runs](https://github.com/windzu/shotflow/issues/12) ([regression evidence](https://github.com/windzu/shotflow/issues/12#issuecomment-5425350427))
 - [Adir Kol / Backend Hub — Seedance 2.0 live-smoke of project-scoped private-asset retry for consenting-adult person-media I2V](https://github.com/adirkol/backend-hub/commit/1b26f444f3a45c15a6d24e3c163607deb39933fe) ([main-line merge](https://github.com/adirkol/backend-hub/commit/5ae7f1f254700d96afbcda6e1772ebb5eab7e3bd))
 
 - [Dima Vasiliu / TimrX — Seedance 2.5 one-variable live probe separating a 4,000-UTF-8-byte prompt fault from accepted 30-second duration](https://github.com/DimaVasiliu/timrx-3d-print/commit/034b6d13fb7179a93ed23304151254379a5b2015) ([companion duration correction](https://github.com/DimaVasiliu/TimrX--Frontend/commit/2dc5ee324c9fb6dfb17252247c3e0a2f00f21b7c))
