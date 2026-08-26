@@ -11007,13 +11007,17 @@ and the
 **Verified model:** Seedance 2.5 — the original creator archived a 15-second
 shaft-travel generation, measured 15 direction reversals, a 1–24-pixel-per-frame
 speed range and six cut-like jumps, and rejected the take from production
-because it could not behave as one continuous scroll-scrubbable camera move
+because it could not behave as one continuous scroll-scrubbable camera move.
+The creator's follow-up executable audit also measures signed net travel in
+frame-heights, closing a false-pass case where direction, rate and cut checks
+look stable only because the generated view barely leaves its starting point.
 
 Use this when a generated camera journey will be controlled by scroll, a slider,
 a timeline or another reversible input. A clip may look energetic at playback
-speed yet fail interactive use if spatial progress reverses, stalls or jumps.
-Define one intended travel axis, measure the returned motion and refuse to wire
-a non-monotonic take into the interface.
+speed yet fail interactive use if spatial progress reverses, stalls or jumps;
+it may also look numerically steady while going nowhere. Define one intended
+travel axis, a minimum useful displacement, and measurable acceptance limits
+before wiring the take into the interface.
 
 ```text
 MONOTONIC SCRUB-READINESS GATE
@@ -11025,6 +11029,9 @@ Interactive mapping: [SCROLL / DRAG / TIMELINE], from [START STATE] to [END STAT
 Intended camera path: one continuous [FORWARD / UP / DOWN / CLOCKWISE] journey.
 Primary progress landmark or region: [SHAFT EDGE / CORRIDOR VANISHING POINT /
 SUBJECT CENTRE / OTHER TRACKABLE FEATURE].
+Minimum useful net travel: [DISTANCE IN FRAME-HEIGHTS / DEGREES / ROUTE UNITS].
+(The source audit uses 1.5 frame-heights as a deliberately loose starting floor;
+calibrate this to the interaction rather than treating it as universal.)
 
 GENERATION CONTRACT
 Create one uninterrupted take. The camera travels only [DIRECTION] along
@@ -11043,8 +11050,11 @@ Record:
 - speed range: robust low and high displacement per frame;
 - stalls: consecutive frames below [MINIMUM PROGRESS THRESHOLD];
 - cut-like jumps: displacement or scene change above [JUMP THRESHOLD];
+- signed net travel: sum d[t], normalized to frame-height or another route unit;
 - endpoint order: whether cumulative progress ever moves materially backward.
 
+Direction and rate checks are necessary but not sufficient: reject a steady,
+cut-free clip when absolute net travel stays below [MINIMUM USEFUL NET TRAVEL].
 Do not approve from a thumbnail strip alone. Plot or tabulate cumulative progress
 against time and inspect every detected reversal and jump in the original video.
 
@@ -11054,6 +11064,7 @@ For a monotonic scrub asset, require:
 - no cut-like jump or hidden edit;
 - no long stall that makes user input appear unresponsive;
 - a bounded speed range that does not alternate between crawl and teleport;
+- absolute net travel at or above the declared minimum useful distance;
 - final cumulative progress greater than every prior state.
 
 If any hard condition fails, mark the clip NOT SCRUB-SAFE. Do not compensate
@@ -11065,18 +11076,22 @@ language. Simplify the route or reduce duration before adding more landmarks.
 If the model still improvises coverage, use a verified continuous source,
 purpose-built camera reference or deliberately authored frame sequence.
 Archive the rejected master, prompt, model, reversal count, speed range, jump
-count and retained replacement.
+count, normalized net travel and retained replacement.
 ```
 
 **Why it works:** linear playback can hide a short reversal or cut because time
 always moves forward. Interactive scrubbing exposes both immediately: reversing
 the user's input should reverse the same spatial journey, not reveal an edit or
-a camera that already doubled back. Quantifying signed progress separates an
+a camera that already doubled back. Normalized net travel adds the complementary
+lower bound: a nearly frozen clip cannot earn approval merely by producing
+stable-looking zero motion. Together, signed progress and distance separate an
 attractive generated video from a deterministic control surface.
 
-**Source:** the original creator's August 26, 2026
+**Sources:** the original creator's August 26, 2026
 [Seedance 2.5 generation, measured rejection and delivery commit](https://github.com/charbel2y16-pixel/fujilift-web/commit/b3df5d6249bbfddceb45d681a2554168d1173c8f),
-including the archived
+the follow-up
+[executable direction, rate, cut, stall and net-travel audit](https://github.com/charbel2y16-pixel/fujilift-web/commit/33bd3bcfa06ea6b9e789671cb972babf8902b3c9),
+and the archived
 [rejected 15-second master](https://github.com/charbel2y16-pixel/fujilift-web/blob/b3df5d6249bbfddceb45d681a2554168d1173c8f/video/higgsfield-shaft-15s.mp4).
 
 ### Hand-topology positive pin and silhouette-redraw suppression gate
@@ -17313,7 +17328,7 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 Community examples and techniques referenced in this README:
 
-- [charbel2y16 / FujiLift — Seedance 2.5 shaft-travel generation rejected for interactive scrubbing after measured direction reversals, speed instability and cut-like jumps](https://github.com/charbel2y16-pixel/fujilift-web/commit/b3df5d6249bbfddceb45d681a2554168d1173c8f) ([archived rejected master](https://github.com/charbel2y16-pixel/fujilift-web/blob/b3df5d6249bbfddceb45d681a2554168d1173c8f/video/higgsfield-shaft-15s.mp4))
+- [charbel2y16 / FujiLift — Seedance 2.5 shaft-travel generation rejected for interactive scrubbing after measured direction reversals, speed instability and cut-like jumps](https://github.com/charbel2y16-pixel/fujilift-web/commit/b3df5d6249bbfddceb45d681a2554168d1173c8f) ([executable direction/rate/cut/stall/net-travel audit](https://github.com/charbel2y16-pixel/fujilift-web/commit/33bd3bcfa06ea6b9e789671cb972babf8902b3c9), [archived rejected master](https://github.com/charbel2y16-pixel/fujilift-web/blob/b3df5d6249bbfddceb45d681a2554168d1173c8f/video/higgsfield-shaft-15s.mp4))
 
 - [Leon Harris / Next-Frame Agency — Seedance 2.0 Mini five-digit hand repair through nonessential finger-motion removal, positive topology pinning and full-span master QA](https://github.com/Leonkharris/nextframe-site/commit/de9ea60177dd894c0e367d8376fd80bbddffdc5d) ([p21 repair](https://github.com/Leonkharris/nextframe-site/blob/de9ea60177dd894c0e367d8376fd80bbddffdc5d/lucifergamingmv/clips/p21.mp4), [p58 repair](https://github.com/Leonkharris/nextframe-site/blob/de9ea60177dd894c0e367d8376fd80bbddffdc5d/lucifergamingmv/clips/p58.mp4), [rebuilt master](https://github.com/Leonkharris/nextframe-site/blob/de9ea60177dd894c0e367d8376fd80bbddffdc5d/lucifergamingmv/MOTION-PASS.mp4))
 
