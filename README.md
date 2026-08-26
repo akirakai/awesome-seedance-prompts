@@ -11002,6 +11002,83 @@ and the
 
 ## Reusable templates
 
+### Monotonic scrub-readiness motion audit and rejection gate
+
+**Verified model:** Seedance 2.5 — the original creator archived a 15-second
+shaft-travel generation, measured 15 direction reversals, a 1–24-pixel-per-frame
+speed range and six cut-like jumps, and rejected the take from production
+because it could not behave as one continuous scroll-scrubbable camera move
+
+Use this when a generated camera journey will be controlled by scroll, a slider,
+a timeline or another reversible input. A clip may look energetic at playback
+speed yet fail interactive use if spatial progress reverses, stalls or jumps.
+Define one intended travel axis, measure the returned motion and refuse to wire
+a non-monotonic take into the interface.
+
+```text
+MONOTONIC SCRUB-READINESS GATE
+
+Model: [EXACT MODEL].
+Prompted duration and settings: [DURATION / RESOLUTION / MODE].
+Returned master: [FILE / TASK ID].
+Interactive mapping: [SCROLL / DRAG / TIMELINE], from [START STATE] to [END STATE].
+Intended camera path: one continuous [FORWARD / UP / DOWN / CLOCKWISE] journey.
+Primary progress landmark or region: [SHAFT EDGE / CORRIDOR VANISHING POINT /
+SUBJECT CENTRE / OTHER TRACKABLE FEATURE].
+
+GENERATION CONTRACT
+Create one uninterrupted take. The camera travels only [DIRECTION] along
+[DEFINED AXIS OR ROUTE] from [START] to [END].
+Maintain a broadly even forward rate; motivated easing is allowed only at
+[START / END]. Never reverse, orbit back, reset position, insert coverage,
+teleport, jump cut or hide a cut with blur or occlusion.
+End farther along the same route than every earlier frame.
+
+MOTION AUDIT
+For each frame or dense sample, estimate signed displacement of the tracked
+landmark along the intended axis: d[t].
+Record:
+- significant direction reversals: sign changes in d[t] after removing
+  sub-threshold tracking jitter;
+- speed range: robust low and high displacement per frame;
+- stalls: consecutive frames below [MINIMUM PROGRESS THRESHOLD];
+- cut-like jumps: displacement or scene change above [JUMP THRESHOLD];
+- endpoint order: whether cumulative progress ever moves materially backward.
+
+Do not approve from a thumbnail strip alone. Plot or tabulate cumulative progress
+against time and inspect every detected reversal and jump in the original video.
+
+PASS / REJECT
+For a monotonic scrub asset, require:
+- zero significant direction reversals outside declared endpoint easing;
+- no cut-like jump or hidden edit;
+- no long stall that makes user input appear unresponsive;
+- a bounded speed range that does not alternate between crawl and teleport;
+- final cumulative progress greater than every prior state.
+
+If any hard condition fails, mark the clip NOT SCRUB-SAFE. Do not compensate
+with interface smoothing, duplicated frames or a different scroll curve.
+
+FAILURE ROUTE
+Regenerate with one axis, one destination and explicit no-reversal/no-cut
+language. Simplify the route or reduce duration before adding more landmarks.
+If the model still improvises coverage, use a verified continuous source,
+purpose-built camera reference or deliberately authored frame sequence.
+Archive the rejected master, prompt, model, reversal count, speed range, jump
+count and retained replacement.
+```
+
+**Why it works:** linear playback can hide a short reversal or cut because time
+always moves forward. Interactive scrubbing exposes both immediately: reversing
+the user's input should reverse the same spatial journey, not reveal an edit or
+a camera that already doubled back. Quantifying signed progress separates an
+attractive generated video from a deterministic control surface.
+
+**Source:** the original creator's August 26, 2026
+[Seedance 2.5 generation, measured rejection and delivery commit](https://github.com/charbel2y16-pixel/fujilift-web/commit/b3df5d6249bbfddceb45d681a2554168d1173c8f),
+including the archived
+[rejected 15-second master](https://github.com/charbel2y16-pixel/fujilift-web/blob/b3df5d6249bbfddceb45d681a2554168d1173c8f/video/higgsfield-shaft-15s.mp4).
+
 ### Hand-topology positive pin and silhouette-redraw suppression gate
 
 **Verified model:** Seedance 2.0 Mini (`seedance_2_0_mini`, 480p, 4 seconds) —
@@ -17235,6 +17312,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [charbel2y16 / FujiLift — Seedance 2.5 shaft-travel generation rejected for interactive scrubbing after measured direction reversals, speed instability and cut-like jumps](https://github.com/charbel2y16-pixel/fujilift-web/commit/b3df5d6249bbfddceb45d681a2554168d1173c8f) ([archived rejected master](https://github.com/charbel2y16-pixel/fujilift-web/blob/b3df5d6249bbfddceb45d681a2554168d1173c8f/video/higgsfield-shaft-15s.mp4))
 
 - [Leon Harris / Next-Frame Agency — Seedance 2.0 Mini five-digit hand repair through nonessential finger-motion removal, positive topology pinning and full-span master QA](https://github.com/Leonkharris/nextframe-site/commit/de9ea60177dd894c0e367d8376fd80bbddffdc5d) ([p21 repair](https://github.com/Leonkharris/nextframe-site/blob/de9ea60177dd894c0e367d8376fd80bbddffdc5d/lucifergamingmv/clips/p21.mp4), [p58 repair](https://github.com/Leonkharris/nextframe-site/blob/de9ea60177dd894c0e367d8376fd80bbddffdc5d/lucifergamingmv/clips/p58.mp4), [rebuilt master](https://github.com/Leonkharris/nextframe-site/blob/de9ea60177dd894c0e367d8376fd80bbddffdc5d/lucifergamingmv/MOTION-PASS.mp4))
 
