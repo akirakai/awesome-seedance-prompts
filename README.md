@@ -257,6 +257,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Security-dog duty ledger and six-beat comedy escalation](#241-security-dog-duty-ledger-and-six-beat-comedy-escalation)
   - [Character-sheet-to-storyboard shield awakening](#242-character-sheet-to-storyboard-shield-awakening)
   - [Center-stage 360 concert orbit and crowd-return continuity](#243-center-stage-360-concert-orbit-and-crowd-return-continuity)
+  - [Lens-splash pool-day camcorder handoff](#244-lens-splash-pool-day-camcorder-handoff)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -11879,6 +11880,93 @@ and [complete source prompt](https://x.com/SirGlavan_/status/2092897996451008637
 
 ---
 
+
+### 244. Lens-splash pool-day camcorder handoff
+
+**Verified model:** Seedance 2.5 — the original creator published the complete
+prompt and its 15-second generated result together on August 27, 2026,
+explicitly identifying Seedance 2.5 on ImagineArt
+
+**Use case:** nostalgic summer UGC, motivated above-water-to-water transition,
+lens-contact effects, short native dialogue  \
+**Mode:** text-to-video  \
+**Settings:** 15 seconds, 4:3 consumer-DV framing, handheld documentary realism,
+raw location audio
+
+```text
+Create a 15-second candid pool-day recording from approximately 2002–2005. The
+only featured person is one clearly adult Korean woman in her twenties with a
+stable face, high bun, navy one-piece swimsuit, loose white cover-up, swim
+goggles and a playful but natural manner. Keep the same adult identity, outfit,
+goggles, inflatable ring and quiet community pool for the full take.
+
+CAMERA CONTRACT
+One friend operates a small consumer DV camcorder from pool-deck height. Use
+imperfect handheld framing, late reframing, brief autofocus search, modest
+exposure pumping, soft digital detail, mild blown highlights and a slightly warm
+tape-era palette. Camera flaws must be caused by visible events: movement can
+make the operator lag, bubbles can hide the lens and water can strike it. Do not
+add arbitrary glitches, polished gimbal motion, cinematic slow motion or a
+second invisible camera.
+
+0–3 s — Ring setup.
+Medium-wide from the deck. She sits at the pool edge and kicks the water gently
+while balancing one small colorful inflatable ring on her head. It slips toward
+the same side as her raised hand; she catches it late and laughs. Keep feet,
+ring, pool edge and their reflections physically connected.
+
+3–6 s — Spoken invitation setup.
+She turns to the operator, holds the recovered ring against her shoulder and
+says in Korean, “오늘 완전 여름이다!” Her mouth owns this line and no other
+person speaks. Let autofocus settle on her eyes only after the turn; preserve
+ordinary pool ambience beneath the voice.
+
+6–9 s — Motivated water handoff.
+She places the goggles over her eyes and jumps forward into the pool. Follow the
+single continuous action from deck contact to entry. The splash reaches the
+camera first, then bubbles fill the frame as the camera dips just below the
+surface. Use the bubbles as a physical occlusion into the submerged view; do
+not teleport her, cut to another pool or replace the outfit.
+
+9–12 s — Recovery and lens contact.
+She surfaces in front of the same edge, swims two strokes toward the camera and
+flicks one handful of water at the lens. The image blurs at the instant of
+contact, holds a translucent droplet for several frames and then partly clears.
+Do not use a full-screen digital blur before the hand reaches the water.
+
+12–15 s — Prop return and close.
+She retrieves the same inflatable ring, holds it like a steering wheel while
+drifting backward, waves and says, “빨리 와!” Keep the line attached to her
+visible mouth. She finishes with one small kick toward the operator; a final
+splash briefly covers the lens and provides the natural end frame.
+
+AUDIO AND ACCEPTANCE
+Use raw camcorder microphone sound only: pool wash, two distinct splashes,
+gentle kicking, birds, distant indistinct conversation and slight microphone
+distortion. No score or narration. Pass only if the ring survives all five
+beats, goggles move from neck to eyes before the jump, the entry remains one
+continuous physical action, bubbles motivate the above/below-water handoff,
+each lens splash has visible cause and recovery, both Korean lines come from the
+same adult speaker, and the delivered file measures 15 seconds.
+
+No identity drift, age change, wardrobe swap, duplicate swimmer, crowd,
+different ring, missing goggles, extra limbs, rubber anatomy, floating prop,
+dry hair after entry, impossible underwater cut, generic blur, random tape
+damage, camera teleport, lip-sync mismatch, translated voiceover, music, text,
+subtitle, logo or watermark.
+```
+
+**Why it works:** every transition is attached to a physical event rather than
+an editor effect. The ring and goggles form a small prop-state ledger, while
+bubble occlusion and two different lens contacts give the model explicit onset,
+coverage and recovery frames. Pinning each short Korean line to a visible beat
+keeps native dialogue from drifting across the action.
+
+**Source:** ÀBDŪLLÂH / @itxabdullaa's August 27, 2026
+[complete Seedance 2.5 prompt and 15-second generated result](https://x.com/itxabdullaa/status/2092912491395441144).
+
+---
+
 ## Reusable templates
 
 ### Monotonic scrub-readiness motion audit and rejection gate
@@ -18391,6 +18479,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [ÀBDŪLLÂH / @itxabdullaa — Seedance 2.5 pool-day DV camcorder scene with complete 15-second prompt, native Korean dialogue and lens-splash transitions](https://x.com/itxabdullaa/status/2092912491395441144)
 
 - [Jayden / @SirGlavan_ — Dreamina Seedance 2.5 golden-hour concert performance with complete 30-second prompt, 360-degree orbit and generated result](https://x.com/SirGlavan_/status/2092897991099048387) ([complete prompt](https://x.com/SirGlavan_/status/2092897996451008637))
 
