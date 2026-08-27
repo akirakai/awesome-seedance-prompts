@@ -261,6 +261,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Silent-cat luxury-service escalation and reaction ledger](#245-silent-cat-luxury-service-escalation-and-reaction-ledger)
   - [First-person cottage chore relay and camera handoff](#246-first-person-cottage-chore-relay-and-camera-handoff)
   - [Single-active-fighter rooftop anime rematch](#247-single-active-fighter-rooftop-anime-rematch)
+  - [Causal water-obstacle near-win reversal](#248-causal-water-obstacle-near-win-reversal)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -12303,8 +12304,143 @@ duration readback remains part of acceptance.
 and [complete revised prompt with both character-sheet references](https://x.com/Mayz1169/status/2092972153494962387).
 ---
 
+### 248. Causal water-obstacle near-win reversal
+
+**Verified model:** Seedance 2.5 — the original creator labels the post and
+complete prompt Seedance 2.5 and publishes the matching 15-second generated result
+**Use case:** live-action obstacle-course choreography, contact causality,
+near-win comedy reversal
+**Mode:** image-to-video with one adult contestant reference
+**Settings:** 15 seconds, 16:9, native Chinese commentary and effects
+
+```text
+@Image1 defines only adult contestant XIA's face, body proportions, hair, makeup,
+clothing and accessories. Preserve her design throughout. She is a trained adult
+performing on a supervised foam-and-pool game-show course.
+
+COURSE LEDGER
+From left to right, keep exactly three blue rollers fixed on alternating
+counter-rotating axles, one yellow sprung tilting board, one narrow teal balance
+beam, one red padded pendulum swinging on a fixed arc and one white finish platform
+with a red bell. The pool, grandstand and canopy never move. The bell remains
+silent for the entire clip.
+
+0–2s — A fast aerial dive reveals the complete course, then settles at the start.
+Xia leans forward in a runner's stance while every mechanism is already moving.
+Male Chinese commentator: “第三关开始，选手冲向水上赛道！”
+
+2–5s — Side tracking. Xia steps across all three rollers without stopping. Each
+roller turns opposite its neighbour: her planted foot slips with the surface,
+knees compress and arms counter-swing before the next step. The axles stay fixed;
+the rollers never drift with her. Commentator: “反向滚筒，稳住重心！”
+
+5–7.5s — Low three-quarter angle includes the board and beam landing. Her weight
+tips the yellow board down; it reaches its low point, rebounds and assists one
+jump. She lands one foot then the other on the beam, bends both knees and makes
+one balance correction before continuing.
+
+7.5–10.5s — Front-facing retreat track. The red pendulum approaches from the
+side. Xia sees it, crouches while still advancing and lets the first pass clear
+her head and back with visible air between them. She rises, takes the final two
+steps and reaches the platform. Commentator: “低头躲锤，终点铃就在前面！”
+
+10.5–12.5s — Side wide shot. Xia reaches for the bell; her fingertips stop a few
+centimetres short. The pendulum returns naturally on the same arc and its foam
+surface compresses against the outer upper back. Sustained contact shifts her
+centre of mass: two recovery steps, the second missing the edge, then a sideways
+fall. Her hand passes beside the bell without striking it; the pendulum continues
+on its own path.
+
+12.5–13.5s — Wide water-impact shot. Hip and side touch first, legs follow, then
+a broad white splash rises and falls under gravity. Hold the untouched red bell
+clearly on the platform.
+
+13.5–15s — Water-level medium close-up. Xia surfaces head then shoulders, exhales,
+looks from the bell to camera and pinches thumb and index finger close together
+to show how narrowly she missed. Commentator: “铃没敲响，水花先到了——只差一点！”
+
+Bright summer broadcast photography, saturated course colors, real body inertia,
+foam compression, board recoil and water physics. Fast drums and playful brass;
+roller bearings, footsteps, board mechanism, pendulum wind, breath, one short
+surprised cry, splash and crowd reaction. No subtitle, logo, teleport, obstacle
+reordering, contact-free fall, extra limb, injury or bell sound.
+```
+
+**Why it works:** every reaction has a visible mechanical cause: counter-rotation
+changes balance, body weight loads the board, the first pendulum pass motivates the
+crouch and the return pass supplies sustained force for the fall. Keeping the bell
+silent through the near-touch preserves the visual joke, while the water-level
+gesture converts the failed objective into a readable final state.
+
+**Source:** John / @johnAGI168's August 27, 2026
+[complete Seedance 2.5 prompt and 15-second generated result](https://x.com/johnAGI168/status/2092984806367805850).
+---
+
 ## Reusable templates
 
+### Premise-level compliance pivot after visual-substitution failure
+
+**Verified model:** Seedance 2.5 — the original creator records a failed
+object-redesign attempt, then reports that replacing the underlying real-money
+lottery premise with a benign holiday-food premise cleared on the first try; the
+same thread includes the successful 15-second Seedance 2.5 result and complete
+six-shot prompt
+
+Use this after a platform refuses a prompt and changing the visible prop does not
+change the decision. Treat the repeated refusal as evidence that the story's
+meaning may be the problem. Replace the incompatible premise openly; do not disguise
+it with a cosmetically different object or attempt to evade the platform check.
+
+```text
+SEMANTIC REFUSAL TRIAGE
+
+Rejected brief in one sentence: [SUBJECT + TRANSACTION / CLAIM + PAYOFF].
+First provider message and stage: [ERROR TEXT / BEFORE OR AFTER TASK ID].
+Visual substitution already tested once: [OLD OBJECT] → [NEUTRAL-LOOKING OBJECT].
+Result: [SAME REFUSAL / DIFFERENT REFUSAL / ACCEPTED].
+
+If the same refusal survives a visual redesign, stop object-level retries. Mark
+[TRANSACTION / CLAIM / REWARD / REAL-WORLD ACTIVITY] as the suspected premise-level
+trigger. Do not crop, rename, blur, euphemize or repeatedly resubmit the same idea.
+
+POLICY-COMPATIBLE PREMISE PIVOT
+Preserve only the safe production grammar:
+- [SHOT COUNT AND DURATION]
+- [CAMERA STYLE AND EDITING RHYTHM]
+- [CHARACTER ROLES AND PERFORMANCE CONTRAST]
+- [SET, LIGHT, AUDIO AND FINAL HOLD].
+
+Replace the story meaning completely:
+- old premise: [INCOMPATIBLE OR RESTRICTED CONCEPT]
+- new premise: [BENIGN CELEBRATION / FOOD OFFER / HOUSEHOLD TASK / FICTIONAL GAME]
+- old claim or payoff: [REMOVE]
+- new observable objective: [SAFE PHYSICAL ACTION AND END STATE].
+
+Rewrite every prop, line and reaction from the new premise. Scrub residual clues
+that would restore the old transaction, reward or claim. The new story must stand
+on its own rather than function as a coded version of the rejected one.
+
+CONTROLLED RETRY
+Submit the rewritten premise once with the same safe cinematic grammar. Record
+provider, exact model, prompt version, task ID, charge/refund state and outcome.
+If it is refused again, stop and surface the decision; do not search for another
+cosmetic workaround.
+
+ACCEPTANCE
+Approve only if the asset matches the new benign premise, contains none of the
+retired semantic cues and passes normal visual, audio and duration review.
+```
+
+**Why it works:** a neutral-looking replacement can leave the same prohibited or
+unsupported meaning intact. Escalating from object diagnosis to premise diagnosis
+prevents blind retries and keeps the useful filmmaking structure—cast contrast,
+shot rhythm and punchline timing—without attempting to conceal the rejected idea.
+In the cited test, the successful replacement became a six-shot walking burger
+joke with strict prop ownership, single-speaker turns and a faceless final hold.
+
+Adapted from Ihor Khort's August 27, 2026
+[Seedance 2.5 refusal analysis and successful 15-second result](https://x.com/Ihor680847/status/2092987863243640972)
+and [complete successful six-shot prompt](https://x.com/Ihor680847/status/2092987866242564292).
 ### Sequential continuation approval gate and failure-propagation firewall
 
 **Verified model:** Seedance 2.5 — Sogni's official platform account published a
@@ -18916,6 +19052,9 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 Community examples and techniques referenced in this README:
 
+- [Ihor Khort — Seedance 2.5 premise-level refusal diagnosis, successful 15-second result and complete six-shot replacement prompt](https://x.com/Ihor680847/status/2092987863243640972) ([complete successful prompt](https://x.com/Ihor680847/status/2092987866242564292))
+
+- [John / @johnAGI168 — Seedance 2.5 water-obstacle parkour show with complete 15-second prompt, generated result and contact-causal reversal](https://x.com/johnAGI168/status/2092984806367805850)
 - [Kiki / @Mayz1169 — Seedance 2.5 anime-fight rematch with a complete revised prompt, two character-sheet references, generated result and direct ghosting/body-melt failure comparison](https://x.com/Mayz1169/status/2092971460914778186) ([complete revised prompt](https://x.com/Mayz1169/status/2092972153494962387))
 
 - [Sogni — official Seedance 2.5 30-second UGC result with sequential 10-second approval guidance and failure-propagation rationale](https://x.com/Sogni_Protocol/status/2092954101558497494)
