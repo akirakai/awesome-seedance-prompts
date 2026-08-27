@@ -262,6 +262,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [First-person cottage chore relay and camera handoff](#246-first-person-cottage-chore-relay-and-camera-handoff)
   - [Single-active-fighter rooftop anime rematch](#247-single-active-fighter-rooftop-anime-rematch)
   - [Causal water-obstacle near-win reversal](#248-causal-water-obstacle-near-win-reversal)
+  - [Occlusion-bus mythic voyage with returning hero anchor](#249-occlusion-bus-mythic-voyage-with-returning-hero-anchor)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -12376,6 +12377,107 @@ gesture converts the failed objective into a readable final state.
 [complete Seedance 2.5 prompt and 15-second generated result](https://x.com/johnAGI168/status/2092984806367805850).
 ---
 
+### 249. Occlusion-bus mythic voyage with returning hero anchor
+
+**Verified model:** Seedance 2.5 — the original creator identifies Higgsfield's
+text-to-video render as Seedance 2.5 and publishes the complete prompt with the
+20-second result
+**Use case:** continuous-shot mythic trailer, full-frame transition carriers,
+recurring hero anchor, unintended public-figure resemblance rejection
+**Mode:** text-to-video, no identity reference
+**Settings:** exactly 20 seconds, 16:9, 24 fps, one uninterrupted shot,
+diegetic audio only
+
+```text
+CAST — all designs are fictional and original
+WARRIOR: adult man in his late forties, tall and heavily built, weathered olive
+skin, shoulder-length wet dark hair, dark beard threaded with grey, tired eyes,
+aged bronze armour, dark leather skirt armour and a muted crimson cloak.
+LUMINOUS WOMAN: adult woman with olive skin, shoulder-length wet black hair and
+an athletic build, wearing an opaque ivory-and-sand layered costume with long
+translucent fabric panels.
+GIANT: colossal bald humanoid with grey-brown leathery skin, two dim red eyes,
+long jointed arms, five fingers per hand and massive legs. Keep anatomy stable.
+
+Keep the warrior, woman, crew, shepherds, captive and two axe fighters distinct.
+Never merge faces, limbs, garments, weapons or scale. Reject any generated face
+that recognizably resembles a real actor, celebrity or public figure; an unintended
+likeness is an identity failure and must not be accepted as the fictional warrior.
+
+LOOK AND CAMERA
+Photoreal live-action mythic fantasy photographed like practical actors, real
+cloth and aged armour integrated with restrained creature VFX. Cool teal-blue
+against warm amber and bronze, organic grain, slight halation and natural
+directional blur. One continuously moving camera: no cut, jump, black edit or
+montage. Change spaces only while a named physical carrier fills the frame.
+
+0–1.8s — Begin medium-wide at a teal wall. The warrior stands in left profile;
+eyes turn first, then jaw, neck and torso while feet remain planted. A hard white
+exposure bloom crosses his face without changing the pose.
+
+1.8–3.5s — Let the bloom become sun glare on a high overhead view of a dark
+ocean. A narrow red-sailed boat is pulled around the outer lip of a whirlpool.
+Descend toward the deck; the red sail fills the lens and wipes naturally into
+an extreme close-up of the same warrior breathing aboard the boat.
+
+3.5–5.0s — Pass his shoulder to reveal at least six adult crew members bracing
+on the pitching wet deck. Spray and rigging respond to the hull. A sheet of red
+canvas crosses frame and reveals the luminous woman standing in blue-white fog;
+she shifts weight once and her long ivory panel follows late. A dark foreground
+cloth covers the lens for only two moving frames.
+
+5.0–7.8s — Emerge low on the deck as it tilts. One sailor drops to a knee, another
+slides and the rest grip the rail while water crosses the boards. Track between
+boots and spray; a white splash fills frame and returns briefly to the warrior
+standing as the recurring anchor. Move past his shoulder into fog where the woman
+takes one complete step—foot plant, weight transfer, torso follow, fabric lag.
+
+7.8–10.8s — Her ivory train fills frame and becomes amber dust. Adult shepherd
+warriors and a fixed flock of pale sheep run toward camera. One near sheep supplies
+a full-frame wipe into the overhead whirlpool, now closer to the boat's red sail.
+Sea mist then reveals the woman completing one head-led body turn while hair and
+fabric trail under inertia.
+
+10.8–13.6s — A white fabric edge becomes smoky wasteland. The giant reaches with
+one open five-fingered hand, grips one armoured adult captive around the torso and
+lifts him clear without biting or injury. Track down the same arm to one leg.
+Exactly two adult fighters strike that leg in sequence with separate long-handled
+axes: right ankle strike, recovery, then left downward strike. Pull back to exactly
+six survivors running as the giant advances; dense smoke fills the lens.
+
+13.6–16.4s — Rise through the smoke to a top view of the luminous woman supported
+on one arm inside a flower-like spiral of ivory fabric. She slowly raises her face.
+A growing highlight converts the top view to a closer standing view as she breathes
+once and steadies the trailing cloth.
+
+16.4–20.0s — Blue-white fog resolves into the original teal wall and the full-body
+warrior on the same mark. Arc from his right profile toward the front while he
+keeps his lower body fixed, then he snaps only head and upper shoulders toward
+camera. Continue a rapid physical push to an extreme facial close-up with pores,
+sweat, dirt, wet hair and grey beard detail. End exactly at 20.0 seconds on live
+breathing and an unblinking hostile gaze—no freeze, fade or title.
+
+AUDIO
+Only location sound: breathing and armour creak; waves, whirlpool suction, hull
+groan, rigging and spray; running feet and sheep; giant steps, low breath, ground
+resonance and two non-gory impacts. Sound perspective travels with the camera and
+stops exactly with the final frame. No music, dialogue, narration, text, logo,
+watermark, gore, extra limb, shared hand, teleport or hidden editorial black frame.
+```
+
+**Why it works:** every impossible location change is assigned to a visible
+carrier—bloom, sail, cloth, splash, sheep, mist or smoke—so the camera can keep
+moving while the scene graph changes. Returning to the warrior between movements
+and at the end creates a continuity checksum. The source also exposes a crucial
+failure boundary: despite an explicit original-character request, its result
+unexpectedly resembled a public actor. The adaptation therefore makes resemblance
+a rejection criterion instead of presenting it as successful identity control.
+
+**Source:** MadMax / @MadMax_Series' August 28, 2026
+[complete Seedance 2.5 text-to-video prompt, 20-second generated result and
+creator disclosure of the unintended public-figure resemblance](https://x.com/MadMax_Series/status/2093000650938335426).
+---
+
 ## Reusable templates
 
 ### Premise-level compliance pivot after visual-substitution failure
@@ -19051,6 +19153,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [MadMax / @MadMax_Series — Seedance 2.5 20-second continuous mythic voyage with complete text-to-video prompt, generated result and disclosed unintended public-figure resemblance](https://x.com/MadMax_Series/status/2093000650938335426)
 
 - [Ihor Khort — Seedance 2.5 premise-level refusal diagnosis, successful 15-second result and complete six-shot replacement prompt](https://x.com/Ihor680847/status/2092987863243640972) ([complete successful prompt](https://x.com/Ihor680847/status/2092987866242564292))
 
