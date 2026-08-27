@@ -12860,6 +12860,171 @@ and [complete two-image, two-segment prompt](https://x.com/ahmetmertugrul/status
 
 ---
 
+### 254. Late-reacting friend-camera summer-day diary and prop ledger
+
+**Verified model:** Seedance 2.5 — the original creator labels the post as a
+Seedance 2.5 prompt and publishes the complete prompt beside the 30-second result
+**Use case:** ordinary-life documentary, motivated amateur-camera texture,
+domestic prop continuity and indoor-to-outdoor exposure recovery
+**Mode:** text-to-video
+**Suggested settings:** 30 seconds, 16:9; request 1080p and verify the returned
+asset rather than treating the requested resolution as provider metadata
+
+```text
+IDENTITY AND WORLD
+Follow one fictional adult man through an unremarkable summer morning. He has
+short untidy dark hair, one washed charcoal T-shirt, loose sand-coloured
+trousers, worn white trainers and one steel wristwatch. Preserve his face, age,
+body, clothing and watch. Begin in a small older apartment: rumpled bed,
+refrigerator, cereal carton, milk bottle, bowl and spoon. Later use the same
+building stairwell and a quiet residential neighbourhood with low walls,
+bicycles, utility poles and humid daylight.
+
+CAMERA-OWNER CONTRACT
+One nearby friend operates the same ageing consumer digital camera throughout.
+The camera is never invisible or omniscient. Build imperfection from observable
+events:
+- stable observation -> the subject moves first -> the operator reacts late;
+- a head or shoulder may leave frame briefly -> operator reframes -> focus
+  hunts once and recovers;
+- the dark-stairwell-to-street threshold causes one slow exposure correction;
+- walking creates small grip shifts, not constant random shaking.
+Keep modest compression, soft highlights and occasional imperfect framing.
+Reject polished crane, gimbal, commercial blocking, arbitrary glitch, fake film
+damage or an error that has no visible cause and recovery.
+
+0–5s — Start from the doorway with a slightly high, patient bedroom view. The
+man wakes, stares toward camera and forms one sleepy half-smile. Autofocus moves
+from blanket to face and settles. Bedsprings and distant traffic only.
+
+5–10s — He sits and stands sooner than the friend expects. The camera initially
+holds the empty pillow, then tilts late and catches his shoulder crossing toward
+the kitchen. Do not cut or teleport him.
+
+10–15s — From the kitchen entrance, show a complete breakfast action: carton
+placed down, bowl set on the counter, cereal poured, milk added, spoon picked up.
+Each prop remains separate and stays where the previous contact left it. Use box
+rustle, dry cereal, liquid pour, ceramic tap and refrigerator hum.
+
+15–19s — Hold a quiet side view while he eats two spoonfuls, pauses and looks
+toward the exit. Let the operator make only one small corrective reframe.
+
+19–24s — Follow behind through the dim stairwell. He opens the exterior door
+before daylight reaches the sensor; the image briefly blooms, then exposure and
+focus recover while he steps into the street. Door latch, shoes, stair echo,
+birds and neighbourhood air replace the refrigerator hum continuously.
+
+24–29s — Trail him through two connected lanes. He remains the same distance
+ahead except when the operator momentarily falls behind at a corner. Background
+bicycles and parked objects stay fixed; nobody performs for camera.
+
+29–30s — He notices the friend, turns only his head, gives one small wave and
+faint smile. Cut abruptly to black while the hand is still descending, followed
+by half a second of residual street sound.
+
+ACCEPTANCE
+Natural environment and contact sound only: no dialogue, narration, score or
+sound-effect sweetening. Reject a different subject, clothing/watch change,
+extra hand or finger, floating food, fused carton and bowl, reset prop, instant
+exposure change, endless focus pulsing, unmotivated camera shake, multiple
+operators, staged acting, title, brand, logo or watermark. Verify returned
+duration, aspect ratio and resolution, then inspect every miss-and-recovery event
+to ensure the amateur texture follows the subject's action rather than masking
+generation defects.
+```
+
+**Why it works:** “home-video” becomes a camera-operator state machine rather
+than a pile of vintage adjectives. Every miss follows a subject action and is
+allowed one readable recovery; the breakfast ledger simultaneously tests mundane
+object physics. The abrupt unfinished wave makes the ending feel found rather
+than designed without sacrificing a checkable final identity.
+
+**Source:** Beech's August 28, 2026
+[complete Seedance 2.5 prompt and 30-second generated result](https://x.com/beechinour/status/2093086602167751073).
+
+---
+
+### 255. Six-beat seasonal romance montage and score-shape ledger
+
+**Verified model:** Seedance 2.5 — the original creator explicitly identifies
+the raw, unedited text-to-video result as Seedance 2.5 inside ImagineArt and
+publishes the complete 30-second prompt
+**Use case:** compressed relationship arc, identity consistency across time
+jumps, gesture-and-prop echoes and native music progression
+**Mode:** text-to-video in ImagineArt
+**Suggested settings:** 30 seconds, 16:9, 24 fps; request 1080p and verify the
+returned asset metadata
+
+```text
+CHARACTER AND RELATIONSHIP LEDGER
+Two fictional adult office workers remain recognisable across six five-second
+time jumps. REN is 28, slim, with neatly side-parted black hair, a charcoal suit
+and muted blue tie. AYA is 27, with a shoulder-length dark bob, cream blouse and
+one fine gold necklace. Preserve faces, heights, dominant hands and necklace.
+Wardrobe may change only at the explicitly named ceremony and home stages.
+Their relationship state advances once per beat:
+strangers -> familiar colleagues -> mutual affection -> couple -> newly married
+-> settled partners. Never reset intimacy or show a later gesture too early.
+
+VISUAL AND MUSICAL SHAPE
+Use naturalistic Tokyo locations and warm cinematic realism, shallow depth only
+when both faces remain readable. One modest camera move per beat; hard cuts
+between years. The score is one continuous original instrumental piece:
+single piano notes -> piano plus soft cello -> restrained strings -> fuller
+strings -> brief orchestral crest -> return to the opening solo-piano motif.
+Do not restart the music at cuts. Contact and location sound remain beneath it.
+
+0–5s — Spring office corridor. AYA drops several presentation pages. REN kneels
+to help, returns the final page without touching her hand, and both share a
+surprised half-smile. End on the page passing between them.
+
+5–10s — Summer, same office after dark. At adjacent desks they divide one simple
+late meal; REN slides a sealed coffee toward AYA and she answers with a tired
+smile. End on the two cups aligned beside their separate keyboards.
+
+10–15s — Autumn rooftop at dusk. AYA shivers once. REN places his jacket around
+her shoulders, then their hands meet on the rail and remain there. Preserve the
+same skyline axis as the camera makes one slow lateral move.
+
+15–20s — Winter residential street. AYA wraps one scarf around both necks. They
+laugh quietly, pause beneath a streetlamp and share one brief first kiss. Snow
+collects on clothing only after it begins falling.
+
+20–25s — Following spring, intimate garden ceremony. Keep the same faces while
+changing to understated formal clothing. They exchange plain rings; family
+figures remain soft background support. The musical crest occurs only when both
+rings are visibly seated.
+
+25–30s — Several years later in a modest apartment at blue hour. The same pair
+sit by a window with two steaming mugs. AYA rests her head on REN's shoulder;
+he covers her hand with his. Echo the first beat by placing one old presentation
+page in a closed keepsake folder on the table. Pull back slowly as solo piano
+returns, then hold the joined hands for the final half-second.
+
+ACCEPTANCE
+Keep screen direction and eye lines coherent inside each beat. Every object
+contact completes visibly: page transfer, coffee slide, jacket placement, joined
+hands, scarf wrap, kiss, ring seating and mug placement. Reject face or age
+reset, necklace disappearance before the ceremony, premature touching, repeated
+wedding, third romantic partner, duplicate prop, fused fingers, unreadable ring,
+score restart, mismatched music crest, dialogue, narration, public-figure
+likeness, brand, caption, logo or watermark. Verify the returned 30-second
+duration and review each hard-cut boundary for identity and relationship-state
+continuity.
+```
+
+**Why it works:** every five-second era owns one physical relationship signal,
+so the montage communicates emotional change without explanatory dialogue. A
+single rising-and-returning score bridges the hard temporal cuts, while the
+explicit state ladder prevents the model from treating each location as a fresh
+couple. The final page echo turns an otherwise generic domestic ending into a
+closed visual memory loop.
+
+**Source:** Syed Abuthahir's August 28, 2026
+[complete ImagineArt Seedance 2.5 prompt and raw 30-second generated result](https://x.com/abulu8/status/2093079796804907236).
+
+---
+
 ## Reusable templates
 
 ### Immutable source/finish split and explicit delivery-variant gate
@@ -19595,6 +19760,10 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Beech — Seedance 2.5 ordinary summer-day diary with a complete 30-second prompt, motivated amateur-camera errors, prop continuity and generated result](https://x.com/beechinour/status/2093086602167751073)
+
+- [Syed Abuthahir — ImagineArt Seedance 2.5 six-beat seasonal romance with a complete 30-second prompt, score progression and raw generated result](https://x.com/abulu8/status/2093079796804907236)
 
 - [Ahmet Muhammed Ertugrul — Seedance 2.5 two-board freefall obstacle relay with a complete 30-second prompt and generated result](https://x.com/ahmetmertugrul/status/2093051613074149707) ([complete two-board prompt](https://x.com/ahmetmertugrul/status/2093051616580477411))
 
