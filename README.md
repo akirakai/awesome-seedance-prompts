@@ -255,6 +255,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Lateral cross-section morning-delivery gag](#239-lateral-cross-section-morning-delivery-gag)
   - [Viral-stunt attempt ladder and match-cut payoff](#240-viral-stunt-attempt-ladder-and-match-cut-payoff)
   - [Security-dog duty ledger and six-beat comedy escalation](#241-security-dog-duty-ledger-and-six-beat-comedy-escalation)
+  - [Character-sheet-to-storyboard shield awakening](#242-character-sheet-to-storyboard-shield-awakening)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -11639,6 +11640,134 @@ and [complete six-shot source prompt](https://x.com/Viniai_/status/2092862227145
 
 ---
 
+
+### 242. Character-sheet-to-storyboard shield awakening
+
+**Verified model:** Seedance 2.5 — APOB AI published the full production
+workflow, character-sheet prompt, world-reference prompt, storyboard prompt,
+time-coded video prompt and an embedded result on August 27, 2026, identifying
+Seedance 2.5 inside Image to Video Ultra S. The article discusses clips up to
+30 seconds, while its exact worked video prompt specifies 15 seconds; this entry
+follows the explicit prompt contract
+
+**Use case:** cinematic anime, character-sheet continuity, storyboard-driven
+image-to-video, magic-effect state progression  \
+**Mode:** image-to-video with character, world and storyboard references  \
+**Settings:** 15 seconds, 16:9, controlled anime camera, native ambience and
+effects
+
+```text
+Generate a 15-second horizontal cinematic anime sequence about Aurelia, an adult
+exiled knight-princess making a final protective stand before a burning palace.
+Use a prepared production package rather than asking the video model to invent
+identity, world and shot order at the same time.
+
+REFERENCE OWNERSHIP
+@Image1 CHARACTER SHEET is the sole owner of Aurelia's identity: adult woman in
+her mid-twenties, short golden-blonde hair, amber eyes, dark crown-like
+headpiece, ruby earrings, ornate gold armor over a black inner layer, red jewel,
+armored gloves, crimson cape, body proportions and expression range.
+@Image2 WORLD BIBLE owns the same night palace, layered roofs, distant damaged
+towers, orange fire, red-black sky, smoke, embers, heat haze and tragic heroic
+palette.
+@Image3 STORYBOARD owns only shot order, pose, framing and the progression from
+face close-up to completed shield. It may not replace identity, armor or world
+design. Resolve any conflict in this order: @Image1 identity, @Image2 world,
+@Image3 blocking.
+
+CONTINUITY AND EFFECT LEDGER
+Aurelia is the only lead. Her armor, cape, jewel and palace never reset.
+0–4 s: jewel dormant, no magic circle.
+4–8 s: jewel activates; restrained sparks gather.
+8–12 s: hand gesture draws one coherent golden circle.
+12–15 s: the same circle becomes one large translucent protective shield.
+Do not show the completed shield before its construction beat.
+
+0–2 s — Vow.
+Begin close on Aurelia's face. She faces camera with a controlled, grave
+expression while warm fire flicker moves across her eyes and armor. Foreground
+embers drift slowly. Her lips move only enough to suggest a silent vow; no
+audible dialogue and no lip-sync speech. Use a gentle push-in.
+
+2–4 s — Decision.
+Ease back to an upper-body view. The cape responds to hot wind with believable
+weight. Aurelia lowers her gaze and closes her eyes for one short pause. Keep
+the burning palace recognizable but softly separated behind her.
+
+4–6 s — Power source.
+Shift to a restrained low-angle medium shot as she raises her chin. The ruby
+jewel at the center of the same armor begins glowing red-gold. Small sparks
+appear around the jewel and gauntlets; they do not yet form symbols.
+
+6–8 s — Resolve.
+Return to a close eye-line. Aurelia opens her eyes with calm determination.
+Fire behind her grows brighter and her hair and earrings move subtly. Keep her
+face and crown geometry unchanged.
+
+8–10 s — Construction.
+She raises one armored hand. Thin golden strokes draw themselves from the palm
+in a single direction, forming concentric rings and abstract ceremonial marks.
+The marks stay graphic and non-linguistic; they may not mutate into readable
+text.
+
+10–12 s — Expansion.
+The same circle expands into a large layered translucent barrier. Its light
+reflects on the existing gold armor and crimson cape. Preserve the circle's
+center, rotation direction and motif during growth; do not spawn a second
+shield.
+
+12–14 s — Protective tableau.
+Widen to a centered heroic composition. Aurelia holds the completed barrier
+before her while smoke and embers move outward from its force. The burning
+palace remains visible through the translucent gold surface. Her stance carries
+weight and the cape follows the same wind direction.
+
+14–15 s — Emotional close.
+Push through the transparent barrier to her face. She remains sorrowful but
+resolved. The shield gives one controlled pulse that fills the frame without
+erasing her identity, then hold on her unwavering gaze.
+
+CAMERA AND LOOK
+High-end 2D Japanese animation with detailed cel shading and modest spatial
+depth. Use only the declared slow push, ease-back, low-angle lift, widening and
+final push. No handheld shake, rapid action montage or live-action lens effects.
+Keep the same fire direction, screen axis and Aurelia-to-palace geography.
+
+AUDIO
+Maintain fire rumble, distant structural collapse and wind through flames.
+Introduce a low magical hum when the jewel activates; add fine energy tones
+while the circle draws; let the shield expansion produce one broad protective
+surge. The final pulse resolves the energy without pop music, spoken dialogue
+or captions.
+
+ACCEPTANCE
+Pass only if reference ownership is respected; Aurelia remains one unchanged
+adult character; jewel, circle and shield states occur once and in order; the
+circle grows continuously rather than appearing fully formed; the palace,
+lighting direction and cape wind remain coherent; the final close-up is viewed
+through the same shield; and the delivered asset measures 15 seconds.
+
+No second Aurelia, face or hairstyle drift, armor substitution, cape color
+change, palace replacement, early shield, duplicate circle, random legible
+runes, flickering face, warped hand, extra finger, melting armor, weightless
+cape, live action, cosplay, photoreal skin, modern object, sci-fi laser,
+subtitle, logo, watermark or black border.
+```
+
+**Why it works:** the production package separates three responsibilities that
+are often collapsed into one image: who the lead is, what the world looks like
+and how the shot sequence unfolds. A small effect ledger turns the shield from
+a decorative flash into a causal four-state event, while the final camera move
+reuses the completed barrier as both foreground and emotional frame. Following
+the exact 15-second prompt rather than the article's broader 30-second claim
+also prevents a duration-contract mismatch.
+
+**Source:** APOB AI's August 27, 2026
+[Seedance 2.5 anime production article with all prompts and embedded result](https://x.com/apob_ai/article/2092872573369606378)
+([canonical post](https://x.com/apob_ai/status/2092872573369606378)).
+
+---
+
 ## Reusable templates
 
 ### Monotonic scrub-readiness motion audit and rejection gate
@@ -18151,6 +18280,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [APOB AI — Seedance 2.5 character-sheet, world-bible and storyboard-to-anime workflow with complete prompts and embedded result](https://x.com/apob_ai/article/2092872573369606378) ([canonical post](https://x.com/apob_ai/status/2092872573369606378))
 
 - [Vini / @Viniai_ — Seedance 2.5 text-only six-shot security-dog comedy with complete 30-second prompt and generated result](https://x.com/Viniai_/status/2092862214189515020) ([complete prompt](https://x.com/Viniai_/status/2092862227145740356))
 
