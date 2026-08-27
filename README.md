@@ -254,6 +254,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Reciprocal head-tilt macaque misdirection](#238-reciprocal-head-tilt-macaque-misdirection)
   - [Lateral cross-section morning-delivery gag](#239-lateral-cross-section-morning-delivery-gag)
   - [Viral-stunt attempt ladder and match-cut payoff](#240-viral-stunt-attempt-ladder-and-match-cut-payoff)
+  - [Security-dog duty ledger and six-beat comedy escalation](#241-security-dog-duty-ledger-and-six-beat-comedy-escalation)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -11520,6 +11521,124 @@ observed 24-versus-30-second discrepancy as a provider-output check.
 
 ---
 
+
+### 241. Security-dog duty ledger and six-beat comedy escalation
+
+**Verified model:** Seedance 2.5 — the original creator published the generated
+30-second result and the complete prompt in one X thread on August 27, 2026,
+explicitly stating that the clip used Seedance 2.5 with no reference images
+
+**Use case:** stylized 3D character comedy, six-beat visual storytelling,
+stateful prop continuity, music-led punchlines  \
+**Mode:** text-to-video, no reference images  \
+**Settings:** 30 seconds, six approximately five-second shots, native score,
+ambience and effects
+
+```text
+Create a polished 30-second stylized 3D animated comedy about Max, a self-serious
+household security dog whose discipline collapses twice. Tell the story in six
+clear five-second beats. Every shot gets one setup and one readable visual joke;
+do not crowd several gags into the same beat.
+
+IDENTITY AND WORLD LOCK
+Max is always the same compact golden-brown adult dog: floppy ears, large
+expressive eyes, broad paws, soft detailed fur and one tiny blue security cap.
+Keep the same front gate, warm suburban garden, front path, delivery courier,
+parcel, flower pot, low inflatable pool and fence. Use feature-animation
+rendering, soft global illumination, shallow but readable depth of field and
+believable weight under the exaggerated expressions.
+
+STATE LEDGER
+0–10 s: Max and the cap are dry; the parcel is closed.
+10–20 s: the parcel is open and reveals one sealed bag of dog treats.
+20–25 s: the treats remain with the courier; Max chases the squirrel and lands
+in the pool.
+25–30 s: Max and his fur are visibly wet; the cap is crooked until the squirrel
+takes it. Never reset an established state.
+
+0–5 s — Professional pose versus butterfly.
+Begin with a slow push toward Max sitting bolt upright beside the gate as if he
+is guarding an important facility. A butterfly crosses his nose. Only his eyes
+and head track it for one beat; he then snaps back into the exact formal pose,
+hoping nobody noticed. Use morning birds, light wind, one delicate flutter and
+restrained pizzicato strings.
+
+5–10 s — Imagined heroism.
+A courier approaches with the closed parcel. Max's ears rise, his eyes widen,
+and he launches into an overconfident warning bark. Use a low hero angle on Max
+then one reaction cut to the courier freezing and lifting both hands. Replace
+the light music with an absurdly grand action cue; keep the encounter playful,
+not threatening.
+
+10–15 s — Treat-driven betrayal.
+The courier opens the same parcel and reveals the treat bag. Cut close on the
+bag, then rack focus to Max as his guard expression melts, ears relax and tail
+accelerates. He walks over and solemnly offers one paw. The courier looks from
+the paw to the gate in confusion. Stop the heroic cue on the reveal, add one
+small sparkle and begin a cheerful melody.
+
+15–20 s — Cover-up and secret signal.
+Max's adult owner steps outside, notices the new friendship and points at the
+security cap. Max realizes he has been caught, returns to his formal stance and
+performs two token barks toward the courier. During the second bark, give the
+courier one quick conspiratorial wink. Use a medium two-shot followed by one
+brief eye close-up and sneaky string accents.
+
+20–25 s — The real distraction.
+A small squirrel appears on the fence. Hold an extreme close-up as Max freezes
+and his eyes enlarge. The squirrel runs through the garden; Max abandons his
+post, races after it, clears the flower pot, loses traction and lands in the
+inflatable pool. Track laterally into one slow readable splash. Add a record
+scratch, rapid paws, restrained whooshes and fast orchestral comedy.
+
+25–30 s — Status-object payoff.
+Max climbs out soaked and embarrassed, the same blue cap now crooked. The
+squirrel jumps onto his head, removes that exact cap and escapes. Max registers
+the missing cap, then chases it around the corner. Follow the chase, freeze for
+a fraction at the exit, cut to black, stop the music and leave one distant bark.
+
+CAMERA, PERFORMANCE AND EDIT
+Favor readable medium shots and reaction close-ups. Camera motion may grow from
+the opening push and simple cuts into faster tracking only after the squirrel
+appears. Keep eye lines, screen direction, scale and garden geography stable.
+Let ears, eyes, tail, posture and pauses carry the comedy; no dialogue or
+explanatory captions. Preserve clean action silhouettes and give each reaction
+enough time to register before cutting.
+
+AUDIO MAP
+Garden ambience persists across the whole piece. Assign a distinct musical
+role to each beat: light duty motif -> mock hero cue -> cheerful temptation ->
+sneaky cover-up -> chaotic chase -> sudden silence. Synchronize the bark,
+parcel rustle, paw movement, sparkle, record scratch, footsteps, splash,
+squirrel squeak and final distant bark to their visible causes.
+
+ACCEPTANCE
+Pass only if Max, the cap, courier and garden remain identifiable; the dry,
+parcel-open, wet and cap-stolen states occur once and in order; every shot has
+one dominant joke; the score changes exactly at the story reversals; the pool
+splash creates the wet-fur state used by the ending; and the final cap theft
+pays off the opening job identity.
+
+No duplicate dog, different breed, cap replacement, parcel reset, disappearing
+treats, dry fur after the splash, talking animal, human lip-sync, aggressive
+bite, injured character, floating prop, extra limb, changing garden layout,
+unmotivated cutaway, overlapping gag, generic trailer music, subtitle, logo,
+watermark or undeclared text.
+```
+
+**Why it works:** the cap is both an identity anchor and a story object, while
+the state ledger forces the parcel, treats, water and wet fur to survive across
+cuts. Each shot advances one comic idea, and the music changes function at the
+same moments as Max's loyalties. The first reversal exposes his weakness; the
+second turns the symbol of his job into the final chase objective, so the
+ending resolves the setup instead of adding an unrelated joke.
+
+**Source:** Vini / @Viniai_'s August 27, 2026
+[Seedance 2.5 generated 30-second result](https://x.com/Viniai_/status/2092862214189515020)
+and [complete six-shot source prompt](https://x.com/Viniai_/status/2092862227145740356).
+
+---
+
 ## Reusable templates
 
 ### Monotonic scrub-readiness motion audit and rejection gate
@@ -18032,6 +18151,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Vini / @Viniai_ — Seedance 2.5 text-only six-shot security-dog comedy with complete 30-second prompt and generated result](https://x.com/Viniai_/status/2092862214189515020) ([complete prompt](https://x.com/Viniai_/status/2092862227145740356))
 
 - [ᴍᴜʀᴘʜʏ / @Diplomeme — Seedance 2.5 viral-stunt recreation UGC with complete 24-second prompt, failed-attempt ladder, match-cut payoff and generated result](https://x.com/Diplomeme/status/2092848326983241739)
 
