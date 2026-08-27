@@ -260,6 +260,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Lens-splash pool-day camcorder handoff](#244-lens-splash-pool-day-camcorder-handoff)
   - [Silent-cat luxury-service escalation and reaction ledger](#245-silent-cat-luxury-service-escalation-and-reaction-ledger)
   - [First-person cottage chore relay and camera handoff](#246-first-person-cottage-chore-relay-and-camera-handoff)
+  - [Single-active-fighter rooftop anime rematch](#247-single-active-fighter-rooftop-anime-rematch)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -12222,6 +12223,86 @@ and [complete source prompt](https://x.com/Mayz1169/status/2092941033931739605).
 
 ---
 
+### 247. Single-active-fighter rooftop anime rematch
+
+**Verified model:** Seedance 2.5 — the original creator identifies the generated
+rematch as Seedance 2.5, publishes the complete revised prompt and directly
+compares it with the previous day's ghosting and between-frame character melting
+failure
+**Use case:** anime fight choreography, multi-reference identity control,
+ghosting and body-merge suppression
+**Mode:** reference-video-guided image-to-video using two character sheets
+**Settings:** 21-second prompt, 16:9; the published returned asset plays for 19
+seconds, so inspect the delivered duration before approving the take
+
+```text
+@Video1 controls only the shot order, camera energy and cutting rhythm.
+@Image1 defines Fighter A's face, hair, outfit, colors, accessories and
+proportions. @Image2 defines Fighter B in the same way. Ignore all text, borders
+and layout in the character sheets. Never exchange, simplify or redesign either
+fighter.
+
+Bright daytime rooftop arena above a colorful coastal megacity: open pale
+concrete floor, dark structural panels, transparent barriers and sparse geometric
+platforms. Keep the fighting area uncluttered so both silhouettes remain readable.
+
+CHOREOGRAPHY CONTRACT
+For every major exchange, exactly one fighter performs the complex attack while
+the other gives one simple dodge, block, step or jump. Keep visible empty space
+between bodies. Never combine crossing kicks, grappling, locks, throws or
+simultaneous multi-limb attacks.
+
+0–3.5s — Track Fighter A alone as she runs in and makes one sweeping roundhouse.
+Fighter B waits several metres ahead, then leans back and sidesteps before
+contact. A completes the arc and visibly regains balance.
+
+3.5–7s — Fighter B owns the counter: three palm strikes. Fighter A retreats one
+step per strike, dodging left, right, then ducking. Hard-cut among one attacking
+palm, one reaction, one footwork insert and one dodge; never show several attacks
+inside the same pose.
+
+7–11s — Fighter A makes one low sliding sweep. Cut from A sliding alone in the
+foreground, to B isolated in a vertical tuck jump against the sky, to B's boots
+landing behind A. Preserve foreground/background separation during the crossing.
+
+11–15s — Fighter B gives one straight kick through empty space beside A. A pivots,
+then answers with one spinning back kick; B only hops backward out of range.
+Both recover their stance before the next beat.
+
+15–18s — Reset them several metres apart. Alternate sharp face and shoe close-ups.
+They sprint toward each other, but cut before their bodies would collide.
+
+18–21s — Wide side view: B performs one low slide while A makes one clean forward
+leap above her. Keep both complete bodies visible with a band of empty space
+between them. They land on opposite sides, slide to a stop and turn back smiling.
+
+CAMERA AND SPEED
+Follow only the currently active fighter during complicated motion. Use hard cuts,
+side tracks, low angles, face close-ups, shoe inserts and occasional wide views.
+Create speed through choreography, editing, momentum, hair and jacket follow-through
+and dust reactions—not speed lines, light trails, ghost silhouettes or long motion
+smears.
+
+STABILITY AND AUDIO
+Exactly one Fighter A and one Fighter B, each with one head, two arms, two hands,
+two legs and two feet. Never duplicate, stretch, melt, detach or merge anatomy;
+keep clothing and accessories attached to the correct owner. Fast electronic
+percussion, footsteps, shoe slides, fabric, jumps and restrained physical whooshes;
+no dialogue, text, logo, weapon, injury, extra character or supernatural effect.
+```
+
+**Why it works:** the creator's revision converts a high-speed two-body problem
+into a chain of single-owner poses. Simple responses, hard-cut isolation and
+visible air gaps make each crossing auditable, while the no-line rule forces speed
+to come from real choreography rather than graphic streaks that can hide unstable
+anatomy. The prompt asks for 21 seconds but the posted output plays for 19, so
+duration readback remains part of acceptance.
+
+**Source:** Kiki / @Mayz1169's August 27, 2026
+[Seedance 2.5 revised result and explicit before/after failure comparison](https://x.com/Mayz1169/status/2092971460914778186)
+and [complete revised prompt with both character-sheet references](https://x.com/Mayz1169/status/2092972153494962387).
+---
+
 ## Reusable templates
 
 ### Sequential continuation approval gate and failure-propagation firewall
@@ -18834,6 +18915,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Kiki / @Mayz1169 — Seedance 2.5 anime-fight rematch with a complete revised prompt, two character-sheet references, generated result and direct ghosting/body-melt failure comparison](https://x.com/Mayz1169/status/2092971460914778186) ([complete revised prompt](https://x.com/Mayz1169/status/2092972153494962387))
 
 - [Sogni — official Seedance 2.5 30-second UGC result with sequential 10-second approval guidance and failure-propagation rationale](https://x.com/Sogni_Protocol/status/2092954101558497494)
 
