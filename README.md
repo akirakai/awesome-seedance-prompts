@@ -269,6 +269,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Two-board freefall obstacle relay and silent-apex reset](#253-two-board-freefall-obstacle-relay-and-silent-apex-reset)
   - [Late-reacting friend-camera summer-day diary and prop ledger](#254-late-reacting-friend-camera-summer-day-diary-and-prop-ledger)
   - [Six-beat seasonal romance montage and score-shape ledger](#255-six-beat-seasonal-romance-montage-and-score-shape-ledger)
+  - [Offscreen-observer whisper lane and degraded pinch-zoom](#256-offscreen-observer-whisper-lane-and-degraded-pinch-zoom)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -13030,6 +13031,85 @@ closed visual memory loop.
 
 ---
 
+### 256. Offscreen-observer whisper lane and degraded pinch-zoom
+
+**Verified model:** Seedance 2.5 on Dreamina — the original creator names both
+model and platform, then publishes the complete prompt beside the generated
+result
+**Use case:** observational phone UGC, invisible camera-owner continuity,
+private self-talk audio and causally degraded digital zoom
+**Mode:** text-to-video
+**Suggested settings:** prompt requests 15 seconds, 9:16 and 30 fps, while the
+published player reports a 30-second asset; verify the returned duration before
+acceptance
+
+```text
+SCENE AND PERFORMANCE CONTRACT
+Stage a fictional, privacy-safe scene with adult performers in an ordinary
+fast-food restaurant at night. One man sits alone at a distant table eating a
+generic burger and drink. Empty chairs surround him. He is relaxed, never poses,
+never speaks and never acknowledges the lens.
+
+One woman owns the same phone camera and microphone throughout but is never
+visible—not directly, in reflection, shadow or inserted cutaway. Her position
+stays far across the room. Her low private speech is self-talk captured close to
+the phone microphone, not narration for an audience. She never says “guys,”
+addresses viewers or explains a story.
+
+0–4s — Open on a slightly messy wide vertical frame as though the camera app has
+just opened. Keep the man small in frame, with imperfect headroom and mild hand
+drift. The woman quietly murmurs, “He is still over there... alone.” Leave one
+natural breath and restaurant ambience around the line.
+
+4–8s — Perform one slow physical pinch-zoom toward the man. Image detail becomes
+visibly softer, phone sharpening more obvious and small hand movements larger as
+magnification increases. Do not replace this with a dolly, lens zoom or cut. He
+continues eating without looking up. The woman whispers, “Not even checking his
+phone...” then pauses.
+
+8–12s — Continue only a little closer. Autofocus searches once between foreground
+chairs and the man, then recovers. He completes one bite, takes one drink and
+briefly scans the room without finding the camera. She says under her breath,
+“Just enjoying dinner by himself.”
+
+12–15s — Hold the distant magnified shot without perfecting composition. The
+phone shifts a few pixels as she watches. After a short silent beat she gives one
+tiny amused exhale and murmurs, “Honestly... maybe he has the right idea.” End
+while the man resumes eating, not on a performed reaction.
+
+PHONE IMAGE CONTRACT
+Simulate a normal rear-phone capture: 9:16, 30 fps, automatic exposure, modest
+rolling-shutter movement, digital-zoom softness, mild compression, imperfect
+white balance, clipped ceiling practicals, realistic noise reduction and
+occasional motion blur. Keep the depth of field broad. Every quality loss must
+increase with the declared pinch-zoom and remain afterward.
+
+AUDIO AND REJECTION
+Mix quiet restaurant HVAC, distant nonverbal conversation, wrappers, trays and
+utensils with the woman's close but low-volume voice. Preserve tiny pauses,
+breathing and imperfect delivery. No music, polished voice-over, vlog cadence,
+subtitles or generated text.
+
+Reject a visible woman, second camera owner, camera-facing man, spoken line from
+the man, instant optical close-up, background replacement, focus that never
+recovers, quality improving after digital zoom, cinematic bokeh, gimbal, dramatic
+lighting, perfect composition, exaggerated pity, public-figure likeness, real
+brand, social-media interface, caption, logo or watermark. Confirm the returned
+duration and audit that every whisper belongs spatially behind the same phone.
+```
+
+**Why it works:** the camera owner exists through sound and handling evidence
+without competing for screen space. Digital zoom changes resolution, shake and
+focus together instead of functioning as a clean cinematic move, while the
+subject's continued indifference protects the observational premise. Separating
+private self-talk from audience-facing narration also gives native audio a
+specific distance, volume and performance target.
+
+**Source:** BMX's August 28, 2026
+[complete Dreamina Seedance 2.5 prompt and generated result](https://x.com/bmx_ai13/status/2093106533953425729).
+
+---
+
 ## Reusable templates
 
 ### Immutable source/finish split and explicit delivery-variant gate
@@ -19765,6 +19845,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [BMX — Dreamina Seedance 2.5 offscreen-observer phone UGC with a complete prompt, private-whisper audio lane, degraded pinch-zoom and generated result](https://x.com/bmx_ai13/status/2093106533953425729)
 
 - [Beech — Seedance 2.5 ordinary summer-day diary with a complete 30-second prompt, motivated amateur-camera errors, prop continuity and generated result](https://x.com/beechinour/status/2093086602167751073)
 
