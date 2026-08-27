@@ -12597,6 +12597,66 @@ and [complete two-part prompts with all reference images](https://x.com/Dyyaiwor
 
 ## Reusable templates
 
+### Immutable source/finish split and explicit delivery-variant gate
+
+**Verified model:** Seedance 2.5 — Atlas Cloud text-to-video model ID
+`bytedance/seedance-2.5/text-to-video`; the original project generated the
+source clips with that endpoint, then implemented a separate finish-pass asset
+and owner-selected delivery path
+
+Use this when a generated take may receive grain, color, codec, cleanup or other
+post-processing. Treat the provider result and every derived finish as distinct
+assets so an aesthetic pass can never silently replace the evidence-bearing
+generation.
+
+```text
+SOURCE / DERIVATIVE CONTRACT
+SOURCE_ASSET_ID: [PROVIDER TASK ID + STORED URL + FILE HASH]
+MODEL: [EXACT SEEDANCE VERSION / ENDPOINT]
+GENERATION RECORD: [PROMPT + REFERENCES + SETTINGS + RETURNED DURATION]
+SOURCE STATUS: immutable; never overwrite, relabel or delete during finishing.
+
+DERIVED_VARIANT
+PARENT_SOURCE_ASSET_ID: [SOURCE_ASSET_ID]
+VARIANT_ID: [FINISH NAME + VERSION]
+TRANSFORM RECIPE: [GRAIN / COLOR / CLEANUP / TRANSCODE + EXACT SETTINGS]
+DERIVED URL / HASH: [VALUE]
+FINISH STATUS: [READY / FAILED / NOT RUN]
+
+If the finish job fails or produces no asset, keep the source READY and expose
+no derived option. Never point the source field at a derivative.
+
+SIDE-BY-SIDE APPROVAL
+Review SOURCE and each DERIVED_VARIANT from the same start frame. For both,
+confirm:
+- same duration, frame count, aspect ratio and audio timeline;
+- no identity, anatomy, product, dialogue, action or end-state change;
+- full playback and decode in the intended delivery environment;
+- the intended finish is visible without crushing detail or hiding defects.
+
+Record DELIVERY_SELECTION: [SOURCE / VARIANT_ID], reviewer, timestamp and reason.
+Download, approval and publishing actions must resolve that explicit selection,
+not a hidden default. Display the selected label beside the player.
+
+FAIL / FALLBACK
+Reject only the derivative if it changes content, timing, audio, playability or
+traceability. Fall back to the immutable source, or derive a new version from
+that same source. Never derive from a derivative, silently promote a finish,
+or discard the source after approval.
+```
+
+**Why it works:** generation quality and finish preference become separate
+decisions. The raw Seedance take remains available for attribution, regression
+comparison and recovery, while reviewers can knowingly ship a processed version
+without losing its parentage. In the source implementation, three existing clips
+were backfilled with separate finish-pass files; the gallery's Original/Grainy
+toggle controls playback, download and the asset sent to the approval queue.
+
+**Source:** Geesta87's August 27, 2026
+[dual-asset implementation and owner-selected delivery commit](https://github.com/Geesta87/Regalos-Que-Cantan/commit/957d0a1b2650ca2500da873e49c764508f833bfa);
+the same original project records the
+[exact Seedance 2.5 Atlas endpoint and generation workflow](https://github.com/Geesta87/Regalos-Que-Cantan/commit/730ae96704176112d21f9f3eeea443e48973d225).
+
 ### Premise-level compliance pivot after visual-substitution failure
 
 **Verified model:** Seedance 2.5 — the original creator records a failed
@@ -19270,6 +19330,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Geesta87 — Seedance 2.5 Atlas production workflow with immutable provider originals, separate finish-pass assets and an explicit Original/Grainy delivery selector](https://github.com/Geesta87/Regalos-Que-Cantan/commit/957d0a1b2650ca2500da873e49c764508f833bfa) ([exact model endpoint and generation workflow](https://github.com/Geesta87/Regalos-Que-Cantan/commit/730ae96704176112d21f9f3eeea443e48973d225))
 
 - [Dyyhoang / @Dyyaiworker — Seedance 2.5 capture-to-canyon two-part continuation, complete prompts, reference images and 44-second Flova AI result](https://x.com/Dyyaiworker/status/2093012360797807083) ([complete two-part prompts](https://x.com/Dyyaiworker/status/2093012572220059700))
 
