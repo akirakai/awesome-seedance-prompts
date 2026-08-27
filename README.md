@@ -17641,6 +17641,97 @@ and the creator's
 [five exact-model Dreamina tests, intact exports and complete structured
 prompts](https://mkanime.ai/guides/seedance-2-5-anime-test).
 
+### Ordered ensemble-dialogue audio-lane map and duration preflight
+
+**Verified model:** Seedance 2.5 — the original creator published the complete
+six-character, multi-reference prompt and its 25-second generated result on
+August 27, 2026
+
+Use this when three or more visible characters must speak in a fixed order
+inside one shared frame, with a separate identity sheet and voice reference for
+each speaker. Build a line-to-mouth-to-audio manifest before writing prose.
+
+```text
+REFERENCE CONTRACT
+@Image1 = approved group frame and spatial authority.
+@Image2..N = one identity sheet per named speaker; one owner per sheet.
+@Audio1..N = one approved voice/performance file per named speaker.
+Do not share an audio lane unless the same voice is intentionally required.
+
+ENSEMBLE MAP — COMPLETE BEFORE PROMPTING
+S1 [NAME]: [SCREEN POSITION] | identity [@IMAGE] | voice [@AUDIO]
+   line [01]: "[EXACT DIALOGUE]" | cue [ACTION / GAZE / PROP]
+S2 [NAME]: [SCREEN POSITION] | identity [@IMAGE] | voice [@AUDIO]
+   line [02]: "[EXACT DIALOGUE]" | cue [ACTION / GAZE / PROP]
+[CONTINUE FOR EVERY SPEAKER AND LINE]
+
+POSITION AND IDENTITY LOCK
+The people shown in @Image1 remain in the same left-to-right order:
+[NAME 1], [NAME 2], [NAME 3] ... [NAME N].
+Match each named person only to the assigned identity sheet. Preserve seating,
+wardrobe ownership, face, hair and relative screen position throughout.
+
+ORDERED DIALOGUE LANES
+Only one primary speaker talks at a time.
+Line 01: [NAME 1] says "[LINE]" using [@AUDIO 1].
+Line 02: after line 01 ends, [NAME 2] says "[LINE]" using [@AUDIO 2].
+[CONTINUE IN THE EXACT APPROVED ORDER.]
+Bind every quoted line to both a named mouth and its assigned audio file.
+Non-speakers keep their mouths closed. They may use only small reactions:
+eye contact, a nod, breathing, a restrained hand or prop movement.
+
+TIMING PREFLIGHT
+Measure every source file rather than estimating from the script.
+Dry dialogue total: [SECONDS].
+Available output duration: [SECONDS].
+Reserve [SECONDS] for handoffs, reactions and the final settle.
+Check every file against the selected provider's current minimum-duration
+requirement. If padding is permitted, add clean room tone without stretching,
+pitching or duplicating the spoken performance.
+
+PERFORMANCE AND END BEAT
+Use one stable ensemble composition with small, motivated reactions.
+After [FINAL SPEAKER] finishes the final word, hold [DELAY], then trigger
+[GROUP REACTION]. No one anticipates or begins that reaction early.
+Preserve each assigned voice's timbre and depth; no speaker or voice swap.
+
+MANIFEST AUDIT
+- every line number occurs once and remains in order;
+- every line names one visible speaker and one audio reference;
+- every image and audio reference belongs to the intended character;
+- flag duplicated audio IDs, skipped IDs and copy-pasted wrong owners;
+- measured dialogue plus headroom fits the requested output duration.
+
+ACCEPTANCE
+Pass only if every line comes from the correct mouth, identity and voice in the
+approved order; left-to-right positions remain stable; no line is skipped or
+duplicated; non-speakers do not lip-sync; the group reaction starts after the
+last line; and voice depth does not drift.
+
+FAILURE ROUTING
+- Wrong mouth: restate the left-to-right roster and line ownership; reduce
+  simultaneous gestures during that line.
+- Early group reaction: attach it to the final word plus an explicit delay.
+- Voice drift: strengthen one-speaker/one-audio ownership, shorten the affected
+  line if necessary, and compare the same interval against the reference.
+- Crowded or overlapping beats: split the scene into coverage with matched
+  endpoints instead of forcing simultaneous dialogue.
+```
+
+**Why it works:** the group image governs geometry, character sheets govern
+identity, and audio files govern voice; none should be asked to perform another
+reference's job. The manifest converts free-form dialogue into auditable lanes
+and exposes wrong or duplicated audio assignments before generation. In the
+source test, 22 seconds of dry dialogue occupied a 25-second result, leaving
+roughly three seconds for handoffs and reactions. Its platform required each
+audio reference to be at least two seconds, which is a provider-specific
+preflight rather than a universal Seedance rule. The reported early laughter
+and one shifted voice depth are retained as explicit rejection checks.
+
+**Source:** G1zm072's August 27, 2026
+[six-character Seedance 2.5 test, complete prompt, reference plan, generated
+result and failure notes](https://www.reddit.com/r/Seedance_AI/comments/1vzfprh/how_to_make_multiple_characters_speak_in_seedance/).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -17688,6 +17779,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [G1zm072 — Seedance 2.5 six-character same-frame dialogue test with a group image, individual character sheets, six reference-audio lanes, complete prompt and 25-second generated result](https://www.reddit.com/r/Seedance_AI/comments/1vzfprh/how_to_make_multiple_characters_speak_in_seedance/)
 
 - [Few-Profession421 — Seedance 2.5 photoreal macaque-and-hiker head-tilt comedy, complete 15-second prompt and generated showcase result](https://www.reddit.com/r/Seedance_AI/comments/1vymg5g/tried_a_simple_monkey_prompt_in_seedance_25_and/)
 
