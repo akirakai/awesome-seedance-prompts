@@ -263,6 +263,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Single-active-fighter rooftop anime rematch](#247-single-active-fighter-rooftop-anime-rematch)
   - [Causal water-obstacle near-win reversal](#248-causal-water-obstacle-near-win-reversal)
   - [Occlusion-bus mythic voyage with returning hero anchor](#249-occlusion-bus-mythic-voyage-with-returning-hero-anchor)
+  - [Reference-role capture-to-canyon continuation relay](#250-reference-role-capture-to-canyon-continuation-relay)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -12478,6 +12479,122 @@ a rejection criterion instead of presenting it as successful identity control.
 creator disclosure of the unintended public-figure resemblance](https://x.com/MadMax_Series/status/2093000650938335426).
 ---
 
+### 250. Reference-role capture-to-canyon continuation relay
+
+**Verified model:** Seedance 2.5 — the original creator identifies the 44-second
+Flova AI result as Seedance 2.5 and publishes both complete continuation prompts
+with the three reference-image roles
+**Use case:** stylized action serial, reference-role separation, accepted-video
+continuation, on-foot-to-vehicle escalation
+**Mode:** multi-reference image-to-video followed by video-reference continuation
+**Suggested settings:** two approximately 30-second 16:9 segments; verify the
+returned duration of each asset before assembly
+
+```text
+REFERENCE CONTRACT
+@LAYOUT supplies only the opening warehouse composition, doorway, interior scale
+and hard shaft of desert light. @HERO supplies the same adult protagonist's face,
+black shoulder-length hair, body proportions, navy tailored suit and footwear.
+@WORLD supplies the dry plateau road, telephone poles, scrub, isolated industrial
+building, distant mesa and canyon geography. Never let one reference redesign
+another role. Stylized-realistic 3D action-film rendering, painterly cel shading,
+hard silhouettes, volumetric light, physical dust and restrained motion blur.
+
+SEGMENT A — CAPTURE TO ON-FOOT ESCAPE
+Generate approximately 30 seconds. Preserve HERO, wardrobe, warehouse layout,
+light direction and WORLD geography through every shot.
+
+0–4s — Extreme facial close-up inside the dark warehouse. A narrow stripe of
+sunlight from the damaged door crosses the eyes and cheek. HERO raises her gaze
+before the camera slowly pulls back enough to establish the interior.
+
+4–8s — Drop to floor level and track past a fixed scatter of playing cards,
+spent metal casings, glass and abandoned equipment. Wind moves exactly one card.
+End at HERO's planted feet; none of the floor objects may teleport.
+
+8–12s — Low tilt from feet to a full-body three-quarter hero view. Hair and suit
+move in the same doorway draft; boxes, machinery and the large exit remain fixed.
+
+12–16s — Exactly two masked adult adversaries emerge from opposite shadows and
+restrain HERO. Use a stable handheld track and readable contact spacing. She
+resists once, is forced to one knee and has both wrists secured behind her.
+No blood, wound, weapon discharge or hidden extra attacker.
+
+16–20s — Extreme close-up: head lowered, hair partly across the face. She raises
+her eyes as action and room sound fall into one brief pre-action silence.
+
+20–24s — One continuous escape chain: rotate against the restraint, free the
+wrists, deliver one controlled elbow, duck the second attack, recover one dropped
+piece of non-lethal equipment and stand. A low track may arc no more than 180
+degrees; keep preparation, contact, recoil and recovery visible.
+
+24–27s — Boxes tip only after physical contact and dust rises from those impacts.
+HERO runs toward the same exit while the camera retreats on her centre line.
+
+27–30s — From inside, hold the doorway as she crosses into hard backlight and
+becomes a readable silhouette running toward the road. Pull back without changing
+screen direction. Hold the accepted final state for at least eight frames.
+
+SEGMENT-A HANDOFF LEDGER
+Record the accepted final frame, HERO identity and wardrobe, hair phase, running
+leg, travel direction, sun angle, doorway geometry, road position, mesa silhouette
+and dust state. Reject the segment if any item is ambiguous.
+
+SEGMENT B — VEHICLE ESCAPE
+Use the accepted Segment A video as the main video reference and continue from
+its exact final accepted frame. Do not restage the exit or reset the running pose.
+Keep the same HERO, warehouse, road, mesa, grade, sun direction and screen travel.
+
+0–4s — Continue the same run at the road edge from a low rear follow. One black
+off-road vehicle approaches from far ahead and decelerates beside HERO.
+
+4–8s — The same vehicle stops, one door opens, HERO enters, closes it, grips the
+wheel and starts the engine. Insert one interior close-up and one mirror view of
+the warehouse. Lock vehicle body, wheel count, door side, cabin and damage state.
+
+8–13s — The vehicle accelerates along the road. Rear chase view shows tyre dust;
+then one lateral track keeps poles and mesa moving with correct parallax.
+
+13–17s — Exactly two matching pursuit vehicles leave the warehouse. Bind the
+threat to the mirror: HERO checks it, then the next exterior shot reveals the
+same two pursuers in the same order. She makes one lane change; no collision.
+
+17–21s — Six one-second inserts may show hands turning the wheel, one tyre over
+gravel, dust wake, pursuers closing, HERO's eyes in the mirror and a clean lateral
+track. Every insert advances the same chase; do not reset distance or direction.
+
+21–25s — HERO leaves the road, makes one weighted desert drift and continues
+toward the mesa. Rise to a high wide view that keeps all three vehicles countable.
+
+25–28s — She approaches the rock face, turns only after visible braking and tyre
+load, then enters one narrow canyon. The two pursuers brake outside; they do not
+teleport through the rock or multiply.
+
+28–30s — Follow into the canyon, then rise to a stable aerial ending. HERO's
+vehicle remains one small moving black point until it disappears naturally into
+depth. Hold the empty road and mesa as the resolved final state.
+
+AUDIO AND REJECTION
+Warehouse wind, card scrape, cloth, footsteps, restrained impacts and a short
+silence; then door, engine, gear change, gravel, tyres, dust and canyon echo.
+Preserve sound perspective across every cut. Reject face or wardrobe drift,
+new woman, vehicle redesign, pursuit-count change, reversed travel, geometry
+reset, weightless turn, unreadable contact, subtitle, logo or watermark.
+```
+
+**Why it works:** the first segment assigns each image a non-overlapping job,
+then converts the accepted video—not a verbal recap—into the continuation anchor.
+The explicit handoff ledger carries pose, direction, light and geography across
+the seam, while the mirror binds off-screen pursuit information to the following
+exterior shot. The source asks for two roughly 30-second segments but its public
+assembly plays for 44 seconds, so duration readback and seam inspection are
+acceptance checks rather than assumed properties.
+
+**Source:** Dyyhoang / @Dyyaiworker's August 28, 2026
+[44-second Seedance 2.5 result on Flova AI](https://x.com/Dyyaiworker/status/2093012360797807083)
+and [complete two-part prompts with all reference images](https://x.com/Dyyaiworker/status/2093012572220059700).
+---
+
 ## Reusable templates
 
 ### Premise-level compliance pivot after visual-substitution failure
@@ -19153,6 +19270,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Dyyhoang / @Dyyaiworker — Seedance 2.5 capture-to-canyon two-part continuation, complete prompts, reference images and 44-second Flova AI result](https://x.com/Dyyaiworker/status/2093012360797807083) ([complete two-part prompts](https://x.com/Dyyaiworker/status/2093012572220059700))
 
 - [MadMax / @MadMax_Series — Seedance 2.5 20-second continuous mythic voyage with complete text-to-video prompt, generated result and disclosed unintended public-figure resemblance](https://x.com/MadMax_Series/status/2093000650938335426)
 
