@@ -256,6 +256,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Viral-stunt attempt ladder and match-cut payoff](#240-viral-stunt-attempt-ladder-and-match-cut-payoff)
   - [Security-dog duty ledger and six-beat comedy escalation](#241-security-dog-duty-ledger-and-six-beat-comedy-escalation)
   - [Character-sheet-to-storyboard shield awakening](#242-character-sheet-to-storyboard-shield-awakening)
+  - [Center-stage 360 concert orbit and crowd-return continuity](#243-center-stage-360-concert-orbit-and-crowd-return-continuity)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -11768,6 +11769,116 @@ also prevents a duration-contract mismatch.
 
 ---
 
+
+### 243. Center-stage 360 concert orbit and crowd-return continuity
+
+**Verified model:** Seedance 2.5 — the original creator published the complete
+prompt and its 30-second generated result together on August 27, 2026,
+explicitly identifying Dreamina Seedance 2.5 and an original reggae performance
+
+**Use case:** live-performance music video, full camera orbit, crowd cutaway,
+artist and stage continuity, native concert audio  \
+**Mode:** reference-to-video with appearance-only character and environment
+references  \
+**Settings:** 30 seconds, 16:9, three planned coverage blocks, original song,
+live-band and crowd ambience
+
+```text
+Create a photorealistic 30-second golden-hour festival performance built around
+one original adult reggae singer, one live band and one audience. The camera may
+leave the singer for a crowd cutaway, but it must return to the same performance
+state, stage position and light direction.
+
+REFERENCE OWNERSHIP
+@Image1 SINGER owns only the adult artist's face, warm-brown skin, long
+dreadlocks, light beard, patterned open shirt, layered necklaces, microphone
+and relaxed joyful presence.
+@Image2 STAGE owns only the wide outdoor platform, lighting rig, sunset
+orientation, band positions and crowd-to-stage geography.
+@Image3 BAND owns the appearance and instruments of the drummer, bassist,
+guitarist and keyboard player.
+@Image4 CROWD owns audience diversity, wardrobe range and scale.
+Use references as appearance truth, not as frames to recreate. No reference may
+replace another asset's identity or spatial role.
+
+PERFORMANCE AND GEOGRAPHY LOCK
+The singer remains on the center-stage mark for the entire piece, facing the
+audience and performing the same original song. The drummer stays rear-center;
+bass, guitar and keys keep their declared sides. The crowd remains in front of
+the stage. Golden sunlight comes from one fixed rear-side direction and the
+stage fixtures keep the same warm palette. Preserve the singer's verse,
+microphone hand, body rhythm and vocal energy across all cuts.
+
+0–12 s — Complete artist orbit.
+Open from a slightly elevated wide-medium view and perform one smooth clockwise
+360-degree orbit around the singer. Keep the singer continuously framed near
+center while the band, crowd, lighting rig and horizon rotate in correct
+parallax. Begin and finish on the same camera side with matching focal length,
+height and stage geometry. Dreadlocks and shirt respond naturally to the same
+breeze. Do not hide a teleport, reverse direction or turn the orbit into a
+series of unrelated angles.
+
+12–22 s — Audience response.
+Cut on a clear musical accent to a broad sweep above the front rows. Travel
+laterally across the audience as people sway, dance and lift their hands in
+different natural rhythms. Keep the stage visible long enough to establish
+orientation, then pass through closer reactions before finishing on a view that
+points back toward the singer's center mark. Maintain the same song phrase,
+sunset color and crowd density; no replacement audience or new venue.
+
+22–30 s — Return and proof of continuity.
+Cut on the next downbeat back to the singer mid-phrase at the same center-stage
+mark. Match microphone hand, posture, dreadlock motion, band layout and sun
+direction to the state established before the crowd cutaway. Use a controlled
+forward arc rather than another full orbit. Let the singer lean toward the
+audience, the band lift the groove and the crowd answer with one coordinated
+cheer. End on a warm triumphant medium-wide frame that contains singer, band and
+front rows together.
+
+CAMERA AND LOOK
+Festival-aftermovie realism with natural skin and fabric texture, believable
+stage scale, warm amber and honey color, restrained flare, atmospheric haze,
+fine film grain and physically correct depth changes. Use stable aerial or
+crane-like motion only for the declared orbit and crowd sweep. Preserve horizon,
+screen direction, focal continuity and camera inertia. Do not mix drone height
+with an impossible close face orbit.
+
+AUDIO AND EDIT MAP
+Use one original soft roots-reggae track recorded as a live performance. Keep
+tempo, vocal timbre, lyric position and instrument arrangement continuous
+through every cut. Add stage monitor spill, crowd murmur, occasional cheers and
+open-air ambience without drowning the singer. Cut at 12 and 22 seconds on
+audible beats; never restart the song, change vocalist or jump to another verse.
+Lip motion follows relaxed singing rather than exaggerated speech.
+
+ACCEPTANCE
+Pass only if the first block completes a readable 360-degree orbit; the singer
+stays on the same center mark; band and crowd geography survive the orbit; the
+crowd shot preserves the song and leads the eye back to stage; the final block
+returns to the same artist, lyric moment, microphone hand, light direction and
+performance energy; and the delivered file measures 30 seconds.
+
+No identity drift, haircut or dreadlock change, wardrobe swap, duplicate singer,
+instrument substitution, band-member teleport, new stage, moving sunset,
+mirrored venue, reversed orbit, incomplete circle, fake crowd loop, synchronized
+clone dancing, floating microphone, mouth-audio mismatch, song restart, sudden
+studio mix, impossible drone proximity, overdone flare, desaturation, subtitle,
+logo, watermark or undeclared text.
+```
+
+**Why it works:** the singer's fixed stage mark becomes a spatial invariant
+against which the 360-degree move can be judged. The crowd cutaway has a defined
+exit direction and musical hand-off, so returning to the artist proves
+continuity instead of merely showing a similar stage. Appearance-only reference
+roles prevent crowd or environment images from rewriting the performer, while
+the audio ledger preserves one live take across three coverage blocks.
+
+**Source:** Jayden / @SirGlavan_'s August 27, 2026
+[Dreamina Seedance 2.5 generated 30-second performance](https://x.com/SirGlavan_/status/2092897991099048387)
+and [complete source prompt](https://x.com/SirGlavan_/status/2092897996451008637).
+
+---
+
 ## Reusable templates
 
 ### Monotonic scrub-readiness motion audit and rejection gate
@@ -18280,6 +18391,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Jayden / @SirGlavan_ — Dreamina Seedance 2.5 golden-hour concert performance with complete 30-second prompt, 360-degree orbit and generated result](https://x.com/SirGlavan_/status/2092897991099048387) ([complete prompt](https://x.com/SirGlavan_/status/2092897996451008637))
 
 - [APOB AI — Seedance 2.5 character-sheet, world-bible and storyboard-to-anime workflow with complete prompts and embedded result](https://x.com/apob_ai/article/2092872573369606378) ([canonical post](https://x.com/apob_ai/status/2092872573369606378))
 
