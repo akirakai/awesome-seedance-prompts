@@ -252,6 +252,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Three-reference Shibuya reunion CM](#236-three-reference-shibuya-reunion-cm)
   - [Repaired-marionette clockwork-circus ascent](#237-repaired-marionette-clockwork-circus-ascent)
   - [Reciprocal head-tilt macaque misdirection](#238-reciprocal-head-tilt-macaque-misdirection)
+  - [Lateral cross-section morning-delivery gag](#239-lateral-cross-section-morning-delivery-gag)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -11267,6 +11268,131 @@ result](https://www.reddit.com/r/Seedance_AI/comments/1vymg5g/tried_a_simple_mon
 
 ---
 
+### 239. Lateral cross-section morning-delivery gag
+
+**Verified model:** Seedance 2.5 — the original creator published the complete
+multi-post prompt thread and corresponding 30-second generated result together
+on August 27, 2026, explicitly identifying Seedance 2.5 on PolloAI
+
+**Use case:** single-take domestic comedy, cross-section set choreography,
+multi-room action continuity, diegetic audio timing  \
+**Mode:** reference-to-video with one adult-character reference and one courier
+reference  \
+**Settings:** 30 seconds, one stabilized lateral take plus one closing hard cut
+
+```text
+Create a photorealistic 30-second morning-routine comedy inside one modest
+Mediterranean ground-floor home. The joke must come from spatial continuity,
+deadpan timing and one harmless delivery surprise, not exaggerated acting.
+
+REFERENCE CONTRACT
+@Image1 alone defines Lucía, an adult Spanish woman in her mid-twenties:
+the same face, dark hair, green eyes, silver glasses, sleep T-shirt and cotton
+lounge shorts. Her glasses go on during the opening beat and stay on. Her hair
+begins loose, becomes one high ponytail during the bathroom exit and remains
+that way. Near the door she adds the same beige robe and slippers over the
+sleepwear; do not replace the underlying outfit.
+
+@Image2 alone defines one adult bicycle courier: the same face, helmet, plain
+dark shirt, square unbranded backpack and city bicycle. He never speaks.
+
+SET AND SCREEN-GEOGRAPHY CONTRACT
+Build the home as a fixed side-view cross-section whose rooms connect in one
+left-to-right row:
+BEDROOM -> BATHROOM -> KITCHEN -> LIVING ROOM -> FRONT DOOR -> STREET.
+The bedroom is lived-in, the bathroom compact, the tiled kitchen practical and
+the living room lightly cluttered. The front door sits at the extreme right and
+opens inward. Outside, keep the doorway at frame-left while the cobblestone
+street runs away in depth. Preserve every doorway, counter, stool, coat rack,
+prop position and light direction after it is established.
+
+CAMERA CONTRACT
+From 0–28 seconds use one unbroken, stabilized rightward lateral dolly at
+human walking height. Keep a readable side-on view like a theatre cross-section.
+The camera advances only when Lucía advances, settles while she acts in each
+room and crosses the open front-door threshold with her. No internal cut, zoom,
+orbit, whip-pan, wipe, dissolve or hidden transition. At 28 seconds permit
+exactly one motivated hard cut to the package insert.
+
+0–3 s — Bedroom hook.
+Start with a twin-bell alarm already ringing. Lucía stops it with one clean
+slap, sits up, takes her glasses from the nightstand and puts them on while
+walking toward the bathroom. Complete the room exit before the beat ends.
+
+3–10 s — Bathroom relay.
+She faces the mirror, applies two short deodorant sprays, takes one quick rinse
+from an already-open unbranded mouthwash bottle and spits into the sink. As she
+moves toward the kitchen, she gathers her hair into one high ponytail in two
+readable motions. Keep her glasses on and let each used prop remain at the sink.
+
+10–16 s — Kitchen compression.
+She sits behind the foreground counter. Pour plain cereal into one bowl, add
+milk, lift the bowl with both hands, drink quickly, set it down and wipe her
+mouth. She immediately leaves the stool and continues right. Use generic
+packages with no readable brand text.
+
+16–20 s — Threshold handoff.
+Without stopping, she takes the beige robe from the coat rack, puts it on over
+the same sleepwear, steps into the waiting slippers and opens the front door
+inward. Let exterior ambience grow as the camera and Lucía cross the threshold
+together without a cut.
+
+20–28 s — Street surprise.
+Lucía pauses outside, folds her arms and takes one quiet morning breath. Far
+down the street, the courier pedals toward camera. Without braking, he tosses
+one small lightweight cardboard parcel in a short controlled arc; it harmlessly
+bumps her padded shoulder, drops to the cobblestones and stays there. The
+courier continues past and exits without looking back. Lucía freezes for one
+beat, looks after him and says softly in Madrid Spanish, "¿Y esto por qué?"
+She looks down, crouches and begins opening the parcel.
+
+28–30 s — Sole hard cut and proof.
+Hard cut to a locked overhead close-up. Her hands finish opening the flaps.
+Inside is one flat card with exactly two centered lines:
+PARA LUCÍA
+CON CARIÑO
+Hold the fully readable card and still hands for the remaining two seconds.
+
+AUDIO
+Use only continuous diegetic sound: alarm bell, slap, bare footsteps, two spray
+hisses, rinse and spit, cereal and milk, bowl contact, robe fabric, slippers,
+door latch, street ambience, bicycle chain and tyres, parcel whoosh, soft
+impact, cardboard and the one Spanish line. No music or score. Let the street
+bed continue under the final insert so the cut changes framing, not location.
+
+ACCEPTANCE AND NEGATIVE LOCK
+Pass only if Lucía crosses all five zones in order without teleporting; the
+camera remains on one lateral axis until the declared hard cut; glasses, hair
+state, wardrobe layers, used props and parcel persist; the courier approaches
+from background depth; the impact is harmless and physically weighted; and the
+final two-line card is correct and stable for two seconds.
+
+No cut before 28 seconds, room reorder, reset set, parallel exterior street,
+cyclist moving left-to-right across the facade, zoom, wipe, dissolve, handheld
+shake, floating prop, capped bottle at the mouth, removed glasses, changed hair,
+outfit replacement, speaking courier, open-mouth laughter, sitcom mugging,
+brand label, other visible text, subtitle, watermark, misspelled final card,
+extra limb, deformed hand, plastic skin or CGI surface.
+```
+
+**Why it works:** the cross-section turns a complex house into one measurable
+screen-space axis. Each room has one compressed action cluster and one exit
+condition, so the subject, camera and prop state advance together instead of
+resetting between locations. The inward-opening door and growing street sound
+make the indoor-to-outdoor boundary observable, while the single declared hard
+cut is saved for information that cannot be read in the wide lateral frame.
+Replacing the source's several branded labels with generic packaging also
+reserves the model's text budget for the final two-line payoff.
+
+**Sources:** Al-Shamus / @im_shahid7's August 27, 2026
+[Seedance 2.5 identification, reference contract, set geometry and generated
+30-second result](https://x.com/im_shahid7/status/2092836404770586820),
+[complete 0–28-second action timeline](https://x.com/im_shahid7/status/2092836410482987079)
+and
+[closing insert, audio map and negative constraints](https://x.com/im_shahid7/status/2092836416065872141).
+
+---
+
 ## Reusable templates
 
 ### Monotonic scrub-readiness motion audit and rejection gate
@@ -17779,6 +17905,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Al-Shamus / @im_shahid7 — Seedance 2.5 single-axis cross-section morning-routine comedy, complete reference contract, 0–30-second timeline, audio map, negative constraints and generated result](https://x.com/im_shahid7/status/2092836404770586820) ([timeline](https://x.com/im_shahid7/status/2092836410482987079), [closing/audio/negative continuation](https://x.com/im_shahid7/status/2092836416065872141))
 
 - [G1zm072 — Seedance 2.5 six-character same-frame dialogue test with a group image, individual character sheets, six reference-audio lanes, complete prompt and 25-second generated result](https://www.reddit.com/r/Seedance_AI/comments/1vzfprh/how_to_make_multiple_characters_speak_in_seedance/)
 
