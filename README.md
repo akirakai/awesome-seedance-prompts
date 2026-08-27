@@ -12764,6 +12764,102 @@ city-wide light ripple before all agents return to their source container.
 
 ---
 
+### 253. Two-board freefall obstacle relay and silent-apex reset
+
+**Verified model:** Seedance 2.5 — the original creator names the model on the
+30-second generated result, then publishes the complete two-board prompt in the
+same thread
+**Use case:** high-altitude action previs, multi-character spatial continuity,
+obstacle-causal choreography and image-to-image scene handoff
+**Mode:** two storyboard images, each animated as one 15-second image-to-video
+segment
+**Suggested settings:** 30 seconds assembled from two 15-second 16:9 segments;
+fictional trained stunt unit and controlled virtual production only
+
+```text
+GLOBAL CONTRACT
+Create a fictional cinematic wingsuit sequence with three adult professional
+performers in a controlled virtual environment. The LEAD wears one matte-black
+suit with narrow amber seams; RIVAL-L and RIVAL-R have distinct fixed silhouettes
+and colours. Preserve suit panels, helmet, wing geometry, body count and flight
+direction. Show physical clearance and recovery around every obstacle. No real
+brand, public figure, gore, collision, spectator injury, tutorial framing or
+claim that the depicted stunt is safe to reproduce.
+
+BOARD A — TOWER TO ALLEY THRESHOLD
+Generate the first approved storyboard image: dawn above a fictional city. LEAD
+has just left one antenna platform; the complete street grid is visible through
+thin mist, while the two rivals are already lower and ahead. Use a high, steep
+composition with warm sun flare and readable separation between all three.
+
+Animate BOARD A for 15 seconds:
+0–3s — Follow just behind LEAD as the platform falls away. Hold one brief beat of
+near-silence, then let the suit open visibly before forward acceleration begins.
+3–8s — Descend between two glass towers on one continuous screen direction.
+Windows and interior lights provide parallax; keep both wingtips clear of every
+facade and retain the same rival order in depth.
+8–12s — Roll once through the open centre of a skybridge, brush one loose fabric
+marker so it crosses the lens, then pass beneath one stationary crane hook. Each
+obstacle appears before the evasive move and remains behind afterward.
+12–15s — The two rivals converge from left and right without touching LEAD. The
+three level out above one traffic lane and enter the same narrow brick alley in
+a countable triangular formation. End on a stable pose and hold eight frames.
+
+BOARD-A HANDOFF LEDGER
+Record LEAD face covering, suit seams, flight attitude and centre lane; both
+rivals' left/right order and distance; dawn direction; alley width; brick colour;
+laundry-line height; nearest fire escape; traffic direction and forward vector.
+
+BOARD B — ALLEY TO ROOFTOP RESOLUTION
+Derive the second storyboard image from BOARD A's accepted endpoint. Keep the
+same three flyers inside the same brick alley. Laundry lines bend in their wake,
+pigeons rise ahead rather than materialising behind them, and one fire escape
+shows sparks only at a visible near-contact point. LEAD glances toward the camera
+without reversing the body or changing lane. Do not redesign the city or suits.
+
+Animate BOARD B for 15 seconds:
+0–3s — A delivery vehicle begins crossing the distant alley exit early enough to
+be read. RIVAL-L climbs above it, RIVAL-R exits through an open side gap, and LEAD
+passes through the unobstructed space beneath the raised trailer. Never hide a
+collision inside blur, cloth or a cut.
+3–8s — Continue into one open plaza. Fountain spray reacts only after the flyers'
+wake reaches it; bystanders remain safely behind barriers and duck without
+entering the flight path. LEAD banks toward one mirrored tower.
+8–12s — Climb along the same facade with correct reflected motion. At the roofline,
+reduce wind and music to almost nothing and hold a short, readable weightless
+apex: forward speed falls, body pitch changes and the city settles below.
+12–15s — Tip into one controlled backward dive, deploy a fictional canopy with
+visible inflation and deceleration, then land running on a clear rooftop pad.
+Finish with one weighted slide that stops well before the edge; rivals remain
+visible at safe distance and do not teleport into the ending.
+
+CAMERA, SOUND AND ACCEPTANCE
+Use one chase camera per segment with restrained vibration, real parallax and
+short motivated occlusions. Dawn wind rises with speed; suit fabric, marker snap,
+pigeons, vehicle, fountain, facade rush, apex silence, canopy opening, footfalls
+and final slide occur only with their pictured causes. No dialogue or narration.
+
+Reject a missing or fourth flyer, rival-side swap, suit redesign, reversed travel,
+obstacle appearing after the dodge, unreadable clearance, hidden impact, vehicle
+teleport, plaza reset, weightless landing, instant canopy, premature fountain or
+pigeon reaction, extra cut, caption, logo or watermark. Verify both returned
+durations and inspect the BOARD A/BOARD B seam frame by frame before assembly.
+```
+
+**Why it works:** two storyboard boards divide a long aerial run at a real spatial
+threshold instead of asking one generation to remember every obstacle. The
+handoff ledger preserves formation, lane, architecture and travel vector, while
+the second segment gives each flyer one exclusive exit route. A near-silent apex
+is both a pacing contrast and an observable state reset before deployment and
+landing; cause-before-reaction checks keep the vehicle, spray, birds and canopy
+from becoming decorative events disconnected from the flight path.
+
+**Sources:** Ahmet Muhammed Ertugrul's August 28, 2026
+[Seedance 2.5 30-second generated result and exact-model attribution](https://x.com/ahmetmertugrul/status/2093051613074149707)
+and [complete two-image, two-segment prompt](https://x.com/ahmetmertugrul/status/2093051616580477411).
+
+---
+
 ## Reusable templates
 
 ### Immutable source/finish split and explicit delivery-variant gate
@@ -19499,6 +19595,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Ahmet Muhammed Ertugrul — Seedance 2.5 two-board freefall obstacle relay with a complete 30-second prompt and generated result](https://x.com/ahmetmertugrul/status/2093051613074149707) ([complete two-board prompt](https://x.com/ahmetmertugrul/status/2093051616580477411))
 
 - [Condz — Seedance 2.5 handcrafted clay helper-box story with a complete seven-shot Chinese prompt, foley map and 30-second generated result](https://x.com/condzxyz/status/2093032563400987056)
 
