@@ -253,6 +253,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Repaired-marionette clockwork-circus ascent](#237-repaired-marionette-clockwork-circus-ascent)
   - [Reciprocal head-tilt macaque misdirection](#238-reciprocal-head-tilt-macaque-misdirection)
   - [Lateral cross-section morning-delivery gag](#239-lateral-cross-section-morning-delivery-gag)
+  - [Viral-stunt attempt ladder and match-cut payoff](#240-viral-stunt-attempt-ladder-and-match-cut-payoff)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -11393,6 +11394,132 @@ and
 
 ---
 
+### 240. Viral-stunt attempt ladder and match-cut payoff
+
+**Verified model:** Seedance 2.5 — the original creator published a complete
+prompt and its generated result together on August 27, 2026, explicitly naming
+Seedance 2.5 on Nemo Video AI; the prompt requests 24 seconds while the posted
+player reports a 30-second asset, so duration must be checked on return
+
+**Use case:** vertical UGC comedy, escalating failed attempts, reference-shot
+reconstruction, social-video match-cut payoff  \
+**Mode:** text-to-video through an agent-assisted reference workflow  \
+**Settings:** prompt contract 24 seconds, 9:16, native dialogue and ambience
+
+```text
+Create a hyper-realistic vertical UGC comedy titled "I Tried to Recreate a
+Viral Stunt in Real Life." The viewer must first understand one polished
+reference shot, then see three increasingly close failures, one successful
+attempt and a final visual proof that the success matches the reference.
+
+CHARACTER AND SAFETY LOCK
+Use one adult woman in her mid-twenties with the same face, dark hair, natural
+body proportions and expressive but believable performance in every shot. She
+wears the same black T-shirt, loose blue jeans, white sneakers, low-profile
+knee and wrist guards and helmet throughout. Use one skateboard, one city
+fountain plaza, one grass safety area, the same daylight and the same friend
+behind the phone camera. No body, wardrobe, prop or location replacement.
+
+STUNT SIGNATURE
+The target is a low, physically plausible flat-ground sequence: a short run,
+one controlled hop with a modest half-turn, the skateboard rolling under the
+landing lane, both feet contacting the deck, knees absorbing weight and a
+stable roll-away. Define and preserve these match points:
+- rear-camera position and 24–28 mm equivalent field of view;
+- fountain horizon and one fixed paving seam;
+- subject approach path and take-off mark;
+- skateboard lane, rotation direction and landing mark;
+- final body orientation and roll-away direction.
+
+0–2 s — Polished viral hook.
+Open on a fictional clean version of the same woman completing the target stunt
+beside the same fountain. Make the path, marks and landing easy to read. Add one
+brief, stable overlay: "VIRAL CLIP". Smash cut to raw selfie footage. She looks
+into the phone and says, "Okay... I'm trying this for real."
+
+2–5 s — Break down the reference.
+Replay three very short inserts from the same viral take: RUN -> HOP -> LAND.
+Freeze for a fraction on both feet contacting the deck. Return to selfie view;
+she studies the clip and says, "How hard can it be?" Use one quick phone
+punch-in, not a cinematic zoom.
+
+5–8 s — Attempt one: timing error.
+Rear-phone view from the declared camera mark. She starts too early, the board
+has not reached the landing lane, and she aborts safely onto the grass. The
+operator jolts once. She stands, checks herself and says, "That was awful."
+
+8–11 s — Attempt two: board-path error.
+Reset the same framing, start mark and props. Her hop and half-turn are correct,
+but the skateboard drifts sideways before contact. She lands safely beside it
+and stares at the board while the friend gives one natural laugh. Do not change
+the first failure into another early take-off.
+
+11–14 s — Attempt three: contact error.
+Use three brisk preparation inserts: tighten one shoe, square the skateboard on
+the paving seam, breathe once. She reaches the correct lane and touches one
+foot to the deck, but the second foot misses and she steps off safely. Bent over
+and breathing, she says, "One more."
+
+14–18 s — Successful fourth attempt.
+Return to the exact viral-shot signature. The approach, hop, half-turn, board
+arrival and two-foot landing align. Show knees compressing, wheels maintaining
+ground contact and one stable roll-away. Hold one beat of silence. She looks
+toward the friend and says, "Wait—we got it!"
+
+18–22 s — Proof by reconstruction.
+Match cut from the successful landing into a clean, stabilized replay that
+reproduces the opening clip's camera position, fountain horizon, action timing,
+framing and landing marks. Use the real continuity state from the successful
+attempt; do not substitute a different face, body, outfit, board or plaza.
+
+22–24 s — Exhausted payoff.
+Cut abruptly back to raw phone footage. She lies safely on the grass beside the
+same skateboard, hair slightly messy, catching her breath. She looks at the
+camera and says, "That took thirty-seven tries." Freeze for a fraction with
+small stable text: "NEVER AGAIN". End on fountain ambience.
+
+CAMERA AND LOOK
+Selfie camera only for direct address; rear camera for attempts. Natural phone
+dynamic range, daylight, skin texture, imperfect framing, autofocus breathing,
+small exposure shifts, handheld micro-shake and ordinary motion blur. The
+opening and proof replay may be cleaner, but never become glossy commercials.
+No crane, drone, anamorphic flare, impossible move or cinematic slow motion.
+
+AUDIO AND EDIT
+Keep dialogue clear over footsteps, board wheels, fountain water, distant
+pedestrians, safe landings, breathing and the friend's single laugh. Light
+original social music may sit underneath, but drop it briefly before the
+successful landing. Most beats last two to four seconds. Use abrupt cuts,
+freeze inserts, one phone punch-in and the declared match cut; no dissolve.
+
+ACCEPTANCE
+Pass only if the same target stunt and five match points are readable in the
+opening, successful attempt and proof replay; each failed take isolates its
+declared variable; the three failures improve monotonically; every landing is
+physically safe; continuity remains stable; text is correct; and the returned
+asset duration is measured and logged against the 24-second prompt contract.
+
+No impossible aerial spin, head impact, uncontrolled fall, floating board,
+foot-through-deck contact, wheel sliding without cause, duplicate performer,
+duplicate skateboard, changed fountain, reset daylight, wardrobe change, body
+shape drift, extra limb, deformed hand, fake phone polish, overacting, robotic
+dialogue, subtitle, logo, watermark or undeclared text.
+```
+
+**Why it works:** the opening clip is not just a hook; it becomes a measurable
+shot signature reused by the successful attempt and final reconstruction. The
+attempt ladder changes one causal variable at a time—take-off timing, board
+path, then two-foot contact—so the audience can see progress instead of three
+interchangeable falls. The match cut provides visual proof of success, while
+switching between clean reference footage and imperfect phone coverage creates
+the comedy. Logging requested and delivered duration preserves the source's
+observed 24-versus-30-second discrepancy as a provider-output check.
+
+**Source:** ᴍᴜʀᴘʜʏ / @Diplomeme's August 27, 2026
+[Seedance 2.5 post with complete 24-second UGC prompt and generated result](https://x.com/Diplomeme/status/2092848326983241739).
+
+---
+
 ## Reusable templates
 
 ### Monotonic scrub-readiness motion audit and rejection gate
@@ -17905,6 +18032,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [ᴍᴜʀᴘʜʏ / @Diplomeme — Seedance 2.5 viral-stunt recreation UGC with complete 24-second prompt, failed-attempt ladder, match-cut payoff and generated result](https://x.com/Diplomeme/status/2092848326983241739)
 
 - [Al-Shamus / @im_shahid7 — Seedance 2.5 single-axis cross-section morning-routine comedy, complete reference contract, 0–30-second timeline, audio map, negative constraints and generated result](https://x.com/im_shahid7/status/2092836404770586820) ([timeline](https://x.com/im_shahid7/status/2092836410482987079), [closing/audio/negative continuation](https://x.com/im_shahid7/status/2092836416065872141))
 
