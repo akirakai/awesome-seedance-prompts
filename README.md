@@ -12224,6 +12224,106 @@ and [complete source prompt](https://x.com/Mayz1169/status/2092941033931739605).
 
 ## Reusable templates
 
+### Sequential continuation approval gate and failure-propagation firewall
+
+**Verified model:** Seedance 2.5 — Sogni's official platform account published a
+30-second generated UGC example on August 27, 2026 and explicitly recommended
+building it as sequential 10-second Seedance 2.5 clips, approving every file
+before allowing the next clip to inherit from it
+
+Use this when a longer video will be made from chained continuations. A weak
+frame near the end of segment one can become the identity, kitchen, product or
+hand reference for every descendant. Treat each approved segment as a release
+gate and every rejected segment as a branch that must never produce children.
+
+```text
+SEQUENTIAL CONTINUATION APPROVAL GATE
+
+Exact model: Seedance 2.5.
+Project: [TOTAL DURATION / FORMAT / STORY].
+Segment plan: [CLIP 1 DURATION] → [CLIP 2 DURATION] → [CLIP 3 DURATION].
+Default starting point for a 30-second piece: three 10-second clips.
+Conditioning mode: [END FRAME / REFERENCE IMAGE / REFERENCE VIDEO / STATE TEXT].
+Never start segment N+1 until segment N has passed every hard gate below.
+
+GLOBAL CANON
+Identity: [FACE / HAIR / BODY / WARDROBE / VOICE].
+Environment: [LAYOUT / LIGHT DIRECTION / TIME / WEATHER].
+Persistent props or product: [APPEARANCE / LABEL POLICY / LOCATION / STATE].
+Camera grammar: [AXIS / HEIGHT / LENS / HANDHELD OR LOCKED].
+Audio bed: [VOICE / AMBIENCE / MUSIC POSITION].
+Forbidden drift: [KNOWN FAILURE MODES].
+
+CLIP 1 — ESTABLISH AND SETTLE
+Generate only the first finite action. End on one readable, low-motion state
+that can safely become the next clip's input. Export the actual returned file
+and sample setup, motion onset, contact, recovery and final frames.
+
+APPROVAL GATE
+Review the full-resolution file, not only a thumbnail or the last frame.
+Require:
+- the intended adult identity, wardrobe and voice remain correct;
+- room geometry, light direction and camera axis are stable;
+- every persistent prop has the right count, position and condition;
+- hands, contact physics and food or product state are usable;
+- the action reaches the declared endpoint without hidden cut or reset;
+- the final 0.5–1 second contains a clean continuation anchor;
+- audio has no stray speaker, restart, clipped line or timing jump;
+- the delivered resolution, duration and container match the request.
+
+Record PASS or FAIL plus the exact first failed frame and failed variable.
+On FAIL, regenerate this clip only. Do not create, keep or evaluate downstream
+continuations from a rejected parent.
+
+STATE MANIFEST
+After PASS, write the approved endpoint as facts:
+[SUBJECT POSITION AND POSE]
+[GAZE / EXPRESSION / BREATH]
+[LEFT AND RIGHT HAND OCCUPANCY]
+[PROP / PRODUCT / FOOD STATE]
+[BACKGROUND PEOPLE AND OBJECTS]
+[CAMERA POSITION / DIRECTION / MOTION]
+[LIGHT / WEATHER]
+[AUDIO PHRASE OR AMBIENCE POSITION]
+[SAFE END-FRAME OR REFERENCE ASSET ID]
+
+CLIP N+1 — CONTINUE ONLY FROM APPROVED PARENT
+Condition on the approved endpoint asset and its state manifest. Begin from the
+same state for several frames, perform one new finite action, then settle into
+the next auditable endpoint. Do not replay the previous action, invent an
+intermediate state or repair an upstream defect inside the child clip.
+
+Repeat the approval gate before unlocking another generation.
+
+LINEAGE INVALIDATION
+Store each clip's parent asset ID, prompt, model, settings and pass record.
+If an approved parent is later replaced, mark every descendant of the old
+parent invalid and regenerate from the new approved endpoint. Never splice a
+child conditioned on one face, layout or prop state onto a different parent
+merely because the cut is short.
+
+ASSEMBLY
+Join only clips from one valid approved lineage. Cut on settled motion,
+motivated contact or matched camera direction. Recheck identity, hands, prop
+state, audio phase and actual total runtime across both sides of every seam.
+Archive rejected parents separately so they cannot be selected by mistake.
+
+No speculative downstream render, rejected-parent continuation, silent asset
+swap, face drift propagation, room rewrite, product mutation, action replay,
+state repair hidden in a cut, mixed lineage, stale endpoint, duplicated audio,
+missing audit record or assumed duration.
+```
+
+**Why it works:** ordinary segmentation limits prompt load but does not prevent a
+bad endpoint from contaminating the rest of the chain. This gate changes the
+dependency graph: only reviewed assets may become parents, and replacing a
+parent invalidates its descendants. The extra pause is most valuable on costly
+models because it prevents spending on continuations that are already anchored
+to an unusable frame.
+
+**Source:** Sogni's official August 27, 2026
+[Seedance 2.5 30-second UGC result and sequential 10-second approval guidance](https://x.com/Sogni_Protocol/status/2092954101558497494).
+
 ### Monotonic scrub-readiness motion audit and rejection gate
 
 **Verified model:** Seedance 2.5 — the original creator archived a 15-second
@@ -18734,6 +18834,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Sogni — official Seedance 2.5 30-second UGC result with sequential 10-second approval guidance and failure-propagation rationale](https://x.com/Sogni_Protocol/status/2092954101558497494)
 
 - [Kiki / @Mayz1169 — Seedance 2.5 first-person cottage chore montage with complete 13-second anime prompt and generated result](https://x.com/Mayz1169/status/2092940255989313693) ([complete prompt](https://x.com/Mayz1169/status/2092941033931739605))
 
