@@ -250,6 +250,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Six-gate neon-citadel ascent](#234-six-gate-neon-citadel-ascent)
   - [Reference-brand café meet-cute handoff](#235-reference-brand-café-meet-cute-handoff)
   - [Three-reference Shibuya reunion CM](#236-three-reference-shibuya-reunion-cm)
+  - [Repaired-marionette clockwork-circus ascent](#237-repaired-marionette-clockwork-circus-ascent)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -11084,6 +11085,108 @@ and the
 
 ---
 
+
+### 237. Repaired-marionette clockwork-circus ascent
+
+**Verified model:** Seedance 2.5 — the original creator published the complete
+multi-reference prompt and corresponding showcase result together in a post
+explicitly titled as a Seedance 2.5 test on August 27, 2026
+
+**Use case:** handcrafted stop-motion narrative, multi-image reference routing,
+character-and-material continuity, repair-to-payoff action arc  \
+**Mode:** reference-to-video with one character master, one world master and
+shot-specific image references  \
+**Settings:** 30 seconds, 16:9, seven-shot story
+
+```text
+Create one coherent 30-second handcrafted stop-motion marionette film. Every
+visible surface must feel physically made at miniature scale; do not drift into
+smooth CGI or live-action humans.
+
+REFERENCE CONTRACT
+@Image1 alone defines the protagonist: one pale carved wooden marionette with a
+fine face seam, weathered blue-green bob, blue eyes, red bell cap, cream ruff,
+patched red-and-blue tunic, brass buttons, cream bloomers, mismatched striped
+stockings, red shoes, exposed wood limbs, brass joints and visible suspension
+strings. Lock its face, proportions, wood grain, paint wear and costume.
+
+@Image2 alone defines the clockwork-circus world: carved wood, aged brass,
+stitched fabric, thread, paper scenery, leather and miniature mechanisms. It
+may not redesign the protagonist. @Image3 through @Image10 guide only the
+assigned shot's composition, props and local action. Later shot references must
+inherit the same marionette and the repair established in shot 2.
+
+0–5 s — Wake behind the show.
+Begin close backstage. The marionette lies among ropes and stored costumes; one
+wooden arm piece is detached beside the matching joint and several strings hang
+without tension. Warm stage light leaks through the curtain while paper
+acrobats, a mechanical elephant and the ringmaster continue the distant show.
+The eyes open as a small cap bell trembles with the machinery.
+
+5–10 s — Repair in observable stages.
+Macro coverage: wrap copper wire around the broken joint, seat one tiny screw,
+then tighten red cloth into a brace. Test the repair in a readable sequence:
+one finger, wrist, elbow. Keep the original arm, joint location, wire turns,
+screw and brace unchanged from this point onward. Skipping music and
+accelerating gears create urgency without changing the restrained face.
+
+10–15 s — Make the repair earn its place.
+Track vertically as the same puppet climbs through pulleys, ropes,
+counterweights and brass gears, treating slack strings as climbing lines. A
+counterweight drops and lights stutter. The repaired hand begins to slip, then
+closes around one rope and holds; show the brace and copper winding intact in
+the catch.
+
+15–20 s — Convert entrance into intervention.
+The marionette swings through the curtain and lands on the clockwork elephant
+during its routine. Its back opens into rotating performance platforms. The
+protagonist balances, catches one loose control line with the repaired arm and
+redirects the failing mechanism into the choreography. The miniature audience
+falls silent. Keep gravity, foot contact and practical shadows credible.
+
+20–25 s — Turn the hazard into dance.
+Several strings tangle and lift the puppet. Begin with one beat of genuine loss
+of control, then let it organize the same tension into an aerial dance. Circle
+once around the subject while the curtains, practical lamps, audience,
+elephant, ringmaster and paper performers preserve their spatial order.
+Motion remains slightly stepped, with strings and support shadows still
+visible.
+
+25–28 s — Choose independence.
+Land center stage. When the machinery pulls again, the marionette uses one
+small brass release tool to unhook the remaining strings from their loops in a
+clear one-by-one sequence. The released lines fall around the red shoes and
+stay there. Take one unsupported step; do not hide it with a cut or levitation.
+
+28–30 s — Close on proof, not spectacle.
+Take a second unsupported step and bow with the repaired arm still intact. The
+wooden audience and clockwork cast answer with warm applause. Dolly slowly
+backward through the red curtains as tungsten lamps dim, but preserve the bow
+as the final readable image rather than cutting to black.
+
+Use tactile stop-motion sound: bell, thread tension, wood contact, tiny screw,
+gears, pulley knocks, cloth, footsteps and applause. Preserve visible wood
+grain, chipped paint, aged velvet, miniature scale, frame-by-frame imperfection
+and practical light. No extra protagonist, face or costume redesign, missing
+brace, magically restored pristine arm, plastic surface, CGI skin, human hand,
+invisible suspension logic, text, logo or watermark.
+```
+
+**Why it works:** the references form a responsibility graph instead of a
+visual average: one image owns identity, one owns world materials, and each
+remaining image owns only local staging. A repair-state ledger then carries the
+wire, screw and brace through three increasingly demanding proofs—grip,
+intervention and bow—so the opening damage becomes causal story information
+rather than a disposable detail. The control strings likewise change narrative
+function in visible stages: failure, climbing aid, hazard, dance apparatus and
+finally a released constraint.
+
+**Source:** Baazookah_Zawadi's August 27, 2026
+[original Seedance 2.5 showcase with complete ten-reference prompt and generated
+result](https://www.reddit.com/r/Seedance_AI/comments/1vclapt/i_tested_seedance_25_for_a_longer_story_video_and/).
+
+---
+
 ## Reusable templates
 
 ### Monotonic scrub-readiness motion audit and rejection gate
@@ -17505,6 +17608,9 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Baazookah_Zawadi — Seedance 2.5 ten-reference handcrafted marionette circus story, complete 30-second prompt and generated showcase result](https://www.reddit.com/r/Seedance_AI/comments/1vclapt/i_tested_seedance_25_for_a_longer_story_video_and/)
+
 
 - [AICU / Zasuko — Seedance 2.0 three-reference Shibuya reunion CM with complete R2V prompt, character sheets, image board and generated audio result](https://github.com/aicuai/Book-SG26/commit/32f2cdf7020e7fc3b0490c85556c41a5277efa96) ([complete prompt](https://github.com/aicuai/Book-SG26/blob/32f2cdf7020e7fc3b0490c85556c41a5277efa96/prompts/chap5/README.md#5-4-5), [reference notebook](https://github.com/aicuai/Book-SG26/blob/32f2cdf7020e7fc3b0490c85556c41a5277efa96/SG26_SD2_R2V.ipynb), [generated MP4](https://github.com/aicuai/Book-SG26/blob/32f2cdf7020e7fc3b0490c85556c41a5277efa96/prompts/chap5/Seedance2.0_R2V%E2%80%97Movie_720p_SAMPLE.mp4))
 
