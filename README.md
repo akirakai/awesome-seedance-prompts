@@ -259,6 +259,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Center-stage 360 concert orbit and crowd-return continuity](#243-center-stage-360-concert-orbit-and-crowd-return-continuity)
   - [Lens-splash pool-day camcorder handoff](#244-lens-splash-pool-day-camcorder-handoff)
   - [Silent-cat luxury-service escalation and reaction ledger](#245-silent-cat-luxury-service-escalation-and-reaction-ledger)
+  - [First-person cottage chore relay and camera handoff](#246-first-person-cottage-chore-relay-and-camera-handoff)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -12101,6 +12102,126 @@ so runtime is an explicit delivery check rather than a presumed setting.
 
 ---
 
+
+### 246. First-person cottage chore relay and camera handoff
+
+**Verified model:** Seedance 2.5 — the original creator published the complete
+prompt and its 13-second generated result together on August 27, 2026,
+explicitly identifying Seedance 2.5
+
+**Use case:** anime slow-life montage, first-person hand continuity, rapid
+domestic-process compression, action-owned sound design  \
+**Mode:** text-to-video  \
+**Settings:** 13 seconds, 16:9, hand-painted Japanese animation, mostly
+first-person camera, no dialogue
+
+```text
+Create a 13-second hand-painted anime morning inside and around one rustic
+lakeside cottage. For the first 11.3 seconds, the viewer owns one consistent
+first-person body: the same two adult hands, the same pale sleeves and the same
+eye height. Never show the person's face, reflection or detached third-person
+body. Preserve the cottage's bed, window, round table, bookshelf, stove and
+flower vase across every return.
+
+SHOT AND OBJECT LEDGER
+
+0–1.5 s — Open the day.
+From inside the dim room, both hands push open the two wooden shutters. Morning
+light enters only after the panels move. Green fields, a lake, distant wooded
+hills and blue sky appear beyond the same window; white curtains lift inward in
+the breeze. One hinge creak and one soft fabric flutter own this beat.
+
+1.5–3.0 s — Reset the bed.
+Hard cut to the same first-person eye height at the bed. Pull one pale blanket
+off the lap, rise and smooth the rumpled white bedding with the right hand.
+Finish on a visibly flatter bed; do not reset it later.
+
+3.0–4.5 s — Dust the shelf.
+Close first-person view of the old bookshelf. A brown feather duster moves from
+top shelf to bottom across worn books, a dark ceramic cup, dried herbs and two
+small ornaments. Dust rises only behind contact and settles in the sunbeam.
+Keep the objects on their original shelves.
+
+4.5–5.4 s — Water the plant.
+At the same window, tilt one small silver watering can toward a healthy potted
+plant. Show a short continuous water stream entering the soil, then stop it
+before the cut. No water on leaves or floor.
+
+5.4–6.3 s — Fold the linen.
+Both hands square one freshly washed white cloth into a compact rectangle on a
+wooden work surface. Press it once and leave one completed stack.
+
+6.3–7.5 s — Outdoor continuation.
+Hard cut outside beneath the same sky. Attach one white sheet and two small
+garments to a wooden clothesline with visible clothespins. The already fixed
+pieces remain attached as the final one is added; wind lifts the fabric without
+removing a pin.
+
+7.5–8.1 s — Polish the table.
+Return to the cottage. Wipe the same round table in one clockwise pass with a
+folded white cloth. A narrow change in reflected sunlight follows the cloth
+rather than appearing before contact.
+
+8.1–8.9 s — Build the bouquet.
+Place daisies, one sunflower and several small pink, purple and blue wildflowers
+into the existing beige ceramic vase. The stems enter the opening and the vase
+stays upright on the polished table.
+
+8.9–9.7 s — Start the kettle.
+Set one weathered copper kettle squarely on the black wood stove. Orange flame
+remains below the kettle; faint steam begins only after it is seated. Use one
+metal contact sound and restrained fire crackle.
+
+9.7–10.5 s — Pour the tea.
+Close first-person insert. Pour amber tea from that same kettle into one white
+porcelain cup. Liquid level rises continuously, steam follows the hot liquid and
+the stream stops before the kettle leaves frame.
+
+10.5–11.3 s — Complete the still life.
+Carry the filled cup without spilling and place it beside the finished bouquet
+at the open window. Keep the lake and hills in the same direction established
+by the opening shot.
+
+11.3–13.0 s — Motivated camera release.
+Set the camera down on a shelf so both hands leave frame. Cut once to a stable
+wide proof view of the made bed, polished table, bookshelf, vase, cup and open
+window. Hold long enough to read the completed chores while curtains, leaves,
+steam and a few dust motes move at different speeds. No invisible person
+continues touching objects.
+
+STYLE, AUDIO AND ACCEPTANCE
+Use warm cel-animation color, detailed painted wood, restrained line boil, soft
+gold sun shafts and clean hard cuts between chores. Keep perspective and scale
+consistent; each shot gets one principal hand action and one owned sound:
+shutter, sheet, duster, water, fold, clothespin, wipe, stems, kettle, tea and
+camera set-down. Add quiet birds, breeze and very soft instrumental music
+beneath those sounds.
+
+Pass only if the same hands and sleeves survive every first-person shot; each
+action reaches a visible end state before the next cut; the made bed, folded
+linen, hanging wash, clean table, bouquet, hot kettle and tea never revert; the
+outdoor sky matches the window view; the final wide shot begins only after the
+camera is visibly placed down; and the delivered file measures 13 seconds.
+
+No face, mirror portrait, third arm, malformed fingers, sleeve change, floating
+tool, pre-contact dust or polish, reversing water, disappearing clothespin,
+reset bedding, empty cup after pouring, cold kettle steam, new cottage, moving
+lake, camera teleport, dialogue, subtitle, logo, watermark or modern appliance.
+```
+
+**Why it works:** the montage treats completion states as continuity anchors
+rather than asking eleven unrelated pretty shots to coexist. One hand-and-sleeve
+identity owns the first-person body, each micro-action has a matching sound and
+the camera is physically put down before the perspective changes. That makes
+the final empty-room view a motivated handoff and a visual audit of everything
+the morning sequence changed.
+
+**Source:** Kiki / @Mayz1169's August 27, 2026
+[Seedance 2.5 generated 13-second anime result](https://x.com/Mayz1169/status/2092940255989313693)
+and [complete source prompt](https://x.com/Mayz1169/status/2092941033931739605).
+
+---
+
 ## Reusable templates
 
 ### Monotonic scrub-readiness motion audit and rejection gate
@@ -18613,6 +18734,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Kiki / @Mayz1169 — Seedance 2.5 first-person cottage chore montage with complete 13-second anime prompt and generated result](https://x.com/Mayz1169/status/2092940255989313693) ([complete prompt](https://x.com/Mayz1169/status/2092941033931739605))
 
 - [AIrina / @airina_xyz — Dreamina Seedance 2.5 luxury-restaurant cat comedy with complete 30-second prompt, dialogue escalation and generated result](https://x.com/airina_xyz/status/2092926649926824038)
 
