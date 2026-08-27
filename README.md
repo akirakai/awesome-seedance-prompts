@@ -12595,6 +12595,175 @@ acceptance checks rather than assumed properties.
 and [complete two-part prompts with all reference images](https://x.com/Dyyaiworker/status/2093012572220059700).
 ---
 
+### 251. Single-owner midnight selfie continuity and fatigue ladder
+
+**Verified model:** Seedance 2.5 — the original creator names the model beside
+the complete prompt and publishes the resulting 30-second video in the same post
+**Use case:** low-fi UGC, two-person native dialogue, long-scene identity and
+camera-ownership continuity
+**Mode:** single identity-reference image-to-video
+**Suggested settings:** 30 seconds, 16:9, standard 1× front-phone camera aesthetic
+
+```text
+REFERENCE CONTRACT
+@Image1 supplies only the same adult protagonist's face, facial proportions,
+skin tone and curly dark ponytail. Ignore its clothing, pose, location, props
+and any visible writing. One adult friend remains the same second person in
+every beat: straight dark-blonde hair, denim jacket, jeans and ordinary white
+sneakers. Never exchange, merge or duplicate their identities.
+
+CAMERA-OWNER CONTRACT
+The protagonist holds the phone at arm's length for the entire night. Every
+shot is the standard-field-of-view front camera in her hand, including the car
+and apartment ending. No rear camera, tripod, propped phone, invisible operator,
+friend-held shot, 0.5× lens, fisheye, action camera or circular lens border.
+Hard cuts may change place, but never camera ownership.
+
+STATE LADDER
+At home the protagonist wears a black tank, jeans, small gold hoops, white
+sneakers and a plain black shoulder bag. On the street add one inexpensive dark
+jacket. After midnight keep that jacket zipped, loosen the ponytail, add flyaway
+hairs, slightly smeared lip gloss, a shiny T-zone and visibly tired eyes. The
+friend's clothes and face never change. Preserve the same two bags and no new
+luxury accessory.
+
+0–3s — Bedroom selfie. The protagonist finishes one lipstick pass while the
+friend sits behind her and teases her for pretending she would stay home.
+3–6s — Bathroom selfie. They check the same outfits in the mirror behind the
+phone, laugh once and collect the two jackets.
+6–9s — Walking selfie on a crowded brick bar street in an ordinary Midwestern
+city. The friend remains shoulder-to-shoulder; the protagonist notes that the
+night is already chaotic.
+9–12s — Busy neighbourhood bar. They clink two simple drinks once; the friend
+answers over the room noise without turning into a posed performance.
+12–15s — Harsh fluorescent restroom queue. The protagonist complains about the
+line; the friend rolls her eyes and stays in the same side of frame.
+15–18s — Small crowded club. They dance casually; the friend bumps the phone,
+causing one recoverable shake and a genuine laugh.
+18–21s — Cold pavement after closing. Jackets are zipped and hair is messy.
+They agree in two clipped phrases that they need food immediately.
+21–24s — Plain late-night food counter. Both eat; the protagonist calls it the
+best decision of the night while the friend nods with her mouth full.
+24–27s — Rideshare back seat. Window lights pass behind the same two faces.
+The protagonist asks for silence until morning while the friend checks a phone.
+27–30s — Apartment hallway. They sit on the floor beside the same shoes and
+bags, exchange one exhausted goodbye, then hold the imperfect final selfie.
+
+VISUAL AND AUDIO
+Old everyday phone-video character: persistent sensor noise, compression,
+slightly inconsistent white balance, ordinary handheld shake, real pores and
+flyaway hair. Lighting changes causally from warm bedroom to mixed street,
+blown club practicals, cold exterior, ugly food-counter fluorescent and dim
+hallway. No cinematic grade, beauty filter, polished commercial light or CG
+skin. No BGM. Use only room tone, street voices, glasses, muffled bass through
+a door, fan, kitchen extractor, car rattle and close phone-mic speech. Natural
+American English, small overlaps and mild microphone distortion.
+
+No third companion, face swap, wardrobe reset, magically repaired makeup,
+camera-owner change, luxury venue, skyline landmark, readable sign, brand,
+caption, logo or watermark. Verify actual returned runtime before approval.
+```
+
+**Why it works:** the phone holder is treated as a continuity invariant rather
+than a vague visual style. A separate fatigue ladder makes elapsed time visible
+through jacket, hair, makeup and performance state, while the fixed friend and
+prop ledger prevents a ten-location montage from silently recasting either
+person. Short dialogue beats leave room for real reactions and noisy ambience.
+
+**Source:** TechHalla's August 28, 2026
+[complete Seedance 2.5 prompt and 30-second generated result](https://x.com/techhalla/status/2093031767556968845).
+
+---
+
+### 252. Clay helper-box build relay and city-light payoff
+
+**Verified model:** Seedance 2.5 — the original creator identifies the one-prompt
+generation as Seedance 2.5, then posts its full Chinese prompt beside the
+30-second result
+**Use case:** handcrafted stop motion, multi-agent causal montage, silent product
+storytelling and foley-led pacing
+**Mode:** text-to-video
+**Suggested settings:** 30 seconds, 16:9, 12fps stepped stop-motion cadence
+
+```text
+Thirty-second handcrafted clay stop-motion short. Real photographed miniature
+materials: fingerprinted plasticine, visible joins, felt, corrugated card,
+matchstick furniture and cotton clouds. Twelve distinct poses per second with
+stepped movement and slight exposure flicker; no smooth interpolation, glossy
+3D render, photoreal human or digital motion blur. Hard-cut between shots and
+give each shot exactly one camera behaviour.
+
+LOCKED CAST AND OBJECTS
+One slim adult clay inventor with messy brown hair, round glasses, grey hoodie
+and expressive eyebrows. One palm-sized matte silver helper box with rounded
+corners, a small front button, lid seam and thin mint-green base light. Six
+thumb-sized white clay robots, each with one antenna and one permanent tool:
+brush, tiny keyboard, magnifier, stamp, speaker or testing probe. One orange
+smiling comet mascot. Preserve every size, colour, tool and silhouette.
+
+0–4s — Static symmetrical attic wide at night. The inventor sits at a tiny desk
+under a warm lamp, surrounded by crooked blank clay notes. A yellow clay idea
+bulb grows above the head in three visible increments. Eyebrows release from a
+frown and the gaze lands on the silver box. Paper scrape, distant city hum, one
+clean idea chime.
+
+4–8s — Desk-height low angle with the box in sharp foreground. A finger presses
+its front button; the base light turns on, the lid opens in four stepped poses
+and a matchstick ladder unfolds. Six robots climb out one by one, land with
+weight, form one row and raise their distinct tools. Button clack, hinge pop,
+wood creak, tiny footfalls and tool taps.
+
+8–12s — Vertical overhead view only. Robots assemble coloured clay interface
+tiles into ordered rows while the keyboard robot types on the open box. A curled
+clay ribbon grows from the seam as an abstract code path and circles the desk
+once. Leave one circular tile empty for the mascot. Dense key taps and tile
+snaps; no readable letters.
+
+12–16s — One macro rack focus. The inventor shapes orange clay into the same
+comet, adds two eyes and a smile, then seats it inside the waiting circular tile.
+The brush robot watches with a vibrating antenna. Soft kneading, two fingertip
+taps and one fitted click.
+
+16–20s — One stepped lateral track across three fixed stations. A magnifier
+robot finds and pushes one crooked tile straight; the probe robot makes the same
+comet hop on a miniature phone; the stamp robot approves one blank clay card.
+End with all three giving one thumbs-up. Glass scrape, corrective click, swipe
+texture and one heavy stamp.
+
+20–25s — Return to the original frontal axis. The inventor inhales, lifts both
+shoulders and presses one large red launch button. The box light brightens and
+the monitor flashes once. Camera then performs one slow pullback through the
+attic window: orange windows illuminate sequentially across the dark-blue
+cardboard city, radiating from the attic, with the same tiny comet silhouette
+visible on each miniature screen. Button thud, rising chime and an accelerating
+series of soft window pops.
+
+25–30s — Hard cut back to the desk. Robots wave, return in reverse order, retract
+the ladder and close the lid. The inventor leans back with relaxed eyebrows.
+One slow stepped push-in ends on the same closed box; its base light breathes
+once and the orange comet tile rests beside it. Hold one second. Reversed tiny
+footfalls, soft lid click and warm resonant tail.
+
+LIGHT AND REJECTION
+Warm hard-edged desk light from upper left, cold-blue moon rim from the window,
+then mint box light reflected in the glasses. The orange city glow gradually
+overtakes the blue only after launch. Foley and quiet environment only: no
+dialogue, narration, voice or music. No tool swap, missing robot, extra helper,
+instant assembly, floating object, changing mascot, smooth CG motion, premature
+city light, readable UI, end slogan, brand, logo or watermark.
+```
+
+**Why it works:** every helper owns one permanent tool and one observable job,
+so “automation” becomes a chain of physical contacts rather than an abstract
+magic effect. The same blank mascot slot links the overhead build to the
+inventor's creative contribution; the launch button then causally drives the
+city-wide light ripple before all agents return to their source container.
+
+**Source:** Condz's August 28, 2026
+[complete Chinese Seedance 2.5 prompt and 30-second generated result](https://x.com/condzxyz/status/2093032563400987056).
+
+---
+
 ## Reusable templates
 
 ### Immutable source/finish split and explicit delivery-variant gate
@@ -19330,6 +19499,10 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Condz — Seedance 2.5 handcrafted clay helper-box story with a complete seven-shot Chinese prompt, foley map and 30-second generated result](https://x.com/condzxyz/status/2093032563400987056)
+
+- [TechHalla — Seedance 2.5 single-owner front-camera nightlife UGC with a complete ten-location prompt, two-person state ledger and 30-second generated result](https://x.com/techhalla/status/2093031767556968845)
 
 - [Geesta87 — Seedance 2.5 Atlas production workflow with immutable provider originals, separate finish-pass assets and an explicit Original/Grainy delivery selector](https://github.com/Geesta87/Regalos-Que-Cantan/commit/957d0a1b2650ca2500da873e49c764508f833bfa) ([exact model endpoint and generation workflow](https://github.com/Geesta87/Regalos-Que-Cantan/commit/730ae96704176112d21f9f3eeea443e48973d225))
 
