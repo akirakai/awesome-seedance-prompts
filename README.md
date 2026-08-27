@@ -251,6 +251,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Reference-brand café meet-cute handoff](#235-reference-brand-café-meet-cute-handoff)
   - [Three-reference Shibuya reunion CM](#236-three-reference-shibuya-reunion-cm)
   - [Repaired-marionette clockwork-circus ascent](#237-repaired-marionette-clockwork-circus-ascent)
+  - [Reciprocal head-tilt macaque misdirection](#238-reciprocal-head-tilt-macaque-misdirection)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -11187,6 +11188,85 @@ result](https://www.reddit.com/r/Seedance_AI/comments/1vclapt/i_tested_seedance_
 
 ---
 
+
+### 238. Reciprocal head-tilt macaque misdirection
+
+**Verified model:** Seedance 2.5 — the original creator posted the complete
+15-second prompt and its generated showcase result together, explicitly stating
+that the test was made with Seedance 2.5
+
+**Use case:** photoreal wildlife comedy, nonverbal reaction timing, restrained
+animal performance, expectation-reversal ending  \
+**Mode:** text-to-video  \
+**Settings:** 15 seconds, naturalistic live action with synchronized ambience
+
+```text
+Create a photorealistic 15-second wildlife-comedy scene in a calm tropical
+forest. Use exactly one adult male hiker on a safe wooden observation platform
+and one anatomically realistic macaque seated on a nearby branch. Keep the
+platform, branch, distance between subjects, daylight direction, hiker's
+camera, macaque identity and screen positions consistent for the whole clip.
+
+CAMERA AND TONE
+Frame both subjects in a stable medium-wide wildlife-documentary composition.
+Use only slight operator breathing and one gentle reframing when the exchange
+begins; no cut, orbit, crash zoom or comedy reaction insert. Natural skin, fur,
+vegetation, shadow, depth of field and breeze. The scene becomes funny through
+timing and coincidence, never through cartoon acting.
+
+0–4 s — Establish curiosity.
+The hiker notices the macaque, slowly raises his camera and takes one photograph
+without stepping closer. The animal looks toward him with alert but relaxed
+curiosity. Its hands and feet keep credible contact with the branch.
+
+4–8 s — First reciprocal beat.
+The hiker lowers the camera. The macaque tilts its head once toward screen-left,
+then holds. After a short observation delay, the hiker tilts his own head toward
+screen-right. The macaque watches his face, pauses and changes to the same
+screen-right tilt. Make the order unmistakable; neither subject moves at the
+same instant.
+
+8–12 s — Build a readable pattern.
+The hiker returns upright, waits, then makes one smaller tilt toward
+screen-left. The macaque tracks him with its eyes before repeating that single
+tilt. The hiker's restrained smile grows only after the repetition. Keep the
+macaque's face and body natural: no human grin, eyebrow performance, nodding or
+exaggerated pause.
+
+12–15 s — Break the pattern.
+Just as the hiker prepares another tilt, the macaque loses interest, turns its
+torso away and begins ordinary self-grooming while remaining securely on the
+same branch. The hiker stops mid-gesture, then gives the recording camera one
+brief confused, amused look. End on this asymmetry; the monkey does not turn
+back for a final gag.
+
+Carry synchronized forest ambience throughout: birds at a distance, insects,
+soft leaf movement, one camera shutter and subtle platform creak. If music is
+used, keep it barely audible, playful and wholly original. No dialogue,
+narration, subtitle, caption, logo or watermark.
+
+ANIMAL-CREDIBILITY LOCK
+The macaque remains a wild animal: realistic anatomy, weight, fur motion, branch
+contact, gaze shifts and grooming. No clothes, human-like walking, hand gesture,
+speech, dance, mugging to camera or physical contact with the hiker. No second
+animal, duplicated limb, changing branch, unsafe approach, fantasy element,
+violence, animation, plastic CGI surface or recognizable existing-media setup.
+```
+
+**Why it works:** the comedy is a four-state behavior map—observe, respond,
+repeat, disengage—rather than a vague request for a funny animal. Alternating
+screen-direction tilts and delayed reactions make agency readable, while the
+final grooming action deliberately violates the established pattern. The
+animal-credibility lock separates a plausible coincidental imitation from
+anthropomorphic performance, preserving the naturalism that makes the payoff
+land.
+
+**Source:** Few-Profession421's August 27, 2026
+[original Seedance 2.5 post with complete prompt and generated showcase
+result](https://www.reddit.com/r/Seedance_AI/comments/1vymg5g/tried_a_simple_monkey_prompt_in_seedance_25_and/).
+
+---
+
 ## Reusable templates
 
 ### Monotonic scrub-readiness motion audit and rejection gate
@@ -17608,6 +17688,9 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Few-Profession421 — Seedance 2.5 photoreal macaque-and-hiker head-tilt comedy, complete 15-second prompt and generated showcase result](https://www.reddit.com/r/Seedance_AI/comments/1vymg5g/tried_a_simple_monkey_prompt_in_seedance_25_and/)
+
 
 - [Baazookah_Zawadi — Seedance 2.5 ten-reference handcrafted marionette circus story, complete 30-second prompt and generated showcase result](https://www.reddit.com/r/Seedance_AI/comments/1vclapt/i_tested_seedance_25_for_a_longer_story_video_and/)
 
