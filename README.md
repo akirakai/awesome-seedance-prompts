@@ -258,6 +258,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Character-sheet-to-storyboard shield awakening](#242-character-sheet-to-storyboard-shield-awakening)
   - [Center-stage 360 concert orbit and crowd-return continuity](#243-center-stage-360-concert-orbit-and-crowd-return-continuity)
   - [Lens-splash pool-day camcorder handoff](#244-lens-splash-pool-day-camcorder-handoff)
+  - [Silent-cat luxury-service escalation and reaction ledger](#245-silent-cat-luxury-service-escalation-and-reaction-ledger)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -11967,6 +11968,139 @@ keeps native dialogue from drifting across the action.
 
 ---
 
+
+### 245. Silent-cat luxury-service escalation and reaction ledger
+
+**Verified model:** Dreamina Seedance 2.5 — the original creator published the
+complete prompt and generated result together on August 27, 2026, explicitly
+identifying Seedance 2.5 in Dreamina
+
+**Use case:** dialogue-led ensemble comedy, reaction escalation, recurring
+silent counterpoint, prop and seating continuity  \
+**Mode:** reference-to-video with one cast-and-layout reference  \
+**Settings:** 30-second script, rapid two-second coverage units, English native
+dialogue, upscale restaurant ambience
+
+```text
+Create a photorealistic deadpan restaurant comedy with two clearly adult women
+and one white cat. One reference image owns the women's faces, clothing,
+left-right seating order, their shared table and the neighboring cat table.
+Keep the blonde woman seated on frame-left and the brunette on frame-right. The
+cat remains at the adjacent table, silent and calm. No character changes seat,
+wardrobe, table or relative distance.
+
+COMEDY STATE LEDGER
+The blonde begins politely curious and escalates through disbelief, indignation
+and theatrical outrage. The brunette begins relaxed and uses progressively
+stronger but still friendly attempts to calm her: a wrist touch, lowered hand,
+shoulder hold and side hug. The cat never mirrors their energy; it stays
+unimpressed and receives one new luxury-service item at a time. Each reveal must
+remain visible in later cat shots: plated entrée, water bowl, folded napkin,
+table-side garnish and miniature dessert. The blonde's own sparse salad remains
+unchanged.
+
+0–2 s — Geography.
+Wide view of one elegant night-time dining room. Establish the two women side by
+side, the cat at the next table and a waiter approaching the cat with a covered
+dish. Preserve this screen direction for every return.
+
+2–4 s — First suspicion.
+Close on the blonde as her polite smile fades. She glances toward the covered
+dish and asks quietly, “Wait... is that his dinner?”
+
+4–6 s — Entrée reveal.
+Low cat-table angle. The waiter lifts the dome to reveal a carefully plated
+truffle pasta dish. The cat sniffs once and looks away. Do not make the cat talk,
+smile or perform like a human.
+
+6–8 s — Contrast proof.
+Return to the same two-shot. The blonde looks from the cat's entrée to her own
+three-leaf salad and points: “He got truffles?” The brunette catches the wrist
+before it crosses the table: “Easy. Stay seated.”
+
+8–10 s — Second privilege.
+Close on the cat as a second waiter places a small porcelain bowl of chilled
+spring water beside the entrée. The cat takes one restrained sip; both earlier
+props remain where they were.
+
+10–12 s — Reaction step two.
+Close on the blonde, now openly stunned: “Is that imported water?” Keep her
+voice attached to her mouth. Off-axis restaurant guests remain background only.
+
+12–14 s — Social-pressure beat.
+Two-shot in the original seating order. The brunette lowers the pointing hand
+and says, “Please—everyone can hear you.” The blonde answers, “Perfect. They
+need to see this.”
+
+14–16 s — Third privilege.
+Cat-table insert. A waiter unfolds a tiny linen napkin beside the same water and
+entrée. The cat rests one paw on it. Preserve paw count, table edge and prop
+positions.
+
+16–18 s — Reaction step three.
+Extreme close-up on the blonde. She holds up her paper napkin without leaving
+the chair: “He gets linen. Mine came from a dispenser.”
+
+18–20 s — Relationship pressure.
+Medium two-shot. The brunette puts an arm around her shoulders and says, “It is
+one quiet cat.” The blonde turns toward her, wounded: “Quiet? He has a tasting
+menu.”
+
+20–22 s — Silent counterpoint.
+Close on the cat. Table-side garnish is added to the entrée. Only now does the
+cat glance at the women, then return to grooming one paw. No vocalization.
+
+22–24 s — Peak approach.
+The blonde leans forward but remains seated, pointing with her free hand:
+“They are finishing it at the table!” The brunette holds her at the waist and
+says, “Sit back.”
+
+24–26 s — Room-wide consequence.
+Wide shot from the original axis. Conversation stops across the dining room.
+The blonde raises her unchanged salad and declares, “I have negotiated with
+this leaf for twenty minutes.” Waitstaff and diners react differently rather
+than freezing in one synchronized pose.
+
+26–28 s — Final prop reveal.
+Cat-table close-up. A miniature chocolate soufflé arrives. The cat taps the top
+once, making one delicate crack. All previous service items remain present and
+the cat stays bored.
+
+28–30 s — Payoff.
+Return to the same women. The brunette completes the side hug as the blonde
+points toward the dessert: “Dessert too? I need his reservation agent.” End on
+the cat licking its paw without acknowledging them, then cut cleanly to black.
+
+CAMERA, AUDIO AND ACCEPTANCE
+Use restrained premium-drama lighting, realistic skin, fur, food and glass
+reflections, stable eyelines and conventional shot/reverse-shot focal lengths.
+Maintain soft restaurant room tone, cutlery, glasses and only the written
+English lines. The cat has no voice. Pass only if seating order never flips;
+each service item appears once and persists; the blonde's salad never upgrades;
+the brunette's calming contact advances in order; the blonde's volume and body
+language rise one step per reveal; every line belongs to the visible speaker;
+and the final delivered file's actual runtime is measured rather than assumed.
+
+No identity drift, seat swap, mirrored room, cat replacement, duplicate waiter,
+vanishing entrée, reset table, extra paw, human cat gesture, talking animal,
+unmotivated scream, premature peak, overlapping dialogue, random diner line,
+lip-sync mismatch, floating cutlery, unreadable food morph, subtitle, logo,
+watermark or undeclared text.
+```
+
+**Why it works:** three parallel ledgers make the escalation measurable: the
+cat accumulates service props, the blonde climbs one reaction level at a time
+and the brunette increases physical reassurance without changing seats. The
+silent cat supplies a stable low-energy counterpoint, while returning to one
+screen axis prevents a dense two-second edit map from scrambling who is looking
+at whom. The source asks for 30 seconds while the compact X player showed 0:29,
+so runtime is an explicit delivery check rather than a presumed setting.
+
+**Source:** AIrina / @airina_xyz's August 27, 2026
+[complete Dreamina Seedance 2.5 prompt and generated result](https://x.com/airina_xyz/status/2092926649926824038).
+
+---
+
 ## Reusable templates
 
 ### Monotonic scrub-readiness motion audit and rejection gate
@@ -18479,6 +18613,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [AIrina / @airina_xyz — Dreamina Seedance 2.5 luxury-restaurant cat comedy with complete 30-second prompt, dialogue escalation and generated result](https://x.com/airina_xyz/status/2092926649926824038)
 
 - [ÀBDŪLLÂH / @itxabdullaa — Seedance 2.5 pool-day DV camcorder scene with complete 15-second prompt, native Korean dialogue and lens-splash transitions](https://x.com/itxabdullaa/status/2092912491395441144)
 
