@@ -271,6 +271,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Six-beat seasonal romance montage and score-shape ledger](#255-six-beat-seasonal-romance-montage-and-score-shape-ledger)
   - [Offscreen-observer whisper lane and degraded pinch-zoom](#256-offscreen-observer-whisper-lane-and-degraded-pinch-zoom)
   - [TV-bezel containment horror and reaction hard cut](#257-tv-bezel-containment-horror-and-reaction-hard-cut)
+  - [Handheld-to-FPV frozen-time slalom and exact-angle resume](#258-handheld-to-fpv-frozen-time-slalom-and-exact-angle-resume)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -13198,6 +13199,117 @@ does not require an unexplained coverage change.
 
 ---
 
+### 258. Handheld-to-FPV frozen-time slalom and exact-angle resume
+
+**Verified model:** Seedance 2.5 — the original creator publishes the generated
+20-second result, exact model attribution and full public prompt in one thread
+**Use case:** frozen-time anime action, one-take camera-mode transition, dense
+prop constellation, exact-position temporal restart
+**Mode:** character-reference image-to-video
+**Suggested settings:** 20 seconds, 16:9, one continuous shot with native dialogue
+and location sound
+
+```text
+Create one continuous 20-second high-quality Japanese 2D anime shot in crowded
+summer Shibuya. @Image1 is the sole authority for one clearly adult tennis
+player's face, vivid orange ponytail, white-orange visor, cropped athletic top,
+pleated skirt with safety shorts, wristbands, striped socks, chunky sneakers,
+orange-white racquet and compact shoulder bag. Keep every asymmetric marking,
+garment, accessory, body proportion and equipment item unchanged.
+
+GLOBAL ONE-TAKE CONTRACT
+No cut, dissolve, hidden edit, teleport, montage or time jump. One friend owns
+the same physical camera from start to finish. The shot may change handling mode
+only when time freezes or resumes; camera position, direction and momentum must
+remain continuous across both thresholds.
+
+0–6s — IMPERFECT RUNNING COVERAGE
+The operator runs beside her through one established sidewalk and crossing,
+struggling to keep a loose side view. Use strong but plausible MiniDV shake,
+late reframing, brief pedestrian occlusion, CCD highlight bloom, tape softness,
+exposure pumping and unstable white balance. She carries the racquet in one
+hand and one yellow-orange ball in the other; the closed shoulder bag bounces.
+
+She threads between pedestrians, one bicycle and shopping bags without contact,
+looks back laughing and breathlessly says, “Hurry—we're going to be late!” Her
+visible mouth owns the line. She turns forward and accelerates while the same
+operator continues beside her.
+
+6–8s — VISIBLE FALL AND FREEZE APEX
+Without cutting, the camera drifts slightly forward while still moving backward.
+She tosses and catches the same ball, glances at her racquet, then catches one
+shoe on a low visible curb. Show cause before reaction: toe contact, widened eyes,
+forward pitch, then released objects. The racquet, main ball, several bag balls,
+one towel and blank instant-photo prints follow distinct readable trajectories.
+
+Freeze time only at the maximum-separation apex before she reaches the ground.
+Her complete body, ponytail, skirt, strap, racquet, balls, towel, photos, nearby
+pedestrians, fabric, vehicles and bicycle wheels become perfectly motionless.
+Record this entire constellation as the restart state. Only the camera may move.
+
+8–17s — PRECISE FPV PROP SLALOM
+The same camera's residual shake settles continuously into smooth, fast and
+precise FPV flight; do not replace it with a second lens or transition. Rise over
+her to establish the frozen crowd, then dive back to her face and pass the visor,
+orange bangs and emblem without clipping them. Curve under the ponytail and past
+the wristband, skirt pleats and one suspended sneaker while identity stays fixed.
+
+Use the frozen props as one ordered navigation graph:
+1. orbit the racquet once, showing frame, grip and strings;
+2. tighten around the main ball;
+3. thread between the spilled balls without changing their spacing;
+4. skim the towel;
+5. pass cleanly through the open bag strap;
+6. enter the corridor formed by the blank photo prints;
+7. dodge one foreground print to reveal the same frozen player in the distance.
+
+The prints may contain only small generic tennis-practice, orange-court, summer-
+sky and city snapshots. They remain flat physical cards with no text or portal.
+Nothing else moves, breathes, blinks, falls, rolls, flutters or changes focus by
+itself during the freeze.
+
+17–20s — EXACT-ANGLE RETURN AND RESUME
+Make one fast wide orbit proving that the player, props and crowd still occupy
+their recorded apex positions. Descend to street height and return to the same
+imperfect side angle, height, focal distance and travel direction held just
+before the freeze. Only when that camera state matches may time resume.
+
+All motion continues from the frozen vectors with no flash or VFX cue: she
+catches herself on one palm and knee; racquet clatters; balls bounce according
+to their stored arcs; towel, photos, hair, skirt and strap settle; pedestrians
+and vehicles continue their interrupted actions. The camera instantly regains
+its earlier chaotic handheld response. Still crouched, she looks up embarrassed,
+then smiles competitively and begins standing to run. End during recovery.
+
+AUDIO AND ACCEPTANCE
+Before and after the freeze use traffic, footsteps, crowd murmur, cloth, breath,
+the declared line, curb contact, racquet impact and bouncing balls. At the freeze
+apex, stop every diegetic event together; use near-silence and only subtle camera
+air movement until time resumes. Reject unless the take is unbroken, every prop
+keeps its apex position throughout the FPV path, the two handling-state changes
+occur only at the two time thresholds, the operator returns to the measured
+side angle and all stored movements resume from their original vectors.
+
+No second athlete, duplicate prop, moving frozen person, floating-object drift,
+body or wardrobe redesign, missing safety shorts, skirt exploitation, collision,
+injury, camera clipping through anatomy, photo portal, rewritten snapshot, time-
+freeze flash, hidden cut, impossible lens jump, false lip-sync, subtitle, logo,
+real brand or watermark.
+```
+
+**Why it works:** the freeze is treated as a recorded six-dimensional restart
+state—subject, props, background, camera pose, camera handling and audio—rather
+than a decorative slow-motion effect. The racquet-to-photo route gives the FPV
+excursion a fixed spatial order, while returning to the measured side view makes
+the resumption testable. Changing from unstable MiniDV to smooth FPV and back
+only at the two temporal thresholds also turns camera style into story logic.
+
+**Source:** Lipsync.video's August 28, 2026
+[Seedance 2.5 generated 20-second result and prompt thread](https://x.com/Lip_sync_video/status/2093212349263909170),
+with the creator's [complete public image and video prompt document](https://docs.google.com/document/d/1X_d_7y_zP3nFeTzMV_zMseJBZZK9kmQ5SgD4ZCqosYA/edit).
+
+---
+
 ## Reusable templates
 
 ### Directional action retarget with reference-role isolation and atomic fan-out
@@ -20196,6 +20308,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Lipsync.video — Seedance 2.5 twenty-second one-take Shibuya tennis freeze with handheld-to-FPV camera transition, complete public prompt and generated result](https://x.com/Lip_sync_video/status/2093212349263909170) ([complete prompt document](https://docs.google.com/document/d/1X_d_7y_zP3nFeTzMV_zMseJBZZK9kmQ5SgD4ZCqosYA/edit))
 
 - [Simply Ray / @kingofdairyque — Higgsfield Seedance 2.5 television-contained apartment horror with a complete 30-second prompt and generated result](https://x.com/kingofdairyque/status/2093198798470402301)
 
