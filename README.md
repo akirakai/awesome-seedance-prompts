@@ -275,6 +275,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Five-slot dress-up UI and cumulative wardrobe ledger](#259-five-slot-dress-up-ui-and-cumulative-wardrobe-ledger)
   - [Localized buffer-glitch pitch and observer-continuity gate](#260-localized-buffer-glitch-pitch-and-observer-continuity-gate)
   - [Static six-setup pressure ladder and silent-reaction release](#261-static-six-setup-pressure-ladder-and-silent-reaction-release)
+  - [Inherited-storm continuation and unresolved-score handoff](#262-inherited-storm-continuation-and-unresolved-score-handoff)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -13668,6 +13669,142 @@ the pressure releases through acting rather than a seventh shot or camera move.
 
 ---
 
+### 262. Inherited-storm continuation and unresolved-score handoff
+
+**Verified model:** Renoise Seedance 2.5 at 1080p — the original creator names
+the model and platform beside the generated result and publishes the complete
+prompt in a direct reply
+**Use case:** anime boss fight, clip continuation, high-speed action, audiovisual
+state handoff, unresolved episode ending
+**Mode:** text-to-video continuation / prior-clip state handoff
+**Suggested settings:** 15 seconds, 16:9, 1080p, 24fps, native audio, continuous
+camera movement
+
+```text
+Continue a high-end 3D-anime desert boss fight for 15 seconds. Frame one must be
+the exact moving endpoint of the preceding clip, not a new establishing shot.
+Inherit its pull-back direction, character positions, airborne sand, approaching
+black storm, light state and still-rising orchestral phrase. Do not pause,
+reintroduce the cast, reset the lens or rebuild the location.
+
+CONTINUATION STATE
+- Nefra is already visible and moving as the camera withdraws. Preserve her
+  screen side, travel vector, pose phase and distance from the guardian.
+- The guardian is the same wounded but active creature from the preceding clip;
+  preserve its scale, orientation, damage and distance from Nefra.
+- The storm has already begun to consume the sun. Its front advances continuously
+  and never snaps back to clear daylight.
+- The score is already in progress. Enter on its current musical bar and dynamic
+  level; do not restart with a new downbeat, silence or intro sting.
+
+CHARACTER LEDGER
+Nefra is a young fictional desert oracle with warm brown skin, a short white bob,
+one white feather plume and golden eyes. Keep one black-and-gold headband, round
+gold earrings, a sun-medallion choker, white wrapped top, translucent shoulder
+shawl, layered white skirt, gold arm and ankle ornaments, bare feet and one
+crescent-topped staff. During her awakening, restrained golden sun-runes may glow
+under her skin and across the staff, but her face, age, body, hair, wardrobe and
+staff design never change. Do not clone her or give her a second weapon.
+
+BOSS AND WORLD LEDGER
+The guardian remains a colossal four-legged ancient beast with broad shoulders,
+black obsidian-stone armour, molten-gold eyes and one cracked golden chest core.
+Keep the same anatomy and armour map in every scale. It may shed sand and rubble,
+but must not become humanoid, grow wings, swap species or duplicate.
+
+Keep the fight inside one ruined Egyptian-inspired temple city: central altar,
+pyramid, obelisks, avenue of sphinxes, broken hieroglyphic columns and gold dust.
+The altar and major monuments stay fixed spatial anchors. No location jump,
+day/night jump, repaired ruins, modern object, crowd or extra fighter.
+
+0.0–1.8s — INHERIT THE PULL-BACK
+Continue the previous camera retreat without a seam. The guardian roars while the
+storm front spreads behind it and progressively occludes the sun. Nefra remains
+readable in the same spatial relationship; no frozen first frame or fresh reveal.
+
+1.8–3.6s — ALTAR IMPACT
+Nefra accelerates, jumps and drives the base of her staff into the central altar
+once. The contact produces a circular gold shockwave that travels across the
+ground and pushes loose sand and small rubble outward. Rise rapidly into a
+top-down crane view, adding one short impact shake only at contact. Do not cut.
+
+3.6–5.4s — CITY-SCALE RUNE ARRAY
+A connected sun-rune network grows outward from the altar through streets and
+ruins, revealing the city's layout without relocating anything. Skim just above
+the illuminated lines, then climb as their geometry becomes legible. The camera
+keeps forward momentum; avoid hovering, a static diagram or readable typography.
+
+5.4–7.2s — FORESIGHT DODGE CHAIN
+The guardian strikes with one forelimb. Before each real impact, show a brief,
+faint gold glyph-afterimage indicating the predicted trajectory. Nefra performs a
+small sequence of physically connected near-miss dodges, never teleporting. Track
+laterally and use at most two 0.2-second speed ramps at the closest passes. Dust,
+cloth and hair react to each displacement and then settle naturally.
+
+7.2–9.0s — WEAK-POINT APPROACH
+The chest core flashes through an existing armour fracture. Nefra plants one foot
+on the guardian's lowered forearm and runs upward toward the crack. Rush behind
+her shoulder so the staff tip, target and direction of travel share one frame.
+Maintain limb anatomy, foot contact and the guardian's established orientation.
+
+9.0–11.0s — SUN RELEASE
+In one continuous whip from tight action to extreme wide, Nefra places the
+crescent staff at the fracture and releases the stored rune light. A vertical
+gold beam forms a vast sun-disc above the city. Permit near-white exposure for no
+more than three frames, then recover detail; do not hide an edit or identity reset
+inside the flash.
+
+11.0–13.0s — SKY COLLISION
+The gold beam and black storm collide above the monuments. Sweep aerially around
+the same city while keeping Nefra, guardian, altar and beam axis geographically
+consistent. Show opposing gold and obsidian energy, sand, rubble and volumetric
+light as one causal simulation, not unrelated spectacle inserts.
+
+13.0–15.0s — UNRESOLVED HANDOFF
+The rune network relights sections of the city. Nefra lands in a recoverable
+mid-action stance as the wounded guardian pushes itself upright again. Descend
+from the aerial view and drive back toward her face and staff. Cut while both
+combatants still have active intent. No victory pose, applause, freeze, fade,
+epilogue or resolved final chord.
+
+AUDIO-PHASE CONTRACT
+Continue the inherited orchestral cue without interruption, adding choir and
+taiko as the rune network expands. Synchronize one guardian roar, staff-on-stone
+impact, rune shimmer, close-pass air, beam surge and low sky-collision rumble to
+their visible causes. Preserve one acoustic space and consistent scale. At the
+last frame the score must still be climbing, ready for the next continuation;
+no new intro, premature cadence, narration, dialogue, subtitle or logo.
+
+STYLE AND FAILURE CONTROL
+Use polished 3D-anime/game-cinematic rendering, a controlled gold-versus-obsidian
+palette, wide anamorphic composition, 24fps motion, detailed particles and
+continuous motivated camera movement. Every shot phase must inherit the state
+produced by the previous phase.
+
+Reject any opening hold, fade-in, camera reset, re-establishing shot, character
+re-entry, location or time jump, static shot, empty frame, repeated impact,
+unmotivated hard cut, live-action face, identity drift, costume or staff change,
+guardian redesign, extra person, floating limb, unreadable contact, text, UI,
+subtitle, watermark, desaturation, low resolution, blurred action, victory pose,
+slow ending or audio restart. Flag for retiming when the returned master falls
+materially short of the requested 15 seconds; record measured output duration
+rather than treating the prompt timeline as proof of delivery length.
+```
+
+**Why it works:** four inherited clocks — camera movement, world simulation,
+combat state and musical phase — prevent a continuation from behaving like a
+new clip. The fixed identity and geography ledgers then survive radical scale
+changes from close combat to aerial spectacle. Ending on renewed opposition and
+an unresolved score creates a usable handoff for another segment. The source
+asks for 15 seconds, while its published player measures 13.886 seconds, so the
+duration gate also preserves a real compliance failure instead of hiding it.
+
+**Source:** Kiki / @Mayz1169's August 28, 2026
+[Renoise Seedance 2.5 1080p generated result and model attribution](https://x.com/Mayz1169/status/2093327980961689803)
+([complete original prompt](https://x.com/Mayz1169/status/2093328286650880258)).
+
+---
+
 ## Reusable templates
 
 ### Directional action retarget with reference-role isolation and atomic fan-out
@@ -21149,6 +21286,8 @@ Community examples and techniques referenced in this README:
 - [Jacob Ye — Seedance 2.5 framing-feasibility, prop-entry and body-occupancy production review](https://github.com/jacobye2017-afk/jacob-ye-seedance-prompt/commit/b16cde84e8565697fcde10d8ca4cf54e903c0d82)
 
 - [AutoCare — Seedance 2.0 Mini motion-family feasibility audit and wrong-neighbour exclusions](https://github.com/AutoCare-1/trainos/commit/d4a7caafb15d15756c46f530beb9aa68ea035d19) ([complete correction prompts](https://github.com/AutoCare-1/trainos/blob/d4a7caafb15d15756c46f530beb9aa68ea035d19/backend-laravel/database/dicas_demonstracao.php), [402-video frame review](https://github.com/AutoCare-1/trainos/blob/d4a7caafb15d15756c46f530beb9aa68ea035d19/backend-laravel/database/revisao_demonstracoes_2026-08-25.md))
+
+- [Kiki / @Mayz1169 — Renoise Seedance 2.5 1080p desert-oracle continuation, generated result and complete prompt](https://x.com/Mayz1169/status/2093327980961689803) ([complete prompt](https://x.com/Mayz1169/status/2093328286650880258))
 
 Official model references:
 
