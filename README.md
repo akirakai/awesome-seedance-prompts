@@ -8126,9 +8126,3287 @@ composition; do not preview the dragon with a shadow, wing tip or camera cue.
 The dragon surges upward from below frame with the same rider already seated and
 secure on its back. Two forceful wing strokes carry both bodies through the
 centre of the locked frame. Match rider identity, clothing and scale to @Image2;
-do 
-... 174801 bytes omitted ...
-1).
+do not create a second falling rider.
+
+[5–6s | momentum conversion]
+Without hovering, the dragon pitches from its vertical climb into a fast forward
+line aimed directly at the densest part of the waterfall. The rider braces with
+believable inertia while the dragon keeps its anatomy and wing count unchanged.
+
+[6–15s | water breach and exit]
+The dragon enters the opaque torrent at speed. Its body physically parts the
+falling water, disappears behind it, then exits on the far side shedding heavy
+sheets, ropes and spray. The waterfall closes naturally behind the moving volume.
+The pair continues away until scale and mist obscure them; the camera remains
+absolutely fixed at the original cliff lip.
+
+Diegetic audio only: footfalls on wet rock, breath, one scream, waterfall roar,
+wing pressure, displaced water, scale and harness movement. Natural gravity,
+inertia, spray occlusion and real-time speed. No cut, slow motion, orbit, camera
+follow after the jump, premature dragon reveal, duplicated rider, extra creature,
+hover, dry passage through water, anatomy drift, face change, subtitle or logo.
+```
+
+**Technique:** A hard camera endpoint plus a deliberately empty beat separates disappearance from reveal. Keeping the lens fixed while the subject changes from runner to mounted dragon makes the transformation legible, and requiring the waterfall to close behind a moving volume turns the final pass into a physics test rather than a flat overlay.
+
+Adapted from Higgsfield AI's official [Seedance 2.5 VFX-challenge video](https://www.youtube.com/watch?v=Hn8A8D4-SpQ). The complete source prompt and official generation links are preserved in the [versioned production playbook](https://github.com/nick-choudhary/higgsfield-ai-youtube-skills/blob/d497dfa72258359dc1a8021d87993fdb5fe41c87/i-challenged-a-vfx-artist-to-beat-ai/PLAYBOOK.md), archived August 8, 2026.
+
+### 189. Clay-blocked bedroom-to-cosmos dream flight
+
+**Verified model:** Seedance 2.5 — published in the official BytePlus prompt guide with the clay-blocking input, stage keyframes, generated output, and synchronized comparison video  
+**Use case:** 3D clay-model motion transfer, keyframe-owned art direction, 30-second narrative, camera-blocking preservation  
+**Mode:** multimodal reference-to-video  
+**Suggested settings:** 30s, 16:9
+
+```text
+Create a 30-second warm, dreamlike 3D animated short. @Video1 is a simplified
+clay-model previs and owns only shot order, shot sizes, camera positions,
+camera paths, pacing, character blocking, and motion trajectories. Never copy
+its grey materials, primitive geometry, guide marks, or unfinished visual
+content.
+
+@Image1 owns the opening bedroom and its overhead return composition.
+@Image2 owns the same young heroine, her face, proportions, clothes, and toy
+airplane. @Image3–@Image10 each own the character state, environment, and
+costume visible in their assigned stage. A keyframe may define appearance but
+must not override @Video1's movement logic.
+
+[0–3s | launch]
+Overhead wide view of the bedroom; follow @Video1's slow push. The girl rises
+from the carpet and throws the toy airplane left-to-right. Its soft throw sound
+grows continuously into a real engine tone.
+
+[3–8s | room to sky]
+Side-follow the plane past hanging stars. One foreground bird wipe reveals the
+girl riding it through sunset clouds. Orbit according to @Video1 while the
+mythical animals from the assigned keyframes join at readable depths.
+
+[8–10s | sky to sea]
+Move behind the plane, then dive toward the water. The girl crosses the surface
+once; bubbles occlude the costume change into the referenced oxygen helmet.
+
+[10–19s | ocean to rift]
+Follow her and one manta ray deeper through the same travel direction. Build
+wonder into apprehension as a fractured-mirror space-time opening grows ahead.
+Pull her through it without a cut or spatial reset.
+
+[19–23s | cosmic payoff]
+Use the spacesuit keyframe. She bounds across small planets, reaches forward,
+and catches one luminous star. Freeze only at full contact.
+
+[23–24s | foreground flip]
+The frozen heroine and planets turn forward like one illustrated page and
+dissolve. Behind them, @Image1's overhead bedroom is already aligned.
+
+[24–28s | waking-world return]
+Continue the inherited overhead push. She is asleep on the carpet in the same
+star-catching hand pose. Her father enters from lower-left and covers her with
+one blanket as dusk cools naturally into moonlight.
+
+[28–30s | book closure]
+Push toward the open space-themed picture book. The father's right hand closes
+it once; hold the closed cover as the final frame.
+
+Keep the heroine's identity and proportions stable inside each keyframe-defined
+state. Let transitions inherit velocity, screen direction, light direction, and
+audio tails. No new shot, reordered beat, camera improvisation, clay material,
+guide line, unexplained duplicate, identity drift, abrupt costume pop, hard cut,
+subtitle, logo, or watermark.
+```
+
+**Technique:** a low-detail previs owns time and movement while stage keyframes
+own appearance. Separating those authorities prevents the clay reference from
+contaminating the final look and lets a long fantasy journey preserve deliberate
+camera blocking.
+
+Adapted from the official [BytePlus Seedance 2.5 clay-model workflow](https://docs.byteplus.com/en/docs/ModelArk/2607689#whitemodel-reference);
+the complete inputs and outputs are retained in the [versioned English snapshot](https://github.com/Jdaroro/awesome-seedance-2x-prompts/blob/626cdfa2fb9284806c259174117d7dfb8f1da58f/docs/third-party/Dreamina-Seedance-2.5-Prompt-Guide-and-Skill.md#3d-clay-model-video-reference-and-rendering),
+published August 9, 2026.
+
+### 190. Identity-locked decades-of-aging emotion edit
+
+**Verified model:** Seedance 2.5 — published as an official BytePlus instruction-edit example with source and generated output  
+**Use case:** video instruction editing, gradual age progression, micro-expression arc, identity preservation  
+**Mode:** locked video edit  
+**Suggested settings:** inherit source ratio; `ratio=adaptive`, `duration=-1`, MOV output
+
+```text
+EDIT @Video1. Keep its complete duration, composition, camera position, lens,
+lighting, background, wardrobe, body movement, and performance rhythm unchanged.
+Modify only the adult female lead's visible age and facial emotion.
+
+[0–25%]
+Begin with her original identity in her twenties. Preserve facial proportions,
+gaze direction, head angle, and skin tone. Her expression is controlled and
+tearful; breathing is small and restrained.
+
+[25–70%]
+Age the same face continuously through the intervening decades. Introduce
+changes in one direction only: fine lines, then deeper expression lines, subtle
+soft-tissue change, and naturally greying hair. Her eyes gradually soften while
+one tear travels past the outer corner. Do not replace her with a different face
+or reset any earlier age state.
+
+[70–100%]
+Settle at approximately sixty years old. The same mouth corners slowly rise
+until she smiles through tears. End on a calm, fully resolved expression and
+hold it for the source shot's final beat.
+
+This remains one continuous shot. No cut, temporal jump, cross-dissolve,
+flicker, face swap, identity drift, sudden wrinkle overlay, changing hairstyle,
+wardrobe edit, lighting change, background change, subtitle, logo, or watermark.
+```
+
+**Technique:** a one-way age ledger and an independent emotion curve give the
+edit two measurable transformations without allowing the source performance or
+camera to drift.
+
+Adapted from the official [BytePlus Seedance 2.5 instruction-edit example](https://docs.byteplus.com/en/docs/ModelArk/2607689#video-instruction-edit);
+the source/output pair is preserved in the [versioned English snapshot](https://github.com/Jdaroro/awesome-seedance-2x-prompts/blob/626cdfa2fb9284806c259174117d7dfb8f1da58f/docs/third-party/Dreamina-Seedance-2.5-Prompt-Guide-and-Skill.md#video-instruction-editing),
+published August 9, 2026.
+
+### 191. MOV-locked pollination macro extension
+
+**Verified model:** Seedance 2.5 — published as an official BytePlus extension example with input, generated MOV output, and stitched seam check  
+**Use case:** forward continuation, macro nature action, audio-visual seam continuity, transition inspection  
+**Mode:** locked video extension  
+**Suggested settings:** extend 5s; `ratio=adaptive`; MOV input and output
+
+```text
+Extend @Video1 forward by exactly 5 seconds. Begin from its final accepted frame
+with the same flower, species, petal geometry, camera height, lens, focus plane,
+light direction, wind, color grade, ambience, and audio level. Do not replay the
+source action.
+
+[0–1s | arrival]
+One bee enters on a continuous flight path and lands on the existing flower.
+Match wing buzz, wind, stem movement, and focus transition across the join.
+
+[1–2.4s | macro proof]
+Move into a macro close-up without teleporting the camera. Show the bee's legs
+and abdomen collecting fine golden pollen from the visible anthers. Keep bee
+anatomy, leg count, flower structure, and contact points stable.
+
+[2.4–3.5s | departure]
+The bee beats its wings, lifts cleanly from the first flower, and flies toward
+another flower of the same species. Follow one readable path; preserve screen
+direction and natural motion blur.
+
+[3.5–5s | pollination payoff]
+Use restrained slow motion only for the final approach. Pollen releases from
+the bee's fine hairs and reaches the second flower's stamen at visible contact.
+End after the transfer, not mid-flight.
+
+Carry source ambience and perceived volume through the seam. Use MOV for both
+input and output. No join flash, frozen duplicate frame, color shift, volume
+jump, new flower species, bee mutation, floating pollen before contact, reverse
+motion, hard cut, subtitle, logo, or watermark.
+```
+
+**Technique:** the first new frame inherits a complete handoff state, while the
+five-second continuation has its own cause-contact-payoff chain. MOV parity and
+an explicit seam audit protect both picture and audio continuity.
+
+Adapted from the official [BytePlus Seedance 2.5 video-extension example](https://docs.byteplus.com/en/docs/ModelArk/2607689#video-extend);
+the input, output, and stitched comparison are preserved in the [versioned English snapshot](https://github.com/Jdaroro/awesome-seedance-2x-prompts/blob/626cdfa2fb9284806c259174117d7dfb8f1da58f/docs/third-party/Dreamina-Seedance-2.5-Prompt-Guide-and-Skill.md#video-extension),
+published August 9, 2026.
+
+### 192. Endpoint-preserving mahjong-to-city dive bridge
+
+**Verified model:** Seedance 2.5 — published as an official BytePlus seamless-transition example with both source videos and generated bridge  
+**Use case:** video-to-video transition, camera-path handoff, geometric match transformation, endpoint protection  
+**Mode:** two-video transition generation  
+**Suggested settings:** 5s bridge, source aspect inherited
+
+```text
+Generate only a 5-second missing bridge between @Video1 and @Video2. Treat both
+uploaded videos as immutable endpoints: do not redraw, shorten, restyle, or
+retime their existing frames.
+
+[0–1.2s | leave endpoint A]
+Continue the exact terminal motion, lens, color, and audio tail of @Video1.
+Accelerate the camera upward from the mahjong table until the tile layout becomes
+a compact geometric pattern below.
+
+[1.2–2.4s | crest and turn]
+At the top of the rise, perform one fast, continuous turn-back. Preserve camera
+roll direction and momentum; do not cut or pause at the apex.
+
+[2.4–4.2s | matched transformation]
+Dive vertically. During the descent, map each tile footprint, orientation, and
+spacing onto a corresponding building mass. Tile faces become roofs, edges
+stretch into façades, and table gaps become streets. Transform progressively
+from near to far; never replace the whole frame at once.
+
+[4.2–5s | enter endpoint B]
+Converge on @Video2's opening camera position, heading, speed, exposure, skyline
+geometry, and first audible beat. The final generated frame must hand off to
+@Video2 without a flash, duplicate frame, or speed discontinuity.
+
+No modification to either source video, unrelated object, lateral camera escape,
+second inversion, instant city pop, geometry boil, scale jump, lighting reset,
+audio dropout, subtitle, logo, or watermark.
+```
+
+**Technique:** a single camera trajectory supplies the transition's causal
+spine, while tile-to-building correspondence turns a visual metaphor into a
+trackable geometric morph. Immutable endpoints make the bridge responsible for
+alignment instead of allowing the sources to drift.
+
+Adapted from the official [BytePlus Seedance 2.5 seamless-transition example](https://docs.byteplus.com/en/docs/ModelArk/2607689#video-transition);
+both inputs and the generated bridge are preserved in the [versioned English snapshot](https://github.com/Jdaroro/awesome-seedance-2x-prompts/blob/626cdfa2fb9284806c259174117d7dfb8f1da58f/docs/third-party/Dreamina-Seedance-2.5-Prompt-Guide-and-Skill.md#seamless-video-transition),
+published August 9, 2026.
+
+
+### 193. Cold-email disappearance true-crime parody
+
+**Verified model:** Seedance 2.5 — the creator records the exact
+`bytedance/seedance-2.5/text-to-video` endpoint, seed, generated master,
+frame review, and dialogue transcript  
+**Use case:** native-feeling product ad, deadpan comedy, dialogue-led narrative,
+anti-gloss failure control  
+**Mode:** text-to-video  
+**Suggested settings:** 30s, 9:16, 480p or 720p, 24fps, native audio
+
+```text
+Create a 30-second vertical late-night true-crime documentary parody. Everyone
+plays the premise completely straight. It must feel like a real low-budget
+documentary segment, not a polished advertisement.
+
+CAPTURE
+Use restrained interview grammar: a long lens, shallow focus, one soft practical
+key from camera-left, deep untreated shadow, ordinary sensor noise, and a nearly
+static operator. The reconstruction insert must look like older footage:
+handheld, cooler, grainier, slightly soft, and visibly captured on different
+equipment. No beauty light or commercial color grade.
+
+PLACE AND CAST
+A cramped suburban home office at night: dark wood panelling, ring binders, a
+dead plant, paper stacked on an inkjet printer, half-closed vertical blinds.
+The interviewee is an unshaven office worker in a plain grey polo, seated slightly
+off axis with clasped hands and tired eyes. The investigator is a matter-of-fact
+middle-aged woman beside a corkboard of paper clues. Ordinary faces, imperfect
+teeth, cheap wardrobe, underplayed delivery, natural pauses and breaths.
+
+TIMELINE
+[0–5s] Hold a medium interview frame. The man swallows and says quietly:
+"Tuesday. Four thousand messages left this room."
+
+[5–10s] He studies his hands: "Not one appeared where it was supposed to."
+Do not cut away until the pause has finished.
+
+[10–15s] Cut to the degraded reconstruction: a hand clicks a mouse in a dark
+room. A monitor lights the face but its display is blank and unreadable.
+
+[15–20s] Cut to the investigator at the corkboard. Without drama she says:
+"We located every one of them."
+
+[20–24s] She taps one paper clue twice: "Promotions. Third page."
+
+[24–27s] Return to the interview. His eyes wet but performance restrained:
+"They never left the inbox."
+
+[27–30s] Hold while he looks away. A calm narrator delivers one approved brand
+line: "[BRAND]. Cold email that lands in Primary."
+
+AUDIO
+Quiet room tone, wall-clock tick, monitor hum, distant dog, chair creak, and
+natural unperformed speech. No music, riser, sting, whoosh, or synthetic impact.
+
+FAILURE CONTROL
+No readable screen, title, subtitle, caption, logo, watermark, lower third,
+floating interface, product UI, invented statistic, glamorous actor, smiling
+spokesperson, glass office, drone, crane, orbit, slow motion, speed ramp, rack-
+focus flourish, lens flare, particle effect, teal-orange grade, or pretty
+cutaway montage. Keep faces and wardrobe stable across the interview shots.
+Add accurate captions and any end card only in post.
+```
+
+**Technique:** declaring a familiar non-ad genre before specifying imperfect
+capture conditions suppresses generic commercial polish. Blank screens avoid
+native-text failures, while sparse dialogue leaves room for pauses and lets the
+final product line function as the only explicit sales beat.
+
+Adapted from GroupX's [exact Seedance 2.5 prompt and three-prompt test batch](https://github.com/GroupX-ai/ad-creative/blob/d21b8ebe9acf56568a3705a3b993fa35931dd6c2/_scripts/seedance-prompts.mjs).
+The [generation record and QA report](https://github.com/GroupX-ai/ad-creative/blob/d21b8ebe9acf56568a3705a3b993fa35931dd6c2/emailchaser/2026-08-08-seedance-video/README.md)
+identify the 480p master, seed `1710683338`, consistent 30-second result, and
+word-for-word transcript; published August 9, 2026.
+
+
+### 194. Start-frame-chained void-to-city materialization walk
+
+**Verified model:** Seedance 2.0 — the creator identifies Higgsfield
+Seedance 2.0 std 1080p, publishes all four generated-shot prompts and settings,
+and supplies the scripts used to assemble the final 28-second film  
+**Use case:** progressive world building, character consistency, multi-clip
+continuation, invisible editorial seams  
+**Mode:** image-to-video sequence with one identity element and chained start
+frames  
+**Suggested settings:** source clips 10s / 12s / 12s / 10s, 16:9, 1080p,
+24fps; final vertical master approximately 28s
+
+```text
+GLOBAL IDENTITY AND MOTION LOCK
+@Hero is the same adult in every shot: oversized burnt-orange chore jacket over
+a plain white T-shirt, wide black cargo trousers, chunky grey-and-white skate
+shoes. Keep face, hair, body proportions, garment cut, colors, walking direction,
+stride length, and pace unchanged. In shots 1–3 use a stabilized 35mm backward
+track at constant distance while @Hero walks directly toward camera.
+
+The world must stay at full architectural scale. Door openings are taller than
+@Hero; each streetlight is about three times human height; upper building edges
+leave the top of frame. Never make a miniature, tabletop city, or diorama.
+
+SHOT 1 — WIREFRAME VOID | 10s | no start frame
+A matte clay-grey infinite void with a faint ground grid and ankle-high mist.
+@Hero is the only textured, colored object. As each foot lands, thin white
+contours draw outward across the ground, rise into full-height doors, streetlight
+outlines, and multi-storey building edges. Keep everything pure wireframe:
+no walls, surface texture, glass, signs, light sources, vehicles, or people.
+Dry footsteps, low empty hum, faint pencil scratch synchronized to new lines.
+
+SHOT 2 — MASS AND MATERIAL | 12s | start from Shot 1's actual final frame
+Continue the identical camera, stride, heading, composition, fog, and line
+positions with no reset. Wireframes first extrude into blank clay-grey volumes.
+Only after each volume is stable do brick, glass, and asphalt spread across its
+surface from near to far. One streetlight flickers twice, stays on, and creates
+the first grounded shadow. Half the street remains grey and unfinished at the
+end. No pedestrians yet. Footsteps gain natural wall reflections as surfaces
+appear.
+
+SHOT 3 — COLOR AND LIFE | 12s | start from Shot 2's actual final frame
+Continue the same track and walking rhythm. Complete the remaining materials,
+then let warm neon and window light activate progressively against cool dusk.
+Translucent pedestrian silhouettes appear already mid-stride and become solid;
+one cyclist crosses behind @Hero from left to right; steam begins at one street
+vent. Color and city ambience spread as a single wave centered on the walker's
+path. Do not instantly replace the entire frame with a finished city.
+
+SHOT 4 — ARRIVAL | 10s | start from Shot 3's actual final frame
+The city is now complete. @Hero slows naturally and stops at frame center while
+pedestrians keep flowing on both sides. He raises his head and looks around.
+Only now change the camera path: crane upward and backward from medium framing
+to a high wide reveal of the full living street. Hold the last composition with
+@Hero as the still point inside the moving crowd.
+
+CHAIN ACCEPTANCE
+Generate in order and select a take before starting the next shot. The first
+frame of every continuation must match its supplied start frame; reject any take
+that redesigns it. Reject scale collapse, identity drift, pace change, premature
+texture or pedestrians, backward state regression, camera-direction reversal,
+instant whole-frame transformation, duplicate person, readable text, logo, or
+watermark.
+```
+
+**Technique:** the identity element controls the person while each selected
+final frame controls the next scene state. Explicit architectural ratios prevent
+the untextured void from being interpreted as a miniature, and the one-way
+wireframe → mass → material → light → population ledger stops the model from
+jumping straight to the finished city.
+
+Adapted from Vova Lukashov's [complete Seedance 2.0 production record and four
+shot prompts](https://github.com/vovalukashov/render-seedance-prompts/blob/872ea65e64732a2316a60113294098dbc85c3179/README.md),
+published August 9, 2026. The repository records four 10–12 second source
+generations and a 28-second assembled result.
+
+### 195. Event-coupled bedroom slice-of-life
+
+**Verified model:** Seedance 2.5 — the creator explicitly identifies the model in
+the original post and publishes the complete prompt beside its media preview
+
+**Use case:** candid domestic narrative, multi-shot phone dialogue, pet interaction,
+motivated handheld imperfection  
+**Mode:** single-character reference-to-video  
+**Suggested settings:** 15s, 16:9, native audio
+
+```text
+Create a 15-second, seven-shot candid bedroom sequence with one adult woman from
+@Image1, one black smartphone, one house cat, one lived-in bed and one bedroom.
+Preserve her identity, cotton pajama set, bare feet, phone ownership, cat
+appearance, bed geometry and door direction across every cut. The result should
+feel accidentally observed, not staged for an advertisement.
+
+CAPTURE CONTRACT
+Handheld documentary camera, soft window light, realistic skin and bedding,
+slight grain, shallow depth of field and restrained performance. Imperfections
+must follow events: the cat's landing causes one small impact jolt; the ringtone
+causes a late reframe toward the phone; the doorbell makes the operator turn
+toward the door a fraction too late, then recover to her rising movement. Allow
+gentle exposure breathing and one brief autofocus settle, but no random shake.
+
+[0–2s | mattress-edge glide] She is already scrolling a shopping page while her
+feet sway behind her. She quietly wonders in Korean what she meant to buy.
+Keep the phone, both hands and her thinking expression readable.
+
+[2–4s | impact reaction] The cat jumps onto the mattress, visibly compressing
+the blanket and meowing once. The camera jolts from the contact, then reframes
+over her shoulder to include her face, phone, hand and cat.
+
+[4–6s | tactile close-up] She turns to the cat, strokes once from forehead to
+shoulders and greets it affectionately in Korean. Push through the cat's softly
+blurred foreground; synchronize lips, hand contact and purring.
+
+[6–8s | call pickup] One short ringtone. She checks the caller, swipes once and
+lifts the same phone to her ear. A loose semicircle follows the whole action
+without hiding the handoff behind a cut.
+
+[8–11s | listening reaction] Hold her profile and phone in one focal plane. Her
+expression progresses from confusion to disbelief, then one brief natural
+laugh while the cat kneads the blanket. A faint authorized friend voice remains
+inside the phone speaker; do not create another visible person.
+
+[11–13s | interruption] One doorbell stops the laugh. Woman and cat turn toward
+the same door. She plants one hand on the mattress; the camera reacts late
+toward the door, then corrects back to her as she begins to stand.
+
+[13–15s | exit state] Still on the call, she says in Korean that her food has
+arrived, ends the call with her thumb, steps off the bed and moves toward the
+door while the cat follows across the blanket. Finish on the continuous upward
+tilt of her standing motion; do not reset the phone, cat or bedding.
+
+SOUND LEDGER
+No music. Use only bedding rustle, breathing, phone taps, mattress impact, one
+meow, faint purring, one ringtone, call-connect tone, filtered friend voice,
+four short Korean lines with accurate lip sync, one laugh, one doorbell,
+call-end tap and cat footsteps. No subtitle, translated text, logo or watermark.
+
+FAILURE CONTROL
+No reference sheet, duplicate woman or cat, wardrobe drift, phone swap, extra
+caller, floating animal, uncompressed mattress, repeated sound cue, perfect
+gimbal motion, arbitrary focus pumping, beauty-filter skin, commercial gloss or
+cut that breaks the cause-to-camera reaction.
+```
+
+**Technique:** Bind every low-fi camera defect to a visible or audible cause.
+The operator becomes a delayed participant in the scene: impact, ringtone and
+doorbell each produce one specific jolt or reframe. That causal ledger creates
+documentary realism without using uncontrolled “handheld” noise.
+
+Adapted from
+[FarReputationAI's original Seedance 2.5 bedroom slice-of-life post](https://www.reddit.com/r/seedance2pro/comments/1vj5vd8/how_to_create_a_candid_bedroom_sliceoflife_videos/),
+published August 9, 2026; the original page contains the complete seven-shot
+prompt and its media preview.
+
+### 196. Causal-state mechanical-temple one-take
+
+**Verified model:** Seedance 2.5 — the versioned gallery record labels the
+creator-mapped generation as Seedance 2.5 and preserves its complete prompt and
+playable result
+
+**Use case:** continuous adventure, reference-role separation, obstacle causality,
+persistent costume damage and unique-prop transfer  
+**Mode:** multi-reference image-to-video continuation  
+**Suggested settings:** 30s, 16:9, one uninterrupted real-time shot, native audio
+
+```text
+Create a 30-second photorealistic one-take adventure using three independent
+references: @Character locks the same adult explorer's identity; @Wardrobe locks
+her white ceremonial outfit, lavender heels and jewelry; @Environment supplies
+only the bamboo, shallow pools, mossy timber temple, yellow industrial machinery,
+satellite dish, cables and morning mist. Do not borrow a person, text or fixed
+composition from @Environment. Fuse all three references into one physical space.
+
+CONTINUOUS-SHOT CONTRACT
+One real-time stabilized walking shot with no edit, occlusion cut, montage, time
+jump or teleport. The explorer always advances screen-left to screen-right while
+the camera changes position through visible travel: rear three-quarter → waterline
+side-track → corridor profile → low pursuit → final front three-quarter. Keep one
+worn brown cross-body bag, one cat-sized white-ceramic mechanical fox and one
+golden seed. Cloth, hair, bag and earrings obey inertia.
+
+ONE-WAY STATE LEDGER
+- outfit: clean → wet hem after the water → dusty after the folding bridge;
+  neither mark may vanish
+- seed: inside the fox's chest through 24s → transferred once to her left palm;
+  never duplicate or appear early
+- route: open behind her → stepping discs sink → cable corridor remains active →
+  bridge folds away → round door seals; no obstacle resets
+
+[0–5s | pressure-plate wake]
+Track behind her along wet stones. Her second heel depresses one brass pressure
+plate with a readable click. Nearby guardian statues tremble; exactly one ceramic
+fox wakes, jumps down and runs right, then pauses on the steps to invite pursuit.
+
+[5–11s | disappearing stepping discs]
+Arc continuously down to water level. Six mossy mechanical discs rise in sequence.
+The fox stays one disc ahead; each disc sinks only after it leaves. She watches the
+next landing, makes low forefoot jumps, bends her knees on impact and pushes real
+ripples outward. Her gauze hem becomes wet and remains wet.
+
+[11–17s | timed cable corridor]
+Slide past a yellow support into profile. Three heavy cable loops sweep on fixed
+cycles. She observes once, then uses stop–dash–stop timing: duck under the first,
+press against the support for the second, lean back under the third. Air pressure
+moves hair and cloth; no cable passes through her body.
+
+[17–24s | folding-bridge pursuit]
+Travel visibly to a low rear three-quarter angle. The fox triggers a seal and the
+bridge folds from the rear toward them. She sprints with short forefoot steps,
+slips once, recovers by pulling on the rail, then jumps through the narrowing round
+door and shoulder-rolls. The door closes behind her; add dust to the already-wet
+hem and keep both marks.
+
+[24–30s | voluntary handoff]
+Rise with her into the core courtyard. The fox opens its ceramic chest around
+visible brass gears and exposes the only golden seed. She relaxes, unclips the bag
+and extends her gloved left palm without grabbing. The fox deliberately pushes the
+seed into it. On contact, one soft mechanical heartbeat starts a causal wake-up
+wave: dish turns, amber machinery lights in order, vines stir, then distant gears
+answer. End with the seed only in her palm and the fox seated behind it.
+
+AUDIO AND FAILURE CONTROL
+Diegetic bamboo, water, birds, footfalls, wet cloth, brass paws, gears, motor hum,
+cable wind, folding timber, breath and one mechanical heartbeat; no score, speech
+or narration. No hidden transition, center drift, face or wardrobe change, bag-side
+swap, magically cleaned fabric, weightless jump, cable/body intersection, real or
+cartoon fox, duplicate seed, premature environment activation, extra person, text,
+logo, UI or watermark.
+```
+
+**Technique:** Assign every obstacle a predecessor, a terminal state and a visible
+carry-over. The pressure plate → fox → discs → cables → bridge → seed chain prevents
+a long prompt from becoming disconnected spectacle, while the wet/dust ledger makes
+time accumulate inside a supposedly continuous shot.
+
+Adapted from [John's original mechanical-temple one-take](https://x.com/john87445528/status/2086552293848301810),
+published August 10, 2026. The complete prompt, Seedance 2.5 mapping and generated
+[WebM result](https://media.beatapi.io/prompt-gallery/seedance-2-5/video-prompt-case-301810/video-6ec8310326831d3e.webm)
+are preserved in the [source-backed gallery record](https://github.com/BeatAPI/awesome-seedance-2-5-prompts/blob/62a82dea8e3ad3195f58636789e092a57ed69478/prompts/use-cases/stories-films.md).
+
+### 197. Single-prop autonomous-sword extraction
+
+**Verified model:** Seedance 2.5 — the creator's complete prompt explicitly declares
+Seedance 2.5, and the source-backed gallery preserves the mapped playable result
+
+**Use case:** supernatural prop physics, continuation, two-character restraint,
+irreversible object state and native dialogue  
+**Mode:** reference-to-video continuation  
+**Suggested settings:** 10s, 16:9, three clean shots, native Mandarin audio
+
+```text
+Continue directly from the supplied prior clip. Preserve the same two adult women,
+their white and sage hanfu, the open meadow, forest slope, vertical cliff, distant
+cliff temple, moss, valley mist, right-side light, weather, scale and travel
+direction. Exactly one silver sword begins fully inside its one waist scabbard.
+
+PHYSICAL-PROP CONTRACT
+The sword is the only anomaly. At frame one, blade, guard and hilt belong to one
+sheathed object. The senior woman's two hands stay visible and far from the hilt.
+The scabbard remains attached and stationary during extraction. The blade can leave
+only by continuous travel through the scabbard mouth: hilt moves outward → blade
+gradually appears → whole blade clears → same sword hovers. No teleport, duplicate,
+glow, magic particles, energy trail or second blade.
+
+[0–3s | wide]
+Immediately after the senior woman says, “Something is wrong,” the meadow sound
+falls quiet. The complete sheathed assembly vibrates with a low metal resonance;
+the blade remains entirely hidden. Both women stay alert but restrained.
+
+[3–7s | medium]
+She looks down without touching the sword. Increase the vibration, stop it sharply
+and hold one silent beat. Keep the scabbard fixed while the hilt begins its own
+visible outward displacement. Show the entire uninterrupted extraction. The same
+sword settles horizontally half a metre in front of her, solid and inertial. The
+junior woman quietly asks in Mandarin, “Senior sister, did it sense it too?”
+
+[7–10s | close]
+The hovering sword slowly turns its point toward the distant mountain mist, gives
+one contained metal chime, flies forward several metres and stops as if sensing the
+path. The senior woman watches rather than commands it and says, “Let it scout
+ahead.” Rack focus once from the stationary blade to her eyes, then cut immediately.
+
+ORDER AND FAILURE CONTROL
+Silence → whole sheathed object vibrates → full stop → one-beat pause → fixed
+scabbard → continuous extraction → hover → point turns → forward flight → stop →
+final line → focus transfer. Preserve exactly two people, one sword and one matching
+scabbard. No hand on hilt, early blade exposure, sword appearing beside the sheath,
+scabbard flying away, second weapon, casting gesture, panic, extra character, spirit
+animal, modern object, subtitle, logo or watermark. Audio is localized wind, valley
+space, low sheath resonance, real metal friction, restrained hover tone and chime.
+```
+
+**Technique:** Treat the supernatural beat as a conservative physics problem:
+one object, one allowed exit path and an irreversible state change. Showing both
+empty hands and fixing the scabbard removes the two easiest shortcuts—an invisible
+pull and a newly generated duplicate.
+
+Adapted from [Soranlan's original autonomous-sword continuation](https://x.com/Soranlan/status/2086591561874235705),
+published August 10, 2026. The original prompt explicitly declares Seedance 2.5;
+its complete record and generated
+[WebM result](https://media.beatapi.io/prompt-gallery/seedance-2-5/creative-video-235705-235705/video-cf71e162629508f0.webm)
+are preserved in the [source-backed gallery entry](https://github.com/BeatAPI/awesome-seedance-2-5-prompts/blob/62a82dea8e3ad3195f58636789e092a57ed69478/prompts/use-cases/action-fantasy.md).
+
+### 198. Fireline granary raid aerial reveal
+
+**Verified model:** Seedance 2.0 Mini (`doubao-seedance-2-0-mini-260615`) —
+generated by the original creator with `generate_audio=true`; the committed
+master was verified to contain an audio track
+
+**Use case:** historical animation, cavalry raids, fire-driven scale reveals  
+**Mode:** text-to-video  
+**Settings:** 5 seconds, 16:9, 720p, native audio
+
+```text
+Five-second child-friendly hand-drawn historical animation with warm gold,
+charcoal-black and controlled fire-orange tones. Deep night at a fortified
+granary camp. Keep one readable front group of mounted raiders and a larger
+formation behind them; preserve horse anatomy, rider scale, torch count, travel
+direction and camp geography. No blood or horror.
+
+0–1.5 s: Begin low behind three horse-and-rider silhouettes entering frame left
+at a gallop. Their raised torches trail sparks backward with the same wind.
+The camera tracks parallel at saddle height; dark grain stacks and fixed camp
+banners establish the target ahead.
+
+1.5–3 s: The lead torch reaches one dry rope line. Contact creates one small
+ignition point; only then does flame travel along the rope and light the first
+stack. Nearby horses react with one brief head movement but keep formation.
+
+3–5 s: Crane upward and pull back in one continuous move as fire propagates
+from stack to stack. Reveal the whole granary compound, rider formation and
+banners against the growing firelight. End on a stable wide view with the
+original lead group still identifiable.
+
+Native audio follows the same causal order: approaching hooves, torch hiss,
+one ignition whoosh, expanding fire roar, horse calls, then one distant horn.
+No instant full-camp explosion, random fire before contact, duplicated riders,
+floating sparks, melting architecture, unreadable action, modern object,
+subtitle, watermark, graphic injury or triumphant music.
+```
+
+**Why it works:** a single visible ignition point makes the expanding fire
+legible, while the continuous crane converts a small cavalry action into a
+camp-scale payoff. The audio grows in the same order as the image instead of
+starting at maximum intensity.
+
+**Source:** Alex Wang's August 10, 2026
+[Seedance 2.0 Mini regeneration record](https://github.com/lmq3030/wolong-academy/commit/11cb7531f20b825d519308fe6b8d342e65cf6744)
+and committed [generated master](https://github.com/lmq3030/wolong-academy/blob/11cb7531f20b825d519308fe6b8d342e65cf6744/public/assets/videos/chapter-05z.mp4).
+The complete API prompt and exact model ID remain in the
+[versioned generation script](https://github.com/lmq3030/wolong-academy/blob/11cb7531f20b825d519308fe6b8d342e65cf6744/scripts/generate-videos.py).
+
+---
+
+### 199. Snow-gate courtesy-to-warm-window push
+
+**Verified model:** Seedance 2.0 Mini (`doubao-seedance-2-0-mini-260615`) —
+generated by the original creator with `generate_audio=true`; the committed
+master was verified to contain an audio track
+
+**Use case:** historical storytelling, quiet character ritual, exterior-to-interior reveals  
+**Mode:** text-to-video  
+**Settings:** 5 seconds, 16:9, 720p, native audio
+
+```text
+Five-second child-friendly hand-drawn historical animation in a snowy mountain
+valley. Cool blue-grey snow and bamboo surround one thatched cottage whose
+window holds the only warm amber light. Exactly three adult travellers arrive
+on three horses: the modestly dressed leader in front and two distinct
+companions behind. Preserve their order, clothing colours, horses, cottage,
+gate and snowfall direction.
+
+0–1.5 s: Medium-wide lateral view. The three horses slow naturally at a bamboo
+fence and wooden gate; hooves compress fresh snow and breath fog drifts
+downwind. Camera glides with them, then stops as the lead horse stops.
+
+1.5–3 s: The leader dismounts on the cottage side, settles both feet, straightens
+his robe once and knocks three measured times. The two companions remain by
+their horses behind him. Do not crowd all three adults against the door.
+
+3–5 s: On the third knock, continue one smooth forward camera move over the
+snowy courtyard and between bamboo stems toward the warm cottage window.
+A thin cooking-smoke plume rises from the roof and bends with the same wind.
+End outside the glass with the amber interior suggested but not inventing a
+new person.
+
+Native audio: restrained wind and snowfall hush, slowing hooves, cloth movement,
+three wooden knocks and a distant solo zither heard only as the camera nears
+the window. No dialogue, music bed, instant dismount, sliding feet, rider swap,
+extra traveller, changing cottage, impossible wall pass, tropical foliage,
+subtitle, watermark, blood or frightening imagery.
+```
+
+**Why it works:** arrival, etiquette and invitation are conveyed through three
+physical sounds and one continuous camera path. Holding the companions back
+protects staging clarity, while the cool-to-warm movement supplies an emotional
+transition without requiring dialogue.
+
+**Source:** Alex Wang's August 10, 2026
+[Seedance 2.0 Mini regeneration record](https://github.com/lmq3030/wolong-academy/commit/11cb7531f20b825d519308fe6b8d342e65cf6744)
+and committed [generated master](https://github.com/lmq3030/wolong-academy/blob/11cb7531f20b825d519308fe6b8d342e65cf6744/public/assets/videos/chapter-06.mp4).
+The complete API prompt and exact model ID remain in the
+[versioned generation script](https://github.com/lmq3030/wolong-academy/blob/11cb7531f20b825d519308fe6b8d342e65cf6744/scripts/generate-videos.py).
+
+---
+
+### 200. White-horse rescue pursuit with infant-audio contrast
+
+**Verified model:** Seedance 2.0 Mini (`doubao-seedance-2-0-mini-260615`) —
+generated by the original creator with `generate_audio=true`; the committed
+master was verified to contain an audio track
+
+**Use case:** historical action, mounted rescue, protective character choreography  
+**Mode:** text-to-video  
+**Settings:** 5 seconds, 16:9, 720p, native audio
+
+```text
+Five-second child-friendly hand-drawn historical action film. One adult rescuer
+in a white robe and silver armour rides one white horse through a battlefield
+corridor, holding one securely swaddled infant against his torso with the left
+arm and one long spear in the right hand. Pursuers and dark banners remain
+behind him. Lock the infant bundle, grip, horse colour, armour, spear, travel
+direction and distant bridge. No blood, injury or horror.
+
+0–2 s: Fast side-tracking medium-wide shot at horse speed. The white horse
+gallops from left to right through dust while the rider keeps the infant stable
+against his chest. Dark pursuit banners move in parallax behind; no enemy
+crosses in front of the infant.
+
+2–3.5 s: One pursuer closes from the rear-right. Without turning the horse, the
+rescuer rotates only the upper body and uses one controlled outward spear sweep
+to deflect the pursuer's weapon. Show approach, clean contact, separation and
+recovery; neither weapon passes near the infant.
+
+3.5–5 s: The rider faces forward, restores the spear beside the horse and
+accelerates toward the same distant bridge. Camera drops slightly behind the
+white horse, then holds the rider centered as the pursuit recedes.
+
+Native audio: rapid hoofbeats, leather and armour movement, rushing air, one
+sharp spear contact, then quieter pursuit under a soft infant hum. No loud cry.
+No dropped or duplicated infant, changing carrying arm, free-floating spear,
+horse-leg fusion, rider teleport, enemy collision with the child, bridge jump,
+camera cut, gore, subtitle, watermark or heroic song.
+```
+
+**Why it works:** the prompt treats protecting the infant as the action's
+highest-priority constraint. A single rear deflection keeps the rescue readable,
+and the quiet infant hum against hoof and weapon sounds adds emotional contrast
+without inventing dialogue.
+
+**Source:** Alex Wang's August 10, 2026
+[Seedance 2.0 Mini regeneration record](https://github.com/lmq3030/wolong-academy/commit/11cb7531f20b825d519308fe6b8d342e65cf6744)
+and committed [generated master](https://github.com/lmq3030/wolong-academy/blob/11cb7531f20b825d519308fe6b8d342e65cf6744/public/assets/videos/chapter-06b.mp4).
+The complete API prompt and exact model ID remain in the
+[versioned generation script](https://github.com/lmq3030/wolong-academy/blob/11cb7531f20b825d519308fe6b8d342e65cf6744/scripts/generate-videos.py).
+
+---
+
+
+### 201. Mechanical-beast debug, repair and retest
+
+**Verified model:** Seedance 2.0 Mini (`doubao-seedance-2-0-mini-260615`) —
+the original creator generated the committed master with this single exact
+model endpoint
+
+**Use case:** educational animation, mechanical causality, failure diagnosis,
+repair verification  
+**Mode:** text-to-video  
+**Settings:** 10 seconds, 16:9, 720p, silent delivery
+
+```text
+Ten-second child-friendly hand-drawn animation in a warm-gold Three Kingdoms
+workshop. Preserve one wooden clockwork beast, one adult healer-engineer, the
+same workbench, one articulated foreleg and one tiny dark defect. Keep the
+illustrated linework, flat painted shading and object proportions stable.
+
+[0–2s | visible failure]
+The clockwork beast walks two steps, its front leg catches, and the entire
+mechanism stops. Hold long enough to show that the jam belongs to that one leg;
+gears elsewhere settle instead of continuing to spin.
+
+[2–5s | isolate the cause]
+At lamplight, the healer opens only the stuck foreleg panel and examines each
+joint in order. Use a controlled push-in to reveal one dark corroded spot deep
+inside the hinge. Do not introduce several possible faults.
+
+[5–7s | one repair]
+She removes the spot with a small silver tool, wipes the hinge clean and closes
+the same panel. Show contact, removal and closure as separate readable actions.
+
+[7–10s | verification]
+Return to the original side view. The beast restarts, repeats the previously
+failed step cleanly and walks with an even rhythm. The healer relaxes only after
+the successful retest.
+
+FAILURE CONTROL
+Failure → inspection → single root cause → repair → repeat test → recovery.
+No instant self-healing, hidden repair behind a cut, changing machine design,
+extra defect, human transformation, live-action or glossy 3D materials,
+unrequested text, logo or watermark. Deliver without audio.
+```
+
+**Technique:** preserve the failing action and replay it after repair. Matching
+the before-and-after test turns “debugging” into a visible causal story rather
+than a generic workshop montage.
+
+**Source:** Alex Wang's August 10, 2026
+[batch-generation commit](https://github.com/lmq3030/wolong-academy/commit/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9),
+the committed [generated master](https://github.com/lmq3030/wolong-academy/blob/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9/public/assets/videos/concepts/concept-debug.mp4),
+and the [complete prompt plus exact endpoint](https://github.com/lmq3030/wolong-academy/blob/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9/scripts/generate-item-videos.py).
+
+---
+
+### 202. Nested-hearth recursion and returning light
+
+**Verified model:** Seedance 2.0 Mini (`doubao-seedance-2-0-mini-260615`) —
+the original creator generated the committed master with this single exact
+model endpoint
+
+**Use case:** recursive visual metaphor, nested-scale animation, reversible
+cause propagation  
+**Mode:** text-to-video  
+**Settings:** 10 seconds, 16:9, 720p, silent delivery
+
+```text
+Ten-second child-friendly hand-drawn animation in a warm-gold military camp.
+Build one earthen cooking hearth containing a smaller concentric hearth, which
+contains another, continuing down to one bowl-sized innermost chamber. Lock the
+camp layout, ring count, clay texture, illustrated linework and top-down axis.
+
+[0–5s | descend through levels]
+Begin above the largest unlit hearth. The camera pushes down its center as the
+outer floor opens to reveal a smaller complete hearth below. Repeat the same
+single operation level by level: open one ring, descend to the next smaller
+ring, keep all previous rings dark and spatially nested. Reach the smallest
+chamber only once.
+
+[5–6s | base case]
+At the innermost bowl-sized hearth, one spark lands and becomes one steady flame.
+Pause briefly so this terminal event is unmistakable.
+
+[6–10s | return through levels]
+Reverse the camera path without a cut. Light travels outward from the smallest
+ring to its parent, then to the next parent, illuminating exactly one level at a
+time until the original outer hearth glows. Previously lit inner rings stay lit.
+
+STATE LEDGER
+large dark → descend inward → smallest spark → outward light return → all rings
+lit. No skipped level, duplicated spark, simultaneous ignition, endless tunnel,
+ring-count change, camera teleport, live-action texture, glossy 3D render,
+person, caption, logo or watermark. Deliver without audio.
+```
+
+**Technique:** assign opposite visual directions to recursion and return:
+camera motion goes inward while the result propagates outward. The base-case
+pause prevents a nested-scale prompt from becoming an arbitrary zoom tunnel.
+
+**Source:** Alex Wang's August 10, 2026
+[batch-generation commit](https://github.com/lmq3030/wolong-academy/commit/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9),
+the committed [generated master](https://github.com/lmq3030/wolong-academy/blob/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9/public/assets/videos/concepts/concept-recursion.mp4),
+and the [complete prompt plus exact endpoint](https://github.com/lmq3030/wolong-academy/blob/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9/scripts/generate-item-videos.py).
+
+---
+
+### 203. Halving search with persistent discarded space
+
+**Verified model:** Seedance 2.0 Mini (`doubao-seedance-2-0-mini-260615`) —
+the original creator generated the committed master with this single exact
+model endpoint
+
+**Use case:** binary-search visualization, ordered elimination, tabletop
+continuity  
+**Mode:** text-to-video  
+**Settings:** 10 seconds, 16:9, 720p, silent delivery
+
+```text
+Ten-second child-friendly hand-drawn strategy-room animation. Across one long
+wooden table, arrange an ordered row of bamboo tokens from smallest at screen
+left to largest at screen right. One strategist may point, but never reorder the
+tokens. A hidden tiger tally behind a folding screen is the single target.
+
+[0–3s | first midpoint]
+Start in a high three-quarter view where the entire ordered row is readable.
+The strategist taps the exact middle token. An assistant signals that the answer
+is larger; the complete left half slides into a dim inactive zone and stays
+there.
+
+[3–6s | second midpoint]
+Reframe only enough to keep the surviving right interval centered. Tap its
+middle token. The assistant now signals that the answer is smaller; the complete
+right half of this surviving interval moves into a second inactive zone. All
+previously discarded tokens remain visible but dim.
+
+[6–10s | terminal check]
+Only two or three active tokens remain. Tap their midpoint once. A thin golden
+line connects that token to the hidden tiger tally; the folding screen opens and
+reveals the tally without moving any discarded token.
+
+ORDER LOCK
+ordered row → midpoint → discard one contiguous half → new midpoint → discard
+one contiguous half → final check → reveal. No random token removal, restored
+half, token duplication, reshuffle, linear one-by-one search, instant answer,
+changing table, live-action or glossy 3D style, readable modern text, logo or
+watermark. Deliver without audio.
+```
+
+**Technique:** keep rejected regions on screen as dim spatial history. That
+makes every halving operation auditable and prevents the model from silently
+reshuffling the search space between beats.
+
+**Source:** Alex Wang's August 10, 2026
+[batch-generation commit](https://github.com/lmq3030/wolong-academy/commit/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9),
+the committed [generated master](https://github.com/lmq3030/wolong-academy/blob/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9/public/assets/videos/concepts/concept-binary-search.mp4),
+and the [complete prompt plus exact endpoint](https://github.com/lmq3030/wolong-academy/blob/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9/scripts/generate-item-videos.py).
+
+---
+
+### 204. Breadth-first stone-maze light wave
+
+**Verified model:** Seedance 2.0 Mini (`doubao-seedance-2-0-mini-260615`) —
+the original creator generated the committed master with this single exact
+model endpoint
+
+**Use case:** breadth-first search visualization, wavefront choreography,
+shortest-path reveal  
+**Mode:** text-to-video  
+**Settings:** 10 seconds, 16:9, 720p, silent delivery
+
+```text
+Ten-second child-friendly hand-drawn animation of a courtyard stone maze viewed
+from a stable high angle. Lock one entrance at lower center, one exit at upper
+right, all walls, junctions and lantern positions. Every reachable junction has
+one unlit lantern; no wall or route may change.
+
+[0–2s | origin]
+The entrance lantern lights once in warm gold. Hold the complete maze in frame
+so its scale and the exit position are established before expansion begins.
+
+[2–7s | level-order wave]
+All lanterns one edge away light together as the first ring. After that ring is
+complete, all still-unlit lanterns one additional edge away light together as
+the second ring. Continue outward in discrete concentric graph levels: finish
+one level before starting the next, branch simultaneously within a level and
+never jump across a wall.
+
+[7–10s | first exit and trace-back]
+The first wave that reaches the exit stops further expansion. From that exit,
+one narrow luminous route traces backward through already lit parent junctions
+to the entrance. Keep non-path lanterns softly lit while the shortest route
+becomes brighter.
+
+WAVEFRONT LOCK
+origin → complete level 1 → complete level 2 → later levels → first exit contact
+→ backward route trace. No depth-first wandering beam, skipped level, moving
+wall, second exit, several final routes, extinguished visited node, camera cut,
+live-action or glossy 3D treatment, modern text, logo or watermark. Deliver
+without audio.
+```
+
+**Technique:** separate discovery from explanation: a synchronized level wave
+finds the exit, then a narrower backward trace identifies the route. Locking the
+maze and retaining visited lights makes the algorithm's history visible.
+
+**Source:** Alex Wang's August 10, 2026
+[batch-generation commit](https://github.com/lmq3030/wolong-academy/commit/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9),
+the committed [generated master](https://github.com/lmq3030/wolong-academy/blob/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9/public/assets/videos/concepts/concept-bfs.mp4),
+and the [complete prompt plus exact endpoint](https://github.com/lmq3030/wolong-academy/blob/3b6b1c78556b7e72b3115adc0dfa78e01ec259c9/scripts/generate-item-videos.py).
+
+---
+
+### 205. Llama-sheriff surrender beat
+
+**Verified model:** Seedance 2.5 — the ComfyUI partner-node workflow selects
+`Seedance 2.5`, preserves the full prompt and parameters, and ships a generated
+MP4 result
+
+**Use case:** live-action comedy, compact narrative reversal, character timing,
+native music  
+**Mode:** text-to-video  
+**Settings:** 5 seconds, 16:9, 720p, audio enabled
+
+```text
+Five-second live-action spaghetti-western comedy at golden hour in a dusty
+desert town. Preserve one readable geography: bank doors in the background,
+open street in the middle and a single llama sheriff blocking the foreground.
+Warm faded film color, long shadows and dry wind.
+
+[0–1.4s | confident escape]
+Two bank robbers burst through the doors carrying one cash sack each and hurry
+toward camera. Keep both sacks and both robbers distinct; do not introduce a
+crowd or getaway vehicle.
+
+[1.4–3.0s | absurd obstacle]
+Reveal the llama sheriff already planted in their path, wearing one cowboy hat
+and one sheriff star. The llama calmly tips its hat once. Hold a clean reaction
+beat as both robbers stop.
+
+[3.0–5.0s | surrender]
+In one causal action, the robbers drop the two sacks, then raise both hands.
+Finish on the composed standoff rather than cutting away.
+
+TIMING LOCK
+escape → sheriff blocks → one hat tip → robbers stop → sacks drop → hands rise.
+No weapon firing, chase, duplicated character, extra llama, changing costume,
+black frame, title or text overlay. Audio: sparse Morricone-inspired guitar,
+boots on dust, two sack impacts and a short desert-wind tail.
+```
+
+**Technique:** place the comic reveal in a fixed three-depth composition, then
+reserve a visible pause between the sheriff's tiny gesture and the robbers'
+larger response. The contrast makes the reversal legible within five seconds.
+
+**Source:** ComfyUI's August 10, 2026
+[Seedance 2.5 partner-node tutorial commit](https://github.com/Comfy-Org/docs/commit/047b9eeff2f8190348cd6fbe606d7069cddadafb),
+the [complete exact-model workflow](https://github.com/Comfy-Org/workflow_templates/blob/f1604424815ffde8fed20543ac38bf245807fbca/templates/api_seedance2_5_t2v.json),
+and its [generated MP4](https://github.com/Comfy-Org/workflow_templates/blob/f1604424815ffde8fed20543ac38bf245807fbca/output/api_seedance2_5_t2v.mp4).
+
+---
+
+### 206. Simultaneous Medusa-poster subject and typography activation
+
+**Verified model:** Seedance 2.5 — the ComfyUI partner-node reference workflow
+selects `Seedance 2.5`, binds the supplied poster image, retains the complete
+prompt and ships a generated MP4 result
+
+**Use case:** poster animation, image-to-video, subject/background concurrency,
+layout preservation  
+**Mode:** reference-to-video from one image  
+**Settings:** 5 seconds, 720p, adaptive aspect ratio, audio enabled
+
+```text
+Use @image1 as the immutable poster layout. It contains a crimson marble Medusa
+statue in front of red typography. Preserve the crop, statue material, face,
+letter positions, palette and negative space throughout; animate the existing
+poster rather than redesigning it.
+
+[0–1.3s | restrained awakening]
+Begin on an exact visual match to @image1. A faint stone resonance starts. The
+statue's eyelids open slowly while the head and shoulders remain almost still.
+
+[1.3–3.8s | two synchronized layers]
+The Medusa looks directly toward camera as the snakes already present in her
+hair rise and sway with different small delays. At the same time—not in a later
+shot—the existing red background letters dissolve one by one into fine drifting
+red particles. Keep every non-dissolving poster element locked.
+
+[3.8–5.0s | resolved living poster]
+Let the last particles pass behind the statue while her gaze holds. End with the
+same composition and crimson-marble identity, now alive.
+
+PRESERVATION LOCK
+one statue, original snakes only, original camera and poster crop, subject
+motion plus typography dissolution occurring concurrently. No camera cut,
+replacement face, added limbs, new words, reflowed type, full-background
+collapse, black frame or unrelated content. Audio: low stone hum, fine granular
+particle hiss and subtle snake movement; no dialogue.
+```
+
+**Technique:** assign motion to two named visual layers and explicitly overlap
+their time windows. A separate preservation ledger for crop, material, face and
+unaffected graphics prevents “animate the poster” from becoming a wholesale
+poster redesign.
+
+**Source:** ComfyUI's August 10, 2026
+[Seedance 2.5 partner-node tutorial commit](https://github.com/Comfy-Org/docs/commit/047b9eeff2f8190348cd6fbe606d7069cddadafb),
+the [complete reference workflow and prompt](https://github.com/Comfy-Org/workflow_templates/blob/f1604424815ffde8fed20543ac38bf245807fbca/templates/api_seedance2_5_r2v.json),
+the [reference poster](https://github.com/Comfy-Org/workflow_templates/blob/f1604424815ffde8fed20543ac38bf245807fbca/input/medusa_poster.png),
+and its [generated MP4](https://github.com/Comfy-Org/workflow_templates/blob/f1604424815ffde8fed20543ac38bf245807fbca/output/api_seedance2_5_r2v.mp4).
+
+---
+
+### 207. Recording-booth scale reveal
+
+**Verified model:** Seedance 2.5 — the creator's runner calls
+`bytedance/seedance-2.5/text-to-video`; the batch ledger marks this complete
+prompt's generated, upscaled and captioned result defect-free after frame and
+transcript review
+
+**Use case:** dialogue-led product ad, fly-on-the-wall documentary, scale reveal,
+native audio  
+**Mode:** text-to-video  
+**Settings:** 30 seconds, 9:16, 480p Seedance master, 1080p upscale, native audio
+
+```text
+Deadpan fly-on-the-wall documentary inside a cheap converted-office recording
+booth. It must feel observed, not advertised. Handheld camera stays slightly too
+close and sometimes peers through smudged booth glass. Use only a desk lamp and
+mixing-console glow; retain shadow grain, imperfect focus and ordinary surfaces.
+
+A self-conscious middle-aged speaker wears one headphone and reads from a phone.
+A bored engineer remains outside at a cluttered desk and uses the talkback.
+
+[0–5s] The speaker leans too close to the microphone, clears his throat and
+records one stiff callback message.
+[5–10s] After an awkward silence, the engineer says the take is usable.
+[10–15s] Relieved, the speaker removes the headphones and asks how many people
+will receive it.
+[15–20s] Without looking up, the engineer answers: about forty thousand.
+[20–25s] Hold on the speaker freezing halfway out of the chair, then sitting
+down again.
+[25–30s] He quietly asks whether to record another take. The engineer replies
+that the point is for the message to sound like him, then gives one short brand
+line about a single voice reaching many inboxes.
+
+SPEECH ALLOWLIST
+Only the callback sentence, the engineer's approval, the audience-size exchange,
+the retake question and the final reply may be spoken. No narration, counting,
+muttered action labels or improvised sales copy.
+
+AUDIO
+Dead booth acoustics, faint headphone spill, chair creak and talkback clicks.
+Flat everyday voices; no music.
+
+CONTROL
+One booth, one speaker, one engineer, continuous session geography. No glossy
+commercial lighting, heroic framing, crowd, text overlay, captions, logo,
+unmotivated cutaway or added prop.
+```
+
+**Technique:** build the sales claim as a delayed conversational reveal rather
+than voice-over. The long physical freeze gives the number consequence, while
+the speech allowlist applies the creator's tested fix for improvised narration
+and spoken stage directions.
+
+**Source:** GroupX's August 10, 2026
+[Seedance 2.5 batch commit](https://github.com/GroupX-ai/ad-creative/commit/856ba1b7593730534c4b74827a06005d03628022),
+[complete source prompt](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/seedance-prompts-b2.mjs),
+[exact-model runner](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/seedance-generate.mjs),
+[frame-and-transcript QA ledger](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/BATCH-2026-08-09-b2.md),
+and [committed generated deliverable](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/voicedrop/2026-08-09-seedance-video-b2/voicedrop-c41-recording-booth-1080p-captioned.mp4).
+
+---
+
+### 208. Locked-off callback avalanche
+
+**Verified model:** Seedance 2.5 — the creator's exact-model runner, complete
+prompt, committed generated video and QA ledger identify this as a defect-free
+`bytedance/seedance-2.5/text-to-video` result
+
+**Use case:** one-take office comedy, escalating prop count, native-audio rhythm,
+product ad  
+**Mode:** text-to-video  
+**Settings:** 30 seconds, 9:16, 480p Seedance master, 1080p upscale, native audio
+
+```text
+One deadpan workplace-comedy take, framed like unremarkable office surveillance
+rather than an ad. Lock a mildly wide camera at seated eye level for all thirty
+seconds: no pan, tilt, zoom, reframing or cut. Flat fluorescent light, soft
+corners and visible grain.
+
+Show a small sales office with two joined desks, faded whiteboard marks, vertical
+blinds, a tired plant and a water cooler. One salesperson sits rigidly at the
+first desk; a coworker at the second calmly eats cereal from a mug.
+
+[0–5s] One phone rings. The salesperson stares at it without answering.
+[5–11s] A second ring starts elsewhere, then a third. She turns her head slowly;
+the coworker keeps eating.
+[11–17s] More phones are now visible across the desks and ring independently,
+never in rhythm. She presses both palms flat on the desktop.
+[17–22s] She quietly says that callers keep coming in.
+[22–26s] Still chewing and never looking up, the coworker says this is the new
+normal.
+[26–30s] She finally looks toward camera while the ringing continues; the
+coworker delivers one short line about letting leads call you.
+
+AUDIO
+Water-cooler glug, spoon against ceramic and ordinary asynchronous ringtones.
+Never turn the ringing into music; no score.
+
+CONTINUITY AND SPEECH LOCK
+The camera and furniture never move. Phones may only accumulate in plausible
+desk positions and never merge. Only the two brief exchanges and final product
+line may be spoken. No narration, muttering, subtitles, logos or glossy ad
+lighting.
+```
+
+**Technique:** hold every visual variable except the accumulating phones. The
+static frame makes each new ring readable, and deliberately asynchronous native
+audio turns escalation into structure without a montage.
+
+**Source:** GroupX's August 10, 2026
+[Seedance 2.5 batch commit](https://github.com/GroupX-ai/ad-creative/commit/856ba1b7593730534c4b74827a06005d03628022),
+[complete source prompt](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/seedance-prompts-b2.mjs),
+[frame-and-transcript QA ledger](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/BATCH-2026-08-09-b2.md),
+and [committed generated deliverable](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/voicedrop/2026-08-09-seedance-video-b2/voicedrop-c42-callback-avalanche-1080p-captioned.mp4).
+
+---
+
+### 209. Black-and-white-to-color infomercial reset
+
+**Verified model:** Seedance 2.5 — the creator publishes the complete prompt,
+exact `bytedance/seedance-2.5/text-to-video` runner, committed output and a QA
+ledger that marks the result defect-free
+
+**Use case:** retro product ad, format transition, before/after contrast,
+controlled performance change  
+**Mode:** text-to-video  
+**Settings:** 30 seconds, 9:16, 480p Seedance master, 1080p upscale, native audio
+
+```text
+Parody a cheap late-1990s direct-response infomercial, played sincerely. Preserve
+period standard-definition softness, clipped highlights, warm-yellow cast,
+slight chromatic smear, hard wall shadow and an overlit three-point setup. One
+locked camera may make a single clumsy zoom.
+
+Use a fake domestic-office set: pine desk, beige tower computer, powered-off
+monitor, floral wallpaper, artificial window and a wicker basket of plain
+envelopes. A neatly groomed middle-aged presenter wears a tucked polo.
+
+[0–6s | monochrome problem] In black and white, he tries to stuff envelopes,
+drops an armful and appeals to camera with exaggerated frustration.
+[6–12s | failure peak] Stay monochrome. Make the one awkward zoom as the basket
+tips over; he puts his head in his hands.
+[12–17s | state reset] Hard cut to full color in the identical composition. The
+light is warmer and cleaner, the basket upright and empty, and the presenter
+perfectly calm with folded hands.
+[17–23s] In an ordinary voice, he says he only had to send once.
+[23–27s] Hold a small shrug and glance toward the empty basket.
+[27–30s] He finishes with one concise line explaining that later follow-ups run
+automatically.
+
+AUDIO
+Boxy period room sound, envelopes sliding and basket striking wood. A thin,
+unpleasant tone exists only in the monochrome section; the color section is
+quiet. No modern music.
+
+LOCKS
+Same actor, set, camera and wardrobe across the cut. The transition changes only
+color, lighting mood, prop state and performance energy. No contemporary device,
+readable screen, captions, logo, extra presenter or modern commercial polish.
+```
+
+**Technique:** make the transition a four-variable state reset—monochrome to
+color, messy to ordered, frantic to calm, noisy to quiet—while locking actor,
+set and camera. The product benefit becomes visible before it is explained.
+
+**Source:** GroupX's August 10, 2026
+[Seedance 2.5 batch commit](https://github.com/GroupX-ai/ad-creative/commit/856ba1b7593730534c4b74827a06005d03628022),
+[complete source prompt](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/seedance-prompts-b2.mjs),
+[frame-and-transcript QA ledger](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/BATCH-2026-08-09-b2.md),
+and [committed generated deliverable](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/emailchaser/2026-08-09-seedance-video-b2/emailchaser-c13-infomercial-1080p-captioned.mp4).
+
+---
+
+### 210. Observation-glass twin-subject A/B test
+
+**Verified model:** Seedance 2.5 — the creator's complete prompt and exact-model
+runner map to a committed generated deliverable that the batch ledger marks
+defect-free after visual and dialogue QA
+
+**Use case:** split-screen-within-one-frame staging, product metaphor, controlled
+reaction contrast, native dialogue  
+**Mode:** text-to-video  
+**Settings:** 30 seconds, 9:16, 480p Seedance master, 1080p upscale, native audio
+
+```text
+Dry scientific-observation parody with no modern ad gloss. Lock the camera in a
+dark room behind one long observation window; retain a faint reflection on the
+glass. On the bright side, show two identical white test rooms side by side.
+Each contains one plain table, moulded chair and closed laptop. Clinical light
+is harsh, flat and shadowless. No camera movement.
+
+Two similar adult subjects wear matching grey shirts and begin in mirrored
+postures, one per room. A researcher is seen only from behind in the dark
+foreground, holding a clipboard.
+
+[0–6s] Hold both rooms. The researcher identifies the left subject as receiving
+message variant A.
+[6–12s] The left subject opens the laptop, reads, shows no reaction and closes it.
+The researcher introduces variant B.
+[12–18s] The right subject opens the laptop, immediately leans forward and types.
+[18–23s] The researcher makes exactly one clipboard mark and quietly records the
+faster response.
+[23–27s] Preserve the contrast: left subject still, right subject still typing.
+[27–30s] Without turning around, the researcher gives one restrained line about
+testing subject-line variants.
+
+AUDIO
+Air-handling hum, pen on clipboard and muffled keyboard taps through glass.
+Quiet unperformed voices; no music.
+
+EXPERIMENT LOCK
+Rooms, wardrobe, laptops, framing and initial poses are identical. After reading,
+only the named reactions diverge. Screens remain unreadable. No third subject,
+camera move, narration, floating graph, caption, logo or invented metric.
+```
+
+**Technique:** stage the comparison as two controlled cells inside one locked
+frame. An explicit shared-state ledger makes the single behavioral difference
+causal and legible, avoiding an ordinary before/after edit.
+
+**Source:** GroupX's August 10, 2026
+[Seedance 2.5 batch commit](https://github.com/GroupX-ai/ad-creative/commit/856ba1b7593730534c4b74827a06005d03628022),
+[complete source prompt](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/seedance-prompts-b2.mjs),
+[frame-and-transcript QA ledger](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/BATCH-2026-08-09-b2.md),
+and [committed generated deliverable](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/emailchaser/2026-08-09-seedance-video-b2/emailchaser-c14-twin-study-1080p-captioned.mp4).
+
+---
+
+### 211. Security-scanner data-validation line
+
+**Verified model:** Seedance 2.5 — GroupX's runner names
+`bytedance/seedance-2.5/text-to-video`, while the complete prompt, committed
+generated output and batch ledger verify this defect-free render
+
+**Use case:** service metaphor, conveyor choreography, privacy-safe prop design,
+native audio  
+**Mode:** text-to-video  
+**Settings:** 30 seconds, 9:16, 480p Seedance master, 1080p upscale, native audio
+
+```text
+Deadpan observational documentary at a tired security checkpoint, never styled
+as an ad. Shoot handheld from behind a queue at shoulder height; allow people to
+briefly cross the lens and let the operator adjust to see around them. Use cold
+fluorescent light, a slightly wide lens, grain and mild motion blur.
+
+The checkpoint has a conveyor, grey trays, scanner arch, folding table, scuffed
+queue tape and plastic chair. A bored officer in blue gloves works quickly.
+Instead of luggage, trays carry plain cards representing phone, email or network
+identifiers. Card faces always point away or blur in motion; no value is legible.
+
+[0–6s] Cards move through the scanner one tray at a time. The officer watches an
+off-camera display whose glow reaches her face; never show the screen.
+[6–12s] She waves three trays through with two fingers, then stops one and lifts
+its card.
+[12–17s] After one-second inspection, she labels it disconnected.
+[17–21s] She drops it into an already half-full rejection bin.
+[21–26s] Without breaking rhythm, she removes the next failed card and labels
+the mailbox invalid.
+[26–30s] She waves the queue forward and states one short line about instantly
+validating phone, email and IP data.
+
+AUDIO
+Conveyor motor, trays knocking, one flat scanner beep, queue shuffle and low
+murmur. Officer speaks only the two rejection labels and final service line.
+No narration or music.
+
+CONTROL
+The belt moves continuously; every accepted tray exits and every rejected card
+enters the same bin. No readable personal data, airline branding, uniform badge,
+shown interface, alarm, confrontation, subtitles, logo or extra sales copy.
+```
+
+**Technique:** translate an invisible API decision into a monotonous physical
+sorting line. Off-camera UI and turned-away cards preserve privacy and suppress
+native-text failures, while the pass/reject state has a single visible route.
+
+**Source:** GroupX's August 10, 2026
+[Seedance 2.5 batch commit](https://github.com/GroupX-ai/ad-creative/commit/856ba1b7593730534c4b74827a06005d03628022),
+[complete source prompt](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/seedance-prompts-b2.mjs),
+[frame-and-transcript QA ledger](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/_scripts/BATCH-2026-08-09-b2.md),
+and [committed generated deliverable](https://github.com/GroupX-ai/ad-creative/blob/856ba1b7593730534c4b74827a06005d03628022/1lookup/2026-08-09-seedance-video-b2/1lookup-c5-security-scanner-1080p-captioned.mp4).
+
+---
+
+### 212. Live-call car-selfie proof
+
+**Verified model:** Seedance 2.5 — GroupX's committed runner uses
+`bytedance/seedance-2.5/text-to-video`; its generation log records a successful
+native-720p render and seed, and the creator publishes the complete prompt,
+generated masters, frame review and word-perfect transcript QA
+
+**Use case:** high-energy UGC ad, live proof beat, phone-camera realism, native
+dialogue  
+**Mode:** text-to-video  
+**Settings:** 15 seconds, 9:16, native 720p, native audio
+
+```text
+Vertical phone-shot selfie from the driver's seat of an ordinary parked used
+car. It must feel like a salesperson's spontaneous social post, not an ad.
+Rear phone camera at arm's length, slightly low and off-centre; constant small
+hand drift, one natural reframe, close-lens distortion, daylight only, real
+pores and stubble, no beauty smoothing or color grade.
+
+A pleased but slightly sweaty salesperson in an open-collar shirt holds the
+recording phone in one hand and a second phone in the other. Keep the performance
+fast, animated and conversational: contractions, one tiny stumble, active
+eyebrows and hands. He looks into the lens throughout.
+
+BEATS
+[0–4s] Open mid-sentence with no establishing shot or silence. He says he
+stopped cold calling three weeks ago.
+[4–6s] He grins, raises the second phone beside his face and says, "Watch."
+[6–8s] That phone lights and rings. He tips his head toward it, delighted.
+[8–12s] Gesturing with the ringing phone, he explains that one voicemail went
+straight to inboxes and now a lead is calling him.
+[12–15s] He drops the phone into his lap, opens both hands in a shrug and gives
+one concise line: stop chasing leads; let them call you.
+
+SPEECH ALLOWLIST
+Only the quoted or paraphrased lines assigned above may be spoken. No narration,
+counting, muttered directions or improvised claims.
+
+AUDIO
+Close, slightly clipped phone-mic voice; low traffic hum, seat creak and the
+second phone's ordinary ringtone. No music.
+
+FAILURE CONTROL
+No text overlay, caption, logo, end card or readable interface. Hold the second
+phone screen-edge-on or show only two unlabeled answer/decline circles. No
+studio light, polished camera move, montage, slow motion, floating graphic or
+commercial gloss.
+```
+
+**Technique:** start with speech already underway, then make the proof object
+perform on camera by second six. The screen-edge control incorporates the
+creator's documented render defect: tiny caller-name glyphs appeared only under
+3× inspection even though the original prompt requested a blank screen.
+
+**Source:** GroupX's August 10, 2026
+[corrective-batch commit](https://github.com/GroupX-ai/ad-creative/commit/624bec6b295144ff40c18fc54d007067655f2b59),
+[complete source prompt](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/_scripts/seedance-prompts-b3.mjs),
+[exact-model run ledger](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/_scripts/seedance-run-log-2026-08-09-seedance-ugc-b3.json),
+[frame-and-transcript QA](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/_scripts/BATCH-2026-08-09-b3.md),
+and [committed generated result](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/voicedrop/2026-08-09-seedance-ugc-b3/voicedrop-c45-ugc-watch-this-720p.mp4).
+
+---
+
+### 213. Promotions-folder founder confession
+
+**Verified model:** Seedance 2.5 — the creator's complete prompt, successful
+`bytedance/seedance-2.5/text-to-video` run ledger, committed native-720p master
+and frame-plus-transcript QA form a traceable primary-source generation record
+
+**Use case:** founder UGC, problem-to-product turn, deliberately unreadable
+screen, fast native dialogue  
+**Mode:** text-to-video  
+**Settings:** 15 seconds, 9:16, native 720p, native audio
+
+```text
+Vertical founder selfie in a cramped home-office corner, made on a modern
+phone's rear camera and posted without ad polish. Prop the phone just below eye
+level for a slightly low, imperfect frame. Allow subtle handheld drift, mild
+close-lens distortion, available light, real skin texture and no beauty filter.
+
+A tired founder in a hoodie sits close to the lens at a cheap desk. Her hair is
+pushed back and she is genuinely exasperated in a funny, energetic way. Behind
+her: radiator, skirting board, mug with teabag string, tangled charger and an
+open laptop angled away so its screen is never readable.
+
+BEATS
+[0–4s] Begin mid-thought with no lead-in. Looking directly into the lens and
+holding one hand up, she says: "Four thousand emails. Zero replies. Zero."
+[4–7s] She turns the laptop toward camera for exactly one second. Its display
+is a featureless blown-out white rectangle, then she turns it back and says she
+went looking.
+[7–11s] Both hands hit the desk; she leans close, eyebrows raised, and says the
+messages were all in promotions, unseen.
+[11–15s] She sits back, exhales and gives one quick plain line: the new tool
+lands cold email in primary; start free.
+
+PERFORMANCE AND SPEECH
+Fast friend-to-friend delivery with contractions, a half-swallowed word, one
+small stumble, moving hands and eyebrows. Only the assigned lines are spoken;
+no narration, counting, stage directions or extra product claims.
+
+AUDIO
+Boxy phone-mic room tone, radiator tick, chair creak, mug touching desk and a
+brief breath near the mic. No score.
+
+FAILURE CONTROL
+No readable screen, email UI, overlay, title, subtitle, caption, logo, end card
+or brand mark. No studio lighting, glossy grade, dolly, orbit, cutaway montage,
+slow motion, stock-footage look or advertising performance.
+```
+
+**Technique:** expose a text-heavy digital problem without asking the model to
+render UI. A one-second, fully blown-out screen supplies the causal reveal while
+the dialogue carries the data; opening on the first complaint places the turn
+inside six seconds rather than delaying it behind an establishing shot.
+
+**Source:** GroupX's August 10, 2026
+[corrective-batch commit](https://github.com/GroupX-ai/ad-creative/commit/624bec6b295144ff40c18fc54d007067655f2b59),
+[complete source prompt](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/_scripts/seedance-prompts-b3.mjs),
+[exact-model run ledger](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/_scripts/seedance-run-log-2026-08-09-seedance-ugc-b3.json),
+[frame-and-transcript QA](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/_scripts/BATCH-2026-08-09-b3.md),
+and [committed generated result](https://github.com/GroupX-ai/ad-creative/blob/624bec6b295144ff40c18fc54d007067655f2b59/emailchaser/2026-08-09-seedance-ugc-b3/emailchaser-c17-ugc-promotions-720p.mp4).
+
+
+### 214. Distance-first phone-to-TV concept frame
+
+**Verified model:** Seedance 2.5 — the creator states that this complete prompt
+was rendered with Higgsfield's exact `seedance_2_5` model; the returned clip
+was 720p with native audio enabled by the provider default
+
+**Use case:** app-concept explainer, device relationship, compositing-safe screen
+design  
+**Mode:** text-to-video  
+**Settings:** 6–8 seconds, 16:9, 720p, native audio generated
+
+```text
+A calm cinematic wide shot in a warm modern living room at dusk. One adult sits
+low on a sofa and holds a smartphone in both hands. Its screen is only a soft
+cool glow that lights the face and chest. Across the room, a large television
+rests switched off on a low wooden console.
+
+Make the physical gap between the small phone and large television the subject:
+keep both devices clearly visible, with uncluttered negative space connecting
+them. Use a 35 mm lens, shallow depth of field and a very slow push-in of only a
+few centimetres. Warm practical lamps shape the room; the phone supplies the
+only cool accent. Photorealistic skin and materials, subtle film grain, gentle
+highlight roll-off, muted teal shadows and amber highlights.
+
+Do not render an app interface. The phone contains no readable text, icon,
+button or logo, and the television stays completely black. No captions,
+watermarks, brand marks, cables, router, floating panel, hologram, extra person,
+distorted hands or abrupt camera move.
+```
+
+**Technique:** communicate a two-device system through composition before
+showing any transfer. Treating screens as light sources rather than generated UI
+also leaves a truthful plate for later compositing with real screen capture.
+
+**Source:** Aniket Shahane's August 11, 2026
+[primary generation-evidence commit](https://github.com/AniketShahane/Flick/commit/cdbdf28a028afeb4540506f938d1356104d0de6a)
+and [complete prompt record](https://github.com/AniketShahane/Flick/blob/cdbdf28a028afeb4540506f938d1356104d0de6a/docs/launch/reviewer-video-prompt.md).
+
+---
+
+### 215. Matched-color device handshake
+
+**Verified model:** Seedance 2.5 — the original creator explicitly identifies
+this as one of three prompts rendered with `seedance_2_5`, producing a 720p
+clip with the model's default native audio
+
+**Use case:** abstract connection metaphor, over-shoulder device staging,
+interface-free product explainer  
+**Mode:** text-to-video  
+**Settings:** 6–8 seconds, 16:9, 720p, native audio generated
+
+```text
+Cinematic medium shot from behind and slightly over one shoulder. An adult holds
+a smartphone at chest height while the dark television across the same living
+room remains visible and sharp beyond it.
+
+The television wakes first: one even field of deep blue blooms across the panel
+and spills softly onto the wall and console. A beat later, the phone changes
+from cool white to exactly the same deep blue. Make this color match the single
+readable event; nothing travels between the devices and no graphic appears.
+
+Use a 50 mm lens, shallow depth of field and restrained handheld
+micro-movement. Preserve the person's pose, both device shapes and the room
+layout while the screens change state. Keep the room warm and photorealistic so
+the paired cool screens separate clearly.
+
+Both displays contain pure color and light only—no text, numbers, icons,
+buttons, menus, progress bars, app UI, logos or recognisable imagery. No extra
+device, router, cable, hologram, floating panel, cut, zoom or distorted hand.
+```
+
+**Technique:** replace fragile native UI with one synchronized visual invariant:
+the same color on two differently sized screens. The ordered state change makes
+“pairing” legible without asking the model to invent product behavior.
+
+**Source:** Aniket Shahane's August 11, 2026
+[primary generation-evidence commit](https://github.com/AniketShahane/Flick/commit/cdbdf28a028afeb4540506f938d1356104d0de6a)
+and [complete prompt record](https://github.com/AniketShahane/Flick/blob/cdbdf28a028afeb4540506f938d1356104d0de6a/docs/launch/reviewer-video-prompt.md).
+
+---
+
+### 216. Single-ribbon direct-transfer visualization
+
+**Verified model:** Seedance 2.5 — the creator reports this complete prompt among
+the first three actual `seedance_2_5` renders and records the resulting 720p,
+audio-on model behavior
+
+**Use case:** data-transfer metaphor, locked-off VFX plate, direct-path
+visualization  
+**Mode:** text-to-video  
+**Settings:** 8–10 seconds, 16:9, 720p, native audio generated
+
+```text
+Lock a cinematic wide camera in the same warm living room. Place a glowing
+smartphone on the sofa arm in the foreground and a large television across the
+room. The television shows only a warm, softly defocused field of film-like
+color and motion—no recognisable scene, face, text or interface.
+
+One thin ribbon of cool cyan light emerges from the phone and travels to the
+television in a single clean, unbroken arc. Its direction is phone to TV only.
+Keep it elegant and continuous, with no branching, particles, pulses, labels or
+detour toward any other object. The room, devices and camera remain fixed while
+the ribbon completes the path, then hold the connected composition briefly.
+
+Premium but restrained photorealism: believable furniture and screen spill,
+warm ambient light contrasted by the cyan ribbon, slow confident timing and no
+camera movement.
+
+No router, set-top box, visible cable, multiple beam, network diagram, floating
+panel, sci-fi HUD, text, logo, watermark, lens-flare clutter, extra person or
+changing device geometry.
+```
+
+**Technique:** constrain an abstract effect by topology rather than decorative
+language: one source, one destination, one uninterrupted curve and no alternate
+route. The locked camera and stable props make directionality easy to verify.
+
+**Source:** Aniket Shahane's August 11, 2026
+[primary generation-evidence commit](https://github.com/AniketShahane/Flick/commit/cdbdf28a028afeb4540506f938d1356104d0de6a)
+and [complete prompt record](https://github.com/AniketShahane/Flick/blob/cdbdf28a028afeb4540506f938d1356104d0de6a/docs/launch/reviewer-video-prompt.md).
+
+---
+
+### 217. Cross-model twin-car motion benchmark
+
+**Verified model:** Seedance 2.0 Mini — the original creator ran this complete
+benchmark prompt through Seedance 2.0 Mini, published the generated clip and
+contact sheet, and verified the model label against the production canvas
+
+**Use case:** controlled model comparison, cyberpunk action, motion-quality
+benchmarking  
+**Mode:** text-to-video  
+**Settings:** 5 seconds, 9:16, 720p
+
+```text
+Five-second vertical cyberpunk racing benchmark at night. Keep exactly two
+distinct futuristic cars beside one another: the left car glows magenta and the
+right car glows cyan. They accelerate in parallel along a rain-wet neon avenue.
+
+Track both cars from wheel height with a low moving camera, keeping both vehicles
+in frame while reflections streak beneath them. Add restrained tire sparks,
+clean light trails and believable speed blur. Preserve each car's color, shape
+and lane order for the whole shot.
+
+No captions, logos, watermark, third vehicle, lane swap, camera cut or identity
+merge.
+```
+
+**Technique:** hold the prompt, duration, aspect ratio and visual invariants
+constant when comparing models. The two fixed colors and lane positions create
+simple pass/fail checks for subject separation, motion coherence and continuity;
+run a cheap probe first, then send the exact same text to every comparison model.
+
+**Source:** convergeai-labs' August 12, 2026
+[primary generation-evidence commit](https://github.com/convergeai-labs/framia-examples/commit/94cbc9168f4872dcb2213649f7b970515f203fbd),
+[complete original prompt](https://github.com/convergeai-labs/framia-examples/blob/94cbc9168f4872dcb2213649f7b970515f203fbd/ai-model-showdown/assets/prompt.txt),
+and [rendered comparison video](https://github.com/convergeai-labs/framia-examples/blob/94cbc9168f4872dcb2213649f7b970515f203fbd/ai-model-showdown/video/ai-model-showdown-framia.mp4).
+
+---
+
+
+### 218. Drain-save card handoff
+
+**Verified model:** Seedance 2.5 (`doubao-seedance-2-5-260628`) — the original
+creator committed the complete prompt, a successful Volcano Ark task record,
+task ID `cgt-20260812222037-v9w8p`, and the returned video and last-frame URLs
+
+**Use case:** fast social-ad hook, object-led rescue beat, motivated shot handoff  
+**Mode:** first-frame image-to-video with native ambience and returned last frame  
+**Settings:** 6 seconds, 9:16, 720p, 24fps
+
+```text
+Six-second vertical, single-take live-action ad. Begin exactly from the supplied
+first frame. From an extremely low 24 mm position beside a rolling black
+suitcase, track forward quickly as a blank teal student card slips from its side
+pocket, flips twice in sunlight and skids toward a curb drain.
+
+Just before the card enters the grate, a white sneaker stops it. A friendly
+Asian woman in her early twenties bends immediately and picks it up. Whip-tilt
+with the card from ground level to her hand and face, then reveal the surprised
+male freshman catching up. She extends the card toward camera; their brief eye
+contact changes from alarm to relief.
+
+End with the teal card moving close enough to cover most of the lens, creating a
+clean physical handoff for the next clip. Warm Brisbane daylight, a believable
+Sunnybank plaza and natural student traffic. Keep the movement fast and legible,
+not shaky.
+
+Native ambience only: suitcase wheels, card impact, shoe scrape and distant
+crowd. No intelligible dialogue or music. No text, subtitle, logo, QR code,
+watermark, staged slow motion, direct-to-camera posing, surreal effect, malformed
+fingers or changing card geometry.
+```
+
+**Technique:** give the hook one small object with an irreversible jeopardy path
+(drop → slide → interception → return), then make that same object the
+full-frame exit. The returned last frame is both the completed payoff and the
+literal start-state asset for the continuation.
+
+**Source:** JR Academy Omni's August 12, 2026
+[primary Seedance 2.5 generation-evidence commit](https://github.com/JR-Academy-Omni/orientation-festival/commit/8c34210836bc6b57344adbb1b165e586158fe0dd),
+which includes the original prompt, successful task manifest and generated
+delivery workflow.
+
+---
+
+### 219. Card-to-crowd continuation
+
+**Verified model:** Seedance 2.5 (`doubao-seedance-2-5-260628`) — the original
+creator fed the previous task's returned last frame into a second successful
+Volcano Ark task, `cgt-20260812222315-f275n`, and published the complete prompt
+and result manifest
+
+**Use case:** identity-preserving continuation, social-proof escalation,
+foreground-occlusion transition  
+**Mode:** returned-last-frame image-to-video with native ambience  
+**Settings:** 6 seconds, 9:16, 720p, 24fps
+
+```text
+Continue seamlessly from the supplied first frame: the teal card still fills
+most of the lens. Preserve the same Asian male freshman in an oversized dark-teal
+T-shirt, light-grey trousers and cream canvas bag; preserve the same woman who
+retrieved the card, the warm Brisbane light and the camera direction.
+
+Pull back quickly as she lowers the card. Smiling, she points toward the busy
+freshers-festival entrance. He hesitates for one beat, then nods and follows.
+She raises the suitcase handle and walks; he catches up while the stabilised
+camera retreats through moving students. Let wristbands, tote bags and flags
+briefly cross the foreground as real depth cues.
+
+A third student offers a blank coloured wristband while everyone keeps walking.
+The freshman accepts it and the three share their first relaxed laugh. End when
+a coral tent panel sweeps right-to-left and fully covers the lens, preparing the
+next reveal. Keep action continuous and layered; nobody stops to queue or pose.
+
+Use footsteps, suitcase wheels, crowd wash and fabric movement only. No
+intelligible dialogue or music. No text, subtitle, logo, QR code, watermark,
+neon portal, slow motion, plastic skin or identity change.
+```
+
+**Technique:** inherit the exact boundary frame, identity ledger, light and
+screen direction, but advance the social state once: stranger → invitation →
+joining. A second physical cover replaces the first, so the clip resolves its
+incoming card occlusion while manufacturing a different outgoing seam.
+
+**Source:** JR Academy Omni's August 12, 2026
+[primary Seedance 2.5 generation-evidence commit](https://github.com/JR-Academy-Omni/orientation-festival/commit/8c34210836bc6b57344adbb1b165e586158fe0dd),
+including the chained request, exact model response and returned last frame.
+
+---
+
+### 220. Tent-wipe festival payoff
+
+**Verified model:** Seedance 2.5 (`doubao-seedance-2-5-260628`) — the original
+creator used task two's returned last frame as task three's first frame and
+published successful task `cgt-20260812222532-4cjz9`, its complete prompt and
+the generated-video manifest
+
+**Use case:** reveal from full-frame occlusion, multi-person continuity,
+earned emotional payoff  
+**Mode:** returned-last-frame image-to-video with native ambience  
+**Settings:** 7 seconds, 9:16, 720p, 24fps
+
+```text
+Continue seamlessly as the coral tent fabric sweeps away from the supplied first
+frame, revealing a lively but believable Brisbane freshers festival. Preserve
+the same male freshman, the same woman, the newly joined student, their wardrobe,
+faces, warm light and direction of travel.
+
+Push through the tent entrance, then make one fluid half-orbit around the three.
+The woman places a blank school sticker on the freshman's chest. The other two
+point to their own blank stickers and react naturally when they realise they
+come from different schools. A coloured soft ball enters from offscreen; the
+freshman catches it reflexively and a small nearby group waves him into a casual
+game.
+
+Follow the ball from close-up into the group, then rise slightly to show stalls,
+gift bags, conversations and Brisbane afternoon light. Finish as three or four
+students lean in naturally for a selfie and the formerly guarded freshman breaks
+into a genuine laugh. Hold the emotional payoff, not an advertising pose.
+
+Native ambience: tent fabric, crowd laughter, ball contact and one light cheer.
+No intelligible dialogue or music. No readable text, subtitle, logo, QR code,
+watermark, branded prize, nightclub excess, intoxication, malformed hands,
+face drift or sudden crowd duplication.
+```
+
+**Technique:** open on the previous clip's full-frame wipe, then spend the shot
+on one causally ordered inclusion arc: badge contact → shared recognition →
+ball contact → group invitation → laugh. Prop contacts make every new person
+legible, while the returning cast, light and direction preserve the chained
+boundary.
+
+**Source:** JR Academy Omni's August 12, 2026
+[primary Seedance 2.5 generation-evidence commit](https://github.com/JR-Academy-Omni/orientation-festival/commit/8c34210836bc6b57344adbb1b165e586158fe0dd),
+including the exact chained input and successful model output.
+
+---
+
+### 221. Ink-glyph derivation trailer with literal-object guard
+
+**Verified model:** Seedance 2.0 Mini (`seedance_2_0_mini`) — the original
+creator rendered all seven 10-second clips, published their successful job IDs
+and assembled output, reconciled the live credit spend, and inspected sampled
+frames from the finished draft
+
+**Use case:** multi-clip editorial trailer, style-key continuity, abstract
+calligraphy animation, literal-object failure control  
+**Mode:** reference-image-to-video clips assembled in sequence  
+**Settings:** 7 × 10 seconds, 9:16, 480p draft, silent generation
+
+```text
+Create seven separate 10-second vertical clips in one flat 2D ink-wash world.
+Attach the same supplied character-and-scroll style key to every clip. Preserve
+the three characters, robe colours, glasses, props, pale silk, restrained
+palette and brush texture. Generate no audio. Begin visible motion on frame one
+and keep a slow camera move, drifting ink grain or changing light through every
+held composition so neither endpoint freezes.
+
+Shared visual object: a descending column of hand-brushed glyph-like marks.
+Each mark must grow directly from the wet ink stroke above it and be joined only
+by one hairline of black ink. It is writing on silk, never hardware. No metal
+links, rings, cable, rope, jewellery, restraint or physical chain.
+
+Clip 1 — A tall hanging scroll unrolls downward. The brushed column writes
+itself rapidly toward and beyond the lower edge while untouched silk remains
+above the first mark. Slow push-in.
+
+Clip 2 — In a vertical audience chamber, the gold-robed ruler snaps open a white
+fan across frame. Behind him, only three brushed marks have appeared on the
+scroll. Keep his thin round glasses and face stable.
+
+Clip 3 — At the foot of the scroll, the blue-robed scholar holds an open bamboo
+text like a tablet. Three new marks grow one after another from the previous
+wet strokes while her hands remain still. Let the ink, not the actor, perform
+the transformation.
+
+Clip 4 — Make a clean moving plate for a quotation card: pale silk, the brushed
+column continuing diagonally below, camera drifting upward into a wide untouched
+field. Do not generate letters; typography will be added in post.
+
+Clip 5 — The cinnabar-robed examiner lifts a wax tablet, removes one brushed
+mark from the drawn sequence and watches the whole structure lose coherence.
+It must collapse into loose ink flecks and calligraphic strokes across the silk,
+not into solid pieces. Keep the optional hand drum visible only through the
+reference image; do not mention music or rhythm.
+
+Clip 6 — A single acupuncture needle rests flat beside the completed writing.
+A hand withdraws, then the camera travels upward along the descending brushwork
+until it reaches the untouched silk above the first mark. No patient, anatomy,
+body, metallic chain or restraint imagery.
+
+Clip 7 — Produce a plain end-card plate with slow ink wash and subtle light
+movement. No generated text; add the disclaimer and credit during finishing.
+
+Across all clips: text-free plates, no anatomy, no face drift, no frozen opening
+or tail, no extra limbs, no sudden style change and no literal interpretation of
+the connected writing as a manufactured object.
+```
+
+**Technique:** the creator's draft made the ambiguous phrase “chain of links”
+materialise as interlocking metal rings in one sampled frame, while a shot
+described as “loose brush strokes” remained correctly calligraphic. Replace the
+category noun with observable construction — glyph, wet stroke, hairline ink —
+and explicitly exclude the competing material ontology. Render a cheap draft,
+sample every motif-bearing shot, and promote only after the metaphor survives.
+
+**Source:** tmjoLnir's August 13, 2026
+[primary Seedance 2.0 Mini render and production-record commit](https://github.com/tmjoLnir/huangdi-neijing/commit/b90c1a36bb0ab2c81c4fc224ab41420359478cc6),
+including complete shot prompts, successful job IDs, assembled outputs and
+visual QA of the literal-object failure.
+
+---
+
+### 222. Poster-matched facade parallax hero loop
+
+**Verified model:** Seedance 2.0 (`seedance_2_0`) — the original creator
+committed the full motion brief, two generated masters, the compressed delivery
+video, and the matching poster frame
+
+Use this for a restrained website or property-ad hero where the existing still
+must remain the immediate visual contract and the animation should feel like the
+same photograph becoming alive rather than a new shot.
+
+```text
+INPUT
+@FirstFrame is the exact opening frame and poster image: a modern three-storey
+apartment building in a northern European town, paved path, clipped hedges,
+young birch trees and bright overcast daylight.
+
+SHOT — 5 SECONDS, 16:9, 24 FPS
+Begin on @FirstFrame without a visible composition, exposure or geometry jump.
+Make one slow, even camera track to the right along the facade.
+Create gentle, physically coherent parallax between the foreground birch and
+the building. Add only slight natural leaf movement in the overcast air.
+Keep the architecture, path, hedges, window layout, materials, sky and cool
+documentary colour unchanged.
+
+CAMERA AND SUBJECT LIMITS
+No zoom, shake, sudden acceleration, reframing, people, vehicles, signs, text,
+logo or watermark. Do not bend walls, move windows, invent doors, relight the
+scene or turn the documentary image into a glossy CGI property render.
+
+END AND DELIVERY
+Finish while the same rightward motion is still calm enough to loop or dissolve
+back to the supplied poster. Export a silent 720p H.264 master, then create a
+fast-start web delivery copy. Confirm that the poster is the exact first video
+frame so loading the motion layer produces no flash or spatial jump.
+```
+
+**Why it works:** the first frame owns every architectural invariant while the
+prompt spends its limited motion budget on one camera vector, one parallax
+relationship and one environmental response. Matching the poster to frame one
+also separates generation quality from web delivery: users see a stable image
+immediately, and the video can fade over it only after it is ready.
+
+**Source:** [ARIZU — exact Seedance 2.0 motion prompt, generated masters and delivered hero video](https://github.com/Ds9001-1983/arizu/commit/cab73a6d7530dd49052ac7cdbfaf219d78b20ed3)
+
+
+
+---
+
+### 223. Triggered-layer argument with quietest-line climax
+
+**Verified model:** Seedance 2.5 — the original author preserves the complete
+30-second image-referenced prompt as a regression fixture and records that the
+user verified the generated relationship-argument result as highly successful
+on August 18, 2026
+
+**Use case:** emotional dialogue, relationship drama, externally triggered
+performance changes, native audio, long-form character consistency  
+**Mode:** image/reference-to-video, five-shot performance sequence  
+**Settings:** 30 seconds, one female lead, nighttime interior, over-the-shoulder
+coverage
+
+```text
+REFERENCES AND IDENTITY
+@Image 1 is the only female lead. Preserve her face, hair, skin tone, apparent
+age, build and recognizability through every shot. @Image 2 fixes her wardrobe.
+@Image 3 fixes the nighttime room. Do not inherit unrelated people or UI from
+the references.
+
+GLOBAL SCENE
+Create a 30-second argument between the woman and an unseen partner. The camera
+occupies the partner's position; keep only a soft shoulder edge in the
+foreground and hold focus on her face and upper body. Warm, dim practical light
+with clear facial shadow. Close handheld coverage with restrained breathing
+motion: move slightly closer only when pressure rises, and become still during
+silence.
+
+One emotional truth must remain visible throughout: she is furious because she
+still cares and has spent too long feeling unheard. Surface emotion may change,
+but pain remains underneath every angry beat.
+
+SHOT 1 — CONTROLLED ACCUSATION
+She holds eye contact without speaking, jaw set and fingers slowly tightening.
+After two heavy breaths she says, quietly:
+"You keep hearing my words without listening to what they mean."
+She waits. The unseen partner gives an inadequate answer. A brief bitter smile
+appears, then disappears.
+
+SHOT 2 — FIRST SURGE
+That answer triggers the change. She takes one step forward, touches her own
+chest and raises her voice:
+"How many times do I have to explain this before it matters to you?"
+Her next sentence accelerates, then trembles near the end. Shoulders rise with
+her breath; she looks away for one beat and returns immediately.
+
+SHOT 3 — HURT EXPOSED
+She stops as suddenly as she surged. Movement and volume shrink. Her eyes are
+red and wet, and her gaze becomes less steady:
+"Do you know how exhausting it is to ask for the same care again and again?"
+A tear gathers but does not fall. She inhales to contain it while the camera
+makes its slowest push toward a close-up.
+
+SHOT 4 — REIGNITION BY RESPONSE
+The unseen partner says, "That isn't what I meant."
+Only after hearing it, she snaps her eyes back up and interrupts:
+"Then tell me what you did mean."
+Hold the silence. Sharp anger drains into recognition and disappointment; she
+gives one small involuntary nod.
+
+SHOT 5 — QUIETEST, HEAVIEST LINE
+The room becomes still. She does not raise her voice again. One tear falls as
+she says the most consequential line at the lowest volume:
+"I should never have to beg someone I love to care."
+Keep eye contact after the line. No further explanation. Only uneven breathing,
+a slight lip tremor and the last traces of anger fading into exhaustion. She
+finally looks away, and the tight close-up lingers on the unresolved feeling.
+
+PERFORMANCE ARC
+suppressed anger → triggered outburst → hurt revealed → response-triggered
+reignition → exhausted disappointment
+
+Make each transition causal: the first escalation follows the inadequate reply;
+the second follows the quoted defensive line. Use a rising-then-falling gesture
+envelope: restrained hands, one forward step and clearer gesture, shrinking
+movement, then complete stillness. Progress eye moisture from dry tension to
+redness, gathered tear and one final falling tear; do not begin already crying.
+
+SOUND
+Chinese dialogue from the woman; the unseen partner owns only the two short
+off-camera responses. Preserve quiet room tone, changing breath, one footstep
+and subtle clothing movement. No BGM, narration, subtitles, captions, text,
+logos, watermark or UI.
+
+CONTINUITY
+Same woman, wardrobe, room, night lighting, screen axis and partner-camera
+position throughout. Do not turn the partner into a visible second performer.
+Do not make every beat louder; the final line must be the quietest.
+```
+
+**Why it works:** the performance does not rely on a generic instruction to
+“become more emotional.” Each surface-layer change has a visible or audible
+trigger, while the invariant emotional truth prevents the character from
+becoming five unrelated moods. Alternating loud and quiet phases creates a
+descending oscillation, and reserving the softest delivery for the most damaging
+line gives the final silence more weight than another climax shout.
+
+**Source:** Anelse0's August 18, 2026
+[user-verified Seedance 2.5 release](https://github.com/Anelse0/ai-character-performance-director/commit/af324b73f807d344d9f0c7658cc1ec55477e2029),
+the
+[complete verified prompt fixture](https://github.com/Anelse0/ai-character-performance-director/blob/af324b73f807d344d9f0c7658cc1ec55477e2029/tests/fixtures/seedance25-30s-argument-oscillating.verified.md)
+and its bounded
+[evidence record](https://github.com/Anelse0/ai-character-performance-director/blob/af324b73f807d344d9f0c7658cc1ec55477e2029/references/evidence-ledger.md).
+
+
+---
+
+### 224. Layered-motion bakery-tree storybook opening
+
+**Verified model:** Seedance 2.5 (`doubao-seedance-2-5-260628`) — the original
+creator identifies the exact enabled model, commits the complete image-to-video
+script and first-frame illustration, and ships the generated 5-second master on
+August 18, 2026
+
+**Use case:** children's-story opening, illustrated establishing shot, restrained
+single-image animation  
+**Mode:** image-to-video  
+**Settings:** 5 seconds, 16:9, generated at 1080p; delivered as H.264 720p
+
+```text
+Use @Image1 as the exact opening composition and visual source of truth. Create a
+five-second 16:9 establishing shot in the same warm, tranquil 1970s Japanese
+hand-painted picture-book watercolor style.
+
+Begin moving immediately. The camera makes one very slow push through the forest
+morning mist toward the giant tree that contains the bakery. Preserve the tree
+silhouette, bakery facade, branch layout, windows, palette, paper texture and
+painted linework.
+
+Animate separate depth layers with small, readable motion: foreground leaves and
+vines sway gently in the breeze; a few birds cross from screen-left behind that
+foreground foliage; faint white steam rises continuously from the chimney. During
+the final two seconds, the bakery windows gradually warm to a soft amber glow
+while the leaves and steam keep moving. End closer to the tree with the lights on,
+not on a frozen pose.
+
+No new building, branch, character, sign, caption, logo, readable text, hard cut,
+fast zoom, 3D depth extrusion, glossy CGI surface, boiling foliage, sliding layer,
+warped window or change of illustration style.
+```
+
+**Why it works:** the still is divided into camera, foreground, mid-distance and
+background motion responsibilities instead of asking the whole illustration to
+"come alive" at once. The window-light change supplies a clear endpoint, while
+continued leaf and steam motion prevents the closing beat from freezing.
+
+**Source:** William Wang's August 18, 2026
+[Seedance 2.5 generation commit](https://github.com/WilliamwangADA/crow-bakery-for-ada/commit/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c),
+[complete generation script](https://github.com/WilliamwangADA/crow-bakery-for-ada/blob/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c/tools/gen_intro_video.mjs),
+[first-frame illustration](https://github.com/WilliamwangADA/crow-bakery-for-ada/blob/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c/assets/scenes/s01_tree.jpg),
+and [committed generated result](https://github.com/WilliamwangADA/crow-bakery-for-ada/blob/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c/assets/video/intro.mp4).
+
+---
+
+### 225. Two-AM whisper-shout UGC gear change
+
+**Verified model:** Seedance 2.5
+(`bytedance/seedance-2.5/text-to-video`) — the original creator committed the
+complete prompt, 720p generated master, finished vertical deliverable, run log
+and transcript-led QA on August 18, 2026
+
+**Use case:** authentic UGC, constrained-volume comedy, native dialogue,
+high-energy hooks, quiet CTA contrast  
+**Mode:** text-to-video  
+**Settings:** 15 seconds requested, 9:16, 720p Seedance master, native audio
+
+```text
+Create a vertical phone selfie recorded by one adult man in his small kitchen
+at two in the morning. It must feel posted immediately, not produced as an ad:
+slightly low and off-centre framing, mild close-lens distortion, constant
+handheld drift, two natural reframes, available light, real pores and stubble,
+no beauty smoothing or colour grade.
+
+LOCATION
+A cooker-hood bulb is the only initial light. Show a draining rack, kettle,
+fruit bowl, tea towel and a dark hallway. The refrigerator may add a second
+motivated light only while its door is open. No visible phone or screen.
+
+PERFORMANCE RULE
+His body is at maximum excitement but his voice cannot rise above a strained
+whisper because someone is asleep nearby. Put the energy into huge silent hand
+gestures, shoulders, eyes, suppressed laughter and quick checks toward the
+hallway. Open already mid-gesture and mid-whisper: the first syllable lands
+inside the first quarter-second. No lead-in or establishing pause.
+
+0–3 s: Face close to lens, one hand braced on the counter, he whisper-shouts:
+"It's two in the morning and I finally have proof."
+
+3–7 s: He grips the counter, shakes with silent triumph, buries one soundless
+yell in the tea towel, checks the hallway and returns to the lens:
+"Nobody ever believes me."
+
+7–11 s: He opens the refrigerator; its light crosses his face. On three small
+finger taps he says:
+"Now it is public. Time-stamped. Locked."
+
+11–15 s: He closes the door and the room dims. His movement stops. He changes
+gear into an ordinary quiet voice, holds eye contact and delivers the final
+call slowly:
+"[PRODUCT OR ACTION]. Free. Try one."
+
+SPEECH OWNERSHIP
+Only the four quoted lines are spoken. Action descriptions are never narrated.
+No ad-lib, mutter, counting, background voice or spoken stage direction.
+
+AUDIO
+Night-quiet room tone, refrigerator hum, bare feet on lino, one dish shifting,
+cloth movement and close breathing. No music. Preserve the whisper-level volume
+while keeping every word intelligible.
+
+CONTROL
+Every garment is plain single-colour fabric with no mark or writing. No text,
+caption, logo, watermark, visible display, generated interface, polished
+commercial light, gimbal, dolly, orbit, speed ramp, slow motion or extra person.
+
+QA
+Transcribe the entire output, not only the intended dialogue. Reject or repair
+any narrated action. If a stray phrase sits wholly between genuine speech gaps,
+mute only that bounded window and re-transcribe; otherwise rerender with physical
+actions separated from the dialogue block. Add captions and end card in post.
+```
+
+**Why it works:** the circumstance prevents “high energy” from collapsing into
+generic shouting. Vocal restraint transfers intensity into the face and hands,
+where close phone framing reads it clearly, while the final stillness and slower
+voice create a hard, legible CTA gear change. The source result also revealed
+that a speech allowlist is not sufficient by itself: transcript QA caught one
+spoken stage direction that visual review could not, and a gap-bounded repair
+restored the intended script without damaging dialogue.
+
+**Source:** GroupX's August 18, 2026
+[eight-ad Seedance 2.5 production commit](https://github.com/GroupX-ai/ad-creative/commit/87fbc5476be6f7c75841320eebf5ceaa7c181d2a),
+the
+[complete prompt and shared control blocks](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/_scripts/seedance-prompts-b10-bitpredict.mjs),
+[QA and repair ledger](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/_scripts/BATCH-2026-08-18-b10-bitpredict-viral.md),
+and the committed
+[Seedance master](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/bitpredict/2026-08-18-viral-b10/bitpredict-c8-two-am-whisper-720p.mp4)
+and
+[repaired deliverable](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/bitpredict/2026-08-18-viral-b10/bitpredict-c8-two-am-whisper-1080p-fixed-captioned.mp4).
+
+---
+
+### 226. Silent-polygraph contradiction beat
+
+**Verified model:** Seedance 2.5
+(`bytedance/seedance-2.5/text-to-video`) — the original creator committed the
+complete prompt, generated 720p master and captioned deliverable, then confirmed
+through transcription and full-resolution QA that the deliberate silent beat,
+blank chart and speech ownership all held on August 18, 2026
+
+**Use case:** dialogue comedy, visual contradiction, deliberate silence,
+two-character timing, native mechanical sound  
+**Mode:** text-to-video  
+**Settings:** 15 seconds requested, 9:16, 720p Seedance master, native audio
+
+```text
+Create a vertical lie-detector parody played completely straight, filmed
+handheld in a real room rather than as a polished advertisement. Practical
+fluorescent light, subtle operator drift, one brief focus hunt, real shadow
+noise and natural skin texture.
+
+LOCATION AND CAST
+One bare grey examination room: scuffed desk, stacking chair, wall clock,
+half-closed blind and an old boxy polygraph with a rolling paper drum and one
+ink needle. Exactly two adults:
+- EXAMINER, seated sideways, bored, holding an unused pen;
+- SUBJECT, upright in the chair, sensor straps visible, initially confident.
+Keep each actor, chair, strap, machine and screen side unchanged.
+
+PERFORMANCE
+Start at full conversational volume on frame one. The examiner is dry and
+unimpressed; the subject begins certain, then breaks into audible panic. The
+examiner's lack of reaction is the contrast, not low overall energy.
+
+0–2 s: The examiner is already asking without looking up:
+"Did you really predict it?"
+
+2–4 s: The subject lifts his chin and answers:
+"Absolutely."
+
+4–7 s — COMPLETE SILENCE:
+Nobody speaks, mouths words, hums or narrates. The needle whips into a violent
+scribble, the blank paper unspools and heaps on the floor. The examiner watches
+the pile grow, then slowly looks back at the subject without changing expression.
+Let needle scratch, drum rotation, paper and room tone carry the full beat.
+
+7–10 s: The subject strains against the straps, hands raised, voice cracking:
+"It was a feeling! It was a feeling!"
+
+10–15 s: The examiner turns to lens and says slowly:
+"Confidence is not evidence. Put it on the record."
+
+SPEECH AND PROP LOCKS
+Only the four quoted lines may be spoken, owned by the named actor. The chart is
+plain white paper carrying only the needle's wavering ink trace: no words,
+numbers, grid labels, dates or logos. Every garment is one flat colour and
+entirely blank. No readable screen, sign, seal, caption, brand or watermark.
+
+AUDIO
+Fluorescent hum, pen movement without writing, needle scratch accelerating,
+paper drum, paper landing on lino, straps and chair creak. No music, narrator,
+background chatter or improvised reaction.
+
+ACCEPTANCE
+Transcribe the complete output and confirm the 4–7 second interval contains
+only non-speech sounds. Inspect the paper at full resolution. Reject if the
+machine invents labels, the silent beat gains words, dialogue ownership swaps,
+the examiner becomes expressive during the contradiction, or the paper motion
+starts before the confident answer ends.
+```
+
+**Why it works:** the joke is a causal audiovisual proof: confident claim,
+three seconds with no language, then one machine contradicting it. Positively
+assigning the silence to needle, drum and paper prevents the model from filling
+dead air with narration. Restricting the chart to a single permitted ink trace
+also removes the usual invitation to generate broken labels and numbers. In the
+source batch, this silence rule held cleanly and the blank-paper rule passed
+full-resolution inspection.
+
+**Source:** GroupX's August 18, 2026
+[Seedance 2.5 production commit](https://github.com/GroupX-ai/ad-creative/commit/87fbc5476be6f7c75841320eebf5ceaa7c181d2a),
+the
+[complete source prompt](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/_scripts/seedance-prompts-b10-bitpredict.mjs),
+[transcript and visual QA record](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/_scripts/BATCH-2026-08-18-b10-bitpredict-viral.md),
+and the committed
+[Seedance master](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/bitpredict/2026-08-18-viral-b10/bitpredict-c13-the-needle-720p.mp4)
+and
+[finished deliverable](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/bitpredict/2026-08-18-viral-b10/bitpredict-c13-the-needle-1080p-captioned.mp4).
+
+---
+
+### 227. Courtroom closing-argument impact beat
+
+**Verified model:** Seedance 2.5 — ComfyUI's official ByteDance partner-node
+workflow explicitly selects \`Seedance 2.5\`, retains the complete prompt and
+1080p parameters, and ships the corresponding generated MP4
+
+**Use case:** live-action comedy, performance choreography, impact reaction,
+native score  
+**Mode:** text-to-video  
+**Settings:** 5 seconds, 16:9, 1080p, audio enabled
+
+\`\`\`text
+Create a five-second live-action 1990s American courtroom drama with restrained
+absurdist comedy. Wood-panelled courtroom, warm dusty sunlight cut by venetian
+blinds, practical film grain and a tense period courtroom score. Maintain one
+continuous low heroic camera angle and one stable room layout.
+
+CAST AND PROP LOCK
+Exactly one hippo lawyer in a dark pinstripe suit at the counsel table, one tiny
+bird witness on the stand, one jury in the background, one water jug and one
+pair of glasses. Preserve every character's side of frame, scale, wardrobe and
+identity.
+
+[0–1.4 s | controlled preparation]
+The hippo lawyer faces the jury and slowly straightens his tie. Keep the
+performance contained and let the score build without a cut.
+
+[1.4–2.7 s | physical punctuation]
+He slams one paw onto the table exactly once. The impact makes the nearby water
+jug jump and settle; no other object moves. Hold long enough for the cause and
+reaction to read.
+
+[2.7–4.1 s | accusation]
+Without changing position, he points dramatically at the tiny bird witness and
+delivers the final words of his closing argument in heightened slow motion.
+His jowls respond naturally to the speech while the bird remains on the stand.
+
+[4.1–5.0 s | satisfied release]
+He lowers the paw, adjusts his glasses once and finishes with a small satisfied
+nod. Resolve on the same low-angle composition.
+
+ORDER LOCK
+tie straightens → one table slam → jug jumps and settles → one point toward the
+bird → closing words → glasses adjustment → nod. No repeated slam, spilled
+water, flying furniture, duplicate lawyer or witness, changing animal scale,
+camera cut, black frame, caption, title, logo or text overlay.
+\`\`\`
+
+**Why it works:** the gag is built from nested action–reaction pairs rather than
+a list of gestures. The table hit owns the jug response, the accusation owns
+the slow-motion speech, and the glasses adjustment supplies a quiet final beat.
+A locked cast and prop ledger protects the extreme hippo-versus-bird scale
+contrast that makes the shot readable.
+
+**Source:** ComfyUI's August 18, 2026
+[official 1080p Seedance 2.5 documentation commit](https://github.com/Comfy-Org/docs/commit/5c4d55740280b26df11441b10bc90c51aea23a02),
+the
+[workflow-and-output release commit](https://github.com/Comfy-Org/workflow_templates/commit/f79d2604ad3f93a22877b86deee45d8dfeb72245),
+the
+[complete exact-model workflow](https://github.com/Comfy-Org/workflow_templates/blob/f79d2604ad3f93a22877b86deee45d8dfeb72245/templates/api_seedance2_5_t2v_1080p.json),
+and its
+[generated 1080p MP4](https://github.com/Comfy-Org/workflow_templates/blob/f79d2604ad3f93a22877b86deee45d8dfeb72245/output/api_seedance2_5_t2v_1080p.mp4).
+
+---
+
+### 228. Reference-locked alien-ring passage
+
+**Verified model:** Seedance 2.5 — ComfyUI's official ByteDance reference node
+explicitly selects \`Seedance 2.5\`, binds the supplied \`cosmoscape.png\`
+image, preserves the full prompt and 1080p parameters, and ships the generated
+MP4
+
+**Use case:** image-to-video, hard-sci-fi one-take, scale reveal, rotating
+mechanism, reference preservation  
+**Mode:** reference-to-video from one image  
+**Settings:** 5 seconds, adaptive aspect ratio, 1080p, audio enabled
+
+\`\`\`text
+Use @image1 as the immutable opening composition: one lone astronaut on a rocky
+cliff beside one colossal segmented alien ring, twin suns, orange circuit
+lines, deep-space structures, atmospheric mist and golden god rays. Preserve
+the astronaut's suit and scale, the cliff silhouette, ring geometry, twin-sun
+placement, palette and horizon. Animate the supplied world; do not redesign it.
+
+ONE CONTINUOUS FIVE-SECOND SHOT
+
+[0–1.3 s | exact handoff]
+Begin on a close visual match to @image1. The astronaut starts moving slowly
+toward the ring. Camera follows from behind at a smooth low angle with a gentle
+dolly push; establish weight and immense scale before the machinery changes.
+
+[1.3–3.2 s | coupled mechanism]
+The ring begins one slow rotation around its fixed central axis. Its segmented
+hexagonal panels shift only by small coordinated increments while the existing
+orange circuit lines pulse along the frame. The astronaut continues forward at
+the same measured pace. Keep the ring rooted and the camera movement smooth.
+
+[3.2–5.0 s | threshold and expansion]
+The astronaut passes through the open centre of the ring. Without a cut, the
+camera's forward motion reveals the larger cosmic construction beyond:
+massive orbital frameworks, distant mechanical spires, suspended dust and
+layered volumetric mist extending into deep space. End on the expanded view
+while retaining the astronaut as a scale anchor.
+
+CONTINUITY LOCK
+one astronaut, one ring, one forward route, one slow axial rotation and one
+low-angle dolly. Ring geometry remains coherent; the astronaut never teleports
+or deforms. No fast movement, jerky camera, orbit, reverse travel, scene cut,
+collapsing structure, added vehicle, replacement sky, black frame, title, logo
+or text overlay. Audio: low mechanical rotation, muted suit steps, distant
+wind and a restrained sub-bass spatial tone; no dialogue.
+\`\`\`
+
+**Why it works:** the reference frame supplies identity and composition while
+the prompt spends its detail budget on motion ownership. Separating the
+astronaut's forward displacement, the ring's axial rotation and the camera's
+dolly prevents all three from collapsing into generic motion. The final
+reveal preserves the astronaut in frame as a persistent scale ruler.
+
+**Source:** ComfyUI's August 18, 2026
+[official 1080p Seedance 2.5 documentation commit](https://github.com/Comfy-Org/docs/commit/5c4d55740280b26df11441b10bc90c51aea23a02),
+the
+[workflow-and-output release commit](https://github.com/Comfy-Org/workflow_templates/commit/f79d2604ad3f93a22877b86deee45d8dfeb72245),
+the
+[complete reference workflow](https://github.com/Comfy-Org/workflow_templates/blob/f79d2604ad3f93a22877b86deee45d8dfeb72245/templates/api_seedance2_5_i2v_1080p.json),
+the
+[supplied reference image](https://github.com/Comfy-Org/workflow_templates/blob/f79d2604ad3f93a22877b86deee45d8dfeb72245/input/cosmoscape.png),
+and its
+[generated 1080p MP4](https://github.com/Comfy-Org/workflow_templates/blob/f79d2604ad3f93a22877b86deee45d8dfeb72245/output/api_seedance2_5_i2v_1080p.mp4).
+
+
+---
+
+### 229. Quantified locked isometric city interaction plate
+
+**Verified model:** Seedance 2.5 (`seedance_2_5`) — the original developer
+committed the exact still/video generation sheet, the resulting 720p clip and a
+241-frame analysis showing only 0.4–0.8 MAE/255 in static regions
+
+**Use case:** interactive web hero, isometric city map, locked-camera ambient
+plate, deterministic hotspots, loop recovery  
+**Mode:** omni-reference image-to-video  
+**Settings:** 10 seconds, 16:9, 720p, high bitrate, audio disabled; the approved
+city still is assigned as both start and end reference
+
+```text
+REFERENCE PLATE — CREATE AND APPROVE BEFORE VIDEO
+A crisp high-angle isometric miniature city occupies one square floating land
+tile, centred against a clean pale-concrete void with generous safe margin on
+all four sides. Perspective is nearly orthographic, as if photographed through
+a long lens at a forty-five-degree downward angle.
+
+Make six districts instantly distinguishable by shape and boundary:
+1. compact glass towers near the centre;
+2. terracotta-roof housing in a low grid;
+3. a green park, lake and curved paths;
+4. an industrial harbour with warehouses, containers and cranes;
+5. a marina on a teal channel;
+6. an open stadium with a running track.
+Roads or water visibly separate every district. A slim elevated railway circles
+the tile; tiny cars and boats supply future motion cues.
+
+Keep one readable lighting system: soft key from upper left, long consistent
+shadows and cool fill that retains detail. Palette: deep slate, pale concrete,
+terracotta, restrained park green, water teal and small amber accents. No baked
+labels, street names, logos, interface, watermark or visible face. Regenerate
+the still until every district is identifiable and survives a vertical crop.
+
+VIDEO REQUEST
+Use the approved city plate as both start_image and end_image.
+
+The camera is mechanically locked for the complete ten seconds. Preserve the
+exact source framing, projection, crop, tile scale and horizon. No pan, tilt,
+roll, dolly, orbit, zoom, lens breathing, handheld motion, reframing or cut.
+The island, roads, buildings and district boundaries never move, rotate, bend
+or scale.
+
+Animate only small ambient systems:
+- tiny cars travel steadily along existing roads;
+- one elevated train makes a single circuit and aims to finish where it began;
+- boats trace slow arcs inside the existing teal water and return near their
+  opening positions;
+- park foliage and the lake surface move very subtly;
+- dock cranes make one small swing and settle;
+- thin cloud shadows cross the tile and leave the far edge.
+
+Hold sun direction, shadow length, exposure and palette constant. Keep every
+district border unobscured and every planned interaction zone readable. Motion
+must stay small enough that a fixed click target remains attached to the same
+building throughout. Single continuous silent take. No added district, moving
+building, camera drift, new text, label, logo, UI or watermark.
+
+ACCEPTANCE — CAMERA LOCK
+Sample static void and tile-edge regions across all returned frames. Pass the
+take only when their mean absolute difference remains at codec-noise scale and
+no landmark walks away from its normalized screen coordinate. Plot fixed
+district hitboxes over the first, middle and final frames; reject if any target
+slides off its intended block.
+
+LOOP TEST AND RECOVERY
+Do not assume that binding the same start and end image guarantees a loop.
+Measure the first frame against every candidate frame in the final half of the
+clip and inspect the largest moving objects, especially the train.
+
+If no clean return exists, preserve the locked plate and build a short overlap
+crossfade from the beginning into the end. Re-measure the seam and reject it if
+a train, car or boat appears doubled. The crossfade is allowed only because the
+camera and architecture remain fixed; regenerate instead if the camera drifts.
+
+INTERACTION HANDOFF
+Keep the animated 720p plate for the wide living map. On district open, crossfade
+to the high-resolution approved still with identical framing before zooming.
+All names, hover states, click targets and accessibility labels remain DOM or
+application layers, never generated pixels.
+```
+
+**Why it works:** the prompt separates immutable navigation geometry from
+low-amplitude ambient motion, then proves the claimed lock numerically rather
+than trusting “static camera” wording. The source run measured only codec-level
+movement in static zones, so normalized hotspots could remain deterministic.
+It also showed that identical start/end references did not make the train
+return; an overlap crossfade reduced the measured seam while preserving the
+fixed architecture. Switching to the aligned high-resolution still during zoom
+keeps detail without asking a 720p video to carry the close view.
+
+**Sources:** MehediHasan27's August 18, 2026
+[primary generation, measurement and implementation commit](https://github.com/MehediHasan27/Citymap/commit/7d63d84c49f5096f746fa70a096eed672c36de4b),
+the committed
+[complete Seedance 2.5 generation sheet](https://github.com/MehediHasan27/Citymap/blob/7d63d84c49f5096f746fa70a096eed672c36de4b/CITY-MAP-PROMPTS.md),
+and the
+[resulting web-ready Seedance clip](https://github.com/MehediHasan27/Citymap/blob/7d63d84c49f5096f746fa70a096eed672c36de4b/public/media/city-iso.web.mp4).
+
+---
+
+### 230. Eight-beat Dubai host documentary
+
+**Verified model:** Seedance 2.5 (`dreamina-seedance-2-5-260628`) — the
+original creator ran this text-only prompt on August 19, 2026 and records a
+successful 720×1280 result, 30.08-second H.264/AAC master, returned final-frame
+PNG and one stable human identity across all eight cuts
+
+**Use case:** long-form vertical travel film, single-host identity continuity,
+native narration, day-to-night montage  
+**Mode:** text-to-video, no visual references  
+**Settings:** 30 seconds, 9:16, 720p, 24 fps, native English voice, city ambience
+and music; `return_last_frame: true`
+
+```text
+Create a photoreal vertical travel documentary following one Emirati host
+through Dubai from sunrise to night. The same man speaks directly to the viewer
+in every segment while recognizable places carry the journey forward.
+
+HOST LOCK
+One Emirati man, early thirties, warm brown complexion, neatly trimmed short
+black beard, alert friendly eyes, white kandura, white ghutra and black agal.
+Keep one face, body, age, wardrobe and voice for the full film. His manner is
+calm and welcoming: relaxed walking pace, open hand gestures and an easy smile.
+Frame him chest-up or as a complete standing figure.
+
+VISUAL AND SOUND SYSTEM
+Live-action 35 mm travel-film texture with fine grain, warm controlled grade,
+natural skin, shallow depth of field and restrained lens flare. Movement feels
+gimbal-smooth with a small amount of human breathing. Let dawn gold evolve into
+blue-hour contrast and warm night reflections. Use real location ambience below
+a light orchestral-and-oud score. All narration is clear English in one warm,
+unhurried Emirati-accented male voice.
+
+0–4 s — Museum of the Future plaza, golden morning. Track backward at the
+host's walking speed, eye-level medium framing. Silver calligraphy and the
+Sheikh Zayed Road skyline sit behind him. He says: "Each morning, this city
+wakes up reaching a little higher."
+
+4–8 s — Dubai Creek. Hold a wide rule-of-thirds composition as he rides a
+wooden abra, one hand on the rail, with dhows and wind-tower houses in haze.
+He says: "Long before the towers, traders crossed this creek."
+
+8–12 s — Old souk. Make a restrained medium-close arc around him among spice
+sacks, gold displays and striped light from the timber roof. He says: "The
+water is the same, and so is the welcome."
+
+12–16 s — Burj Khalifa at twilight. Place the camera extremely low and wide;
+the host opens his arms at the base while the tower fills the vertical frame.
+He says: "Look up—we built this within one lifetime."
+
+16–20 s — Dubai Fountain. Rise slowly above the boardwalk as illuminated
+plumes climb behind him and mist catches amber light. He says: "At night, even
+the water performs for everyone who arrives."
+
+20–24 s — Marina promenade. Follow beside him in a steady medium shot; yachts,
+curved towers and neon reflections slide across dark water. He says: "People
+from two hundred nations live here, and home never feels far away."
+
+24–28 s — Moonlit desert. Push gently toward his back as he faces cool blue
+dunes, with only a narrow band of city glow on the horizon. He says: "The
+desert where it began is still beside us."
+
+28–30 s — Palm coastline. Lock a centered medium close-up. He turns to lens,
+smiles and opens his arms while the coast glitters behind him. He says: "I am
+Emirati. This is my home. Come and see it."
+
+CONTINUITY AND FAILURE CONTROL
+Use exactly one camera move in each segment and maintain a continuous,
+unhurried rhythm between cuts. Assign every spoken line only to HOST; synchronize
+his mouth accurately and keep silent background people indistinct. Preserve
+natural anatomy, stable walking, one wardrobe and one identity throughout.
+Exclude subtitles, captions, logos, watermarks, miniature tilt-shift, animation,
+illustration, plastic CGI skin, blown highlights, flicker and distorted crowd
+faces.
+```
+
+**Why it works:** one prose identity sheet carries the host through eight
+locations without a reference image, while the repeated wardrobe and speaker
+label reinforce that state at every cut. Whole-second beats tile the actual
+30-second request, each shot owns one camera move, and the day-to-night route
+creates visual progression without asking the host to transform. The successful
+source run specifically confirmed that the explicit 9:16 text-to-video request
+stayed in the intended task class and held a single identity across all cuts.
+
+**Source:** Ahmad Raza's August 19, 2026
+[Seedance 2.5 director release](https://github.com/ahmadsamii/seedance-2-5-director/commit/f2715d5dd3b189a787a18dbcc43b3d1c344d6d05)
+and the
+[complete prompt with successful-run metadata](https://github.com/ahmadsamii/seedance-2-5-director/blob/f2715d5dd3b189a787a18dbcc43b3d1c344d6d05/examples/30s-vertical-documentary.md).
+
+
+---
+
+### 231. Iris-reflection gaze collision
+
+**Verified model:** Seedance 2.0 — the original creator committed the complete
+shot prompt and the corresponding Seedance 2.0 render on August 21, 2026
+
+**Use case:** recognition reveal, macro eye performance, in-frame reflected
+character, suspense without a reverse shot  
+**Mode:** cinematic text-to-video  
+**Settings:** one short 16:9 live-action period-fantasy shot, native ambience,
+no dialogue or captions
+
+```text
+Create one uninterrupted extreme macro shot at night. A child's single eye is
+pressed close to a narrow moonlit split in a worn paper door. The wet iris,
+eyelashes and rough paper fibres are sharply readable; the surrounding room
+falls into soft darkness. Inside the curved iris reflection, a distant horned
+oni stands in the passing moonlight.
+
+0–2.5 s — Begin close enough to read the eye, door edge and reflected figure.
+Push forward almost imperceptibly. The child holds completely still while the
+lashes and paper edge expand naturally with the camera move. Keep the reflected
+oni small, optically curved and locked to the iris surface.
+
+2.5–5 s — The pupil contracts and the child blinks exactly once. During that
+blink, let the reflected oni slowly turn its head toward the camera, but keep
+that action visible only inside the iris. A thin band of moonlight flickers
+across both the door slit and the reflection.
+
+5–7 s — Stop the push at an intimate macro distance. Hold on recognition rather
+than fear: the eyelid settles, the gaze stays fixed and the child does not
+flinch. The oni remains facing outward in the reflection.
+
+Continuity locks: one eye, one reflected figure and one continuous camera move.
+Do not cut to the oni, place an extra face outside the iris, detach or enlarge
+the reflection, change the child's identity, morph the eye, add tears, text,
+logos or a jump scare. Preserve physically plausible reflection perspective
+through the push and blink.
+
+Sound is sparse: paper fibres creaking softly, distant procession footsteps,
+night wind and one controlled breath.
+```
+
+**Why it works:** the reveal and reaction occupy different spatial layers of
+the same shot. Assigning the child the blink and pupil change while the reflected
+oni owns the head turn gives Seedance two unambiguous motion channels and avoids
+a continuity-breaking reverse angle.
+
+**Sources:** Leon Harris / Project Kinmuku's August 21, 2026
+[Seedance 2.0 render commit](https://github.com/Leonkharris/nextframe-site/commit/f6e63e53b1c6a33ae86566113d37c5c6fe1caa62),
+the committed
+[complete episode prompt data](https://github.com/Leonkharris/nextframe-site/blob/f6e63e53b1c6a33ae86566113d37c5c6fe1caa62/ProjectKinmuku/episodes_data.js),
+and the
+[resulting shot 04 MP4](https://github.com/Leonkharris/nextframe-site/blob/f6e63e53b1c6a33ae86566113d37c5c6fe1caa62/ProjectKinmuku/assets/episodes/ep1/clips/shot04.mp4).
+
+---
+
+### 232. Against-current procession abandonment
+
+**Verified model:** Seedance 2.0 — the original creator committed the complete
+shot prompt and the corresponding Seedance 2.0 render on August 21, 2026
+
+**Use case:** abandonment beat, crowd-versus-hero motion contrast, restrained
+fantasy acting, wide environmental storytelling  
+**Mode:** cinematic text-to-video  
+**Settings:** one 7–10 second 16:9 live-action period-fantasy shot, native
+ambience, no dialogue or captions
+
+```text
+Create one wide rear-view night shot on a mountain road. A lone horned oni in a
+heavy robe stands motionless near the centre foreground. A shadowy procession
+of travellers, banners and dim lanterns flows around him, follows the bend and
+continues away into mist. Cold moonlight outlines his horns and shoulders while
+small amber lanterns recede into the distance.
+
+Use a single very slow push toward the oni's back. The camera never overtakes or
+orbits him. The procession owns the large motion: walkers pass on both sides,
+cloth and lanterns sway, and the line steadily empties into the bend. Passing
+wind streams the oni's hair in the same direction, but his robe retains weight.
+
+Give the oni only three restrained actions across the shot: his shoulders lower
+by a few centimetres, his head tilts a fraction toward the departing line, and
+one visible hand gradually closes. He never turns around, steps forward, waves,
+chases the group or collapses. Finish with more empty road visible between him
+and the last lantern than at the start.
+
+Continuity locks: preserve one road bend, one moon direction, one horn shape,
+one costume and a coherent procession path. Do not duplicate walkers, reverse
+the crowd, make figures pass through the oni, move the landscape, cut, zoom
+abruptly, add dialogue, subtitles, logos or melodramatic crying.
+
+Sound begins with layered footsteps, cloth and low night wind, then lets the
+footsteps and lantern rattle recede until the oni's breath is the nearest sound.
+```
+
+**Why it works:** abandonment is expressed as relative motion rather than facial
+exposition. The crowd, wind and camera advance while the lead remains rooted;
+the three small acting beats preserve readability without competing with the
+procession or asking the model to invent a close-up.
+
+**Sources:** Leon Harris / Project Kinmuku's August 21, 2026
+[Seedance 2.0 render commit](https://github.com/Leonkharris/nextframe-site/commit/f6e63e53b1c6a33ae86566113d37c5c6fe1caa62),
+the committed
+[complete episode prompt data](https://github.com/Leonkharris/nextframe-site/blob/f6e63e53b1c6a33ae86566113d37c5c6fe1caa62/ProjectKinmuku/episodes_data.js),
+and the
+[resulting shot 06 MP4](https://github.com/Leonkharris/nextframe-site/blob/f6e63e53b1c6a33ae86566113d37c5c6fe1caa62/ProjectKinmuku/assets/episodes/ep1/clips/shot06.mp4).
+
+---
+
+### 233. Grooming-mask micro-expression rupture
+
+**Verified model:** Seedance 2.0 — the original creator committed the complete
+shot prompt and the corresponding Seedance 2.0 render on August 21, 2026
+
+**Use case:** villain taunt reaction plate, concealed emotional injury, precise
+micro-performance, creature-character continuity  
+**Mode:** cinematic text-to-video  
+**Settings:** one 6–8 second 16:9 live-action fantasy shot, native ambience,
+silent performance plate
+
+```text
+Create one medium-close night shot of a poised cat-yokai seated above a quiet
+street in a black kimono. Moonlight makes a clean rim along her cheek, ear and
+shoulder. One hand is raised as she slowly grooms a single claw; her tail curls
+behind her and gives occasional controlled flicks. Keep her expression elegant,
+amused and deliberately unhurried.
+
+Move the camera in a restrained arc of less than thirty degrees. During the
+first half, she performs effortless superiority: one measured tongue-to-claw
+contact, half-lidded eyes and a small knowing smile. At the midpoint, stop the
+grooming for less than half a second. Her eyes flatten and the smile almost
+disappears, revealing that an old insult landed. She immediately covers the
+rupture: the smile returns a little sharper, the tail flicks once and she resumes
+grooming with slightly greater pressure until the end.
+
+Do not turn the moment into anger or surprise. She never bares her teeth,
+lunges, looks into camera, changes pose or speaks. Preserve one face, two cat
+ears, one tail, one raised hand and the same claw throughout. Prevent extra
+fingers, duplicated tongues, fur-to-skin morphs, wardrobe drift, a full orbit,
+cuts, captions, logos or exaggerated anime symbols.
+
+Sound is only high night wind, distant street ambience, a soft cloth movement
+and the faint claw-grooming contact. Add any taunting dialogue later in post so
+the generated plate remains focused on the facial rupture.
+```
+
+**Why it works:** the prompt treats composure as a timed performance with one
+brief violation, then a stronger cover. The grooming pause, eye flattening and
+single tail flick are separate, countable cues; limiting the arc and anatomy
+reduces the usual creature-character drift.
+
+**Sources:** Leon Harris / Project Kinmuku's August 21, 2026
+[Seedance 2.0 render commit](https://github.com/Leonkharris/nextframe-site/commit/f13c1875812bd3dbcf2c0c7b0ac679f89d493380),
+the committed
+[complete episode prompt data](https://github.com/Leonkharris/nextframe-site/blob/f13c1875812bd3dbcf2c0c7b0ac679f89d493380/ProjectKinmuku/episodes_data.js),
+and the
+[resulting shot 08 MP4](https://github.com/Leonkharris/nextframe-site/blob/f13c1875812bd3dbcf2c0c7b0ac679f89d493380/ProjectKinmuku/assets/episodes/ep2/clips/shot08.mp4).
+
+### 234. Six-gate neon-citadel ascent
+
+**Verified model:** Seedance 2.5 — the original creator identified the committed
+30-second long-form cut as Seedance 2.5 and mounted the generated MP4 beside the
+complete bilingual story and shot data on August 22, 2026
+
+**Use case:** long-form anime trailer, six-beat vertical narrative, multi-character
+reference continuity, delayed palette payoff, native narration  
+**Mode:** character-reference text-to-video  
+**Settings:** one 30-second 9:16 cyberpunk-anime generation, six five-second
+beats, one narrator, no subtitles
+
+```text
+REFERENCE AND PALETTE CONTRACT
+@Kairo = adult hero: warm dark-brown skin, athletic build, silver-blue swept
+undercut, cyan earring, short stubble, black techwear jacket edged in cyan and
+magenta, red waist accent, cyan-lit eyes and energy.
+@Vega = composed Wheel Keeper: pale skin, long straight black hair with vivid
+violet streaks, blunt fringe, clear rectangular glasses, black satin jacket,
+silver chain and restrained red oni embroidery.
+@Nyx = rival gatekeeper: pale skin, chin-length silver bob, acid-green light
+marks across face and collarbone, black choker and harness beneath an
+iridescent sheer jacket.
+@Fortuna = cyber-angel spirit: glossy black armour with orange-red seams, cyan
+hexagon at the sternum, pale ice-blue hair, orange-red irises ringed in cyan,
+temple modules and a tilted cyan-particle halo.
+
+Keep every identity, face, silhouette, outfit and colour assignment stable.
+Use high-detail cel-shaded shonen animation with painterly texture, neon rim
+light and deep near-black negative space. Magenta, cyan and violet may dominate;
+do not spend warm gold before the final unresolved luck cue. Use one warm,
+cinematic narrator, concise enough that every line finishes inside its beat.
+
+0–5 s — Establish the six-gate climb.
+Rise slowly through drifting fog past six immense neon gates stacked toward a
+citadel in the night sky. Cut once to Kairo at the first gate and make a gentle
+front dolly toward his lifted face. He is tired but still upright, eyes fixed on
+the distant summit. Narration: "Six gates rise above the city. Others climbed
+higher; none arrived whole."
+
+5–10 s — Cross Bronze and reveal the judge.
+The Bronze Gate grinds open with sparks and visible mechanical weight. Follow
+Kairo from a low angle as he walks through without looking back. Dissolve to
+Vega, completely still above the dark Wheel Room, while the camera cranes
+between violet and muted-red beams. Narration: "The first gate asks only that
+you do not hesitate. Six gates hide one question."
+
+10–15 s — Compress four trials without identity drift.
+Use four clean, causally ordered flashes: Silver, Sapphire, Platinum, then
+Obsidian. In every flash Kairo advances in the same direction. Add damage
+progressively—heavier breath, one new scrape, then a torn jacket edge—but never
+reset or redesign him. Keep the camera close and energetic while each gate
+opens only after his forward action. Narration: "Every gate takes something.
+He climbs because he refuses to let go."
+
+15–20 s — Let doubt become the obstacle.
+Nyx resolves from magenta flares at the Diamond Gate and occupies the centre of
+the passage. Pull back just enough to show that she blocks the route without
+touching Kairo. Cut to his close response: he holds her gaze, takes one small
+step and closes one cyan-lit hand into a fist. No attack occurs. Narration:
+"The last keeper closes no door with force. She closes it with doubt."
+
+20–25 s — Yield, then disclose scale.
+Nyx moves only half a step aside, lips tight and eyes briefly averted. Glide
+past her from a low angle as the Diamond Gate opens behind her. Continue the
+same forward screen direction into the chamber, then crane back to reveal the
+colossal Wheel turning slowly above tiny, motionless Kairo. Narration: "He does
+not defeat the keeper. He refuses to agree with her."
+
+25–30 s — End on the unanswered touch.
+Move from the wide scale reveal to an extreme close view of Kairo's hand
+approaching the Wheel rim. Do not let him touch it yet. Fortuna emerges from the
+rotation in controlled cyan and orange-red light; Kairo's fingers tremble once,
+then steady. Introduce one narrow warm-gold glint at the rim but do not reveal a
+prize or result. Narration: "Fortuna promises no reward—only an answer." End on
+the suspended gap between hand and Wheel.
+
+AUDIO AND FAILURE CONTROL
+Carry one rising orchestral-synth score across all six beats. Layer gate motors,
+neon electrical hum, boots on stone and a deep rotational bass pulse; thin the
+mix around the final hand gap. Keep dialogue assigned only to the narrator.
+Maintain forward travel, cumulative damage and gate order. No backward gate,
+duplicate guardian, costume repair, premature gold wash, contact before the
+last frame, outcome reveal, victory claim, sudden zoom, anatomy warp, captions,
+logos or watermarks.
+```
+
+**Why it works:** six equal time cells turn a dense 30-second anime trailer into
+an executable state chain: each gate opens only after forward motion, damage
+accumulates instead of resetting, and the two guardians perform different
+blocking functions. Repeating compact reference identities at the top protects
+four-character continuity, while withholding gold and physical contact makes
+the cliffhanger measurable in the final frame. The source commit verifies that
+the creator rendered and mounted the corresponding first 30-second, six-beat
+cut rather than publishing prompt text alone.
+
+**Sources:** Leon Harris / Next-Frame Agency's August 22, 2026
+[Seedance 2.5 generation commit](https://github.com/Leonkharris/nextframe-site/commit/d3d199a839a68ba548af9776f10cdcd422b3cfc0),
+the committed
+[complete bilingual story and shot data](https://github.com/Leonkharris/nextframe-site/blob/d3d199a839a68ba548af9776f10cdcd422b3cfc0/xsino/data.js),
+and the
+[resulting 30-second MP4](https://github.com/Leonkharris/nextframe-site/blob/d3d199a839a68ba548af9776f10cdcd422b3cfc0/xsino/assets/videos/07/take1_the_six_gates.mp4).
+
+---
+
+### 235. Reference-brand café meet-cute handoff
+
+**Verified model:** Seedance 2.5 — the original creator committed a complete
+website prompt and a corresponding 5.1-second, 16:9 one-shot with dialogue
+audio; the creator records that Seedance reproduced the uploaded icon and exact
+ImprovTalk wordmark in the generated outro on August 22, 2026
+
+**Use case:** native-dialogue app commercial, live-action-to-brand transition,
+reference-driven end card, micro-performance  \
+**Mode:** icon-reference text-to-video on the Seedance 2.5 website  \
+**Settings:** source prompt: 15 seconds, 9:16, audio on, highest quality;
+documented returned take: 5.1 seconds, 16:9, audio
+
+```text
+REFERENCE CONTRACT
+@BrandIcon is the authority for the final icon geometry, orange-to-magenta-to-
+deep-blue palette and exact wordmark spelling. Do not borrow shapes or colours
+from unrelated marks. Use no other text.
+
+Create one continuous premium live-action app commercial in a bright modern
+specialty café at golden hour. Warm low sun enters through tall windows; a trace
+of purple dusk remains outside. A stylish adult man in an olive overshirt and
+white tee stands beside an adult woman's table while she reads beside a flat
+white. Preserve the same two faces, hair, clothing, table and café geometry.
+
+0–5 s — Start in a medium two-shot. With a nervous but genuine smile, he says:
+"We don't know each other, but... I couldn't leave without saying hi." Keep the
+delivery warm and imperfect, with a small breath before the second clause.
+
+5–12 s — She looks up, holds one real beat of surprise, then smiles and answers
+playfully. He laughs and relaxes; she closes the book and leans in slightly.
+Build easy conversation through eye contact, tiny laughs, natural pauses and
+restrained gestures. Never make either performance theatrical.
+
+12–15 s — Let the café light wash gradually into the purple-to-blue gradient
+from @BrandIcon, with one warm orange accent from the upper left. Fade their
+laughter softly while the camera defocuses the couple into that clean colour
+field. Reveal @BrandIcon centred, crisp and unaltered; place the exact wordmark
+"ImprovTalk" beneath it in clean white type. Hold long enough to read it.
+
+Use one smooth stabilized arc and slow push from the medium two-shot toward an
+intimate framing; do not cut or reset the camera. Natural café ambience and both
+voices remain audible until the outro fade. Keep realistic skin, hair, hands,
+motion blur and object contact. No morphing, duplicate person, wardrobe change,
+logo deformation, misspelled wordmark, subtitle, caption, watermark or extra
+text.
+```
+
+**Why it works:** the prompt assigns the reference two narrow jobs—palette and
+brand identity—while observable dialogue beats govern the live-action scene.
+The final light wash, defocus and audio fade create a motivated handoff instead
+of asking the model to jump directly from people to a graphic card. The source
+also exposes an important surface constraint: its committed prompt targets
+15-second vertical output, while the documented Seedance website return is
+5.1 seconds at 16:9, so delivery should be checked against the actual returned
+stream rather than the requested UI settings.
+
+**Sources:** Davit Gadyan's August 22, 2026
+[primary Seedance 2.5 generation commit](https://github.com/DavitGadyan/AIVideo_Generation_higgsfield/commit/32666b37dfa064b6b33d55648e0c533d9dca55e5),
+the committed
+[complete website prompt](https://github.com/DavitGadyan/AIVideo_Generation_higgsfield/blob/32666b37dfa064b6b33d55648e0c533d9dca55e5/docs/generation-prompt-website.txt),
+the
+[model/result record](https://github.com/DavitGadyan/AIVideo_Generation_higgsfield/blob/32666b37dfa064b6b33d55648e0c533d9dca55e5/docs/README.md),
+and the
+[generated MP4](https://github.com/DavitGadyan/AIVideo_Generation_higgsfield/blob/32666b37dfa064b6b33d55648e0c533d9dca55e5/docs/videos/seedance.mp4).
+
+---
+
+### 236. Three-reference Shibuya reunion CM
+
+**Verified model:** Seedance 2.0 — AICU and the credited notebook creator
+published the exact three input references, the complete R2V generation prompt,
+the corresponding 15-second audio result and the ComfyUI API workflow together;
+the August 26, 2026 notebook update makes the model-to-result chain explicit
+
+**Use case:** two-character anime dialogue, photoreal-background integration,
+storyboard-conditioned coverage, reunion micro-story  \
+**Mode:** reference-to-video with two character sheets and one image board  \
+**Settings:** 15 seconds, documented 1254×720 result, native Japanese dialogue
+
+```text
+REFERENCE CONTRACT
+@Image1 is the sole identity and wardrobe authority for Mei: pale-aqua
+twin-tails, black ribbons, pink eyes and a white frilled dress.
+@Image2 is the sole identity and wardrobe authority for Rizu: warm skin, blue
+eyes, a pink-blonde side ponytail, orange hoodie, shorts and sneakers.
+@Image3 controls only the Shibuya geography, shot order, framing and overall
+mood. It must not redesign either character.
+
+Create a bright 15-second character-introduction commercial at the Hachiko
+meeting area. Render the plaza, crowd and city photorealistically, but render
+only Mei and Rizu as clean cel-shaded anime characters. Make their contact
+shadows, light direction and sunny midday colour temperature agree with the
+real environment. Keep both designs unchanged through every angle.
+
+0–4 s — Establish absence and concern.
+Open wide enough to identify the Hachiko-side plaza and the scramble-crossing
+atmosphere, then settle into a medium view of Mei holding her phone alone. She
+searches the moving crowd with restrained worry and says softly in Japanese:
+"リズ、まだかな……" Do not let passers-by obscure her face for more than a
+moment.
+
+4–6 s — Introduce the late friend in motion.
+Cut to Rizu running through the same crowd while looking for Mei. Track beside
+her at walking height so her speed reads without camera shake. Her breath is
+audible; she remains upbeat rather than distressed.
+
+6–10 s — Make recognition the emotional turn.
+Rizu sees Mei first and raises one hand above the crowd, calling in Japanese:
+"メイ、こっち！" Match her eyeline into a close reaction of Mei. Mei's
+expression changes in order—recognition, relief, then a small bright smile—and
+she answers with one shy wave. Preserve screen direction so the two shots feel
+spatially connected.
+
+10–15 s — Complete contact and leave together.
+Rizu reaches Mei and takes her hand naturally; show fingers making one clean
+contact rather than merging. Mei exhales, smiles and lightly scolds her in
+Japanese: "待ち合わせ、ここって言ったよね。" Rizu laughs and replies:
+"ごめん、急いだんだよ！" End from behind at three-quarter height as the same
+two characters walk side by side toward the city, suggesting the day is only
+starting.
+
+Carry real plaza ambience, footsteps and both voices across the edit. Keep
+Japanese lip movement aligned to the assigned speaker. Use a clear progression
+of establishing view, motion medium, reaction close-up, reunion two-shot and
+walking-away finish. No third anime lead, identity swap, changed costume,
+fantasy effect, manga symbol, romantic staging, subtitle, caption, logo,
+watermark, malformed hand contact, heavy shake or unmotivated location reset.
+```
+
+**Why it works:** each reference has one non-overlapping responsibility: two
+character sheets lock separate identities while the image board supplies
+geography and coverage. The prompt then repeats observable character anchors
+only where angle and action change, and uses an eyeline match plus ordered
+micro-expression states to make the reunion readable. Separating the
+photorealistic environment from the cel-shaded leads while explicitly sharing
+light and contact shadows prevents the common pasted-on-character look. The
+published sample verifies the entire prompt/reference/result chain rather than
+showing an unattributed output alone.
+
+**Sources:** AICU and credited notebook creator Zasuko's August 26, 2026
+[example-and-workflow publication commit](https://github.com/aicuai/Book-SG26/commit/32f2cdf7020e7fc3b0490c85556c41a5277efa96),
+the
+[complete Seedance 2.0 R2V prompt](https://github.com/aicuai/Book-SG26/blob/32f2cdf7020e7fc3b0490c85556c41a5277efa96/prompts/chap5/README.md#5-4-5),
+the
+[three-reference notebook record](https://github.com/aicuai/Book-SG26/blob/32f2cdf7020e7fc3b0490c85556c41a5277efa96/SG26_SD2_R2V.ipynb),
+and the
+[15-second audio sample](https://github.com/aicuai/Book-SG26/blob/32f2cdf7020e7fc3b0490c85556c41a5277efa96/prompts/chap5/Seedance2.0_R2V%E2%80%97Movie_720p_SAMPLE.mp4).
+
+---
+
+
+### 237. Repaired-marionette clockwork-circus ascent
+
+**Verified model:** Seedance 2.5 — the original creator published the complete
+multi-reference prompt and corresponding showcase result together in a post
+explicitly titled as a Seedance 2.5 test on August 27, 2026
+
+**Use case:** handcrafted stop-motion narrative, multi-image reference routing,
+character-and-material continuity, repair-to-payoff action arc  \
+**Mode:** reference-to-video with one character master, one world master and
+shot-specific image references  \
+**Settings:** 30 seconds, 16:9, seven-shot story
+
+```text
+Create one coherent 30-second handcrafted stop-motion marionette film. Every
+visible surface must feel physically made at miniature scale; do not drift into
+smooth CGI or live-action humans.
+
+REFERENCE CONTRACT
+@Image1 alone defines the protagonist: one pale carved wooden marionette with a
+fine face seam, weathered blue-green bob, blue eyes, red bell cap, cream ruff,
+patched red-and-blue tunic, brass buttons, cream bloomers, mismatched striped
+stockings, red shoes, exposed wood limbs, brass joints and visible suspension
+strings. Lock its face, proportions, wood grain, paint wear and costume.
+
+@Image2 alone defines the clockwork-circus world: carved wood, aged brass,
+stitched fabric, thread, paper scenery, leather and miniature mechanisms. It
+may not redesign the protagonist. @Image3 through @Image10 guide only the
+assigned shot's composition, props and local action. Later shot references must
+inherit the same marionette and the repair established in shot 2.
+
+0–5 s — Wake behind the show.
+Begin close backstage. The marionette lies among ropes and stored costumes; one
+wooden arm piece is detached beside the matching joint and several strings hang
+without tension. Warm stage light leaks through the curtain while paper
+acrobats, a mechanical elephant and the ringmaster continue the distant show.
+The eyes open as a small cap bell trembles with the machinery.
+
+5–10 s — Repair in observable stages.
+Macro coverage: wrap copper wire around the broken joint, seat one tiny screw,
+then tighten red cloth into a brace. Test the repair in a readable sequence:
+one finger, wrist, elbow. Keep the original arm, joint location, wire turns,
+screw and brace unchanged from this point onward. Skipping music and
+accelerating gears create urgency without changing the restrained face.
+
+10–15 s — Make the repair earn its place.
+Track vertically as the same puppet climbs through pulleys, ropes,
+counterweights and brass gears, treating slack strings as climbing lines. A
+counterweight drops and lights stutter. The repaired hand begins to slip, then
+closes around one rope and holds; show the brace and copper winding intact in
+the catch.
+
+15–20 s — Convert entrance into intervention.
+The marionette swings through the curtain and lands on the clockwork elephant
+during its routine. Its back opens into rotating performance platforms. The
+protagonist balances, catches one loose control line with the repaired arm and
+redirects the failing mechanism into the choreography. The miniature audience
+falls silent. Keep gravity, foot contact and practical shadows credible.
+
+20–25 s — Turn the hazard into dance.
+Several strings tangle and lift the puppet. Begin with one beat of genuine loss
+of control, then let it organize the same tension into an aerial dance. Circle
+once around the subject while the curtains, practical lamps, audience,
+elephant, ringmaster and paper performers preserve their spatial order.
+Motion remains slightly stepped, with strings and support shadows still
+visible.
+
+25–28 s — Choose independence.
+Land center stage. When the machinery pulls again, the marionette uses one
+small brass release tool to unhook the remaining strings from their loops in a
+clear one-by-one sequence. The released lines fall around the red shoes and
+stay there. Take one unsupported step; do not hide it with a cut or levitation.
+
+28–30 s — Close on proof, not spectacle.
+Take a second unsupported step and bow with the repaired arm still intact. The
+wooden audience and clockwork cast answer with warm applause. Dolly slowly
+backward through the red curtains as tungsten lamps dim, but preserve the bow
+as the final readable image rather than cutting to black.
+
+Use tactile stop-motion sound: bell, thread tension, wood contact, tiny screw,
+gears, pulley knocks, cloth, footsteps and applause. Preserve visible wood
+grain, chipped paint, aged velvet, miniature scale, frame-by-frame imperfection
+and practical light. No extra protagonist, face or costume redesign, missing
+brace, magically restored pristine arm, plastic surface, CGI skin, human hand,
+invisible suspension logic, text, logo or watermark.
+```
+
+**Why it works:** the references form a responsibility graph instead of a
+visual average: one image owns identity, one owns world materials, and each
+remaining image owns only local staging. A repair-state ledger then carries the
+wire, screw and brace through three increasingly demanding proofs—grip,
+intervention and bow—so the opening damage becomes causal story information
+rather than a disposable detail. The control strings likewise change narrative
+function in visible stages: failure, climbing aid, hazard, dance apparatus and
+finally a released constraint.
+
+**Source:** Baazookah_Zawadi's August 27, 2026
+[original Seedance 2.5 showcase with complete ten-reference prompt and generated
+result](https://www.reddit.com/r/Seedance_AI/comments/1vclapt/i_tested_seedance_25_for_a_longer_story_video_and/).
+
+---
+
+
+### 238. Reciprocal head-tilt macaque misdirection
+
+**Verified model:** Seedance 2.5 — the original creator posted the complete
+15-second prompt and its generated showcase result together, explicitly stating
+that the test was made with Seedance 2.5
+
+**Use case:** photoreal wildlife comedy, nonverbal reaction timing, restrained
+animal performance, expectation-reversal ending  \
+**Mode:** text-to-video  \
+**Settings:** 15 seconds, naturalistic live action with synchronized ambience
+
+```text
+Create a photorealistic 15-second wildlife-comedy scene in a calm tropical
+forest. Use exactly one adult male hiker on a safe wooden observation platform
+and one anatomically realistic macaque seated on a nearby branch. Keep the
+platform, branch, distance between subjects, daylight direction, hiker's
+camera, macaque identity and screen positions consistent for the whole clip.
+
+CAMERA AND TONE
+Frame both subjects in a stable medium-wide wildlife-documentary composition.
+Use only slight operator breathing and one gentle reframing when the exchange
+begins; no cut, orbit, crash zoom or comedy reaction insert. Natural skin, fur,
+vegetation, shadow, depth of field and breeze. The scene becomes funny through
+timing and coincidence, never through cartoon acting.
+
+0–4 s — Establish curiosity.
+The hiker notices the macaque, slowly raises his camera and takes one photograph
+without stepping closer. The animal looks toward him with alert but relaxed
+curiosity. Its hands and feet keep credible contact with the branch.
+
+4–8 s — First reciprocal beat.
+The hiker lowers the camera. The macaque tilts its head once toward screen-left,
+then holds. After a short observation delay, the hiker tilts his own head toward
+screen-right. The macaque watches his face, pauses and changes to the same
+screen-right tilt. Make the order unmistakable; neither subject moves at the
+same instant.
+
+8–12 s — Build a readable pattern.
+The hiker returns upright, waits, then makes one smaller tilt toward
+screen-left. The macaque tracks him with its eyes before repeating that single
+tilt. The hiker's restrained smile grows only after the repetition. Keep the
+macaque's face and body natural: no human grin, eyebrow performance, nodding or
+exaggerated pause.
+
+12–15 s — Break the pattern.
+Just as the hiker prepares another tilt, the macaque loses interest, turns its
+torso away and begins ordinary self-grooming while remaining securely on the
+same branch. The hiker stops mid-gesture, then gives the recording camera one
+brief confused, amused look. End on this asymmetry; the monkey does not turn
+back for a final gag.
+
+Carry synchronized forest ambience throughout: birds at a distance, insects,
+soft leaf movement, one camera shutter and subtle platform creak. If music is
+used, keep it barely audible, playful and wholly original. No dialogue,
+narration, subtitle, caption, logo or watermark.
+
+ANIMAL-CREDIBILITY LOCK
+The macaque remains a wild animal: realistic anatomy, weight, fur motion, branch
+contact, gaze shifts and grooming. No clothes, human-like walking, hand gesture,
+speech, dance, mugging to camera or physical contact with the hiker. No second
+animal, duplicated limb, changing branch, unsafe approach, fantasy element,
+violence, animation, plastic CGI surface or recognizable existing-media setup.
+```
+
+**Why it works:** the comedy is a four-state behavior map—observe, respond,
+repeat, disengage—rather than a vague request for a funny animal. Alternating
+screen-direction tilts and delayed reactions make agency readable, while the
+final grooming action deliberately violates the established pattern. The
+animal-credibility lock separates a plausible coincidental imitation from
+anthropomorphic performance, preserving the naturalism that makes the payoff
+land.
+
+**Source:** Few-Profession421's August 27, 2026
+[original Seedance 2.5 post with complete prompt and generated showcase
+result](https://www.reddit.com/r/Seedance_AI/comments/1vymg5g/tried_a_simple_monkey_prompt_in_seedance_25_and/).
+
+---
+
+### 239. Lateral cross-section morning-delivery gag
+
+**Verified model:** Seedance 2.5 — the original creator published the complete
+multi-post prompt thread and corresponding 30-second generated result together
+on August 27, 2026, explicitly identifying Seedance 2.5 on PolloAI
+
+**Use case:** single-take domestic comedy, cross-section set choreography,
+multi-room action continuity, diegetic audio timing  \
+**Mode:** reference-to-video with one adult-character reference and one courier
+reference  \
+**Settings:** 30 seconds, one stabilized lateral take plus one closing hard cut
+
+```text
+Create a photorealistic 30-second morning-routine comedy inside one modest
+Mediterranean ground-floor home. The joke must come from spatial continuity,
+deadpan timing and one harmless delivery surprise, not exaggerated acting.
+
+REFERENCE CONTRACT
+@Image1 alone defines Lucía, an adult Spanish woman in her mid-twenties:
+the same face, dark hair, green eyes, silver glasses, sleep T-shirt and cotton
+lounge shorts. Her glasses go on during the opening beat and stay on. Her hair
+begins loose, becomes one high ponytail during the bathroom exit and remains
+that way. Near the door she adds the same beige robe and slippers over the
+sleepwear; do not replace the underlying outfit.
+
+@Image2 alone defines one adult bicycle courier: the same face, helmet, plain
+dark shirt, square unbranded backpack and city bicycle. He never speaks.
+
+SET AND SCREEN-GEOGRAPHY CONTRACT
+Build the home as a fixed side-view cross-section whose rooms connect in one
+left-to-right row:
+BEDROOM -> BATHROOM -> KITCHEN -> LIVING ROOM -> FRONT DOOR -> STREET.
+The bedroom is lived-in, the bathroom compact, the tiled kitchen practical and
+the living room lightly cluttered. The front door sits at the extreme right and
+opens inward. Outside, keep the doorway at frame-left while the cobblestone
+street runs away in depth. Preserve every doorway, counter, stool, coat rack,
+prop position and light direction after it is established.
+
+CAMERA CONTRACT
+From 0–28 seconds use one unbroken, stabilized rightward lateral dolly at
+human walking height. Keep a readable side-on view like a theatre cross-section.
+The camera advances only when Lucía advances, settles while she acts in each
+room and crosses the open front-door threshold with her. No internal cut, zoom,
+orbit, whip-pan, wipe, dissolve or hidden transition. At 28 seconds permit
+exactly one motivated hard cut to the package insert.
+
+0–3 s — Bedroom hook.
+Start with a twin-bell alarm already ringing. Lucía stops it with one clean
+slap, sits up, takes her glasses from the nightstand and puts them on while
+walking toward the bathroom. Complete the room exit before the beat ends.
+
+3–10 s — Bathroom relay.
+She faces the mirror, applies two short deodorant sprays, takes one quick rinse
+from an already-open unbranded mouthwash bottle and spits into the sink. As she
+moves toward the kitchen, she gathers her hair into one high ponytail in two
+readable motions. Keep her glasses on and let each used prop remain at the sink.
+
+10–16 s — Kitchen compression.
+She sits behind the foreground counter. Pour plain cereal into one bowl, add
+milk, lift the bowl with both hands, drink quickly, set it down and wipe her
+mouth. She immediately leaves the stool and continues right. Use generic
+packages with no readable brand text.
+
+16–20 s — Threshold handoff.
+Without stopping, she takes the beige robe from the coat rack, puts it on over
+the same sleepwear, steps into the waiting slippers and opens the front door
+inward. Let exterior ambience grow as the camera and Lucía cross the threshold
+together without a cut.
+
+20–28 s — Street surprise.
+Lucía pauses outside, folds her arms and takes one quiet morning breath. Far
+down the street, the courier pedals toward camera. Without braking, he tosses
+one small lightweight cardboard parcel in a short controlled arc; it harmlessly
+bumps her padded shoulder, drops to the cobblestones and stays there. The
+courier continues past and exits without looking back. Lucía freezes for one
+beat, looks after him and says softly in Madrid Spanish, "¿Y esto por qué?"
+She looks down, crouches and begins opening the parcel.
+
+28–30 s — Sole hard cut and proof.
+Hard cut to a locked overhead close-up. Her hands finish opening the flaps.
+Inside is one flat card with exactly two centered lines:
+PARA LUCÍA
+CON CARIÑO
+Hold the fully readable card and still hands for the remaining two seconds.
+
+AUDIO
+Use only continuous diegetic sound: alarm bell, slap, bare footsteps, two spray
+hisses, rinse and spit, cereal and milk, bowl contact, robe fabric, slippers,
+door latch, street ambience, bicycle chain and tyres, parcel whoosh, soft
+impact, cardboard and the one Spanish line. No music or score. Let the street
+bed continue under the final insert so the cut changes framing, not location.
+
+ACCEPTANCE AND NEGATIVE LOCK
+Pass only if Lucía crosses all five zones in order without teleporting; the
+camera remains on one lateral axis until the declared hard cut; glasses, hair
+state, wardrobe layers, used props and parcel persist; the courier approaches
+from background depth; the impact is harmless and physically weighted; and the
+final two-line card is correct and stable for two seconds.
+
+No cut before 28 seconds, room reorder, reset set, parallel exterior street,
+cyclist moving left-to-right across the facade, zoom, wipe, dissolve, handheld
+shake, floating prop, capped bottle at the mouth, removed glasses, changed hair,
+outfit replacement, speaking courier, open-mouth laughter, sitcom mugging,
+brand label, other visible text, subtitle, watermark, misspelled final card,
+extra limb, deformed hand, plastic skin or CGI surface.
+```
+
+**Why it works:** the cross-section turns a complex house into one measurable
+screen-space axis. Each room has one compressed action cluster and one exit
+condition, so the subject, camera and prop state advance together instead of
+resetting between locations. The inward-opening door and growing street sound
+make the indoor-to-outdoor boundary observable, while the single declared hard
+cut is saved for information that cannot be read in the wide lateral frame.
+Replacing the source's several branded labels with generic packaging also
+reserves the model's text budget for the final two-line payoff.
+
+**Sources:** Al-Shamus / @im_shahid7's August 27, 2026
+[Seedance 2.5 identification, reference contract, set geometry and generated
+30-second result](https://x.com/im_shahid7/status/2092836404770586820),
+[complete 0–28-second action timeline](https://x.com/im_shahid7/status/2092836410482987079)
+and
+[closing insert, audio map and negative constraints](https://x.com/im_shahid7/status/2092836416065872141).
 
 ---
 
