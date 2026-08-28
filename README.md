@@ -276,6 +276,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Localized buffer-glitch pitch and observer-continuity gate](#260-localized-buffer-glitch-pitch-and-observer-continuity-gate)
   - [Static six-setup pressure ladder and silent-reaction release](#261-static-six-setup-pressure-ladder-and-silent-reaction-release)
   - [Inherited-storm continuation and unresolved-score handoff](#262-inherited-storm-continuation-and-unresolved-score-handoff)
+  - [Opening-owned cosmetic squeeze and irreversible application ledger](#263-opening-owned-cosmetic-squeeze-and-irreversible-application-ledger)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -13805,6 +13806,122 @@ duration gate also preserves a real compliance failure instead of hiding it.
 
 ---
 
+### 263. Opening-owned cosmetic squeeze and irreversible application ledger
+
+**Verified model:** WeryAI Seedance 2.5 — the original creator names the model
+and platform beside one generated result and the complete prompt
+**Use case:** cosmetic UGC, macro texture proof, product application, beauty ad,
+packaging consistency
+**Mode:** reference-to-video with character and product images
+**Suggested settings:** 15 seconds, 9:16, 24fps, native dialogue and foley,
+highest natively supported resolution; upscale separately when required
+
+```text
+Create a 15-second vertical premium cosmetic UGC film for a fictional product,
+the Aster Vale “Rose Veil” peptide lip tint. Combine authentic creator delivery
+with controlled studio macro photography. The film must prove how the balm exits
+the package, transfers to the lips and changes their finish without resetting the
+product between shots.
+
+REFERENCE-ROLE CONTRACT
+- @CHARACTER controls only the same adult woman's facial identity, skin tone,
+  hairstyle, body proportions and neutral cream studio wardrobe. Preserve natural
+  pores, lip lines and small facial asymmetries. Do not inherit its background,
+  pose, crop, lighting or camera angle.
+- @PRODUCT is the absolute package reference. Preserve one dusty rose squeeze
+  tube, one matte cream cap, the same slanted applicator opening, exact dimensions,
+  material finish, colour blocks and label placement. It does not control the set,
+  hand pose, framing or lighting.
+- Never blend character and product references. There is one woman, one tube and
+  one detachable cap throughout the film.
+
+PRODUCT-STATE LEDGER
+Track these states in order and never reverse them:
+S0: tube is intact and capped, with no balm visible;
+S1: she removes the cap once and places it on the left side of the beige surface;
+S2: one small rose-mauve bead emerges from the real slanted opening;
+S3: the bead transfers from the tip to her lips and becomes a thin even layer;
+S4: the final tube remains uncapped, cap still left of it, with only a tiny residue
+on the applicator and no second product anywhere.
+
+0.0–2.0s — LABEL-FORWARD HOOK AND VISIBLE OPENING
+Medium-close handheld creator framing in a warm minimal beauty studio. She holds
+the single capped tube close enough for its silhouette and colour blocks to read,
+keeps it label-forward and looks directly into the lens. In a natural, confident
+voice she says: “Okay — this is my new lip obsession.” During the final half-
+second she removes the cap once and places it on a fixed mark at frame left. Keep
+her fingers anatomically correct and never cover the applicator opening.
+
+2.0–4.2s — CONTROLLED SQUEEZE PROOF
+Hard cut to an extreme macro of the same uncapped tube. Her thumb and index finger
+compress the centre of the flexible package once. Show the tube wall denting under
+pressure before a single clean, glossy ribbon of tinted balm grows from the real
+slanted opening. The balm remains attached to the tip; it does not splash, float,
+branch or emerge through the label or side wall. Use restrained slow motion,
+shallow depth of field and one narrow studio highlight that reveals creamy texture.
+The cap stays visible and stationary in the left background.
+
+4.2–7.2s — CONSERVED TRANSFER AND APPLICATION
+Cut to a close three-quarter view where the applicator, bead and lips share the
+same frame. She touches the bead to the centre of the lower lip and makes one
+smooth pass outward, then one connected pass across the upper lip. The visible
+amount on the tip decreases as the lip layer increases; no fresh balm appears.
+Maintain realistic contact, pressure, hand joints and lip deformation. The result
+is a translucent rosy-mauve wash with hydrated shine, not opaque lipstick.
+
+7.2–9.0s — HUMAN REACTION
+Return to intimate creator framing. She gently presses her lips together once,
+turns a few degrees so the gloss catches the key light and smiles without changing
+identity. She says: “Look at that tint.” Keep pores and natural lip texture; no
+beauty-filter skin, enlarged lips, duplicated teeth or generated subtitle.
+
+9.0–15.0s — SIX-SECOND PRODUCT PAYOFF
+Match cut on the tube into a locked tabletop hero composition. The same product
+stands upright but remains uncapped in state S4; the detached cap is still on its
+left and the applicator shows the tiny remaining residue. Use a slow five-percent
+push-in, warm beige surface, soft reflection and one controlled highlight moving
+across the tube. Hold long enough to inspect geometry, colour and state. Do not
+recap, refill, clean, rotate 360 degrees, duplicate or redesign the product.
+
+Reserve clean negative space above the package for later graphic design, but do
+not ask the video model to render campaign copy. Add exact title, slogan and legal
+text as a separate post-production overlay after package fidelity is approved.
+
+AUDIO CONTRACT
+Use one consistent soft adult voice for the two written lines. Preserve quiet
+studio room tone, cap-release click, subtle package compression, balm contact and
+one soft lip press. Keep foley synchronized and intimate. No narration, extra
+speech, mouth sounds exaggerated for ASMR, loud music, notification tone or
+unmotivated transition sound.
+
+ACCEPTANCE AND FAILURE CONTROL
+Accept only one continuous identity and exactly one tube plus one cap. Verify the
+opening before extrusion, then check S0→S1→S2→S3→S4 frame by frame. The balm must
+leave only the declared opening, conserve volume during transfer and remain on the
+lips afterward. Reject label drift, fictional extra text, cap teleportation,
+automatic recapping, tube refill, product duplication, wrong colour, hard-shell
+deformation, side-wall leakage, floating balm, excessive quantity, hand mutation,
+lip warping, face drift, plastic skin, missing dialogue or unsynchronized foley.
+
+Reject or retime any master that is not approximately 15 seconds. Every interval
+from 0.0 to 15.0 must have an assigned visual state; do not leave an unprompted
+tail that the model can fill with a freeze, repetition, new shot or random action.
+```
+
+**Why it works:** the applicator opening owns the extrusion event, while a
+five-state package ledger makes the balm, cap and tube accumulate irreversible
+evidence across macro, application and hero coverage. The conserved transfer
+links a visible loss at the tip to a visible gain on the lips. Moving exact ad
+copy to post also separates packaging fidelity from generated typography. The
+source prompt declares 15 seconds but maps action only through 10 seconds; its
+published result measures 15.232 seconds. Assigning the full 0–15-second range
+closes that five-second ambiguity without discarding the verified result.
+
+**Source:** H A J R A / @codewithhajra's August 29, 2026
+[WeryAI Seedance 2.5 complete prompt and generated vertical cosmetic result](https://x.com/codewithhajra/status/2093368009830113336).
+
+---
+
 ## Reusable templates
 
 ### Directional action retarget with reference-role isolation and atomic fan-out
@@ -21288,6 +21405,8 @@ Community examples and techniques referenced in this README:
 - [AutoCare — Seedance 2.0 Mini motion-family feasibility audit and wrong-neighbour exclusions](https://github.com/AutoCare-1/trainos/commit/d4a7caafb15d15756c46f530beb9aa68ea035d19) ([complete correction prompts](https://github.com/AutoCare-1/trainos/blob/d4a7caafb15d15756c46f530beb9aa68ea035d19/backend-laravel/database/dicas_demonstracao.php), [402-video frame review](https://github.com/AutoCare-1/trainos/blob/d4a7caafb15d15756c46f530beb9aa68ea035d19/backend-laravel/database/revisao_demonstracoes_2026-08-25.md))
 
 - [Kiki / @Mayz1169 — Renoise Seedance 2.5 1080p desert-oracle continuation, generated result and complete prompt](https://x.com/Mayz1169/status/2093327980961689803) ([complete prompt](https://x.com/Mayz1169/status/2093328286650880258))
+
+- [H A J R A / @codewithhajra — WeryAI Seedance 2.5 vertical lip-tint UGC, complete prompt and generated result](https://x.com/codewithhajra/status/2093368009830113336)
 
 Official model references:
 
