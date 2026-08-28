@@ -272,6 +272,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Offscreen-observer whisper lane and degraded pinch-zoom](#256-offscreen-observer-whisper-lane-and-degraded-pinch-zoom)
   - [TV-bezel containment horror and reaction hard cut](#257-tv-bezel-containment-horror-and-reaction-hard-cut)
   - [Handheld-to-FPV frozen-time slalom and exact-angle resume](#258-handheld-to-fpv-frozen-time-slalom-and-exact-angle-resume)
+  - [Five-slot dress-up UI and cumulative wardrobe ledger](#259-five-slot-dress-up-ui-and-cumulative-wardrobe-ledger)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -13310,6 +13311,123 @@ with the creator's [complete public image and video prompt document](https://doc
 
 ---
 
+### 259. Five-slot dress-up UI and cumulative wardrobe ledger
+
+**Verified model:** Seedance 2.5 — the original creator publishes the generated
+15-second result, exact model attribution and complete prompt in one thread
+**Use case:** reference-video transfer, game-interface compositing, cumulative
+wardrobe transformation, asset-to-slot consistency
+**Mode:** reference video plus one character sheet and five garment thumbnails
+**Suggested settings:** 15 seconds, 9:16, fixed full-body camera, native game audio
+
+```text
+Create a 15-second vertical live-action dress-up-game clip starring one clearly
+adult fictional character. @Video1 controls only the fixed camera, full-body
+composition, action cadence, interface layout, selection timing and edit rhythm.
+@Character controls only the adult's face, body proportions, straight bangs,
+two thick braided pigtails and completed outfit. @Slot1 through @Slot5 are
+ready-made inventory thumbnails and each controls exactly one garment group.
+Ignore the character sheet's white background, turnaround poses and page layout.
+
+REFERENCE-ROLE AND UI CONTRACT
+Keep a slightly high, locked wide camera with the character centred and fully
+visible from head to shoes. Build one static vertical inventory at screen left
+with exactly five equal cream squares, identical cherry-red pixel borders and
+the following immutable top-to-bottom mapping:
+
+1. ivory inner blouse with ruffled hem, collar and front buttons;
+2. cream strawberry-print suspender dress with red chest bow, full skirt,
+   decorative bows, strawberry border and white lace hem;
+3. cherry-red cropped cardigan with long sleeves, buttons and small ribbons;
+4. white ruffled ankle socks plus strawberry-red bow-front Mary Jane shoes;
+5. symmetrical cream-and-red lace headbow.
+
+Insert each supplied thumbnail directly into its assigned slot. Preserve its
+silhouette, crop, orientation, colours and details. Every thumbnail appears once
+and remains visible, static and unchanged through the full selection sequence.
+Selecting a slot may add only a red glow and one check mark around that same
+slot; it must never redraw, replace, duplicate, merge, move or shuffle an asset.
+Do not invent thumbnails from the full character sheet.
+
+SETTING AND INITIAL STATE
+Use a bright strawberry-themed dressing room with warm cream walls, cherry-red
+scalloped trim, white lace curtains, a red gingham armchair, ivory wardrobe with
+red handles, vintage vanity, strawberry cushions and a small tea set. Soft warm
+daylight, clean shadows and a cream, strawberry-red and pale-pink palette. Keep
+the room, camera, light and furniture fixed.
+
+At frame one the character already has @Character's exact face, proportions,
+bangs and braids, but wears loose cream satin pyjamas with red piping and no
+headbow. Record a wardrobe ledger with five false states: blouse, dress,
+cardigan, footwear and headbow are not yet equipped.
+
+0–3.5s — CLAW ACTIVATION
+A single large pixel-art arcade claw descends from directly above. It uses glossy
+cherry-red segments, burgundy pixel outlines, cream highlights and heart-shaped
+joints. It gently closes around her shoulders, emits one restrained red-heart
+sparkle burst, releases her and retracts along the same vertical path. She and
+the room do not move before contact.
+
+3.5–5.8s — WAKE AND LOAD
+She raises her head, yawns, rubs both eyes and stretches overhead. A red-and-
+cream pixel progress bar appears near the bottom and fills once from empty to
+full. Use short activation beeps and a few red sparkles. Do not show inventory
+slots until the bar completes.
+
+5.8–12.8s — FIVE MONOTONIC EQUIP EVENTS
+Reveal the fixed interface: DRESS UP at upper left, three red heart icons, one
+small close button at upper right and the five-slot inventory at left. Apply one
+crisp hard cut and a small heart-and-cream-sparkle burst per selection:
+
+- 5.8–7.2s: highlight Slot 1; replace only the pyjama top with the exact blouse.
+- 7.2–8.4s: highlight Slot 2; remove the pyjama bottoms and add the exact dress
+  over the already-equipped blouse. The blouse remains unchanged underneath.
+- 8.4–9.7s: highlight Slot 3; add the exact cardigan over the existing layers.
+- 9.7–11.1s: highlight Slot 4; add its socks and shoes together as one event.
+- 11.1–12.8s: highlight Slot 5; add the exact headbow at the sheet's scale and
+  placement.
+
+After every cut, flip only the selected ledger state from false to true. All
+earlier garments, thumbnails, highlights, face, braids and body proportions
+persist. The newly worn item must visibly match the selected thumbnail. Between
+events she makes one small surprised reaction and briefly looks toward the
+active slot without leaving the centre mark.
+
+12.8–15s — COMPLETION PAYOFF
+The character now matches @Character's complete front-view styling. She makes
+one small joyful bounce, lightly lifts both sides of the skirt, releases them
+and finishes with a V-sign. Show large centred red-and-cream pixel text
+COMPLETE! with a restrained ring of hearts, strawberries and sparkles. Hold the
+final outfit and interface long enough to compare all five worn groups with all
+five source thumbnails.
+
+REALISM, AUDIO AND ACCEPTANCE
+Photoreal live-action texture with one coherent strawberry-red, burgundy and
+cream pixel system for claw, borders, icons, progress bar and highlights. Use
+playful retro-game music, one claw-machine motor, activation beeps, five distinct
+menu clicks and five sparkle chimes; no dialogue.
+
+Reject unless there are exactly five slots in the declared order, every slot is
+selected exactly once, each selection changes only its owned garment group,
+clothing accumulates without rollback, and the final frame passes a five-way
+thumbnail-to-outfit comparison. No duplicate thumbnail, repeated dress, second
+footwear icon, question mark, extra slot, substituted garment, dissolve, cloth
+morph, body change, face drift, missing braid, extra character, camera move,
+dark lighting, random text, logo or watermark.
+```
+
+**Why it works:** the prompt separates motion and interface timing, character
+identity, final styling and five garment authorities before generation. A
+static one-to-one slot map plus a false-to-true wardrobe ledger makes every hard
+cut independently auditable, while the final comparison catches both thumbnail
+drift and lost layers instead of accepting a generally similar outfit.
+
+**Source:** Kiki / @Mayz1169's August 28, 2026
+[Seedance 2.5 generated 15-second result](https://x.com/Mayz1169/status/2093221619930161608)
+and [complete reference-role, five-slot and timeline prompt](https://x.com/Mayz1169/status/2093221833579590087).
+
+---
+
 ## Reusable templates
 
 ### Directional action retarget with reference-role isolation and atomic fan-out
@@ -20308,6 +20426,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Kiki / @Mayz1169 — Seedance 2.5 five-slot dress-up game with a complete 15-second prompt, immutable UI assets, cumulative wardrobe ledger and generated result](https://x.com/Mayz1169/status/2093221619930161608) ([complete prompt](https://x.com/Mayz1169/status/2093221833579590087))
 
 - [Lipsync.video — Seedance 2.5 twenty-second one-take Shibuya tennis freeze with handheld-to-FPV camera transition, complete public prompt and generated result](https://x.com/Lip_sync_video/status/2093212349263909170) ([complete prompt document](https://docs.google.com/document/d/1X_d_7y_zP3nFeTzMV_zMseJBZZK9kmQ5SgD4ZCqosYA/edit))
 
