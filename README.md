@@ -273,6 +273,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [TV-bezel containment horror and reaction hard cut](#257-tv-bezel-containment-horror-and-reaction-hard-cut)
   - [Handheld-to-FPV frozen-time slalom and exact-angle resume](#258-handheld-to-fpv-frozen-time-slalom-and-exact-angle-resume)
   - [Five-slot dress-up UI and cumulative wardrobe ledger](#259-five-slot-dress-up-ui-and-cumulative-wardrobe-ledger)
+  - [Localized buffer-glitch pitch and observer-continuity gate](#260-localized-buffer-glitch-pitch-and-observer-continuity-gate)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -13428,6 +13429,104 @@ and [complete reference-role, five-slot and timeline prompt](https://x.com/Mayz1
 
 ---
 
+### 260. Localized buffer-glitch pitch and observer-continuity gate
+
+**Verified model:** Dreamina Seedance 2.5 — the original creator identifies the
+model beside a generated 30-second result and publishes the complete JSON prompt
+**Use case:** corporate satire, selective digital failure, reaction comedy,
+effect-boundary continuity
+**Mode:** text-to-video
+**Suggested settings:** 30 seconds, 16:9, clean corporate coverage, native audio
+
+```text
+Create a 30-second photoreal corporate-pitch satire with one brief uncanny
+science-fiction interruption. Golden hour on a modern glass-and-concrete
+rooftop. A fictional startup founder in his late twenties wears one fitted black
+turtleneck and pitches from a tablet to exactly three investors in distinct,
+unchanging business-casual outfits. Preserve all four faces, clothes, seats,
+screen direction, tablet, rooftop geography and sunset progression throughout.
+
+EFFECT-OWNERSHIP CONTRACT
+The founder alone owns the buffer failure. Between 9 and 12 seconds only his
+visible body and spoken syllable may repeat, pause or show a restrained two-frame
+digital offset. The investors, tablet, furniture, skyline, wind, sunlight and
+reflections remain physically continuous and never inherit digital artifacts.
+Use one cold-blue flicker confined to the founder's silhouette; the rest of the
+frame keeps its warm golden palette. Do not redesign, duplicate or replace him.
+
+The 12–14-second beat is a real-time reaction hold, not a second glitch: the
+founder stays in the last interrupted pose while the three investors continue
+breathing, blinking and exchanging separate uneasy looks. The camera becomes
+still and the audio drops to room tone. At 14 seconds he resumes from the exact
+unfinished word, gesture angle and tablet position, and every observer response
+continues from its current state.
+
+0–4s — ESTABLISH THE PITCH
+Begin with one restrained wide rooftop view at golden hour. The founder stands
+at a fixed presentation mark; the three investors sit in one readable row. Move
+to a medium corporate presentation angle as he introduces a slide on the tablet.
+Use light rooftop wind and a modest clean-synth bed.
+
+4–9s — CONFIDENCE RISE
+He delivers the pitch fluently with controlled hand gestures. The investors nod
+at different moments rather than in unison. Keep the tablet graphics abstract
+and unreadable. End with his right hand halfway through one upward gesture and
+his mouth forming an unfinished word.
+
+9–12s — LOCAL BUFFER EVENT
+Stutter only the founder through two or three repeats of that same partial hand
+arc and mouth shape. Add one sharp digital audio repeat synchronized to each
+visual offset. His feet, face topology and clothing remain anchored; the effect
+must look like delayed frames, not teleportation, possession or body morphing.
+The investors notice the event while the rooftop world continues normally.
+
+12–14s — OBSERVER PROOF
+Remove every digital artifact and hold a locked medium-wide composition. The
+founder remains paused for two seconds. Investor A stops nodding; Investor B
+looks briefly toward Investor C; Investor C leans back a few centimetres. Let
+the synth cut out, leaving only wind and distant traffic. No one speaks.
+
+14–24s — EXACT RESUME
+The founder completes the unfinished word and hand gesture with no temporal
+jump, then continues more enthusiastically than before. Restore the same synth
+bed from its interrupted musical position. Investor A gives no further nod;
+Investors B and C exchange one restrained second glance. Keep the founder's
+smile increasingly controlled rather than changing his identity or acting wild.
+
+24–30s — PHONE PAYOFF
+Cut once to a closer investor-side angle. Investor C slowly raises one phone,
+keeping it pointed toward the founder. Rack focus from the phone edge to the
+founder's unnervingly perfect smile. End on a living one-second hold: natural
+breathing, moving hair and sunset reflections continue. Do not create another
+freeze or glitch at the ending.
+
+AUDIO AND ACCEPTANCE
+Use one founder voice, rooftop wind, distant city ambience, a light corporate
+synth and exactly one localized glitch-stutter sequence. The synth stops only
+for the 12–14-second observer beat and resumes from the same musical phase.
+
+Reject unless the glitch is confined to the founder, the three observers remain
+individually identifiable and temporally continuous, the founder resumes the
+stored word/pose/tablet state, and the phone rise is the only final action. No
+global glitch-art wash, blue tint over the whole frame, frozen skyline, duplicate
+founder, face swap, wardrobe change, synchronized investor reactions, extra
+phone, frantic camera shake, supernatural effect, subtitle, readable company
+name, logo, brand or watermark.
+```
+
+**Why it works:** the source prompt's comedy depends on viewers believing that a
+digital failure has entered an otherwise ordinary physical scene. Assigning the
+artifact to one subject while keeping observers and environment on a separate
+continuous clock makes that contrast testable. A stored interruption state then
+forces the resumed syllable, gesture and prop pose to reconnect, while three
+different observer reactions and the single phone raise provide visual proof
+that the surrounding world never buffered.
+
+**Source:** M / @Strength04_X's August 28, 2026
+[Dreamina Seedance 2.5 complete structured prompt and generated 30-second result](https://x.com/Strength04_X/status/2093252876227215841).
+
+---
+
 ## Reusable templates
 
 ### Directional action retarget with reference-role isolation and atomic fan-out
@@ -20426,6 +20525,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [M / @Strength04_X — Dreamina Seedance 2.5 rooftop founder satire with a complete 30-second structured prompt, localized buffer glitch, observer-reaction hold and generated result](https://x.com/Strength04_X/status/2093252876227215841)
 
 - [Kiki / @Mayz1169 — Seedance 2.5 five-slot dress-up game with a complete 15-second prompt, immutable UI assets, cumulative wardrobe ledger and generated result](https://x.com/Mayz1169/status/2093221619930161608) ([complete prompt](https://x.com/Mayz1169/status/2093221833579590087))
 
