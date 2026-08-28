@@ -270,6 +270,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Late-reacting friend-camera summer-day diary and prop ledger](#254-late-reacting-friend-camera-summer-day-diary-and-prop-ledger)
   - [Six-beat seasonal romance montage and score-shape ledger](#255-six-beat-seasonal-romance-montage-and-score-shape-ledger)
   - [Offscreen-observer whisper lane and degraded pinch-zoom](#256-offscreen-observer-whisper-lane-and-degraded-pinch-zoom)
+  - [TV-bezel containment horror and reaction hard cut](#257-tv-bezel-containment-horror-and-reaction-hard-cut)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -13110,7 +13111,167 @@ specific distance, volume and performance target.
 
 ---
 
+### 257. TV-bezel containment horror and reaction hard cut
+
+**Verified model:** Seedance 2.5 on Higgsfield — the original creator names the
+model and platform beside the complete prompt and generated result
+**Use case:** screen-within-screen horror, boundary containment, offscreen camera
+owner, native dialogue and delayed reaction payoff
+**Mode:** text-to-video
+**Suggested settings:** prompt requests 30 seconds and 16:9, while the published
+player reports a 28-second asset; verify the returned duration before acceptance
+
+```text
+Create one fictional, non-graphic 16:9 apartment-horror scene with a clearly
+adult Japanese woman watching a film at night. Lock her face, hair, cream knit
+sweater, grey blanket, headphones, sofa, cushions, room layout and physical
+television. One boyfriend owns the same handheld phone camera and microphone
+throughout but remains offscreen; only his natural Japanese voice may be heard.
+
+ROOM / SCREEN CONTRACT
+Warm string lights and cold television spill remain the two motivated sources.
+The television is a real object in the room, not a full-frame portal. Whenever
+its film is shown, keep all four black bezel edges continuously visible and keep
+the pictured hallway, ghost and every supernatural event strictly inside the
+display rectangle. The ghost never crosses the bezel, changes the apartment or
+occupies the same physical depth as the woman.
+
+0–6s — Establish ordinary viewing.
+Loose phone medium shot beside the sofa. She watches quietly, adjusts the same
+blanket once and makes one nervous joke to the offscreen boyfriend. Preserve
+small hand tremor, imperfect headroom, breathing and ordinary room tone.
+
+6–13s — Approach the physical television.
+The operator slowly leans and walks closer while keeping part of the woman and
+the television in one readable geography. She grows uneasy behind the camera's
+movement but does not perform for the lens. The TV film continues as one dark,
+old wooden hallway with faint rain and floor creaks.
+
+13–18s — Prove containment.
+Frame the television directly with all four bezel edges visible. Inside the
+screen only, one pale fictional ghost with wet black hair appears at the far end
+of the hallway and advances slowly. Apartment reflections may remain on the
+glass; no hand, hair, shadow or fog crosses onto the wall or room.
+
+18–23s — In-screen lunge.
+The ghost accelerates toward the movie camera inside the hallway and stops at
+the television image plane. Hold the complete bezel through the approach. At
+the instant the in-screen face reaches its nearest point, hard cut once to the
+sofa; never disguise a boundary crossing with blur, darkness or a whip-pan.
+
+23–28s — Owned reaction.
+The same woman flinches, grabs one established cushion, then releases tension
+into embarrassed laughter. Her visible mouth owns one short Japanese response;
+the boyfriend answers from the unchanged phone position. Keep their timing
+slightly overlapping and conversational rather than polished voice-over.
+
+28–30s — Residual proof.
+She asks him to stop filming and sit beside her. As the phone begins lowering,
+one tiny shape moves once in the distant television image. The screen remains
+inside the bezel and the woman does not notice. End without a second scare.
+
+AUDIO / TEXT / ACCEPTANCE
+Use apartment HVAC, fabric, cushion contact, phone handling, low TV rain and
+wood creaks plus only the declared Japanese dialogue. If subtitles are used,
+show Japanese and one natural English translation only while a line is spoken;
+no persistent captions. Pass only if all four bezel edges survive the entire
+TV insert, the ghost never enters the room, the hard cut lands after the lunge,
+the sofa props and identities persist, the final movement remains in-screen and
+the delivered file measures the requested duration.
+
+No gore, injury, public figure, child, extra room occupant, visible camera owner,
+ghost outside the television, disappearing bezel, full-frame hallway, portal
+transition, reflection becoming a person, prop teleport, identity drift,
+wardrobe change, false lip-sync, cinematic crane or drone, CGI sheen, random
+subtitle, logo or watermark.
+```
+
+**Why it works:** the four visible bezel edges turn an abstract instruction
+about two realities into a frame-by-frame acceptance test. A single hard cut
+separates the in-screen lunge from the room reaction, while the tiny final motion
+reuses the same containment rule instead of adding a new monster or location.
+The offscreen owner also has one stable camera and audio position, so suspense
+does not require an unexplained coverage change.
+
+**Source:** Simply Ray / @kingofdairyque's August 28, 2026
+[complete Higgsfield Seedance 2.5 prompt and generated result](https://x.com/kingofdairyque/status/2093198798470402301).
+
+---
+
 ## Reusable templates
+
+### Directional action retarget with reference-role isolation and atomic fan-out
+
+**Verified model:** `bytedance/seedance-2.5` reference-to-video — the original
+implementation pins this exact endpoint, supplies a target prototype plus a
+chronological source frame sheet, and includes request-routing and live-harness
+coverage for multi-direction derivation
+
+Use this when one approved animation must be re-expressed in several facing
+directions without copying the source view, grid or identity. Assign appearance
+and target orientation to one image, action phases and effects to another, then
+branch every requested direction from the same immutable source snapshot.
+
+```text
+PREPARE TWO AUTHORITATIVE REFERENCES
+@Image1 = TARGET PROTOTYPE. Owns character identity, equipment, proportions,
+colours, opening pose, root position, scale and target facing direction.
+@Image2 = SOURCE ACTION SHEET. A chronological grid read left-to-right, then
+top-to-bottom. Owns pose phases, limb arcs, motion amplitude, effect shape and
+scale, cycle timing and recovery only.
+
+Record [SOURCE ORIENTATION], [TARGET ORIENTATION], [ACTION], [FRAME COUNT],
+[FRAME WIDTH x HEIGHT] and [GRID ORDER]. Reject the pair before generation if
+either role is ambiguous, a cell is missing or the target prototype already
+faces a different direction than declared.
+
+CAMERA AND ORIENTATION LOCK
+Use a static orthographic game-asset camera: no zoom, pan, perspective drift or
+camera rotation. Keep the subject horizontally centred at the same apparent
+scale. Frame one reproduces @Image1. Maintain its exact target-facing direction
+in every phase—no turn, mirror, side-view substitution or opposite-facing pose.
+
+ACTION RETARGET
+Animate @Image1 performing [ACTION]. Retarget @Image2's ordered preparation,
+climax, recovery, limb arcs and effects along the target-facing axis. Never copy
+@Image2's identity, facing direction, camera, sheet layout, duplicate bodies or
+empty cells. Complete one cycle:
+@Image1 rest pose -> preparation -> climax -> recovery -> identical rest pose.
+
+CANVAS CONTAINMENT
+Keep the full subject and every effect inside [FRAME WIDTH x HEIGHT] with a
+clear matte band at all four edges. If an effect is too long, compress only its
+reach along the facing axis. Preserve lateral width, density, opacity, texture,
+turbulence, timing and terminal burst; do not weaken the whole effect merely to
+make it fit.
+
+ORDERED EXTRACTION GATE
+Return enough distinct phases to extract exactly [FRAME COUNT] ordered frames.
+Each output frame N must correspond to source phase N. Reject a result with a
+swapped phase, duplicate rest frame, missing climax, orientation change, root
+drift, scale jump, grid leakage, edge contact or altered asymmetric marking.
+
+ATOMIC MULTI-DIRECTION FAN-OUT
+Freeze one approved source snapshot and create every [TARGET DIRECTION] as its
+own child of that snapshot; never derive direction B from generated direction A.
+Run independent directions concurrently if desired, but stage outputs in one
+group. If any branch fails, cancel unfinished siblings and delete all partial
+children. Publish the group only when every requested direction passes the same
+identity, orientation, phase-order, containment and loop-seam checks.
+```
+
+**Why it works:** the two references control disjoint variables, so the model
+does not have to infer whether a frame sheet's identity or its motion should win.
+The facing-axis rule makes effect shortening measurable instead of permitting a
+generic rescale. Finally, immutable sibling branches and atomic publication stop
+one generated view from contaminating the others or leaving an incomplete
+direction set after a partial failure.
+
+**Source:** 1024XEngineer's August 28, 2026
+[Seedance 2.5 multi-reference directional-derivation implementation and live
+harness](https://github.com/1024XEngineer/Holonic-Asset/commit/d70a819a4ab959152394fd9c77c689a1a6e9a895),
+including the [complete reusable reference-role prompt
+builder](https://github.com/1024XEngineer/Holonic-Asset/blob/d70a819a4ab959152394fd9c77c689a1a6e9a895/core-api/internal/module/generator/prompts/animation_derivation.go).
 
 ### Motion-source first-frame alignment and bound-reference delivery gate
 
@@ -20035,6 +20196,10 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Simply Ray / @kingofdairyque — Higgsfield Seedance 2.5 television-contained apartment horror with a complete 30-second prompt and generated result](https://x.com/kingofdairyque/status/2093198798470402301)
+
+- [1024XEngineer / Holonic Asset — exact `bytedance/seedance-2.5` two-reference directional-animation derivation, immutable fan-out workflow and complete prompt builder](https://github.com/1024XEngineer/Holonic-Asset/commit/d70a819a4ab959152394fd9c77c689a1a6e9a895) ([prompt source](https://github.com/1024XEngineer/Holonic-Asset/blob/d70a819a4ab959152394fd9c77c689a1a6e9a895/core-api/internal/module/generator/prompts/animation_derivation.go))
 
 - [Aatir — Higgsfield Seedance 2.5 Edit motion-transfer workflow with source-frame-aligned identity generation, real reference-binding checks and an eight-part delivery gate](https://github.com/aatirs7/clonelab/commit/1d5f992233a51bc7f4ad21a5010d87c467f449de)
 
