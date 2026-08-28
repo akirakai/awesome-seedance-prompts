@@ -13112,6 +13112,83 @@ specific distance, volume and performance target.
 
 ## Reusable templates
 
+### Character-sheet ablation and expression-bias gate
+
+**Verified model:** Seedance 2.5 — the original creator generated three
+side-by-side results with the same prompt and three explicitly documented
+character-sheet layouts; the public comparison video and attached source sheets
+show the identity and expression differences discussed below
+
+Use this before standardizing one character sheet across a project. Treat sheet
+layout as a testable input: more views may improve identity evidence, while an
+expression panel can also pull performance toward that pictured expression.
+
+```text
+LOCK THE TEST
+MODEL: Seedance 2.5.
+BASE PROMPT: [ONE COMPLETE PROMPT; IDENTICAL IN EVERY RUN].
+FORMAT: [DURATION / ASPECT RATIO / RESOLUTION; IDENTICAL IN EVERY RUN].
+CHARACTER, WARDROBE, SCENE, ACTION, CAMERA AND AUDIO: unchanged.
+Change only CHARACTER_SHEET_VARIANT. If a provider exposes a reproducible seed,
+record it; otherwise run enough repeats to distinguish a layout effect from
+ordinary generation variance.
+
+SHEET A — MINIMAL / HEADLESS BODY
+- face close-up;
+- headless full-body view;
+- rear full-body view.
+
+SHEET B — ATTACHED-HEAD COVERAGE
+- face close-up;
+- full-body view with head attached;
+- rear full-body view;
+- side bust view.
+
+SHEET C — EXPRESSION-ENRICHED COVERAGE
+- everything required for attached-head identity coverage;
+- profile face close-up;
+- only the facial expression(s) that the target shot truly needs.
+
+FRAME-BY-FRAME SCORECARD
+For each result, inspect the same moments and record PASS / FAIL plus first
+failure time:
+- near-face identity and facial proportions;
+- far-camera identity and head-to-body continuity;
+- facial geometry before, during and after a smile or other expression change;
+- requested-expression accuracy;
+- natural performance when no expression is requested;
+- expression leakage: the sheet expression persisting into unrelated beats;
+- wardrobe, silhouette, rear-view and profile consistency.
+
+SELECTION RULE
+- Do not approve Sheet A merely because headless sheets are fashionable. Reject
+  it if the head/body join, distant face or expression transition drifts.
+- Use Sheet B as a neutral candidate when attached-head spatial evidence passes
+  and the performance should remain unscripted or natural.
+- Use Sheet C when a specific expression is story-critical, but reject or reduce
+  its expression panel if that look leaks into neutral beats.
+- If only one expression fails, test a separate close-up reference containing
+  that exact expression instead of expanding the master sheet indiscriminately.
+- If no still-sheet variant passes, test a short approved character video as
+  the identity/performance reference. Do not keep adding contradictory stills.
+
+PROVENANCE
+Save every sheet, prompt, returned asset, provider, timestamp and scorecard.
+Record the chosen sheet per shot; one layout need not win every camera distance
+or performance requirement.
+```
+
+**Why it works:** it separates two decisions that are often collapsed into one:
+identity coverage and performance control. The source comparison found visible
+face/geometry drift in its minimal headless-sheet result, while the
+expression-enriched sheet tracked the pictured expression more closely but also
+appeared more constrained by it. An ablation gate preserves that useful tradeoff
+without claiming that any layout is universally best.
+
+**Source:** Tanabe's August 28, 2026
+[Seedance 2.5 three-sheet controlled comparison, attached source sheets and
+side-by-side generated results](https://x.com/tanabe_fragm/status/2093135764452471057).
+
 ### Immutable source/finish split and explicit delivery-variant gate
 
 **Verified model:** Seedance 2.5 — Atlas Cloud text-to-video model ID
@@ -19845,6 +19922,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Tanabe — Seedance 2.5 same-prompt three-sheet character-consistency comparison with attached layouts, side-by-side generated results and expression-bias findings](https://x.com/tanabe_fragm/status/2093135764452471057)
 
 - [BMX — Dreamina Seedance 2.5 offscreen-observer phone UGC with a complete prompt, private-whisper audio lane, degraded pinch-zoom and generated result](https://x.com/bmx_ai13/status/2093106533953425729)
 
