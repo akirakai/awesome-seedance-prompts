@@ -16240,6 +16240,84 @@ from the official Seedance 2.5 six-room one-take preview. See the
 [Volcano Ark showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5)
 and [archived full prompt](https://github.com/renoise-ai/awesome-seedance-2-5-prompts#six-room-one-take-transition).
 
+### Full-frame graphic-match calibration and reference-authority gate
+
+**Verified model:** Higgsfield Seedance 2.5, `omni_reference` — the creator
+records a 25.042-second, 854×480, 24 fps test with audio, the exact submitted
+prompt, reference order and frame-by-frame transition review
+
+Use this when one long take must cross time or location through a graphic match.
+The transition label is not enough: make the source shape fill the image, start
+the target at the same screen geometry, and give every visible prop its own
+reference authority when a location plate shows a conflicting version.
+
+```text
+INPUTS
+@Image1 = LOCATION A; owns architecture, prop placement and light level only.
+@Image2 = SOURCE CARRIER; owns its exact shape, color, material and condition.
+@Image3 = LOCATION B; owns architecture, target placement and light level only.
+@Image4 = TARGET CARRIER; owns its exact shape, color, material and condition.
+
+PRECHECK
+Choose a source and target with one comparable flat silhouette: [RECTANGLE /
+CIRCLE / STRIPE / DARK FIELD]. Define the visible bounds, center, orientation
+and camera-facing plane for both. If a location plate contains the wrong color
+or design of either carrier, state that the location supplies position only and
+attach the dedicated carrier plate; do not expect prose to override pixels.
+
+BEFORE STATE
+[DURATION / ASPECT RATIO], one perceived long take.
+In [LOCATION A], [SUBJECT] completes [ACTION A]. Keep @Image2 readable until the
+transition approach begins.
+
+FULL-FRAME APPROACH
+Move the camera square to @Image2 at [HEIGHT / SPEED]. Center its flat surface,
+then push straight toward it until the surface fills the frame edge to edge.
+At the final source frame, no wall, floor, hand, background or competing edge
+remains visible. Do not zoom; achieve the coverage with camera travel.
+
+GRAPHIC MATCH
+The very next frame begins on @Image4 in [LOCATION B], viewed square-on at the
+same center, scale, angle, orientation and edge-to-edge crop. Only [TIME OF DAY /
+LOCATION / LIGHT TEMPERATURE] changes across the join. Hold this matched view
+briefly before the camera resumes.
+
+AFTER STATE
+Pull, crane or track away from @Image4 to reveal [LOCATION B]. [SUBJECT]
+completes [ACTION B], preserving identity, carrier geometry and screen direction.
+
+REFERENCE AUTHORITY
+Location plates own geography and placement, never a conflicting prop finish.
+Dedicated prop plates own color, material, hardware and wear in every frame.
+Name one owner for every property; do not ask two references to govern it.
+
+TIMING AND EDIT HANDLES
+Treat prompt timecodes as sequence and budget cues, not frame locks. Leave clean
+handles before and after the match. After rendering, record the actual last
+source frame, first target frame and join time; move the editorial cut or split
+the generation when the ordered match lands outside the usable window.
+
+ACCEPTANCE GATE
+- the source reaches 100% frame coverage before the state change;
+- source and target bounds, center, scale, angle and orientation agree;
+- the target carrier follows @Image4 rather than the location plate;
+- all beats remain in order and the measured join time is documented;
+- no partial background, dissolve, intermediate morph, geometry drift, wrong
+  prop color, duplicate carrier or assumed frame-accurate timecode.
+```
+
+**Why it works:** the graphic match is created by measurable screen geometry,
+not by the phrase “shape match.” Dedicated prop evidence prevents a location
+plate from silently owning the wrong finish, while post-render timing review
+separates a successful transition device from an inaccurate timestamp. In the
+source test, the jacket filled the frame at 14.5 seconds and the matched open
+saddlebag appeared at 14.7 seconds; the join worked, but landed about 3.1
+seconds later than prompted.
+
+Adapted from John Stocker's August 28–29, 2026
+[Higgsfield Seedance 2.5 generation record, measured frames and reference fix](https://github.com/johnstockertutorial-afk/film-thealzheimer/commit/e5cd09c7a3727f681856631d711c4eb5735a17ac),
+with the [complete 25-second prompt and exact model settings](https://github.com/johnstockertutorial-afk/film-thealzheimer/blob/e5cd09c7a3727f681856631d711c4eb5735a17ac/02_PRODUCTION-SCENES/SCENE03_DECISION-AND-DEPARTURE/MASTER-PROMPT/LONGTAKE/25s/ALZHEIMER_VID_S04-S05_DECISION-AND-DEPARTURE_LT_GEN_v001.md).
+
 ### Map-anchored route handoff template
 
 **Verified model:** Seedance 2.0 — confirmed by the versioned public prompt-gallery metadata and its direct mapping to the original creator post
@@ -21407,6 +21485,8 @@ Community examples and techniques referenced in this README:
 - [Kiki / @Mayz1169 — Renoise Seedance 2.5 1080p desert-oracle continuation, generated result and complete prompt](https://x.com/Mayz1169/status/2093327980961689803) ([complete prompt](https://x.com/Mayz1169/status/2093328286650880258))
 
 - [H A J R A / @codewithhajra — WeryAI Seedance 2.5 vertical lip-tint UGC, complete prompt and generated result](https://x.com/codewithhajra/status/2093368009830113336)
+
+- [John Stocker — Higgsfield Seedance 2.5 full-frame graphic match, primary generation record, measured transition and reference-authority repair](https://github.com/johnstockertutorial-afk/film-thealzheimer/commit/e5cd09c7a3727f681856631d711c4eb5735a17ac) ([complete 25-second prompt](https://github.com/johnstockertutorial-afk/film-thealzheimer/blob/e5cd09c7a3727f681856631d711c4eb5735a17ac/02_PRODUCTION-SCENES/SCENE03_DECISION-AND-DEPARTURE/MASTER-PROMPT/LONGTAKE/25s/ALZHEIMER_VID_S04-S05_DECISION-AND-DEPARTURE_LT_GEN_v001.md))
 
 Official model references:
 
