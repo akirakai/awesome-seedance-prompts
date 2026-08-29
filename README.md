@@ -279,6 +279,9 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Opening-owned cosmetic squeeze and irreversible application ledger](#263-opening-owned-cosmetic-squeeze-and-irreversible-application-ledger)
   - [Motion-first burger macro sprint and post-copy gate](#264-motion-first-burger-macro-sprint-and-post-copy-gate)
   - [Symbol-triggered ancient-machine awakening and identity-recognition reveal](#265-symbol-triggered-ancient-machine-awakening-and-identity-recognition-reveal)
+  - [Twelve-shot stormglass chase and cable-state physics ledger](#266-twelve-shot-stormglass-chase-and-cable-state-physics-ledger)
+  - [Beginner-to-confident kung-fu vlog and exact-cut progression lock](#267-beginner-to-confident-kung-fu-vlog-and-exact-cut-progression-lock)
+  - [Flooded-city armor lock and extension-detail contrast](#268-flooded-city-armor-lock-and-extension-detail-contrast)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -14073,6 +14076,265 @@ Adapted from DeCat / @DeCat2025's August 29, 2026
 [Dreamina Seedance 2.0 Fast complete prompt and 15-second generated result](https://x.com/DeCat2025/status/2093504644567740693).
 
 ---
+
+### 266. Twelve-shot stormglass chase and cable-state physics ledger
+
+**Verified model:** Dreamina Seedance 2.5 — the original creator names the
+model beside the complete prompt, three reference-role images and an attached
+30-second generated video
+**Use case:** miniature fantasy action, multi-reference choreography, hard-cut
+coverage, cable and creature physics
+**Mode:** multi-reference text-to-video
+**Suggested settings:** 30 seconds, 16:9, exactly 12 setups, handcrafted
+stop-motion miniature look, diegetic audio only
+
+```text
+Create a 30-second handcrafted stop-motion aerial chase using exactly twelve
+distinct camera setups and clean hard cuts. Physical miniature materials only:
+painted plaster, translucent cast glass, stitched fabric, ceramic, weathered
+brass and resin water. Preserve stepped stop-motion movement, practical light,
+shallow macro depth and small hand-built imperfections; no anime, cyberpunk or
+photoreal live-action people.
+
+REFERENCE AUTHORITY
+@Image1 controls only Mara's adult face, silver curls, teal flight coat, cream
+armor, right-forearm brass harpoon and crescent magnetic sail-glider. The glider
+always has one teal sail and exactly two blue rotors.
+@Image2 controls only the stormglass manta: one 120-meter body, exactly two
+triangular wings, one ribbon tail, four cream tendrils, two gold eyes, milky
+turquoise glass plates and bronze ribs. Violet light exists only in plate seams.
+@Image3 controls only the flooded ivory-and-turquoise solar metropolis, giant
+gold mirrors and stormy dawn palette. Do not inherit any reference composition.
+
+TWELVE-SHOT ACTION LEDGER
+0.0–2.0s — Extreme-wide aerial: Mara skims the floodwater while the colossal
+manta descends through cloud and pushes vapor across the towers.
+2.0–4.0s — Water-level side track: both rotors make concentric ripples; the
+manta's shadow crosses the bright water.
+4.0–6.0s — Low upward canyon view: the manta folds one wing, drops between ivory
+towers and bends nearby turbines with its pressure wave.
+6.0–8.0s — Tight frontal Mara view: gold light races over her goggles; she sees
+the solar mirrors and arms the forearm harpoon without speaking.
+8.0–10.5s — Three-quarter chase: one glass wing destroys a suspended garden
+bridge; Mara banks under falling plaster and water, glider intact.
+10.5–13.0s — Overhead: she threads between two tilted mirrors; the manta rotates
+slowly enough to expose the bronze leading rib beneath its left wing.
+13.0–15.5s — Macro-to-wide pullback: the brass point launches, crosses visible
+space and clamps around that rib. It does not pierce glass. One turquoise cable
+snaps taut and stays continuous.
+15.5–18.0s — Wide lateral: the manta's momentum swings Mara in a controlled arc
+around one solar tower. Show cable tension, centrifugal force and vehicle weight.
+18.0–20.5s — Close tracking: Mara passes the tower and loops the free cable
+section around one brass emergency lever. Her arm remains attached to the
+harpoon; keep the entire cable route readable.
+20.5–23.0s — Two-frame warm impact flash, then giant wide: tension pulls the
+lever and many mirrors pivot together, redirecting dawn into one gold corridor.
+23.0–26.5s — Heroic low angle: the manta enters the corridor. Light passes
+through its glass plates, evaporates storm vapor and dims the violet seams
+without injuring or transforming it. It twists the rib free and banks to sea.
+26.5–30.0s — Expansive aerial hold: Mara steadies above shining water while the
+calm manta recedes toward the open sun. Preserve tiny courier/huge creature scale
+for the final second.
+
+PHYSICS, CAMERA AND AUDIO
+Maintain screen direction and city geography across every cut. Mara is light and
+responsive; the manta has immense mass and slow rotational inertia. Pressure
+disturbs water, cloth and vegetation before the creature passes. The cable never
+duplicates, vanishes or changes attachment. Debris and water fall downward.
+Use wind, rotor hum, sail strain, brass clicks, cable launch and tension, glass
+resonance, thunder, plaster impacts, mirror gears and the manta's low glass call.
+No score, narration, dialogue, text, logo, extra person, limb, wing, eye, tail,
+harpoon, cable, explosion, blood, creature death, camera teleport or repeated
+angle.
+```
+
+**Why it works:** three references receive non-overlapping authority, while the
+twelve-shot ledger preserves one readable geography. The harpoon → rib → cable
+→ tower → lever → mirror corridor chain gives every cut a causal handoff, and
+the cable-state contract prevents the key action prop from disappearing during
+coverage changes.
+
+Adapted from PSS / @PromptSin's August 29, 2026
+[Dreamina Seedance 2.5 complete prompt, three-reference breakdown and
+30-second generated result](https://x.com/PromptSin/status/2093643612269764740).
+
+---
+
+### 267. Beginner-to-confident kung-fu vlog and exact-cut progression lock
+
+**Verified model:** Higgsfield Seedance 2.5 — the original creator names the
+model and platform beside the complete prompt and attached 30-second generated
+video
+**Use case:** travel UGC, sports-learning diary, bilingual native dialogue,
+performance progression
+**Mode:** text-to-video
+**Suggested settings:** 30 seconds, 9:16, casual smartphone capture, native
+Korean dialogue and courtyard ambience
+
+```text
+Create a genuine vertical smartphone sports vlog following one Korean adult
+woman in her early twenties learning basic Chinese martial arts in an outdoor
+training courtyard. Preserve her same petite oval face, brown eyes, fair natural
+skin, long black hair and voice from first frame to last. The footage must feel
+casually hand-held: imperfect framing, small walking shake, autofocus hunting,
+auto-exposure settling, mild motion blur and realistic phone microphone sound.
+No gimbal, drone, beauty filter, commercial polish or cinematic coverage.
+
+0.0–4.0s — ARRIVAL
+Selfie mode outside the courtyard. Excited but slightly nervous, she says in
+Korean, “오늘 중국 무술을 배워볼 거예요!” Turn the phone once to reveal students
+already practicing. Background activity continues naturally.
+
+4.0–8.0s — PREPARATION
+Use one motivated hard cut into the same courtyard after she has changed into a
+simple training uniform. Beside one instructor, she copies a basic stance and
+guard. She watches their hands and corrects her own posture with beginner timing.
+
+8.0–12.0s — FIRST ATTEMPT
+Film from an ordinary friend-held waist-height angle. She performs controlled
+straight punches and two defensive blocks with small timing errors, then makes
+one visible self-correction. Keep technique safe and modest, not expert.
+
+12.0–15.0s — KICK AND HUMAN ERROR
+The instructor holds one pad. She attempts one controlled front kick, recoils
+from the pad, loses balance by one step and laughs in embarrassment. Do not cut
+away from the recovery.
+
+HARD CUT EXACTLY AT 15.0s
+Preserve the same person, uniform, courtyard, light direction and instructor.
+The cut represents later practice; it must not look like a face or costume swap.
+
+15.0–18.0s — IMPROVED REPEAT
+Repeat the earlier stance, punches and blocks from a comparable friend-camera
+angle. Her coordination is noticeably better, but breathing and effort remain
+believable for a beginner.
+
+18.0–22.0s — SHORT COMBINATION
+She performs a safe compact sequence of block, straight punch, turn and footwork.
+Hands, hips and planted feet move in causal order; no wire-fu speed or impossible
+joint motion.
+
+22.0–26.0s — GROUP PRACTICE
+She joins several students in synchronized basics. Keep her identifiable near
+center without duplicating her. Clothing rustle, footsteps and distant courtyard
+conversation remain diegetic.
+
+26.0–30.0s — SELFIE PAYOFF
+Breathing slightly harder, she returns to selfie mode and says,
+“생각보다 어렵지만 정말 재미있었어요!” She smiles, gives one small wave and
+lowers the phone naturally to end recording.
+
+Preserve one continuous phone-camera character, natural blinking, skin texture,
+body weight, courtyard geography and ambient acoustic space. Reject face morph,
+identity drift, duplicate lead, expert-level opening technique, injury, unsafe
+contact, floating feet, perfect stabilization, cinematic lens changes, subtitles,
+logo, watermark, invented speech or music.
+```
+
+**Why it works:** the exact 15-second cut creates a before/after test without
+asking the model to imply improvement continuously. Repeating comparable moves on
+both sides makes progression visible, while intentional beginner errors,
+breathing and phone-camera imperfections keep the result in the UGC register.
+
+Adapted from Sania / @saniaspeaks_'s August 29, 2026
+[Higgsfield Seedance 2.5 complete prompt and 30-second generated
+result](https://x.com/saniaspeaks_/status/2093665693015388426).
+
+---
+
+### 268. Flooded-city armor lock and extension-detail contrast
+
+**Verified model:** Dreamina Seedance 2.5 — the original creator identifies the
+model, publishes the complete first-generation and extension prompts, attaches
+the 20-second-plus-20-second result and reports what each detail level preserved
+or dropped
+**Use case:** reference-locked military science fiction, long-form continuation,
+environmental escalation, extension diagnostics
+**Mode:** reference-image text-to-video followed by reference-video extension
+**Suggested settings:** 20-second primary generation plus 20-second extension,
+16:9, one immutable armor reference, native effects and no score
+
+```text
+Generate a two-part 40-second science-fiction pursuit as one 20-second primary
+clip followed by one 20-second continuation. @ArmorImage controls only the
+soldiers' adult identities as a unit, armor design, helmet geometry and material.
+All soldiers keep those suits unchanged. The continuation must use the delivered
+primary clip as @Video1 and inherit its final frame, city state, squad spacing,
+water level, ash, light direction and sound bed.
+
+PRIMARY CLIP — 0.0–20.0s
+0.0–5.0s — In a devastated coastal financial district, track backward from
+chest height as the lead soldier walks toward camera and the rest of the squad
+follows several meters behind. Skyscrapers vanish into smoke; autonomous vehicles
+sit half submerged. Ash falls like snow. Damaged screens show only corrupted
+abstract shapes.
+
+5.0–10.0s — The squad passes beneath one collapsed elevated transit line.
+Reconnaissance drones weave above fixed concrete debris. Emergency lights flash
+inside damaged buildings. Preserve squad order, armor, street axis and water
+depth while the camera descends gradually.
+
+10.0–15.0s — A distant shockwave races down the same street. Windows implode in
+a readable sequence from far to near; dust and glass move outward after each
+impact. Every soldier braces without changing identity. The lead looks up only
+after the blast reaches them.
+
+15.0–20.0s — Reveal through the cloud a gigantic rotating geometric object,
+neither aircraft nor conventional spacecraft. Electrical discharges cross its
+surface and briefly light the city. Finish at water level as the squad advances
+through knee-deep floodwater; each step makes weight-matched splashes. In the
+last moment, the same amber off-camera reflection reaches every helmet together.
+
+EXTENSION FROM @VIDEO1 — 20.0–40.0s
+20.0–25.0s — Begin on the exact delivered ending: same water-level lens, squad
+formation, amber reflection, ash and city geography. Pull back without resetting
+the scene. A motorcycle engine grows from far behind camera; the squad hears it
+before anyone turns.
+
+25.0–31.0s — The motorcycle enters through the same flooded street, displacing
+a single wake. Cut once to the rider's helmet-level perspective. Keep the squad
+leader centered and preserve the inherited screen direction; no new building,
+weather or armor design.
+
+31.0–36.0s — The leader sidesteps at the last safe moment, grips the rider's
+upper jacket and redirects momentum so rider and motorcycle separate in two
+physically believable paths. The rider lands clear of the wheels; no lethal
+impact or impossible instant stop.
+
+36.0–40.0s — Return to the inherited street axis. The other soldiers form one
+readable ring around the recovering rider while the motorcycle slides to rest
+in the background. Ash, water ripples, emergency lights and distant electrical
+storm continue on the same clock. End unresolved on the leader raising one hand
+for silence.
+
+AUDIO AND ACCEPTANCE GATE
+Use boots in water, ash hiss, drone rotors, staggered glass failure, distant fire,
+electrical discharge, then the approaching motorcycle, wake, cloth grip, slide
+and squad movement. No music or dialogue. Reject armor or helmet transformation,
+soldier duplication, event order swaps, simultaneous window failure, floating
+debris, dry boots, camera teleport, extension frame reset, vanished motorcycle,
+screen-direction reversal, readable advertising, title, logo or watermark.
+
+Review the primary and extension separately: the first passes only if armor,
+city scale and ordered destruction survive all 20 seconds; the extension passes
+only if the exact ending state is inherited and the confrontation remains
+spatially legible. If either segment drops a major beat, reduce simultaneous
+events before adding descriptive adjectives.
+```
+
+**Why it works:** the first segment uses high detail to lock armor and city
+continuity, while the extension converts a previously underspecified encounter
+into an inherited-state ledger. Separate acceptance gates capture the creator's
+observed trade-off: dense prompting preserved world detail but lost some events;
+the sparse extension kept the broad POV idea but weakened choreography.
+
+Adapted from Heather Cooper / @HBCoop_'s August 30, 2026
+[Dreamina Seedance 2.5 20-second generation plus 20-second extension
+result](https://x.com/HBCoop_/status/2093729949123543225) and
+[complete primary and extension prompts](https://x.com/HBCoop_/status/2093729967985320195).
+
+---
+
 ## Reusable templates
 
 ### Directional action retarget with reference-role isolation and atomic fan-out
@@ -21565,6 +21827,12 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Heather Cooper / @HBCoop_ — Dreamina Seedance 2.5 twenty-second flooded-city armor test plus twenty-second extension, with complete prompts, attached result and creator analysis of detail density versus choreography](https://x.com/HBCoop_/status/2093729949123543225) ([complete primary and extension prompts](https://x.com/HBCoop_/status/2093729967985320195))
+
+- [Sania / @saniaspeaks_ — Higgsfield Seedance 2.5 thirty-second smartphone kung-fu learning vlog with complete prompt, exact midpoint hard cut, bilingual dialogue and generated result](https://x.com/saniaspeaks_/status/2093665693015388426)
+
+- [PSS / @PromptSin — Dreamina Seedance 2.5 twelve-shot stormglass-manta chase with complete 30-second prompt, three reference-role images, cable-state physics and generated result](https://x.com/PromptSin/status/2093643612269764740)
 
 - [DeCat / @DeCat2025 — Dreamina Seedance 2.0 Fast 15-second archaeological machine awakening with a complete prompt, attached generated result, ordered activation chain and identity-recognition reversal](https://x.com/DeCat2025/status/2093504644567740693)
 
