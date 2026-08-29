@@ -21114,6 +21114,98 @@ equipment separation and the inherited dust state, and was owner-approved.
 plus the versioned [model-behavior ledger and returned-mode finding](https://github.com/rajamobeenashraf-jpg/chloe/blob/cd4e91da8f879b0a7ab7b69e1524e56312bfd164/PROMPT_LEARNINGS.md)
 and [prompt/media-role assembler](https://github.com/rajamobeenashraf-jpg/chloe/blob/cd4e91da8f879b0a7ab7b69e1524e56312bfd164/pai-pro-tooling/alexander/build_prompt.mjs).
 
+### Ordered multi-clip role binding and source-return gate
+
+**Verified model:** Seedance 2.0 Fast
+(`dreamina-seedance-2-0-fast-260128` through BytePlus ModelArk) — the original
+integrator fixed this exact server-side model, completed a live two-clip job,
+and verified that the submitted database rows retained `source_video` positions
+0 and 1
+
+Use this when one clip must be extended or two to three clips must be joined in
+a declared order. Bind stored asset roles to the provider's wire roles before
+submission, make send order equal prompt numbering, and state whether the
+returned file must contain the original clips or only newly generated footage.
+
+```text
+ROUTE CONTRACT
+Exact model = dreamina-seedance-2-0-fast-260128.
+Operation = [EXTEND ONE CLIP / JOIN TWO OR THREE CLIPS].
+Maximum source clips on this verified route = 3.
+Do not mix first_frame, last_frame and semantic-reference meanings.
+
+ORDER MANIFEST
+Video 1 = [FILENAME / HASH / DURATION] | terminal state [STATE] |
+          outgoing camera, motion and audio [VECTOR / BED]
+Video 2 = [FILENAME / HASH / DURATION] | opening state [STATE] |
+          incoming camera, motion and audio [VECTOR / BED]
+[Video 3 = ... only when required]
+
+Preserve this list as the upload and payload order. The first selected clip is
+Video 1, the second is Video 2, and the third is Video 3. Removing one clip must
+not silently reorder the others.
+
+WIRE-ROLE BINDING
+For every source clip, emit:
+type = video_url
+role = reference_video
+
+For a supplementary semantic image, emit:
+type = image_url
+role = reference_image
+
+Never leave a semantic image unroled. On this provider contract, a bare image
+is interpreted as a first frame rather than as a neutral reference. Use
+first_frame or last_frame only when literal endpoint control is intended.
+
+PROMPT — ONE-CLIP EXTENSION
+Extend Video 1 [FORWARD / BACKWARD]. Begin from its exact boundary state and
+continue with [ONE CAUSALLY NEXT ACTION]. Preserve identity, object ownership,
+motion direction, camera axis, exposure and the active audio bed.
+Return [ONLY THE NEW SEGMENT / VIDEO 1 FOLLOWED BY THE NEW SEGMENT].
+End on [NEW STABLE STATE OR CONTINUATION HOOK].
+
+PROMPT — ORDERED MULTI-CLIP JOIN
+Create one continuous result in this exact order: Video 1 -> Video 2
+[-> Video 3]. Keep the existing source footage intact. Generate only the
+missing transition between each adjacent pair.
+
+At every seam, inherit the outgoing subject state, camera vector, light and
+audio phase from the earlier clip; use [VISIBLE CAUSAL BRIDGE]; then arrive at
+the next clip's opening composition, speed and first audible beat. No source
+swap, source omission, duplicated clip, endpoint redraw, unrelated insert,
+motion reversal, exposure flash, frozen seam or audio dropout.
+
+PRE-SUBMIT AUDIT
+- source_video rows exist exactly once at positions 0..N-1;
+- serialized video_url items preserve that same order;
+- every source clip carries role=reference_video;
+- every semantic image carries role=reference_image rather than no role;
+- prompt labels and attached-media order agree;
+- stale clips are cleared when the user changes generation mode;
+- the requested return policy for original footage is explicit.
+
+POST-RUN ACCEPTANCE
+Record exact model, prompt, ordered input hashes, payload roles, task ID and
+returned asset. Decode the result and verify the requested source order,
+original-footage inclusion policy and every transition seam. A completed queue
+job passes only when the media itself contains the declared clips and bridges.
+```
+
+**Why it works:** positional numbering is reliable only when UI selection,
+stored rows, serialized items and prompt labels share one order. Explicit wire
+roles prevent a semantic image from silently becoming a keyframe, while the
+source-return sentence removes an ambiguity observed in one-clip extension:
+the service may otherwise return only the newly generated continuation. The
+source implementation confirmed the two-clip path against the live API rather
+than treating unit tests or a successful queue state as proof.
+
+**Sources:** QuantumWeaveDev26's August 29, 2026
+[ordered multi-clip implementation and wire-role repair](https://github.com/QuantumWeaveDev26/Custom-interface/commit/cb6d918c3c07715cb559296b422ce98cc01e23a4),
+[live two-clip verification](https://github.com/QuantumWeaveDev26/Custom-interface/commit/67b6a8578072468b084112eca104a27bce246fd1),
+and the committed
+[exact Seedance 2.0 Fast model configuration](https://github.com/QuantumWeaveDev26/Custom-interface/blob/67b6a8578072468b084112eca104a27bce246fd1/apps/web/.env.example).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -21654,6 +21746,8 @@ Community examples and techniques referenced in this README:
 - [Wigly — fal Seedance 2.5 image/video likeness-policy re-test, terminal response-body trap, zero-charge evidence and access-tier routing](https://github.com/corpomedical/picacho/commit/5fdd64be01d5857803ad58b9c04039b4572691a3) ([versioned endpoint notes](https://github.com/corpomedical/picacho/blob/5fdd64be01d5857803ad58b9c04039b4572691a3/src/lib/generations/providers/video-models.ts))
 
 - [Rajamobeen Ashraf / Chloe — Seedance 2.5 text-placement failure, owner-approved still-first `omni_reference` repair, returned-mode semantics and persistent model-behavior ledger](https://github.com/rajamobeenashraf-jpg/chloe/commit/a8dd825a1497d0c7a236e96650a1170d84dfc87c) ([verified ledger](https://github.com/rajamobeenashraf-jpg/chloe/blob/cd4e91da8f879b0a7ab7b69e1524e56312bfd164/PROMPT_LEARNINGS.md), [prompt assembler](https://github.com/rajamobeenashraf-jpg/chloe/blob/cd4e91da8f879b0a7ab7b69e1524e56312bfd164/pai-pro-tooling/alexander/build_prompt.mjs))
+
+- [QuantumWeaveDev26 / Custom-interface — Seedance 2.0 Fast ordered multi-clip role binding, live two-clip extension and source-return control](https://github.com/QuantumWeaveDev26/Custom-interface/commit/67b6a8578072468b084112eca104a27bce246fd1) ([implementation and role repair](https://github.com/QuantumWeaveDev26/Custom-interface/commit/cb6d918c3c07715cb559296b422ce98cc01e23a4), [exact model configuration](https://github.com/QuantumWeaveDev26/Custom-interface/blob/67b6a8578072468b084112eca104a27bce246fd1/apps/web/.env.example))
 
 Official model references:
 
