@@ -21285,6 +21285,88 @@ warns can expose a splice.
 the committed [complete six-second block prompt](https://github.com/Auxlife32/ai-video-studio/blob/191f3ea21bf2296c6fd5deec579fd2790d9a01e1/examples/demo-prompt.txt),
 and the [exact OpenRouter model route and live-test notes](https://github.com/Auxlife32/ai-video-studio/blob/191f3ea21bf2296c6fd5deec579fd2790d9a01e1/scripts/seedance.py).
 
+
+### Same-plate motion-survival bake-off and parameter-authority audit
+
+**Verified model:** Seedance 2.5 (`seedance-2.5` through Picsart) — the
+original production ran the same approved start frame and prompt for five
+seconds at 480p, retained the character at 0 seconds, midpoint and 5 seconds
+without morphing, preserved the requested 1:1 frame, and logged both the raw
+result and the model's failure to hold a requested static camera
+
+Use this before committing a character plate or expensive shot family to a
+route. Keep one minimal motion probe immutable across candidates, then inspect
+identity at three checkpoints separately from framing, camera and payload
+obedience. Treat each observed control as its own acceptance decision rather
+than allowing an attractive final frame to hide a mid-shot break or ignored
+parameter.
+
+```text
+LOCK THE TEST CASE
+Approved start frame = [IMMUTABLE FILE + HASH].
+Exact candidate route = [MODEL AND PROVIDER].
+Duration = 5 seconds. Resolution = 480p.
+Aspect ratio = [MATCH THE APPROVED PLATE].
+Seed = [FIXED WHEN THE ROUTE EXPOSES ONE].
+Audio = off.
+Prompt version = [TEST ID].
+
+MOTION PROBE
+Animate the approved subject performing exactly one bounded action:
+[SMALL TURN / LOOK / STEP / OBJECT REACH].
+Keep the subject's identity, silhouette, colours, materials, costume and
+distinctive features unchanged from the approved start frame.
+Camera: [DECLARED STATIC COMPOSITION OR ONE SMALL MEASURABLE MOVE].
+Environment and lighting remain unchanged.
+No morphing, feature swim, added subjects, endpoint redraw, crop, reframing,
+unrequested camera motion or new action after the stated motion completes.
+
+PRE-RUN RECORD
+Save the start-frame hash, full prompt, negative field, media roles, duration,
+resolution, aspect ratio, seed, route, quoted cost and task ID. When comparing
+routes, change only the exact model; do not rewrite the motion or references.
+
+THREE-CHECKPOINT IDENTITY AUDIT
+Decode the returned media and inspect frame 0, midpoint and final frame.
+At each point record:
+- face and distinctive-feature geometry;
+- body proportions, silhouette, colours and materials;
+- morphing, melting, feature swim or invented detail;
+- subject scale, crop and frame-edge clearance.
+
+PARAMETER-AUTHORITY AUDIT
+Measure these independently:
+- does frame 0 reproduce or faithfully inherit the approved plate;
+- does the returned frame use the declared aspect ratio without hidden crop;
+- does the camera follow the declared path or drift despite a static request;
+- do duration, resolution and model metadata match the submitted payload;
+- does the playable result exist at the logged output URL.
+
+PASS / ROUTE DECISION
+A queue success is not a pass. Approve a route only when all three identity
+checkpoints pass and every required parameter has evidence. Record ignored
+controls as model behaviour, not prompt success. If identity holds but camera
+lock fails, redesign the shot around measurable staging or an allowed small
+move before scaling production; do not conceal the failure with more vague
+negative wording. Preserve the raw probe and rejection reason so later model
+or provider changes can rerun the same test card.
+```
+
+**Why it works:** a five-second, one-action probe isolates motion retention from
+story complexity, while the three checkpoints catch transient defects that
+frame 0 and the ending can both miss. Separating identity from parameter
+authority also prevents an otherwise usable character result from being
+misreported as evidence for camera lock or framing behaviour. In the source
+test, Seedance held identity and 1:1 framing but still drifted the camera, so
+the audit produced a qualified capability record rather than a single
+pass/fail impression.
+
+**Sources:** Gegham Simonyan / Hayanim Studio's August 29, 2026
+[completed Seedance 2.5 motion bake-off and production findings](https://github.com/Gegham8/hayanim-studio/commit/7c849bd9ef72228e461a17c204f7d4d5ddccc01c),
+the committed [five-second test method and checkpoint results](https://github.com/Gegham8/hayanim-studio/blob/7c849bd9ef72228e461a17c204f7d4d5ddccc01c/docs/16-smoke-test-results.md),
+the [exact model/result generation log](https://github.com/Gegham8/hayanim-studio/blob/7c849bd9ef72228e461a17c204f7d4d5ddccc01c/episodes/EP001-champordnere/generation-log.csv),
+and the [raw Seedance 2.5 clip](https://cdn-editing-temp.picsart.com/editing-temp/df5d78a5-cd30-422c-a0d0-6c3a17cb6b9b.mp4).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -21332,6 +21414,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Gegham Simonyan / Hayanim Studio — exact `seedance-2.5` same-plate five-second motion bake-off with raw output, three-checkpoint identity audit and camera/aspect-ratio findings](https://github.com/Gegham8/hayanim-studio/commit/7c849bd9ef72228e461a17c204f7d4d5ddccc01c) ([test results](https://github.com/Gegham8/hayanim-studio/blob/7c849bd9ef72228e461a17c204f7d4d5ddccc01c/docs/16-smoke-test-results.md), [generation log](https://github.com/Gegham8/hayanim-studio/blob/7c849bd9ef72228e461a17c204f7d4d5ddccc01c/episodes/EP001-champordnere/generation-log.csv))
 
 - [Auxlife32 — exact `bytedance/seedance-2.5` block-prompt workflow with an untouched timed demo, repeated-take cut-window finding and complete generation route](https://github.com/Auxlife32/ai-video-studio/commit/191f3ea21bf2296c6fd5deec579fd2790d9a01e1) ([complete prompt](https://github.com/Auxlife32/ai-video-studio/blob/191f3ea21bf2296c6fd5deec579fd2790d9a01e1/examples/demo-prompt.txt), [model route](https://github.com/Auxlife32/ai-video-studio/blob/191f3ea21bf2296c6fd5deec579fd2790d9a01e1/scripts/seedance.py))
 
