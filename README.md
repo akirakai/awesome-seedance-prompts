@@ -16847,6 +16847,85 @@ and [corrective BytePlus Ark / fal mode comparison and face-prominence
 tests](https://github.com/hkk009008-svg/content/commit/0014c61cc899337fb2744e08e51b867598dedba5),
 published August 9, 2026.
 
+### Terminal-status result-body gate and likeness access-tier router
+
+**Verified model:** Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`
+on fal) — the creator re-tested both `image_urls` and `video_urls` on August
+29, 2026, recorded three zero-charge policy rejections, and found that fal
+reported the queue jobs as `COMPLETED` while the response body contained
+`partner_validation_failed`
+
+Use this after the preceding input preflight when a real-person reference may
+behave differently across distribution routes. It does not authorize likeness
+use or bypass a rejection; it prevents a terminal queue label from being
+mistaken for a delivered video and separates route policy from model ability.
+
+```text
+REQUEST LEDGER
+Model: Seedance 2.5
+Provider route: [FAL PROXY / VOLCENGINE ARK / OTHER VERIFIED ROUTE]
+Input mode: [IMAGE REFERENCES / VIDEO REFERENCES]
+Reference owner: [THE VERIFIED USER / AUTHORIZED ADULT / NOT VERIFIED]
+Reference consent and platform authorization: [CONFIRMED / NOT CONFIRMED]
+Expected output: [VIDEO URL / FILE / MEDIA OBJECT]
+
+PRE-SUBMIT GATE
+Do not infer this route's likeness policy from a successful demo on another
+provider. Record the exact endpoint, input keys, asset hashes, starting balance
+and request ID. Submit once; never begin with parallel retries.
+
+TERMINAL EVALUATION
+1. Poll until the provider declares a terminal queue state.
+2. If the state is COMPLETED or equivalent, fetch and parse the full response.
+3. Count the task as successful only when the expected video artifact exists,
+   is downloadable, and has valid media metadata.
+4. Inspect the response body for `content_policy_violation`,
+   `partner_validation_failed`, private-information errors, missing output,
+   nested error objects or provider warnings even when status says COMPLETED.
+5. Store queue state and response verdict as separate fields:
+   queue_terminal = [YES / NO]
+   artifact_delivered = [YES / NO]
+   policy_verdict = [PASS / REJECT / UNKNOWN]
+
+BILLING GATE
+Compare starting and ending balance or the provider's authoritative charge
+record. Mark the attempt free only when the evidence confirms zero charge; do
+not generalize one provider's free policy rejection to another route.
+
+ACCESS-TIER ROUTER
+If fal returns a likeness-policy rejection for image or video references, stop
+on that route. Do not conclude that Seedance 2.5 lacks the capability.
+Use a direct provider path only when it explicitly supports the requested media
+and all account-level requirements are satisfied. For Volcengine Ark's
+real-person path, require per-user facial verification, portrait authorization,
+and the verified user's own likeness. Otherwise remove the likeness references
+or choose a separately verified policy-compatible model.
+
+STOP CONDITIONS
+No crop, blur, re-encode, renamed file, input-type swap or repeated resubmission
+to evade a provider decision. No success analytics, delivery event or user
+notification based on queue status alone.
+
+ACCEPTANCE
+- exact model and route recorded;
+- terminal response body parsed;
+- a valid output artifact, not a status label, proves success;
+- charge state is evidence-backed;
+- likeness ownership and authorization match the selected access tier;
+- rejection stops cleanly without an unauthorized fallback.
+```
+
+**Why it works:** queue completion proves that orchestration finished, not that
+generation succeeded. Treating the artifact, policy verdict and charge record
+as independent results prevents false delivery and unnecessary paid retries.
+The access-tier branch also explains why a creator can demonstrate their own
+verified likeness on one provider while an application accepting arbitrary
+user uploads remains blocked on another.
+
+Adapted from Wigly's August 29, 2026
+[live Seedance 2.5 image/video reference re-test and routing record](https://github.com/corpomedical/picacho/commit/5fdd64be01d5857803ad58b9c04039b4572691a3),
+with the [versioned endpoint and operational notes](https://github.com/corpomedical/picacho/blob/5fdd64be01d5857803ad58b9c04039b4572691a3/src/lib/generations/providers/video-models.ts).
+
 ### Storyboard-to-short parameter preflight and moving-hook template
 
 **Verified model:** Seedance 2.5 — confirmed by the creator's paid 30-second
@@ -21487,6 +21566,8 @@ Community examples and techniques referenced in this README:
 - [H A J R A / @codewithhajra — WeryAI Seedance 2.5 vertical lip-tint UGC, complete prompt and generated result](https://x.com/codewithhajra/status/2093368009830113336)
 
 - [John Stocker — Higgsfield Seedance 2.5 full-frame graphic match, primary generation record, measured transition and reference-authority repair](https://github.com/johnstockertutorial-afk/film-thealzheimer/commit/e5cd09c7a3727f681856631d711c4eb5735a17ac) ([complete 25-second prompt](https://github.com/johnstockertutorial-afk/film-thealzheimer/blob/e5cd09c7a3727f681856631d711c4eb5735a17ac/02_PRODUCTION-SCENES/SCENE03_DECISION-AND-DEPARTURE/MASTER-PROMPT/LONGTAKE/25s/ALZHEIMER_VID_S04-S05_DECISION-AND-DEPARTURE_LT_GEN_v001.md))
+
+- [Wigly — fal Seedance 2.5 image/video likeness-policy re-test, terminal response-body trap, zero-charge evidence and access-tier routing](https://github.com/corpomedical/picacho/commit/5fdd64be01d5857803ad58b9c04039b4572691a3) ([versioned endpoint notes](https://github.com/corpomedical/picacho/blob/5fdd64be01d5857803ad58b9c04039b4572691a3/src/lib/generations/providers/video-models.ts))
 
 Official model references:
 
