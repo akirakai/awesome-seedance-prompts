@@ -21030,6 +21030,90 @@ and one shifted voice depth are retained as explicit rejection checks.
 [six-character Seedance 2.5 test, complete prompt, reference plan, generated
 result and failure notes](https://www.reddit.com/r/Seedance_AI/comments/1vzfprh/how_to_make_multiple_characters_speak_in_seedance/).
 
+### Still-first hard-geometry lock and mode-echo acceptance gate
+
+**Verified model:** Seedance 2.5 (`seedance_2_5`, `omni_reference`, 1080p) —
+the source production compared a failed text-to-video placement test with an
+owner-approved still-first rerun, retained both job IDs, and recorded the
+provider's returned parameter semantics
+
+Use this when a shot succeeds at scale or motion but fails a non-negotiable
+screen-space relationship: formation angle, left/right ownership, contact
+point, object separation, or an environmental state that must exist on frame
+one. Route the geometry into an approved still instead of repeatedly adding
+placement synonyms to text-to-video.
+
+```text
+HARD-GEOMETRY TRIGGER
+List every relationship that must be visible at the opening:
+- [GROUP A] occupies [FRAME REGION] and travels [SCREEN DIRECTION];
+- [GROUP B] forms [LINE / WEDGE / GAP / CONTACT POINT] at [FRAME REGION];
+- [PROP / WARDROBE FAMILY A] never appears on [GROUP B];
+- [DUST / RAIN / DAMAGE / CROWD STATE] is already active before motion begins.
+
+If a same-model text-to-video probe preserves scale and action energy but
+collapses these relationships, classify it as PLACEMENT GEOMETRY FAILURE.
+Keep its job ID as the baseline and stop rephrasing the same layout in prose.
+
+COMPOSITION-STILL GATE
+Create one full-frame still containing the exact approved opening geometry,
+screen direction, contact map, group separation, grade and already-active
+environment state. Describe fragile costume or prop forms positively—name the
+required shape and material—instead of relying on "no [small detail]."
+
+Reject the still before video generation if any group changes side, the impact
+point is ambiguous, equipment families mix, the world state starts too clean,
+or the composition cannot continue into the intended action.
+
+REFERENCE CONTRACT
+@Image1 owns the complete opening composition: placement, scale, screen
+direction, group separation, environmental state and grade. Animate from that
+evidence without redesigning it.
+@Image2..N, if used, each own only [IDENTITY / COSTUME / PROP APPEARANCE].
+They do not override @Image1's pose, background, light or camera.
+
+SUBMISSION ROUTE
+Model: seedance_2_5
+Mode: omni_reference
+Resolution: 1080p
+Record the still ID, video task ID, media order and submitted media roles.
+Use one camera instruction and one causal action path from the locked state.
+
+MODE-ECHO AUDIT
+Parse the returned request or parameter echo. If the provider converts the
+submitted start-image role into reference_images, record that coercion.
+On this route, judge @Image1 as a strong composition anchor, not a promise of
+pixel-identical first-frame delivery. If literal first-frame identity is a hard
+requirement, stop and use a separately verified true first-frame route; do not
+rename reference adherence as exact boundary control.
+
+THREE-TIMEPOINT ACCEPTANCE
+Inspect opening, midpoint and endpoint frames and mark PASS / FAIL for:
+- required regions, formation angle, contact point and screen direction;
+- group, equipment and identity separation;
+- inherited environment state at the opening and its causal evolution;
+- camera lock, action continuity and absence of geometry reset.
+
+Compare the result with the retained text-to-video baseline. Approve the route
+only when the hard geometry is measurably repaired and the complete clip passes
+human review. Add every obeyed, ignored or coerced behavior to a per-model
+ledger with its evidence IDs before the next shot.
+```
+
+**Why it works:** the still solves simultaneous spatial placement in a medium
+that can be inspected before motion begins; Seedance then receives a concrete
+layout rather than a paragraph it may reinterpret. Separating submitted role
+from returned mode semantics also prevents a strong reference match from being
+misreported as literal first-frame fidelity. In the cited comparison, the
+text-only run turned a left-entering wedge and offset defensive line into two
+head-on columns; the still-first rerun restored direction, contact geometry,
+equipment separation and the inherited dust state, and was owner-approved.
+
+**Sources:** Rajamobeen Ashraf's August 29, 2026
+[Seedance 2.5 v1/v2 production log and owner-approved validation](https://github.com/rajamobeenashraf-jpg/chloe/commit/a8dd825a1497d0c7a236e96650a1170d84dfc87c),
+plus the versioned [model-behavior ledger and returned-mode finding](https://github.com/rajamobeenashraf-jpg/chloe/blob/cd4e91da8f879b0a7ab7b69e1524e56312bfd164/PROMPT_LEARNINGS.md)
+and [prompt/media-role assembler](https://github.com/rajamobeenashraf-jpg/chloe/blob/cd4e91da8f879b0a7ab7b69e1524e56312bfd164/pai-pro-tooling/alexander/build_prompt.mjs).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -21568,6 +21652,8 @@ Community examples and techniques referenced in this README:
 - [John Stocker — Higgsfield Seedance 2.5 full-frame graphic match, primary generation record, measured transition and reference-authority repair](https://github.com/johnstockertutorial-afk/film-thealzheimer/commit/e5cd09c7a3727f681856631d711c4eb5735a17ac) ([complete 25-second prompt](https://github.com/johnstockertutorial-afk/film-thealzheimer/blob/e5cd09c7a3727f681856631d711c4eb5735a17ac/02_PRODUCTION-SCENES/SCENE03_DECISION-AND-DEPARTURE/MASTER-PROMPT/LONGTAKE/25s/ALZHEIMER_VID_S04-S05_DECISION-AND-DEPARTURE_LT_GEN_v001.md))
 
 - [Wigly — fal Seedance 2.5 image/video likeness-policy re-test, terminal response-body trap, zero-charge evidence and access-tier routing](https://github.com/corpomedical/picacho/commit/5fdd64be01d5857803ad58b9c04039b4572691a3) ([versioned endpoint notes](https://github.com/corpomedical/picacho/blob/5fdd64be01d5857803ad58b9c04039b4572691a3/src/lib/generations/providers/video-models.ts))
+
+- [Rajamobeen Ashraf / Chloe — Seedance 2.5 text-placement failure, owner-approved still-first `omni_reference` repair, returned-mode semantics and persistent model-behavior ledger](https://github.com/rajamobeenashraf-jpg/chloe/commit/a8dd825a1497d0c7a236e96650a1170d84dfc87c) ([verified ledger](https://github.com/rajamobeenashraf-jpg/chloe/blob/cd4e91da8f879b0a7ab7b69e1524e56312bfd164/PROMPT_LEARNINGS.md), [prompt assembler](https://github.com/rajamobeenashraf-jpg/chloe/blob/cd4e91da8f879b0a7ab7b69e1524e56312bfd164/pai-pro-tooling/alexander/build_prompt.mjs))
 
 Official model references:
 
