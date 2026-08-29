@@ -278,6 +278,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Inherited-storm continuation and unresolved-score handoff](#262-inherited-storm-continuation-and-unresolved-score-handoff)
   - [Opening-owned cosmetic squeeze and irreversible application ledger](#263-opening-owned-cosmetic-squeeze-and-irreversible-application-ledger)
   - [Motion-first burger macro sprint and post-copy gate](#264-motion-first-burger-macro-sprint-and-post-copy-gate)
+  - [Symbol-triggered ancient-machine awakening and identity-recognition reveal](#265-symbol-triggered-ancient-machine-awakening-and-identity-recognition-reveal)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -13995,6 +13996,83 @@ Adapted from Tony Payet / AutomationBoost's August 29, 2026
 [original creator page](https://automatisationboost.com/ressources/prompt-burger-video.html)).
 
 ---
+### 265. Symbol-triggered ancient-machine awakening and identity-recognition reveal
+
+**Verified model:** Dreamina Seedance 2.0 Fast — the original creator names the
+model beside the complete prompt and an attached 15-second generated video
+**Use case:** archaeological science fiction, continuous awakening chain,
+environment-scale reveal, native synthetic dialogue
+**Mode:** text-to-video
+**Suggested settings:** 15 seconds, 16:9, 24fps, photoreal cinematic rendering,
+native foley and one spoken line
+
+```text
+Create one continuous 15-second archaeological science-fiction reveal beneath a
+remote desert excavation. Follow the same experienced adult archaeologist in
+dusty expedition clothes, gloves, headlamp and one leather satchel. Preserve the
+same face, wardrobe, equipment and screen direction. The chamber contains one
+partially buried circular machine surrounded by weathered stone pillars; ancient
+stone and advanced metal remain distinct materials rather than morphing together.
+
+CONTINUOUS-CAMERA CONTRACT
+Begin just behind the archaeologist's right shoulder and travel through visible
+space into a final facial close-up. No cut, flash-hidden edit, teleport, new room
+or sudden lens reset. Every camera move follows the newly activated evidence.
+
+0.0–3.0s — CONTACT BEFORE ACTIVATION
+The archaeologist brushes a narrow strip of dust from the machine with one gloved
+hand. A single unfamiliar symbol appears. Their index finger touches it once; the
+symbol depresses by a few millimeters and emits a restrained blue-gold pulse.
+Nothing else moves before physical contact.
+
+3.0–7.0s — OUTWARD WAKE SEQUENCE
+A deep internal latch answers first. Then three concentric stone-and-metal rings
+begin rotating one after another from center to exterior. Energy travels through
+carved wall channels only after each ring reaches motion. Dust shakes loose from
+the ceiling, catches the headlamp and falls with believable gravity. Arc wider
+around the archaeologist while preserving the chamber's pillar positions.
+
+7.0–10.5s — SCALE AND TARGET REVEAL
+The machine rises slowly from its buried socket as displaced sand slides back
+into the opening. Thousands of small lights illuminate outward in ordered rows.
+A volumetric star map forms above the rings, contracts from many galaxies to the
+Solar System, then to Earth. One final point projects vertically onto the floor
+directly beneath the archaeologist's boots. They step back once but do not run.
+
+10.5–13.0s — SILENCE AND RECOGNITION
+All rings stop on the same mechanical beat and the chamber becomes almost silent.
+The machine rotates toward the archaeologist without changing its base position.
+A central metallic iris opens into one brilliant white mechanical eye and blinks
+exactly once. Push past the fading star map toward the archaeologist's face.
+
+13.0–15.0s — IDENTITY REVERSAL
+Hold the mechanical eye reflected clearly in the archaeologist's pupils. In one
+calm ancient synthetic voice, the machine says, “Welcome back… Commander.” Their
+breath stops and recognition replaces curiosity without a theatrical gasp. Cut
+instantly to black after the final word; no attack, explanation or extra movement.
+
+AUDIO AND FAILURE CONTROL
+Use glove-on-dust friction, one button contact, descending internal latch,
+sequential ring rumbles, channel energy, falling grit, rising machinery, then a
+hard drop to near-silence before the single line. Preserve one cavern acoustic
+space. No music, narration, other speech, subtitle, title card or readable glyph.
+
+Reject activation before touch, simultaneous all-at-once motion, floating sand,
+changing ring count, shifting pillars, duplicated archaeologist, wardrobe or
+satchel drift, random creature, portal, explosion, aggressive eye, lip-sync on
+the machine voice, invented text, logo, watermark, fade-out or resolved epilogue.
+```
+
+**Why it works:** the reveal is an ordered evidence chain—touch → latch → rings
+→ wall channels → machine rise → star map → Earth point → eye—so monumental
+motion remains causal and readable inside fifteen seconds. The abrupt sound
+collapse reserves time for the identity twist, while the eye reflection connects
+the machine's recognition to the archaeologist without adding another shot.
+
+Adapted from DeCat / @DeCat2025's August 29, 2026
+[Dreamina Seedance 2.0 Fast complete prompt and 15-second generated result](https://x.com/DeCat2025/status/2093504644567740693).
+
+---
 ## Reusable templates
 
 ### Directional action retarget with reference-role isolation and atomic fan-out
@@ -21487,6 +21565,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [DeCat / @DeCat2025 — Dreamina Seedance 2.0 Fast 15-second archaeological machine awakening with a complete prompt, attached generated result, ordered activation chain and identity-recognition reversal](https://x.com/DeCat2025/status/2093504644567740693)
 
 - [Tony Payet / AutomationBoost — Seedance 2.5 ten-second vertical burger commercial with the complete creator-confirmed prompt, motion-first hook, four-texture sprint and model-route notes](https://github.com/tonyPayetDev/automationboost/commit/4fd5f0d840890d6686e46f7d786255d921760537) ([complete prompt](https://github.com/tonyPayetDev/automationboost/blob/4fd5f0d840890d6686e46f7d786255d921760537/ressources/prompt-burger-video.html), [creator page](https://automatisationboost.com/ressources/prompt-burger-video.html))
 
