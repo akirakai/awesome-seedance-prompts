@@ -277,6 +277,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Static six-setup pressure ladder and silent-reaction release](#261-static-six-setup-pressure-ladder-and-silent-reaction-release)
   - [Inherited-storm continuation and unresolved-score handoff](#262-inherited-storm-continuation-and-unresolved-score-handoff)
   - [Opening-owned cosmetic squeeze and irreversible application ledger](#263-opening-owned-cosmetic-squeeze-and-irreversible-application-ledger)
+  - [Motion-first burger macro sprint and post-copy gate](#264-motion-first-burger-macro-sprint-and-post-copy-gate)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -13922,6 +13923,78 @@ closes that five-second ambiguity without discarding the verified result.
 
 ---
 
+### 264. Motion-first burger macro sprint and post-copy gate
+
+**Verified model:** Seedance 2.5 through Kie.ai — the original creator publishes
+the complete prompt, identifies Seedance 2.5 as the model used for the video and
+separately labels Wan 2.7 only as an alternative route
+**Use case:** vertical food advertising, scroll-stop hook, macro texture proof,
+rapid product montage
+**Mode:** text-to-video
+**Suggested settings:** 10 seconds, 9:16, highest natively supported resolution,
+24fps, synchronized food foley
+
+```text
+Create a 10-second photoreal vertical social ad for one fictional gourmet burger.
+Start with motion already under way; do not spend the opening on a static plate.
+Keep one bun, one patty, one cheese portion, one lettuce portion and one sauce
+throughout. Every later shot inherits the food state established by the earlier
+shot instead of regenerating or rearranging the ingredients.
+
+0.0–2.0s — MOTION HOOK
+Extreme macro: lift the top bun just far enough to pull one glossy cheese bridge
+between bun and patty. Both ends remain physically attached as the strand
+stretches, thins and begins to recoil. Steam crosses the focal plane and a sharp
+grill hiss starts on frame one. No establishing shot, hand, fork or floating food.
+
+2.0–7.0s — FOUR-TEXTURE SPRINT
+Use four clean hard cuts, each motivated by the preceding material motion:
+- patty surface bubbles and releases one small bead of juice;
+- the same brioche edge lands on the hot grill and browns without burning;
+- crisp lettuce settles once against the patty and stops moving;
+- one ribbon of signature sauce travels across the existing stack and stays put.
+Change scale and angle between cuts, but preserve ingredient order, browning,
+volume, light direction and the same dark restaurant background. Each insert
+gets one readable action; do not cross-dissolve or combine all materials at once.
+
+7.0–9.0s — ASSEMBLY AND HERO PUSH
+Complete the same burger once, square its layers, then slide it toward a locked
+low three-quarter camera. The stack remains upright and recognizable while steam
+rises behind it. End the push before the lens and hold the full silhouette.
+
+9.0–10.0s — CLEAN COPY PLATE
+Keep the burger motionless in a premium hero frame with clean negative space in
+the upper third. Do not render campaign text inside the generated video. Add the
+exact call to action as a separate post-production overlay after the product
+geometry, texture and final hold pass review.
+
+AUDIO
+Build one continuous food-sound bed: grill sizzle, light cheese pull, bun contact,
+lettuce rustle, controlled sauce movement and one soft plate slide. No dialogue,
+voice-over, music restart, oversized impact or sound without a visible cause.
+
+ACCEPTANCE
+Pass only if the first second contains visible cheese motion; the four texture
+beats are individually readable; the ingredient stack never resets or changes
+order; the hero burger is the same object assembled in the inserts; and the last
+second is stable enough for external copy. Reject duplicate ingredients, floating
+cheese, impossible liquid motion, raw-to-burnt jumps, changing bun geometry,
+camera collision, CGI-plastic texture, invented logo, baked-in text, subtitle,
+watermark, dead opening frame or missing final hold.
+```
+
+**Why it works:** the opening hook is a material action rather than a product
+portrait, while four single-purpose inserts prove distinct textures without
+asking one shot to perform everything. A global ingredient ledger connects the
+fast cuts, and moving the call to action into post preserves a clean commercial
+plate instead of gambling the approved food render on generated typography.
+
+Adapted from Tony Payet / AutomationBoost's August 29, 2026
+[creator-confirmed Seedance 2.5 burger prompt and method](https://github.com/tonyPayetDev/automationboost/commit/4fd5f0d840890d6686e46f7d786255d921760537)
+([complete versioned source prompt](https://github.com/tonyPayetDev/automationboost/blob/4fd5f0d840890d6686e46f7d786255d921760537/ressources/prompt-burger-video.html),
+[original creator page](https://automatisationboost.com/ressources/prompt-burger-video.html)).
+
+---
 ## Reusable templates
 
 ### Directional action retarget with reference-role isolation and atomic fan-out
@@ -21414,6 +21487,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 ## Sources
 
 Community examples and techniques referenced in this README:
+
+- [Tony Payet / AutomationBoost — Seedance 2.5 ten-second vertical burger commercial with the complete creator-confirmed prompt, motion-first hook, four-texture sprint and model-route notes](https://github.com/tonyPayetDev/automationboost/commit/4fd5f0d840890d6686e46f7d786255d921760537) ([complete prompt](https://github.com/tonyPayetDev/automationboost/blob/4fd5f0d840890d6686e46f7d786255d921760537/ressources/prompt-burger-video.html), [creator page](https://automatisationboost.com/ressources/prompt-burger-video.html))
 
 - [Gegham Simonyan / Hayanim Studio — exact `seedance-2.5` same-plate five-second motion bake-off with raw output, three-checkpoint identity audit and camera/aspect-ratio findings](https://github.com/Gegham8/hayanim-studio/commit/7c849bd9ef72228e461a17c204f7d4d5ddccc01c) ([test results](https://github.com/Gegham8/hayanim-studio/blob/7c849bd9ef72228e461a17c204f7d4d5ddccc01c/docs/16-smoke-test-results.md), [generation log](https://github.com/Gegham8/hayanim-studio/blob/7c849bd9ef72228e461a17c204f7d4d5ddccc01c/episodes/EP001-champordnere/generation-log.csv))
 
