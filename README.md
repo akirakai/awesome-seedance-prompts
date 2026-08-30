@@ -286,6 +286,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Four-beat quadruped-mech pursuit and sound-pressure escalation](#270-four-beat-quadruped-mech-pursuit-and-sound-pressure-escalation)
   - [White-halo entity and owned-reality-warping escalation](#271-white-halo-entity-and-owned-reality-warping-escalation)
   - [Six-shot kendo equipment ledger and beat-locked hard cuts](#272-six-shot-kendo-equipment-ledger-and-beat-locked-hard-cuts)
+  - [Two-pass street-food simulation and last-ten-second continuation ledger](#273-two-pass-street-food-simulation-and-last-ten-second-continuation-ledger)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -14665,6 +14666,131 @@ result](https://x.com/johnAGI168/status/2093978055584661519).
 ---
 
 
+### 273. Two-pass street-food simulation and last-ten-second continuation ledger
+
+**Verified model:** Seedance 2.5 — the original creator names the exact model,
+publishes both complete 30-second prompts and attaches the combined generated
+result  
+**Use case:** business-concept previsualization, amateur-phone UGC, reference-video
+continuation, escalating physical comedy  
+**Mode:** two-reference image-to-video followed by last-ten-second
+reference-video continuation  
+**Suggested settings:** two 30-second generations, 3:4 vertical, 2013 smartphone
+texture, retain the final 10 seconds of pass one as the continuity reference
+
+```text
+PASS ONE — ARRIVAL, QUEUE FORMATION AND FIRST SALE
+
+Create one continuous 30-second clip that looks as if a neighbour recorded it
+from across a wet street on an early smartphone in 2013. Use 3:4 vertical
+framing, imperfect handheld sway, hesitant pinch zooms, focus hunting,
+auto-exposure pumping, rolling shutter, compressed detail and dull overcast
+whites. No cinematic coverage or invisible cuts.
+
+REFERENCE AUTHORITY
+@Image1 owns only the adult driver's face, bald crown with mullet, full beard,
+heavy build, stained tan work jacket, black pocket shirt, gold chain and voice.
+@Image2 owns only the dark-green three-wheel food vehicle, open rear bed,
+rotating döner spit, orange gas bottles, pita crate, salad and sauce containers,
+beige speaker, wet asphalt, gray apartment block and shopfront positions.
+Keep the same man, machine, food inventory and street throughout.
+
+0–8s | moving business
+The trike is already entering from frame left at the first frame. The driver has
+both hands on the wheel; the meat turns behind him with a faint heater glow.
+The camera performs one clumsy zoom to the spit and back. Ordinary adult
+pedestrians notice the smell and drift toward the vehicle without speaking,
+forming a loose moving cluster while leaving its path clear.
+
+8–14s | audio-triggered order
+The vehicle stops once. The driver taps a phone fixed to the dashboard and one
+Turkish song begins through the visible beige speaker. Only after the music
+starts does the cluster reorganize into a single-file queue. Pan along the same
+people, then widen to prove the queue, trike and rotating spit share one street.
+
+14–20s | operator transition
+The cab door opens. The driver steps onto the asphalt holding one long carving
+knife safely downward. The line remains still and watches him cross to the rear
+bed. Preserve the knife, gold chain, gas hoses and every person's place during
+the camera's awkward zoom out.
+
+20–30s | first transaction
+He climbs onto the bed, opens one pita, carves thin meat only where the blade
+touches the rotating cone, adds salad and sauce, wraps it and hands it to the
+first customer. That customer takes the food, exits to the same side, and every
+remaining person advances exactly one place. End while the driver begins the
+next order; do not reset the queue or food quantity.
+
+Audio remains diegetic: engine, spit motor, fat hiss, wet footsteps, street
+noise, carving, wrapping and the one speaker-owned song. No extra score,
+teleporting crowd, duplicate customer, changing driver, reverse-turning spit,
+floating food, unsafe blade motion, transformed vehicle, modern phone sharpness,
+subtitle, logo or watermark.
+
+
+PASS TWO — CONTINUE FROM THE LAST TEN SECONDS
+
+Use the final 10 seconds of PASS ONE as @Video1. Continue from its final frame
+with the same camera operator, driver, trike, street, weather, queue order,
+partly carved meat cone, tools, ingredients, song position and room-scale audio.
+Generate one continuous 30-second clip with the identical 3:4 early-phone
+degradation. Do not replay the arrival or first transaction.
+
+0–6s | inherited action
+Open mid-carve: the blade is already moving and the next slices fall onto the
+same metal tray. One city pigeon lands on top of the meat cone after the first
+second and folds its wings. The driver notices but keeps carving safely below it.
+Zoom from blade contact to the perched bird and back to the inherited queue.
+
+6–12s | tool handoff
+After exactly two more cuts, the driver places the knife on the tray, picks up
+the already-visible black-handled spatula, transfers the cut meat into one open
+pita and adds white sauce. Each tool leaves his hand before the next enters it;
+the pigeon and queue keep their positions.
+
+12–18s | second transaction
+He wraps the kebab, gives it two vigorous but believable mixing shakes, accepts
+one paper bill from the next customer and hands over the same kebab. The customer
+steps aside and the line advances one place. Preserve the money, food and hand
+ownership across the exchange.
+
+18–24s | safe comic interruption
+The driver lifts a blowtorch already connected to one orange hose and aims it
+low at the meat. The flame never touches the pigeon. Heat and sound startle the
+bird; it launches cleanly, lands on his bald crown and pecks at his cap area
+without injury. He shuts the torch off before flailing, keeps its nozzle away
+from every person and tries to wave the bird away.
+
+24–30s | controlled collapse
+While the driver is distracted, the orderly queue breaks into a chaotic crowd
+around the rear bed. Adults reach only for already-cut food from the tray; nobody
+touches the live flame, gas bottles, rotating spit or knife. The camera operator
+backs up and zooms wide to keep the same truck, crowd, street and overcast sky
+visible. End amid the unresolved commotion rather than inventing a new location.
+
+Carry forward the speaker music, spit motor and street bed established by
+@Video1, then add only visible-action sounds: spatula scrape, sauce squeeze,
+paper wrap, bill, torch ignition and shutdown, wing flap, startled voices and
+metal-bed footsteps. Preserve all inherited identities, object wear, food
+depletion, queue history, light and screen direction. No rewind, discontinuous
+opening, duplicate driver or pigeon, burn or injured animal, uncontrolled flame,
+crowd inside the machinery, replacement vehicle, geography drift, cinematic
+sound design, cut, subtitle, logo or watermark.
+```
+
+**Why it works:** the first pass establishes identities, geography, inventory
+and queue order before completing one full transaction. The last-ten-second
+reference then carries those observable states into a second generation instead
+of relying on prose alone; explicit inheritance and tool-ownership rules make
+the comic escalation auditable without resetting the business simulation.
+
+Adapted from TechHalla / @techhalla's August 30, 2026
+[Seedance 2.5 combined generated result](https://x.com/techhalla/status/2094023436779622494)
+and [complete two-pass prompts](https://x.com/techhalla/status/2094023441099760020).
+
+---
+
+
 ## Reusable templates
 
 ### Directional action retarget with reference-role isolation and atomic fan-out
@@ -22155,6 +22281,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 
 ## Sources
+
+- [TechHalla — Seedance 2.5 two-pass street-food business simulation with complete 30-second primary and continuation prompts, last-ten-second video handoff, inherited inventory and queue state, and attached combined generated result](https://x.com/techhalla/status/2094023436779622494) ([complete two-pass prompts](https://x.com/techhalla/status/2094023441099760020))
 
 - [John / @johnAGI168 — Seedance 2.5 fifteen-second kendo-dojo montage with a complete six-shot prompt, equipment-state ledger, beat-locked hard cuts, contact-causal sparring and attached generated result](https://x.com/johnAGI168/status/2093978055584661519)
 
