@@ -284,6 +284,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Flooded-city armor lock and extension-detail contrast](#268-flooded-city-armor-lock-and-extension-detail-contrast)
   - [Two-reference elemental continuation and contact-first effect ledger](#269-two-reference-elemental-continuation-and-contact-first-effect-ledger)
   - [Four-beat quadruped-mech pursuit and sound-pressure escalation](#270-four-beat-quadruped-mech-pursuit-and-sound-pressure-escalation)
+  - [White-halo entity and owned-reality-warping escalation](#271-white-halo-entity-and-owned-reality-warping-escalation)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -14481,6 +14482,96 @@ result](https://x.com/JasonHeatony7/status/2093517871024349535).
 
 ---
 
+
+### 271. White-halo entity and owned-reality-warping escalation
+
+**Verified model:** Seedance 2.5 on CapCut — the original creator names this
+exact model and platform beside the complete prompt and attached generated video  
+**Use case:** cosmic-horror action, reference-locked creature identity, large-scale
+battlefield causality, native sound and freeze-state payoff  
+**Mode:** single-character-reference image-to-video  
+**Suggested settings:** 30 seconds, 16:9, 24fps, cinematic live action,
+anamorphic 35mm look
+
+```text
+Create a 30-second photorealistic Arctic cosmic-horror sequence. @Image1 owns
+only the adult entity's immutable appearance: one muscular faceless body made
+of liquid-black star-field matter and one pure-white circular halo floating at
+the same distance behind its head. It has no eyes, mouth, clothing or dialogue.
+Keep its proportions, surface texture and halo geometry unchanged in every shot.
+Military personnel are fictional adults; show no gore or visible injury.
+
+0–5s | signal
+Inside one Arctic command post, a rotating radar array detects a single enormous
+signal directly beneath the base. Screens interfere, the operator reports it,
+and the commander orders an exterior perimeter. Carry the alarm, red practical
+lights and blizzard wind into the next shot.
+
+5–10s | owned rupture
+Outside, distort only one fixed region of air above the ice. Fine glass-like
+cracks spread outward before a black opening forms. White arcs and black
+particles originate only at its edge; nearby snow responds after the pressure
+change. Soldiers, vehicles and helicopters establish one readable semicircle
+facing the rupture. Do not move or duplicate the perimeter later.
+
+10–16s | entry
+The entity's hand emerges first and grips the cracked region. Fingers press into
+space, new fractures radiate from those contact points, then both arms pull the
+same tear wider. Only after the opening is large enough does the whole entity
+step through. Its halo follows on the same axis and remains behind its head.
+Hold one clean scale comparison with the perimeter; the entity stays silent.
+
+16–20s | attack and survival
+The command is given, then weapons fire from visible fixed origins. Muzzle flash
+precedes projectile travel; impacts and explosions occur only at the entity's
+position. Smoke, snow and debris briefly hide it. Let the sound collapse before
+the smoke clears to reveal the same unmoved, undamaged body and unchanged halo.
+
+20–25s | telekinetic field
+The entity raises only its right hand. A local spatial bend expands from that
+gesture. Soldiers, weapons, vehicles, ice and debris respond in that order,
+lifting with believable initial mass and inertia before entering a shared orbit.
+Keep every object intact and preserve its orientation history. Circle the entity
+once while the fixed perimeter geography remains legible.
+
+25–28s | positional discontinuity
+The entity performs three clean relocations: behind one armored vehicle, atop
+one tank, then inside the original semicircle. At each beat, the old position
+empties before the new one appears; a brief black-white stretch affects only
+nearby air, snow and light. Do not clone the entity or leave duplicate halos.
+
+28–30s | state freeze
+Stop the battlefield at one exact instant: airborne snow, fired projectiles and
+previously lifted debris all hold their last positions. Engines and weapons fall
+silent while a low spatial tone remains. The single entity stands at centre as
+the camera pushes toward its featureless head. Its halo brightens without
+changing size. Behind it, one new sky-wide fracture opens; cut to black at full
+rupture, before any new attack.
+
+Use cold blue-gray snow, deep blacks, restrained white highlights, volumetric
+blizzard, realistic vehicle mass, directional impacts and layered diegetic audio.
+Every anomaly must be owned by the entity's visible gesture, contact point or
+current location. No speech or mouth motion from the entity, facial feature,
+identity drift, costume, ordinary glowing portal, unexplained explosion, effect
+before cause, duplicate entity or halo, extra vehicle, geography reset, weightless
+metal, rubber body, cheap game render, excessive blur, subtitle, logo or watermark.
+```
+
+**Why it works:** one reference owns a deliberately minimal but fragile identity,
+while every supernatural effect receives a visible origin and an ordered response.
+The perimeter and object-state ledgers make the escalating destruction auditable;
+the final freeze reuses only already-established projectiles and debris instead
+of inventing a disconnected spectacle.
+
+Adapted from Louis / @louis_vuis's August 30, 2026
+[Seedance 2.5 on CapCut complete prompt and generated
+result](https://x.com/louis_vuis/status/2093879116928004201); the
+[platform-indexed prompt snapshot](https://youmind.com/video-prompts/cinematic-scifi-horror-arctic-video-10053)
+preserves the full structure and exact model metadata.
+
+---
+
+
 ## Reusable templates
 
 ### Directional action retarget with reference-role isolation and atomic fan-out
@@ -21971,6 +22062,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 
 ## Sources
+
+- [Louis / @louis_vuis — CapCut Seedance 2.5 thirty-second Arctic cosmic-horror sequence with a complete prompt, immutable faceless-entity reference, owned reality-warping effects, battlefield state ledger and attached generated result](https://x.com/louis_vuis/status/2093879116928004201) ([platform-indexed complete prompt](https://youmind.com/video-prompts/cinematic-scifi-horror-arctic-video-10053))
 
 - [Jason Heaton / @JasonHeatony7 — SocialSight Seedance 2.5 thirty-second quadruped-mech mountain pursuit with complete prompt, heavy-machine physics, causal destruction and attached generated result](https://x.com/JasonHeatony7/status/2093517871024349535)
 
