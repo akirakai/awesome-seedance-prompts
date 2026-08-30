@@ -287,6 +287,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [White-halo entity and owned-reality-warping escalation](#271-white-halo-entity-and-owned-reality-warping-escalation)
   - [Six-shot kendo equipment ledger and beat-locked hard cuts](#272-six-shot-kendo-equipment-ledger-and-beat-locked-hard-cuts)
   - [Two-pass street-food simulation and last-ten-second continuation ledger](#273-two-pass-street-food-simulation-and-last-ten-second-continuation-ledger)
+  - [Exercise-path gym vlog and anatomy-safe camera gate](#274-exercise-path-gym-vlog-and-anatomy-safe-camera-gate)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -14791,6 +14792,98 @@ and [complete two-pass prompts](https://x.com/techhalla/status/20940234410997600
 ---
 
 
+### 274. Exercise-path gym vlog and anatomy-safe camera gate
+
+**Verified model:** Seedance 2.5 — the original creator names the exact model,
+publishes the complete prompt and attaches paired 15-second comparison results  
+**Use case:** fitness UGC, biomechanics-sensitive motion, athletic identity
+consistency, non-sexual body-progress coverage  
+**Mode:** single-character-reference image-to-video  
+**Suggested settings:** 15 seconds, 9:16, realistic handheld phone capture,
+natural gym window light, native equipment sound and no dialogue
+
+```text
+Create a 15-second premium but believable vertical phone vlog of one adult woman
+completing a short lower-body gym session. @Image1 alone owns her face, hairstyle,
+skin tone, healthy athletic proportions, training outfit and accessories. Keep
+all of them unchanged. She is the only person visible. Use one modern gym with
+fixed windows, machine positions, dumbbell rack and floor markings.
+
+CAMERA-SAFETY CONTRACT
+Every exercise view must show the relevant joint chain and equipment contact:
+hips, knees, feet, handles and resistance pads for abduction; head, spine, hips,
+knees, bar and feet for the Romanian deadlift. Use ordinary front, rear
+three-quarter or full-body training-record angles. No crotch-level camera,
+sexualized close-up, body-part-only crop, extreme lens distortion or pose that
+hides technique.
+
+0.0–2.4s | readiness
+The lead sits squarely in a hip-abduction machine, front-facing medium shot.
+She checks both foot placements and the two thigh pads, raises her bent arms
+briefly to show a composed pre-workout pose, meets the lens, then lowers her
+hands onto the handles. Tilt gently from waist to face; do not change seats,
+outfit or machine geometry.
+
+2.4–4.5s | first controlled repetition
+Hard cut to a low rear three-quarter view that still includes both knees, pads
+and feet. Starting from the closed position, she opens both legs symmetrically
+against resistance, holds the maximum safe range for 0.3 seconds, then returns
+under control to the identical closed position. Her torso stays slightly forward
+and still; pad motion must follow knee contact without lag or detachment.
+
+4.5–5.3s | mirror check
+Hard cut to one brief mirror-selfie view. She holds the same phone in one hand
+and adjusts only the side of her waistband with the other. The mirror must show
+the same face, outfit, room and phone orientation; no duplicated body or invented
+coach.
+
+5.3–7.2s | repeat and muscle-state proof
+Hard cut to a centred rear medium-wide view. Complete one more full abduction
+cycle: closed -> open -> 0.3-second hold -> controlled close. Preserve the exact
+machine range and seat position from the first repetition. Show natural muscle
+tension and release without changing body volume or proportions.
+
+7.2–10.8s | Romanian deadlift
+Hard cut to a rear three-quarter full-body view. She stands with feet at hip
+width and both hands on one barbell. Perform one complete repetition: soften the
+knees, push the hips backward while the spine remains neutral, lower the bar
+close along the thighs to upper-shin height, press both feet into the floor, then
+extend the hips to stand tall. The bar stays horizontal and near the legs; at
+the top she stops at neutral instead of leaning backward.
+
+10.8–15.0s | completion pose
+Hard cut to a rear medium-wide standing view. She raises both arms into a
+controlled back pose, lowers them, gives one natural hair toss and rotates only
+to a rear three-quarter angle. Shift weight onto one leg, look back and give a
+small satisfied smile. Slow only the final 0.5 seconds while preserving real
+breathing and balance; end naturally without a freeze frame.
+
+Use one rhythmic workout track throughout, with every hard cut on a clear beat.
+Layer only visible-source sound: machine rollers, pad movement, controlled
+breathing, shoes on rubber flooring and the barbell settling after the completed
+rep. No dialogue, narration or subtitles.
+
+Require anatomically correct training mechanics and honest phone-image texture:
+pores, fabric weave, sweat response, slight handheld drift and realistic gym
+exposure. Reject partial repetitions, asymmetric pads, knee collapse, bouncing,
+squat substituted for hip hinge, rounded spine, floating or bending bar, bar
+through legs, disconnected grip, sudden muscle enlargement, altered body shape,
+identity or outfit drift, extra limbs, plastic skin, warped mirror, changing gym,
+random camera jump, logo, watermark or unreadable text.
+```
+
+**Why it works:** each exercise is defined as a closed start-to-finish state
+cycle rather than a vague fitness gesture. Joint-chain visibility and equipment
+contact make the motion testable, while the camera gate preserves an athletic,
+non-sexual training perspective without sacrificing evidence of technique.
+
+Adapted from John / @johnAGI168's August 30, 2026
+[Seedance 2.5 complete prompt and paired 15-second generated comparison
+results](https://x.com/johnAGI168/status/2094046192409727159).
+
+---
+
+
 ## Reusable templates
 
 ### Directional action retarget with reference-role isolation and atomic fan-out
@@ -22281,6 +22374,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 
 ## Sources
+
+- [John / @johnAGI168 — Seedance 2.5 fifteen-second gym vlog with complete prompt, paired comparison results, closed exercise cycles, biomechanics constraints and a non-sexual camera gate](https://x.com/johnAGI168/status/2094046192409727159)
 
 - [TechHalla — Seedance 2.5 two-pass street-food business simulation with complete 30-second primary and continuation prompts, last-ten-second video handoff, inherited inventory and queue state, and attached combined generated result](https://x.com/techhalla/status/2094023436779622494) ([complete two-pass prompts](https://x.com/techhalla/status/2094023441099760020))
 
