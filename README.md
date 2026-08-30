@@ -289,6 +289,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Two-pass street-food simulation and last-ten-second continuation ledger](#273-two-pass-street-food-simulation-and-last-ten-second-continuation-ledger)
   - [Exercise-path gym vlog and anatomy-safe camera gate](#274-exercise-path-gym-vlog-and-anatomy-safe-camera-gate)
   - [Layer-grown resin dragon and same-subject organic launch](#275-layer-grown-resin-dragon-and-same-subject-organic-launch)
+  - [First-person survival simulator with causal noise and HUD ledgers](#276-first-person-survival-simulator-with-causal-noise-and-hud-ledgers)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -14970,6 +14971,135 @@ result](https://x.com/PromptSin/status/2094070647395901652).
 ---
 
 
+### 276. First-person survival simulator with causal noise and HUD ledgers
+
+**Verified model:** Runway Seedance 2.5 — the original creator names the exact
+model and platform, attaches the 30-second generated result and publishes the
+complete prompt in a direct reply  
+**Use case:** first-person gameplay simulation, reactive NPC systems, persistent
+HUD, resource-state continuity, survival-horror escape  
+**Mode:** text-to-video  
+**Suggested settings:** 30 seconds, 16:9, authentic first-person game capture,
+photorealistic real-time rendering, native gameplay audio and restrained ambience
+
+```text
+Create a 30-second capture from a fictional modern first-person open-world
+survival game. It must read as live playable footage, not a film, trailer or
+pre-rendered cutscene. The player leaves a fortified garage, scavenges one
+abandoned pharmacy and returns along the same streets after noise attracts an
+infected horde. Keep violence non-graphic.
+
+PLAYER AND CAMERA LOCK
+The camera is always the player's eyes. Only worn tactical gloves, dirty jacket
+sleeves and contextually held items may enter frame. Use mouse-like turns,
+walking bob, crouched camera height, sprint shake, brief downward inventory
+checks and physical interaction animations. Never cut to third person, a drone,
+a reverse shot or an impossible camera. Preserve one realistic field of view.
+
+PERSISTENT HUD STATE
+Keep the same minimal interface, size and screen coordinates for all 30 seconds:
+top left = health, stamina and hydration; top right = circular minimap with
+streets, objective direction, safe-zone marker and temporary threats; bottom
+left = backpack weight/capacity; bottom right = equipped item/durability; centre
+= interaction prompt only when an object is within reach. Begin with objective
+SEARCH THE PHARMACY FOR MEDICAL SUPPLIES. Values change only after the action
+that causes the change.
+
+0.0–4.0s | leave the safe zone
+Start inside one barricaded garage while survivor NPCs sort supplies behind the
+player. Look down, open the pack for less than one second and confirm 14.2 kg,
+limited food and no medicine; close it before the objective appears. Push the
+reinforced door physically and step into daylight. The safe-zone marker moves
+behind the player on the minimap; the garage geometry remains memorable.
+
+4.0–8.0s | stealth route
+Walk between fixed abandoned vehicles while scanning windows and alleys. One
+infected emerges from behind a delivery van about twenty metres ahead. Crouch
+behind a known car, lowering speed and camera height, then pass around its far
+side while the infected investigates elsewhere. Stamina stays nearly full and
+no new enemy appears without entering from visible geography.
+
+8.0–12.0s | inventory gain
+Reach the damaged pharmacy seen on the minimap, push through its broken entrance
+and let exposure adapt naturally to the darker interior. Switch on a small
+flashlight. Search two empty cabinets, then respond to a centre-screen prompt by
+opening a medical box with the visible hand. Collect bandages and medicine;
+inventory weight changes once from 14.2 kg to 15.6 kg and the items remain owned.
+
+12.0–16.0s | local disturbance
+Turn toward scraping in a dark hallway. An infected crosses the far doorway, so
+back away instead of fighting. The player's elbow knocks one metal display onto
+the floor; show contact before the crash. Nearby infected answer from outside,
+and only a few threat markers approach the pharmacy. The player whispers,
+“No, no, no,” through controlled breathing.
+
+16.0–20.0s | cascading alarm
+Exit and sprint across the same street. One infected collides visibly with an
+abandoned car, which then triggers a repeating alarm. The wider sound radius
+draws infected from mapped alleys, storefronts and building entrances; they
+orient toward the car before acquiring the visible player. Threat markers
+multiply and the objective changes once to RETURN TO THE SAFE ZONE. Turn toward
+the unchanged safe-zone marker.
+
+20.0–24.0s | horde escape
+Run back through the recognizable intersection while stamina drains steadily.
+Glance backward for less than one second to prove the horde follows through the
+route, snap forward to avoid the same wrecked vehicle, vault its hood with both
+hands, squeeze between two barriers and stumble on loose debris without falling.
+Each exertion drains additional stamina; infected footsteps grow closer.
+
+24.0–27.0s | critical stamina
+At approximately twenty percent stamina, reduce speed to a heavy exhausted run;
+increase breathing, heartbeat and camera weight without changing field of view.
+Reveal the original garage entrance about forty metres ahead. Survivor NPCs
+notice the pursuit, call for the player and begin pulling the reinforced gate
+open. A second survivor signals from inside. One backward glance shows several
+faster infected separating naturally from the mapped horde.
+
+27.0–30.0s | closed loop with consequence
+Spend the final reserve, dive through the partial opening and stumble in first
+person across the garage floor. Survivors slam the gate only after the player
+clears it. One infected strikes the exterior a beat later, shaking the same
+barrier without passing through it. While the player remains winded, show the
+owned medical supplies; update the objective to MEDICAL SUPPLIES DELIVERED and
+add HORDE ACTIVITY INCREASED beneath it. End with a slow live look toward the
+straining gate, not a freeze frame.
+
+SIMULATION CAUSALITY
+Quiet movement has a small detection radius; the fallen display creates a local
+investigation; the car alarm creates the large cascading response. Infected must
+walk or run from existing streets and react first to sound, then to confirmed
+sight. Pack weight, carried medicine, stamina, threats and objectives persist
+and update once. The return route must reuse the pharmacy, intersection,
+vehicles, barriers and garage in consistent positions.
+
+AUDIO
+Use wind, distant calls, footsteps, clothing and pack movement, doors, glass,
+flashlight and inventory clicks, the metal crash, car alarm, reactive infected
+voices, radio chatter, survivor shouts, player breathing and low-stamina
+heartbeat. Tie every cue to its visible source. Use only subdued adaptive game
+ambience; no trailer score or cinematic impact.
+
+Reject movie-style composition, cutscene transition, third-person image,
+teleport, impossible parkour, infinite stamina, effortless combat, excessive
+weapons or gore, enemy pop-in, duplicated infected, inconsistent street layout,
+floating prop, broken hand anatomy, HUD movement, illogical value change,
+disappearing medicine, unreadable objective or final still frame.
+```
+
+**Why it works:** the scene is governed by linked systems rather than a loose
+zombie montage. Sound radius drives enemy behaviour, exertion drives stamina,
+interaction drives inventory, and those states drive the HUD and objective.
+The outward-and-return route supplies a separate geography check, so gameplay
+continuity can be audited independently from visual realism.
+
+Adapted from Amira Zairi / @azed_ai's August 31, 2026
+[Runway Seedance 2.5 30-second generated result](https://x.com/azed_ai/status/2094095009138299254)
+and [complete original prompt reply](https://x.com/azed_ai/status/2094095023398945140).
+
+---
+
+
 ## Reusable templates
 
 ### Directional action retarget with reference-role isolation and atomic fan-out
@@ -22460,6 +22590,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 
 ## Sources
+
+- [Amira Zairi / @azed_ai — Runway Seedance 2.5 thirty-second first-person zombie-survival simulation with attached generated result, complete prompt reply, persistent HUD, causal noise propagation, resource ledgers and round-trip geography](https://x.com/azed_ai/status/2094095009138299254) ([complete prompt](https://x.com/azed_ai/status/2094095023398945140))
 
 - [PSS / @PromptSin — Dreamina Seedance 2.5 fifteen-second one-take resin-printing dragon sequence with complete prompt, attached generated result, ordered fabrication, same-subject material conversion and contact-causal launch](https://x.com/PromptSin/status/2094070647395901652)
 
