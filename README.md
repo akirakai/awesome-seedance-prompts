@@ -285,6 +285,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Two-reference elemental continuation and contact-first effect ledger](#269-two-reference-elemental-continuation-and-contact-first-effect-ledger)
   - [Four-beat quadruped-mech pursuit and sound-pressure escalation](#270-four-beat-quadruped-mech-pursuit-and-sound-pressure-escalation)
   - [White-halo entity and owned-reality-warping escalation](#271-white-halo-entity-and-owned-reality-warping-escalation)
+  - [Six-shot kendo equipment ledger and beat-locked hard cuts](#272-six-shot-kendo-equipment-ledger-and-beat-locked-hard-cuts)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -14572,6 +14573,98 @@ preserves the full structure and exact model metadata.
 ---
 
 
+### 272. Six-shot kendo equipment ledger and beat-locked hard cuts
+
+**Verified model:** Seedance 2.5 — the original creator names the exact model
+beside the complete prompt and attached 15-second generated video with sound  
+**Use case:** sports montage, reference-locked wardrobe and equipment continuity,
+contact-causal choreography, beat-synchronized short-form editing  
+**Mode:** single-character-reference image-to-video  
+**Suggested settings:** 15 seconds, 9:16, photoreal handheld phone texture,
+high frame rate, warm indoor dojo light
+
+```text
+Create a 15-second vertical kendo-dojo vlog montage. @Image1 owns only the adult
+lead's face, body proportions, hairstyle and light wrist beads. Keep that identity
+unchanged across all six shots. Use one continuous dojo with two fixed zones:
+the polished practice floor beside one shoji door and calligraphy panel, and the
+warm-lit equipment wall filled with dark protective gear. Preserve the door,
+wall, floor tone, equipment cubbies and light direction whenever a zone returns.
+
+BASE WARDROBE AND PROP LEDGER
+The lead always wears one dark indigo textured kendogi and matching pleated
+hakama, barefoot. Add a brown-do chest protector only in shots 3 and 4; remove it
+before shots 5 and 6. The male coach, in a black T-shirt and indigo hakama, may
+appear only in shots 1 and 4. Shot 1 uses one metal practice sword per person;
+shot 2 uses exactly two shinai held by the lead; shot 4 uses one shinai per
+fighter; shot 5 uses one shinai across her lap; shot 6 uses one sheathed practice
+sword. Never carry equipment into a shot where it is not assigned.
+
+0.0–2.5s | synchronized opening
+Medium view on the practice floor. Lead left, coach slightly behind at right.
+Both raise their practice swords from a calm horizontal display into a high
+overhead guard. Keep blade paths separate, wrists aligned and bare feet planted.
+Their movement ends on the first musical accent. HARD CUT.
+
+2.5–4.5s | equipment-wall challenge
+Low close angle in front of the equipment cubbies; lead alone. She crosses two
+shinai toward the lens so their tips dominate the upper frame, then shifts her
+eyes from the tips to camera with a restrained challenge. Both hands continue
+owning the same weapon throughout. HARD CUT.
+
+4.5–6.5s | armor reveal
+Strong shoji backlight. Start behind the lead now wearing the assigned chest
+protector. She turns only to a three-quarter profile and looks back to camera.
+Let the armor lacing and hanging panels respond subtly after her torso stops;
+keep a narrow warm rim around the same silhouette. HARD CUT.
+
+6.5–9.5s | contact-first sparring
+Return to the exact practice-floor geography. Lead and coach begin in middle
+guard with shinai tips touching. The coach attacks downward; she sidesteps right
+and blocks upward; visible bamboo contact produces one sharp clap. Using that
+rebound, she steps forward with one heavy right-foot stamp and delivers one clean
+overhead counter. Keep the order attack -> evade -> contact -> rebound -> stamp
+-> counter. No hit effect or sound may occur before contact. HARD CUT.
+
+9.5–12.0s | controlled release
+Lead alone, chest protector removed, seated cross-legged at the equipment wall.
+One shinai lies horizontally across her lap. She turns her head slightly, closes
+her eyes for one beat, then opens them with tired calm. The hakama spreads with
+natural weight; no missing or newly appearing gear. HARD CUT.
+
+12.0–15.0s | final inventory proof
+Lead stands at the same equipment wall, base wardrobe only, holding one sheathed
+practice sword diagonally across her chest. She turns her gaze from offscreen to
+camera without smiling. Slow only the final half-second and end on a stable pose;
+do not freeze-frame or add a transition.
+
+EDIT AND AUDIO CONTRACT
+Use exactly five full hard cuts at 2.5, 4.5, 6.5, 9.5 and 12.0 seconds. Each cut
+lands on a strong beat of one continuous Japanese lo-fi/trap track. No dissolve,
+fade, black frame, flash, blur, morph or animated transition. Layer barefoot wood
+steps, metal air movement, bamboo vibration, armor cloth, the sparring clap,
+foot stamp, blade whoosh and one short kiai only where their visible causes occur.
+Drop the music during the final second, leaving only quiet dojo room tone.
+
+Maintain natural phone-camera breathing, skin pores, fabric weave, believable
+weapon weight and safe adult choreography. No identity drift, face replacement,
+costume redesign, armor in the wrong shot, extra coach, duplicate weapon, fused
+hands, blade through body, changing room layout, readable calligraphy, reflection,
+subtitle, logo or watermark.
+```
+
+**Why it works:** a closed wardrobe-and-equipment ledger turns six aggressive
+hard cuts into auditable continuity states, while the sparring beat requires
+attack, contact, recoil and counter in causal order. Fixed cut times let the edit
+rhythm carry energy without asking transitions or camera motion to hide changes.
+
+Adapted from John / @johnAGI168's August 30, 2026
+[Seedance 2.5 complete prompt and attached 15-second generated
+result](https://x.com/johnAGI168/status/2093978055584661519).
+
+---
+
+
 ## Reusable templates
 
 ### Directional action retarget with reference-role isolation and atomic fan-out
@@ -22062,6 +22155,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 
 ## Sources
+
+- [John / @johnAGI168 — Seedance 2.5 fifteen-second kendo-dojo montage with a complete six-shot prompt, equipment-state ledger, beat-locked hard cuts, contact-causal sparring and attached generated result](https://x.com/johnAGI168/status/2093978055584661519)
 
 - [Louis / @louis_vuis — CapCut Seedance 2.5 thirty-second Arctic cosmic-horror sequence with a complete prompt, immutable faceless-entity reference, owned reality-warping effects, battlefield state ledger and attached generated result](https://x.com/louis_vuis/status/2093879116928004201) ([platform-indexed complete prompt](https://youmind.com/video-prompts/cinematic-scifi-horror-arctic-video-10053))
 
