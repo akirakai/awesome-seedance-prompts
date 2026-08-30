@@ -288,6 +288,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Six-shot kendo equipment ledger and beat-locked hard cuts](#272-six-shot-kendo-equipment-ledger-and-beat-locked-hard-cuts)
   - [Two-pass street-food simulation and last-ten-second continuation ledger](#273-two-pass-street-food-simulation-and-last-ten-second-continuation-ledger)
   - [Exercise-path gym vlog and anatomy-safe camera gate](#274-exercise-path-gym-vlog-and-anatomy-safe-camera-gate)
+  - [Layer-grown resin dragon and same-subject organic launch](#275-layer-grown-resin-dragon-and-same-subject-organic-launch)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -14884,6 +14885,91 @@ results](https://x.com/johnAGI168/status/2094046192409727159).
 ---
 
 
+### 275. Layer-grown resin dragon and same-subject organic launch
+
+**Verified model:** Dreamina Seedance 2.5 — the original creator names the exact
+model, publishes the complete prompt and attaches a 15-second generated result  
+**Use case:** single-take creature reveal, additive-manufacturing visualization,
+material-to-organic transformation, causal launch choreography  
+**Mode:** text-to-video  
+**Suggested settings:** 15 seconds, 16:9, photorealistic live action, one
+continuous camera path, native workshop sound and no music
+
+```text
+Create a 15-second photorealistic fantasy event in one unbroken shot inside a
+dark industrial resin-printing workshop. Only one dragon exists throughout.
+It has four muscular legs, two folded wings, one armored tail, one horned head,
+black scales with restrained crimson accents and amber eyes. Its silhouette,
+anatomy, horn layout, wing attachment, markings and scale never change.
+
+FABRICATION AND LIFE-STATE LEDGER
+0.0–4.0s | layer-grown object
+Begin at extreme macro distance inside one large resin printer. Orbit the build
+platform slowly while rapid, mechanically credible layers create the same
+dragon from the feet upward: legs and tail base first, then torso, folded wings,
+neck, horns and head. Every completed lower part remains solid and fixed while
+later layers are added; do not reveal an already finished creature or build
+parts in an impossible order. At exactly 4.0 seconds the mechanism stops, gives
+one completion beep and leaves a fully formed, motionless printed statue.
+
+4.0–7.0s | continuous material conversion
+Push toward the statue's face without cutting. Amber light appears inside both
+eyes, then a narrow conversion front travels continuously from head to tail:
+rigid translucent resin becomes living black scale texture while the outline,
+mass and every anatomical feature remain identical. The chest takes one first
+breath, claws press against the platform, the tail tests its balance and faint
+vapour leaves the nostrils. Show fine surface cracking only at the moving
+boundary; no melting, explosion, replacement creature or instant full-body
+change.
+
+7.0–11.0s | contact-causal launch
+The now-living dragon raises its head, opens both wings to full span and roars.
+Wing pressure moves loose resin dust and papers, but the printer remains intact.
+It lowers its centre of mass, plants all four claws, compresses its legs, pushes
+visibly against the platform and only then becomes airborne. Preserve believable
+weight, joint motion, downwash and accelerating wing beats.
+
+11.0–15.0s | spatially continuous escape
+Continue the same camera move behind and beside the dragon as it threads between
+fixed workshop equipment toward one already-open industrial window. Track it
+through the opening and rise into a wide view as it climbs above the rooftops
+toward a moonlit city. Keep the glowing workshop visible below to prove spatial
+continuity; ease the camera during the final 0.4 seconds without freezing the
+dragon or the environment.
+
+CAMERA
+Use one traceable path only: macro platform orbit -> facial push-in -> launch
+tracking -> exterior aerial reveal. No cut, hidden cut, teleport, reverse angle,
+lens jump or sudden scale change. Keep the subject readable during the
+conversion and preserve the same workshop geography before and after takeoff.
+
+AUDIO
+Diegetic sound only: accelerated printer mechanics, platform vibration,
+completion beep at 4.0 seconds, restrained material crackle, first breath, claw
+scrape, roar, heavy wing beats, displaced air, fluttering paper, room tone and
+distant city ambience. Every sound begins only after its visible cause. No score,
+narration, dialogue or synthetic trailer hit.
+
+Reject duplicate dragons, extra or missing limbs, detached or changing wings,
+horn or colour drift, resin liquefaction, body deformation, premature motion
+before the printer stops, hovering before push-off, fire breath, damaged
+machine, moving window, people, logo, text, subtitle, watermark, cartoon finish
+or a final still frame.
+```
+
+**Why it works:** the prompt treats fabrication, conversion and flight as one
+irreversible state ledger for the same subject. The build order prevents a
+finished creature from appearing prematurely; the travelling material boundary
+preserves geometry; and the planted-claw launch makes airborne motion follow a
+visible physical cause rather than a teleport.
+
+Adapted from PSS / @PromptSin's August 30, 2026
+[Dreamina Seedance 2.5 complete prompt and attached 15-second generated
+result](https://x.com/PromptSin/status/2094070647395901652).
+
+---
+
+
 ## Reusable templates
 
 ### Directional action retarget with reference-role isolation and atomic fan-out
@@ -22374,6 +22460,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 
 ## Sources
+
+- [PSS / @PromptSin — Dreamina Seedance 2.5 fifteen-second one-take resin-printing dragon sequence with complete prompt, attached generated result, ordered fabrication, same-subject material conversion and contact-causal launch](https://x.com/PromptSin/status/2094070647395901652)
 
 - [John / @johnAGI168 — Seedance 2.5 fifteen-second gym vlog with complete prompt, paired comparison results, closed exercise cycles, biomechanics constraints and a non-sexual camera gate](https://x.com/johnAGI168/status/2094046192409727159)
 
