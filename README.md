@@ -22545,6 +22545,134 @@ the committed [five-second test method and checkpoint results](https://github.co
 the [exact model/result generation log](https://github.com/Gegham8/hayanim-studio/blob/7c849bd9ef72228e461a17c204f7d4d5ddccc01c/episodes/EP001-champordnere/generation-log.csv),
 and the [raw Seedance 2.5 clip](https://cdn-editing-temp.picsart.com/editing-temp/df5d78a5-cd30-422c-a0d0-6c3a17cb6b9b.mp4).
 
+
+### Native-aspect product-reference hero and emergent-look promotion gate
+
+**Verified model:** Seedance 2.5 (`bytedance/seedance-2.5` through
+OpenRouter) — the original creator used five real product photographs as
+`input_references`, committed two 854×480 probes plus separate 1920×1080 and
+1080×1440 finals, and recorded the returned cost for each successful run. The
+final labels matched the physical packages word for word after the prompt made
+that authority explicit.
+
+Use this when a product hero must preserve real packaging across landscape and
+portrait delivery. Prove the smallest causal motion first, accept an emergent
+look only after frame review, promote its measurable properties into the shared
+contract, then generate each aspect natively from the untouched references.
+Never treat a crop of one paid master as equivalent to a separately composed
+product shot.
+
+```text
+PRE-SUBMIT RECORD
+Exact model = bytedance/seedance-2.5.
+Provider route = OpenRouter /api/v1/videos.
+Approved product references = [PUBLIC IMAGE URL 1..N].
+Reference order and hashes = [IMMUTABLE LEDGER].
+Probe size = [LOW-COST VALID SIZE]. Final sizes = [LANDSCAPE WxH] and
+[PORTRAIT WxH].
+Duration = [SECONDS]. Native audio = [ON / OFF].
+Record the quoted pixel budget and require explicit approval before submission.
+If the provider exposes no cancellation route, a sent job is committed spend.
+
+REFERENCE AUTHORITY
+The uploaded references own only:
+- the exact number of products;
+- each package's silhouette, cap, colour, material and relative scale;
+- the placement and verbatim spelling of every supplied label element.
+They do not own the source backgrounds, lighting, camera angle or arrangement.
+Do not merge products, duplicate a package, invent copy, substitute a label,
+move printing to another face or place scene text on the packaging.
+
+LOW-COST MOTION PROBE
+Create one uninterrupted [DURATION]-second product event.
+Start on [EMPTY OR MINIMAL PLATE]. Exactly one [DROPLET / POUR / PARTICLE /
+MECHANICAL TRIGGER] causes [ONE PHYSICAL RESPONSE]. The response propagates in
+this order: [CONTACT] -> [CROWN / RIPPLE / OPENING] -> [PRODUCT EMERGENCE] ->
+[STABLE HERO HOLD].
+Use one camera move: [LOCKED MACRO / SLOW PUSH / SMALL CONTROLLED ARC].
+Keep the surface, product count and causal order readable. No extra droplets,
+cuts, text overlays, logo animation or secondary reveal.
+
+PROBE REVIEW
+Decode the entire result, not only a thumbnail. Record:
+- frame 0 and the exact contact frame;
+- whether there is exactly one trigger and one causal response;
+- first frame on which every product is fully readable;
+- package geometry and verbatim-label errors by product;
+- top-zone and bottom-zone luminance, dominant colours and their stability;
+- empty-opening duration, edge energy and whether it fits the site's visual
+  language rather than merely feeling slow.
+
+EMERGENT-LOOK PROMOTION
+If an unrequested visual property passes review and should survive, stop calling
+it an accident. Convert it into a shared invariant with observable language:
+"[TOP REGION] remains [DARK VALUE / COLOUR]; [LOWER REGION] remains
+[BRIGHTER VALUE / COLOUR]; the boundary stays [SOFT / FIXED]; product rims keep
+[LIGHT DIRECTION]."
+Reject attractive properties that cannot be stated or measured. Change one
+failed dimension per new probe; keep model, references, duration and size fixed.
+
+SHARED FINAL CONTRACT
+Concept = [THE APPROVED CAUSAL EVENT].
+Products = the same [COUNT] reference-owned packages, fully visible and
+label-correct.
+Motion = one trigger, one ordered physical response, one final hero state.
+Promoted look = [TOP / BOTTOM / PALETTE / LIGHT-DIRECTION INVARIANTS].
+Camera character = [LENS / HEIGHT / MOVE / FOCUS].
+Final hold = [DURATION] with clear interface-safe negative space.
+No invented writing, merged bottle, hidden cap, cropped label, extra trigger,
+second climax, discontinuous cut or post-generated brand copy.
+
+LANDSCAPE LANE
+Generate natively at [LANDSCAPE WxH] from the untouched approved references.
+Compose products across [HORIZONTAL SAFE REGION]. Preserve [LEFT / RIGHT]
+negative space for the desktop interface. Keep every protected cap and label
+inside the frame throughout emergence and the final hold.
+
+PORTRAIT LANE
+Generate a new result natively at [PORTRAIT WxH] from the same untouched
+references and shared contract. Re-stage products within [VERTICAL SAFE REGION];
+do not crop or extend the landscape video. Restate every promoted look property
+explicitly. Reserve [TOP / BOTTOM] interface-safe space without shrinking the
+hero products below readable label size.
+
+DUAL-LANE ACCEPTANCE
+Pass only when:
+- both files report the requested native pixel dimensions and exact model;
+- reference count, package geometry, colours and labels agree across lanes;
+- protected packaging remains inside each delivery frame at start, action peak
+  and final hold;
+- one trigger causes the same ordered event in both lanes;
+- every promoted top/bottom colour and luminance relationship survives;
+- there are no invented package words, duplicate products or crop-derived
+  equivalence claims;
+- raw MP4s, prompts, references, task IDs and actual billed cost remain linked
+  in one generation ledger.
+```
+
+**Why it works:** reference authority solves a different problem from aspect
+composition: one protects packaging truth while the other protects visibility.
+The probe prevents a full-resolution spend from hiding basic trigger, label or
+timing failures. Promoting a reviewed emergent look turns a stochastic success
+into explicit evidence for the next lane, while native recomposition lets the
+same products remain large and uncropped instead of forcing one frame through
+two incompatible safe areas. In the source run, a shared product crop lost
+bottles differently in landscape and portrait; separate finals preserved them,
+and the desktop result's dark upper field and turquoise water were successfully
+restated for the mobile generation.
+
+**Sources:** Ryan Elwathiq's August 30, 2026
+[complete generation-and-delivery commit](https://github.com/RyanElwathiq/LuvIt-Priject/commit/b73e6330b35050871391d9fbf543aa441e8c7faa),
+the committed
+[exact-model runner and billed-cost ledger](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/_أدوات/gen-video.mjs),
+the
+[measured product-reference and dual-aspect findings](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/_خطة/موجة-٢-صفحة-المتجر-الموحّدة.md),
+and the raw
+[desktop](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/hero-sequence/drop-final-desktop.mp4)
+and
+[mobile](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/hero-sequence/drop-final-mobile.mp4)
+Seedance 2.5 finals.
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -22590,6 +22718,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 
 ## Sources
+
+- [Ryan Elwathiq / LuvIt — exact `bytedance/seedance-2.5` five-reference product-drop hero with two low-resolution probes, separate native desktop/mobile finals, verbatim-label evidence, measured costs and emergent-look promotion](https://github.com/RyanElwathiq/LuvIt-Priject/commit/b73e6330b35050871391d9fbf543aa441e8c7faa) ([generation findings](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/_خطة/موجة-٢-صفحة-المتجر-الموحّدة.md), [exact-model runner](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/_أدوات/gen-video.mjs), [desktop final](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/hero-sequence/drop-final-desktop.mp4), [mobile final](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/hero-sequence/drop-final-mobile.mp4))
 
 - [Amira Zairi / @azed_ai — Runway Seedance 2.5 thirty-second first-person zombie-survival simulation with attached generated result, complete prompt reply, persistent HUD, causal noise propagation, resource ledgers and round-trip geography](https://x.com/azed_ai/status/2094095009138299254) ([complete prompt](https://x.com/azed_ai/status/2094095023398945140))
 
