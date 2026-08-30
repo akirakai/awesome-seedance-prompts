@@ -282,6 +282,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Twelve-shot stormglass chase and cable-state physics ledger](#266-twelve-shot-stormglass-chase-and-cable-state-physics-ledger)
   - [Beginner-to-confident kung-fu vlog and exact-cut progression lock](#267-beginner-to-confident-kung-fu-vlog-and-exact-cut-progression-lock)
   - [Flooded-city armor lock and extension-detail contrast](#268-flooded-city-armor-lock-and-extension-detail-contrast)
+  - [Two-reference elemental continuation and contact-first effect ledger](#269-two-reference-elemental-continuation-and-contact-first-effect-ledger)
+  - [Four-beat quadruped-mech pursuit and sound-pressure escalation](#270-four-beat-quadruped-mech-pursuit-and-sound-pressure-escalation)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -14335,6 +14337,150 @@ result](https://x.com/HBCoop_/status/2093729949123543225) and
 
 ---
 
+### 269. Two-reference elemental continuation and contact-first effect ledger
+
+**Verified model:** Seedance 2.5 — the original creator labels the complete
+prompt with this exact model and publishes the matching 29-second generated
+video in the same post
+**Use case:** live-action elemental combat, reference-locked continuation,
+contact-causal VFX, carried prop state
+**Mode:** two-reference image-to-video continuation
+**Suggested settings:** 30 seconds, 16:9, 24fps, fast handheld action coverage,
+diegetic effects only
+
+```text
+Continue a photorealistic Korean supernatural-action short from the exact final
+frame of the previous part. @Image1 controls only the adult water fighter's
+face, proportions, hair, clothing and accessories. @Image2 controls only the
+adult fire fighter's identity, proportions, hair and clothing. Preserve the
+same late-night school corridor, damage, screen sides and dropped USB. Begin
+with both fighters already colliding at arm's length; never reset the standoff.
+
+ABILITY AND CONTACT CONTRACT
+The woman generates transparent water from her own ability; it behaves as heavy
+liquid with refraction, inertia, splash and compression. The man generates
+orange-red flame and heat for close combat. Every exchange must visibly follow:
+target -> body entry -> strike motion -> physical contact -> body reaction ->
+balance change or displacement -> counterattack. An effect may strengthen a
+landed action only after contact. Never let VFX hit first or substitute for
+human movement. Both fighters land readable hits and immediately answer them.
+
+0–5s — The existing rotating water guard reverses direction and pushes the
+man's fire forearm off-line, turning his shoulder. Without stepping away, the
+woman lands left elbow, right body punch and knee in order. Her palms then touch
+his chest; only after contact does a short compressed-water burst push him back.
+
+5–10s — The man steadies and uses brief fire at his feet to rush forward. His
+left hook misses, but his right elbow contacts her shoulder and shifts her one
+step sideways. She immediately forms one thick water whip, catches the attacking
+forearm, pulls his torso off-axis and follows the pull with knee then side kick.
+
+10–15s — He evaporates the whip and re-enters. She releases one short, dense
+pressure wall across only the local corridor width—not a tsunami. He braces with
+crossed fire-heated arms, is driven backward, then forces through the thinning
+water and steam to land one forearm strike that displaces her.
+
+15–20s — He lands a body hook and advances with a knee. Before the next contact,
+she expands one brief rotating water-pressure field that opens his arms and
+centre; it is a single break, not a sustained shield. She exits through it with
+elbow, body kick and palm contact, followed by one delayed hydraulic pulse.
+
+20–25s — Both commit to a head-on entry: his flame-wrapped forearm against a
+thick spiral of water wrapped around her real arm. Their forearms meet first,
+then fire and water generate steam at that fixed point. She rotates outward and
+uses the water's torque to drag his shoulder line away. Neither pauses to pose.
+
+25–30s — She redirects his final fire punch with a short water layer on her left
+forearm. Finish with one turning kick in strict order: planted foot, hip rotation,
+leg swing, foot-to-torso contact, his first body reaction, then the compressed
+water around her leg releases along the kick direction. He loses balance and
+falls away as the main fire extinguishes. She lands breathing hard, picks up the
+same USB and heads for the exit; one weak ember returns beside his lowered hand.
+
+Use close tracking, over-shoulder coverage, lateral movement, low angles and only
+short motivated whip-pans. Keep both bodies in frame immediately before and after
+important contacts. Allow at most 0.2 seconds of micro slow motion on the final
+kick; all other action stays at real speed. Audio: shoes, cloth, breath, impacts,
+water mass, flame rush, steam and corridor reflections. No BGM, dialogue, text,
+teleport, cautious reset, extra fighter, identity drift, effect before contact,
+unsupported hit reaction, opaque magic beam, giant fireball, dragon, tsunami,
+magic circle, weightless liquid, plastic skin, game CG, gore or hero pose.
+```
+
+**Why it works:** reference authority and inherited scene state keep the second
+part from restarting, while the contact contract separates physical cause from
+effect amplification. The six five-second exchanges vary the water ability
+without losing the opponent, corridor or USB ledger, and the final kick exposes
+the most common ordering failure as an explicit acceptance sequence.
+
+Adapted from Pyona / @pyona_ai's August 28, 2026
+[complete Seedance 2.5 prompt and 29-second generated
+result](https://x.com/pyona_ai/status/2093334200112091428).
+
+---
+
+### 270. Four-beat quadruped-mech pursuit and sound-pressure escalation
+
+**Verified model:** Seedance 2.5 — the original creator names this exact model
+and SocialSight beside the complete prompt and attached 30-second generated video
+**Use case:** military science-fiction chase, heavy-machine physics, multi-subject
+geography, native battlefield audio
+**Mode:** text-to-video
+**Suggested settings:** 30 seconds, 16:9, aggressive tracking coverage,
+photorealistic practical-effects look
+
+```text
+Create a 30-second photorealistic military-science-fiction pursuit in one rugged
+mountain pass. Keep one enormous autonomous quadruped combat mech and one fixed
+group of adult soldiers. The machine always has four weight-bearing legs, the
+same armor panels, weapon locations and forward direction. Preserve the route
+ledger—ridge behind, narrow trail through centre, defensive boulders ahead—and
+keep the soldiers fleeing toward the boulders throughout.
+
+0–7s — Track backward at running height as the soldiers sprint through the pass.
+The mech crests the ridge behind them and descends at frightening speed. Each
+foot plants, compresses suspension and breaks rock before the next leg advances;
+stones and dirt launch from the actual impact points. Begin the audio ladder with
+boots, breath, mountain wind, metallic footfalls and rising hydraulic strain.
+
+7–15s — The mech acquires the group without stopping. Integrated cannons fire
+from their fixed mounts while it continues advancing. Muzzle flash precedes each
+projectile impact; impacts strike trail edges and rock faces around the runners,
+then produce flame, fragments and expanding dust. Alternate a rear three-quarter
+wide with one readable soldier-level view, never reversing travel direction.
+
+15–23s — Shift into a fast lateral track that contains both runners and mech.
+The machine bounds across broken terrain with believable mass and fires in short
+bursts. A sequence of impacts travels along the trail rather than exploding
+everywhere at once. One struck outcrop fractures first, then heavy pieces tumble
+downhill under gravity and remain in the scene. Add cannon echoes, servo loading,
+rockfall and deeper concussion pressure without introducing music.
+
+23–30s — The soldiers reach the same boulder line and dive behind cover before
+the final barrage. Show weapon discharge, nearby impacts and camera concussion
+in causal order. Dust and smoke engulf the pass; hold long enough for the single
+mech to emerge through them with its weapon housings visibly hot. End on its
+continued approach, not a victory pose or unexplained stop.
+
+Camera may shake briefly only after nearby impacts; retain readable bodies, leg
+contacts and weapon origins. Use practical-style fire, volumetric dust, directional
+echoes, bass pressure and mechanical resonance. No gore, visible injury, slow
+motion, music, text, extra mech, changing leg count, duplicate soldier, floating
+debris, weightless gait, muzzle flash after impact, random explosion, geography
+reset, screen-direction reversal, toy scale, glossy game render or camera teleport.
+```
+
+**Why it works:** the fixed route makes a 30-second chase spatially testable,
+while the footfall, firing and destruction rules attach every effect to a visible
+heavy-machine cause. The four-beat sound ladder grows with the threat, and the
+last thermal state proves that the same mech carried its firing history forward.
+
+Adapted from Jason Heaton / @JasonHeatony7's August 29, 2026
+[SocialSight Seedance 2.5 complete prompt and 30-second generated
+result](https://x.com/JasonHeatony7/status/2093517871024349535).
+
+---
+
 ## Reusable templates
 
 ### Directional action retarget with reference-role isolation and atomic fan-out
@@ -21825,6 +21971,10 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 
 ## Sources
+
+- [Jason Heaton / @JasonHeatony7 — SocialSight Seedance 2.5 thirty-second quadruped-mech mountain pursuit with complete prompt, heavy-machine physics, causal destruction and attached generated result](https://x.com/JasonHeatony7/status/2093517871024349535)
+
+- [Pyona / @pyona_ai — Seedance 2.5 two-reference school-corridor elemental continuation with a complete thirty-second prompt, contact-first VFX contract, carried USB state and attached generated result](https://x.com/pyona_ai/status/2093334200112091428)
 
 Community examples and techniques referenced in this README:
 
