@@ -18131,9 +18131,26 @@ captions, timecodes, arrows, or title block. If @Image2 is supplied, it defines
 [VEHICLE / PRODUCT / CHARACTER] identity and proportions only; the storyboard
 continues to own framing, order, action, and environment.
 
+PANEL-ADDRESS AND BRIDGE PASS
+Before compiling motion, label the visible cells P1 through PN in reading order.
+For every panel, record:
+- opening state: [SUBJECT, POSITION, PROP / ENVIRONMENT STATE];
+- achieved end state: [ONE VISIBLE RESULT];
+- composition and shot size: [LAYOUT + WIDE / MEDIUM / CLOSE];
+- camera: [ONE MOTIVATED MOVE / LOCKED];
+- subject action: [ONE COMPLETE ACTION].
+
+For every adjacent pair Pi -> Pi+1, write the connective action that carries
+identity, geography, screen direction, balance, momentum and prop state into the
+next panel. If the next panel is an intentional cut, name the cut and repeat the
+state that survives it. Never ask the model to infer an invisible bridge from
+the drawings alone. A simple line-art or stick-figure board is acceptable; read
+it for staging and motion, not for final surface finish.
+
 TIMING AND HOOK
-Use approximately two seconds per panel from 00:00 to 00:30.
-Panel 1 must already contain visible motion: [SUBJECT ENTERS FRAME / CAMERA
+Map every time window to its panel ID; do not collapse two panels into one
+unlabeled beat. Use approximately two seconds per panel from 00:00 to 00:30.
+Panel P1 must already contain visible motion: [SUBJECT ENTERS FRAME / CAMERA
 TRACKS / PROP ACTIVATES]. Do not open on a posed still or an empty hold.
 Each later panel contains one readable action and one camera move. Do not add
 extra cuts inside a panel.
@@ -18178,6 +18195,10 @@ Adapted from Dirk Teubert's Seedance 2.5 [paid-run failure review, corrected
 storyboard handoff, and render checks](https://github.com/dirkteu/blaulicht-leitstand/commit/df1248e250e70d6281e5076199df54cf0334ab43),
 published August 9, 2026. The source's cross-run look-master reference remains
 excluded here because its generation-time effect was explicitly unverified.
+The panel-address and connective-action pass also follows ByteDance's
+[official Seedance 2.5 creation manual](https://bytedance.larkoffice.com/wiki/RXh5ww6EqighMdkVTMccm2d4n7e),
+as re-read on August 30 and preserved in KampterHarbour's
+[versioned manual refresh](https://github.com/KampterHarbour/kampter-sd-25-skills/commit/f1cddc54b8e3fd05d11bddaca520e00d697b2312).
 
 
 ### Style-seeded adjacent-boundary storyboard chain
@@ -22878,6 +22899,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 
 ## Sources
+
+- [KampterHarbour — August 30, 2026 re-read of ByteDance's official Seedance 2.5 creation manual, preserving the manual's multi-grid panel mapping, connective-action, composition, shot-size, camera-movement and action guidance](https://github.com/KampterHarbour/kampter-sd-25-skills/commit/f1cddc54b8e3fd05d11bddaca520e00d697b2312) ([official Seedance 2.5 manual](https://bytedance.larkoffice.com/wiki/RXh5ww6EqighMdkVTMccm2d4n7e))
 
 - [Scott Canton / Heartstamp Studio — Replicate `bytedance/seedance-2.0` and `bytedance/seedance-2.5` generated failures with exact route evidence, provider-specific `@Video1` / `[Video1]` binding, clause-safe prompt caps, mode-required `duration=-1` / `aspect_ratio=adaptive` sentinel translation and result-delivery gates](https://github.com/scanton/social-media-assets/commit/076f19347d6c5f5fa624264280b71b2689ba6a62) ([dialect diagnosis](https://github.com/scanton/social-media-assets/commit/6f8d98cf7897d0f61a0f1d0dd165c8c10a23518f), [first render and clause-safe cap handling](https://github.com/scanton/social-media-assets/commit/deb1c2fa78e8dd4e2c79c88c3116cc2aed6479ba), [exact Seedance 2.0 route](https://github.com/scanton/social-media-assets/blob/deb1c2fa78e8dd4e2c79c88c3116cc2aed6479ba/src/lib/models.ts), [delivery diagnosis](https://github.com/scanton/social-media-assets/commit/b5db9d1e5886965aef243ba94c715809cbb9b6c1))
 
