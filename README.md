@@ -23245,7 +23245,126 @@ Contributions are welcome. A useful submission should include:
 Please submit prompts you wrote yourself or have permission to redistribute. When adapting a public example, rewrite it, link the source, and explain the reusable technique instead of copying the post wholesale.
 
 
+### Region-scoped repair with protected-remainder and edit-surface gate
+
+**Verified model:** Higgsfield Seedance 2.5, using the separate web-model entry
+`Seedance 2.5 Edit`. Higgsfield's official Seedance 2.5 showcase demonstrates
+region-level label, background and wardrobe replacement while retaining the
+rest of the clip. A dated product-surface inspection additionally records the
+Edit-video task, dedicated source-video slot, `@`-reference binding, text-described
+regions and output up to 1080p; this route has no mask editor, so spatial
+language and protected-area acceptance checks must do the isolation work.
+
+Use this after a take is approved except for one local defect. It turns “fix the
+label” into a bounded edit contract: one target, one time span, stable spatial
+landmarks and an explicit protected remainder. Do not send a global restyle
+prompt or regenerate the master when only a local repair is needed.
+
+```text
+ROUTE RECEIPT
+Platform = Higgsfield web.
+Surface = Video -> model entry "Seedance 2.5 Edit".
+Task = Edit video.
+Source slot = VIDEO TO EDIT.
+Exact model = Seedance 2.5.
+Output = [MATCH SOURCE / SUPPORTED RESOLUTION, UP TO 1080P].
+Record the checked date and visible controls before spending credits. If this
+exact edit entry is absent, stop; do not substitute ordinary generation.
+
+SOURCE + DEFECT LEDGER
+@Video1 = [HASH / DURATION / RESOLUTION / FPS OF APPROVED MASTER].
+Approved master remains immutable.
+Defect interval = [START-END], plus [NUMBER] guard frames on both sides.
+Target instance = [ONE OBJECT / FACE AREA / WARDROBE PART / BACKGROUND REGION].
+Current state = [WHAT IS WRONG].
+Required state = [WHAT MUST REPLACE OR CHANGE].
+Persistent landmarks = [OBJECT EDGE / BODY PART / SET FEATURE / SCREEN SIDE].
+Occlusion events = [WHEN HANDS / PROPS / SUBJECTS PASS IN FRONT].
+Protected remainder = [IDENTITY / ACTION / CAMERA / LIGHT / AUDIO / OTHER TEXT].
+
+REFERENCE CONTRACT
+Bind @Video1 in VIDEO TO EDIT; it owns timing, motion, framing, lighting, audio
+and every protected pixel outside the repair.
+Bind @Image1 only if an approved replacement label, texture, face detail,
+wardrobe or background plate exists; it owns that declared visual property
+only. Never let @Image1 replace pose, camera, performance or scene geometry.
+Reject the request if a named @ reference is not visibly attached.
+
+TEXT-DEFINED REGION MAP
+Because this route has no mask editor, identify the target redundantly:
+- semantic owner: [THE BOTTLE'S FRONT LABEL, not every label];
+- persistent landmarks: [between cap and lower seam, bounded by bottle edges];
+- screen path: [centre-right at start, moving left with the bottle];
+- time span: [START-END], including occlusion and reappearance;
+- exclusion ring: [hands, bottle shape, reflections, table and background].
+Use relational landmarks that survive camera motion. Do not rely on one fixed
+pixel coordinate or a vague phrase such as "fix the object."
+
+EDIT PROMPT
+Edit only [TARGET INSTANCE] in @Video1 during [START-END].
+Replace [CURRENT STATE] with [REQUIRED STATE], using @Image1 only for
+[DECLARED PROPERTY]. Track the same physical surface through perspective
+change, motion blur, lighting variation, reflections, partial occlusion and
+reappearance. Keep its scale, curvature, attachment and contact shadows
+physically consistent.
+
+Preserve @Video1 everywhere else: identical subject identity and performance,
+body and prop geometry, camera path, framing, timing, lighting, grade,
+background, audio, all approved text and all pixels outside the described
+region. Do not repaint, beautify, relight, reframe, stabilize, retime, add
+objects or alter any neighbouring label. No full-scene regeneration.
+
+ONE-DEFECT GATE
+Submit one bounded repair per pass. If two defects overlap in time or space,
+declare their shared boundary and edit them together; otherwise make separate
+children of the same immutable master, never a serial chain of edited outputs.
+Keep the shortest interval that contains the defect plus guard frames.
+
+ACCEPTANCE GATE
+Compare the edited result against @Video1 at:
+1. one frame before the interval;
+2. first changed frame;
+3. midpoint and maximum occlusion;
+4. final changed frame;
+5. one frame after the interval.
+
+Accept only if:
+- the intended target alone changed;
+- the replacement remains attached through motion and occlusion;
+- entry and exit frames have no pop, halo, texture crawl or colour jump;
+- protected identity, action, camera, geometry, light, grade and audio match;
+- unrelated text and logos are unchanged;
+- the fix persists for every required frame, not only the hero frame.
+
+FAILURE ROUTING
+Correct target, spill outside region -> tighten landmarks and exclusion ring.
+Target drifts or floats -> add surface curvature, attachment and occlusion path.
+Edit appears then reverts -> extend the interval and name the reappearance.
+Whole frame repainted -> verify the Edit surface, shorten to one defect and
+restore the protected-remainder clause.
+Wrong asset copied -> repair @ binding and role ownership before changing prose.
+If two bounded attempts fail the same gate, preserve the master and move the
+repair to deterministic compositing instead of repeatedly degrading the clip.
+```
+
+**Why it works:** a local defect is separated from global creative generation.
+The route preflight prevents an ordinary Seedance generation surface from being
+mistaken for the edit tool, while the semantic region map substitutes stable
+object relationships for a missing mask. Guard frames and protected-remainder
+checks make collateral repainting measurable and preserve an approved take.
+
+**Sources:** Higgsfield's official
+[Seedance 2.5 product showcase](https://higgsfield.ai/seedance/2.5), which
+demonstrates label, background and wardrobe fixes and explicitly describes
+region-level edits without a full reroll; and Iret's August 31, 2026
+[dated product-surface verification](https://github.com/iret77/ai-film-production/commit/e3ee5d679776f1b425fe9a9cd391b59f1c8e8f0c),
+which records the exact Seedance 2.5 Edit route, source slot, text-defined region
+workflow, `@` references, 1080p ceiling and absence of a mask editor.
+
 ## Sources
+
+- [Higgsfield — official Seedance 2.5 region-edit showcase for bounded label, background and wardrobe repair without a full reroll](https://higgsfield.ai/seedance/2.5); [Iret — August 31, 2026 dated verification of the separate Seedance 2.5 Edit surface, source-video slot, text-defined regions, `@` references, 1080p ceiling and no-mask workflow](https://github.com/iret77/ai-film-production/commit/e3ee5d679776f1b425fe9a9cd391b59f1c8e8f0c)
+
 
 - [OfoxAI — August 31, 2026 Seedance 2.5 execution release with a live-verified 1.9-second create checkpoint, zero-spend schema-and-price dry-run, per-take seeds, contact-sheet selection and actual-bill reconciliation](https://github.com/ofoxai/skills/commit/0e845c71cc304b421d40f61dba900d6bedab8b90) ([Seedance 2.5 scenario contract](https://github.com/ofoxai/skills/blob/0e845c71cc304b421d40f61dba900d6bedab8b90/skills/seedance-product-video/SKILL.md), [real-run and billing findings](https://github.com/ofoxai/skills/blob/0e845c71cc304b421d40f61dba900d6bedab8b90/skills/ofox-video-core/CHANGELOG.md))
 
