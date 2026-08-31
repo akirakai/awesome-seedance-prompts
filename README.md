@@ -290,6 +290,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Exercise-path gym vlog and anatomy-safe camera gate](#274-exercise-path-gym-vlog-and-anatomy-safe-camera-gate)
   - [Layer-grown resin dragon and same-subject organic launch](#275-layer-grown-resin-dragon-and-same-subject-organic-launch)
   - [First-person survival simulator with causal noise and HUD ledgers](#276-first-person-survival-simulator-with-causal-noise-and-hud-ledgers)
+  - [Fire-phoenix ritual and action-owned VFX state ledger](#277-fire-phoenix-ritual-and-action-owned-vfx-state-ledger)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -15100,6 +15101,91 @@ and [complete original prompt reply](https://x.com/azed_ai/status/20940950233989
 ---
 
 
+### 277. Fire-phoenix ritual and action-owned VFX state ledger
+
+**Verified model:** Seedance 2.5 — explicitly labeled by the creator beside the complete prompt and attached 20-second result  
+**Use case:** dark-fantasy action choreography, fluid-fire ownership, timed duplicate control, native audio  
+**Mode:** text-to-video  
+**Suggested settings:** 20s, 16:9, native audio
+
+```text
+Create a 20-second photorealistic Eastern dark-fantasy film at night. One athletic
+adult East Asian woman has sharp features, long black hair with a few dark-red
+strands, a black-and-red battle robe, gold scale shoulder armor, a wide red cape,
+long sleeves, a phoenix hairpin and one antique-bronze phoenix mask. Lock her face,
+hair, body, clothing, mask and handedness throughout; fabric may react to motion and
+heat but never redesign itself.
+
+The location is one vast circular dark-stone altar in an otherwise black open space.
+A real ring of fire marks its edge. Keep the altar center, cardinal directions and
+camera axis legible through every move.
+
+FIRE CONTRACT: every flame begins at a named contact point or follows a visible body
+trajectory. Use white-yellow hot cores, orange-red outer flame, fluid inertia, smoke,
+sparks, heat distortion and physically motivated light on skin, metal, cloth and
+stone. The phoenix is made from separate feather-shaped flame streams whose wings
+assemble and move; never turn it into an ordinary solid bird.
+
+[0.0–3.0s | mask and first phoenix]
+Start in extreme close-up on the mask in her hand, then rack focus to her calm eyes.
+Pull rapidly to a low medium shot as she places the mask on her face, sweeps her
+right hand across her chest and ignites one fist-sized flame in her left palm.
+When both arms open, that same flame expands behind her into a ten-meter phoenix;
+its two wings build outward layer by layer while their light reaches the cape,
+armor and floor.
+
+[3.0–6.0s | counter-orbit fire ring]
+She pivots clockwise on her left foot and the cape follows with delayed weight. Her
+right arm draws one thick flame ribbon from low to high, attached to the hand path,
+until it nearly closes around her. The camera circles counter-clockwise at low level.
+Let the ribbon cross the lens once as a motivated occlusion, then cut to a vertical
+overhead view. The ring closes and abstract gold-red geometry illuminates outward
+through the stone joints; no text or religious symbol.
+
+[6.0–9.5s | overhead dive and eye reveal]
+Continue the overhead clockwise rotation while her sleeves drive the ring faster and
+sparks leave tangentially. Dive through the sparks as she drops to one knee and
+strikes the floor with her right palm. Contact raises one lateral fire wall. Push
+toward her through that foreground wall as her left fingers slide the mask partly
+aside, revealing one sharp eye that remains unobscured.
+
+[9.5–13.0s | safe fire-breath bridge]
+From a side full shot, she pulls one rotating flame mass from the wall into her left
+palm and raises it to her mouth. She looks upward and releases a thick vertical
+magical fire column precisely from the mouth direction; the effect causes no burn,
+pain or breathing distress. Rising heat lifts hair, sleeves and cape. During a fast
+half-orbit, the column separates into two symmetric arcs that seed the next event.
+
+[13.0–16.2s | duplicate window]
+A vertical flame mirror appears at altar center and creates exactly two identical
+versions, one on each side. Only during this interval, both versions jump and rotate
+outward in synchronized opposition; sleeves and capes draw two symmetric S-shaped
+fire trails. Hold a frontal wide composition until the trails collide at center,
+producing a bright-core explosion, smoke, sparks and an expanding pressure ring.
+At 16.2 seconds the mirror and extra version are fully gone: the state ledger returns
+to exactly one original woman.
+
+[16.2–20.0s | original-only vortex and final assembly]
+Reveal the single original from the smoke in overhead view. Her fast spin pulls cape
+and fire into one rising spiral. She stops, raises both arms and the spiral expands
+as every floor line ignites; she floats about half a meter. Rise and pull far back
+while the same phoenix reassembles behind her, wings fully open and tail feathers
+connected to the altar geometry. Hold the final symmetric frame for the last half
+second as slow sparks approach the lens.
+
+Audio: epic low drums, dark ambience, combustion, air displacement, explosion and
+cloth movement. No dialogue, narration or subtitle. Reject extra people, duplicates
+outside 13.0–16.2s, post-explosion doubles, detached flame trails, non-emissive or
+flat fire, phoenix flicker or asymmetry, fire passing through the body, incorrect
+fire-breath origin, injury, mask-face fusion, wardrobe change, face drift, extra
+limbs, frozen smoke, camera-axis drift, logo, watermark or readable text.
+```
+
+**Technique:** Give fluid VFX explicit ownership and persistence rules: flames inherit visible body trajectories, illumination proves their position, and the mirror duplicate has a hard birth/death interval. Resetting the entity count immediately after the explosion prevents the final phoenix tableau from inheriting ghost performers.
+
+Adapted from [John's original Seedance 2.5 fire-phoenix prompt and attached 20-second result](https://x.com/johnAGI168/status/2094061058776342862), published August 30, 2026.
+
+
 ## Reusable templates
 
 ### Directional action retarget with reference-role isolation and atomic fan-out
@@ -22899,6 +22985,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 
 ## Sources
+
+- [John / @johnAGI168 — Seedance 2.5 twenty-second text-to-video fire-phoenix ritual with complete prompt, attached result, action-owned fluid VFX, a hard duplicate interval and original-only state reset](https://x.com/johnAGI168/status/2094061058776342862)
 
 - [KampterHarbour — August 30, 2026 re-read of ByteDance's official Seedance 2.5 creation manual, preserving the manual's multi-grid panel mapping, connective-action, composition, shot-size, camera-movement and action guidance](https://github.com/KampterHarbour/kampter-sd-25-skills/commit/f1cddc54b8e3fd05d11bddaca520e00d697b2312) ([official Seedance 2.5 manual](https://bytedance.larkoffice.com/wiki/RXh5ww6EqighMdkVTMccm2d4n7e))
 
