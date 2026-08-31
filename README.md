@@ -22940,6 +22940,105 @@ the new
 and the
 [result-versus-input-host delivery diagnosis](https://github.com/scanton/social-media-assets/commit/b5db9d1e5886965aef243ba94c715809cbb9b6c1).
 
+
+### Single-render beat compression, overlay ownership and derived-fallback gate
+
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`, text-to-video) —
+the original creator submitted one 9:16, 720p, six-second silent job
+(`dcc4ae01-638e-43ea-8054-b6995c423608`) for 39 credits, then committed the
+6.04-second H.264 result, exact prompt, manifest and two frames derived from that
+same MP4. The source also tested the application fallback by forcing the video
+request to fail.
+
+Use this when several related interface or title-sequence states share one visual
+world and dynamic copy must remain deterministic. Let Seedance own one continuous
+background plate; let the application own names, numbers, labels, controls and
+state timing. Collapse separate shots only when they can be expressed as ordered
+beats on one camera spine without a hard cut.
+
+```text
+PRE-SUBMIT COLLAPSE TEST
+Requested states = [BEAT 1], [BEAT 2], [BEAT 3].
+Shared world = [PALETTE / MATERIAL / LIGHT / CENTRAL GEOMETRY].
+Shared camera spine = [ONE SLOW PUSH / CRANE / SMALL ORBIT].
+Dynamic application content = [NAMES / COUNTS / LABELS / NODES / CTA].
+Exact model = seedance_2_5. Mode = t2v.
+Aspect = [NATIVE DELIVERY ASPECT]. Duration = [4–30 SECONDS].
+Resolution = [DELIVERY RESOLUTION]. Native audio = [ON / OFF].
+
+Use one render only if every beat shares the world and the camera can connect them
+continuously. Keep separate renders when a beat needs a hard location change,
+different identity authority, incompatible camera axis or independently replaceable
+performance.
+
+GENERATIVE PLATE
+Create a [FORMAT] background plate for [DELIVERY SURFACE].
+Composition = [DARK / BRIGHT FIELD], [PALETTE], [MATERIAL LANGUAGE].
+Reserve [SAFE REGION] as stable negative space for application overlays.
+The protected region stays [EMPTY / LOW-CONTRAST / GEOMETRICALLY STABLE] for the
+entire clip.
+
+ONE UNBROKEN MOVE IN ORDERED BEATS
+Beat 1 — [OPENING STATE AND ONE TRIGGER]. Camera [MOVE 1].
+Beat 2 — the same trigger causes [ORDERED EXPANSION OR TRANSFORMATION].
+Camera connects by [MOVE 2] without a cut or reset.
+Beat 3 — [N] existing elements activate one at a time and [CONVERGE / CONNECT /
+SETTLE] into [FINAL BACKGROUND STATE]. Camera adds at most [SMALL ANGLE] while
+the protected overlay region remains fixed.
+End on a clean hold long enough for the application transition.
+
+OWNERSHIP FIREWALL
+The generated video owns only atmosphere, abstract geometry, light, texture and
+background motion. It contains no readable text, letters, numbers, logo, face,
+hands, interface chrome or user-specific data. The application owns every dynamic
+or exact element and draws it above the plate. Do not ask the model to approximate
+content that software can render exactly.
+
+MOTION + CONTAMINATION GATE
+Pass the paid master only when:
+- every beat appears in order inside one continuous move;
+- the overlay-safe region remains stable at opening, midpoint and final hold;
+- colour, central geometry and light direction do not reset between beats;
+- no fake writing, duplicate node, warped map, border or UI artifact appears;
+- motion remains readable at the smallest delivery viewport;
+- there is no hard cut, aggressive flash, fast zoom or nausea-inducing rotation.
+
+DERIVED-DELIVERY LEDGER
+Archive the exact prompt, task ID, cost, model, dimensions, codec, duration and raw
+MP4 together. Extract [POSTER TIME] from the same approved MP4 for pre-load and
+autoplay-blocked display. Extract [FALLBACK TIME] from that MP4 for static sharing
+or no-video contexts. Record both timestamps and hashes; do not spend another
+generation on stills that the approved master already contains.
+
+RUNTIME FAILURE GATE
+Place the video above a complete lightweight fallback scene and below deterministic
+application overlays. On 404, decode error, autoplay block or unsupported playback,
+remove only the video layer. The fallback and exact dynamic content must remain
+usable. Test this path by deliberately breaking the media URL before shipping.
+
+REGENERATION ROUTER
+Wrong generated text -> strengthen the ownership firewall; never bake exact copy.
+Overlay collision -> enlarge and stabilize the reserved region.
+Beat discontinuity -> simplify the causal bridge or split the render.
+Palette drift -> restate one shared world before each beat.
+Video delivery failure with a valid master -> fix hosting/playback; do not regenerate.
+```
+
+**Why it works:** one seed and one continuous camera move remove cross-clip colour
+and centre-position mismatch while reducing generation spend. Separating the
+stochastic plate from deterministic interface content prevents fake typography and
+makes personalization free of regeneration. Deriving poster and fallback frames
+from the accepted master preserves visual identity, and a deliberately tested
+layer-removal path distinguishes model quality from media-delivery reliability.
+
+**Sources:** Noah1206's August 31, 2026
+[one-job generation and integration commit](https://github.com/Noah1206/loverabbit/commit/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a),
+the committed
+[exact prompt and acceptance checklist](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/scripts/higgsfield/prompts.md),
+[model/job/cost manifest](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/scripts/higgsfield/asset-manifest.json),
+and the
+[generated Seedance 2.5 MP4](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/public/assets/guin-map/opening.mp4).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -22985,6 +23084,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 
 ## Sources
+
+- [Noah1206 / Loverabbit — Higgsfield `seedance_2_5` six-second single-render relationship-map plate with exact prompt, real job/cost manifest, committed MP4, same-master poster/fallback extraction and tested runtime media fallback](https://github.com/Noah1206/loverabbit/commit/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a) ([exact prompt](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/scripts/higgsfield/prompts.md), [asset manifest](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/scripts/higgsfield/asset-manifest.json), [generated MP4](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/public/assets/guin-map/opening.mp4))
 
 - [John / @johnAGI168 — Seedance 2.5 twenty-second text-to-video fire-phoenix ritual with complete prompt, attached result, action-owned fluid VFX, a hard duplicate interval and original-only state reset](https://x.com/johnAGI168/status/2094061058776342862)
 
