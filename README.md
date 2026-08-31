@@ -291,6 +291,9 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Layer-grown resin dragon and same-subject organic launch](#275-layer-grown-resin-dragon-and-same-subject-organic-launch)
   - [First-person survival simulator with causal noise and HUD ledgers](#276-first-person-survival-simulator-with-causal-noise-and-hud-ledgers)
   - [Fire-phoenix ritual and action-owned VFX state ledger](#277-fire-phoenix-ritual-and-action-owned-vfx-state-ledger)
+  - [Nine-reference meme-walk one-take and appearance-window ledger](#278-nine-reference-meme-walk-one-take-and-appearance-window-ledger)
+  - [Last-ferry sprint with first-frame hazard and cargo-survival payoff](#279-last-ferry-sprint-with-first-frame-hazard-and-cargo-survival-payoff)
+  - [Consensual kitchen micro-drama with speaker-listener and heat-safe state gates](#280-consensual-kitchen-micro-drama-with-speaker-listener-and-heat-safe-state-gates)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -15186,7 +15189,323 @@ limbs, frozen smoke, camera-axis drift, logo, watermark or readable text.
 Adapted from [John's original Seedance 2.5 fire-phoenix prompt and attached 20-second result](https://x.com/johnAGI168/status/2094061058776342862), published August 30, 2026.
 
 
+### 278. Nine-reference meme-walk one-take and appearance-window ledger
+
+**Verified model:** Seedance 2.5 — the creator labels the full multi-reference prompt with this exact version and publishes the resulting 28-second take in the same thread  
+**Use case:** multi-character reference control, uninterrupted phone vlog, front/rear camera ownership, identity exclusion windows  
+**Mode:** multi-image reference generation  
+**Suggested settings:** about 30s, 9:16, native audio
+
+```text
+Create a vertical smartphone street vlog as ONE uninterrupted handheld take of
+about 30 seconds. Use brisk walking pace, short whip pans, digital zooms and
+front/rear-camera flips only; never hide a cut inside a pan, occlusion or flash.
+
+REFERENCE MANIFEST
+Before generation, assign every uploaded image one stable number and role.
+@ImageHost = the recurring adult host's face, hair, build and fixed outfit.
+@ImageStreet = the only location plate; keep the entire take on this same block.
+@ImageA ... @ImageG = different cameo identities and their defining poses.
+Do not reorder the files after writing the prompt. A cameo reference controls
+only its named person, not the host, location, camera or another time window.
+
+CAMERA OWNER
+The host's phone is the camera. It never appears in frame and no second device
+exists. The host is visible only during the opening and closing front-camera
+moments; between them the rear camera shows the street while the host remains
+off-screen and may react by voice. Preserve realistic walking bounce,
+micro-shake, clipped daylight, exposure and white-balance readjustment on pans,
+brief autofocus hunting and a slight quality loss during digital zoom. Deep
+phone focus, no cinematic bokeh, gimbal, crane, film grain or commercial grade.
+
+APPEARANCE-WINDOW LEDGER
+Host: visible at 0–5s and 28–30s only.
+Cameo pair A: 0–5s only.
+Street performer B: 5–9s only.
+Argument pair C plus calm animal: 9–13s only.
+Window animal D: 13–17s only.
+Office pair E: 17–21s only.
+Driver F: 21–25s only.
+Wall debater G: 25–30s only.
+Each listed identity is a different adult person. No cameo may reappear as a
+background extra, double, stand-in or face blend outside its window.
+
+[0–5s | selfie hook]
+The host walks and begins an excited sentence. A passing couple freezes in one
+odd, reference-matched reaction behind the host. The host notices, stops the
+sentence mid-word and keeps walking without breaking the take.
+
+[5–9s | rear-camera whip]
+Flip to the rear camera and whip right to a sidewalk performer who prepares one
+serious note, unexpectedly laughs, turns away, then resets. The host laughs
+quietly from behind the camera.
+
+[9–13s | terrace contrast]
+Slide along the same terrace to one expressive argument. Punch in to a perfectly
+calm animal at the opposite table. Let autofocus hunt once, then settle.
+
+[13–17s | vertical discovery]
+Tilt up the same facade and digitally zoom to an animal resting in a sunlit
+window. The softer zoom image, hand shake and host's brief warm reaction prove
+that the same phone still owns the shot.
+
+[17–21s | sidewalk obstruction]
+Drop back to street level. One office pair holds a reference-matched disagreement
+while the host physically walks around them; maintain their positions and
+gesture ownership.
+
+[21–25s | across-road stare]
+Whip left across the road and zoom to one driver who notices the lens and tracks
+it with the eyes. Preserve road direction and the host's walking momentum.
+
+[25–30s | callback]
+Swing forward to one adult arguing earnestly with a brick wall. Flip briefly to
+the front camera: the host has exactly the opening face, hair and outfit, now
+speechless. Flip back; the wall debate continues and the take ends mid-action.
+
+AUDIO
+Raw street ambience, traffic, footsteps, wind on the microphone and local
+performance sounds only. Keep the host's off-camera reactions spatially close to
+the phone. No music bed, caption, narration, logo or watermark.
+
+Reject any hidden cut, location reset, host appearing behind the rear camera,
+second phone, identity swap, cameo outside its assigned interval, reference pose
+copied onto the wrong person, duplicate named character, generic extra resembling
+a named person, wardrobe drift, face blend, beautified skin, impossible pan,
+teleport, frozen crowd, subtitle or unreadable pseudo-text.
+```
+
+**Technique:** Treat a large cast as a timed database rather than one global
+identity request. The ordered reference manifest fixes who owns each look; the
+appearance-window ledger defines when that identity is allowed to exist. A
+separate camera-owner rule makes the host's disappearance during rear-camera
+coverage intentional rather than an identity failure.
+
+Adapted from [Muhammad Ayan's original Seedance 2.5 thread, complete workflow and
+28-second result](https://x.com/socialwithaayan/status/2094451151471296736),
+including the [host character-sheet prompt](https://x.com/socialwithaayan/status/2094451181947125848),
+[ordered reference upload rule](https://x.com/socialwithaayan/status/2094451208081850784),
+[reference-number manifest](https://x.com/socialwithaayan/status/2094451231846781265)
+and [complete one-take prompt](https://x.com/socialwithaayan/status/2094451246115737859),
+published September 1, 2026.
+
+
+### 279. Last-ferry sprint with first-frame hazard and cargo-survival payoff
+
+**Verified model:** Dreamina Seedance 2.5 — explicitly labeled by the creator beside the complete prompt and attached 15-second result  
+**Use case:** vertical travel UGC, first-frame action hook, safe physical peril, persistent prop ledger  
+**Mode:** text-to-video  
+**Suggested settings:** 15s, 9:16, native audio
+
+```text
+Create a 15-second photorealistic vertical travel clip recorded by a friend on a
+small early-2010s compact camera. It feels urgent and accidental, not like an ad.
+
+IDENTITY + CARGO LOCK
+One adult traveler in a faded overshirt, plain T-shirt, shorts and worn sneakers.
+He carries exactly one canvas backpack and one paper takeaway bag. Preserve his
+face, build, outfit, backpack, bag, handedness and scale throughout. The bag is
+crushed during the run but never disappears, opens or changes owner.
+
+[0–2s | hazard already visible]
+In frame one, the traveler is already sprinting down the pier while the last
+ferry's ramp lifts and the water gap widens. Keep the traveler, ramp edge and gap
+simultaneously readable; do not spend the opening on an establishing hold.
+
+[2–4.5s | causal reprieve]
+Run beside him with rough handheld motion. Backpack and clothing respond to each
+stride; wind hits the microphone and the food bag nearly slips. A deckhand first
+sees the runner, then lowers the ramp a small final amount. The ramp never moves
+before the deckhand reacts.
+
+[4.5–7s | one safe leap]
+Low angle on the remaining short gap. Show one believable forward jump, two-foot
+landing and weighted stumble into the rail. Hands, backpack and food bag follow
+the same trajectory; nothing teleports and no item falls into the water.
+
+[7–9.5s | proof of arrival]
+The ramp closes behind him. He bends over, catches his breath, checks the dented
+bag and laughs in relief. The camera briefly loses focus from the sudden stop,
+then recovers.
+
+[9.5–12s | geographic continuation]
+He walks onto the open deck. The same harbor recedes behind the ferry; wind,
+gulls, vibrating rope and engine motion establish that departure continues.
+
+[12–15s | cargo payoff]
+Natural arm's-length selfie. Still breathless, he opens the same paper bag and
+shows that the meal survived. He grins, turns the compact camera toward the
+island horizon and the recording ends abruptly without a polished hold.
+
+LOOK + AUDIO
+Imperfect stabilization, occasional optical micro-zoom, mild compression,
+slightly clipped water highlights, natural focus delay and cool coastal color.
+Harbor wind, running steps, gulls, ferry engine, ramp hydraulics, bag rustle,
+breathing and unforced laughter only. No music or scripted dialogue.
+
+Reject impossible gap size, superhuman jump, ramp reversing without the
+deckhand's action, unsafe fall, injury, water impact, duplicated traveler,
+changing clothes, missing backpack, new food bag, disappearing cargo, ferry
+teleport, drone, gimbal, crane, glossy commercial light, logo, readable sign,
+subtitle or watermark.
+```
+
+**Technique:** Put the threat in frame one, then track one fragile prop through
+the entire causal chain. The final food reveal pays off the opening run only if
+the same bag survives every intermediate state, turning continuity into story
+rather than a cosmetic constraint.
+
+Adapted from [PSS / PromptSin's complete Dreamina Seedance 2.5 prompt and
+attached 15-second result](https://x.com/PromptSin/status/2094377547408740379),
+published August 31, 2026.
+
+
+### 280. Consensual kitchen micro-drama with speaker-listener and heat-safe state gates
+
+**Verified model:** Seedance 2.5 — explicitly labeled by the creator beside the complete 20-second prompt and attached result  
+**Use case:** two-character native dialogue, precise lip sync, listener control, safe domestic blocking  
+**Mode:** reference-guided text-to-video  
+**Suggested settings:** 20s, 9:16, Mandarin native audio
+
+```text
+Create a warm 20-second vertical phone-shot micro-drama in a connected modern
+kitchen and living room at dusk. Two consenting adult partners share a stable,
+affectionate relationship. Use @Image1 only for the adult woman's identity and
+@Image2 only for the adult man's identity. Preserve both faces, hairstyles,
+builds, relative height and fixed home clothes.
+
+PROP + HEAT LEDGER
+One induction cooker, one steaming pot, one wooden spoon and one counter remain
+in fixed positions. The woman owns the spoon until she places it down. The
+cooker is ON during cooking and visibly OFF before either person turns away from
+the pot. No hot surface, steam or utensil is ignored during the final movement.
+
+[0–4s | independent task]
+Slow handheld approach from the kitchen doorway. Focus first on the simmering
+food, then the woman's profile. She stirs with one hand, steadies the pot with
+the other, tastes once and gives a small satisfied reaction. The man has not
+touched her yet. Audio: low simmer, spoon against pot and room tone.
+
+[4–8.5s | recognized contact]
+Side-rear medium shot. The man walks in, pauses visibly, then gently wraps both
+arms around her waist over the apron and rests his chin near her shoulder. She
+startles for an instant, recognizes him, relaxes and continues a slower stir.
+He asks softly in Mandarin what she is making.
+
+DIALOGUE LANE: while he speaks, only his mouth articulates; she listens with
+closed lips, then answers after his line finishes.
+
+[8.5–14.5s | playful exchange]
+Move to a shoulder-level two-shot that keeps both faces, the waist embrace and
+the pot visible. She lightly nudges him with one elbow without breaking contact
+and says, smiling, that she is cooking and asks what he wants. During her line
+his mouth remains closed and his reaction stays in the eyes. After a clear
+pause, he gives one short teasing reply. She stops stirring for half a second,
+blushes and suppresses a laugh rather than showing anger or fear.
+
+[14.5–20s | safety before romance]
+Side close two-shot. First she switches the induction cooker OFF; the control
+light extinguishes. Next she lays the wooden spoon flat beside the stable pot.
+Only after both states are visible does she tap his hand and turn within the
+embrace. He releases enough space for the turn and places open hands lightly at
+her waist.
+
+She delivers one shy, affectionate line. They hold a full second of eye contact;
+he leans partway and stops, and she voluntarily closes the remaining distance.
+They share one brief closed-mouth kiss, separate slowly and rest foreheads
+together while the pot remains safe and still in the background.
+
+PERFORMANCE + AUDIO
+Natural phone exposure, warm practical light, real skin and fabric, restrained
+handheld movement. Exact Mandarin speaker ownership and lip sync; the listener's
+lips remain closed. Use simmer, spoon, footsteps, clothing and quiet room sound
+with very soft domestic music. No narrator, subtitle or on-screen text.
+
+Reject minors, strangers, coercion, surprise kiss, struggle, sexual touching,
+blocked exit, cooker left on, utensil in hand during the turn, pot spill, steam
+burn, simultaneous dialogue, listener mouthing the speaker's words, swapped
+lines, double mouth, identity blend, face swap, wardrobe drift, extra limb,
+teleport, camera jump, plastic skin, logo or watermark.
+```
+
+**Technique:** Dialogue and physical safety are both written as state machines.
+Only one mouth owns each line, and the romantic payoff cannot begin until the
+cooker-off and spoon-down states are visibly complete. The pause before mutual
+approach makes consent readable as blocking rather than a vague adjective.
+
+Adapted from [John's complete Seedance 2.5 adult-couple kitchen prompt and
+attached 20-second result](https://x.com/johnAGI168/status/2094401180101206388),
+published August 31, 2026.
+
+
+
 ## Reusable templates
+
+
+### Per-window terminal-state gate for delayed ambient motion
+
+**Verified model:** Seedance 2.5 — the creator labels the test with this exact
+version, publishes the 15-second candle result and reports that writing an end
+state after every time range prevented the flame from moving before its trigger
+
+Use this when a passive element must remain quiet until one local cause arrives:
+a candle before a door opens, fabric before a gust, dust before impact, water
+before contact or a practical light before power-up. Give every time window a
+visible terminal state, including the quiet windows, instead of describing the
+effect globally.
+
+```text
+DURATION = [SECONDS]. CAMERA = [LOCKED / ONE SLOW MOVE].
+TARGET = [FLAME / CURTAIN / DUST / WATER / PRACTICAL LIGHT].
+TRIGGER = [VISIBLE OR AUDIBLE CAUSE].
+RESPONSE DIRECTION = [SCREEN-LEFT / RIGHT / UP / DOWN / RADIAL].
+BASELINE = [EXACT QUIET SHAPE, POSITION AND INTENSITY].
+
+[0–T1 | baseline hold]
+Show [SUBJECT AND LOCATION]. TARGET remains at BASELINE: [NO LEAN / NO WAVE /
+NO PARTICLE LIFT / NO RIPPLE / NO BRIGHTNESS CHANGE]. Background may contain
+[ALLOWED MICRO-MOTION] only.
+End state at T1: TARGET still matches BASELINE exactly.
+
+[T1–T2 | cause arrives]
+Make TRIGGER occur once from [SOURCE LOCATION]. Cause must be perceivable before
+the response. TARGET reacts in RESPONSE DIRECTION with [MEASURABLE AMPLITUDE]
+and reaches [PEAK STATE].
+End state at T2: [EXACT PEAK STATE], not a loop or generic continuous motion.
+
+[T2–T3 | recovery]
+After the cause stops, TARGET returns along the physically correct path with
+[INERTIA / DAMPING / TURBULENCE] and no second trigger.
+End state at T3: [EXACT SETTLED STATE].
+
+[T3–END | final proof]
+Hold long enough to verify that the event is over. Preserve any irreversible
+result such as [DIMMER FLAME / SHIFTED OBJECT / WET SURFACE]; otherwise return
+to BASELINE. No replay.
+
+CAMERA + FOCUS
+The camera does not create the event. If focus changes, describe the visible
+focus ownership at the end of each window: [FOREGROUND SHARP, BACKGROUND SOFT]
+-> [BACKGROUND SHARP, FOREGROUND SOFT]. Do not request only “rack focus” and
+leave the landing plane undefined.
+
+ACCEPTANCE GATE
+Reject if TARGET moves before T1, the response begins before TRIGGER, direction
+is reversed, the peak never completes, recovery loops, a second cause appears,
+focus lands on the wrong plane, or the final state reverts incorrectly.
+```
+
+**Why it works:** a global phrase such as “flickering candle” can leak motion
+across the whole clip. Explicit terminal states turn each time range into a
+bounded state transition, so the model has both a start condition and a stop
+condition. The source test used a left-originating breath of air, a right-leaning
+near-extinguished flame and a defined recovery rather than asking for continuous
+atmosphere.
+
+Adapted from [Glenn Williams's Seedance 2.5 candle timing test, prompt fragment,
+15-second result and reported end-state finding](https://x.com/GlennHasABeard/status/2094387519148134418),
+published August 31, 2026.
+
 
 ### Directional action retarget with reference-role isolation and atomic fan-out
 
@@ -23362,6 +23681,15 @@ which records the exact Seedance 2.5 Edit route, source slot, text-defined regio
 workflow, `@` references, 1080p ceiling and absence of a mask editor.
 
 ## Sources
+
+
+- [Muhammad Ayan / @socialwithaayan — September 1, 2026 Seedance 2.5 nine-reference, 28-second uninterrupted phone-vlog result with character-sheet setup, ordered reference manifest, exact appearance windows and complete prompt](https://x.com/socialwithaayan/status/2094451151471296736) ([character-sheet prompt](https://x.com/socialwithaayan/status/2094451181947125848), [ordered upload rule](https://x.com/socialwithaayan/status/2094451208081850784), [reference manifest](https://x.com/socialwithaayan/status/2094451231846781265), [complete Seedance 2.5 prompt](https://x.com/socialwithaayan/status/2094451246115737859))
+
+- [PSS / @PromptSin — August 31, 2026 Dreamina Seedance 2.5 last-ferry travel sprint with complete 15-second prompt, first-frame hazard, causal ramp response, persistent cargo and attached result](https://x.com/PromptSin/status/2094377547408740379)
+
+- [John / @johnAGI168 — August 31, 2026 Seedance 2.5 adult-couple kitchen micro-drama with complete 20-second prompt and result, native Mandarin speaker/listener lanes, explicit mutual approach and cooker-off/utensil-down safety gates](https://x.com/johnAGI168/status/2094401180101206388)
+
+- [Glenn Williams / @GlennHasABeard — August 31, 2026 Seedance 2.5 candle timing test with attached 15-second result and creator-reported per-window terminal-state control for preventing pre-trigger motion](https://x.com/GlennHasABeard/status/2094387519148134418)
 
 - [Higgsfield — official Seedance 2.5 region-edit showcase for bounded label, background and wardrobe repair without a full reroll](https://higgsfield.ai/seedance/2.5); [Iret — August 31, 2026 dated verification of the separate Seedance 2.5 Edit surface, source-video slot, text-defined regions, `@` references, 1080p ceiling and no-mask workflow](https://github.com/iret77/ai-film-production/commit/e3ee5d679776f1b425fe9a9cd391b59f1c8e8f0c)
 
