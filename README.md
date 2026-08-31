@@ -23039,6 +23039,133 @@ the committed
 and the
 [generated Seedance 2.5 MP4](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/public/assets/guin-map/opening.mp4).
 
+
+### Dry-run quote, timeout-safe job checkpoint and seed-addressable take ledger
+
+**Verified model:** Ofox `bytedance/seedance-2.5` (Seedance 2.5, BytePlus
+default upstream) — the original maintainer's August 31 release explicitly
+reports a live `create` request returning in 1.9 seconds; the same versioned
+execution package fixes this exact model as the scenario default and documents
+real paid Seedance 2.5 completion, reference-mode billing and output delivery
+
+Use this when an agent, CI job or short-lived tool call must control a paid
+generation without losing the task identifier, accidentally resubmitting after a
+timeout or selecting an unrepeatable take. Separate the creative contract,
+spending decision, submission checkpoint, polling and winner promotion into
+independently recoverable stages.
+
+```text
+IMMUTABLE GENERATION CONTRACT
+model = bytedance/seedance-2.5
+provider = [PINNED UPSTREAM OR EXPLICIT AUTO]
+mode = [TEXT-TO-VIDEO / IMAGE-TO-VIDEO / VIDEO-TO-VIDEO]
+prompt = [COMPLETE VERSIONED PROMPT]
+references = [ORDERED ASSET URLS + DECLARED ROLE FOR EACH]
+duration = [SECONDS]
+resolution = [480P DRAFT / 720P OR 1080P FINAL]
+aspect_ratio = [VALID EXACT VALUE]
+audio = [ON / OFF]
+output_directory = [WRITABLE ABSOLUTE PATH]
+take_count = [1–10]
+seed_policy = [UNIQUE DISCLOSED SEED PER TAKE]
+
+STAGE 1 — ZERO-SPEND COMPILE AND QUOTE
+Resolve the live model schema and provider before submission. Validate mode,
+duration, resolution, aspect ratio, reference types and output path; compile the
+exact payload and prompt; then stop without making a create request.
+
+Record:
+prompt_hash = [HASH]
+schema_snapshot = [ID / DATE]
+resolved_provider = [VALUE]
+estimated_cost_per_take = [VALUE OR UNAVAILABLE]
+estimated_batch_total = [VALUE OR UNAVAILABLE]
+submission_made = false
+
+Quote the batch total, not the attractive per-take number. A valid estimate is
+not permission to spend. If the catalog is unavailable, say that the estimate is
+unavailable instead of inventing a stale price. Correct any validation error
+before continuing.
+
+STAGE 2 — ONE CREATE, IMMEDIATE CHECKPOINT
+After approval, submit exactly once. Use an asynchronous create path that returns
+the task identifier without waiting for the render. Persist the following before
+any poll:
+task_id = [ID]
+submitted_at = [UTC]
+model / provider / mode = [EXACT VALUES]
+prompt_hash = [HASH]
+reference_hashes = [HASHES]
+seed = [DISCLOSED VALUE]
+estimated_cost = [VALUE]
+state = CREATED
+
+Never hide creation and a long poll inside a tool call whose timeout is shorter
+than the model's maximum wait. A local timeout after a task ID exists is not a
+failed generation and never authorizes a second create.
+
+STAGE 3 — POLL-ONLY RECOVERY
+Poll task_id until a terminal response. Retry status reads on transport errors;
+do not retry creation. On interruption, resume from the persisted task ID.
+Accept COMPLETED only when the terminal body contains the exact model/provider,
+a playable rendered-output URL or retained bytes, duration and actual billing.
+Do not present an input-staging URL, thumbnail or metadata record as the video.
+
+Failure routing:
+- no task ID + platform confirms no accepted job and no charge -> permit one
+  corrected create;
+- task ID exists -> poll that same task;
+- terminal moderation or parameter rejection -> preserve the response and revise
+  only the identified cause before any new paid request;
+- completed task but download failure -> recover the existing output URL or
+  bytes; do not regenerate.
+
+STAGE 4 — SEED-ADDRESSABLE TAKE LEDGER
+For a multi-take draft, assign and print one unique seed for every take before
+submission:
+TAKE 1 = [TASK ID, SEED, STATUS, ACTUAL COST, OUTPUT PATH]
+TAKE 2 = [TASK ID, SEED, STATUS, ACTUAL COST, OUTPUT PATH]
+...
+Stop the remaining queue after a structural failure likely to affect every take.
+Retain completed takes and their costs. Never run a batch with one fixed seed
+unless intentionally testing deterministic replay.
+
+Build a contact sheet from opening, midpoint and closing frames of every finished
+take. Select a winner by identity, action order, camera compliance, reference
+ownership, terminal state and artifact count—not by the opening frame alone.
+Promote the winner with its recorded seed and prompt hash. Treat the seed as a
+provenance and rerun handle, not a pixel-identical promise after changing model,
+resolution, provider or references; re-accept the promoted final independently.
+
+STAGE 5 — ACTUAL-BILL RECONCILIATION
+For every terminal task, preserve estimated cost, actual cost, billed seconds,
+mode, resolution and provider. Sum actual costs across all submitted takes,
+including rejected or unused results when billed:
+batch_actual_total = SUM([ACTUAL COSTS])
+winner_effective_cost = batch_actual_total
+
+Flag estimate-versus-bill drift before the next batch. In video-reference mode,
+price from the provider's actual `video_url` reference type and output duration;
+do not silently substitute the text-to-video tier. Archive the raw outputs,
+contact sheet, immutable contract, task ledger and billing reconciliation
+together.
+```
+
+**Why it works:** a paid render can outlive the agent call that started it.
+Returning and persisting the task ID first converts a timeout from an ambiguous
+failure into a resumable state. The zero-spend compile catches invalid parameters
+and exposes the full batch liability before side effects. Per-take seeds make a
+chosen draft addressable, while contact-sheet review and actual-total accounting
+prevent an inexpensive-looking single take from hiding the cost of the batch that
+produced it.
+
+**Sources:** OfoxAI's August 31, 2026
+[live-verified `create`, keyless dry-run and per-take-seed release](https://github.com/ofoxai/skills/commit/0e845c71cc304b421d40f61dba900d6bedab8b90),
+the versioned
+[Seedance 2.5 scenario contract and promotion workflow](https://github.com/ofoxai/skills/blob/0e845c71cc304b421d40f61dba900d6bedab8b90/skills/seedance-product-video/SKILL.md),
+and the core
+[real-run, billing, chaining and failure findings](https://github.com/ofoxai/skills/blob/0e845c71cc304b421d40f61dba900d6bedab8b90/skills/ofox-video-core/CHANGELOG.md).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -23084,6 +23211,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 
 ## Sources
+
+- [OfoxAI — August 31, 2026 Seedance 2.5 execution release with a live-verified 1.9-second create checkpoint, zero-spend schema-and-price dry-run, per-take seeds, contact-sheet selection and actual-bill reconciliation](https://github.com/ofoxai/skills/commit/0e845c71cc304b421d40f61dba900d6bedab8b90) ([Seedance 2.5 scenario contract](https://github.com/ofoxai/skills/blob/0e845c71cc304b421d40f61dba900d6bedab8b90/skills/seedance-product-video/SKILL.md), [real-run and billing findings](https://github.com/ofoxai/skills/blob/0e845c71cc304b421d40f61dba900d6bedab8b90/skills/ofox-video-core/CHANGELOG.md))
 
 - [Noah1206 / Loverabbit — Higgsfield `seedance_2_5` six-second single-render relationship-map plate with exact prompt, real job/cost manifest, committed MP4, same-master poster/fallback extraction and tested runtime media fallback](https://github.com/Noah1206/loverabbit/commit/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a) ([exact prompt](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/scripts/higgsfield/prompts.md), [asset manifest](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/scripts/higgsfield/asset-manifest.json), [generated MP4](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/public/assets/guin-map/opening.mp4))
 
