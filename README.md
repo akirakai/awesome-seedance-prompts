@@ -22675,7 +22675,7 @@ Seedance 2.5 finals.
 
 ### Provider-dialect reference binding and clause-safe prompt-cap gate
 
-**Verified models:** Seedance 2.0 (`bytedance/seedance-2.0` through
+**Verified model:** Seedance 2.0 (`bytedance/seedance-2.0` through
 Replicate) and Seedance 2.5 (`bytedance/seedance-2.5` through Replicate). The
 original creator's first screen-replacement run produced a real Seedance 2.0
 clip that reinterpreted the attached card animation instead of playing it. The
