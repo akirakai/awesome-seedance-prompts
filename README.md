@@ -23125,22 +23125,27 @@ Seedance 2.5 finals.
 ### Provider-dialect reference binding and clause-safe prompt-cap gate
 
 **Verified model:** Seedance 2.0 (`bytedance/seedance-2.0` through
-Replicate) and Seedance 2.5 (`bytedance/seedance-2.5` through Replicate). The
-original creator's first screen-replacement run produced a real Seedance 2.0
-clip that reinterpreted the attached card animation instead of playing it. The
-versioned route and live schema exposed both the 4,000-character prompt cap and
-Replicate's `[Video1]` reference syntax; the same application had been compiled
-for fal's `@Video1`, so the asset was present but semantically unbound. After
-that binding was fixed and the route moved to Seedance 2.5, a second real result
-read the reference yet held one frame for the whole render: provider-neutral
-`auto` values had been dropped, although this editing mode required
-`duration=-1` and `aspect_ratio=adaptive`.
+Replicate) and Seedance 2.5 (`bytedance/seedance-2.5` through Replicate and
+OpenRouter). The original creator's first screen-replacement run produced a real
+Seedance 2.0 clip that reinterpreted the attached card animation instead of
+playing it. The versioned route and live schema exposed both the
+4,000-character prompt cap and Replicate's `[Video1]` reference syntax; the
+same application had been compiled for fal's `@Video1`, so the asset was
+present but semantically unbound. After that binding was fixed and the route
+moved to Seedance 2.5, a second real result read the reference yet held one frame
+for the whole render: provider-neutral `auto` values had been dropped, although
+this editing mode required `duration=-1` and `aspect_ratio=adaptive`. A
+separate OpenRouter Seedance 2.5 two-reference test supplied a person and a
+location but emitted only `urls[0]` as `frame_images.first_frame`; the render
+lost the person and inherited the first image's 16:9 shape despite a 9:16
+request. Sending the complete ordered set through `input_references` restored
+both reference participation and aspect-ratio control.
 
-Use this when one logical reference-video prompt must travel through more than
-one provider or model version. Treat field names, in-prompt reference tokens,
-prompt length and returned-media access as four separate contracts. Compile and
-show the provider-specific prompt before submission; never infer successful
-binding from upload or queue completion alone.
+Use this when one logical reference prompt must travel through more than one
+provider or model version. Treat reference transport mode, field names,
+in-prompt reference tokens, prompt length and returned-media access as separate
+contracts. Compile and show the provider-specific payload before submission;
+never infer successful binding from upload or queue completion alone.
 
 ```text
 CANONICAL INTENT
@@ -23198,6 +23203,32 @@ For every logical reference, require both:
 2. exactly one provider-valid semantic token in the compiled prompt.
 An uploaded asset with an unresolved token is unbound, not partially bound.
 
+REFERENCE TRANSPORT MODE GATE
+Classify each visual input before building the payload:
+- CONTENT / IDENTITY / STYLE GUIDE -> input_references; preserve every item in
+  the declared order;
+- EXACT OPENING COMPOSITION -> frame_images.first_frame, only when that image is
+  intentionally the opening frame and may anchor source geometry;
+- EXACT ENDING COMPOSITION -> frame_images.last_frame where the live route
+  documents it.
+Do not convert a multi-reference pack into a first-frame request merely because
+a UI calls the operation image-to-video.
+
+For a multi-reference job, record and assert:
+- expected reference count = [N];
+- emitted input_references count = [N];
+- requested aspect ratio = [ASPECT];
+- first_frame present = [YES ONLY WITH EXPLICIT START-FRAME INTENT / NO].
+Fail before billing if any reference is dropped, reordered or collapsed to
+urls[0].
+
+ASPECT-OWNERSHIP GATE
+When first_frame is present, assume its dimensions may override or constrain the
+requested aspect until the live route proves otherwise. If aspect_ratio must own
+delivery, use content references instead of an accidental first-frame anchor.
+Record each reference's dimensions, payload field, requested aspect and returned
+aspect.
+
 DIALECT COMPILATION
 Write the editable canonical prompt with stable logical names.
 For fal-style routes, compile:
@@ -23231,6 +23262,10 @@ PRE-SUBMIT GATE
 Fail before billing if:
 - any attached asset lacks a compiled semantic token;
 - any token has no corresponding bound asset;
+- a multi-reference request emits fewer payload references than the ledger;
+- first_frame is used without explicit opening-frame intent;
+- first_frame dimensions conflict with the requested aspect on a route where
+  the source frame owns geometry;
 - token numbering changes after translation;
 - the compiled prompt exceeds the live schema cap;
 - critical clauses were dropped or truncated;
@@ -23267,9 +23302,13 @@ into a new instruction, while the delivery gate avoids mistaking authenticated
 input metadata for a failed or missing render. Semantic parameter compilation
 also preserves the difference between "model decides" and "field omitted": in
 the follow-up Seedance 2.5 run, the reference token was correct but dropping
-`auto` exposed a five-second default and a still-frame result. Together these
-checks separated prompt binding, mode viability and output delivery instead of
-mislabeling all three as model creativity.
+`auto` exposed a five-second default and a still-frame result. The transport
+mode gate adds a second distinction: a content reference is not an opening-frame
+anchor. In the OpenRouter test, collapsing two content references to
+`first_frame` silently removed one source and transferred geometry ownership to
+the other. Together these checks separate prompt binding, reference transport,
+mode viability and output delivery instead of mislabeling integration faults as
+model creativity.
 
 **Sources:** Scott Canton's August 31, 2026
 [first Replicate render diagnosis and clause-safe 4,000-character fit](https://github.com/scanton/social-media-assets/commit/deb1c2fa78e8dd4e2c79c88c3116cc2aed6479ba),
@@ -23279,8 +23318,10 @@ the subsequent
 [reference-dialect failure analysis and live-schema verification](https://github.com/scanton/social-media-assets/commit/6f8d98cf7897d0f61a0f1d0dd165c8c10a23518f),
 the new
 [Seedance 2.5 frozen-reference result and sentinel-parameter correction](https://github.com/scanton/social-media-assets/commit/076f19347d6c5f5fa624264280b71b2689ba6a62),
-and the
-[result-versus-input-host delivery diagnosis](https://github.com/scanton/social-media-assets/commit/b5db9d1e5886965aef243ba94c715809cbb9b6c1).
+the
+[result-versus-input-host delivery diagnosis](https://github.com/scanton/social-media-assets/commit/b5db9d1e5886965aef243ba94c715809cbb9b6c1),
+and JennieDov's September 1, 2026
+[OpenRouter Seedance 2.5 two-reference failure and transport-field repair](https://github.com/jenniedov/jenai-studio/commit/848db744e521e6e1d42d8ad4c630b39a60ba3bfd).
 
 
 ### Single-render beat compression, overlay ownership and derived-fallback gate
@@ -23728,6 +23769,8 @@ workflow, `@` references, 1080p ceiling and absence of a mask editor.
 - [KampterHarbour — August 30, 2026 re-read of ByteDance's official Seedance 2.5 creation manual, preserving the manual's multi-grid panel mapping, connective-action, composition, shot-size, camera-movement and action guidance](https://github.com/KampterHarbour/kampter-sd-25-skills/commit/f1cddc54b8e3fd05d11bddaca520e00d697b2312) ([official Seedance 2.5 manual](https://bytedance.larkoffice.com/wiki/RXh5ww6EqighMdkVTMccm2d4n7e))
 
 - [Scott Canton / Heartstamp Studio — Replicate `bytedance/seedance-2.0` and `bytedance/seedance-2.5` generated failures with exact route evidence, provider-specific `@Video1` / `[Video1]` binding, clause-safe prompt caps, mode-required `duration=-1` / `aspect_ratio=adaptive` sentinel translation and result-delivery gates](https://github.com/scanton/social-media-assets/commit/076f19347d6c5f5fa624264280b71b2689ba6a62) ([dialect diagnosis](https://github.com/scanton/social-media-assets/commit/6f8d98cf7897d0f61a0f1d0dd165c8c10a23518f), [first render and clause-safe cap handling](https://github.com/scanton/social-media-assets/commit/deb1c2fa78e8dd4e2c79c88c3116cc2aed6479ba), [exact Seedance 2.0 route](https://github.com/scanton/social-media-assets/blob/deb1c2fa78e8dd4e2c79c88c3116cc2aed6479ba/src/lib/models.ts), [delivery diagnosis](https://github.com/scanton/social-media-assets/commit/b5db9d1e5886965aef243ba94c715809cbb9b6c1))
+
+- [JennieDov — September 1, 2026 OpenRouter `bytedance/seedance-2.5` two-reference field report: collapsing a person-plus-location pack to `frame_images.first_frame` dropped the person and inherited the source's 16:9 geometry; emitting the complete ordered set through `input_references` restored reference participation and requested-aspect ownership](https://github.com/jenniedov/jenai-studio/commit/848db744e521e6e1d42d8ad4c630b39a60ba3bfd)
 
 - [Ryan Elwathiq / LuvIt — exact `bytedance/seedance-2.5` five-reference product-drop hero with two low-resolution probes, separate native desktop/mobile finals, verbatim-label evidence, measured costs and emergent-look promotion](https://github.com/RyanElwathiq/LuvIt-Priject/commit/b73e6330b35050871391d9fbf543aa441e8c7faa) ([generation findings](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/_خطة/موجة-٢-صفحة-المتجر-الموحّدة.md), [exact-model runner](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/_أدوات/gen-video.mjs), [desktop final](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/hero-sequence/drop-final-desktop.mp4), [mobile final](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/hero-sequence/drop-final-mobile.mp4))
 
