@@ -22673,6 +22673,130 @@ and
 [mobile](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/hero-sequence/drop-final-mobile.mp4)
 Seedance 2.5 finals.
 
+### Provider-dialect reference binding and clause-safe prompt-cap gate
+
+**Verified model:** Seedance 2.0 (`bytedance/seedance-2.0` through
+Replicate) — the original creator's first screen-replacement run produced a
+real clip that reinterpreted the attached card animation instead of playing it.
+The versioned route proves that this step used Seedance 2.0; the live model
+schema then exposed both the 4,000-character prompt cap and Replicate's
+`[Video1]` reference syntax. The same application had been compiled for fal's
+`@Video1` syntax, so the asset was present in the request but absent from the
+prompt's semantics.
+
+Use this when one logical reference-video prompt must travel through more than
+one provider or model version. Treat field names, in-prompt reference tokens,
+prompt length and returned-media access as four separate contracts. Compile and
+show the provider-specific prompt before submission; never infer successful
+binding from upload or queue completion alone.
+
+```text
+CANONICAL INTENT
+Task = [PLAY / TRANSFER / RESTYLE / CONTINUE] the approved reference clip.
+Reference-video role = [SOURCE MOTION OR CONTENT].
+Reference-image role = [IDENTITY / SURFACE / FIRST FRAME].
+Reference-audio role = [TIMING / DIALOGUE / AMBIENCE].
+Protected result = [WHAT MUST COME FROM EACH REFERENCE].
+Forbidden substitution = do not invent, paraphrase or reinterpret protected
+reference content.
+
+PROVIDER + MODEL CONTRACT
+Provider = [EXACT PROVIDER].
+Exact model = [VERSIONED MODEL ID].
+Read the live API schema used for submission, not a shortened marketing page.
+Record:
+- media input fields: [reference_videos / video_urls / ...];
+- required prompt tokens: [[Video1] / @Video1 / ...];
+- prompt maxLength: [NUMBER / NONE];
+- duration and reference-count limits;
+- output host and whether returned bytes are browser-readable.
+Do not silently fall back to another model or provider.
+
+REFERENCE LEDGER
+Logical Video1 = [HASHED SOURCE CLIP], role = [ROLE].
+Logical Image1 = [HASHED STILL], role = [ROLE].
+Logical Audio1 = [HASHED AUDIO], role = [ROLE].
+For every logical reference, require both:
+1. a real asset bound to the correct request field; and
+2. exactly one provider-valid semantic token in the compiled prompt.
+An uploaded asset with an unresolved token is unbound, not partially bound.
+
+DIALECT COMPILATION
+Write the editable canonical prompt with stable logical names.
+For fal-style routes, compile:
+  Video1 -> @Video1; Image1 -> @Image1; Audio1 -> @Audio1.
+For Replicate Seedance routes verified by schema, compile:
+  Video1 -> [Video1]; Image1 -> [Image1]; Audio1 -> [Audio1].
+Translate token syntax only; do not change reference order or roles.
+Display and archive the exact compiled prompt, not the canonical draft.
+
+PROMPT PRIORITY ORDER
+Put clauses in this order before any length fitting:
+1. protected reference roles and the requested operation;
+2. immutable identity, surface and continuity rules;
+3. action order and camera;
+4. optional styling and polish.
+Make every rule a complete clause ending at a known boundary. If the model
+declares a cap, measure the compiled prompt in the provider's unit and remove
+whole low-priority clauses until it fits. Never cut inside a token, reference
+role, negation or safety rule. Report how many characters and which clause IDs
+were removed.
+
+COMPILED REQUEST
+Use [Video1] as the literal source content; [PLAY / TRANSFER / CONTINUE] its
+ordered motion rather than describing or recreating it. Use [Image1] only for
+[DECLARED ROLE]. Preserve [PROTECTED ELEMENTS]. Execute [ACTION ORDER].
+Camera = [ONE PHYSICALLY CLEAR MOVE]. No invented replacement animation,
+unreferenced extra media, role swapping, token text on screen or silent model
+fallback.
+
+PRE-SUBMIT GATE
+Fail before billing if:
+- any attached asset lacks a compiled semantic token;
+- any token has no corresponding bound asset;
+- token numbering changes after translation;
+- the compiled prompt exceeds the live schema cap;
+- critical clauses were dropped or truncated;
+- the UI preview differs from the payload prompt;
+- exact provider, model and schema snapshot are missing.
+
+RESULT-BODY + DELIVERY GATE
+Queue status is not acceptance. Read the complete terminal response and verify:
+- exact model and provider match the ledger;
+- a public rendered-output URL or locally retained output bytes exist;
+- an input-staging or metadata URL is never presented as the deliverable;
+- frame 0, midpoint and final frame use the reference for its declared role;
+- protected content is played or transferred, not newly interpreted;
+- raw output, compiled prompt, task ID, schema snapshot and rejection reason
+  remain linked.
+
+FAILURE ROUTING
+Attached but reinvented content -> audit token dialect and semantic role first.
+Prompt rejected for length -> recompile at whole-clause boundaries.
+Playable render hidden behind metadata -> separate input staging from output
+delivery; do not regenerate a video that already succeeded.
+Correct binding but weak motion -> only then revise choreography or model.
+```
+
+**Why it works:** transport success, semantic binding and creative compliance
+are different events. A provider can accept the file while the prompt names
+nothing, which looks like model disobedience but is actually a dialect error.
+Clause-safe fitting prevents a model limit from turning half a negative rule
+into a new instruction, while the delivery gate avoids mistaking authenticated
+input metadata for a failed or missing render. In the source run, these checks
+separated an actual Seedance 2.0 reinterpretation from the later discovery that
+Seedance 2.5's live API supported references and no prompt cap, despite its
+shorter rendered docs page suggesting otherwise.
+
+**Sources:** Scott Canton's August 31, 2026
+[first Replicate render diagnosis and clause-safe 4,000-character fit](https://github.com/scanton/social-media-assets/commit/deb1c2fa78e8dd4e2c79c88c3116cc2aed6479ba),
+the versioned
+[Seedance 2.0 screen-replacement route](https://github.com/scanton/social-media-assets/blob/deb1c2fa78e8dd4e2c79c88c3116cc2aed6479ba/src/lib/models.ts),
+the subsequent
+[reference-dialect failure analysis and live-schema verification](https://github.com/scanton/social-media-assets/commit/6f8d98cf7897d0f61a0f1d0dd165c8c10a23518f),
+and the
+[result-versus-input-host delivery diagnosis](https://github.com/scanton/social-media-assets/commit/b5db9d1e5886965aef243ba94c715809cbb9b6c1).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -22718,6 +22842,8 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 
 ## Sources
+
+- [Scott Canton / Heartstamp Studio — Replicate `bytedance/seedance-2.0` generated screen-replacement failure with exact route evidence, live-schema prompt-cap audit, provider-specific `@Video1` / `[Video1]` binding diagnosis and result-versus-input delivery gate](https://github.com/scanton/social-media-assets/commit/6f8d98cf7897d0f61a0f1d0dd165c8c10a23518f) ([first render and clause-safe cap handling](https://github.com/scanton/social-media-assets/commit/deb1c2fa78e8dd4e2c79c88c3116cc2aed6479ba), [exact Seedance 2.0 route](https://github.com/scanton/social-media-assets/blob/deb1c2fa78e8dd4e2c79c88c3116cc2aed6479ba/src/lib/models.ts), [delivery diagnosis](https://github.com/scanton/social-media-assets/commit/b5db9d1e5886965aef243ba94c715809cbb9b6c1))
 
 - [Ryan Elwathiq / LuvIt — exact `bytedance/seedance-2.5` five-reference product-drop hero with two low-resolution probes, separate native desktop/mobile finals, verbatim-label evidence, measured costs and emergent-look promotion](https://github.com/RyanElwathiq/LuvIt-Priject/commit/b73e6330b35050871391d9fbf543aa441e8c7faa) ([generation findings](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/_خطة/موجة-٢-صفحة-المتجر-الموحّدة.md), [exact-model runner](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/_أدوات/gen-video.mjs), [desktop final](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/hero-sequence/drop-final-desktop.mp4), [mobile final](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/hero-sequence/drop-final-mobile.mp4))
 
