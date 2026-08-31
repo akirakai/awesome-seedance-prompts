@@ -22675,14 +22675,17 @@ Seedance 2.5 finals.
 
 ### Provider-dialect reference binding and clause-safe prompt-cap gate
 
-**Verified model:** Seedance 2.0 (`bytedance/seedance-2.0` through
-Replicate) — the original creator's first screen-replacement run produced a
-real clip that reinterpreted the attached card animation instead of playing it.
-The versioned route proves that this step used Seedance 2.0; the live model
-schema then exposed both the 4,000-character prompt cap and Replicate's
-`[Video1]` reference syntax. The same application had been compiled for fal's
-`@Video1` syntax, so the asset was present in the request but absent from the
-prompt's semantics.
+**Verified models:** Seedance 2.0 (`bytedance/seedance-2.0` through
+Replicate) and Seedance 2.5 (`bytedance/seedance-2.5` through Replicate). The
+original creator's first screen-replacement run produced a real Seedance 2.0
+clip that reinterpreted the attached card animation instead of playing it. The
+versioned route and live schema exposed both the 4,000-character prompt cap and
+Replicate's `[Video1]` reference syntax; the same application had been compiled
+for fal's `@Video1`, so the asset was present but semantically unbound. After
+that binding was fixed and the route moved to Seedance 2.5, a second real result
+read the reference yet held one frame for the whole render: provider-neutral
+`auto` values had been dropped, although this editing mode required
+`duration=-1` and `aspect_ratio=adaptive`.
 
 Use this when one logical reference-video prompt must travel through more than
 one provider or model version. Treat field names, in-prompt reference tokens,
@@ -22711,6 +22714,31 @@ Record:
 - duration and reference-count limits;
 - output host and whether returned bytes are browser-readable.
 Do not silently fall back to another model or provider.
+
+SEMANTIC PARAMETER COMPILATION
+Define canonical intent before provider values:
+  duration = MODEL_DECIDES;
+  aspect_ratio = MATCH_INPUT;
+Never assume omission means the same thing as "auto." Read the live schema and
+the relevant field descriptions together, because mode-required sentinel
+values may look invalid as ordinary measurements.
+
+Compile canonical intent by exact route:
+- if the destination enum documents auto/adaptive/match_input, send that exact
+  member rather than the source provider's spelling;
+- if a non-negative physical quantity exposes and documents a negative sentinel
+  such as duration=-1 for intelligent duration, send the sentinel;
+- if the route offers no documented equivalent, fail closed and request an
+  explicit supported value; never silently drop the field.
+
+MODE-VIABILITY GATE
+Record which values the selected operation requires, not only which values the
+schema accepts. For first/last-frame interpolation, editing, continuation or
+reference playback, verify the documented duration and aspect sentinels before
+billing. Compare source duration with the compiled render duration; a
+thirteen-second reference cannot be meaningfully played through a five-second
+default. Archive both the canonical map and the provider-compiled map so an
+omitted field is visible evidence, not an invisible default.
 
 REFERENCE LEDGER
 Logical Video1 = [HASHED SOURCE CLIP], role = [ROLE].
@@ -22773,9 +22801,13 @@ Queue status is not acceptance. Read the complete terminal response and verify:
 FAILURE ROUTING
 Attached but reinvented content -> audit token dialect and semantic role first.
 Prompt rejected for length -> recompile at whole-clause boundaries.
+Reference is bound but becomes a frozen frame or truncated playback -> compare
+compiled duration/aspect sentinels, mode requirements and source length before
+revising the creative prompt.
 Playable render hidden behind metadata -> separate input staging from output
 delivery; do not regenerate a video that already succeeded.
-Correct binding but weak motion -> only then revise choreography or model.
+Only after binding and parameter semantics pass should choreography or model
+choice change.
 ```
 
 **Why it works:** transport success, semantic binding and creative compliance
@@ -22783,10 +22815,12 @@ are different events. A provider can accept the file while the prompt names
 nothing, which looks like model disobedience but is actually a dialect error.
 Clause-safe fitting prevents a model limit from turning half a negative rule
 into a new instruction, while the delivery gate avoids mistaking authenticated
-input metadata for a failed or missing render. In the source run, these checks
-separated an actual Seedance 2.0 reinterpretation from the later discovery that
-Seedance 2.5's live API supported references and no prompt cap, despite its
-shorter rendered docs page suggesting otherwise.
+input metadata for a failed or missing render. Semantic parameter compilation
+also preserves the difference between "model decides" and "field omitted": in
+the follow-up Seedance 2.5 run, the reference token was correct but dropping
+`auto` exposed a five-second default and a still-frame result. Together these
+checks separated prompt binding, mode viability and output delivery instead of
+mislabeling all three as model creativity.
 
 **Sources:** Scott Canton's August 31, 2026
 [first Replicate render diagnosis and clause-safe 4,000-character fit](https://github.com/scanton/social-media-assets/commit/deb1c2fa78e8dd4e2c79c88c3116cc2aed6479ba),
@@ -22794,6 +22828,8 @@ the versioned
 [Seedance 2.0 screen-replacement route](https://github.com/scanton/social-media-assets/blob/deb1c2fa78e8dd4e2c79c88c3116cc2aed6479ba/src/lib/models.ts),
 the subsequent
 [reference-dialect failure analysis and live-schema verification](https://github.com/scanton/social-media-assets/commit/6f8d98cf7897d0f61a0f1d0dd165c8c10a23518f),
+the new
+[Seedance 2.5 frozen-reference result and sentinel-parameter correction](https://github.com/scanton/social-media-assets/commit/076f19347d6c5f5fa624264280b71b2689ba6a62),
 and the
 [result-versus-input-host delivery diagnosis](https://github.com/scanton/social-media-assets/commit/b5db9d1e5886965aef243ba94c715809cbb9b6c1).
 
@@ -22843,7 +22879,7 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 ## Sources
 
-- [Scott Canton / Heartstamp Studio — Replicate `bytedance/seedance-2.0` generated screen-replacement failure with exact route evidence, live-schema prompt-cap audit, provider-specific `@Video1` / `[Video1]` binding diagnosis and result-versus-input delivery gate](https://github.com/scanton/social-media-assets/commit/6f8d98cf7897d0f61a0f1d0dd165c8c10a23518f) ([first render and clause-safe cap handling](https://github.com/scanton/social-media-assets/commit/deb1c2fa78e8dd4e2c79c88c3116cc2aed6479ba), [exact Seedance 2.0 route](https://github.com/scanton/social-media-assets/blob/deb1c2fa78e8dd4e2c79c88c3116cc2aed6479ba/src/lib/models.ts), [delivery diagnosis](https://github.com/scanton/social-media-assets/commit/b5db9d1e5886965aef243ba94c715809cbb9b6c1))
+- [Scott Canton / Heartstamp Studio — Replicate `bytedance/seedance-2.0` and `bytedance/seedance-2.5` generated failures with exact route evidence, provider-specific `@Video1` / `[Video1]` binding, clause-safe prompt caps, mode-required `duration=-1` / `aspect_ratio=adaptive` sentinel translation and result-delivery gates](https://github.com/scanton/social-media-assets/commit/076f19347d6c5f5fa624264280b71b2689ba6a62) ([dialect diagnosis](https://github.com/scanton/social-media-assets/commit/6f8d98cf7897d0f61a0f1d0dd165c8c10a23518f), [first render and clause-safe cap handling](https://github.com/scanton/social-media-assets/commit/deb1c2fa78e8dd4e2c79c88c3116cc2aed6479ba), [exact Seedance 2.0 route](https://github.com/scanton/social-media-assets/blob/deb1c2fa78e8dd4e2c79c88c3116cc2aed6479ba/src/lib/models.ts), [delivery diagnosis](https://github.com/scanton/social-media-assets/commit/b5db9d1e5886965aef243ba94c715809cbb9b6c1))
 
 - [Ryan Elwathiq / LuvIt — exact `bytedance/seedance-2.5` five-reference product-drop hero with two low-resolution probes, separate native desktop/mobile finals, verbatim-label evidence, measured costs and emergent-look promotion](https://github.com/RyanElwathiq/LuvIt-Priject/commit/b73e6330b35050871391d9fbf543aa441e8c7faa) ([generation findings](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/_خطة/موجة-٢-صفحة-المتجر-الموحّدة.md), [exact-model runner](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/_أدوات/gen-video.mjs), [desktop final](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/hero-sequence/drop-final-desktop.mp4), [mobile final](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/hero-sequence/drop-final-mobile.mp4))
 
