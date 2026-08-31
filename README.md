@@ -22948,7 +22948,11 @@ the original creator submitted one 9:16, 720p, six-second silent job
 (`dcc4ae01-638e-43ea-8054-b6995c423608`) for 39 credits, then committed the
 6.04-second H.264 result, exact prompt, manifest and two frames derived from that
 same MP4. The source also tested the application fallback by forcing the video
-request to fail.
+request to fail. In a follow-up, the creator retired that technically valid but
+art-direction-wrong master, submitted exactly one replacement job
+(`aa9c9beb-72b4-496f-9f2a-18a8a59c102d`) for the same 39 credits, committed its
+exact treasure-map prompt and MP4, then aligned application playback to events
+measured in the delivered clip.
 
 Use this when several related interface or title-sequence states share one visual
 world and dynamic copy must remain deterministic. Let Seedance own one continuous
@@ -23010,6 +23014,23 @@ autoplay-blocked display. Extract [FALLBACK TIME] from that MP4 for static shari
 or no-video contexts. Record both timestamps and hashes; do not spend another
 generation on stills that the approved master already contains.
 
+OUTPUT-LOCKED REVISION + PLAYBACK MAP
+If a render passes technical checks but misses the intended visual direction,
+archive it as [REJECTED MASTER + REASON]; never silently overwrite its provenance.
+Rewrite one shared-world brief and submit exactly one replacement master before
+reassessing. After delivery, inspect the actual frames and record:
+- trigger begins at [TIME / FRAME];
+- subject clears [SAFE REGION] at [TIME / FRAME];
+- transformation settles at [TIME / FRAME];
+- final hold begins at [TIME / FRAME].
+Schedule deterministic overlays from these measured events, not requested prompt
+timings alone. Delay an overlay until its safe region has settled and the primary
+action no longer occupies it. For compact or revisit playback, seek directly to a
+self-contained [SETTLED TIME] and draw the exact overlay there; do not replay a
+short fragment that cuts off the causal opening action. Re-extract poster and
+fallback frames from the approved replacement MP4 and update their manifest links
+without commissioning a separate still.
+
 RUNTIME FAILURE GATE
 Place the video above a complete lightweight fallback scene and below deterministic
 application overlays. On 404, decode error, autoplay block or unsupported playback,
@@ -23021,6 +23042,10 @@ Wrong generated text -> strengthen the ownership firewall; never bake exact copy
 Overlay collision -> enlarge and stabilize the reserved region.
 Beat discontinuity -> simplify the causal bridge or split the render.
 Palette drift -> restate one shared world before each beat.
+Correct motion but wrong art direction -> preserve the rejected-job lineage,
+replace one master, then remap playback and overlays from the delivered frames.
+Compact replay truncates the action -> seek to a complete settled state rather
+than replaying an incomplete opening fragment.
 Video delivery failure with a valid master -> fix hosting/playback; do not regenerate.
 ```
 
@@ -23030,6 +23055,10 @@ stochastic plate from deterministic interface content prevents fake typography a
 makes personalization free of regeneration. Deriving poster and fallback frames
 from the accepted master preserves visual identity, and a deliberately tested
 layer-removal path distinguishes model quality from media-delivery reliability.
+Keeping rejected and approved job lineage prevents a creative correction from
+looking like an unexplained rerun, while mapping overlays to observed output events
+keeps the generated action readable even when its real timing differs from the
+written beat plan.
 
 **Sources:** Noah1206's August 31, 2026
 [one-job generation and integration commit](https://github.com/Noah1206/loverabbit/commit/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a),
@@ -23037,7 +23066,13 @@ the committed
 [exact prompt and acceptance checklist](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/scripts/higgsfield/prompts.md),
 [model/job/cost manifest](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/scripts/higgsfield/asset-manifest.json),
 and the
-[generated Seedance 2.5 MP4](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/public/assets/guin-map/opening.mp4).
+[generated Seedance 2.5 MP4](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/public/assets/guin-map/opening.mp4). Follow-up evidence: the
+[one-replacement art-direction correction and output-timing integration commit](https://github.com/Noah1206/loverabbit/commit/19a9e35bb6196547df2525896fe46ce57677035a),
+its committed
+[replacement prompt and acceptance checklist](https://github.com/Noah1206/loverabbit/blob/19a9e35bb6196547df2525896fe46ce57677035a/scripts/higgsfield/prompts.md),
+[replacement job/cost manifest](https://github.com/Noah1206/loverabbit/blob/19a9e35bb6196547df2525896fe46ce57677035a/scripts/higgsfield/asset-manifest.json),
+and the
+[approved replacement MP4](https://github.com/Noah1206/loverabbit/blob/19a9e35bb6196547df2525896fe46ce57677035a/public/assets/guin-map/opening.mp4).
 
 
 ### Dry-run quote, timeout-safe job checkpoint and seed-addressable take ledger
@@ -23214,7 +23249,7 @@ Please submit prompts you wrote yourself or have permission to redistribute. Whe
 
 - [OfoxAI — August 31, 2026 Seedance 2.5 execution release with a live-verified 1.9-second create checkpoint, zero-spend schema-and-price dry-run, per-take seeds, contact-sheet selection and actual-bill reconciliation](https://github.com/ofoxai/skills/commit/0e845c71cc304b421d40f61dba900d6bedab8b90) ([Seedance 2.5 scenario contract](https://github.com/ofoxai/skills/blob/0e845c71cc304b421d40f61dba900d6bedab8b90/skills/seedance-product-video/SKILL.md), [real-run and billing findings](https://github.com/ofoxai/skills/blob/0e845c71cc304b421d40f61dba900d6bedab8b90/skills/ofox-video-core/CHANGELOG.md))
 
-- [Noah1206 / Loverabbit — Higgsfield `seedance_2_5` six-second single-render relationship-map plate with exact prompt, real job/cost manifest, committed MP4, same-master poster/fallback extraction and tested runtime media fallback](https://github.com/Noah1206/loverabbit/commit/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a) ([exact prompt](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/scripts/higgsfield/prompts.md), [asset manifest](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/scripts/higgsfield/asset-manifest.json), [generated MP4](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/public/assets/guin-map/opening.mp4))
+- [Noah1206 / Loverabbit — Higgsfield `seedance_2_5` six-second single-render relationship-map plate with exact prompt, real job/cost manifest, committed MP4, same-master poster/fallback extraction and tested runtime media fallback](https://github.com/Noah1206/loverabbit/commit/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a) ([exact prompt](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/scripts/higgsfield/prompts.md), [asset manifest](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/scripts/higgsfield/asset-manifest.json), [generated MP4](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a)); [follow-up one-master art-direction replacement, measured-output overlay remap and settled-frame revisit route](https://github.com/Noah1206/loverabbit/commit/19a9e35bb6196547df2525896fe46ce57677035a) ([replacement prompt](https://github.com/Noah1206/loverabbit/blob/19a9e35bb6196547df2525896fe46ce57677035a/scripts/higgsfield/prompts.md), [replacement manifest](https://github.com/Noah1206/loverabbit/blob/19a9e35bb6196547df2525896fe46ce57677035a/scripts/higgsfield/asset-manifest.json), [approved replacement MP4](https://github.com/Noah1206/loverabbit/blob/19a9e35bb6196547df2525896fe46ce57677035a/public/assets/guin-map/opening.mp4))
 
 - [John / @johnAGI168 — Seedance 2.5 twenty-second text-to-video fire-phoenix ritual with complete prompt, attached result, action-owned fluid VFX, a hard duplicate interval and original-only state reset](https://x.com/johnAGI168/status/2094061058776342862)
 
