@@ -15444,15 +15444,19 @@ published August 31, 2026.
 
 ### Per-window terminal-state gate for delayed ambient motion
 
-**Verified model:** Seedance 2.5 — the creator labels the test with this exact
-version, publishes the 15-second candle result and reports that writing an end
-state after every time range prevented the flame from moving before its trigger
+**Verified model:** Seedance 2.5 — the creator labels both 15-second tests with
+this exact version, publishes each generated result, reports that per-window end
+states prevented pre-trigger motion, and shows that an explicit post-change
+motion inventory keeps a local material transformation from freezing the frame
 
 Use this when a passive element must remain quiet until one local cause arrives:
 a candle before a door opens, fabric before a gust, dust before impact, water
 before contact or a practical light before power-up. Give every time window a
 visible terminal state, including the quiet windows, instead of describing the
-effect globally.
+effect globally. For an irreversible change such as liquid-to-ice, use the
+optional branch below: give the state change a short directional sweep, then
+separately inventory the newly static target and every background layer that
+must keep moving.
 
 ```text
 DURATION = [SECONDS]. CAMERA = [LOCKED / ONE SLOW MOVE].
@@ -15483,6 +15487,22 @@ Hold long enough to verify that the event is over. Preserve any irreversible
 result such as [DIMMER FLAME / SHIFTED OBJECT / WET SURFACE]; otherwise return
 to BASELINE. No replay.
 
+IRREVERSIBLE BRANCH (replace recovery + final proof)
+[T1–T2 | bounded state sweep]
+Transform TARGET from [PRE-STATE] to [POST-STATE] in one fast sweep from
+[ORIGIN] toward [DESTINATION]. Complete the sweep within [1–2 SECONDS].
+End state at T2: all of TARGET has become POST-STATE; no mixed-state patches.
+
+[T2–END | selective stillness]
+TARGET remains completely still in POST-STATE. These independent layers continue
+moving naturally: [SNOW], [MIST], [SKY / CLOUDS], [DISTANT FOLIAGE], [CAMERA].
+Do not freeze, slow or transform any listed layer. No thaw, second sweep or
+whole-frame time stop.
+
+ADDITIONAL ACCEPTANCE GATE
+Reject if the transformation begins outside its window, stalls partway, spreads
+in the wrong direction, leaves TARGET moving, or freezes an unrelated layer.
+
 CAMERA + FOCUS
 The camera does not create the event. If focus changes, describe the visible
 focus ownership at the end of each window: [FOREGROUND SHARP, BACKGROUND SOFT]
@@ -15504,7 +15524,10 @@ atmosphere.
 
 Adapted from [Glenn Williams's Seedance 2.5 candle timing test, prompt fragment,
 15-second result and reported end-state finding](https://x.com/GlennHasABeard/status/2094387519148134418),
-published August 31, 2026.
+published August 31, 2026. The irreversible branch comes from
+[his Seedance 2.5 wave-freezing test, prompt fragment, 15-second result and
+post-change motion inventory](https://x.com/GlennHasABeard/status/2094488957203652685),
+published September 1, 2026.
 
 
 ### Directional action retarget with reference-role isolation and atomic fan-out
@@ -23690,6 +23713,8 @@ workflow, `@` references, 1080p ceiling and absence of a mask editor.
 - [John / @johnAGI168 — August 31, 2026 Seedance 2.5 adult-couple kitchen micro-drama with complete 20-second prompt and result, native Mandarin speaker/listener lanes, explicit mutual approach and cooker-off/utensil-down safety gates](https://x.com/johnAGI168/status/2094401180101206388)
 
 - [Glenn Williams / @GlennHasABeard — August 31, 2026 Seedance 2.5 candle timing test with attached 15-second result and creator-reported per-window terminal-state control for preventing pre-trigger motion](https://x.com/GlennHasABeard/status/2094387519148134418)
+
+- [Glenn Williams / @GlennHasABeard — September 1, 2026 Seedance 2.5 wave-to-ice test with attached 15-second result, two-second directional phase-change window, persistent frozen target and explicit snow/mist/sky motion exemptions](https://x.com/GlennHasABeard/status/2094488957203652685)
 
 - [Higgsfield — official Seedance 2.5 region-edit showcase for bounded label, background and wardrobe repair without a full reroll](https://higgsfield.ai/seedance/2.5); [Iret — August 31, 2026 dated verification of the separate Seedance 2.5 Edit surface, source-video slot, text-defined regions, `@` references, 1080p ceiling and no-mask workflow](https://github.com/iret77/ai-film-production/commit/e3ee5d679776f1b425fe9a9cd391b59f1c8e8f0c)
 
