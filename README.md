@@ -15441,6 +15441,95 @@ published August 31, 2026.
 
 ## Reusable templates
 
+### Voice-first compliance register and native-soundtrack ownership gate
+
+**Verified model:** LibTV Seedance 2.0 Mini — the versioned adapter fixes this
+exact model as its default, while the creator's September 1, 2026 commit reports
+a real mixed-reference shot whose mouth moved with the supplied speech at four
+measured checkpoints
+
+Use this when a character must perform an approved line rather than receive a
+dub after generation. Create and measure the voice before the picture, register
+the actual image and audio with the provider's compliance system, then let the
+returned Seedance clip own its synchronized soundtrack.
+
+```text
+VOICE-FIRST SHOT CONTRACT
+Exact model = Seedance 2.0 Mini through LibTV.
+Mode = mixed2video / omni-reference.
+@Image1 = approved first frame and identity anchor.
+@Audio1 = approved spoken performance for this shot.
+Prompt = [COMPLETE VISUAL, PERFORMANCE, CAMERA AND LINE-OWNERSHIP BRIEF].
+Requested ratio = [VALUE]. Resolution = [VALUE]. Native sound = ON.
+
+1 — SYNTHESIZE AND MEASURE BEFORE VIDEO
+Create the final spoken line first. Measure its actual decoded duration:
+speech_seconds = [VALUE].
+tail_pad = [0.6s STARTING POINT].
+planned_clip = ceil(speech_seconds + tail_pad), clamped to the model's
+4–15-second output window.
+
+Do not estimate from character count. If speech plus breathing room exceeds
+15 seconds, split at a natural pause and make separate shots. If @Audio1 is
+shorter than 1.8 seconds or longer than 30.2 seconds, do not spend a compliance
+submission: route that shot to picture generation plus documented post-dubbing.
+
+2 — FILE THE GENERATION ASSETS
+The canvas asset library and Seedance compliance register are separate systems.
+Resolve the CDN URL for @Image1 and @Audio1, then file both through the
+provider's compliance register and wait for PASSED status. Persist each returned
+compliance UUID beside the source URL and hash.
+
+Throttle filings below the observed 15-per-minute ceiling. Treat provider code
+10026 as WAIT-AND-RETRY, not asset rejection. Never commit session credentials
+inside the project or prompt manifest.
+
+3 — BIND SPEECH TO THE SHOT
+Send @Image1 and @Audio1 together in mixed2video mode. @Image1 owns frame zero,
+face, hair, wardrobe, framing and scene. @Audio1 owns the spoken words, voice,
+pace and mouth performance.
+
+[CHARACTER] says exactly: "[LINE]".
+Begin from the approved still, perform one restrained [GESTURE / GAZE CHANGE],
+and let the mouth articulate only @Audio1. Preserve natural blinks and breathing.
+No paraphrase, extra speaker, invented line, silent mouth, unrelated lip motion,
+identity drift, camera reset, music or post-added dialogue.
+
+4 — RETURNED-AUDIO OWNERSHIP
+If the accepted job used @Audio1, mark the clip NATIVE_LIP_SYNC = true. Its own
+audio is the authority. The downstream dub stage must skip this clip; replacing
+the returned track would exchange a synchronized performance for an
+unsynchronized one.
+
+For a non-registerable short line, mark NATIVE_LIP_SYNC = false and retain the
+explicit fallback route. Never silently mix the two ownership policies.
+
+ACCEPTANCE
+- job record contains the intended model, mixed2video mode, @Image1 and @Audio1;
+- the opening frame preserves the approved identity and composition;
+- closed, rounded, open-vowel and closing mouth shapes occur at the matching
+  waveform moments;
+- the full line completes before the tail pad and no extra speech appears;
+- the returned file has the expected native audio track and duration;
+- no later stage overlays another voice on a NATIVE_LIP_SYNC clip.
+
+Archive prompt, model, input hashes, compliance UUIDs, measured speech duration,
+planned duration, job ID, returned URL, soundtrack-owner flag and fallback reason.
+```
+
+**Why it works:** post-dubbing cannot repair mouth motion that was invented
+without hearing the line. Voice-first timing removes duration guesses,
+compliance preflight prevents a paid generation from failing at asset intake,
+and one soundtrack-owner flag stops a correct native performance from being
+destroyed later in the pipeline. The source test also shows that a short line
+can be a valid creative beat yet still be ineligible for the provider's audio
+reference window, so fallback must be explicit per shot.
+
+**Sources:** Jason Cai's September 1, 2026
+[real-shot lip-sync verification, compliance findings and pipeline implementation](https://github.com/jasoncai0/ai-shortdrama-pipeline/commit/1d80808f5aed05342ce189806cc6eed008cce4c0),
+the versioned [Seedance 2.0 Mini LibTV adapter and mixed-reference binding](https://github.com/jasoncai0/ai-shortdrama-pipeline/blob/1d80808f5aed05342ce189806cc6eed008cce4c0/src/plugins/video/libtv.ts),
+and the [compliance-register implementation](https://github.com/jasoncai0/ai-shortdrama-pipeline/blob/1d80808f5aed05342ce189806cc6eed008cce4c0/src/lib/compliance.ts).
+
 
 ### Through-motion canonical-anchor chain and spatial-displacement gate
 
@@ -23872,6 +23961,8 @@ workflow, `@` references, 1080p ceiling and absence of a mask editor.
 
 ## Sources
 
+
+- [Jason Cai — September 1, 2026 LibTV Seedance 2.0 Mini real-shot voice-driven generation with measured mouth checkpoints, separate compliance-register discovery, 1.8–30.2-second audio window, 15-per-minute filing limit and native-soundtrack ownership routing](https://github.com/jasoncai0/ai-shortdrama-pipeline/commit/1d80808f5aed05342ce189806cc6eed008cce4c0) ([exact-model LibTV adapter](https://github.com/jasoncai0/ai-shortdrama-pipeline/blob/1d80808f5aed05342ce189806cc6eed008cce4c0/src/plugins/video/libtv.ts), [compliance implementation](https://github.com/jasoncai0/ai-shortdrama-pipeline/blob/1d80808f5aed05342ce189806cc6eed008cce4c0/src/lib/compliance.ts))
 
 - [QuantumWeaveDev26 — September 1, 2026 live ModelArk `dreamina-seedance-2-5-260628` video-extension probe with returned 4-second H.264/AAC output, followed by a resumable sequential round-chain implementation with atomic progress/task-ID checkpoints and per-round cost accounting](https://github.com/QuantumWeaveDev26/Custom-interface/commit/db9a19b1ae4b3bc093dad8b05668d637d8acc7fe) ([round-chain implementation and failure test](https://github.com/QuantumWeaveDev26/Custom-interface/commit/829eae47a29c22c10c39d99201daa4fba2b9d53a))
 
