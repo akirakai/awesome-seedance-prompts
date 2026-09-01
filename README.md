@@ -296,6 +296,9 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Consensual kitchen micro-drama with speaker-listener and heat-safe state gates](#280-consensual-kitchen-micro-drama-with-speaker-listener-and-heat-safe-state-gates)
   - [Giant-goddess scale reveal through continuous retreat](#281-giant-goddess-scale-reveal-through-continuous-retreat)
   - [Rooftop-to-river cyber-duel and environment-impact relay](#282-rooftop-to-river-cyber-duel-and-environment-impact-relay)
+  - [Restrained single-tear portrait with eye-before-head motion](#283-restrained-single-tear-portrait-with-eye-before-head-motion)
+  - [Two-part office riddle with exact-state continuation](#284-two-part-office-riddle-with-exact-state-continuation)
+  - [Component-conserving Lamborghini-to-wasp transformation](#285-component-conserving-lamborghini-to-wasp-transformation)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -15660,6 +15663,283 @@ Adapted from TanLuAI's September 1, 2026
 and the creator's [complete first-render and targeted repair prompts](https://x.com/TanLuAI/status/2094762832730435828).
 
 
+
+### 283. Restrained single-tear portrait with eye-before-head motion
+
+**Verified model:** Seedance 2.5 — the original creator names this exact version,
+publishes the complete prompt and attaches the generated eight-second result in
+one post  
+**Use case:** subtle facial acting, reference-locked portrait, contact-triggered
+emotion, physically staged single tear  
+**Mode:** single-character reference image-to-video  
+**Suggested settings:** 8 seconds, 9:16, fixed camera, one take, no dialogue
+
+```text
+Create an eight-second photoreal vertical close-up of the same adult woman in
+@Image1. Keep her facial structure, skin tone, center-parted black hair, side
+buns, hairpin, dark eye and lip makeup, black historical robe and white crossed
+collar unchanged. Preserve the reference's frontal extreme close-up, deep
+blue-green classical background and soft shallow-depth portrait light. Her face
+remains the visual center.
+
+PERFORMANCE RULE
+She is cool, restrained and distant, with only a trace of hidden warmth. Motion
+must remain small but alive: breath shifts the lips and chin; the eyes initiate
+every attention change; the head follows later and by a smaller amount. No cute
+posing, theatrical grief or frozen mannequin stillness.
+
+[0.0–1.6s | quiet baseline]
+She looks into lens with naturally open eyes and slightly parted lips. Show one
+small breath, a few millimeters of chin motion and no smile.
+
+[1.6–2.8s | offscreen attention]
+Her pupils travel slowly toward frame left. After a short delay, her head turns
+a few degrees in the same direction. Hold the thoughtful side gaze, complete
+one natural blink, then let eyes return first and head settle to center second.
+
+[2.8–4.5s | approaching hand and contact]
+One anatomically complete hand enters from bottom frame; show only fingers and a
+small part of the hand. Her eyes drop to inspect it and her chin follows down.
+The index finger makes gentle contact under the chin and lifts it only a few
+degrees. The head follows that physical force without leaning backward; her gaze
+rises from the hand to the lens. Keep pressure, skin contact and timing legible.
+
+[4.5–5.8s | emotional release without a smile]
+Hold the touch briefly. Her focused gaze softens, eyelids relax and lips change
+with one lighter breath. The finger withdraws. Her chin settles a fraction and
+the touched expression persists instead of resetting.
+
+[5.8–8.0s | one-drop endpoint]
+Moisture increases gradually along both lower lids. She makes one quick, soft
+blink. Only one main droplet gathers at one lower-lid edge, crosses it and moves
+slowly down that cheek. The other eye may glisten but does not release a second
+tear. End on direct eye contact, one readable tear track and the same restrained,
+quiet expression.
+
+CAMERA AND SOUND
+Locked camera, one uninterrupted take, no zoom or reframing. Natural skin,
+catchlights and microtexture; quiet room tone and breathing only.
+
+Reject identity, hairstyle, hairpin, wardrobe or framing drift; head locked
+perfectly still; head leading the pupils; large chin lift or backward snap;
+finger floating, pushing or intersecting skin; extra hand or finger; smile,
+pout, sob, trembling jaw, exaggerated brow, tears appearing before moisture,
+simultaneous streams, flood of tears, speech mouth, subtitle, music, text, logo
+or watermark.
+```
+
+**Technique:** Separate attention into eye motion and delayed head follow, then
+make the emotional change depend on visible touch. Moisture, blink, droplet
+formation and cheek travel are four ordered states; limiting the event to one
+owned tear prevents the model from replacing restrained acting with generic
+crying.
+
+Adapted from [Chengzi's September 1, 2026 complete Seedance 2.5 micro-expression
+prompt and attached eight-second result](https://x.com/Chengzilhy/status/2094774229254422579).
+
+
+### 284. Two-part office riddle with exact-state continuation
+
+**Verified model:** Seedance 2.5 — the creator labels the full two-part prompt
+with this exact version and publishes the resulting 30-second office short in
+the same post  
+**Use case:** reference-video character replacement, Mandarin two-speaker comedy,
+prop conceal/reveal, continuation with exact first-frame state  
+**Mode:** reference video plus two character images and one wardrobe reference  
+**Suggested settings:** pass 1 at 15 seconds, pass 2 at 10.4 seconds, 9:16,
+native dialogue audio
+
+```text
+Recreate the timing and office geography of @Video1 as a realistic phone-shot
+comedy, while replacing only the two adults. @Image1 owns the woman on frame
+left: identity, face, hair and body. @Image2 owns the man on frame right:
+identity, face, hair and body. @Image3 owns only the woman's outfit and must not
+overwrite her face or hair. Preserve the man's gray checked suit, black shirt,
+blue-gray tie, black rectangular glasses and final surgical mask.
+
+CAPTURE CONTRACT
+Vertical 1080 x 1920, 30 fps. One ordinary phone is fixed about 1.4 meters in
+front of the white desk at seated chest height with a 26 mm equivalent view.
+Cool ceiling fluorescents, deep focus, automatic exposure and white balance,
+real skin, compression noise and imperfect office composition. The desk owns
+one dark-gray Surface tablet at center and one small black wireless-mic device
+to its left. Bottle racks stay frame right; desks and glass partition stay frame
+left. Use phone-mic air-conditioning, distant office noise, chair, cloth, desk,
+mask and spontaneous laughter. No music or narration.
+
+PASS 1 — RIDDLE AND HIDDEN PROP, 15.0 SECONDS
+The woman remains seated left with relaxed, slightly side-on posture. The man
+remains seated right and begins looking at the tablet. A single folded light-blue
+medical mask is hidden in her left hand below the desk edge; it must not appear
+before the final preparation beat.
+
+[0.00–0.90] Woman calls, "老板，哎。" Her lips alone move. The man stops looking
+at the tablet, turns and raises his brows.
+[0.90–2.10] Woman says, "我考你一道题，嗯。" The man listens with closed lips.
+[2.10–5.10] Woman says, "什么东西不带不安全……" She briefly looks upward, then
+back to him. He thinks silently.
+[5.10–6.80] Woman continues, "带了不舒服，嗯哼？" She suppresses a knowing smile.
+[6.80–9.15] Woman finishes, "不带不让进，带了才让进。" He looks down and begins
+to smile but does not speak.
+[9.15–9.50] She closes her mouth. The man alone asks, "啊？"
+[9.50–10.30] No words; he looks at the desk while both suppress laughter.
+[10.30–11.90] Man alone says, "不知道，哈哈哈。" The woman laughs only after his
+answer.
+[11.90–13.45] Woman alone says, "那你把眼睛闭上。" She remains seated; no mask.
+[13.45–14.65] Man answers, "哈哈哈，真的吗？闭上，哈哈。" He then closes both
+eyes completely.
+[14.65–15.00] Translucent pink-purple heart bubbles begin rising. The woman has
+only started to stand; the folded mask remains hidden below the desk edge.
+
+PASS-1 TERMINAL RECEIPT
+Last frame must contain: man seated right with both eyes closed and smiling;
+woman left, barely beginning to rise; exactly one folded mask still below the
+desk; unchanged tablet, mic and background; active rising heart bubbles. Export
+this last frame and the preceding video as the only continuation source.
+
+PASS 2 — ANSWER AND PAYOFF, 10.4 SECONDS
+Start from the exact receipt. Do not repeat the riddle, reopen the man's eyes or
+re-stage the closing instruction.
+
+[0.00–0.60] Woman stands; cloth folds naturally. Man stays seated, eyes closed.
+[0.60–1.70] She moves to his left-rear and raises the one folded mask into view,
+then opens it horizontally with one ear loop in each hand.
+[1.70–2.53] Woman alone says, "你猜对了。" The closed-eye man only smiles.
+[2.53] One direct action cut. Hearts disappear. After the cut the same opened
+mask is already against his mouth and nose; her hands own the two ear loops.
+No flash, dissolve or camera change.
+[2.53–4.74] She hooks one loop behind each ear and adjusts the top edge without
+disturbing his glasses, saying, "就是你想的——口罩。" Highlight only "口罩" in
+the subtitle.
+[4.74–5.30] With the mask covering nose, mouth and chin, he opens his eyes and
+alone says, "对。" Mask cloth responds subtly to breath and speech.
+[5.30–6.95] He touches but does not remove the lower edge and says,
+"我想的一直就是口罩。" She listens with closed lips.
+[6.95–8.47] He closes his mouth. She bends back toward seated height and alone
+says, "我就知道，哈哈哈哈。" He joins only with muffled laughter.
+[8.47] Make one short digital crop into a tighter two-shot without changing
+camera direction.
+[8.47–10.40] Both continue natural laughter. Keep glasses and mask stable.
+Display the exact final title "《想得一样》" in yellow with black outline; no
+new dialogue.
+
+OWNERSHIP AND FAILURE GATES
+Every spoken line belongs to its named mouth; the listener never mouths, echoes
+or steals it. Preserve male/female voice identity. The single mask remains
+hidden until its beat, unfolds once, and finishes across nose, mouth and chin
+with two ear loops behind the correct ears. Do not turn it into an eye mask,
+cloth, paper or duplicate. Do not move, clone or reset the tablet, mic, chairs
+or bottle racks. Reject swapped identities, wardrobe loss, early standing,
+early mask, eye reopening before pass 2, extra limb, ear-loop/glasses
+intersection, subtitle error, extra camera, cinematic grading, beauty filter,
+slow motion, watermark or platform UI.
+```
+
+**Technique:** A continuation receipt carries every unresolved state—not just a
+last frame. The hidden prop, closed eyes, half-rise, overlay and desk geography
+all cross the pass boundary, while a line-owner ledger and mask state machine
+prevent the second render from restarting or reassigning the joke.
+
+Adapted from [John's September 1, 2026 complete two-part Seedance 2.5 office
+prompt and attached 30-second result](https://x.com/john87445528/status/2094752055831171247).
+
+
+### 285. Component-conserving Lamborghini-to-wasp transformation
+
+**Verified model:** Seedance 2.5 — the original creator identifies this exact
+model in the complete prompt reply and publishes the generated transformation
+sequence in the parent post  
+**Use case:** vehicle-to-creature hard-surface transformation, part provenance,
+mechanical weight, consistent driver and environment  
+**Mode:** text-to-video  
+**Suggested settings:** 30 seconds, 16:9, cinematic native effects audio
+
+```text
+Create a thirty-second photoreal science-fiction thriller in one abandoned
+forest parking lot. A glossy metallic green Lamborghini Aventador-like car with
+black carbon-fiber accents transforms into one giant predatory mechanical wasp.
+Preserve the same vehicle paint, young adult Asian male driver, lot geography,
+forest, light direction and resulting creature throughout. Transform by visible
+hinges, slides, rotations, pistons and load-bearing joints; no magical dissolve.
+
+COMPONENT PROVENANCE MAP
+- hood and engine bay -> split shell around one glowing mechanical core;
+- two scissor doors -> two translucent veined wings with carbon-fiber spars;
+- roof and cabin panels -> narrow armored thorax;
+- front bumper and grille -> one pair of serrated mandibles;
+- two headlights -> clustered amber compound eyes;
+- hood seam -> two thin antennae;
+- rear body and engine cover -> long segmented green-and-black abdomen;
+- four exhaust outlets -> one curved mechanical stinger;
+- four original wheels -> visible joints in four rear legs;
+- two underbody assemblies -> two additional front legs.
+Every source part leaves its old location once and appears in exactly one target.
+Nothing floats, duplicates, vanishes or rematerializes.
+
+[0–5s | anomalous car]
+Begin on the intact parked car. Doors closed, headlights low. The driver grips
+the wheel and looks around as the chassis shakes, the engine revs by itself and
+the headlights flicker. Let impacts propagate through suspension, glass and his
+body. Build hydraulic knocks beneath the floor and engine bay.
+
+[5–12s | inside-out conversion]
+The hood splits and hinges around the core. Doors open, rotate and stretch only
+through articulated spars into wings. Roof contracts into the thorax. Bumper
+halves travel forward into mandibles as headlight units rotate and subdivide
+into amber eyes. Rear panels telescope into a segmented abdomen; exhaust pieces
+converge into the stinger. Wheels tilt into four leg joints and the underbody
+deploys the remaining two legs. Show gears, cables, manifolds, locks and
+hydraulic resistance. The driver remains visible and protected until the cabin
+has transferred its load.
+
+[12–18s | finished-form proof]
+The same mass settles as a six-legged wasp machine with narrow waist, two wings,
+one abdomen and one stinger. Prove the mapping with a short moving inspection:
+original wheels rotate at four leg joints, green paint continues across armor,
+wing spars derive from the doors and exhaust metal remains in the stinger.
+Mandibles open hydraulically, antennae twitch and amber eyes pulse. A violent
+wing test pushes dust, smoke and debris outward with directional pressure.
+
+[18–24s | one readable attack]
+The wasp lunges at the same driver. Keep the action non-graphic: mandibles close
+around his outer clothing without injury, lift him and place him onto the
+armored thorax between the wing roots. He catches two stable carbon-fiber spars
+and holds on. Preserve his face, clothes and anatomy; show one cause, one lift,
+one landing and recovery rather than a blurred teleport. Use fast tracking,
+motion blur, sparks and a few connected glass fragments.
+
+[24–30s | locomotion and scale endpoint]
+The creature scuttles through the same lot toward the forest. Six jointed legs
+and integrated wheels share weight; wings buzz, abdomen counter-swings and the
+stinger maintains clearance. Small obstacles crush under actual contact. Pull
+far back until car-scale foreground objects and tree trunks prove its size,
+then return to one short close view of amber eyes, clicking mandibles and the
+single glowing stinger.
+
+VISUAL AND AUDIO
+Natural forest light, realistic metallic green reflections, carbon weave, dirt,
+rust, grease, heat haze, wing translucency, mechanical shadows, restrained
+volumetric fog and subtle film grain. Use engine revs, panel locks, gear strain,
+hydraulics, wing buzz, mandible clicks, alarmed breathing, glass, debris and
+heavy leg impacts; no narration or music-led montage.
+
+Reject elastic morphing, liquid metal, magical glow replacing mechanics,
+unmapped new components, floating panel, duplicated wheel, fewer or more than
+six legs, multiple abdomen or stinger, cartoon insect, weightless motion,
+driver duplication or injury, changing car color or forest, inconsistent
+geometry, excessive CGI sheen, subtitle, brand logo, unwanted text or watermark.
+```
+
+**Technique:** Write transformation as a conservation problem. Each visible car
+component has one destination, then the completed form re-proves those mappings
+before action begins. This blocks the common shortcut in which a car dissolves
+and an unrelated creature appears, while the attack and wide reveal test weight
+and scale after conversion.
+
+Adapted from [Li Goudan's September 1, 2026 generated transformation post](https://x.com/zkgoudan/status/2094782031041585235)
+and the creator's [complete Seedance 2.5 prompt reply](https://x.com/zkgoudan/status/2094782161953882598).
+
+
 ## Reusable templates
 
 ### Voice-first compliance register and native-soundtrack ownership gate
@@ -24316,6 +24596,10 @@ which records the exact Seedance 2.5 Edit route, source slot, text-defined regio
 workflow, `@` references, 1080p ceiling and absence of a mask editor.
 
 ## Sources
+
+- [Chengzi / @Chengzilhy — September 1, 2026 complete Seedance 2.5 restrained micro-expression prompt and attached eight-second result, with eye-before-head attention, contact-driven chin motion and single-droplet state control](https://x.com/Chengzilhy/status/2094774229254422579)
+- [John / @john87445528 — September 1, 2026 complete two-part Seedance 2.5 office-riddle prompt and attached 30-second result, with exact continuation state, speaker ownership, hidden-prop ledger and mask payoff](https://x.com/john87445528/status/2094752055831171247)
+- [Li Goudan / @zkgoudan — September 1, 2026 Seedance 2.5 Lamborghini-to-wasp generated sequence](https://x.com/zkgoudan/status/2094782031041585235) ([complete prompt reply](https://x.com/zkgoudan/status/2094782161953882598))
 
 - [John / @johnAGI168 — September 1, 2026 complete Seedance 2.5 fixed-scale giant-goddess one-take prompt and attached 10-second result](https://x.com/johnAGI168/status/2094710250469314941)
 - [TanLuAI / @TanLuAI — September 1, 2026 Seedance 2.5 high-altitude duel workflow, finished 20-second film and asset/repair method](https://x.com/TanLuAI/status/2094762826237894934) ([complete master and targeted repair prompts](https://x.com/TanLuAI/status/2094762832730435828))
