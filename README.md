@@ -16072,15 +16072,19 @@ and the same commit's [complete end-frame cover-reveal workflow and prompt](http
 
 ### Voice-first compliance register and native-soundtrack ownership gate
 
-**Verified model:** LibTV Seedance 2.0 Mini — the versioned adapter fixes this
-exact model as its default, while the creator's September 1, 2026 commit reports
-a real mixed-reference shot whose mouth moved with the supplied speech at four
-measured checkpoints
+**Verified models:** LibTV Seedance 2.0 Mini and Higgsfield Seedance 2.5 — the
+LibTV adapter fixes the first exact model as its default and its creator reports
+a real mixed-reference shot whose mouth moved with supplied speech at four
+measured checkpoints; Hossam Daoud's September 1, 2026 studio record explicitly
+verifies an audio reference accepted by Seedance 2.5 on Higgsfield while the
+generation remained inside the website Unlimited entitlement
 
-Use this when a character must perform an approved line rather than receive a
-dub after generation. Create and measure the voice before the picture, register
-the actual image and audio with the provider's compliance system, then let the
-returned Seedance clip own its synchronized soundtrack.
+Use this when a shot contains people who may speak, remain silent or carry a
+line without showing a synchronized mouth. Classify the speech state before
+writing the visual prompt. For an on-camera line, create and measure the voice
+before the picture, register the actual image and audio when required, then let
+the returned Seedance clip own its synchronized soundtrack. For silence or a
+line that need not show a mouth, use an explicit staging route instead.
 
 ```text
 VOICE-FIRST SHOT CONTRACT
@@ -16091,8 +16095,22 @@ Mode = mixed2video / omni-reference.
 Prompt = [COMPLETE VISUAL, PERFORMANCE, CAMERA AND LINE-OWNERSHIP BRIEF].
 Requested ratio = [VALUE]. Resolution = [VALUE]. Native sound = ON.
 
+0 — ROUTE THE SPEECH STATE BEFORE WRITING THE SHOT
+Tag every line or quiet beat as exactly one of:
+- ON_CAMERA_SYNC: the speaking mouth is clearly visible; follow the audio-first
+  path below and attach the final target-language performance;
+- OFF_CAMERA_SAFE: stage the speaker turned away, over-the-shoulder or fully
+  outside frame; no visible mouth may articulate the line;
+- EXPLICIT_SILENCE: write "[CHARACTER] does not speak; mouth stays closed" as a
+  positive shot action, and name only breathing / room tone that may remain.
+
+Never generate a visibly talking face from a prompt written in another language
+and plan to repair it with a later dub. If the audio-reference path is unavailable
+or the line is shorter than the provider window, prefer OFF_CAMERA_SAFE before
+accepting unsynchronized visible speech.
+
 1 — SYNTHESIZE AND MEASURE BEFORE VIDEO
-Create the final spoken line first. Measure its actual decoded duration:
+For ON_CAMERA_SYNC, create the final spoken line first. Measure its actual decoded duration:
 speech_seconds = [VALUE].
 tail_pad = [0.6s STARTING POINT].
 planned_clip = ceil(speech_seconds + tail_pad), clamped to the model's
@@ -16113,16 +16131,22 @@ Throttle filings below the observed 15-per-minute ceiling. Treat provider code
 10026 as WAIT-AND-RETRY, not asset rejection. Never commit session credentials
 inside the project or prompt manifest.
 
-3 — BIND SPEECH TO THE SHOT
-Send @Image1 and @Audio1 together in mixed2video mode. @Image1 owns frame zero,
-face, hair, wardrobe, framing and scene. @Audio1 owns the spoken words, voice,
-pace and mouth performance.
+3 — BIND SPEECH OR SILENCE TO THE SHOT
+For ON_CAMERA_SYNC, send @Image1 and @Audio1 together in mixed2video mode.
+@Image1 owns frame zero, face, hair, wardrobe, framing and scene. @Audio1 owns
+the spoken words, voice, pace and mouth performance.
 
 [CHARACTER] says exactly: "[LINE]".
 Begin from the approved still, perform one restrained [GESTURE / GAZE CHANGE],
 and let the mouth articulate only @Audio1. Preserve natural blinks and breathing.
 No paraphrase, extra speaker, invented line, silent mouth, unrelated lip motion,
 identity drift, camera reset, music or post-added dialogue.
+
+For OFF_CAMERA_SAFE, state who speaks and keep that person's mouth unavailable
+to camera for the entire line; every visible listener keeps lips closed. For
+EXPLICIT_SILENCE, state that each visible person does not speak and keeps a
+closed resting mouth. Do not rely on the absence of quoted dialogue to mean
+silence—the source test shows that an unspecified human scene can invent speech.
 
 4 — RETURNED-AUDIO OWNERSHIP
 If the accepted job used @Audio1, mark the clip NATIVE_LIP_SYNC = true. Its own
@@ -16139,6 +16163,8 @@ ACCEPTANCE
 - closed, rounded, open-vowel and closing mouth shapes occur at the matching
   waveform moments;
 - the full line completes before the tail pad and no extra speech appears;
+- OFF_CAMERA_SAFE never reveals the speaking mouth, and EXPLICIT_SILENCE shows
+  closed resting mouths with no invented words;
 - the returned file has the expected native audio track and duration;
 - no later stage overlays another voice on a NATIVE_LIP_SYNC clip.
 
@@ -16150,14 +16176,21 @@ planned duration, job ID, returned URL, soundtrack-owner flag and fallback reaso
 without hearing the line. Voice-first timing removes duration guesses,
 compliance preflight prevents a paid generation from failing at asset intake,
 and one soundtrack-owner flag stops a correct native performance from being
-destroyed later in the pipeline. The source test also shows that a short line
-can be a valid creative beat yet still be ineligible for the provider's audio
-reference window, so fallback must be explicit per shot.
+destroyed later in the pipeline. Speech-state routing also prevents the prompt
+writer from treating silence as an omission: the Seedance 2.5 field test
+returned English-looking mouth motion from an English visual prompt before the
+Arabic line existed, while explicit closed-mouth direction or off-camera staging
+removed that failure surface. A short line can still be a valid creative beat
+while ineligible for a provider's audio window, so fallback remains explicit
+per shot.
 
 **Sources:** Jason Cai's September 1, 2026
 [real-shot lip-sync verification, compliance findings and pipeline implementation](https://github.com/jasoncai0/ai-shortdrama-pipeline/commit/1d80808f5aed05342ce189806cc6eed008cce4c0),
 the versioned [Seedance 2.0 Mini LibTV adapter and mixed-reference binding](https://github.com/jasoncai0/ai-shortdrama-pipeline/blob/1d80808f5aed05342ce189806cc6eed008cce4c0/src/plugins/video/libtv.ts),
-and the [compliance-register implementation](https://github.com/jasoncai0/ai-shortdrama-pipeline/blob/1d80808f5aed05342ce189806cc6eed008cce4c0/src/lib/compliance.ts).
+and the [compliance-register implementation](https://github.com/jasoncai0/ai-shortdrama-pipeline/blob/1d80808f5aed05342ce189806cc6eed008cce4c0/src/lib/compliance.ts); plus Hossam Daoud's September 1, 2026
+[Seedance 2.5 voice-first field verification and failure record](https://github.com/HossamDaoud83/CPS-Plugins-Official/commit/2ca64bdee63f7611a1383f4fed2de3ecc38822b1),
+the same commit's [measured order-of-work and speech-state routing](https://github.com/HossamDaoud83/CPS-Plugins-Official/blob/2ca64bdee63f7611a1383f4fed2de3ecc38822b1/plugins/studio/knowledge/PLAYBOOK.md),
+and its [explicit-silence and off-camera staging rules](https://github.com/HossamDaoud83/CPS-Plugins-Official/blob/2ca64bdee63f7611a1383f4fed2de3ecc38822b1/plugins/studio/skills/directing-principles/SKILL.md).
 
 
 ### Through-motion canonical-anchor chain and spatial-displacement gate
@@ -24808,6 +24841,8 @@ Adapted from Accomplished-Tax1050's September 1, 2026
 outputs and a reusable test structure](https://www.reddit.com/r/Seedance_AI/comments/1vws6ys/seedance_20_vs_25_i_compared_both_with_the_same/).
 
 ## Sources
+
+- [Hossam Daoud — September 1, 2026 Higgsfield Seedance 2.5 field verification: an Arabic dialogue scene exposed invented English-looking mouth motion, then an audio-first measured render kept the attached reference inside Unlimited; includes the reusable on-camera / off-camera / explicit-silence router](https://github.com/HossamDaoud83/CPS-Plugins-Official/commit/2ca64bdee63f7611a1383f4fed2de3ecc38822b1) ([measured order of work](https://github.com/HossamDaoud83/CPS-Plugins-Official/blob/2ca64bdee63f7611a1383f4fed2de3ecc38822b1/plugins/studio/knowledge/PLAYBOOK.md), [silence and staging rules](https://github.com/HossamDaoud83/CPS-Plugins-Official/blob/2ca64bdee63f7611a1383f4fed2de3ecc38822b1/plugins/studio/skills/directing-principles/SKILL.md))
 
 - [Accomplished-Tax1050 — September 1, 2026 three matched-prompt Seedance 2.0 versus Seedance 2.5 comparisons with six approximately 15.07-second 1280×720 outputs, complete prompts for quiet material contact, coordinated sports motion and Portuguese dialogue, plus an axis-scored regression-test structure](https://www.reddit.com/r/Seedance_AI/comments/1vws6ys/seedance_20_vs_25_i_compared_both_with_the_same/)
 
