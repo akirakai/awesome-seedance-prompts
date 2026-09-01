@@ -15997,7 +15997,10 @@ and [complete successful six-shot prompt](https://x.com/Ihor680847/status/209298
 **Verified model:** Seedance 2.5 — Sogni's official platform account published a
 30-second generated UGC example on August 27, 2026 and explicitly recommended
 building it as sequential 10-second Seedance 2.5 clips, approving every file
-before allowing the next clip to inherit from it
+before allowing the next clip to inherit from it. A September 1 live ModelArk
+probe separately confirmed video extension on
+`dreamina-seedance-2-5-260628`, and the creator then published the resumable
+round-chain implementation and its failure test.
 
 Use this when a longer video will be made from chained continuations. A weak
 frame near the end of segment one can become the identity, kitchen, product or
@@ -16063,6 +16066,30 @@ intermediate state or repair an upstream defect inside the child clip.
 
 Repeat the approval gate before unlocking another generation.
 
+AUTOMATED ROUND CHECKPOINT — OPTIONAL
+Use this branch when one paid job creates multiple sequential extensions.
+Set `rounds = [COUNT]`; round 1 is the ordinary take and every later round
+uses the previous approved clip as one `reference_video`. The live-tested
+Seedance 2.5 route returns only the new extension footage, so retain every
+approved segment URL for final assembly.
+
+For each round:
+1. submit exactly once and immediately persist `external_task_id`,
+   `round_index`, parent segment URL, prompt hash, model, settings and quote;
+2. poll only that task ID until terminal state—never create again after a
+   worker timeout;
+3. after success and approval, atomically store the returned segment URL,
+   advance `chain_progress`, and clear `external_task_id` in the same write;
+4. start the next round only from the newly committed checkpoint.
+
+On restart, resume from `chain_progress + 1`. If an unfinished task ID exists,
+poll it instead of submitting. Clearing the task ID before saving its segment
+can lose paid footage; retaining a completed task ID after advancing can append
+the same segment twice. Keep intermediate clips out of the public gallery and
+promote only the assembled valid lineage. Quote and reconcile
+`per-round cost × submitted rounds`; sequential dependencies cannot be
+parallelized, and a running ModelArk task may be non-cancellable.
+
 LINEAGE INVALIDATION
 Store each clip's parent asset ID, prompt, model, settings and pass record.
 If an approved parent is later replaced, mark every descendant of the old
@@ -16085,12 +16112,15 @@ missing audit record or assumed duration.
 **Why it works:** ordinary segmentation limits prompt load but does not prevent a
 bad endpoint from contaminating the rest of the chain. This gate changes the
 dependency graph: only reviewed assets may become parents, and replacing a
-parent invalidates its descendants. The extra pause is most valuable on costly
-models because it prevents spending on continuations that are already anchored
-to an unusable frame.
+parent invalidates its descendants. The durable round checkpoint adds a second
+invariant for automated runs: every paid task is either still pollable or its
+returned segment and progress are committed, never neither and never both.
 
-**Source:** Sogni's official August 27, 2026
-[Seedance 2.5 30-second UGC result and sequential 10-second approval guidance](https://x.com/Sogni_Protocol/status/2092954101558497494).
+**Sources:** Sogni's official August 27, 2026
+[Seedance 2.5 30-second UGC result and sequential 10-second approval guidance](https://x.com/Sogni_Protocol/status/2092954101558497494);
+QuantumWeaveDev26's September 1, 2026
+[live ModelArk Seedance 2.5 extension probe](https://github.com/QuantumWeaveDev26/Custom-interface/commit/db9a19b1ae4b3bc093dad8b05668d637d8acc7fe)
+and [resumable round-chain implementation](https://github.com/QuantumWeaveDev26/Custom-interface/commit/829eae47a29c22c10c39d99201daa4fba2b9d53a).
 
 ### Monotonic scrub-readiness motion audit and rejection gate
 
@@ -23842,6 +23872,8 @@ workflow, `@` references, 1080p ceiling and absence of a mask editor.
 
 ## Sources
 
+
+- [QuantumWeaveDev26 — September 1, 2026 live ModelArk `dreamina-seedance-2-5-260628` video-extension probe with returned 4-second H.264/AAC output, followed by a resumable sequential round-chain implementation with atomic progress/task-ID checkpoints and per-round cost accounting](https://github.com/QuantumWeaveDev26/Custom-interface/commit/db9a19b1ae4b3bc093dad8b05668d637d8acc7fe) ([round-chain implementation and failure test](https://github.com/QuantumWeaveDev26/Custom-interface/commit/829eae47a29c22c10c39d99201daa4fba2b9d53a))
 
 - [Dan de Geest — September 1, 2026 Krea Seedance 2.5 first/last-frame continuous-journey experiment with source frame, normalized depth diagnostic, protected destination plans, four generated MP4 tests and the “never stop moving” spatial-traversal finding](https://github.com/dandegeest/TunnelVision/commit/8a85cee8542128ed18c68a424a34f3d2f0404d5f) ([workflow explanation](https://github.com/dandegeest/TunnelVision/blob/8a85cee8542128ed18c68a424a34f3d2f0404d5f/README.md), [tuning assets and outputs](https://github.com/dandegeest/TunnelVision/tree/8a85cee8542128ed18c68a424a34f3d2f0404d5f/camotion/tuning))
 
