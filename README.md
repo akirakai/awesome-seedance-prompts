@@ -294,6 +294,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Nine-reference meme-walk one-take and appearance-window ledger](#278-nine-reference-meme-walk-one-take-and-appearance-window-ledger)
   - [Last-ferry sprint with first-frame hazard and cargo-survival payoff](#279-last-ferry-sprint-with-first-frame-hazard-and-cargo-survival-payoff)
   - [Consensual kitchen micro-drama with speaker-listener and heat-safe state gates](#280-consensual-kitchen-micro-drama-with-speaker-listener-and-heat-safe-state-gates)
+  - [Giant-goddess scale reveal through continuous retreat](#281-giant-goddess-scale-reveal-through-continuous-retreat)
+  - [Rooftop-to-river cyber-duel and environment-impact relay](#282-rooftop-to-river-cyber-duel-and-environment-impact-relay)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -15439,6 +15441,225 @@ published August 31, 2026.
 
 
 
+### 281. Giant-goddess scale reveal through continuous retreat
+
+**Verified model:** Seedance 2.5 — the original creator labels the complete
+10-second prompt with this exact version and publishes the generated result in
+the same post  
+**Use case:** colossal-subject reveal, fixed world scale, uninterrupted
+close-up-to-extreme-wide camera travel  
+**Mode:** single-character reference image-to-video  
+**Suggested settings:** 10 seconds, 9:16, one continuous shot, native audio
+
+```text
+Create a photoreal mythic-historical shot at sunset on an ancient Mediterranean
+island. The entire clip is ONE uninterrupted camera move; no hidden cut, wipe,
+flash transition or time jump.
+
+REFERENCE AUTHORITY
+@Image1 owns only the same adult woman's face, facial structure, skin tone and
+identity. Do not inherit its hair, clothing, background or camera angle. Give
+her straight black hair with blunt bangs, a weathered white lace hood, an
+ancient fitted white dress with layered skirt, white lace-up boots and one old
+silver necklace. Her right hand owns one heavy, worn, double-edged sword with a
+gray blade and leather-wrapped grip.
+
+FIXED-SCALE LAW
+From frame zero, she is already roughly one hundred meters tall and is seated
+on the highest wall of the coastal fortress. Her body size, fortress dimensions,
+shoreline and ships never change. The audience learns her scale only because
+the camera retreats through increasingly large spatial witnesses; no growth,
+inflation, transformation or miniature-to-full-size effect is allowed.
+
+WORLD MAP
+An ochre stone citadel occupies the coastal ridge. A sloping road and army
+formation connect it to a gold beach; a blue-green bay lies below. Bronze-helmet
+soldiers with round shields and spears advance uphill. Five to seven dark
+ancient longships approach the beach. Keep fortress, army, beach, bay and ships
+in that order for the entire move.
+
+[0.0–1.5s | intimate false scale]
+Begin inches behind her left shoulder so only lace, hair, shoulder and a narrow
+strip of coast are readable. Orbit clockwise about sixty degrees with an
+85 mm portrait feel and restrained handheld breathing. She stays seated and
+almost still; wind moves the hood edge and hair. Her eyes turn first, then her
+head follows slowly.
+
+[1.5–3.2s | identity proof]
+Complete the orbit into a frontal close-up. Hold sharp focus on the same eyes as
+she looks calmly into lens for half a second, then lifts the sword from beside
+her body. Continue retreating from face close-up to chest framing without a
+sudden zoom. Sunset rim light passes through the lace while natural skin texture
+remains visible.
+
+[3.2–5.2s | scale disclosure]
+Accelerate backward from medium framing to a full-body wide. Reveal that she is
+seated on the fortress edge with the layered skirt hanging outside the wall and
+both boots suspended above the slope. She extends the sword horizontally, then
+turns her wrist until the point addresses the army below. The sword has visible
+mass and inertia. Descend slightly while moving from about 30 to 200 meters so
+her stable body-to-tower ratio becomes undeniable.
+
+[5.2–7.2s | army as scale witness]
+Fly backward at low altitude over the advancing formation while always facing
+the woman on the ridge. She makes one slow, authoritative horizontal sword arc.
+Its pressure moves dust and dress fabric; front soldiers brace and lose one
+step, but nobody flies or falls unnaturally. Helmets and spear tips pass the
+frame edges to create speed without changing geography.
+
+[7.2–8.8s | land-to-sea handoff]
+Continue seamlessly over the beach and out above the bay. The seated woman now
+reads as part of the entire hilltop city; the army becomes a dense field of
+small figures. Longships enter from the bottom of frame, oars working and hulls
+rising naturally with the waves.
+
+[8.8–10.0s | terminal atlas frame]
+Ease the backward rise. Finish with the full bay, ships, beach, army, ridge city
+and giant woman visible together. She places the same sword upright beside her
+and looks beyond the fleet. In the final frame she is upper-center and about
+18 percent of image height; the army fills the middle slope and the ships occupy
+the lower water. Hold this exact world state through the last frame.
+
+AUDIO
+Low female vocal texture without words, ancient horn, slow war drums, sea,
+wind, marching feet and shield contact. Build layers as distance grows and end
+on one deep horn note.
+
+Reject any cut, camera teleport, sudden focal jump, growing body, shrinking
+castle, changing proportion, background popping into existence, standing or
+walking woman, frantic sword attack, modern wedding dress, modern architecture
+or vessel, face or wardrobe drift, missing hood, bending or multiplying sword,
+skirt through masonry, duplicate army tiles, floating soldiers or ships, frozen
+water, curved horizon, CGI/game look, subtitle, narration, text, logo or
+watermark.
+```
+
+**Technique:** Make scale a camera-discovery problem rather than an animation
+event. A fixed-size subject is re-proved against a tower, formation, beach and
+fleet while one continuous retreat connects every witness; the explicit final
+atlas frame prevents the wide reveal from losing the hero.
+
+Adapted from [John's September 1, 2026 complete Seedance 2.5 giant-goddess
+prompt and attached 10-second result](https://x.com/johnAGI168/status/2094710250469314941).
+
+
+### 282. Rooftop-to-river cyber-duel and environment-impact relay
+
+**Verified model:** Seedance 2.5 — the creator explicitly identifies the model
+for the published workflow, supplies the complete first-render and repair
+prompts, reference assets and the resulting 20-second film  
+**Use case:** two-character aerial action, weapon continuity, destructive
+location handoffs, defect-window repair  
+**Mode:** multi-image reference generation  
+**Suggested settings:** 20 seconds, 16:9, native effects-only audio
+
+```text
+Create a 20-second photoreal live-action science-fiction fight at sunrise.
+Fast, dense choreography and aggressive tracking are required, but every strike,
+fall, collision and recovery must remain physically readable.
+
+REFERENCE MANIFEST
+@Image1 owns Fighter Pink: one adult blonde woman, pink future-heritage armor
+and one pink metal spear with a silver three-sided point and red tassel.
+@Image2 owns Fighter Black: one adult Asian woman, short black hair, glossy
+worn black biomechanical armor and exactly two integrated forward forearm
+blades. The blades never become guns or detach.
+@Image3 is the master geography plate for the cloud-top ecological city,
+mountain valley and river.
+@Image4 owns only the empty high-rise restaurant: curved glass wall, pale stone
+floor, gold practical strips, interior tree, vines, tables and chairs.
+@Image5 owns the river corridor, water surface and white-gold hydrofoil traffic.
+References do not exchange identity, wardrobe, weapon, architecture or layout.
+
+ACTION AND CAMERA LANGUAGE
+Use real adult proportions, skin, hair, scratched metal, gravity, wind pressure,
+fall inertia and impact recovery. Prefer short push-pulls, whip pans, dive
+tracking, close lateral pursuit and weapon-led camera turns. Motion blur may
+sell speed but cannot hide contact. No dialogue or pose holds. Pink attacks with
+spear thrusts, sweeps, butt strikes and pole-assisted kicks. Black attacks with
+paired stabs, cross-blocks, forearm slashes, knees, sweeps and spinning kicks.
+Both may arrest a fall and enter short powered flight without wings or backpacks.
+
+[0–2s | rooftop exchange]
+Start outside the roof edge looking down the glass facade through cloud. Pink
+fires three distinct spear thrusts toward throat line, shoulder lane and torso
+armor. Black cross-blocks each one, opens both blades across the shaft, ducks a
+returning sweep and counters toward Pink's shoulder. Keep weapon origins and
+three contacts separate.
+
+[2–5s | one causal launch]
+Black traps the spear briefly, releases, sweeps Pink's support leg, then uses
+the roof edge for one fast spinning kick to the chest armor. Pink and the single
+spear leave the roof together and begin a backward fall. Dive beside Pink;
+Black pauses for less than half a second, then jumps after her.
+
+[5–7s | facade pursuit]
+Pink drags the spear tip once along the glass facade, producing sparks and one
+continuous scratch without stopping the fall. Black kicks from an exposed beam,
+closes from above and makes two downward blade attempts. Pink blocks the first;
+the second displaces the shaft. Black grips Pink's shoulder as Pink answers with
+one spear-butt strike, and their combined momentum carries them toward the
+restaurant glazing.
+
+[7–9s | environmental breach]
+The paired forearm blades contact the curved pane first; the spear braces across
+it. Fractures radiate from those contact points, then the entire section fails.
+Follow both fighters through the same opening. Transparent fragments, frame
+pieces, napkins and leaves cross into the room; stone-floor impacts and high
+wind remain directional. The restaurant contains no bystanders.
+
+[9–12s | interior three-attack relay]
+Pink rolls, rises to one knee and performs low sweep → butt strike → reverse
+thrust. Black gives only enough ground to cross-block, press the shaft downward
+and counter toward Pink's ribs. Continue with right slash → left return slash →
+paired forward stab while Pink retreats between displaced furniture. Track low
+over the fallen glass; no table, chair or shard resets.
+
+[12–15s | second exit setup]
+Pink plants the same spear once and uses it for a fast turning double kick.
+Black leans clear, lifts the shaft with one blade and forces Pink back with the
+other. Black steps onto one overturned table and delivers one airborne kick that
+drives Pink toward the opposite glass wall. Preserve accumulated room damage.
+
+[15–18s | fall-to-flight conversion]
+Pink takes the spear and breaches the second pane; Black follows. Both fall
+vertically before converting the same downward momentum into fast horizontal
+flight above cloud and valley. Track from behind as Black attacks from Pink's
+left-rear lane. Pink blocks paired stabs with the unchanged spear while towers,
+cliffs, skybridges and the river establish a continuous descent route.
+
+[18–20s | river terminal impact]
+Above the river, Pink brakes and turns with one inertia-powered sweep. Black
+rolls beneath it, makes two blade counters, steps once against the spear shaft
+and rotates into one kick to Pink's shoulder armor. Pink skims to within meters
+of the water, raises a mist tail, attempts to recover and is driven into the
+river in one large connected splash. Black remains above the same impact point;
+do not show injury.
+
+AUDIO
+Only high-altitude wind, low city machinery, blade air cuts, metal-on-spear
+contacts, armor impacts, progressive glass fracture, falling fragments,
+furniture, watercraft and the final water impact. No score, narration or speech.
+
+Reject standing exchanges, slow motion, idle staring, gun, bullet, laser,
+detached or missing forearm blade, bent or duplicated spear, weapon-owner swap,
+magic wave, weightless fall, floating pose, repeated glass break, restored
+restaurant, paper-like shards, static vegetation, missing gravity, anatomy
+failure, gore, penetration, anime/game render, plastic skin, subtitle, text,
+logo or watermark.
+```
+
+**Technique:** Treat each location change as an impact-owned handoff: roof kick
+creates the fall, weapon contact creates the glass breach, interior pressure
+creates the second exit, and vertical momentum becomes river-level flight.
+Stable weapon ownership and persistent damage keep a rapid eight-beat edit from
+reading as disconnected spectacle.
+
+Adapted from TanLuAI's September 1, 2026
+[Seedance 2.5 workflow and attached finished film](https://x.com/TanLuAI/status/2094762826237894934)
+and the creator's [complete first-render and targeted repair prompts](https://x.com/TanLuAI/status/2094762832730435828).
+
+
 ## Reusable templates
 
 ### Voice-first compliance register and native-soundtrack ownership gate
@@ -23853,6 +24074,87 @@ the [real-run matrix and downloaded Seedance 2.5 result record](https://github.c
 the [provider route compiler](https://github.com/aqm857886159/Nomi/blob/52dc89a211aee85344a02269113434ec7d10f4e2/electron/catalog/falOfficial.ts),
 and its [deep-endpoint regression gate](https://github.com/aqm857886159/Nomi/blob/52dc89a211aee85344a02269113434ec7d10f4e2/electron/catalog/vendorWireDriftFixes.test.ts).
 
+
+### Master-render defect isolation and scene-plate repair template
+
+**Verified model:** Seedance 2.5 — the creator documents this workflow beside a
+real 20-second action render, its complete master prompt, the replacement prompt
+for the failed final beat and the assembled result
+
+```text
+Use this workflow when a long, reference-heavy Seedance 2.5 render is mostly
+successful and only one or two action windows fail. Do not regenerate approved
+material merely because the terminal beat needs repair.
+
+ASSET PREP
+1. Create one face portrait per adult character for identity.
+2. Create a separate headless body/wardrobe card per character when garment,
+   armor, limb silhouette or back detail needs stronger ownership. The card
+   controls body design only; it must not invent a new face.
+3. Create one clean scene plate for every location where a major action occurs.
+4. Add one wide master-geography plate that shows how all locations connect.
+5. Write a manifest before uploading:
+   @FaceA / @BodyA = Character A identity and body design
+   @FaceB / @BodyB = Character B identity and body design
+   @Scene1 ... @SceneN = local geometry only
+   @World = route, scale, direction and environmental continuity only
+
+MASTER RENDER
+Duration = [DURATION]
+Aspect ratio = [RATIO]
+Write one complete timeline with:
+[WINDOW] -> preparation -> contact -> reaction -> recovery -> visible end state.
+Give each character a short appearance and capability description even when a
+reference exists. Assign every persistent weapon and prop one owner. Describe
+speed with concrete camera verbs such as dive-follow, short push-pull, lateral
+body track and weapon-led whip; describe environmental responses such as glass
+fracture, moving foliage, dust or water only after their physical causes.
+Generate this master once.
+
+DEFECT REVIEW
+Watch the full result and record each failed interval:
+[START–END] | expected action | observed defect | incoming state | outgoing state.
+Classify it as:
+A. fragment reshoot — the original beat is usable in concept but malformed;
+B. pickup shot — the master skipped a necessary bridge or proof;
+C. deterministic post fix — the defect is text, compositing or timing that does
+   not require a new generative shot.
+Never label the whole clip failed when an approved section can remain untouched.
+
+TARGETED REPAIR PROMPT
+Repair window = [START–END].
+Use only the references required by this window.
+Incoming state: [character lanes, pose, velocity, weapon owner, damage, camera].
+Action chain: [CONTACT 1] -> [REACTION] -> [COUNTER] -> [TERMINAL EVENT].
+Outgoing state: [exact pose, direction, location, prop and environment state].
+Camera: inherit [screen direction / height / velocity] from the preceding shot
+and finish on [handoff framing] for the next shot.
+Preserve all accumulated damage and world geometry. Do not replay earlier beats,
+introduce a new ability, reset a weapon, heal the set or change character design.
+
+ASSEMBLY GATE
+Replace only the rejected interval. Join on matching direction, velocity,
+silhouette or a physically motivated wipe. A short transition may conceal a
+minor boundary mismatch, but it cannot replace state continuity. Recheck the
+frame before and after each join for identity, weapon count, screen side,
+background geography, exposure, audio perspective and motion vector.
+
+Reject blind full rerender, overlapping replacement, duplicate beat, reset
+damage, changed reference role, new character or prop, reversed travel,
+speed discontinuity, unexplained location jump, transition used to hide a
+different world, subtitle, logo or watermark.
+```
+
+**Technique:** Separate asset authority before the expensive master render,
+then convert review notes into timestamped defect windows. A repair prompt that
+contains only incoming state, one action chain and the required outgoing state
+spends generation capacity on the broken beat while protecting approved footage
+and preserving a recoverable edit path.
+
+Adapted from TanLuAI's September 1, 2026
+[Seedance 2.5 asset-to-master-to-repair workflow and completed film](https://x.com/TanLuAI/status/2094762826237894934)
+plus the [full master prompt and narrowed second-pass correction](https://x.com/TanLuAI/status/2094762832730435828).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -24015,6 +24317,8 @@ workflow, `@` references, 1080p ceiling and absence of a mask editor.
 
 ## Sources
 
+- [John / @johnAGI168 — September 1, 2026 complete Seedance 2.5 fixed-scale giant-goddess one-take prompt and attached 10-second result](https://x.com/johnAGI168/status/2094710250469314941)
+- [TanLuAI / @TanLuAI — September 1, 2026 Seedance 2.5 high-altitude duel workflow, finished 20-second film and asset/repair method](https://x.com/TanLuAI/status/2094762826237894934) ([complete master and targeted repair prompts](https://x.com/TanLuAI/status/2094762832730435828))
 
 - [Nomi — September 1, 2026 live fal `bytedance/seedance-2.5` acceptance run: deep submit-path polling returned 405, owner/app-root routing restored the same task and produced a downloaded 202 KB MP4; includes the route compiler and structural regression gate](https://github.com/aqm857886159/Nomi/commit/52dc89a211aee85344a02269113434ec7d10f4e2) ([real-run matrix](https://github.com/aqm857886159/Nomi/blob/52dc89a211aee85344a02269113434ec7d10f4e2/docs/research/2026-09-02-model-acceptance-matrix.md), [provider route compiler](https://github.com/aqm857886159/Nomi/blob/52dc89a211aee85344a02269113434ec7d10f4e2/electron/catalog/falOfficial.ts), [regression gate](https://github.com/aqm857886159/Nomi/blob/52dc89a211aee85344a02269113434ec7d10f4e2/electron/catalog/vendorWireDriftFixes.test.ts))
 
