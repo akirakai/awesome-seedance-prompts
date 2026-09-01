@@ -15442,6 +15442,82 @@ published August 31, 2026.
 ## Reusable templates
 
 
+### Through-motion canonical-anchor chain and spatial-displacement gate
+
+**Verified model:** Krea Seedance 2.5 — the original creator names this exact
+model and platform, documents first/last-frame conditioning, and publishes the
+source frame, depth diagnostic, four generated MP4 tests and the motion findings
+
+Use this when a long first-person journey must be assembled from separately
+generated clips without revealing a stop at every shared frame. Treat every
+intermediate image as a position sampled from the middle of one continuous
+trajectory, then demand visible evidence that the camera translated through
+space rather than allowing the world to dissolve into the next image.
+
+```text
+JOURNEY
+Canonical viewpoints: [A] → [B] → [C] → [D].
+Generate one segment per adjacent pair: A→B, B→C, C→D.
+For segment N, bind @Image1 to the exact departure anchor and @Image2 to the
+exact arrival anchor. Keep aspect ratio, horizon, lens feel and camera height
+compatible across the whole chain.
+
+SEGMENT PROMPT
+[DURATION], first-person POV, one continuous shot.
+Begin exactly from @Image1 with the camera already moving forward at
+[ENTRY SPEED] toward [VANISHING POINT / ROUTE]. Continue through one physically
+connected environment and arrive exactly at @Image2 while still moving at
+[EXIT SPEED]. Never stop moving. Do not ease into either boundary frame.
+
+The destination is a real place ahead in the same space, not a replacement
+image. Preserve [LANDMARKS / MATERIALS / LIGHT DIRECTION / ROUTE GEOMETRY].
+Let nearby [POST / WALL EDGE / FOLIAGE / DOORWAY] grow rapidly and pass the
+camera, let mid-ground objects shift laterally, and keep distant structures
+moving more slowly. Use one natural foreground occlusion at [LOCATION] to
+reveal previously hidden geometry without changing the world's rules.
+
+SHARED-ANCHOR HANDOFF
+@Image2 is the final frame of this segment and the unchanged first frame of the
+next. End with forward optical flow still present; the next segment must begin
+with the same direction, camera height, horizon, speed class and visible
+occluder state. Do not add a hold, arrival pose, centered beauty shot or
+deceleration at the anchor.
+
+SPATIAL-DISPLACEMENT PROOF
+- at least one near object crosses or exits frame;
+- near, middle and far planes show different parallax rates;
+- occlusion reveals plausible unseen space instead of hiding a scene swap;
+- the route remains navigable and the destination grows consistently;
+- screen direction and velocity do not reverse at the anchor.
+
+PREFLIGHT — DIAGNOSTIC ONLY
+Optionally derive a normalized near-weight depth map from each anchor:
+white = nearer, black = farther. Mark [VANISHING POINT], protect the destination
+bounding box, and test whether the intended forward flow expands near geometry
+without crushing the destination. Use this to tune the route and occlusion
+plan; do not send the depth map as a Seedance reference unless the selected
+provider explicitly exposes a depth-control input.
+
+ACCEPTANCE GATE
+Review the complete reel, not isolated clips. Reject any segment where aesthetic
+change substitutes for camera displacement, geometry melts, the camera appears
+stationary, the destination teleports closer, the anchor holds, velocity resets,
+or adjacent clips use different boundary images. Approve only when A→B→C→D
+reads as one uninterrupted traversal with through-motion at B and C.
+```
+
+**Why it works:** exact shared boundary images solve appearance continuity, while
+constant locomotion, multi-plane parallax and foreground passage provide
+independent proof of physical camera travel. The source experiment found that
+visually attractive transitions could still feel stationary or dissolve-like;
+making locomotion the governing rule produced more convincing traversal.
+
+Adapted from Dan de Geest's September 1, 2026
+[Krea Seedance 2.5 camera-motion and depth-map experiment with four generated
+results](https://github.com/dandegeest/TunnelVision/commit/8a85cee8542128ed18c68a424a34f3d2f0404d5f),
+the [versioned workflow explanation](https://github.com/dandegeest/TunnelVision/blob/8a85cee8542128ed18c68a424a34f3d2f0404d5f/README.md)
+and the [published tuning assets and outputs](https://github.com/dandegeest/TunnelVision/tree/8a85cee8542128ed18c68a424a34f3d2f0404d5f/camotion/tuning).
+
 ### Per-window terminal-state gate for delayed ambient motion
 
 **Verified model:** Seedance 2.5 — the creator labels both 15-second tests with
@@ -23766,6 +23842,8 @@ workflow, `@` references, 1080p ceiling and absence of a mask editor.
 
 ## Sources
 
+
+- [Dan de Geest — September 1, 2026 Krea Seedance 2.5 first/last-frame continuous-journey experiment with source frame, normalized depth diagnostic, protected destination plans, four generated MP4 tests and the “never stop moving” spatial-traversal finding](https://github.com/dandegeest/TunnelVision/commit/8a85cee8542128ed18c68a424a34f3d2f0404d5f) ([workflow explanation](https://github.com/dandegeest/TunnelVision/blob/8a85cee8542128ed18c68a424a34f3d2f0404d5f/README.md), [tuning assets and outputs](https://github.com/dandegeest/TunnelVision/tree/8a85cee8542128ed18c68a424a34f3d2f0404d5f/camotion/tuning))
 
 - [Muhammad Ayan / @socialwithaayan — September 1, 2026 Seedance 2.5 nine-reference, 28-second uninterrupted phone-vlog result with character-sheet setup, ordered reference manifest, exact appearance windows and complete prompt](https://x.com/socialwithaayan/status/2094451151471296736) ([character-sheet prompt](https://x.com/socialwithaayan/status/2094451181947125848), [ordered upload rule](https://x.com/socialwithaayan/status/2094451208081850784), [reference manifest](https://x.com/socialwithaayan/status/2094451231846781265), [complete Seedance 2.5 prompt](https://x.com/socialwithaayan/status/2094451246115737859))
 
