@@ -15942,6 +15942,134 @@ and the creator's [complete Seedance 2.5 prompt reply](https://x.com/zkgoudan/st
 
 ## Reusable templates
 
+### End-frame-owned cover reveal and muted-autoplay publish gate
+
+**Verified model:** Higgsfield Seedance 2.0 (`seedance_2_0`) — the creator's
+September 1, 2026 commit explicitly reports Seedance 2.0 image-to-video
+generation, includes nine produced MP4 category animations, and preserves the
+complete versioned end-frame cover-reveal workflow and prompt template
+
+Use this when an approved static launch cover must become a short feed-card
+animation without sacrificing its exact final composition. The finished cover
+owns the END frame, while the prompt designs only the approach into it. This is
+also a publishing contract: spend video credits only after explicit approval,
+default to muted autoplay, and reject any render whose final frame drifts from
+the approved art.
+
+```text
+ROUTE RECEIPT
+Provider = Higgsfield.
+Exact model = Seedance 2.0 / seedance_2_0.
+Mode = standard image-to-video with one END image.
+Duration = 5 seconds by default; supported requested range = 4–15 seconds.
+Resolution = 1080p unless the checked model surface reports another limit.
+Audio = false by default because feed-card previews autoplay muted.
+Count = 1 approved generation, then at most one defect-specific retry.
+Record model, mode, duration, resolution, audio flag, end-image hash, prompt
+hash, returned task ID, output URL and actual credit charge.
+
+PUBLISH AUTHORIZATION GATE
+The static cover, OG metadata and favicon may already be approved, but video is
+a separate paid artifact. Before generation, record:
+video_authorized = true
+authorized_destination = [FEED CARD / STANDALONE COVER / OTHER]
+authorized_credit_ceiling = [VALUE]
+If authorization is absent, keep the static cover and stop before submitting a
+generation. Do not infer video consent from approval of the image or website.
+
+END-FRAME AUTHORITY
+@EndImage1 = the approved plain full-bleed cover. It exclusively owns:
+- final crop, aspect ratio and safe margins;
+- final hero scale, position and silhouette;
+- exact title, tagline, CTA and logo spelling;
+- typeface appearance, hierarchy, colors and spacing;
+- plate geometry, frame, capsule and corner marks;
+- final lighting, palette and compositional balance.
+
+Do not use @EndImage1 as a start image. The animation begins from a simpler
+pre-title state and must arrive at this exact cover. If only an OG-framed cover
+exists, the outer frame, capsule and corner dots remain perfectly static for the
+entire clip.
+
+CONTENT INVENTORY
+Hero subject = [SUBJECT VISIBLE IN APPROVED COVER]
+Context motion = [ONE PHYSICALLY FITTING MOTION]
+Title text = "[EXACT TITLE]"
+Title entrance family = [PIXEL SNAP / CHROME INFLATE / CONDENSED SLAM /
+OTHER TYPOGRAPHY-MATCHED MOTION]
+Tagline = "[EXACT TAGLINE]"
+CTA pill = "[EXACT CTA]"
+Static marks = [LOGO / FRAME / DOTS / CAPSULE / NONE]
+No text may be invented beyond this inventory.
+
+[0.0–1.5s | living scene, no copy]
+Begin with the approved cover's scene already recognizable but without title,
+tagline or CTA. Give the hero one restrained, content-specific motion:
+[fur ripples / stars orbit / clouds drift / train lamps flicker / selected
+equivalent]. Use one slow camera push toward the terminal composition. Preserve
+identity, product geometry, lighting direction and background layout.
+
+[1.5–3.5s | ordered graphic entrance]
+The exact title enters with the selected typography-matched movement. Complete
+the title before the exact tagline fades beneath it. Then the exact rounded CTA
+pill enters with one soft, quickly damped bounce. Logo and protected frame marks
+do not move unless their motion is explicitly authorized. No extra word,
+character, punctuation or plate appears.
+
+[3.5–5.0s | deterministic settle]
+Reduce the hero and camera to micro-motion. Title, tagline, CTA and every plate
+ease into the exact positions owned by @EndImage1. The transition completes
+before the final hold. End exactly on the provided end image and hold perfectly
+still for the last moments.
+
+FILLED PROMPT
+Premium [DURATION]-second motion-cover reveal with smooth cinematic easing.
+The scene starts WITHOUT title, tagline or CTA: [HERO SUBJECT + CONTEXT MOTION].
+A restrained camera push approaches the final composition. Then the exact title
+"[TITLE]" [TYPOGRAPHY-MATCHED ENTRANCE]; only after it lands, the exact tagline
+"[TAGLINE]" fades beneath it, followed by the rounded CTA "[CTA]" sliding into
+place with one soft bounce. Protected marks [STATIC MARKS] stay perfectly
+static. All moving elements ease precisely into their final positions. The
+video ends exactly on the provided end frame and holds still for the final
+moments. No flicker, no extra text, no misspelling, no new object, no logo drift,
+no composition change after settlement.
+
+DELIVERY AND ACCEPTANCE
+Bind the generated MP4 to the feed card's video field while keeping the approved
+cover as its poster and fallback. On hover or focus, play muted and inline; on
+leave, pause and return to time zero. Do not remove the static image from the
+DOM before the video can play.
+
+Accept only if:
+- final frame matches @EndImage1 in crop, hero geometry, copy and plate layout;
+- every visible word is exact and appears only once;
+- entrance order is title -> tagline -> CTA;
+- no text exists during the opening scene;
+- protected marks never move;
+- motion visibly settles before the final hold;
+- hover playback failure leaves the static cover intact.
+
+Wrong final composition -> confirm the asset was passed as END image, not start.
+Extra or mutated text -> reduce the inventory and restate exact-copy ownership.
+Title continues moving at the end -> extend the settle window and require an
+earlier lock.
+OG frame moves -> isolate it as protected static geometry.
+Autoplay or network failure -> retain poster/fallback; do not regenerate.
+After one defect-specific retry, ship the static cover rather than spending
+repeated credits on an unstable reveal.
+```
+
+**Why it works:** the approved cover is a terminal constraint rather than a
+starting suggestion. Motion can be inventive during the buildup, but every
+subject and graphic layer converges to a known final frame. The separate
+authorization, muted-playback and fallback gates keep a successful generation
+from becoming an unsafe or brittle website integration.
+
+Adapted from Altus Rossouw's September 1, 2026
+[Seedance 2.0 generation and nine committed MP4 hover animations](https://github.com/AltusRossouw/lumenx-lighting/commit/0ccfd3b420a6c2aaabff6b87d18f342bb1822bc5)
+and the same commit's [complete end-frame cover-reveal workflow and prompt](https://github.com/AltusRossouw/lumenx-lighting/blob/0ccfd3b420a6c2aaabff6b87d18f342bb1822bc5/.agents/skills/higgsfield-websites/references/cover-animator.md).
+
+
 ### Voice-first compliance register and native-soundtrack ownership gate
 
 **Verified model:** LibTV Seedance 2.0 Mini — the versioned adapter fixes this
@@ -24596,6 +24724,8 @@ which records the exact Seedance 2.5 Edit route, source slot, text-defined regio
 workflow, `@` references, 1080p ceiling and absence of a mask editor.
 
 ## Sources
+
+- [Altus Rossouw — September 1, 2026 Higgsfield Seedance 2.0 image-to-video release with nine committed category-card MP4s and a complete end-frame-owned cover-reveal workflow, including exact model call, typography entrance schedule, credit authorization, muted feed delivery and poster fallback](https://github.com/AltusRossouw/lumenx-lighting/commit/0ccfd3b420a6c2aaabff6b87d18f342bb1822bc5) ([full cover-reveal template](https://github.com/AltusRossouw/lumenx-lighting/blob/0ccfd3b420a6c2aaabff6b87d18f342bb1822bc5/.agents/skills/higgsfield-websites/references/cover-animator.md))
 
 - [Chengzi / @Chengzilhy — September 1, 2026 complete Seedance 2.5 restrained micro-expression prompt and attached eight-second result, with eye-before-head attention, contact-driven chin motion and single-droplet state control](https://x.com/Chengzilhy/status/2094774229254422579)
 - [John / @john87445528 — September 1, 2026 complete two-part Seedance 2.5 office-riddle prompt and attached 30-second result, with exact continuation state, speaker ownership, hidden-prop ledger and mask payoff](https://x.com/john87445528/status/2094752055831171247)
