@@ -23676,10 +23676,12 @@ and the
 ### Dry-run quote, timeout-safe job checkpoint and seed-addressable take ledger
 
 **Verified model:** Ofox `bytedance/seedance-2.5` (Seedance 2.5, BytePlus
-default upstream) — the original maintainer's August 31 release explicitly
-reports a live `create` request returning in 1.9 seconds; the same versioned
-execution package fixes this exact model as the scenario default and documents
-real paid Seedance 2.5 completion, reference-mode billing and output delivery
+default upstream) and EvoLink `seedance-2.0-mini-reference-to-video` (Seedance
+2.0 Mini) — the original Ofox maintainer's August 31 release explicitly reports
+a live `create` request returning in 1.9 seconds and real paid Seedance 2.5
+completion; Agent Media's September 1 live check records a completed Seedance
+2.0 Mini product-in-hands run whose playable output existed only inside the
+terminal response's artifact array
 
 Use this when an agent, CI job or short-lived tool call must control a paid
 generation without losing the task identifier, accidentally resubmitting after a
@@ -23744,6 +23746,21 @@ Accept COMPLETED only when the terminal body contains the exact model/provider,
 a playable rendered-output URL or retained bytes, duration and actual billing.
 Do not present an input-staging URL, thumbnail or metadata record as the video.
 
+Normalize the complete terminal body before declaring delivery:
+- read `body.artifacts` when it is an array; otherwise read
+  `body.output.artifacts` when that is an array;
+- select the first artifact whose MIME begins `video/`; if MIME is absent,
+  fall back to an MP4, MOV or WebM URL, then to the first artifact;
+- resolve known scalar aliases first
+  (`video_url`, `output_url`, `result_url`, `output_media_url`), then the
+  selected artifact URL;
+- preserve every remaining artifact with its kind and URL so a portrait,
+  character sheet or wireframe needs no second retrieval.
+
+A terminal success with neither a playable scalar URL nor a video artifact is
+DELIVERY_INCOMPLETE, not an accepted render and not permission to resubmit.
+Inspect the stored run and artifact records before considering a new paid job.
+
 Failure routing:
 - no task ID + platform confirms no accepted job and no charge -> permit one
   corrected create;
@@ -23786,11 +23803,14 @@ together.
 
 **Why it works:** a paid render can outlive the agent call that started it.
 Returning and persisting the task ID first converts a timeout from an ambiguous
-failure into a resumable state. The zero-spend compile catches invalid parameters
-and exposes the full batch liability before side effects. Per-take seeds make a
-chosen draft addressable, while contact-sheet review and actual-total accounting
-prevent an inexpensive-looking single take from hiding the cost of the batch that
-produced it.
+failure into a resumable state. Normalizing scalar and array-shaped delivery
+contracts prevents a finished render from disappearing behind a misleading
+success-without-link report, while retaining sibling artifacts avoids unnecessary
+follow-up calls. The zero-spend compile catches invalid parameters and exposes the
+full batch liability before side effects. Per-take seeds make a chosen draft
+addressable, while contact-sheet review and actual-total accounting prevent an
+inexpensive-looking single take from hiding the cost of the batch that produced
+it.
 
 **Sources:** OfoxAI's August 31, 2026
 [live-verified `create`, keyless dry-run and per-take-seed release](https://github.com/ofoxai/skills/commit/0e845c71cc304b421d40f61dba900d6bedab8b90),
@@ -23798,6 +23818,12 @@ the versioned
 [Seedance 2.5 scenario contract and promotion workflow](https://github.com/ofoxai/skills/blob/0e845c71cc304b421d40f61dba900d6bedab8b90/skills/seedance-product-video/SKILL.md),
 and the core
 [real-run, billing, chaining and failure findings](https://github.com/ofoxai/skills/blob/0e845c71cc304b421d40f61dba900d6bedab8b90/skills/ofox-video-core/CHANGELOG.md).
+Additional delivery evidence: Agent Media's September 1, 2026
+[live completed-run diagnosis and artifact-array repair](https://github.com/gitroomhq/agent-media-app/commit/2319acfbed1b87d1e65a1b46ca5b91f1fc49b0cb),
+the exact
+[Seedance 2.0 Mini product-in-hands activity](https://github.com/gitroomhq/agent-media-app/blob/2319acfbed1b87d1e65a1b46ca5b91f1fc49b0cb/services/primitive-worker-vnext/src/activities/product-in-hands.ts),
+and the
+[shape-drift regression gate](https://github.com/gitroomhq/agent-media-app/blob/2319acfbed1b87d1e65a1b46ca5b91f1fc49b0cb/services/api-v2/src/__tests__/mcp-status-tool.test.ts).
 
 ## Camera language
 
@@ -23961,6 +23987,8 @@ workflow, `@` references, 1080p ceiling and absence of a mask editor.
 
 ## Sources
 
+
+- [Agent Media — September 1, 2026 live completed Seedance 2.0 Mini product-in-hands run whose `artifacts[]` response exposed a false success-without-link delivery failure, repaired with MIME/extension-aware video selection, scalar-alias fallback and sibling-artifact reporting](https://github.com/gitroomhq/agent-media-app/commit/2319acfbed1b87d1e65a1b46ca5b91f1fc49b0cb) ([exact-model product-in-hands activity](https://github.com/gitroomhq/agent-media-app/blob/2319acfbed1b87d1e65a1b46ca5b91f1fc49b0cb/services/primitive-worker-vnext/src/activities/product-in-hands.ts), [shape-drift regression gate](https://github.com/gitroomhq/agent-media-app/blob/2319acfbed1b87d1e65a1b46ca5b91f1fc49b0cb/services/api-v2/src/__tests__/mcp-status-tool.test.ts))
 
 - [Jason Cai — September 1, 2026 LibTV Seedance 2.0 Mini real-shot voice-driven generation with measured mouth checkpoints, separate compliance-register discovery, 1.8–30.2-second audio window, 15-per-minute filing limit and native-soundtrack ownership routing](https://github.com/jasoncai0/ai-shortdrama-pipeline/commit/1d80808f5aed05342ce189806cc6eed008cce4c0) ([exact-model LibTV adapter](https://github.com/jasoncai0/ai-shortdrama-pipeline/blob/1d80808f5aed05342ce189806cc6eed008cce4c0/src/plugins/video/libtv.ts), [compliance implementation](https://github.com/jasoncai0/ai-shortdrama-pipeline/blob/1d80808f5aed05342ce189806cc6eed008cce4c0/src/lib/compliance.ts))
 
