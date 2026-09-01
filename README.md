@@ -299,6 +299,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Restrained single-tear portrait with eye-before-head motion](#283-restrained-single-tear-portrait-with-eye-before-head-motion)
   - [Two-part office riddle with exact-state continuation](#284-two-part-office-riddle-with-exact-state-continuation)
   - [Component-conserving Lamborghini-to-wasp transformation](#285-component-conserving-lamborghini-to-wasp-transformation)
+  - [Rainy-bodega errand one-take with hand-occupancy ledger](#286-rainy-bodega-errand-one-take-with-hand-occupancy-ledger)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -15940,6 +15941,93 @@ Adapted from [Li Goudan's September 1, 2026 generated transformation post](https
 and the creator's [complete Seedance 2.5 prompt reply](https://x.com/zkgoudan/status/2094782161953882598).
 
 
+
+### 286. Rainy-bodega errand one-take with hand-occupancy ledger
+
+**Verified model:** Seedance 2.5 — the original creator names the exact model and
+Aristotto text-to-video workflow, publishes the complete prompt, and attaches
+the finished 30-second 1280×720 result with audio  
+**Use case:** everyday one-take realism, cluttered interior traversal,
+hand-and-prop continuity, causal native sound  
+**Mode:** text-to-video  
+**Suggested settings:** 30 seconds, 16:9, 720p, native audio enabled
+
+```text
+Create one continuous thirty-second real-time handheld take inside a compact
+New York bodega on a rainy morning. No cuts, montage, time jump or speed ramp.
+Follow one adult bike messenger in the same yellow rain shell. One red bicycle
+helmet stays in the left hand from the opening frame through the exit.
+
+HAND AND PROP LEDGER
+- Left hand: red helmet throughout; it is never dropped, hidden, duplicated or
+  transferred.
+- Right hand: free -> entrance door -> cooler door -> one clear seltzer bottle
+  -> free while the bottle rests on the counter -> phone for one payment tap ->
+  bottle again.
+- Phone: appears only for the payment tap, then returns to the same pocket.
+- At the exit, both hands remain occupied, so the messenger pushes the door
+  open with the right forearm while still holding the bottle.
+- The same clerk, cooler, counter, customer and store layout persist.
+
+[0–5s | enter and establish]
+Start just behind the messenger outside the rain-streaked glass entrance. The
+right hand opens the door, the bell gives one clear ring and the messenger
+steps inside without releasing the helmet. The right hand closes the door.
+Water shakes from the jacket; the camera crosses the threshold and remains
+inside the same geography.
+
+[5–10s | acquire the bottle]
+Track at chest height as the messenger reaches the cooler. The right hand opens
+its door, removes exactly one clear seltzer bottle and closes it. Keep the left
+hand and red helmet continuously visible whenever framing permits. The cooler
+light, shelf arrangement and bottle label orientation do not reset.
+
+[10–16s | navigate the aisle]
+Follow from behind as the messenger walks around one stationary customer. The
+helmet remains left and the bottle remains right. Use small shoulder and camera
+adjustments to show real clearance in the narrow aisle; nobody teleports,
+changes side or duplicates.
+
+[16–22s | pay with a legal hand transfer]
+At the counter, the right hand places the bottle down in one visible action,
+freeing that hand. The same hand removes the phone, taps the card reader once
+and waits for one confirmation beep. The phone returns to its pocket before
+the right hand picks up the same bottle. The clerk only nods; no dialogue.
+
+[22–27s | return toward the entrance]
+The messenger turns toward the door with helmet left and bottle right. The
+camera walks backward at a safe fixed distance, preserving the path, counter
+and aisle direction established earlier.
+
+[27–30s | occupied-hand exit]
+Without transferring either object, the messenger presses the door with the
+right forearm, steps into the rain and leaves. The door closes once behind the
+messenger while the camera stops inside, proving the same store and completed
+route.
+
+CAMERA AND SOUND
+Use a full-length, chest-height handheld tracking perspective from behind with
+natural footfall drift and readable hands; no orbit, crane shot or impossible
+wall crossing. Build sound from rain, one entrance bell, cooler hum, wet
+footsteps, jacket movement, bottle contact, one card-reader beep and bodega room
+tone. No music or narration.
+
+Reject repeated entrance, cut disguised as a whip pan, object swap, extra
+helmet or bottle, missing payment step, wrong hand, bottle passing through the
+phone, unexplained free hand, moving customer blocking the path, store-layout
+reset, teleportation, lip movement, subtitle, logo, unwanted text or watermark.
+```
+
+**Technique:** Treat the two hands as finite-capacity tracks. Every door,
+container, purchase and payment action must reserve a free hand; a visible
+set-down creates that capacity, and the forearm exit solves the final
+both-hands-occupied state. Mirror each transfer with one causal sound so a
+continuity error is also audible.
+
+Adapted from [StrangeCurve743's August 30, 2026 Seedance 2.5 prompt and attached
+30-second bodega result](https://www.reddit.com/r/AristottoAI/comments/1w2fq6n/the_bodega_walkthrough_trend_with_seedance_25/).
+
+
 ## Reusable templates
 
 ### End-frame-owned cover reveal and muted-autoplay publish gate
@@ -24907,6 +24995,8 @@ the [versioned movement-and-load findings](https://github.com/yukitake212/video-
 and the [two-axis review method](https://github.com/yukitake212/video-knowledge/blob/0c54e3e2c6d6389054bdd79129b655fcb7e607b0/OPERATIONS.md).
 
 ## Sources
+
+- [StrangeCurve743 — August 30, 2026 Seedance 2.5 Aristotto text-to-video bodega one-take with complete 30-second prompt and attached 1280×720 result with audio](https://www.reddit.com/r/AristottoAI/comments/1w2fq6n/the_bodega_walkthrough_trend_with_seedance_25/)
 
 
 - [Yukitake212 — September 2, 2026 Higgsfield Seedance 2.5 public 30-second clip measurement: conflicting locomotion verbs changed force-walking into dragging without visual breakage; includes weight/contact observations and a separate semantic-fidelity review axis](https://github.com/yukitake212/video-knowledge/commit/0c54e3e2c6d6389054bdd79129b655fcb7e607b0) ([movement-and-load findings](https://github.com/yukitake212/video-knowledge/blob/0c54e3e2c6d6389054bdd79129b655fcb7e607b0/principles/guards.md#%E7%A7%BB%E5%8B%95%E3%81%A8%E8%8D%B7%E9%87%8D), [two-axis review method](https://github.com/yukitake212/video-knowledge/blob/0c54e3e2c6d6389054bdd79129b655fcb7e607b0/OPERATIONS.md))
