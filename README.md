@@ -24840,7 +24840,77 @@ Adapted from Accomplished-Tax1050's September 1, 2026
 [three-prompt Seedance 2.0 versus Seedance 2.5 matched comparison with six
 outputs and a reusable test structure](https://www.reddit.com/r/Seedance_AI/comments/1vws6ys/seedance_20_vs_25_i_compared_both_with_the_same/).
 
+
+### Weight-bearing locomotion contract and semantic-fidelity gate
+
+**Verified model:** Higgsfield Seedance 2.5 — a September 2, 2026 primary
+measurement record names the exact model and public 30-second creator clip,
+quotes the motion clauses under test, and documents contact, footwear, occlusion
+and frame-change observations from the generated result
+
+Use this when one adult guides, restrains, supports, drags or carries another.
+Choose one locomotion class, assign weight and propulsion explicitly, and make
+the contact evidence visible. Review semantic fidelity separately from visual
+quality so a polished but story-wrong movement cannot pass.
+
+```text
+MOTION SEMANTICS CONTRACT
+Primary locomotion = [WALKS UNDER GUIDANCE / IS DRAGGED / IS CARRIED].
+Choose exactly one; do not blend synonyms from the other classes.
+Weight bearer = [SUBJECT / SUPPORTING ADULT / PROP].
+Foot contact = [AT LEAST ONE FOOT PLANTED CONTINUOUSLY / INTERMITTENT /
+NONE WHILE CARRIED].
+Propulsion owner = [SUBJECT / NAMED ADULT / VEHICLE].
+Lift permission = [FORBIDDEN / ALLOWED ONLY DURING NAMED WINDOW].
+Visible proof = [SOLE OR FOOT COMPRESSION] + [READABLE GRIP OR SUPPORT POINT] +
+[POST-CONTACT BODY RESPONSE].
+
+POSITIVE STATE
+Write the desired physics directly:
+"[SUBJECT]'s weight remains on [BEARER] throughout. [FOOT STATE] stays visible.
+[NAMED AGENT] supplies forward force through [CONTACT POINT]. The body is
+[NEVER LIFTED / LIFTED ONLY AT TIMECODE AND SET DOWN BEFORE END STATE]."
+Do not rely on "do not drag" or another forbidden verb as the main control.
+
+CONTRADICTION SCRUB
+Delete any secondary verb that implies a different weight state. Replace
+"A or B" for footwear, subject count, contact or route with one committed value.
+If the grip is causal, reserve an unobstructed view of it; do not let foreground
+bodies hide every contact point.
+
+TIMELINE AND HANDOFF
+[0–Xs] Establish weight, foot contact, propulsion owner and visible grip.
+[X–Ys] Perform one locomotion class while camera keeps feet and contact readable.
+[Y–Zs] Arrive at [TERMINAL POSITION]; preserve the same bearer and show one
+recovery beat that proves the requested state survived.
+
+TWO-AXIS ACCEPTANCE
+QUALITY — inspect anatomy, subject count, identity, perspective, wardrobe and
+scene continuity.
+SEMANTIC FIDELITY — inspect weight bearer, foot contact, propulsion owner,
+lift permission, direction and causal grip.
+Record the first failing timestamp on either axis. Reject a take that passes
+QUALITY but changes the requested locomotion class; patch or rewrite from that
+timestamp instead of approving it from attractive still frames.
+```
+
+**Why it works:** fluent motion can conceal a causal error. In the measured
+source, five competing movement verbs made a requested force-walk read as a
+drag, while ordinary shape, count, perspective and design checks still passed.
+A single locomotion class plus visible load and contact evidence makes the story
+state observable; separate acceptance axes prevent aesthetic coherence from
+masking semantic failure.
+
+Adapted from Yukitake212's September 2, 2026
+[Higgsfield Seedance 2.5 public-clip measurement and change record](https://github.com/yukitake212/video-knowledge/commit/0c54e3e2c6d6389054bdd79129b655fcb7e607b0),
+the [versioned movement-and-load findings](https://github.com/yukitake212/video-knowledge/blob/0c54e3e2c6d6389054bdd79129b655fcb7e607b0/principles/guards.md#%E7%A7%BB%E5%8B%95%E3%81%A8%E8%8D%B7%E9%87%8D)
+and the [two-axis review method](https://github.com/yukitake212/video-knowledge/blob/0c54e3e2c6d6389054bdd79129b655fcb7e607b0/OPERATIONS.md).
+
 ## Sources
+
+
+- [Yukitake212 — September 2, 2026 Higgsfield Seedance 2.5 public 30-second clip measurement: conflicting locomotion verbs changed force-walking into dragging without visual breakage; includes weight/contact observations and a separate semantic-fidelity review axis](https://github.com/yukitake212/video-knowledge/commit/0c54e3e2c6d6389054bdd79129b655fcb7e607b0) ([movement-and-load findings](https://github.com/yukitake212/video-knowledge/blob/0c54e3e2c6d6389054bdd79129b655fcb7e607b0/principles/guards.md#%E7%A7%BB%E5%8B%95%E3%81%A8%E8%8D%B7%E9%87%8D), [two-axis review method](https://github.com/yukitake212/video-knowledge/blob/0c54e3e2c6d6389054bdd79129b655fcb7e607b0/OPERATIONS.md))
+
 
 - [Hossam Daoud — September 1, 2026 Higgsfield Seedance 2.5 field verification: an Arabic dialogue scene exposed invented English-looking mouth motion, then an audio-first measured render kept the attached reference inside Unlimited; includes the reusable on-camera / off-camera / explicit-silence router](https://github.com/HossamDaoud83/CPS-Plugins-Official/commit/2ca64bdee63f7611a1383f4fed2de3ecc38822b1) ([measured order of work](https://github.com/HossamDaoud83/CPS-Plugins-Official/blob/2ca64bdee63f7611a1383f4fed2de3ecc38822b1/plugins/studio/knowledge/PLAYBOOK.md), [silence and staging rules](https://github.com/HossamDaoud83/CPS-Plugins-Official/blob/2ca64bdee63f7611a1383f4fed2de3ecc38822b1/plugins/studio/skills/directing-principles/SKILL.md))
 
