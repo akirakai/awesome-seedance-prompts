@@ -23676,12 +23676,16 @@ and the
 ### Dry-run quote, timeout-safe job checkpoint and seed-addressable take ledger
 
 **Verified model:** Ofox `bytedance/seedance-2.5` (Seedance 2.5, BytePlus
-default upstream) and EvoLink `seedance-2.0-mini-reference-to-video` (Seedance
-2.0 Mini) — the original Ofox maintainer's August 31 release explicitly reports
-a live `create` request returning in 1.9 seconds and real paid Seedance 2.5
-completion; Agent Media's September 1 live check records a completed Seedance
-2.0 Mini product-in-hands run whose playable output existed only inside the
-terminal response's artifact array
+default upstream), fal `bytedance/seedance-2.5` (Seedance 2.5), and EvoLink
+`seedance-2.0-mini-reference-to-video` (Seedance 2.0 Mini) — the original Ofox
+maintainer's August 31 release explicitly reports a live `create` request
+returning in 1.9 seconds and real paid Seedance 2.5 completion; Agent Media's
+September 1 live check records a completed Seedance 2.0 Mini product-in-hands
+run whose playable output existed only inside the terminal response's artifact
+array; Nomi's September 1 live fal acceptance run records a Seedance 2.5 create
+that could not be polled through its deep submit path until status/result were
+moved to the provider's app root, after which a real MP4 completed and was
+downloaded
 
 Use this when an agent, CI job or short-lived tool call must control a paid
 generation without losing the task identifier, accidentally resubmitting after a
@@ -23746,6 +23750,23 @@ Accept COMPLETED only when the terminal body contains the exact model/provider,
 a playable rendered-output URL or retained bytes, duration and actual billing.
 Do not present an input-staging URL, thumbnail or metadata record as the video.
 
+Before polling, compile and persist a provider-specific route ledger:
+- submit_endpoint = [FULL VERSIONED CREATE ENDPOINT];
+- advertised_status_url = [VALUE FROM CREATE RESPONSE OR NONE];
+- advertised_result_url = [VALUE FROM CREATE RESPONSE OR NONE];
+- compiled_poll_root = [EXACT PROVIDER ROUTE];
+- route_schema_snapshot = [ID / DATE].
+
+Do not assume status and result live beneath the full create endpoint. For fal's
+verified deep-path contract, keep creation on the complete model path but reduce
+poll/result routing to the first two non-empty path segments, `owner/app`:
+`bytedance/seedance-2.5/text-to-video` creates on the full path, while status
+and result resolve under `bytedance/seedance-2.5/requests/{task_id}`. Prefer
+provider-returned status/result URLs when documented, verify their model root,
+and reject a route compiler that changes the task ID. HTTP 405 on a deep poll
+after an accepted create is ROUTE_MISMATCH, not a failed render and never
+permission to submit again. Correct only the poll root and resume the same task.
+
 Normalize the complete terminal body before declaring delivery:
 - read `body.artifacts` when it is an array; otherwise read
   `body.output.artifacts` when that is an array;
@@ -23803,14 +23824,16 @@ together.
 
 **Why it works:** a paid render can outlive the agent call that started it.
 Returning and persisting the task ID first converts a timeout from an ambiguous
-failure into a resumable state. Normalizing scalar and array-shaped delivery
-contracts prevents a finished render from disappearing behind a misleading
-success-without-link report, while retaining sibling artifacts avoids unnecessary
-follow-up calls. The zero-spend compile catches invalid parameters and exposes the
-full batch liability before side effects. Per-take seeds make a chosen draft
-addressable, while contact-sheet review and actual-total accounting prevent an
-inexpensive-looking single take from hiding the cost of the batch that produced
-it.
+failure into a resumable state. Recording create and poll routes separately
+prevents an accepted fal job from being misclassified as failed merely because
+its versioned submit endpoint has no nested status handler. Normalizing scalar
+and array-shaped delivery contracts prevents a finished render from disappearing
+behind a misleading success-without-link report, while retaining sibling
+artifacts avoids unnecessary follow-up calls. The zero-spend compile catches
+invalid parameters and exposes the full batch liability before side effects.
+Per-take seeds make a chosen draft addressable, while contact-sheet review and
+actual-total accounting prevent an inexpensive-looking single take from hiding
+the cost of the batch that produced it.
 
 **Sources:** OfoxAI's August 31, 2026
 [live-verified `create`, keyless dry-run and per-take-seed release](https://github.com/ofoxai/skills/commit/0e845c71cc304b421d40f61dba900d6bedab8b90),
@@ -23824,6 +23847,11 @@ the exact
 [Seedance 2.0 Mini product-in-hands activity](https://github.com/gitroomhq/agent-media-app/blob/2319acfbed1b87d1e65a1b46ca5b91f1fc49b0cb/services/primitive-worker-vnext/src/activities/product-in-hands.ts),
 and the
 [shape-drift regression gate](https://github.com/gitroomhq/agent-media-app/blob/2319acfbed1b87d1e65a1b46ca5b91f1fc49b0cb/services/api-v2/src/__tests__/mcp-status-tool.test.ts).
+Additional fal routing evidence: Nomi's September 1, 2026
+[live model-acceptance run and repair](https://github.com/aqm857886159/Nomi/commit/52dc89a211aee85344a02269113434ec7d10f4e2),
+the [real-run matrix and downloaded Seedance 2.5 result record](https://github.com/aqm857886159/Nomi/blob/52dc89a211aee85344a02269113434ec7d10f4e2/docs/research/2026-09-02-model-acceptance-matrix.md),
+the [provider route compiler](https://github.com/aqm857886159/Nomi/blob/52dc89a211aee85344a02269113434ec7d10f4e2/electron/catalog/falOfficial.ts),
+and its [deep-endpoint regression gate](https://github.com/aqm857886159/Nomi/blob/52dc89a211aee85344a02269113434ec7d10f4e2/electron/catalog/vendorWireDriftFixes.test.ts).
 
 ## Camera language
 
@@ -23987,6 +24015,8 @@ workflow, `@` references, 1080p ceiling and absence of a mask editor.
 
 ## Sources
 
+
+- [Nomi — September 1, 2026 live fal `bytedance/seedance-2.5` acceptance run: deep submit-path polling returned 405, owner/app-root routing restored the same task and produced a downloaded 202 KB MP4; includes the route compiler and structural regression gate](https://github.com/aqm857886159/Nomi/commit/52dc89a211aee85344a02269113434ec7d10f4e2) ([real-run matrix](https://github.com/aqm857886159/Nomi/blob/52dc89a211aee85344a02269113434ec7d10f4e2/docs/research/2026-09-02-model-acceptance-matrix.md), [provider route compiler](https://github.com/aqm857886159/Nomi/blob/52dc89a211aee85344a02269113434ec7d10f4e2/electron/catalog/falOfficial.ts), [regression gate](https://github.com/aqm857886159/Nomi/blob/52dc89a211aee85344a02269113434ec7d10f4e2/electron/catalog/vendorWireDriftFixes.test.ts))
 
 - [Agent Media — September 1, 2026 live completed Seedance 2.0 Mini product-in-hands run whose `artifacts[]` response exposed a false success-without-link delivery failure, repaired with MIME/extension-aware video selection, scalar-alias fallback and sibling-artifact reporting](https://github.com/gitroomhq/agent-media-app/commit/2319acfbed1b87d1e65a1b46ca5b91f1fc49b0cb) ([exact-model product-in-hands activity](https://github.com/gitroomhq/agent-media-app/blob/2319acfbed1b87d1e65a1b46ca5b91f1fc49b0cb/services/primitive-worker-vnext/src/activities/product-in-hands.ts), [shape-drift regression gate](https://github.com/gitroomhq/agent-media-app/blob/2319acfbed1b87d1e65a1b46ca5b91f1fc49b0cb/services/api-v2/src/__tests__/mcp-status-tool.test.ts))
 
