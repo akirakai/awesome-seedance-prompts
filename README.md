@@ -24723,7 +24723,93 @@ region-level edits without a full reroll; and Iret's August 31, 2026
 which records the exact Seedance 2.5 Edit route, source slot, text-defined region
 workflow, `@` references, 1080p ceiling and absence of a mask editor.
 
+### Frozen-input cross-version regression and axis-scored acceptance gate
+
+**Verified model:** LumiYing Seedance 2.0 and Seedance 2.5 — the original
+creator published three complete prompts and six paired outputs, with each pair
+generated at approximately 15.07 seconds and 1280×720 while keeping the prompt
+and delivery format unchanged between model versions
+
+Use this before migrating an established production workflow to a newer
+Seedance version. Freeze the creative packet, run both versions against the
+same observable requirements, and score separate failure axes instead of
+choosing from poster frames or general impressions.
+
+```text
+TEST RECEIPT
+Provider / surface = [ONE PROVIDER AND MODE FOR BOTH RUNS].
+Candidate A = [EXACT SEEDANCE VERSION].
+Candidate B = [EXACT SEEDANCE VERSION].
+Purpose = [UPGRADE DECISION / REGRESSION CHECK / SHOT-TYPE ROUTING].
+Record task IDs, completion times, output metadata and cost for every take.
+
+FROZEN INPUT PACKET
+Prompt = [ONE COMPLETE PRODUCTION BRIEF; BYTE-FOR-BYTE IDENTICAL].
+References = [ORDERED FILE LIST + HASH + DECLARED ROLE FOR EACH ASSET].
+Duration / aspect ratio / resolution / audio setting = [IDENTICAL].
+Seed = [SAME SEED WHEN SUPPORTED]; otherwise run [N] takes per version and
+compare distributions rather than one lucky result.
+Do not rewrite a weak clause for only one candidate. Any prompt correction
+starts a new paired test.
+
+PROBE SET
+Probe 1 — QUIET CONTACT:
+[SUBJECT] manipulates [MATERIAL / OBJECT] in close view. Require natural skin,
+hands, blinking, contact deformation and one restrained expression.
+
+Probe 2 — COORDINATED MOTION:
+[EXACT SUBJECT COUNT] completes [ORDERED ACTION CHAIN] around fixed
+[COURT / SET / PROP] geometry. Name one continuous object trajectory and the
+exact terminal frame.
+
+Probe 3 — SPEECH ALIGNMENT:
+[CHARACTER A] and [CHARACTER B] exchange [EXACT LINES] in [LANGUAGE]. Assign
+speaker windows, listening behaviour, lip ownership, subtitle policy and the
+relative level of dialogue, ambience and music.
+
+For each probe, divide the duration into continuous time windows. Give each
+window one primary action, one camera instruction, one inherited continuity
+anchor and one observable ending condition. Add only failure controls that can
+be judged yes or no.
+
+BLIND ACCEPTANCE MATRIX
+Score every take without exposing its model label:
+- timing: requested beats occur inside their windows;
+- continuity: identity, wardrobe, props and background persist;
+- anatomy and contact: hands, joints, weight and material response remain
+  plausible;
+- physics and geometry: trajectories, lines, surfaces and screen direction do
+  not jump or deform;
+- camera: the named move completes without drift or unrequested cuts;
+- audio / language / text: speaker, pronunciation, lip movement, subtitle
+  policy and mix agree;
+- terminal frame: the result ends on the declared state rather than starting
+  the next action.
+
+Record PASS / FAIL plus the first failing timestamp for every axis. Never
+collapse the matrix into one subjective quality score.
+
+DECISION GATE
+Adopt Candidate B only if it clears the required axes across the probe set and
+repeat takes without introducing a blocking regression. Route shot types
+separately when one version wins quiet acting but another wins fast motion.
+Keep Candidate A available until Candidate B passes the real project's prompt
+and reference packet. Archive the frozen inputs, outputs and scorecards so a
+later provider or model update can rerun the same test.
+```
+
+**Why it works:** identical inputs turn version choice into a controlled
+production decision. The three probes expose complementary failure surfaces,
+while blind, timestamped scoring prevents a striking frame from hiding broken
+motion, contact, language or continuity.
+
+Adapted from Accomplished-Tax1050's September 1, 2026
+[three-prompt Seedance 2.0 versus Seedance 2.5 matched comparison with six
+outputs and a reusable test structure](https://www.reddit.com/r/Seedance_AI/comments/1vws6ys/seedance_20_vs_25_i_compared_both_with_the_same/).
+
 ## Sources
+
+- [Accomplished-Tax1050 — September 1, 2026 three matched-prompt Seedance 2.0 versus Seedance 2.5 comparisons with six approximately 15.07-second 1280×720 outputs, complete prompts for quiet material contact, coordinated sports motion and Portuguese dialogue, plus an axis-scored regression-test structure](https://www.reddit.com/r/Seedance_AI/comments/1vws6ys/seedance_20_vs_25_i_compared_both_with_the_same/)
 
 - [Altus Rossouw — September 1, 2026 Higgsfield Seedance 2.0 image-to-video release with nine committed category-card MP4s and a complete end-frame-owned cover-reveal workflow, including exact model call, typography entrance schedule, credit authorization, muted feed delivery and poster fallback](https://github.com/AltusRossouw/lumenx-lighting/commit/0ccfd3b420a6c2aaabff6b87d18f342bb1822bc5) ([full cover-reveal template](https://github.com/AltusRossouw/lumenx-lighting/blob/0ccfd3b420a6c2aaabff6b87d18f342bb1822bc5/.agents/skills/higgsfield-websites/references/cover-animator.md))
 
