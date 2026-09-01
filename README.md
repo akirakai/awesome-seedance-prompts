@@ -17814,7 +17814,9 @@ No narration, extra speech, canned audience noise, or overpowering music.
 
 For 20–30 second generations, define a small set of invariants before adding
 scene changes. The surroundings may transform, but the camera path and spatial
-anchors should not.
+anchors should not. For an identity-heavy route inside one continuous space,
+divide the duration into three stages, allow one material change per stage, and
+give every stage a visible terminal state before the next change begins.
 
 ```text
 [DURATION], one continuous shot with no cuts, jump cuts, or hidden transitions.
@@ -17834,6 +17836,21 @@ TIMELINE
 [20–25s] Zone 3: [PAYOFF].
 [25–30s] Decelerate, settle into [FINAL COMPOSITION], and hold.
 
+OPTIONAL 30-SECOND IDENTITY-ROUTE BRANCH
+Camera leash: remain [MEASURED DISTANCE] behind / beside [SUBJECT], match the
+subject's speed, and make only the corrections needed to preserve that distance.
+
+Stage 1 [0–T1]: establish [ROUTE / BODY SCALE / CAMERA LEASH]; permit one change:
+[ACTION OR ROUTE EVENT]. End state: [VISIBLE SUBJECT POSE + ROUTE POSITION].
+Stage 2 [T1–T2]: inherit Stage 1 exactly; permit one change: [NEXT ACTION OR
+GEOMETRY EVENT]. End state: [VISIBLE SUBJECT POSE + ROUTE POSITION].
+Stage 3 [T2–30s]: inherit Stage 2 exactly; permit one final change: [PAYOFF OR
+ARRIVAL]. End state: [STABLE FINAL POSE / POSITION / COMPOSITION], held clearly.
+
+Do not start a later-stage change before the prior terminal state is visible.
+No distance pumping, camera overtake, identity reset, skipped route segment,
+extra action, or stage that ends mid-motion.
+
 CONTINUITY
 Doors remain connected; floor level, window positions, walking pace, camera
 height, screen direction, and body scale remain coherent. Transform style only
@@ -17845,6 +17862,9 @@ This “fixed invariants + threshold-triggered transformations” pattern is ada
 from the official Seedance 2.5 six-room one-take preview. See the
 [Volcano Ark showcase](https://ark.volcengine.com/promotion?modelName=seedance-2-5)
 and [archived full prompt](https://github.com/renoise-ai/awesome-seedance-2-5-prompts#six-room-one-take-transition).
+The measured camera leash and three-stage terminal-state branch are adapted from
+[Glenn Williams's September 1, 2026 Seedance 2.5 30-second spiral-staircase
+one-take, complete prompt and generated result](https://x.com/GlennHasABeard/status/2094526206343299417).
 
 ### Full-frame graphic-match calibration and reference-authority gate
 
@@ -24300,6 +24320,8 @@ Community examples and techniques referenced in this README:
 - [Rajamobeen Ashraf / Chloe — Seedance 2.5 text-placement failure, owner-approved still-first `omni_reference` repair, returned-mode semantics and persistent model-behavior ledger](https://github.com/rajamobeenashraf-jpg/chloe/commit/a8dd825a1497d0c7a236e96650a1170d84dfc87c) ([verified ledger](https://github.com/rajamobeenashraf-jpg/chloe/blob/cd4e91da8f879b0a7ab7b69e1524e56312bfd164/PROMPT_LEARNINGS.md), [prompt assembler](https://github.com/rajamobeenashraf-jpg/chloe/blob/cd4e91da8f879b0a7ab7b69e1524e56312bfd164/pai-pro-tooling/alexander/build_prompt.mjs))
 
 - [QuantumWeaveDev26 / Custom-interface — Seedance 2.0 Fast ordered multi-clip role binding, live two-clip extension and source-return control](https://github.com/QuantumWeaveDev26/Custom-interface/commit/67b6a8578072468b084112eca104a27bce246fd1) ([implementation and role repair](https://github.com/QuantumWeaveDev26/Custom-interface/commit/cb6d918c3c07715cb559296b422ce98cc01e23a4), [exact model configuration](https://github.com/QuantumWeaveDev26/Custom-interface/blob/67b6a8578072468b084112eca104a27bce246fd1/apps/web/.env.example))
+
+- [Glenn Williams — Seedance 2.5 30-second spiral-staircase one-take, measured camera leash and three-stage terminal-state rule](https://x.com/GlennHasABeard/status/2094526206343299417)
 
 Official model references:
 
