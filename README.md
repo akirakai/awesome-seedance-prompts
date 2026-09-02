@@ -305,6 +305,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Multi-floor cartel gauntlet with clearance checkpoints](#289-multi-floor-cartel-gauntlet-with-clearance-checkpoints)
   - [Inflatable water-shoe stunt with buoyancy and landing ledger](#290-inflatable-water-shoe-stunt-with-buoyancy-and-landing-ledger)
   - [Hit-location lightning-spear ledger and snap-triggered payoff](#291-hit-location-lightning-spear-ledger-and-snap-triggered-payoff)
+  - [Motif-inheritance title sequence with long-range design memory](#292-motif-inheritance-title-sequence-with-long-range-design-memory)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -16501,6 +16502,80 @@ Adapted and rewritten from Xingzhe AI Video's September 2, 2026
 and [complete prompt reply](https://x.com/joshesye/status/2095117466636628317).
 
 
+### 292. Motif-inheritance title sequence with long-range design memory
+
+**Verified model:** Seedance 2.5 on Runway — the original creator names this
+exact version beside the finished 30-second video and publishes the complete
+prompt in the attached reply  
+**Use case:** cinematic title design, graphic match transitions, long-range
+motif recall, readable typography  
+**Mode:** text-to-video  
+**Suggested settings:** 30 seconds, widescreen
+
+```text
+Create a 30-second cinematic title sequence governed by one non-negotiable
+continuity rule: every shot must inherit one visible object, contour, texture
+or typographic element from the immediately preceding shot. That inherited
+element must physically or graphically transform into the main subject of the
+next composition. Never introduce a new scene through an unrelated cut or a
+dissolve that has no shared visual carrier.
+
+[0–5s | sphere to letter]
+Begin in a dark controlled studio with one perfectly transparent glass sphere
+floating at center. Push forward slowly. A reflection inside the sphere sharpens
+into a circular letterform; preserve the same circle, scale and screen position
+until the sphere itself becomes the O in the elegant title ORIGIN. Hold just
+long enough for the word to read.
+
+[5–10s | letter to passage]
+Expand only the inherited O. Its interior gains depth and becomes a circular
+architectural tunnel while the rest of ORIGIN leaves frame. Keep the camera's
+forward direction continuous and travel through the opening; do not cut to a
+separate tunnel.
+
+[10–15s | passage to eye]
+At the far end, reveal that the same circular exit is the iris of one human
+eye. Complete the scale change in one legible move. Approach until the iris
+fills frame, retaining the ring geometry and radial detail established by the
+tunnel.
+
+[15–20s | eye to graphic title]
+Flatten the inherited iris rays into one refined sunburst graphic. Use that
+sunburst as the actual background structure of the next readable title card,
+not as a decorative overlay that appears independently. Keep the typography,
+spacing, contrast and lighting language consistent with ORIGIN.
+
+[20–27s | controlled continuation]
+Create two or three more title transitions under the same contract. Before each
+change, make the carrier visible; then let its shape, surface or letterform
+become the next scene's dominant subject. Across the whole sequence show five
+to seven distinct readable title cards. Preserve visual identity through
+controlled camera motion, macro detail, tactile materials and precise lighting,
+even when the environment changes.
+
+[27–30s | long-range recall]
+Bring back transformed traces of the opening circle, tunnel depth and iris
+rays. Combine them without replaying an earlier shot. Their final shared form
+must resolve into the word CONTINUUM in a calm minimal composition. Stop all
+transformation and hold the complete title steadily for the final beat.
+
+Reject arbitrary montage, unmotivated hard cut, dissolve-only bridge, carrier
+that disappears before the next shot, unrelated new imagery, illegible or
+mutating title text, inconsistent graphic identity, restless final frame,
+watermark or logo.
+```
+
+**Technique:** Treat every transition as a custody transfer. A visible carrier
+is established, preserved through the boundary, and promoted to the next
+shot's subject. The closing title then recalls several earlier carriers at
+once, adding long-range design memory instead of merely chaining attractive
+match cuts.
+
+Adapted and rewritten from Umesh's September 2, 2026
+[original Seedance 2.5 result post](https://x.com/umesh_ai/status/2095129568529256487)
+and [complete prompt reply](https://x.com/umesh_ai/status/2095129571263955288).
+
+
 ## Reusable templates
 
 ### End-frame-owned cover reveal and muted-autoplay publish gate
@@ -26341,6 +26416,8 @@ Community examples and techniques referenced in this README:
 - [QuantumWeaveDev26 / Custom-interface — Seedance 2.0 Fast ordered multi-clip role binding, live two-clip extension and source-return control](https://github.com/QuantumWeaveDev26/Custom-interface/commit/67b6a8578072468b084112eca104a27bce246fd1) ([implementation and role repair](https://github.com/QuantumWeaveDev26/Custom-interface/commit/cb6d918c3c07715cb559296b422ce98cc01e23a4), [exact model configuration](https://github.com/QuantumWeaveDev26/Custom-interface/blob/67b6a8578072468b084112eca104a27bce246fd1/apps/web/.env.example))
 
 - [Glenn Williams — Seedance 2.5 30-second spiral-staircase one-take, measured camera leash and three-stage terminal-state rule](https://x.com/GlennHasABeard/status/2094526206343299417)
+
+- [Umesh — Runway Seedance 2.5 motif-inheritance title sequence, 30-second result and complete prompt](https://x.com/umesh_ai/status/2095129568529256487) ([complete prompt reply](https://x.com/umesh_ai/status/2095129571263955288))
 
 Official model references:
 
