@@ -17048,6 +17048,121 @@ Adapted and rewritten from Saul Goodman / @Goodmanprotocol's September 3, 2026
 
 ## Reusable templates
 
+### Face-presence recast coverage gate and source-audio authority
+
+**Verified model:** Seedance 2.5 — the creator's released workflow calls
+`bytedance/seedance-2-5` through kie.ai, reports two dedicated replacement
+tests for the face-free-shot failure and documents a measured paid render  
+**Use case:** recast a proven UGC or product ad while preserving its edit,
+performance, product choreography, captions and original soundtrack  
+**Mode:** video editing with one source video and one replacement-person image
+
+```text
+FACE-PRESENCE RECAST PREFLIGHT
+
+INPUTS
+@Video1 = SOURCE AD, 4–30 seconds. It owns duration, aspect ratio, shot order,
+cut times, camera, framing, performance timing, product blocking, environment,
+lighting, captions and source audio.
+@Image1 = REPLACEMENT ADULT. It owns only face, hair, visible body proportions,
+skin tone, wardrobe and named accessories.
+
+1. BUILD A SHOT-LEVEL COVERAGE TABLE BEFORE GENERATION
+For every source shot, record:
+SHOT | IN–OUT | CAMERA | REQUIRED ACTION/CONTACT | FACE VISIBLE? |
+BODY OR HANDS VISIBLE WITHOUT FACE? | TEXT | AUDIO EVENT
+
+Mark each shot as:
+A — FACE-ANCHORED: the replacement face is clearly visible with the body.
+B — FACE-FREE BODY: hands or body appear, but no replacement face can anchor
+identity.
+C — NON-PERSON: product, environment or graphic only.
+
+Calculate the total duration and percentage of B shots. Do not hide a short B
+shot: skin tone, build, nails, jewellery or hand identity may remain from the
+source even when a replacement instruction and negative clause are present.
+
+2. PRE-SPEND DECISION GATE
+If B coverage is non-zero, choose and record exactly one route before rendering:
+COMPATIBLE CAST — select @Image1 with similar visible skin tone, build, hands,
+nails and jewellery to the source performer.
+REPLATE — remove or separately rebuild the B shots so the new face is visible
+whenever identity-bearing body detail appears.
+ACCEPT — keep the source body detail in those named shots and disclose the
+mismatch in the delivery report.
+Do not claim that stronger wording will solve a face-free identity operation.
+Do not submit until the route and affected time windows are explicit.
+
+3. EDIT PROMPT
+
+@Image1 is REPLACEMENT: [VISIBLE FACE, HAIR, SKIN, BUILD, WARDROBE AND
+ACCESSORIES].
+
+Treat @Video1 as the immutable editorial master. Preserve its [N] shots and
+cuts at [TIMESTAMPS]; preserve the camera mode for every shot, crop, focus,
+exposure, screen direction, performance rhythm, product scale and contact
+points, room geometry, light direction, captions and graphics.
+
+CHANGE ONLY:
+Replace the original on-camera presenter with REPLACEMENT from @Image1 in
+FACE-ANCHORED shots [LIST A SHOTS AND TIME WINDOWS]. Transfer the original
+pose, gaze, expression beat, gesture, limb path, object contact and entry/exit
+timing without changing the edit. Keep REPLACEMENT's identity and wardrobe
+stable across all A shots; never blend with or duplicate the source presenter.
+
+KNOWN FACE-FREE WINDOWS:
+[LIST B SHOTS AND TIME WINDOWS]. Apply the selected route:
+[COMPATIBLE CAST / REPLATE / ACCEPT, WITH ITS EXACT CONSEQUENCE].
+Never silently report these windows as successfully recast.
+
+LOCKED:
+- C shots remain source-identical.
+- Product shape, packaging colour, printed marks, scale and hand-contact frame
+  remain unchanged.
+- Environment, props, perspective, shadows unrelated to the performer, lens
+  behaviour, motion blur, noise and compression texture remain unchanged.
+- Captions preserve their approved wording, location and timing.
+- No new person, product, prop, shot, camera move, transition or dialogue.
+
+Reject background redraw, altered cut, retiming, reframing, new camera motion,
+product deformation, shifted contact, caption mutation, identity blend,
+wardrobe drift, source face surviving in an A shot, invented replacement claim
+for a B shot, extra speaker, regenerated soundtrack, logo or watermark.
+
+4. SOURCE-AUDIO AUTHORITY
+Render the visual edit without generated audio. After generation, align the
+result to the source start, keep the shortest valid shared duration and remux
+the untouched @Video1 audio track. Do not ask the video model to recreate
+speech, room tone or music that already exists in the approved ad.
+
+5. ACCEPTANCE REPORT
+Return a diff rather than a generic success statement:
+HELD — cut timestamps, camera map, product contacts, lighting, environment,
+captions and source audio.
+CHANGED — replacement identity and wardrobe in the named A windows.
+KNOWN — every B window and the approved handling route.
+CHECK — source face absent from A shots; replacement stable across A shots;
+no new cut; product contacts within [TOLERANCE]; original audio waveform and
+sync retained; output duration difference stated.
+```
+
+**Technique:** Identity replacement needs a visibility audit before it needs a
+stronger prompt. Separating face-anchored, face-free-body and non-person shots
+turns an otherwise hidden model limitation into a measurable casting and source-
+selection decision. Making the original soundtrack authoritative also prevents
+a visually successful recast from changing proven dialogue, timing or music.
+
+This complements a protected-plate replacement prompt: the plate lock describes
+the desired edit, while this gate identifies the frames where the requested
+identity change lacks usable facial evidence and must be routed before spend.
+
+Adapted and rewritten from Mike Futia's September 2, 2026
+[creator-tested Seedance 2.5 Ad Multiplier release](https://github.com/mikefutia/ad-multiplier/commit/d1b1afe274d7fe1126622280b8a885455b22d2b4),
+[complete workflow and measured limitations](https://github.com/mikefutia/ad-multiplier/blob/d1b1afe274d7fe1126622280b8a885455b22d2b4/README.md)
+and [reusable prompt template](https://github.com/mikefutia/ad-multiplier/blob/d1b1afe274d7fe1126622280b8a885455b22d2b4/SKILL.md).
+
+---
+
 ### End-frame-owned cover reveal and muted-autoplay publish gate
 
 **Verified model:** Higgsfield Seedance 2.0 (`seedance_2_0`) — the creator's
@@ -26285,6 +26400,8 @@ the [versioned movement-and-load findings](https://github.com/yukitake212/video-
 and the [two-axis review method](https://github.com/yukitake212/video-knowledge/blob/0c54e3e2c6d6389054bdd79129b655fcb7e607b0/OPERATIONS.md).
 
 ## Sources
+
+- [Mike Futia — September 2, 2026 creator-tested Seedance 2.5 Ad Multiplier: complete video-edit prompt, shot-level face-presence audit, two failed face-free replacement tests, pre-spend mismatch gate and source-audio remux workflow](https://github.com/mikefutia/ad-multiplier/commit/d1b1afe274d7fe1126622280b8a885455b22d2b4) ([workflow](https://github.com/mikefutia/ad-multiplier/blob/d1b1afe274d7fe1126622280b8a885455b22d2b4/README.md), [prompt template](https://github.com/mikefutia/ad-multiplier/blob/d1b1afe274d7fe1126622280b8a885455b22d2b4/SKILL.md))
 
 - [Saul Goodman / @Goodmanprotocol — September 3, 2026 Seedance 2.5 ten-look one-shirt fashion reel: complete 30-second prompt, invariant base-garment styling matrix, ordered transition montage, opening lip-synced line and attached 30.144-second generated result](https://x.com/Goodmanprotocol/status/2095216981624721691)
 
