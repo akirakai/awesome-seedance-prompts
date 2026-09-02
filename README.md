@@ -302,6 +302,9 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Rainy-bodega errand one-take with hand-occupancy ledger](#286-rainy-bodega-errand-one-take-with-hand-occupancy-ledger)
   - [Overhead restaurant hero with reserved-copy lanes and staged dish arrivals](#287-overhead-restaurant-hero-with-reserved-copy-lanes-and-staged-dish-arrivals)
   - [Off-camera filmer hose mishap with progressive wetness and lens-hit cutoff](#288-off-camera-filmer-hose-mishap-with-progressive-wetness-and-lens-hit-cutoff)
+  - [Multi-floor cartel gauntlet with clearance checkpoints](#289-multi-floor-cartel-gauntlet-with-clearance-checkpoints)
+  - [Inflatable water-shoe stunt with buoyancy and landing ledger](#290-inflatable-water-shoe-stunt-with-buoyancy-and-landing-ledger)
+  - [Hit-location lightning-spear ledger and snap-triggered payoff](#291-hit-location-lightning-spear-ledger-and-snap-triggered-payoff)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -16235,6 +16238,269 @@ preserves the complete prompt, creator attribution, model label and original
 source link.
 
 
+
+### 289. Multi-floor cartel gauntlet with clearance checkpoints
+
+**Verified model:** VideoDuck Seedance 2.5 — the original creator names this
+exact version, publishes the complete prompt and attaches the generated
+30-second action film in the same post  
+**Use case:** grounded one-versus-many action, enemy-class separation,
+multi-floor continuity, native sound  
+**Mode:** text-to-video  
+**Suggested settings:** 30 seconds, 16:9, gritty photoreal action
+
+```text
+Create a 30-second photoreal action short inside one abandoned concrete
+hideout at dusk. Use a desaturated gray-brown grade, dirty practical bulbs,
+dust and haze, real contact spacing, readable body weight and a dynamic
+handheld camera that never hides impacts behind uncontrolled shake.
+
+CAST AND CLASS LOCK
+Hero: one exhausted adult man, about 35, weathered face, dark stubble, one
+brow cut, dirty white sleeveless shirt, worn dark trousers and boots.
+Ground-floor gang: rough casual clothing and machetes only.
+Upper-floor enforcers: dark tailored suits and blades only.
+Boss: one larger adult man with slicked-back graying hair, trimmed beard,
+immaculate white suit and dark shirt. No class may borrow another class's
+wardrobe, weapon or face.
+
+GEOGRAPHY AND CLEARANCE STATE
+The battered entrance opens into one dim ground floor with peeling walls,
+pillars, debris, movable furniture and a staircase at the rear. The stairs
+lead to one upper room with tall dirty windows and shafts of low light.
+A floor becomes CLEARED only after every attacker on it has dropped and
+stays down. No defeated person reappears, teleports upstairs or resets.
+
+[0–5s | breach and threat map]
+Follow behind the hero as he approaches, shouts one short challenge and
+kicks the entrance open. The door fails from that contact. Push through with
+him and reveal the casual-clothed gang readying machetes while the rear
+staircase remains visible as the destination.
+
+[5–12s | ground-floor clearance]
+Use short changing angles around one continuous fight. He evades one visible
+machete wind-up, redirects the arm, disarms that attacker, uses one pillar
+and one piece of furniture for leverage, then drops the remaining gang one
+at a time. Every strike has preparation, contact, recoil and recovery. End
+on a brief wide that proves the floor is cleared and the stairs unobstructed.
+
+[12–17s | transition checkpoint]
+The hero catches one breath, keeps the same injuries and clothing, then
+crosses the already-damaged room and climbs. Track beside him without
+restoring furniture or bodies. At the landing, reveal the suited enforcers
+in front and the white-suited boss behind them; hold one tense beat.
+
+[17–24s | second class]
+The enforcers attack first. Keep their dark suits and blades distinct from
+the earlier gang. The hero blocks, redirects and defeats them through fast
+but legible exchanges. When the last enforcer drops, settle into a wider
+two-shot with only hero and boss standing.
+
+[24–30s | terminal duel]
+The hero and boss trade heavy close-range blows, each visibly absorbing
+impact and regaining balance. The hero creates one opening, lands a decisive
+final strike and the boss drops once. End on the hero standing in a shaft of
+dim light while the camera settles into a clean stable frame.
+
+Audio: door burst, concrete room tone, blades, cloth, furniture, footsteps,
+breathing, grunts, impact transients and a restrained action score that peaks
+only at the final strike. Intense but non-gory: no blood or graphic injury.
+Reject duplicate hero, resurrected attacker, class or weapon swap, extra boss,
+changing floor plan, instant room clearance, missed eyeline, weightless hit,
+random slow motion, teleport, limb fusion, subtitle, logo or watermark.
+```
+
+**Technique:** Treat each floor as a state checkpoint rather than a decorative
+location change. Enemy classes own different clothes and weapons, while a
+clearance gate requires the camera to prove that one wave is finished before
+the hero advances. Persistent room damage and injuries make the staircase a
+causal handoff instead of a reset.
+
+Adapted and rewritten from [Aaliyah's original VideoDuck Seedance 2.5 post,
+complete prompt and attached 30-second result](https://x.com/The_Kremlinn/status/2095083714120229230),
+published September 2, 2026.
+
+
+### 290. Inflatable water-shoe stunt with buoyancy and landing ledger
+
+**Verified model:** APOB Image to Video Ultra S Seedance 2.5 — APOB's official
+creator article names the exact model, supplies the complete first-frame,
+character-sheet and video prompts, and shows the generated result  
+**Use case:** impossible-product advertising, water physics, continuous phone
+tracking, safe stunt choreography  
+**Mode:** opening-frame image-to-video with character-sheet reference  
+**Suggested settings:** 15 seconds, 9:16, photoreal social video
+
+```text
+Generate a 15-second vertical photoreal product-test video from the supplied
+opening frame. One adult beach athlete tests exactly one pair of oversized
+transparent inflatable water-running shoes on a bright lake. The tone is a
+viral phone-shot experiment with polished product detail, not a real stunt
+tutorial.
+
+IDENTITY AND PRODUCT LOCK
+Preserve the athlete's face, tanned skin, short wet dark hair, natural build,
+white sleeveless top, teal swim shorts and black waterproof watch. The same
+two shoes stay attached to the same feet: thick clear vinyl, rounded air
+chambers, visible seams and trapped bubbles, reinforced translucent soles and
+subtle blue edges. No logo, opaque material, deflation, melting or duplication.
+
+PHYSICS LEDGER
+Dry sand: vinyl holds shape under hand pressure.
+Shallow water: soles compress under body weight, rebound and float.
+Acceleration: each sole keeps water contact and creates its own spray plus a
+connected V-shaped wake.
+Boat wake: knees load before launch; buoyancy converts the rising water surface
+into upward motion.
+Landing: both soles contact water, compress, displace one outward splash,
+rebound once and continue gliding. Never skip a state.
+
+[0.0–2.0s | preparation]
+Begin from the approved low handheld first frame. He finishes one ankle strap,
+taps the glossy vinyl and shifts weight forward. Sunlight refracts through the
+shoes onto wet sand.
+
+[2.0–4.0s | first proof]
+He stands carefully and takes two steps into shallow water. Keep the camera
+near foot level so compression, rebound, ripples and flotation are visible.
+
+[4.0–6.5s | glide]
+He pushes off, bends his knees and opens his arms for balance. Track low beside
+him as the two soles skim the surface and build continuous spray and wake.
+
+[6.5–9.0s | speed and identity]
+Increase speed without a cut. Briefly tilt to his delighted face, then return
+to the product. Reflections of sky and lake move across the clear vinyl while
+the athlete and horizon remain stable.
+
+[9.0–11.5s | loaded wake]
+A small speedboat wake approaches from behind. He sees it, lowers his center of
+mass and bends both knees before the shoes ride up the wave. Water pressure,
+body loading and rising surface create the launch.
+
+[11.5–13.5s | one controlled rotation]
+Perform exactly one compact backflip, anatomically correct and not excessively
+high. Shoes remain attached, inflated and sunlit; the camera follows without
+teleporting or losing the landing zone.
+
+[13.5–15.0s | product-owned landing]
+Both shoes reconnect with the lake, compress and rebound once. One believable
+splash expands from contact. He regains balance, glides to a slower pace and
+ends smiling with both shoes unobstructed in a stable final frame.
+
+Use bright summer daylight, natural skin, realistic refraction, drag, foam,
+weight transfer and modest handheld motion. Audio: strap, vinyl tap, sand,
+ripples, increasing water hiss, wake impact, air movement, landing splash and
+the athlete's brief laugh. Reject hard cut, impossible camera jump, floating
+without contact, missing wake, pre-contact splash, unsafe crash, injury, panic,
+extra person nearby, anatomy error, detached shoe, opaque or branded product,
+water explosion, caption, subtitle, logo or watermark.
+```
+
+**Technique:** Prove an impossible product through a material-state ledger.
+Compression, rebound, flotation, drag, wake and landing occur in that order,
+so every spectacular beat inherits a visible physical cause. Returning to a
+stable product frame after the single stunt makes the motion serve the ad.
+
+Adapted and rewritten from APOB's September 2, 2026 official
+[Seedance 2.5 water-running-shoe workflow, complete prompts and generated
+result](https://x.com/apob_ai/article/2095078853550993478).
+
+
+### 291. Hit-location lightning-spear ledger and snap-triggered payoff
+
+**Verified model:** Seedance 2.5 — the creator labels the finished 20-second
+film with this exact version and publishes the complete prompt in the attached
+reply  
+**Use case:** Eastern-fantasy one-take action, weapon ownership, delayed VFX
+detonation, partial-boss cliffhanger  
+**Mode:** hero-reference plus environment-reference image-to-video  
+**Suggested settings:** 20 seconds, 16:9, 4K, 24fps, native effects audio
+
+```text
+Create a 20-second photoreal live-action Eastern-fantasy battle in one
+continuous 35mm handheld take. @Hero owns one adult woman's face, cold focused
+expression, long black hair, silver-blue armor with dragon shoulders, crown,
+white-blue fabric and exactly one silver-blue pole spear. @Bridge owns the
+storm-dark ancient city wall, broken black-stone bridge, blue-white lightning
+cracks, lava chasm on frame left, fog and distant mountains. Neither reference
+may overwrite the other's role.
+
+ENEMY AND WEAPON CONTRACT
+Use black heavy-armored nonhuman soldiers with horned helmets and orange-red
+molten cores; one giant commander is larger than the rank and file. The heroine
+always owns the same visible spear. It never becomes a sword, staff, gun, pair
+of blades or free-floating duplicate.
+
+HIT-LOCATION LEDGER
+Every successful spear or spectral-spear contact writes one visible blue-white
+mark at the exact armor location hit. A mark persists faintly after impact.
+No mark may appear on an untouched enemy. At 15–18 seconds, one finger snap is
+the only permission to connect and detonate the stored marks.
+
+[0–4s | bridge entry and weighted contact]
+Rush low along the cracked bridge as soldiers charge and the giant commander
+breaks stone behind them. The heroine lands from frame right, plants the spear
+butt with weight, then slides forward. One horizontal sweep hits three breastplates;
+a low shaft strike breaks one knee guard; one rising attack lifts that enemy
+toward the lava edge. Show metal deformation, sparks, recoil and recovery.
+
+[4–7s | wheel and counterforce]
+She spins the same spear into one circular lightning-frost wheel. Orbit only
+halfway so her face, hands and weapon path remain readable. The commander
+punches; she braces diagonally with the spear. Contact depresses the bridge and
+throws fragments. She converts the recoil into one backward aerial rotation.
+
+[7–11s | loaded vertical strike]
+Land on one raised slab, pull the spear back and lower the hips like a drawn bow.
+Rack focus from her rain- and dust-marked profile to the gathering spear tip.
+She jumps; one cloud lightning path joins the weapon. Tilt up, then follow the
+vertical spear strike into the center of the enemy group. Contact creates one
+radial lightning-frost shockwave and connected bridge cracks.
+
+[11–15s | registered spectral hits]
+She rises, passes one hand along the physical spear and creates multiple
+non-solid silver-blue spear traces without obscuring her body. One forward
+point releases them. Each trace must visibly hit armor before its blue-white
+mark appears; molten cores dim only at those contact points. Avoid a generic
+full-screen explosion.
+
+[15–18s | snap-owned delayed release]
+She plants the physical spear and motion suddenly settles into a close side
+portrait. Background soldiers continue approaching. Rack focus to her free
+hand. She makes exactly one audible snap. Only now do all previously registered
+marks brighten and connect into a lightning-frost array. Each affected soldier
+freezes and fractures outward from its own stored hit location into ash, sparks
+and ice crystals. She retrieves the unchanged spear after the release.
+
+[18–20s | partial threat reveal]
+Track slowly backward behind her as she walks toward the city. The fallen
+commander stays down. Clouds rotate inward and the lava chasm rises; reveal only
+one city-gate-sized molten claw gripping the broken bridge plus a vast shadow.
+Do not show the final creature's full body. She stops, looks up and the spear
+relights for a stable cliffhanger frame.
+
+No music. Use wind, thunder, armored footsteps, spear air cuts, metal contacts,
+stone failure, lava, monster voices, ice crack, one dry finger snap and the
+delayed array release. Keep rain, dust, sweat and scorch marks cumulative.
+Reject missing or transformed spear, double weapon, human-looking army,
+unearned mark, detonation before snap, simultaneous hit without contact,
+reset bridge damage, clean studio face, random face or armor change, game CG,
+anime render, plastic skin, complete final-boss reveal, subtitle, logo or
+watermark.
+```
+
+**Technique:** Separate impact from payoff with a persistent hit-location
+register. Each contact creates one owned mark; the snap reads and releases only
+that registered set. This prevents a delayed VFX climax from becoming an
+unrelated global explosion. A partial final threat reveal adds escalation
+without spending the last seconds on a new full character design.
+
+Adapted and rewritten from Xingzhe AI Video's September 2, 2026
+[original Seedance 2.5 result post](https://x.com/joshesye/status/2095117021008560356)
+and [complete prompt reply](https://x.com/joshesye/status/2095117466636628317).
+
+
 ## Reusable templates
 
 ### End-frame-owned cover reveal and muted-autoplay publish gate
@@ -25474,6 +25740,12 @@ the [versioned movement-and-load findings](https://github.com/yukitake212/video-
 and the [two-axis review method](https://github.com/yukitake212/video-knowledge/blob/0c54e3e2c6d6389054bdd79129b655fcb7e607b0/OPERATIONS.md).
 
 ## Sources
+
+- [Aaliyah / @The_Kremlinn — September 2, 2026 VideoDuck Seedance 2.5 multi-floor cartel gauntlet, complete prompt and attached 30-second result](https://x.com/The_Kremlinn/status/2095083714120229230)
+
+- [APOB AI — September 2, 2026 official Image to Video Ultra S Seedance 2.5 water-running-shoe workflow, opening-frame prompt, character sheet, complete video prompt and generated result](https://x.com/apob_ai/article/2095078853550993478)
+
+- [Xingzhe AI Video / @joshesye — September 2, 2026 Seedance 2.5 lightning-spear battle and attached 20-second result](https://x.com/joshesye/status/2095117021008560356) ([complete prompt](https://x.com/joshesye/status/2095117466636628317))
 
 - [Nexora — September 2, 2026 Seedance 2.5 early-2000s Korean home-video hose mishap with off-camera filmer ownership, progressive wetness and lens-hit hard cut](https://x.com/frametheory058/status/2095003298747318531) ([complete versioned prompt record](https://youmind.com/video-prompts/korean-home-video-early-2000s-10225))
 
