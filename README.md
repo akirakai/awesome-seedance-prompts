@@ -22606,6 +22606,98 @@ and the committed
 
 
 
+### Lineage-locked master/preview pair and non-clobbering recovery gate
+
+**Verified model:** AiTop `DOUBAO_SEEDANCE_2_0_4K` (Seedance 2.0 4K) and
+`DOUBAO_SEEDANCE_2_5` (Seedance 2.5). The original developer recorded real
+Seedance 2.0 4K tasks whose HEVC Main 10 masters acquired delayed H.264 preview
+derivatives, a real Seedance 2.5 video-extension task with the same behavior,
+and a fourteen-second 4K task whose derivative took about six minutes. The
+September 2 release commits both the repaired workflow and regression tests for
+master preservation, delayed recovery and master/preview lineage.
+
+Use this when a high-quality Seedance result needs a compatibility derivative
+for browser review, or when an accepted clip is the parent of another generation
+that may resume after a refresh. Treat the provider master, compatibility preview
+and child result as three different assets. Never let a convenient preview URL or
+a recovered child overwrite the approved parent.
+
+```text
+LINEAGE CONTRACT
+parent_clip = [URL + HASH + TASK ID + EXACT MODEL]
+current_run = [TASK ID + MODE + SOURCE PARENT HASH]
+returned_master = [ORIGINAL PROVIDER URL + CONTAINER + CODEC]
+compatibility_preview = [OPTIONAL DERIVATIVE URL + CODEC]
+child_clip = [NEW RESULT URL + HASH + PARENT TASK ID]
+
+MASTER OWNERSHIP
+The returned master is immutable.
+Download, archive and downstream reference binding always use returned_master.
+Playback may use compatibility_preview only after the pairing gate passes.
+A derivative never replaces the master and never becomes the source of truth.
+
+ASYNC DERIVATIVE GATE
+Do not assume TRANSFER_SUCCESS means every derivative is ready.
+Record [MASTER STATUS], [DERIVATIVE STATUS] and [FIRST-SEEN TIMES] separately.
+If derivative status is IGNORE, use the master.
+If it is pending, continue status-only polling within [BOUNDED WAIT WINDOW],
+then retry lookup from the saved task ID; never create another paid render.
+If the wait expires, preserve the master and label preview unavailable.
+
+PAIRING GATE
+Before preview substitution, prove that master and derivative share one canonical
+output identity. Prefer provider-returned lineage metadata; otherwise compare a
+stable task/output identifier extracted from both URLs.
+Reject the preview when:
+- its canonical output ID differs from the master;
+- its task ID belongs to the current child while the UI slot owns the parent;
+- pairing cannot be proven; or
+- it is only an input, thumbnail or unrelated terminal artifact.
+
+NON-CLOBBERING RECOVERY
+On resume, inspect the run node before applying the recovered result.
+- empty placeholder or dedicated output node -> recovered result may fill it;
+- node already holding a playable parent clip -> keep that clip unchanged and
+  create or update a downstream child node for the recovered result;
+- existing paired preview -> retain it with its owning master;
+- preview produced for the new child -> attach it only to that child.
+Persist parent_task_id, task_id, master URL, preview URL and output hashes
+atomically before clearing recovery state.
+
+MODEL/PAYLOAD PREFLIGHT
+Pin the exact model enum. For AiTop Seedance 2.0 4K, compile the gateway's exact
+`4K` resolution spelling. For Seedance 2.5, strip unsupported `tools` fields and
+preserve the selected normal/edit/extend task contract. Fail before billing when
+the model, task type or parameter dialect does not match the compiled payload.
+
+ACCEPTANCE
+1. Full master downloads and decodes in the finishing path.
+2. Browser review uses only a proven same-output derivative.
+3. Download and chained generation still resolve to the master.
+4. Refresh during generation leaves the parent clip byte-identical.
+5. The recovered child appears once and keeps its own preview.
+6. Replaying the recovery routine is idempotent and submits no new job.
+```
+
+**Why it works:** an asynchronous compatibility derivative can arrive minutes
+after the master, and a continuation node can simultaneously own an old parent
+and a new child result. Separating those identities prevents two deceptive
+successes: displaying the child's preview as though the parent changed, and
+overwriting the approved parent while recovering a completed continuation.
+Status-only recovery also avoids paying twice for a render that already exists.
+
+**Sources:** ScofiledYu's September 2, 2026
+[Seedance 2.0 4K / 2.5 repair and regression commit](https://github.com/ScofiledYu/FlowGen-AI-Studio/commit/227d46c591c275d6589ab6a301cb00d1106d3a93),
+the committed
+[measured HEVC, delayed-transcode and recovery findings](https://github.com/ScofiledYu/FlowGen-AI-Studio/blob/227d46c591c275d6589ab6a301cb00d1106d3a93/skill.md),
+[same-output pairing implementation](https://github.com/ScofiledYu/FlowGen-AI-Studio/blob/227d46c591c275d6589ab6a301cb00d1106d3a93/utils/taskStatusVideoUrl.ts),
+[non-clobbering recovery implementation](https://github.com/ScofiledYu/FlowGen-AI-Studio/blob/227d46c591c275d6589ab6a301cb00d1106d3a93/utils/runRecovery.ts),
+and the
+[paired-preview](https://github.com/ScofiledYu/FlowGen-AI-Studio/blob/227d46c591c275d6589ab6a301cb00d1106d3a93/scripts/transcoded-video-url-test.ts)
+and
+[parent-preservation](https://github.com/ScofiledYu/FlowGen-AI-Studio/blob/227d46c591c275d6589ab6a301cb00d1106d3a93/scripts/mov-recovery-keep-original-test.ts)
+regression gates.
+
 ### Account-scoped resolution re-probe and immutable model-ceiling gate
 
 **Verified model:** Seedance 2.5
@@ -25164,6 +25256,8 @@ the [versioned movement-and-load findings](https://github.com/yukitake212/video-
 and the [two-axis review method](https://github.com/yukitake212/video-knowledge/blob/0c54e3e2c6d6389054bdd79129b655fcb7e607b0/OPERATIONS.md).
 
 ## Sources
+
+- [ScofiledYu — September 2, 2026 AiTop `DOUBAO_SEEDANCE_2_0_4K` and `DOUBAO_SEEDANCE_2_5` measured delivery/recovery release: delayed H.264 compatibility derivatives for HEVC masters, same-output pairing, preview-versus-download ownership and non-clobbering continuation recovery](https://github.com/ScofiledYu/FlowGen-AI-Studio/commit/227d46c591c275d6589ab6a301cb00d1106d3a93) ([measured findings](https://github.com/ScofiledYu/FlowGen-AI-Studio/blob/227d46c591c275d6589ab6a301cb00d1106d3a93/skill.md), [pairing regression gate](https://github.com/ScofiledYu/FlowGen-AI-Studio/blob/227d46c591c275d6589ab6a301cb00d1106d3a93/scripts/transcoded-video-url-test.ts), [recovery regression gate](https://github.com/ScofiledYu/FlowGen-AI-Studio/blob/227d46c591c275d6589ab6a301cb00d1106d3a93/scripts/mov-recovery-keep-original-test.ts))
 
 - [Aggravating_Yam_5784 — September 1, 2026 original Seedance 2.5 video-to-poster workflow: short temporal pose candidates, direct source-frame export, upscale, crop and deterministic typography finishing](https://www.reddit.com/r/Seedance_AI/comments/1w4nfni/i_made_cinematic_ai_poster_using_seedance_25/)
 
