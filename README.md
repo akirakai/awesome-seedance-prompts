@@ -301,6 +301,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Component-conserving Lamborghini-to-wasp transformation](#285-component-conserving-lamborghini-to-wasp-transformation)
   - [Rainy-bodega errand one-take with hand-occupancy ledger](#286-rainy-bodega-errand-one-take-with-hand-occupancy-ledger)
   - [Overhead restaurant hero with reserved-copy lanes and staged dish arrivals](#287-overhead-restaurant-hero-with-reserved-copy-lanes-and-staged-dish-arrivals)
+  - [Off-camera filmer hose mishap with progressive wetness and lens-hit cutoff](#288-off-camera-filmer-hose-mishap-with-progressive-wetness-and-lens-hit-cutoff)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -16105,6 +16106,135 @@ settings](https://github.com/Yitzy-max/Website-skills-/blob/57981cb88f6612de26a1
 render](https://d8j0ntlcm91z4.cloudfront.net/user_3IkRZvhQJHVYjmx5uflJWyvBjWO/hf_20260902_002513_bd270e3f-54f6-4658-9cfa-2435511dfea1.mp4).
 
 
+### 288. Off-camera filmer hose mishap with progressive wetness and lens-hit cutoff
+
+**Verified model:** Seedance 2.5 — the creator's September 2, 2026 original
+post explicitly says the displayed result was created with Seedance 2.5 and
+shares the complete prompt; the versioned platform record preserves the same
+prompt, author and original-post link  
+**Use case:** nostalgic home-video comedy, off-camera dialogue ownership,
+cause-and-effect prop physics, irreversible wetness continuity  
+**Mode:** reference-driven text-to-video with native dialogue and location sound  
+**Suggested settings:** 30 seconds, landscape, native audio enabled
+
+```text
+Create a thirty-second photoreal candid home video in one continuous event.
+It takes place on a warm summer morning in an ordinary older Korean residential
+lane. The result must resemble a forgotten early-2000s consumer-DV recording
+made by a friend, never a commercial, polished film, music video or AI demo.
+
+REFERENCE AND ROLE OWNERSHIP
+- @CharacterSheet1 owns the recurring characters' identities only.
+- Minji is a 21-year-old Korean woman with a natural face, visible skin texture,
+  loosely tied messy black hair, an oversized white T-shirt, loose pale lounge
+  trousers and flat sandals. Preserve her face, age, proportions, hair and
+  clothing from first frame to last.
+- Jisung is the sole camera operator. He remains behind the camera for the
+  entire clip; only his assigned voice, laughter and physical camera reactions
+  may reveal him. Never materialize him in frame or in a reflection.
+- Mrs Park is the same elderly neighbor throughout, wearing one unchanged set
+  of patterned house clothes.
+- Two schoolchildren may cross the distant background once. They never become
+  foreground performers.
+
+CAMERA AND PLACE CONTRACT
+Use one handheld early-2000s DV camcorder at conversational distance: imperfect
+framing, mild shake, small accidental pans, brief focus correction, exposure
+breathing, faded color, soft detail, compression noise and natural motion blur.
+The operator may lose the subject only as an immediate reaction to a splash,
+then must recover her. No gimbal, drone, slow motion, cinematic dolly, shallow
+beauty focus, heroic composition or modern commercial grade.
+
+Keep one continuous lane with aged walls, modest houses, plants, laundry,
+bicycles, poles and overhead wires. Morning light direction and every doorway
+remain stable. The green hose stays connected to one unseen tap and keeps one
+nozzle, one continuous body and one physically traceable route.
+
+STATE LEDGER
+- Minji: dry -> face and upper shirt wet -> shoulder and hair wetter -> visibly
+  soaked at the finish. Once wet, she never becomes dry again.
+- Hose: under sandal / low pressure -> foot released / pressure restored ->
+  nozzle redirected by hand. Water exists only at its nozzle.
+- Lens: clean until the final beat -> one direct spray -> attached droplets and
+  smeared partial blur -> immediate hard cut.
+- Dialogue belongs only to its named speaker. No extra speaker or line.
+
+[0–4s | ordinary setup]
+Minji exits her doorway carrying the connected hose and waters several potted
+plants. She notices the camera, gives a small amused look and asks naturally,
+"Why are you filming this?" Jisung answers from behind the camera, "I'm bored."
+She gives him a restrained annoyed smile and returns to the plants.
+
+[4–9s | visible cause]
+The stream weakens gradually to almost nothing. Minji checks the nozzle once,
+then follows the hose with her eyes and discovers that her own sandal is
+pinning it to the concrete. Hold a readable view that includes her foot, the
+flattened hose and the weak stream; do not conceal the cause with a cut.
+
+[9–13s | pressure payoff]
+She lifts the same foot. Normal pressure returns immediately. Because the
+nozzle is angled badly, one plausible stream splashes across her face, hair and
+upper shirt. She freezes in surprised silence. Jisung jerks the camera aside,
+briefly loses her, then reframes while laughing. She looks into the lens with a
+quiet "seriously?" expression.
+
+[13–18s | self-owned second mistake]
+Laughing, Minji turns the hose toward the camera as a playful threat. While
+adjusting the same nozzle, she rotates it the wrong way and sprays her own
+shoulder and face again. She recoils and says, "Wait—wait!" Jisung's laughter
+adds visible shake. Wet strands now cling to her face; the earlier wet fabric
+and hair state persist.
+
+[18–23s | neighbor reversal]
+Mrs Park notices from her doorway and lifts her own small hose as if offering
+help. Minji relaxes. Mrs Park gives exactly one harmless short spray toward
+Minji. After half a beat of shock, both women laugh. Keep the exchange small,
+believable and geographically readable rather than staging a water fight.
+
+[23–27s | brief social echo]
+Minji returns one small spray. Mrs Park retreats behind the same gate. The two
+schoolchildren notice from farther down the lane, laugh briefly and continue
+walking. They do not duplicate, approach the camera or interrupt the main
+action.
+
+[27–30s | camera-owned ending]
+Still laughing and carrying all accumulated wetness, Minji walks directly
+toward Jisung with the hose. She points and says, "You started this." Jisung
+answers from behind the lens, "I literally did nothing!" Minji gives one
+mischievous look and sends exactly one quick spray into the camera. Real
+droplets attach to the lens, creating a partial watery smear while Jisung
+reacts. Preserve her laughter and running water under the blurred image, then
+hard-cut immediately. No recovery shot and no dry reset.
+
+PHYSICS, PERFORMANCE AND AUDIO
+Use real hose pressure, gravity, splash direction, droplet travel, wet-cloth
+behavior and progressive hair adhesion. Every response begins after its visible
+cause. Performance stays restrained: natural blinking, breath, balance,
+reaction delay and conversational Korean-accented English, with no narrator or
+sketch-comedy mugging. Use only birds, distant neighbors, faint traffic,
+footsteps, water, fabric, laughter and the written dialogue. No music.
+
+Reject an on-screen cameraman, duplicated person or hose, disconnected water
+source, explosive spray, changing nozzle, instant dry clothing, reversed
+wetness, extra dialogue, lip-sync on the wrong person, teleportation, staged
+crowd, glamour lighting, cinematic stabilization, subtitle, text, logo or
+watermark.
+```
+
+**Technique:** Treat an off-camera filmer as an owned character rather than an
+unconstrained POV. His voice and involuntary camera movement prove his presence
+without allowing a duplicate body to appear. Pair that ownership rule with
+monotonic state changes—pressure, wetness and lens contamination—so each comic
+beat has a visible cause, an irreversible consequence and a terminal condition
+the model cannot quietly reset.
+
+Adapted and rewritten from Nexora's [original Seedance 2.5 prompt and result
+post](https://x.com/frametheory058/status/2095003298747318531); the
+[versioned platform record](https://youmind.com/video-prompts/korean-home-video-early-2000s-10225)
+preserves the complete prompt, creator attribution, model label and original
+source link.
+
+
 ## Reusable templates
 
 ### End-frame-owned cover reveal and muted-autoplay publish gate
@@ -25344,6 +25474,8 @@ the [versioned movement-and-load findings](https://github.com/yukitake212/video-
 and the [two-axis review method](https://github.com/yukitake212/video-knowledge/blob/0c54e3e2c6d6389054bdd79129b655fcb7e607b0/OPERATIONS.md).
 
 ## Sources
+
+- [Nexora — September 2, 2026 Seedance 2.5 early-2000s Korean home-video hose mishap with off-camera filmer ownership, progressive wetness and lens-hit hard cut](https://x.com/frametheory058/status/2095003298747318531) ([complete versioned prompt record](https://youmind.com/video-prompts/korean-home-video-early-2000s-10225))
 
 - [Manju Laoli — September 2, 2026 creator-tested Seedance 2.0 action revision: two static-buildup failures, a complete approved 15-second one-take, close-scale first-frame correction, motion-carried charging and one-to-two-frame hit-stop gate](https://github.com/lixiaoxiao9888-create/manju-laoli-skill/commit/ed7f17abcf444288e0886862cfa098743c15b6b6) ([approved one-take and launch-scale rule](https://github.com/lixiaoxiao9888-create/manju-laoli-skill/blob/ed7f17abcf444288e0886862cfa098743c15b6b6/short-drama-director/references/action-cinematography-breakdown.md), [failure-derived action gate](https://github.com/lixiaoxiao9888-create/manju-laoli-skill/blob/ed7f17abcf444288e0886862cfa098743c15b6b6/short-drama-director/references/action-previs-15grid.md))
 
