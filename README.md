@@ -24945,6 +24945,94 @@ screenshot loss, repeated resampling and generated-text failures.
 Adapted from Aggravating_Yam_5784's September 1, 2026
 [original Seedance 2.5 poster workflow, result and extraction notes](https://www.reddit.com/r/Seedance_AI/comments/1w4nfni/i_made_cinematic_ai_poster_using_seedance_25/).
 
+### Motion-carried buildup and close-scale action-launch gate
+
+**Verified model:** Seedance 2.0 — the primary commit records two creator-user
+test failures caused by static confrontation and suspended buildup, publishes
+the exact revised 15-second one-take prompt with its model label, and records
+that the close-scale opening revision passed the follow-up test
+
+Use this for a dense action one-take whose hero becomes tiny, inert or slow when
+the prompt opens on a grand establishing view or reserves whole seconds for a
+pose. Carry emotion, charging and visual emphasis inside continuing movement;
+reserve stillness for an intentional non-action shot, not for this template.
+
+```text
+FORMAT
+Model: Seedance 2.0
+Duration: [10–15 seconds]. Aspect ratio: [16:9 / 9:16].
+Mode: [TEXT-TO-VIDEO / FIRST+LAST FRAME].
+One uninterrupted shot. References: [CHARACTER / LOCATION / END STATE].
+
+OPENING-SCALE CONTRACT
+Frame 0 begins on [HERO] in a medium-close composition; the hero occupies at
+least one third of frame height and is already performing [FIRST ACTION].
+[ARMY / CITY / CROWD / LANDSCAPE] remains background evidence only.
+Do not begin on an empty plate or distant spectacle. Reveal scale later by
+moving with the hero and then opening the frame.
+
+SINGLE CAMERA TRAJECTORY
+Write one continuous route, not a list of new camera positions:
+[CLOSE TRACK] -> [MOVE WITH FIRST IMPULSE] -> [RISE / RETREAT / ARC WITH BODY]
+-> [FOLLOW THE FINISHER]. Camera direction supports the current force vector.
+No cut, teleport, viewpoint reset or unrelated orbit.
+
+MOTION-CARRIED PERFORMANCE
+Every time window contains a displacement, contact, recovery or irreversible
+state change. Attach expression to an action moment: [GLANCE WHILE TURNING],
+[SMILE WHILE DRAWING THE WEAPON], [FEAR WHILE RETREATING].
+Charge power while [STEPPING / SLIDING BACK / RISING / SPINNING / PULLING A
+PROP]; never allocate a separate standing, hovering, staring or confrontation
+interval. After each beat, inherit position, momentum, damage and prop state.
+
+SPEED EVIDENCE
+Keep the hero readable while near, middle and far planes move at different
+rates. Let [DEBRIS / CLOTH / POST / FOLIAGE / SPARKS] cross the foreground
+after a physical cause. Synchronize the camera with [ATTACK / LEAP / FALL]
+instead of shrinking the hero to make the world appear fast.
+
+TIMELINE
+[0–T1] Close-scale first action: [PREPARATION -> CONTACT -> RESPONSE].
+[T1–T2] Continue the same momentum into [COUNTER / RETREAT / ENVIRONMENT HIT].
+[T2–T3] Build power while visibly moving through [PATH]; expression occurs
+         during [TURN / DRAW / ASCENT], not as a standalone pose.
+[T3–T4] The developing effect reaches [READABLE CONFIGURATION] while motion
+         continues and the camera naturally opens to [MEDIUM / WIDE].
+[T4–END] Release immediately into [FINISHER] and end on its causal result.
+
+HIT-STOP EXCEPTION
+At the single most important impact, allow only a one-to-two-frame micro-pause,
+plus [CONTACT DEFORMATION / SPARK / DEBRIS] and one synchronized impact sound.
+Motion resumes immediately. Do not convert this into slow motion or a held pose.
+
+ACCEPTANCE GATE
+- frame 0 shows the hero at >= one-third frame height and the first action has begun;
+- no action window is spent only standing, hovering, staring or posing;
+- charging is visibly carried by locomotion or manipulation;
+- one camera path follows the action without reset;
+- foreground passage and layered parallax prove speed without losing the hero;
+- hit-stop lasts only one to two frames and the finisher occupies the ending;
+- identity, weapon ownership, geography, accumulated damage and momentum persist.
+
+Reject if the opening hero is tiny, a static buildup consumes the final beats,
+the camera invents cuts, parallax replaces real body travel, or the action
+settles before the payoff.
+```
+
+**Why it works:** a distant opening can spend the model's early frames on
+environment while reducing the performer to an unreadable token, and a named
+“buildup” can become literal inactivity. Locking a close first frame protects
+subject scale; carrying performance and charging through locomotion keeps each
+window productive. The source's revised one-take replaces four idle ending
+seconds with ascent, weapon-array formation and immediate release, while
+layered parallax, foreground passage and same-direction camera acceleration
+supply speed without sacrificing identity.
+
+Adapted from Manju Laoli's September 2, 2026
+[creator-tested Seedance action-system release](https://github.com/lixiaoxiao9888-create/manju-laoli-skill/commit/ed7f17abcf444288e0886862cfa098743c15b6b6),
+the [complete approved Seedance 2.0 one-take and close-scale launch rule](https://github.com/lixiaoxiao9888-create/manju-laoli-skill/blob/ed7f17abcf444288e0886862cfa098743c15b6b6/short-drama-director/references/action-cinematography-breakdown.md),
+and the [failure-derived no-idle action gate](https://github.com/lixiaoxiao9888-create/manju-laoli-skill/blob/ed7f17abcf444288e0886862cfa098743c15b6b6/short-drama-director/references/action-previs-15grid.md).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -25256,6 +25344,8 @@ the [versioned movement-and-load findings](https://github.com/yukitake212/video-
 and the [two-axis review method](https://github.com/yukitake212/video-knowledge/blob/0c54e3e2c6d6389054bdd79129b655fcb7e607b0/OPERATIONS.md).
 
 ## Sources
+
+- [Manju Laoli — September 2, 2026 creator-tested Seedance 2.0 action revision: two static-buildup failures, a complete approved 15-second one-take, close-scale first-frame correction, motion-carried charging and one-to-two-frame hit-stop gate](https://github.com/lixiaoxiao9888-create/manju-laoli-skill/commit/ed7f17abcf444288e0886862cfa098743c15b6b6) ([approved one-take and launch-scale rule](https://github.com/lixiaoxiao9888-create/manju-laoli-skill/blob/ed7f17abcf444288e0886862cfa098743c15b6b6/short-drama-director/references/action-cinematography-breakdown.md), [failure-derived action gate](https://github.com/lixiaoxiao9888-create/manju-laoli-skill/blob/ed7f17abcf444288e0886862cfa098743c15b6b6/short-drama-director/references/action-previs-15grid.md))
 
 - [ScofiledYu — September 2, 2026 AiTop `DOUBAO_SEEDANCE_2_0_4K` and `DOUBAO_SEEDANCE_2_5` measured delivery/recovery release: delayed H.264 compatibility derivatives for HEVC masters, same-output pairing, preview-versus-download ownership and non-clobbering continuation recovery](https://github.com/ScofiledYu/FlowGen-AI-Studio/commit/227d46c591c275d6589ab6a301cb00d1106d3a93) ([measured findings](https://github.com/ScofiledYu/FlowGen-AI-Studio/blob/227d46c591c275d6589ab6a301cb00d1106d3a93/skill.md), [pairing regression gate](https://github.com/ScofiledYu/FlowGen-AI-Studio/blob/227d46c591c275d6589ab6a301cb00d1106d3a93/scripts/transcoded-video-url-test.ts), [recovery regression gate](https://github.com/ScofiledYu/FlowGen-AI-Studio/blob/227d46c591c275d6589ab6a301cb00d1106d3a93/scripts/mov-recovery-keep-original-test.ts))
 
