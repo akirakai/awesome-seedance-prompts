@@ -308,6 +308,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Motif-inheritance title sequence with long-range design memory](#292-motif-inheritance-title-sequence-with-long-range-design-memory)
   - [Blind-mammoth vibration trap against an axial sky serpent](#293-blind-mammoth-vibration-trap-against-an-axial-sky-serpent)
   - [Counter-owned fire/ice wuxia duel with elemental battlefield geography](#294-counter-owned-fireice-wuxia-duel-with-elemental-battlefield-geography)
+  - [Paired-hitman warehouse advance with role-locked affect and beat-synced action](#295-paired-hitman-warehouse-advance-with-role-locked-affect-and-beat-synced-action)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -16817,6 +16818,135 @@ Adapted and rewritten from Amira Zairi / @azed_ai's September 3, 2026
 and [complete prompt reply](https://x.com/azed_ai/status/2095179047848525988).
 
 
+### 295. Paired-hitman warehouse advance with role-locked affect and beat-synced action
+
+**Verified model:** Seedance 2.0 — the original creator labels the complete video
+prompt with this exact version, publishes the companion GPT Image 2 character-
+sheet prompt in the same thread, and attaches a 14.559-second, 720×720 playable
+generated result  
+**Use case:** two-lead action, contrasting performance registers, ensemble role
+separation, beat-synchronized impacts, shared-destination payoff  
+**Mode:** text-to-video with an optional character-sheet reference  
+**Suggested settings:** 15 seconds, 1:1, native soundtrack, cinematic cel-shaded
+3D anime
+
+```text
+Create a 15-second cinematic cel-shaded 3D action short inside one warm-lit
+industrial warehouse. Concrete floor, metal shelving, stacked crates, dusty
+window light and one closed briefcase on a table at the far end remain spatial
+anchors. Begin after the mission is already in progress.
+
+CAST AND ROLE LOCK
+LEAD A — THE ANCHOR: tall, powerful adult man; large rounded afro, thick
+mustache, unwavering fierce eyes; fitted black suit, white shirt, narrow black
+tie, black Oxford shoes and one silver handgun. His expression stays controlled
+and severe. His movement is direct, heavy and economical.
+
+LEAD B — THE DRIFT: tall, slim adult man; shoulder-length dark hair, heavy-
+lidded eyes; matching black suit, white shirt, narrow black tie, black Oxford
+shoes and one silver handgun. He remains almost bored by the danger. His
+movement is loose, minimal and casually precise.
+
+ADVERSARIES: warehouse attackers only, each in visually distinct casual street
+clothes such as jeans, hoodies, leather jackets, work boots or baseball caps.
+No adversary wears a suit, white dress shirt or tie. Never duplicate a lead,
+swap their faces, exchange their weapons or transfer their performance style.
+
+PERFORMANCE LEDGER
+LEAD A owns forceful interceptions, body checks, crate displacement and decisive
+forward pressure. LEAD B owns effortless sidesteps, small evasions, jacket or
+shoulder adjustments and attacks made with minimal head movement. LEAD A never
+becomes playful. LEAD B never becomes visibly alarmed; permit exactly one brief
+mildly annoyed glance when grabbed from behind. After every exchange both resume
+the same side-by-side advance toward the briefcase.
+
+AUDIO AND RHYTHM CONTRACT
+Start one high-energy funky soul groove on frame one and never drop it. Assign
+each important foot plant, shelf impact, crate fall, gunshot and cover rise to a
+clear beat or offbeat. Warehouse room tone, cloth, breath, debris and weapon
+mechanics remain audible below the music. Do not create dialogue.
+
+[0–1s | enter mid-action]
+Open wide with both leads already walking forward through active warehouse
+chaos, weapons raised and the briefcase visible deep in frame. Casual-clothed
+attackers approach from separate lanes. No slow introduction or standing pose.
+
+[1–3s | LEAD A ownership]
+Two attackers close on LEAD A. He sidesteps the first punch, redirects that
+attacker into one shelving unit and lets the shelf absorb the body contact.
+Crates begin falling from the earned collision. Without stopping, he answers
+the second attacker and immediately returns to his forward lane. LEAD B keeps
+walking and does not steal this beat.
+
+[3–5s | LEAD B ownership]
+A leather-jacketed attacker jumps from a low shelf toward LEAD B. LEAD B makes
+one small side step; the attacker lands hard on open concrete. LEAD B looks
+down, completes one restrained response, straightens his jacket once and
+continues walking. LEAD A never turns around to supervise him.
+
+[5–7s | parallel competence]
+Three attackers fill the path. LEAD A kicks one heavy crate along the floor so
+it visibly contacts two attackers before they react; he handles the remaining
+center threat in the same stride. At screen-right, LEAD B answers two different
+attackers with minimal torso rotation. Preserve clear lanes and never aim either
+lead at the other.
+
+[7–9s | single affect deviation]
+One attacker catches LEAD B in a rear bear hug. Show the first valid contact,
+then LEAD B's only mildly annoyed glance. He breaks the grip with a compact
+double-elbow action, turns, resolves the threat and brushes his shoulder once.
+LEAD A gives one half-second side glance, then restores his forward gaze.
+
+[9–11s | synchronized cover beat]
+Both leads slide behind the same large crate as incoming impacts strike its
+front. LEAD A reloads while LEAD B checks his weapon; neither cowers. On one
+strong musical beat they rise together from opposite ends of cover, resolve
+separate targets in a short readable sequence, then stand and continue forward.
+The crate remains damaged afterward.
+
+[11–13s | final obstruction]
+The last group charges while one attacker throws a crate from beside the
+shelving. LEAD A intercepts the nearest body and uses it only as momentary moving
+cover. LEAD B ducks the visible crate path without breaking stride and answers
+his own lane. The final attackers clear from the route; settling dust exposes
+the untouched table and briefcase ahead.
+
+[13–15s | shared destination payoff]
+Both arrive together. LEAD A opens the same briefcase while LEAD B watches the
+room, then leans in. A controlled warm-gold practical light from inside the case
+illuminates their faces and suit edges. LEAD A allows restrained satisfaction;
+LEAD B gives one small approving nod. Hold the readable duo and open case for
+the final beat without revealing the contents.
+
+CAMERA AND SAFETY
+Use rapid but motivated angle changes: low tracking for the shared advance,
+medium coverage before and after contacts, one overhead lane check and close
+inserts only for the allowed expressions, reload and case latch. Keep action
+non-graphic; no blood, wound or gore. Preserve warehouse geography, lead screen
+sides, clothing, hair, weapon count, damaged shelving, displaced crates and
+distance to the briefcase across every cut.
+
+Render with semi-realistic cel-shaded 3D, hand-painted texture, bold controlled
+colour blocks, hard-edged shadows, subtle film grain and physical dust. Reject
+extra lead, identical attacker, adversary in a suit, emotion drift, comic panic,
+hero pose between beats, friendly-fire aim, action without contact, unexplained
+fall, reset crate, repaired shelf, changing weapon, disappearing briefcase,
+rubber body, uncontrolled shake, modern UI, subtitle, logo or watermark.
+```
+
+**Technique:** Give each protagonist an invariant performance register and a
+separate action-ownership vocabulary. Enemy wardrobe forms a third visual class,
+the briefcase measures shared forward progress, and a single allowed emotional
+deviation becomes readable because every other beat preserves the baseline.
+Mapping contacts and reactions to the soundtrack prevents rapid cutting from
+turning into an unstructured montage.
+
+Adapted and rewritten from TechieSA / @TechieBySA's September 2, 2026
+[Seedance 2.0 result post and 14.559-second generated video](https://x.com/TechieBySA/status/2095158487349096761),
+[complete character-sheet prompt](https://x.com/TechieBySA/status/2095158505187459367)
+and [complete video prompt](https://x.com/TechieBySA/status/2095158513018261870).
+
+
 ## Reusable templates
 
 ### End-frame-owned cover reveal and muted-autoplay publish gate
@@ -26058,6 +26188,8 @@ and the [two-axis review method](https://github.com/yukitake212/video-knowledge/
 ## Sources
 
 - [Amira Zairi / @azed_ai — September 3, 2026 Runway Seedance 2.5 fire-versus-ice wuxia duel: complete 30-second prompt, counter-for-counter choreography, fixed elemental geography, progressive environment reactions and attached 30.144-second generated result](https://x.com/azed_ai/status/2095179033478914550) ([complete prompt](https://x.com/azed_ai/status/2095179047848525988))
+
+- [TechieSA / @TechieBySA — September 2, 2026 Seedance 2.0 paired-hitman warehouse short: complete character-sheet and 15-second video prompts, role-locked affect, adversary wardrobe isolation, beat-synchronized action and attached 14.559-second result](https://x.com/TechieBySA/status/2095158487349096761) ([character sheet](https://x.com/TechieBySA/status/2095158505187459367), [video prompt](https://x.com/TechieBySA/status/2095158513018261870))
 
 - [Arijiit Das — September 2, 2026 Dreamina Seedance 2.5 giant-creature fight: two production character sheets, complete 30-second multi-reference prompt, fixed combat axis, persistent wound/destruction ledger, vibration-driven reversal and attached 30.08-second generated result](https://www.linkedin.com/pulse/kaiju-fight-test-arijiit-das-tq4qc)
 
