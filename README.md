@@ -306,6 +306,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Inflatable water-shoe stunt with buoyancy and landing ledger](#290-inflatable-water-shoe-stunt-with-buoyancy-and-landing-ledger)
   - [Hit-location lightning-spear ledger and snap-triggered payoff](#291-hit-location-lightning-spear-ledger-and-snap-triggered-payoff)
   - [Motif-inheritance title sequence with long-range design memory](#292-motif-inheritance-title-sequence-with-long-range-design-memory)
+  - [Blind-mammoth vibration trap against an axial sky serpent](#293-blind-mammoth-vibration-trap-against-an-axial-sky-serpent)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -16576,6 +16577,125 @@ Adapted and rewritten from Umesh's September 2, 2026
 and [complete prompt reply](https://x.com/umesh_ai/status/2095129571263955288).
 
 
+### 293. Blind-mammoth vibration trap against an axial sky serpent
+
+**Verified model:** Seedance 2.5 on Dreamina AI — the original creator labels
+the complete prompt with this exact model version and publishes it beside an
+attached 30.08-second generated video  
+**Use case:** giant-creature combat, multi-reference identity control, fixed
+screen direction, persistent damage, mass and momentum  
+**Mode:** multi-reference generation  
+**Suggested settings:** 30 seconds, 16:9, silent generation
+
+```text
+Create a 30-second photoreal live-action giant-creature fight at night. Use two
+identity references, one ruined avenue and exactly two living beings.
+
+REFERENCE CONTRACT
+@Image1 controls only KHOLOS: an ancient 100-metre quadruped mammoth with
+clouded amber eyes, one long spiral tusk, one broken tusk stump, a scarred
+searching trunk, dry iron-grey and umber fur, and old flank scars.
+@Image2 controls only ARGENT: a slender 150-metre wingless silver serpent with
+four short clawed limbs, a pale mane, two swept-back horns with one chipped tip,
+two jaw whiskers and tarnished matte scales.
+
+Neither reference controls framing, sheet borders, typography, daylight grade,
+camera angle, first frame or final frame. Never copy a reference-board layout
+into the film. Preserve both creatures' asymmetry, proportions, markings and
+surface colors through every cut.
+
+WORLD, SCALE AND POPULATION
+One straight ruined city avenue recedes from the lens between broken towers.
+Fires burn only in the gaps; smoke and dry dust hang in blue night air. KHOLOS
+remains taller than the nearby buildings and never rises onto two legs. ARGENT
+remains long and narrow, never winged or bulky. Show each creature once in any
+frame. No duplicate body, human, animal, moving vehicle or aircraft may appear.
+
+COMBAT TOPOLOGY
+Lock the avenue as the Z axis. ARGENT attacks from deep background toward the
+foreground, passes the lens and leaves frame; it never makes a lateral
+left-to-right attack. Keep the camera on one side of the avenue and never cross
+the action axis. KHOLOS owns the road center, turning in place rather than
+teleporting to meet an attack.
+
+STATE LEDGER
+Every physical result survives all later cuts. The left-flank gash remains
+visible after the first pass; the right-shoulder gash remains after the second.
+A collapsed tower stays collapsed, its rubble stays in the street, split asphalt
+stays split, and ARGENT's final slack body never recovers. No wound, debris,
+position or destruction state resets.
+
+MASS AND EDITING
+KHOLOS accelerates and stops like a moving hill; every footfall compresses the
+road. ARGENT's long body sags between aerial coils and carries inertia through
+each turn. Use hard cuts only on named actions or contacts. Allow exactly one
+speed ramp: slow down during the constricting wrap, then return instantly to
+full speed when the trunk takes control. All other action stays at natural
+speed.
+
+[0–4s | blind search]
+Street-level wide, slow push down the avenue. KHOLOS stands at center and sweeps
+his trunk through smoke, reading scent and ground vibration rather than sight.
+Cut to the towers behind him: one thin silver body crosses a distant gap and is
+already gone when he turns. End with an empty sky and his trunk still raised.
+
+[4–9s | two owned passes]
+Track beside ARGENT diving along the avenue. Its claws rake KHOLOS's left flank;
+show contact, opened hide and the serpent exiting past camera. Cut as KHOLOS
+swings the intact tusk through empty air. ARGENT repeats from the opposite depth
+lane and opens the right shoulder. KHOLOS turns late, strikes a tower instead
+and collapses its face into the road. Hold both wounds and the new rubble.
+
+[9–14s | vibration trap]
+KHOLOS stops completely. Close on the trunk lowering until its underside makes
+broad contact with cracked asphalt. Cut high and wide: ARGENT circles above the
+towers, slows and studies the still body. Only after the trunk has settled and
+the mammoth has read the approaching vibration does ARGENT fold into one
+straight dive along the established axis.
+
+[14–20s | single slow-motion coil]
+Begin the only speed ramp. Orbit slowly without crossing the axis as ARGENT
+opens from the dive and wraps KHOLOS's shoulders and chest. Each heavy loop
+closes over the earlier wounds; dust hangs while the serpent's head rises above
+him. End with the coil visibly tight and both bodies locked at road center.
+
+[20–24s | force ownership changes]
+The instant the coil finishes tightening, snap back to full speed. Low handheld
+angle: KHOLOS's trunk whips upward, seizes ARGENT directly below the jaw and
+pulls its head out of the coil. He slams the head into the road; asphalt splits
+from that contact. He then drives the one intact spiral tusk through a visible
+section of the silver coil. Keep the broken tusk a stump.
+
+[24–30s | sensory-character payoff]
+Close on ARGENT's silent open jaws and failing throat movement. Cut as the
+punctured coil loses tension and slides into the existing rubble. Pull backward
+and rise to one high wide. KHOLOS stands over the single slack serpent, both
+gashes still present and sides heaving. Although the fight is over, his clouded
+eyes still cannot locate the body; he raises the trunk and resumes searching the
+air. Hold that exact readable state to the end.
+
+Deep-blue 35mm night look, soft anamorphic falloff, organic grain, fire-orange
+accents, cold rim light on tarnished scales, dry matte fur and suspended dust.
+Keep motion blur physical and preserve readable contact. No dialogue, voice,
+music, Foley, subtitle, text, logo or watermark in this generation.
+
+Reject extra creature, duplicate body, scale drift, winged serpent, bipedal
+mammoth, mirrored tusks, crossed action axis, lateral attack, weightless float,
+frictionless slide, unearned wound, healed wound, rebuilt tower, reset rubble,
+second speed ramp, glossy chrome, wet surfaces, commercial hero lighting,
+cartoon, rubber suit, game render or final-state recovery.
+```
+
+**Technique:** Build the fight on three linked ledgers. A topology ledger fixes
+the attack axis, camera side and center owner; a consequence ledger preserves
+wounds and destruction; a sensory ledger makes the blind defender's apparent
+stillness a vibration-reading trap rather than an arbitrary reversal. One
+contact-owned speed ramp marks the exact transfer of force ownership.
+
+Adapted and rewritten from Arijiit Das's September 2, 2026
+[complete Seedance 2.5 production record and attached 30.08-second result](https://www.linkedin.com/pulse/kaiju-fight-test-arijiit-das-tq4qc).
+
+
 ## Reusable templates
 
 ### End-frame-owned cover reveal and muted-autoplay publish gate
@@ -25815,6 +25935,8 @@ the [versioned movement-and-load findings](https://github.com/yukitake212/video-
 and the [two-axis review method](https://github.com/yukitake212/video-knowledge/blob/0c54e3e2c6d6389054bdd79129b655fcb7e607b0/OPERATIONS.md).
 
 ## Sources
+
+- [Arijiit Das — September 2, 2026 Dreamina Seedance 2.5 giant-creature fight: two production character sheets, complete 30-second multi-reference prompt, fixed combat axis, persistent wound/destruction ledger, vibration-driven reversal and attached 30.08-second generated result](https://www.linkedin.com/pulse/kaiju-fight-test-arijiit-das-tq4qc)
 
 - [Aaliyah / @The_Kremlinn — September 2, 2026 VideoDuck Seedance 2.5 multi-floor cartel gauntlet, complete prompt and attached 30-second result](https://x.com/The_Kremlinn/status/2095083714120229230)
 
