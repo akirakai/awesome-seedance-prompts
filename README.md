@@ -307,6 +307,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Hit-location lightning-spear ledger and snap-triggered payoff](#291-hit-location-lightning-spear-ledger-and-snap-triggered-payoff)
   - [Motif-inheritance title sequence with long-range design memory](#292-motif-inheritance-title-sequence-with-long-range-design-memory)
   - [Blind-mammoth vibration trap against an axial sky serpent](#293-blind-mammoth-vibration-trap-against-an-axial-sky-serpent)
+  - [Counter-owned fire/ice wuxia duel with elemental battlefield geography](#294-counter-owned-fireice-wuxia-duel-with-elemental-battlefield-geography)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -16696,6 +16697,126 @@ Adapted and rewritten from Arijiit Das's September 2, 2026
 [complete Seedance 2.5 production record and attached 30.08-second result](https://www.linkedin.com/pulse/kaiju-fight-test-arijiit-das-tq4qc).
 
 
+### 294. Counter-owned fire/ice wuxia duel with elemental battlefield geography
+
+**Verified model:** Runway Seedance 2.5 — the original creator names this exact
+model in the result post, publishes the complete prompt in a direct reply, and
+attaches a 30.144-second, 1280×720 playable generated result  
+**Use case:** equal-power fantasy duel, readable high-speed choreography,
+element ownership, progressive battlefield transformation, unresolved hook  
+**Mode:** text-to-video  
+**Suggested settings:** 30 seconds, 16:9, native audio, cinematic fantasy 3D
+
+```text
+Create a 30-second premium realistic 3D wuxia/xianxia duel at an ancient
+mountain palace above storm clouds. Use one vast circular stone courtyard,
+surrounding pagodas, damaged ceremonial pillars, dragon carvings, lanterns,
+distant waterfalls and exactly two adult fighters.
+
+CAST AND ABILITY OWNERSHIP
+FIRE QUEEN: long black hair with restrained crimson streaks; layered dark-red
+and black royal battle dress, light armour, gold embroidery, phoenix crown and
+slender jian. She presses forward with short explosive footwork, rotations and
+flame-assisted sword combinations. Her fire is always crimson, orange and gold.
+
+ICE QUEEN: extremely long silver-white hair; pale-blue and silver royal battle
+dress, translucent layers, delicate armour, crystal crown and translucent frost
+jian. She wins space through redirection, evasive turns, surface control and
+precise counters. Her ice is always pale blue, silver-white and translucent.
+
+Keep both identities, costumes, crowns, swords and elemental palettes unchanged.
+Neither fighter may borrow the other's power or lose her weapon.
+
+BATTLEFIELD GEOGRAPHY
+Establish FIRE on screen-left and ICE on screen-right. Fire may scorch existing
+stone and open glowing cracks only from visible contact points. Ice may spread
+across existing surfaces, build crystals and produce freezing mist only from a
+visible sword, foot or palm action. Every change remains in later shots:
+scorched stone stays scorched, frost stays spread, broken pillars stay broken,
+meltwater stays wet and debris never resets.
+
+COUNTER CONTRACT
+Every major technique must have an intelligent answer. Show target, approach,
+body and sword motion, contact or near-contact, environmental reaction, balance
+change and counterattack. Effects amplify martial actions; they never replace
+footwork or swordplay. Keep both women moving through readable parries, spins,
+Qinggong leaps, pillar rebounds and mid-air direction changes. Neither stands
+still to throw projectiles, poses after a hit or wins by unexplained power.
+
+[0–4s | divided court]
+Descend through clouds into one enormous establishing view, then settle at
+stone level between the fighters. Flame curls around FIRE's jian while frost
+advances from ICE's planted foot. Wind drives hair, sleeves, capes and lanterns.
+Both meet eyes and enter opposed combat stances without crossing screen sides.
+
+[4–9s | first contact]
+FIRE strikes the stone once and glides forward with a low flaming cut. ICE
+slides back over her own frost, turns beneath the blade and raises her jian at
+the final instant. Track laterally as steel meets steel first; only then release
+sparks, ice splinters and steam. Continue into several connected parry-counter
+beats that travel across the court instead of resetting to a new standoff.
+
+[9–14s | aerial exchange]
+ICE drives her palm into the floor and grows a crystal ridge from that contact.
+Both leap before it reaches them. From a low angle, preserve their relative
+positions as they trade two airborne sword contacts. FIRE rebounds from a
+pillar and sends one flame crescent along her real blade path. ICE curves around
+it, freezes airborne moisture into one shield, then breaks that same shield into
+controlled fragments aimed back at FIRE.
+
+[14–19s | material counter]
+Follow tightly behind FIRE as the fragments pursue her downward. During the
+fall she completes one full sword circle; the resulting fire spiral melts only
+the fragments it reaches, creating dense steam and condensation. She lands on
+one knee, keeps moving and enters close sword range as ICE descends ahead.
+Shoot at sword height so each block, shoulder turn, sleeve clearance and change
+of footing remains visible through the steam.
+
+[19–24s | earned escalation]
+One simultaneous clash throws each fighter back toward her established half.
+From overhead, FIRE arrests her slide by dragging the jian through stone,
+leaving one molten arc; ICE arrests hers by planting the sword and freezing a
+new radial patch. Both recognize the stalemate through a brief eye close-up.
+FIRE builds a phoenix-shaped stream from the molten arc while ICE draws existing
+mist and frost into one translucent dragon. Keep each fighter physically
+connected to the technique through sword movement and grounded foot pressure.
+
+[24–30s | unresolved collision]
+Both launch at the same instant. Track laterally with the phoenix and dragon
+around their moving bodies, then swing frontal for the final leap. Slow only
+during the last metre: swords collide first beneath the moon, and the two large
+forms collide immediately afterward. Fire, ice, steam, sparks and fragments
+expand from that shared contact and crack the court. Push through the steam to
+show two silhouettes on opposite sides, both swords retained and both pairs of
+eyes still glowing. Hard cut to black before either attacks again.
+
+CAMERA AND AUDIO
+Use a stable action axis, readable wide geography, low tracking, sword-level
+close coverage, one controlled 180-degree orbit during a locked clash, one
+overhead state check and aerial tracking for Qinggong. Never cross the axis
+during an exchange or hide contact behind uncontrolled shake. Score with deep
+drums, strings and restrained guzheng; layer sword impacts, silk, footfalls,
+wind, fire, frost growth, ice fracture, stone damage, breath and steam.
+
+Reject extra fighter, duplicate weapon, costume or crown drift, swapped
+elemental colour, static spell casting, repeated swing, weightless body,
+teleport, effect before action, generic energy beam, random explosion,
+environment reset, rebuilt architecture, disappearing sword, extra limb,
+clipping fabric, cartoon expression, modern object, subtitle, logo, watermark
+or declared winner.
+```
+
+**Technique:** Treat the duel as two coupled state machines. The counter ledger
+requires every attack to transfer into a specific answer, while the elemental
+geography ledger records who owns each side and which physical changes survive.
+This keeps spectacular VFX subordinate to readable martial contact and lets the
+unresolved collision feel earned rather than arbitrary.
+
+Adapted and rewritten from Amira Zairi / @azed_ai's September 3, 2026
+[Runway Seedance 2.5 result post and 30.144-second generated video](https://x.com/azed_ai/status/2095179033478914550)
+and [complete prompt reply](https://x.com/azed_ai/status/2095179047848525988).
+
+
 ## Reusable templates
 
 ### End-frame-owned cover reveal and muted-autoplay publish gate
@@ -25935,6 +26056,8 @@ the [versioned movement-and-load findings](https://github.com/yukitake212/video-
 and the [two-axis review method](https://github.com/yukitake212/video-knowledge/blob/0c54e3e2c6d6389054bdd79129b655fcb7e607b0/OPERATIONS.md).
 
 ## Sources
+
+- [Amira Zairi / @azed_ai — September 3, 2026 Runway Seedance 2.5 fire-versus-ice wuxia duel: complete 30-second prompt, counter-for-counter choreography, fixed elemental geography, progressive environment reactions and attached 30.144-second generated result](https://x.com/azed_ai/status/2095179033478914550) ([complete prompt](https://x.com/azed_ai/status/2095179047848525988))
 
 - [Arijiit Das — September 2, 2026 Dreamina Seedance 2.5 giant-creature fight: two production character sheets, complete 30-second multi-reference prompt, fixed combat axis, persistent wound/destruction ledger, vibration-driven reversal and attached 30.08-second generated result](https://www.linkedin.com/pulse/kaiju-fight-test-arijiit-das-tq4qc)
 
