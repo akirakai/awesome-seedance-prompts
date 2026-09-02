@@ -309,6 +309,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Blind-mammoth vibration trap against an axial sky serpent](#293-blind-mammoth-vibration-trap-against-an-axial-sky-serpent)
   - [Counter-owned fire/ice wuxia duel with elemental battlefield geography](#294-counter-owned-fireice-wuxia-duel-with-elemental-battlefield-geography)
   - [Paired-hitman warehouse advance with role-locked affect and beat-synced action](#295-paired-hitman-warehouse-advance-with-role-locked-affect-and-beat-synced-action)
+  - [Ten-look base-shirt styling matrix with invariant garment identity](#296-ten-look-base-shirt-styling-matrix-with-invariant-garment-identity)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -16947,6 +16948,104 @@ Adapted and rewritten from TechieSA / @TechieBySA's September 2, 2026
 and [complete video prompt](https://x.com/TechieBySA/status/2095158513018261870).
 
 
+
+### 296. Ten-look base-shirt styling matrix with invariant garment identity
+
+**Verified model:** Seedance 2.5 — the original creator labels the complete prompt
+with this exact version and attaches a 30.144-second playable generated result  
+**Use case:** fashion UGC, one-garment continuity, rapid styling montage,
+look-count verification, native opening dialogue  
+**Mode:** text-to-video  
+**Suggested settings:** 30 seconds, 16:9, realistic fashion reel, native audio
+
+```text
+Create a polished but believable 30-second landscape fashion reel in one bright,
+minimal apartment. An adult Gen-Z fashion host demonstrates ten genuinely
+different ways to wear ONE oversized pastel-yellow button-up shirt. The same
+physical shirt must survive the entire film.
+
+INVARIANT ASSET REGISTER
+HOST: preserve one face, skin tone, body proportions, hairstyle and natural
+makeup. Do not recast, age, duplicate or change hair between looks.
+HERO SHIRT: one warm pastel-yellow woven cotton button-up with the same collar,
+button count, placket, cuffs, hem length, scale and fabric texture in every shot.
+It may be opened, closed, knotted, tucked, rolled, belted, shifted off one
+shoulder or draped over the shoulders only when the named look requires it.
+ROOM: preserve the same windows, pale walls, mirror, daylight direction and
+furniture geography. Reframe inside this room; never teleport to a new location.
+PROPS: one pair of sunglasses, one narrow belt and one clear iced drink. A prop
+exists only in the look that names it and must leave frame before the next look.
+
+[0–3s | promise and proof]
+Medium-wide in the apartment. The host holds the unworn yellow shirt on one
+hanger so the collar, placket, cuffs and full hem are readable. She makes eye
+contact and says exactly, “One shirt, ten ways to style.” Lip movement must
+match every word. Show one clean title, “1 SHIRT · 10 LOOKS,” inside safe margins,
+then remove it before the first transition.
+
+[3–25s | ordered styling matrix]
+Present the following looks once each, in this exact order. Give every look a
+clear full-body proof pose, then one brief medium or detail action that explains
+the styling relationship. Keep the yellow shirt visible and identifiable.
+
+01 — OPEN LAYER: worn open over an ivory cropped tee with blue wide-leg denim.
+02 — WAIST KNOT: the two front tails tied once at the waist above straight denim.
+03 — ASYMMETRIC SHOULDER: collar relaxed off one shoulder; sunglasses adjusted.
+04 — FULL TUCK: shirt neatly tucked into tailored white trousers with a slim belt.
+05 — WEEKEND OPEN: open over a simple top with denim shorts; one iced drink lift.
+06 — BELTED SHIRT: fully buttoned and cinched over clean black tailored trousers.
+07 — LONG LAYER: open as a light overshirt above a fitted white midi slip dress.
+08 — FRENCH TUCK: only the front section tucked, cuffs rolled, relaxed blue denim.
+09 — SHOULDER DRAPE: unworn and resting cape-like over a black tank and white
+linen trousers; both sleeves remain visible and belong to the same shirt.
+10 — TONAL FINISH: fully buttoned with cream wide-leg trousers, no extra prop.
+
+TRANSITION CONTRACT
+Allocate about two seconds to each look. Alternate four motivated transition
+families—whip pan, half-spin, finger snap on a stable pose, and body-aligned
+match cut—but use exactly one transition between adjacent looks. End each look
+with the host centered at the same torso scale and facing the same screen
+direction that begins the next look. A transition may hide a clothing reset; it
+must not smear, dissolve or redesign the yellow shirt. Mix full-body, medium and
+close detail coverage without skipping the full-body proof for any numbered look.
+
+PERFORMANCE AND SOUND
+Use confident walking, one controlled turn, collar or cuff adjustments, a brief
+mirror check and natural smiles. Actions must belong to the current styling
+state; never touch a belt, drink or sunglasses before it exists. Maintain one
+light contemporary rhythm bed, realistic steps, cloth movement, snap accents
+and room tone. After the opening sentence, the host remains silent: no narration,
+new dialogue, crowd voice or lyric competing with the montage.
+
+[25–30s | countable recall]
+Hold LOOK 10 live at center. Around it, reveal a clean two-by-five contact-sheet
+border made only from one approved full-body proof frame of LOOKS 01–10, in
+number order. Each small frame must preserve the same host and yellow shirt and
+must not invent an eleventh outfit. Add the final line, “10 LOOKS · 1 SHIRT,”
+then a smaller question, “Which one is yours?” Hold the completed layout long
+enough to count all ten before fade-out.
+
+Bright natural window light, restrained warm-neutral palette, realistic cotton
+weight and folds, subtle handheld fashion coverage, shallow depth only when it
+does not obscure garment proof, premium editorial detail without beauty-filter
+skin. Reject shirt hue or button drift, new shirt, duplicate shirt during the
+montage, fused clothing, missing look, reordered look, prop carry-over, host
+identity change, room reset, impossible tuck, sleeve through body, partial
+morph, unreadable title, extra number, repeated outfit, extra dialogue, logo or
+watermark.
+```
+
+**Technique:** Treat the hero garment as an immutable asset and each look as a
+relationship change around it, not as a replacement costume. The numbered
+styling ledger, shared transition pose and final contact sheet make both garment
+continuity and the promised count directly auditable. This differs from a
+whole-outfit swap: the yellow shirt's construction, colour and material must
+survive every edit while only its wearing state and companion pieces change.
+
+Adapted and rewritten from Saul Goodman / @Goodmanprotocol's September 3, 2026
+[complete Seedance 2.5 prompt and attached 30.144-second generated fashion reel](https://x.com/Goodmanprotocol/status/2095216981624721691).
+
+
 ## Reusable templates
 
 ### End-frame-owned cover reveal and muted-autoplay publish gate
@@ -26186,6 +26285,8 @@ the [versioned movement-and-load findings](https://github.com/yukitake212/video-
 and the [two-axis review method](https://github.com/yukitake212/video-knowledge/blob/0c54e3e2c6d6389054bdd79129b655fcb7e607b0/OPERATIONS.md).
 
 ## Sources
+
+- [Saul Goodman / @Goodmanprotocol — September 3, 2026 Seedance 2.5 ten-look one-shirt fashion reel: complete 30-second prompt, invariant base-garment styling matrix, ordered transition montage, opening lip-synced line and attached 30.144-second generated result](https://x.com/Goodmanprotocol/status/2095216981624721691)
 
 - [Amira Zairi / @azed_ai — September 3, 2026 Runway Seedance 2.5 fire-versus-ice wuxia duel: complete 30-second prompt, counter-for-counter choreography, fixed elemental geography, progressive environment reactions and attached 30.144-second generated result](https://x.com/azed_ai/status/2095179033478914550) ([complete prompt](https://x.com/azed_ai/status/2095179047848525988))
 
