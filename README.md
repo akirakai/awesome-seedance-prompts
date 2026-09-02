@@ -300,6 +300,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Two-part office riddle with exact-state continuation](#284-two-part-office-riddle-with-exact-state-continuation)
   - [Component-conserving Lamborghini-to-wasp transformation](#285-component-conserving-lamborghini-to-wasp-transformation)
   - [Rainy-bodega errand one-take with hand-occupancy ledger](#286-rainy-bodega-errand-one-take-with-hand-occupancy-ledger)
+  - [Overhead restaurant hero with reserved-copy lanes and staged dish arrivals](#287-overhead-restaurant-hero-with-reserved-copy-lanes-and-staged-dish-arrivals)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -16028,6 +16029,82 @@ Adapted from [StrangeCurve743's August 30, 2026 Seedance 2.5 prompt and attached
 30-second bodega result](https://www.reddit.com/r/AristottoAI/comments/1w2fq6n/the_bodega_walkthrough_trend_with_seedance_25/).
 
 
+
+### 287. Overhead restaurant hero with reserved-copy lanes and staged dish arrivals
+
+**Verified model:** Higgsfield Seedance 2.0 Mini
+(`seedance_2_0_mini`) — the creator records the exact MCP model, settings,
+complete prompt and timestamped hosted render in the same integration commit  
+**Use case:** luxury restaurant website hero, overhead food arrangement,
+copy-safe composition, muted autoplay background  
+**Mode:** text-to-video, no reference images  
+**Suggested settings:** 12 seconds, 16:9, 720p, audio disabled
+
+```text
+Create a twelve-second luxury restaurant website hero in one uninterrupted
+extreme-overhead shot. The camera points perfectly straight down at one round
+table covered by warm-ivory premium linen with fine weave, natural folds and
+deep warm shadows. Low-key amber rim light grazes the cloth. Begin with the
+table almost empty.
+
+LAYOUT CONTRACT
+- Reserve the left and right thirds as clean copy lanes from first to last
+  frame. Food, glassware, steam and basil may not enter those protected zones.
+- Use the center third as the only arrival and landing area.
+- Keep exactly one pasta plate, one pizza, one wine glass and one basil sprig.
+- Give every object one entry edge, one non-crossing travel path and one final
+  coordinate. Objects never swap, duplicate, collide or leave after landing.
+- Maintain a very slow, almost imperceptible macro push-in without tilt, orbit
+  or framing drift.
+
+[0–2s | empty-table hold]
+Establish the linen, copy lanes and center landing area. Only the cloth breathes
+with tiny slow movement. Keep the camera and light direction stable.
+
+[2–5s | pasta arrival]
+One plate of fresh hand-rolled pasta glides gently into the center from the top
+edge. It moves with believable mass, decelerates continuously and settles once.
+A thin wisp of steam rises locally without spreading into either copy lane.
+
+[5–8s | pizza arrival]
+One artisan wood-fired pizza enters from the lower edge on a separate path. It
+slows naturally and stops beside the pasta with readable clearance. Neither
+plate shifts to make room; their soft contact shadows remain attached.
+
+[8–10s | finishing objects]
+One glass of red wine enters from the upper-right edge and settles upright
+without spilling. One basil sprig follows from the lower-left and stops near
+the plates. Preserve glass transparency, liquid level, food geometry and the
+single-item counts.
+
+[10–12s | publishable end hold]
+All four objects remain completely still while the cloth continues its subtle
+breathing motion. Hold the balanced center composition long enough for a
+website headline or transition to appear over either protected side lane.
+
+STYLE AND DELIVERY
+Photoreal luxury restaurant campaign, realistic food texture, restrained
+highlights, warm amber-and-ivory palette, soft physically attached shadows,
+minimal motion. Silent background suitable for autoplay and looping.
+
+Reject side-lane intrusion, unreadable copy area, extra dish, object morph,
+plate overlap, reversed arrival, abrupt stop, sliding after settlement,
+floating shadow, spilled wine, turbulent steam, hand, person, utensil, camera
+tilt, exaggerated parallax, text, logo, watermark or interface.
+```
+
+**Technique:** Design the shot as a landing plan rather than a list of objects.
+Assign every item a protected path and final coordinate, then require a
+velocity → deceleration → settled-state transition before the next arrival.
+Persistent copy lanes and a final motionless hold make the generated clip
+usable as a real responsive hero background instead of merely a food montage.
+
+Adapted from Yitzy-max's [September 2, 2026 generation and integration
+commit](https://github.com/Yitzy-max/Website-skills-/commit/57981cb88f6612de26a1bca3cd3f8eb60c7bd9e3), including the [complete prompt and exact
+settings](https://github.com/Yitzy-max/Website-skills-/blob/57981cb88f6612de26a1bca3cd3f8eb60c7bd9e3/videos/README.md) and [hosted Seedance 2.0 Mini
+render](https://d8j0ntlcm91z4.cloudfront.net/user_3IkRZvhQJHVYjmx5uflJWyvBjWO/hf_20260902_002513_bd270e3f-54f6-4658-9cfa-2435511dfea1.mp4).
+
+
 ## Reusable templates
 
 ### End-frame-owned cover reveal and muted-autoplay publish gate
@@ -24995,6 +25072,8 @@ the [versioned movement-and-load findings](https://github.com/yukitake212/video-
 and the [two-axis review method](https://github.com/yukitake212/video-knowledge/blob/0c54e3e2c6d6389054bdd79129b655fcb7e607b0/OPERATIONS.md).
 
 ## Sources
+
+- [Yitzy-max — September 2, 2026 Higgsfield Seedance 2.0 Mini restaurant-hero generation: exact `seedance_2_0_mini` call, 12-second 720p silent hosted render, complete prompt and web-delivery integration](https://github.com/Yitzy-max/Website-skills-/commit/57981cb88f6612de26a1bca3cd3f8eb60c7bd9e3) ([prompt and settings](https://github.com/Yitzy-max/Website-skills-/blob/57981cb88f6612de26a1bca3cd3f8eb60c7bd9e3/videos/README.md), [hosted render](https://d8j0ntlcm91z4.cloudfront.net/user_3IkRZvhQJHVYjmx5uflJWyvBjWO/hf_20260902_002513_bd270e3f-54f6-4658-9cfa-2435511dfea1.mp4))
 
 - [StrangeCurve743 — August 30, 2026 Seedance 2.5 Aristotto text-to-video bodega one-take with complete 30-second prompt and attached 1280×720 result with audio](https://www.reddit.com/r/AristottoAI/comments/1w2fq6n/the_bodega_walkthrough_trend_with_seedance_25/)
 
