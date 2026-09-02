@@ -24761,6 +24761,98 @@ Adapted from TanLuAI's September 1, 2026
 [Seedance 2.5 asset-to-master-to-repair workflow and completed film](https://x.com/TanLuAI/status/2094762826237894934)
 plus the [full master prompt and narrowed second-pass correction](https://x.com/TanLuAI/status/2094762832730435828).
 
+
+### Poster-frame harvest reel and plateau-frame acceptance gate
+
+**Verified model:** Seedance 2.5 — the original creator identifies Seedance
+2.5 as the motion source for this poster workflow, publishes the resulting
+poster and documents the video-to-still extraction and finishing sequence
+
+Use this when direct image generation keeps losing the cinematic face, lighting
+or background quality already achieved in Seedance. Generate a short motion
+reel whose stable pose plateaus are deliberately usable as still candidates;
+extract the best encoded frame, then perform only deterministic finishing
+outside the model.
+
+```text
+OUTPUT CONTRACT
+Purpose = [POSTER / KEY ART / THUMBNAIL / CHARACTER CARD].
+Motion source = Seedance 2.5.
+Generate one [3–6]-second clip containing [3–6] one-second candidate tableaus.
+Delivery = highest supported resolution, source aspect ratio chosen for the
+final crop, no dialogue, no subtitle, no generated title or logo.
+Keep one identity, wardrobe, location, time of day, lens family, light direction
+and color pipeline across the whole reel.
+
+POSTER INVENTORY
+Subject = [IDENTITY + WARDROBE + IDENTITY-CRITICAL DETAILS].
+Environment = [LOCATION + DEPTH PLANES + BACKGROUND DETAILS TO PRESERVE].
+Story signal = [ONE READABLE EMOTION OR CONFLICT].
+Final crop = [RATIO].
+Protected copy zone = [LEFT / RIGHT / TOP / BOTTOM / NONE].
+Required negative space = [DESCRIPTION].
+Do not ask Seedance to typeset the finished poster; add title, credits and logo
+only after the accepted frame has been extracted.
+
+CANDIDATE PLAN
+Give each one-second window exactly one still-image hypothesis:
+[0–1s] Pose A = [BODY LINE + GAZE + HAND STATE].
+         Composition = [SUBJECT POSITION + COPY SPACE].
+         Light accent = [FACE / SILHOUETTE / PROP].
+[1–2s] Pose B = [BODY LINE + GAZE + HAND STATE].
+         Composition = [SUBJECT POSITION + COPY SPACE].
+         Light accent = [FACE / SILHOUETTE / PROP].
+[2–3s] Pose C = [BODY LINE + GAZE + HAND STATE].
+         Composition = [SUBJECT POSITION + COPY SPACE].
+         Light accent = [FACE / SILHOUETTE / PROP].
+[OPTIONAL WINDOWS] Repeat the same three fields; do not introduce a new person,
+wardrobe, set, weather state or unrelated story beat.
+
+PLATEAU RULE
+Enter each pose with one small physically motivated movement, settle quickly,
+then hold a clean readable plateau for at least the final half of that window.
+During the hold: eyes open naturally, face unobscured, hands resolved, hair and
+cloth limited to micro-motion, camera nearly locked, subject and background
+sharp enough for frame extraction. Put transitions near window boundaries so a
+candidate is not trapped inside motion blur, a blink or a half-finished gesture.
+
+CONTINUITY AND FAILURE CONTROL
+Preserve facial proportions, skin detail, garment construction, prop count,
+background geometry, light direction and protected copy space. No beauty-filter
+skin, face swap, extra finger, eye closure during the hold, costume mutation,
+background grid, plastic texture, camera whip, focus hunt, rapid exposure
+change, duplicate subject, text, logo or watermark.
+
+FRAME HARVEST
+1. Review the original encoded video one frame at a time; do not capture the
+   player interface or take a screen screenshot.
+2. From every plateau, export the sharpest source frame.
+3. Reject a candidate if face detail, hand anatomy, background geometry,
+   intended negative space or story signal fails, even when its color is
+   attractive.
+4. Compare the surviving frames at the intended final crop before upscaling.
+5. Upscale only the selected source frame, then crop and make minor repairs.
+6. Add title, billing block and logo in a layout tool so typography remains
+   deterministic and independently editable.
+
+ACCEPTANCE GATE
+Accept one frame only when it passes all six axes:
+identity | anatomy | background integrity | cinematic light | crop safety |
+copy-space safety.
+Record clip ID, source timestamp, extracted-frame dimensions, crop and upscale
+settings. Keep the original frame beside the finished poster so later edits do
+not repeatedly upscale an already processed image.
+```
+
+**Technique:** Treat Seedance as a temporal cinematography sampler rather than
+the final poster renderer. Explicit pose plateaus create several coherent
+lighting and performance candidates inside one short generation, while
+source-frame export, crop-first review and compositor-owned typography prevent
+screenshot loss, repeated resampling and generated-text failures.
+
+Adapted from Aggravating_Yam_5784's September 1, 2026
+[original Seedance 2.5 poster workflow, result and extraction notes](https://www.reddit.com/r/Seedance_AI/comments/1w4nfni/i_made_cinematic_ai_poster_using_seedance_25/).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -25072,6 +25164,8 @@ the [versioned movement-and-load findings](https://github.com/yukitake212/video-
 and the [two-axis review method](https://github.com/yukitake212/video-knowledge/blob/0c54e3e2c6d6389054bdd79129b655fcb7e607b0/OPERATIONS.md).
 
 ## Sources
+
+- [Aggravating_Yam_5784 — September 1, 2026 original Seedance 2.5 video-to-poster workflow: short temporal pose candidates, direct source-frame export, upscale, crop and deterministic typography finishing](https://www.reddit.com/r/Seedance_AI/comments/1w4nfni/i_made_cinematic_ai_poster_using_seedance_25/)
 
 - [Yitzy-max — September 2, 2026 Higgsfield Seedance 2.0 Mini restaurant-hero generation: exact `seedance_2_0_mini` call, 12-second 720p silent hosted render, complete prompt and web-delivery integration](https://github.com/Yitzy-max/Website-skills-/commit/57981cb88f6612de26a1bca3cd3f8eb60c7bd9e3) ([prompt and settings](https://github.com/Yitzy-max/Website-skills-/blob/57981cb88f6612de26a1bca3cd3f8eb60c7bd9e3/videos/README.md), [hosted render](https://d8j0ntlcm91z4.cloudfront.net/user_3IkRZvhQJHVYjmx5uflJWyvBjWO/hf_20260902_002513_bd270e3f-54f6-4658-9cfa-2435511dfea1.mp4))
 
