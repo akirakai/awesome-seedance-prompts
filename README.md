@@ -26823,7 +26823,89 @@ Adapted and rewritten from Chandler Milien's September 3, 2026
 production commit](https://github.com/Ajnaya509/foreas-website/commit/5b7b374a0394adab1dc3be70b165e33f6b0ab93c).
 
 
+### Observable-front motion rewrite and low-resolution acceptance gate
+
+**Verified models:** Seedance 2.0 and Seedance 2.5 — the original creator states
+that most shots in a completed twelve-minute film used these two exact versions
+and documents this successful motion-language repair from that production. The
+source does not identify which one of the two rendered the individual coral
+shot, so this template is deliberately scoped to the verified pair and does not
+claim that either version alone produced it.
+
+Use this when a requested transformation, spread, growth or invasion only
+pulses, shimmers or changes texture in place. Replace the abstract state verb
+with one observable traveling process: a front with an origin, direction,
+ordered contacts and a terminal boundary. Prove the motion cheaply before
+spending on final resolution.
+
+```text
+FAILURE RECEIPT
+Exact candidate models = [SEEDANCE 2.0 / SEEDANCE 2.5].
+Keep [REFERENCES / SUBJECT / SCENE / CAMERA / LIGHTING / DURATION] unchanged.
+Failed clause = "[ABSTRACT VERB + INTENSIFIER]."
+Observed failure = [PULSED / SHIMMERED / SWELLED IN PLACE / CHANGED TEXTURE /
+APPEARED EVERYWHERE AT ONCE].
+The repaired run may change only the motion clause below.
+
+OBSERVABLE PROCESS MAP
+Origin = [ONE VISIBLE START POINT OR EDGE].
+Process class = [ADVANCING FRONT / WAVE / FLOW / AVALANCHE / CREEPING CRACK /
+ROLLING CLOUD / CASCADE].
+Travel direction = [SCREEN DIRECTION + WORLD ROUTE].
+Leading edge = [READABLE SHAPE, DEPTH AND SPEED].
+Ordered checkpoints = [LANDMARK A] -> [LANDMARK B] -> [LANDMARK C].
+Contact response = [WHAT EACH LANDMARK DOES ONLY AFTER THE FRONT REACHES IT].
+Trail state = [VISIBLE IRREVERSIBLE CHANGE LEFT BEHIND].
+Terminal boundary = [EXACT PLACE OR OBJECT THE FRONT REACHES BEFORE THE SHOT ENDS].
+
+REPLACEMENT MOTION CLAUSE
+"Treat [PHENOMENON] as one traveling [PROCESS CLASS], not as stationary surface
+animation. It begins visibly at [ORIGIN]. Its leading edge moves [DIRECTION]
+at [SPEED], reaches [A], then [B], then [C], and changes each location only
+after contact. The changed state remains behind the front. By the final beat,
+the leading edge reaches [TERMINAL BOUNDARY] and is still moving consistently."
+
+CAMERA EVIDENCE
+Choose framing that keeps the origin and at least two checkpoints readable in
+one shot, or assign one motivated follow move that never overtakes the leading
+edge. Do not hide every contact behind cuts, smoke, foreground blockage or
+camera shake.
+
+480P MOTION GATE
+Render the shortest viable test at 480p with the same duration and composition
+planned for delivery. Inspect [EARLY / MIDDLE / LATE] decoded frames and record:
+- leading-edge position changes monotonically along the declared route;
+- checkpoints are contacted in order, never before the front arrives;
+- the trail persists instead of resetting or breathing;
+- scale and speed remain physically coherent;
+- subject, location and camera locks survive the rewrite.
+
+Reject in-place pulsing, whole-frame dissolve, simultaneous global appearance,
+reversed travel, skipped checkpoints, contact before arrival or a front that
+stalls while texture continues animating.
+
+ESCALATION RULE
+If the route passes, rerender at delivery resolution without rewriting the
+approved motion clause. If it fails, change only PROCESS CLASS or reduce the
+checkpoint count; do not stack synonyms such as "grows, expands, spreads and
+erupts rapidly." Archive the failed clause, model, settings, output and first
+failing timestamp beside the approved test.
+```
+
+**Why it works:** an abstract change can be satisfied by local animation with no
+translation. The source production repeatedly obtained coral that merely
+pulsed when asked to grow or expand through a city. Describing the same event as
+a directional avalanche-like front, with named places it had to reach, produced
+the intended traversal. The 480p gate separates motion and composition proof
+from final-quality spend.
+
+Adapted and rewritten from Agreeable-Problem989's September 3, 2026
+[Seedance 2.0/2.5 twelve-minute-film production retrospective and documented
+coral-motion repair](https://www.reddit.com/r/Seedance_AI/comments/1w675bp/i_used_seedance_for_most_of_a_12minute_ai_film_a/).
+
 ## Sources
+
+- [Agreeable-Problem989 — September 3, 2026 Seedance 2.0/2.5 twelve-minute-film production retrospective: documented abstract-verb failure, directional physical-process rewrite, ordered spatial arrival, character-reference simplification and 480p composition testing](https://www.reddit.com/r/Seedance_AI/comments/1w675bp/i_used_seedance_for_most_of_a_12minute_ai_film_a/)
 
 - [Chandler Milien — September 3, 2026 Higgsfield Seedance 2.5 generated portrait clip and measured terminal-screen takeover: committed MP4/WebM and poster, exact 540×960 screen bounds, responsive scale computation, native-UI separation, delayed-entry timing fix and playback fallbacks](https://github.com/Ajnaya509/foreas-website/commit/5b7b374a0394adab1dc3be70b165e33f6b0ab93c)
 
