@@ -310,6 +310,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Counter-owned fire/ice wuxia duel with elemental battlefield geography](#294-counter-owned-fireice-wuxia-duel-with-elemental-battlefield-geography)
   - [Paired-hitman warehouse advance with role-locked affect and beat-synced action](#295-paired-hitman-warehouse-advance-with-role-locked-affect-and-beat-synced-action)
   - [Ten-look base-shirt styling matrix with invariant garment identity](#296-ten-look-base-shirt-styling-matrix-with-invariant-garment-identity)
+  - [Locked-camera foreground spill and delayed background-threat focus handoff](#297-locked-camera-foreground-spill-and-delayed-background-threat-focus-handoff)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -17046,6 +17047,104 @@ Adapted and rewritten from Saul Goodman / @Goodmanprotocol's September 3, 2026
 [complete Seedance 2.5 prompt and attached 30.144-second generated fashion reel](https://x.com/Goodmanprotocol/status/2095216981624721691).
 
 
+### 297. Locked-camera foreground spill and delayed background-threat focus handoff
+
+**Verified model:** Seedance 2.5 — the original creator labels the complete prompt
+with this exact version and attaches a playable 20.096-second generated result  
+**Use case:** restrained crime suspense, dry comedy, two-reference identity control,
+single-take staging, motivated rack focus, native dialogue  
+**Mode:** reference-to-video with two character images  
+**Suggested settings:** 20 seconds, 16:9, photorealistic live action, native audio,
+no music
+
+```text
+Create one photorealistic 20-second crime-suspense scene with dry, understated
+comedy. Use two adult character references and one continuous locked-camera take.
+
+REFERENCE OWNERSHIP
+@Image1 = AGENT A, the person who will appear in the rear plane. Preserve only
+A's face, hair, visible body proportions, wardrobe and accessories.
+@Image2 = AGENT B, the person operating the drink dispenser in the foreground.
+Preserve only B's face, hair, visible body proportions, wardrobe and accessories.
+Never swap, merge, duplicate or average the two identities.
+
+LOCATION AND CAMERA LOCK
+A modern cold-grey indoor refreshment area: one silver drink dispenser, stainless
+drip tray, pale counter and cool white ceiling light. Fix the camera slightly
+below chest height at the dispenser's front-side corner, 35–50 mm medium-close
+coverage with mild shallow depth of field. Keep the lens position, frame edges,
+screen direction and room geography unchanged for the whole take. The camera
+must not pan or search for danger.
+
+[0–4s | quiet approach]
+B enters the existing foreground cautiously but naturally. She makes one brief
+environment check, then gives the dispenser her full attention. Neutral face,
+closed mouth, no smile and no exaggerated spy acting.
+
+[4–7s | commit to the task]
+B places one transparent plastic cup directly beneath the nozzle. She verifies
+the rear plane only once with peripheral vision, then watches the cup. Both hands,
+cup, nozzle and tray remain spatially consistent.
+
+[7–12s | foreground causal chain]
+Orange drink flows continuously into the cup. Show the exact irreversible order:
+liquid level rises -> reaches the rim -> passes visibly above it -> runs down the
+outside wall -> crosses B's fingers -> breaks into droplets on the metal tray.
+The machine does not stop in time and none of the spilled liquid vanishes or
+returns to the cup. B only tightens her fingers, presses her lips and makes one
+sub-second “this is bad” micro-reaction. Keep the comedy physical and restrained.
+
+[12–14s | danger enters before its owner]
+Without camera movement, the muzzle and front section of one black handgun enter
+slowly from B's right-rear edge and stop near the side-back of her head. The
+object must enter the already established composition before A's full body or
+face becomes readable. B notices in sequence: eye movement stops -> eyes make
+one tiny rear-right confirmation -> expression becomes still -> body freezes.
+No wide eyes, open mouth, scream, snap turn or dropped cup.
+
+[14–17s | surrender and focus transfer]
+B remains facing the dispenser. She stops trying to manage the cup and raises
+both empty hands very slowly while keeping her shoulders controlled. Perform one
+continuous cinematic rack focus with no reframing: foreground B moves gradually
+out of focus as rear-plane A becomes sharp. Do not pulse, hunt or return focus.
+
+[17–20s | calm authority]
+A is now the clear subject in the rear plane, holding the same handgun steadily
+with one hand. Preserve @Image1 exactly. Her face stays calm, neutral and serious;
+the threat comes from blocking and the object, never from a villain grimace. She
+looks at B and says once, in low conversational Mandarin with precise lip sync:
+“你知道的太多了。”
+B keeps both hands raised, does not turn and does not answer. Allow only one tiny
+eye pause. Cut immediately on the final spoken syllable; add no reaction tail.
+
+SOUND OWNERSHIP
+Use only synchronous production sound: restrained footsteps, plastic cup contact,
+dispenser mechanism, liquid stream, overflow across fingers, droplets striking
+metal, subtle cloth movement, room tone and A's final line. No score, horror hit,
+weapon cocking, alarm, narration, extra dialogue or crowd voice.
+
+CONTINUITY AND FAILURE CONTROL
+Preserve both identities, hand count, cup transparency, liquid colour, spill
+history, gun count, fixed camera, room layout, light direction and foreground/
+background screen positions. Reject identity swap, early reveal of A, weapon
+appearing without an entry path, camera turning toward danger, premature rack
+focus, discontinuous fill level, disappearing spill, comic mugging, sudden head
+turn, dropped cup, accidental firing, blood, injury, extra person, cut, zoom,
+subtitle, logo or watermark.
+```
+
+**Technique:** Keep a mundane foreground failure causally active while the real
+threat enters the already established rear plane. Revealing the threatening
+object before its owner prevents a premature character reveal; the locked camera
+forces blocking to carry suspense, and a single one-way rack focus transfers
+narrative authority without a cut. The reaction ladder caps performance amplitude
+as danger rises, while the liquid-state ledger keeps the dry-comedy cause visible
+through the focus handoff.
+
+Adapted and rewritten from Chengzi / @Chengzilhy's September 3, 2026
+[complete Seedance 2.5 prompt and attached 20.096-second generated result](https://x.com/Chengzilhy/status/2095413989966491714).
+
+
 ## Reusable templates
 
 ### Face-presence recast coverage gate and source-audio authority
@@ -26602,6 +26701,8 @@ the [versioned movement-and-load findings](https://github.com/yukitake212/video-
 and the [two-axis review method](https://github.com/yukitake212/video-knowledge/blob/0c54e3e2c6d6389054bdd79129b655fcb7e607b0/OPERATIONS.md).
 
 ## Sources
+
+- [Chengzi / @Chengzilhy — September 3, 2026 Seedance 2.5 locked-camera dispenser suspense scene: complete 20-second two-reference prompt, irreversible overflow ledger, threat-object-first blocking, restrained reaction ladder, one-way rack-focus handoff and attached 20.096-second generated result](https://x.com/Chengzilhy/status/2095413989966491714)
 
 - [Born Gifted / AIR — September 3, 2026 Seedance 2.5 anchor-graph experiment: four-clip previous-final-frame chain with independent-clip/interpolation failure comparison and generated MP4s, followed by eight approved still anchors joined through seven start-to-end morphs and hold-weighted scroll frames](https://github.com/borngifted/air/commit/f7dc7fdc127fd5a2f43172abbed872ddd402df9a) ([eight-anchor redesign](https://github.com/borngifted/air/commit/07e0cbe49d2185155b1ec64ad2d287831fb1fb12))
 - [Mike Futia — September 2, 2026 creator-tested Seedance 2.5 Ad Multiplier: complete video-edit prompt, shot-level face-presence audit, two failed face-free replacement tests, pre-spend mismatch gate and source-audio remux workflow](https://github.com/mikefutia/ad-multiplier/commit/d1b1afe274d7fe1126622280b8a885455b22d2b4) ([workflow](https://github.com/mikefutia/ad-multiplier/blob/d1b1afe274d7fe1126622280b8a885455b22d2b4/README.md), [prompt template](https://github.com/mikefutia/ad-multiplier/blob/d1b1afe274d7fe1126622280b8a885455b22d2b4/SKILL.md))
