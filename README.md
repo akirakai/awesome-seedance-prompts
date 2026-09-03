@@ -26089,6 +26089,91 @@ Adapted from Manju Laoli's September 2, 2026
 the [complete approved Seedance 2.0 one-take and close-scale launch rule](https://github.com/lixiaoxiao9888-create/manju-laoli-skill/blob/ed7f17abcf444288e0886862cfa098743c15b6b6/short-drama-director/references/action-cinematography-breakdown.md),
 and the [failure-derived no-idle action gate](https://github.com/lixiaoxiao9888-create/manju-laoli-skill/blob/ed7f17abcf444288e0886862cfa098743c15b6b6/short-drama-director/references/action-previs-15grid.md).
 
+### Anchor-owned start/end chain and hold-weighted transition gate
+
+**Verified model:** Seedance 2.5 — the creator publishes a first attempt made
+from four independent clips plus interpolated joins, a corrected four-clip
+chain whose clips begin on the preceding final frame, and a later eight-anchor
+journey connected by seven Seedance 2.5 start-to-end morphs; the commits include
+the generated MP4s, posters and extracted transition frames
+
+Use this when a sequence must pause on several designed states yet move between
+them without asking one long generation to remember every earlier decision.
+Each still anchor owns the exact identity, composition, light and readable
+content at one narrative checkpoint. Each Seedance segment owns only the
+controlled change between two adjacent anchors.
+
+```text
+ANCHOR GRAPH
+Model: Seedance 2.5.
+Mode: start-image + end-image transition, one edge per generation.
+Aspect ratio and crop: [LOCKED FOR THE WHOLE GRAPH].
+
+Create [N] approved anchor images A1...AN before generating video.
+For every anchor record:
+ANCHOR | NARRATIVE STATE | SUBJECT IDENTITY | POSE | CAMERA/CROP |
+LIGHT/PALETTE | PROPS/TEXT | ELEMENTS ALLOWED TO CHANGE NEXT
+
+An anchor is authoritative. Do not regenerate it inside another clip.
+Build exactly N-1 directed edges: A1->A2, A2->A3 ... A(N-1)->AN.
+
+EDGE PROMPT — REPEAT FOR EACH ADJACENT PAIR
+@Image1 is the exact opening frame [Ai].
+@Image2 is the exact closing frame [Ai+1].
+
+Generate one continuous [3–6 second] bridge from @Image1 to @Image2.
+Preserve across the entire bridge: [FACE / BODY / WARDROBE / WORLD SCALE /
+CAMERA SIDE / LIGHT DIRECTION / PALETTE / APPROVED TEXT].
+
+The only permitted state change is:
+[START STATE] -> [ONE VISIBLE CAUSAL MOTION OR MATERIAL TRANSFORMATION] ->
+[END STATE].
+
+Use [SUBJECT MOVEMENT / CAMERA MOVE / OCCLUDER / MATERIAL FLOW] as the single
+transition carrier. It begins from something already visible in @Image1 and
+resolves into a matching feature already present in @Image2. Keep motion
+direction and screen position continuous. No cut, unrelated orbit, new subject,
+extra prop, invented lettering, identity blend or intermediate scene.
+
+The first frame must reproduce @Image1; the final frame must reproduce @Image2.
+Approach the final pose and composition gradually, settle for the last few
+frames, and do not continue changing after the destination is reached.
+
+EDGE ACCEPTANCE
+- opening and closing frames match their anchors in crop, identity and light;
+- every invariant survives the midpoint, not only the endpoints;
+- exactly one named delta occurs and its carrier remains visible;
+- no morph seam, duplicate subject, gibberish text or unplanned scene appears;
+- direction, scale and motion remain compatible with the neighbouring edges.
+
+Reject only the failed edge. Never regenerate approved anchors or successful
+edges to repair one seam.
+
+ASSEMBLY
+Join edges on their identical anchor frames; remove duplicate endpoint frames.
+For a normal film, hold each anchor only for the intended editorial beat.
+For a scroll-scrub or presentation timeline, extract source frames and repeat
+each anchor for [12–20 timeline steps] while leaving the transition frames
+single-width. Use the first/last anchor as the reduced-motion poster path.
+
+FINAL GATE
+Scrub or play through every boundary. Confirm that the anchor state is stable
+during each hold, the transition begins only after the hold, and reversing the
+timeline cannot expose an unmatched endpoint. Compare against an independent-
+clip plus interpolation attempt when available; prefer the anchor graph only
+when it measurably reduces identity drift, morphing and text mutation.
+```
+
+**Technique:** The source's independent-clip attempt exposed drifting identity,
+morph seams and corrupted poster text. Making anchors authoritative turns a
+long sequence into locally testable edges, while repeated endpoint frames add
+readable pauses without asking Seedance to generate artificial stillness.
+
+Adapted and rewritten from Born Gifted's September 3, 2026
+[four-clip Seedance 2.5 chain, independent-clip failure comparison and generated MP4 assets](https://github.com/borngifted/air/commit/f7dc7fdc127fd5a2f43172abbed872ddd402df9a)
+and the [eight-anchor, seven-transition scroll journey with extracted frames](https://github.com/borngifted/air/commit/07e0cbe49d2185155b1ec64ad2d287831fb1fb12).
+
+---
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -26401,6 +26486,7 @@ and the [two-axis review method](https://github.com/yukitake212/video-knowledge/
 
 ## Sources
 
+- [Born Gifted / AIR — September 3, 2026 Seedance 2.5 anchor-graph experiment: four-clip previous-final-frame chain with independent-clip/interpolation failure comparison and generated MP4s, followed by eight approved still anchors joined through seven start-to-end morphs and hold-weighted scroll frames](https://github.com/borngifted/air/commit/f7dc7fdc127fd5a2f43172abbed872ddd402df9a) ([eight-anchor redesign](https://github.com/borngifted/air/commit/07e0cbe49d2185155b1ec64ad2d287831fb1fb12))
 - [Mike Futia — September 2, 2026 creator-tested Seedance 2.5 Ad Multiplier: complete video-edit prompt, shot-level face-presence audit, two failed face-free replacement tests, pre-spend mismatch gate and source-audio remux workflow](https://github.com/mikefutia/ad-multiplier/commit/d1b1afe274d7fe1126622280b8a885455b22d2b4) ([workflow](https://github.com/mikefutia/ad-multiplier/blob/d1b1afe274d7fe1126622280b8a885455b22d2b4/README.md), [prompt template](https://github.com/mikefutia/ad-multiplier/blob/d1b1afe274d7fe1126622280b8a885455b22d2b4/SKILL.md))
 
 - [Saul Goodman / @Goodmanprotocol — September 3, 2026 Seedance 2.5 ten-look one-shirt fashion reel: complete 30-second prompt, invariant base-garment styling matrix, ordered transition montage, opening lip-synced line and attached 30.144-second generated result](https://x.com/Goodmanprotocol/status/2095216981624721691)
