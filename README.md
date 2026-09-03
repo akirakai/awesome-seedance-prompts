@@ -19890,7 +19890,7 @@ Adapted from [Shami's original Seedance 2.0 serialized sports-thriller prompt](h
 
 ### Multimodal asset-role contract template
 
-**Verified model:** Seedance 2.0 — confirmed by the original creator's explicitly versioned Seedance 2.0 prompting guide
+**Verified models:** Seedance 2.0 — confirmed by the original creator's explicitly versioned Seedance 2.0 prompting guide; Seedance 2.0 Fast (`doubao-seedance-2-0-fast-260128`) — recovered from a creator's succeeded production node and three byte-identical task-history serializations
 
 Use this before the shot list when combining several images, videos, and audio files. Assign each asset a single authority, state what it must not contribute, then resolve conflicts through a written priority order.
 
@@ -19913,6 +19913,28 @@ CONFLICT PRIORITY
 6. Text instructions below.
 If a lower-priority asset conflicts with a higher-priority layer, preserve the higher-priority layer and adapt only the lower one.
 
+CANVAS DEPLOYMENT GATE
+1. Promote only reviewed upstream images: after an image-generation node succeeds,
+   download and approve its result, then re-upload it as an independent image
+   input. Do not let an unreviewed transient output silently become a video
+   reference.
+2. Freeze one ordered manifest before prompting and submission:
+   Image 1 = [CHARACTER A], Image 2 = [CHARACTER B],
+   Image 3 = [SCENE STATE], Image 4 = [COLOR CARD].
+   The incoming-edge order, prompt numbering and serialized request order must
+   match exactly. Removing or replacing one input must not renumber the others.
+3. Give the four slots non-overlapping authority. Character images own only
+   identity, proportions and wardrobe. The scene image owns geography, camera,
+   light direction, furniture and visible-person count. The color card owns only
+   palette relationships; explicitly reject its board, layout, labels and text.
+4. Before a paid run, compare the emitted prompt and ordered input list with the
+   task-history record. Fail closed on a missing, duplicated or reordered asset.
+5. In each shot, nominate one focal character for the strong action. All others
+   are limited to breathing, blinking and small eye movement, with reactions
+   staggered after the focal event rather than firing simultaneously.
+6. Validate the chosen model, aspect ratio, resolution and duration against the
+   current route schema, then keep that tuple fixed across the sequence.
+
 SHOT PLAN
 [0–Xs] [SHOT SIZE]: [SUBJECT] performs [ACTION]. Camera follows @Video1's [SPECIFIC MOVE]. @Audio1 cue [CUE] triggers [VISIBLE EVENT].
 [X–Ys] [NEXT BEAT]. Preserve the ownership rules above.
@@ -19921,9 +19943,9 @@ SHOT PLAN
 No asset blending, face from wardrobe reference, background from motion reference, camera copied from a still image, invented lyric, unauthorized text, priority reversal, identity drift, prop reassignment, or unstated style transfer.
 ```
 
-**Why it works:** Upload count is not control. The contract converts references into non-overlapping jobs and supplies a deterministic conflict rule, so adding more assets reduces ambiguity instead of increasing it.
+**Why it works:** Upload count is not control. The contract converts references into non-overlapping jobs and supplies a deterministic conflict rule, so adding more assets reduces ambiguity instead of increasing it. The deployment gate separately proves that the reviewed assets reached the model in the same order the prompt names them; the single-focal-action rule then reduces ensemble identity swaps and simultaneous reaction noise.
 
-Adapted from [ChatCut's original Seedance 2.0 multimodal prompting guide](https://x.com/chatcutapp/status/2041763561333264865), published April 8, 2026.
+Adapted from [ChatCut's original Seedance 2.0 multimodal prompting guide](https://x.com/chatcutapp/status/2041763561333264865), published April 8, 2026. The accepted-asset promotion, four-input ordering and single-focal-reaction gate are adapted from James / tvskill's September 4, 2026 [succeeded Seedance 2.0 Fast canvas recovery](https://github.com/xixi2036/tvskill/commit/9d4e8d1a958625ff4b92de252e2468b2ad0c2445); the supported-route tuple check follows the same creator's [live schema audit and regression repair](https://github.com/xixi2036/tvskill/commit/9213cf6cb3c814f64fc6f137bed8f6383a5393a2).
 
 
 ### Emotion-to-performance task-router template
@@ -27251,6 +27273,8 @@ and the versioned
 
 
 ## Sources
+
+- [James / tvskill — Seedance 2.0 Fast succeeded four-reference canvas, byte-identical ordering and accepted-asset promotion](https://github.com/xixi2036/tvskill/commit/9d4e8d1a958625ff4b92de252e2468b2ad0c2445) ([route-schema audit](https://github.com/xixi2036/tvskill/commit/9213cf6cb3c814f64fc6f137bed8f6383a5393a2))
 - [Lars Hustoft / SCRPT — September 3, 2026 creator-recorded Seedance 2.5 multi-shot camera workflow: confirmed reference-driven intro/lullaby use, canonical cast/pose/prop/storyboard stack, camera-keyed take bank, frame-level identity judge and three-refusal production stop](https://github.com/larshustoft/scrpt/commit/6df11a3b182614d29ce96ddb0d81d67bbae23657) ([hard-stop revision](https://github.com/larshustoft/scrpt/commit/5a3fadc55322711006be1936fa7bff864cf19e4f), [17-take camera-provenance postmortem](https://github.com/larshustoft/scrpt/commit/4b64d9397be987351c1646c4dd562fe9fe820333), [production record](https://github.com/larshustoft/scrpt/blob/5a3fadc55322711006be1936fa7bff864cf19e4f/universe/PRODUCTION-LINE.md))
 
 
