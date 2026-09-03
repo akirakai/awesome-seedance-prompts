@@ -311,6 +311,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Paired-hitman warehouse advance with role-locked affect and beat-synced action](#295-paired-hitman-warehouse-advance-with-role-locked-affect-and-beat-synced-action)
   - [Ten-look base-shirt styling matrix with invariant garment identity](#296-ten-look-base-shirt-styling-matrix-with-invariant-garment-identity)
   - [Locked-camera foreground spill and delayed background-threat focus handoff](#297-locked-camera-foreground-spill-and-delayed-background-threat-focus-handoff)
+  - [Four-cut green-plum portrait with bite-state and silence ledger](#298-four-cut-green-plum-portrait-with-bite-state-and-silence-ledger)
+  - [Eight-reference strawberry-picnic montage with shot-keyed state binding](#299-eight-reference-strawberry-picnic-montage-with-shot-keyed-state-binding)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -17145,6 +17147,229 @@ Adapted and rewritten from Chengzi / @Chengzilhy's September 3, 2026
 [complete Seedance 2.5 prompt and attached 20.096-second generated result](https://x.com/Chengzilhy/status/2095413989966491714).
 
 
+
+### 298. Four-cut green-plum portrait with bite-state and silence ledger
+
+**Verified model:** Seedance 2.0 Fast — the original developer records this exact
+model in the completed job metadata and identifies the four-shot 15-second task
+as a live, successful Doubao generation  
+**Use case:** vertical lifestyle portrait, one-reference multi-shot editing,
+food-state continuity, reaction timing, native foley  
+**Mode:** reference-to-video with one approved opening image  
+**Suggested settings:** 15 seconds, 9:16, four hard-cut shots, native audio, no
+music or dialogue
+
+```text
+Create a 15-second vertical documentary-style portrait on one shaded lakeshore
+during a bright summer afternoon. This is a four-shot edited sequence with three
+visible hard cuts, not a disguised continuous take. Preserve one adult subject,
+one outfit, one place and one green plum throughout.
+
+REFERENCE OWNERSHIP
+@Image1 owns the subject's face, center-parted low braided bun, loose windblown
+strands, cream sleeveless floral dress, pale-blue chiffon neck scarf, lakeshore
+shade, skin tone and opening composition. It is also the exact starting state of
+Shot 1. Do not copy borders, text or unrelated objects from the reference.
+
+INVARIANTS
+The same subject remains slightly left of center. A dark tree trunk stays as a
+right-foreground frame and the open lake stays on the left. Afternoon sunlight
+comes from rear-right; soft jade-blue lake bounce comes from front-left.
+Moving leaf shadows are the only repeating visual motif. Real skin, fine facial
+hair, light perspiration and subtle grain; high-key cream, mist-blue and jade
+palette; no warm-yellow grade. No other person, identity drift, outfit change,
+extra fruit, malformed hand, subtitle, logo, score or spoken line.
+
+PROP STATE LEDGER
+One green plum is owned by the subject's right hand:
+whole fruit in palm -> wiped whole fruit -> whole fruit at lips -> one bite with
+one visible missing crescent. Once the bite exists, the fruit never becomes
+whole again. The left hand may briefly cover the mouth only in the reaction.
+
+SHOT 1 | 0.0–4.5 s | 85 mm medium-close, slow stable push
+Begin with her fingers still holding a rough branch. She releases it one finger
+at a time; the branch springs back and shifts the leaf shadows across her face.
+Her wrist turns inward, revealing the whole plum in her right palm. She looks
+down. Wind lifts one loose strand and the scarf tip. End with the fruit fully
+readable in her palm.
+
+HARD CUT.
+
+SHOT 2 | 4.5–8.0 s | 100 mm overhead macro, nearly locked
+Show the same whole plum in the same right palm. One water bead travels down its
+fuzzy skin. Her thumb wipes the bead away, then all five fingers close naturally
+around the fruit. Leaf-light moves over the knuckles. No face, new fruit or
+teleport. End with the right hand lifting out of frame toward her mouth.
+
+HARD CUT on the upward hand motion.
+
+SHOT 3 | 8.0–10.5 s | 50 mm side-backlit close-up, tiny push
+Continue the lift with the whole plum arriving at her lips. She opens her mouth,
+then holds completely still for half a second. After the hold, she takes exactly
+one bite. Teeth contact, cheek compresses slightly and one crisp crack is heard.
+Backlight draws one rim around lips and fruit. End with a single clear bite
+missing; do not hide the changed shape.
+
+HARD CUT after the crack.
+
+SHOT 4 | 10.5–15.0 s | 85 mm close-up, slow retreat then stop
+Continue from the bitten state. Sourness arrives in order: eyes squeeze closed,
+nose wrinkles, shoulders shake twice, then the empty left hand briefly covers
+her mouth as one short wordless laugh escapes. Wind lifts the braid and scarf.
+She turns back toward the lake while still smiling. Finish on the bitten plum
+beside her lips, missing crescent facing camera, with jade lake bokeh behind.
+
+AUDIO LEDGER
+Continuous leaves and distant soft water; one bird call during Shot 2. At the
+bite, one dry crisp crack. For roughly half a second after the crack, mute leaves,
+water and bird completely; then return ambience and permit one brief wordless
+laugh. No dialogue, narration, humming, background music or captions.
+
+ACCEPTANCE
+Pass only if all three hard cuts are visible, each focal length changes, the
+bite-state is irreversible, the half-second pre-bite hold and post-crack silence
+both read clearly, lighting direction survives every cut, and the final fruit
+shows exactly one bite.
+```
+
+**Why it works:** the single reference owns identity and environment, while the
+fruit ledger supplies a small irreversible event that proves continuity across
+four independently framed shots. Separating the anticipatory hold from the
+post-impact silence gives the bite a measurable edit rhythm instead of asking
+for a vague “dramatic pause.”
+
+Adapted from leo-306's September 4, 2026
+[live Seedance 2.0 Fast multi-shot job record](https://github.com/leo-306/auto-chat/blob/3d2d924996d07f71dea8559db2e6083d11ddd255/examples/doubao-video-15s-multishot-job.json)
+and the creator's
+[successful-run commit](https://github.com/leo-306/auto-chat/commit/3d2d924996d07f71dea8559db2e6083d11ddd255).
+
+
+### 299. Eight-reference strawberry-picnic montage with shot-keyed state binding
+
+**Verified model:** Seedance 2.5 — the original developer records this exact
+model in the successful 30-second Doubao job, then reports that all seven planned
+cut points were present in the verification run with no timing error above 0.6 s  
+**Use case:** multi-reference lifestyle montage, shot-specific pose binding,
+long-range prop continuity, heterogeneous transition planning, native music and
+foley  
+**Mode:** reference-to-video with eight ordered images  
+**Suggested settings:** 30 seconds, 9:16, eight shots, native audio
+
+```text
+Create a 30-second vertical summer-picnic portrait composed of eight distinct
+shots. Every shot uses the same adult subject, face, braided hairstyle, cream
+picnic cloth, basket, plate, outfit, bare feet, grass location and rear-right
+afternoon light. Cuts must be visible; never smear two planned shots into one
+camera move.
+
+ORDERED REFERENCE CONTRACT
+@Image1 = Shot 1 standing and bending over the basket.
+@Image2 = Shot 2 half-kneeling while arranging fruit on the white plate.
+@Image3 = Shot 3 turned toward the basket and looking back over one shoulder.
+@Image4 = Shot 4 side-seated with one strawberry at the lips.
+@Image5 = Shot 5 prone with chin supported and lower legs raised.
+@Image6 = Shot 6 reclining against the basket with one strawberry soda.
+@Image7 = Shot 7 kneeling while pouring the basket into a shallow white dish.
+@Image8 = Shot 8 cross-legged while offering the finished plate to camera.
+Each image owns only its shot's pose, framing and visible contact geometry.
+All eight jointly own identity, wardrobe, location and light. Do not import
+borders, text or extra people, and never swap the order.
+
+CONTINUITY REGISTER
+Keep the basket screen-left and the plate plus small cake screen-right on the
+same cloth. The camera stays low and generally opposite the picnic.
+ONE HERO STRAWBERRY follows this irreversible path:
+basket -> white plate -> right fingertips -> lips -> one visible bite -> pink
+saucer with bite facing camera -> returned to the near rim of the final plate.
+Do not restore, duplicate, enlarge or lose it.
+Moving leaf-light, intermittent wind and one clean plate-click per shot are the
+three long-range motifs.
+
+SHOT 1 | 0–4 s | 35 mm low full-body, one slow rise
+Match @Image1. She places the hero strawberry in the basket, straightens and
+tucks one loose strand behind her ear. End with that strawberry lifted between
+right thumb and index finger.
+
+SHOT 2 | 4–8 s | 50 mm medium, nearly locked
+Continue the unfinished descent into @Image2. Her knee presses one new fold into
+the cloth. She arranges several berries on the white plate one by one; each
+contact produces one light ceramic click. End with a neat ring of fruit and her
+eyes raised toward camera.
+
+SHOT 3 | 8–11 s | 50 mm three-quarter rear, short lateral drift
+Match @Image3. She reaches into the basket, parts the fruit with one hand, fixes
+a loose hair with the other, then looks over her shoulder. End with the hero
+strawberry isolated between two fingers.
+
+SHOT 4 | 11–15 s | 85 mm close-up, slow push then stop
+Match @Image4. Bring the hero strawberry to her lips. Hold all sound for half a
+second, then take one bite with a crisp crack. A trace of juice may remain on the
+lower lip. End with the missing bite fully visible and sustained eye contact.
+
+SHOT 5 | 15–19 s | 50 mm slightly high medium-close, locked
+Match @Image5. The same bitten fruit now rests on the pink saucer, bite toward
+camera. She supports her chin, crosses her raised lower legs once and gives one
+small shoulder-shaking smile. Keep the fruit and saucer readable.
+
+SHOT 6 | 19–22 s | 50 mm medium, one slight retreat
+Match @Image6. She opens the soda once, drinks one small sip and reacts when a
+condensation bead reaches her hand. The bitten hero strawberry remains on the
+saucer; the bottle never replaces it.
+
+SHOT 7 | 22–26 s | 50 mm medium plus one half-second 100 mm insert
+Match @Image7. She tips the basket into the shallow dish. Several whole berries
+roll, and the macro insert tracks one of them without changing the hero fruit's
+bitten state. End with two or three berries resting on the cloth and her glance
+back to camera.
+
+SHOT 8 | 26–30 s | 50 mm medium, slow final push
+Match @Image8. Restore the bitten hero strawberry from its saucer to the near
+edge of the completed white plate, bite facing camera. She slides the plate
+forward with both hands and lifts her gaze. Stop when the plate reaches the
+lower frame edge and moving leaf-light crosses her collarbone.
+
+TRANSITION LEDGER
+1->2 action relay on the unfinished descent.
+2->3 fruit occlusion: one berry briefly fills frame.
+3->4 eyeline-matched hard cut.
+4->5 one natural leaf-light overexposure, never a graphic flash.
+5->6 lateral camera relay along the cloth.
+6->7 plate-click sound begins just before the cut.
+7->8 position-matched cut from one rolling circle to the plated fruit.
+Use exactly one named bridge at each boundary. Never combine bridges or invent a
+new transition.
+
+AUDIO
+A light nylon-guitar, hand-drum and whistle cue runs continuously except for the
+half-second hold before Shot 4's bite. Layer grass and leaf movement, distant
+birds, basket creak, plate contacts, soda fizz and the single bite crack. No
+dialogue, narration, vocal melody, subtitle, title card, watermark or logo.
+
+FAILURE CONTROLS
+No new person, recast face, hairstyle or outfit; no shoe appearance; no shifted
+basket/plate geography; no doubled or regenerated hero fruit; no disappearing
+bite; no extra limb or fused fingers; no sudden evening grade; no shot without
+its assigned reference state; no cut that erases the incoming object's state.
+
+ACCEPTANCE
+Verify eight readable key states in order, seven distinct boundaries, timing
+within one second of every planned cut, stable identity and light, one traceable
+hero strawberry with a permanent bite after Shot 4, and the final plate offered
+with that bite facing camera.
+```
+
+**Why it works:** image order is converted into an explicit shot-state contract
+rather than a vague reference pool. One strawberry carries history across poses,
+while each boundary receives exactly one visual or auditory bridge. This makes
+both the eight reference assignments and all seven cuts objectively reviewable.
+
+Adapted from leo-306's September 4, 2026
+[complete Seedance 2.5 eight-reference job](https://github.com/leo-306/auto-chat/blob/3d2d924996d07f71dea8559db2e6083d11ddd255/examples/doubao-video-30s-strawberry-picnic-job.json),
+[standalone prompt record](https://github.com/leo-306/auto-chat/blob/3d2d924996d07f71dea8559db2e6083d11ddd255/examples/doubao-video-30s-strawberry-picnic-prompt.txt),
+[successful-run and cut-timing verification](https://github.com/leo-306/auto-chat/commit/3d2d924996d07f71dea8559db2e6083d11ddd255),
+and the same generated job's
+[paid-confirmation recovery and unwatermarked acquisition log](https://github.com/leo-306/auto-chat/commit/4d6884a7d72c537c26401e2854a25f9e922e153d).
+
 ## Reusable templates
 
 ### Face-presence recast coverage gate and source-audio authority
@@ -26904,6 +27129,8 @@ Adapted and rewritten from Agreeable-Problem989's September 3, 2026
 coral-motion repair](https://www.reddit.com/r/Seedance_AI/comments/1w675bp/i_used_seedance_for_most_of_a_12minute_ai_film_a/).
 
 ## Sources
+
+- [leo-306 — September 4, 2026 successful Doubao multi-shot jobs: complete Seedance 2.0 Fast four-shot green-plum prompt and Seedance 2.5 eight-reference strawberry-picnic prompt; the 30-second verification hit all seven planned cut points within 0.6 seconds, followed by a successful paid-confirmation recovery and unwatermarked acquisition](https://github.com/leo-306/auto-chat/commit/3d2d924996d07f71dea8559db2e6083d11ddd255) ([paid-confirmation production log](https://github.com/leo-306/auto-chat/commit/4d6884a7d72c537c26401e2854a25f9e922e153d))
 
 - [Agreeable-Problem989 — September 3, 2026 Seedance 2.0/2.5 twelve-minute-film production retrospective: documented abstract-verb failure, directional physical-process rewrite, ordered spatial arrival, character-reference simplification and 480p composition testing](https://www.reddit.com/r/Seedance_AI/comments/1w675bp/i_used_seedance_for_most_of_a_12minute_ai_film_a/)
 
