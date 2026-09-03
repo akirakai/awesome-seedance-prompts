@@ -20553,11 +20553,13 @@ published August 9, 2026.
 
 ### Terminal-status result-body gate and likeness access-tier router
 
-**Verified model:** Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`
-on fal) — the creator re-tested both `image_urls` and `video_urls` on August
-29, 2026, recorded three zero-charge policy rejections, and found that fal
-reported the queue jobs as `COMPLETED` while the response body contained
-`partner_validation_failed`
+**Verified models:** Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`
+on fal) and Seedance 2.0 on fal — the creator recorded three zero-charge
+Seedance 2.5 policy rejections on August 29, then on September 3, 2026
+documented two more zero-charge refusals when Seedance 2.0 rejected the same
+six adult reference photos it had accepted eleven days earlier. The 2.5 jobs
+also showed why `COMPLETED` must not be trusted alone: their response bodies
+contained `partner_validation_failed` instead of a video artifact
 
 Use this after the preceding input preflight when a real-person reference may
 behave differently across distribution routes. It does not authorize likeness
@@ -20605,6 +20607,27 @@ real-person path, require per-user facial verification, portrait authorization,
 and the verified user's own likeness. Otherwise remove the likeness references
 or choose a separately verified policy-compatible model.
 
+
+POLICY SNAPSHOT AND FALLBACK ROUTER
+Treat `accepts photoreal references` as a dated route observation, not a
+permanent model constant. Store exact model, endpoint, input hashes, observed
+result and `observed_at`. A previous success may rank a candidate, but it
+cannot guarantee the next submission after a provider-policy change.
+
+After a likeness rejection:
+1. Parse the refusing model and route from the response; add that exact pair
+   to the retry exclusion set.
+2. Resolve any alternative from one capability table ordered by how much of
+   the request survives the move, then by verified cost. A candidate must be
+   currently marked compatible and must not equal the refusing model.
+3. Feed the same resolved target into the warning text, button label and
+   submission handler. Never let UI copy name one model while code sends to
+   another.
+4. Re-run reference, duration, audio and continuation preflight for the new
+   route. Submit only after the user deliberately invokes the retry.
+5. If no compatible target remains, show the refusal and omit the retry
+   action. Do not loop back to a rejected model or guess a destination.
+
 STOP CONDITIONS
 No crop, blur, re-encode, renamed file, input-type swap or repeated resubmission
 to evade a provider decision. No success analytics, delivery event or user
@@ -20616,19 +20639,26 @@ ACCEPTANCE
 - a valid output artifact, not a status label, proves success;
 - charge state is evidence-backed;
 - likeness ownership and authorization match the selected access tier;
+- the refusing model-route pair cannot be selected as its own fallback;
+- warning text, action target and submitted model resolve from one snapshot;
+- when no compatible target remains, the warning stays and the action vanishes;
 - rejection stops cleanly without an unauthorized fallback.
 ```
 
 **Why it works:** queue completion proves that orchestration finished, not that
 generation succeeded. Treating the artifact, policy verdict and charge record
 as independent results prevents false delivery and unnecessary paid retries.
-The access-tier branch also explains why a creator can demonstrate their own
-verified likeness on one provider while an application accepting arbitrary
-user uploads remains blocked on another.
+The access-tier branch explains why the same capability can differ by route;
+the dated-policy snapshot handles a stricter rule arriving without a model-ID
+change. Excluding the refusing route and deriving copy plus behavior from one
+fallback resolver prevents a one-click retry from resubmitting to the model
+that just rejected the assets.
 
 Adapted from Wigly's August 29, 2026
 [live Seedance 2.5 image/video reference re-test and routing record](https://github.com/corpomedical/picacho/commit/5fdd64be01d5857803ad58b9c04039b4572691a3),
-with the [versioned endpoint and operational notes](https://github.com/corpomedical/picacho/blob/5fdd64be01d5857803ad58b9c04039b4572691a3/src/lib/generations/providers/video-models.ts).
+the [versioned endpoint and operational notes](https://github.com/corpomedical/picacho/blob/5fdd64be01d5857803ad58b9c04039b4572691a3/src/lib/generations/providers/video-models.ts),
+and the September 3
+[Seedance 2.0 refusal re-test plus capability-owned fallback implementation](https://github.com/corpomedical/picacho/commit/1a1b49b065a05357ec21d3793a119bd92c25c12e).
 
 ### Storyboard-to-short parameter preflight and moving-hook template
 
@@ -27090,7 +27120,7 @@ Community examples and techniques referenced in this README:
 
 - [John Stocker — Higgsfield Seedance 2.5 full-frame graphic match, primary generation record, measured transition and reference-authority repair](https://github.com/johnstockertutorial-afk/film-thealzheimer/commit/e5cd09c7a3727f681856631d711c4eb5735a17ac) ([complete 25-second prompt](https://github.com/johnstockertutorial-afk/film-thealzheimer/blob/e5cd09c7a3727f681856631d711c4eb5735a17ac/02_PRODUCTION-SCENES/SCENE03_DECISION-AND-DEPARTURE/MASTER-PROMPT/LONGTAKE/25s/ALZHEIMER_VID_S04-S05_DECISION-AND-DEPARTURE_LT_GEN_v001.md))
 
-- [Wigly — fal Seedance 2.5 image/video likeness-policy re-test, terminal response-body trap, zero-charge evidence and access-tier routing](https://github.com/corpomedical/picacho/commit/5fdd64be01d5857803ad58b9c04039b4572691a3) ([versioned endpoint notes](https://github.com/corpomedical/picacho/blob/5fdd64be01d5857803ad58b9c04039b4572691a3/src/lib/generations/providers/video-models.ts))
+- [Wigly — fal Seedance 2.5/2.0 likeness-policy re-tests, terminal response-body trap, dated capability state and capability-owned fallback routing](https://github.com/corpomedical/picacho/commit/1a1b49b065a05357ec21d3793a119bd92c25c12e) ([August 29 Seedance 2.5 evidence](https://github.com/corpomedical/picacho/commit/5fdd64be01d5857803ad58b9c04039b4572691a3), [versioned endpoint notes](https://github.com/corpomedical/picacho/blob/5fdd64be01d5857803ad58b9c04039b4572691a3/src/lib/generations/providers/video-models.ts))
 
 - [Rajamobeen Ashraf / Chloe — Seedance 2.5 text-placement failure, owner-approved still-first `omni_reference` repair, returned-mode semantics and persistent model-behavior ledger](https://github.com/rajamobeenashraf-jpg/chloe/commit/a8dd825a1497d0c7a236e96650a1170d84dfc87c) ([verified ledger](https://github.com/rajamobeenashraf-jpg/chloe/blob/cd4e91da8f879b0a7ab7b69e1524e56312bfd164/PROMPT_LEARNINGS.md), [prompt assembler](https://github.com/rajamobeenashraf-jpg/chloe/blob/cd4e91da8f879b0a7ab7b69e1524e56312bfd164/pai-pro-tooling/alexander/build_prompt.mjs))
 
