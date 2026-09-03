@@ -22672,6 +22672,93 @@ and the
 [merged implementation](https://github.com/pollinations/pollinations/commit/e21c5f771b7667e6f375a8a93084137cd7a55b6e).
 
 
+### URL-only proxy-geometry reference-video gate and transfer audit
+
+**Verified model:** Seedance 2.0 Mini
+(`doubao-seedance-2-0-mini-260615`) — the original developer live-tested one
+public-URL white-model previs as `reference_video`; the job passed synchronous
+and asynchronous validation, returned a finished clip, and preserved the
+previs's blocking, camera position and depth layout in the opening frame
+
+Use this when camera blocking is expensive to discover in a final-quality
+render. Prove the path with cheap proxy geometry, then let the approved clip
+own time and motion while the final prompt owns appearance.
+
+```text
+CAPABILITY SNAPSHOT
+Exact model = doubao-seedance-2-0-mini-260615.
+Mode = multimodal reference-to-video.
+Verified video capacity = exactly one reference clip.
+Verified transport = one stable public HTTPS URL.
+Output envelope = 4–15 seconds, 480p or 720p, 24fps.
+Do not send service_tier. Do not infer asset-ID, local-file, base64, multiple-
+video or higher-resolution support from this test.
+
+PASS 1 — PROXY PREVIS
+Build one low-detail grey-box clip at the final duration and aspect ratio.
+Represent every persistent subject, obstacle and set plane with a unique simple
+shape or neutral color. Animate only:
+- exact subject entrances, paths, contacts, stops and exits;
+- camera start, height, orientation, path, speed changes and final position;
+- foreground / subject / background depth order and intended occlusions;
+- the timing of every major beat.
+
+Do not spend effort on faces, wardrobe, final materials, lighting polish, text
+or effects. Review the proxy from beginning to end. Reject it if a path crosses
+the wrong object, the camera loses the subject, an occlusion hides a required
+beat, or the endpoint is unusable.
+
+REFERENCE MATERIALIZATION
+Export the approved proxy once and upload those exact bytes to a durable public
+HTTPS URL. Confirm that the URL returns the video without login, redirect loop
+or expiring browser session. Bind it as the single Seedance video reference.
+
+PASS 2 — FINAL GENERATION PROMPT
+Use @Reference1 only for temporal structure: reproduce its shot order, camera
+start and path, camera height and orientation, subject blocking, trajectories,
+contact timing, depth ordering, occlusions, pace and final composition.
+
+Replace every proxy shape with the following final production design:
+- SUBJECT A = [IDENTITY / SILHOUETTE / WARDROBE / PROP];
+- SUBJECT B = [IDENTITY / SILHOUETTE / WARDROBE / PROP];
+- SET = [FINAL LOCATION / SCALE / MATERIALS / FIXED GEOGRAPHY];
+- LIGHT = [DIRECTION / QUALITY / COLOR / TIME];
+- SOUND = [DIEGETIC EVENTS BOUND TO THE SAME CONTACTS].
+
+The reference owns WHEN and WHERE. This text owns WHAT THINGS LOOK AND SOUND
+LIKE. Never copy grey clay, proxy labels, guide lines, primitive materials or
+unfinished geometry into the final world. Never invent a new camera move or
+reorder a proxy beat.
+
+REQUEST GATE
+- exact model ID still matches;
+- one and only one reference-video URL is present;
+- service_tier is absent;
+- duration and resolution stay inside the verified envelope;
+- the submitted prompt explicitly separates motion authority from appearance;
+- estimated cost and task ID are recorded before polling.
+
+TRANSFER AUDIT
+Compare proxy and final at setup, motion onset, every major contact, recovery
+and endpoint. Pass only if screen direction, camera orientation, subject
+positions, depth order and action timing remain recognizable while proxy
+materials disappear completely. Record any mismatch as MOTION, CAMERA, DEPTH,
+APPEARANCE or TRANSPORT; rerun only the failed layer.
+```
+
+**Why it works:** the white model turns camera and spatial uncertainty into a
+cheap, inspectable contract. The source run establishes that this exact Mini
+endpoint can consume one URL video and transfer its core staging, while the
+authority split prevents low-detail proxy styling from contaminating the
+finished shot. The conservative request gate records only the capacity and
+transport actually exercised.
+
+**Sources:** Neil's September 3, 2026
+[live Seedance 2.0 Mini white-model reference-video run](https://github.com/neilalexanderlee/ai-comic-studio/commit/ba6e4c19e8410d0114f2476d6c147e87afda594d),
+the [versioned exact-model capability record](https://github.com/neilalexanderlee/ai-comic-studio/blob/ba6e4c19e8410d0114f2476d6c147e87afda594d/src/lib/ai/video-capabilities.ts),
+and the follow-up
+[official-envelope correction for 4–15 seconds, 480p/720p and 24fps](https://github.com/neilalexanderlee/ai-comic-studio/commit/72fe7ebadfbc88f007d50699664ead5276a991c8).
+
 ### Published-capability media gate for prompt-routed public R2V
 
 **Verified model:** Seedance 2.5
@@ -27076,6 +27163,8 @@ Community examples and techniques referenced in this README:
 
 - [Recoupable — Seedance 2.5 time-scoped scene plate, face-reference rejection and primary run log](https://github.com/recoupable/skills/commit/638ca5cd72591525ffe5232c4edf6facea8399a2)
 - [NovoAds — Seedance 2.0 mode-scoped leading-silence measurements](https://github.com/novoads/claude-code-ads/commit/bf4697cdecf29c997a2ef70a4678cc1282734ba3)
+
+- [Neil / AI Comic Studio — Seedance 2.0 Mini white-model reference-video transfer, one-public-URL capability boundary and exact-model envelope](https://github.com/neilalexanderlee/ai-comic-studio/commit/ba6e4c19e8410d0114f2476d6c147e87afda594d) ([official-envelope correction](https://github.com/neilalexanderlee/ai-comic-studio/commit/72fe7ebadfbc88f007d50699664ead5276a991c8))
 
 - [Pollinations — Seedance 2.0 Fast live E2E capability envelope, positional keyframes and no-fallback routing](https://github.com/pollinations/pollinations/pull/13366)
 
