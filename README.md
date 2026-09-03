@@ -313,6 +313,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Locked-camera foreground spill and delayed background-threat focus handoff](#297-locked-camera-foreground-spill-and-delayed-background-threat-focus-handoff)
   - [Four-cut green-plum portrait with bite-state and silence ledger](#298-four-cut-green-plum-portrait-with-bite-state-and-silence-ledger)
   - [Eight-reference strawberry-picnic montage with shot-keyed state binding](#299-eight-reference-strawberry-picnic-montage-with-shot-keyed-state-binding)
+  - [Furniture-relay duo brawl with partner-spin contact gate](#300-furniture-relay-duo-brawl-with-partner-spin-contact-gate)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -17370,6 +17371,113 @@ Adapted from leo-306's September 4, 2026
 and the same generated job's
 [paid-confirmation recovery and unwatermarked acquisition log](https://github.com/leo-306/auto-chat/commit/4d6884a7d72c537c26401e2854a25f9e922e153d).
 
+### 300. Furniture-relay duo brawl with partner-spin contact gate
+
+**Verified model:** Seedance 2.0 — the original creator labels the attached
+generated result Seedance 2.0 and publishes the complete 15-second video prompt
+plus its two-character reference-sheet prompt in the same thread  
+**Use case:** comedic two-lead action, environment-assisted choreography,
+costume-class separation, cooperative finisher, beat-synced native audio  
+**Mode:** character-reference image-to-video  
+**Suggested settings:** 15 seconds, 16:9, fast multi-cut cel-shaded 3D action,
+native audio
+
+```text
+Create a 15-second semi-realistic cel-shaded 3D action-comedy inside one upscale
+massage hall. Cream recliners form two parallel lanes; three low side tables
+begin beside Chairs 1, 3 and 5. Preserve the cream walls, geometric white panels,
+warm practical light, polished floor and the opening furniture map through every
+cut.
+
+REFERENCE AND CATEGORY LOCK
+@Image1 owns both adult leads' faces, hair, proportions and costume colors.
+LEAD A wears one loose rose robe and moves with calm, economical precision.
+LEAD B wears one turquoise waist wrap and fights through loud improvisation,
+surprise and recovered confidence. ATTACKERS all wear matching blue robes.
+Never give an attacker either lead's costume, face, movement style or reaction.
+
+CONTINUITY LEDGER
+Number the six recliners and three tables from screen-left to screen-right.
+A table or chair may cause one major impact only. After use, keep its exact
+displaced, spinning, tipped or broken state; do not restore, duplicate or move it
+to another lane. Keep LEAD A on the rear-left-to-front-right travel line and
+LEAD B on the front-left-to-rear-right line until the back-to-back checkpoint.
+Every attacker must enter from a visible free lane and leave it before another
+body occupies the same path.
+
+0.0–2.5 s | lanes established
+Begin wide enough to show both leads, all furniture lanes and the closing ring.
+On the first two strong beats, LEAD B swings Table 1 into one visible attacker,
+then freezes for a half-beat in surprise. LEAD A redirects two different
+attackers into opposite armrests with two completed contacts. Cut only after
+each body clears its lane.
+
+2.5–5.0 s | contrasting competence
+LEAD A plants one hand on Chair 2, vaults across its back and lands before
+finishing two compact strikes. His robe follows the turn but his face and belt
+remain unchanged. LEAD B throws one cushion to block an attacker's sight,
+waits for it to cover the face, lands one clean punch, then shakes his hand once.
+Chair 2 and the cushion retain their new positions.
+
+5.0–7.5 s | floor relay
+One attacker first establishes a rear waist hold on LEAD B. LEAD B lowers his
+center of gravity, makes shoulder contact with the polished floor and slides
+into Chair 3; the chair then rotates into two approaching attackers in sequence.
+In the other lane, LEAD A uses Chairs 4 and 5 as two distinct support points,
+showing palm contact, weight transfer, release and landing. No floating or
+unseen launch.
+
+7.5–10.5 s | convergence checkpoint
+LEAD B attempts one chair vault, clips the near edge, recovers without falling
+and gives one proud glance. LEAD A clears the last rear-lane attacker. They
+arrive back-to-back at the center only after both travel lines are empty.
+Table 2 removes one left-side threat and two separately kicked chairs remove
+two right-side threats. Hold a wide frame long enough to verify the damaged
+furniture map before the final ring closes.
+
+10.5–13.5 s | cooperative contact finisher
+LEAD B announces the move with eye contact, locks both hands visibly around
+LEAD A's waist and plants both feet. LEAD A braces his core; only after his feet
+leave the floor may he extend both legs horizontally. LEAD B performs one
+continuous full-body rotation around a fixed planted center. Attackers enter the
+outer ring one at a time and recoil only after an on-screen foot contact.
+Alternate one wide orbit, one overhead proof and two brief face inserts without
+changing rotation direction, grip, height or room geography. Do not cut across
+an unproven hit.
+
+13.5–15.0 s | state proof
+LEAD B decelerates, places LEAD A on both feet and releases only after balance
+returns. All attackers and used furniture remain where they landed. LEAD A
+straightens the same rose robe; LEAD B checks that the same turquoise wrap is
+secure, then the partners exchange one restrained look. End in a wide frame
+that preserves the final room ledger.
+
+AUDIO AND CAMERA
+Run one energetic funk-hip-hop cue from frame one. Map major furniture contacts
+and the final rotation hits to distinct beats; keep cloth, bare-foot slide,
+wooden impact and room reflections audible. LEAD B may shout short non-lyrical
+reactions; LEAD A stays silent. Use rapid motivated cuts, but re-establish the
+room axis before every lane change.
+
+No third lead, costume swap, face drift, attacker duplication, simultaneous
+unreadable pile-up, furniture reset, hidden contact, self-propelled partner
+spin, changing grip, reversed orbit, broken body mechanics, blood, subtitle,
+logo or watermark.
+```
+
+**Why it works:** the furniture map turns a chaotic room into auditable action
+lanes, while costume categories keep three cast functions visually separable.
+The finisher is written as a contact chain — cue, grip, lift, leg extension,
+fixed-axis rotation, sequential impacts, deceleration and two-foot landing —
+so the model cannot replace cooperation with an unexplained airborne spin.
+Persistent furniture damage supplies a second continuity check beneath the fast
+editing.
+
+Adapted and rewritten from TechieSA / @TechieBySA's September 3, 2026
+[Seedance 2.0 generated result and model declaration](https://x.com/TechieBySA/status/2095515245456322612),
+[complete two-character reference-sheet prompt](https://x.com/TechieBySA/status/2095515259612065975),
+and [complete 15-second video prompt](https://x.com/TechieBySA/status/2095515266532651349).
+
 ## Reusable templates
 
 ### Face-presence recast coverage gate and source-audio authority
@@ -27273,6 +27381,8 @@ and the versioned
 
 
 ## Sources
+
+- [TechieSA — Seedance 2.0 massage-hall duo brawl, generated result, character sheet and complete video prompt](https://x.com/TechieBySA/status/2095515245456322612) ([character sheet](https://x.com/TechieBySA/status/2095515259612065975), [video prompt](https://x.com/TechieBySA/status/2095515266532651349))
 
 - [James / tvskill — Seedance 2.0 Fast succeeded four-reference canvas, byte-identical ordering and accepted-asset promotion](https://github.com/xixi2036/tvskill/commit/9d4e8d1a958625ff4b92de252e2468b2ad0c2445) ([route-schema audit](https://github.com/xixi2036/tvskill/commit/9213cf6cb3c814f64fc6f137bed8f6383a5393a2))
 - [Lars Hustoft / SCRPT — September 3, 2026 creator-recorded Seedance 2.5 multi-shot camera workflow: confirmed reference-driven intro/lullaby use, canonical cast/pose/prop/storyboard stack, camera-keyed take bank, frame-level identity judge and three-refusal production stop](https://github.com/larshustoft/scrpt/commit/6df11a3b182614d29ce96ddb0d81d67bbae23657) ([hard-stop revision](https://github.com/larshustoft/scrpt/commit/5a3fadc55322711006be1936fa7bff864cf19e4f), [17-take camera-provenance postmortem](https://github.com/larshustoft/scrpt/commit/4b64d9397be987351c1646c4dd562fe9fe820333), [production record](https://github.com/larshustoft/scrpt/blob/5a3fadc55322711006be1936fa7bff864cf19e4f/universe/PRODUCTION-LINE.md))
