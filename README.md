@@ -26700,7 +26700,132 @@ Adapted from Yukitake212's September 2, 2026
 the [versioned movement-and-load findings](https://github.com/yukitake212/video-knowledge/blob/0c54e3e2c6d6389054bdd79129b655fcb7e607b0/principles/guards.md#%E7%A7%BB%E5%8B%95%E3%81%A8%E8%8D%B7%E9%87%8D)
 and the [two-axis review method](https://github.com/yukitake212/video-knowledge/blob/0c54e3e2c6d6389054bdd79129b655fcb7e607b0/OPERATIONS.md).
 
+### Measured terminal-mask takeover and native-UI authority gate
+
+**Verified model:** Higgsfield Seedance 2.5 — the original creator's September
+3, 2026 production commit explicitly identifies the model and provider, includes
+the generated portrait MP4/WebM and poster, and records the shipped seven-second
+silent clip's terminal-screen measurements, browser handoff and two discovered
+integration defects
+
+Use this when a generated shot must appear to become a live website, app,
+notification or product interface. Give the video one plain terminal mask—a
+dark phone screen, monitor, doorway or other bounded surface—then measure that
+surface in the approved output and let deterministic code enlarge it over the
+viewport. The generated clip owns cinematic approach motion; the application
+owns every readable and interactive pixel after the handoff.
+
+```text
+AUTHORITY SPLIT
+Generated layer owns:
+- the scene, device or portal, camera approach, lighting and physical motion;
+- one terminal mask with a uniform colour matching [HOST BACKGROUND COLOUR];
+- the mask's perspective, visible boundary and final screen position.
+
+Native layer owns:
+- exact copy, typography, icons, prices, controls, accessibility and state;
+- responsive layout and interaction;
+- loading, reduced-motion, playback-failure and network fallbacks.
+
+Never ask Seedance to render the final interface. It must remain a separate
+native layer at delivery resolution, otherwise the takeover enlarges and blurs
+the UI together with the video.
+
+GENERATION BRIEF
+Provider = Higgsfield.
+Exact model = Seedance 2.5.
+Mode = [TEXT-TO-VIDEO / IMAGE-TO-VIDEO].
+Delivery = [DURATION] seconds, [ASPECT RATIO], muted unless story sound is
+essential.
+
+Create one continuous [SCENE] shot. Establish [SUBJECT / DEVICE / VEHICLE], then
+move the camera steadily and directly toward [TERMINAL MASK]. The mask remains
+[UNIFORM COLOUR] and completely empty throughout: no word, icon, notification,
+reflection, glare, gradient, fingerprint, cursor or image.
+
+Complete every subject action before the final approach. During the last
+[0.4–0.8] seconds, reduce independent motion and let the mask become the clear
+geometric destination. Finish with the mask centre close to the frame centre
+and with enough clean area that enlarging it can cover the narrowest delivery
+viewport. Do not cut, orbit, rack focus away, fade to another colour, turn the
+device, crop the mask edge or place a hand across it.
+
+TERMINAL-MASK ACCEPTANCE
+Reject the generated take before integration if:
+- the mask is not a single continuous region;
+- its final colour differs visibly from the host background;
+- text, UI, highlight or reflected scenery remains inside it;
+- its centre or area changes abruptly during the takeover window;
+- a required viewport would reveal scene pixels before the mask fills it.
+
+MEASUREMENT RECEIPT
+Inspect the approved final frame at native encoded dimensions:
+frame = [WIDTH] x [HEIGHT]
+mask bounds = x [LEFT] -> [RIGHT], y [TOP] -> [BOTTOM]
+mask width fraction = (RIGHT - LEFT) / WIDTH
+mask height fraction = (BOTTOM - TOP) / HEIGHT
+mask centre = ((LEFT + RIGHT) / 2 / WIDTH,
+               (TOP + BOTTOM) / 2 / HEIGHT)
+mask colour sample = [HEX / RGB]
+host background = [EXACT SAME HEX / RGB]
+
+Keep these measured values with the video hash. Never estimate them from a CSS
+box or copy coordinates from another crop.
+
+VIEWPORT TAKEOVER
+1. Size the video image to cover the viewport while preserving its encoded
+   aspect ratio. Use the displayed image dimensions, not the element's nominal
+   box and not an unmeasured object-fit crop.
+2. Set transform origin to the measured mask centre.
+3. Compute scale for the current viewport:
+   k = max(viewport width / displayed mask width,
+           viewport height / displayed mask height) x [1.03–1.06 overscan].
+4. Begin the scale inside the clip's calm terminal window. In the verified
+   source, the handoff starts 0.45 seconds before the end.
+5. Only after the mask covers every edge, reveal the native layer at its normal
+   CSS-pixel size. Fade the now-uniform video away after the cover is complete.
+6. Recompute k on resize; do not hard-code the factor from one phone.
+
+Do not put the native layer inside the scaled container. Do not let a global
+max-width rule silently cap the video's calculated pixel dimensions. Verify
+computed layout values, not only the inline values the script attempted to set.
+
+ENTRY-SCOPED RECOVERY
+Load and play the clip only when its section enters view. Start the playback
+safety timer at that entry event, not at page load; otherwise a reader who
+lingers upstream can arrive after the hidden sequence has already completed.
+On autoplay rejection, media error, timeout or reduced-motion preference, skip
+directly to the native state. Keep a poster underneath and never make access to
+the real interface depend on generated video playback.
+
+SEAM QA
+Test the narrowest and widest supported viewports. Accept only if:
+- no dashboard, bezel or scene sliver survives around the enlarged mask;
+- the video colour and host background form no visible line;
+- native text and icons stay sharp, correctly sized and interactive;
+- the handoff has no jump caused by a mismatched crop or transform origin;
+- resize, delayed entry, autoplay denial and reduced motion all reach the same
+  correct native state;
+- removing the video entirely does not remove content or functionality.
+```
+
+**Why it works:** a vague “push into the phone” request leaves the transition to
+luck. This workflow turns the final empty surface into measured geometry and
+assigns post-handoff truth to the application. The source production measured
+a 540×960 final frame, found the filmed screen at 39.26% of frame width and
+46.56% of frame height with its centre at 49.3% / 49.6%, then calculated the
+viewport scale dynamically. It also caught a global max-width rule that
+silently defeated the intended size and a fallback timer that began before the
+viewer reached the scene.
+
+Adapted and rewritten from Chandler Milien's September 3, 2026
+[Higgsfield Seedance 2.5 generated-video and measured browser-takeover
+production commit](https://github.com/Ajnaya509/foreas-website/commit/5b7b374a0394adab1dc3be70b165e33f6b0ab93c).
+
+
 ## Sources
+
+- [Chandler Milien — September 3, 2026 Higgsfield Seedance 2.5 generated portrait clip and measured terminal-screen takeover: committed MP4/WebM and poster, exact 540×960 screen bounds, responsive scale computation, native-UI separation, delayed-entry timing fix and playback fallbacks](https://github.com/Ajnaya509/foreas-website/commit/5b7b374a0394adab1dc3be70b165e33f6b0ab93c)
 
 - [Chengzi / @Chengzilhy — September 3, 2026 Seedance 2.5 locked-camera dispenser suspense scene: complete 20-second two-reference prompt, irreversible overflow ledger, threat-object-first blocking, restrained reaction ladder, one-way rack-focus handoff and attached 20.096-second generated result](https://x.com/Chengzilhy/status/2095413989966491714)
 
