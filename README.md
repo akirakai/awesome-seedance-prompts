@@ -317,6 +317,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Dual-register buddy action with causal-gag and reaction rails](#301-dual-register-buddy-action-with-causal-gag-and-reaction-rails)
   - [Holiday stairwell trap relay with irreversible debris and pendulum-contact proof](#302-holiday-stairwell-trap-relay-with-irreversible-debris-and-pendulum-contact-proof)
   - [Vacant-cockpit takeover with instrument causality and windshield-scale handoff](#303-vacant-cockpit-takeover-with-instrument-causality-and-windshield-scale-handoff)
+  - [Catalogue-to-bottle extrusion relay with scent-state convergence](#304-catalogue-to-bottle-extrusion-relay-with-scent-state-convergence)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -17862,6 +17863,104 @@ identity across a large scale change by ending through the same windshield.
 Adapted and rewritten from Saul Goodman / @Goodmanprotocol's September 5, 2026
 [complete Seedance 2.5 prompt and playable 30-second result](https://x.com/Goodmanprotocol/status/2095927028830908746).
 
+
+### 304. Catalogue-to-bottle extrusion relay with scent-state convergence
+
+**Verified model:** Seedance 2.5 — the original creator states that the attached
+playable 15-second result was generated in Dreamina with Seedance 2.5 and
+publishes the complete single prompt in the immediately linked reply  
+**Use case:** luxury product advertising, printed-to-physical transformation,
+material-specific micro-VFX, multi-variant hero convergence  
+**Mode:** text-to-video  
+**Suggested settings:** 15 seconds, 9:16, photoreal macro product film, native
+page, glass, liquid and boutique ambience
+
+```text
+Create a 15-second vertical luxury fragrance commercial on one polished dark
+marble counter inside an elegant boutique. One black-and-gold catalogue remains
+open at the same centre mark. Its cover geometry, page size, spine, margins,
+gold rule lines and small abstract monogram never change. Treat printed text as
+stable decorative linework rather than inventing readable words.
+
+CAMERA AND LIGHT LOCK
+Use one 85 mm macro-product camera at counter height with shallow depth of field.
+The camera may make only a slow cumulative push-in; page flips do not reset its
+position. Warm key light stays upper left, soft fill stays camera right, and
+every bottle casts a contact shadow onto the active page. Preserve marble veins,
+boutique bokeh, catalogue angle and reflection direction throughout.
+
+ONE-ACTIVE-BOTTLE RULE
+Each spread contains exactly one flat printed bottle illustration. That
+illustration extrudes vertically into one physical glass bottle, displays one
+scent signature, then descends into the identical printed silhouette before the
+page can turn. Prove the page is flat again for two frames. Never leave a
+previous bottle, duplicate label, displaced liquid or loose prop behind.
+
+0.0–1.2s — BASELINE PROOF
+Begin on the closed catalogue, then let it open naturally to the first spread.
+Show the flat amber-bottle illustration and its matching shadow-free printed
+state before any transformation. Quiet boutique room tone, one soft page sound.
+
+1.2–3.0s — AMBER / OUD
+The printed amber silhouette gains glass thickness from bottom to top and rises
+straight out of the paper without stretching. Golden liquid settles one beat
+after the bottle stops; condensation beads form on the outside and one narrow
+oud-smoke ribbon curls clockwise. Descend in reverse order: smoke clears, liquid
+still remains inside, bottle returns to print, contact shadow disappears.
+
+3.0–4.8s — ROSE
+Only after the page is flat, turn one page from the upper-right corner. A rose
+bottle extrudes from the new illustration. Three red petals unfold at its base;
+one water bead travels down a petal after the glass is fully formed. Return the
+petals and bottle to the page before the next flip.
+
+4.8–6.6s — CITRUS
+Turn one page. A pale citrus bottle rises while a short arc of bergamot peel,
+one lemon wedge and fine mist appear in separate depth planes. Hold the mist for
+four slow-motion frames, then let peel, fruit and bottle collapse cleanly back
+into their printed positions.
+
+6.6–8.4s — OCEAN
+Turn one page. A midnight-blue bottle emerges. A circular ripple spreads only
+inside the printed ocean panel, becoming real transparent water at the moving
+front while the rest of the paper stays dry. The ripple reaches the panel edge,
+reverses and settles; the bottle descends and the panel becomes ink again.
+
+8.4–10.2s — WOOD
+Turn one page. A warm smoky bottle rises with two miniature cedar-bark planes
+and one sandalwood curl. Preserve dry fibrous texture and soft smoke; no flame,
+forest or background change. All elements flatten into the illustration.
+
+10.2–15.0s — HERO AND SIGNATURE RECALL
+Turn to the final spread. A sculptural clear hero bottle with restrained gold
+metal detail extrudes and locks perfectly above its printed twin. Recall only
+the five prior signatures, not the prior bottles: amber smoke arrives from left,
+three rose petals from low right, citrus mist from above, one water orbit from
+behind and soft wood-toned particles from the page. They converge in that order,
+remain outside the label and settle into a balanced halo. Continue the slow
+push-in and hold the centred bottle for the final 1.2 seconds.
+
+MATERIAL AND FAILURE CONTROL
+Glass has consistent wall thickness, refraction and sharp silhouette; liquid
+stays inside each vessel and reacts one beat after vertical motion. Condensation
+belongs only to glass, water belongs only to its named panel, and every loose
+element obeys gravity. No hands, people, extra products, floating catalogue,
+page teleport, warped bottle, changing monogram, unreadable pseudo-words,
+plastic glass, label drift, duplicated fragrance, excessive particles, camera
+shake, flicker, captions, watermark or UI.
+```
+
+**Why it works:** A strict print–extrude–display–retract–flat–flip cycle gives
+each transformation a visible beginning and terminal state, preventing product
+variants from accumulating or changing the catalogue. Each fragrance owns one
+material signature with a bounded region and reaction delay. The finale recalls
+those signatures rather than duplicating earlier bottles, so the hero reveal
+feels cumulative while preserving a single-product composition.
+
+Adapted and rewritten from Future Vibes AI / @FutureVibesAi's September 5, 2026
+[Seedance 2.5 declaration and playable 15-second result](https://x.com/FutureVibesAi/status/2095928289135366418)
+and [complete single prompt](https://x.com/FutureVibesAi/status/2095928416910606406).
+
 ## Reusable templates
 
 ### Face-presence recast coverage gate and source-audio authority
@@ -28100,6 +28199,9 @@ and the versioned
 
 
 ## Sources
+
+- [Future Vibes AI / @FutureVibesAi — September 5, 2026 Dreamina Seedance 2.5 catalogue-to-perfume transformation: playable 15-second result and complete single prompt with five material signatures and a final hero convergence](https://x.com/FutureVibesAi/status/2095928289135366418) ([complete prompt](https://x.com/FutureVibesAi/status/2095928416910606406))
+
 
 - [Saul Goodman / @Goodmanprotocol — September 5, 2026 Seedance 2.5 vacant-cockpit takeover: complete 30-second timed prompt and playable result with instrument-response, turbulence and windshield-scale handoff](https://x.com/Goodmanprotocol/status/2095927028830908746)
 
