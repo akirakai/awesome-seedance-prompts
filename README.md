@@ -26173,10 +26173,11 @@ and JennieDov's September 1, 2026
 
 ### Single-write dialogue, untimed shot labels and payload-field mirror gate
 
-**Verified model:** Seedance 2.0 — the original creator records nine successful
-15-second episode segments and a controlled gateway probe: sending explicit
-`duration` and `ratio` fields returned a 1080×1920, 5.08-second take, while
-omitting them fell back to the gateway's 1920×1080 landscape default
+**Verified models:** Seedance 2.0 and Seedance 2.0 Fast — one creator records
+nine successful 15-second Seedance 2.0 segments plus a controlled gateway probe;
+a second paid Seedance 2.0 Fast text-to-video run sent `size=9:16` and returned
+a 496×864 portrait stream, confirming that the accepted ratio key can change
+with the exact provider route
 
 Use this when a multi-shot native-audio prompt passes through an application or
 provider adapter. Keep story instructions, spoken-copy ownership, reference
@@ -26185,20 +26186,30 @@ submission.
 
 ```text
 JOB CONTRACT
-Exact model = Seedance 2.0
+Exact model = [Seedance 2.0 / Seedance 2.0 Fast]
+Provider + endpoint = [EXACT ROUTE]
 Duration D = [5–15] seconds
 Aspect A = [9:16 / 16:9 / supported ratio]
+Ratio key R = [ratio / aspect_ratio / size / OMIT; verified for this route]
 Resolution = [SUPPORTED VALUE]
 Shot count = [2–4]
 Dialogue ledger = [SPEAKER, EXACT FULL LINE, SHOT NUMBER] for every spoken line
 
+ROUTE-SCHEMA PREFLIGHT
+Resolve R from the live schema for the exact model and endpoint; do not infer it
+from the marketing family name. If image-to-video makes the ratio inapplicable,
+set R = OMIT and let the source image own orientation. Otherwise serialize only
+R = A. Never send the same ratio through several candidate keys, and never keep
+a visible aspect selector whose chosen value will be discarded.
+
 STRUCTURED REQUEST
 duration = D
-ratio = A
+[R] = A
 resolution = [SUPPORTED VALUE]
-Keep D and A explicit in the request. If the provider still supports the legacy
-prompt suffix, append exactly one matching "--ratio A --dur D" after the prompt
-body; the structured fields and suffix must agree.
+Keep D, A and the resolved R explicit in the request ledger. If the provider
+still supports the legacy prompt suffix, append exactly one matching
+"--ratio A --dur D" after the prompt body; the serialized field and suffix must
+agree.
 
 REFERENCE COMPILER
 Freeze the ordered image manifest before writing the shots.
@@ -26236,22 +26247,28 @@ PRE-SUBMIT GATE
 2. Assert that every quote contains one sentence and has an explicit speaker.
 3. Reject shot labels containing timestamp ranges; D belongs to the request.
 4. Assert reference count, order, @ImageN tokens and same-language role notes.
-5. Compare request duration/ratio with the optional suffix; fail on absence,
+5. Assert exactly one route-valid ratio key, or an explicit OMIT decision for a
+   reference mode in which the source owns orientation.
+6. Compare request duration/ratio with the optional suffix; fail on absence,
    mismatch, duplicate suffixes or an unintended default.
-6. Archive the final prompt and serialized payload together.
+7. Archive the final prompt, exact route and serialized payload together; inspect
+   the returned stream dimensions before accepting the take.
 ```
 
 **Why it works:** the model no longer receives two competing timing systems or
 three copies of the same dialogue. Ordinal shot labels preserve edit order
 without inviting literal timecode execution; single-location dialogue makes
-speaker and lip-sync ownership explicit. The separate payload mirror prevents a
-correct-looking prompt from silently rendering at the gateway's default
+speaker and lip-sync ownership explicit. The route-aware payload mirror prevents
+a correct-looking prompt from silently rendering at the gateway's default
 duration or orientation, while deterministic @ImageN compilation removes
 reference-role guessing.
 
 Adapted from GYZ001 / MJAgent2's September 4, 2026
 [Seedance 2.0 prompt-dialect repair, nine-segment production record and live
-duration/ratio gateway probe](https://github.com/GYZ001/MJAgent2/commit/9eda934f9d15d80c642d0d57df52635aba0df8e7).
+duration/ratio gateway probe](https://github.com/GYZ001/MJAgent2/commit/9eda934f9d15d80c642d0d57df52635aba0df8e7),
+and Orieileen / Canvex's September 4, 2026
+[paid Seedance 2.0 Fast portrait run and per-route ratio-key
+repair](https://github.com/Orieileen/Canvex/commit/167f27635768d1d910b1f17a83bf3cbbcdcb9a7b).
 
 
 ### Single-render beat compression, overlay ownership and derived-fallback gate
@@ -27573,6 +27590,8 @@ and the versioned
 
 
 ## Sources
+
+- [Orieileen / Canvex — September 4, 2026 paid Seedance 2.0 Fast text-to-video run: route-specific `size` ratio key, 9:16 request, returned 496×864 stream and dead-selector prevention](https://github.com/Orieileen/Canvex/commit/167f27635768d1d910b1f17a83bf3cbbcdcb9a7b)
 
 - [Kent / the-blue-wing — September 4, 2026 SIRAYA Seedance operation-bound `camera_fixed` probe: T2V rejection, corrective R2V tests on 2.0 Mini and 2.5, and removal of the invalid multi-reference control](https://github.com/kent0908/the-blue-wing/commit/0d6bc2070aa3f72d9519991688612d16b4ebf7e7) ([initial T2V test and falsified reference-presence hypothesis](https://github.com/kent0908/the-blue-wing/commit/4bbe7627c395ec8be057dc1c096f3e475d09f27d))
 
