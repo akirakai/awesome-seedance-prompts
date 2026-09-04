@@ -26085,6 +26085,89 @@ and JennieDov's September 1, 2026
 [OpenRouter Seedance 2.5 two-reference failure and transport-field repair](https://github.com/jenniedov/jenai-studio/commit/848db744e521e6e1d42d8ad4c630b39a60ba3bfd).
 
 
+### Single-write dialogue, untimed shot labels and payload-field mirror gate
+
+**Verified model:** Seedance 2.0 — the original creator records nine successful
+15-second episode segments and a controlled gateway probe: sending explicit
+`duration` and `ratio` fields returned a 1080×1920, 5.08-second take, while
+omitting them fell back to the gateway's 1920×1080 landscape default
+
+Use this when a multi-shot native-audio prompt passes through an application or
+provider adapter. Keep story instructions, spoken-copy ownership, reference
+bindings and transport parameters as separate ledgers, then compare them before
+submission.
+
+```text
+JOB CONTRACT
+Exact model = Seedance 2.0
+Duration D = [5–15] seconds
+Aspect A = [9:16 / 16:9 / supported ratio]
+Resolution = [SUPPORTED VALUE]
+Shot count = [2–4]
+Dialogue ledger = [SPEAKER, EXACT FULL LINE, SHOT NUMBER] for every spoken line
+
+STRUCTURED REQUEST
+duration = D
+ratio = A
+resolution = [SUPPORTED VALUE]
+Keep D and A explicit in the request. If the provider still supports the legacy
+prompt suffix, append exactly one matching "--ratio A --dur D" after the prompt
+body; the structured fields and suffix must agree.
+
+REFERENCE COMPILER
+Freeze the ordered image manifest before writing the shots.
+@Image1 = [CHARACTER / SCENE / KEYFRAME], owns [ONE NON-OVERLAPPING ROLE].
+@Image2 = [CHARACTER / SCENE / KEYFRAME], owns [ONE NON-OVERLAPPING ROLE].
+Replace every human-readable asset alias in the body with its exact @ImageN
+token. Append one role note per bound image in the same language as the prompt.
+Longer aliases are matched before shorter aliases so one name cannot consume
+the prefix of another. With no reference input, leave ordinary @names untouched.
+
+PROMPT BODY
+镜头1：[one camera move] → [bound subject] → [one concrete action] →
+[scene and light]. [If speech occurs, write it here once as:
+SPEAKER says "ONE COMPLETE SENTENCE."]
+镜头2：[next camera move] → [state inherited from Shot 1] → [next action].
+[Continue as needed, using only the ordinal labels 镜头N：; do not place a
+second range such as "about 0–3 s" inside any shot label.]
+
+DIALOGUE OWNERSHIP
+Each spoken line appears in exactly one shot and nowhere else in the prompt
+body. One pair of quotation marks contains one complete sentence ending in a
+period, question mark or exclamation mark. If the approved line contains
+several independent sentences, split them into consecutive quoted sentences
+under the same speaker while preserving the complete original line in the
+external dialogue ledger.
+The shot text and dialogue ledger must match word for word.
+
+FULL-CLIP RECAP
+Repeat only [AMBIENCE], [MUSIC], [VISUAL STYLE] and [CONTINUITY CONSTRAINTS].
+Do not copy spoken lines into this recap and do not ask the model to redistribute
+a block of dialogue across shots.
+
+PRE-SUBMIT GATE
+1. Assert that every dialogue-ledger line occurs once in the prompt body.
+2. Assert that every quote contains one sentence and has an explicit speaker.
+3. Reject shot labels containing timestamp ranges; D belongs to the request.
+4. Assert reference count, order, @ImageN tokens and same-language role notes.
+5. Compare request duration/ratio with the optional suffix; fail on absence,
+   mismatch, duplicate suffixes or an unintended default.
+6. Archive the final prompt and serialized payload together.
+```
+
+**Why it works:** the model no longer receives two competing timing systems or
+three copies of the same dialogue. Ordinal shot labels preserve edit order
+without inviting literal timecode execution; single-location dialogue makes
+speaker and lip-sync ownership explicit. The separate payload mirror prevents a
+correct-looking prompt from silently rendering at the gateway's default
+duration or orientation, while deterministic @ImageN compilation removes
+reference-role guessing.
+
+Adapted from GYZ001 / MJAgent2's September 4, 2026
+[Seedance 2.0 prompt-dialect repair, nine-segment production record and live
+duration/ratio gateway probe](https://github.com/GYZ001/MJAgent2/commit/9eda934f9d15d80c642d0d57df52635aba0df8e7).
+
+
 ### Single-render beat compression, overlay ownership and derived-fallback gate
 
 **Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`, text-to-video) —
@@ -27381,6 +27464,8 @@ and the versioned
 
 
 ## Sources
+
+- [GYZ001 / MJAgent2 — September 4, 2026 Seedance 2.0 prompt-dialect repair: nine successful 15-second segments, single-write dialogue ownership, untimed ordinal shot labels, deterministic @ImageN binding and a live duration/ratio field probe](https://github.com/GYZ001/MJAgent2/commit/9eda934f9d15d80c642d0d57df52635aba0df8e7)
 
 - [TechieSA — Seedance 2.0 massage-hall duo brawl, generated result, character sheet and complete video prompt](https://x.com/TechieBySA/status/2095515245456322612) ([character sheet](https://x.com/TechieBySA/status/2095515259612065975), [video prompt](https://x.com/TechieBySA/status/2095515266532651349))
 
