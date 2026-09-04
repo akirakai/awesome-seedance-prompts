@@ -315,6 +315,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Eight-reference strawberry-picnic montage with shot-keyed state binding](#299-eight-reference-strawberry-picnic-montage-with-shot-keyed-state-binding)
   - [Furniture-relay duo brawl with partner-spin contact gate](#300-furniture-relay-duo-brawl-with-partner-spin-contact-gate)
   - [Dual-register buddy action with causal-gag and reaction rails](#301-dual-register-buddy-action-with-causal-gag-and-reaction-rails)
+  - [Holiday stairwell trap relay with irreversible debris and pendulum-contact proof](#302-holiday-stairwell-trap-relay-with-irreversible-debris-and-pendulum-contact-proof)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -17617,6 +17618,169 @@ Adapted and rewritten from TechieSA / @TechieBySA's September 4, 2026
 [companion two-character sheet prompt](https://x.com/TechieBySA/status/2095836037167628529)
 and [complete 15-second video prompt](https://x.com/TechieBySA/status/2095836043572379675).
 
+### 302. Holiday stairwell trap relay with irreversible debris and pendulum-contact proof
+
+**Verified model:** Seedance 2.0 — the original creator explicitly labels the
+attached playable 15-second result Seedance 2.0 and publishes both the complete
+companion cast-sheet prompt and the complete timed video prompt in the same
+thread  
+**Use case:** three-character action comedy, trap-chain causality, simultaneous
+contact proof, persistent prop-state continuity, lens-filling terminal transition  
+**Mode:** reference-to-video with one approved cast-bible image  
+**Suggested settings:** 15 seconds, rapid-cut cinematic cel-shaded 3D anime,
+native orchestral score, synchronized effects and spoken reactions
+
+```text
+Create a 15-second fast holiday action-comedy around one unchanged entrance hall
+and its red-carpet staircase. Use stylized cinematic cel-shaded 3D anime with
+hand-painted surfaces, hard-edged shadows and readable physical contact. The
+humour comes from setup, cause and reaction; never show injury detail or realistic
+harm.
+
+REFERENCE AND CAST OWNERSHIP
+@Image1 owns the face, hair, age, proportions, wardrobe and colour palette of
+exactly three characters. Do not import labels, layout divisions, decorative
+text or duplicate figures from the sheet.
+
+DEFENDER — one mischievous adult homeowner at the top landing, red knit sweater,
+green trousers, brown boots and green cross-body strap. Calm, observant and smug.
+The defender never enters the staircase lane, never changes outfit and never
+appears at ground level.
+
+INTRUDER A — short, stocky adult in a dark flat cap, brown-grey overcoat, scarf
+and gloves. His reaction style is angry and compact.
+
+INTRUDER B — tall, lanky adult with unruly curls, fleece-collar corduroy jacket,
+blue shirt and worn boots. His reaction style is wide-eyed and elastic.
+
+No fourth person. The intruders never exchange height, face, coat, reaction style
+or screen side.
+
+FIXED GEOGRAPHY
+The front door is at the foot of one straight red-carpet staircase. Wooden floor
+surrounds a pale runner containing dozens of lightweight unbreakable holiday
+baubles. Two padded paint-can props hang from separate ropes above the staircase,
+each with a fixed ceiling pivot and a clear horizontal swing corridor. The top
+landing and defender remain visible whenever the camera proves the full axis.
+Furniture, door, stairs, pivots and light direction never move.
+
+IRREVERSIBLE STATE LEDGER
+BAUBLES: initially scattered -> displaced and rolling after the first step ->
+more widely scattered after both intruders hop -> remain in those displaced
+positions through the final frame. Never reset them into a neat field.
+
+INTRUDERS: enter upright -> each completes one bauble contact and separate hop ->
+regroup at stair foot -> climb together -> each receives one on-screen padded-can
+contact -> tumble backward -> settle in one heap -> disentangle and stand dazed.
+Never cut directly from a trap setup to a fall; show the physical cause between
+them.
+
+PENDULUMS: held still above -> released once -> ropes become taut -> both cans
+travel along visible arcs -> contact one different intruder at the same instant
+-> continue past contact, lose energy and swing back empty. They never teleport,
+strike twice or change pivot.
+
+0.0–0.8 s | location and entry
+Open on a very brief exterior wide of the same decorated brick house at snowy
+night, then make one clean motivated cut through the front door into the entrance
+hall. Intruders A and B cross the threshold in their fixed screen order. Establish
+the entire floor-to-landing axis immediately; the defender is already watching
+from the top.
+
+0.8–4.0 s | sequential bauble relay
+Hold a low three-quarter wide that proves both feet and the scattered field.
+Intruder A plants one boot on one bauble. Only after it rolls under the sole does
+his ankle shift and he complete three angry one-foot hops. During A's second hop,
+Intruder B steps forward into a different bauble; show sole contact, visible roll,
+then B's larger elastic hop. Keep the two reaction rhythms distinct and the
+defender safely above, eating one handful of snacks without moving position.
+
+Use only two brief inserts: first, the two displaced baubles rolling away along
+different paths; second, the defender's restrained amused look. Return to the
+same wide before either intruder regains balance. Every rolled object remains
+where it stops.
+
+4.0–8.8 s | climb, release and simultaneous contact proof
+The intruders shake off the mishap and begin a normal coordinated climb, one hand
+free and one foot visibly landing on each step. At the midpoint, cut to the
+defender releasing both ropes with one deliberate hand action. Show the two ropes
+tighten from their fixed pivots and both padded cans accelerate through separate,
+parallel arcs.
+
+Use one medium profile containing the cans and both faces in the same composition.
+Each can contacts its assigned intruder squarely at the same instant. Preserve
+the rope line, direction of travel and visible compression of the padded surface.
+The intruders' heads and shoulders recoil only after contact. The cans continue
+past them while both intruders lose footing and tumble backward down the same
+stair axis. Cut wide early enough to show the complete descent and final settled
+heap among the already displaced baubles.
+
+8.8–11.2 s | terminal state and recovery
+Hold on the heap until all four hands and four feet are readable and motion has
+settled. The empty cans swing back above them without touching anyone. Intruder A
+pushes free first with an irritated groan; Intruder B untangles one leg and rises
+second, wobbling. Neither teleports upright. Keep the bauble field, rope motion
+and screen order continuous.
+
+11.2–12.6 s | vertical authority handoff
+Frame one wide along the established staircase axis: defender at the top,
+intruders at the bottom. The defender points down once and says one short,
+original taunt. Only the defender speaks. Intruder A answers with a silent scowl;
+Intruder B gives one delayed worried glance upward. Do not add subtitles or a
+reaction cutaway that loses the distance between them.
+
+12.6–15.0 s | safe lens-filling payoff
+The defender raises a clearly theatrical flame-effect projector toward the open
+air above the intruders, never at a person. Show hands settle on the prop before
+activation. A bright orange stage-flame effect travels along the staircase axis
+toward the camera while both intruders remain safely below and outside its path.
+The expanding light fills the lens and becomes the final transition. End only
+after the whole frame is orange; do not reveal another location, logo or title.
+
+CAMERA CONTRACT
+Use wides to prove geography and completed body states, low inserts only for
+bauble contact, and one unobstructed profile for the simultaneous pendulum hit.
+Keep the 180-degree axis from front door to top landing. Every cut must preserve
+screen side, stair height, prop state and travel direction. No floating camera,
+orbit, room change, slow-motion replay or impact hidden by a cut.
+
+AUDIO LEDGER
+Play one upbeat comedic holiday orchestral cue continuously from frame one.
+Assign distinct synchronous sounds to door entry, each bauble roll, each hop,
+rope release, rope tension, two simultaneous padded impacts, stair contacts,
+heap settlement and the final stage-flame burst. A and B may make short
+character-specific non-lyrical reactions only after their own contacts. Keep the
+defender's single taunt isolated and lip-synced. No narrator, crowd, overlapping
+dialogue, borrowed film quote or silent impact.
+
+FAILURE CONTROLS
+No child character, realistic weapon, glass breakage, burns, blood, injury
+detail, fourth person, identity swap, coat swap, height swap, duplicate intruder,
+restored bauble field, self-propelled can, loose pivot, asynchronous face hit,
+fall before contact, vanished rope, staircase reversal, room change, unreadable
+pile-up, subtitle, watermark or brand text.
+
+ACCEPTANCE
+Pass only if both foot traps have visible contact-before-reaction, displaced
+baubles stay displaced, both intruders climb before the second trap, the two
+padded cans share one readable contact instant while retaining separate ropes,
+the complete tumble ends in one stable heap, recovery begins from that heap, and
+the final orange occlusion follows the established staircase axis without
+touching a character.
+```
+
+**Why it works:** the floor objects, ropes and bodies each carry an irreversible
+state, so rapid comedy cannot reset between shots. The pendulum beat is treated
+as a geometry test — two pivots, two arcs, two assigned targets and one shared
+contact instant — while the camera must prove contact before reaction and
+reaction before recovery. A lens-filling practical effect then supplies a clean
+ending without erasing the audited trap sequence.
+
+Adapted and rewritten from TechieSA / @TechieBySA's September 5, 2026
+[Seedance 2.0 model declaration and playable 15-second result](https://x.com/TechieBySA/status/2095913793607843990),
+[complete companion cast-sheet prompt](https://x.com/TechieBySA/status/2095913806060830881)
+and [complete timed video prompt](https://x.com/TechieBySA/status/2095913813346304314).
+
 ## Reusable templates
 
 ### Face-presence recast coverage gate and source-audio authority
@@ -27857,6 +28021,7 @@ and the versioned
 ## Sources
 
 - [TechieSA / @TechieBySA — September 4, 2026 Seedance 2.0 buddy-action result: playable 15-second clip, complete two-character sheet and full timed video prompt](https://x.com/TechieBySA/status/2095836019559924084) ([character sheet](https://x.com/TechieBySA/status/2095836037167628529), [video prompt](https://x.com/TechieBySA/status/2095836043572379675))
+- [TechieSA / @TechieBySA — September 5, 2026 Seedance 2.0 holiday-house trap comedy: playable 15-second result, complete cast sheet and full timed video prompt](https://x.com/TechieBySA/status/2095913793607843990) ([cast sheet](https://x.com/TechieBySA/status/2095913806060830881), [video prompt](https://x.com/TechieBySA/status/2095913813346304314))
 
 - [GenMedia Labs / RunComfy — September 4, 2026 Seedance 2.5 reference-to-video route release: exact fixed-480p and fixed-1080p schemas, prompt-plus-images operation without video input, counted-seconds billing and draft-to-delivery parity](https://github.com/genmedia-labs/skills/commit/4dc788aecbefc99cb188cc43c4ce08383d33f768) ([480p platform contract](https://www.runcomfy.com/models/bytedance/seedance-2.5/reference-to-video/480p), [1080p platform contract](https://www.runcomfy.com/models/bytedance/seedance-2.5/reference-to-video/1080p))
 
