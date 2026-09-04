@@ -21039,12 +21039,14 @@ invalid control removed](https://github.com/kent0908/the-blue-wing/commit/0d6bc2
 ### Terminal-status result-body gate and likeness access-tier router
 
 **Verified models:** Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`
-on fal) and Seedance 2.0 on fal — the creator recorded three zero-charge
-Seedance 2.5 policy rejections on August 29, then on September 3, 2026
-documented two more zero-charge refusals when Seedance 2.0 rejected the same
-six adult reference photos it had accepted eleven days earlier. The 2.5 jobs
-also showed why `COMPLETED` must not be trusted alone: their response bodies
-contained `partner_validation_failed` instead of a video artifact
+on fal) and Seedance 2.0 on fal plus BytePlus ModelArk
+(`dreamina-seedance-2-0-260128`) — the creator recorded zero-charge policy
+rejections on both distribution routes. A direct 4-second, 720p text-to-video
+request succeeded end to end and returned `content.video_url`; the same exact
+ModelArk route rejected a public real-person reference with HTTP 400 before
+issuing a task ID or charge. Earlier fal jobs also showed why `COMPLETED` must
+not be trusted alone: their response bodies contained
+`partner_validation_failed` instead of a video artifact
 
 Use this after the preceding input preflight when a real-person reference may
 behave differently across distribution routes. It does not authorize likeness
@@ -21053,17 +21055,31 @@ mistaken for a delivered video and separates route policy from model ability.
 
 ```text
 REQUEST LEDGER
-Model: Seedance 2.5
-Provider route: [FAL PROXY / VOLCENGINE ARK / OTHER VERIFIED ROUTE]
-Input mode: [IMAGE REFERENCES / VIDEO REFERENCES]
+Exact model ID: [VERSIONED SEEDANCE ID]
+Provider route: [FAL PROXY / BYTEPLUS MODELARK / VOLCENGINE ARK / OTHER VERIFIED ROUTE]
+Input mode: [TEXT TO VIDEO / IMAGE REFERENCES / VIDEO REFERENCES]
 Reference owner: [THE VERIFIED USER / AUTHORIZED ADULT / NOT VERIFIED]
 Reference consent and platform authorization: [CONFIRMED / NOT CONFIRMED]
 Expected output: [VIDEO URL / FILE / MEDIA OBJECT]
 
 PRE-SUBMIT GATE
 Do not infer this route's likeness policy from a successful demo on another
-provider. Record the exact endpoint, input keys, asset hashes, starting balance
-and request ID. Submit once; never begin with parallel retries.
+provider. Record the exact endpoint, input keys, ordered content array, asset
+hashes and starting balance. Submit once; never begin with parallel retries.
+
+SUBMIT / QUEUE BOUNDARY
+1. If the create call returns an HTTP rejection and no task ID, record the exact
+   provider code, message and named content[N] item. Set:
+   submit_accepted = NO
+   queue_created = NO
+   queue_terminal = NOT APPLICABLE
+   artifact_delivered = NO
+2. Do not poll a nonexistent task, convert the rejection into FAILED queue state,
+   or auto-resubmit altered media.
+3. Mark the attempt uncharged only when the provider's authoritative usage or
+   balance evidence confirms it; no task ID alone is not universal billing proof.
+4. If the create call returns a task ID, set submit_accepted = YES and
+   queue_created = YES. Poll only that recorded ID and continue below.
 
 TERMINAL EVALUATION
 1. Poll until the provider declares a terminal queue state.
@@ -21079,9 +21095,10 @@ TERMINAL EVALUATION
    policy_verdict = [PASS / REJECT / UNKNOWN]
 
 BILLING GATE
-Compare starting and ending balance or the provider's authoritative charge
-record. Mark the attempt free only when the evidence confirms zero charge; do
-not generalize one provider's free policy rejection to another route.
+Compare starting and ending balance, returned usage or the provider's
+authoritative charge record. Mark the attempt free only when the evidence
+confirms zero charge; do not generalize ModelArk's submit-time rejection or one
+proxy's policy behavior to another route.
 
 ACCESS-TIER ROUTER
 If fal returns a likeness-policy rejection for image or video references, stop
@@ -21119,8 +21136,9 @@ to evade a provider decision. No success analytics, delivery event or user
 notification based on queue status alone.
 
 ACCEPTANCE
-- exact model and route recorded;
-- terminal response body parsed;
+- exact versioned model ID, route and ordered content array recorded;
+- submit acceptance and queue creation recorded separately;
+- terminal response body parsed only when a task was actually created;
 - a valid output artifact, not a status label, proves success;
 - charge state is evidence-backed;
 - likeness ownership and authorization match the selected access tier;
@@ -21133,17 +21151,21 @@ ACCEPTANCE
 **Why it works:** queue completion proves that orchestration finished, not that
 generation succeeded. Treating the artifact, policy verdict and charge record
 as independent results prevents false delivery and unnecessary paid retries.
-The access-tier branch explains why the same capability can differ by route;
-the dated-policy snapshot handles a stricter rule arriving without a model-ID
-change. Excluding the refusing route and deriving copy plus behavior from one
-fallback resolver prevents a one-click retry from resubmitting to the model
-that just rejected the assets.
+The submit/queue boundary prevents a synchronous input rejection from entering
+polling or retry logic, while the access-tier branch explains why the same
+capability can differ by route. The dated-policy snapshot handles a stricter
+rule arriving without a model-ID change. Excluding the refusing route and
+deriving copy plus behavior from one fallback resolver prevents a one-click
+retry from resubmitting to the model that just rejected the assets.
 
 Adapted from Wigly's August 29, 2026
 [live Seedance 2.5 image/video reference re-test and routing record](https://github.com/corpomedical/picacho/commit/5fdd64be01d5857803ad58b9c04039b4572691a3),
 the [versioned endpoint and operational notes](https://github.com/corpomedical/picacho/blob/5fdd64be01d5857803ad58b9c04039b4572691a3/src/lib/generations/providers/video-models.ts),
-and the September 3
-[Seedance 2.0 refusal re-test plus capability-owned fallback implementation](https://github.com/corpomedical/picacho/commit/1a1b49b065a05357ec21d3793a119bd92c25c12e).
+the September 3
+[Seedance 2.0 refusal re-test plus capability-owned fallback implementation](https://github.com/corpomedical/picacho/commit/1a1b49b065a05357ec21d3793a119bd92c25c12e),
+and the September 4
+[direct ModelArk success plus no-task, no-charge real-person submission
+rejection](https://github.com/corpomedical/picacho/commit/c5bfc4882de2079fa011258faaeac3a45856500b).
 
 ### Storyboard-to-short parameter preflight and moving-hook template
 
@@ -27590,6 +27612,8 @@ and the versioned
 
 
 ## Sources
+
+- [Wigly / Picacho — September 4, 2026 direct BytePlus ModelArk Seedance 2.0 probe: 4-second 720p T2V success with returned video artifact, plus a same-route real-person reference rejection before task creation or charge](https://github.com/corpomedical/picacho/commit/c5bfc4882de2079fa011258faaeac3a45856500b)
 
 - [Orieileen / Canvex — September 4, 2026 paid Seedance 2.0 Fast text-to-video run: route-specific `size` ratio key, 9:16 request, returned 496×864 stream and dead-selector prevention](https://github.com/Orieileen/Canvex/commit/167f27635768d1d910b1f17a83bf3cbbcdcb9a7b)
 
