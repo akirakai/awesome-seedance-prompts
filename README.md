@@ -314,6 +314,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Four-cut green-plum portrait with bite-state and silence ledger](#298-four-cut-green-plum-portrait-with-bite-state-and-silence-ledger)
   - [Eight-reference strawberry-picnic montage with shot-keyed state binding](#299-eight-reference-strawberry-picnic-montage-with-shot-keyed-state-binding)
   - [Furniture-relay duo brawl with partner-spin contact gate](#300-furniture-relay-duo-brawl-with-partner-spin-contact-gate)
+  - [Dual-register buddy action with causal-gag and reaction rails](#301-dual-register-buddy-action-with-causal-gag-and-reaction-rails)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -17478,6 +17479,144 @@ Adapted and rewritten from TechieSA / @TechieBySA's September 3, 2026
 [complete two-character reference-sheet prompt](https://x.com/TechieBySA/status/2095515259612065975),
 and [complete 15-second video prompt](https://x.com/TechieBySA/status/2095515266532651349).
 
+### 301. Dual-register buddy action with causal-gag and reaction rails
+
+**Verified model:** Seedance 2.0 — the original creator explicitly labels the
+attached 15-second generated result Seedance 2.0, then publishes the complete
+video prompt and companion two-character sheet prompt in the same thread  
+**Use case:** buddy-action comedy, invariant personality contrast, causal
+misdirection, action/reaction coverage, one-location ensemble continuity  
+**Mode:** text-to-video with a companion character-sheet reference  
+**Suggested settings:** 15 seconds, rapid-cut semi-realistic cel-shaded 3D
+anime, native music, effects and spoken reactions
+
+```text
+Create a 15-second high-energy buddy-action comedy on one bright palm-lined city
+street. Preserve the same road direction, colorful façades, parked hero car,
+sun angle and attack zone through every cut. Begin with the fight already in
+progress; do not spend time on an entrance or introduction.
+
+CAST AND CATEGORY LOCK
+@Image1, if supplied, owns both adult partners' faces, hair, age, proportions,
+wardrobe and weapons.
+
+PARTNER A — VOLATILE:
+lean, athletic and visibly weathered; loose dark leather jacket, open-collar
+striped shirt, jeans and worn boots. He is fearless, impulsive and delighted by
+danger. His body language is large and fast. He may grin after a dangerous
+success, but never freezes in fear or becomes methodical.
+
+PARTNER B — CONTROLLED:
+older, composed and formally dressed in a light suit jacket, white shirt, dark
+tie and dark trousers. He uses compact, deliberate movement and precise aim.
+His concern appears only in small looks, one slow head shake and a tired final
+stare. He never copies PARTNER A's grin, wild gestures or reckless path.
+
+ATTACKERS:
+street-clothed adults in jeans, hoodies and casual jackets. No attacker wears a
+suit, tie, either partner's face or either partner's silhouette. Keep every
+attacker inside one readable lane until the completed contact or retreat.
+
+DUAL-RAIL PERFORMANCE CONTRACT
+Every comedy unit has two rails:
+ACTION RAIL = visible setup -> physical cause -> readable result -> settled body.
+REACTION RAIL = the other partner sees that result -> gives one character-true
+response -> returns attention to the next threat.
+
+Do not cut from setup directly to reaction. Show the result first. Never give
+both partners the same emotional response, and never allow a reaction insert to
+erase the street geography or reset a defeated attacker.
+
+0.0–1.5 s | establish both registers
+Open wide in the middle of the street fight. PARTNER A already swings through
+one loose, aggressive exchange while grinning. PARTNER B advances beside him
+with compact aim and clean foot placement. Casual-clothed attackers approach
+from separate foreground and background lanes. Keep the parked car visible as
+the shared spatial anchor.
+
+1.5–3.5 s | force versus precision
+PARTNER A catches one incoming attacker, plants both feet and completes one
+short head-first body check before releasing; the attacker reaches the ground
+before the cut. In the adjacent lane, PARTNER B resolves two different threats
+with two clearly separated precise responses. PARTNER A gives one impressed
+side glance. PARTNER B keeps his face neutral and moves on.
+
+3.5–5.5 s | causal-gag proof
+One attacker draws back a fist while a second attacker closes directly behind
+PARTNER A. Hold a medium three-body profile that proves their order. The first
+attacker swings; only after the fist commits does PARTNER A duck below its path.
+The same fist continues forward and visibly contacts the second attacker, who
+falls because of that contact. PARTNER A rises with a wide grin. PARTNER B sees
+the completed accident and performs one slow, disapproving head shake.
+
+5.5–7.5 s | car-path contrast
+PARTNER A plants both hands on the unchanged car hood, slides and rolls across
+its surface, then lands on the far side before removing two threats from that
+lane. The hood may gain one persistent dent or dust streak but does not change
+model, color or position. PARTNER B walks around the front bumper using the
+short safe path and resolves one separate attacker with a single economical
+action. Rejoin them in one wide frame only after both paths clear.
+
+7.5–9.5 s | threat reversal
+Three attackers surround PARTNER B in a readable open triangle. Before they
+touch him, PARTNER A enters the deep background behind the group with the same
+unrestrained posture and expression. Each attacker notices him in sequence,
+checks the others and backs away one step without teleporting or falling.
+PARTNER B turns only after the retreat begins. PARTNER A gives one small shrug;
+PARTNER B answers with a silent, incredulous look.
+
+9.5–12.5 s | back-to-back sector ownership
+A final group enters from four visible street sectors. The partners meet
+back-to-back at the center and keep that contact point stable. PARTNER A owns
+the left and rear sectors with broad aggressive movement; PARTNER B owns the
+right and front sectors with compact precise movement. Alternate a wide axis
+proof with brief medium inserts, but never let either partner aim through the
+other's body or attack the same target. Each attacker reacts only after an
+on-screen cause, then stays down or exits the frame.
+
+12.5–14.0 s | aftermath state
+The last attacker settles. Hold wide enough to verify the cleared lanes,
+unchanged road direction, same car and final body positions. PARTNER A remains
+dishevelled and energized, enjoying the result. PARTNER B's suit stays mostly
+ordered; his shoulders lower into visible exhaustion. Do not repair the hood,
+restore attackers or introduce a new threat.
+
+14.0–15.0 s | reaction payoff
+Cut to a clean two-shot on the established axis. PARTNER B turns slowly toward
+PARTNER A and gives exactly one tired head shake. Wait until it completes.
+PARTNER A answers only by widening the same grin. End on the contrast without a
+title card, celebration pose or location change.
+
+CAMERA AND AUDIO
+Run one energetic rock cue continuously from frame one. Bind the body check,
+misdirected fist, car contact, landings and sector clearances to distinct beats;
+keep footsteps, cloth, vehicle contact, weapon mechanics and street reflections
+audible. Spoken reactions, if used, belong only to the visible speaker and
+never overlap an impact.
+
+Use rapid motivated coverage: wides establish lane ownership, medium profiles
+prove cause and contact, and close views exist only for the specified reactions.
+Re-establish the street axis after the hood crossing and before the back-to-back
+exchange. Something may change every two seconds, but the location, identities,
+wardrobe, weapons, car and personality registers never reset.
+
+No third hero, face swap, role swap, attacker in formalwear, duplicate body,
+friendly fire, invisible hit, premature fall, reversed fist path, unexplained
+retreat, car replacement, repaired dent, uncontrolled camera shake, blood,
+gore, subtitle, logo, watermark or unrequested text.
+```
+
+**Why it works:** the action rail protects physical causality while the reaction
+rail protects character comedy. One partner's reckless choices are not merely
+described; they create visible consequences that the controlled partner must
+observe and answer without abandoning his baseline. The parked car and street
+axis keep the rapid two-second units inside one continuous geography.
+
+Adapted and rewritten from TechieSA / @TechieBySA's September 4, 2026
+[Seedance 2.0 model declaration and playable 15-second result](https://x.com/TechieBySA/status/2095836019559924084),
+[companion two-character sheet prompt](https://x.com/TechieBySA/status/2095836037167628529)
+and [complete 15-second video prompt](https://x.com/TechieBySA/status/2095836043572379675).
+
 ## Reusable templates
 
 ### Face-presence recast coverage gate and source-audio authority
@@ -27716,6 +27855,8 @@ and the versioned
 
 
 ## Sources
+
+- [TechieSA / @TechieBySA — September 4, 2026 Seedance 2.0 buddy-action result: playable 15-second clip, complete two-character sheet and full timed video prompt](https://x.com/TechieBySA/status/2095836019559924084) ([character sheet](https://x.com/TechieBySA/status/2095836037167628529), [video prompt](https://x.com/TechieBySA/status/2095836043572379675))
 
 - [GenMedia Labs / RunComfy — September 4, 2026 Seedance 2.5 reference-to-video route release: exact fixed-480p and fixed-1080p schemas, prompt-plus-images operation without video input, counted-seconds billing and draft-to-delivery parity](https://github.com/genmedia-labs/skills/commit/4dc788aecbefc99cb188cc43c4ce08383d33f768) ([480p platform contract](https://www.runcomfy.com/models/bytedance/seedance-2.5/reference-to-video/480p), [1080p platform contract](https://www.runcomfy.com/models/bytedance/seedance-2.5/reference-to-video/1080p))
 
