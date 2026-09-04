@@ -318,6 +318,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Holiday stairwell trap relay with irreversible debris and pendulum-contact proof](#302-holiday-stairwell-trap-relay-with-irreversible-debris-and-pendulum-contact-proof)
   - [Vacant-cockpit takeover with instrument causality and windshield-scale handoff](#303-vacant-cockpit-takeover-with-instrument-causality-and-windshield-scale-handoff)
   - [Catalogue-to-bottle extrusion relay with scent-state convergence](#304-catalogue-to-bottle-extrusion-relay-with-scent-state-convergence)
+  - [Alpine rally camera relay with course-state continuity](#305-alpine-rally-camera-relay-with-course-state-continuity)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -17961,6 +17962,101 @@ Adapted and rewritten from Future Vibes AI / @FutureVibesAi's September 5, 2026
 [Seedance 2.5 declaration and playable 15-second result](https://x.com/FutureVibesAi/status/2095928289135366418)
 and [complete single prompt](https://x.com/FutureVibesAi/status/2095928416910606406).
 
+
+### 305. Alpine rally camera relay with course-state continuity
+
+**Verified model:** Seedance 2.5 — the original creator labels the attached
+playable 30-second result “Made with Seedance 2.5” and publishes the complete
+timed text-to-video prompt in the first reply  
+**Use case:** automotive action, mixed aerial/cockpit/ground coverage, winter
+physics, motivated camera handoffs  
+**Mode:** text-to-video  
+**Suggested settings:** 30 seconds, 16:9, photoreal live-action rally film,
+cinematic native audio
+
+```text
+Create one continuous 30-second alpine rally run assembled from four motivated
+camera positions. One unbranded blue-and-white rally car, one adult driver and
+one winter course persist from start to finish. Cold late-afternoon sun stays
+camera-left; the course progresses in this fixed order: upper hairpin, snowy
+forest, open valley, ridge switchback. Never reset the car to an earlier road
+section.
+
+CONTINUITY LEDGER
+At every handoff preserve the car's travel direction, yaw angle, steering
+input, gear, engine pitch, wheel rotation, body roll and current snow trail.
+A fresh plume begins only after loaded tyres contact loose snow, then remains
+behind on the completed path and dissipates with age. Reuse one blue safety
+post at the hairpin exit and one red ridge marker only once each. Cuts may hide
+inside the windshield frame, a full-frame snow plume or a foreground tree; no
+camera may teleport while the car is visible.
+
+0.0–4.5s — AERIAL COURSE PROOF
+Begin high behind and left of the upper hairpin. Reveal the complete first turn,
+the forest entrance below it and the valley farther ahead. The car approaches,
+brakes before turn-in, rotates once around the hairpin and unwinds toward the
+blue safety post. The drone descends along the road axis without crossing the
+mountain or reversing screen direction.
+
+4.5–10.5s — COCKPIT INPUT AND RESPONSE
+Let the car roof and windshield fill frame, then cut on the dark windshield
+edge to a shoulder-level cockpit view. The blue safety post passes on the same
+side and at the expected instant. Show both gloved hands unwind the wheel,
+select one higher gear and settle before the next bend. Steering input leads
+vehicle yaw; suspension vibration, forest parallax and engine rise all agree
+with acceleration. The windshield remains clear enough to read the route, with
+no invented gauges or floating interface.
+
+10.5–16.5s — CONTACT-OWNED LOW TRACK
+A foreground spruce trunk briefly covers the cockpit view. Emerge at a fixed
+low camera outside the next forest curve, looking in the inherited travel
+direction. The same car enters at the matching engine note, compresses its
+outside suspension and completes one controlled drift. Snow erupts from the
+rear tyres only after lateral load is visible, crosses the lens as the car
+passes and becomes the full-frame transition. Keep all four wheels attached
+and in contact except for natural suspension travel.
+
+16.5–24.0s — VALLEY-TO-RIDGE AERIAL RUN
+Resolve the white plume into a trailing aerial view over the open valley. The
+old forest plume remains behind and fades; do not create a new trail ahead of
+the car. Follow one uninterrupted route from open field to forest edge and up
+the ridge road. Arc from rear-three-quarter to side tracking in one smooth
+drone move, then widen to establish the red ridge marker and final switchback.
+Speed changes follow slope and steering rather than decorative time ramps.
+
+24.0–30.0s — FINAL COCKPIT PAYOFF
+As the drone lowers toward the windshield, use the dark A-pillar for one final
+match cut into the cockpit. The red ridge marker crosses on the same side.
+The driver brakes, downshifts once, turns in, catches the small slide and
+straightens the wheel on exit. End while the car is still driving toward the
+next visible stretch of road; hold the stable forward view for the last half
+second rather than freezing or changing location.
+
+AUDIO AND LOOK
+Maintain one continuous engine performance whose RPM follows braking, shifts
+and acceleration. Change only perspective: open alpine wind in aerial views,
+close tyre crunch and snow impact at ground level, restrained cabin resonance,
+breathing and mechanical controls inside. Professional natural-light rally
+photography, realistic shutter motion, crisp snow texture and readable terrain.
+
+Reject a second car or driver, sponsor text, changing livery, repeated landmark,
+reversed course, clean road after passage, snow before tyre contact, wheel or
+body deformation, impossible drift, windshield weather jump, floating drone
+shadow, unrelated cutaway, camera collision, time reversal, speed ramp, frozen
+ending, subtitle, logo or watermark.
+```
+
+**Why it works:** the views are joined by observable race state rather than a
+generic request for “smooth transitions.” Landmarks, steering, engine pitch,
+snow age and screen direction all survive each cut, while physical occluders
+give the model safe places to change camera ownership. The four blocks also
+separate route proof, driver input, tyre contact and final recovery so the
+30-second sequence remains legible.
+
+Adapted and rewritten from Ludovic Creator / @LudovicCreator's September 5,
+2026 [Seedance 2.5 declaration and playable 30-second result](https://x.com/LudovicCreator/status/2095934987467952241)
+and [complete timed prompt](https://x.com/LudovicCreator/status/2095935010532401457).
+
 ## Reusable templates
 
 ### Face-presence recast coverage gate and source-audio authority
@@ -28199,6 +28295,9 @@ and the versioned
 
 
 ## Sources
+
+- [Ludovic Creator / @LudovicCreator — September 5, 2026 Seedance 2.5 alpine rally: playable 30-second result and complete timed text-to-video prompt with aerial, cockpit and ground-level camera handoffs](https://x.com/LudovicCreator/status/2095934987467952241) ([complete prompt](https://x.com/LudovicCreator/status/2095935010532401457))
+
 
 - [Future Vibes AI / @FutureVibesAi — September 5, 2026 Dreamina Seedance 2.5 catalogue-to-perfume transformation: playable 15-second result and complete single prompt with five material signatures and a final hero convergence](https://x.com/FutureVibesAi/status/2095928289135366418) ([complete prompt](https://x.com/FutureVibesAi/status/2095928416910606406))
 
