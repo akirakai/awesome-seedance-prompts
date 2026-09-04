@@ -23132,7 +23132,10 @@ and the
 (`doubao-seedance-2-0-mini-260615`) — the original developer live-tested one
 public-URL white-model previs as `reference_video`; the job passed synchronous
 and asynchronous validation, returned a finished clip, and preserved the
-previs's blocking, camera position and depth layout in the opening frame
+previs's blocking, camera position and depth layout in the opening frame;
+Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`) — a second creator
+published the exact-route working prompt and paired clay/final result, then
+calibrated reference-input billing against the resulting paid 12-second run
 
 Use this when camera blocking is expensive to discover in a final-quality
 render. Prove the path with cheap proxy geometry, then let the approved clip
@@ -23192,6 +23195,30 @@ REQUEST GATE
 - the submitted prompt explicitly separates motion authority from appearance;
 - estimated cost and task ID are recorded before polling.
 
+REFERENCE-INPUT COST GATE
+Read every supplied clip's real duration from container metadata; never price a
+nominal placeholder duration as though it were measured. Cache the measurement
+with the URL, send the same value to the server-side estimator, clamp it to the
+endpoint envelope there, and mark any unreadable-duration fallback explicitly.
+
+For this verified Seedance 2.5 route, estimate generated duration and supplied
+video duration separately: apply the 0.6 reference-video multiplier only to
+the generated part, then bill every supplied video second at the full base
+rate. Do not multiply the combined input-plus-output duration by 0.6, and do
+not assume a reference-backed take is cheaper than one prompt-only take.
+
+Before spending, compare whole strategies rather than unit prices:
+- PROMPT-ONLY PLAN = fresh-take estimate × expected takes to settle the camera;
+- CLAY PLAN = one reference-backed take, including the full measured clay clip;
+- choose the clay route only when the approved blockout removes enough expected
+  rerolls to beat its higher per-take cost.
+
+Keep the calibration record beside the estimate. The observed 12-second, 4:3,
+480p run invoiced $3.05; the separated estimator predicted $2.96. In the same
+worked comparison, four prompt-only guesses at $1.85 each cost $7.40, so one
+clay-backed take saved $4.44 despite costing more than a single guess. Treat
+this as one measured calibration point, not a universal price promise.
+
 TRANSFER AUDIT
 Compare proxy and final at setup, motion onset, every major contact, recovery
 and endpoint. Pass only if screen direction, camera orientation, subject
@@ -23207,11 +23234,21 @@ authority split prevents low-detail proxy styling from contaminating the
 finished shot. The conservative request gate records only the capacity and
 transport actually exercised.
 
+The Seedance 2.5 production adds a financial acceptance test: reference video
+is worthwhile when it collapses camera-search retries, not because its unit
+render is automatically cheap. Measuring the actual input duration and pricing
+input/output separately keeps a successful motion-control technique from
+hiding an underestimated bill.
+
 **Sources:** Neil's September 3, 2026
 [live Seedance 2.0 Mini white-model reference-video run](https://github.com/neilalexanderlee/ai-comic-studio/commit/ba6e4c19e8410d0114f2476d6c147e87afda594d),
 the [versioned exact-model capability record](https://github.com/neilalexanderlee/ai-comic-studio/blob/ba6e4c19e8410d0114f2476d6c147e87afda594d/src/lib/ai/video-capabilities.ts),
 and the follow-up
 [official-envelope correction for 4–15 seconds, 480p/720p and 24fps](https://github.com/neilalexanderlee/ai-comic-studio/commit/72fe7ebadfbc88f007d50699664ead5276a991c8).
+The Seedance 2.5 extension is adapted from Ajwad Rauf's September 4, 2026
+[paid-run cost correction and whole-strategy comparison](https://github.com/ajwadrauf/portfolio/commit/a938f11f0391794630f17fdfda9a0930c6f524e9),
+backed by the earlier [finished frame-locked clay/final pair and exact worked prompt](https://github.com/ajwadrauf/portfolio/commit/96e21ac2859216962734a5e56831cb208f738dc1)
+and [exact fal route verification](https://github.com/ajwadrauf/portfolio/commit/9d75d33aed07d74473e2fad192f9d511b96b51e0).
 
 ### Published-capability media gate for prompt-routed public R2V
 
@@ -27482,6 +27519,8 @@ and the versioned
 
 
 ## Sources
+
+- [Ajwad Rauf — September 4, 2026 Seedance 2.5 paid clay-reference run: measured input-duration billing, separated 0.6 output/full-rate input estimate, and whole-strategy retry comparison](https://github.com/ajwadrauf/portfolio/commit/a938f11f0391794630f17fdfda9a0930c6f524e9) ([finished clay/final pair and worked prompt](https://github.com/ajwadrauf/portfolio/commit/96e21ac2859216962734a5e56831cb208f738dc1), [exact fal route](https://github.com/ajwadrauf/portfolio/commit/9d75d33aed07d74473e2fad192f9d511b96b51e0))
 
 - [James / tvskill — September 4, 2026 Seedance 2.0 Fast V04 native-dialogue subtitle burn-in: one intermittent bottom-strip failure despite an explicit no-text tail, per-segment lower-20% audit and no-eraser rework route](https://github.com/xixi2036/tvskill/commit/bbc55238986301a832607c3f4538eea30a694f03) ([exact-model succeeded production record](https://github.com/xixi2036/tvskill/commit/9d4e8d1a958625ff4b92de252e2468b2ad0c2445))
 
