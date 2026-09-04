@@ -316,6 +316,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Furniture-relay duo brawl with partner-spin contact gate](#300-furniture-relay-duo-brawl-with-partner-spin-contact-gate)
   - [Dual-register buddy action with causal-gag and reaction rails](#301-dual-register-buddy-action-with-causal-gag-and-reaction-rails)
   - [Holiday stairwell trap relay with irreversible debris and pendulum-contact proof](#302-holiday-stairwell-trap-relay-with-irreversible-debris-and-pendulum-contact-proof)
+  - [Vacant-cockpit takeover with instrument causality and windshield-scale handoff](#303-vacant-cockpit-takeover-with-instrument-causality-and-windshield-scale-handoff)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -17781,6 +17782,86 @@ Adapted and rewritten from TechieSA / @TechieBySA's September 5, 2026
 [complete companion cast-sheet prompt](https://x.com/TechieBySA/status/2095913806060830881)
 and [complete timed video prompt](https://x.com/TechieBySA/status/2095913813346304314).
 
+
+### 303. Vacant-cockpit takeover with instrument causality and windshield-scale handoff
+
+**Verified model:** Seedance 2.5 — the original creator explicitly labels the
+complete prompt Seedance 2.5 and publishes it beside the attached playable
+30-second result  
+**Use case:** cinematic live-action emergency action, interior-to-exterior
+scale transition, instrument-response causality, native-audio escalation  
+**Mode:** text-to-video  
+**Suggested settings:** 30 seconds, 16:9, photoreal cinematic action, native
+dialogue-free sound design and restrained orchestral score
+
+```text
+Create a 30-second photoreal cinematic action sequence in and around one modern
+passenger aircraft. Keep the same adult woman, cockpit geometry, daylight,
+aircraft livery and flight direction throughout. The scene is tense but
+non-graphic; there are no visible passengers, injuries, collisions or weapons.
+
+IDENTITY AND GEOGRAPHY
+The woman wears one practical dark travel outfit with tied-back hair. Preserve
+her face, build, clothing and screen direction in every cut. The cockpit has two
+front seats, a central pedestal, overhead controls and a broad windshield. Lock
+the left seat, right seat, aisle, instrument panel and horizon relationship.
+Never mirror the controls or move the seats between shots.
+
+0–6s — ABSENCE PROOF
+Begin behind the woman as she opens the cockpit door and steps just inside.
+Handheld camera follows over one shoulder, then cuts to a wide angle that proves
+both pilot seats are empty in the same frame. Cut once to her face only after the
+empty seats are readable: breath catches, eyes scan left then right, and one hand
+steadies against the doorframe. Aircraft hum continues underneath a faint loose
+rattle; no alarm yet.
+
+6–13s — TAKEOVER AND CONTROL RESPONSE
+She crosses the aisle, sits in the left seat, fastens the lap restraint and grips
+the yoke with both hands. Use three short cause-and-effect inserts: her hand
+advances one control, the matching instrument value changes, then the aircraft
+bank appears through the windshield. Return to a medium profile as she corrects
+the yoke and fixes her gaze on the horizon. Do not show random button pressing,
+unmotivated flashing panels or a second operator.
+
+13–21s — TURBULENCE WITH REACTION ORDER
+A visible cloud boundary reaches the nose before the first jolt. Apply one sharp
+vertical drop, a smaller left roll and two damped rebounds. For each disturbance
+preserve the order: horizon moves, suspended items and hair react, her shoulders
+absorb the force, hands counter-steer, then instruments settle toward stable
+values. Handheld camera inherits the same direction and amplitude rather than
+shaking independently. Introduce one warning tone, structural creaks and rising
+wind; keep every sound synchronized to its visible cause.
+
+21–30s — SCALE AND IDENTITY HANDOFF
+Match-cut from the cockpit horizon to an exterior three-quarter aerial view of
+the same aircraft continuing on the established heading through broken cloud.
+Track alongside long enough to confirm stable wings and believable forward
+speed. Arc toward the nose without teleporting or reversing the aircraft, then
+push toward the windshield until the woman becomes clearly visible in the left
+seat. Finish on her focused face through the glass while reflections remain
+subtle enough to preserve identity. Hold the final expression for one second;
+the warning tone stops, engine sound remains, and the score suspends without a
+victory cue.
+
+CONTINUITY AND FAILURE CONTROL
+Every control movement must create one visible instrument or flight response.
+The aircraft cannot change model, livery, scale, altitude discontinuously or
+flight direction. Keep turbulence physically damped, cockpit displays stable and
+legible as interface shapes but without invented text. No extra crew, duplicated
+woman, melting hands, mirrored panel, impossible exterior jump, opaque
+windshield, excessive camera shake or audio event without an on-screen cause.
+```
+
+**Why it works:** The sequence proves absence before reaction, then turns the
+takeover into an auditable chain of control input, instrument response and
+aircraft motion. A directional turbulence ledger keeps the performer, loose
+objects, camera and horizon inside one physical event. The final exterior arc
+does more than supply spectacle: it preserves aircraft heading and transfers
+identity across a large scale change by ending through the same windshield.
+
+Adapted and rewritten from Saul Goodman / @Goodmanprotocol's September 5, 2026
+[complete Seedance 2.5 prompt and playable 30-second result](https://x.com/Goodmanprotocol/status/2095927028830908746).
+
 ## Reusable templates
 
 ### Face-presence recast coverage gate and source-audio authority
@@ -28019,6 +28100,9 @@ and the versioned
 
 
 ## Sources
+
+- [Saul Goodman / @Goodmanprotocol — September 5, 2026 Seedance 2.5 vacant-cockpit takeover: complete 30-second timed prompt and playable result with instrument-response, turbulence and windshield-scale handoff](https://x.com/Goodmanprotocol/status/2095927028830908746)
+
 
 - [TechieSA / @TechieBySA — September 4, 2026 Seedance 2.0 buddy-action result: playable 15-second clip, complete two-character sheet and full timed video prompt](https://x.com/TechieBySA/status/2095836019559924084) ([character sheet](https://x.com/TechieBySA/status/2095836037167628529), [video prompt](https://x.com/TechieBySA/status/2095836043572379675))
 - [TechieSA / @TechieBySA — September 5, 2026 Seedance 2.0 holiday-house trap comedy: playable 15-second result, complete cast sheet and full timed video prompt](https://x.com/TechieBySA/status/2095913793607843990) ([cast sheet](https://x.com/TechieBySA/status/2095913806060830881), [video prompt](https://x.com/TechieBySA/status/2095913813346304314))
