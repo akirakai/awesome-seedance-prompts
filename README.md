@@ -23303,6 +23303,110 @@ The Seedance 2.5 extension is adapted from Ajwad Rauf's September 4, 2026
 backed by the earlier [finished frame-locked clay/final pair and exact worked prompt](https://github.com/ajwadrauf/portfolio/commit/96e21ac2859216962734a5e56831cb208f738dc1)
 and [exact fal route verification](https://github.com/ajwadrauf/portfolio/commit/9d75d33aed07d74473e2fad192f9d511b96b51e0).
 
+### Optional-video reference-stack compiler and counted-seconds delivery gate
+
+**Verified model:** Seedance 2.5
+(`bytedance/seedance-2.5/reference-to-video/480p` and
+`bytedance/seedance-2.5/reference-to-video/1080p` on RunComfy) — the
+platform's exact route contracts and newly published workflow specify plural
+reference arrays, prompt-plus-images operation without a video reference,
+tier-specific fixed output resolution, 4–30-second output and counted-second
+billing for supplied video
+
+Use this when still references can own identity and art direction but a motion
+clip may or may not be worth its extra duration cost. Compile one explicit
+reference-role manifest, prove it cheaply at 480p, and promote the same
+accepted contract to the fixed-1080p delivery route.
+
+```text
+ROUTE CONTRACT
+Exact model = Seedance 2.5.
+Draft endpoint = bytedance/seedance-2.5/reference-to-video/480p.
+Delivery endpoint = bytedance/seedance-2.5/reference-to-video/1080p.
+Resolution is fixed by endpoint; never send a resolution field.
+Output duration = 4–30 seconds.
+Use the route's plural fields: images, videos and audios.
+
+REFERENCE-ROLE MANIFEST
+images [0–9]:
+- @Image1 = [identity / product / wardrobe / environment authority];
+- @Image2 = [one different, non-overlapping visible responsibility];
+- continue only while every image has a unique job.
+
+videos [0–3]:
+- @Video1 = [motion trajectory / camera path / performance rhythm authority];
+- optional: leave videos empty when the prompt and stills define the shot;
+- never add a placeholder clip merely to satisfy a generic schema assumption.
+
+audios [0–3]:
+- @Audio1 = [music / voice / pace / sound-event authority];
+- image and audio references do not add chargeable video seconds on these
+  verified routes.
+
+OPTIONAL-VIDEO GATE
+If the ordered stills already own identity, styling and composition, and the
+prompt can state one observable action chain plus one camera path, submit
+without a video reference. Add a video only when motion trajectory, timing or
+camera choreography cannot be specified reliably in text. Record that exact
+motion-only responsibility; do not let the clip silently override appearance.
+
+PROMPT BODY
+[SUBJECT from @Image1] performs [one causal action chain with visible start,
+contacts and end state]. Preserve [identity / product / wardrobe] from the
+named images. If present, use @Video1 only for [declared motion or camera
+responsibility]. Camera: [start framing, one path, speed change, endpoint].
+Audio: [native ambience / dialogue / @Audio1 authority]. End on [inspectable
+final state]. No captions, logos, watermarks or unrequested text.
+
+SERIALIZED PAYLOAD GATE
+Send only the supported fields:
+- prompt;
+- ordered images, videos and audios;
+- aspect_ratio;
+- duration;
+- generate_audio.
+Omit unused reference arrays when the client permits. Before submission,
+compare the serialized reference order and hashes with the approved manifest.
+
+COUNTED-SECONDS BUDGET
+Measure every supplied video from its container; never price a filename or
+nominal duration.
+- 1080p route: counted seconds = output seconds + all reference-video seconds;
+  observed route price = counted seconds × $0.53.
+- 480p without video references: estimate output seconds × $0.20.
+- 480p with video references: counted seconds = output seconds + all
+  reference-video seconds; estimate counted seconds × $0.12.
+Images and audio do not enter these duration sums. Compare a still-only plan
+with each video-led plan before spending, and trim motion references to the
+smallest essential interval. Treat these as dated RunComfy route prices, not
+universal Seedance pricing.
+
+DRAFT → DELIVERY PARITY
+Freeze the prompt, ordered reference hashes, role manifest, aspect ratio,
+duration and generate_audio flag. Render on the fixed-480p route and accept
+identity, action order, camera, sound and endpoint. Promote the unchanged
+manifest and prompt to the fixed-1080p route; only the endpoint may change.
+Reject any silent field, reference-order or prompt drift between tiers.
+
+DELIVERY ACCEPTANCE
+Confirm the returned stream matches the route's fixed resolution. Audit every
+reference against its declared job, verify output duration and audio behavior,
+and archive the exact payload, measured input-video durations, estimate,
+actual charge and result URL.
+```
+
+**Why it works:** a video reference becomes an evidence-backed motion tool
+instead of a presumed requirement. The route-scoped manifest prevents
+references from competing for authority, while counted-second budgeting makes
+the cost of motion guidance visible before generation. Draft-to-delivery
+parity then separates a resolution upgrade from an accidental prompt change.
+
+**Sources:** GenMedia Labs' September 4, 2026
+[new RunComfy Seedance 2.5 route workflow and schemas](https://github.com/genmedia-labs/skills/commit/4dc788aecbefc99cb188cc43c4ce08383d33f768),
+plus the live platform contracts for the
+[fixed-480p route](https://www.runcomfy.com/models/bytedance/seedance-2.5/reference-to-video/480p)
+and [fixed-1080p route](https://www.runcomfy.com/models/bytedance/seedance-2.5/reference-to-video/1080p).
+
 ### Published-capability media gate for prompt-routed public R2V
 
 **Verified model:** Seedance 2.5
@@ -27612,6 +27716,8 @@ and the versioned
 
 
 ## Sources
+
+- [GenMedia Labs / RunComfy — September 4, 2026 Seedance 2.5 reference-to-video route release: exact fixed-480p and fixed-1080p schemas, prompt-plus-images operation without video input, counted-seconds billing and draft-to-delivery parity](https://github.com/genmedia-labs/skills/commit/4dc788aecbefc99cb188cc43c4ce08383d33f768) ([480p platform contract](https://www.runcomfy.com/models/bytedance/seedance-2.5/reference-to-video/480p), [1080p platform contract](https://www.runcomfy.com/models/bytedance/seedance-2.5/reference-to-video/1080p))
 
 - [Wigly / Picacho — September 4, 2026 direct BytePlus ModelArk Seedance 2.0 probe: 4-second 720p T2V success with returned video artifact, plus a same-route real-person reference rejection before task creation or charge](https://github.com/corpomedical/picacho/commit/c5bfc4882de2079fa011258faaeac3a45856500b)
 
