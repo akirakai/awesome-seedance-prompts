@@ -319,6 +319,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Vacant-cockpit takeover with instrument causality and windshield-scale handoff](#303-vacant-cockpit-takeover-with-instrument-causality-and-windshield-scale-handoff)
   - [Catalogue-to-bottle extrusion relay with scent-state convergence](#304-catalogue-to-bottle-extrusion-relay-with-scent-state-convergence)
   - [Alpine rally camera relay with course-state continuity](#305-alpine-rally-camera-relay-with-course-state-continuity)
+  - [Balloon proposal with emotion and canopy-deployment ledgers](#306-balloon-proposal-with-emotion-and-canopy-deployment-ledgers)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -18057,6 +18058,128 @@ Adapted and rewritten from Ludovic Creator / @LudovicCreator's September 5,
 2026 [Seedance 2.5 declaration and playable 30-second result](https://x.com/LudovicCreator/status/2095934987467952241)
 and [complete timed prompt](https://x.com/LudovicCreator/status/2095935010532401457).
 
+
+### 306. Balloon proposal with emotion and canopy-deployment ledgers
+
+**Verified model:** Seedance 2.5 — the original creator names Seedance 2.5 in
+the post containing the playable 30-second result and supplies the complete
+timed prompt in the immediately linked reply  
+**Use case:** cinematic romance, staged aerial action, multi-stage acting,
+physically embedded readable text, native sound  
+**Mode:** text-to-video  
+**Suggested settings:** 30 seconds, 16:9, photoreal golden-hour live action,
+professionally rigged fictional stunt
+
+```text
+Create a 30-second cinematic proposal above a vast alpine valley. One colourful
+hot-air balloon carries exactly three adults: WOMAN, MAN and PILOT. The MAN wears
+one certified parachute harness concealed under his jacket; all actions are a
+planned professional stunt. Preserve their faces, clothing, basket layout,
+balloon colours, altitude relationship and late-golden-hour light throughout.
+
+STORY KNOWLEDGE
+Only MAN and PILOT know the plan before deployment. WOMAN may not smile knowingly,
+look for a camera or anticipate the reveal. PILOT stays calm and unobtrusive:
+one exchanged glance early and one downward point later, never an explanatory
+gesture that spoils the surprise.
+
+EMOTION LEDGER FOR WOMAN
+relaxed affection -> puzzled attention -> credible fear -> helpless panic ->
+physical relief -> comprehension -> tearful joy.
+Every state needs one visible trigger and must persist until the next trigger.
+Do not skip from calm directly to joy, repeat a reaction, or play any stage as
+comedy.
+
+AERIAL AND IDENTITY LEDGER
+After MAN leaves the basket, keep one uninterrupted descent: the same body,
+harness, heading, fall line and distance below the balloon. Every exterior and
+basket cut observes that same event at its current altitude. Wind affects coat,
+hair, suspension lines and balloon consistently. The balloon never dives to
+follow him and MAN never returns to an earlier height.
+
+0.0–5.0s — CALM BASELINE
+Open on a wide aerial orbit that establishes the balloon, basket and valley,
+then move to a stable medium shot inside the basket. WOMAN watches the landscape;
+MAN watches her, takes her hand and gives PILOT one nearly invisible glance.
+One burner pulse warms their faces. WOMAN notices his nervous focus and softly
+asks, "What is it?" He answers only with a reassuring smile.
+
+5.0–9.0s — HARNESS REVEAL
+MAN releases her hand and opens his jacket, exposing the secured harness. WOMAN
+first studies it in confusion. Her fear begins only when he braces one boot on
+the reinforced basket step. She catches his forearm and says, "Wait—what are
+you doing?" He gently removes her hand, holds eye contact for one beat and
+commits to the jump. Keep PILOT in the background without reacting.
+
+9.0–13.0s — DEPARTURE AND PANIC
+Cut outside only after MAN pushes cleanly away from the basket. Show a readable
+gap opening between his body and the balloon before the next angle. From the
+basket, WOMAN lunges to the rail but remains safely inside; her reaching hand
+cannot touch him. Alternate one downward view and one wide side view while his
+size decreases continuously. Her voice breaks as she calls his name; do not
+reset his fall for coverage.
+
+13.0–18.0s — SAME FALL, NEW INFORMATION
+Track beside MAN as he finds a stable belly-to-earth posture. Clothing pressure,
+limb corrections and increasing separation prove real airflow and gravity.
+Return to WOMAN gripping the same rail, breathless and tearful. She asks PILOT
+for help. PILOT points down once. Her gaze follows the gesture to MAN's hand
+moving toward the deployment handle.
+
+18.0–22.5s — MECHANICAL DEPLOYMENT CHAIN
+Show the sequence without omission:
+handle pull -> container opens -> pilot chute catches air -> lines extend and
+become taut -> folded canopy leaves the bag -> cells inflate progressively ->
+harness loads -> descent rate visibly decreases -> canopy stabilises.
+No instant fully formed parachute. MAN's body is pulled upright only when the
+lines take weight.
+
+The white canopy already contains the dark words "MARRY ME?" and one red heart
+as sewn or printed fabric graphics while it is still folding open. The message
+must not appear later as an overlay. It becomes readable only when airflow
+spreads and turns the fabric toward the balloon; spelling, orientation and
+placement then remain stable while folds distort it naturally.
+
+22.5–26.5s — RELIEF BEFORE MEANING
+Hold both balloon and open canopy in one wide frame long enough to prove safe
+separation. In WOMAN's close-up, shoulders release and breathing slows before
+she notices the message. Only then does fear become disbelief, laughter and
+tears. She covers her mouth, checks PILOT's restrained smile, looks back down
+and answers, "Yes!"
+
+26.5–30.0s — SHARED FINAL GEOGRAPHY
+MAN hears her distant answer, keeps both brake toggles controlled and raises
+one fist briefly without disturbing the canopy. WOMAN waves from inside the
+basket and repeats, "Yes!" Pull to a final wide composition containing the
+balloon above and parachute below on the same vertical axis, with both people
+still visible. End during the safe descent; add no landing, ring close-up or
+new scene.
+
+AUDIO
+Continuous high-altitude wind, basket creaks and occasional burner roar.
+Inside the basket, prioritise breath and short dialogue. During free fall,
+shift to rushing air; at deployment add fabric extraction, line tension and
+one canopy snap. Music stays restrained, nearly drops out during panic, then
+returns only after the canopy has arrested the fall. Keep voices attached to
+their speakers and distance.
+
+Reject accidental fall, unsafe rig, second parachutist, extra passenger,
+identity swap, duplicate body, changing balloon, reversed fall, altitude reset,
+weightless motion, instant canopy, missing or slack lines, malformed harness,
+digital text overlay, misspelled or mirrored message, early awareness, comic
+panic, injury, collision, subtitle, logo or watermark.
+```
+
+**Why it works:** three independent state machines make a dense 30-second scene
+auditable. WOMAN's emotion advances only after visible causes; MAN's altitude
+and identity never reset across coverage; and the parachute follows a complete
+load-bearing deployment chain. Treating the proposal wording as part of the
+folded fabric also prevents a late floating-text effect.
+
+Adapted and rewritten from Amira Zairi / @azed_ai's September 5, 2026
+[Seedance 2.5 declaration and playable 30-second result](https://x.com/azed_ai/status/2095965288605123037)
+and [complete timed prompt](https://x.com/azed_ai/status/2095965302265884692).
+
 ## Reusable templates
 
 ### Face-presence recast coverage gate and source-audio authority
@@ -28295,6 +28418,9 @@ and the versioned
 
 
 ## Sources
+
+- [Amira Zairi / @azed_ai — September 5, 2026 Seedance 2.5 hot-air-balloon proposal: playable 30-second result and complete timed prompt with staged emotion, continuous free fall, progressive canopy deployment and fabric-owned message](https://x.com/azed_ai/status/2095965288605123037) ([complete prompt](https://x.com/azed_ai/status/2095965302265884692))
+
 
 - [Ludovic Creator / @LudovicCreator — September 5, 2026 Seedance 2.5 alpine rally: playable 30-second result and complete timed text-to-video prompt with aerial, cockpit and ground-level camera handoffs](https://x.com/LudovicCreator/status/2095934987467952241) ([complete prompt](https://x.com/LudovicCreator/status/2095935010532401457))
 
