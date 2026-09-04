@@ -24833,7 +24833,7 @@ world-replacement result](https://github.com/HossamDaoud83/CPS-Plugins-Official/
 ### Reason-free lower-third caption reserve
 
 > **Type:** Reusable template / text-artifact failure control  
-> **Verified model:** Seedance 2.0 — the original developer states that this project's videos use Seedance 2.0, records two firsthand failures where explaining a subtitle reserve caused the model to render an unwanted caption layer, and commits the corrected production rule
+> **Verified model:** Seedance 2.0 — the original developer states that this project's videos use Seedance 2.0, records two firsthand failures where explaining a subtitle reserve caused the model to render an unwanted caption layer, and commits the corrected production rule; Seedance 2.0 Fast (`doubao-seedance-2-0-fast-260128`) — a second creator's succeeded exact-model production later emitted an unrequested native-dialogue subtitle in one delivered take despite an explicit no-text tail
 
 Use this when captions will be burned in after generation. Reserve composition
 without positively naming the thing the empty space is for; keep typography and
@@ -24883,12 +24883,27 @@ Pass only if:
 - documents and screens contain no accidentally readable invented copy;
 - the clean plate and post-captioned master are both retained.
 
+NATIVE-DIALOGUE BURN-IN AUDIT
+Treat text suppression as a per-take result check, not a prompt-only guarantee.
+For every generated segment containing native dialogue:
+1. Inspect the full clip; one clean sibling take does not clear the rest of a batch.
+2. At each spoken-line window and every suspicious high-contrast change, extract
+   a frame and inspect the bottom 20% separately.
+3. Reject any model-burned subtitle, dialogue box or explanatory text even when
+   the requested speech and lip-sync are otherwise correct.
+4. Record the exact time window and visible string, then keep the failed take out
+   of continuation inputs and clean-master assembly.
+
 FAILURE ROUTING
-If text appears, remove every positive mention of subtitles, captions, overlays,
-titles and lower thirds except the neutral sentence "Lower third of frame kept
-clean and unobstructed," then repeat the identical shot with the suppression
-tail. If the composition is still crowded, move the subject upward or widen the
-shot; do not explain the caption workflow to the model.
+If text appears, first check whether the current toolchain has a verified
+subtitle-removal route. If it does not, remove every positive mention of
+subtitles, captions, overlays, titles and lower thirds except the neutral
+sentence "Lower third of frame kept clean and unobstructed"; promote "do not
+generate a subtitle strip, dialogue box or explanatory text for spoken lines"
+into the critical constraints; then create a new render node under the ordinary
+rework contract. Do not treat an in-place retry as evidence that an intermittent
+failure has been fixed. If the composition is still crowded, move the subject
+upward or widen the shot; do not explain the caption workflow to the model.
 ```
 
 **Why it works:** a positive explanation such as "kept clean for subtitles"
@@ -24896,14 +24911,17 @@ activates both halves of the phrase: the requested clean zone and the very text
 concept that should be absent. A neutral spatial instruction reserves the same
 pixels without priming typography, while the short negative tail sets an
 explicit rejection test. Separating generation from caption burn-in also
-preserves a reusable clean master.
+preserves a reusable clean master. The later Seedance 2.0 Fast result shows why
+the output gate remains necessary even with the correct tail: one take burned a
+white dialogue subtitle at 4.8–5.4 seconds while five sibling takes remained
+clean, so a single successful sample cannot validate the batch.
 
 **Sources:** xingke2023's August 21, 2026
 [Seedance 2.0 production-rule commit](https://github.com/xingke2023/seedance/commit/56bd1ba01d6dd4dbee84f093ba733155b4162e7b),
 the committed
 [complete caption-safe-area rule](https://github.com/xingke2023/seedance/blob/56bd1ba01d6dd4dbee84f093ba733155b4162e7b/backend/src/prompt/skills/subtitle-safe-area.md),
 and the
-[firsthand two-failure provenance record](https://github.com/xingke2023/seedance/blob/56bd1ba01d6dd4dbee84f093ba733155b4162e7b/backend/src/prompt/skills/SOURCES.md).
+[firsthand two-failure provenance record](https://github.com/xingke2023/seedance/blob/56bd1ba01d6dd4dbee84f093ba733155b4162e7b/backend/src/prompt/skills/SOURCES.md). The native-dialogue audit and no-eraser fallback are adapted from James / tvskill's September 4, 2026 [Seedance 2.0 Fast V04 burned-subtitle evidence and per-segment lower-strip inspection rule](https://github.com/xixi2036/tvskill/commit/bbc55238986301a832607c3f4538eea30a694f03), with the exact model route preserved in the creator's [succeeded production node and serialized task record](https://github.com/xixi2036/tvskill/commit/9d4e8d1a958625ff4b92de252e2468b2ad0c2445).
 
 ### Parent-derived endpoint-pair review gate
 
@@ -27464,6 +27482,8 @@ and the versioned
 
 
 ## Sources
+
+- [James / tvskill — September 4, 2026 Seedance 2.0 Fast V04 native-dialogue subtitle burn-in: one intermittent bottom-strip failure despite an explicit no-text tail, per-segment lower-20% audit and no-eraser rework route](https://github.com/xixi2036/tvskill/commit/bbc55238986301a832607c3f4538eea30a694f03) ([exact-model succeeded production record](https://github.com/xixi2036/tvskill/commit/9d4e8d1a958625ff4b92de252e2468b2ad0c2445))
 
 - [GYZ001 / MJAgent2 — September 4, 2026 Seedance 2.0 prompt-dialect repair: nine successful 15-second segments, single-write dialogue ownership, untimed ordinal shot labels, deterministic @ImageN binding and a live duration/ratio field probe](https://github.com/GYZ001/MJAgent2/commit/9eda934f9d15d80c642d0d57df52635aba0df8e7)
 
