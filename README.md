@@ -20924,7 +20924,10 @@ preserves the tested provider fallback on the main line.
 ### Mode-exclusive reference preflight with face-prominence fallback
 
 **Verified model:** Seedance 2.5 — live-tested through BytePlus Ark and the
-public fal proxy with paid, polled outputs from the same adult-subject project
+public fal proxy with paid, polled outputs from the same adult-subject project;
+Seedance 2.0 Mini and Seedance 2.5 through SIRAYA — the original integrator
+recorded model-returned `camera_fixed` rejections in both text-to-video and
+multi-reference R2V, then removed the invalid control
 
 Use this when a shot has one approved opening keyframe plus a separate portrait
 or multi-angle identity pack. Decide between start-frame and reference mode
@@ -20952,6 +20955,25 @@ appearance, object, wardrobe, or environment evidence.
 Do not also mark @Image1 as first_frame. Do not send reference video or
 reference audio on an endpoint that rejects those roles.
 
+PARAMETER / OPERATION GATE — references do not automatically mean I2V
+Classify the emitted request by its actual payload, not by whether the UI shows
+an attached asset:
+- T2V: no image-start field and no input_references. Omit camera_fixed.
+- R2V: input_references carries one or more image, video or audio references.
+  For the tested SIRAYA Seedance 2.0 Mini and 2.5 routes, omit camera_fixed;
+  both returned "not supported for model ... in r2v, must be empty."
+- SINGLE-IMAGE I2V: one dedicated start-image field, not input_references.
+  Treat camera_fixed support as unknown until the exact provider, model and
+  single-image route accepts a live canary. Never infer support from an R2V
+  attachment or from a family-level parameter list.
+
+If a locked shot is required but the API field is not proven for this operation,
+put the constraint in the prompt: "Locked-off tripod camera for the entire
+shot; fixed framing and horizon; no pan, tilt, dolly, orbit, zoom or reframing."
+Then reject any visible camera drift after generation. Do not silently switch
+from R2V to single-image I2V merely to preserve a camera toggle; that would
+change reference authority and invalidate the comparison.
+
 INPUT PREFLIGHT
 For a consenting adult subject, check every proposed portrait or face panel
 against the selected endpoint before the paid render. If a face-prominent real
@@ -20973,8 +20995,11 @@ extra person, unrequested cut, or frozen filler.
 
 RETRY AND BILLING GATE
 If rejection occurs before a task ID is issued and the platform confirms zero
-charge, permit one mode-correct fallback. If a task ID exists, poll that task
-instead of resubmitting; a timeout or missing download URL may still be billed.
+charge, permit one mode-correct fallback. If the error names camera_fixed as
+unsupported or requires it to be empty, remove only that field, keep the same
+operation and references, and record the exact provider/model/mode tuple as
+unsupported before retrying. If a task ID exists, poll that task instead of
+resubmitting; a timeout or missing download URL may still be billed.
 ```
 
 **Measured failure controls:** The original cap probe established that the Ark
@@ -20992,18 +21017,24 @@ opening composition at 0.9896, while reference mode measured 0.4026 and
 the result supports mode routing rather than a claim that one provider is
 higher quality.
 
-**Technique:** Separate three questions that are easy to conflate: how many
-images the endpoint accepts, whether a particular image passes policy, and
-whether the opening frame must be literal. A mode-exclusive gate prevents an
-invalid first-frame-plus-reference request; policy-aware fallback preserves an
-approved composition without trying to circumvent the rejection; task-ID-aware
-retry logic avoids double spending.
+**Technique:** Separate four questions that are easy to conflate: how many
+images the endpoint accepts, whether a particular image passes policy, whether
+the opening frame must be literal, and which operation the serialized payload
+actually invokes. A mode-exclusive gate prevents an invalid
+first-frame-plus-reference request; the operation-keyed parameter gate prevents
+an R2V array from masquerading as single-image I2V; policy-aware fallback
+preserves an approved composition without trying to circumvent the rejection;
+task-ID-aware retry logic avoids double spending.
 
 Adapted from hkk009008-svg's [initial live reference-cap and version-routing
 probe](https://github.com/hkk009008-svg/content/commit/7ffe1866da47e27d525a98d8a906951b0a056fc2)
 and [corrective BytePlus Ark / fal mode comparison and face-prominence
 tests](https://github.com/hkk009008-svg/content/commit/0014c61cc899337fb2744e08e51b867598dedba5),
-published August 9, 2026.
+published August 9, 2026. The operation-keyed parameter extension comes from
+Kent's September 4, 2026 [initial T2V rejection and provisional
+reference-presence hypothesis](https://github.com/kent0908/the-blue-wing/commit/4bbe7627c395ec8be057dc1c096f3e475d09f27d)
+and the immediate [corrective R2V tests on Seedance 2.0 Mini and 2.5, with the
+invalid control removed](https://github.com/kent0908/the-blue-wing/commit/0d6bc2070aa3f72d9519991688612d16b4ebf7e7).
 
 ### Terminal-status result-body gate and likeness access-tier router
 
@@ -27519,6 +27550,8 @@ and the versioned
 
 
 ## Sources
+
+- [Kent / the-blue-wing — September 4, 2026 SIRAYA Seedance operation-bound `camera_fixed` probe: T2V rejection, corrective R2V tests on 2.0 Mini and 2.5, and removal of the invalid multi-reference control](https://github.com/kent0908/the-blue-wing/commit/0d6bc2070aa3f72d9519991688612d16b4ebf7e7) ([initial T2V test and falsified reference-presence hypothesis](https://github.com/kent0908/the-blue-wing/commit/4bbe7627c395ec8be057dc1c096f3e475d09f27d))
 
 - [Ajwad Rauf — September 4, 2026 Seedance 2.5 paid clay-reference run: measured input-duration billing, separated 0.6 output/full-rate input estimate, and whole-strategy retry comparison](https://github.com/ajwadrauf/portfolio/commit/a938f11f0391794630f17fdfda9a0930c6f524e9) ([finished clay/final pair and worked prompt](https://github.com/ajwadrauf/portfolio/commit/96e21ac2859216962734a5e56831cb208f738dc1), [exact fal route](https://github.com/ajwadrauf/portfolio/commit/9d75d33aed07d74473e2fad192f9d511b96b51e0))
 
