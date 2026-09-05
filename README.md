@@ -18753,9 +18753,11 @@ and its [explicit-silence and off-camera staging rules](https://github.com/Hossa
 
 ### Through-motion canonical-anchor chain and spatial-displacement gate
 
-**Verified model:** Krea Seedance 2.5 — the original creator names this exact
-model and platform, documents first/last-frame conditioning, and publishes the
-source frame, depth diagnostic, four generated MP4 tests and the motion findings
+**Verified models:** Krea Seedance 2.5, TopView Seedance 2.0 and TopView
+Seedance 2.0 Fast — the original creators name each exact model and platform;
+the Krea record publishes the source frame, depth diagnostic and four generated
+MP4 tests, while the TopView record commits the generated clips and quantifies
+their first-frame, last-frame and inter-clip errors
 
 Use this when a long first-person journey must be assembled from separately
 generated clips without revealing a stop at every shared frame. Treat every
@@ -18799,6 +18801,26 @@ SPATIAL-DISPLACEMENT PROOF
 - the route remains navigable and the destination grows consistently;
 - screen direction and velocity do not reverse at the anchor.
 
+MEASURED SEAM AND ASSEMBLY GATE
+Decode the final frame of segment N and the first frame of segment N+1 to the
+same size and colour space. Compute their mean absolute RGB difference on a
+0–255 scale, and also measure representative intentional motion inside both
+segments. Reject if the seam is not materially smaller than normal in-shot
+motion, if either rendered endpoint misses its canonical anchor, or if visual
+inspection finds a flash, ghost, hold or geometry reset.
+
+Only after that proof, remove exactly the duplicated first boundary frame from
+segments 2..N during assembly. Keep an index of each clip's surviving frame
+range and verify the final count. Never drop a boundary frame merely because
+the request supplied matching endpoint images.
+
+ROUTE COMPARISON LEDGER
+When comparing Standard and Fast variants, keep the anchor pair, prompt,
+duration and delivery size constant where the provider permits. Record exact
+model version, native resolution, charge, render time, endpoint error, seam
+error and sharpness after delivery resize. Promote the cheaper route only when
+both continuity and final-display detail pass; do not infer parity from labels.
+
 PREFLIGHT — DIAGNOSTIC ONLY
 Optionally derive a normalized near-weight depth map from each anchor:
 white = nearer, black = farther. Mark [VANISHING POINT], protect the destination
@@ -18817,15 +18839,24 @@ reads as one uninterrupted traversal with through-motion at B and C.
 
 **Why it works:** exact shared boundary images solve appearance continuity, while
 constant locomotion, multi-plane parallax and foreground passage provide
-independent proof of physical camera travel. The source experiment found that
+independent proof of physical camera travel. The Krea experiment found that
 visually attractive transitions could still feel stationary or dissolve-like;
-making locomotion the governing rule produced more convincing traversal.
+making locomotion the governing rule produced more convincing traversal. The
+TopView production test adds an objective assembly check: its three joins
+measured 2.5, 0.8 and 0.7/255, versus 9.8–23.5/255 for deliberate motion inside
+the clips. The same run used Seedance 2.0 for the first 1080p segment and
+Seedance 2.0 Fast for the remaining 720p segments, then removed only the proved
+duplicate boundary frames.
 
 Adapted from Dan de Geest's September 1, 2026
 [Krea Seedance 2.5 camera-motion and depth-map experiment with four generated
 results](https://github.com/dandegeest/TunnelVision/commit/8a85cee8542128ed18c68a424a34f3d2f0404d5f),
 the [versioned workflow explanation](https://github.com/dandegeest/TunnelVision/blob/8a85cee8542128ed18c68a424a34f3d2f0404d5f/README.md)
-and the [published tuning assets and outputs](https://github.com/dandegeest/TunnelVision/tree/8a85cee8542128ed18c68a424a34f3d2f0404d5f/camotion/tuning).
+and the [published tuning assets and outputs](https://github.com/dandegeest/TunnelVision/tree/8a85cee8542128ed18c68a424a34f3d2f0404d5f/camotion/tuning);
+plus Ahmed Ali's September 5, 2026
+[Seedance 2.0 first-segment render and quantified endpoint match](https://github.com/Ahmed123Ali-jr/teacher-app/commit/bf886479e3334646ed4efb6781c16afd4ed881d5),
+[sequentially edited canonical keyframes](https://github.com/Ahmed123Ali-jr/teacher-app/commit/88235493edc8b13fe1270a25b8dc30f20e626dfd)
+and [four-clip Seedance 2.0 / 2.0 Fast assembly with measured seams and committed output frames](https://github.com/Ahmed123Ali-jr/teacher-app/commit/d02594b2e617a7fd572ae26285f69eb82d771f3f).
 
 ### Per-window terminal-state gate for delayed ambient motion
 
@@ -28656,6 +28687,9 @@ and the versioned
 
 
 ## Sources
+
+
+- [Ahmed Ali — September 5, 2026 TopView Seedance 2.0 / 2.0 Fast first-and-last-frame chain: committed generated clips and 93-frame assembly, sequentially edited canonical anchors, quantified endpoint and inter-clip differences, duplicate-boundary removal and measured Standard-versus-Fast cost/detail comparison](https://github.com/Ahmed123Ali-jr/teacher-app/commit/d02594b2e617a7fd572ae26285f69eb82d771f3f) ([Seedance 2.0 first-segment endpoint proof](https://github.com/Ahmed123Ali-jr/teacher-app/commit/bf886479e3334646ed4efb6781c16afd4ed881d5), [canonical keyframe chain](https://github.com/Ahmed123Ali-jr/teacher-app/commit/88235493edc8b13fe1270a25b8dc30f20e626dfd))
 
 
 - [Paulo Shimas / The Creator Stack — September 5, 2026 Seedance 2.5 Cine-Grade: production-validated text-only relighting workflow, three complete edit prompts, eight-axis treatment compiler, preservation contract and defect-specific retries](https://github.com/aipauloshimas/cine-grade/commit/e70e4fd7b3bbbd6c8d49034704f326a17f850d83) ([validated prompts](https://github.com/aipauloshimas/cine-grade/blob/e70e4fd7b3bbbd6c8d49034704f326a17f850d83/references/prompt-skeleton.md), [troubleshooting](https://github.com/aipauloshimas/cine-grade/blob/e70e4fd7b3bbbd6c8d49034704f326a17f850d83/references/troubleshooting.md))
