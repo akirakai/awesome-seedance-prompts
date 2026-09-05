@@ -320,6 +320,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Catalogue-to-bottle extrusion relay with scent-state convergence](#304-catalogue-to-bottle-extrusion-relay-with-scent-state-convergence)
   - [Alpine rally camera relay with course-state continuity](#305-alpine-rally-camera-relay-with-course-state-continuity)
   - [Balloon proposal with emotion and canopy-deployment ledgers](#306-balloon-proposal-with-emotion-and-canopy-deployment-ledgers)
+  - [Dusk ranger address with expression-chain and acoustic ownership](#307-dusk-ranger-address-with-expression-chain-and-acoustic-ownership)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -18180,6 +18181,68 @@ Adapted and rewritten from Amira Zairi / @azed_ai's September 5, 2026
 [Seedance 2.5 declaration and playable 30-second result](https://x.com/azed_ai/status/2095965288605123037)
 and [complete timed prompt](https://x.com/azed_ai/status/2095965302265884692).
 
+
+### 307. Dusk ranger address with expression-chain and acoustic ownership
+
+**Verified model:** Seedance 2.5 — the Krea platform team identifies the exact
+model in its own matched test, publishes the complete eight-second prompt and
+reports natural lip sync plus a continuous facial performance in the generated
+Seedance take  
+**Use case:** cinematic direct address, native-audio dialogue, micro-expression
+timing, restrained presenter coverage  
+**Mode:** text-to-video  
+**Suggested settings:** 8 seconds, 16:9, photoreal live action, static medium
+close shot, native voice and location sound
+
+```text
+Create an eight-second photoreal documentary portrait at a coastal overlook
+during the last warm light of dusk. One adult park ranger in a plain,
+unbranded field uniform stands at the same rail for the entire shot. Use a
+static eye-level medium close frame with the horizon level, shoulders fully
+inside frame and enough quiet background to read the setting. No zoom, pan,
+reframe or cut.
+
+PERFORMANCE CHAIN
+0.0–1.4s — The ranger begins looking toward the water, breathing naturally.
+Wind moves only loose hair, the collar edge and distant grass. She hears one
+far gull, then shifts her eyes toward the lens before turning her head.
+
+1.4–5.8s — She completes the turn, settles direct eye contact and says in one
+calm, unhurried sentence: "The coast keeps returning. We can, too." Keep mouth,
+jaw, cheeks, eyes and breath inside one continuous performance. Do not insert a
+pause between clauses, exaggerate articulation or let the smile arrive while
+she is still speaking.
+
+5.8–8.0s — After the final word, hold eye contact for half a beat. A small
+closed-mouth smile grows from the released breath; only then does she look back
+toward the water. End on the profile turn without freezing.
+
+AUDIO OWNERSHIP
+Record one dry, centered voice attached to the ranger's mouth. Maintain a
+single continuous bed of light wind and distant surf; place occasional gulls
+far behind the voice. The wind may soften beneath the sentence but cannot stop,
+restart or become indoor room tone. No music, narrator, second voice, doubled
+dialogue, subtitle or audible camera operator.
+
+CONTINUITY AND FAILURE CONTROL
+Preserve the same face, age, uniform, rail, waterline, light direction and
+background exposure. Keep both hands outside the speaking performance unless
+already resting naturally on the rail. Reject wandering camera, symmetrical
+news-presenter pose, repeated sentence, early smile, frozen eyes, over-wide
+mouth motion, voice before the lips move, trailing speech after the head turns,
+changing weather, invented badge text, caption, logo, watermark or interface.
+```
+
+**Why it works:** The line is surrounded by visible pre-speech and post-speech
+states, so lip sync is only one part of an auditable performance chain. The
+eye-first turn prevents an abrupt presenter snap, while the delayed smile and
+gaze release give the face a continuous emotional arc. Assigning perspective
+and continuity to every sound layer also prevents the native mix from resetting
+around the dialogue.
+
+Adapted and rewritten from the Krea Team's September 5, 2026
+[Seedance 2.5 versus Veo 3.1 matched test, complete prompts and measured results](https://www.krea.ai/blog/seedance-2-5-vs-veo-3-1-which-is-better-full-comparison-2026).
+
 ## Reusable templates
 
 ### Face-presence recast coverage gate and source-audio authority
@@ -28418,6 +28481,9 @@ and the versioned
 
 
 ## Sources
+
+
+- [Krea Team — September 5, 2026 Seedance 2.5 matched dialogue test: complete eight-second native-audio prompt with reported natural lip sync, continuous facial performance and stable cinematic framing](https://www.krea.ai/blog/seedance-2-5-vs-veo-3-1-which-is-better-full-comparison-2026)
 
 - [Amira Zairi / @azed_ai — September 5, 2026 Seedance 2.5 hot-air-balloon proposal: playable 30-second result and complete timed prompt with staged emotion, continuous free fall, progressive canopy deployment and fabric-owned message](https://x.com/azed_ai/status/2095965288605123037) ([complete prompt](https://x.com/azed_ai/status/2095965302265884692))
 
