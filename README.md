@@ -322,6 +322,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Balloon proposal with emotion and canopy-deployment ledgers](#306-balloon-proposal-with-emotion-and-canopy-deployment-ledgers)
   - [Dusk ranger address with expression-chain and acoustic ownership](#307-dusk-ranger-address-with-expression-chain-and-acoustic-ownership)
   - [Asymmetric rooftop duo with single bullet-time interrupt](#308-asymmetric-rooftop-duo-with-single-bullet-time-interrupt)
+  - [Twelve-cut clandestine boss standoff with foreground-occlusion ledger](#309-twelve-cut-clandestine-boss-standoff-with-foreground-occlusion-ledger)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -18357,6 +18358,109 @@ Adapted and rewritten from TechieSA / @TechieBySA's September 5, 2026
 and [complete timed video prompt](https://x.com/TechieBySA/status/2096196104047997164).
 
 
+### 309. Twelve-cut clandestine boss standoff with foreground-occlusion ledger
+
+**Verified model:** Seedance 2.5 — the workflow author states that the owner-
+provided source clip displayed its Seedance 2.5 prompt on screen, publishes the
+complete transcription, and pins the card to the exact Reference endpoint
+`seedance-2-5-global-token-mmv`; the release test verifies model, prompt,
+duration, aspect ratio and reference-image delivery together  
+**Use case:** rapid-cut character showcase, clandestine-camera tension,
+reference-face consistency, prop continuity and foreground depth  
+**Mode:** one portrait reference plus reference-to-video  
+**Suggested settings:** 15 seconds, 16:9, 1080p, exactly 12 hard cuts, native
+room tone and restrained noir score
+
+```text
+Create a 15-second photorealistic clandestine crime-drama montage in one
+private back room at night. Use exactly twelve hard cuts; no dissolve, morph,
+speed ramp or full-body view.
+
+REFERENCE AND CAST CONTRACT
+@Image1 is the sole identity master for THE PRINCIPAL: preserve the same adult
+face, bone structure, age, skin texture, hairline and body build in every cut.
+The principal wears one fitted charcoal shirt, dark trousers and one plain
+ring. Exactly two guards exist, but they appear only as soft, partial
+foreground shoulders or backs. The rival remains off screen for the entire
+clip. Do not invent a visible rival, crowd, bartender or extra guard.
+
+SCENE AND PROP LEDGER
+Keep the same dark leather bench, scarred black table, single low pendant lamp
+and blue-magenta practical light in fixed positions. One heavy silver lighter
+begins closed in the principal's right hand, opens once, ignites once, closes
+once and ends flat at the centre of the table. One low glass remains at the
+principal's left; it is lifted once and returns to the same ring mark. Ambient
+haze may drift, but nobody smokes and no new prop appears.
+
+SHOT RULE
+Every cut must include one near-lens occluder that belongs to the room:
+guard shoulder, glass rim, hanging chain, chair back or a thin band of haze.
+Keep the principal's eyes readable in at least eight cuts. Use only medium,
+tight profile and extreme close-up framings. The subject never looks into the
+lens and never acknowledges the hidden camera.
+
+0.0–4.0s — CUTS 1–3: ESTABLISH THE POWER BALANCE
+Cut 1: low medium shot sliding past the left guard's blurred shoulder; the
+principal sits centred, closed lighter in the right hand, glass on the left.
+Cut 2: extreme close-up through the glass rim as the principal opens the
+lighter; the hinge click is clear and the face remains the same.
+Cut 3: tight three-quarter profile behind the pendant chain; one flame lights
+the jaw and eyes while the unseen rival speaks only as an indistinct murmur.
+
+4.0–8.0s — CUTS 4–6: CONTROLLED RESPONSE
+Cut 4: whip-pan behind a chair back into a medium side angle; the principal
+closes the lighter and leans forward without changing seat or screen side.
+Cut 5: extreme close-up through a narrow strip of haze; one eyebrow lifts and
+the mouth forms a restrained half-smile, with no dialogue.
+Cut 6: tight hand-and-face composition past the right guard's shoulder; the
+principal lifts the single glass, takes one measured sip and lowers it onto
+the same ring mark. Preserve the lighter in the right hand.
+
+8.0–12.0s — CUTS 7–9: THE PROP BECOMES THE THREAT
+Cut 7: macro foreground focus on condensation, then rack focus to the eyes;
+the glass stays down and the principal's gaze moves toward the off-screen rival.
+Cut 8: low three-quarter close-up framed by both guards at opposite edges;
+the principal rotates the closed lighter once between two fingers.
+Cut 9: short crash-in through foreground haze as the lighter strikes the
+table centre once. Show hand-to-metal-to-table contact before the impact sound.
+
+12.0–15.0s — CUTS 10–12: QUIET SUPREMACY
+Cut 10: extreme close-up behind the lighter's blurred edge; the principal's
+hand releases it and withdraws, proving its final position.
+Cut 11: medium shot sliding past the left guard; the principal settles back
+into the same leather bench while the off-screen murmur stops.
+Cut 12: tight profile through the still glass; hold the unchanged face and one
+small exhale as the score ends on a low pulse. Finish in motion with haze
+crossing the lens, not a freeze frame or fade.
+
+AUDIO AND FINISH
+Low air-conditioning hum, distant club bass through the wall, cloth movement,
+one hinge click, one flame catch, one glass lift and set-down, and one dry
+metal-on-table impact. Keep the score sparse and subordinate to those causal
+sounds. Heavy foreground bokeh, restrained anamorphic streaks, textured skin,
+real fabric and metal, deep noir contrast without crushed facial detail.
+
+FAILURE CONTROL
+No identity swap between cuts, direct eye contact, visible rival, additional
+person, full-body shot, duplicated guard, extra glass, lighter teleport,
+repeated ignition, missed table contact, changed seat, reversed screen side,
+slow morph, floating haze source, cigarette, subtitle, logo, watermark,
+beauty-plastic skin, broken hand or extra finger.
+```
+
+**Why it works:** The cut count is explicit and each cut owns a different
+foreground occluder, so rapid montage still preserves depth without becoming
+an arbitrary sequence of close-ups. A single identity master is restated
+across all cuts, while the off-screen rival and partial guards prevent the
+model from multiplying faces. The lighter and glass use finite state ledgers
+with visible contacts, converting noir attitude into auditable physical
+continuity.
+
+Adapted and rewritten from the HNK Studio workflow author's September 5, 2026
+[release and on-screen Seedance 2.5 prompt provenance](https://github.com/hlaingkhay28047-svg/TG/commit/df81553004dbf404e43defb211a236ee17eda51a),
+the versioned [complete Triad Boss card and exact Reference endpoint](https://github.com/hlaingkhay28047-svg/TG/blob/df81553004dbf404e43defb211a236ee17eda51a/panel/js/hnk_video_wf_data.js),
+and its [model/prompt/duration/aspect integrity test](https://github.com/hlaingkhay28047-svg/TG/blob/df81553004dbf404e43defb211a236ee17eda51a/test/verify_ref_video_cards.js).
+
 ## Reusable templates
 
 
@@ -28801,6 +28905,8 @@ and the versioned
 
 
 ## Sources
+
+- [HNK Studio — September 5, 2026 Seedance 2.5 Reference Triad Boss workflow: owner-provided source clip with on-screen exact-model prompt, complete 15-second transcription, one-photo identity lock, twelve hard cuts and foreground-occlusion staging](https://github.com/hlaingkhay28047-svg/TG/commit/df81553004dbf404e43defb211a236ee17eda51a) ([complete card and endpoint](https://github.com/hlaingkhay28047-svg/TG/blob/df81553004dbf404e43defb211a236ee17eda51a/panel/js/hnk_video_wf_data.js), [integrity test](https://github.com/hlaingkhay28047-svg/TG/blob/df81553004dbf404e43defb211a236ee17eda51a/test/verify_ref_video_cards.js))
 
 
 - [TechieSA / @TechieBySA — September 5, 2026 Seedance 2.5 rain-rooftop duo action: playable 15-second result, complete two-character design prompt and complete timed video prompt with asymmetric performance rails, four adversaries, one bullet-time interruption and continuous score/rain ownership](https://x.com/TechieBySA/status/2096196085198839832) ([character design](https://x.com/TechieBySA/status/2096196097953649082), [video prompt](https://x.com/TechieBySA/status/2096196104047997164))
