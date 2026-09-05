@@ -321,6 +321,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Alpine rally camera relay with course-state continuity](#305-alpine-rally-camera-relay-with-course-state-continuity)
   - [Balloon proposal with emotion and canopy-deployment ledgers](#306-balloon-proposal-with-emotion-and-canopy-deployment-ledgers)
   - [Dusk ranger address with expression-chain and acoustic ownership](#307-dusk-ranger-address-with-expression-chain-and-acoustic-ownership)
+  - [Asymmetric rooftop duo with single bullet-time interrupt](#308-asymmetric-rooftop-duo-with-single-bullet-time-interrupt)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -18243,6 +18244,119 @@ around the dialogue.
 Adapted and rewritten from the Krea Team's September 5, 2026
 [Seedance 2.5 versus Veo 3.1 matched test, complete prompts and measured results](https://www.krea.ai/blog/seedance-2-5-vs-veo-3-1-which-is-better-full-comparison-2026).
 
+### 308. Asymmetric rooftop duo with single bullet-time interrupt
+
+**Verified model:** Seedance 2.5 — the original creator explicitly labels the
+attached playable 15-second result with this exact model, then publishes a
+complete two-character design prompt and complete timed video prompt in the
+same thread  
+**Use case:** stylized action choreography, two-character role separation,
+fixed adversary count, bounded slow motion and beat-owned native audio  
+**Mode:** two-character reference sheet plus reference-driven video generation  
+**Suggested settings:** 15 seconds, 16:9, rapid-cut cel-shaded action, native
+rain, effects and score
+
+```text
+Create an original 15-second cinematic cyber-thriller animation on one rain-
+soaked rooftop at night. Neon towers remain far below; wet concrete, one row
+of ventilation housings and one access door preserve the same geography.
+Exactly six adults exist: two partners and four hostile security operatives.
+No civilian, reinforcement, duplicate or disappearing body.
+
+IDENTITY AND PERFORMANCE RAILS
+CIPHER — lean adult man, short dark hair, narrow round glasses, long charcoal
+trench coat, black boots. Calm, economical and precise; no flourish or anger.
+VIOLET — athletic adult woman, cropped dark hair, small oval glasses, fitted
+plum tactical jacket, black trousers and flat boots. Fast, aggressive and
+always moving. Never exchange either partner's wardrobe, glasses, body,
+fighting rhythm or screen identity.
+
+OPERATIVES A–D — exactly four adults in identical slate suit jackets, white
+shirts, black ties, rectangular glasses and earpieces. White shirts remain
+visible so they cannot be mistaken for either partner. Assign each one a
+persistent landing place: A beside the access door, B beside the left vent,
+C against the tall center housing, D near the right safety rail. Once down,
+each stays at that location and cannot return to the fight.
+
+AUDIO CONTRACT
+Begin a driving electronic-orchestral rhythm on frame one. Synchronize every
+contact, weapon discharge and speed change to a distinct beat. Heavy rain and
+rooftop wind continue across every cut. During the single time-stop window,
+stretch and filter the rain and score rather than muting them; restore both on
+the same snap that restarts motion. No dialogue, narrator or subtitle.
+
+0.0–1.2s — COUNT AND GEOGRAPHY PROOF
+Wide rooftop master: Cipher and Violet stand back-to-back at center while A and
+B close from screen-left and C and D close from screen-right. Hold long enough
+to see all six bodies, all four white shirts and the four future landing zones.
+
+1.2–3.5s — VIOLET OWNS A AND B
+Track Violet left. She ducks A's swing, redirects A into the closed access door,
+then pivots through one low sweep that sends B against the left vent. Show both
+contacts and recoveries. A remains seated by the door; B remains prone beside
+the vent. Do not cut away before their terminal states are visible.
+
+3.5–5.5s — CIPHER OWNS C
+Whip-pan right on Cipher blocking C's punch, slipping one kick and landing one
+short elbow. C dents the tall center housing and settles against it. Cipher's
+coat follows his turns with wet weight; C remains visible and does not reset.
+
+5.5–7.5s — D TRIGGERS THE ONLY BULLET-TIME EVENT
+D fires exactly three projectiles from behind Cipher. Cipher turns and raises
+one open hand. Enter slow motion once: all three projectiles stop in a readable
+row several centimeters before his glasses; nearby raindrops suspend at
+different depths while the distant skyline and all four operatives remain
+spatially fixed. Orbit no more than 35 degrees around the hand and face. Cipher
+tilts his head once. No other section uses slow motion or frozen rain.
+
+7.5–10.5s — FULL-SPEED RELEASE AND FINAL TAKEDOWN
+On one hard musical beat, rain and projectiles resume together. Cipher closes
+his hand, drops the three harmless captured projectiles onto the roof, kicks
+D's weapon away and redirects D toward Violet. Without changing screen
+direction, Violet completes one spinning body check that sends D sliding to the
+right safety rail. D stops there. A, B and C stay in their recorded locations.
+
+10.5–12.5s — FOUR-STATE AUDIT
+Fast lateral camera move across A by the door, B by the left vent, C at the
+center housing and D by the right rail, then return to the partners. All four
+operatives are alive, conscious or winded, visibly disarmed and no longer
+attacking. Do not invent another opponent to extend the action.
+
+12.5–15.0s — PARTNER PAYOFF
+The score resolves but does not restart. Cipher and Violet meet at center,
+check opposite sides once, then walk together toward the city-facing edge.
+Rain continues, neon reflections stay attached to the wet roof and both retain
+their distinct movement styles. End in a medium-wide side-by-side silhouette
+during forward motion, not a frozen pose.
+
+VISUAL LANGUAGE AND FAILURE CONTROL
+Premium semi-realistic cel-shaded 3D animation with hand-painted surface
+texture, hard-edged shadows, restrained outlines, saturated neon reflections
+and subtle film grain. Use rapid readable cuts, low action angles, controlled
+whip-pans and one short orbit only. Preserve rooftop axis, rain direction,
+operative labels, landing locations and irreversible downed states.
+
+Reject fifth operative, recycled attacker, identity or wardrobe swap, white
+shirt disappearing, duplicate weapon, missed contact, opponent moving before
+impact, body teleport, reversed screen direction, more than one slow-motion
+event, early frozen rain, frozen soundtrack, whole-scene reset, gore, text,
+logo, watermark, distorted face, extra limb or broken anatomy.
+```
+
+**Why it works:** the partners receive contrasting, non-overlapping performance
+rails, while every opponent has both a letter and an irreversible landing
+location. That turns crowd action into a countable state transition rather than
+a stream of replaceable bodies. The one exceptional bullet-time window is
+bounded by a trigger and a shared audiovisual restart, so it reads as a designed
+contrast instead of generic slow motion. A dedicated four-state audit prevents
+defeated opponents from silently returning before the hero payoff.
+
+Adapted and rewritten from TechieSA / @TechieBySA's September 5, 2026
+[Seedance 2.5 declaration and playable 15-second result](https://x.com/TechieBySA/status/2096196085198839832),
+[complete two-character design prompt](https://x.com/TechieBySA/status/2096196097953649082)
+and [complete timed video prompt](https://x.com/TechieBySA/status/2096196104047997164).
+
+
 ## Reusable templates
 
 
@@ -28687,6 +28801,9 @@ and the versioned
 
 
 ## Sources
+
+
+- [TechieSA / @TechieBySA — September 5, 2026 Seedance 2.5 rain-rooftop duo action: playable 15-second result, complete two-character design prompt and complete timed video prompt with asymmetric performance rails, four adversaries, one bullet-time interruption and continuous score/rain ownership](https://x.com/TechieBySA/status/2096196085198839832) ([character design](https://x.com/TechieBySA/status/2096196097953649082), [video prompt](https://x.com/TechieBySA/status/2096196104047997164))
 
 
 - [Ahmed Ali — September 5, 2026 TopView Seedance 2.0 / 2.0 Fast first-and-last-frame chain: committed generated clips and 93-frame assembly, sequentially edited canonical anchors, quantified endpoint and inter-clip differences, duplicate-boundary removal and measured Standard-versus-Fast cost/detail comparison](https://github.com/Ahmed123Ali-jr/teacher-app/commit/d02594b2e617a7fd572ae26285f69eb82d771f3f) ([Seedance 2.0 first-segment endpoint proof](https://github.com/Ahmed123Ali-jr/teacher-app/commit/bf886479e3334646ed4efb6781c16afd4ed881d5), [canonical keyframe chain](https://github.com/Ahmed123Ali-jr/teacher-app/commit/88235493edc8b13fe1270a25b8dc30f20e626dfd))
