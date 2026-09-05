@@ -28904,7 +28904,119 @@ and the versioned
 [production laws and measured workflow record](https://github.com/larshustoft/scrpt/blob/5a3fadc55322711006be1936fa7bff864cf19e4f/universe/PRODUCTION-LINE.md).
 
 
+
+### Source-motion-authority multicam coverage editor and shot-select gate
+
+**Verified model:** Seedance 2.5 — the original creator tested this exact version
+in Dreamina's video-edit / omni-reference workflow on a real talking-head
+pour-over-coffee clip, published three complete prompts, and documented which
+camera setups, timing requests, mouth movements and face angles passed or
+failed
+
+Use this when one recorded performance is correct but the edit needs alternate
+camera coverage that was never captured. Keep the source clip as the only
+authority for time-varying evidence, let optional stills repair only unseen
+static facial geometry, and treat the generated result as a bank of selectable
+shots rather than an automatic full-length replacement.
+
+```text
+INPUT AND AUTHORITY LEDGER
+@Video1 = the approved live-action source take. It exclusively owns the
+performer's action order, gesture timing, hand and tool motion, mouth shapes,
+jaw motion, blinks, gaze, expression changes, object positions, room state,
+lighting continuity and total duration.
+
+@Image1 = optional multi-angle identity sheet. It may supply only static facial
+and head geometry for angles not visible in @Video1. It may not author motion,
+expression timing, lip-sync, pose or lighting.
+
+@Image2 = optional sharp frame extracted from @Video1. It has priority over
+@Image1 for the performer's exact facial features and real skin texture, but it
+still may not replace the dynamic evidence in @Video1.
+
+EDIT SCOPE
+Change only camera position, height, angle, distance, lens perspective, focus
+and camera movement. Reconstruct the same performance as coverage from [N]
+distinct physical cameras. Join cameras with hard cuts at [REQUESTED CUT
+TIMES]. Do not use dissolves, morphs, blended views, whip transitions or one
+continuous orbit pretending to be multiple cameras.
+
+Every adjacent setup must change at least two of these: camera height, distance,
+viewing direction, focal length, foreground relationship or whether the face
+is visible. Give each shot one dominant camera move. The camera must travel
+through real free space; it may not pass through furniture, the performer or a
+container wall.
+
+SHOT PLAN
+[START–CUT 1 | SHOT A — ESTABLISHING COVERAGE]
+Place a [LENS] camera at [HEIGHT / SIDE / PITCH] for a readable view of the
+performer, workspace and room. Use one [SHORT SLIDE / SMALL ARC / LOCKED HOLD].
+Keep the face [SMALL / MEDIUM] in frame and preserve the source action at the
+same moment.
+
+[CUT 1–CUT 2 | SHOT B — LOW-RISK ACTION COVERAGE]
+Use [90-DEGREE OVERHEAD / HIGH OVER-SHOULDER / TABLE-HEIGHT HAND-AND-TOOL
+CLOSE-UP]. Frame the source action, hands and existing objects while keeping the
+speaking face outside frame or small. Follow only with [ONE SMALL PAN / VERTICAL
+DESCENT / SHORT DOLLY]. Do not change when the action begins, its direction or
+the object's location.
+
+[CUT 2–END | SHOT C — DISTINCT REVEAL OR EXIT]
+Start behind or between [EXISTING FOREGROUND OBJECTS] and move through a real
+gap using [DOLLY OUT / CRANE UP / LATERAL REVEAL]. End on a composition whose
+height, distance and foreground geometry clearly differ from shots A and B.
+Do not invent an object merely to create the wipe.
+
+FACE-VISIBLE SPEECH OVERRIDE
+For any shot where the speaking face is readable, the lips, jaw, cheeks,
+blinks and gaze must match @Video1 at that same moment. The performer may not
+pause, repeat or reinterpret the line. If a radically new angle cannot preserve
+those dynamics, keep the face out of frame and let hands, tools, shoulder or
+room geometry carry the coverage.
+
+GLOBAL PRESERVATION
+Retain the same performer, clothing, room, furniture, props, liquid level,
+light direction and natural perspective. Do not add, remove or duplicate a
+person, animal, object, action, subtitle, graphic, logo or watermark. No
+fisheye, digital zoom, frozen mouth, crossed gaze, replayed gesture, early
+action, delayed action, extra action or background rebuild.
+
+POST-RENDER SHOT-SELECT GATE
+Do not replace @Video1 wholesale. Preserve its original audio and review every
+generated setup separately:
+1. Is this a genuinely different physical camera?
+2. Does action timing still match the source at the usable interval?
+3. When the face is visible, do mouth movement, blinking and gaze remain
+   continuous during playback and frame inspection?
+4. Are hands, tools, liquid and room geometry intact?
+5. What exact in/out interval passes all four checks?
+
+Cut only passing intervals into the edit against the original audio. Requested
+cut times are instructions, not evidence: if Seedance cuts early, late or
+compresses a setup, locate the actual usable boundaries manually. Higher
+resolution may improve detail but does not repair timing, eyes or lip-sync.
+Regenerate only the failed angle; do not reroll already accepted coverage.
+```
+
+**Why it works:** ordinary camera-transfer prompts often let a still image
+compete with the source performance or ask one impossible moving camera to
+simulate an edit. This structure assigns all dynamic truth to the video,
+limits stills to static identity repair, forces visibly different physical
+setups, and moves final timing authority to a shot-by-shot editorial gate. The
+creator's tests also establish a practical risk ladder: overhead, tool-detail
+and high over-shoulder coverage were most dependable; clear side faces and
+container-interior views could compose successfully while still failing
+lip-sync.
+
+Adapted and rewritten from one7531 / Oa AI's September 5, 2026
+[Seedance 2.5 multicam test release](https://github.com/one7531/oaai/commit/99564b4ccb11f41235c81c22634385d8297ddb84),
+the [measured workflow and failure notes](https://github.com/one7531/oaai/blob/99564b4ccb11f41235c81c22634385d8297ddb84/prompts/seedance-2.5-multicam/README.md),
+and the [three complete tested prompts](https://github.com/one7531/oaai/blob/99564b4ccb11f41235c81c22634385d8297ddb84/prompts/seedance-2.5-multicam/prompts-zh-TW.md).
+
 ## Sources
+
+- [one7531 / Oa AI — September 5, 2026 Dreamina Seedance 2.5 live-action multicam edit test: three complete prompts, source-video dynamic authority, optional still-role isolation, physical-camera coverage, timing drift, face / lip-sync failure notes and shot-select workflow](https://github.com/one7531/oaai/commit/99564b4ccb11f41235c81c22634385d8297ddb84) ([workflow and measured failures](https://github.com/one7531/oaai/blob/99564b4ccb11f41235c81c22634385d8297ddb84/prompts/seedance-2.5-multicam/README.md), [complete prompts](https://github.com/one7531/oaai/blob/99564b4ccb11f41235c81c22634385d8297ddb84/prompts/seedance-2.5-multicam/prompts-zh-TW.md))
+
 
 - [HNK Studio — September 5, 2026 Seedance 2.5 Reference Triad Boss workflow: owner-provided source clip with on-screen exact-model prompt, complete 15-second transcription, one-photo identity lock, twelve hard cuts and foreground-occlusion staging](https://github.com/hlaingkhay28047-svg/TG/commit/df81553004dbf404e43defb211a236ee17eda51a) ([complete card and endpoint](https://github.com/hlaingkhay28047-svg/TG/blob/df81553004dbf404e43defb211a236ee17eda51a/panel/js/hnk_video_wf_data.js), [integrity test](https://github.com/hlaingkhay28047-svg/TG/blob/df81553004dbf404e43defb211a236ee17eda51a/test/verify_ref_video_cards.js))
 
