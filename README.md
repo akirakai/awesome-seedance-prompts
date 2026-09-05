@@ -18245,6 +18245,146 @@ Adapted and rewritten from the Krea Team's September 5, 2026
 
 ## Reusable templates
 
+
+### Canvas-matched eight-axis relight-only edit compiler
+
+**Verified model:** Seedance 2.5 — the original creator explicitly states that
+the three complete text-only video-edit prompts in the September 5, 2026
+release were production-validated with Seedance 2.5; untested looks in the same
+release are excluded  
+**Use case:** transfer a film-like lighting and colour treatment onto existing
+footage while preserving identity, motion, timing, framing, wardrobe, props and
+environment  
+**Mode:** text-only video editing with one source video; reference still is a
+controlled fallback, not a default input
+
+```text
+CANVAS-MATCHED RELIGHT-ONLY EDIT
+
+INPUTS
+@Video1 = SOURCE MASTER. It owns every physical and editorial fact: people,
+faces, skin texture, hair, body proportions, wardrobe, objects, room or
+landscape geometry, visible window view, movement, performance, timing,
+camera position, lens perspective, framing, focus and cut structure.
+Target look = [NAMED FILM / SERIES / VISUAL TREATMENT].
+Target signature = [SPECIFIC SCENE OR LIGHTING CONDITION, NOT THE TITLE ALONE].
+
+1. VIABILITY FILTER — LIGHT OR SET?
+Describe the target signature without naming any new object, costume, wall,
+location, weather event or production-design element. Pass only if the look is
+recognisable through lighting, colour, exposure, contrast, tonal response,
+optics and atmosphere applied to surfaces already present in @Video1.
+
+If recognition requires a different set, wardrobe, architecture, prop or
+background, do not run this edit. Select the closest light-driven signature
+that fits the existing footage, or reshoot the neutral source plate. Never
+solve a canvas mismatch by regenerating the environment.
+
+2. SOURCE-FRAME INVENTORY
+Inspect representative first, middle and final frames. Record only visible
+elements:
+- key subject and skin regions;
+- actual light source or brightest direction;
+- largest repaintable surface or open depth plane;
+- walls, floor, table, sky, horizon, window and distant view that really exist;
+- darkest garment or object;
+- brightest protected highlight;
+- camera movement, subject movement and any exposure change.
+
+Declare canvas family:
+[OPEN SPACE / SINGLE-WINDOW SIDE LIGHT / CLOSE-UP SKIN /
+SPARSE INTERIOR / OTHER].
+Reject the target if its signature needs a canvas that this footage does not
+provide.
+
+3. EIGHT-AXIS TREATMENT MAP
+Complete every row before writing prose.
+
+LIGHT — [SOURCE COUNT, DIRECTION, HARDNESS, KEY-TO-FILL RATIO].
+TEMPERATURE — [HIGHLIGHT HUE] versus [SHADOW HUE].
+PALETTE — [TWO TO FOUR DOMINANT COLOURS AND SATURATION LIMITS].
+CONTRAST — [GLOBAL CONTRAST, BLACK DENSITY, HIGHLIGHT PROTECTION].
+CURVE — [SHADOW TOE, MIDTONE SHAPE, HIGHLIGHT SHOULDER].
+EXPOSURE — [FACE / HIGHLIGHT / BACKGROUND PRIORITY].
+OPTICS — [GRAIN, HALATION, BLOOM, DIFFUSION, VIGNETTE].
+ATMOSPHERE — [CLEAN / HUMID / HAZY, WITH DEPTH BEHAVIOUR].
+SKIN SAFETY — [HOW HUMAN UNDERTONES AND TEXTURE SURVIVE THE GRADE].
+
+Bind each decision to an inventoried element. Say how an existing grey wall,
+white table, black garment, sky, face or distant building reads under the new
+light. No axis may introduce an element absent from @Video1.
+
+4. COMPILED EDIT PROMPT
+Edit @Video1 into [TARGET SIGNATURE] using the completed treatment map.
+Illuminate the existing scene from [ACTUAL OR PLAUSIBLE SOURCE DIRECTION].
+[DESCRIBE HOW THE NAMED VISIBLE SURFACES RESPOND TO THAT LIGHT].
+[DESCRIBE HIGHLIGHT–SHADOW TEMPERATURE SEPARATION].
+[DESCRIBE PALETTE AND SATURATION ON EXISTING SURFACES].
+[DESCRIBE CONTRAST, BLACKS, HIGHLIGHT LIMIT AND FILMIC CURVE].
+[DESCRIBE EXPOSURE PRIORITY].
+[DESCRIBE OPTICAL TEXTURE].
+[DESCRIBE ATMOSPHERE AS DEPTH AND LIGHT BEHAVIOUR, NOT AN ADDED OBJECT].
+[DESCRIBE SKIN UNDERTONE, DETAIL AND FACE READABILITY].
+
+Preserve @Video1 exactly as the physical and editorial master. Keep the same
+person, face, skin texture, hair, body proportions, clothing, expressions,
+gestures, action paths, object contacts, timing, camera, crop, focus,
+background and environment. Relight those existing elements coherently; do
+not replace, redraw, beautify, move or regenerate them. Keep the treatment
+stable frame to frame and physically attached to the original light geometry.
+
+CHANGE ONLY lighting direction and intensity, exposure, colour treatment,
+contrast, shadows, highlights, tonal curve, optical texture, atmospheric
+light behaviour and overall mood.
+
+Reject new or removed object, changed wardrobe colour unrelated to illumination,
+face or body drift, background replacement, window-view swap, altered motion,
+retiming, reframing, focus change, artificial skin, generic single-colour tint,
+grey blacks, clipped highlights, unmotivated fog, flicker, text, logo,
+watermark or interface.
+
+5. RESULT GATES
+Compare first, middle and final frames against @Video1:
+- geometry, identity, wardrobe, props, motion timing and framing are unchanged;
+- each of the eight axes is visible and stays stable through motion;
+- the grade has light direction and depth, not only a colour wash;
+- skin retains the declared undertone and texture;
+- the two signature-specific checks pass:
+  A. [MEASURABLE LOOK CHECK];
+  B. [MEASURABLE LOOK CHECK].
+
+6. DEFECT-SPECIFIC RETRY
+Retry only the failed axis. Examples:
+- flat tint -> strengthen source direction and foreground-to-background depth;
+- dead cool skin -> restore a controlled warm undertone without neutralising
+  the environment;
+- surviving pure white -> bind every bright surface to the target temperature;
+- grey blacks -> restore a dense coloured black floor;
+- crushed detail -> soften the toe while holding global contrast;
+- environment drift -> remove the sentence that implied a set change and
+  rewrite it as illumination on the original surface;
+- flicker -> shorten the edit window and demand one frame-stable treatment.
+
+Do not add a film still on the first retry. After two attempts fail on the same
+look axis, a still may be tested as a look-only reference, with @Video1
+remaining sole authority for subject, composition, motion and environment.
+Record the added reference and audit all preserved fields again.
+```
+
+**Technique:** The target style is first tested against the source footage's
+actual visual canvas, then decomposed into eight independent lighting and
+image-response decisions. Binding every axis to an existing surface stops a
+film title from becoming an invitation to rebuild the set. The final
+change-only contract and frame audit make identity, geometry and motion
+preservation observable rather than aspirational.
+
+Adapted and rewritten from Paulo Shimas / The Creator Stack's September 5,
+2026 [Seedance 2.5 Cine-Grade release and production-validation claim](https://github.com/aipauloshimas/cine-grade/commit/e70e4fd7b3bbbd6c8d49034704f326a17f850d83),
+[three complete validated edit prompts](https://github.com/aipauloshimas/cine-grade/blob/e70e4fd7b3bbbd6c8d49034704f326a17f850d83/references/prompt-skeleton.md)
+and [defect-to-countermeasure table](https://github.com/aipauloshimas/cine-grade/blob/e70e4fd7b3bbbd6c8d49034704f326a17f850d83/references/troubleshooting.md).
+
+---
+
 ### Face-presence recast coverage gate and source-audio authority
 
 **Verified model:** Seedance 2.5 — the creator's released workflow calls
@@ -28481,6 +28621,9 @@ and the versioned
 
 
 ## Sources
+
+
+- [Paulo Shimas / The Creator Stack — September 5, 2026 Seedance 2.5 Cine-Grade: production-validated text-only relighting workflow, three complete edit prompts, eight-axis treatment compiler, preservation contract and defect-specific retries](https://github.com/aipauloshimas/cine-grade/commit/e70e4fd7b3bbbd6c8d49034704f326a17f850d83) ([validated prompts](https://github.com/aipauloshimas/cine-grade/blob/e70e4fd7b3bbbd6c8d49034704f326a17f850d83/references/prompt-skeleton.md), [troubleshooting](https://github.com/aipauloshimas/cine-grade/blob/e70e4fd7b3bbbd6c8d49034704f326a17f850d83/references/troubleshooting.md))
 
 
 - [Krea Team — September 5, 2026 Seedance 2.5 matched dialogue test: complete eight-second native-audio prompt with reported natural lip sync, continuous facial performance and stable cinematic framing](https://www.krea.ai/blog/seedance-2-5-vs-veo-3-1-which-is-better-full-comparison-2026)
