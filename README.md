@@ -27448,7 +27448,10 @@ run whose playable output existed only inside the terminal response's artifact
 array; Nomi's September 1 live fal acceptance run records a Seedance 2.5 create
 that could not be polled through its deep submit path until status/result were
 moved to the provider's app root, after which a real MP4 completed and was
-downloaded
+downloaded; Anomalia's September 5 production ledger records 72
+`bytedance/seedance-2-5` jobs on Kie over 30 days, including a 12.5% failure
+rate, 248-second mean latency and 382-second p95, then preserves Kie as the
+explicit reserve when changing the primary provider
 
 Use this when an agent, CI job or short-lived tool call must control a paid
 generation without losing the task identifier, accidentally resubmitting after a
@@ -27488,6 +27491,32 @@ Quote the batch total, not the attractive per-take number. A valid estimate is
 not permission to spend. If the catalog is unavailable, say that the estimate is
 unavailable instead of inventing a stale price. Correct any validation error
 before continuing.
+
+STAGE 1B — PROVIDER DELIVERY ROUTE AND PAID CANARY
+Do not choose a provider from catalog price, submit acceptance or another
+model's benchmark. Build a rolling ledger for this exact versioned model and
+input mode:
+provider | window | submitted | no-task rejection | terminal without video |
+delivered | mean delivery seconds | p95 delivery seconds | actual cost.
+
+Count success only when the video artifact passes Stage 3. Set one primary route
+for normal traffic and a different, explicitly supported reserve route for
+primary-provider unavailability. Never point primary and reserve to the same
+endpoint, and never let fallback discard `reference_*`, audio or edit inputs
+that the reserve route cannot serialize. Route such jobs loudly to a compatible
+provider or stop before submission.
+
+Exercise two independent tests: the healthy primary path and the missing-key or
+provider-down fallback path. Assert the route selected before create. Also
+inject a wrong reserve setting and verify that the test fails; a hard-coded
+last-resort route can otherwise mask a broken registry while every behavior
+test remains green.
+
+When the candidate provider bills this model with an unpublished video-token
+conversion, mark cost UNKNOWN. After approval, run one cheapest representative
+paid canary, record actual tokens and charge, update the per-take and batch
+forecast, then decide whether to move production traffic. Do not infer this
+model's bill from a different video model on the same provider.
 
 STAGE 2 — ONE CREATE, IMMEDIATE CHECKPOINT
 After approval, submit exactly once. Use an asynchronous create path that returns
@@ -27596,7 +27625,11 @@ artifacts avoids unnecessary follow-up calls. The zero-spend compile catches
 invalid parameters and exposes the full batch liability before side effects.
 Per-take seeds make a chosen draft addressable, while contact-sheet review and
 actual-total accounting prevent an inexpensive-looking single take from hiding
-the cost of the batch that produced it.
+the cost of the batch that produced it. A model-and-mode-specific delivery
+ledger keeps provider selection tied to videos actually received, while
+separate primary and reserve routes prevent an outage from falling back into
+itself. One paid canary resolves opaque token pricing before an unknown rate is
+multiplied across a batch.
 
 **Sources:** OfoxAI's August 31, 2026
 [live-verified `create`, keyless dry-run and per-take-seed release](https://github.com/ofoxai/skills/commit/0e845c71cc304b421d40f61dba900d6bedab8b90),
@@ -27615,6 +27648,8 @@ Additional fal routing evidence: Nomi's September 1, 2026
 the [real-run matrix and downloaded Seedance 2.5 result record](https://github.com/aqm857886159/Nomi/blob/52dc89a211aee85344a02269113434ec7d10f4e2/docs/research/2026-09-02-model-acceptance-matrix.md),
 the [provider route compiler](https://github.com/aqm857886159/Nomi/blob/52dc89a211aee85344a02269113434ec7d10f4e2/electron/catalog/falOfficial.ts),
 and its [deep-endpoint regression gate](https://github.com/aqm857886159/Nomi/blob/52dc89a211aee85344a02269113434ec7d10f4e2/electron/catalog/vendorWireDriftFixes.test.ts).
+Provider-routing evidence: Anomalia's September 5, 2026
+[30-day Seedance 2.5 delivery ledger, route change and fallback regression notes](https://github.com/anomaliaso/anomalia/commit/808d8fbbaf32c27ecbbe448785d50b98469e7228).
 
 
 ### Master-render defect isolation and scene-plate repair template
