@@ -10627,6 +10627,28 @@ crossfade from the beginning into the end. Re-measure the seam and reject it if
 a train, car or boat appears doubled. The crossfade is allowed only because the
 camera and architecture remain fixed; regenerate instead if the camera drifts.
 
+START-FRAME AND MICROTEXTURE FAILURE GATE
+If frame one must reproduce a supplied still exactly, treat redundant assignment
+of that same file as both `start_image` and an ordinary image reference as a
+suspect configuration, not extra control. First test `start_image` alone and
+open the composition contract with: “Open on the attached still exactly,
+pixel for pixel, at frame one.” Compare output frame one with the source at
+fixed landmarks, subject scale and normalized positions. Promote the route only
+after that single-authority test passes; if the model still restages, label the
+result reference-guided rather than strict-start-frame.
+
+If the action is intentionally allowed to cross the frame, remove any conflicting
+return-to-opening instruction and design a horizon-matched crossfade instead.
+Do not ask for both irreversible travel and a seamless return inside the same
+short take.
+
+For print grain, paper texture or halftone, measure a static crop across
+consecutive frames. A Seedance 2.5 test measured 4.8 mean luma difference on a
+0–255 scale where a fixed field under codec noise would be near 1. When the
+structure, palette and camera pass but the microtexture re-renders, stop adding
+negative-prompt synonyms: soften the generated grain and apply one static
+halftone overlay in post, using the same treatment across the whole series.
+
 INTERACTION HANDOFF
 Keep the animated 720p plate for the wide living map. On district open, crossfade
 to the high-resolution approved still with identical framing before zooming.
@@ -10643,12 +10665,26 @@ return; an overlap crossfade reduced the measured seam while preserving the
 fixed architecture. Switching to the aligned high-resolution still during zoom
 keeps detail without asking a 720p video to carry the close view.
 
+A later independent Seedance 2.5 run adds two measured failure controls. Binding
+one still to both start and reference slots produced a restaged opening despite
+a strict first-frame instruction, so exact frame-one fidelity now requires a
+single-authority test rather than trust in duplicate conditioning. The same run
+held medium, palette, camera and four-rider count while its static-sky grain
+measured 4.8 MAE/255 between adjacent frames; that separates a successful
+structural plate from a microtexture defect best handled by one static post layer.
+
 **Sources:** MehediHasan27's August 18, 2026
 [primary generation, measurement and implementation commit](https://github.com/MehediHasan27/Citymap/commit/7d63d84c49f5096f746fa70a096eed672c36de4b),
 the committed
 [complete Seedance 2.5 generation sheet](https://github.com/MehediHasan27/Citymap/blob/7d63d84c49f5096f746fa70a096eed672c36de4b/CITY-MAP-PROMPTS.md),
 and the
 [resulting web-ready Seedance clip](https://github.com/MehediHasan27/Citymap/blob/7d63d84c49f5096f746fa70a096eed672c36de4b/public/media/city-iso.web.mp4).
+Will Texas House's September 6, 2026
+[first Seedance 2.5 Range take and measured defect log](https://github.com/willtexashouse/texashouse/commit/ddaf11863ec202771981c8e6d83ec8f6dc524241)
+records the exact `seedance_2_5` omni-reference settings, job ID, output
+metadata, passed structural checks, failed strict-start/loop checks and 4.8
+MAE/255 static-sky grain measurement; the same commit preserves the
+[six complete source prompts and recovery options](https://github.com/willtexashouse/texashouse/blob/ddaf11863ec202771981c8e6d83ec8f6dc524241/brand/briefs/eras-motion-runsheet.md).
 
 ---
 
@@ -29014,6 +29050,9 @@ the [measured workflow and failure notes](https://github.com/one7531/oaai/blob/9
 and the [three complete tested prompts](https://github.com/one7531/oaai/blob/99564b4ccb11f41235c81c22634385d8297ddb84/prompts/seedance-2.5-multicam/prompts-zh-TW.md).
 
 ## Sources
+
+- [Will Texas House — September 6, 2026 Seedance 2.5 Range take: complete locked-plate prompt, exact omni-reference settings and job ID, passed medium / palette / camera / subject-count checks, failed strict-start loop, quantified 4.8 MAE/255 grain shimmer and three recovery branches](https://github.com/willtexashouse/texashouse/commit/ddaf11863ec202771981c8e6d83ec8f6dc524241) ([six complete prompts and take log](https://github.com/willtexashouse/texashouse/blob/ddaf11863ec202771981c8e6d83ec8f6dc524241/brand/briefs/eras-motion-runsheet.md))
+
 
 - [one7531 / Oa AI — September 5, 2026 Dreamina Seedance 2.5 live-action multicam edit test: three complete prompts, source-video dynamic authority, optional still-role isolation, physical-camera coverage, timing drift, face / lip-sync failure notes and shot-select workflow](https://github.com/one7531/oaai/commit/99564b4ccb11f41235c81c22634385d8297ddb84) ([workflow and measured failures](https://github.com/one7531/oaai/blob/99564b4ccb11f41235c81c22634385d8297ddb84/prompts/seedance-2.5-multicam/README.md), [complete prompts](https://github.com/one7531/oaai/blob/99564b4ccb11f41235c81c22634385d8297ddb84/prompts/seedance-2.5-multicam/prompts-zh-TW.md))
 
