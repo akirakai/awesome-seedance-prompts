@@ -28404,6 +28404,114 @@ Adapted and rewritten from the September 7, 2026
 the [complete thirty-block shot and through-line manifest](https://github.com/anjolovic/anjolovic/blob/5dbf53cc133561865f3d13f3a137b305055c5228/production/script_manifest.json),
 and the [locked generation, narration and assembly plan](https://github.com/anjolovic/anjolovic/blob/5dbf53cc133561865f3d13f3a137b305055c5228/production/PRODUCTION-PLAN.md).
 
+
+### Closed-swap ledger and immutable sheet-block world editor
+
+**Verified model:** Seedance 2.5 — the original creator states that this
+video-to-video workflow was hardened on a four-take production, tested live in
+CapCut Video Studio, and that every countermeasure below answers a defect seen
+in a real Seedance 2.5 generation; the release includes one complete validated
+7.0-second prompt
+
+Use this when a real continuous phone take should keep its camera, timing,
+person and audio while several named placeholders become creatures, objects or
+a bounded location. Freeze each replacement's static identity separately from
+its per-take scale and behaviour, and make the prompt that the creator approves
+byte-for-byte identical to the generation payload.
+
+```text
+INGEST AND SOURCE AUTHORITY
+BASE_VIDEO = [ONE CONTINUOUS 4–10 SECOND TAKE].
+Declare its measured duration to one decimal place: [N.N seconds].
+Sample the whole clip at 1 fps; sample gesture windows at 4 fps.
+BASE_VIDEO exclusively owns duration, framing, lens, handheld path, exposure,
+light direction, person, gestures, lip movement, voice and room sound.
+
+Create an inventory of every visible object and its screen-space position.
+Classify each item as SWAPPED or UNTOUCHED. Nothing may remain unclassified.
+
+CLOSED SWAP LEDGER — APPROVE BEFORE PROMPTING
+For every replacement record:
+ID | exact placeholder and viewer-left/right position | kind:
+[LIVING CREATURE / INERT OBJECT / LOCATION] | exact replacement |
+scale relative to both placeholder and adult person | behaviour | sheet ID.
+
+If a placeholder moves, disclose that its motion may transfer. Either reshoot
+with a fixed placeholder or explicitly discard placeholder-object motion while
+retaining only camera and person motion. Never hide this choice.
+At most one location swap per take. A whole-room or whole-background swap
+removes every listed original room element; it cannot preserve selected old
+walls, furniture or windows by accident.
+
+IMMUTABLE SHEETS
+For every replacement approve one frozen identity block plus one reference
+image. The identity block owns only silhouette, geometry, materials, colours
+and distinctive features; it contains no per-shot scale or action.
+Reuse that block verbatim in every take. Store its hash and reference-image
+hash. Any changed byte creates a new sheet version.
+
+VALIDATED EDIT PAYLOAD
+Edit @Video1. Return exactly [N.N seconds].
+Preserve @Video1 frame for frame except for the approved swaps below.
+
+PRESERVE
+Camera and light: [MEASURED PATH, FRAMING, EXPOSURE AND DIRECTION].
+Person and performance: [IDENTITY, CLOTHING, ACTION AND TIMED GESTURES], or none.
+Untouched objects: [COMPLETE INVENTORY WITH SCREEN POSITIONS], or none.
+Background: [COMPLETE ORIGINAL BACKGROUND], or 'replaced in full below'.
+
+SWAP [ID] — [EXACT PLACEHOLDER] -> [REPLACEMENT] (@SheetID)
+[INSERT THE APPROVED IDENTITY BLOCK VERBATIM.]
+Position and scale: occupy the placeholder's exact screen position; [ABSOLUTE
+AND RELATIVE SIZE]; never grow beyond [BOUNDARY].
+Behaviour: for a creature, continuous natural idle motion from first through
+last frame plus reactions anchored to measured gesture times. For an object,
+remain rigid and motionless; apparent movement comes only from the camera.
+Audio: [NAMED DIEGETIC SOUND / NONE].
+
+LOCATION — [EXACT AREA] -> [LOCATION] (@SheetID)
+[INSERT THE APPROVED LOCATION BLOCK VERBATIM.]
+Coverage: [PHYSICAL FOOTPRINT, EDGE PLACEMENT AND SURFACES THAT MUST NOT LEAK].
+Moving elements: [ONLY THE NAMED CONTINUOUS MOTION].
+
+GLOBAL CONTRACT
+All replacements are physical elements in the filmed space, illuminated by the
+same source and casting matching contact shadows. Preserve the raw phone look;
+do not grade, stabilize, relight, change frame rate, add a cut or invent an
+effect. Keep @Video1 audio untouched, then add only swap-owned sounds.
+Nothing not listed in the closed ledger may appear.
+
+TRANSPORT GATE
+Validate section order, exact duration, every ledger item, every untouched
+object, verbatim sheet blocks and required negatives. Save character count and
+SHA-256. Show the full saved prompt for approval. Send those exact bytes;
+never summarize, translate or shorten after validation. If the destination
+rejects the payload length, stop instead of silently condensing it.
+
+ACCEPTANCE
+Inspect first, midpoint and final frames. Reject on source-camera drift, person
+or voice change, old-surface leakage, wrong screen side, scale drift, inherited
+placeholder motion, frozen creature, moving inert object, altered duration,
+new object or prompt-hash mismatch. Change only the earliest failed variable,
+revalidate and obtain approval again.
+```
+
+**Why it works:** the source production separates four authorities that models
+often blend: the take owns dynamics, a sheet owns static appearance, the swap
+row owns scale and behaviour, and the coverage line owns the editable surface.
+The closed inventory prevents background residue and surprise objects, while
+the payload hash closes the common gap between a carefully reviewed prompt and
+a shortened text that is actually sent. Explicit first-to-last creature motion
+and inert-object immobility also prevent the two opposite motion failures from
+sharing one vague instruction.
+
+Adapted and rewritten from Paulo Shimas / The Creator Stack's September 7, 2026
+[Seedance 2.5 production-tested workflow release](https://github.com/aipauloshimas/world-swap-capcut/commit/eaf8340bb3fc33e962d1e1a6ff34d73ccc06ade4),
+the [complete validated seven-second world-swap prompt](https://github.com/aipauloshimas/world-swap-capcut/blob/eaf8340bb3fc33e962d1e1a6ff34d73ccc06ade4/examples/OG-2_world_swap_prompt.txt),
+the [full workflow and defect countermeasure record](https://github.com/aipauloshimas/world-swap-capcut/blob/eaf8340bb3fc33e962d1e1a6ff34d73ccc06ade4/SKILL.md),
+and the [structure, sheet and payload-fingerprint verifier](https://github.com/aipauloshimas/world-swap-capcut/blob/eaf8340bb3fc33e962d1e1a6ff34d73ccc06ade4/scripts/verify_prompt.py).
+
+
 ---
 ## Camera language
 
@@ -29150,6 +29258,9 @@ the [measured workflow and failure notes](https://github.com/one7531/oaai/blob/9
 and the [three complete tested prompts](https://github.com/one7531/oaai/blob/99564b4ccb11f41235c81c22634385d8297ddb84/prompts/seedance-2.5-multicam/prompts-zh-TW.md).
 
 ## Sources
+
+- [Paulo Shimas / The Creator Stack — September 7, 2026 Seedance 2.5 real-take world-swap workflow: four-take production validation, exact-duration source authority, closed object inventory, immutable character/location sheets, motion-inheritance and surface-coverage failure controls, complete 7.0-second prompt and payload-fingerprint verifier](https://github.com/aipauloshimas/world-swap-capcut/commit/eaf8340bb3fc33e962d1e1a6ff34d73ccc06ade4) ([complete worked prompt](https://github.com/aipauloshimas/world-swap-capcut/blob/eaf8340bb3fc33e962d1e1a6ff34d73ccc06ade4/examples/OG-2_world_swap_prompt.txt), [workflow and countermeasure record](https://github.com/aipauloshimas/world-swap-capcut/blob/eaf8340bb3fc33e962d1e1a6ff34d73ccc06ade4/SKILL.md), [verifier](https://github.com/aipauloshimas/world-swap-capcut/blob/eaf8340bb3fc33e962d1e1a6ff34d73ccc06ade4/scripts/verify_prompt.py))
+
 
 - [anjolovic production log — September 7, 2026 Seedance 2.0 Standard two-minute explainer: playable 1080p master assembled from twelve 10-second clips, complete thirty-block shot ledger, narration timings, real scene-change failures and measured spend](https://github.com/anjolovic/anjolovic/commit/5dbf53cc133561865f3d13f3a137b305055c5228) ([complete shot manifest](https://github.com/anjolovic/anjolovic/blob/5dbf53cc133561865f3d13f3a137b305055c5228/production/script_manifest.json), [locked production plan](https://github.com/anjolovic/anjolovic/blob/5dbf53cc133561865f3d13f3a137b305055c5228/production/PRODUCTION-PLAN.md))
 
