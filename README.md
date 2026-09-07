@@ -28304,6 +28304,106 @@ Adapted and rewritten from Born Gifted's September 3, 2026
 [four-clip Seedance 2.5 chain, independent-clip failure comparison and generated MP4 assets](https://github.com/borngifted/air/commit/f7dc7fdc127fd5a2f43172abbed872ddd402df9a)
 and the [eight-anchor, seven-transition scroll journey with extracted frames](https://github.com/borngifted/air/commit/07e0cbe49d2185155b1ec64ad2d287831fb1fb12).
 
+
+### Measured shot-density and narration-overlap gate for modular explainers
+
+**Verified model:** Seedance 2.0 Standard — the creator delivered a 120-second
+1080p film assembled from twelve 10-second Seedance 2.0 Standard clips with
+native diegetic audio, published the playable master and complete thirty-block
+shot manifest, and recorded that two inspected clips produced only one and two
+scene changes after each had requested five hard cuts
+
+Use this when a narrated explainer is built from fixed-duration visual blocks.
+Treat the requested shot list as a hypothesis, not proof that the returned clip
+contains those edits. Keep the story, visual continuity, speech timing and
+mixing gates independently measurable so a weak visual block can be replaced
+without reopening the whole film.
+
+```text
+PROJECT LEDGER
+Model: Seedance 2.0 Standard.
+Output: [TOTAL LENGTH], assembled from [N] blocks of [10 seconds].
+Frame: [ASPECT RATIO], [RESOLUTION], [FPS].
+Recurring subject: [ONE APPROVED IDENTITY REFERENCE].
+Through-line object: [OBJECT], whose state advances as:
+[BLOCK 1 STATE] -> [BLOCK 2 STATE] -> ... -> [FINAL STATE].
+
+For every block record:
+BLOCK | FACT / STORY BEAT | LOCATION | SUBJECT STATE | THROUGH-LINE STATE |
+REQUESTED SETUPS | ACTUAL SCENE CHANGES | ACCEPTED IN / OUT | AUDIO RISK
+
+VISUAL BLOCK PROMPT
+Create one photorealistic 10-second [ASPECT RATIO] clip.
+@Image1 owns [LOCATION / LIGHT / PALETTE].
+@Image2 owns [SUBJECT IDENTITY / WARDROBE].
+@Image3 owns [THROUGH-LINE PROP GEOMETRY].
+
+Narrative beat: [ONE FACT OR CAUSAL EVENT].
+Opening state: [VISIBLE START].
+Closing state: [VISIBLE, IRREVERSIBLE END].
+The recurring subject, wardrobe, location geometry, light direction and
+through-line object remain identical unless the closing state explicitly
+changes one of them.
+
+Requested coverage:
+1. [SHOT SIZE / ANGLE]: [ONE COMPLETE ACTION].
+2. [SHOT SIZE / ANGLE]: [ONE COMPLETE ACTION].
+3. [SHOT SIZE / ANGLE]: [ONE COMPLETE ACTION].
+4. [SHOT SIZE / ANGLE]: [ONE COMPLETE ACTION].
+5. [SHOT SIZE / ANGLE]: [ONE COMPLETE ACTION].
+
+Join requested setups only with hard cuts. Do not dissolve, morph, orbit or
+zoom to imitate a new setup. Natural diegetic sound only. Nobody speaks on
+camera. No generated caption, label, number, logo or watermark.
+
+SHOT-DENSITY GATE
+After rendering, detect and manually verify the actual hard-cut boundaries.
+A five-setup request passes only when at least four genuine hard cuts and five
+distinct framings are visible. Camera drift, a reframing inside one take and
+an object passing the lens do not count as cuts.
+
+If the clip returns only one or two scene changes, do not describe it as a
+five-shot montage and do not force the editor to cut invented coverage.
+Choose one:
+A. accept the coherent one- or two-shot result and rewrite the block ledger;
+B. generate the missing setups independently, then use only their verified
+   intervals in the edit;
+C. reduce the block to one dominant action and move the other facts elsewhere.
+Regenerate only the failed block or setup.
+
+NARRATION TAKE
+[Measured documentary delivery; starts immediately; no pre-roll.]
+[00:00-00:09] [ONE BLOCK-SPECIFIC LINE].
+
+VOICE GATE
+- detected speech length: 7.8–9.5 seconds for a 10-second block;
+- no internal pause of 0.8 seconds or longer;
+- no faster than 2.9 spoken words per second;
+- the line completes without time-stretching or cutting a word.
+Rewrite and rerecord only the failed line.
+
+ASSEMBLY AND AUDIO GATE
+Center each approved voice take in its matching 10-second block.
+Keep ordinary clip audio about 15–25 dB below narration.
+Audit unusually loud blocks separately; voice must remain dominant throughout.
+Duck the instrumental bed under speech, then normalize the master to
+approximately -16 LUFS in two passes. Confirm exact total duration, block order,
+through-line state, narration intelligibility and real cut count before export.
+```
+
+**Technique:** The source requested five approximately two-second setups inside
+each 10-second generation, but probes found only one and two scene changes in
+two inspected clips. Separating requested coverage from actual coverage prevents
+a prompt from silently becoming the edit decision. The same production log
+also turns narration into a measurable interface: twelve accepted lines landed
+between 8.06 and 9.41 seconds, while twenty-eight takes including retries were
+needed, so speech duration and pause gates belong before final assembly.
+
+Adapted and rewritten from the September 7, 2026
+[Seedance 2.0 two-minute delivery, playable master, settings, measured failures and spend](https://github.com/anjolovic/anjolovic/commit/5dbf53cc133561865f3d13f3a137b305055c5228),
+the [complete thirty-block shot and through-line manifest](https://github.com/anjolovic/anjolovic/blob/5dbf53cc133561865f3d13f3a137b305055c5228/production/script_manifest.json),
+and the [locked generation, narration and assembly plan](https://github.com/anjolovic/anjolovic/blob/5dbf53cc133561865f3d13f3a137b305055c5228/production/PRODUCTION-PLAN.md).
+
 ---
 ## Camera language
 
@@ -29050,6 +29150,10 @@ the [measured workflow and failure notes](https://github.com/one7531/oaai/blob/9
 and the [three complete tested prompts](https://github.com/one7531/oaai/blob/99564b4ccb11f41235c81c22634385d8297ddb84/prompts/seedance-2.5-multicam/prompts-zh-TW.md).
 
 ## Sources
+
+- [anjolovic production log — September 7, 2026 Seedance 2.0 Standard two-minute explainer: playable 1080p master assembled from twelve 10-second clips, complete thirty-block shot ledger, narration timings, real scene-change failures and measured spend](https://github.com/anjolovic/anjolovic/commit/5dbf53cc133561865f3d13f3a137b305055c5228) ([complete shot manifest](https://github.com/anjolovic/anjolovic/blob/5dbf53cc133561865f3d13f3a137b305055c5228/production/script_manifest.json), [locked production plan](https://github.com/anjolovic/anjolovic/blob/5dbf53cc133561865f3d13f3a137b305055c5228/production/PRODUCTION-PLAN.md))
+
+
 
 - [Will Texas House — September 6, 2026 Seedance 2.5 Range take: complete locked-plate prompt, exact omni-reference settings and job ID, passed medium / palette / camera / subject-count checks, failed strict-start loop, quantified 4.8 MAE/255 grain shimmer and three recovery branches](https://github.com/willtexashouse/texashouse/commit/ddaf11863ec202771981c8e6d83ec8f6dc524241) ([six complete prompts and take log](https://github.com/willtexashouse/texashouse/blob/ddaf11863ec202771981c8e6d83ec8f6dc524241/brand/briefs/eras-motion-runsheet.md))
 
