@@ -29257,7 +29257,111 @@ Adapted and rewritten from one7531 / Oa AI's September 5, 2026
 the [measured workflow and failure notes](https://github.com/one7531/oaai/blob/99564b4ccb11f41235c81c22634385d8297ddb84/prompts/seedance-2.5-multicam/README.md),
 and the [three complete tested prompts](https://github.com/one7531/oaai/blob/99564b4ccb11f41235c81c22634385d8297ddb84/prompts/seedance-2.5-multicam/prompts-zh-TW.md).
 
+### Raw-performance role assignment and semantic-motion retention gate
+
+**Verified model:** Seedance 2.0 — the creator ran five paid generations with
+APIMart's exact `doubao-seedance-2.0-face` / `seedance-2.0-face` route,
+using the same five-second clip and prompt across raw-video, depth-video and
+depth-plus-skeleton reference arms at 480p  
+**Use case:** transfer a filmed performance to a new character and setting
+without importing the source look or losing small gestures and prop interaction  
+**Mode:** image-to-video / omni-reference with one `video_ref`
+
+Use a raw performance clip when the take contains semantically important hand
+poses, carried objects, contact or interaction. Treat a depth or skeleton
+render as coarse geometry only; it is not a declared Seedance control signal
+and may discard precisely the evidence that says what the performer is doing.
+
+```text
+INPUT-CHOICE GATE
+Inspect the approved source take before generating.
+
+If success depends on any hand pose, facial performance, garment motion,
+carried object, tool use, touch, pickup, placement or person-object contact:
+    use the shortest sufficient interval of the RAW source video as @Video1.
+
+Use a depth / pose / skeleton derivative only when:
+    - the job needs coarse body path, blocking or camera path rather than
+      semantic interaction; or
+    - the serving route cannot legally or technically accept the raw clip.
+Never assume that adding a skeleton restores object meaning. If forced onto
+that route, describe every missing interaction explicitly and mark it
+unverified until a paid A/B passes.
+
+REFERENCE ROLE
+@Video1 owns only:
+- action order and timing;
+- body, arm, hand and head trajectories;
+- contact timing and which hand carries or touches each object;
+- subject path, stop position and camera movement.
+
+Do not adopt @Video1's identity, face, body styling, wardrobe, palette,
+surface materials, lighting, location, background, text, logos or product
+appearance. Those attributes are exclusions, not soft preferences.
+
+TARGET SUBJECT AND WORLD
+Render [TARGET CHARACTER], wearing [TARGET WARDROBE], in [TARGET LOCATION].
+Use [TARGET MEDIUM / PHOTOREAL STYLE], [LIGHTING] and [PALETTE].
+Replace source props by semantic role:
+- source [OBJECT A] becomes [TARGET OBJECT A], held by [LEFT / RIGHT] hand;
+- source [OBJECT B] becomes [TARGET OBJECT B], held or used by [HAND];
+- preserve pickup, lift, contact, release and placement moments exactly.
+
+ACTION CONTRACT
+Reproduce the complete observable performance from @Video1 without adding,
+removing, reordering or retiming an action. Preserve the entrance path,
+turns, pauses, raised-arm poses, grip changes, two-hand coordination,
+object contacts and final stance. A broad walk or body trajectory does not
+count as success if a visible hand or object beat disappears.
+
+CAMERA AND CONTINUITY
+Follow @Video1's camera path, framing changes and subject scale unless an
+explicit camera override is listed here: [OVERRIDE OR NONE].
+Keep the new character, wardrobe, environment, object inventory, handedness
+and screen direction stable. No source-look bleed, extra object, empty hand,
+hand swap, invented gesture, lowered arm, generic idle walk, morph, cut,
+freeze, duplicate person or background rebuild.
+
+PAIRED ACCEPTANCE GATE
+Render the raw-reference arm first. If considering a depth or skeleton arm,
+freeze the model, source interval, target description, settings and prompt;
+change only the reference representation.
+
+Score each arm separately:
+1. Coarse path and stop position.
+2. Every named hand / prop interaction.
+3. Target identity and setting with zero source-look bleed.
+4. Temporal and visual stability.
+
+Reject any take that passes path matching but drops a named semantic beat.
+Promote depth or skeleton only if it equals or beats raw on all four axes.
+Record exact model, mode, resolution, duration, seed if exposed, reference
+hashes, scores and failures; do not generalize from an unpaired beauty shot.
+```
+
+**Why it works:** a raw reference contains both geometry and semantic evidence.
+The explicit role contract tells Seedance which dynamic facts to copy and
+which visual attributes to ignore, so removing source appearance does not
+require destroying object and hand information first. In the creator's
+controlled second round, the raw arm changed a yellow-raincoat industrial
+take into a red-hoodie cartoon boy in a Japanese café while retaining the
+raised two-object gesture; both the depth-only and depth-plus-skeleton arms
+kept only the walk and left the arms down. Scores were raw 4/4/4 versus
+2/4/4 for each derivative, and the skeleton overlay added no measured benefit.
+
+This is a routing gate, not a universal claim: the published test used one
+slow, single-person five-second clip, one 480p take per arm, and no fixed seed.
+Fast dance, rotation, noisy footage, multiple people and true ControlNet-style
+conditioning remain outside its evidence.
+
+Adapted and rewritten from aqm857886159 / Nomi's September 7, 2026
+[paid Seedance 2.0 raw-versus-depth A/B release](https://github.com/aqm857886159/Nomi/commit/49152bdc62b02fa1323bfea785f5903414bdcb8e),
+the [complete experiment, prompts, settings and honest limits](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth.md),
+and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
+
 ## Sources
+
+- [aqm857886159 / Nomi — September 7, 2026 Seedance 2.0 raw-performance versus depth/skeleton paid A/B: five real `doubao-seedance-2.0-face` generations, complete role-assignment prompt, matched settings, independent scoring and semantic hand/prop-retention gate](https://github.com/aqm857886159/Nomi/commit/49152bdc62b02fa1323bfea785f5903414bdcb8e) ([full experiment and prompts](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth.md), [round-two comparison](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg))
 
 - [Paulo Shimas / The Creator Stack — September 7, 2026 Seedance 2.5 real-take world-swap workflow: four-take production validation, exact-duration source authority, closed object inventory, immutable character/location sheets, motion-inheritance and surface-coverage failure controls, complete 7.0-second prompt and payload-fingerprint verifier](https://github.com/aipauloshimas/world-swap-capcut/commit/eaf8340bb3fc33e962d1e1a6ff34d73ccc06ade4) ([complete worked prompt](https://github.com/aipauloshimas/world-swap-capcut/blob/eaf8340bb3fc33e962d1e1a6ff34d73ccc06ade4/examples/OG-2_world_swap_prompt.txt), [workflow and countermeasure record](https://github.com/aipauloshimas/world-swap-capcut/blob/eaf8340bb3fc33e962d1e1a6ff34d73ccc06ade4/SKILL.md), [verifier](https://github.com/aipauloshimas/world-swap-capcut/blob/eaf8340bb3fc33e962d1e1a6ff34d73ccc06ade4/scripts/verify_prompt.py))
 
