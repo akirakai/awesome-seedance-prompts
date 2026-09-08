@@ -18633,6 +18633,125 @@ and the public [eight-prompt SPECTRUM production PDF](https://drive.google.com/f
 
 ## Reusable templates
 
+### Medium-native animation-style compiler and timing-matched story harness
+
+**Verified model:** Seedance 2.5 — Atomic Gains' September 8, 2026
+release identifies all 33 master styles as Seedance 2.5 prompts and the
+same-day tutorial shows the generated examples made with Seedance 2.5 on
+OpenArt  
+**Use case:** build a reusable animation look from the physical logic of a
+medium, then attach new timed stories without reducing the style to a label  
+**Mode:** text-to-video; a reference image may define story content, but the
+compiled style block remains the rendering authority
+
+```text
+MEDIUM-NATIVE ANIMATION STYLE COMPILER
+
+INPUTS
+TARGET MEDIUM = [CELS / INK WASH / PAINT ON GLASS / CHARCOAL / CLAY /
+WOOL / CUT PAPER / SCREEN PRINT / SUITMATION / OTHER]
+PERIOD OR PRODUCTION CONTEXT = [ERA, REGION, THEATRICAL / OVA / TV / HANDMADE]
+STORY = [CHARACTERS, LOCATION, ACTION, DIALOGUE]
+DURATION = [SECONDS]
+OUTPUT = [ASPECT RATIO, RESOLUTION]
+
+1. PHYSICAL CONSTRUCTION
+Name how the image would really be made:
+- substrate and mark-making material;
+- moving-character layer versus background layer;
+- paint, ink, fibre, clay, paper, miniature or practical-suit properties;
+- which imperfections belong to production and which belong to capture.
+Every later instruction must follow this construction. Do not mix incompatible
+pipelines merely because they share an aesthetic label.
+
+2. STATIC IMAGE GRAMMAR
+LINEWORK — [EDGE MATERIAL, THICKNESS, IRREGULARITY].
+COLOUR — [LIMITED PALETTE, PAINT OR INK BEHAVIOUR, SATURATION CEILING].
+SHADING — [FLAT CEL SHAPES / WASH / IMPASTO / PRINT OVERLAP / PRACTICAL LIGHT].
+SURFACES — [HOW THE MEDIUM REMAINS VISIBLE ON PEOPLE, PROPS AND BACKGROUNDS].
+LAYERING — [FOREGROUND, CHARACTER AND BACKGROUND SEPARATION].
+LIGHTING — [ILLUSTRATED OR PRACTICAL LOGIC NATIVE TO THE MEDIUM].
+
+3. TEMPORAL GRAMMAR
+Define motion as the medium would produce it:
+- drawing or replacement cadence [ONES / TWOS / THREES / HELD POSES];
+- anticipation, key poses, holds, transitions and recovery;
+- fast-motion device [SMEAR DRAWING / SPEED LINE / LAGGED INK LAYER /
+REPLACEMENT BLUR / PRACTICAL DEBRIS];
+- economical face, blink and mouth shapes;
+- simplified hair, cloth and secondary motion;
+- environmental loops that may continue during a held character pose.
+Reject uniformly smooth interpolation when the selected medium depends on
+discrete handmade timing.
+
+4. MEDIUM-NATIVE CAMERA AND EFFECTS
+Use only camera moves plausible for the production method: [MULTIPLANE PAN /
+PUSH ON A HELD DRAWING / ROSTRUM MOVE / LOCKED MINIATURE / CRASH ZOOM /
+STOP-MOTION REPOSITION / OTHER].
+Translate effects into the same medium: smoke becomes [MARK OR MATERIAL],
+light becomes [PAINTED SHAPE OR PRACTICAL SOURCE], impact becomes
+[SMEAR / BURST / DEBRIS], and transitions become [PHYSICAL OR GRAPHIC DEVICE].
+Do not insert physically simulated particles, fluids or lighting unless the
+chosen production process could create them.
+
+5. CAPTURE CHARACTER
+Add only the acquisition traits that would result from photographing or
+scanning the chosen artwork: [GRAIN, GATE WEAVE, REGISTRATION SHIFT, EXPOSURE
+VARIATION, OPTICAL SOFTNESS, HALATION, PAPER FIBRE, LENS LIMIT].
+Keep these subtle enough that construction remains readable. A generic vintage
+filter does not substitute for a production method.
+
+6. IMMUTABLE STYLE PREFIX
+Compile sections 1–5 into one self-contained style block. It must state:
+- what the work is made from;
+- how characters differ from backgrounds;
+- how colour, light and texture behave;
+- how motion is sampled and where holds occur;
+- how camera and effects obey the medium;
+- the exact modern or incompatible traits that must not appear.
+Keep this prefix unchanged across every story in the same visual world.
+
+7. TIMING-MATCHED STORY
+Append, do not interleave, the new content below the style prefix.
+
+[0–A s] [SHOT SIZE / LENS OR STAGING]. [ONE ACTION]. [SOUND OR DIALOGUE].
+[A–B s] [MOTIVATED CUT OR NATIVE TRANSITION]. [ONE ACTION]. [SOUND].
+[B–DURATION s] [PAYOFF AND HELD END STATE]. [SOUND RESOLUTION].
+
+Make the generation duration equal to the final written timestamp. Give each
+beat enough time for its action and line; shorten the story before compressing
+the medium's characteristic holds.
+
+8. ACCEPTANCE GATES
+Pass only if:
+- a still frame reveals the declared material and layer construction;
+- normal-speed playback reveals the declared cadence, holds and fast-motion
+  device;
+- effects and transitions use the same medium instead of a foreign VFX layer;
+- capture artifacts are stable and subordinate;
+- the story completes by DURATION without dropped dialogue or rushed payoff;
+- no excluded modern rendering trait, extra character, text, logo or watermark
+  appears.
+
+If the result has the right subject but the wrong medium, revise sections 1–5,
+not the story. If timing fails while the medium holds, reduce story beats or
+dialogue and keep the immutable style prefix unchanged.
+```
+
+**Technique:** A style name is replaced by a production model: construction,
+image grammar, temporal sampling, camera, effects and capture each have their
+own contract. Keeping that contract as an immutable prefix prevents a new story
+from silently changing the medium. Matching the generation length to the
+time-stamped story protects the holds and reaction beats that make limited or
+handmade animation recognisable.
+
+Adapted and rewritten from Atomic Gains' September 8, 2026
+[Seedance 2.5 animation-style tutorial and generated examples](https://www.youtube.com/watch?v=RbAwwMte270)
+and the creator's public
+[33-style master-prompt and story library](https://docs.google.com/document/d/1V3En-pWsczDDycTYqjwSJc3c88gANlB7/edit?usp=sharing).
+
+---
+
 
 ### Canvas-matched eight-axis relight-only edit compiler
 
@@ -29494,6 +29613,8 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [Atomic Gains — September 8, 2026 Seedance 2.5 animation-style library: generated OpenArt examples plus 33 complete master prompts and 31 timed stories spanning cel, ink, paint, fibre, paper, stop-motion, practical miniature, hybrid and display-media grammars](https://www.youtube.com/watch?v=RbAwwMte270) ([public prompt library](https://docs.google.com/document/d/1V3En-pWsczDDycTYqjwSJc3c88gANlB7/edit?usp=sharing))
 
 - [Amir D / @starks_arq — September 8, 2026 SPECTRUM short film: playable 2:50 Seedance 2.5 / CapCut 1080p result, creator-linked PDF with all eight final prompts, exact image-role maps, native-voice contracts, timed cut lists and continuity gates](https://x.com/starks_arq/status/2097020866093797664) ([complete-prompt release](https://x.com/starks_arq/status/2097020960780189918), [eight-prompt production PDF](https://drive.google.com/file/d/1aW2GCy8Set_0Pw7aIWg5foHEXtLQDRc9/view?usp=sharing))
 
