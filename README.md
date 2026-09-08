@@ -325,6 +325,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Twelve-cut clandestine boss standoff with foreground-occlusion ledger](#309-twelve-cut-clandestine-boss-standoff-with-foreground-occlusion-ledger)
   - [Nine-shot creation monologue with voice-identity and reflection-match ledgers](#310-nine-shot-creation-monologue-with-voice-identity-and-reflection-match-ledgers)
   - [Asymmetric-mecha traversal with irreversible component ledger](#311-asymmetric-mecha-traversal-with-irreversible-component-ledger)
+  - [Blind-box-to-live-look reveal with mirrored-attribute and silence ledgers](#312-blind-box-to-live-look-reveal-with-mirrored-attribute-and-silence-ledgers)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -18740,6 +18741,103 @@ and the creator's [complete nine-cut source prompt](https://x.com/tokyo_Valentin
 
 ---
 
+### 312. Blind-box-to-live-look reveal with mirrored-attribute and silence ledgers
+
+**Verified model:** Seedance 2.5 — creator John / @johnAGI168 labels the post
+with this exact version and publishes the complete 30-second prompt beside the
+attached playable 30-second generated result  
+**Use case:** collectible unboxing, creator-style product reveal, toy-to-human
+design transfer, beat-cut fashion montage, sparse native dialogue  
+**Mode:** single-image reference-to-video  
+**Suggested settings:** 30 seconds, four timed sections, fast realistic phone-vlog
+coverage, Mandarin lip sync, electronic music and practical foley
+
+```text
+Create a 30-second realistic phone unboxing vlog that turns into a premium
+collectible-inspired fashion reveal. @Image1 is the only identity reference for
+one adult woman. Before activation it owns her face, proportions, hairstyle and
+opening clothes. After activation her face and adult proportions remain unchanged,
+while only the approved collectible look replaces hair, makeup, clothes and
+accessories. No other person appears.
+
+CLOSED DESIGN MAP
+PACKAGE — one unbranded black-and-silver faceted blind box with a transparent
+star window and blue-violet aurora finish.
+FIGURE — one stylized collectible whose face is recognizably derived from
+@Image1: screen-left half of the hair electric blue, screen-right half nebula
+violet, straight fringe, two gradient braids, silver-white asymmetric mini dress,
+transparent blue-violet shoulder layer, star waist chain and silver platform boots.
+LIVE LOOK — translate exactly those figure attributes onto the same adult woman
+with realistic human anatomy and fabric; never give her a toy body.
+Treat left-blue/right-violet as a camera-space invariant. Never mirror, swap,
+blend or collapse the two colour halves. The figure and live look must remain the
+same design in different physical forms.
+
+0.00–4.00s — UNBOX AND REACTION
+One warm modern bedroom, one table and exactly one closed box. Begin in a frontal
+medium phone shot. She removes the wrap, opens the faceted lid, extracts one
+silver pouch, tears it and pours the single figure into her left palm. Push close
+enough to keep her surprised face and the figure readable together. She looks
+from figure to lens and says only, “我去，这么帅！” with accurate natural Mandarin
+lip sync.
+
+4.00–9.00s — DESIGN PROOF AND MOTIVATED TRANSFORM
+Cut to one orbiting product close-up that proves the split hair, shoulder layer,
+star chain and boots. Return to a two-face comparison as she holds the figure
+beside her cheek, raises one eyebrow and makes a small finger heart in front of
+its chest. The star lights only after the gesture. Blue-violet light expands from
+that contact point until the finger heart and flare cover the entire frame. Use
+this full occlusion as the only transformation cut.
+
+9.00–26.00s — BEAT-CUT LIVE LOOK
+After the flare, reveal the same woman in the mapped live look; keep her face and
+adult proportions from @Image1 and keep left-blue/right-violet hair in every view.
+Use eight short, physically distinct setups, about two seconds each, one simple
+pose per beat:
+1. ice-blue full-body front, arms opening to show the silhouette;
+2. deep-violet side pose, one turn that releases both braids;
+3. face close-up, hand beside cheek to show gradient nails and star ring;
+4. green background, wink plus one V-sign as the camera pushes in;
+5. magenta low angle, one platform boot approaches lens without hiding her face;
+6. pale-violet grid, seated side pose with one bent and one extended leg;
+7. orange-blue gradient, standing package-card pose with hand at head and waist;
+8. black star field, playful half-crouch near lens.
+Each cut lands on a music accent. A blue-violet upward light sweep fully covers
+the last setup and returns to the real-world closing scene. No speech in this
+entire section.
+
+26.00–30.00s — MATCHED OBJECT/HUMAN HERO CLOSE
+On a clean light background, keep the woman in the live look and place exactly
+one matching figure in her hand. She checks the figure, brings her face beside
+it, then both face camera. She raises the figure toward lens, winks behind it and
+says only, “谁是你的隐藏款？” in a relaxed, playful, slightly mysterious Mandarin
+delivery. Hold the matched pair through the final frame.
+
+AUDIO AND SILENCE LEDGER
+There are exactly two spoken lines, owned by the visible woman at the two declared
+times. From 4.00s until the closing line begins, no voice-over, dialogue or silent
+mouth movement is allowed. Use only fashion electronic music, package handling,
+star activation, transition hits, footsteps and cloth movement. Preserve the
+music bed through the transformation; do not restart it at every cut.
+
+No subtitle, background copy, brand, logo, instruction card, second figure,
+shrinking person, horror reversal, identity drift, unfamiliar figure face,
+clothing drift, figure-size drift, mirrored hair colours, extra limb, fused
+finger, double mouth, lip-sync drift, watermark or invented fifth story beat.
+```
+
+**Why it works:** the collectible and performer share a closed attribute map
+instead of a vague “same style” instruction, so every asymmetric colour and
+accessory has one corresponding owner. The gesture supplies a causal effect
+trigger and a full-frame edit surface; a separate silence ledger stops the
+fashion montage from inventing narration, while the closing two-shot audits both
+identity and design transfer at once.
+
+Adapted and rewritten from John / @johnAGI168's September 8, 2026
+[Seedance 2.5 complete prompt and attached 30-second generated result](https://x.com/johnAGI168/status/2097249504986644872).
+
+---
+
 ## Reusable templates
 
 ### Medium-native animation-style compiler and timing-matched story harness
@@ -29722,6 +29820,8 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [John / @johnAGI168 — September 8, 2026 Seedance 2.5 blind-box unboxing and live-look transformation: attached playable 30-second result, complete four-part prompt, collectible-to-human attribute map, gesture-owned occlusion edit, eight-beat fashion showcase, two-line Mandarin voice budget and left/right colour lock](https://x.com/johnAGI168/status/2097249504986644872)
 
 - [Tosukun / @tokyo_Valentine — September 8, 2026 Seedance 2.5 giant-oni-mecha battle: attached generated result, two cel-shaded swordswomen, one photoreal asymmetric enemy, complete nine-cut prompt, traversable forearm and irreversible shoulder / drive / chest / frame / detached-arm state chain](https://x.com/tokyo_Valentine/status/2097234711072669886) ([complete source prompt](https://x.com/tokyo_Valentine/status/2097234714461716636))
 
