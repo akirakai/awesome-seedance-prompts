@@ -323,6 +323,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Dusk ranger address with expression-chain and acoustic ownership](#307-dusk-ranger-address-with-expression-chain-and-acoustic-ownership)
   - [Asymmetric rooftop duo with single bullet-time interrupt](#308-asymmetric-rooftop-duo-with-single-bullet-time-interrupt)
   - [Twelve-cut clandestine boss standoff with foreground-occlusion ledger](#309-twelve-cut-clandestine-boss-standoff-with-foreground-occlusion-ledger)
+  - [Nine-shot creation monologue with voice-identity and reflection-match ledgers](#310-nine-shot-creation-monologue-with-voice-identity-and-reflection-match-ledgers)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -18497,6 +18498,139 @@ Adapted and rewritten from the HNK Studio workflow author's September 5, 2026
 the versioned [complete Triad Boss card and exact Reference endpoint](https://github.com/hlaingkhay28047-svg/TG/blob/df81553004dbf404e43defb211a236ee17eda51a/panel/js/hnk_video_wf_data.js),
 and its [model/prompt/duration/aspect integrity test](https://github.com/hlaingkhay28047-svg/TG/blob/df81553004dbf404e43defb211a236ee17eda51a/test/verify_ref_video_cards.js).
 
+
+### 310. Nine-shot creation monologue with voice-identity and reflection-match ledgers
+
+**Verified model:** Seedance 2.5 — creator Amir D states that the published
+2:50 film was made in CapCut with Seedance 2.5 at 1080p, then links a public
+PDF containing the eight final prompts used for the film; this entry adapts the
+PDF's complete first prompt and its rendered opening sequence  
+**Use case:** philosophical title film, rapid evolutionary montage, stable
+narrator identity across voice-over and on-camera speech, geometric match cuts  
+**Mode:** multi-image reference-to-video with native dialogue and sound  
+**Suggested settings:** 25 seconds, 16:9, 24fps, 1080p, nine shots, eight
+explicit cuts
+
+```text
+Create a 25-second photoreal cinematic prologue in one generation. Use exactly
+nine shots, with hard cuts only at 5.00, 7.30, 9.30, 11.30, 13.30, 15.30,
+19.30 and 20.80 seconds. The last cut is a geometric match from one upside-down
+face to another face reflected in water. Do not add internal cuts.
+
+VOICE AND IDENTITY
+One narrator, EVE, owns every spoken word. @Image1 is her sole identity master:
+preserve the same adult face, skin texture, hairline, earrings and raw linen
+shift whenever she appears. Shots 1–8 use her voice off screen. In shot 9 she
+speaks on camera, with exactly the same voice. Keep a warm, close-miked young
+American voice: gentle, airy, lightly raspy, unhurried, with a small inhale
+before each sentence and a settled falling cadence. No second speaker.
+
+REFERENCE ROLES
+@Image2 supplies only the centred defocused ignition light and its glow.
+@Image3 fixes the orbital sunrise, Earth's limb and light direction.
+@Image4 fixes the deep-blue volcanic vent.
+@Image5 fixes the transparent single-cell macro world.
+@Image6 fixes the warm translucent growth chamber.
+@Image7 fixes the winter grass, residual snow and flower.
+@Image8 fixes the second woman's winter clothing and appearance.
+@Image9 fixes the dusk puddle, EVE's kneeling position and the low sun.
+A reference owns only the listed subject, geometry, palette and light; the
+timeline below owns all motion and state changes.
+
+0.00–5.00s — IGNITION
+Pure black. EVE whispers, “It began as one point of light.” At 1.00s one tiny,
+fully defocused point appears dead centre, matching @Image2. It brightens while
+a sub-bass rumble grows. From 2.60s the glow expands until the frame becomes
+edge-to-edge white at 4.00s. Keep that white alive until the cut with moving
+grain, a slightly warmer centre, restrained exposure breathing and one
+horizontal anamorphic streak; never freeze on a flat white card.
+
+5.00–7.30s — ORBITAL SUNRISE
+Hard cut to @Image3. The white resolves as sunlight cresting Earth's curved
+limb, with a thin blue atmosphere and black space above. Lock the camera; allow
+only flare ghosts to drift. EVE says, “We crossed a long distance to arrive.”
+
+7.30–9.30s — VOLCANIC MOUTH
+Hard cut to the exact stone world of @Image4. Rock geometry remains rigid while
+fine sediment and near-lens bubbles rise. At 7.60s a red glow wakes inside the
+vent. At 8.50s one dense pale hydrothermal plume surges from the mouth toward
+the lens in heavy folds, carrying clear bubbles. The plume grows to the cut;
+the rock never breathes, melts or changes shape.
+
+9.30–11.30s — CELL DIVISION
+Hard cut to @Image5. One cell floats centred with a dark core inside one clear
+membrane. From 9.90–10.40s, core and membrane divide together into exactly two
+complete cells. From 10.70–11.10s, both divide again into exactly four separate
+cells. Never duplicate a naked core, leave a shared membrane or exceed four.
+
+11.30–13.30s — GROWTH CHAMBER
+Hard cut to @Image6. A tiny soft cluster grows continuously into one curled
+rounded form. Its curve tightens while fluid streams and suspended motes drift;
+the chamber light warms and dips once. No cut, jump growth or adult anatomy.
+
+13.30–15.30s — FIRE AND TIME
+Hard cut to a perfect 90-degree bird's-eye view of one shallow stone-ringed fire
+on the winter ground of @Image7. Exactly seven adults in distinct hides form a
+loose ring. Night advances into flat winter day across the shot: the orange
+fire pool recedes, visible breath persists, and seven outward shadows rotate
+like spokes without adding or removing a person.
+
+15.30–19.30s — FLOWER TO WOMAN
+Hard cut to the flower in @Image7, still seen perfectly from above. From
+15.60–17.60s execute one uninterrupted crane through a full arc down to ground
+level, ending on a lateral view of the flower with shallow depth of field.
+Then reveal the woman from @Image8 lying five metres behind it and rack focus
+once from flower to her. EVE begins, “Since thought began, we have asked what
+brought us here,” and the line continues across the next cut.
+
+19.30–20.80s — UPSIDE-DOWN FACE
+Hard cut straight down with an 85mm feel. Frame the woman from @Image8 on her
+back, her head at bottom centre and her face upside down to the viewer. She
+looks into the lens, blinks once and takes one visible breath. Use only a
+one-to-two-centimetre handheld sway; preserve the exact head size and position
+needed for the next cut.
+
+20.80–25.00s — REFLECTION MATCH AND REVEAL
+Match cut to the still water surface of @Image9 filling the frame. EVE's
+upside-down reflected head begins at the same bottom-centre coordinates and
+same scale as the previous woman's face. Her reflection looks frame-right and
+speaks, “Some call it chance.” One faint ripple crosses the reflection.
+From 22.80–23.60s the camera rises continuously out of the water and tilts over
+the puddle rim, her hands and chest, arriving at eye level on EVE's face.
+Without changing speaker or voice, she adds, “I am not certain.” On the first
+word she gives three small head shakes; the mouth settles into a restrained
+half-smile. Hold living motion to 25.00s.
+
+AUDIO
+Use production sound only: rumble and white hush; low orbital hum; underwater
+pressure and bubbles; close fluid motion; fire and winter wind; cold open air;
+then still dusk air and one quiet water lap. Every silence retains its physical
+bed. Dialogue occurs only inside quotation marks. No music, score, singing,
+subtitle or generated title.
+
+CONTINUITY AND FAILURE CONTROL
+Keep each plate's light direction stable. Preserve EVE's identity between her
+reflection and direct view, and preserve her voice between off-screen and
+on-camera lines. Maintain the complete cut list, exact cell count, seven-person
+fire ring, continuous flower crane, single rack focus, upside-down face
+placement and reflection-match geometry. No extra face, speaker, cut, dissolve,
+morph, camera teleport, flat white freeze, soft or moving rock, shared cell
+membrane, spontaneous adult form, missing figure, broken reflection, lip-sync
+switch, text, logo or watermark.
+```
+
+**Why it works:** the prompt separates nine reference authorities from nine
+time-bound state changes, so each image supplies a world without silently
+overwriting motion. Finite counts make the cell and fire beats auditable; the
+upside-down head coordinates turn the final transition into a measurable match
+rather than a vague thematic cut. A single voice contract explicitly bridges
+voice-over, reflection speech and the final visible performance.
+
+Adapted and rewritten from Amir D / @starks_arq's September 8, 2026
+[Seedance 2.5 film release and 1080p version statement](https://x.com/starks_arq/status/2097020866093797664),
+the [creator's complete-prompt reply](https://x.com/starks_arq/status/2097020960780189918),
+and the public [eight-prompt SPECTRUM production PDF](https://drive.google.com/file/d/1aW2GCy8Set_0Pw7aIWg5foHEXtLQDRc9/view?usp=sharing).
+
 ## Reusable templates
 
 
@@ -29360,6 +29494,9 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [Amir D / @starks_arq — September 8, 2026 SPECTRUM short film: playable 2:50 Seedance 2.5 / CapCut 1080p result, creator-linked PDF with all eight final prompts, exact image-role maps, native-voice contracts, timed cut lists and continuity gates](https://x.com/starks_arq/status/2097020866093797664) ([complete-prompt release](https://x.com/starks_arq/status/2097020960780189918), [eight-prompt production PDF](https://drive.google.com/file/d/1aW2GCy8Set_0Pw7aIWg5foHEXtLQDRc9/view?usp=sharing))
+
 
 - [aqm857886159 / Nomi — September 7, 2026 Seedance 2.0 raw-performance versus depth/skeleton paid A/B: five real `doubao-seedance-2.0-face` generations, complete role-assignment prompt, matched settings, independent scoring and semantic hand/prop-retention gate](https://github.com/aqm857886159/Nomi/commit/49152bdc62b02fa1323bfea785f5903414bdcb8e) ([full experiment and prompts](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth.md), [round-two comparison](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg))
 
