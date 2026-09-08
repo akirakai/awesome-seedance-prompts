@@ -328,6 +328,9 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Blind-box-to-live-look reveal with mirrored-attribute and silence ledgers](#312-blind-box-to-live-look-reveal-with-mirrored-attribute-and-silence-ledgers)
   - [Route-locked fashion journey with phased wardrobe and delayed companion entry](#313-route-locked-fashion-journey-with-phased-wardrobe-and-delayed-companion-entry)
   - [Era-closed 1955 French newsreel with image-space film damage](#314-era-closed-1955-french-newsreel-with-image-space-film-damage)
+  - [Empty-space teleport relay with alternating initiative](#315-empty-space-teleport-relay-with-alternating-initiative)
+  - [One-way clock-tower time-run with contact-state chain](#316-one-way-clock-tower-time-run-with-contact-state-chain)
+  - [Crust-machine planet split with scale-preserving escape](#317-crust-machine-planet-split-with-scale-preserving-escape)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -19133,6 +19136,274 @@ three-dimensional props or a modern filter.
 Adapted and rewritten from simeon-sanai / @Naiknelofar788's September 9, 2026
 [complete Seedance 2.5 prompt and attached 30.14-second generated result](https://x.com/Naiknelofar788/status/2097354764925509789).
 
+
+---
+
+### 315. Empty-space teleport relay with alternating initiative
+
+**Verified model:** Seedance 2.5 — creator Kōda names this exact version,
+publishes the complete prompt in the reply thread, and attaches the playable
+generated result; the creator also discloses that the posted edit was accelerated
+to 1.30x after generation  
+**Use case:** stylized two-character combat, reference-locked identity, continuous
+vertical traversal, teleport legibility, post-speed finishing  
+**Mode:** two-image reference-to-video  
+**Suggested settings:** vertical composition, one continuous take, fast native
+motion; evaluate the native render before applying an optional 1.30x speed-up
+
+```text
+Create one uninterrupted vertical combat ascent inside a depthless white void.
+@Image1 owns only FIGHTER A's face, white hair, coral effects and costume.
+@Image2 owns only FIGHTER B's face, violet armour, effects and costume. Preserve
+both silhouettes, left/right costume asymmetries and rendering style. Never
+merge, recolour, duplicate or exchange their attributes.
+
+MOTION LAW
+Use contemporary-dance mechanics at impossible speed: spiralling torsos,
+inverted extensions, scissoring legs and sharp axis changes. Momentum must
+continue through every contact. Each fighter must attack, land at least one hit,
+defend and reverse the other's force; neither may become a passive target.
+
+TELEPORT LAW
+A teleport has three readable phases: the departing body disappears completely,
+one clean beat shows empty white space at that coordinate, then a colour-matched
+fracture opens at a different height and the same fighter exits it with the
+previous momentum. Never leave a ghost, duplicate, continuous body smear or
+unearned position jump.
+
+TWELVE-BEAT RELAY
+1. Open at impact: A's rising heel meets B's crossed forearms; B opens the guard
+into a palm strike that sends A upward.
+2. B vanishes below and reappears inverted above for a descending kick. A catches
+the ankle and turns the descent into a lateral swing.
+3. B folds with the rotation, punches A's ribs and breaks the grip.
+4. A clears the frame, reappears several body lengths overhead and drops heel
+first. B pivots, hooks the leg and throws A into a steep downward spiral.
+5. A twists through the fall and kicks B under the chin; B recoils while A passes
+upward.
+6. B teleports across A's ascent with a horizontal forearm. A blocks, tumbles and
+uses that same rotation to wrap both legs around B's guard.
+7. Both vanish. Hold a clean empty centre, then reopen coral above and violet
+below; they collide shin to shin while still climbing.
+8. B retracts into a straight shoulder punch. A redirects the next fist and
+answers with a compact elbow; each contact has one owner and one consequence.
+9. A teleports beneath B with a rising knee. B catches the following kick,
+rotates around the ankle and releases A downward as one violet pressure ring
+expands from the turn.
+10. A disappears during the fall. B's follow-up crosses genuinely empty space;
+A returns behind and above with a spinning back kick.
+11. B converts the recoil into an inverted heel counter. They separate vertically,
+then relaunch from opposite ends and meet forearm to forearm at centre.
+12. Finish mid-exchange: A rolls around the block into a downward shoulder kick;
+B drops, teleports overhead and returns a counterkick as fresh coral and violet
+fractures tear open. Both are accelerating when the clip ends.
+
+CAMERA AND EFFECT CONTRACT
+The camera climbs with the mean height of both fighters, rotating only enough to
+keep contact geometry readable. Alternate wide body-proof views with brief impact
+proximity without cutting. Coral belongs only to A; violet belongs only to B.
+Effects originate at portals or true contact points and dissipate behind travel.
+Keep faces and limbs crisp at contact while the void and effects carry motion blur.
+
+No floor, horizon, props, bystanders, cut, slow-motion hold, frozen pose,
+one-sided beating, repeated beat, reversed momentum, phantom duplicate, hidden
+contact, swapped colour, merged costume, detached limb, subtitle, logo or
+watermark. Generate the full motion first. If the native take preserves every
+empty-space and contact gate, an editor may accelerate the complete clip uniformly
+to 1.30x; do not use uneven ramps to conceal failed choreography.
+```
+
+**Why it works:** initiative alternates instead of assigning one permanent
+attacker, so the exchange reads as a causal duel. The empty-space beat turns
+teleportation into a testable three-state event, and the uniform post-speed note
+separates generation quality from editorial pacing rather than asking the model
+to hide unreadable motion.
+
+Adapted and rewritten from Kōda / @aimikoda's September 9, 2026
+[Seedance 2.5 generated result and 1.30x finishing disclosure](https://x.com/aimikoda/status/2097358700428059003)
+and the creator's [complete thirty-beat source prompt](https://x.com/aimikoda/status/2097358972227326241).
+
+---
+
+### 316. One-way clock-tower time-run with contact-state chain
+
+**Verified model:** Seedance 2.5 — TechieSA names this exact model in the
+original post, attaches a playable result with X's Made with AI label, and
+publishes the complete 15-second prompt in the same thread  
+**Use case:** rapid-cut anime action, three-reference role isolation, vehicle
+continuity, lightning-to-cable causality, native music and effects  
+**Mode:** multi-image reference-to-video  
+**Suggested settings:** 15 seconds, cinematic cel-shaded 3D, storm night, rapid
+motivated cuts, native synth-rock and effects
+
+```text
+Create a 15-second cinematic cel-shaded 3D anime sequence on one rain-soaked
+1950s town street ending at a clock tower. @Image1 owns only the young DRIVER's
+identity and red vest. @Image2 owns only the older ROOFTOP ENGINEER's identity,
+wild white hair and long pale coat. @Image3 owns only the silver wedge-shaped
+TIME CAR with closed gullwing doors, four headlights, rear machinery and one
+roof-mounted catch pole. Preserve all three designs exactly.
+
+ROLE AND GEOGRAPHY LOCK
+The driver remains seated with both hands on the wheel. The engineer remains on
+the tower roof beside the loose power cable. The car begins at the far end of the
+street pointed toward the tower and moves forward on that same axis until it
+vanishes. It never reverses, turns around, passes the tower or changes lanes.
+Show the tower growing in the windshield and exterior frames to prove direction.
+
+CONTACT STATE CHAIN
+CABLE: loose and dead -> engineer reconnects it -> lightning energizes it ->
+roof hook catches it once -> surge passes through the car -> cable remains behind.
+CAR: distant and accelerating -> exactly 88 at contact -> electrically charged
+-> vanished -> two burning tyre tracks remain. Never activate a later state
+before its cause and never restore an earlier state.
+
+0.00–2.00s — ESTABLISH THE WHOLE PROBLEM
+Wide down-street view toward the tower. Engineer on roof with the loose cable;
+car at the far end pointed toward camera-axis destination, headlights cutting
+rain, engine already running. Driver visible inside.
+
+2.00–5.00s — COMMITTED RUN
+Track beside the car as it launches only toward the tower. Water fans from the
+tyres; the tower grows rapidly in frame. No steering reversal.
+
+5.00–7.00s — ROOFTOP ACTION
+Cut to the engineer fighting wind, reconnecting the loose cable to the roof
+terminal and shouting one urgent warning down the established street.
+
+7.00–9.00s — DRIVER PROOF
+Interior forward view: tower rushes closer through the windshield, speedometer
+reaches 88, dashboard device glows orange, hands stay locked and feet do not brake.
+
+9.00–11.00s — ENERGY CAUSE
+Lightning hits the clock tower. White-blue current travels visibly from roof
+terminal along the hanging cable. The engineer is silhouetted; the cable is now
+live, but the car has not touched it yet.
+
+11.00–13.00s — SINGLE CONTACT
+The still-forward car's roof hook catches the live cable exactly once at 88.
+Current follows cable -> hook -> car; wheel arches spark and rain flashes to
+steam without changing the vehicle's path or shape.
+
+13.00–15.00s — CONSEQUENCE FRAME
+One white flash removes the car mid-street. Hold on the empty wet road, exactly
+two burning tyre tracks ending beneath the cable, and the engineer looking down
+from the unchanged roof. Do not show the vehicle elsewhere.
+
+AUDIO LEDGER
+One high-energy 1980s-style synth-rock bed starts on frame one and never restarts.
+Layer constant rain, forward-building engine, rooftop shout, one thunder strike,
+one cable contact crack and a final electric surge. Lower music only enough for
+the shout; restore it immediately without silence.
+
+Use bold cel shading, hand-painted texture, thick controlled outlines and hard
+storm shadows. Keep silver car, red vest and pale coat instantly separable.
+Physics and screen direction stay grounded despite rapid cuts.
+
+Reject a passenger, second engineer, open door, detached pole, car U-turn,
+backward wheel motion, premature cable glow, lightning hitting the car directly,
+missed hook, repeated contact, restored car, extra tyre track, spatially reversed
+tower, slow motion, title, subtitle, logo or watermark.
+```
+
+**Why it works:** every asset has one role and one location, while the single
+street axis makes approach direction auditable across cuts. The cable and car
+state chains force five dependent events into causal order; the empty-road hold
+then proves that the vehicle vanished rather than simply cutting to a new angle.
+
+Adapted and rewritten from TechieSA / @TechieBySA's September 9, 2026
+[Seedance 2.5 version declaration and generated 15-second result](https://x.com/TechieBySA/status/2097359965987934264),
+the creator's [three-reference character sheet](https://x.com/TechieBySA/status/2097359980244426876),
+and [complete timed source prompt](https://x.com/TechieBySA/status/2097359986607169824).
+
+---
+
+### 317. Crust-machine planet split with scale-preserving escape
+
+**Verified model:** Seedance 2.5 — the original creator labels the post with
+this exact version, publishes the complete 30-second prompt, and attaches a
+playable generated result carrying X's Made with AI media label  
+**Use case:** large-scale science-fiction destruction, two-vehicle chase,
+recognizable planetary geography, staged irreversible damage, final scale reveal  
+**Mode:** text-to-video  
+**Suggested settings:** 30 seconds, 16:9, photoreal live action, 24fps, continuous
+forward energy with one final pullback
+
+```text
+Create a 30-second photorealistic science-fiction escape above Earth as a
+planetary extraction machine splits the crust. Keep Earth recognizable through
+blue atmosphere, oceans, cloud systems, continental coastlines and curved
+horizon even while the surface breaks. The machine is embedded in the crust,
+not floating at an arbitrary scale. Exactly two sleek spacecraft travel together;
+one leads and one trails, and neither duplicates, swaps order or becomes debris.
+
+IRREVERSIBLE WORLD STATES
+A — intact recognizable planet with hairline machine seams.
+B — seams glow and branch while continents remain connected.
+C — tectonic slabs separate; mountain ranges stay attached to their owning slab.
+D — gaps expose deep molten light and machine structure.
+E — the planet is visibly opening into a small number of immense petal-like
+sections. Once a fracture or gap appears it may widen, but it never heals,
+teleports or changes to an unrelated location.
+
+0.00–5.00s — APPROACH AND SCALE
+Dive through clouds toward one colossal industrial mechanism built into Earth's
+surface. Begin wide enough to read planet curvature, then use cloud layers,
+coastlines and mountain chains to establish size before the machine fills frame.
+Only state A is present.
+
+5.00–11.00s — FIRST SPLIT
+Track above the surface as machine seams energize. Move A -> B -> C in order:
+glowing fractures race along existing plates, rock lifts with inertia, mountain
+ranges break only where their slab breaks, and molten light rises from the new
+gaps. No instant full destruction.
+
+11.00–17.00s — TWO-SHIP FLIGHT
+The same two craft accelerate through state C, weaving between tectonic slabs,
+attached mountains, dust and fixed machine pylons. Keep lead/trail order,
+consistent travel direction, believable banking and collision clearance. Debris
+passes according to relative velocity instead of chasing the camera.
+
+17.00–22.00s — IMPOSSIBLE PASSAGE
+Aim both craft at one identifiable gap between two landmasses. The gap narrows
+from plate motion, both ships cross it in their established order, then it closes
+behind them without crushing or duplicating either craft. Dust, rocks, sparks
+and molten fragments carry the parent slab's momentum.
+
+22.00–26.00s — CONTROL SPHERE
+Follow the craft into one transparent control sphere suspended from the same
+crust machine. The broken planet remains visible through real curved glass with
+refraction and reflections; do not replace the exterior with a new world. Reach
+state D.
+
+26.00–30.00s — PLANETARY REVEAL
+Continue the same camera move upward and backward until Earth again reads as one
+planet. Reveal state E: several vast crustal sections separating like heavy
+petals around coherent glowing fractures, with oceans, clouds and continents
+still mapped to their original pieces. The two craft and control sphere become
+small scale references rather than disappearing. End before total disintegration.
+
+CAMERA AND PHYSICS CONTRACT
+Use natural acceleration, mass, parallax, atmospheric haze, exposure response
+and restrained motion blur. Keep one continuous causal direction from dive to
+escape to pullback. Camera shake comes only from nearby impacts; it decreases
+during the final reveal. Let geography deform, never regenerate.
+
+Reject a second Earth, flat map, arbitrary planet, unrecognizable continents,
+instant explosion, healed fracture, floating mountain detached before its plate,
+more than two spacecraft, ship-order swap, collision without consequence,
+debris moving against inertia, cartoon physics, glossy game-CGI look, hard cut
+to space, subtitle, logo or watermark.
+```
+
+**Why it works:** the destruction is a finite state machine rather than a bag of
+spectacle words. Coastlines, atmosphere, slab ownership and two fixed spacecraft
+provide persistent scale witnesses, while the final pullback audits that every
+local fracture belongs to the same recognizable planet.
+
+Adapted and rewritten from Saul Goodman / @Goodmanprotocol's September 9, 2026
+[complete Seedance 2.5 prompt and attached 30-second generated result](https://x.com/Goodmanprotocol/status/2097365433854959774).
+
 ---
 
 ## Reusable templates
@@ -30117,6 +30388,12 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [Saul Goodman / @Goodmanprotocol — September 9, 2026 Seedance 2.5 crust-machine Earth split: complete 30-second prompt, attached playable result, X Made with AI label, irreversible planetary states, two-ship order and scale-preserving final pullback](https://x.com/Goodmanprotocol/status/2097365433854959774)
+
+- [TechieSA / @TechieBySA — September 9, 2026 Seedance 2.5 one-way clock-tower time run: attached playable 15-second result with X Made with AI label, three strict visual references, complete timed prompt, fixed street axis and lightning-to-cable-to-hook contact chain](https://x.com/TechieBySA/status/2097359965987934264) ([reference-sheet prompt](https://x.com/TechieBySA/status/2097359980244426876), [complete timed video prompt](https://x.com/TechieBySA/status/2097359986607169824))
+
+- [Kōda / @aimikoda — September 9, 2026 Seedance 2.5 continuous vertical combat relay: attached generated result, complete thirty-beat two-reference prompt, alternating initiative, explicit empty-space teleport phases and disclosed uniform 1.30x post-speed finish](https://x.com/aimikoda/status/2097358700428059003) ([complete source prompt](https://x.com/aimikoda/status/2097358972227326241))
 
 - [simeon-sanai / @Naiknelofar788 — September 9, 2026 Seedance 2.5 French 1955 newsreel: complete archival-street prompt, attached playable 30.14-second result, X `Made with AI` label, period-closed object vocabulary, observational crowd actions and analogue-film degradation](https://x.com/Naiknelofar788/status/2097354764925509789)
 
