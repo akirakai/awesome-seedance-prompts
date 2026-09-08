@@ -326,6 +326,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Nine-shot creation monologue with voice-identity and reflection-match ledgers](#310-nine-shot-creation-monologue-with-voice-identity-and-reflection-match-ledgers)
   - [Asymmetric-mecha traversal with irreversible component ledger](#311-asymmetric-mecha-traversal-with-irreversible-component-ledger)
   - [Blind-box-to-live-look reveal with mirrored-attribute and silence ledgers](#312-blind-box-to-live-look-reveal-with-mirrored-attribute-and-silence-ledgers)
+  - [Route-locked fashion journey with phased wardrobe and delayed companion entry](#313-route-locked-fashion-journey-with-phased-wardrobe-and-delayed-companion-entry)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -18838,6 +18839,164 @@ Adapted and rewritten from John / @johnAGI168's September 8, 2026
 
 ---
 
+### 313. Route-locked fashion journey with phased wardrobe and delayed companion entry
+
+**Verified model:** Seedance 2.5 — the original creator labels the post with
+this exact version and publishes a complete 30-second prompt beside the attached
+playable 30-second generated result  
+**Use case:** fashion-travel campaign, multi-location montage, persistent wearable
+and prop continuity, late ensemble entry, sparse title-card rhythm  
+**Mode:** text-to-video  
+**Suggested settings:** 30 seconds, photoreal live action, 24fps, 180-degree
+shutter, hard cuts only, native ambience beneath one instrumental music bed
+
+```text
+Create a 30-second photorealistic editorial road-trip film across New Zealand.
+Follow one original adult woman from a rain-darkened city to a volcanic beach.
+The pace is energetic, but every shot must prove where she is, what she carries
+and which phase of the journey has begun. Use motivated hard cuts only; never
+morph one location, face or outfit into another.
+
+IDENTITY AND ROLE LEDGER
+LEAD — one woman in her early twenties with a heart-shaped face, hazel-brown
+eyes, warm fair skin with visible freckles, long dark wavy hair and a slim
+athletic build. Preserve the same face, body scale, hair length and natural skin
+texture in all sixteen shots. She never speaks or lip-moves.
+COMPANION — one woman in her early twenties with a short dark bob, pale-yellow
+sweatshirt, loose denim and white shoes. She does not exist before 21.6s, enters
+once from frame right, and remains the same person through the ending.
+
+PERSISTENT OBJECTS
+The lead wears white wired earphones in both ears whenever visible; keep both
+buds and the cable physically connected instead of fading, becoming wireless or
+changing colour. One small black shoulder bag belongs only to wardrobe phase A.
+One cream daypack belongs only to phase B. One compact black camera follows the
+lead through all three phases, has realistic weight, and may transfer to the
+companion only during the declared photograph shot.
+
+WARDROBE STATE MACHINE
+A, 0.0–6.5s — cobalt rain shell, straight black trousers and white trainers.
+B, 6.5–16.0s — cream cropped fleece, forest-green cargo skirt over black
+leggings, cream daypack and the same white trainers.
+C, 16.0–30.0s — graphite track jacket, loose black trousers, white trainers and
+small silver hoops.
+Change clothes only at the two stated hard cuts. Never mix garments between
+phases, return to a retired phase, or change identity with the outfit.
+
+ROUTE LEDGER
+Travel in this exact order: wet Auckland street -> historic rail platform ->
+moving coastal train -> rural station -> green hill road -> waterfall path ->
+ocean cliff -> black-sand beach -> beach café edge. A later shot may look back
+toward an earlier landscape, but the route cannot reverse, skip ahead and return,
+or invent another country. Preserve overcast coastal weather gradually warming
+toward late-day light.
+
+0.0–2.2s — RAIN INTRO
+Handheld 50mm close shot beside the lead as she walks through light rain in
+phase A. Water beads cling to the shell, traffic and pedestrians move behind her,
+and she gives one small private smile while listening.
+
+2.2–3.8s — CAMERA PROOF
+85mm detail of her fingers changing one setting on the compact camera. Keep the
+earphone wire crossing the jacket and let rain remain attached to fabric.
+
+3.8–6.5s — CITY EXIT
+Track at 35mm while she crosses the reflective street. She glances back once.
+A passing bus fills the foreground and supplies the cut surface; it must not
+intersect her body.
+
+6.5–8.6s — PLATFORM ARRIVAL
+Cut behind the bus wipe to phase B at the old covered platform. She walks toward
+the train with the compact camera in hand and cream pack on her shoulders.
+
+8.6–10.4s — TRAIN APPROACH
+One low 24mm platform view. The train enters, then braking air and displaced wind
+move her hair and fleece. Her reaction follows the train's arrival, not before it.
+
+10.4–12.6s — WINDOW QUIET
+Inside the moving train, use an intimate 50mm side view. She rests near the
+window while ocean cliffs pass outside in a consistent direction; cable and
+camera strap remain readable.
+
+12.6–14.2s — REFLECTION BEAT
+85mm close-up in the rain-streaked glass. Keep one face and one optically plausible
+reflection. She closes her eyes briefly, then smiles without speaking.
+
+14.2–16.0s — RURAL DISEMBARK
+Hard cut to the countryside platform. She steps down once and walks forward.
+Place one large condensed vertical title, 'AOTEAROA', inside a clear side lane;
+remove it before the next shot. No station sign or other readable copy.
+
+16.0–18.0s — HILL PHASE
+Phase C begins. A 24mm lateral track follows her along an emerald road while
+cloud shadows cross distant hills. The compact camera stays with her.
+
+18.0–19.8s — WATERFALL TURN
+Wide view on a wet wooden path. She turns toward the waterfall, mist reaches her
+jacket and she laughs naturally without forming words.
+
+19.8–21.6s — COAST REVEAL
+Begin behind her on the cliff path, then move gently to her side to reveal the
+black-sand shore below. Do not orbit or switch to a drone.
+
+21.6–23.2s — COMPANION ENTRY
+At beach level, the companion enters from frame right carrying exactly two
+unbranded takeaway cups. The lead notices her, then laughs; no companion appears
+in the background of any earlier shot.
+
+23.2–25.0s — TWO-PERSON WALK
+35mm side two-shot. They walk barefoot on wet black sand, each carrying her own
+shoes. Keep two women, two cups already set aside off-frame, and the same compact
+camera with the lead until the next beat.
+
+25.0–26.4s — CONTROLLED PROP TRANSFER
+The lead visibly hands the compact camera to the companion. Only after receiving
+it does the companion raise it and take one photograph. The lead covers part of
+her face playfully; the shutter sound occurs once at the visible button press.
+
+26.4–28.0s — RUN TO THE SURF
+Wide low 24mm view as both run toward shallow water. Feet displace wet sand,
+clothes and hair respond to the same wind, and nobody teleports ahead.
+
+28.0–30.0s — FREE DANCE AND TITLES
+Near the café edge, both stop and move freely to the music without synchronized
+choreography. At 28.6s show 'CHASE WEATHER'; at 29.3s replace it with 'FOLLOW THE
+TIDE'. Keep both cards bold, condensed, inside safe margins, and remove all other
+text. The lead lifts one arm, both laugh, then hard-cut to black.
+
+IMAGE AND MOTION CONTRACT
+Use cool blue rain, deep green terrain, true volcanic-black sand and restrained
+warmth in the closing skin tones. Keep natural grain, slight optical bloom, real
+moisture and atmospheric depth. City shots may carry modest handheld movement;
+train portraits are stable 50–85mm; landscapes use 24mm depth and gentle lateral
+travel. No artificial slow motion, crash zoom, glossy beauty filter or synthetic
+CGI sheen.
+
+AUDIO LEDGER
+Maintain one instrumental music bed across the complete route without restarting
+at cuts. Layer location-owned sound beneath it: rain on nylon, traffic, train
+brakes and rail vibration, waterfall, ocean wind, footsteps, one shutter click,
+cloth movement and small natural laughs. No dialogue, voice-over, lyrics or
+silent mouth performance.
+
+Reject a second lead, early companion, duplicated tourist, face drift, wardrobe
+phase mixing, disappearing earphones, wireless earbuds, cable discontinuity,
+camera duplication, unmotivated camera-owner swap, impossible reflection,
+reversed route, extra title, malformed text, brand substitution, warped hand,
+plastic skin, drone orbit, morph transition, subtitle, logo or watermark.
+```
+
+**Why it works:** four orthogonal ledgers prevent a fast travel montage from
+becoming a set of unrelated beauty shots. Route order controls geography;
+wardrobe phases make time progression explicit; the wired earphones and compact
+camera audit object continuity; and the companion's one-way entry time prevents
+premature duplication. The visible handoff also gives the only camera ownership
+change a causal event.
+
+Adapted and rewritten from Strength04_X's September 8, 2026
+[Seedance 2.5 complete prompt and attached 30-second generated result](https://x.com/Strength04_X/status/2097303258171949530).
+---
+
 ## Reusable templates
 
 ### Medium-native animation-style compiler and timing-matched story harness
@@ -29820,6 +29979,8 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [Strength04_X — September 8, 2026 Seedance 2.5 New Zealand fashion journey: attached playable 30-second result, complete sixteen-shot prompt, ordered city-to-beach route, three wardrobe phases, persistent wired-earphone and compact-camera ledgers, delayed companion entry and two-card closing rhythm](https://x.com/Strength04_X/status/2097303258171949530)
 
 - [John / @johnAGI168 — September 8, 2026 Seedance 2.5 blind-box unboxing and live-look transformation: attached playable 30-second result, complete four-part prompt, collectible-to-human attribute map, gesture-owned occlusion edit, eight-beat fashion showcase, two-line Mandarin voice budget and left/right colour lock](https://x.com/johnAGI168/status/2097249504986644872)
 
