@@ -18995,6 +18995,7 @@ change a causal event.
 
 Adapted and rewritten from Strength04_X's September 8, 2026
 [Seedance 2.5 complete prompt and attached 30-second generated result](https://x.com/Strength04_X/status/2097303258171949530).
+
 ---
 
 ## Reusable templates
