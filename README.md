@@ -324,6 +324,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Asymmetric rooftop duo with single bullet-time interrupt](#308-asymmetric-rooftop-duo-with-single-bullet-time-interrupt)
   - [Twelve-cut clandestine boss standoff with foreground-occlusion ledger](#309-twelve-cut-clandestine-boss-standoff-with-foreground-occlusion-ledger)
   - [Nine-shot creation monologue with voice-identity and reflection-match ledgers](#310-nine-shot-creation-monologue-with-voice-identity-and-reflection-match-ledgers)
+  - [Asymmetric-mecha traversal with irreversible component ledger](#311-asymmetric-mecha-traversal-with-irreversible-component-ledger)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -18631,6 +18632,114 @@ Adapted and rewritten from Amir D / @starks_arq's September 8, 2026
 the [creator's complete-prompt reply](https://x.com/starks_arq/status/2097020960780189918),
 and the public [eight-prompt SPECTRUM production PDF](https://drive.google.com/file/d/1aW2GCy8Set_0Pw7aIWg5foHEXtLQDRc9/view?usp=sharing).
 
+### 311. Asymmetric-mecha traversal with irreversible component ledger
+
+**Verified model:** Seedance 2.5 — the original creator explicitly names this
+version, attaches the generated anime battle, and publishes the complete prompt
+in a same-thread reply  
+**Use case:** two-heroine anime action, extreme size contrast, hybrid 2D/live-action
+compositing, traversable enemy anatomy, persistent cross-cut damage  
+**Mode:** three-reference image-to-video  
+**Suggested settings:** 15-second prompt, 16:9, nine hard cuts, native music and
+effects; the attached X player reports about 28 seconds, so verify delivered
+duration and reject an unrequested repeat before approval
+
+```text
+Create a high-frame-count theatrical Japanese-anime fight at sunset in one wet
+Shibuya crossing. @Image1 owns the white-haired adult swordswoman's face, hair,
+purple costume, large white boots, ornaments and katana. @Image2 owns the
+black-haired adult swordswoman's distinct face, hair, teal costume, multicolour
+boots, ornaments and katana. @Image3 owns AKAONI, one enormous red oni mech:
+asymmetric left/right horns, blue circular sensor, fangs, black dorsal spikes,
+red-and-white heavy armour and one oversized white arm. Never exchange either
+woman's identity, sword or colour family, and never mirror the mech's horns or arm.
+
+COMPOSITING AND SCALE CONTRACT
+Render both women as stable hand-drawn 2D line art and cel shading. Render the
+mech, glass towers, crosswalk and wet asphalt photorealistically. Integrate the
+women through correct occlusion, contact shadow, reflected light and foot pressure;
+do not turn them photoreal or flatten the mech into cel art. Keep the primary mech
+large enough that both women can run along its forearm. Distant same-model mechs
+may establish scale but may not enter the primary fight.
+
+IRREVERSIBLE COMPONENT LEDGER
+Track five named states across every cut:
+1. SHOULDER SHELL: intact -> scored in Shot 2 -> remains scored.
+2. WHITE ARM DRIVE: intact -> shaft and cables severed in Shot 4 -> arm slows.
+3. CHEST PLATE: closed -> split in Shot 6 -> stays open.
+4. CENTRAL FRAME: exposed -> cut from both sides in Shot 7 -> torso tips forward.
+5. WHITE ARM: attached -> detaches in Shot 7 -> lands behind the women in Shot 8
+   -> remains the same foreground wreckage in Shot 9.
+No repaired armour, duplicate arm, migrated wound or debris reset.
+
+0.0–1.0 s — One fast forward push from high behind both women as they sprint
+along a roof edge at frame-left and leap toward the primary mech filling the
+right foreground. Its blue sensor acquires them only after the leap begins.
+
+1.0–2.5 s — One low parallel track beside the mech's shoulder. The white-haired
+woman twists in flight, cuts one visible score through the shoulder shell and
+lands; the black-haired woman somersaults over her. Contact precedes sparks.
+
+2.5–4.0 s — One lateral move along the swinging white forearm. The white-haired
+woman runs low along its surface while the black-haired woman plants once near
+the elbow and jumps toward the chest. End with the first sword aligned to the
+cylindrical joint before contact.
+
+4.0–5.5 s — One short follow in the blade direction. Close enough to prove the
+white-haired woman inserts her sword into the joint gap, opens the shell, severs
+the shaft and cables, and kicks away only after orange sparks and blue discharge.
+The arm visibly loses speed.
+
+5.5–7.0 s — One pullback between two giant silhouettes. The women cross at
+different heights without touching, preserve their travel directions, then
+separate toward opposite sides of the already damaged primary mech.
+
+7.0–8.5 s — One diagonal track beside the black-haired woman's blade. She kicks
+the chest for leverage, rotates once and cuts downward through one joint. The
+chest plate opens and reveals the mechanical frame; do not close it on the cut.
+
+8.5–11.0 s — One retreating high frontal shot. The white-haired woman enters
+from screen-left and the black-haired woman from screen-right; their synchronized
+cuts meet the exposed frame from opposite sides. Only after both contacts do the
+central frame separate, the white arm detach and the torso pitch forward. Both
+women kick away toward the street.
+
+11.0–13.0 s — One low backward track inches above the crosswalk. The white-haired
+woman lands foreground with one hand down; the black-haired woman lands behind
+and absorbs the impact through bent knees. The same detached white arm then
+strikes the wet asphalt behind them, scrapes once and stops, throwing sparks,
+water and metal fragments without hitting either woman.
+
+13.0–15.0 s — One subtle push on a full-body two-shot. Place the women on their
+locked sides with the same detached arm and red-white debris in front. They lower
+their swords, exchange one grin and lightly bump their empty hands at centre.
+One final armour fragment drops behind them on the last EDM hit; hold both faces.
+
+MOTION, CAMERA AND AUDIO
+Carry momentum between actions: dodge rotation becomes a cut, landing recoil
+becomes the next jump, and every reaction follows a completed impact. Give each
+shot only its declared primary camera move; match travel and blade direction
+across cuts. Keep faces and contact points sharp while motion blur belongs to
+backgrounds and fragments. Fast EDM throughout; synchronize metal slices,
+electrical break, heavy body collapse and final debris hit. No dialogue.
+
+No slow motion, aerial pause, long wind-up, split screen, subtitle, title,
+onomatopoeia, logo, watermark, extra heroine, sword swap, mirrored asymmetry,
+floating foot, pre-contact damage, instant arm fall or restored component.
+```
+
+**Why it works:** the oversized arm changes role without changing identity: it
+is first a moving attack surface, then a traversable path, then a disabled
+component and finally persistent wreckage. Named irreversible states let nine
+rapid cuts preserve cause, scale and damage, while separate render authorities
+keep the cel-drawn heroines legible inside a photoreal metal environment.
+
+Adapted and rewritten from Tosukun / @tokyo_Valentine's September 8, 2026
+[Seedance 2.5 generated battle and version declaration](https://x.com/tokyo_Valentine/status/2097234711072669886)
+and the creator's [complete nine-cut source prompt](https://x.com/tokyo_Valentine/status/2097234714461716636).
+
+---
+
 ## Reusable templates
 
 ### Medium-native animation-style compiler and timing-matched story harness
@@ -29613,6 +29722,8 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [Tosukun / @tokyo_Valentine — September 8, 2026 Seedance 2.5 giant-oni-mecha battle: attached generated result, two cel-shaded swordswomen, one photoreal asymmetric enemy, complete nine-cut prompt, traversable forearm and irreversible shoulder / drive / chest / frame / detached-arm state chain](https://x.com/tokyo_Valentine/status/2097234711072669886) ([complete source prompt](https://x.com/tokyo_Valentine/status/2097234714461716636))
 
 - [Atomic Gains — September 8, 2026 Seedance 2.5 animation-style library: generated OpenArt examples plus 33 complete master prompts and 31 timed stories spanning cel, ink, paint, fibre, paper, stop-motion, practical miniature, hybrid and display-media grammars](https://www.youtube.com/watch?v=RbAwwMte270) ([public prompt library](https://docs.google.com/document/d/1V3En-pWsczDDycTYqjwSJc3c88gANlB7/edit?usp=sharing))
 
