@@ -327,6 +327,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Asymmetric-mecha traversal with irreversible component ledger](#311-asymmetric-mecha-traversal-with-irreversible-component-ledger)
   - [Blind-box-to-live-look reveal with mirrored-attribute and silence ledgers](#312-blind-box-to-live-look-reveal-with-mirrored-attribute-and-silence-ledgers)
   - [Route-locked fashion journey with phased wardrobe and delayed companion entry](#313-route-locked-fashion-journey-with-phased-wardrobe-and-delayed-companion-entry)
+  - [Era-closed 1955 French newsreel with image-space film damage](#314-era-closed-1955-french-newsreel-with-image-space-film-damage)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -18996,6 +18997,142 @@ change a causal event.
 Adapted and rewritten from Strength04_X's September 8, 2026
 [Seedance 2.5 complete prompt and attached 30-second generated result](https://x.com/Strength04_X/status/2097303258171949530).
 
+
+### 314. Era-closed 1955 French newsreel with image-space film damage
+
+**Verified model:** Seedance 2.5 — the original creator names this exact model,
+publishes the complete prompt in the post, and attaches a playable 30.14-second
+result carrying X's `Made with AI` media label  
+**Use case:** historical live action, archival documentary simulation, ensemble
+street blocking, period-contamination control, analogue-film degradation  
+**Mode:** text-to-video  
+**Suggested settings:** 30 seconds, monochrome 4:3 archival composition, restrained
+documentary cutting, native location ambience without narration
+
+```text
+Create a 30-second black-and-white European newsreel that appears to have been
+filmed on an ordinary French city street in 1955 and rediscovered in an archive.
+This is observed daily life, not a costume pageant: nobody performs for the
+camera, no single pedestrian becomes a modern commercial hero, and every action
+continues naturally beyond its cut.
+
+CLOSED ERA INVENTORY
+The world contains only mid-1950s French street evidence: narrow cobbles,
+weathered stone façades, iron balconies, striped café awnings, glass shopfronts,
+period street lamps, one newspaper kiosk, upright bicycles and a small number of
+rounded post-war French cars. Adults wear wool coats, modest dresses, suits,
+scarves, flat caps and leather shoes; children wear simple coats and remain with
+their families. Hair, tailoring, luggage and spectacles all belong to the same
+year.
+
+Treat this inventory as closed. Do not introduce contemporary road markings,
+plastic street furniture, LED lighting, modern storefronts, trainers, synthetic
+sportswear, smartphones, earbuds, digital watches, recent vehicles, present-day
+logos, modern safety signs or readable anachronistic copy. An uncertain object
+must remain outside the frame rather than being modernized.
+
+STREET-LIFE LEDGER
+Maintain one coherent street axis and recurring background geography across the
+sequence. Use these distinct actions once each:
+- one newspaper seller crosses the pavement carrying a bundle;
+- one seated patron reads a folded paper outside the café;
+- one waiter carries a small tray from doorway to table;
+- two cyclists pass in the road lane without intersecting pedestrians;
+- one couple exits the café and joins the pavement flow;
+- one parent guides two children past the kiosk;
+- two period cars advance slowly in the same traffic direction.
+
+Do not duplicate performers, vehicles, bicycles, newspapers or café furniture.
+Crowd members enter, pass and leave on continuous paths. Nobody teleports,
+reverses direction at a cut, freezes for the lens or looks into camera.
+
+0.0–4.0s — FOUND-STREET ESTABLISHER
+Begin on a slightly elevated 35mm view from across the road. A car passes the
+foreground, revealing the café, kiosk and walking crowd. The operator reacts a
+fraction late and settles the frame imperfectly.
+
+4.0–7.5s — HEADLINE RUN
+Cut to a shoulder-height 50mm follow as the newspaper seller threads through
+pedestrians. Papers flex with his stride. His call is audible but distant and
+not clean enough to become narration or subtitles.
+
+7.5–10.5s — CAFÉ OBSERVATION
+Hold a patient medium view: the seated patron turns one page while the waiter
+places a cup at another table. Steam and cigarette smoke drift independently;
+hands touch real objects with plausible weight.
+
+10.5–13.5s — TRAFFIC CROSSING
+Use a low curbside 35mm angle. Bicycle wheels pass close to lens, then a rounded
+period car continues behind them. Preserve lane direction, wheel rotation,
+reflections and pedestrian spacing.
+
+13.5–16.5s — HUMAN DETAIL
+Cut to an unposed 75mm glimpse of the parent and children crossing near the
+kiosk. Focus arrives slightly late, holds briefly, then breathes as another
+pedestrian partially occludes them.
+
+16.5–20.0s — NEWSPAPER INSERT
+Show hands opening a broadsheet on a café table, then a close detail of dense
+period print and halftone photographs. Keep text indistinct except for plausible
+typographic rhythm; do not invent clean modern headlines or floating letters.
+
+20.0–24.0s — STREET FLOW
+Return to the established axis with a gentle handheld pan following the exiting
+couple. Cyclists and cars retain their earlier direction. The pan overshoots by
+a few degrees and corrects once, like a human news cameraman anticipating late.
+
+24.0–27.0s — MATERIAL CUTAWAYS
+Use three short observational inserts: a bicycle hub turning, coffee trembling
+on a saucer as a car passes, then worn shoes stepping from cobble to curb. Each
+insert inherits the same overcast light and street ambience.
+
+27.0–30.0s — ARCHIVE ENDING
+Widen as the crowd absorbs every featured person back into ordinary street life.
+A car briefly masks the lower frame; exposure blooms near the pale sky, the
+camera stops abruptly and the reel ends without a modern title or fade.
+
+CAMERA CONTRACT
+Photograph the event as imperfect field documentation: mostly shoulder-height
+35–50mm lenses, one restrained 75mm detail, modest handheld sway, spontaneous
+reframing, occasional focus lag, natural motion blur and only one gentle manual
+zoom. Cuts are simple physical splices. No gimbal glide, drone, impossible
+orbit, speed ramp, bullet time, rack-focus showcase or contemporary coverage
+grammar.
+
+PHOTOCHEMICAL CONTRACT
+Render soft monochrome 35mm nitrate-newsreel character with moderate organic
+grain, low micro-contrast, uneven exposure, slight gate weave, tiny brightness
+flicker, occasional dust, hairline scratches, mild edge softness and one brief
+light leak. Film damage belongs to the image plane: dust and scratches may cross
+people and buildings without gaining depth, casting shadows or moving like
+objects in the street. Keep faces human beneath the degradation; do not use a
+clean digital image with a uniform vintage overlay.
+
+AUDIO CONTRACT
+Use one continuous mono location bed: soft French crowd murmur, leather
+footsteps on cobbles, bicycle freewheels and bells, café crockery, paper rustle,
+a distant seller's call and restrained period-engine noise. Perspective follows
+the cut. Add faint projector flutter only as archival presentation texture.
+No voice-over, modern music, stereo effects, intelligible invented dialogue,
+subtitles or synthetic trailer impacts.
+
+Reject colour leakage, modern contamination, repeated extras, cloned faces,
+extra fingers, object intersections, floating newspapers, traffic reversal,
+clean digital sharpness, decorative sepia, looping scratch overlays, CGI smoke,
+present-day signage, legible gibberish, subtitles, logos and watermarks.
+```
+
+**Why it works:** the closed era inventory turns historical accuracy into an
+auditable whitelist instead of relying on a vague vintage adjective. The
+street-life ledger gives each recurring person and vehicle one causal path, while
+the fixed street axis makes continuity checkable across documentary cuts. Most
+importantly, the photochemical contract separates image-plane damage from the
+physical scene, preventing scratches, dust and flicker from behaving like
+three-dimensional props or a modern filter.
+
+Adapted and rewritten from simeon-sanai / @Naiknelofar788's September 9, 2026
+[complete Seedance 2.5 prompt and attached 30.14-second generated result](https://x.com/Naiknelofar788/status/2097354764925509789).
+
 ---
 
 ## Reusable templates
@@ -29980,6 +30117,8 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [simeon-sanai / @Naiknelofar788 — September 9, 2026 Seedance 2.5 French 1955 newsreel: complete archival-street prompt, attached playable 30.14-second result, X `Made with AI` label, period-closed object vocabulary, observational crowd actions and analogue-film degradation](https://x.com/Naiknelofar788/status/2097354764925509789)
 
 - [Strength04_X — September 8, 2026 Seedance 2.5 New Zealand fashion journey: attached playable 30-second result, complete sixteen-shot prompt, ordered city-to-beach route, three wardrobe phases, persistent wired-earphone and compact-camera ledgers, delayed companion entry and two-card closing rhythm](https://x.com/Strength04_X/status/2097303258171949530)
 
