@@ -19861,6 +19861,137 @@ Adapted and rewritten from Loriel.AI / @ou_zhen599's September 9, 2026
 
 ## Reusable templates
 
+### Paired-version task router with duration- and usable-take-normalized scoring
+
+**Verified models:** Seedance 2.0 and Seedance 2.5 — Kapwing author Emily
+Peng reports running the same disclosed prompts through both named models,
+embeds the paired outputs and records credit use for five tests  
+**Use case:** choose a Seedance version by measured task fit rather than assuming
+the newest model wins every shot  
+**Mode:** matched text-to-video or reference-to-video A/B; use the same prompt,
+reference assets and exposed settings in both arms
+
+```text
+PAIRED-VERSION TASK ROUTER
+
+VERSIONS
+ARM A = Seedance 2.0
+ARM B = Seedance 2.5
+
+FIX BEFORE GENERATION
+- one exact prompt string and one immutable reference set per test;
+- same aspect ratio, requested duration, audio choice and resolution where both
+  endpoints expose equivalent controls;
+- same seed only when both endpoints expose and honor it; otherwise record
+  “seed unavailable” instead of implying determinism;
+- at least three takes per arm for production decisions when budget allows;
+- preserve every returned file, job ID, model label, actual duration and credit
+  charge before judging quality.
+
+RUN SEPARATE TEST CELLS
+Do not combine all capabilities in one beauty shot.
+
+1. MULTI-SHOT IDENTITY
+Use one adult reference subject across four ordinary locations or actions.
+Score face, hair, clothing, accessories, setting and lighting separately. A
+recognizable face does not cancel a changed jacket or relocated environment.
+
+2. LIQUID ACCUMULATION
+Pour one liquid into one transparent vessel. Score impact splash, surface
+movement, bubbles or foam, rising volume, viscosity, containment and audio
+synchronization. Reject a perfectly flat fill, changing vessel or sound that
+arrives after the visible impact.
+
+3. FABRIC SETTLING
+Drop one lightweight cloth onto a fixed surface with a locked camera. Check
+whether every later fold can plausibly follow from the initial shape, direction
+and gravity. Separate motion quality from texture sharpness.
+
+4. REQUESTED-DURATION CONTINUITY
+Give one subject a route with a clear start, intermediate landmarks and finish,
+then request the longest duration needed by the project. Record requested and
+returned seconds. Score whether the action actually advances throughout; reject
+subject-only slow motion, repeated filler or background people moving at a
+different time scale.
+
+5. HAND-OBJECT CAUSALITY
+Use one familiar mechanical interaction with visible resistance and release,
+such as opening a tabbed container. Score hand ownership, finger contact, object
+geometry, tension before release, spray or movement after release and exact
+sound timing. A polished product frame does not pass if the causal chain is
+wrong.
+
+6. REFERENCE-TO-STYLE TRANSFORMATION
+Apply one strongly defined illustrated or animated grammar to the same reference
+subject. Score two axes independently:
+A. subject fidelity — identity and recognizable design survive;
+B. style fidelity — anatomy, line, shading, proportion and motion genuinely
+belong to the target medium.
+Do not call one arm better until the project declares which axis matters more.
+
+7. PRECISE CAMERA COVERAGE
+Request two unmistakable shots: a direction-locked follow shot, then one hard
+cut to a specified close view on a physical action. Score camera axis, centring,
+lateral drift, cut type, action match and scene continuity. Smoothness is not a
+substitute for the requested composition.
+
+PER-TAKE LEDGER
+MODEL =
+PROMPT HASH =
+REFERENCE HASHES =
+REQUESTED / RETURNED DURATION =
+RESOLUTION / ASPECT / AUDIO =
+CREDITS =
+IDENTITY =
+OBJECT AND WARDROBE CONTINUITY =
+PHYSICS AND CONTACT =
+STYLE FIDELITY =
+CAMERA COMPLIANCE =
+AUDIO CAUSALITY =
+FAILURE NOTES =
+USABLE WITHOUT REGENERATION = YES / NO
+
+NORMALIZE COST
+Report:
+- credits per returned second;
+- credits per usable take;
+- total credits required to obtain one accepted result.
+Never compare raw totals when one arm returned a different duration or required
+more retries.
+
+ROUTING DECISION
+Choose the model separately for each production need. Begin with the published
+observations only as hypotheses:
+- test Seedance 2.5 first for long multi-shot continuity, preserved reference
+  identity, liquid behavior and hand-object interaction;
+- test Seedance 2.0 first when literal camera placement or stronger migration
+  into a stylized medium matters more than reference fidelity;
+- run both when the shot mixes those priorities.
+
+ACCEPTANCE
+Publish the prompt, exact model names, references or their hashes, number of
+takes, actual duration, cost, output links and failures. Do not promote one
+unseeded take into a universal ranking, average unlike tasks into one score,
+hide a shortened result, or declare a cheaper model from an unnormalized total.
+```
+
+**Why it works:** model choice becomes a routing problem with seven isolated
+failure surfaces rather than one subjective “looks better” verdict. The source
+tests found Seedance 2.5 stronger in several continuity and contact cases, while
+Seedance 2.0 followed the requested rear-follow framing more literally and
+pushed a reference further into a late-1990s animation grammar. The same source
+also recorded mixed credit directions and a 30-second request that returned
+different actual durations, which is why cost must be normalized by delivered
+seconds and accepted takes.
+
+The published evidence is a useful starting prior, not a benchmark: it appears
+to contain one take per arm for each prompt, did not disclose fixed seeds and
+did not hold every output length equal. Re-run the matrix on project-specific
+assets before fixing a production route.
+
+Adapted and rewritten from Emily Peng's September 9, 2026
+[paired Seedance 2.0 versus Seedance 2.5 tests, disclosed prompts, embedded outputs, credit ledger and failure notes](https://www.kapwing.com/resources/is-seedance-2-5-actually-better-than-2-0-heres-what-i-found/).
+
 ### Medium-native animation-style compiler and timing-matched story harness
 
 **Verified model:** Seedance 2.5 — Atomic Gains' September 8, 2026
@@ -30928,6 +31059,8 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [Emily Peng / Kapwing — September 9, 2026 paired Seedance 2.0 and Seedance 2.5 task tests: identical disclosed prompts, embedded outputs, character / liquid / fabric / duration / object / style / camera comparisons, per-test credit records and explicit limitations](https://www.kapwing.com/resources/is-seedance-2-5-actually-better-than-2-0-heres-what-i-found/)
 
 - [Loriel.AI / @ou_zhen599 — September 9, 2026 Seedance 2.5 three-hand memory portal: complete 30-second prompt, attached playable result, fixed triangular reality map, closed hand order, sword-hand ledger, reversible contact-point transition, solo combat memory and overlapping reaction timing](https://x.com/ou_zhen599/status/2097626458734911700)
 
