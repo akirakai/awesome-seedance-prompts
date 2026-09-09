@@ -335,6 +335,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Burned evacuation ledger placed above the victory record](#319-burned-evacuation-ledger-placed-above-the-victory-record)
   - [Three-to-one-to-half-move deadpan duel reversal](#320-three-to-one-to-half-move-deadpan-duel-reversal)
   - [Marina leap and ladder recovery with closed dry-prop and wet-state ledgers](#321-marina-leap-and-ladder-recovery-with-closed-dry-prop-and-wet-state-ledgers)
+  - [Three-hand contact portal with closed memory and reaction states](#322-three-hand-contact-portal-with-closed-memory-and-reaction-states)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -19727,6 +19728,135 @@ continuous piece of readable geography and body mechanics.
 Adapted and rewritten from u/mementomori2344323's September 9, 2026
 [complete Seedance 2.5 1080p prompt, generated result and creator discussion](https://www.reddit.com/r/Seedance_AI/comments/1vqytn3/some_people_still_think_ai_doest_look_real_this/).
 
+
+### 322. Three-hand contact portal with closed memory and reaction states
+
+**Verified model:** Seedance 2.5 — the creator explicitly names Seedance 2.5,
+publishes the complete 30-second prompt and attaches the generated result  
+**Use case:** multi-reference fantasy drama, contact-triggered flashback, short
+action insert, group blocking, native dialogue and narration  
+**Mode:** multi-reference image-to-video  
+**Suggested settings:** 30 seconds, 16:9, controlled multi-shot sequence, native
+English dialogue and sound
+
+```text
+Create a 30-second realistic fantasy-drama sequence. Three clearly adult women
+meet beside one stationary weathered car on an abandoned elevated road. Traveller
+A, Traveller B, Warrior C, the car and the road each have one separate visual
+reference. Treat every reference as a role contract, not a composition to copy:
+the three faces and wardrobes remain distinct; the car defines one object; the
+road defines one continuous geography. Only Warrior C appears inside the memory.
+
+REALITY MAP
+The car is parked behind the two travellers, nose pointing screen-left. A and B
+stand half a metre apart. C approaches from the road and stops about 70 cm in
+front of them, forming a readable triangle. Keep every reality camera on one
+side of the line between C and the travellers. The first frame already contains
+all three women and the car.
+
+CLOSED HAND AND WEAPON LEDGERS
+C carries one straight sword in her right hand, low and clear of every body; its
+scabbard remains at her left hip. She uses only her left hand for contact.
+The stack is always: C's left hand on the bottom, A's right hand in the middle,
+B's left hand on top. In overhead view those forearms enter from bottom, upper
+left and upper right respectively. The memory cannot open until B completes the
+top contact. Do not swap hands, duplicate the sword or let it drift between cuts.
+
+0–3.5 s — APPROACH AND QUESTION
+A small forward camera drift preserves the triangle as C plants her final step.
+A watches C steadily; B stays close to A but checks C's sword once. C looks from
+A to B and asks in a quiet adult female voice, “Do you want the truth?” Keep the
+other mouths closed.
+
+3.5–7.5 s — INVITATION AND STACK
+C presents her empty left palm at waist height while her sword arm stays still.
+She says, “Then give me your hands.” A commits first with her right hand. B
+hesitates for one beat, then places her left hand on top. At 6.0 seconds hard cut
+to a strict vertical overhead that clearly shows all three sleeve and skin
+identifiers. Show one clean landing per hand with natural finger placement and
+skin compression.
+
+7.5–9 s — OPEN THE MEMORY
+Only after the third hand settles, thin antique-gold light escapes from the hand
+seams and forms a transparent circular window above the contact point. Inside
+the circle, reveal a top-down stone clearing beneath flowering trees; outside it,
+the stacked hands and grey road remain visible. Expand the window without a
+white flash, body morph or petal wipe until the clearing fills frame at 9.0
+seconds on the same downward-facing geometry.
+
+9–17.5 s — ONE CONTINUOUS COMBAT MEMORY
+The memory contains Warrior C alone. Cut to a wide oblique full-body view that
+keeps both feet, hips and the entire blade path visible. She performs one
+unbroken phrase: drop weight into a rising diagonal cut; advance one grounded
+step into a horizontal cut; absorb the momentum and stop the blade safely across
+her left side. Hips lead shoulders, cloth and ribbons trail, and motion blur
+belongs mainly to the blade. Do not invent an opponent, energy wave or extra
+attack.
+
+Across this phrase and three brief detail cuts, one offscreen adult male narrator
+says: “Five centuries ago, she guarded an empire no one here remembers.” C never
+lip-syncs the narration. After the wide action, carry its remaining rotation
+through a close view of her focused eyes, one delayed swing of an earring and
+one petal landing on the flat of the blade before sliding over the near edge.
+She then settles her stance without sheathing or attacking again.
+
+17.5–19 s — CLOSE THROUGH THE SAME CONTACT
+An antique-gold ring contracts from the frame edges. Outside it, restore the
+exact earlier overhead road view and unchanged three-hand order. The clearing
+shrinks into the contact point and disappears at 19.0 seconds. Do not dissolve
+people, turn hands into petals or change exposure.
+
+19–20.5 s — SEPARATE ONCE
+From overhead, A withdraws toward upper left, B toward upper right and C slightly
+downward. Cut to the same-side reality medium shot while that motion is still in
+progress. The car, sword, spacing and road match the opening. B raises her
+withdrawn hand toward her mouth; A remains planted and studies C.
+
+20.5–26.5 s — OVERLAPPING REACTIONS
+A examines her own hand, then C's wrist armour, then C's face. She swallows once
+and exhales without speaking. B is already reacting in the background rather
+than waiting for her close-up. Glide focus to B; she lowers her hand below her
+mouth before asking, “Five hundred years?” in a shocked but controlled voice.
+A and C keep their lips closed.
+
+26.5–30 s — RESTRAINED ANSWER
+Cut along B's eyeline to a three-quarter close-up of C. She listens without lip
+movement. First the tension leaves her eyes, then her chin dips slightly, then
+one corner of her mouth forms the smallest closed-mouth smile. End during an
+extremely slow push-in, with live breathing, faint wind and residual earring
+motion. No extra line and no fade.
+
+PHYSICS, LIGHT AND SOUND
+Use grounded foot pressure, sword inertia, delayed cloth and hair, real hand
+compression and independent breathing. Reality is low-saturation grey-cyan
+daylight with natural warm skin and quiet wind. The memory shifts only the
+environment toward cool mist, restrained pink foliage, cold silver and old gold;
+skin density and light direction remain coherent. Return to the exact opening
+white balance when the window closes.
+
+Use footsteps, cloth, restrained sword air, one low drum contact, sparse plucked
+strings, a short refractive pulse and natural road ambience. Music disappears
+after the return. Keep three voices distinct: C, B and the unseen male narrator.
+A never speaks. No subtitles.
+
+ACCEPTANCE
+Preserve three identities, one car, one sword, one scabbard, fixed hand order,
+screen axis, eyelines, wardrobe and object colours. Reject extra characters,
+face mixing, fused or added fingers, left-right swap, early transition, repeated
+hand contact, weapon drift, full-screen flash, copied gesture loop, new enemy,
+explosion, colour reset, blocked speaking mouth, subtitle, logo or watermark.
+```
+
+**Why it works:** the hand stack is both a closed inventory and a causal switch:
+three identifiable arms must reach one exact state before the memory may open.
+Returning through the same overhead geometry gives the model a reversible
+transition without asking bodies or locations to morph. Separate sword,
+speaker and reaction ledgers keep the combat insert from corrupting the reality
+scene when it resumes.
+
+Adapted and rewritten from Loriel.AI / @ou_zhen599's September 9, 2026
+[complete Seedance 2.5 prompt and attached generated result](https://x.com/ou_zhen599/status/2097626458734911700).
+
 ---
 
 ## Reusable templates
@@ -30798,6 +30928,8 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [Loriel.AI / @ou_zhen599 — September 9, 2026 Seedance 2.5 three-hand memory portal: complete 30-second prompt, attached playable result, fixed triangular reality map, closed hand order, sword-hand ledger, reversible contact-point transition, solo combat memory and overlapping reaction timing](https://x.com/ou_zhen599/status/2097626458734911700)
 
 - [Zephyra Leigh — September 9, 2026 Seedance 2.5 luxury-studio pose relay: playable 15-second result, one-image identity and wardrobe lock, ten distinct silhouettes, photographer-motivated transitions and complete two-part prompt](https://x.com/ZephyraLeigh/status/2097571603362287988) ([prompt part one](https://x.com/ZephyraLeigh/status/2097571607590129877), [prompt part two](https://x.com/ZephyraLeigh/status/2097571612539437146))
 
