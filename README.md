@@ -19861,6 +19861,69 @@ Adapted and rewritten from Loriel.AI / @ou_zhen599's September 9, 2026
 
 ## Reusable templates
 
+### Segment-reference lifecycle gate for clean reruns
+
+**Verified model:** Seedance 2.5, `reference_to_video` via BytePlus — a
+production implementation records the exact rejected request condition, the
+corrected outbound reference arrays and regression tests for image, video and
+audio inputs  
+**Use case:** multi-segment productions that reuse a blocking previs and final
+mixed soundtrack without contaminating reruns with an earlier generated clip  
+**Mode:** reference-to-video for a fresh render; edit or extend only when the
+previous output is intentionally the source
+
+```text
+SEGMENT REFERENCE REGISTRY
+@Video1 = BLOCKING PREVIS. It owns only second-by-second performer paths, shot
+sizes, cuts and camera motion. Copy none of its grey stand-ins, blank sets,
+grid, lighting or appearance. Images and the scene brief own all visible
+identity, wardrobe, props and environments.
+
+@Audio1 = FINAL MASTER. Dialogue and music are already mixed. Synchronize lips,
+actions and cuts to it exactly; generate no additional speech, narration, music
+or replacement voice. Let its duration define the segment.
+
+REFERENCE-TO-VIDEO PAYLOAD GATE
+- Build the outbound image, video and audio lists again for every run.
+- Include only the current user-selected references for this generation.
+- Put the blocking previs before any intentional continuity reference, then
+  calculate every @VideoN and @AudioN label from the final array order.
+- Never append this node's previous output, register it as a reference or let it
+  change mode inference. A rerun is a new reference-to-video request.
+- Check each reference and total reference duration against the live endpoint
+  limit before submission.
+
+EDIT / EXTEND ROUTE
+When the previous output is intentionally the source, switch explicitly to
+video-edit or video-extend and supply that source in the endpoint's source
+field. Do not inject the blocking previs or master soundtrack into these routes
+unless the endpoint contract explicitly asks for them.
+
+ASSET-LIFETIME GATE
+Persist an immutable object identifier for every uploaded asset, not only a
+temporary download URL. Immediately before submission, refresh all expiring
+image, video, mask and audio URLs from those identifiers. Deduplicate refreshes
+by object identifier, preserve array order, and abort or visibly flag the job
+if a required asset cannot be resolved; never silently submit a stale link.
+
+STATE SEPARATION
+Store BLOCKING PREVIS, FINAL MASTER and REGISTERED OUTPUT in separate slots from
+the endpoint's transient reference arrays. Local editing may clear temporary
+references, but must not erase the segment's reusable production assets.
+```
+
+Why it works: an earlier output is useful only when it is deliberately the
+edit or extension source. Silently appending it to a fresh reference-to-video
+rerun can exceed the reference-duration cap, shift every numbered binding and
+make the old render compete with the intended previs. The source records a
+BytePlus rejection caused by an accidentally appended 30.08-second prior
+output, plus tests that rebuild clean arrays and refresh one-hour signed URLs
+without reordering them.
+
+Adapted and rewritten from gabrieltan0506-prog / `mvstudiopro`'s September 9,
+2026 [Seedance 2.5 production implementation, failure record and request-array
+regression suite](https://github.com/gabrieltan0506-prog/mvstudiopro/commit/109116e9b18da5562965399f710a67e891bfd27e).
+
 ### Paired-version task router with duration- and usable-take-normalized scoring
 
 **Verified models:** Seedance 2.0 and Seedance 2.5 — Kapwing author Emily
@@ -31059,6 +31122,8 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [gabrieltan0506-prog / mvstudiopro — September 9, 2026 Seedance 2.5 segment-reference lifecycle implementation: tested blocking-previs and sole-master role prompts, clean reference-to-video reruns, an exact 30.08-second stale-output rejection, mode-separated edit/extend routing, signed-URL refresh and outbound array regression tests](https://github.com/gabrieltan0506-prog/mvstudiopro/commit/109116e9b18da5562965399f710a67e891bfd27e)
 
 - [Emily Peng / Kapwing — September 9, 2026 paired Seedance 2.0 and Seedance 2.5 task tests: identical disclosed prompts, embedded outputs, character / liquid / fabric / duration / object / style / camera comparisons, per-test credit records and explicit limitations](https://www.kapwing.com/resources/is-seedance-2-5-actually-better-than-2-0-heres-what-i-found/)
 
