@@ -26206,6 +26206,14 @@ Chosen operation = [REFERENCE / EDIT / EXTEND]
 Do not leave the omni-reference subtask on auto when the workflow already knows
 the operation.
 
+PROVIDER-DIALECT BINDING
+Compile the chosen operation to the active provider's actual request field.
+For the verified Griptape / BytePlus proxy route, set
+omni_reference_task_type = [reference / edit / extend].
+For the verified GPUniq seedance-2-5 route, set video_task = [edit / extend].
+Never send one provider's field to another or silently fall back. Reject
+video_task before billing on every non-2.5 Seedance SKU.
+
 REFERENCE
 omni_reference_task_type = reference
 Attach at least one reference image, video or audio; a reference task with no
@@ -26220,7 +26228,8 @@ omni_reference_task_type = edit
 Attach the source clip and use an explicit edit verb:
 "Edit @Video 1: [REMOVE / ADD / DELETE / MODIFY / REPLACE / CHANGE] [TARGET].
 Preserve [UNTOUCHED SUBJECTS, TIMING, CAMERA AND AUDIO]."
-Use adaptive ratio and smart duration; do not request a fixed edit duration.
+Use adaptive ratio and smart duration. On the GPUniq dialect, omit duration:
+the live edit returned approximately the source length, not the route default.
 
 EXTEND
 omni_reference_task_type = extend
@@ -26228,7 +26237,19 @@ Attach the source clip and use an explicit continuation verb:
 "Extend @Video 1 [FORWARD / BACKWARD]. Continue from the boundary with
 [CAUSALLY NEXT ACTION], preserving [IDENTITY, MOTION VECTOR, CAMERA, LIGHT AND
 AUDIO BED]."
-Use adaptive ratio and a supported 4–30 second duration.
+Use adaptive ratio and a supported 4–30-second addition. On the GPUniq dialect,
+duration means seconds to add, not the desired final runtime.
+
+SOURCE-TIMING AND COST GATE
+Edit and extend inherit the source aspect ratio; do not attach image_url or
+last_frame_url as competing start/end frames. Before submission, record source
+duration and intended added duration. After completion:
+- edit: compare returned duration with the source and reject unexplained drift;
+- extend: confirm returned new footage equals the requested added seconds;
+- record billed seconds and invoice because the verified gateway charged
+  source seconds plus output seconds for both modes.
+Treat the observed roughly 0.4-second edit-length tolerance as dated gateway
+evidence, not a promise of frame-identical preservation or a universal price.
 
 PROMPT–ROUTE AGREEMENT
 Before queueing, require all three to agree:
@@ -26259,6 +26280,8 @@ known bad request before it queues and incurs wait time.
 [manual 1080p Seedance 2.5 E2E and task-routing pull request](https://github.com/griptape-ai/griptape-nodes-library-standard/pull/537)
 and the
 [merged provider-payload implementation](https://github.com/griptape-ai/griptape-nodes-library-standard/commit/a366bbbd7a4099c249aec7933fbd9a8b39e75326).
+The provider-dialect, inherited-geometry, duration and billing gates are backed
+by GPUniq's September 9, 2026 [live edit/extend render record](https://github.com/kalinin-egor/documentationai-Docs/commit/61b342dcf213f374894694192b0c25f9b097d6ad).
 
 
 ### Stable-midframe presenter splice with numeric-integrity routing
@@ -31341,6 +31364,7 @@ Community examples and techniques referenced in this README:
 - [Irdanwen / Sub Rosa — Seedance 2.5 public R2V capability flags and billed prompt-misrouting repair](https://github.com/Irdanwen/sub-rosa/commit/e50817aa404e01454be474fb800d1dbe40d3663e)
 
 - [Griptape Nodes — Seedance 2.5 manual 1080p E2E and explicit omni-reference task routing](https://github.com/griptape-ai/griptape-nodes-library-standard/pull/537)
+- [GPUniq — Seedance 2.5 live edit/extend duration, geometry and billed-seconds contract](https://github.com/kalinin-egor/documentationai-Docs/commit/61b342dcf213f374894694192b0c25f9b097d6ad)
 
 - [BentleyBlanks — Seedance 2.5 profile locomotion generation and cycle recovery](https://github.com/BentleyBlanks/bentleyblanks.github.io/commit/0ebd80fd7b90fcf7b8fdac73f8c0ffd3fb7892d6)
 - [freetag369 — Seedance 2.5 four-slot reference-mascot boost package](https://github.com/freetag369/tiktok-live-stats/commit/3679d380bf80056a25bbafc609b7d6bd5d56eb9a)
