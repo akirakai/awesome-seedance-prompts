@@ -20026,6 +20026,73 @@ and direct original-post mapping.
 
 ## Reusable templates
 
+### Numeric angle-of-view route for a hard cut or true locked-tripod zoom
+
+**Verified model:** Seedance 2.5 — the original creator publishes the exact
+settings and complete prompts, then shows the generated comparison shots in the
+same tutorial  
+**Use case:** make a shot-size change without accidental dolly motion, or create
+an optical zoom whose camera body remains fixed  
+**Mode:** reference-to-video or text-to-video; choose exactly one route below
+
+```text
+REFERENCE DUTIES
+@Character = identity, body, wardrobe and any fixed prop.
+@Location = set layout, surfaces, practical lights and subject position.
+Keep both references and the subject's starting mark identical across the shot.
+
+ROUTE: [HARD CUT / LOCKED-TRIPOD OPTICAL ZOOM]
+
+IF HARD CUT
+[0–CUT_TIME] Locked camera at exactly [WIDE_FOV] degrees field of view.
+Frame [WIDE COMPOSITION]. No camera or lens movement.
+[CUT_TIME–END] One hard cut to a second locked camera at exactly [TIGHT_FOV]
+degrees field of view. Frame [TIGHT COMPOSITION]. The crop changes only on the
+cut: no zoom, dolly, pan, tilt, orbit or transitional blur.
+Carry [ONE CONTINUOUS AMBIENT SOUND] across the cut so both framings remain in
+the same place and moment.
+
+IF LOCKED-TRIPOD OPTICAL ZOOM
+Fix one tripod at [POSITION], [HEIGHT], [YAW] and [PITCH]. It never translates
+or rotates. From [START_TIME] to [END_TIME], narrow the lens continuously from
+[START_FOV] degrees to [END_FOV] degrees. Only the field of view changes.
+The background enlarges, flattens and compresses behind the subject; it does
+not rush past the lens and creates no new side parallax.
+At [END_TIME], stop the lens at [END_FOV] and hold the final composition through
+the last frame.
+
+SUBJECT AND PERFORMANCE
+[IDENTITY-LOCKED SUBJECT] remains on [EXACT SCREEN SIDE / FLOOR MARK] throughout.
+[TIMED ACTIONS AND DIALOGUE]. Give each spoken line one named speaker and one
+non-overlapping time window. State the final pose, gaze and prop state.
+
+CONSTRAINTS
+One geographic location and one stable subject identity. No hybrid move, hidden
+cut, digital push, camera translation, orbit, subject teleport, background drift,
+unmotivated crop change, duplicate subject, changed wardrobe or invented text.
+
+ACCEPTANCE GATE
+- HARD CUT: two static perspective states; the framing changes on exactly one
+  cut and never creeps before or after it.
+- OPTICAL ZOOM: the camera center and foreground-to-background alignment remain
+  fixed while apparent magnification and compression change continuously.
+- In either route, the subject keeps the same floor mark, identity, wardrobe,
+  light direction, action state and ambient-audio continuity.
+- Treat degree values as directing constraints, not calibrated lens telemetry;
+  approve the rendered geometry and parallax, not the number alone.
+```
+
+**Why it works:** shot size, camera position and lens behavior become separate
+variables. A closed route prevents the model from blending an edit, zoom and
+dolly into one vague push-in. The geometry-based acceptance check also avoids
+claiming that a generated field-of-view number is optically exact merely because
+the prompt contained it.
+
+Adapted from Mira AI's September 9, 2026
+[Seedance 2.5 camera-control tutorial and generated comparisons](https://www.youtube.com/watch?v=MHjvClvIwwg)
+and its [complete public prompt pack](https://docs.google.com/document/d/1kxcpO-Fy1DheCWoURZXRV5vJEUq7XuHSaVcdW-CcTTk/edit?usp=sharing),
+including the tested 84°/29° locked-cut pair and the 84°→8° fixed-tripod zoom.
+
 ### Segment-reference lifecycle gate for clean reruns
 
 **Verified model:** Seedance 2.5, `reference_to_video` via BytePlus — a
@@ -31288,6 +31355,11 @@ and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blo
 
 ## Sources
 
+- [Mira AI — September 9, 2026 Seedance 2.5 camera-control tutorial:
+generated comparisons and complete prompts for numeric field-of-view cuts, a
+fixed-tripod optical zoom, background compression and geometry-based failure
+checks](https://www.youtube.com/watch?v=MHjvClvIwwg)
+([complete public 25-technique prompt pack](https://docs.google.com/document/d/1kxcpO-Fy1DheCWoURZXRV5vJEUq7XuHSaVcdW-CcTTk/edit?usp=sharing))
 - [Nexora / @frametheory058 — September 9, 2026 Seedance 2.5 reptile-enclosure
 feeding near-miss: complete 30-second one-take prompt, attached playable result,
 closed keeper / snake / route inventory, contact-to-rescue dependency chain,
