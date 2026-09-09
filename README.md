@@ -19404,6 +19404,225 @@ local fracture belongs to the same recognizable planet.
 Adapted and rewritten from Saul Goodman / @Goodmanprotocol's September 9, 2026
 [complete Seedance 2.5 prompt and attached 30-second generated result](https://x.com/Goodmanprotocol/status/2097365433854959774).
 
+### 318. Ten-silhouette luxury studio pose relay
+
+**Verified model:** Seedance 2.5 — the creator names this exact version in the
+main post, attaches a playable 15-second generated result, and publishes the
+complete prompt in two direct follow-up posts  
+**Use case:** reference-led fashion editorial, identity and wardrobe lock,
+high shot density, distinct-pose counting, photographer-motivated transitions  
+**Mode:** image-to-video with one approved adult character reference  
+**Suggested settings:** 15 seconds, source-matched portrait framing, realistic
+studio photography, no generated text or logo
+
+```text
+Create a 15-second photoreal luxury-fashion studio film using @Image1 as the
+only character reference. Preserve the same adult woman's face, hair, skin tone,
+body proportions, outfit, shoes, jewellery and accessories in every shot. Do not
+redesign or restyle her. The location is one premium neutral studio with a
+seamless backdrop, polished floor, large softboxes, narrow strip lights and a
+light controlled haze. Reflections, shadows and exposure remain physically
+consistent.
+
+Deliver EXACTLY TEN clearly different silhouettes. Each pose must become
+readable before the next transition:
+1. Track backward at waist height as she walks, then arrests mid-step with one
+   foot forward and chin raised.
+2. Medium full-body wall lean: one shoulder touches the wall, one knee bends,
+   arms relax and her gaze passes just beside camera.
+3. Three-quarter standing portrait: torso turned, one hand at the waist, the
+   other loose; arc gently toward frontal.
+4. Low eye-level seated-cube pose: straight back, asymmetrical ankles, one elbow
+   resting naturally on a knee.
+5. Tight over-shoulder portrait: body faces away and only the head returns to
+   lens; preserve shoulder and hair detail.
+6. Near-floor editorial pose: one knee raised, the other leg folded, one arm
+   carrying believable body weight.
+7. Detail beat: she adjusts the existing sleeve or collar with both hands, then
+   lifts her eyes; do not invent a new garment.
+8. Quarter-turn stop: hair and cloth complete their inertia after the body
+   settles; capture from a diagonal three-quarter angle.
+9. Full-body light-beam pose: one arm extends slightly while the other remains
+   relaxed; a single directional shadow lands on the backdrop.
+10. Magazine-cover finish: still asymmetric stance, one shoulder lower, direct
+    eye contact; push from full body to waist-up and stop on the expression.
+
+Use only photographer-plausible bridges: a quick reframe, small handheld
+reposition, short tracking move, rack focus, movement match or brief flash. No
+floating camera and no excessive whip pan. Her performance stays controlled:
+subtle breath, real weight shifts, intentional professional posing and restrained
+facial changes. Use full-frame lens behaviour, natural depth of field, fine film
+grain, pores, individual hairs, fabric stitching, correct motion blur and
+believable specular highlights.
+
+COUNT AND ACCEPTANCE GATE
+Before delivery, verify ten completed poses, ten different silhouettes and no
+repeated composition. Reject a missing or merged pose, identity drift, outfit
+change, new accessory, extra limb or finger, plastic skin, body distortion,
+anime or CGI rendering, impossible balance, text, caption, logo or watermark.
+The last frame must read as a real finished fashion-magazine photograph.
+```
+
+**Why it works:** a closed ten-state pose ledger turns a vague fashion montage
+into an auditable sequence. Each state owns a different silhouette, support
+geometry and camera height, while one immutable identity-and-wardrobe contract
+prevents the dense edit rhythm from becoming ten different models.
+
+Adapted and rewritten from Zephyra Leigh's September 9, 2026
+[Seedance 2.5 generated result and version statement](https://x.com/ZephyraLeigh/status/2097571603362287988),
+with the creator's complete prompt in
+[part one](https://x.com/ZephyraLeigh/status/2097571607590129877) and
+[part two](https://x.com/ZephyraLeigh/status/2097571612539437146).
+
+### 319. Burned evacuation ledger placed above the victory record
+
+**Verified model:** Seedance 2.0 Fast — the creator names this exact version
+inside the complete prompt and attaches the playable 15-second result  
+**Use case:** live-action xianxia moral drama, four-person dialogue hierarchy,
+paper-prop continuity, three-shot reversal, native Mandarin audio  
+**Mode:** multi-reference image-to-video; @Image1 locks the senior swordswoman
+and @Image2 locks the junior swordswoman  
+**Suggested settings:** 15 seconds, 16:9, three continuous shots, native Mandarin
+dialogue, no subtitles
+
+```text
+Create a 15-second photoreal Chinese xianxia drama in one coherent ancient
+mountain-sect location. @Image1 defines one tall senior swordswoman in the same
+white embroidered silk hanfu, silver sash, jade pendant, white boots and one
+silver sword. @Image2 defines one shorter junior swordswoman in the same
+blue-green linen hanfu, dark belt, wooden hairpin, black shoes and one dark
+steel sword. Never swap faces, costumes or weapons. Also keep one restrained
+elder master, one captured enemy strategist, two disciples and several ordinary
+townspeople in stable depth positions.
+
+The world remains alive but narratively neutral: water flows, mist travels,
+clouds and leaves move, cloth answers the wind and distant people make only
+minor natural motions. The environment must not create the conflict, solve it
+or perform the characters' emotion.
+
+0.00–5.00 — PUBLIC ACCUSATION, WIDE
+The captive throws one burned-edge evacuation register onto the ground. It is
+the only damaged register and must remain identifiable. In Mandarin he says,
+“Your victory record leaves out three hundred and twenty-seven lives.”
+The elder cuts him off: “Enough.” The junior does not look at the captive; she
+looks at the elder and asks, “Master?” He neither answers nor denies it. Hold
+his silence long enough to turn the accusation into a real question.
+
+5.00–10.00 — DANGEROUS MISREAD, MEDIUM
+The same senior bends, picks up the same burned register and rises. The junior,
+now tense, asks, “Will you hide it as well?” The senior answers, “No,” walks
+past the elder and places the burned register openly on top of the disciple's
+clean official victory book. She says, “File this with the victories.” The elder
+objects, “That was our disgrace.” Without arguing, she answers, “It was still
+ours.” Keep the placement action unobstructed and let the captive's expectant
+smile disappear in the background.
+
+10.00–15.00 — MEMORY AS CONSEQUENCE, CLOSE
+The junior studies the two stacked books and asks the senior, “What if those
+after us condemn us?” The senior answers, “They may,” pauses, then looks at the
+burned pages: “Forgetting would teach them to repeat it.” The junior does not
+cry. She slowly presses one curled burned page flat so the clean book cannot
+cover it. Behind shallow focus, the elder lowers his eyes, the captive loses
+his reply, and one townsman quietly removes his old cap. End with the two women
+side by side without a victory pose or smile.
+
+PERFORMANCE, CAMERA AND SOUND
+Play every emotion through pauses, eye lines, hand detail and breath; no shouting
+except the captive's initial accusation, no sermon and no melodramatic tears.
+Use one wide, one medium and one close shot with clean restrained movement,
+continuous light and honest foreground/midground/background parallax. Keep
+native Mandarin lip sync and separate voices. Synchronize the register landing,
+paper movement, silk, sword fittings and environment; do not generate subtitles.
+
+Reject a changed or duplicated register, clean pages becoming burned at random,
+prop disappearance, master or captive stealing focus, costume or face drift,
+weapon swap, heroic group portrait, excessive magic, decorative sword energy,
+preachy exposition, camera flourish, text, logo or watermark.
+```
+
+**Why it works:** the burned register is not scenery but a continuous moral
+state: accusation on the ground, suspected concealment in hand, public
+placement above the official record, then a curled page flattened by the junior.
+The three visible prop states carry the reversal while four compact dialogue
+roles preserve hierarchy inside fifteen seconds.
+
+Adapted and rewritten from Soran / @Soranlan's September 9, 2026
+[complete Seedance 2.0 Fast prompt and attached generated result](https://x.com/Soranlan/status/2097546389773500738).
+
+### 320. Three-to-one-to-half-move deadpan duel reversal
+
+**Verified model:** Seedance 2.0 — the creator explicitly names this version in
+the complete prompt and attaches the playable 15-second result  
+**Use case:** xianxia action comedy, dialogue misdirection, three-beat escalation,
+sheathed-sword contact choreography, restrained native Mandarin performance  
+**Mode:** multi-reference image-to-video with two locked heroines  
+**Suggested settings:** 15 seconds, 16:9, exactly three shots, native Mandarin
+dialogue and synchronized action sound
+
+```text
+Create a continuous 15-second photoreal Chinese xianxia action comedy in one
+credible ancient outdoor location. @Image1 owns the same tall senior woman,
+white embroidered silk hanfu, silver sash, jade pendant, white boots and one
+sheathed silver sword. @Image2 owns the same shorter junior woman, blue-green
+linen hanfu, dark belt, wooden hairpin, black shoes and one dark steel sword.
+Keep one boastful enemy swordsman and one completely serious elder master in
+stable positions. Preserve all faces, clothes, swords, screen direction and
+geography.
+
+The comedy has one legible premise: the enemy thinks “three moves” predicts the
+junior's defeat; the women and master were actually estimating how long he will
+last. Everyone plays the situation sincerely. The background may breathe with
+wind, water, mist, leaves and distant disciples, but it never supplies a gag.
+
+0.00–5.00 — MISDIRECTION, WIDE
+The enemy faces the women and tells the junior in Mandarin, “Your senior says
+you fall to me within three moves.” The junior turns very slowly toward the
+senior: “Three?” The senior remains loose and corrects her: “She was counting
+you.” Make the junior's turn and the enemy's misplaced confidence unmistakable.
+
+5.00–10.00 — ESCALATION, MEDIUM
+The junior looks back at the enemy, surprised rather than angry: “Three? That is
+generous.” His smile freezes. In shallow depth behind them, the elder silently
+raises one finger. The enemy notices and demands, “What does that mean?” Rack
+focus to the elder. He answers, perfectly serious, “One.” Hold half a beat.
+The enemy finally loses composure, draws and charges the senior in a straight
+readable line.
+
+10.00–15.00 — PHYSICAL PAYOFF, CLOSE
+The senior stays relaxed and never fully draws her silver sword. In one short,
+physically coherent chain she:
+1. steps off the attack line;
+2. taps the enemy's weapon wrist with the same sheathed sword;
+3. redirects his forward momentum and balance.
+His sword spins free and sticks safely into nearby ground; he lands on one knee
+without blood or graphic injury. Do not add a combo or magical effect.
+
+In the sudden silence, the junior raises one finger and says, “Master counted
+correctly.” The senior studies the kneeling enemy: “He needed only half.”
+Focus returns to the elder, who answers, “I rounded up out of courtesy.” End as
+the enemy looks from elder to senior to junior and cannot reply; the junior
+suppresses a laugh while the senior gives him one formal martial salute.
+
+PERFORMANCE AND ACCEPTANCE
+Senior: calm economy, no boasting. Junior: fast but restrained comprehension.
+Enemy: credible confidence turning to delayed humiliation, never a clown.
+Master: minimal motion and absolute seriousness. Use clean body mechanics,
+accurate eye lines and lip sync, natural cloth and hair response, and distinct
+draw, scabbard-tap, sword-flight and ground-impact sounds. Reject an unclear
+winner, soft contact, unsheathed replacement weapon, extra strikes, random
+sword energy, slow-motion flourish, exaggerated faces, costume or identity
+drift, subtitle, text, logo or watermark.
+```
+
+**Why it works:** the spoken number is a state variable that changes owner and
+meaning before the action proves it: apparent prediction of the junior, then
+three moves for the enemy, then one, then half. A three-contact sheathed-sword
+chain gives the final joke one readable physical cause instead of hiding it
+inside flashy choreography.
+
+Adapted and rewritten from Soran / @Soranlan's September 9, 2026
+[complete Seedance 2.0 prompt and attached generated result](https://x.com/Soranlan/status/2097549763143221433).
+
 ---
 
 ## Reusable templates
@@ -23257,9 +23476,11 @@ invalid control removed](https://github.com/kent0908/the-blue-wing/commit/0d6bc2
 ### Terminal-status result-body gate and likeness access-tier router
 
 **Verified models:** Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`
-on fal) and Seedance 2.0 on fal plus BytePlus ModelArk
-(`dreamina-seedance-2-0-260128`) — the creator recorded zero-charge policy
-rejections on both distribution routes. A direct 4-second, 720p text-to-video
+on fal), Seedance 2.0 on fal plus BytePlus ModelArk
+(`dreamina-seedance-2-0-260128`), and Seedance 2.0 Mini
+(`bytedance/seedance-2.0-mini` on OpenRouter) — the creators recorded
+zero-charge policy rejections, and the Mini probe separately reproduced a
+post-generation likeness refusal after accepted input validation. A direct 4-second, 720p text-to-video
 request succeeded end to end and returned `content.video_url`; the same exact
 ModelArk route rejected a public real-person reference with HTTP 400 before
 issuing a task ID or charge. Earlier fal jobs also showed why `COMPLETED` must
@@ -23312,6 +23533,30 @@ TERMINAL EVALUATION
    artifact_delivered = [YES / NO]
    policy_verdict = [PASS / REJECT / UNKNOWN]
 
+LIKELINESS-REJECTION CAUSAL ISOLATION
+When an image-reference job passes submission, remains pending or in progress,
+then returns an output-copyright refusal, do not classify it as an input failure.
+Record this as a second-stage output gate and stop retries.
+
+To diagnose the refusal without turning the test into an evasion workflow:
+1. Confirm the original authorized or freely licensed reference, exact model,
+   prompt, duration, resolution, aspect ratio and provider route.
+2. Set generated audio off for the controlled probe. If the same output refusal
+   remains, an audio-match explanation is excluded for that run.
+3. Compare only already-authorized evidence in which the same subject was tested
+   once with contextual background and once with a tight crop that removes that
+   background. Keep every other variable fixed.
+4. If both jobs pass input validation, enter the generation queue and then fail
+   with the same output-copyright verdict, attribute the evidence to subject
+   likeness rather than the removed backdrop. Do not infer an exact fame
+   threshold from two endpoints.
+5. Treat policy scoring as potentially probabilistic. One near-threshold pass or
+   failure is an observation, not a stable capability promise; a true A/B needs
+   repeated runs.
+6. Any masking, blur or crop that changes an input verdict is diagnostic evidence
+   only. Do not use it to ship, conceal identity, bypass the output gate or keep
+   iterating after rejection.
+
 BILLING GATE
 Compare starting and ending balance, returned usage or the provider's
 authoritative charge record. Mark the attempt free only when the evidence
@@ -23357,6 +23602,10 @@ ACCEPTANCE
 - exact versioned model ID, route and ordered content array recorded;
 - submit acceptance and queue creation recorded separately;
 - terminal response body parsed only when a task was actually created;
+- input acceptance and output-policy rejection remain separate stages;
+- a background-removed control may support a likeness diagnosis but never
+  authorizes delivery or further obfuscation;
+- audio-disabled evidence may rule out audio matching only for that recorded run;
 - a valid output artifact, not a status label, proves success;
 - charge state is evidence-backed;
 - likeness ownership and authorization match the selected access tier;
@@ -23383,7 +23632,11 @@ the September 3
 [Seedance 2.0 refusal re-test plus capability-owned fallback implementation](https://github.com/corpomedical/picacho/commit/1a1b49b065a05357ec21d3793a119bd92c25c12e),
 and the September 4
 [direct ModelArk success plus no-task, no-charge real-person submission
-rejection](https://github.com/corpomedical/picacho/commit/c5bfc4882de2079fa011258faaeac3a45856500b).
+rejection](https://github.com/corpomedical/picacho/commit/c5bfc4882de2079fa011258faaeac3a45856500b). The second-stage likeness-isolation gate is additionally
+adapted from sageryza's September 9, 2026
+[Seedance 2.0 Mini matched-background probe and two recorded output refusals](https://github.com/sageryza/imageforge/commit/79a06251cf9ccb4dac8a4433617162b5b9c2299a)
+and the creator's
+[full request, prompt, job-state and failure ledger](https://github.com/sageryza/imageforge/blob/79a06251cf9ccb4dac8a4433617162b5b9c2299a/docs/modules/audio-and-film.md#seedance).
 
 ### Storyboard-to-short parameter preflight and moving-hook template
 
@@ -30418,6 +30671,14 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [Zephyra Leigh — September 9, 2026 Seedance 2.5 luxury-studio pose relay: playable 15-second result, one-image identity and wardrobe lock, ten distinct silhouettes, photographer-motivated transitions and complete two-part prompt](https://x.com/ZephyraLeigh/status/2097571603362287988) ([prompt part one](https://x.com/ZephyraLeigh/status/2097571607590129877), [prompt part two](https://x.com/ZephyraLeigh/status/2097571612539437146))
+
+- [Soran / @Soranlan — September 9, 2026 Seedance 2.0 Fast burned evacuation ledger: complete 15-second three-shot prompt, attached playable result, four-person dialogue hierarchy, irreversible paper-prop states and native Mandarin moral reversal](https://x.com/Soranlan/status/2097546389773500738)
+
+- [Soran / @Soranlan — September 9, 2026 Seedance 2.0 three-to-one-to-half-move duel: complete 15-second prompt, attached playable result, dialogue-owned numerical reversal, restrained four-role performance and sheathed-sword contact chain](https://x.com/Soranlan/status/2097549763143221433)
+
+- [sageryza / imageforge — September 9, 2026 OpenRouter Seedance 2.0 Mini second-stage likeness probe: two authorized matched-subject tests with and without contextual backdrop, accepted input validation, four queue polls, identical output-copyright refusals, audio disabled and recorded job IDs](https://github.com/sageryza/imageforge/commit/79a06251cf9ccb4dac8a4433617162b5b9c2299a) ([full request and failure ledger](https://github.com/sageryza/imageforge/blob/79a06251cf9ccb4dac8a4433617162b5b9c2299a/docs/modules/audio-and-film.md#seedance))
 
 - [sageryza / imageforge — September 9, 2026 OpenRouter Seedance 2.0 Mini repeatability probe: five successful 480p takes, matched four-second seed tests, file hashes and per-0.5-second PSNR showing similar openings followed by drift, plus a same-seed cross-resolution test proving that 720p is a fresh take rather than a preserved keeper](https://github.com/sageryza/imageforge/commit/bc5d339d7ec3b227839cfb660c3200da3d8b32a5) ([measured take ledger](https://github.com/sageryza/imageforge/blob/bc5d339d7ec3b227839cfb660c3200da3d8b32a5/docs/mental-hospital/climax3-the-gap.md#the-five-mini-takes-2026-09-09--and-the-seed-trick-that-makes-an-ab-real))
 
