@@ -331,6 +331,10 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Empty-space teleport relay with alternating initiative](#315-empty-space-teleport-relay-with-alternating-initiative)
   - [One-way clock-tower time-run with contact-state chain](#316-one-way-clock-tower-time-run-with-contact-state-chain)
   - [Crust-machine planet split with scale-preserving escape](#317-crust-machine-planet-split-with-scale-preserving-escape)
+  - [Ten-silhouette luxury studio pose relay](#318-ten-silhouette-luxury-studio-pose-relay)
+  - [Burned evacuation ledger placed above the victory record](#319-burned-evacuation-ledger-placed-above-the-victory-record)
+  - [Three-to-one-to-half-move deadpan duel reversal](#320-three-to-one-to-half-move-deadpan-duel-reversal)
+  - [Marina leap and ladder recovery with closed dry-prop and wet-state ledgers](#321-marina-leap-and-ladder-recovery-with-closed-dry-prop-and-wet-state-ledgers)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -19623,6 +19627,106 @@ inside flashy choreography.
 Adapted and rewritten from Soran / @Soranlan's September 9, 2026
 [complete Seedance 2.0 prompt and attached generated result](https://x.com/Soranlan/status/2097549763143221433).
 
+
+### 321. Marina leap and ladder recovery with closed dry-prop and wet-state ledgers
+
+**Verified model:** Seedance 2.5 — the creator names Seedance 2.5 and 1080p in
+the post, supplies the complete 30-second prompt and attaches the generated
+result  
+**Use case:** raw social video, group continuity, water-entry physics, persistent
+props, progressive wet-state continuity, plausible recovery from water  
+**Mode:** text-to-video  
+**Suggested settings:** 30 seconds, 9:16, 1080p, one continuous handheld phone
+take, native French dialogue and location sound
+
+```text
+Create a raw 30-second vertical phone recording at a real marina after dark.
+One friend owns the same physical phone and records one uninterrupted take from
+the quay. Keep four clearly adult women stable and distinguishable throughout:
+the lead wears one purple evening dress; Friend A wears black, Friend B wears
+red and Friend C wears silver. Preserve their faces, apparent ages, body
+proportions, clothes, positions and voices. The same two yachts, stone quay,
+fixed metal bathing ladder, mooring bollards and warm harbour lights define one
+unchanging geography.
+
+CLOSED PROP LEDGER
+At the start, the lead carries one small black shoulder bag and wears one pair
+of dark shoes. Before entering the water she visibly hands the bag and both
+shoes to Friend A in one continuous exchange. Friend A keeps all three dry
+objects in frame or clearly in her possession until the end. Nothing vanishes,
+duplicates, changes owner off camera or follows the lead underwater.
+
+WET-STATE LEDGER
+Before the jump, the lead's hair and dress are dry. At water contact, both
+become fully wet and darker; after she surfaces, the same hair remains attached
+and slicked against her head and shoulders, the dress clings with believable
+weight, and water continues dripping through the final pose. Never restore a
+dry hairstyle or dry garment.
+
+0–4 s — APPROACH
+Walk backward at human pace as the group approaches along the established quay.
+Use ordinary phone autofocus, rolling-shutter wobble, clipped harbour lights and
+small imperfect reframing. The lead laughs toward the operator; the other three
+remain behind her and do not swap sides.
+
+4–7 s — VISIBLE HANDOFF AND DECISION
+The lead stops beside the fixed ladder, removes both shoes, hands the pair and
+the same closed shoulder bag to Friend A, then checks the clear water below.
+Hold long enough to see Friend A receive every object. One friend asks in
+French, “Tu es sûre ?” The lead answers, “Regarde-moi.”
+
+7–11 s — COMPLETE JUMP ARC
+Without cutting, pan from her planted feet through one forward jump into the
+open water between the quay and the nearer yacht. Show push-off, airborne arc,
+feet clearing the edge, body entering away from the hull, then one coherent
+splash. Do not hide the takeoff or replace her with a second body. Friends react
+only after contact.
+
+11–15 s — SURFACE AND ORIENTATION
+Tilt down to the disturbed surface. The same lead resurfaces once inside the
+splash ring, inhales, wipes water from her eyes and turns toward the already
+visible ladder. Keep the yacht, quay edge and ladder in their established
+screen positions. Friend B calls, “À l'échelle !”
+
+15–21 s — PLAUSIBLE RECOVERY
+Track laterally as she swims three short strokes to the fixed ladder. Show one
+hand grasping the first rung before the other; feet find lower rungs underwater.
+She climbs rung by rung while her weight remains supported by the ladder, not by
+a mooring rope, bollard or impossible vertical pull. Water streams from the
+same wet dress and hair.
+
+21–25 s — RETURN TO QUAY
+She steps onto the quay barefoot, steadies herself with one hand on the rail and
+laughs while the three friends close around her. Friend A still holds the dry
+bag and both shoes. Preserve all four women; do not add a rescuer or bystander.
+
+25–30 s — WET AFTERMATH
+The operator moves to a loose medium shot. The lead squeezes water only from the
+ends of her still-visible hair, shakes once, then strikes a playful confident
+pose beside the ladder. The friends laugh and one says, “Elle l'a vraiment
+fait.” End on live dripping water and breathing, never a freeze frame.
+
+AUDIO AND ACCEPTANCE
+Use only phone-recorded French voices, laughter, footsteps, fabric, splash,
+water, yacht ropes, distant harbour ambience and breath. Sound perspective
+stays with the operator. No music, narration or subtitles.
+
+Reject a missing or duplicated woman, face or age drift, shoes or bag
+disappearing, underwater accessories, regenerated dry hair, shortened hair,
+wardrobe change, extra bollard or ladder, yacht relocation, contact with a
+hull, impossible climb, teleport, hidden edit, cinematic crane move, slow
+motion, glamour polish, text, logo or watermark.
+```
+
+**Why it works:** the handoff closes the two failure-prone dry props before the
+jump, while a one-way dry-to-wet state ledger prevents the shoes, bag, hair and
+dress from being silently regenerated. Replacing an unsupported pull onto the
+quay with an established fixed ladder gives entry, resurfacing and exit one
+continuous piece of readable geography and body mechanics.
+
+Adapted and rewritten from u/mementomori2344323's September 9, 2026
+[complete Seedance 2.5 1080p prompt, generated result and creator discussion](https://www.reddit.com/r/Seedance_AI/comments/1vqytn3/some_people_still_think_ai_doest_look_real_this/).
+
 ---
 
 ## Reusable templates
@@ -31414,6 +31518,9 @@ Community examples and techniques referenced in this README:
 - [Umesh — Runway Seedance 2.5 motif-inheritance title sequence, 30-second result and complete prompt](https://x.com/umesh_ai/status/2095129568529256487) ([complete prompt reply](https://x.com/umesh_ai/status/2095129571263955288))
 
 - [Erik Lee — Seedance 2.5 Ark live time-window edit, exact-model payload and duration-preservation ledger](https://github.com/eriklee1895/erik-agent-skills/commit/347252a9676d7638fdfad7de14340096ba27142f) ([result ledger](https://github.com/eriklee1895/erik-agent-skills/blob/347252a9676d7638fdfad7de14340096ba27142f/skills/seedance-video-gen/references/seedance-2.5.md))
+
+- [u/mementomori2344323 — Seedance 2.5 1080p marina leap, complete 30-second prompt, generated result and continuity-failure discussion](https://www.reddit.com/r/Seedance_AI/comments/1vqytn3/some_people_still_think_ai_doest_look_real_this/)
+
 
 Official model references:
 
