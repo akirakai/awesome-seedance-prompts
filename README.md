@@ -336,6 +336,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Three-to-one-to-half-move deadpan duel reversal](#320-three-to-one-to-half-move-deadpan-duel-reversal)
   - [Marina leap and ladder recovery with closed dry-prop and wet-state ledgers](#321-marina-leap-and-ladder-recovery-with-closed-dry-prop-and-wet-state-ledgers)
   - [Three-hand contact portal with closed memory and reaction states](#322-three-hand-contact-portal-with-closed-memory-and-reaction-states)
+  - [Four-light alien-island camera roll with ordinary-worldbuilding lock](#323-four-light-alien-island-camera-roll-with-ordinary-worldbuilding-lock)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -19857,6 +19858,100 @@ scene when it resumes.
 Adapted and rewritten from Loriel.AI / @ou_zhen599's September 9, 2026
 [complete Seedance 2.5 prompt and attached generated result](https://x.com/ou_zhen599/status/2097626458734911700).
 
+
+### 323. Four-light alien-island camera roll with ordinary-worldbuilding lock
+
+**Verified model:** Seedance 2.5 — the original creator explicitly names the
+version, publishes the complete prompt and attaches the generated result; the
+versioned gallery preserves the full prompt-to-post mapping  
+**Use case:** found-phone science-fiction travel diary, multi-shot worldbuilding,
+daylight progression, native ambient audio  
+**Mode:** text-to-video  
+**Suggested settings:** 30 seconds, 9:16, hard-cut smartphone camera roll
+
+```text
+Create a 30-second vertical sequence assembled only from casual phone clips shot
+during one vacation day on an inhabited alien island. Keep one clearly adult
+traveller recognizable in every appearance: slate-lilac skin, tiny mint luminous
+freckles, a translucent swept-back crest and gold irises. Her light travel layers
+may change once at midday and once after sunset, but her face, body proportions,
+crest geometry, small shoulder bag and relaxed personality do not.
+
+PHONE-CAPTURE CONTRACT
+Every shot must feel caught by the traveller or a nearby friend: small hand shake,
+brief autofocus searches, exposure settling after a turn toward a sun, occasional
+wind on the microphone and one harmless lens smudge. Use short hard cuts only.
+No crane, drone, impossible orbit, montage transition, speed ramp, slow motion,
+colour-flash effect, title, subtitle, logo or polished commercial grade.
+
+WORLD RULES
+This is an ordinary holiday destination to its inhabitants, not a spectacle.
+Two suns create two coherent shadows whenever both are visible. The turquoise
+shore behaves like a soft gel: it folds, stretches and rebounds but never splashes
+like water. Shell ferries expand and contract slowly while moored. Small living
+objects move under their own power without transforming. Once introduced, each
+rule remains true in every later shot where it applies.
+
+0–4 s — VIOLET TWIN DAWN
+From a narrow guesthouse lane, she films herself unlocking the door, then turns
+the phone as one calf-sized iridescent beetle crosses behind her. She gives it the
+same absent-minded greeting one would give a neighbourhood cat. Keep the dawn
+cool, both suns low and the lane geography readable.
+
+4–9 s — MORNING GEL COVE
+Hard cut to ankle height at the beach. A slow teal ridge rolls to her boot, bends
+around it and pulls away without droplets. Cut to glassy pebbles as one bead climbs
+uphill across a stone; rack focus to one box-shaped fish gliding beneath the gel
+surface. She whispers one amused “Okay,” without staging a reaction.
+
+9–15 s — WHITE BINARY NOON
+At a small open-air café, she lowers herself onto one six-legged seat that adjusts
+once beneath her weight and then stays still. A ribbed fruit exhales when opened;
+she spreads its warm luminous pulp on flatbread and taps cups with a friend just
+outside frame. Preserve the double-shadow direction and midday wardrobe.
+
+15–21 s — LONG AFTERNOON
+On a dry ridge, her moss-covered map tablet crawls half a metre away; she catches
+it by its strap and laughs. Cut to a crooked arm-length selfie above the same cove:
+the bent horizon, distant café and paired shadows agree with the established island.
+Do not turn the map into an animal or make the landscape move.
+
+21–26 s — AMBER DUSK
+From the harbour rail, record three breathing shell ferries in fixed berths. At a
+coral-textured terrace she bites one translucent savoury disc while a violet drink
+changes gradually to amber under the setting suns. Let one clip begin late and one
+end during chewing, like an unedited camera roll.
+
+26–30 s — LAMP-LIT NIGHT
+A two-second imperfect dance clip with friends hard-cuts to her sitting tired and
+happy above the dark gel sea. The crest and evening layer match the prior shot.
+Muted lightning travels below the surface without thunder or a sky flash. She
+inhales near the microphone, starts to say “Tomorrow we—”, and the recording ends
+mid-sentence without fade.
+
+SOUND AND ACCEPTANCE
+Keep sound local to each clip: lane insects, soft boot contact with gel, café
+murmur, seat joints, fruit breath, ridge wind, harbour creaks, ferry respiration,
+brief music heard only near the dancers, close breathing and underwater electrical
+rumble. No continuous score or narrator.
+
+Reject identity replacement, age drift, unexplained wardrobe reset, third sun,
+single or directionless shadow, ordinary liquid splash, rule appearing before its
+first reveal, creature panic, tourist screaming, transforming props, repeated clip,
+cinematic coverage, artificial reaction, camera teleport, caption or watermark.
+```
+
+**Why it works:** the four daylight phases form a one-way time ledger, while
+each unusual material or creature receives a persistent behaviour instead of a
+one-shot visual gag. Treating every anomaly as routine tourist footage suppresses
+spectacle escalation; motivated phone flaws, hard cuts and source-local sound keep
+the many shots inside one believable camera roll.
+
+Adapted and rewritten from TechHalla's September 9, 2026
+[complete Seedance 2.5 prompt and attached generated result](https://x.com/techhalla/status/2097521124154241509);
+the [versioned prompt record](https://youmind.com/video-prompts/alien-planet-vacation-home-video-10588)
+preserves the full text, model label, author, date and direct original-post mapping.
+
 ---
 
 ## Reusable templates
@@ -31122,6 +31217,8 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [TechHalla — September 9, 2026 Seedance 2.5 alien-island vacation camera roll: complete 30-second prompt, attached generated result, four-phase local daylight, persistent ordinary-world physics, casual phone-capture grammar and native ambient-audio ledger](https://x.com/techhalla/status/2097521124154241509) ([versioned full-prompt record and direct original-post mapping](https://youmind.com/video-prompts/alien-planet-vacation-home-video-10588))
 
 - [gabrieltan0506-prog / mvstudiopro — September 9, 2026 Seedance 2.5 segment-reference lifecycle implementation: tested blocking-previs and sole-master role prompts, clean reference-to-video reruns, an exact 30.08-second stale-output rejection, mode-separated edit/extend routing, signed-URL refresh and outbound array regression tests](https://github.com/gabrieltan0506-prog/mvstudiopro/commit/109116e9b18da5562965399f710a67e891bfd27e)
 
