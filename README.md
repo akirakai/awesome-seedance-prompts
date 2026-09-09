@@ -28751,9 +28751,9 @@ and the
 
 ### Dry-run quote, timeout-safe job checkpoint and seed-addressable take ledger
 
-**Verified model:** Ofox `bytedance/seedance-2.5` (Seedance 2.5, BytePlus
-default upstream), fal `bytedance/seedance-2.5` (Seedance 2.5), and EvoLink
-`seedance-2.0-mini-reference-to-video` (Seedance 2.0 Mini) — the original Ofox
+**Verified model:** Ofox and fal `bytedance/seedance-2.5`
+(Seedance 2.5), EvoLink `seedance-2.0-mini-reference-to-video`, and OpenRouter
+`bytedance/seedance-2.0-mini` (Seedance 2.0 Mini) — the original Ofox
 maintainer's August 31 release explicitly reports a live `create` request
 returning in 1.9 seconds and real paid Seedance 2.5 completion; Agent Media's
 September 1 live check records a completed Seedance 2.0 Mini product-in-hands
@@ -28764,7 +28764,11 @@ moved to the provider's app root, after which a real MP4 completed and was
 downloaded; Anomalia's September 5 production ledger records 72
 `bytedance/seedance-2-5` jobs on Kie over 30 days, including a 12.5% failure
 rate, 248-second mean latency and 382-second p95, then preserves Kie as the
-explicit reserve when changing the primary provider
+explicit reserve when changing the primary provider; sageryza's September 9
+OpenRouter probe records five successful Seedance 2.0 Mini 480p takes plus
+matched four-second seed and resolution tests, with per-window PSNR and file
+hashes proving that a repeated seed biases the opening but does not reproduce
+the same clip
 
 Use this when an agent, CI job or short-lived tool call must control a paid
 generation without losing the task identifier, accidentally resubmitting after a
@@ -28903,15 +28907,33 @@ TAKE 1 = [TASK ID, SEED, STATUS, ACTUAL COST, OUTPUT PATH]
 TAKE 2 = [TASK ID, SEED, STATUS, ACTUAL COST, OUTPUT PATH]
 ...
 Stop the remaining queue after a structural failure likely to affect every take.
-Retain completed takes and their costs. Never run a batch with one fixed seed
-unless intentionally testing deterministic replay.
+Retain completed takes and their costs. Never run a production batch with one
+fixed seed. A fixed seed is permitted only inside a named repeatability probe,
+and the result must not be labelled deterministic replay.
+
+SEED REPEATABILITY GATE
+Keep prompt, references, duration, aspect, resolution, provider and model
+byte-for-byte fixed, then render at least three takes with one shared seed and
+three with distinct seeds. Compare decoded frames at the opening and in equal
+time windows through the clip; record hashes and a frame-distance metric.
+A same-seed pair that opens closer but drifts is OPENING BIAS, not reproduction.
+To test one prompt change, run several takes per arm. One same-seed pair cannot
+attribute a later insert, action or camera difference to the changed clause.
+
+RESOLUTION PROMOTION GATE
+Do not assume that the seed carries a keeper from draft to delivery resolution.
+Run one same-seed, same-prompt cross-resolution probe. If it returns a materially
+different performance or composition, preserve a liked low-resolution take with
+deterministic upscale and finishing, or accept the high-resolution render as a
+fresh take. Never promise that a 480p approval can be recreated at 720p or 1080p.
 
 Build a contact sheet from opening, midpoint and closing frames of every finished
 take. Select a winner by identity, action order, camera compliance, reference
 ownership, terminal state and artifact count—not by the opening frame alone.
-Promote the winner with its recorded seed and prompt hash. Treat the seed as a
-provenance and rerun handle, not a pixel-identical promise after changing model,
-resolution, provider or references; re-accept the promoted final independently.
+Promote the winner with its recorded seed and prompt hash. Treat the seed as
+provenance and a limited opening-bias handle, not a pixel-identical rerun promise
+even when prompt and settings are unchanged; re-accept every promoted final
+independently.
 
 STAGE 5 — ACTUAL-BILL RECONCILIATION
 For every terminal task, preserve estimated cost, actual cost, billed seconds,
@@ -28936,10 +28958,14 @@ and array-shaped delivery contracts prevents a finished render from disappearing
 behind a misleading success-without-link report, while retaining sibling
 artifacts avoids unnecessary follow-up calls. The zero-spend compile catches
 invalid parameters and exposes the full batch liability before side effects.
-Per-take seeds make a chosen draft addressable, while contact-sheet review and
-actual-total accounting prevent an inexpensive-looking single take from hiding
-the cost of the batch that produced it. A model-and-mode-specific delivery
-ledger keeps provider selection tied to videos actually received, while
+Per-take seeds make a chosen draft traceable, while the repeatability gate
+prevents a similar opening from being mistaken for a reproducible full take.
+The resolution gate also prevents a low-resolution keeper from being discarded
+under the false assumption that a shared seed will preserve its performance.
+Contact-sheet review and actual-total accounting prevent an inexpensive-looking
+single take from hiding the cost of the batch that produced it. A
+model-and-mode-specific delivery ledger keeps provider selection tied to videos
+actually received, while
 separate primary and reserve routes prevent an outage from falling back into
 itself. One paid canary resolves opaque token pricing before an unknown rate is
 multiplied across a batch.
@@ -28963,6 +28989,10 @@ the [provider route compiler](https://github.com/aqm857886159/Nomi/blob/52dc89a2
 and its [deep-endpoint regression gate](https://github.com/aqm857886159/Nomi/blob/52dc89a211aee85344a02269113434ec7d10f4e2/electron/catalog/vendorWireDriftFixes.test.ts).
 Provider-routing evidence: Anomalia's September 5, 2026
 [30-day Seedance 2.5 delivery ledger, route change and fallback regression notes](https://github.com/anomaliaso/anomalia/commit/808d8fbbaf32c27ecbbe448785d50b98469e7228).
+Seed-behaviour evidence: sageryza's September 9, 2026
+[paid Seedance 2.0 Mini repeatability, cross-resolution and last-frame probe](https://github.com/sageryza/imageforge/commit/bc5d339d7ec3b227839cfb660c3200da3d8b32a5)
+and the
+[measured take ledger with per-window PSNR](https://github.com/sageryza/imageforge/blob/bc5d339d7ec3b227839cfb660c3200da3d8b32a5/docs/mental-hospital/climax3-the-gap.md#the-five-mini-takes-2026-09-09--and-the-seed-trick-that-makes-an-ab-real).
 
 
 ### Master-render defect isolation and scene-plate repair template
@@ -30388,6 +30418,8 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [sageryza / imageforge — September 9, 2026 OpenRouter Seedance 2.0 Mini repeatability probe: five successful 480p takes, matched four-second seed tests, file hashes and per-0.5-second PSNR showing similar openings followed by drift, plus a same-seed cross-resolution test proving that 720p is a fresh take rather than a preserved keeper](https://github.com/sageryza/imageforge/commit/bc5d339d7ec3b227839cfb660c3200da3d8b32a5) ([measured take ledger](https://github.com/sageryza/imageforge/blob/bc5d339d7ec3b227839cfb660c3200da3d8b32a5/docs/mental-hospital/climax3-the-gap.md#the-five-mini-takes-2026-09-09--and-the-seed-trick-that-makes-an-ab-real))
 
 - [Saul Goodman / @Goodmanprotocol — September 9, 2026 Seedance 2.5 crust-machine Earth split: complete 30-second prompt, attached playable result, X Made with AI label, irreversible planetary states, two-ship order and scale-preserving final pullback](https://x.com/Goodmanprotocol/status/2097365433854959774)
 
