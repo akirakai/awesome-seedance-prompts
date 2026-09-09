@@ -337,6 +337,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Marina leap and ladder recovery with closed dry-prop and wet-state ledgers](#321-marina-leap-and-ladder-recovery-with-closed-dry-prop-and-wet-state-ledgers)
   - [Three-hand contact portal with closed memory and reaction states](#322-three-hand-contact-portal-with-closed-memory-and-reaction-states)
   - [Four-light alien-island camera roll with ordinary-worldbuilding lock](#323-four-light-alien-island-camera-roll-with-ordinary-worldbuilding-lock)
+  - [Handheld anaconda feeding near-miss with contact-and-rescue chain](#324-handheld-anaconda-feeding-near-miss-with-contact-and-rescue-chain)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -19952,6 +19953,75 @@ Adapted and rewritten from TechHalla's September 9, 2026
 the [versioned prompt record](https://youmind.com/video-prompts/alien-planet-vacation-home-video-10588)
 preserves the full text, model label, author, date and direct original-post mapping.
 
+
+### 324. Handheld anaconda feeding near-miss with contact-and-rescue chain
+
+**Verified model:** Seedance 2.5 — the versioned public platform record labels
+the model, preserves the complete prompt and playable generated result, and maps
+both directly to the original creator post  
+**Use case:** continuous found-phone wildlife drama, human-animal contact,
+reactive reframing, native dialogue  
+**Mode:** text-to-video  
+**Suggested settings:** 30 seconds, 9:16, one uninterrupted handheld take
+
+```text
+Create one continuous 30-second vertical phone recording inside a humid
+professional reptile habitat. This is a fictional, non-gory near-miss involving
+adult staff. Keep the same primary keeper, rescue keeper, camera operator voice,
+green anaconda, feeding tongs, uniform and pool-edge geography from first frame
+to last. Never replace, duplicate or resize a person or the snake.
+
+0–7 s — ROUTINE SETUP
+A friend-held phone follows the primary keeper through the enclosure while he
+speaks casually to camera. Establish the murky pool, one safe route behind him
+and the second keeper deeper in frame. The primary keeper reaches the same marked
+feeding point and crouches with the tongs; nobody changes sides of the pool.
+
+7–15 s — INTERRUPTED DEMONSTRATION
+He begins, “Watch how fast—”. The same anaconda surges from the pool toward the
+feeding zone. Show one readable causal chain: head approaches the tongs, one
+heavy coil catches his forearm, his shoulder turns under the load, his knees
+slide toward the wet edge. Only after contact does the startled camera jerk down,
+briefly lose his face and hunt focus. Do not cut or teleport the snake.
+
+15–23 s — RESCUE AND RELEASE
+The second keeper follows the previously established path, braces behind the
+primary keeper and pulls him backward by the belt and upper torso. Preserve the
+coil's grip, body weight and opposing force long enough to read the struggle.
+Then the coil loosens progressively; the same snake falls back into the pool and
+displaces water with one heavy splash. Keep the people on dry ground and the
+action non-gory.
+
+23–30 s — CONSEQUENCE
+The camera backs away with both keepers to the safe route. The primary keeper is
+breathing hard, shaking and checking the caught forearm. The operator asks,
+“You good?” He answers at normal speed, “Yeah… yeah,” looks back toward the
+pool and adds, “That was way too close.” Hold long enough to hear the final
+breath and enclosure ambience.
+
+PHONE-REALISM LOCK
+Use ordinary auto-exposure, imperfect framing, mild rolling shutter, autofocus
+recovery, motion blur caused only by camera or subject movement, damp acoustics,
+water impact and overlapping alarmed reactions. Dialogue must use one stable
+voice per speaker, natural hesitation, breaths and accurate lip sync.
+
+No cinematic lighting, score, slow motion, edit, hidden cut, transition, heroic
+performance, impossible snake anatomy, weightless coil, body penetration, extra
+animal, changing clothing, instant dry surfaces, text, subtitle or watermark.
+```
+
+**Why it works:** the prompt preserves one geographic route and makes the
+near-miss a dependency chain rather than a pile of simultaneous effects. Camera
+failure is delayed until after visible contact, so handheld panic reads as a
+reaction instead of hiding the event. The release, splash, retreat and shaken
+dialogue provide irreversible physical and emotional consequences.
+
+Adapted and rewritten from Nexora / @frametheory058's September 9, 2026
+[original prompt and generated result](https://x.com/frametheory058/status/2097532251131261359);
+the [versioned full-prompt record](https://youmind.com/video-prompts/anaconda-snake-feeding-incident-10585)
+preserves the exact Seedance 2.5 label, full text, author, date, playable output
+and direct original-post mapping.
+
 ---
 
 ## Reusable templates
@@ -31218,6 +31288,11 @@ and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blo
 
 ## Sources
 
+- [Nexora / @frametheory058 — September 9, 2026 Seedance 2.5 reptile-enclosure
+feeding near-miss: complete 30-second one-take prompt, attached playable result,
+closed keeper / snake / route inventory, contact-to-rescue dependency chain,
+reactive phone-camera failure and native overlapping dialogue](https://x.com/frametheory058/status/2097532251131261359)
+([versioned full-prompt record and direct original-post mapping](https://youmind.com/video-prompts/anaconda-snake-feeding-incident-10585))
 - [TechHalla — September 9, 2026 Seedance 2.5 alien-island vacation camera roll: complete 30-second prompt, attached generated result, four-phase local daylight, persistent ordinary-world physics, casual phone-capture grammar and native ambient-audio ledger](https://x.com/techhalla/status/2097521124154241509) ([versioned full-prompt record and direct original-post mapping](https://youmind.com/video-prompts/alien-planet-vacation-home-video-10588))
 
 - [gabrieltan0506-prog / mvstudiopro — September 9, 2026 Seedance 2.5 segment-reference lifecycle implementation: tested blocking-previs and sole-master role prompts, clean reference-to-video reruns, an exact 30.08-second stale-output rejection, mode-separated edit/extend routing, signed-URL refresh and outbound array regression tests](https://github.com/gabrieltan0506-prog/mvstudiopro/commit/109116e9b18da5562965399f710a67e891bfd27e)
