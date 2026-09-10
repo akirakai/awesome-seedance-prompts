@@ -338,6 +338,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Three-hand contact portal with closed memory and reaction states](#322-three-hand-contact-portal-with-closed-memory-and-reaction-states)
   - [Four-light alien-island camera roll with ordinary-worldbuilding lock](#323-four-light-alien-island-camera-roll-with-ordinary-worldbuilding-lock)
   - [Handheld anaconda feeding near-miss with contact-and-rescue chain](#324-handheld-anaconda-feeding-near-miss-with-contact-and-rescue-chain)
+  - [Container-yard strike relay with contact-gated X-ray insert](#325-container-yard-strike-relay-with-contact-gated-x-ray-insert)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -20022,6 +20023,89 @@ the [versioned full-prompt record](https://youmind.com/video-prompts/anaconda-sn
 preserves the exact Seedance 2.5 label, full text, author, date, playable output
 and direct original-post mapping.
 
+
+### 325. Container-yard strike relay with contact-gated X-ray insert
+
+**Verified model:** Seedance 2.5 — the original creator names the exact model,
+publishes the complete 30-second prompt and attaches the generated result in the
+same post  
+**Use case:** close-range fight choreography, impact inserts, slow-motion state
+changes, irreversible damage continuity  
+**Mode:** text-to-video  
+**Suggested settings:** 30 seconds, multi-shot action sequence
+
+```text
+Create a 30-second fictional, non-gory fight between the same two adult
+performers in one foggy shipping-container yard. Character A is the advancing
+striker; Character B is the defender. Lock both faces, builds, hairstyles,
+wardrobes and screen identities. Establish the container behind B and preserve
+its position for every later collision.
+
+0–4 s — FIRST CONTACT
+A closes distance and throws a readable three-punch combination. B attempts to
+slip and guard but the final punch lands on the cheek. Stay at medium close
+range until contact is visible. At that exact frame, enter extreme slow motion:
+sweat and saliva continue along the hit direction while the camera makes one
+short orbit around B's face. Return to real time only after separation.
+
+4–9 s — OVERWHELMED GUARD
+B raises both forearms and retreats along the established line. A's next strikes
+hit the guard before A secures one neck-and-shoulder clinch and delivers a short
+body blow. Use controlled handheld impact vibration, then pull back once to show
+both feet, the clinch and B's loss of balance. Do not hide contact behind shake.
+
+9–13 s — ANATOMY INSERT AND FALL
+The body blow launches B backward. For less than one second, overlay a stylized
+red volumetric X-ray of B's torso, registered to the same body and showing the
+spine flexing in the force direction. It is an explanatory visualization, not a
+new skeleton or a scene transition. Return to photographed reality before B
+falls. One seam of the gray outer jacket tears under tension; the intact inner
+layer remains covered and unchanged. Follow B's continuous trajectory.
+
+13–17 s — CONTAINER CONSEQUENCE
+B's back and shoulder hit the previously established container, producing one
+metal impact. B slides down the same surface and lands seated, dazed. A enters
+the low-angle frame only by walking the known distance; no teleport or heroic
+freeze.
+
+17–23 s — FAILED COUNTER
+B plants one hand, struggles up and throws one desperate attack. A evades,
+resets both feet and lands one counterpunch. Shift from a readable side medium
+shot to a frontal close-up only at contact. Use a second brief slow-motion
+window for cheek compression, sweat and breath, then restore normal anatomy and
+speed immediately.
+
+23–27 s — MOMENTUM-OWNED THROW
+As B staggers, A captures B's striking arm, turns the hips and uses B's forward
+momentum for one shoulder throw. Keep the grip, feet, center-of-mass transfer and
+body orientation readable in one wide side-tracking shot. B rotates once and
+does not change identity, clothing or scale in the air.
+
+27–30 s — CLOSED END STATE
+B lands on the ground with one heavy impact and remains unable to continue. A
+releases the arm, takes one step back and watches from a stable medium-wide
+composition. Fog moves slowly around both bodies; breathing and clothing settle.
+End on the unresolved live frame, not a freeze-frame effect.
+
+AUDIO AND ACCEPTANCE
+Use yard ambience, footwork, cloth tension, breath, glove or fist impacts,
+container resonance and the final ground hit. No score, dialogue, narration,
+text, subtitle or watermark. Reject a strike without contact, repeated impact,
+wrong attacker, switched screen side, floating body, broken grip, impossible
+joint, x-ray detached from B, permanent transparent anatomy, reset jacket,
+different container, hidden cut during the throw, gore or sexualized damage.
+```
+
+**Why it works:** every spectacle beat is downstream of a visible contact.
+The slow-motion windows begin only when a strike lands, the X-ray remains
+registered to B's torso, and the torn jacket, container collision and grounded
+finish form irreversible state changes. Assigning the final throw to one grip
+and one momentum transfer keeps the widest move readable instead of letting
+camera shake substitute for choreography.
+
+Adapted and rewritten from u/Lonelydude014's September 10, 2026
+[complete Seedance 2.5 fight prompt and attached generated result](https://www.reddit.com/r/Seedance_AI/comments/1vqgdfx/testing_seedance_25_with_a_detailed_fight/).
+
 ---
 
 ## Reusable templates
@@ -31354,6 +31438,8 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [u/Lonelydude014 — September 10, 2026 Seedance 2.5 container-yard fight: complete 30-second prompt, attached generated result, contact-gated bullet time, body-registered X-ray insert, persistent jacket damage, container collision and grip-readable shoulder throw](https://www.reddit.com/r/Seedance_AI/comments/1vqgdfx/testing_seedance_25_with_a_detailed_fight/)
 
 - [Mira AI — September 9, 2026 Seedance 2.5 camera-control tutorial:
 generated comparisons and complete prompts for numeric field-of-view cuts, a
