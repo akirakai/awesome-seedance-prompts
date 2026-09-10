@@ -20110,6 +20110,101 @@ Adapted and rewritten from u/Lonelydude014's September 10, 2026
 
 ## Reusable templates
 
+### Chroma-plate motion harvest and feet-anchored sprite pipeline
+
+**Verified model:** Seedance 2.5 (`bytedance/seedance-2.5`, fal
+`image-to-video`) — the primary release contains the exact request
+implementation, complete source-clip template, measured paid run, extracted
+16-frame result and visual comparison  
+**Use case:** convert a smooth AI-generated character performance into keyed,
+aligned sprite frames without asking a sheet generator to invent the
+in-betweens  
+**Mode:** image-to-video source clip followed by deterministic frame extraction
+
+```text
+SOURCE FRAME
+Use one full-body character frame with every limb and moving prop visible.
+Start from an existing transparent frame when possible, then composite it over
+uniform #00FF00. Preserve the character's pale details; do not remove a white
+background if that would also erase eye whites, clothing or highlights.
+
+MOTION-SOURCE CLIP
+Create one continuous [LOOPING / ONE-SHOT] performance of [CHARACTER].
+Lock the camera position, orientation and field of view for the whole clip:
+no pan, tilt, roll, zoom, dolly, orbit, parallax, reframing or edit.
+
+Keep the complete character centered, at constant scale and clear of every
+frame edge. Keep both feet, or the relevant contact points, on one fixed
+baseline. Do not let the subject travel across the plate, turn toward another
+view, or move closer to or farther from the lens.
+
+Primary motion: [ONE READABLE ACTION ARC].
+Secondary motion: [ONE DELAYED CLOTH / HAIR / PROP RESPONSE].
+For an idle cycle, use one breath, one small secondary sway and at most one
+blink. For an attack or locomotion cycle, name the anticipation, peak and
+recovery in physical order.
+
+Fill the entire background with one evenly lit, flat chroma-green field.
+There is no floor, horizon, gradient, vignette, cast shadow, reflection or
+green illumination on the character. Nothing else enters the frame.
+[IF LOOPING: finish in the exact opening pose and baseline.]
+[IF ONE-SHOT: finish in one explicit terminal pose.]
+
+REQUEST ENVELOPE
+Endpoint: image-to-video
+Duration: 4 seconds
+Resolution: 480p
+Audio: off
+Submit once and retain the returned clip, model id, endpoint, duration,
+resolution and seed when available.
+
+DETERMINISTIC HARVEST
+1. Sample [N] frames at equal time intervals. For a loop, stop before the
+   duplicate endpoint; for a one-shot, include both ends.
+2. Estimate the plate color from frame-00 corner patches rather than assuming
+   the model reproduced #00FF00 exactly, then key every frame with one recorded
+   similarity value.
+3. Keep the largest connected alpha component and meaningful detached
+   accessories. Remove only tiny border-connected bleed or isolated debris;
+   flag any frame that loses more than 5% of its original opaque pixels.
+4. Align horizontal position from the lowest contact band around the feet,
+   not the full silhouette bounding box, so a lantern, sword or extended arm
+   cannot push the body sideways. Align vertical position to the common foot
+   baseline.
+5. Pack the aligned frames into the atlas and preserve the source clip,
+   sampling times, key value, alignment measurements and prompt as provenance.
+
+ACCEPTANCE AND REPAIR
+Accept only if every pose is complete; body/contact-point drift is below 5% of
+cell width; the largest adjacent-frame jump is below 8%; scale drift is below
+15%; and the keyed edge is usable at delivery size.
+- Clipped anatomy or excessive scale drift -> regenerate the source clip.
+- Stable body with prop-inflated horizontal wobble -> realign from the feet.
+- Green fringe with no green costume detail -> cautiously widen the key.
+- Green clothing or effects being erased -> narrow the key and tolerate or
+  manually repair the remaining fringe.
+Never sample a preview that was itself rendered from the extracted frames;
+only a deliberately shot chroma-plate performance may become a motion source.
+```
+
+**Why it works:** Seedance supplies temporally coherent in-betweens while a
+measurable post-process owns transparency, frame count, pivot and atlas
+geometry. Separating source generation from extraction also makes failures
+routable: camera or scale errors require a new clip, whereas plate residue and
+prop-biased alignment can be repaired without another paid render.
+
+The released validation used a 4.04-second, 640 × 640 Seedance 2.5 clip and
+produced 16 frames in 12.4 seconds of post-processing. The creator measured
+0.343 px body drift, 2.921 px horizontal anchor drift, a 3 px maximum jump,
+0.0226 scale drift and no warnings after keying and alignment.
+
+Adapted and rewritten from pandazki's September 10, 2026
+[Sprite-mode release with the complete implementation and generated evidence](https://github.com/pandazki/pneuma-skills/commit/36b5f5dcd7be3fcc66191fa43c875d3bba587d06),
+the [full source-clip template and measured run](https://github.com/pandazki/pneuma-skills/blob/36b5f5dcd7be3fcc66191fa43c875d3bba587d06/modes/sprite/skill/references/video-preview.md#the-motion-source-clip),
+and the [real sheet-versus-video derived-frame showcase](https://github.com/pandazki/pneuma-skills/blob/36b5f5dcd7be3fcc66191fa43c875d3bba587d06/modes/sprite/showcase/highlight-sheet-or-video.png).
+
+---
+
 ### Numeric angle-of-view route for a hard cut or true locked-tripod zoom
 
 **Verified model:** Seedance 2.5 — the original creator publishes the exact
@@ -31455,6 +31550,14 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [pandazki / Pneuma Skills — September 10, 2026 Seedance 2.5
+chroma-plate motion-source release: exact `bytedance/seedance-2.5` request
+implementation, complete image-to-video template, measured paid clip,
+corner-sampled key, connected-component cleanup, feet-derived alignment,
+16-frame extraction and visual comparison](https://github.com/pandazki/pneuma-skills/commit/36b5f5dcd7be3fcc66191fa43c875d3bba587d06)
+([full template and measurements](https://github.com/pandazki/pneuma-skills/blob/36b5f5dcd7be3fcc66191fa43c875d3bba587d06/modes/sprite/skill/references/video-preview.md#the-motion-source-clip),
+[derived-frame showcase](https://github.com/pandazki/pneuma-skills/blob/36b5f5dcd7be3fcc66191fa43c875d3bba587d06/modes/sprite/showcase/highlight-sheet-or-video.png))
 
 - [deskcorvn / AI-Video — September 10, 2026 Seedance 2.5 agent-mediated production repair: two days of real runs, captured assistant replies and actual tool payloads, explicit acceptance-state polling gate, settled-control readback, and measured 30-second no-ratio / no-duplicate-duration-text constraints](https://github.com/deskcorvn/AI-Video/commit/ce8135f655cb398c7116dda738097f5b4812fbbf)
 
