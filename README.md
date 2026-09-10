@@ -29537,11 +29537,13 @@ and JennieDov's September 1, 2026
 
 ### Single-write dialogue, untimed shot labels and payload-field mirror gate
 
-**Verified models:** Seedance 2.0 and Seedance 2.0 Fast — one creator records
-nine successful 15-second Seedance 2.0 segments plus a controlled gateway probe;
-a second paid Seedance 2.0 Fast text-to-video run sent `size=9:16` and returned
-a 496×864 portrait stream, confirming that the accepted ratio key can change
-with the exact provider route
+**Verified models:** Seedance 2.0, Seedance 2.0 Fast and Seedance 2.5 — one
+creator records nine successful 15-second Seedance 2.0 segments plus a controlled
+gateway probe; a second paid Seedance 2.0 Fast text-to-video run sent
+`size=9:16` and returned a 496×864 portrait stream; a third creator's two-day
+Seedance 2.5 production log records real 30-second agent-mediated runs and the
+actual downstream submit payload, confirming that prompt text, visible controls
+and serialized fields can each become an independent parameter authority
 
 Use this when a multi-shot native-audio prompt passes through an application or
 provider adapter. Keep story instructions, spoken-copy ownership, reference
@@ -29550,9 +29552,9 @@ submission.
 
 ```text
 JOB CONTRACT
-Exact model = [Seedance 2.0 / Seedance 2.0 Fast]
+Exact model = [Seedance 2.0 / Seedance 2.0 Fast / Seedance 2.5]
 Provider + endpoint = [EXACT ROUTE]
-Duration D = [5–15] seconds
+Duration D = [ROUTE-VALID VALUE] seconds
 Aspect A = [9:16 / 16:9 / supported ratio]
 Ratio key R = [ratio / aspect_ratio / size / OMIT; verified for this route]
 Resolution = [SUPPORTED VALUE]
@@ -29615,8 +29617,18 @@ PRE-SUBMIT GATE
    reference mode in which the source owns orientation.
 6. Compare request duration/ratio with the optional suffix; fail on absence,
    mismatch, duplicate suffixes or an unintended default.
-7. Archive the final prompt, exact route and serialized payload together; inspect
-   the returned stream dimensions before accepting the take.
+7. When an external selector owns duration, suppress duration words from the
+   creative prompt on routes measured to reject or renegotiate duplicate timing.
+8. For the tested Dola Seedance 2.5 30-second route, omit an explicit ratio and
+   let the route own geometry; do not generalize this exception to other providers.
+9. On an agent-mediated route, read back the settled model and duration controls,
+   capture the newest assistant reply and actual downstream submit payload, and
+   require an explicit acceptance state before long polling.
+10. If the agent proposes the wrong duration or asks for a missing parameter,
+    answer from the job ledger and continue the same conversation. Do not open a
+    second submission while acceptance or charge state is unknown.
+11. Archive the final prompt, exact route and serialized payload together; inspect
+    the returned duration and stream dimensions before accepting the take.
 ```
 
 **Why it works:** the model no longer receives two competing timing systems or
@@ -29625,14 +29637,19 @@ without inviting literal timecode execution; single-location dialogue makes
 speaker and lip-sync ownership explicit. The route-aware payload mirror prevents
 a correct-looking prompt from silently rendering at the gateway's default
 duration or orientation, while deterministic @ImageN compilation removes
-reference-role guessing.
+reference-role guessing. On conversational gateways, the acceptance receipt
+closes the additional gap between what the user selected, what the agent
+acknowledged and what the video tool actually received.
 
 Adapted from GYZ001 / MJAgent2's September 4, 2026
 [Seedance 2.0 prompt-dialect repair, nine-segment production record and live
 duration/ratio gateway probe](https://github.com/GYZ001/MJAgent2/commit/9eda934f9d15d80c642d0d57df52635aba0df8e7),
 and Orieileen / Canvex's September 4, 2026
 [paid Seedance 2.0 Fast portrait run and per-route ratio-key
-repair](https://github.com/Orieileen/Canvex/commit/167f27635768d1d910b1f17a83bf3cbbcdcb9a7b).
+repair](https://github.com/Orieileen/Canvex/commit/167f27635768d1d910b1f17a83bf3cbbcdcb9a7b),
+and deskcorvn / AI-Video's September 10, 2026
+[two-day Seedance 2.5 agent-gateway production repair, real-submit receipt and
+route-specific 30-second constraints](https://github.com/deskcorvn/AI-Video/commit/ce8135f655cb398c7116dda738097f5b4812fbbf).
 
 
 ### Single-render beat compression, overlay ownership and derived-fallback gate
@@ -31438,6 +31455,8 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [deskcorvn / AI-Video — September 10, 2026 Seedance 2.5 agent-mediated production repair: two days of real runs, captured assistant replies and actual tool payloads, explicit acceptance-state polling gate, settled-control readback, and measured 30-second no-ratio / no-duplicate-duration-text constraints](https://github.com/deskcorvn/AI-Video/commit/ce8135f655cb398c7116dda738097f5b4812fbbf)
 
 - [u/Lonelydude014 — September 10, 2026 Seedance 2.5 container-yard fight: complete 30-second prompt, attached generated result, contact-gated bullet time, body-registered X-ray insert, persistent jacket damage, container collision and grip-readable shoulder throw](https://www.reddit.com/r/Seedance_AI/comments/1vqgdfx/testing_seedance_25_with_a_detailed_fight/)
 
