@@ -24812,6 +24812,105 @@ as re-read on August 30 and preserved in KampterHarbour's
 [versioned manual refresh](https://github.com/KampterHarbour/kampter-sd-25-skills/commit/f1cddc54b8e3fd05d11bddaca520e00d697b2312).
 
 
+### Eight-slot UGC hard-cut anti-morph compiler
+
+**Verified model:** Seedance 2.5 (`seedance_2_5`, Higgsfield
+`omni_reference`, 720p) — confirmed by the creator's two paid 15-second
+outputs, transaction records, frozen-frame QA, and documented audio replacement
+
+Use this when a single horizontal storyboard must become a fast vertical UGC
+ad whose eight panels read as deliberate cuts instead of soft morphs. Unlike a
+continuous storyboard bridge, this structure makes every boundary visibly
+different, assigns each hand and reference one job, and keeps speech and
+typography out of the paid render.
+
+```text
+JOB PREFLIGHT
+Exact model = seedance_2_5
+Mode = omni_reference
+Output = 9:16, 720p, 15 seconds
+Generate audio = false
+Reference transport = image_references
+
+REFERENCE OWNERSHIP
+@Image1 = approved horizontal eight-slot board; owns beat order, shot size,
+capture viewpoint, subject action, micro-location and light.
+@Image2 = approved adult creator; owns face, hair, body proportions and outfit.
+@Image3 = approved product; owns package geometry, scale, color and label.
+Never render the board, grid, borders, slot labels or simultaneous panels.
+Do not let the board replace identity or product geometry.
+
+EIGHT-BEAT CUT MAP
+Compile exactly B1 -> B2 -> B3 -> B4 -> B5 -> B6 -> B7 -> B8.
+Assign consecutive time windows that cover 0.0-15.0 seconds once, with no gap
+or overlap. Every beat contains:
+- one shot-size band: TIGHT / MID / WIDE;
+- one capture owner: SELFIE HANDHELD / EXTERNAL LOCKED;
+- one physical action with a visible achieved end state;
+- explicit left-hand, right-hand and product contact states;
+- one camera instruction;
+- an explicit "hard cut" after B1-B7, never after B8.
+
+ANTI-MORPH BOUNDARY TEST
+Before accepting each adjacent pair, compare four axes:
+1. capture owner or viewpoint;
+2. shot-size band;
+3. physical action and contact state;
+4. background or micro-location.
+Change at least three axes across every hard cut. Never place two consecutive
+TIGHT product-use details at the same angle or distance. If a boundary changes
+only pose or expression, redesign the later board slot before paying for video;
+do not ask the model to invent separation from two near-identical panels.
+
+HAND AND PRODUCT LEDGER
+At the start of every beat, state which hand is off-frame holding the phone,
+which hand is visible, and where the product is. A hand holding the phone cannot
+also touch the face or product. Use two-handed product action only in an
+EXTERNAL LOCKED beat. Keep exactly one hero product unless the approved action
+requires a named disposable component. Describe every contact as
+approach -> grasp / press / peel -> material response -> completed state.
+Never reset an already completed application, open package or removed layer.
+
+CAMERA CONTRACT
+SELFIE HANDHELD: one purposeful phone move tied to the hook or reaction, with
+small human correction; no extra drift layered on top.
+EXTERNAL LOCKED: camera position, aim and focal length remain fixed; only the
+subject and product move. If one deliberate push-in is essential, name it as
+the sole move and keep everything else locked.
+Do not use handheld, drift, wobble or micro-shake language inside a locked beat.
+
+PERFORMANCE AND AUDIO
+Start B1 with action or speech-ready mouth movement, not a neutral hold.
+Give each beat one restrained observable reaction and reserve one larger
+body-led emotional peak for the whole clip. Render silent: no generated voice,
+music, captions, subtitles or label replacement. Add authorized narration,
+music and text in post; derive subtitle timing from the final audio, not from
+the planned beat windows.
+
+ENDPOINT AND QA
+B8 completes [PRODUCT / USER PAYOFF] and holds a clean end state without an
+extra cut or replay.
+Before delivery:
+- confirm returned model, 9:16 dimensions, 15-second duration and no audio track;
+- make a contact sheet and verify eight ordered, visually separated beats;
+- reject a dissolve or face/product morph at any intended hard cut;
+- reject hand-role violations, product duplication, geometry or label drift;
+- reject a frozen opening, visible board, baked text or invented ninth beat.
+Record the task ID and authoritative charge before any retry.
+```
+
+**Why it works:** the board supplies composition, but the boundary test supplies
+editing grammar. Large simultaneous changes in viewpoint, scale, action and
+place give an intentional cut more evidence than two neighboring look-alike
+panels. The hand ledger prevents selfie impossibilities, while silent rendering
+separates visual generation from language-specific voice and subtitle QA.
+
+Adapted from Jacob O. Haupold's September 12, 2026
+[Seedance 2.5 UGC production and transaction audit](https://github.com/jacobohaupold/Claude-septiembre/commit/8088149b8dac51304d9da612f11094608f6eb87a)
+and its
+[complete eight-slot workflow, prompt structure and measured failure notes](https://github.com/jacobohaupold/Claude-septiembre/blob/8088149b8dac51304d9da612f11094608f6eb87a/nocta/marketing/anuncios/MANUAL_HIGGSFIELD.md#a6-prompt-del-clip-seedance_2_5-omni_reference-916-720p-15-s-sin-audio).
+
+
 ### Style-seeded adjacent-boundary storyboard chain
 
 **Verified model:** Seedance 2.5 — confirmed by the creator's August 10
@@ -31788,6 +31887,14 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [Jacob O. Haupold / Claude-septiembre — September 12, 2026 Higgsfield
+Seedance 2.5 UGC production audit: two paid 15-second 720p
+`omni_reference` clips, complete eight-slot board-to-video workflow,
+transaction-backed cost, four-axis hard-cut separation, hand / product
+ownership, locked-camera word gate, native-Spanish voice failure and silent
+post-audio route](https://github.com/jacobohaupold/Claude-septiembre/commit/8088149b8dac51304d9da612f11094608f6eb87a)
+([full workflow and prompt structure](https://github.com/jacobohaupold/Claude-septiembre/blob/8088149b8dac51304d9da612f11094608f6eb87a/nocta/marketing/anuncios/MANUAL_HIGGSFIELD.md#a6-prompt-del-clip-seedance_2_5-omni_reference-916-720p-15-s-sin-audio))
 
 - [Salvatore0104 / easyai-cli — September 12, 2026 real-site
 Seedance 2.0 Fast transport repair: exact `豆包Seedance-2.0-fast` route,
