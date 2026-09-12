@@ -20110,6 +20110,168 @@ Adapted and rewritten from u/Lonelydude014's September 10, 2026
 
 ## Reusable templates
 
+### Voice-locked semantic beat ladder with free-staging retakes
+
+**Verified model:** Seedance 2.5 (fal `bytedance/seedance-2.5/text-to-video`,
+720p) — the original filmmaker records a completed 69-second production made
+from three text-only Seedance parts, publishes the reusable prompt skeleton,
+measured cost and observed drift, and contrasts an over-choreographed first take
+with the stronger voice-first rerun  
+**Use case:** narrated explainers or illustrated essays whose visuals must land
+on an already recorded voice track without turning every sentence into brittle
+micro-choreography  
+**Mode:** text-to-video parts; silent generation followed by deterministic
+voiceover assembly
+
+```text
+LOCK THE VOICE BEFORE VIDEO
+Approve and record the final narration first. Measure every sentence boundary
+and its real spoken duration. Split the film only at complete sentence endings,
+never at an arbitrary round second, and keep every part within the model limit.
+
+IMMUTABLE PART PREFIX
+Repeat these two blocks verbatim at the head of every part:
+
+STYLE
+[PHYSICAL OR GRAPHIC MEDIUM NAMED FIRST].
+Ground = [COLOUR / MATERIAL]. Fills = [PALETTE]. Lines = [COLOUR / WEIGHT].
+Reserve [ACCENT 1] only for [MEANING] and [ACCENT 2] only for [MEANING].
+Motion grammar = [ON TWOS / HELD FRAMES / STOP-MOTION STEPS / OTHER].
+Mood = [BRIGHT / LIGHT / RESTRAINED / OTHER].
+Exclude [GRADIENT / PHOTOGRAPHIC / 3D / LETTERING / OTHER WRONG MEDIUM].
+
+WORLD
+The central metaphor is [ONE SENTENCE].
+[OBJECT A] means [ROLE]; [OBJECT B] means [ROLE].
+Only [CHARACTERS] may appear, in [ALLOWED PLACES].
+For a continuation, begin from the previous part's observed terminal state:
+[STATE], without implying a shared source frame.
+
+SEMANTIC BEAT TABLE
+The generated part is silent; the approved narrator is added afterwards.
+Every shot states only its time window, the exact narration heard there, and
+the one idea a first-time viewer must understand. Cut only where marked.
+Within a shot, stay in one place and let the model choose staging, performance,
+camera and transitions.
+
+Shot 1, [T0–T1].
+Narrator: "[EXACT RECORDED WORDS]."
+Picture must make clear: [ONE LEGIBLE IDEA].
+
+Cut.
+
+Shot 2, [T1–T2].
+Narrator: "[EXACT RECORDED WORDS]."
+Picture must make clear: [ONE LEGIBLE IDEA].
+
+[CONTINUE ONLY AS REQUIRED.]
+
+Do not prescribe hand-by-hand object handling, actor gestures, camera paths,
+lens vocabulary or depth of field in the first pass. Do not render lettering,
+captions, brand marks or the narrator.
+
+REVIEW AND RETAKE
+For each returned part:
+- compare actual cuts with the requested boundaries;
+- verify every beat is understandable with the sound muted;
+- record palette, character and prop drift separately;
+- mux the measured voice segment, padding only the container tail with silence;
+- reject any edit that trims or time-stretches a spoken word.
+
+If one beat fails, rerun only that part and add one concrete direction for that
+beat. Do not rewrite the stable STYLE or WORLD blocks, and do not expand the
+whole part into gesture choreography.
+```
+
+**Why it works:** narration timing and visual meaning are locked, while the
+model retains freedom over the variables it staged better than the creator's
+first hand-choreographed attempt. Repeating the same style/world prefix makes
+drift auditable across independently generated parts; sentence-boundary splits
+and one-variable retakes keep a local failure from reopening a long film.
+
+The recorded Seedance 2.5 run delivered three parts totalling 69 seconds for an
+estimated $33. The creator reports that the semantic rerun held the intended
+cut count and meaning while improving palette and reveal staging; remaining
+drift was limited to accent-colour spread, glow and a few prop/wardrobe details.
+
+Adapted and rewritten from Carlos Sandoval's September 12, 2026
+[primary Seedance 2.5 production release and failure comparison](https://github.com/clsandoval/make-film/commit/b2e2d4b755767a2a64874e39000d62fee80900ca),
+the [complete voice-first template](https://github.com/clsandoval/make-film/blob/b2e2d4b755767a2a64874e39000d62fee80900ca/assets/VOICE-FIRST-PROMPT.template.md),
+and the [measured 69-second workflow record](https://github.com/clsandoval/make-film/blob/b2e2d4b755767a2a64874e39000d62fee80900ca/references/voice-first-video.md).
+
+---
+
+### Silent square feed GIF with one-gag-per-beat density gate
+
+**Verified model:** Seedance 2.5 (fal `bytedance/seedance-2.5/text-to-video`,
+720p) — the original filmmaker records two paid takes of the same ten-second
+concept, the prompt change that replaced four rushed payoff shots with one
+continuous gag, the generated plate workflow and final GIF sizes  
+**Use case:** silent social-feed loop, lightweight product metaphor, visual joke
+or announcement whose exact words will be composited after generation  
+**Mode:** one 10-second square text-to-video plate followed by typography and
+palette-controlled GIF encoding
+
+```text
+DELIVERY CONTRACT
+Duration = 10 seconds. Aspect ratio = 1:1. Resolution = 720p.
+Generated audio = off. One visual joke in three beats.
+Seedance owns moving imagery only; the editor owns every readable character,
+caption, corrected word, logo and final encode.
+
+VISUAL LANGUAGE
+[ONE PRECISE MEDIUM]: [GROUND], [FILL COLOURS], [LINE COLOUR AND WEIGHT].
+Reserve [ONE ACCENT] only for [PAYOFF CUE].
+Mood is [BRIGHT / LIGHT / AIRY / OTHER], not [WRONG MOOD].
+No lettering, pseudo-lettering, subtitle, logo, watermark or prebuilt text box.
+Characters: [ONE SHORT IDENTITY BLOCK FOR EACH RECURRING ROLE].
+
+0–3 seconds — SETUP
+[ONE ACTION THAT ESTABLISHES THE PROBLEM].
+Keep [PHONE / TABLET / SIGN / SKY AREA] visually clean if editor-owned text must
+later attach there.
+
+Hard cut.
+
+3–6 seconds — TURN
+[ONE CAUSAL REVERSAL OR MISINTERPRETATION].
+
+Hard cut.
+
+6–10 seconds — PAYOFF
+[ONE GAG, EXPRESSED AS ONE CONTINUOUS ACTION THAT GROWS UNTIL THE FINAL FRAME].
+Do not list alternate gags, extra mechanisms or several payoff nouns.
+End on a composition whose large shapes can reconnect cleanly to the opener.
+
+POST-TEXT OWNERSHIP
+Extract a contact sheet before positioning any type; do not assume that a
+generated phone, tablet or blank surface landed where the storyboard predicted.
+Place each approved word in post with exact spelling, time window, position,
+colour and motion. Retain the clean plate separately.
+
+DENSITY AND LOOP GATE
+- Exactly one setup, one turn and one payoff are readable.
+- The final four seconds contain one sustained gag, not a noun-per-cut montage.
+- No model-rendered text survives.
+- Inspect the last-to-first transition at delivery size; if large subjects jump,
+  revise the terminal composition or ship the MP4 without claiming a clean loop.
+- Encode a palette-optimised delivery copy, then verify duration, dimensions,
+  frame rate, file-size cap and readability inside the target feed.
+```
+
+**Why it works:** the number of concrete payoff mechanisms acts like an
+unintended shot-count instruction. In the source A/B run, four listed gags
+became four cuts inside four seconds; replacing them with one growing action
+produced one readable continuous payoff. Keeping typography outside Seedance
+also makes spelling and comic timing deterministic after the actual plate
+composition is known.
+
+Adapted and rewritten from Carlos Sandoval's September 12, 2026
+[primary two-take Seedance 2.5 production record](https://github.com/clsandoval/make-film/commit/b2e2d4b755767a2a64874e39000d62fee80900ca)
+and the [complete ten-second feed-GIF prompt structure, failure notes and encode measurements](https://github.com/clsandoval/make-film/blob/b2e2d4b755767a2a64874e39000d62fee80900ca/references/linkedin-gif-10s.md).
+
+---
+
 ### Chroma-plate motion harvest and feet-anchored sprite pipeline
 
 **Verified model:** Seedance 2.5 (`bytedance/seedance-2.5`, fal
@@ -31550,6 +31712,15 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [Carlos Sandoval / make-film — September 12, 2026 fal Seedance 2.5
+voice-first and silent-feed production release: a 69-second three-part narrated
+film, two-take ten-second GIF comparison, complete reusable templates, exact
+text-to-video route, measured cost, drift notes, semantic-beat retakes,
+one-gag-per-beat density control and editor-owned typography](https://github.com/clsandoval/make-film/commit/b2e2d4b755767a2a64874e39000d62fee80900ca)
+([voice-first template](https://github.com/clsandoval/make-film/blob/b2e2d4b755767a2a64874e39000d62fee80900ca/assets/VOICE-FIRST-PROMPT.template.md),
+[long-form measured workflow](https://github.com/clsandoval/make-film/blob/b2e2d4b755767a2a64874e39000d62fee80900ca/references/voice-first-video.md),
+[ten-second GIF workflow and A/B failure record](https://github.com/clsandoval/make-film/blob/b2e2d4b755767a2a64874e39000d62fee80900ca/references/linkedin-gif-10s.md))
 
 - [pandazki / Pneuma Skills — September 10, 2026 Seedance 2.5
 chroma-plate motion-source release: exact `bytedance/seedance-2.5` request
