@@ -20110,6 +20110,82 @@ Adapted and rewritten from u/Lonelydude014's September 10, 2026
 
 ## Reusable templates
 
+### Semantic prompt-to-omni transport compiler and empty-content recovery gate
+
+**Verified model:** Seedance 2.0 Fast (live catalog ID
+`豆包Seedance-2.0-fast`) — the original developer records a successful paid
+text-to-video task on the real service after the same direct request first failed
+with `VIDEO_INPUT_CONTENT_EMPTY`; the accepted run returned a 5.04-second H.264
+clip, and an idempotent recovery returned the same task without another submit  
+**Use case:** API, CLI or agent workflows that already have a sound creative
+prompt but must compile it into a provider's ordered multimodal request without
+losing reference semantics or paying twice during schema recovery  
+**Mode:** text-to-video or image-referenced video through an omni-video gateway
+
+```text
+SEMANTIC PROMPT — KEEP THIS PROVIDER-INDEPENDENT
+[SUBJECT] performs [ONE ORDERED ACTION ARC] in [ENVIRONMENT].
+Camera: [ONE MOTIVATED MOVE].
+Preserve [IDENTITY / PRODUCT GEOMETRY / PALETTE / LIGHT DIRECTION].
+Audio: [ON WITH A DIEGETIC PLAN / OFF].
+No extra subject, identity swap, state reset, text, logo or watermark.
+
+REFERENCE LEDGER
+Image 1 = [IDENTITY / PRODUCT / COMPOSITION / STYLE ROLE].
+Image 2 = [SECOND NON-OVERLAPPING ROLE].
+Keep the declared image order fixed from upload through submission.
+
+TRANSPORT COMPILER
+Resolve the exact model before compiling. Only when its live capabilities expose
+the omni-video contract, build content in this order:
+1. { type: "text", text: [THE COMPLETE SEMANTIC PROMPT] }
+2. { type: "image_url", role: "reference_image",
+     image_url: { url: [RESOLVED HTTPS URL FOR IMAGE 1] } }
+3. Repeat for Images 2…N in the same order as the reference ledger.
+
+Do not submit a bare prompt to this route. Do not place unresolved local paths in
+content; upload them first and use the returned HTTPS URLs. If the caller already
+supplied content, validate and preserve it rather than silently appending a
+second text block or duplicate references.
+
+PRE-QUEUE AGREEMENT GATE
+- resolved model still equals the model the user approved;
+- content[0].text exactly equals the approved complete prompt;
+- every later item maps one-to-one to the ordered reference ledger;
+- mode, duration, aspect ratio, resolution and audio match the settled controls;
+- the idempotency key and request fingerprint are recorded before submission.
+
+EMPTY-CONTENT RECOVERY
+If the provider returns VIDEO_INPUT_CONTENT_EMPTY, retry only when no task was
+accepted and no charge was recorded. Correct only the transport mapping, keep
+the semantic prompt, model, controls, references, order and idempotency key
+unchanged, and submit once. Never rewrite the creative brief to repair a request
+schema error.
+
+POST-RUN TRUTH GATE
+Record accepted task ID, returned task on recovery, actual duration, dimensions,
+codec, audio state and charge fields. A repeated idempotency key must resolve to
+the same task without a second debit. If the response omits an actual-cost field,
+report cost as unknown; do not infer a universal price from a balance delta.
+```
+
+**Why it works:** it separates what Seedance should depict from how one gateway
+expects that instruction to be transported. Text-first ordering and a
+one-to-one reference ledger prevent a valid prompt from arriving as empty or
+having reference roles silently reshuffled. The recovery gate also distinguishes
+a pre-acceptance schema defect from a generation failure, so the fix cannot
+mutate the creative request or create a duplicate paid task.
+
+The cited live run used 480p, five seconds, 16:9, audio off and text-to-video; it
+returned H.264 at 864×496 and about 5.04 seconds. Treat those measurements as
+dated route evidence, not universal Seedance output dimensions or pricing.
+
+Adapted and rewritten from Salvatore0104's September 12, 2026
+[real-site Seedance 2.0 Fast validation, payload repair and regression
+tests](https://github.com/Salvatore0104/easyai-cli/commit/28b4c4dca24146eefc863860cf8d44ea3959d64b).
+
+---
+
 ### Voice-locked semantic beat ladder with free-staging retakes
 
 **Verified model:** Seedance 2.5 (fal `bytedance/seedance-2.5/text-to-video`,
@@ -31712,6 +31788,13 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [Salvatore0104 / easyai-cli — September 12, 2026 real-site
+Seedance 2.0 Fast transport repair: exact `豆包Seedance-2.0-fast` route,
+successful paid 480p five-second text-to-video task, pre-acceptance
+`VIDEO_INPUT_CONTENT_EMPTY` failure, text-first multimodal content mapping,
+ordered reference-image tests and same-task idempotent recovery without a second
+submission](https://github.com/Salvatore0104/easyai-cli/commit/28b4c4dca24146eefc863860cf8d44ea3959d64b)
 
 - [Carlos Sandoval / make-film — September 12, 2026 fal Seedance 2.5
 voice-first and silent-feed production release: a 69-second three-part narrated
