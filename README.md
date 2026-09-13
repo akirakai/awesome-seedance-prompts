@@ -20110,6 +20110,188 @@ Adapted and rewritten from u/Lonelydude014's September 10, 2026
 
 ## Reusable templates
 
+
+### Role-mapped Blender whitebox to natural-motion semantic rerender
+
+**Verified model:** Seedance 2.5 (official ByteDance canvas, reference-video
+mode) — the original creator publishes the exact workflow, three complete
+render prompts and their results, and reports two real generations for the
+ten-second pet example  
+**Use case:** complex camera paths, multi-character blocking, dialogue coverage
+or vehicle stunts that need cheap spatial previs before an expensive semantic
+render  
+**Mode:** reference-video plus character, prop and environment stills; the
+whitebox controls space and time while Seedance regenerates appearance and
+natural motion
+
+```text
+PREVIS CONTRACT
+Exact model = Seedance 2.5.
+Final duration / aspect = [SECONDS] / [RATIO].
+Shot count = [N]. Reference-video duration = [SECONDS].
+Characters = [ROLE A, ROLE B...].
+Props or vehicles = [CLOSED LIST].
+Locations = [FIXED LANDMARKS AND CONNECTING ROUTE].
+Impossible or expensive beats = [EVENTS THAT REQUIRE PRECISE BLOCKING].
+
+Before opening Blender, turn the story into a numbered shot ledger. For every
+shot record:
+- time range and cut boundary;
+- camera position, height, lens feeling, direction and movement;
+- each role's entry point, path, screen side, facing and terminal position;
+- the physical trigger that causes the next beat;
+- any projectile, vehicle or prop trajectory;
+- the state that must survive the cut.
+
+WHITEBOX ROLE MAP
+Give every character and important object one unique, flat placeholder colour
+and shape. Write the mapping before rendering:
+[COLOUR / SHAPE] = [ROLE OR ASSET REFERENCE].
+No placeholder may change identity between shots. Use simple geometry only;
+do not spend time on faces, clothing, textures or realistic limb animation.
+
+Build one continuous spatial model for all connected shots. Animate camera
+moves, cut times, blocking, height changes, contact points and trajectories.
+The whitebox is allowed to slide or move rigidly; its job is to prove geography
+and timing, not final body mechanics. Export at the final duration and aspect.
+
+PREVIS ACCEPTANCE GATE
+Review the whole whitebox before a Seedance submission:
+1. Every shot appears once, in the intended order and at the intended time.
+2. Screen direction, eyelines and the 180-degree line are deliberate.
+3. Entrances, exits and landing zones remain inside the established geometry.
+4. Contact, door, ledge, window, weapon and vehicle targets are unambiguous.
+5. A projectile or fast vehicle has one readable path from launch to impact.
+6. No shot requires the final model to infer an unseen room or reverse a
+   completed state.
+Repair only the failed shot or camera path, then re-export the full reference.
+
+REFERENCE AUTHORITY MATRIX
+Treat each input as authoritative only for its declared channel.
+
+Reference video locks:
+- shot order, cut timing, camera path and framing;
+- role positions, screen sides, scale, height and spatial relationships;
+- object routes, contact locations and terminal poses.
+
+Reference video does NOT lock:
+- rigid sliding, cube-like posture or mechanical turning;
+- placeholder surfaces, lighting or primitive geometry;
+- missing footwork, breathing, gaze, cloth, hair or secondary motion.
+
+Asset stills lock:
+- face and body identity;
+- wardrobe, colour blocking, logos or patterns;
+- prop / vehicle construction;
+- environment materials and landmark appearance.
+
+Text locks:
+- natural performance and physics;
+- causal action detail, emotion and audio;
+- when an asset appears, changes state or remains hidden.
+
+SEEDANCE RENDER PROMPT
+Generate a [SECONDS]-second [RATIO] [LIVE-ACTION / CINEMATIC CG / OTHER]
+sequence. Replace every whitebox role according to the role map and replace
+the primitive set with the declared environment. Follow the reference video's
+camera movement, framing, cuts, character locations, spatial relationships,
+height changes and trajectories. The geometry is positional guidance only.
+Regenerate anatomically natural running, stopping, turning, reaching, speaking,
+driving, jumping, landing and impact response with weight, inertia, traction,
+air resistance and delayed secondary motion. Never copy block sliding or rigid
+placeholder posture.
+
+ASSET ANCHORS
+@Image1 = [ROLE A: face, hair, wardrobe, immutable identifiers].
+@Image2 = [ROLE B...].
+@Image3 = [PROP OR VEHICLE: construction and ownership].
+@Image4 = [ENVIRONMENT: layout-compatible materials and landmarks].
+State when each asset first appears. An absent or concealed asset stays absent
+until its named reveal; it is never summoned, grown or teleported unless that
+event is explicitly part of the story.
+
+WORLD AND CONTINUITY LEDGER
+Lighting / weather = [ONE COHERENT PROGRESSION].
+A owns [PROP]; B owns [PROP]. Hands are [FREE / OCCUPIED] per shot.
+Persistent state changes = [OPEN DOOR, BROKEN WINDOW, DAMAGE, WET CLOTHING,
+MISSING OBJECT, POSITION CHANGE].
+Crowd or background inventory = [CLOSED LIST].
+Carry every completed state forward. Do not restore, duplicate or exchange an
+asset across a cut.
+
+SHOT LEDGER
+[00:00-00:AA] Shot 1 — [CAMERA AND FRAMING].
+Trigger: [VISIBLE CAUSE].
+Action: [ROLE-SPECIFIC BODY MECHANICS AND CONTACT].
+Terminal state: [EXACT END POSITION / PROP STATE].
+Performance: [GAZE, BREATH, EXPRESSION].
+Synchronous sound: [ONLY SOUNDS MOTIVATED BY THIS BEAT].
+
+[00:AA-00:BB] Shot 2 — [CAMERA AND FRAMING].
+Trigger: [WHAT SHOT 1 CAUSED].
+Action: [NEXT MOTION, PRESERVING SCREEN DIRECTION AND OWNERSHIP].
+Terminal state: [STATE PASSED TO SHOT 3].
+Performance: [REACTION ORDER].
+Synchronous sound: [LOCAL SOUND].
+
+Repeat until Shot [N]. For dialogue, place each line in exactly one speaker's
+shot and require the listener's mouth to remain closed. For a chase, keep all
+vehicles moving forward unless a stop is explicitly scripted. For a projectile,
+put the camera behind or beside the travel axis as specified by the whitebox;
+do not reverse or multiply the projectile.
+
+IMAGE AND AUDIO FINISH
+Describe one material and lighting system for skin, hair, cloth, metal, glass,
+weather and environmental reflections. Use motion blur only where speed
+requires it while keeping faces and action ownership readable. Generate only
+synchronized dialogue, breathing, footsteps, mechanisms, impacts and ambience
+listed in the ledger. [NO MUSIC / DECLARED MUSIC]. No captions, subtitles,
+narration, logo or watermark unless deliberately requested.
+
+FAILURE CONTROLS
+No visible cubes, proxy people, guide colours, wireframes or studio background.
+No copied rigid sliding, mannequin motion or mechanical pivots.
+No identity swap, changed wardrobe, prop duplication, ownership drift,
+teleportation, extra actor or altered location topology.
+No premature reveal, repeated event, hidden reset or extra cut.
+No wrong screen direction, axis jump, broken eyeline, impossible contact,
+camera path reversal or trajectory reversal.
+No anatomy error, hand / prop intersection, floating body or physics-free
+impact. Add scene-specific exclusions only when each one protects a named
+asset, state or causal beat.
+
+FINAL READBACK
+Accept the render only if:
+- model, duration, ratio and reference mode match the request;
+- all [N] shots and cut boundaries are present once;
+- camera and blocking match the whitebox within useful tolerance;
+- people move naturally rather than inheriting primitive motion;
+- identity, ownership and irreversible state survive every cut;
+- every reveal, contact, line and sound belongs to the correct beat;
+- no placeholder geometry or guide colour remains visible.
+Store the submitted prompt, reference manifest, task ID and playable artifact.
+```
+
+**Why it works:** the authority matrix resolves a common reference-video
+conflict. Blender owns the hard-to-infer camera, geography, cuts and paths,
+while Seedance is explicitly told to discard the whitebox's poor anatomy and
+rebuild natural performance. A colour-to-role map and per-shot terminal states
+make multi-character continuity testable instead of relying on visual
+resemblance alone.
+
+**Evidence boundary:** the creator demonstrates this method on a complex
+nine-shot rooftop action scene, a four-shot dialogue and a seven-shot vehicle
+stunt, and reports fewer than two draws as a typical result of their workflow.
+That is strong production evidence, not a guaranteed success rate; the published
+tests use the official ByteDance canvas and their specific assets and previs.
+
+Adapted and rewritten from TanLuAI's September 13, 2026
+[original Seedance 2.5 article, complete prompts and generated examples](https://x.com/TanLuAI/status/2099124935285461329).
+A compact archival copy of the attached preview is preserved in the
+[X-RayLuan workflow record](https://github.com/X-RayLuan/awesome-gpt-6-astra-prompts/commit/da6b1d29caee57fda421b909629d7cf309b54ab8).
+
+---
+
 ### Positive-only originality repair and prompt-specific preset handshake
 
 **Verified model:** Seedance 2.5 (Higgsfield route) — the original creator records
@@ -32098,6 +32280,12 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [TanLuAI — September 13, 2026 official-canvas Seedance 2.5
+Blender-whitebox workflow: original article, three complete generated examples,
+colour-to-role replacement, camera / timing / blocking authority, natural-motion
+rerendering, asset anchors, shot ledgers and real two-draw cost evidence](https://x.com/TanLuAI/status/2099124935285461329)
+([archived preview and source mapping](https://github.com/X-RayLuan/awesome-gpt-6-astra-prompts/commit/da6b1d29caee57fda421b909629d7cf309b54ab8))
 
 - [Funesterie / alphaonze — September 13, 2026 Seedance 2.0 Fast
 provider-reserve audit: a real long-form job stopped at 2 of 28 plans with
