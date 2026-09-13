@@ -31514,6 +31514,79 @@ the [full workflow and defect countermeasure record](https://github.com/aipaulos
 and the [structure, sheet and payload-fingerprint verifier](https://github.com/aipauloshimas/world-swap-capcut/blob/eaf8340bb3fc33e962d1e1a6ff34d73ccc06ade4/scripts/verify_prompt.py).
 
 
+
+### Two-reference product-cameo window with native-audio one-take
+
+**Verified model:** Seedance 2.5 (AtlasCloud
+\`bytedance/seedance-2.5/reference-to-video\`, 720p) — NodeTool's published
+workflow binds this exact route, exposes the complete prompt and settings, ships
+the resulting 15-second native-audio reel, and regression-tests the three timed
+visibility intervals
+
+Use this when a selfie testimonial should remain face-led while a second
+reference product appears for one short proof beat. Give the two images
+non-overlapping authority, then define the product's allowed screen interval as
+a closed state rather than a loose suggestion.
+
+\`\`\`text
+INPUT AUTHORITY
+@Image1 owns only [CREATOR FACE, HAIR, WARDROBE, ROOM AND NATURAL SKIN].
+@Image2 owns only [PRODUCT SILHOUETTE, MATERIAL, COLOUR, LID / HARDWARE AND
+PROPORTIONS]. Ignore @Image2's background, lighting and camera view.
+Do not transfer appearance or scene traits between the two references.
+
+ROUTE
+Seedance 2.5 reference-to-video, 720p, 15 seconds, vertical 9:16.
+Generate picture, one speaking voice and lip movement together in one pass.
+One continuous front-camera phone take; no cutaway or product-only insert.
+
+PERFORMANCE AND CAMERA
+Chest-up adult creator facing the phone. Preserve facial asymmetry, real pores,
+small blinks and gaze corrections, breathing, restrained hand movement, slight
+handheld drift, modest autofocus / exposure breathing and ordinary phone
+compression. [EMOTION ARC] while speaking [EXACT SCRIPT].
+
+VISIBILITY STATE LEDGER
+[0.0–4.5s] Creator alone. Both hands and the product remain outside the frame.
+Begin the approved dialogue immediately with [OPENING AFFECT].
+[4.5–7.0s] Without moving away from the face, one hand raises @Image2 from
+below frame into [LOWER-LEFT / LOWER-RIGHT SAFE ZONE]. Keep the whole face and
+mouth unobstructed. Hold long enough to read its shape, then lower product and
+hand completely out of frame before 7.0s.
+[7.0–15.0s] Creator alone again. Product and hands stay absent through
+[FINAL LINE / SMALL SMILE / CTA HOLD]. They may not re-enter.
+
+SPEECH AND SOUND
+The only spoken words are: "[EXACT SCRIPT]"
+No paraphrase, extra word, narrator or second speaker. Use one natural
+[LANGUAGE / ACCENT] adult voice with conversational cadence and subtle room
+tone. No music. Keep the mouth visible for the entire spoken passage.
+
+FAILURE CONTROLS
+No product before 4.5s or after 7.0s; no duplicate, morphing or oversized
+product; no imported product-reference background; no hand over the face; no
+jump cut, cutaway, subtitle, generated lettering, logo, beauty filter, waxy
+skin, rigid pose, repetitive mouth cycle or compositing seam.
+
+ACCEPTANCE
+Inspect frames immediately before and after 4.5s and 7.0s plus the final frame.
+Pass only when the creator identity and room persist, the product enters once
+from the named edge, matches @Image2, never blocks the mouth, exits on time and
+stays absent, and the native dialogue contains exactly the approved words.
+\`\`\`
+
+**Why it works:** reference authority and visibility authority solve different
+failure classes. The first prevents a clean product plate from replacing the
+creator's room; the second makes absence before and after the proof beat as
+important as the product appearance itself. Frame checks at both boundaries
+turn a vague UGC gesture into a testable one-take state transition.
+
+Adapted and rewritten from NodeTool's September 13, 2026
+[Seedance 2.5 UGC workflow and generated-sample commit](https://github.com/nodetool-ai/nodetool/commit/0e55d06d429abb86665412902d2b5916f0148f2b),
+the [complete model-bound prompt graph](https://github.com/nodetool-ai/nodetool/blob/0e55d06d429abb86665412902d2b5916f0148f2b/packages/base-nodes/nodetool/examples/nodetool-base/Generate%20a%20Native-Audio%20UGC%20Testimonial.json),
+and the [published 15-second finished MP4](https://github.com/nodetool-ai/nodetool/blob/0e55d06d429abb86665412902d2b5916f0148f2b/marketing/public/apps/examples/ugc-product-video/final.mp4).
+
+
 ---
 ## Camera language
 
@@ -32362,6 +32435,8 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [NodeTool — September 13, 2026 AtlasCloud Seedance 2.5 native-audio UGC release: complete model-bound reference-to-video prompt, creator / product authority split, tested 4.5–7.0-second product visibility window, exact-dialogue gate and committed 15-second finished reel](https://github.com/nodetool-ai/nodetool/commit/0e55d06d429abb86665412902d2b5916f0148f2b) ([complete workflow](https://github.com/nodetool-ai/nodetool/blob/0e55d06d429abb86665412902d2b5916f0148f2b/packages/base-nodes/nodetool/examples/nodetool-base/Generate%20a%20Native-Audio%20UGC%20Testimonial.json), [generated MP4](https://github.com/nodetool-ai/nodetool/blob/0e55d06d429abb86665412902d2b5916f0148f2b/marketing/public/apps/examples/ugc-product-video/final.mp4))
 
 - [TanLuAI — September 13, 2026 official-canvas Seedance 2.5
 Blender-whitebox workflow: original article, three complete generated examples,
