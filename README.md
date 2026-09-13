@@ -339,6 +339,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Four-light alien-island camera roll with ordinary-worldbuilding lock](#323-four-light-alien-island-camera-roll-with-ordinary-worldbuilding-lock)
   - [Handheld anaconda feeding near-miss with contact-and-rescue chain](#324-handheld-anaconda-feeding-near-miss-with-contact-and-rescue-chain)
   - [Container-yard strike relay with contact-gated X-ray insert](#325-container-yard-strike-relay-with-contact-gated-x-ray-insert)
+  - [Saturn-ring camera-as-vehicle audio crescendo](#326-saturn-ring-camera-as-vehicle-audio-crescendo)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -20106,6 +20107,87 @@ camera shake substitute for choreography.
 Adapted and rewritten from u/Lonelydude014's September 10, 2026
 [complete Seedance 2.5 fight prompt and attached generated result](https://www.reddit.com/r/Seedance_AI/comments/1vqgdfx/testing_seedance_25_with_a_detailed_fight/).
 
+### 326. Saturn-ring camera-as-vehicle audio crescendo
+
+**Verified model:** Seedance 2.0 Fast (`bytedance/seedance-2-fast`, Kie route) —
+the primary production repository fixes the exact model ID, commits the complete
+prompt and rendered MP4, records 372 credits consumed, and preserves passing
+visual and native-audio QC events in the same production change  
+**Use case:** first-person space fly-through, continuous obstacle navigation,
+native-audio synchronization, end-weighted energy ramp  
+**Mode:** text-to-video  
+**Suggested settings:** 15 seconds, 9:16, native audio enabled, no added music
+
+```text
+Create one uninterrupted 15-second first-person flight through the real rings of
+Saturn. The camera itself is the vehicle: the image edge must stay completely
+open, with no cockpit, hull, instrument, pilot or HUD visible. Preserve one
+continuous forward trajectory, one Saturn orientation and one physically
+coherent ring plane from the first frame to the last.
+
+0–4 s — CALM ORIENTATION
+Begin on a readable wide view, already drifting forward. Hold Saturn as a huge
+banded crescent on the left, cut by hard side light, while its ring plane recedes
+as a thin bright line toward the camera's route. Let a distant sun flare only at
+the frame edge. Keep the view active from frame one; do not open on black or use
+a fade.
+
+4–6 s — COMMITTED ACCELERATION
+Increase forward speed smoothly toward the same ring plane. Introduce the first
+slowly tumbling blocks of dirty water ice and dark rock at several depths. Their
+parallax and apparent speed must follow distance: far objects drift, near
+objects cross quickly. Once acceleration begins, never brake, hover, reverse or
+reset the route.
+
+6–13 s — OBSTACLE FIELD
+Pass between car-sized and house-sized fragments without a cut. Keep Saturn
+visible through intermittent gaps so the geography does not become an unrelated
+asteroid field. Near ice blocks rush past the sides and overhead with
+distance-appropriate motion blur; fine grains streak past like high-speed snow.
+Show two or three readable collisions between debris pieces, each producing one
+causal burst of smaller crystals. The camera avoids the fragments rather than
+striking them, and forward momentum remains continuous.
+
+13–15 s — CRYSTAL-CLOUD CLIMAX
+Enter the densest part of the same ring. A backlit cloud of ice crystals grows
+until it surrounds the lens and becomes the brightest, fastest and most
+overwhelming moment of the take. Preserve visible crystal texture and forward
+motion through the final frame; do not turn the climax into a blank white flash,
+freeze or transition.
+
+IMAGE AND PHYSICS
+Photoreal space cinematography, real astronomical scale, restrained cold
+gray-blue ice and warm sand-colored Saturn bands, hard sunlight, deep black
+shadows and light volumetric haze. Apply heavy motion blur only to debris that
+passes very close to the lens. No invented planet, artificial neon palette,
+scene change, teleport, discontinuous object scale, repeated collision or
+vehicle silhouette.
+
+AUDIO AND ACCEPTANCE
+Generate diegetic sound only. Begin with a quiet deep rumble. Add close pass-bys,
+ice hiss and sharp cracks exactly when visible debris crosses or collides. Let
+the overall sound field grow with speed and density so the final two seconds are
+the loudest and fullest. No music, voice, narration, subtitle, caption, logo or
+watermark. Reject any cut, fade, camera stop, detached sound effect, silent
+collision, cockpit element, black opening, loss of Saturn geography or weak
+terminal crescendo.
+```
+
+**Why it works:** the camera-as-vehicle rule removes the competing cockpit layer
+and makes parallax the proof of motion. The four phases share one position,
+velocity and energy ledger: orientation becomes acceleration, acceleration
+becomes obstacle density, and density becomes a crystal-cloud climax. Giving
+every close pass and collision a visible audio trigger while reserving maximum
+sound energy for the last two seconds makes the native soundtrack carry the
+same escalation as the image.
+
+Adapted and rewritten from Wolkchen0 / youtube-automation's September 13, 2026
+[primary production commit](https://github.com/Wolkchen00/youtube-automation/commit/8297f4ff36040948993f952bef52360cde3d20ef).
+The repository preserves the [complete source prompt](https://github.com/Wolkchen00/youtube-automation/blob/8297f4ff36040948993f952bef52360cde3d20ef/galactic_experience/flythrough/plans/part01.json),
+[generated MP4](https://github.com/Wolkchen00/youtube-automation/blob/8297f4ff36040948993f952bef52360cde3d20ef/galactic_experience/hazir/saturn-rings-flythrough.mp4),
+[exact Seedance 2.0 Fast route](https://github.com/Wolkchen00/youtube-automation/blob/8297f4ff36040948993f952bef52360cde3d20ef/core/kie_api.py#L475-L489)
+and [passing visual/native-audio QC ledger](https://github.com/Wolkchen00/youtube-automation/blob/8297f4ff36040948993f952bef52360cde3d20ef/galactic_experience/flythrough/qc_log.jsonl).
+
 ---
 
 ## Reusable templates
@@ -33072,6 +33154,8 @@ Community examples and techniques referenced in this README:
 
 
 - [LeN1N-NWO / Traum-App — September 13, 2026 Higgsfield Seedance 2.5 nineteen-style batch, preset-response ledger and positive-only IP repair](https://github.com/LeN1N-NWO/Traum-App/commit/490abeac72b0c7f3920100889384312e24ef28aa) ([ten-render and preset record](https://github.com/LeN1N-NWO/Traum-App/commit/8890687bae84a09965db0c8eaabd65b75766b327), [versioned generated previews](https://github.com/LeN1N-NWO/Traum-App/commit/d24a5396a5b6362947da7503aa3e90f3e5c0caa5))
+
+- [Wolkchen0 / youtube-automation — Seedance 2.0 Fast Saturn-ring camera-as-vehicle fly-through, complete prompt, committed result and QC ledger](https://github.com/Wolkchen00/youtube-automation/commit/8297f4ff36040948993f952bef52360cde3d20ef) ([complete prompt](https://github.com/Wolkchen00/youtube-automation/blob/8297f4ff36040948993f952bef52360cde3d20ef/galactic_experience/flythrough/plans/part01.json), [generated MP4](https://github.com/Wolkchen00/youtube-automation/blob/8297f4ff36040948993f952bef52360cde3d20ef/galactic_experience/hazir/saturn-rings-flythrough.mp4), [exact model route](https://github.com/Wolkchen00/youtube-automation/blob/8297f4ff36040948993f952bef52360cde3d20ef/core/kie_api.py#L475-L489), [QC ledger](https://github.com/Wolkchen00/youtube-automation/blob/8297f4ff36040948993f952bef52360cde3d20ef/galactic_experience/flythrough/qc_log.jsonl))
 
 Official model references:
 
