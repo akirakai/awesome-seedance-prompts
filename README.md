@@ -20121,7 +20121,7 @@ intellectual-property check or suggested-preset handshake prevents an otherwise
 original Seedance prompt from reaching generation  
 **Mode:** text-to-video; prompt-authored style on Seedance 2.5
 
-\`\`\`text
+```text
 IMMUTABLE ATTEMPT LEDGER
 Exact model = Seedance 2.5.
 Provider route = [HIGGSFIELD SURFACE / API].
@@ -20176,7 +20176,7 @@ PROMPT-SPECIFIC PRESET HANDSHAKE
    stop and obtain a new prompt hash before submission.
 
 POLICY-REJECTION REPAIR
-If the provider returns \`ip_detected\` or an equivalent pre-task refusal:
+If the provider returns `ip_detected` or an equivalent pre-task refusal:
 1. stop automatic retries and retain the rejected prompt and response;
 2. remove every named or implied borrowed identity, including names written
    only to say what the result must not resemble;
@@ -20193,7 +20193,7 @@ duration, ratio and resolution. Inspect the opening, midpoint and terminal
 frames for original identity, readable medium, one completed event and no
 unintended resemblance. Store failures beside successes; never let a CSS look,
 thumbnail conversion or preset suggestion stand in for a generated style proof.
-\`\`\`
+```
 
 **Why it works:** the creative layer and the provider negotiation layer remain
 separate. Positive-only character facts keep an exclusion phrase from
@@ -20205,10 +20205,10 @@ grammar and one terminal image, then judge the generated clip rather than a
 post-applied colour filter.
 
 **Evidence boundary:** the cited marker sequence observed one negative
-famous-character comparison rejected with \`ip_detected\` and a positively
+famous-character comparison rejected with `ip_detected` and a positively
 specified original replacement accepted. That supports this route-specific
 repair, not a universal claim about every policy filter. Likewise,
-\`declined_preset_id\` is a Higgsfield interaction contract rather than a
+`declined_preset_id` is a Higgsfield interaction contract rather than a
 Seedance model parameter.
 
 Adapted and rewritten from LeN1N-NWO / Traum-App's September 13, 2026
