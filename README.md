@@ -20110,6 +20110,108 @@ Adapted and rewritten from u/Lonelydude014's September 10, 2026
 
 ## Reusable templates
 
+### Upstream-credit reserve and partial-delivery settlement gate
+
+**Verified model:** Seedance 2.0 Fast (Comfy Cloud route) — the original
+developer records live billing activity for completed roughly seven-second
+plans and a real long-form job that stopped after 2 of 28 planned outputs with
+`Payment Required`, then validates the reserve reader and settlement paths
+against those observations  
+**Use case:** multi-shot or song-length workflows that fan one creative brief
+into separately billed Seedance plans and must not start work the upstream
+balance cannot finish  
+**Mode:** orchestrated Seedance 2.0 Fast generations; one paid provider task per
+plan
+
+```text
+IMMUTABLE JOB LEDGER
+Exact model = [VERSIONED PROVIDER ROUTE].
+Planned plans = [N]. Expected seconds per plan = [ROUTE-SPECIFIC VALUE].
+Creative prompt / reference manifest hash = [HASH].
+Customer reservation = [SITE CREDITS OR NONE].
+Generation idempotency key = [KEY].
+Record these before the director expands or submits any plan.
+
+AUTHORITATIVE RESERVE READER
+Read the provider's own balance endpoint with the same scoped credential used
+for generation. Treat missing credentials, timeout, malformed units or a failed
+response as UNKNOWN, never as zero and never as proof of sufficient funds.
+Cache briefly to avoid hammering the account.
+
+Calibrate balance units only against a provider statement, dashboard reading or
+a completed task's authoritative debit. Store:
+observed_at = [UTC]
+balance_units_per_currency = [MEASURED VALUE]
+provider_units_per_delivered_plan = [MEASURED VALUE]
+route / resolution / duration = [EXACT SETTINGS]
+Never promote one dated account measurement into universal Seedance pricing.
+
+CONCURRENCY-AWARE COVERAGE
+For every active job, count planned plans minus terminal delivered plans.
+reserved_upstream_units =
+  sum(active outstanding plans × measured units per plan)
+available_units = max(0, reported balance - reserved_upstream_units)
+plans_covered = floor(available_units / measured units per plan)
+
+Do not let two simultaneous starts each claim the same unspent balance. If a
+plan has been submitted but the provider debits only on completion, it remains
+reserved until its charge and terminal state are reconciled.
+
+PRE-SUBMIT GATE
+- plans_covered < 1: stop before customer-credit reservation, prompt expansion
+  and provider submission; return a clear temporary-capacity result.
+- 1 <= plans_covered < planned plans: show the estimated shortfall and require
+  one deliberate continue decision. Do not silently begin a guaranteed partial.
+- plans_covered >= planned plans: reserve downstream credits atomically, persist
+  the ledger, then create exactly one task for the next plan.
+- reserve UNKNOWN: expose the uncertainty and follow the product's explicit
+  fail-open or fail-closed policy; never label it sufficient.
+
+PER-PLAN DELIVERY SETTLEMENT
+After each terminal provider task:
+1. validate that the expected video artifact exists and has valid media metadata;
+2. record task ID, terminal state, authoritative debit and delivered plan index;
+3. bill the customer only for validated delivered plans;
+4. release the upstream reservation for that plan;
+5. on a terminal job failure, refund every undelivered downstream plan;
+6. when zero plans are delivered, refund the full customer reservation.
+
+RETRY AND RECOVERY
+Never start a replacement while the original task or its charge is unknown.
+Retry only after the original has a terminal rejection or failure, the debit is
+reconciled, and the unchanged plan retains the same creative hash. Give the
+replacement a new provider attempt ID linked to the original job ledger.
+
+POST-RUN AUDIT
+Assert:
+- no provider task exists when coverage was zero;
+- concurrent jobs never overbook the same upstream units;
+- delivered-plan count equals validated artifacts, not merely completed rows;
+- customer charge equals delivered plans and undelivered plans are refunded;
+- every reported cost is tagged with route, settings and observation date.
+```
+
+**Why it works:** a site-credit balance and a provider balance answer different
+questions. Reserving outstanding provider work closes the race in which two
+long jobs both appear affordable before completion-time debits arrive.
+Artifact-based settlement then prevents a partial render from being priced as a
+complete film, while the unknown-state and retry gates avoid converting a
+balance-read failure into duplicate paid work.
+
+The cited September 13 measurement was 119.5 Comfy credits for one roughly
+seven-second Seedance 2.0 Fast plan. It is retained only as evidence that the
+gate was calibrated from a real account; current provider pricing must be read
+again rather than inferred from that number.
+
+Adapted and rewritten from Funesterie / alphaonze's September 13, 2026
+[real 2-of-28 payment failure, provider-balance reader and concurrency-aware
+coverage tests](https://github.com/Funesterie/alphaonze/commit/6eb13b7af4fa5e5a7e6c28a1c77d45817e9ad891)
+and the follow-up
+[live-debit calibration and delivered-plan refund regression
+tests](https://github.com/Funesterie/alphaonze/commit/a78806d9e5602c78d65ae2efa700e9adb3711ab0).
+
+---
+
 ### Semantic prompt-to-omni transport compiler and empty-content recovery gate
 
 **Verified model:** Seedance 2.0 Fast (live catalog ID
@@ -31887,6 +31989,13 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [Funesterie / alphaonze — September 13, 2026 Seedance 2.0 Fast
+provider-reserve audit: a real long-form job stopped at 2 of 28 plans with
+`Payment Required`, live account activity measured completed-plan debits,
+and regression-tested balance parsing, concurrency-aware outstanding-plan
+reservation, zero-capacity preflight, partial-delivery billing and refunds](https://github.com/Funesterie/alphaonze/commit/6eb13b7af4fa5e5a7e6c28a1c77d45817e9ad891)
+([live-debit calibration and settlement follow-up](https://github.com/Funesterie/alphaonze/commit/a78806d9e5602c78d65ae2efa700e9adb3711ab0))
 
 - [Jacob O. Haupold / Claude-septiembre — September 12, 2026 Higgsfield
 Seedance 2.5 UGC production audit: two paid 15-second 720p
