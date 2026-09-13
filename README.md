@@ -31518,7 +31518,7 @@ and the [structure, sheet and payload-fingerprint verifier](https://github.com/a
 ### Two-reference product-cameo window with native-audio one-take
 
 **Verified model:** Seedance 2.5 (AtlasCloud
-\`bytedance/seedance-2.5/reference-to-video\`, 720p) — NodeTool's published
+`bytedance/seedance-2.5/reference-to-video`, 720p) — NodeTool's published
 workflow binds this exact route, exposes the complete prompt and settings, ships
 the resulting 15-second native-audio reel, and regression-tests the three timed
 visibility intervals
@@ -31528,7 +31528,7 @@ reference product appears for one short proof beat. Give the two images
 non-overlapping authority, then define the product's allowed screen interval as
 a closed state rather than a loose suggestion.
 
-\`\`\`text
+```text
 INPUT AUTHORITY
 @Image1 owns only [CREATOR FACE, HAIR, WARDROBE, ROOM AND NATURAL SKIN].
 @Image2 owns only [PRODUCT SILHOUETTE, MATERIAL, COLOUR, LID / HARDWARE AND
@@ -31573,7 +31573,7 @@ Inspect frames immediately before and after 4.5s and 7.0s plus the final frame.
 Pass only when the creator identity and room persist, the product enters once
 from the named edge, matches @Image2, never blocks the mouth, exits on time and
 stays absent, and the native dialogue contains exactly the approved words.
-\`\`\`
+```
 
 **Why it works:** reference authority and visibility authority solve different
 failure classes. The first prevents a clean product plate from replacing the
