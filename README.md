@@ -20110,6 +20110,115 @@ Adapted and rewritten from u/Lonelydude014's September 10, 2026
 
 ## Reusable templates
 
+### Positive-only originality repair and prompt-specific preset handshake
+
+**Verified model:** Seedance 2.5 (Higgsfield route) — the original creator records
+nineteen completed five-second, 3:4, 480p, silent renders, commits all nineteen
+preview MP4s, and documents both the marker character's rejected and accepted
+revisions and the provider's per-prompt preset responses  
+**Use case:** short style tests or batch previews where a provider-side
+intellectual-property check or suggested-preset handshake prevents an otherwise
+original Seedance prompt from reaching generation  
+**Mode:** text-to-video; prompt-authored style on Seedance 2.5
+
+\`\`\`text
+IMMUTABLE ATTEMPT LEDGER
+Exact model = Seedance 2.5.
+Provider route = [HIGGSFIELD SURFACE / API].
+Settings = [DURATION, ASPECT, RESOLUTION, AUDIO].
+Submitted prompt hash = [HASH].
+Provider response = [TASK ID / SUGGESTED PRESET / POLICY CODE].
+Suggested or declined preset ID = [EXACT RESPONSE VALUE / NONE].
+Artifact = [PATH, MEDIA HASH, DURATION / NONE].
+Charge state = [AUTHORITATIVE VALUE / UNKNOWN].
+
+POSITIVE-ONLY ORIGINAL CHARACTER CARD
+Describe the fictional subject only through visible desired facts:
+- adult role and body proportions;
+- silhouette, face, hair and wardrobe;
+- two or three distinctive but unbranded colour or material details;
+- one pose, action and expression;
+- no proper name unless it belongs to the creator's own documented character.
+
+The submitted prompt contains no celebrity, franchise, public-figure, famous
+character or borrowed-style name, including inside a negation or comparison.
+Do not write “not like [NAME]” or “nothing resembling [FRANCHISE].” This is a
+compliance repair, not a synonym or spelling-variation strategy.
+
+FIVE-SECOND STYLE MICRO-BRIEF
+Medium = [INK / CUT PAPER / CLAY / OIL PAINT / SCREEN PRINT / PRACTICAL PUPPET /
+OTHER PHYSICAL METHOD].
+Subject = [POSITIVE-ONLY ORIGINAL CHARACTER CARD].
+Material law = [HOW EDGES, LAYERS, PIGMENT, FIBRES OR JOINTS REALLY MOVE].
+One impossible event = [ONE CHANGE THAT EMERGES FROM THAT MATERIAL].
+Camera grammar = [ONE QUIET TAKE / HARD CUT / JUMP CUT / MULTIPLANE MOVE /
+CRANE / ORBIT / REVERSE TRACK / SCROLL PAN].
+Terminal image = [ONE UNAMBIGUOUS SETTLED STATE].
+
+Generate one five-second 3:4 style proof. Begin directly on the subject and
+complete one event. Every effect is made from the declared medium; a generic
+colour filter does not create the style. Keep the camera grammar to one move or
+one named cut pattern. No generated dialogue, captions, logo or watermark.
+Hold the terminal image long enough to judge the material and silhouette.
+
+PROMPT-SPECIFIC PRESET HANDSHAKE
+1. Submit the approved prompt once and preserve the full response.
+2. A suggested-preset response without a task ID is not a generation failure
+   and not a completed attempt.
+3. If the suggestion is useful, select it deliberately and record that the
+   configuration changed.
+4. If the prompt itself must remain the style authority, decline exactly the
+   preset ID returned for this prompt, then resubmit the byte-identical prompt
+   once.
+5. Never cache one declined preset ID for the batch. A different prompt may
+   receive a different suggestion and therefore a different ID.
+6. If the provider changes the prompt, settings or model during this handshake,
+   stop and obtain a new prompt hash before submission.
+
+POLICY-REJECTION REPAIR
+If the provider returns \`ip_detected\` or an equivalent pre-task refusal:
+1. stop automatic retries and retain the rejected prompt and response;
+2. remove every named or implied borrowed identity, including names written
+   only to say what the result must not resemble;
+3. replace them with a fresh positive character card made only of original,
+   observable traits;
+4. keep the safe event, medium, camera and settings fixed when possible;
+5. assign a new prompt hash and submit one controlled repair;
+6. if it is rejected again, stop and surface the decision. Do not disguise,
+   misspell, crop around or iteratively probe the blocked reference.
+
+BATCH ACCEPTANCE
+For each style, require a real task ID and playable artifact with the requested
+duration, ratio and resolution. Inspect the opening, midpoint and terminal
+frames for original identity, readable medium, one completed event and no
+unintended resemblance. Store failures beside successes; never let a CSS look,
+thumbnail conversion or preset suggestion stand in for a generated style proof.
+\`\`\`
+
+**Why it works:** the creative layer and the provider negotiation layer remain
+separate. Positive-only character facts keep an exclusion phrase from
+reintroducing the very protected identity it names, while prompt-specific
+preset handling prevents a provider suggestion from being mistaken for a
+submitted job or answered with a stale ID. The nineteen-render batch also shows
+a compact way to test styles: bind one material-native event to one camera
+grammar and one terminal image, then judge the generated clip rather than a
+post-applied colour filter.
+
+**Evidence boundary:** the cited marker sequence observed one negative
+famous-character comparison rejected with \`ip_detected\` and a positively
+specified original replacement accepted. That supports this route-specific
+repair, not a universal claim about every policy filter. Likewise,
+\`declined_preset_id\` is a Higgsfield interaction contract rather than a
+Seedance model parameter.
+
+Adapted and rewritten from LeN1N-NWO / Traum-App's September 13, 2026
+[ten-render production ledger and preset-response record](https://github.com/LeN1N-NWO/Traum-App/commit/8890687bae84a09965db0c8eaabd65b75766b327),
+[marker rejection and positive-only successful revision](https://github.com/LeN1N-NWO/Traum-App/commit/490abeac72b0c7f3920100889384312e24ef28aa),
+and the follow-up commit that
+[versions all nineteen generated preview MP4s](https://github.com/LeN1N-NWO/Traum-App/commit/d24a5396a5b6362947da7503aa3e90f3e5c0caa5).
+
+---
+
 ### Upstream-credit reserve and partial-delivery settlement gate
 
 **Verified model:** Seedance 2.0 Fast (Comfy Cloud route) — the original
@@ -32773,6 +32882,8 @@ Community examples and techniques referenced in this README:
 
 - [u/mementomori2344323 — Seedance 2.5 1080p marina leap, complete 30-second prompt, generated result and continuity-failure discussion](https://www.reddit.com/r/Seedance_AI/comments/1vqytn3/some_people_still_think_ai_doest_look_real_this/)
 
+
+- [LeN1N-NWO / Traum-App — September 13, 2026 Higgsfield Seedance 2.5 nineteen-style batch, preset-response ledger and positive-only IP repair](https://github.com/LeN1N-NWO/Traum-App/commit/490abeac72b0c7f3920100889384312e24ef28aa) ([ten-render and preset record](https://github.com/LeN1N-NWO/Traum-App/commit/8890687bae84a09965db0c8eaabd65b75766b327), [versioned generated previews](https://github.com/LeN1N-NWO/Traum-App/commit/d24a5396a5b6362947da7503aa3e90f3e5c0caa5))
 
 Official model references:
 
