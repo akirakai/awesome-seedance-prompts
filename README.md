@@ -33489,7 +33489,123 @@ the creator's [eight-failure diagnosis and recovery rule](https://github.com/adh
 and the [successful ninety-percent endpoint plus post-production handoff](https://github.com/adhamcharaf/wedding_card/blob/4c63b0952f6f41872d7986513c6dc665ee954d2f/docs/CONCEPTION.md#1-le-film-mis-%C3%A0-jour-le-2026-09-14).
 
 
+### Per-look single-clip style transfer and typography ownership gate
+
+**Verified model:** Higgsfield Seedance 2.5, `omni_reference` — the creator
+documents five paid non-figure shots generated from one matched real clip each,
+57.5 credits total; four reproduced the target account's construction, motion
+and scene-varying color system recognizably  
+**Use case:** transfer a creator's recurring visual grammar and motion to new
+subjects without letting an unrelated panel, still or generic style paragraph
+compete with the reference  
+**Mode:** reference-to-video with one `video_references` clip per shot
+
+Use this when a creator uses one broad medium but several structurally different
+shot families, such as figure scenes, object symbols, large numerals, hand
+lettering or assembling stacks. The reusable unit is not “the account style”;
+it is one measured look plus the editorial condition that selects it.
+
+```text
+SOURCE-AUDIT GATE
+Collect at least [N] creator-owned or licensed source videos.
+Before sampling:
+- verify every file opens, has plausible duration and is not a tiny or partial
+  download;
+- make a contact sheet per source video;
+- measure cut cadence from the timeline rather than guessing it;
+- separate burned-in platform subtitles from intentional in-scene typography.
+
+LOOK DISCOVERY
+Name [4–8] recurring STRUCTURAL LOOKS. For each look record:
+LOOK_ID = [STABLE NAME]
+WHEN = [EDITORIAL CONDITION THAT WARRANTS THIS LOOK]
+VISIBLE CONSTRUCTION = [FIGURE / OBJECT / NUMERAL / LETTERING / STACK / OTHER]
+MOTION GRAMMAR = [WHAT DRAWS, BUILDS, RISES, PULSES OR HOLDS]
+CAPTION OWNER = [SEEDANCE COMPOSITION | POST-PRODUCTION OVERLAY]
+EXAMPLE TIMESTAMPS = [SOURCE + IN/OUT]
+
+Reject a taxonomy that only repeats the common medium, palette or texture.
+Run discovery as a dry run, inspect the sheets, and revise the look split by
+eye before any paid generation.
+
+REFERENCE PREPARATION
+For each approved LOOK_ID:
+1. Cut one clean [ABOUT 8 S; PROVIDER-SUPPORTED] interval from the real source.
+2. Crop platform captions only when that does not remove the creator's own
+   designed lettering or composition.
+3. Reclassify a representative frame against LOOK_ID and WHEN.
+4. Drop the clip if it is corrupted, mistimed, mixed between looks or a weak
+   match. Persist source URL, timestamp and clip hash.
+
+SHOT ROUTING
+For each new shot, choose exactly one LOOK_ID from the shot's meaning and
+editorial role. Do not round-robin looks or force a quota.
+NEW CONTENT = [SUBJECT / ACTION / VISUAL CLAIM]
+EXACT DISPLAY TEXT = [TEXT OR NONE]
+MATCHED CLIP = [ONE VERIFIED CLIP FOR LOOK_ID]
+
+SEEDANCE SUBMISSION
+MODEL = Seedance 2.5
+MODE = omni_reference
+VIDEO_REFERENCES = [MATCHED CLIP ONLY]
+START_IMAGE = NONE
+IMAGE_REFERENCES = NONE
+DECLINED_PRESET_ID = [CURRENT RESPONSE VALUE, IF RETURNED]
+
+PROMPT:
+Create [NEW CONTENT] using the visual construction and motion grammar carried
+by @Video1. @Video1 owns the look, drawing/build order, rhythm and scene-color
+logic; it does not own the new subject or literal source content. Render one
+coherent shot with stable geometry and no source subtitle, logo or copied
+caption. [ACTION TIMING AND END STATE].
+
+TYPOGRAPHY OWNERSHIP
+If exact spelling or numerals matter, do not ask Seedance to typeset them.
+Generate only [GROUND / FIGURES / OBJECTS / MOTION] and add
+EXACT DISPLAY TEXT in the compositor using the measured placement and material.
+A word that becomes correct only near the end is a failure, not a pass.
+
+ACCEPTANCE GATE
+Accept only if:
+1. the routed structural look is recognizable, not merely the broad medium;
+2. the requested action follows the matched clip's motion grammar;
+3. the new subject stays stable and source subject/captions do not leak;
+4. every exact word or numeral comes from its assigned owner;
+5. the final edit matches the measured cadence without treating one creator's
+   cuts-per-minute or median shot length as a universal default.
+
+Record model, mode, duration, resolution, reference hash, provider response,
+credit charge, selected LOOK_ID, human review and rejected failure modes.
+```
+
+**Why it works:** one verified clip is allowed to carry the visual and motion
+grammar while the prompt carries only new content and constraints. Splitting a
+single medium into structural looks prevents a numeral shot from receiving a
+figure-scene reference, and assigning precision typography to the compositor
+avoids promoting a stylistically convincing but misspelled render.
+
+In the creator's five-shot trial, Seedance independently reproduced different
+saturated grounds per scene even though no colors were named. The documented
+limit was equally useful: “WHO WINS?” remained misspelled for roughly four
+seconds before resolving, so exact lettering was moved outside the model.
+The reported 22 cuts/minute and 2.3-second median are account-specific
+measurements and should be remeasured for another source.
+
+Adapted and rewritten from KMKM333 / PPE Style Engine's September 14, 2026
+[paid Option B production record](https://github.com/KMKM333/ppe-style-engine/commit/5d068bb7a784ffdd63998222381d7d8e5b5ada7b),
+the [complete single-clip findings and failure notes](https://github.com/KMKM333/ppe-style-engine/blob/5d068bb7a784ffdd63998222381d7d8e5b5ada7b/.claude/skills/ppe-reference-style/SKILL.md#option-b-2026-09-14-the-accounts-real-clip-as-the-only-visual-input)
+and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-engine/blob/5d068bb7a784ffdd63998222381d7d8e5b5ada7b/.claude/skills/ppe-reference-style/discover_looks.py).
+
+
 ## Sources
+
+- [KMKM333 / PPE Style Engine — September 14, 2026 Higgsfield
+Seedance 2.5 `omni_reference` Option B trial: five paid non-figure shots,
+four recognizable creator-style matches, one real clip per structural look,
+measured cadence and an exact-lettering failure routed to compositor
+overlay](https://github.com/KMKM333/ppe-style-engine/commit/5d068bb7a784ffdd63998222381d7d8e5b5ada7b)
+([full findings](https://github.com/KMKM333/ppe-style-engine/blob/5d068bb7a784ffdd63998222381d7d8e5b5ada7b/.claude/skills/ppe-reference-style/SKILL.md#option-b-2026-09-14-the-accounts-real-clip-as-the-only-visual-input),
+[look discovery](https://github.com/KMKM333/ppe-style-engine/blob/5d068bb7a784ffdd63998222381d7d8e5b5ada7b/.claude/skills/ppe-reference-style/discover_looks.py))
 
 - [Adham Charaf / wedding_card — September 14, 2026 BytePlus ModelArk
 Seedance 2.5 invitation film: two complete first/last-frame prompts, committed
