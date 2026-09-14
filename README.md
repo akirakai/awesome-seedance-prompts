@@ -20882,6 +20882,116 @@ and the [paid-job metadata, generated-video link and QA](https://github.com/baya
 ## Reusable templates
 
 
+### Prompt-intent task routing and terminal-failure no-resubmit gate
+
+**Verified model:** Seedance 2.5 through BytePlus ModelArk — the original
+integrator reproduced the queued `TaskTypeMismatch` / `TaskTypeConstraint`
+failure, preserved the production privacy-error shape, and committed the
+prompt-intent classifier, request task declaration, polling state machine and
+regression tests
+
+Use this before sending an attached-video prompt to Seedance 2.5. The declared
+UI mode is not sufficient by itself: the model also reads the words and may
+classify a request as an edit or continuation. Route semantic intent before
+credits are spent, then keep a terminal provider result from escaping into an
+outer scheduler that would submit the paid generation again.
+
+```text
+MODEL AND INPUT RECEIPT
+Model = Seedance 2.5
+Provider = BytePlus ModelArk
+@Video1 = [PUBLIC URL / ASSET ID / HASH / DURATION / WIDTH / HEIGHT / FPS]
+Prompt = [COMPLETE INSTRUCTION]
+Requested output = [DURATION / RATIO / RESOLUTION / AUDIO]
+Persist this receipt and the prompt hash before submission.
+
+PRE-SUBMIT INTENT ROUTER
+Choose exactly one task from the prompt's leading operative intent:
+
+REFERENCES — create a new video that borrows declared properties.
+Use when the wording says, for example:
+"Use the motion and camera rhythm from @Video1 for a new performer."
+The source clip is evidence, not footage to be modified or continued.
+
+EDIT — change the attached clip itself.
+Route here when the prompt asks to replace, remove, delete, erase, swap, edit,
+modify or change something in @Video1. Treat "add" as edit only when it clearly
+means add an object or effect to this video/clip/footage. Bind exactly one source
+video and preserve its duration and dimensions unless the provider explicitly
+documents otherwise.
+
+EXTEND — continue beyond an attached boundary.
+Route here when the prompt says extend, continue, continuation, keep going or
+show what happens next. Preserve @Video1 and its terminal state as the outgoing
+boundary; do not apply the edit route's fixed-length result contract.
+
+If both edit and extend verbs occur, route from the first operative request and
+surface the remaining operation as a second job. Ordinary generation language
+such as "add dramatic lighting" is not automatically an edit. If intent is
+uncertain, stop before submission rather than paying for an auto-classified
+task.
+
+MODE SWITCH AUDIT
+When changing from References:
+- retain the one source clip the operation concerns;
+- remove audio attachments the chosen task cannot accept;
+- for Edit, remove every additional video after @Video1;
+- preserve the prompt text and its media labels;
+- revalidate source duration, shape and the requested output contract.
+
+TASK DECLARATION
+For Edit or Extend, set the provider's explicit Seedance 2.5
+omni-reference task type in the request rather than relying on auto detection.
+Require shape and duration fields compatible with that task before POST.
+A synchronous 4xx is a preflight failure; it is not a queued generation.
+
+ASYNC CHECKPOINT
+After a successful POST, persist task_id before the first poll.
+queued or running -> keep polling on the existing task.
+succeeded with video_url -> validate and deliver the artifact.
+succeeded without video_url -> terminal failure.
+failed, cancelled or expired -> terminal failure.
+A status-endpoint network error or 5xx is transient; retry only polling, never
+the generation submission, and stop after [MAX CONSECUTIVE POLL ERRORS, e.g. 5].
+
+ERROR ROUTING
+InvalidParameter.TaskTypeMismatch or
+InvalidParameter.TaskTypeConstraint:
+  mark VIDEO_TASK_MISMATCH; show the required Edit/Extend route and its
+  duration/shape constraint. Do not auto-resubmit.
+
+InputImageSensitiveContentDetected.PrivacyInformation or
+InputVideoSensitiveContentDetected.PrivacyInformation:
+  mark REAL_PERSON_PRIVACY; identify the rejected input and stop. Do not crop,
+  rename, blur or repeatedly resubmit it to bypass the provider decision.
+
+Unknown provider error:
+  preserve the raw code and message, fail the current job and surface it for
+  review. Do not guess a new task type.
+
+NO-RESUBMIT SETTLEMENT
+Handle a terminal provider outcome inside the current worker run. Write the
+task ID, terminal status, recognized reason, actual debit and refund state in
+one ledger. Never let a terminal provider exception trigger the outer job
+runner's whole-run retry, because that would POST a second paid generation.
+Only a deliberately corrected task route or authorized reference change may
+create a new job and new submission key.
+```
+
+**Why it works:** the first gate aligns prompt semantics with the provider's
+actual subtask before queueing, while the second separates retryable polling
+transport failures from immutable task outcomes. Together they prevent both a
+late task-shape rejection and the more expensive failure mode in which a
+scheduler retries the entire worker and silently purchases the same generation
+again.
+
+Adapted from madebyak's September 14, 2026
+[Seedance 2.5 production repair](https://github.com/madebyak/clickefy/commit/481db496b3fb37b813a641bc185ed1bfb5ccbd48),
+the [tested prompt-intent router](https://github.com/madebyak/clickefy/blob/481db496b3fb37b813a641bc185ed1bfb5ccbd48/packages/types/src/video-task-intent.ts),
+the [provider-error regression cases](https://github.com/madebyak/clickefy/blob/481db496b3fb37b813a641bc185ed1bfb5ccbd48/packages/types/src/job-errors.test.ts)
+and the [Seedance terminal-state adapter](https://github.com/madebyak/clickefy/blob/481db496b3fb37b813a641bc185ed1bfb5ccbd48/packages/providers/src/adapters/seedance.ts).
+
+
 ### Idempotent CN-reference registration and readiness-gated submission
 
 **Verified models:** Seedance 2.0 Mini
@@ -33660,6 +33770,14 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 
 ## Sources
+
+- [madebyak / clickefy — September 14, 2026 BytePlus ModelArk
+Seedance 2.5 failure-control repair: prompt-semantic Edit/Extend routing,
+queued task-type error regression tests, actionable privacy mapping and
+terminal-state no-resubmit polling](https://github.com/madebyak/clickefy/commit/481db496b3fb37b813a641bc185ed1bfb5ccbd48)
+([intent router](https://github.com/madebyak/clickefy/blob/481db496b3fb37b813a641bc185ed1bfb5ccbd48/packages/types/src/video-task-intent.ts),
+[error tests](https://github.com/madebyak/clickefy/blob/481db496b3fb37b813a641bc185ed1bfb5ccbd48/packages/types/src/job-errors.test.ts),
+[Seedance adapter](https://github.com/madebyak/clickefy/blob/481db496b3fb37b813a641bc185ed1bfb5ccbd48/packages/providers/src/adapters/seedance.ts))
 
 - [bayazbayev4-arch / Clean Bee Instagram — September 14–15, 2026
 Higgsfield Seedance 2.5 `omni_reference` A/B/C production test: complete
