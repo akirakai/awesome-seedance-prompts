@@ -341,6 +341,11 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Container-yard strike relay with contact-gated X-ray insert](#325-container-yard-strike-relay-with-contact-gated-x-ray-insert)
   - [Saturn-ring camera-as-vehicle audio crescendo](#326-saturn-ring-camera-as-vehicle-audio-crescendo)
   - [Dual-reference boss-death ash wipe and successor reveal](#327-dual-reference-boss-death-ash-wipe-and-successor-reveal)
+  - [Reception-chaos one-take with lost-order prop ledger](#328-reception-chaos-one-take-with-lost-order-prop-ledger)
+  - [First-frame order wave with interface-authority separation](#329-first-frame-order-wave-with-interface-authority-separation)
+  - [Still operator against a moving systems field](#330-still-operator-against-a-moving-systems-field)
+  - [Human-guided rotating architecture in a void](#331-human-guided-rotating-architecture-in-a-void)
+  - [System-acknowledgment corridor with pace-matched tracking](#332-system-acknowledgment-corridor-with-pace-matched-tracking)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -20277,6 +20282,315 @@ including the [exact model, job, prompt and frame-by-frame QA record](https://gi
 and [generated MP4](https://github.com/dpeh001-x/Mojiworld/blob/5286ef3f7ebb41c956bb7fc6dccc779789249f2c/steam/higgsfield/cinematics/clip_sovereign_fall.mp4).
 
 
+
+### 328. Reception-chaos one-take with lost-order prop ledger
+
+**Verified model:** Seedance 2.5 (Higgsfield) — the original creator publishes
+the exact model, 15-second 1080p settings, four-reference prompt and the finished
+CRM film assembled from this generation and its continuation  
+**Use case:** stylized commercial “before” scene, multi-character one-take,
+prop-state comedy, camera escalation and native foley  
+**Mode:** reference-to-video with four ordered images  
+**Suggested settings:** 15 seconds, 16:9, 1080p, native sound effects, no speech
+
+```text
+Create one uninterrupted 15-second premium stylized-3D commercial shot. Use soft
+rounded feature-animation forms, expressive eyes, cinematic depth of field,
+volumetric light and restrained motion blur. Do not cut or change rooms.
+
+REFERENCE OWNERSHIP
+@Image1 owns the reception's floor plan, curved petrol-blue counter, left
+monitor, right tablet, wall logo, window and carpet rack.
+@Image2 owns only the young administrator's identity and proportions.
+@Image3 owns only the bearded owner's identity and outfit.
+@Image4 owns the teal geometric customer carpet.
+Keep these authorities separate. The reception is now overwhelmed: paper
+folders and receipts cover the counter, sticky notes surround the monitor,
+loose sheets and crumpled paper cover the floor, and tagged rolled carpets have
+collapsed from the rack. The teal carpet is half-hidden at the bottom of that
+heap. Warm tired tungsten-green light replaces the clean reference lighting.
+
+0–3 s — PHONE PRESSURE
+Open in extreme macro on a smartphone vibrating across receipts. Let nearby
+notes tremble from contact. The administrator moves only as a soft background
+shape while the camera creeps a few centimetres closer.
+
+3–6 s — CHAOS REVEAL
+Speed-ramp backward and upward through sheets displaced by the move. Reveal the
+whole room as she traps the phone against one shoulder and searches a thick
+folder with both hands. The spreadsheet may show only abstract cells.
+
+6–10 s — OWNER ARRIVAL
+Orbit 180 degrees around her at chest height without losing room geography.
+The owner enters during the orbit, stops opposite the counter, gestures toward
+the carpet heap and waits. She gives one helpless shrug while staying on the
+call. Papers that fall remain on the floor.
+
+10–13 s — FAILED SEARCH
+Follow low as she leaves the phone, rounds the counter and removes two wrong
+carpets in sequence. Each wrong roll lands and stays where it fell. Keep the
+teal carpet visible but unnoticed beneath the pile; the owner holds his head in
+the background.
+
+13–15 s — OVERLOAD PORTRAIT
+She rises and faces camera. Perform one restrained dolly zoom on her exhausted
+face while the room stretches behind her. She closes her eyes and exhales.
+Finish on a stable close-up with the unlit logo blurred behind her.
+
+AUDIO AND GATES
+Use only causal foley: phone buzz on paper, sheet flutter, page turns, entering
+footsteps, carpet thuds, tag rustle, the dolly-zoom swell and final exhale.
+No dialogue, music or lip-sync. No readable letters, numbers, captions or
+watermarks. Reject cuts, extra people, identity swaps, duplicated carpets,
+reset props, impossible hands, face morphing, a clean room before the ending or
+a terminal frame that is not stable enough to seed the next clip.
+```
+
+**Why it works:** one hero carpet and the accumulating wrong rolls make the
+search failure measurable across a complex camera move. The final close-up is
+both a dramatic payoff and a deliberately clean continuation boundary.
+
+Adapted and rewritten from Heisenberg2003-coder's September 14, 2026
+[Seedance 2.5 production commit](https://github.com/SupremeGoogle/prompt-portfolio/commit/cc2fc569a5214da97f357a615b9b8035b652e113),
+the [complete model-bound prompt](https://github.com/SupremeGoogle/prompt-portfolio/blob/cc2fc569a5214da97f357a615b9b8035b652e113/prompts/06-2-desyat-sekund-brend-rolika-po-referensu.md)
+and the creator's [finished-film release](https://disk.yandex.ru/d/mqkh8iDKnGrJcw).
+
+
+### 329. First-frame order wave with interface-authority separation
+
+**Verified model:** Seedance 2.5 (Higgsfield) — the same primary production
+publishes this exact 13-second 1080p continuation prompt, identifies the prior
+generation's last frame as its start frame and includes the resulting act in
+the released CRM film  
+**Use case:** commercial continuation, irreversible room transformation,
+multi-reference authority routing, UI-safe screen transition and native audio  
+**Mode:** first-frame image-to-video with nine supporting image references  
+**Suggested settings:** 13 seconds, 16:9, 1080p, native audio, no dialogue
+
+```text
+Continue exactly from the supplied first frame for one uncut 13-second
+stylized-3D technology-commercial shot. Frame zero owns the administrator's
+closed eyes, tired exhale, loose hair, pencil behind her ear, cream knit sweater
+with white collar, close-up framing and warm yellow-green light. Do not
+“correct” her back to an earlier uniform.
+
+REFERENCE OWNERSHIP
+@Image1 owns the clean reception layout and its final ordered state.
+@Image2 owns the administrator's identity.
+@Image3 owns the owner's identity and outfit.
+@Image4 owns the teal geometric carpet.
+@Image5 owns the circular arrow-and-star logo.
+@Image6–@Image9 own only the color, card hierarchy, badges and block geometry of
+four CRM views. They do not authorize readable text or replace any character,
+room or prop.
+
+0–2 s — FREEZE
+Complete the exhale. Freeze every drifting sheet, sticky note and dust particle
+in place while the camera makes a barely visible push. Mute the room into one
+faint high tone.
+
+2–4 s — IGNITION
+Flare the green star in @Image5 behind her head. Send one ring of green-white
+light across her face; she opens her eyes and focuses on the reflection. Do not
+transform the room yet.
+
+4–7 s — ORDER FRONT
+Release one spherical light front and pull back fast enough to keep its leading
+edge visible. Objects change only after contact: sheets fold into frosted CRM
+panels; sticky notes dissolve; receipt stacks stream into the monitor; floor
+paper becomes dust; each carpet lifts, rolls, wraps and lands on the rack.
+The teal carpet moves last into the front-center slot. Loose hair returns to a
+bun, the pencil becomes green particles, the logo lights and warm dim light is
+replaced by cool daylight. Leave no chaos behind the front.
+
+7–10 s — OPERATING STATE
+Orbit 120 degrees around the now-calm administrator. Arrange three or four
+panels at different depths. She swipes one panel into the monitor; hold the
+screen flat for one second. The owner enters relaxed, raises a phone showing
+only abstract dashboard shapes, then exchanges one approving look with her.
+
+10–13 s — HANDOFF
+Glide over the counter to the tablet. Her finger makes one visible tap, after
+which a stable order-card layout appears. Accelerate directly into that screen
+until it covers every edge and resolves as a clean white terminal frame for the
+next insert.
+
+AUDIO AND GATES
+Bind silence to the freeze, one crystal chime to ignition, a deep whoosh and
+object-specific foley to the traveling front, then a light electronic pulse,
+two UI clicks and a rising screen-dive shimmer. No voice or lip-sync. All small
+UI text must remain blurred and unreadable. Reject an early transformation,
+objects changing ahead of the front, leftover clutter, wardrobe reset, identity
+morph, floating-screen perspective warp, cut, dark post-wave room or incomplete
+white-frame coverage.
+```
+
+**Why it works:** frame-zero truth overrides the earlier character plate where
+the preceding take drifted, while the ordered-room and interface references are
+limited to their own domains. A visible transformation front converts a vague
+magic cleanup into contact-gated, irreversible changes.
+
+Adapted and rewritten from the same September 14, 2026
+[primary production commit](https://github.com/SupremeGoogle/prompt-portfolio/commit/cc2fc569a5214da97f357a615b9b8035b652e113),
+[complete continuation prompt](https://github.com/SupremeGoogle/prompt-portfolio/blob/cc2fc569a5214da97f357a615b9b8035b652e113/prompts/06-2-desyat-sekund-brend-rolika-po-referensu.md)
+and [finished CRM film](https://disk.yandex.ru/d/mqkh8iDKnGrJcw).
+
+
+### 330. Still operator against a moving systems field
+
+**Verified model:** Seedance 2.0 (Higgsfield) — the original creator commits the
+identity reference, complete prompt and delivered MP4/WebM from a three-shot
+portfolio production, with one shared 1080p generation contract across all
+three shots  
+**Use case:** cinematic executive portrait, calm-versus-motion contrast,
+single-move camera and campaign-wide identity consistency  
+**Mode:** image-reference video  
+**Suggested settings:** 10 seconds, 16:9, 1080p, 24 fps, silent
+
+```text
+@Image1 is the sole identity authority for one adult man: preserve his short
+dark hair, trimmed beard, olive-light-tan complexion, matte black fitted blazer,
+black crew-neck shirt, silver steel-bracelet watch and calm executive presence.
+Do not redescribe or reinterpret his facial geometry.
+
+He sits alone at a wide dark-walnut desk inside a vast black void. His hands
+rest loosely clasped on the desk. Keep his shoulders relaxed and his body almost
+perfectly still while he looks toward the lens.
+
+At several depths behind and around him, suspend faint violet-indigo light
+panels with no readable content. They pulse only slightly like remote hardware
+status lights. Thin violet threads drift slowly through haze between subject
+and camera, producing parallax without crossing his face.
+
+Over the full ten seconds, perform one slow dolly from wide to medium-close with
+an almost imperceptible leftward drift. A warm amber practical outside frame
+right creates one gold edge on his cheek and shoulder. Hold the final framing
+unchanged for the last twelve frames so the website can crossfade its loop.
+
+Photoreal cinematic capture, ARRI Alexa character, 35 mm anamorphic lens, T1.8,
+shallow depth of field, near-black environment, violet key light, warm amber
+skin fill, volumetric haze, gentle bloom, restrained 35 mm grain, crushed
+blacks, violet highlights and natural warm skin. Slow deliberate movement only.
+No cut, second camera, text, logo, graphic, caption, speech, music, stock-office
+look, motivational gesture, changing wardrobe, moving hands, face drift or
+panel passing through the body.
+```
+
+**Why it works:** the motion budget is deliberately asymmetric: environment and
+camera may move, but the person does not. Reusing one explicit reference and
+one photographic grammar turns a simple hero loop into the identity anchor for
+two later scenes.
+
+Adapted and rewritten from Jihad Maasarani's September 14, 2026
+[three-scene Seedance 2.0 production commit](https://github.com/jihadlenix/portfolio/commit/aca1857962d3f2b33e713a2a0aa1d0614684a135),
+the [complete generation plan](https://github.com/jihadlenix/portfolio/blob/aca1857962d3f2b33e713a2a0aa1d0614684a135/BUILD-PLAN.md)
+and [committed scene MP4](https://github.com/jihadlenix/portfolio/blob/aca1857962d3f2b33e713a2a0aa1d0614684a135/assets/video/scene-01-hero.mp4).
+
+
+### 331. Human-guided rotating architecture in a void
+
+**Verified model:** Seedance 2.0 (Higgsfield) — the creator records the same
+exact model and shared character reference, publishes this complete 12-second
+prompt and commits its generated clip for scroll-scrubbed delivery  
+**Use case:** abstract system visualization, gesture-causal environmental
+motion, rear-angle identity continuity and orbiting camera  
+**Mode:** image-reference video  
+**Suggested settings:** 12 seconds, 16:9, 1080p generation, 24 fps, silent
+
+```text
+Use @Image1 as the sole identity authority for the same adult man from the
+campaign. Preserve his short dark hair, trimmed beard, build, matte black
+blazer, black shirt and silver watch. Show him from a three-quarter rear angle
+in a black void, facing a structure several stories tall. Do not substitute a
+new face, body or wardrobe because his face is mostly hidden.
+
+The structure consists of translucent violet-indigo panels, nodes and thin
+connecting lines layered at many depths. It is an abstract architecture, never
+a literal dashboard and never readable text. Begin with the whole system nearly
+still and the man's right hand lowered.
+
+He raises that hand once, slowly and deliberately. Only after the hand begins
+to rise, send light along the nearest connections and rotate the architecture
+around him. Panels slide into new alignment in one coherent reorganization;
+far layers travel more slowly than near layers. Never let a panel intersect his
+body. The completed alignment remains stable rather than resetting.
+
+Orbit the camera slowly left around him for the entire take, revealing depth
+and scale without crossing the front of his body or becoming a second shot.
+Warm amber light from behind camera separates his shoulders and head from the
+cold machine field.
+
+Photoreal cinematic capture, ARRI Alexa character, 35 mm anamorphic lens, T1.8,
+shallow depth, violet key, warm amber fill, volumetric haze, gentle lens bloom,
+subtle 35 mm grain, crushed blacks and restrained highlights. No cuts, text,
+logo, UI labels, caption, audio, extra person, frantic gesture, teleporting
+panel, independent random motion, identity drift or motivational-speaker pose.
+End on a clean reorganized system with the hand at rest.
+```
+
+**Why it works:** the hand raise is a single visible cause and the system
+reorganization is its persistent effect. The camera orbit and layered parallax
+prove three-dimensional scale while the rear-angle identity rule prevents an
+unseen face from becoming permission to replace the character.
+
+Adapted and rewritten from the same
+[Seedance 2.0 production commit](https://github.com/jihadlenix/portfolio/commit/aca1857962d3f2b33e713a2a0aa1d0614684a135),
+[complete shared-reference plan](https://github.com/jihadlenix/portfolio/blob/aca1857962d3f2b33e713a2a0aa1d0614684a135/BUILD-PLAN.md)
+and [committed architect-scene MP4](https://github.com/jihadlenix/portfolio/blob/aca1857962d3f2b33e713a2a0aa1d0614684a135/assets/video/scene-02-architect.mp4).
+
+
+### 332. System-acknowledgment corridor with pace-matched tracking
+
+**Verified model:** Seedance 2.0 (Higgsfield) — the primary repository binds
+this third complete prompt to the same model, identity reference and photographic
+suffix as the first two, then commits both rendered delivery formats  
+**Use case:** cinematic closing portrait, environment-reaction ledger,
+pace-matched tracking and direct-address terminal frame  
+**Mode:** image-reference video  
+**Suggested settings:** 12 seconds, 16:9, 1080p, 24 fps, silent
+
+```text
+@Image1 is the only identity authority for the same adult man: preserve his
+short dark hair, trimmed beard, olive-light-tan complexion, matte black blazer,
+black crew-neck shirt, silver watch, proportions and calm presence.
+
+He walks unhurriedly toward camera along the centre of an immense dark corridor.
+Both walls are formed by tall violet-indigo panels extending far behind and
+above him. The panels carry only abstract flowing geometry, never readable
+text. A polished black floor reflects the lights as long vertical streaks;
+volumetric haze preserves depth. One distant warm amber source behind him
+creates a stable rim around his silhouette.
+
+Track backward at his exact walking speed so his size and centre position remain
+constant. As he passes each panel, that panel dims once; after it is behind him,
+it brightens and stays bright. This acknowledgment state must travel down the
+corridor in walking order and may never jump ahead, reset or affect both walls
+everywhere at once.
+
+During the final two seconds, decelerate the camera to a stop. Match the man's
+last step to that deceleration, let him stop without sliding, settle his weight
+evenly and look directly into the lens. Hold the clean closing portrait long
+enough for overlaid website copy to appear later in post.
+
+Photoreal cinematic capture, ARRI Alexa character, 35 mm anamorphic lens, T1.8,
+shallow depth of field, crushed blacks, violet highlights, natural warm skin,
+gentle bloom and subtle 35 mm grain. One continuous move only. No cuts, audio,
+text, logo, caption, extra person, changing corridor, wardrobe drift, speed
+mismatch, backward foot slip, global light pulse, panel intersection,
+motivational gesture or generated on-screen graphic.
+```
+
+**Why it works:** pace matching gives the camera and subject one velocity
+ledger, while the dim-then-bright rule gives each passed panel an irreversible
+state. The coordinated stop produces a stable direct-address endpoint instead
+of the common treadmill walk or last-frame lurch.
+
+Adapted and rewritten from the same September 14, 2026
+[Higgsfield Seedance 2.0 release](https://github.com/jihadlenix/portfolio/commit/aca1857962d3f2b33e713a2a0aa1d0614684a135),
+[complete three-scene prompt specification](https://github.com/jihadlenix/portfolio/blob/aca1857962d3f2b33e713a2a0aa1d0614684a135/BUILD-PLAN.md)
+and [committed scale-scene MP4](https://github.com/jihadlenix/portfolio/blob/aca1857962d3f2b33e713a2a0aa1d0614684a135/assets/video/scene-03-scale.mp4).
+
+
 ---
 
 ## Reusable templates
@@ -32739,6 +33053,24 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [SupremeGoogle / prompt-portfolio — September 14, 2026 Higgsfield
+Seedance 2.5 DarkHost CRM film: two complete 1080p one-take prompts, four- and
+nine-image authority maps, first-frame continuation, persistent chaos props,
+contact-gated order wave, UI text isolation and released three-generation
+film](https://github.com/SupremeGoogle/prompt-portfolio/commit/cc2fc569a5214da97f357a615b9b8035b652e113)
+([complete prompt file](https://github.com/SupremeGoogle/prompt-portfolio/blob/cc2fc569a5214da97f357a615b9b8035b652e113/prompts/06-2-desyat-sekund-brend-rolika-po-referensu.md),
+[finished-film release](https://disk.yandex.ru/d/mqkh8iDKnGrJcw))
+
+- [Jihad Maasarani / portfolio — September 14, 2026 Higgsfield Seedance 2.0
+three-scene cinematic identity system: shared character plate, complete 1080p
+prompts and photographic suffix, committed MP4/WebM results, calm-versus-motion
+portrait, gesture-causal system reorganization and pace-matched corridor
+tracking](https://github.com/jihadlenix/portfolio/commit/aca1857962d3f2b33e713a2a0aa1d0614684a135)
+([complete generation plan](https://github.com/jihadlenix/portfolio/blob/aca1857962d3f2b33e713a2a0aa1d0614684a135/BUILD-PLAN.md),
+[scene 1](https://github.com/jihadlenix/portfolio/blob/aca1857962d3f2b33e713a2a0aa1d0614684a135/assets/video/scene-01-hero.mp4),
+[scene 2](https://github.com/jihadlenix/portfolio/blob/aca1857962d3f2b33e713a2a0aa1d0614684a135/assets/video/scene-02-architect.mp4),
+[scene 3](https://github.com/jihadlenix/portfolio/blob/aca1857962d3f2b33e713a2a0aa1d0614684a135/assets/video/scene-03-scale.mp4))
 
 - [epac-hub — September 14, 2026 Seedance 2.5 same-pass voice-and-mouth
 replacement: published external-lipsync baselines, authorized cloned-voice
