@@ -340,6 +340,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Handheld anaconda feeding near-miss with contact-and-rescue chain](#324-handheld-anaconda-feeding-near-miss-with-contact-and-rescue-chain)
   - [Container-yard strike relay with contact-gated X-ray insert](#325-container-yard-strike-relay-with-contact-gated-x-ray-insert)
   - [Saturn-ring camera-as-vehicle audio crescendo](#326-saturn-ring-camera-as-vehicle-audio-crescendo)
+  - [Dual-reference boss-death ash wipe and successor reveal](#327-dual-reference-boss-death-ash-wipe-and-successor-reveal)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -20189,6 +20190,93 @@ The repository preserves the [complete source prompt](https://github.com/Wolkche
 and [passing visual/native-audio QC ledger](https://github.com/Wolkchen00/youtube-automation/blob/8297f4ff36040948993f952bef52360cde3d20ef/galactic_experience/flythrough/qc_log.jsonl).
 
 
+### 327. Dual-reference boss-death ash wipe and successor reveal
+
+**Verified model:** Seedance 2.0 (`seedance_2_0`, Higgsfield route) — the
+original creator committed the rendered MP4 beside the exact prompt, job ID,
+reference mapping and generation settings, then recorded eight seconds of
+frame-by-frame visual QA and measured the embedded audio track  
+**Use case:** dark-fantasy game cutscene, two-character identity handoff,
+disintegration VFX, particle-occluded reveal, native-audio crescendo and release  
+**Mode:** start image plus one secondary character reference  
+**Suggested settings:** 8 seconds, 16:9, 720p, `mode: std`, epic genre,
+native audio enabled
+
+```text
+Create an eight-second painterly dark-fantasy game cinematic in one ruined
+tower sanctum. @Image1 is the sole identity authority for the defeated ruler:
+preserve the masked crown, deep violet-and-gold robes, tall staff, scale and
+silhouette until those elements are visibly destroyed. @Image2 is the sole
+identity authority for the smaller orange-hooded survivor: preserve that
+character's face, coat, proportions and recognizability. Never merge the two
+designs, exchange clothing or show a hybrid body.
+
+WORLD AND LIGHT
+Use one cracked black-stone floor, broken arches and one crimson-violet sky.
+Ash already drifts lightly in the air, but the central floor remains readable.
+Cold ambient light comes through the arches; a narrow warm rim separates both
+characters from the background. Preserve the same horizon, architecture and
+light direction throughout.
+
+0.0–2.0 s — DEFEAT BECOMES VISIBLE
+Open on @Image1 standing alone at the center of the sanctum. Make the ruler
+stagger under believable weight, plant the staff once, then sink onto one knee.
+The staff flame gutters and goes out. During a slow, restrained push-in,
+white-gold cracks begin inside the mask and robes and spread downward. Do not
+show @Image2 yet.
+
+2.0–5.0 s — IRREVERSIBLE DISINTEGRATION
+Continue the same shot and position. Starting at the ruler's feet, break the
+body and clothing upward into violet ash, gold cinders and a few rigid fragments.
+The destruction must consume existing material rather than duplicate it:
+destroyed legs do not reappear, empty space remains behind the rising boundary,
+and the crown is the final body element to fragment. Release the staff only
+after the supporting hand is gone; let it hit the floor and shatter once.
+Expand the particle cloud along the same wind direction until it briefly covers
+the entire lens. This full-frame ash is a physical occluder, not a cut, flash,
+morph or crossfade.
+
+5.0–8.0 s — OCCLUSION HANDOFF AND REVEAL
+As the same cloud passes beyond camera, crane gently down and let the particles
+thin. Reveal @Image2 already kneeling at the ruler's former position, head
+bowed, arms loose and body collapsed but breathing. The defeated ruler is now
+completely absent; no robe, mask, limb or duplicate remains. The broken staff
+pieces stay on the same floor where they landed. Hold the final composition long
+enough to read the survivor's identity while the last cinders settle and the
+sanctum darkens slightly. End on a clean, stable frame without titles or UI.
+
+AUDIO CAUSAL CHAIN
+Begin with low wind, one weighted knee impact and the staff flame fading.
+Drive every visible crack with restrained stone-and-ember texture. At the first
+true breakup, introduce a deep receding roar and a low choir; place one bell
+strike at the instant the crown fragments. Give the staff impact one hard,
+localized crack. When ash fills the frame, let the choir peak, then fall away as
+the survivor appears. Finish with only wind, soft cinder crackle and a faint
+breath. No dialogue, narration, unrelated battle sounds or music continuing
+past the reveal.
+
+ACCEPTANCE GATE
+Reject any result with an early glimpse of @Image2, a dissolve between unrelated
+rooms, identity blending, regenerated ruler parts, a staff that breaks before
+contact, particles moving against the established wind, a second camera angle,
+captions, or missing embedded audio. The valid shot has exactly one ruler,
+one irreversible feet-to-crown destruction, one full-frame ash occlusion,
+one successor reveal and one stable terminal state.
+```
+
+**Why it works:** the prompt treats the particle storm as a causal visibility
+gate between two separately owned references. The first identity must finish an
+irreversible destruction before the second can appear, while the fallen staff
+and fixed room prove that the reveal did not reset the scene. Audio events are
+bound to visible state changes, and the final near-silence gives the successor
+enough screen time to register.
+
+Adapted and rewritten from dpeh001-x / Mojiworld's September 14, 2026
+[shipped Seedance 2.0 production commit](https://github.com/dpeh001-x/Mojiworld/commit/5286ef3f7ebb41c956bb7fc6dccc779789249f2c),
+including the [exact model, job, prompt and frame-by-frame QA record](https://github.com/dpeh001-x/Mojiworld/blob/5286ef3f7ebb41c956bb7fc6dccc779789249f2c/steam/higgsfield/cinematics/clip_sovereign_fall.SPEC.md)
+and [generated MP4](https://github.com/dpeh001-x/Mojiworld/blob/5286ef3f7ebb41c956bb7fc6dccc779789249f2c/steam/higgsfield/cinematics/clip_sovereign_fall.mp4).
+
+
 ---
 
 ## Reusable templates
@@ -32533,6 +32621,13 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [dpeh001-x / Mojiworld — September 14, 2026 Higgsfield Seedance 2.0
+dual-reference boss-death cinematic: exact `seedance_2_0` job, complete prompt,
+rendered eight-second MP4, embedded-audio measurements and frame-by-frame
+identity / action QA](https://github.com/dpeh001-x/Mojiworld/commit/5286ef3f7ebb41c956bb7fc6dccc779789249f2c)
+([generation record](https://github.com/dpeh001-x/Mojiworld/blob/5286ef3f7ebb41c956bb7fc6dccc779789249f2c/steam/higgsfield/cinematics/clip_sovereign_fall.SPEC.md),
+[generated MP4](https://github.com/dpeh001-x/Mojiworld/blob/5286ef3f7ebb41c956bb7fc6dccc779789249f2c/steam/higgsfield/cinematics/clip_sovereign_fall.mp4))
 
 - [Reaf-9 / AI Linqs — September 14, 2026 Higgsfield Seedance 2.5
 four-anchor / three-clip scroll narrative: adopted adjacent start/end-image
