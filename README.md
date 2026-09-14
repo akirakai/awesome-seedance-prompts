@@ -346,6 +346,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Still operator against a moving systems field](#330-still-operator-against-a-moving-systems-field)
   - [Human-guided rotating architecture in a void](#331-human-guided-rotating-architecture-in-a-void)
   - [System-acknowledgment corridor with pace-matched tracking](#332-system-acknowledgment-corridor-with-pace-matched-tracking)
+  - [Seven-stage moving-car and world co-morph](#333-seven-stage-moving-car-and-world-co-morph)
+  - [Scale-aware wildlife evolution in one tracking shot](#334-scale-aware-wildlife-evolution-in-one-tracking-shot)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -20591,9 +20593,229 @@ Adapted and rewritten from the same September 14, 2026
 and [committed scale-scene MP4](https://github.com/jihadlenix/portfolio/blob/aca1857962d3f2b33e713a2a0aa1d0614684a135/assets/video/scene-03-scale.mp4).
 
 
+### 333. Seven-stage moving-car and world co-morph
+
+**Verified model:** Seedance 2.5 (Dreamina) — the original creator's public
+thread pairs a visible generated video with an explicit Seedance 2.5 attribution
+and the complete 15-second prompt  
+**Use case:** automotive commercial, continuous object transformation,
+environment co-morph, locked tracking geometry and ground-contact continuity  
+**Mode:** text-to-video  
+**Suggested settings:** 15 seconds, 16:9, cinematic photorealism
+
+```text
+Create a premium 15-second automotive commercial as one uninterrupted moving
+shot. A single car always drives forward on a real road. Keep the camera on a
+front-left tracking rig at one constant relative distance and angle. Preserve
+the car's screen position, direction, speed, wheel phase, road contact,
+perspective and apparent scale while its body and the world transform in full
+view.
+
+SEVEN CONTINUOUS STATES
+1. Begin with a glossy red mid-engine sports coupe in a rain-soaked neon city
+   at night. Tires throw believable spray and colored signs move across the wet
+   reflections.
+2. While the wheels keep turning, reshape it into a yellow wedge-shaped
+   supercar as the street dries and opens into a bright desert highway.
+3. Resculpt it into a blue rear-engine performance coupe while sand becomes
+   snow and the road climbs into blue-hour alpine terrain.
+4. Change it into a deep-green grand tourer as snow recedes into a coastal
+   cliff road under sunset light.
+5. Transform it into a silver aerodynamic supercar while the coast grows into
+   a dense green forest road.
+6. Turn it into a white long-hood performance coupe as trees and daylight
+   resolve into an illuminated future tunnel.
+7. Finish as a burnt-orange American sports car when the tunnel's light bands
+   become lava glow on a volcanic highway at sunrise.
+
+TRANSFORMATION CONTRACT
+Give each handoff roughly 0.5–0.8 seconds. Car and location must change
+simultaneously through continuous geometry: paint travels across intact body
+panels, lamps and vents reform, wheel design changes while rotating, and road
+materials, weather, vegetation and horizon evolve outward from the vehicle.
+Do not hide a handoff behind an obstacle or make a new car enter frame. Retain
+one chassis centre, four grounded tires, believable suspension load and
+forward momentum through every state.
+
+Photoreal premium-ad finish, realistic metal and glass, HDR but controlled
+highlights, physical reflections, natural motion blur, shallow cinematic depth
+and plausible surrealism. No edit, wipe, dissolve, portal, teleport, glitch,
+camera drift, speed jump, floating wheel, duplicate vehicle, scale pop,
+misshapen body, logo, caption, watermark or terminal reset. End with the final
+car still driving steadily in the same tracked composition.
+```
+
+**Why it works:** one camera-to-chassis transform is treated as an invariant
+while paint, body topology and landscape are allowed to change. Ground contact,
+wheel phase and momentum make seven conspicuous morphs read as one impossible
+take instead of seven disguised edits.
+
+Adapted and rewritten from Future Vibes AI's September 12, 2026
+[original Seedance 2.5 result thread](https://x.com/i/status/2098718451556880640)
+and [complete prompt post](https://x.com/FutureVibesAi/status/2098718867745013798).
+
+
+### 334. Scale-aware wildlife evolution in one tracking shot
+
+**Verified model:** Seedance 2.5 (Dreamina) — the original creator publishes a
+generated-video thread, names Seedance 2.5 and supplies the complete prompt for
+the uninterrupted animal metamorphosis  
+**Use case:** photoreal wildlife metamorphosis, locomotion continuity,
+scale-aware camera transfer, anatomy reconstruction and landscape co-evolution  
+**Mode:** text-to-video  
+**Suggested settings:** 15 seconds, 16:9, cinematic wildlife realism
+
+```text
+Create one uninterrupted 15-second wildlife tracking shot. Start at sunrise
+with a tiny field mouse running through dew-covered meadow grass. Without
+slowing, leaving the ground or being hidden, let the same moving animal evolve
+in this order:
+
+field mouse → rabbit → wolf → adult lion → Bengal tiger → giant elephant.
+
+Every transformation must be visible and anatomical. Preserve the current
+stride phase and forward heading while bones lengthen, joints reposition,
+muscle mass grows, paws restructure, ears and tail change, and fur or skin
+replaces the prior surface. One creature exists at all times; never spawn the
+next species beside or behind it. Feet keep taking weight on the road or earth
+with no sliding, hovering or gait reset.
+
+Make the habitat evolve with the animal:
+dew meadow → open grassland → misty pine forest → African savanna → tropical
+jungle → vast dry plain.
+Blend terrain, plants, humidity, light and distant horizon continuously. Do not
+use foreground cover, darkness, dust clouds or a portal to conceal a handoff.
+
+The camera begins very low at the animal's front-left, tracking backward at its
+exact pace. As body size increases, pull back and rise smoothly enough to keep
+the entire creature at a stable relative scale and preserve direction,
+perspective and lead room. Camera height may respond only to verified growth;
+it may not jump ahead of a transformation.
+
+Use high-end natural-history cinematography: lifelike locomotion, physically
+credible fur and skin, volumetric sunrise, restrained HDR, subtle motion blur,
+natural depth of field and environmental sound appropriate to each habitat.
+No cut, dissolve, wipe, glitch, magic effect, duplicate animal, anatomy error,
+extra limb, hidden transition, speed jump, sliding foot, camera teleport, text,
+logo or watermark. End on the elephant continuing the same run across the open
+plain in a stable wide composition.
+```
+
+**Why it works:** species change, landscape change and camera retreat share one
+growth ledger. Locking stride phase and weight-bearing contact prevents the
+common effect of six separate creatures being crossfaded into the same frame.
+
+Adapted and rewritten from Future Vibes AI's September 13, 2026
+[original Seedance 2.5 result](https://x.com/FutureVibesAi/status/2098822990972748122)
+and [complete prompt post](https://x.com/FutureVibesAi/status/2098823474399855034).
+
+
 ---
 
 ## Reusable templates
+
+
+### Idempotent CN-reference registration and readiness-gated submission
+
+**Verified model:** Seedance 2.0 Mini
+(`seedance/seedance-2.0-mini`, JojoKey China line) — the original production
+commit records three live text-, image- and reference-to-video generations,
+each returning a playable MP4, plus a settled four-second 480p task and measured
+first-frame fidelity for the two reference modes
+
+Use this when a China-routed Seedance request must register public image or
+video URLs before generation. Treat registration, regional synchronization and
+generation as separate state machines; a returned asset URI is not proof that
+the video endpoint can read it yet.
+
+```text
+MODEL AND MODE
+MODEL = seedance/seedance-2.0-mini
+MODE = [T2V | I2V | R2V]
+PROMPT = [COMPLETE SHOT INSTRUCTIONS]
+DURATION = [SUPPORTED SECONDS]
+RESOLUTION = [480p | 720p]
+RATIO = [SUPPORTED ASPECT RATIO]
+REFERENCE_IMAGES = [ORDERED PUBLIC URLS, IF ANY]
+REFERENCE_VIDEO = [ONE PUBLIC URL, IF ANY]
+
+ACCOUNT GATE
+Before prompt expansion, media registration or paid submission, read the
+generation account rather than treating a successful model-list response as
+proof of readiness. Record:
+- China line enabled state;
+- spendable CNY balance;
+- any explicitly supported fallback line and its spendable balance.
+Stop with the provider's blocker if no authorized route is both enabled and
+funded.
+
+CANONICAL ASSET REGISTRATION
+For every I2V/R2V reference:
+1. Canonicalize the source URL without changing the underlying file.
+2. Classify its modality as image or video.
+3. Compute ASSET_IDEMPOTENCY_KEY from
+   hash("seedance-cn-asset" + modality + canonical_source_url).
+   Do not include generation ID, shot number, retry count or current time.
+4. POST the URL to the China-line asset-registration endpoint with that
+   Idempotency-Key.
+5. Persist the returned asset ID and asset:// handle in a cache keyed by the
+   same modality and canonical URL. Reuse it across shots.
+6. Read the registration state. A returned handle with sync_status=1 or
+   ready=false is PENDING, not usable.
+
+READINESS POLL
+Poll the asset status endpoint on a bounded interval.
+- Submit generation only after sync_status=2 or ready=true.
+- On a terminal sync error, stop and preserve the provider response.
+- If the deadline expires while pending, verify that the public source URL is
+  reachable from mainland China. Do not manufacture a new asset key merely to
+  repeat the same unreachable upload.
+- Never submit a pending handle: InvalidVideoCnAsset is a synchronization error,
+  not evidence that the creative prompt failed.
+
+GENERATION PAYLOAD
+Place PROMPT first in the ordered content array. Append ready asset handles in
+the same order as REFERENCE_IMAGES, then REFERENCE_VIDEO if the chosen mode
+supports it. Mirror MODEL, MODE, DURATION, RESOLUTION and RATIO into the fields
+the route actually accepts. Give the generation itself a separate stable
+idempotency key derived from the intended output, never the asset-registration
+key.
+
+SAFE RECOVERY
+- Missing Idempotency-Key during asset registration: repair the header and retry
+  registration with the same stable asset key.
+- InvalidVideoCnAsset while the cached asset is still pending: resume the asset
+  poll; do not create or pay for another generation.
+- Asset never synchronizes: change hosting only after the old state and billing
+  are recorded, then register the new canonical URL once.
+- Generation acceptance or billing unknown: query the original task before any
+  resubmission.
+- China route disabled: use a documented compatible fallback only if its model,
+  media semantics and balance have been verified; otherwise stop.
+
+OUTPUT AND FIRST-FRAME QA
+Confirm the completed task exposes a playable MP4 and preserve task ID, exact
+payload, registered asset IDs, registration/sync timestamps and settled usage.
+For I2V/R2V, decode frame zero, resize source and output to one comparison grid,
+and record a visual overlay plus PSNR or another fixed similarity metric.
+Calibrate the threshold on accepted project examples; do not promote one source
+measurement to a universal pass rule. Fail if the intended first frame is
+visibly re-composed, cropped beyond tolerance or replaced despite a successful
+HTTP response.
+```
+
+**Why it works:** the verified live route rejected registration without an
+idempotency key, then rejected an asset submitted while it still reported
+`sync_status=1`. Stable URL-based keys avoid paying the recorded ¥0.10 asset
+fee once per job, while the readiness poll prevents `InvalidVideoCnAsset`.
+The source's settled 480p Mini task used 40,594 tokens in four seconds and its
+I2V first frame measured 30.7 dB PSNR versus 22.8 dB for R2V; those values are
+useful dated calibration evidence, not universal pricing or fidelity promises.
+
+Adapted and rewritten from Dylan-Nihilo / OmniStudio's September 14, 2026
+[production commit and three live-generation record](https://github.com/Dylan-Nihilo/OmniStudio/commit/cd70f0ac6d16a78f49f758b51794e0526f3b6e15),
+with the [provider implementation](https://github.com/Dylan-Nihilo/OmniStudio/blob/cd70f0ac6d16a78f49f758b51794e0526f3b6e15/src/models/jojokey.py)
+and [readiness, reuse and recovery tests](https://github.com/Dylan-Nihilo/OmniStudio/blob/cd70f0ac6d16a78f49f758b51794e0526f3b6e15/tests/test_jojokey_provider.py).
 
 
 ### Measured same-pass voice-and-mouth fallback for failed external lip sync
@@ -33073,6 +33295,23 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+
+- [Future Vibes AI — September 12–13, 2026 Dreamina Seedance 2.5
+continuous-transformation pair: original generated videos and complete prompts
+for a seven-state moving-car / environment co-morph and a scale-aware
+mouse-to-elephant wildlife evolution](https://x.com/i/status/2098718451556880640)
+([car prompt](https://x.com/FutureVibesAi/status/2098718867745013798),
+[wildlife result](https://x.com/FutureVibesAi/status/2098822990972748122),
+[wildlife prompt](https://x.com/FutureVibesAi/status/2098823474399855034))
+
+- [Dylan-Nihilo / OmniStudio — September 14, 2026 Seedance 2.0 Mini
+China-line production repair: three live T2V/I2V/R2V MP4 generations,
+registration idempotency, asynchronous asset-readiness polling, stable
+URL-based reference reuse, account gating, settled token evidence and measured
+first-frame fidelity](https://github.com/Dylan-Nihilo/OmniStudio/commit/cd70f0ac6d16a78f49f758b51794e0526f3b6e15)
+([provider implementation](https://github.com/Dylan-Nihilo/OmniStudio/blob/cd70f0ac6d16a78f49f758b51794e0526f3b6e15/src/models/jojokey.py),
+[regression tests](https://github.com/Dylan-Nihilo/OmniStudio/blob/cd70f0ac6d16a78f49f758b51794e0526f3b6e15/tests/test_jojokey_provider.py))
 
 - [SupremeGoogle / prompt-portfolio — September 14, 2026 Higgsfield
 Seedance 2.5 DarkHost CRM film: two complete 1080p one-take prompts, four- and
