@@ -20282,6 +20282,124 @@ and [generated MP4](https://github.com/dpeh001-x/Mojiworld/blob/5286ef3f7ebb41c9
 ## Reusable templates
 
 
+### Measured same-pass voice-and-mouth fallback for failed external lip sync
+
+**Verified model:** Seedance 2.5 — the original production PR replaces a
+published external-lipsync version with a committed 9:16 Seedance 2.5 master in
+which the authorized cloned voice and mouth performance were generated together;
+it preserves the previous correlation baseline, the final transcript and
+mouth/audio measurement, the two-part seam, a two-frame repair and mastered
+loudness values
+
+Use this when repeated post-generation lipsync engines cannot make one
+presenter's face follow an approved script. Measure the failure first, then
+route the performance through one Seedance generation contract that owns both
+voice and visible speech; do not declare success from visual inspection alone.
+
+```text
+AUTHORITY AND CONSENT
+@IdentityRef = the same authorized adult presenter. It owns face, apparent age,
+hair, skin tone, body proportions and ordinary mannerisms.
+@VoiceRef = authorized clean speech from that presenter. It owns voice identity,
+accent, pronunciation range and vocal texture; use it only with documented
+permission.
+SCRIPT = [APPROVED VERBATIM COPY].
+LOCATION = [REAL WORKPLACE OR CONTEXTUAL SET].
+The generated presenter must speak SCRIPT exactly. The visible mouth and cloned
+voice must come from the same Seedance 2.5 generation pass. Do not generate a
+silent performance for a separate lipsync engine, replace the voice with a
+generic speaker, paraphrase the script or add captions.
+
+ROUTE DECISION BEFORE SPEND
+Keep the currently published take and measure its zero-lag relationship between
+mouth opening and the speech envelope over visible talking frames. Also retain
+the exact audio and video used by each external lipsync attempt.
+Choose this same-pass fallback only after the existing approach shows persistent
+poor synchronization on the same face. Record:
+- prior engine and take;
+- script and reference hashes;
+- mouth/audio score and measurement method;
+- observed error class: constant offset, cumulative drift or unrelated motion.
+Do not compare differently edited scripts or differently framed faces as if they
+were one controlled test.
+
+PERFORMANCE PROMPT
+Create a natural vertical coworker-shot workplace testimonial. Frame wide enough
+to show the presenter from [WAIST / MID-TORSO] upward, both hands and enough of
+LOCATION to prove context. Keep the camera at a believable colleague's standing
+height with restrained handheld movement; this is not an arm's-length selfie.
+Background people may continue ordinary work but never address camera or cover
+the presenter's mouth.
+
+The presenter looks toward the coworker behind camera and speaks SCRIPT in the
+authorized cloned voice. Keep jaw and lips unobstructed. Use conversational
+breathing and small head movement while both hands perform readable, non-repeating
+gestures: touch chest for personal experience, open palms for explanation,
+count on fingers for enumerated points, then point briefly toward camera for the
+call to action. Gestures support phrase boundaries and never cover the mouth,
+merge fingers or continue after the sentence ends.
+
+No extra line, altered pronunciation, second speaker, dubbed timbre, beauty
+filter, close crop that removes the hands, random camera push, subtitle, logo,
+background music or silent mouth movement.
+
+LONG-SCRIPT SEGMENTATION
+If SCRIPT exceeds one supported generation, split only at a natural sentence
+pause. Block A owns the opening through [SPLIT PHRASE]. Block B begins from the
+approved terminal frame of A and inherits the same identity, wardrobe, location,
+camera height, lens, exposure, screen position and voice. Begin B on the same
+breath/rest pose rather than replaying the last words.
+
+Use one visually identical boundary frame as the seam. Review the last gestures
+of A and first gestures of B frame by frame: hand count, finger shape, shoulder
+height, gaze and mouth-rest state must match. Preserve both raw audio tracks;
+never hide a mismatched pose with a dissolve.
+
+MEASURED SYNC REPAIR
+1. Transcribe the assembled result word by word and compare it with SCRIPT.
+2. Compute mouth-opening versus audio-envelope correlation over visible speech,
+   using the same detector, crop, frame rate and lag convention as the baseline.
+3. Plot lag by section rather than trusting one full-video score.
+4. If one whole segment has a constant offset, nudge only that segment's audio
+   by the measured whole-frame amount and recompute; the verified source repair
+   moved its second segment by two frames.
+5. If lag grows over time, do not treat it as a constant offset. Retime or
+   regenerate only the failing segment.
+6. Never move audio independently inside a word or conceal a failed phrase under
+   unrelated B-roll without documenting it.
+
+MASTERING AND ACCEPTANCE
+Apply restrained presence EQ and gentle compression after sync is fixed, then
+master the complete spoken section to [DELIVERY LUFS] with true peak below
+[PEAK CEILING]. The verified production used approximately -14 LUFS and -1 dBTP;
+treat those as platform calibration, not universal prompt parameters.
+
+Pass only when:
+- the word-level transcript equals SCRIPT and named terms are pronounced;
+- the same-pass take materially improves the frozen external-lipsync baseline;
+- correction does not reduce correlation in another section;
+- the join uses one matching visual state with no repeated word or gesture;
+- both hands remain anatomically stable and context stays readable;
+- the final loudness, peak and silence scan meet the recorded delivery target.
+Archive the baseline, raw Seedance segments, seam frame, offset ledger, metric
+outputs and final master.
+```
+
+**Why it works:** some faces defeat a sequence of generic lipsync engines even
+when their audio is correct. Generating authorized voice and mouth motion in the
+same model pass couples phonation to performance before post-production, while
+a fixed baseline and reproducible correlation test prevent “looks better” from
+becoming the only release criterion. Wide framing also turns hand motion and
+workplace context into testable requirements instead of sacrificing them for a
+mouth-only crop.
+
+Adapted and rewritten from epac-hub's September 14, 2026
+[Seedance 2.5 replacement PR and measured test plan](https://github.com/epac-hub/podcast/pull/118),
+the [merged production commit](https://github.com/epac-hub/podcast/commit/3953ffd15c88d825e11e7ca4914ef35f16163a9e)
+and the committed
+[63-second vertical master](https://github.com/epac-hub/podcast/blob/3953ffd15c88d825e11e7ca4914ef35f16163a9e/promo/short/jonathan-pharmacy-tech-medicaid-short.mp4).
+
+
 ### Adjacent-keyframe chain for scroll-scrub narrative revision
 
 **Verified model:** Seedance 2.5 (Higgsfield route, start/end-image
@@ -32621,6 +32739,13 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [epac-hub — September 14, 2026 Seedance 2.5 same-pass voice-and-mouth
+replacement: published external-lipsync baselines, authorized cloned-voice
+routing, two-part visual seam, two-frame audio repair, transcript equality,
+mouth/audio correlation and -14 LUFS delivery QA](https://github.com/epac-hub/podcast/pull/118)
+([merged production commit](https://github.com/epac-hub/podcast/commit/3953ffd15c88d825e11e7ca4914ef35f16163a9e),
+[final vertical MP4](https://github.com/epac-hub/podcast/blob/3953ffd15c88d825e11e7ca4914ef35f16163a9e/promo/short/jonathan-pharmacy-tech-medicaid-short.mp4))
 
 - [dpeh001-x / Mojiworld — September 14, 2026 Higgsfield Seedance 2.0
 dual-reference boss-death cinematic: exact `seedance_2_0` job, complete prompt,
