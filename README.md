@@ -348,6 +348,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [System-acknowledgment corridor with pace-matched tracking](#332-system-acknowledgment-corridor-with-pace-matched-tracking)
   - [Seven-stage moving-car and world co-morph](#333-seven-stage-moving-car-and-world-co-morph)
   - [Scale-aware wildlife evolution in one tracking shot](#334-scale-aware-wildlife-evolution-in-one-tracking-shot)
+  - [Storybook swallow-to-envelope endpoint match](#335-storybook-swallow-to-envelope-endpoint-match)
+  - [Wax-seal-preserving envelope opening and card reveal](#336-wax-seal-preserving-envelope-opening-and-card-reveal)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -20710,6 +20712,109 @@ Adapted and rewritten from Future Vibes AI's September 13, 2026
 and [complete prompt post](https://x.com/FutureVibesAi/status/2098823474399855034).
 
 
+### 335. Storybook swallow-to-envelope endpoint match
+
+**Verified model:** Seedance 2.5 (BytePlus ModelArk
+`dreamina-seedance-2-5-260628`) — the creator committed the complete request
+JSON, first/last-frame roles, seed and downloaded 720p master from the same
+generation workflow  
+**Use case:** illustrated invitation opener, exact object-led transition,
+first/last-frame interpolation and rigid-detail preservation  
+**Mode:** first-and-last-frame image-to-video  
+**Suggested settings:** 8 seconds, 9:16, 720p, seed 69591, audio off
+
+```text
+@Image1 is the exact opening frame: two pink storybook swallows fly above a calm
+sea at sunset while carrying one sealed peach envelope between them.
+@Image2 is the exact terminal frame: the same closed embossed envelope faces
+camera and fills the vertical frame, with its round gold wax seal centred.
+
+Create one slow, seamless forward approach. Keep the sea, sunset, painted
+texture and warm light stable rather than rebuilding the world.
+
+0–2 s — Begin on @Image1. The birds beat their wings softly in a synchronized
+but natural rhythm. The envelope hangs level between them; its flap stays
+closed, the ribbons trail gently and the seal is already present.
+2–6 s — Let both birds fly straight toward camera at one continuous speed.
+Increase the envelope's apparent size only through the approach. Preserve its
+frontal orientation, embossed paper, pointed flap, round seal, left/right bird
+assignment and carry contact. Use restrained background parallax.
+6–8 s — The envelope occupies progressively more of frame until it becomes
+@Image2 exactly. Treat the seal as a rigid child of the envelope: it scales
+with the paper but never bends, melts, slides, duplicates or redraws. Only after
+the envelope nearly fills frame may the birds release it and leave cleanly to
+opposite sides. Settle on the closed envelope and hold the exact terminal frame.
+
+Hand-painted storybook motion, soft warm illumination and a smooth camera.
+No cut, dissolve, extra bird, sparkle, glitter, text, new ornament, opening
+flap, changing horizon, asymmetric scale, warped envelope, damaged seal,
+premature release, terminal bounce or reset.
+```
+
+**Why it works:** the first frame owns the illustrated world and carry
+relationship, while the last frame owns the transition target. Making the wax
+seal subordinate to one rigid envelope transform prevents the small emblem
+from being independently regenerated during the large scale change.
+
+Adapted and rewritten from Adham Charaf's September 14, 2026
+[Seedance 2.5 production commit](https://github.com/adhamcharaf/wedding_card/commit/4c63b0952f6f41872d7986513c6dc665ee954d2f),
+the [complete model-bound request](https://github.com/adhamcharaf/wedding_card/blob/4c63b0952f6f41872d7986513c6dc665ee954d2f/assets/seedance/video1.json)
+and its [committed generated master](https://github.com/adhamcharaf/wedding_card/blob/4c63b0952f6f41872d7986513c6dc665ee954d2f/assets/seedance/video1-oiseaux-720p.mp4).
+
+
+### 336. Wax-seal-preserving envelope opening and card reveal
+
+**Verified model:** Seedance 2.5 (BytePlus ModelArk
+`dreamina-seedance-2-5-260628`) — the original repository commits this timed
+request with explicit first/last-frame roles beside the generated 720p master
+and final assembled film  
+**Use case:** invitation reveal, hinged-object mechanics, attached-detail
+continuity, staged material emergence and stable end plate  
+**Mode:** first-and-last-frame image-to-video  
+**Suggested settings:** 8 seconds, 9:16, 720p, audio off
+
+```text
+@Image1 is the exact first frame: a closed peach paper envelope seen straight
+on in close-up. Preserve its embossed floral motifs, pointed flap, small sun
+ornament, centred round gold wax seal, warm light and shallow depth of field.
+@Image2 is the exact last frame: a blank fibrous peach card lies flat and still
+over about ninety percent of frame, leaving a thin envelope border visible.
+
+Lock the camera for the entire shot.
+
+0–1 s — Hold @Image1 without movement so the closed state reads clearly.
+1–4 s — Rotate the pointed flap upward around its real top hinge, as though
+opened by an invisible mechanism. The intact wax seal remains attached to the
+tip of the flap and travels with it. It may not crack, split, leave a fragment
+on the pocket or float independently. Keep the paper untorn. Continue until the
+flap is nearly vertical, then fold it behind the top edge.
+4–7 s — Slide one handmade card upward from inside the envelope. Give it visible
+mottled fibres, softly rounded corners and a faint contact shadow. It moves
+steadily toward camera, tilts only slightly, and grows without changing color,
+thickness or shape.
+7–8 s — Settle the card flat into @Image2, covering about ninety percent of the
+view. Leave the thin envelope margin and paper texture clearly visible. Hold
+the last frame motionless.
+
+Hand-crafted photoreal stationery, warm golden light and restrained physical
+motion. No hand, person, text, extra object, camera move, edit, torn paper,
+broken or redrawn seal, second card, premature full-frame solid color, edge
+flicker, last-frame drift or reset.
+```
+
+**Why it works:** four explicit mechanical states separate hinge rotation,
+seal attachment and card translation. The visible border and material texture
+also produce a safer, editable terminal plate than asking the model to end on
+an ambiguous featureless full-frame color.
+
+Adapted and rewritten from the same
+[verified Seedance 2.5 release](https://github.com/adhamcharaf/wedding_card/commit/4c63b0952f6f41872d7986513c6dc665ee954d2f),
+the [complete timed request](https://github.com/adhamcharaf/wedding_card/blob/4c63b0952f6f41872d7986513c6dc665ee954d2f/assets/seedance/video2.json),
+[generated second-shot master](https://github.com/adhamcharaf/wedding_card/blob/4c63b0952f6f41872d7986513c6dc665ee954d2f/assets/seedance/video2-enveloppe-720p.mp4)
+and [production assembly record](https://github.com/adhamcharaf/wedding_card/blob/4c63b0952f6f41872d7986513c6dc665ee954d2f/docs/CONCEPTION.md#1-le-film-mis-%C3%A0-jour-le-2026-09-14).
+
+
+
 ---
 
 ## Reusable templates
@@ -33294,7 +33399,82 @@ Adapted and rewritten from aqm857886159 / Nomi's September 7, 2026
 the [complete experiment, prompts, settings and honest limits](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth.md),
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
+
+### Classifier-safe near-solid terminal frame and post-produced full-bleed handoff
+
+**Verified model:** Seedance 2.5 (BytePlus ModelArk
+`dreamina-seedance-2-5-260628`) — the creator recorded eight
+`OutputVideoSensitiveContentDetected` failures on a peach full-frame endpoint,
+then committed a successful textured ninety-percent endpoint and the delivered
+post-produced full-bleed transition  
+**Use case:** failure control for near-solid skin-adjacent colors, safe terminal
+plates, first/last-frame generation and website or title-card handoff  
+**Mode:** generation preflight + image-to-video endpoint design + post-production
+
+Use this when the desired last frame is almost uniform peach, tan, beige, pink
+or another skin-adjacent color. It is an evidence-backed recovery pattern from
+one production, not a claim that every moderation system or color behaves the
+same way.
+
+```text
+DESIRED HANDOFF
+GENERATED SUBJECT / OBJECT = [WHAT MOVES INTO THE END PLATE]
+FULL-BLEED TARGET COLOR = [COLOR]
+MATERIAL = [PAPER / FABRIC / PAINT / OTHER]
+POST DESTINATION = [SITE BACKGROUND / TITLE CARD / NEXT SHOT]
+
+PREFLIGHT
+If the requested generated endpoint would be a featureless full-frame color:
+- keep a clearly recognizable material texture;
+- stop the foreground at [ABOUT 90%] frame coverage;
+- retain a thin, stable border from the enclosing object or scene;
+- remove accidental skin-like cues without inventing text or decoration;
+- assign the exact safe state as @Image2 / last_frame.
+
+GENERATION ENDPOINT CONTRACT
+Move [SUBJECT / OBJECT] toward the safe last-frame anchor in one continuous
+physical action. During the final second, settle at [COVERAGE] with [BORDER]
+still visible and [MATERIAL TEXTURE] readable. Hold motionless. Do not zoom to
+a featureless field, erase every edge, smooth away the texture, pulse the color,
+redraw the border or generate the full-bleed transition.
+
+ACCEPTANCE GATE
+Accept only if:
+1. the submitted task explicitly reports success;
+2. the final generated frames preserve texture and the enclosing border;
+3. no subject, seal, logo or edge changes during the hold;
+4. the last frame can be extracted as a stable plate.
+
+POST-PRODUCTION HANDOFF
+Outside Seedance, extend the accepted last frame by [HOLD]. Animate a short
+crop/scale from [90%] to full bleed over [ABOUT 0.5 S], then crossfade to
+[POST DESTINATION] over [ABOUT 0.5 S]. Extract any poster or color reference
+from the encoded master, not from an earlier source image. Record rejected and
+accepted task states; do not claim an unsuccessful generation as evidence.
+```
+
+**Why it works:** the model is asked to render a legible physical material and
+bounded object rather than an ambiguous flat field. The final few percent of
+coverage and color match are deterministic compositing work, so the successful
+Seedance motion is preserved without repeatedly submitting the same failing
+endpoint.
+
+Adapted and rewritten from Adham Charaf's
+[verified ModelArk generation release](https://github.com/adhamcharaf/wedding_card/commit/4c63b0952f6f41872d7986513c6dc665ee954d2f),
+the creator's [eight-failure diagnosis and recovery rule](https://github.com/adhamcharaf/wedding_card/blob/4c63b0952f6f41872d7986513c6dc665ee954d2f/docs/LESSONS.md#le-filtre-de-sortie-de-seedance-refuse-les-aplats-couleur-peau)
+and the [successful ninety-percent endpoint plus post-production handoff](https://github.com/adhamcharaf/wedding_card/blob/4c63b0952f6f41872d7986513c6dc665ee954d2f/docs/CONCEPTION.md#1-le-film-mis-%C3%A0-jour-le-2026-09-14).
+
+
 ## Sources
+
+- [Adham Charaf / wedding_card — September 14, 2026 BytePlus ModelArk
+Seedance 2.5 invitation film: two complete first/last-frame prompts, committed
+720p generated masters, rigid wax-seal continuity, exact shared-boundary
+assembly and an eight-failure recovery from a near-solid peach endpoint](https://github.com/adhamcharaf/wedding_card/commit/4c63b0952f6f41872d7986513c6dc665ee954d2f)
+([swallow-to-envelope request](https://github.com/adhamcharaf/wedding_card/blob/4c63b0952f6f41872d7986513c6dc665ee954d2f/assets/seedance/video1.json),
+[envelope-to-card request](https://github.com/adhamcharaf/wedding_card/blob/4c63b0952f6f41872d7986513c6dc665ee954d2f/assets/seedance/video2.json),
+[measured failure notes](https://github.com/adhamcharaf/wedding_card/blob/4c63b0952f6f41872d7986513c6dc665ee954d2f/docs/LESSONS.md#le-filtre-de-sortie-de-seedance-refuse-les-aplats-couleur-peau))
+
 
 
 - [Future Vibes AI — September 12–13, 2026 Dreamina Seedance 2.5
