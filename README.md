@@ -340,7 +340,6 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Handheld anaconda feeding near-miss with contact-and-rescue chain](#324-handheld-anaconda-feeding-near-miss-with-contact-and-rescue-chain)
   - [Container-yard strike relay with contact-gated X-ray insert](#325-container-yard-strike-relay-with-contact-gated-x-ray-insert)
   - [Saturn-ring camera-as-vehicle audio crescendo](#326-saturn-ring-camera-as-vehicle-audio-crescendo)
-  - [Circuit-board-to-city golden data flight](#327-circuit-board-to-city-golden-data-flight)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -20190,76 +20189,107 @@ The repository preserves the [complete source prompt](https://github.com/Wolkche
 and [passing visual/native-audio QC ledger](https://github.com/Wolkchen00/youtube-automation/blob/8297f4ff36040948993f952bef52360cde3d20ef/galactic_experience/flythrough/qc_log.jsonl).
 
 
-### 327. Circuit-board-to-city golden data flight
-
-**Verified model:** Seedance 2.5 (Higgsfield route) — the original creator
-records the exact model, route, date, duration, aspect ratio, resolution and
-audio setting beside the complete prompt, then commits the PC and mobile frame
-sequences extracted from the generated clip  
-**Use case:** first-person brand-film background, continuous environment
-transformation, restrained technology visualization, scroll-driven web canvas  
-**Mode:** text-to-video  
-**Suggested settings:** 10 seconds, 16:9, 1080p, audio disabled, one continuous
-take
-
-```text
-Create a photorealistic ten-second forward flight through one continuous dark
-digital world. The camera is an invisible observer: no vehicle, cockpit, person,
-interface or foreground frame may enter the image. Start in motion and keep one
-steady forward velocity from the first frame to the last.
-
-0–3 s — CIRCUIT PLAIN
-Skim close above a vast matte-black circuit board. Fine warm-gold traces form a
-readable landscape, with sparse amber component lights at several depths.
-Maintain a low flight path and use measured parallax to establish scale. The
-board must feel physically photographed, not like a flat motion graphic.
-
-3–6.5 s — DATA ASCENT
-Lift in one smooth arc without cutting or changing direction. Let the same gold
-traces stretch naturally into flowing filaments around the camera, forming a
-deep tunnel of data. Nearby strands pass quickly while distant strands move
-slowly; the tunnel grows from the circuit landscape rather than arriving as a
-separate effect. Do not accelerate, shake, spin or punch-zoom.
-
-6.5–10 s — CITY REVEAL
-Emerge from the thinning filaments high above an immense night city built from
-server-like towers and circuit-shaped streets. Preserve the black-and-gold
-material language so the streets visibly inherit the board traces and the
-tower lights inherit the component lights. Continue gliding forward over the
-city through the final frame, with soft haze and restrained bokeh revealing
-depth. End on a stable readable vista, not a fade, flash or freeze.
-
-CONTINUITY AND FINISH
-Use deep matte blacks, desaturated surfaces and warm gold or amber illumination
-only. Keep high contrast without crushing structural detail. Use shallow depth
-of field selectively; the route and terminal city must remain legible. Preserve
-one lighting direction, one horizon and one forward axis across all three
-states. No cut, dissolve, teleport, speed ramp, camera stop, duplicated
-landmark, abrupt scale change, neon rainbow, glossy game-render finish, text,
-letter, logo, face, UI screen or watermark. Generate no audio.
-```
-
-**Why it works:** the camera obeys one velocity and direction ledger while the
-world changes through material inheritance: circuit traces become data strands,
-then streets; component lights become windows. That continuity makes three
-visually distinct environments read as one physical journey. Separating the
-lift from acceleration also prevents the reveal from turning into an
-uncontrolled zoom or a hard scene switch.
-
-Adapted and rewritten from Reaf-9 / AI Linqs' September 14, 2026
-[primary production commit](https://github.com/Reaf-9/ai-linqs-site-v2/commit/a1a577824ec205ca5f7d4451c5b0101fbe550be9).
-The same revision preserves the
-[complete model-bound prompt and settings](https://github.com/Reaf-9/ai-linqs-site-v2/blob/a1a577824ec205ca5f7d4451c5b0101fbe550be9/README.md)
-and the generated clip's committed
-[PC](https://github.com/Reaf-9/ai-linqs-site-v2/tree/a1a577824ec205ca5f7d4451c5b0101fbe550be9/assets/seq/pc)
-and
-[mobile](https://github.com/Reaf-9/ai-linqs-site-v2/tree/a1a577824ec205ca5f7d4451c5b0101fbe550be9/assets/seq/sp)
-frame sequences.
-
 ---
 
 ## Reusable templates
 
+
+### Adjacent-keyframe chain for scroll-scrub narrative revision
+
+**Verified model:** Seedance 2.5 (Higgsfield route, start/end-image
+generation) — the original creator first generated and committed a ten-second
+single-flight version, rejected it as monotonous, then generated three
+five-second clips from four storyboard anchors and committed the replacement PC
+and mobile frame sequences  
+**Use case:** website hero film, scroll-controlled narrative, brand progression,
+multi-state transformation, replacing a technically correct but visually flat
+one-take  
+**Mode:** image-to-video with an ordered keyframe chain; each adjacent pair
+defines one short clip
+
+```text
+STORY STATE LEDGER
+Exact model = Seedance 2.5.
+Final narrative length = [TOTAL SECONDS].
+Storyboard anchors = [K1, K2, K3, K4...].
+One anchor = one stable story state, not a collage or multi-panel frame.
+
+Write each anchor before generation:
+K1 — [OPENING HUMAN / PRODUCT / PLACE STATE, COMPOSITION, LIGHT AND COLOUR]
+K2 — [FIRST VISIBLE CHANGE AND ITS COMPLETED TERMINAL STATE]
+K3 — [RELATIONSHIP OR WORKFLOW PAYOFF, NEW COMPOSITION, PERSISTENT DETAILS]
+K4 — [FINAL SCALE EXPANSION OR BRAND PROMISE, TERMINAL IMAGE]
+For every adjacent pair, list the identities, objects, screen sides, colour
+roles and light direction that must survive the transition.
+
+CLIP COMPILER
+Generate N−1 separate five-second clips:
+- Clip 1: K1 is the exact start image; K2 is the exact end image.
+- Clip 2: K2 is the exact start image; K3 is the exact end image.
+- Continue the same rule through the final pair.
+
+Give each clip one dominant causal change:
+[SUBJECT ACTION] causes [VISIBLE TRANSFORMATION], while the camera performs
+[ONE SIMPLE MOVE]. Preserve [IDENTITIES / PROPS / LAYOUT / COLOUR ROLES].
+Arrive cleanly at the supplied end image. Do not introduce the next clip's
+event early.
+
+CONTINUITY HANDOFF
+The shared boundary anchor is authoritative for both neighbouring clips.
+Match its subject count, pose, framing, horizon, light direction, palette and
+completed effects. If K2 introduces a new partner, object or visual signal,
+that state must already be complete at the end of Clip 1 and remain present
+from the first frame of Clip 2. Do not regenerate a near-duplicate boundary
+with a different face, costume, geometry or screen position.
+
+MOTION AND VARIETY GATE
+Do not solve the whole narrative with one repeated straight push. Alternate
+the dramatic function of the short clips while keeping the world coherent:
+[DISCOVERY] → [RELATIONSHIP] → [EXPANSION].
+Assign each clip a distinct composition or camera behaviour, but never more
+than one primary move. Reject a chain whose cuts are technically continuous
+yet all three segments have the same velocity, scale and visual rhythm.
+
+FRAME-SEQUENCE DELIVERY
+After approving all clips, extract the same number of frames from each one.
+Discard only the known unstable tail fraction [for example, the final 2%] and
+number the frames continuously across clip boundaries. Produce separate
+landscape and portrait sequences from the approved master; do not generate an
+independent mobile story unless its framing requires different blocking.
+
+For scroll playback, load sparse passes first [every 16th frame, then 8th,
+4th, 2nd, then all frames]. Map each message section to the frame percentage
+where its story state becomes readable, and interpolate linearly between
+sections. Verify every shared boundary at full resolution before publishing.
+
+ACCEPTANCE
+The final sequence must communicate all ordered states without captions.
+Reject missing or duplicated subjects, boundary jumps, early effects,
+unmotivated camera resets, repeated straight-line motion, palette drift,
+different human/AI or product colour roles, unreadable terminal anchors,
+literal storyboard borders, text, logo corruption or black transition frames.
+```
+
+**Why it works:** start/end anchors turn each short generation into one bounded
+state transition, while the shared boundary image acts as a checksum between
+clips. The explicit variety gate addresses the failure observed in the first
+ten-second attempt: temporal continuity alone does not create narrative
+progress. Equal frame quotas then make the three generated clips predictable
+for a scroll-controlled canvas without asking Seedance to solve web timing.
+
+Adapted and rewritten from Reaf-9 / AI Linqs' September 14, 2026
+[adopted four-anchor, three-clip Seedance 2.5 production revision](https://github.com/Reaf-9/ai-linqs-site-v2/commit/b6ade7b594590ec499e3566912624d97aec1ed88).
+The same source preserves the
+[model, keyframe-chain and extraction record](https://github.com/Reaf-9/ai-linqs-site-v2/blob/b6ade7b594590ec499e3566912624d97aec1ed88/README.md),
+the replacement
+[PC](https://github.com/Reaf-9/ai-linqs-site-v2/tree/b6ade7b594590ec499e3566912624d97aec1ed88/assets/seq/pc)
+and
+[mobile](https://github.com/Reaf-9/ai-linqs-site-v2/tree/b6ade7b594590ec499e3566912624d97aec1ed88/assets/seq/sp)
+frame sequences, and the
+[rejected single-flight baseline](https://github.com/Reaf-9/ai-linqs-site-v2/commit/a1a577824ec205ca5f7d4451c5b0101fbe550be9)
+for direct A/B provenance.
+
+---
 
 ### Role-mapped Blender whitebox to natural-motion semantic rerender
 
@@ -32505,12 +32535,13 @@ and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blo
 ## Sources
 
 - [Reaf-9 / AI Linqs — September 14, 2026 Higgsfield Seedance 2.5
-circuit-board-to-data-tunnel-to-city one-take: exact model and settings,
-complete prompt, generated background clip and committed PC/mobile frame
-sequences](https://github.com/Reaf-9/ai-linqs-site-v2/commit/a1a577824ec205ca5f7d4451c5b0101fbe550be9)
-([prompt and generation record](https://github.com/Reaf-9/ai-linqs-site-v2/blob/a1a577824ec205ca5f7d4451c5b0101fbe550be9/README.md),
-[PC frame sequence](https://github.com/Reaf-9/ai-linqs-site-v2/tree/a1a577824ec205ca5f7d4451c5b0101fbe550be9/assets/seq/pc),
-[mobile frame sequence](https://github.com/Reaf-9/ai-linqs-site-v2/tree/a1a577824ec205ca5f7d4451c5b0101fbe550be9/assets/seq/sp))
+four-anchor / three-clip scroll narrative: adopted adjacent start/end-image
+workflow, committed PC/mobile sequences, equal frame quotas and an explicitly
+rejected monotonous single-flight baseline](https://github.com/Reaf-9/ai-linqs-site-v2/commit/b6ade7b594590ec499e3566912624d97aec1ed88)
+([model, keyframe chain and extraction record](https://github.com/Reaf-9/ai-linqs-site-v2/blob/b6ade7b594590ec499e3566912624d97aec1ed88/README.md),
+[PC frames](https://github.com/Reaf-9/ai-linqs-site-v2/tree/b6ade7b594590ec499e3566912624d97aec1ed88/assets/seq/pc),
+[mobile frames](https://github.com/Reaf-9/ai-linqs-site-v2/tree/b6ade7b594590ec499e3566912624d97aec1ed88/assets/seq/sp),
+[rejected baseline](https://github.com/Reaf-9/ai-linqs-site-v2/commit/a1a577824ec205ca5f7d4451c5b0101fbe550be9))
 
 - [NodeTool — September 13, 2026 AtlasCloud Seedance 2.5 native-audio UGC release: complete model-bound reference-to-video prompt, creator / product authority split, tested 4.5–7.0-second product visibility window, exact-dialogue gate and committed 15-second finished reel](https://github.com/nodetool-ai/nodetool/commit/0e55d06d429abb86665412902d2b5916f0148f2b) ([complete workflow](https://github.com/nodetool-ai/nodetool/blob/0e55d06d429abb86665412902d2b5916f0148f2b/packages/base-nodes/nodetool/examples/nodetool-base/Generate%20a%20Native-Audio%20UGC%20Testimonial.json), [generated MP4](https://github.com/nodetool-ai/nodetool/blob/0e55d06d429abb86665412902d2b5916f0148f2b/marketing/public/apps/examples/ugc-product-video/final.mp4))
 
