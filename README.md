@@ -20822,11 +20822,12 @@ and [production assembly record](https://github.com/adhamcharaf/wedding_card/blo
 
 ### Idempotent CN-reference registration and readiness-gated submission
 
-**Verified model:** Seedance 2.0 Mini
-(`seedance/seedance-2.0-mini`, JojoKey China line) — the original production
-commit records three live text-, image- and reference-to-video generations,
-each returning a playable MP4, plus a settled four-second 480p task and measured
-first-frame fidelity for the two reference modes
+**Verified models:** Seedance 2.0 Mini
+(`seedance/seedance-2.0-mini`, JojoKey China line) and Seedance 2.5
+(`seedance-2.5-i2v` routed to `video-cn-2.5`) — the first production commit
+records three live text-, image- and reference-to-video generations with
+playable MP4s; the later creator commit records six real Seedance 2.5 client
+shots and the submission defect discovered while producing them
 
 Use this when a China-routed Seedance request must register public image or
 video URLs before generation. Treat registration, regional synchronization and
@@ -20886,6 +20887,23 @@ the route actually accepts. Give the generation itself a separate stable
 idempotency key derived from the intended output, never the asset-registration
 key.
 
+HEADER-SAFE GENERATION IDEMPOTENCY
+A stable semantic job name may contain Chinese or other Unicode, but an HTTP
+header cannot safely carry every such string.
+1. Preserve RAW_OUTPUT_KEY in the job record before transport.
+2. If it is printable ASCII, use it unchanged up to the route's length limit.
+3. If it contains non-ASCII, retain any printable ASCII prefix and append a
+   deterministic hexadecimal digest of the complete UTF-8 raw key. The tested
+   implementation uses the first 20 SHA-1 hex characters.
+4. Assert that the transmitted key is non-empty ASCII and no longer than 128
+   characters.
+5. Assert that distinct raw keys such as "镜头一" and "镜头二" produce distinct
+   headers. Never obtain safety by merely deleting non-ASCII characters:
+   different shots could collapse onto one key and silently return the other's
+   video.
+6. Persist RAW_OUTPUT_KEY → SENT_HEADER_KEY beside the request for audit and
+   recovery.
+
 SAFE RECOVERY
 - Missing Idempotency-Key during asset registration: repair the header and retry
   registration with the same stable asset key.
@@ -20913,14 +20931,20 @@ HTTP response.
 idempotency key, then rejected an asset submitted while it still reported
 `sync_status=1`. Stable URL-based keys avoid paying the recorded ¥0.10 asset
 fee once per job, while the readiness poll prevents `InvalidVideoCnAsset`.
+The later six-shot Seedance 2.5 production found another pre-transport boundary:
+a Chinese generation key could not be encoded as an HTTP header. Hash-suffixed
+ASCII normalization preserves both transport safety and shot uniqueness instead
+of discarding Unicode and allowing two intended outputs to collide.
+
 The source's settled 480p Mini task used 40,594 tokens in four seconds and its
 I2V first frame measured 30.7 dB PSNR versus 22.8 dB for R2V; those values are
 useful dated calibration evidence, not universal pricing or fidelity promises.
 
 Adapted and rewritten from Dylan-Nihilo / OmniStudio's September 14, 2026
-[production commit and three live-generation record](https://github.com/Dylan-Nihilo/OmniStudio/commit/cd70f0ac6d16a78f49f758b51794e0526f3b6e15),
-with the [provider implementation](https://github.com/Dylan-Nihilo/OmniStudio/blob/cd70f0ac6d16a78f49f758b51794e0526f3b6e15/src/models/jojokey.py)
-and [readiness, reuse and recovery tests](https://github.com/Dylan-Nihilo/OmniStudio/blob/cd70f0ac6d16a78f49f758b51794e0526f3b6e15/tests/test_jojokey_provider.py).
+[production commit and three live-generation record](https://github.com/Dylan-Nihilo/OmniStudio/commit/cd70f0ac6d16a78f49f758b51794e0526f3b6e15)
+and the later [six-shot Seedance 2.5 Unicode-key repair](https://github.com/Dylan-Nihilo/OmniStudio/commit/2d0c988ae7159b0c2a267322a28dd3844c52ee03),
+with the updated [provider implementation](https://github.com/Dylan-Nihilo/OmniStudio/blob/2d0c988ae7159b0c2a267322a28dd3844c52ee03/src/models/jojokey.py)
+and [readiness, reuse, routing and key-collision tests](https://github.com/Dylan-Nihilo/OmniStudio/blob/2d0c988ae7159b0c2a267322a28dd3844c52ee03/tests/test_jojokey_provider.py).
 
 
 ### Measured same-pass voice-and-mouth fallback for failed external lip sync
@@ -33486,12 +33510,13 @@ mouse-to-elephant wildlife evolution](https://x.com/i/status/2098718451556880640
 [wildlife prompt](https://x.com/FutureVibesAi/status/2098823474399855034))
 
 - [Dylan-Nihilo / OmniStudio — September 14, 2026 Seedance 2.0 Mini
-China-line production repair: three live T2V/I2V/R2V MP4 generations,
-registration idempotency, asynchronous asset-readiness polling, stable
-URL-based reference reuse, account gating, settled token evidence and measured
-first-frame fidelity](https://github.com/Dylan-Nihilo/OmniStudio/commit/cd70f0ac6d16a78f49f758b51794e0526f3b6e15)
-([provider implementation](https://github.com/Dylan-Nihilo/OmniStudio/blob/cd70f0ac6d16a78f49f758b51794e0526f3b6e15/src/models/jojokey.py),
-[regression tests](https://github.com/Dylan-Nihilo/OmniStudio/blob/cd70f0ac6d16a78f49f758b51794e0526f3b6e15/tests/test_jojokey_provider.py))
+and Seedance 2.5 China-line production repairs: three live Mini T2V/I2V/R2V
+MP4 generations, six live 2.5 client shots, registration readiness and reuse,
+account gating, measured first-frame fidelity, plus collision-safe ASCII
+normalization for Unicode generation keys](https://github.com/Dylan-Nihilo/OmniStudio/commit/cd70f0ac6d16a78f49f758b51794e0526f3b6e15)
+([Seedance 2.5 Unicode-key repair](https://github.com/Dylan-Nihilo/OmniStudio/commit/2d0c988ae7159b0c2a267322a28dd3844c52ee03),
+[updated provider](https://github.com/Dylan-Nihilo/OmniStudio/blob/2d0c988ae7159b0c2a267322a28dd3844c52ee03/src/models/jojokey.py),
+[regression tests](https://github.com/Dylan-Nihilo/OmniStudio/blob/2d0c988ae7159b0c2a267322a28dd3844c52ee03/tests/test_jojokey_provider.py))
 
 - [SupremeGoogle / prompt-portfolio — September 14, 2026 Higgsfield
 Seedance 2.5 DarkHost CRM film: two complete 1080p one-take prompts, four- and
