@@ -21490,25 +21490,33 @@ Submit once and retain the returned clip, model id, endpoint, duration,
 resolution and seed when available.
 
 DETERMINISTIC HARVEST
-1. Sample [N] frames at equal time intervals. For a loop, stop before the
-   duplicate endpoint; for a one-shot, include both ends.
-2. Estimate the plate color from frame-00 corner patches rather than assuming
+1. Build a timestamped contact sheet and measure the opening hold, closing hold
+   and candidate repeating windows before choosing any frames. For a loop,
+   select one window whose end state most closely matches its start state;
+   do not assume the full clip closes merely because the prompt requests it.
+2. Sample [N] equal intervals inside that measured cycle and omit its duplicate
+   endpoint. For a one-shot, instead isolate the readable action window and
+   include both terminal states.
+3. Estimate the plate color from frame-00 corner patches rather than assuming
    the model reproduced #00FF00 exactly, then key every frame with one recorded
    similarity value.
-3. Keep the largest connected alpha component and meaningful detached
+4. Keep the largest connected alpha component and meaningful detached
    accessories. Remove only tiny border-connected bleed or isolated debris;
    flag any frame that loses more than 5% of its original opaque pixels.
-4. Align horizontal position from the lowest contact band around the feet,
+5. Align horizontal position from the lowest contact band around the feet,
    not the full silhouette bounding box, so a lantern, sword or extended arm
    cannot push the body sideways. Align vertical position to the common foot
    baseline.
-5. Pack the aligned frames into the atlas and preserve the source clip,
-   sampling times, key value, alignment measurements and prompt as provenance.
+6. Pack the aligned frames into the atlas and preserve the source clip,
+   detected window, sampling times, key value, alignment measurements and
+   prompt as provenance.
 
 ACCEPTANCE AND REPAIR
 Accept only if every pose is complete; body/contact-point drift is below 5% of
 cell width; the largest adjacent-frame jump is below 8%; scale drift is below
-15%; and the keyed edge is usable at delivery size.
+15%; and the keyed edge is usable at delivery size. For a loop, compare the
+last-to-first seam with ordinary interior steps: a seam larger than the normal
+motion range means the selected window does not close and must be re-cut.
 - Clipped anatomy or excessive scale drift -> regenerate the source clip.
 - Stable body with prop-inflated horizontal wobble -> realign from the feet.
 - Green fringe with no green costume detail -> cautiously widen the key.
@@ -21529,9 +21537,21 @@ produced 16 frames in 12.4 seconds of post-processing. The creator measured
 0.343 px body drift, 2.921 px horizontal anchor drift, a 3 px maximum jump,
 0.0226 scale drift and no warnings after keying and alignment.
 
+A September 14 follow-up generated another Seedance 2.5 image-to-video clip
+from the documented locked-camera, treadmill-walk and pure-green recipe
+(4.042 seconds, 24 fps, 480p, audio off). The prompt asked for a return to the
+opening pose, yet the full clip contained about 2.4 cycles. Selecting the
+measured 1.667-second closed window cut the 16-frame seam score from 0.126 to
+0.036 and maximum positional jump from 34.5 px to 19.5 px, while body drift
+remained essentially unchanged. This isolates cycle selection from anchoring:
+the camera can be stable and the body well aligned while the wrong time window
+still makes a visibly broken loop.
+
 Adapted and rewritten from pandazki's September 10, 2026
 [Sprite-mode release with the complete implementation and generated evidence](https://github.com/pandazki/pneuma-skills/commit/36b5f5dcd7be3fcc66191fa43c875d3bba587d06),
-the [full source-clip template and measured run](https://github.com/pandazki/pneuma-skills/blob/36b5f5dcd7be3fcc66191fa43c875d3bba587d06/modes/sprite/skill/references/video-preview.md#the-motion-source-clip),
+the [full source-clip template and first measured run](https://github.com/pandazki/pneuma-skills/blob/36b5f5dcd7be3fcc66191fa43c875d3bba587d06/modes/sprite/skill/references/video-preview.md#the-motion-source-clip),
+the [September 14 closed-cycle validation](https://github.com/pandazki/pneuma-skills/commit/062c29ebc2810584c01e2e639fe1b7f709d11e1d),
+its [complete measurements and comparison table](https://github.com/pandazki/pneuma-skills/blob/062c29ebc2810584c01e2e639fe1b7f709d11e1d/modes/sprite/skill/references/video-preview.md#measured-the-documented-walk-workflow-on-lumi-2026-09-14),
 and the [real sheet-versus-video derived-frame showcase](https://github.com/pandazki/pneuma-skills/blob/36b5f5dcd7be3fcc66191fa43c875d3bba587d06/modes/sprite/showcase/highlight-sheet-or-video.png).
 
 ---
@@ -33134,12 +33154,13 @@ one-gag-per-beat density control and editor-owned typography](https://github.com
 [long-form measured workflow](https://github.com/clsandoval/make-film/blob/b2e2d4b755767a2a64874e39000d62fee80900ca/references/voice-first-video.md),
 [ten-second GIF workflow and A/B failure record](https://github.com/clsandoval/make-film/blob/b2e2d4b755767a2a64874e39000d62fee80900ca/references/linkedin-gif-10s.md))
 
-- [pandazki / Pneuma Skills — September 10, 2026 Seedance 2.5
-chroma-plate motion-source release: exact `bytedance/seedance-2.5` request
-implementation, complete image-to-video template, measured paid clip,
-corner-sampled key, connected-component cleanup, feet-derived alignment,
-16-frame extraction and visual comparison](https://github.com/pandazki/pneuma-skills/commit/36b5f5dcd7be3fcc66191fa43c875d3bba587d06)
-([full template and measurements](https://github.com/pandazki/pneuma-skills/blob/36b5f5dcd7be3fcc66191fa43c875d3bba587d06/modes/sprite/skill/references/video-preview.md#the-motion-source-clip),
+- [pandazki / Pneuma Skills — September 10 and 14, 2026 Seedance 2.5
+chroma-plate motion-source workflow: exact `bytedance/seedance-2.5` request
+implementation, complete image-to-video template, two measured clips,
+closed-cycle detection, corner-sampled key, connected-component cleanup,
+feet-derived alignment and visual comparison](https://github.com/pandazki/pneuma-skills/commit/36b5f5dcd7be3fcc66191fa43c875d3bba587d06)
+([September 14 cycle-window validation](https://github.com/pandazki/pneuma-skills/commit/062c29ebc2810584c01e2e639fe1b7f709d11e1d),
+[complete updated measurements](https://github.com/pandazki/pneuma-skills/blob/062c29ebc2810584c01e2e639fe1b7f709d11e1d/modes/sprite/skill/references/video-preview.md#measured-the-documented-walk-workflow-on-lumi-2026-09-14),
 [derived-frame showcase](https://github.com/pandazki/pneuma-skills/blob/36b5f5dcd7be3fcc66191fa43c875d3bba587d06/modes/sprite/showcase/highlight-sheet-or-video.png))
 
 - [deskcorvn / AI-Video — September 10, 2026 Seedance 2.5 agent-mediated production repair: two days of real runs, captured assistant replies and actual tool payloads, explicit acceptance-state polling gate, settled-control readback, and measured 30-second no-ratio / no-duplicate-duration-text constraints](https://github.com/deskcorvn/AI-Video/commit/ce8135f655cb398c7116dda738097f5b4812fbbf)
