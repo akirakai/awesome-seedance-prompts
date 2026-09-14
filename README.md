@@ -350,6 +350,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Scale-aware wildlife evolution in one tracking shot](#334-scale-aware-wildlife-evolution-in-one-tracking-shot)
   - [Storybook swallow-to-envelope endpoint match](#335-storybook-swallow-to-envelope-endpoint-match)
   - [Wax-seal-preserving envelope opening and card reveal](#336-wax-seal-preserving-envelope-opening-and-card-reveal)
+  - [Three-reference street collision to lens-pass macro](#337-three-reference-street-collision-to-lens-pass-macro)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -20817,6 +20818,67 @@ and [production assembly record](https://github.com/adhamcharaf/wedding_card/blo
 
 ---
 
+### 337. Three-reference street collision to lens-pass macro
+
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`,
+`omni_reference`) — the original production repository records the exact
+prompt, three ordered image references, paid job ID, raw output URL and QA for
+the generated clip  
+**Use case:** cinematic product ad, multi-reference identity/prop control,
+speed-ramped one-take and optical-object transition  
+**Mode:** multi-reference image-to-video  
+**Suggested settings:** 10 seconds, 9:16, 1080p, native audio on
+
+```text
+Use the three references with separate authority:
+- @Image1 controls only the adult performer's face, hair, body, white T-shirt,
+  open pale-blue linen shirt, navy trousers and white shoes.
+- @Image2 controls only the gold aviator frame and amber lens tint.
+- @Image3 controls only the slim pink-lemonade can, its pastel abstract artwork
+  and the liquid color. Keep the can free of letters and added branding.
+
+Create one uninterrupted ten-second take on a sunny European-style city street.
+Warm hard daylight, pastel neoclassical façades, stone pavement, 35 mm
+anamorphic character, creamy depth of field and physically credible high-speed
+motion.
+
+0.0–2.0 s — Place the camera about fifteen centimetres above the pavement and
+dolly backward at the performer's walking speed. Frame his approaching shoes
+tightly; keep stride direction and cadence continuous.
+2.0–4.5 s — Without cutting, keep retreating while craning and tilting from
+legs to torso and face. He walks directly toward camera, already on a phone
+call, wearing @Image2 and holding @Image3 in the opposite hand. Preserve the
+exact outfit, face, prop ownership and confident expression.
+4.5–5.5 s — A second adult in a beige linen suit enters from camera-right and
+their shoulders collide once. Show the performer's head and upper body absorb
+the impact before the props react.
+5.5–7.5 s — Ease into genuine slow motion. The glasses leave his face and
+rotate toward lens; the can leaves his hand and tumbles separately; a connected
+arc of pink lemonade breaks into suspended droplets. Keep the phone at his ear
+and his soft-focus body behind the foreground objects.
+7.5–10.0 s — Deepen to near-frozen motion and glide through one amber lens.
+Let the whole view warm only while the lens crosses frame, then rack focus to
+the rotating can and finish on a stable macro view of its unchanged abstract
+label with droplets still visible.
+
+Use only causal street ambience, footfalls, one shoulder impact, metal/plastic
+tumbles and liquid movement. No edit, teleport, extra collision, generic face,
+outfit substitution, swapped hands, duplicated or melting prop, changed label,
+random writing, spill before impact, discontinuous trajectory, fake zoom,
+camera reversal or music.
+```
+
+**Why it works:** each reference owns one visual role, while the impact supplies
+a single cause for three later motions. The camera path, speed change and
+amber-lens exposure shift remain one continuous trajectory, and the final
+macro state makes product fidelity directly testable.
+
+Adapted and rewritten from the creator's September 14–15, 2026
+[Seedance 2.5 production commit](https://github.com/bayazbayev4-arch/clean-bee-instagram/commit/b7e45882183af34162983bce6a3882a02f2dfdaa),
+the [complete model-bound prompt](https://github.com/bayazbayev4-arch/clean-bee-instagram/blob/b7e45882183af34162983bce6a3882a02f2dfdaa/reels/15-09-2026-abc-seedance_2_5/prompt.md)
+and the [paid-job metadata, generated-video link and QA](https://github.com/bayazbayev4-arch/clean-bee-instagram/blob/b7e45882183af34162983bce6a3882a02f2dfdaa/reels/15-09-2026-abc-seedance_2_5/meta.json).
+
+
 ## Reusable templates
 
 
@@ -33598,6 +33660,14 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 
 ## Sources
+
+- [bayazbayev4-arch / Clean Bee Instagram — September 14–15, 2026
+Higgsfield Seedance 2.5 `omni_reference` A/B/C production test: complete
+three-image 10-second street-collision prompt, paid job metadata, raw generated
+video, output specs and beat-by-beat QA](https://github.com/bayazbayev4-arch/clean-bee-instagram/commit/b7e45882183af34162983bce6a3882a02f2dfdaa)
+([prompt](https://github.com/bayazbayev4-arch/clean-bee-instagram/blob/b7e45882183af34162983bce6a3882a02f2dfdaa/reels/15-09-2026-abc-seedance_2_5/prompt.md),
+[metadata and generated result](https://github.com/bayazbayev4-arch/clean-bee-instagram/blob/b7e45882183af34162983bce6a3882a02f2dfdaa/reels/15-09-2026-abc-seedance_2_5/meta.json),
+[test design](https://github.com/bayazbayev4-arch/clean-bee-instagram/blob/b7e45882183af34162983bce6a3882a02f2dfdaa/reels/15-09-2026-abc-refs/concept.md))
 
 - [KMKM333 / PPE Style Engine — September 14, 2026 Higgsfield
 Seedance 2.5 `omni_reference` Option B trial: five paid non-figure shots,
