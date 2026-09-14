@@ -20881,6 +20881,95 @@ and the [paid-job metadata, generated-video link and QA](https://github.com/baya
 
 ## Reusable templates
 
+### Thirty-second typography-hold I2V stability and rejection-escalation gate
+
+**Verified model:** Seedance 2.5 (`bytedance/seedance-2.5/image-to-video`
+through fal, 1080p, 30 seconds, native audio) — the original producer committed
+13 native thirty-second outputs, request IDs and ten-frame strips sampled at
+three-second intervals; every accepted take kept the source typography stable
+through the full duration. Seven other source stills were rejected three to four
+times with the same generic parameter response, including controlled 720p and
+1080p-without-audio probes, and were explicitly routed to separately identified
+fallback models rather than reported as Seedance successes.
+
+Use this for a long image-to-video ad, game interstitial or UI plate whose
+lettering, digits and product art must remain unchanged while the surrounding
+scene moves. Separate the prompt contract, delivery proof and rejection triage:
+a successful job is not accepted until the whole thirty-second hold has been
+sampled, and a source-specific refusal is not treated as a prompt failure.
+
+```text
+MODEL AND SOURCE RECEIPT
+Exact model = bytedance/seedance-2.5/image-to-video
+Duration = 30 seconds
+Resolution = 1080p
+Native audio = ON
+@Image1 = [PUBLIC URL / SHA-256 / WIDTH / HEIGHT / OCR TRANSCRIPT]
+Protected regions = [ALL TEXT BOXES / DIGITS / LOGO / PRODUCT CUTOUT]
+Motion-safe regions = [BACKGROUND / PARTICLES / LIGHT / APPROVED CHARACTER]
+
+PROMPT CONTRACT
+Create one continuous thirty-second take from @Image1 with no repeated loop,
+dissolve, cut, reset or seam. @Image1 owns the exact composition, crop, color
+relationships, product shape and every visible glyph. Keep all protected text
+and digits fixed in wording, spelling, order, position, scale, line breaks and
+font silhouette for the whole take.
+
+Animate only the declared motion-safe regions: [SUBTLE ACTION]. Use slow,
+bounded motion that never crosses, occludes, repaints or warps protected text.
+Keep the product in its original slot and preserve its label. Camera = [LOCKED
+OR ONE SMALL DECLARED MOVE]. Audio = [DIEGETIC BED], continuous and free of
+speech unless dialogue was explicitly commissioned. No new text, countdown,
+number substitution, logo, caption, watermark, zoom crop or palette shift.
+
+SUBMISSION LEDGER
+Before polling, persist:
+- source hash and OCR transcript;
+- exact model, duration, resolution and audio flag;
+- prompt hash and provider request ID;
+- submission time and terminal provider state.
+Never infer that two visually similar stills share the same acceptance state.
+
+THIRTY-SECOND ACCEPTANCE STRIP
+Extract frames at 0, 3, 6, 9, 12, 15, 18, 21, 24, 27 and 30 seconds.
+For every frame compare against @Image1:
+- all required words and digits remain exact and legible;
+- text boxes, logo and product remain inside their protected regions;
+- no product recolor, slot exit, duplicated object or camera zoom;
+- motion remains continuous and the last frame is not a disguised loop seam.
+Archive the strip beside the output and request ID. Reject the take if one
+sample fails; do not average a broken frame into an overall pass.
+
+CONTROLLED REJECTION TRIAGE
+If the provider returns a generic invalid-parameter result while identical
+settings work for other sources:
+1. classify it as SOURCE-SPECIFIC / ROUTE-SPECIFIC / UNKNOWN, not prompt drift;
+2. run at most one resolution probe and one audio-off probe, changing only that
+   single variable and preserving the prompt and source hash;
+3. record every failed request ID and whether billing occurred;
+4. if both probes fail, stop repeating the same submission and quarantine the
+   source for manual policy/format review or an explicitly labelled fallback.
+
+PROVENANCE GATE
+Count only outputs whose own request used the exact Seedance route above.
+If a rejected source is finished with another model or by compositing a text
+band, record that model and post-process separately; never use that derivative
+as evidence that Seedance preserved the text.
+```
+
+**Why it works:** Long-duration typography is judged as a stateful hold, not by
+a good opening and closing frame. The interval strip exposes mid-take spelling,
+digit, slot and crop failures, while the one-variable rejection probes distinguish
+a source-specific backend refusal from an unsupported duration, resolution or
+audio assumption without spending through blind retries.
+
+Adapted from Robert McKinley's September 14, 2026
+[production commit](https://github.com/robertmckinley-alt/hempclaude/commit/2e1157e706220b42836091bf9a3c05c4163c6491),
+[model-route and caveat ledger](https://github.com/robertmckinley-alt/hempclaude/blob/2e1157e706220b42836091bf9a3c05c4163c6491/ads/fal-gaming/README.md),
+[request-ID audit](https://github.com/robertmckinley-alt/hempclaude/blob/2e1157e706220b42836091bf9a3c05c4163c6491/ads/fal-gaming/video-jobs.tsv),
+[native Seedance output](https://github.com/robertmckinley-alt/hempclaude/blob/2e1157e706220b42836091bf9a3c05c4163c6491/ads/fal-gaming/video-1080x1920/sleep-01-level-locked.mp4)
+and [three-second QA strip](https://github.com/robertmckinley-alt/hempclaude/blob/2e1157e706220b42836091bf9a3c05c4163c6491/ads/fal-gaming/video-qa/sleep-01-level-locked.png).
+
 
 ### Prompt-intent task routing and terminal-failure no-resubmit gate
 
@@ -33770,6 +33859,15 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 
 ## Sources
+
+- [Robert McKinley — 13 native thirty-second Seedance 2.5 I2V outputs with
+  stable-text interval QA, request IDs, repeated source-specific rejection
+  diagnostics and explicitly separated fallback provenance
+  (September 14, 2026)](https://github.com/robertmckinley-alt/hempclaude/commit/2e1157e706220b42836091bf9a3c05c4163c6491)
+  ([workflow and caveats](https://github.com/robertmckinley-alt/hempclaude/blob/2e1157e706220b42836091bf9a3c05c4163c6491/ads/fal-gaming/README.md),
+  [request ledger](https://github.com/robertmckinley-alt/hempclaude/blob/2e1157e706220b42836091bf9a3c05c4163c6491/ads/fal-gaming/video-jobs.tsv),
+  [native output](https://github.com/robertmckinley-alt/hempclaude/blob/2e1157e706220b42836091bf9a3c05c4163c6491/ads/fal-gaming/video-1080x1920/sleep-01-level-locked.mp4),
+  [QA strip](https://github.com/robertmckinley-alt/hempclaude/blob/2e1157e706220b42836091bf9a3c05c4163c6491/ads/fal-gaming/video-qa/sleep-01-level-locked.png))
 
 - [madebyak / clickefy — September 14, 2026 BytePlus ModelArk
 Seedance 2.5 failure-control repair: prompt-semantic Edit/Extend routing,
