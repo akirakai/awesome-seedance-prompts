@@ -340,6 +340,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Handheld anaconda feeding near-miss with contact-and-rescue chain](#324-handheld-anaconda-feeding-near-miss-with-contact-and-rescue-chain)
   - [Container-yard strike relay with contact-gated X-ray insert](#325-container-yard-strike-relay-with-contact-gated-x-ray-insert)
   - [Saturn-ring camera-as-vehicle audio crescendo](#326-saturn-ring-camera-as-vehicle-audio-crescendo)
+  - [Circuit-board-to-city golden data flight](#327-circuit-board-to-city-golden-data-flight)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -20188,6 +20189,73 @@ The repository preserves the [complete source prompt](https://github.com/Wolkche
 [exact Seedance 2.0 Fast route](https://github.com/Wolkchen00/youtube-automation/blob/8297f4ff36040948993f952bef52360cde3d20ef/core/kie_api.py#L475-L489)
 and [passing visual/native-audio QC ledger](https://github.com/Wolkchen00/youtube-automation/blob/8297f4ff36040948993f952bef52360cde3d20ef/galactic_experience/flythrough/qc_log.jsonl).
 
+
+### 327. Circuit-board-to-city golden data flight
+
+**Verified model:** Seedance 2.5 (Higgsfield route) — the original creator
+records the exact model, route, date, duration, aspect ratio, resolution and
+audio setting beside the complete prompt, then commits the PC and mobile frame
+sequences extracted from the generated clip  
+**Use case:** first-person brand-film background, continuous environment
+transformation, restrained technology visualization, scroll-driven web canvas  
+**Mode:** text-to-video  
+**Suggested settings:** 10 seconds, 16:9, 1080p, audio disabled, one continuous
+take
+
+```text
+Create a photorealistic ten-second forward flight through one continuous dark
+digital world. The camera is an invisible observer: no vehicle, cockpit, person,
+interface or foreground frame may enter the image. Start in motion and keep one
+steady forward velocity from the first frame to the last.
+
+0–3 s — CIRCUIT PLAIN
+Skim close above a vast matte-black circuit board. Fine warm-gold traces form a
+readable landscape, with sparse amber component lights at several depths.
+Maintain a low flight path and use measured parallax to establish scale. The
+board must feel physically photographed, not like a flat motion graphic.
+
+3–6.5 s — DATA ASCENT
+Lift in one smooth arc without cutting or changing direction. Let the same gold
+traces stretch naturally into flowing filaments around the camera, forming a
+deep tunnel of data. Nearby strands pass quickly while distant strands move
+slowly; the tunnel grows from the circuit landscape rather than arriving as a
+separate effect. Do not accelerate, shake, spin or punch-zoom.
+
+6.5–10 s — CITY REVEAL
+Emerge from the thinning filaments high above an immense night city built from
+server-like towers and circuit-shaped streets. Preserve the black-and-gold
+material language so the streets visibly inherit the board traces and the
+tower lights inherit the component lights. Continue gliding forward over the
+city through the final frame, with soft haze and restrained bokeh revealing
+depth. End on a stable readable vista, not a fade, flash or freeze.
+
+CONTINUITY AND FINISH
+Use deep matte blacks, desaturated surfaces and warm gold or amber illumination
+only. Keep high contrast without crushing structural detail. Use shallow depth
+of field selectively; the route and terminal city must remain legible. Preserve
+one lighting direction, one horizon and one forward axis across all three
+states. No cut, dissolve, teleport, speed ramp, camera stop, duplicated
+landmark, abrupt scale change, neon rainbow, glossy game-render finish, text,
+letter, logo, face, UI screen or watermark. Generate no audio.
+```
+
+**Why it works:** the camera obeys one velocity and direction ledger while the
+world changes through material inheritance: circuit traces become data strands,
+then streets; component lights become windows. That continuity makes three
+visually distinct environments read as one physical journey. Separating the
+lift from acceleration also prevents the reveal from turning into an
+uncontrolled zoom or a hard scene switch.
+
+Adapted and rewritten from Reaf-9 / AI Linqs' September 14, 2026
+[primary production commit](https://github.com/Reaf-9/ai-linqs-site-v2/commit/a1a577824ec205ca5f7d4451c5b0101fbe550be9).
+The same revision preserves the
+[complete model-bound prompt and settings](https://github.com/Reaf-9/ai-linqs-site-v2/blob/a1a577824ec205ca5f7d4451c5b0101fbe550be9/README.md)
+and the generated clip's committed
+[PC](https://github.com/Reaf-9/ai-linqs-site-v2/tree/a1a577824ec205ca5f7d4451c5b0101fbe550be9/assets/seq/pc)
+and
+[mobile](https://github.com/Reaf-9/ai-linqs-site-v2/tree/a1a577824ec205ca5f7d4451c5b0101fbe550be9/assets/seq/sp)
+frame sequences.
+
 ---
 
 ## Reusable templates
@@ -32435,6 +32503,14 @@ the [complete experiment, prompts, settings and honest limits](https://github.co
 and the [second-round comparison sheet](https://github.com/aqm857886159/Nomi/blob/49152bdc62b02fa1323bfea785f5903414bdcb8e/docs/research/2026-09-07-motion-ref-raw-vs-depth/round2-contact-sheet.jpg).
 
 ## Sources
+
+- [Reaf-9 / AI Linqs — September 14, 2026 Higgsfield Seedance 2.5
+circuit-board-to-data-tunnel-to-city one-take: exact model and settings,
+complete prompt, generated background clip and committed PC/mobile frame
+sequences](https://github.com/Reaf-9/ai-linqs-site-v2/commit/a1a577824ec205ca5f7d4451c5b0101fbe550be9)
+([prompt and generation record](https://github.com/Reaf-9/ai-linqs-site-v2/blob/a1a577824ec205ca5f7d4451c5b0101fbe550be9/README.md),
+[PC frame sequence](https://github.com/Reaf-9/ai-linqs-site-v2/tree/a1a577824ec205ca5f7d4451c5b0101fbe550be9/assets/seq/pc),
+[mobile frame sequence](https://github.com/Reaf-9/ai-linqs-site-v2/tree/a1a577824ec205ca5f7d4451c5b0101fbe550be9/assets/seq/sp))
 
 - [NodeTool — September 13, 2026 AtlasCloud Seedance 2.5 native-audio UGC release: complete model-bound reference-to-video prompt, creator / product authority split, tested 4.5–7.0-second product visibility window, exact-dialogue gate and committed 15-second finished reel](https://github.com/nodetool-ai/nodetool/commit/0e55d06d429abb86665412902d2b5916f0148f2b) ([complete workflow](https://github.com/nodetool-ai/nodetool/blob/0e55d06d429abb86665412902d2b5916f0148f2b/packages/base-nodes/nodetool/examples/nodetool-base/Generate%20a%20Native-Audio%20UGC%20Testimonial.json), [generated MP4](https://github.com/nodetool-ai/nodetool/blob/0e55d06d429abb86665412902d2b5916f0148f2b/marketing/public/apps/examples/ugc-product-video/final.mp4))
 
