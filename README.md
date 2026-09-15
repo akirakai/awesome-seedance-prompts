@@ -352,6 +352,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Wax-seal-preserving envelope opening and card reveal](#336-wax-seal-preserving-envelope-opening-and-card-reveal)
   - [Three-reference street collision to lens-pass macro](#337-three-reference-street-collision-to-lens-pass-macro)
   - [Touch-activated canvas miniature triptych](#338-touch-activated-canvas-miniature-triptych)
+  - [Remote-work voice note to impossible-desert pullback](#339-remote-work-voice-note-to-impossible-desert-pullback)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -20943,6 +20944,103 @@ Adapted and rewritten from ConvergeAI Labs' September 15, 2026
 [raw Seedance 2.0 output](https://github.com/convergeai-labs/framia-examples/blob/ac2203a292d33439b25f2c24001f3fadeafbfeb8/veo-vs-seedance/video/seedance-2.0-hero-shot.mp4)
 and [creator's comparison notes and frame evidence](https://github.com/convergeai-labs/framia-examples/blob/ac2203a292d33439b25f2c24001f3fadeafbfeb8/veo-vs-seedance/README.md).
 
+
+---
+
+### 339. Remote-work voice note to impossible-desert pullback
+
+**Verified model:** Seedance 2.5 — the original creator identifies the exact
+model and 30-second duration, publishes the complete generation prompt, and
+describes the generated ad and repeatable narrative structure in the same
+primary-source post  
+**Use case:** deadpan commercial, native voice-note audio, close-to-extreme-wide
+one-take and end-card negative space  
+**Mode:** text-to-video  
+**Suggested settings:** 30 seconds, 16:9, 720p for testing or 1080p for final,
+native audio
+
+```text
+Create one continuous thirty-second live-action commercial with dry, deadpan
+timing. No cut, hidden transition, freeze frame or slow motion.
+
+SUBJECT AND ANCHOR
+One adult East Asian woman in her twenties sits on the hood of a bright yellow,
+doorless off-road vehicle parked on a sloping orange slickrock shelf. She has
+two high black ponytails, small silver aviator sunglasses, a white fitted top,
+faded denim shorts and worn brown hiking boots. A cooler and rolled tent remain
+strapped behind the seats; one front tire is braced against a boulder. Lock her
+face, hair, wardrobe, body proportions and the vehicle's saturated yellow
+color. Everything else uses muted burnt orange, dusty juniper green and pale
+blue.
+
+0.0–1.0 s — From the front bumper, hold a slightly low medium view with gentle
+handheld drift. She leans against the windshield, one knee raised, scrolling
+on her phone with an easy smile. A light breeze moves only her ponytails and
+loose fabric.
+
+1.0–4.0 s — One crisp notification arrives. Push to a close view as a cheerful,
+slightly compressed client voice note plays: “Hey, this looks great. Could you
+make one last quick change and send it as soon as possible? Thank you.” Her
+smile drains gradually; she reads the message again without speaking.
+
+4.0–7.0 s — Hold close. She lowers the phone, tightens her mouth and raises
+both brows. With one finger she lowers her sunglasses, scans the rock wall,
+one boulder, the vehicle's empty rear seat and finally the phone. She gives one
+small shrug and taps the phone once against the hood.
+
+7.0–12.0 s — Begin a smooth backward-and-upward move into a full view. Reveal
+the entire vehicle on the tilted shelf. She raises the phone as though looking
+for reception; keep her and the vehicle centred.
+
+12.0–17.0 s — Continue the same trajectory and ease wider. The yellow vehicle
+becomes a small clear rectangle inside house-sized boulders and sandstone
+fins. Reveal only faint tire marks crossing bare rock and climbing a steep
+ledge behind it.
+
+17.0–22.0 s — Rise and retreat farther without changing direction. Reveal that
+the boulder field lies at the bottom of a vast natural bowl bordered by tall
+fins and one stone arch; distant snow-dusted mountains enter the level horizon.
+Make every apparent exit route visibly harder than the route in.
+
+22.0–27.0 s — Reach a high aerial extreme-wide. Slickrock domes, dry washes and
+sandstone extend to the horizon. The yellow vehicle remains the only saturated
+anchor and is now almost a single pixel. Show no road, settlement, building,
+person or second vehicle.
+
+27.0–30.0 s — Decelerate to an almost locked frame. A long fin shadow slowly
+crosses the vehicle while the mountains keep the last warm sunlight. Hold
+large, clean sky and rock negative space for a later tagline; generate no copy.
+
+CAMERA AND FOCUS
+Use shallow focus in the opening close views, then transition continuously to
+deep focus as scale expands. Each pullback stage travels farther than the
+previous one, with natural easing, a level horizon and no distance reset. Keep
+the vehicle near frame centre and compose the revealed trail toward the top of
+frame.
+
+LOOK AND SOUND
+Late-afternoon hard sunlight, long shadows, faint heat shimmer, restrained
+35 mm grain and soft filmic contrast. Audio begins with dry wind, a raven, the
+cooling engine and one distant pebble fall. After the voice note, widen the wind
+until the landscape feels empty. No dialogue from the woman and no music.
+
+No cut, black frame, camera reversal, warped vehicle, changing yellow paint,
+identity drift, duplicate person, extra vehicle, paved road, building, water,
+storm, night transition, readable phone screen, generated text, subtitle,
+logo or watermark.
+```
+
+**Why it works:** the yellow vehicle acts as a persistent scale witness while
+four increasingly long pullback stages convert a small workplace interruption
+into a visual impossibility. The performance finishes before the landscape
+takes over, and the audio thins from a close voice note to empty wind along the
+same spatial expansion. Reserving negative space without asking the model to
+render the tagline protects both the punchline and typography.
+
+Adapted and rewritten from Big_Maximum_92's September 15, 2026
+[original Seedance 2.5 workflow, generated-ad account, full prompt and reusable
+story structure](https://www.reddit.com/r/seedance2pro/comments/1wg02j4/how_to_create_this_viral_seedance_25_ad_full/).
+
 ## Reusable templates
 
 ### Stylized-reference panel bisect and physical-state ledger
@@ -34023,6 +34121,12 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 
 ## Sources
+
+- [Big_Maximum_92 — September 15, 2026 Seedance 2.5
+thirty-second remote-work commercial: original generated-ad account, complete
+prompt, native voice-note timing, four-stage continuous pullback and reusable
+deadpan narrative structure](https://www.reddit.com/r/seedance2pro/comments/1wg02j4/how_to_create_this_viral_seedance_25_ad_full/)
+
 
 - [ConvergeAI Labs / Framia Examples — September 15, 2026
 Seedance 2.0 eight-second vertical hero probe: complete shared prompt, raw
