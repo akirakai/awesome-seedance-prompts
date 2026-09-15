@@ -21235,17 +21235,21 @@ and [three-second QA strip](https://github.com/robertmckinley-alt/hempclaude/blo
 
 ### Prompt-intent task routing and terminal-failure no-resubmit gate
 
-**Verified model:** Seedance 2.5 through BytePlus ModelArk — the original
-integrator reproduced the queued `TaskTypeMismatch` / `TaskTypeConstraint`
-failure, preserved the production privacy-error shape, and committed the
-prompt-intent classifier, request task declaration, polling state machine and
-regression tests
+**Verified model:** Seedance 2.5 through BytePlus ModelArk and KIE
+`seedance-2-5` — one production integrator reproduced queued
+`TaskTypeMismatch` / `TaskTypeConstraint` and privacy failures; a second
+recorded two otherwise identical reference-video nodes where the prompt caused
+Seedance to classify one as a normal reference generation and the other as an
+edit requiring source-inherited ratio and duration. Both repairs include the
+provider adapter and regression tests
 
 Use this before sending an attached-video prompt to Seedance 2.5. The declared
 UI mode is not sufficient by itself: the model also reads the words and may
 classify a request as an edit or continuation. Route semantic intent before
-credits are spent, then keep a terminal provider result from escaping into an
-outer scheduler that would submit the paid generation again.
+credits are spent; when the provider alone can decide between reference and
+edit, allow only its exact source-inheritance correction to trigger one
+single-variable resubmission. Keep every other terminal result from escaping
+into an outer scheduler that would purchase the generation again.
 
 ```text
 MODEL AND INPUT RECEIPT
@@ -21291,10 +21295,26 @@ When changing from References:
 - revalidate source duration, shape and the requested output contract.
 
 TASK DECLARATION
-For Edit or Extend, set the provider's explicit Seedance 2.5
-omni-reference task type in the request rather than relying on auto detection.
-Require shape and duration fields compatible with that task before POST.
-A synchronous 4xx is a preflight failure; it is not a queued generation.
+When the provider exposes an explicit Seedance 2.5 omni-reference task type,
+set Edit or Extend in the request rather than relying on auto detection. Require
+shape and duration fields compatible with that task before POST.
+
+When a gateway exposes only one reference-video route and lets Seedance classify
+the prompt server-side, keep the user's requested ratio and duration on the
+first submission. Do not coerce every attached-video request to edit settings:
+the same asset is a legal style reference under different prompt wording.
+
+REFERENCE-VIDEO RESERVATION AND RESULT LEDGER
+Before the first POST, probe and store every reference-video duration. Because
+an edit inherits the selected source clip's length, reserve output usage for
+max([REQUESTED OUTPUT DURATION], [LONGEST REFERENCE CLIP]), while still sending
+the user's requested duration. After success, measure the raw provider output
+before trimming, looping or transcoding and settle against:
+  [SUM OF STORED REFERENCE DURATIONS] + [DELIVERED RAW OUTPUT DURATION].
+A normal reference generation settles to the requested result length; an edit
+settles to the inherited source length. If a reference duration cannot be
+measured, use the provider's documented per-clip ceiling; never re-probe a
+later-expired URL and silently shrink the stored reservation.
 
 ASYNC CHECKPOINT
 After a successful POST, persist task_id before the first poll.
@@ -21310,6 +21330,17 @@ InvalidParameter.TaskTypeMismatch or
 InvalidParameter.TaskTypeConstraint:
   mark VIDEO_TASK_MISMATCH; show the required Edit/Extend route and its
   duration/shape constraint. Do not auto-resubmit.
+
+Exact Seedance edit reclassification from a gateway:
+  require all three provider signals in the same rejection:
+  1. Seedance identified the prompt as video editing;
+  2. ratio must be adaptive;
+  3. duration must be -1.
+  Persist the rejected receipt, then submit exactly once more with the same
+  model, prompt, references, audio and output format; change only
+  ratio=adaptive and duration=-1. Record the corrected payload that actually
+  ran. If those values were already present, any signal is missing, or the
+  corrected request fails, stop without another generation submission.
 
 InputImageSensitiveContentDetected.PrivacyInformation or
 InputVideoSensitiveContentDetected.PrivacyInformation:
@@ -21329,18 +21360,25 @@ Only a deliberately corrected task route or authorized reference change may
 create a new job and new submission key.
 ```
 
-**Why it works:** the first gate aligns prompt semantics with the provider's
-actual subtask before queueing, while the second separates retryable polling
-transport failures from immutable task outcomes. Together they prevent both a
-late task-shape rejection and the more expensive failure mode in which a
-scheduler retries the entire worker and silently purchases the same generation
-again.
+**Why it works:** the first gate aligns prompt semantics with providers that
+accept an explicit subtask. For gateways where Seedance itself makes the final
+classification from the prompt, the narrow three-signal fallback preserves the
+user's ratio and duration on true reference runs yet follows the source clip on
+edits. The stored duration ledger prevents the inherited-length branch from
+being under-reserved, while terminal-state isolation prevents a scheduler from
+silently purchasing the same generation again.
 
 Adapted from madebyak's September 14, 2026
 [Seedance 2.5 production repair](https://github.com/madebyak/clickefy/commit/481db496b3fb37b813a641bc185ed1bfb5ccbd48),
 the [tested prompt-intent router](https://github.com/madebyak/clickefy/blob/481db496b3fb37b813a641bc185ed1bfb5ccbd48/packages/types/src/video-task-intent.ts),
 the [provider-error regression cases](https://github.com/madebyak/clickefy/blob/481db496b3fb37b813a641bc185ed1bfb5ccbd48/packages/types/src/job-errors.test.ts)
 and the [Seedance terminal-state adapter](https://github.com/madebyak/clickefy/blob/481db496b3fb37b813a641bc185ed1bfb5ccbd48/packages/providers/src/adapters/seedance.ts).
+The provider-directed edit fallback and duration ledger were verified in
+Nodaro's September 15, 2026
+[field-reported Seedance 2.5 repair](https://github.com/nodaroai/app.nodaro.ai/commit/7bc12b4f4310f53f2a9f9c0f7bfc4c8fe76c9685),
+[one-retry KIE adapter](https://github.com/nodaroai/app.nodaro.ai/blob/98903655f34d8c276737520aa0509fd98ad4f047/backend/src/providers/kie/video.ts),
+[operator guide and worked billing example](https://github.com/nodaroai/app.nodaro.ai/blob/98903655f34d8c276737520aa0509fd98ad4f047/docs/nodes/ai-video/generate-video.md)
+and [reference-duration regression tests](https://github.com/nodaroai/app.nodaro.ai/blob/98903655f34d8c276737520aa0509fd98ad4f047/backend/src/ee/billing/__tests__/seedance2-ref-video-credits.test.ts).
 
 
 ### Idempotent CN-reference registration and readiness-gated submission
@@ -34161,6 +34199,14 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 
 ## Sources
+
+- [Nodaro — September 15, 2026 KIE Seedance 2.5
+`seedance-2-5` field repair: prompt-driven reference/edit reclassification,
+exact adaptive-ratio and inherited-duration single retry, longest-reference
+reservation, delivered-clip settlement and regression tests](https://github.com/nodaroai/app.nodaro.ai/commit/7bc12b4f4310f53f2a9f9c0f7bfc4c8fe76c9685)
+([provider adapter](https://github.com/nodaroai/app.nodaro.ai/blob/98903655f34d8c276737520aa0509fd98ad4f047/backend/src/providers/kie/video.ts),
+[operator guide](https://github.com/nodaroai/app.nodaro.ai/blob/98903655f34d8c276737520aa0509fd98ad4f047/docs/nodes/ai-video/generate-video.md),
+[duration-ledger tests](https://github.com/nodaroai/app.nodaro.ai/blob/98903655f34d8c276737520aa0509fd98ad4f047/backend/src/ee/billing/__tests__/seedance2-ref-video-credits.test.ts))
 
 - [JPG-GITY — September 15, 2026 BytePlus ModelArk Seedance 2.5
 Trusted Asset Library measurements: successful one- and two-image asset://
