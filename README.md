@@ -351,6 +351,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Storybook swallow-to-envelope endpoint match](#335-storybook-swallow-to-envelope-endpoint-match)
   - [Wax-seal-preserving envelope opening and card reveal](#336-wax-seal-preserving-envelope-opening-and-card-reveal)
   - [Three-reference street collision to lens-pass macro](#337-three-reference-street-collision-to-lens-pass-macro)
+  - [Touch-activated canvas miniature triptych](#338-touch-activated-canvas-miniature-triptych)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -20879,6 +20880,69 @@ the [complete model-bound prompt](https://github.com/bayazbayev4-arch/clean-bee-
 and the [paid-job metadata, generated-video link and QA](https://github.com/bayazbayev4-arch/clean-bee-instagram/blob/b7e45882183af34162983bce6a3882a02f2dfdaa/reels/15-09-2026-abc-seedance_2_5/meta.json).
 
 
+
+---
+
+### 338. Touch-activated canvas miniature triptych
+
+**Verified model:** Seedance 2.0 — the original creator records that the actual
+generation metadata identified Seedance 2.0, and committed the complete shared
+prompt, raw eight-second Seedance output, comparison film and result frames  
+**Use case:** cinematic product hero, magical interface reveal, miniature-world
+transition and text-artifact failure control  
+**Mode:** text-to-video  
+**Suggested settings:** 8 seconds, 9:16, one continuous shot, native audio
+
+```text
+Create an eight-second vertical cinematic hero shot in one uninterrupted take.
+
+0.0–2.0 s — Begin in a dark, cozy studio at night. A perfectly blank,
+unmarked white canvas hovers a few centimetres above a wooden desk. Make one
+slow forward push; keep the desk, canvas and room axis fixed. Warm tungsten rim
+light outlines the canvas against deep shadow. An adult hand enters naturally
+from frame-right and approaches its centre.
+
+2.0–6.5 s — At first fingertip contact, let soft gold particles travel outward
+across the canvas surface and open three connected living miniatures rather
+than three cuts. First reveal a rain-lit interior window seat with one orange
+cat; then let the rain reflections carry into a pastel bakery interior with
+plain shelves, undecorated boxes and a blank façade; finally let a ribbon of
+light become an abstract tabletop track as one tiny unbranded racing car passes
+through. Each vignette remains physically contained inside the same canvas.
+Use no storefront, menu board, placard, packaging copy, vehicle decal or other
+object that conventionally carries writing.
+
+6.5–8.0 s — The miniature car exits behind a sweep of particles. Let the three
+worlds settle into one luminous diorama while the camera completes the same
+slow push-in. Hold a clean final frame with the orange cat as the clearest
+subject and the unchanged canvas edge still visible.
+
+Use shallow depth of field, anamorphic bokeh, restrained film grain, warm
+tungsten highlights and believable miniature scale. Native sound follows the
+visual cause: quiet room tone, rain against glass, a soft contact chime,
+particle shimmer and one brief tiny motor pass. No speech or music.
+
+No edit, jump, reset, extra hand, deformed finger, moving desk, detached
+miniature, competing hero, letters, pseudo-letters, sign, logo, subtitle,
+watermark or branded object. Do not rely on a final “no text” instruction to
+cancel a positively requested text-bearing object; the scene inventory itself
+must remain signage-free.
+```
+
+**Why it works:** the source generation proved that a generic negative text
+instruction can lose to stronger semantic cues: both compared models invented
+misspelled shop signs when asked for a café and bakery. This adaptation removes
+the conflict upstream by specifying interior fragments, a blank façade,
+unmarked packaging and an unbranded vehicle. The canvas edge and fixed room
+axis also keep three miniature reveals readable as one transformation rather
+than unrelated scene changes.
+
+Adapted and rewritten from ConvergeAI Labs' September 15, 2026
+[primary generation commit](https://github.com/convergeai-labs/framia-examples/commit/ac2203a292d33439b25f2c24001f3fadeafbfeb8),
+[complete model-bound prompt](https://github.com/convergeai-labs/framia-examples/blob/ac2203a292d33439b25f2c24001f3fadeafbfeb8/veo-vs-seedance/assets/prompts.txt),
+[raw Seedance 2.0 output](https://github.com/convergeai-labs/framia-examples/blob/ac2203a292d33439b25f2c24001f3fadeafbfeb8/veo-vs-seedance/video/seedance-2.0-hero-shot.mp4)
+and [creator's comparison notes and frame evidence](https://github.com/convergeai-labs/framia-examples/blob/ac2203a292d33439b25f2c24001f3fadeafbfeb8/veo-vs-seedance/README.md).
+
 ## Reusable templates
 
 ### Stylized-reference panel bisect and physical-state ledger
@@ -33959,6 +34023,16 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 
 ## Sources
+
+- [ConvergeAI Labs / Framia Examples — September 15, 2026
+Seedance 2.0 eight-second vertical hero probe: complete shared prompt, raw
+Seedance output, side-by-side comparison, result frames and a documented
+misspelled-sign failure that motivates a positive signage-free scene
+rewrite](https://github.com/convergeai-labs/framia-examples/commit/ac2203a292d33439b25f2c24001f3fadeafbfeb8)
+([prompt and settings](https://github.com/convergeai-labs/framia-examples/blob/ac2203a292d33439b25f2c24001f3fadeafbfeb8/veo-vs-seedance/assets/prompts.txt),
+[raw Seedance 2.0 clip](https://github.com/convergeai-labs/framia-examples/blob/ac2203a292d33439b25f2c24001f3fadeafbfeb8/veo-vs-seedance/video/seedance-2.0-hero-shot.mp4),
+[comparison notes and frames](https://github.com/convergeai-labs/framia-examples/blob/ac2203a292d33439b25f2c24001f3fadeafbfeb8/veo-vs-seedance/README.md))
+
 
 - [Robert McKinley — 13 native thirty-second Seedance 2.5 I2V outputs with
   stable-text interval QA, request IDs, repeated source-specific rejection
