@@ -353,6 +353,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Three-reference street collision to lens-pass macro](#337-three-reference-street-collision-to-lens-pass-macro)
   - [Touch-activated canvas miniature triptych](#338-touch-activated-canvas-miniature-triptych)
   - [Remote-work voice note to impossible-desert pullback](#339-remote-work-voice-note-to-impossible-desert-pullback)
+  - [Matched paper-boat render with Mini-to-standard escalation gate](#340-matched-paper-boat-render-with-mini-to-standard-escalation-gate)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -21041,6 +21042,41 @@ Adapted and rewritten from Big_Maximum_92's September 15, 2026
 [original Seedance 2.5 workflow, generated-ad account, full prompt and reusable
 story structure](https://www.reddit.com/r/seedance2pro/comments/1wg02j4/how_to_create_this_viral_seedance_25_ad_full/).
 
+
+---
+
+### 340. Matched paper-boat render with Mini-to-standard escalation gate
+
+**Verified models:** Seedance 2.0 Mini and Seedance 2.0 — the original provider
+ran the same disclosed request through both exact endpoints on September 15,
+2026; both tasks succeeded and returned 1280×720, 24 fps, 5.04-second clips,
+with frame evidence and billed-unit measurements  
+**Use case:** quiet cinematic b-roll and a controlled low-cost model comparison  
+**Mode:** text-to-video  
+**Suggested settings:** 5 seconds, 16:9, 720p, native audio off
+
+```text
+A small folded paper boat drifts across a shallow puddle on a city sidewalk
+just after rain. Film from a low camera angle in soft morning light. Gentle,
+concentric ripples trail the boat; wet cobblestones remain visible around the
+puddle and the distant street falls into soft cinematic focus. Keep the boat's
+paper-fold geometry intact and use one continuous shot with no text, people,
+cut or sudden weather change.
+```
+
+**Why it works:** one modest subject, one readable motion, one fixed camera
+height and one lighting condition make this a useful calibration shot rather
+than a beauty prompt with many hidden variables. The creator's matched runs
+held prompt, duration, aspect, resolution and audio choice constant: Mini
+finished in 125 seconds and standard 2.0 in 124, each billed 108,900 units.
+The evidence therefore supports a practical gate—test Mini first at a 720p
+delivery target, inspect the result, and escalate only for a visible quality
+need—not a claim that one unseeded sample universally ranks the models.
+
+Adapted and rewritten from Jasper Li / Monid's September 15, 2026
+[complete API walkthrough, matched successful-run ledger, prompt and comparison
+frames](https://monid.ai/blog/guides/how-to-use-seedance-2-0-api).
+
 ## Reusable templates
 
 ### Stylized-reference panel bisect and physical-state ledger
@@ -22640,9 +22676,11 @@ regression suite](https://github.com/gabrieltan0506-prog/mvstudiopro/commit/1091
 
 ### Paired-version task router with duration- and usable-take-normalized scoring
 
-**Verified models:** Seedance 2.0 and Seedance 2.5 — Kapwing author Emily
-Peng reports running the same disclosed prompts through both named models,
-embeds the paired outputs and records credit use for five tests  
+**Verified models:** Seedance 2.0 Mini, Seedance 2.0 and Seedance 2.5 —
+Kapwing author Emily Peng reports running the same disclosed prompts through
+2.0 and 2.5 with embedded outputs and credit use for five tests; Jasper Li /
+Monid separately publishes matched successful Mini and 2.0 requests, output
+specifications, wall-clock times and billed units  
 **Use case:** choose a Seedance version by measured task fit rather than assuming
 the newest model wins every shot  
 **Mode:** matched text-to-video or reference-to-video A/B; use the same prompt,
@@ -22652,8 +22690,9 @@ reference assets and exposed settings in both arms
 PAIRED-VERSION TASK ROUTER
 
 VERSIONS
-ARM A = Seedance 2.0
-ARM B = Seedance 2.5
+PREFLIGHT ARM = Seedance 2.0 Mini when 720p is sufficient
+STANDARD ARM = Seedance 2.0
+NEWEST ARM = Seedance 2.5
 
 FIX BEFORE GENERATION
 - one exact prompt string and one immutable reference set per test;
@@ -22730,11 +22769,25 @@ USABLE WITHOUT REGENERATION = YES / NO
 
 NORMALIZE COST
 Report:
+- provider billed units and the exact per-unit rate;
+- actual width × height, frame rate, returned seconds and wall-clock time;
 - credits per returned second;
 - credits per usable take;
 - total credits required to obtain one accepted result.
-Never compare raw totals when one arm returned a different duration or required
-more retries.
+For token-priced routes, verify the provider estimate against actual pixels ×
+frames per second × seconds rather than a nominal resolution label. Never
+compare raw totals when one arm returned a different duration, used a different
+pixel count or required more retries.
+
+MINI-TO-STANDARD PREFLIGHT
+When the delivery ceiling is 720p, first run the identical request on 2.0 Mini
+and 2.0. Preserve both files before their signed URLs expire. Escalate from Mini
+only if a named visual acceptance criterion fails or standard 2.0 produces a
+visible improvement worth its measured rate. Do not claim that Mini is faster
+or token-efficient without measuring both: one published five-second pair took
+125 versus 124 seconds and billed the same 108,900 units; its exact 2× price
+difference came from the rate, not the token count. Treat this as one calibration
+pair, not a universal quality ranking.
 
 ROUTING DECISION
 Choose the model separately for each production need. Begin with the published
@@ -22767,7 +22820,11 @@ did not hold every output length equal. Re-run the matrix on project-specific
 assets before fixing a production route.
 
 Adapted and rewritten from Emily Peng's September 9, 2026
-[paired Seedance 2.0 versus Seedance 2.5 tests, disclosed prompts, embedded outputs, credit ledger and failure notes](https://www.kapwing.com/resources/is-seedance-2-5-actually-better-than-2-0-heres-what-i-found/).
+[paired Seedance 2.0 versus Seedance 2.5 tests, disclosed prompts, embedded
+outputs, credit ledger and failure notes](https://www.kapwing.com/resources/is-seedance-2-5-actually-better-than-2-0-heres-what-i-found/),
+with the Mini-first billing and output gate verified against Jasper Li / Monid's
+September 15, 2026 [matched Seedance 2.0 Mini and 2.0 successful-run
+record](https://monid.ai/blog/guides/how-to-use-seedance-2-0-api).
 
 ### Medium-native animation-style compiler and timing-matched story harness
 
@@ -34231,6 +34288,10 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 
 ## Sources
+
+- [Jasper Li / Monid — September 15, 2026 matched Seedance 2.0 Mini and
+Seedance 2.0 paper-boat runs: complete request, success record, output
+specifications, comparison frames, latency and billed-unit evidence](https://monid.ai/blog/guides/how-to-use-seedance-2-0-api)
 
 - [btcfoxman / dra2api — September 15, 2026 route-scoped Seedance
 capability evidence: paid 2.5 and 2.0 Fast 15-reference runs, plural-array
