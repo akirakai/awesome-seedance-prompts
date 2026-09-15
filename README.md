@@ -21142,6 +21142,118 @@ method](https://www.reddit.com/r/seedance2pro/comments/1wg066l/how_to_made_this_
 
 ## Reusable templates
 
+### Sheet-first shot selection, full-resolution promotion and endpoint-occupancy gate
+
+**Verified model:** Seedance 2.5, JXP Reference Generation — the original
+producer ran the workflow end to end on September 15, 2026: one selected
+full-resolution storyboard frame became an eight-second, 16:9, 480p reference
+generation; the returned clip measured 854 × 480 and 8.06 seconds, cost 16
+credits, and completed in about six minutes
+
+Use this when a sequence is still being designed and only a few shots deserve
+paid video generation. Resolve story order on one cheap contact sheet, promote
+only an approved panel to a standalone full-resolution frame, then let that
+frame own appearance while the Seedance prompt owns motion and the out-point.
+
+```text
+STAGE 1 — SHEET-LEVEL STORY PROBE
+Create one [N]-panel storyboard sheet from an approved character or product
+reference. Put one narrative beat and one camera job in each numbered panel.
+Keep a shared continuity block for identity, wardrobe, location, props, light
+and palette. At this stage judge only:
+- whether the sequence reads in order;
+- whether every panel adds new information;
+- whether shot sizes and camera angles vary deliberately;
+- whether props, screen direction and the final payoff remain coherent.
+
+Do not crop a small tile from this sheet and send it directly to video. The
+sheet is a decision surface, not a production-resolution reference.
+
+STAGE 2 — SELECTIVE FULL-RESOLUTION PROMOTION
+Choose only PANEL [K] after the full sequence is approved. Rebuild that shot as
+one standalone full-resolution image from the same source reference and the
+same continuity block.
+
+PROMOTED FRAME MUST LOCK
+- exact approved identity, wardrobe and body proportions;
+- scene geometry, set dressing and time-of-day logic;
+- camera position, shot size, subject placement and screen direction;
+- every visible prop's shape, owner and physical state;
+- enough off-screen travel room for the requested motion.
+
+Reject the promoted frame if it inherits sheet borders, numbers, neighbouring
+panels, tiny-tile softness, a wrong background, or a pose that cannot continue
+physically into the intended action.
+
+STAGE 3 — SEEDANCE REFERENCE CONTRACT
+Model = Seedance 2.5
+Mode = Reference Generation
+@Image1 = the promoted full-resolution frame.
+@Image1 owns identity, wardrobe, composition, lighting, location and frame-zero
+state. The prompt owns only action, camera motion, duration, sound and the exact
+terminal state. Do not redescribe or redesign visual facts already approved in
+@Image1.
+
+VIDEO PROMPT
+Animate @Image1 as one continuous [DURATION]-second shot. Preserve the exact
+[CHARACTER / PRODUCT], wardrobe, location geometry, prop state, light direction
+and opening composition from the reference.
+
+At the first visible beat, [SUBJECT] begins [ONE PHYSICALLY CLEAR ACTION].
+The camera performs one [SLOW PUSH-IN / TRACK / LOCKED OBSERVATION] at
+[CONTROLLED SPEED]. Motion remains natural and continuous, with [CONTACT,
+WEIGHT, CLOTH, HAIR OR PRODUCT-PHYSICS REQUIREMENTS].
+
+By [OUT-POINT TIME], [SUBJECT] must [REMAIN IN FRAME AT SPECIFIED POSITION /
+EXIT THROUGH SPECIFIED EDGE / HAND OFF TO NEXT SHOT IN SPECIFIED POSE]. Hold
+the exact final state for [HOLD LENGTH]. Do not invent a second action, reverse
+the movement, empty the frame early, or add an unrequested transition.
+
+[AUDIO OWNERSHIP OR SILENCE]. No text, subtitle, logo redesign, identity drift,
+wardrobe change, prop teleport, background reset or camera cut.
+
+OUT-POINT OWNERSHIP
+Write the endpoint as a visible state, not merely an intention. If the next
+shot needs the subject, say where the subject remains and what pose, gaze, prop
+state and camera vector must survive. If an empty plate is desired, name the
+exit edge and the moment at which the plate becomes empty.
+
+RENDER ACCEPTANCE
+Archive model label, mode, reference-image hash, prompt, requested settings,
+job ID, billed credits, latency and decoded output metadata. Inspect:
+- frame 0: reference composition and identity;
+- motion onset: no frozen opening or pose reset;
+- midpoint: action, camera and physical state;
+- 0.5 seconds before the out-point: subject occupancy and handoff readiness;
+- final frame: exact terminal state and hold.
+
+Reject a visually attractive result if the subject leaves before the declared
+out-point, the shot rests on the wrong plate, or a low-resolution sheet tile
+was mistaken for a production input.
+```
+
+**Why it works:** the sheet and the promoted frame solve different problems.
+The sheet makes sequence changes cheap and exposes continuity errors before
+video spend; the standalone frame gives Seedance enough spatial and identity
+evidence for one shot. In the cited run, the opening storefront, neighbouring
+shutters, low sun, face, hair, glasses and apron survived, and the requested
+slow push-in executed. The useful failure was temporal: by 7.6 seconds the
+character had entered the café and the camera rested on an empty storefront.
+That turns end-of-shot occupancy into an explicit prompt and QA field.
+
+The source reports that the six-panel sheet cost one image credit and took
+32.5 seconds, whereas six independently generated frames cost six credits and
+3 minutes 13 seconds; only the chosen shot then received the full-resolution
+rebuild and paid video pass. Those image-stage figures are workflow evidence,
+not Seedance pricing. The article does not publish the exact sentence submitted
+to Seedance, so this entry is counted as a verified reusable technique and
+adapted prompt structure, not as a verbatim source prompt.
+
+Adapted and rewritten from JXP Team's September 15, 2026
+[full storyboard-to-Seedance 2.5 test](https://www.jxp.com/gpt-image/blog/gpt-image-2-5-storyboard),
+including its generation settings, returned metadata, contact sheet, measured
+costs and failure review.
+
 ### Stylized-reference panel bisect and physical-state ledger
 
 **Verified model:** Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`
@@ -34351,6 +34463,11 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 
 ## Sources
+
+- [JXP Team — September 15, 2026 sheet-first storyboard-to-Seedance 2.5
+test: one-sheet sequence approval, selective full-resolution frame promotion,
+eight-second Reference Generation receipt, returned metadata, continuity
+inspection and early-exit failure evidence](https://www.jxp.com/gpt-image/blog/gpt-image-2-5-storyboard)
 
 - [Big_Maximum_92 — September 14, 2026 Seedance 2.5
 one-versus-crowd fashion result: complete image-to-video prompt, source-image
