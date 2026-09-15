@@ -21142,6 +21142,205 @@ method](https://www.reddit.com/r/seedance2pro/comments/1wg066l/how_to_made_this_
 
 ## Reusable templates
 
+
+### Lexical-absence repair, positive-mechanism restatement and resolution-escalation gate
+
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`) — the original
+producer preserved the exact paid job, model, settings, source prompt, generated
+MP4 and diagnostic frames for a 10-second 480p take; frame inspection found that
+repeating two forbidden visual states as negations made one more prominent and
+left the other intact, while the requested camera direction and terminal motion
+were preserved  
+**Use case:** a paid take gets the action or camera right but repeatedly renders
+an unwanted object, surface state or construction detail named inside negative
+clauses  
+**Mode:** text-to-video or image-to-video retake with one controlled prompt
+change
+
+```text
+ATTEMPT LEDGER
+Exact model = [VERSIONED MODEL ID].
+Mode and inputs = [T2V / I2V + ASSET HASHES].
+Settings = [DURATION / ASPECT / RESOLUTION / FPS / AUDIO].
+Job ID and charge = [VALUES].
+Submitted prompt hash = [HASH].
+Artifact and review frames = [PATHS / HASHES].
+Decision = [SIGNED / HOLD / REJECTED].
+
+1 — FREEZE THE WORKING CONTRACT
+List every observed success before changing the prompt:
+- camera direction and whether it ever reverses;
+- continuous-shot or cut structure;
+- subject trajectory and timing;
+- lighting state that actually appeared;
+- terminal frame and whether motion continues through it.
+Carry those clauses byte-for-byte when possible. A defect retake is not
+permission to rewrite successful behavior.
+
+2 — RUN A LEXICAL-ABSENCE AUDIT
+For each unwanted visual state, locate every clause that names it, including
+“no”, “without”, “never”, comparisons and repeated warnings. Remove the unwanted
+noun from the submitted generation prompt instead of intensifying the negation.
+Keep the diagnosis in this ledger, outside the prompt.
+
+3 — REPLACE ABSENCE WITH VISIBLE POSITIVE FACTS
+Write only what occupies the frame:
+SUBJECT = [FUNCTIONAL OBJECT OR CHARACTER].
+READABLE PARTS = [POSITIVE COMPONENTS, JOINTS, OPENINGS, CONTROLS OR MATERIALS].
+SURFACE = [DESIRED FINISH AND EDGE TREATMENT].
+SPATIAL PATH = [SUBJECT OR PARTICLES ENTER, CROSS AND EXIT NAMED FRAME REGIONS].
+BACKGROUND = [DESIRED POSITIVE ENVIRONMENT].
+Do not describe the desired object as a featureless “smooth thing”; preserving
+recognizable function requires naming the parts that make it readable.
+
+4 — REMOVE THE FAILURE REGION WHEN IT IS NOT STORY-CRITICAL
+If the unwanted state forms in a nonessential region, reframe so that region is
+never visible. Specify the crop, lens, camera height and exit edge positively:
+“[ACTION] crosses [VISIBLE REGION] and exits through [FRAME EDGE] while the
+camera remains [DISTANCE / ANGLE].” Do not name what must not collect outside
+the crop.
+
+5 — KEEP SILENT ASSETS SILENT
+If the shot will be scored later and needs no native sound, set the actual
+request field to generate_audio=false. Do not rely on silence in the prose.
+Record the provider quote before and after the field change; never infer the
+price delta from a single receipt.
+
+6 — ONE-VARIABLE RETAKE
+Keep model, inputs, duration, aspect, resolution, camera, timing and accepted
+terminal state fixed. Change only the lexical-absence and positive-mechanism
+clauses. Re-probe at the approved draft resolution; do not buy a higher
+resolution to repair a story or geometry miss.
+
+ACCEPTANCE
+- compare the same opening, defect-window and terminal timestamps;
+- the desired mechanism remains visually readable;
+- the unwanted state is absent without being named in the submitted prompt;
+- camera direction, action order and terminal motion match the frozen contract;
+- silent requests return the intended audio state;
+- only after the draft passes may an identical high-resolution render be
+  quoted or submitted.
+```
+
+**Why it works:** a negative clause still supplies the model with the visual
+concept it names. Moving that concept into an external defect ledger, positively
+specifying the desired mechanism, and cropping nonessential failure regions
+reduces competing scene instructions while protecting the parts of the take
+that already worked.
+
+**Evidence boundary:** the cited take proves the repeated-negation regressions,
+the preserved motion contract and the need for a controlled repair; no repaired
+take had been generated in that record. Treat this as a failure-control and
+next-attempt protocol, not as proof that positive restatement guarantees a
+clean render.
+
+Adapted and rewritten from the September 15, 2026
+[Seedance 2.5 take-6 production commit](https://github.com/theempp/tester/commit/253f12470cbec80fa8d2e4764e5bb1108e4df88d),
+[exact job and frame-by-frame review](https://github.com/theempp/tester/blob/253f12470cbec80fa8d2e4764e5bb1108e4df88d/review/TAKE6-REVIEW.md),
+[complete source prompt and prior-take comparison](https://github.com/theempp/tester/blob/253f12470cbec80fa8d2e4764e5bb1108e4df88d/SCROLL-STRUCTURE.md#part-1s-exact-take-5-prompt-build-the-delta-from-this-not-from-take-4s),
+and the committed [generated MP4](https://github.com/theempp/tester/blob/253f12470cbec80fa8d2e4764e5bb1108e4df88d/review/hero-roast-take6.mp4).
+
+---
+
+### Listing-independent OpenRouter submission, authenticated artifact and concurrent provenance gate
+
+**Verified model:** Seedance 2.0 Mini
+(`bytedance/seedance-2.0-mini`, OpenRouter route) — the original developer
+committed two successful four-second 9:16 outputs, their complete prompts,
+model-stamped manifest rows and measured 0.30555 USD costs; the same production
+record documents an earlier native-audio request that failed after 52 seconds
+on an audio copyright check and a completed artifact URL that returned 401
+without bearer authentication  
+**Use case:** build pipelines that submit Seedance jobs through OpenRouter and
+must survive an incomplete model catalogue, long polling, silent-shot audio
+checks, protected result URLs and concurrent manifest writers  
+**Mode:** text-to-video asset generation
+
+```text
+CAPABILITY CONTRACT
+Do not use GET /models as the sole availability test for video generation.
+Pin the exact reviewed model ID and submit only through the documented /videos
+surface. If submission itself rejects the model, record that response as the
+capability result; do not silently route to another model.
+
+REQUEST RECORD
+Asset key = [STABLE KEY].
+Exact model = bytedance/seedance-2.0-mini.
+Prompt = [COMPLETE PROMPT].
+Prompt fingerprint = [HASH OF MODEL + PROMPT + SETTINGS].
+Aspect ratio = [VALUE].
+Duration = [VALUE].
+generate_audio = [TRUE / FALSE].
+Expected output = video/mp4.
+If the edit supplies music or the shot is intentionally silent, set
+generate_audio=false explicitly.
+
+SUBMIT
+1. POST the exact request to /videos with bearer authentication.
+2. Persist the returned job ID or polling URL and request fingerprint before
+   entering the poll loop.
+3. If the submit fails, retain the response body and stop. A submit failure has
+   no resumable job.
+
+POLL
+Poll the returned URL with bearer authentication.
+Use bounded exponential backoff up to [MAX INTERVAL] and a wall-clock timeout.
+Treat temporary poll failures as transient; retain the job checkpoint.
+On timeout, report “job may still finish” and resume polling the same job later.
+Do not create a second paid job merely because the client timed out.
+
+TERMINAL GATE
+FAILED:
+- preserve status, provider error, elapsed time and charge state;
+- if an intentionally silent asset was submitted with audio enabled and the
+  error is audio-specific, create one controlled request with
+  generate_audio=false and a new fingerprint;
+- do not claim the image prompt was defective without visual evidence.
+
+COMPLETED:
+- require one returned artifact URL;
+- an unsigned_urls entry is an authenticated API resource, not a public
+  presigned link;
+- download it with the same bearer credential;
+- require HTTP success, nonzero bytes and a playable MP4 before marking the job
+  delivered.
+
+ARTIFACT AND CACHE
+Store asset key, exact model, prompt, settings, request fingerprint, job ID,
+generated timestamp, returned cost, file hash and measured media metadata.
+Skip generation only when both the file and matching fingerprint exist.
+
+CONCURRENT MANIFEST WRITES
+At completion, reread the manifest from disk and merge only keys touched by the
+current run. Never overwrite the full manifest from a stale startup snapshot.
+If two runs touch the same key with different fingerprints, stop and surface
+the conflict rather than choosing the last finisher.
+
+ACCEPTANCE
+- exact model and request fingerprint are recoverable from the manifest;
+- the job has one playable authenticated artifact;
+- audio presence matches generate_audio;
+- timeout recovery reused the original job;
+- a concurrent unrelated run cannot erase this asset's provenance;
+- no fallback model or public-URL assumption is hidden from the record.
+```
+
+**Why it works:** the route's catalogue, submission and artifact-delivery
+surfaces have different truth boundaries. A checkpointed submit/poll loop
+prevents timeout-driven duplicate spend, authenticated retrieval prevents a
+completed paid job from becoming an apparent download failure, and merge-on-
+write preserves provenance when slow video and fast image jobs finish out of
+order.
+
+Adapted and rewritten from Bamidele Tewogbade's September 15, 2026
+[production commit](https://github.com/bamideletewogbade/aksen-labs/commit/d052dff091e7196f812e0e1ece32a44c1780c5e2),
+[measured generation record and failure notes](https://github.com/bamideletewogbade/aksen-labs/blob/d052dff091e7196f812e0e1ece32a44c1780c5e2/video/README.md#three-things-about-these-models-learned-the-hard-way),
+[exact submit, poll and authenticated-download implementation](https://github.com/bamideletewogbade/aksen-labs/blob/d052dff091e7196f812e0e1ece32a44c1780c5e2/video/src/ai/openrouter.mjs),
+[model-stamped manifest](https://github.com/bamideletewogbade/aksen-labs/blob/d052dff091e7196f812e0e1ece32a44c1780c5e2/video/src/generated-manifest.json),
+and the committed [hands-and-phone output](https://github.com/bamideletewogbade/aksen-labs/blob/d052dff091e7196f812e0e1ece32a44c1780c5e2/video/public/generated/hands-phone.mp4).
+
+---
+
 ### Sheet-first shot selection, full-resolution promotion and endpoint-occupancy gate
 
 **Verified model:** Seedance 2.5, JXP Reference Generation — the original
@@ -34463,6 +34662,26 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 
 ## Sources
+
+
+- [daddy zo / tester — September 15, 2026 Higgsfield Seedance 2.5
+sixth paid coffee-roaster take: exact model and job receipt, complete source
+prompt, committed MP4 and diagnostic frames, repeated-negation regressions,
+positive-mechanism repair plan and draft-before-resolution escalation
+gate](https://github.com/theempp/tester/commit/253f12470cbec80fa8d2e4764e5bb1108e4df88d)
+([take review](https://github.com/theempp/tester/blob/253f12470cbec80fa8d2e4764e5bb1108e4df88d/review/TAKE6-REVIEW.md),
+[source prompt](https://github.com/theempp/tester/blob/253f12470cbec80fa8d2e4764e5bb1108e4df88d/SCROLL-STRUCTURE.md#part-1s-exact-take-5-prompt-build-the-delta-from-this-not-from-take-4s),
+[generated MP4](https://github.com/theempp/tester/blob/253f12470cbec80fa8d2e4764e5bb1108e4df88d/review/hero-roast-take6.mp4))
+
+- [Bamidele Tewogbade / Aksen Labs — September 15, 2026 OpenRouter
+Seedance 2.0 Mini production pipeline: two completed four-second outputs,
+complete prompts and costs, native-audio copyright failure, authenticated
+unsigned-result retrieval and concurrent provenance merge
+gate](https://github.com/bamideletewogbade/aksen-labs/commit/d052dff091e7196f812e0e1ece32a44c1780c5e2)
+([generation notes](https://github.com/bamideletewogbade/aksen-labs/blob/d052dff091e7196f812e0e1ece32a44c1780c5e2/video/README.md#three-things-about-these-models-learned-the-hard-way),
+[provider implementation](https://github.com/bamideletewogbade/aksen-labs/blob/d052dff091e7196f812e0e1ece32a44c1780c5e2/video/src/ai/openrouter.mjs),
+[model-stamped manifest](https://github.com/bamideletewogbade/aksen-labs/blob/d052dff091e7196f812e0e1ece32a44c1780c5e2/video/src/generated-manifest.json),
+[generated MP4](https://github.com/bamideletewogbade/aksen-labs/blob/d052dff091e7196f812e0e1ece32a44c1780c5e2/video/public/generated/hands-phone.mp4))
 
 - [JXP Team — September 15, 2026 sheet-first storyboard-to-Seedance 2.5
 test: one-sheet sequence approval, selective full-resolution frame promotion,
