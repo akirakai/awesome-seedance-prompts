@@ -21347,13 +21347,18 @@ and the [Seedance terminal-state adapter](https://github.com/madebyak/clickefy/b
 
 **Verified models:** Seedance 2.0 Mini
 (`seedance/seedance-2.0-mini`, JojoKey China line) and Seedance 2.5
-(`seedance-2.5-i2v` routed to `video-cn-2.5`) — the first production commit
-records three live text-, image- and reference-to-video generations with
-playable MP4s; the later creator commit records six real Seedance 2.5 client
-shots and the submission defect discovered while producing them
+(`seedance-2.5-i2v` routed to `video-cn-2.5`, plus BytePlus ModelArk
+`dreamina-seedance-2-5-260628`) — the first production commit records three
+live text-, image- and reference-to-video generations with playable MP4s; the
+later creator commit records six real Seedance 2.5 client shots and the
+submission defect discovered while producing them. A separate live BytePlus
+test generated a five-second 480p identity-preserving clip from one Trusted
+Asset Library `asset://` image, then generated successfully from two such
+images plus one reference audio.
 
 Use this when a China-routed Seedance request must register public image or
-video URLs before generation. Treat registration, regional synchronization and
+video URLs, or when BytePlus ModelArk must resolve Trusted Asset Library
+handles, before generation. Treat registration, regional synchronization and
 generation as separate state machines; a returned asset URI is not proof that
 the video endpoint can read it yet.
 
@@ -21377,6 +21382,31 @@ proof of readiness. Record:
 - any explicitly supported fallback line and its spendable balance.
 Stop with the provider's blocker if no authorized route is both enabled and
 funded.
+
+BYTEPLUS TRUSTED-ASSET PREFLIGHT
+When MODEL = dreamina-seedance-2-5-260628 and references use the BytePlus
+Trusted Asset Library:
+1. Validate the AK/SK-signed control plane with the read-only GetAssetQuota
+   action before any CreateAsset write. A working generation API key does not
+   prove that these separate credentials, signature fields or project rights
+   are valid.
+2. Before uploading one image, require an accepted format
+   [JPEG | PNG | WEBP | BMP | TIFF | GIF | HEIC | HEIF], both dimensions
+   strictly between 300 and 6000 pixels, width/height strictly between 0.4 and
+   2.5, and a file smaller than 30 MB. Reject locally instead of waiting for an
+   asynchronous Failed state that may expose no reason.
+3. Store every asset ID and group ID created by this workflow. Validate known
+   groups with one Filter.GroupIds query and search unknown groups by
+   Filter.Name with a small page cap; never enumerate a large shared project
+   merely to populate a picker.
+4. Before each paid generation, resolve every cached asset ID with GetAsset or
+   filtered ListAssets and require Status=Active. If it is absent, evict the
+   stale mapping and stop before submission. A deleted or unknown asset causes
+   a synchronous HTTP 400 InvalidParameter, creates no task and cannot be fixed
+   by retrying the same payload.
+5. Keep the ordered content binding explicit: place each asset:// handle in
+   content[], then address it in PROMPT by ordinal role such as Image 1,
+   Image 2 or Audio 1—not by its raw asset ID.
 
 CANONICAL ASSET REGISTRATION
 For every I2V/R2V reference:
@@ -21436,6 +21466,9 @@ SAFE RECOVERY
   are recorded, then register the new canonical URL once.
 - Generation acceptance or billing unknown: query the original task before any
   resubmission.
+- BytePlus asset missing at preflight or rejected synchronously as not found:
+  invalidate that cached asset ID; do not retry the identical paid-generation
+  payload or mistake the provider failure for a creative-prompt failure.
 - China route disabled: use a documented compatible fallback only if its model,
   media semantics and balance have been verified; otherwise stop.
 
@@ -21457,7 +21490,10 @@ fee once per job, while the readiness poll prevents `InvalidVideoCnAsset`.
 The later six-shot Seedance 2.5 production found another pre-transport boundary:
 a Chinese generation key could not be encoded as an HTTP header. Hash-suffixed
 ASCII normalization preserves both transport safety and shot uniqueness instead
-of discarding Unicode and allowing two intended outputs to collide.
+of discarding Unicode and allowing two intended outputs to collide. The
+BytePlus test adds a different boundary: validate image geometry and cached
+asset existence before the generation POST, because a stale `asset://` handle
+fails synchronously and repeated submission cannot repair it.
 
 The source's settled 480p Mini task used 40,594 tokens in four seconds and its
 I2V first frame measured 30.7 dB PSNR versus 22.8 dB for R2V; those values are
@@ -21468,6 +21504,10 @@ Adapted and rewritten from Dylan-Nihilo / OmniStudio's September 14, 2026
 and the later [six-shot Seedance 2.5 Unicode-key repair](https://github.com/Dylan-Nihilo/OmniStudio/commit/2d0c988ae7159b0c2a267322a28dd3844c52ee03),
 with the updated [provider implementation](https://github.com/Dylan-Nihilo/OmniStudio/blob/2d0c988ae7159b0c2a267322a28dd3844c52ee03/src/models/jojokey.py)
 and [readiness, reuse, routing and key-collision tests](https://github.com/Dylan-Nihilo/OmniStudio/blob/2d0c988ae7159b0c2a267322a28dd3844c52ee03/tests/test_jojokey_provider.py).
+The BytePlus branch is adapted from JPG-GITY's September 15, 2026
+[live-measurement commit](https://github.com/JPG-GITY/byteplus-docs-sync/commit/bfbaba0fb79ec57f2fa2771a2e8975ed405291fd)
+and its [Trusted Asset Library measurements and generation
+record](https://github.com/JPG-GITY/byteplus-docs-sync/blob/bfbaba0fb79ec57f2fa2771a2e8975ed405291fd/skill/references/trusted-asset-library.md#8-using-the-asset-in-generation).
 
 
 ### Measured same-pass voice-and-mouth fallback for failed external lip sync
@@ -34121,6 +34161,12 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 
 ## Sources
+
+- [JPG-GITY — September 15, 2026 BytePlus ModelArk Seedance 2.5
+Trusted Asset Library measurements: successful one- and two-image asset://
+generations, reference-audio binding, upload preflight limits and stale-asset
+terminal rejection](https://github.com/JPG-GITY/byteplus-docs-sync/commit/bfbaba0fb79ec57f2fa2771a2e8975ed405291fd)
+
 
 - [Big_Maximum_92 — September 15, 2026 Seedance 2.5
 thirty-second remote-work commercial: original generated-ad account, complete
