@@ -21150,7 +21150,8 @@ producer preserved the exact paid job, model, settings, source prompt, generated
 MP4 and diagnostic frames for a 10-second 480p take; frame inspection found that
 repeating two forbidden visual states as negations made one more prominent and
 left the other intact, while the requested camera direction and terminal motion
-were preserved  
+were preserved. A same-day production follow-up records the designer-signed
+repair, the shipped 1080p artifact and its exact upscale job  
 **Use case:** a paid take gets the action or camera right but repeatedly renders
 an unwanted object, surface state or construction detail named inside negative
 clauses  
@@ -21212,33 +21213,56 @@ terminal state fixed. Change only the lexical-absence and positive-mechanism
 clauses. Re-probe at the approved draft resolution; do not buy a higher
 resolution to repair a story or geometry miss.
 
+7 — SHIP THE SIGNED FRAMES, NOT A NEW ROLL
+After the draft is signed, separate delivery resolution from generation:
+- native high-resolution re-render = a new stochastic generation that may
+  regress the repaired motion, material or geometry;
+- deterministic upscale = the same accepted frames at delivery resolution.
+When only resolution must change, prefer the upscaler. Record its exact model or
+operation, source artifact hash, job ID, explicit target, cost, dimensions,
+frame count and output hash. Never rely on a provider default target. Review the
+same opening, repaired-detail and terminal timestamps after upscale; reject
+rewritten edges, invented texture, changed framing or a different frame count.
+
 ACCEPTANCE
 - compare the same opening, defect-window and terminal timestamps;
 - the desired mechanism remains visually readable;
 - the unwanted state is absent without being named in the submitted prompt;
 - camera direction, action order and terminal motion match the frozen contract;
 - silent requests return the intended audio state;
-- only after the draft passes may an identical high-resolution render be
-  quoted or submitted.
+- only after the draft passes may delivery resolution be purchased;
+- prefer a verified deterministic upscale over a native re-render when the
+  signed motion and pixels must remain unchanged; re-render only after
+  explicitly reopening the accepted creative state.
 ```
 
 **Why it works:** a negative clause still supplies the model with the visual
 concept it names. Moving that concept into an external defect ledger, positively
 specifying the desired mechanism, and cropping nonessential failure regions
 reduces competing scene instructions while protecting the parts of the take
-that already worked.
+that already worked. Once those frames are accepted, deterministic upscaling
+decouples delivery resolution from creative sampling instead of paying for a
+fresh render that may undo the repair.
 
-**Evidence boundary:** the cited take proves the repeated-negation regressions,
-the preserved motion contract and the need for a controlled repair; no repaired
-take had been generated in that record. Treat this as a failure-control and
-next-attempt protocol, not as proof that positive restatement guarantees a
-clean render.
+**Evidence boundary:** the first record proves the repeated-negation
+regressions and preserved motion contract. The follow-up proves that positive
+construction restatement removed the riveted machine and earned designer
+sign-off, but it did not solve everything: the unwanted ground mound grew and
+the mechanism became a featureless box. Treat positive restatement as a
+controlled repair with explicit trade-off review, not a guarantee. The same
+follow-up records a reviewed 1080p upscale with no rewritten edges or invented
+texture, costing 0.1 credit instead of the quoted 65-credit native 720p
+re-render; that result validates this provider path, not every upscaler.
 
 Adapted and rewritten from the September 15, 2026
 [Seedance 2.5 take-6 production commit](https://github.com/theempp/tester/commit/253f12470cbec80fa8d2e4764e5bb1108e4df88d),
 [exact job and frame-by-frame review](https://github.com/theempp/tester/blob/253f12470cbec80fa8d2e4764e5bb1108e4df88d/review/TAKE6-REVIEW.md),
 [complete source prompt and prior-take comparison](https://github.com/theempp/tester/blob/253f12470cbec80fa8d2e4764e5bb1108e4df88d/SCROLL-STRUCTURE.md#part-1s-exact-take-5-prompt-build-the-delta-from-this-not-from-take-4s),
 and the committed [generated MP4](https://github.com/theempp/tester/blob/253f12470cbec80fa8d2e4764e5bb1108e4df88d/review/hero-roast-take6.mp4).
+The later [signed-production follow-up](https://github.com/theempp/tester/commit/e0b25ab53d4f03225b508c1738a9bd7dab4c1d2b),
+[repair, acceptance and upscale ledger](https://github.com/theempp/tester/blob/e0b25ab53d4f03225b508c1738a9bd7dab4c1d2b/SCROLL-STRUCTURE.md#amendment-3--2026-09-15-part-1-shipped--part-2-rejected)
+and [shipped 1080p artifact](https://github.com/theempp/tester/blob/e0b25ab53d4f03225b508c1738a9bd7dab4c1d2b/public/media/hero-roast-film.mp4)
+supply the verified repair outcome and deterministic-resolution handoff.
 
 ---
 
@@ -34665,13 +34689,15 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 
 - [daddy zo / tester — September 15, 2026 Higgsfield Seedance 2.5
-sixth paid coffee-roaster take: exact model and job receipt, complete source
-prompt, committed MP4 and diagnostic frames, repeated-negation regressions,
-positive-mechanism repair plan and draft-before-resolution escalation
-gate](https://github.com/theempp/tester/commit/253f12470cbec80fa8d2e4764e5bb1108e4df88d)
-([take review](https://github.com/theempp/tester/blob/253f12470cbec80fa8d2e4764e5bb1108e4df88d/review/TAKE6-REVIEW.md),
+sixth paid coffee-roaster take and signed follow-up: exact model and jobs,
+complete source prompt, committed draft and 1080p delivery artifacts,
+positive-construction repair with documented residual trade-offs, and
+deterministic upscale instead of a stochastic native re-render
+gate](https://github.com/theempp/tester/commit/e0b25ab53d4f03225b508c1738a9bd7dab4c1d2b)
+([original take review](https://github.com/theempp/tester/blob/253f12470cbec80fa8d2e4764e5bb1108e4df88d/review/TAKE6-REVIEW.md),
 [source prompt](https://github.com/theempp/tester/blob/253f12470cbec80fa8d2e4764e5bb1108e4df88d/SCROLL-STRUCTURE.md#part-1s-exact-take-5-prompt-build-the-delta-from-this-not-from-take-4s),
-[generated MP4](https://github.com/theempp/tester/blob/253f12470cbec80fa8d2e4764e5bb1108e4df88d/review/hero-roast-take6.mp4))
+[signed repair and upscale ledger](https://github.com/theempp/tester/blob/e0b25ab53d4f03225b508c1738a9bd7dab4c1d2b/SCROLL-STRUCTURE.md#amendment-3--2026-09-15-part-1-shipped--part-2-rejected),
+[shipped 1080p artifact](https://github.com/theempp/tester/blob/e0b25ab53d4f03225b508c1738a9bd7dab4c1d2b/public/media/hero-roast-film.mp4))
 
 - [Bamidele Tewogbade / Aksen Labs — September 15, 2026 OpenRouter
 Seedance 2.0 Mini production pipeline: two completed four-second outputs,
