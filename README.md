@@ -20881,6 +20881,106 @@ and the [paid-job metadata, generated-video link and QA](https://github.com/baya
 
 ## Reusable templates
 
+### Stylized-reference panel bisect and physical-state ledger
+
+**Verified model:** Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`
+through fal) — the original producer logged six photoreal-face input
+rejections across still, video and extension paths, then two successful
+four-second 9:16, 480p reference probes: a headless wardrobe crop transferred
+the outfit and props while allowing a new face (seed `143886878`), and a
+clearly stylized 3D face sheet preserved identity, hair, earrings, headset and
+wardrobe (seed `715878081`)
+
+Use this when an approved photoreal character pack cannot enter a
+reference-to-video route, but the project may change medium. Treat
+policy-compatible stylization as a production redesign with isolated acceptance
+tests, then carry reference roles, geometry and physical state explicitly into
+the full take.
+
+```text
+ROUTE DECISION
+Exact model = bytedance/seedance-2.5/reference-to-video
+If the required delivery must remain photoreal:
+- do not submit a face-bearing still or clip to this verified fal route;
+- use a separately verified image-to-video path, or keep Seedance on face-free
+  plates and beats only.
+If a stylized or animated delivery is acceptable, continue below.
+
+ONE-STYLE ASSET PASS
+First approve identity against the authorized source portraits.
+Re-render every character sheet, two-character scale board, location plate and
+prop with one shared [STYLE STRING]. The result must read unmistakably as
+[3D FEATURE ANIMATION / DRAWN ANIMATION / OTHER DECLARED MEDIUM], not as a
+lightly filtered photograph. Paste the identical style string into the video
+prompt.
+
+PANEL BISECT BEFORE A PAID TAKE
+For each face panel P:
+1. submit only P plus one face-free location plate;
+2. render 4 seconds, 9:16, 480p, audio off;
+3. record model, asset hashes, request state, seed and acceptance result.
+If P is rejected, quarantine only P and restylize it more decisively; do not
+crop, blur, rename or repeatedly resubmit it to evade the decision.
+Proceed only after every panel passes alone.
+
+HARDEST-BEAT PROOF
+Before rendering the sequence, test the hardest two-lead interaction at the
+intended duration. Require both identities, scale relationship, overlap,
+occlusion, hand contact and prop ownership to survive. Do not spend on later
+takes until this proof passes.
+
+REFERENCE AUTHORITY
+@Image1 = [STYLIZED LEAD A]: identity, hair, costume and signature accessories.
+@Image2 = [STYLIZED LEAD B]: identity, hair, costume and signature accessories.
+@Image3 = [TWO-SHOT SCALE BOARD]: relative height and build only; never a first
+frame.
+@Image4 = [LOCATION PLATE]: geometry, palette and lighting only; no identity.
+@Image5... = [PROPS / ADDITIONAL PANELS], each with one named role and explicit
+exclusions.
+A headless wardrobe crop may control only build, clothing and attached props;
+the generated face is new and must not be reported as preserved identity.
+
+FULL TAKE PROMPT
+[GLOBAL] [SHARED STYLE STRING], [PALETTE], every shot uses a locked camera,
+[ACTING REGISTER], no visible text, diegetic audio only, no music.
+
+PHYSICAL LAWS
+- touching hands remain solid and never pass through each other;
+- every prop belongs to one named hand and changes hands only in a written beat;
+- every cable remains visibly connected to its named endpoints;
+- weight transfers through a named foot, hand or support before the body rises;
+- crowds remain one background mass with backs to camera if faces are excluded.
+
+[CHARACTERS] Bind every image to one role and fidelity requirement.
+[GEO SPATIAL LAYOUT] Freeze entrances, exits, distances and screen direction for
+the location; repeat the same geometry block in every shot set there.
+[SHOTS — N SECONDS CONTINUOUS]
+Shot K ([A]–[B] s): [FRAME SIZE], locked camera, exact initial state, one
+primary event and exact end state. Restate named hands, connected props, foot
+contact and character positions in the end state.
+[MAINTAIN CONSISTENCY] No identity swap, scale drift, role leakage, prop
+teleport, detached cable, interpenetrating hands, unsupported floating,
+unrequested face, text, logo or music.
+
+DELIVERY GATE
+Archive the accepted panel probes and hardest-beat proof beside the full takes.
+Reject the sequence if any previously accepted identity panel changes medium,
+a role leaks between references, contact geometry breaks, a prop changes owner
+without a beat, or an internal cut resets the physical state.
+```
+
+**Why it works:** the source tests isolate two different problems. The input
+gate is diagnosed one panel at a time before a costly multi-reference render;
+the full prompt then prevents accepted identity from being undermined by
+ambiguous reference roles or missing physical continuity. The producer reports
+that decisive stylization passed and held identity, whereas the headless crop
+transferred only wardrobe and props as intended.
+
+Adapted and rewritten from Recoupable's September 14–15, 2026
+[Seedance 2.5 production follow-up](https://github.com/recoupable/skills/commit/133902c8db3c47c304148b2270673ce19be7543c)
+and its [decision gate, prompt architecture and primary run log](https://github.com/recoupable/skills/blob/133902c8db3c47c304148b2270673ce19be7543c/skills/recoup-internal-marketing/references/seedance.md#the-decision-gate-earned-2026-09-14-nobody-off-the-stage--read-before-any-other-section).
+
+
 ### Thirty-second typography-hold I2V stability and rejection-escalation gate
 
 **Verified model:** Seedance 2.5 (`bytedance/seedance-2.5/image-to-video`
@@ -34690,7 +34790,7 @@ Community examples and techniques referenced in this README:
 
 - [Lava IG Console — Seedance 2.5 faceless symbolic studio one-take](https://github.com/MuxiLiu512/lava-ig-console/commit/4e5897cef16dd31e3af0c876de258978f142c8a7)
 
-- [Recoupable — Seedance 2.5 time-scoped scene plate, face-reference rejection and primary run log](https://github.com/recoupable/skills/commit/638ca5cd72591525ffe5232c4edf6facea8399a2)
+- [Recoupable — Seedance 2.5 time-scoped scene plate, face-reference rejection and primary run log](https://github.com/recoupable/skills/commit/638ca5cd72591525ffe5232c4edf6facea8399a2) ([stylized-face bisect and physical-state follow-up](https://github.com/recoupable/skills/commit/133902c8db3c47c304148b2270673ce19be7543c))
 - [NovoAds — Seedance 2.0 mode-scoped leading-silence measurements](https://github.com/novoads/claude-code-ads/commit/bf4697cdecf29c997a2ef70a4678cc1282734ba3)
 
 - [Neil / AI Comic Studio — Seedance 2.0 Mini white-model reference-video transfer, one-public-URL capability boundary and exact-model envelope](https://github.com/neilalexanderlee/ai-comic-studio/commit/ba6e4c19e8410d0114f2476d6c147e87afda594d) ([official-envelope correction](https://github.com/neilalexanderlee/ai-comic-studio/commit/72fe7ebadfbc88f007d50699664ead5276a991c8))
