@@ -354,6 +354,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Touch-activated canvas miniature triptych](#338-touch-activated-canvas-miniature-triptych)
   - [Remote-work voice note to impossible-desert pullback](#339-remote-work-voice-note-to-impossible-desert-pullback)
   - [Matched paper-boat render with Mini-to-standard escalation gate](#340-matched-paper-boat-render-with-mini-to-standard-escalation-gate)
+  - [Motionless ivory lead against a synchronized black crowd](#341-motionless-ivory-lead-against-a-synchronized-black-crowd)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -21077,6 +21078,68 @@ Adapted and rewritten from Jasper Li / Monid's September 15, 2026
 [complete API walkthrough, matched successful-run ledger, prompt and comparison
 frames](https://monid.ai/blog/guides/how-to-use-seedance-2-0-api).
 
+
+---
+
+### 341. Motionless ivory lead against a synchronized black crowd
+
+**Verified model:** Seedance 2.5 — the original creator identifies the exact
+model, publishes the complete image-to-video prompt and method beside the
+generated result, and states that the uploaded image supplied character,
+wardrobe, composition, lighting and overall fashion-film design  
+**Use case:** high-fashion contrast film, foreground/background choreography,
+locked lead identity and controlled group motion  
+**Mode:** image-to-video from one composed reference frame  
+**Suggested settings:** 22 seconds, 16:9, 720p and audio enabled match the
+hosted result metadata; regenerate at the available delivery tier
+
+```text
+Use @Image1 as the exact authority for the lead, wardrobe, crowd arrangement,
+raw-concrete location, composition, lighting and cold cinematic fashion look.
+Create photorealistic live action with realistic skin, fabric and hair.
+
+PHASE 1 — APPROACH
+Begin in a medium-wide frontal view. One young adult woman in a fully closed
+ivory tailored coat, black sunglasses and black pointed heels walks slowly and
+confidently toward camera through the centre line of a large crowd dressed
+entirely in black. Her arms rest naturally at her sides and her expression stays
+calm and serious. Track backward at exactly her walking speed so she remains
+centred. Every crowd member faces forward and remains completely still.
+
+PHASE 2 — STATE HANDOFF
+She reaches the front-centre mark and stops fully. Show both feet settle, her
+shoulders relax and her gaze lock directly into the lens. From this boundary
+onward, freeze her pose: no step, head turn, hand motion, body sway or reaction.
+
+PHASE 3 — BACKGROUND CHOREOGRAPHY
+Only after the lead is locked, the entire black-clad crowd begins one aggressive
+synchronized cycle across every row: heads snap to one side; shoulders jerk
+upward; torsos lean briefly forward; everyone snaps upright together. Repeat
+the complete order in rhythm. Do not let the motion propagate into the lead.
+
+CAMERA AND END STATE
+During the crowd sequence, push slowly toward the woman. Keep her face,
+sunglasses and ivory coat sharply focused while the moving crowd falls into a
+subtle depth-of-field blur. End in a perfectly centred close-to-medium view as
+the crowd completes one final head-and-shoulder snap, then hold on the lead's
+unchanged expression.
+
+No duplicate lead, second ivory garment, male crowd member, disappearing or
+new person, lead motion after the stop, unsynchronized row, sudden scene change,
+camera shake, cartoon styling, CGI surface, text, subtitle or logo.
+```
+
+**Why it works:** the motion contract has an explicit handoff. The crowd is not
+asked to move until the lead reaches a testable locked state, and the prompt
+repeats both halves asymmetrically: one named foreground subject owns stillness
+while the black-clad group owns the four-step cycle. Color, focus and frame
+centre reinforce that role separation, while the final synchronized snap gives
+the take a clear editorial endpoint.
+
+Adapted and rewritten from Big_Maximum_92's September 14, 2026
+[original Seedance 2.5 result, complete prompt and reusable production
+method](https://www.reddit.com/r/seedance2pro/comments/1wg066l/how_to_made_this_viral_one_vs_the_crowd_fashion/).
+
 ## Reusable templates
 
 ### Stylized-reference panel bisect and physical-state ledger
@@ -34288,6 +34351,11 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 
 ## Sources
+
+- [Big_Maximum_92 — September 14, 2026 Seedance 2.5
+one-versus-crowd fashion result: complete image-to-video prompt, source-image
+authority, foreground stillness lock, synchronized background action sequence
+and hosted output](https://www.reddit.com/r/seedance2pro/comments/1wg066l/how_to_made_this_viral_one_vs_the_crowd_fashion/)
 
 - [Jasper Li / Monid — September 15, 2026 matched Seedance 2.0 Mini and
 Seedance 2.0 paper-boat runs: complete request, success record, output
