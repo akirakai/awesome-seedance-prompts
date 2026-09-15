@@ -25341,9 +25341,11 @@ published August 9, 2026.
 
 ### Model-aware reference-media duration gate
 
-**Verified model:** Seedance 2.5 — confirmed by the official BytePlus input
-contract, deployed model-specific validation, upstream boundary tests, and a
-successful production generation
+**Verified models:** DRA Seedance 2.5 (`seedance-2-5`), Seedance 2.0 Fast
+(`seedance-2-0-fast` / `doubao-seedance-2-0-fast-260128`), and Seedance
+2.0 Mini (`seedance-2-0-mini`) — confirmed by creator-run public-route
+generations, route validation logs, billing records, output probes, and the
+official BytePlus input contract
 
 Use this before writing shots whenever a workflow can attach videos or audio.
 Keep the asset library permissive until a model is chosen, then bind every file
@@ -25369,6 +25371,10 @@ A — 2.5 reference:
 - Total reference-video duration must be at most 30 seconds.
 - Total reference-audio duration must be at most 30 seconds.
 - Audio may be used without an image or video.
+- Provider override — on DRA `seedance-2-5`, budget reference video and audio
+  together within a 30-second combined bucket. Do not generalize that
+  route-specific validator to other providers. A live 15-reference canary used
+  9 images, 3 two-second videos, and 3 two-second audio clips in one request.
 
 B — 2.0 / 2.0 Fast reference:
 - Up to 9 images, 3 videos, and 3 audio clips.
@@ -25376,6 +25382,9 @@ B — 2.0 / 2.0 Fast reference:
 - Total reference-video duration must be at most 15 seconds.
 - Total reference-audio duration must be at most 15 seconds.
 - Audio requires at least one image or video.
+- Provider override — DRA Fast accepted the full 9-image + 3-video + 3-audio
+  set in one paid run. Pass references through plural array fields; repeated
+  singular CLI flags retained only the final value during the creator's test.
 
 C — 2.5 edit or extend:
 - Accept exactly one source video, 4–30 seconds.
@@ -25395,6 +25404,24 @@ unknown upstream cap, use an obviously invalid disposable file and require a
 validation error with no task ID. Never probe with a boundary value that might
 be accepted and create a paid task. Keep any measured decoder tolerance internal
 and do not advertise it as extra usable duration.
+
+OUTPUT-DURATION EVIDENCE LADDER
+Record evidence per provider, exact model ID, mode, requested duration,
+resolution, and aspect ratio:
+1. DOCS_ONLY — documentation or schema states a range.
+2. PREFLIGHT_ONLY — dry-run accepts a value and returns no task ID or charge.
+3. GENERATED — a paid task reaches terminal success; save task ID, quote,
+   billed credits, output URL/hash, and measured container/stream durations.
+Do not promote a boundary from PREFLIGHT_ONLY to GENERATED. On the measured DRA
+route, 2.0 Mini generated at 5 seconds while 4 and 15 seconds were rejected
+(route range 5–12); 2.0 Fast generated at 4 seconds (route range 4–15);
+2.5 generated at 5 seconds, while 4 and 30 seconds passed dry-run only.
+
+AUDIO-FLAG VERIFICATION
+Treat `generate_audio=false` as request intent until the delivered file is
+measured. A DRA 2.0 Fast text-to-video canary requested audio off but returned
+non-silent AAC. Inspect streams and amplitude before promising a mute master;
+strip or mute the track in post when the delivery contract requires silence.
 ```
 
 **Why it works:** upload-time validation cannot know a future model, while
@@ -25406,6 +25433,11 @@ creation.
 Adapted from the [FlashMuse v1.0.0.90 implementation and measured upstream tests](https://github.com/lookxun/FlashMuse_Agent/commit/212606c7190eb90991160c924c93bbf68e8676ff),
 published August 9, 2026, and cross-checked against the official
 [BytePlus Seedance 2.5 input contract](https://docs.byteplus.com/en/docs/ModelArk/2607688).
+Additional primary route evidence: the creator's
+[September 15 duration matrix and no-spend boundary checks](https://github.com/btcfoxman/dra2api/blob/8cfb6fc116eb9e76eddaa7c00a2ecb60fa58c8a5/docs/duration-verification.md),
+[Seedance 2.5 15-reference paid run](https://github.com/btcfoxman/dra2api/blob/0790c125fd36bda612fc1467d2af5ba0529beab8/docs/verification-15-references.md),
+[Seedance 2.0 Fast 15-reference paid run](https://github.com/btcfoxman/dra2api/blob/d5546547782d19208d16cc9d5e5b709e9179c45b/docs/verification-fast-15-references.md),
+and [Fast audio-off output probe](https://github.com/btcfoxman/dra2api/commit/edf352d93b0fe2d73e0d9edae8dc96f88355eb3c).
 
 ### Single-shot template
 
@@ -34199,6 +34231,14 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 
 ## Sources
+
+- [btcfoxman / dra2api — September 15, 2026 route-scoped Seedance
+capability evidence: paid 2.5 and 2.0 Fast 15-reference runs, plural-array
+binding, model-specific duration outcomes, no-spend 2.5 boundary checks, and a
+Fast output-audio mismatch](https://github.com/btcfoxman/dra2api/commit/8cfb6fc116eb9e76eddaa7c00a2ecb60fa58c8a5)
+([2.5 paid-run record](https://github.com/btcfoxman/dra2api/blob/0790c125fd36bda612fc1467d2af5ba0529beab8/docs/verification-15-references.md),
+[Fast paid-run record](https://github.com/btcfoxman/dra2api/blob/d5546547782d19208d16cc9d5e5b709e9179c45b/docs/verification-fast-15-references.md),
+[duration evidence matrix](https://github.com/btcfoxman/dra2api/blob/8cfb6fc116eb9e76eddaa7c00a2ecb60fa58c8a5/docs/duration-verification.md))
 
 - [Nodaro — September 15, 2026 KIE Seedance 2.5
 `seedance-2-5` field repair: prompt-driven reference/edit reclassification,
