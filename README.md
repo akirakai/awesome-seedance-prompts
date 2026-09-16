@@ -356,6 +356,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Matched paper-boat render with Mini-to-standard escalation gate](#340-matched-paper-boat-render-with-mini-to-standard-escalation-gate)
   - [Motionless ivory lead against a synchronized black crowd](#341-motionless-ivory-lead-against-a-synchronized-black-crowd)
   - [Purple gate pillar to unfolded-letter storyboard film](#342-purple-gate-pillar-to-unfolded-letter-storyboard-film)
+  - [Permanent-HUD runaway-cart quest with micro-cutaway continuity](#343-permanent-hud-runaway-cart-quest-with-micro-cutaway-continuity)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -21221,6 +21222,134 @@ Adapted and rewritten from FanZeros' September 16, 2026
 and [generated MP4](https://github.com/FanZeros/videoGenerate/blob/1fc1f6617ec11a26f4a81bbf09296e9d53d5492a/gate-of-finality-intro/output/intro_30s.mp4).
 
 
+### 343. Permanent-HUD runaway-cart quest with micro-cutaway continuity
+
+**Verified model:** Seedance 2.5 — the original creator explicitly names the
+model beside the attached generated result and publishes the complete 15-second
+prompt in a direct reply  
+**Use case:** third-person open-world gameplay simulation, persistent HUD,
+causal mission progression, parkour, native Indonesian dialogue and
+gameplay-preserving portrait cutaways  
+**Mode:** text-to-video  
+**Suggested settings:** 15 seconds, 16:9, requested 60 fps, third-person
+over-the-shoulder game capture, native dialogue and street sound
+
+```text
+Create a 15-second capture from a fictional polished open-world RPG at tropical
+golden hour in Kayutangan Heritage, Malang, East Java. It must feel like one
+responsive third-person gameplay session rather than a trailer. Use an
+over-the-shoulder follow camera and allow exactly two 0.3-second portrait
+cutaways. Keep the permanent HUD visible, stable and correctly updated through
+both cutaways.
+
+PLAYER, COMPANION AND WORLD LOCK
+The playable character is one Indonesian SMA student in a white-and-gray school
+uniform with a backpack. His girlfriend is the only companion and begins beside
+him carrying two iced drinks. Preserve both identities, uniforms, carried
+objects and relative positions until an action changes them. Fill the route
+with believable Malang details: heritage shopfronts, overhead cables, food
+stalls, Indonesian motorcycles, a green angkot, students walking home and warm
+shop lights.
+
+HUD CONTRACT
+Keep every element in the same screen position for the full runtime:
+- top left: chibi player portrait, health, stamina and XP;
+- bottom left: compact street minimap with the companion as a blue icon;
+- top right: current mode or objective;
+- bottom centre: faint movement keys;
+- bottom right: one context action only when it becomes available.
+Begin at level 3 with 72/120 XP, full health and stamina, FREE ROAM at top right
+and no mission marker. Values and objectives may change only after the visible
+event that causes the change.
+
+0.0–1.2s | ordinary walk
+Let the player casually follow the street beside his girlfriend. Establish the
+vendor and a parked food cart uphill from the intersection. Keep both drinks in
+the girlfriend's hands.
+
+1.2–2.4s | mission trigger
+A wheel stopper visibly slips before the unattended cart rolls downhill. The
+vendor turns, panics and shouts in Indonesian, “Mas! Gerobaknya!” Replace FREE
+ROAM with STOP THE RUNAWAY CART, attach one yellow marker to the moving cart and
+show SHIFT — SPRINT at bottom right.
+
+2.4–4.0s | chase
+The player sprints; lower the follow camera slightly and drain stamina
+continuously. The cart narrowly misses two pedestrians, who jump aside only
+after seeing it approach. Do not spawn a collision or teleport any NPC.
+
+4.0–5.5s | parkour gate
+A parked motorcycle blocks the pavement. Show SPACE — VAULT, then let the
+player plant both hands, clear the seat, land and continue without a cut. Add
+PARKOUR +5 XP once, after the landing.
+
+5.5–7.0s | route decision
+The cart bounces into a narrow side lane. The player cuts between two food
+stalls instead of following the road. The girlfriend stays with the vendor near
+the starting point; the minimap must show the player closing on the cart while
+the companion icon remains behind.
+
+7.0–8.5s | contact struggle
+When the player reaches the rear frame, show E — GRAB. He takes the frame with
+both hands while running and is dragged several metres. Reduce stamina visibly
+from about 61 percent to 28 percent; do not let the cart stop on first contact.
+
+8.5–10.0s | causal stop
+The player braces one foot, pulls and rotates the cart sideways. Stop it inches
+before live traffic. A green angkot passes directly in front only after the
+cart is stationary. Remove the objective marker.
+
+10.0–11.0s | first micro-cutaway
+Use one 0.3-second portrait insert of the protagonist catching his breath, but
+leave the HUD fixed over the image. Return immediately to gameplay. The vendor
+arrives, laughs nervously and says, “Waduh, makasih banget, Mas!” Flash MISSION
+COMPLETE once at top right.
+
+11.0–12.2s | reward settlement
+Slide in one reward panel: +320 XP, +20,000 IDR, LOCAL REPUTATION +5 and the
+smaller bonus CART SAVIOR. Apply each reward once; never duplicate or reverse
+the values.
+
+12.2–13.2s | companion payoff
+The girlfriend catches up still holding both original drinks. Use the second
+and final 0.3-second portrait insert while keeping the HUD visible. She hands
+one drink to the protagonist and says, “Hero banget.” Add PARTNER AFFECTION +2
+only after the handoff.
+
+13.2–14.0s | level state
+Fill the existing XP bar, show level 3 changing once to level 4, use one brief
+white level-up glow around the avatar, then reset XP to 32/150.
+
+14.0–15.0s | playable exit
+Replace the completed objective with the optional task FIND BAKSO BEFORE
+SUNSET. Add one yellow waypoint roughly 80 metres away on the unchanged
+minimap. The girlfriend starts walking ahead; the protagonist, now holding one
+drink, follows when W — FOLLOW appears. End at 14.9 seconds in the live
+over-the-shoulder view as they move deeper into the same golden-hour street.
+
+AUDIO AND CONTROL FEEL
+Use continuous street ambience, motorcycles, cart-wheel rattle, footfalls,
+cloth and backpack movement, breath, context-confirmation sounds, short reward
+chimes and the three specified Indonesian dialogue lines. Keep movement
+grounded, physics causal and the humour understated. No fighting, trailer
+montage, cinematic black bars, disappearing HUD, extra cutaway, extra companion,
+duplicated drink, unreadable UI, premature reward, impossible parkour, teleport,
+random text, frozen ending or new location.
+```
+
+**Why it works:** the prompt separates three synchronized ledgers: physical
+mission causality, persistent interface state and companion-held props. The two
+portrait inserts are allowed only as measured interrupts under an unchanged
+HUD, so they add character reaction without granting the model permission to
+turn the sequence into a trailer. Every objective, prompt, reward and level
+change follows a visible trigger, making both the game logic and the final
+playable state auditable.
+
+Adapted and rewritten from DΞV / @junwatu's September 16, 2026
+[Seedance 2.5 generated-result post](https://x.com/junwatu/status/2100134593164710263)
+and [complete original prompt reply](https://x.com/junwatu/status/2100141098719236400).
+
+
 ## Reusable templates
 
 
@@ -35210,6 +35339,13 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 
 ## Sources
+
+
+- [DΞV / @junwatu — September 16, 2026 Seedance 2.5 fifteen-second
+third-person open-world RPG result with complete prompt reply, permanent HUD,
+causal runaway-cart mission, stateful rewards and two gameplay-preserving
+portrait cutaways](https://x.com/junwatu/status/2100134593164710263)
+([complete prompt](https://x.com/junwatu/status/2100141098719236400))
 
 
 - [monid-ai / monid — September 16, 2026 BytePlus ModelArk Seedance
