@@ -33962,6 +33962,117 @@ Adapted and rewritten from kafeichong's September 16, 2026
 ledger](https://github.com/kafeichong/sweetyshell_view_flow/commit/25cf3b6c771d5c22f0eeb34b423fe82de8e8968b).
 
 
+### Measured-output-canvas anchor prefit and version-aware delivery gate
+
+**Verified models:** Seedance 2.5 (`seedance-2-5`) and the Seedance 2.0
+standard, Fast and Mini routes (`seedance-2`, `seedance-2-fast`,
+`seedance-2-mini`) — verified from 3,000 completed production jobs plus
+controlled opening-frame comparisons published by the implementation author
+
+Use this before any image-to-video or endpoint-pair request whose first visible
+frame must survive without a one-frame size snap, crop jump or rapid exposure
+drift. Separate two decisions: first fit the asset to the pixels the selected
+route really returns, then choose whether that route should receive it as a
+literal frame or as a prompt-bound reference.
+
+```text
+EXACT-ROUTE PREFLIGHT
+Provider = [PROVIDER].
+Exact model = [seedance-2-5 / seedance-2 / seedance-2-fast /
+               seedance-2-mini].
+Resolution = [480p / 720p / 1080p].
+Delivery ratio = [16:9 / 9:16 / 1:1].
+Start frame = [ASSET ID, WIDTH x HEIGHT, HASH].
+End frame = [OPTIONAL ASSET ID, WIDTH x HEIGHT, HASH].
+Existing loose reference images = [ORDERED LIST].
+Frame-fit policy = measured output canvas.
+Frame-delivery policy = model-specific.
+
+MEASURED CANVAS LOOKUP
+Use a production-measured row for this exact model, resolution and ratio:
+- Seedance 2.5: 480p 16:9 = 854x480; 480p 9:16 = 480x854;
+  720p 16:9 = 1280x720; 720p 9:16 = 720x1280;
+  720p 1:1 = 960x960; 1080p 16:9 = 1920x1080.
+- Seedance 2.0 standard / Fast / Mini: 480p 16:9 = 864x496;
+  480p 9:16 = 496x864; 720p 16:9 = 1280x720;
+  720p 9:16 = 720x1280.
+
+Do not derive an unknown canvas from the nominal resolution label. When the
+exact combination has not been measured, fall back only to the declared aspect
+ratio; if even that is unresolved, preserve the original asset and mark the
+geometry as UNMEASURED.
+
+ANCHOR PREFIT
+Fit both start and end anchors before provider submission.
+- If an anchor already matches the measured canvas, leave it untouched.
+- If its aspect differs from the target by no more than 5%, resize to the exact
+  even-numbered target dimensions.
+- If the difference exceeds 5%, art-direct a crop to the target ratio first,
+  protecting face, product, logo, hands and action path, then resize.
+- Never stretch a square image directly into a portrait frame.
+- Preserve alpha when the source requires it.
+- Cache the derivative by source hash + target geometry + crop so retries and
+  continuation shots reuse identical pixels.
+
+MODEL-SPECIFIC DELIVERY
+For Seedance 2.5:
+  send the fitted opening and closing anchors as true frame inputs.
+
+For Seedance 2.0 standard / Fast / Mini:
+  append the fitted anchors after every user-supplied loose reference image;
+  preserve all existing reference ordinals;
+  bind the new ordinal explicitly in the prompt:
+  "Use @Image[N] as the opening (first) frame of the video."
+  If an end anchor is present, bind it separately as the closing frame.
+  Do not append a duplicate sentence when the prompt already owns that binding.
+
+IMAGE-CAP SAFETY
+Never evict a user's reference to make room for an anchor. If converting the
+anchor to a reference would exceed the model's image cap, retain frame delivery
+and flag the known visual-risk branch for review.
+
+PROMPT OWNERSHIP
+@Image[N] owns opening composition, identity, wardrobe, object geometry,
+lighting and colour.
+[OPTIONAL CLOSING IMAGE] owns the completed terminal arrangement.
+The text prompt owns only the causal motion between those states:
+[PREPARATION] -> [PRIMARY ACTION] -> [SETTLE].
+Keep one camera move and one light direction. No cut, reframing, duplicate
+subject, invented border, exposure pulse or aspect change.
+
+FIRST-SIX-FRAME ACCEPTANCE
+Inspect frame 0 and the next six frames before reviewing the full clip.
+Fail the take if:
+- frame 1 changes width, crop or subject scale relative to frame 0;
+- the anchor is crop-zoomed by the provider;
+- luminance drifts visibly before the intended action begins;
+- reference ordinals changed or the wrong image became the opening state;
+- start and end derivatives were fitted by different geometry rules.
+
+Record requested labels, derivative dimensions and hashes, resolved delivery
+mode, returned width x height, and PASS / FAIL evidence. A successful request
+without this early-frame comparison does not prove the anchor path.
+```
+
+**Why it works:** a nominal aspect token does not guarantee the same raster
+across Seedance versions. In the source tests, an unfitted 940x1672 portrait
+snapped one frame into five of ten Seedance 2.5 renders; the same image resized
+to the measured 720x1280 canvas snapped in none of three. The Seedance 2.0
+family also behaved differently by transport: literal frame delivery produced
+about a two-percent crop-zoom and an 11–26 percent darkening within six frames,
+while prompt-bound reference delivery held the opening look. The gate therefore
+keeps geometry and transport as separate, version-specific decisions.
+
+Adapted and rewritten from nodaroai's September 16, 2026
+[production-measured frame-fit and delivery
+commit](https://github.com/nodaroai/app.nodaro.ai/commit/14ef0bed7c514e91f0e71763faac215e846c711a),
+the versioned
+[output-canvas table](https://github.com/nodaroai/app.nodaro.ai/blob/14ef0bed7c514e91f0e71763faac215e846c711a/packages/shared/src/video-output-canvas.ts),
+[dispatch implementation](https://github.com/nodaroai/app.nodaro.ai/blob/14ef0bed7c514e91f0e71763faac215e846c711a/backend/src/lib/video-frame-dispatch.ts)
+and
+[pixel-level regression tests](https://github.com/nodaroai/app.nodaro.ai/blob/14ef0bed7c514e91f0e71763faac215e846c711a/backend/src/lib/__tests__/video-frame-fit.test.ts).
+
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -34985,6 +35096,16 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 ## Sources
 
+
+- [nodaroai / app.nodaro.ai — September 16, 2026 production-measured
+Seedance anchor-frame study: 3,000 completed-job canvas harvest, controlled
+Seedance 2.5 resize comparison, Seedance 2.0 standard/Fast/Mini frame-versus-
+reference delivery measurements, shared dispatch implementation and pixel-level
+regression suite](https://github.com/nodaroai/app.nodaro.ai/commit/14ef0bed7c514e91f0e71763faac215e846c711a)
+([measured canvas table](https://github.com/nodaroai/app.nodaro.ai/blob/14ef0bed7c514e91f0e71763faac215e846c711a/packages/shared/src/video-output-canvas.ts),
+[production guidance](https://github.com/nodaroai/app.nodaro.ai/blob/14ef0bed7c514e91f0e71763faac215e846c711a/docs/nodes/ai-video/generate-video.md),
+[dispatch implementation](https://github.com/nodaroai/app.nodaro.ai/blob/14ef0bed7c514e91f0e71763faac215e846c711a/backend/src/lib/video-frame-dispatch.ts),
+[regression tests](https://github.com/nodaroai/app.nodaro.ai/blob/14ef0bed7c514e91f0e71763faac215e846c711a/backend/src/lib/__tests__/video-frame-fit.test.ts))
 
 - [FanZeros / videoGenerate — September 16, 2026 Seedance 2.5
 single-request 30-second fantasy opening: complete 2×2-board prompt, successful
