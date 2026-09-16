@@ -34096,6 +34096,98 @@ and
 [pixel-level regression tests](https://github.com/nodaroai/app.nodaro.ai/blob/14ef0bed7c514e91f0e71763faac215e846c711a/backend/src/lib/__tests__/video-frame-fit.test.ts).
 
 
+### Request-derived reference-video rate key and poll-safe settlement
+
+**Verified model:** BytePlus ModelArk Seedance 2.0 Mini
+(`dreamina-seedance-2-0-mini-260615`) — the original developer preserved two
+live 480p, four-second task recordings: one ordinary generation settled at
+40,594 tokens, while the request containing a reference video settled at 80,770
+tokens on the provider's separate reference-video rate  
+**Use case:** asynchronous Seedance jobs whose quote, settlement and recovery
+must stay correct when request fields and poll-response metadata differ  
+**Mode:** text, image or reference-video generation through a task-based API
+
+```text
+IMMUTABLE REQUEST LEDGER
+Before submission, save:
+- exact public model and pinned endpoint handle;
+- prompt hash and ordered content[] manifest;
+- resolution, requested duration, aspect ratio and audio setting;
+- has_reference_video = YES only when the submitted content[] contains video;
+- selected rate key = [RESOLUTION / RESOLUTION_WITH_VIDEO];
+- quote token formula, rate revision, spend ceiling and submission timestamp.
+
+The REQUEST owns the billing tier. Never derive the rate key from a later model
+echo, display label or poll body.
+
+QUOTE
+1. Choose the vendor rate line from the immutable request:
+   no reference video -> [RESOLUTION]
+   reference video present -> [RESOLUTION_WITH_VIDEO]
+2. Estimate tokens with the documented geometry, fps and duration formula.
+3. If duration is AUTO, reserve the maximum duration the selected model may
+   choose; release unused funds only after authoritative settlement.
+4. Preserve reference-video time in the estimate when the route meters input
+   footage. Do not assume a short output makes the input free.
+
+SUBMIT
+Submit once. If the create response has no task ID, treat it as a synchronous
+rejection and prove the charge state before retrying. If it returns an ID,
+persist that ID before polling; the provider exposes no idempotency guarantee,
+so repeating the create call can purchase a second job.
+
+POLL
+Poll only the stored task ID.
+- queued / running -> continue polling;
+- transient non-2xx poll response -> keep the task open and retry the status
+  read; do not convert the network/read failure into a terminal generation
+  failure or submit again;
+- failed / cancelled / expired -> record the terminal task body and charge
+  evidence;
+- succeeded -> require a non-empty, downloadable video artifact.
+
+SETTLEMENT
+Read authoritative completion tokens from the terminal usage object, but price
+those tokens with the rate key captured from the request. Do not infer the tier
+from the echoed model ID: the live tasks returned a dated model name rather
+than the submitted endpoint handle, and an earlier implementation therefore
+recorded zero cost.
+
+Persist:
+request rate key -> returned completion tokens -> settled cost
+alongside task ID, terminal status, artifact URL and download checksum.
+
+ARTIFACT EXPIRY
+Download the completed video immediately to durable storage. Record the
+provider URL's expiry separately; a successful task whose signed URL later
+expires is not reproducible delivery without a saved artifact.
+
+ACCEPTANCE
+- exactly one create call is associated with the task ID;
+- rate key is reproducible from the original request;
+- returned usage supplies the token count but cannot change the rate tier;
+- an AUTO quote reserves the model maximum and releases only after settlement;
+- transient polling failure resumes the same task;
+- success requires a verified artifact, not only a terminal status;
+- the expiring result has been copied and checksummed.
+```
+
+**Why it works:** reference video affects both the token count and the vendor
+rate line. In the two live Mini recordings, the plain task used 40,594 tokens;
+the reference-video task used 80,770 because Ark also metered the input clip.
+Pricing that second task with the ordinary 480p line would have charged
+$0.282695 instead of the vendor's $0.169617, a 67% overcharge. Separating
+request-owned classification from response-owned usage also survives provider
+echo changes, while poll-safe recovery prevents a paid task from being
+abandoned and purchased again.
+
+Adapted and rewritten from monid-ai's September 16, 2026
+[ByteDance connector and live-recording commit](https://github.com/monid-ai/monid/commit/fe39d53e03796f15ea1e403386135fd0c4321b48),
+the [plain Seedance 2.0 Mini task fixture](https://github.com/monid-ai/monid/blob/fe39d53e03796f15ea1e403386135fd0c4321b48/connectors/bytedance/fixtures/task-succeeded.json),
+the [reference-video task fixture](https://github.com/monid-ai/monid/blob/fe39d53e03796f15ea1e403386135fd0c4321b48/connectors/bytedance/fixtures/task-succeeded-ref-video.json),
+and the [poll and settlement implementation](https://github.com/monid-ai/monid/blob/fe39d53e03796f15ea1e403386135fd0c4321b48/connectors/bytedance/provider.ts).
+
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -35119,6 +35211,15 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 ## Sources
 
+
+- [monid-ai / monid — September 16, 2026 BytePlus ModelArk Seedance
+connector with two live `dreamina-seedance-2-0-mini-260615` recordings:
+40,594-token plain generation versus 80,770-token reference-video generation,
+request-owned rate selection, transient-poll recovery and signed-result expiry
+handling](https://github.com/monid-ai/monid/commit/fe39d53e03796f15ea1e403386135fd0c4321b48)
+([plain task](https://github.com/monid-ai/monid/blob/fe39d53e03796f15ea1e403386135fd0c4321b48/connectors/bytedance/fixtures/task-succeeded.json),
+[reference-video task](https://github.com/monid-ai/monid/blob/fe39d53e03796f15ea1e403386135fd0c4321b48/connectors/bytedance/fixtures/task-succeeded-ref-video.json),
+[provider lifecycle](https://github.com/monid-ai/monid/blob/fe39d53e03796f15ea1e403386135fd0c4321b48/connectors/bytedance/provider.ts))
 
 - [ofoxai / skills — September 16, 2026 Ofox BytePlus
 `bytedance/seedance-2.5` authorized-likeness A/B: identical synthetic
