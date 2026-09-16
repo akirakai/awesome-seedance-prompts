@@ -362,6 +362,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Reference-locked storm courier three-shot chase](#346-reference-locked-storm-courier-three-shot-chase)
   - [Low-axis fox attention-to-exit reference beat](#347-low-axis-fox-attention-to-exit-reference-beat)
   - [Three-shot downhill mud run with rider continuity](#348-three-shot-downhill-mud-run-with-rider-continuity)
+  - [Reference-locked single-leg bench hip drive](#349-reference-locked-single-leg-bench-hip-drive)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -21698,6 +21699,53 @@ Adapted and rewritten from ComfyUI's September 16, 2026
 and [generated downhill-racer MP4](https://media.comfy.org/website/workshop/byteplus/seedance-2-5-text-to-video/downhill-racer-in-the-mud.mp4).
 
 
+### 349. Reference-locked single-leg bench hip drive
+
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`) — the original
+creator records that this body-to-bench layout failed twice on the Mini route,
+then completed on 2.5; the production repository preserves the expanded prompt
+structure and the retained catalogue MP4  
+**Use case:** exercise demonstration, reference-locked athlete identity,
+apparatus-contact clarity and large-range cyclic motion  
+**Mode:** multi-reference image-to-video  
+**Recorded settings:** 4 seconds, 9:16, 480p, audio off, two complete repetitions
+
+```text
+Use the supplied adult-athlete references only for identity, body proportions
+and training clothes. Keep exactly one athlete and one flat exercise bench.
+
+Frame the full body from a stable three-quarter side view on a busy gym floor.
+Place the bench crosswise behind the athlete, never lengthwise under the body.
+Only the shoulder blades touch the near edge of the bench; the head hangs free
+beyond it. One foot is planted flat on the floor with that knee bent. The other
+leg stays straight and extended forward in the air. The hands never grip the
+bench.
+
+Show two complete, controlled repetitions with an unmistakable range:
+- LOW STATE — hips hang close to the floor, clearly below the bench edge;
+- HIGH STATE — hips drive upward until shoulder, hip and planted knee form one
+  straight horizontal line; glutes tighten while the free leg remains straight.
+Travel fully from low to high and back twice. Do not pause in one pose.
+
+Keep the bench, shoulder-blade contact, planted foot, free-leg identity and
+camera position unchanged from first frame to last. The athlete never stands,
+sits on top of the bench, lies along its length, switches legs or turns the
+movement into a bench dip. No cropped contact points, extra person, extra bench,
+sliding foot, bent free leg, camera move, text, logo or native audio.
+```
+
+**Why it works:** the prompt defines the specialised setup through visible
+contact geometry rather than the exercise name, assigns each leg a persistent
+role and turns motion amplitude into two testable endpoint states. This addresses
+the source failure directly: Mini repeatedly substituted a bench dip, while the
+same relationship-specific brief completed on the stronger 2.5 route.
+
+Adapted and rewritten from AutoCare's September 16, 2026
+[primary generation and review commit](https://github.com/AutoCare-1/trainos/commit/0c5dfacbc69d94ba7553ec77c93850079e79cea0),
+[complete production prompt record](https://github.com/AutoCare-1/trainos/blob/0c5dfacbc69d94ba7553ec77c93850079e79cea0/backend-laravel/database/dicas_demonstracao.php)
+and [retained generated MP4](https://pub-9482945b571143e887b925bd2e0565e1.r2.dev/exercise-demos/elevacao-de-quadril-unilateral.mp4).
+
+
 ## Reusable templates
 
 
@@ -25539,6 +25587,10 @@ No camera move or crop may hide the start, peak range, contacts or apparatus.
 5. MOTION AUDIT
 Extract at least five frames spanning setup, early motion, midpoint, peak range
 and return. Judge the action strip rather than frame zero.
+For periodic movement, do not sample at intervals equal or close to one
+repetition period: those frames can land on the same phase and make real travel
+look static. Before rejecting amplitude, resample at off-period or half-period
+offsets and verify that both endpoint states appear.
 Reject as severe if the action family changes, the prop/anchor topology breaks,
 the movement uses the wrong plane or joint, or a defining contact disappears.
 Regenerate only severe failures that belong to a supported motion family.
@@ -25552,15 +25604,19 @@ feasibility route prevents wasted retries on apparatus the model does not
 reliably represent. In the creator's audit, severe errors were about 42% for
 machine/pulley/Smith movements versus 6% for free-weight, bodyweight and cardio
 movements; pre-existing descriptive tips did not materially change the former
-failure rate.
+failure rate. A later 97-frame, two-repetition batch exposed a review alias:
+frames 10, 48 and 86 were nearly one repetition apart and falsely made four
+successful clips look static; off-period frames 4, 28, 52 and 76 recovered the
+missing amplitude.
 
 **Sources:** AutoCare's
 [original frame-by-frame audit and regeneration commit](https://github.com/AutoCare-1/trainos/commit/d4a7caafb15d15756c46f530beb9aa68ea035d19),
 the
 [complete 19-prompt correction set](https://github.com/AutoCare-1/trainos/blob/d4a7caafb15d15756c46f530beb9aa68ea035d19/backend-laravel/database/dicas_demonstracao.php),
-and the
+the
 [402-video motion review](https://github.com/AutoCare-1/trainos/blob/d4a7caafb15d15756c46f530beb9aa68ea035d19/backend-laravel/database/revisao_demonstracoes_2026-08-25.md),
-published August 25, 2026.
+and the September 16, 2026
+[bodyweight batch with the confirmed phase-resampling correction](https://github.com/AutoCare-1/trainos/commit/0c5dfacbc69d94ba7553ec77c93850079e79cea0).
 
 ### Semantic no-text contradiction gate and shot-level patch
 
@@ -36720,6 +36776,8 @@ Community examples and techniques referenced in this README:
 - [Jacob Ye — Seedance 2.5 framing-feasibility, prop-entry and body-occupancy production review](https://github.com/jacobye2017-afk/jacob-ye-seedance-prompt/commit/b16cde84e8565697fcde10d8ca4cf54e903c0d82)
 
 - [AutoCare — Seedance 2.0 Mini motion-family feasibility audit and wrong-neighbour exclusions](https://github.com/AutoCare-1/trainos/commit/d4a7caafb15d15756c46f530beb9aa68ea035d19) ([complete correction prompts](https://github.com/AutoCare-1/trainos/blob/d4a7caafb15d15756c46f530beb9aa68ea035d19/backend-laravel/database/dicas_demonstracao.php), [402-video frame review](https://github.com/AutoCare-1/trainos/blob/d4a7caafb15d15756c46f530beb9aa68ea035d19/backend-laravel/database/revisao_demonstracoes_2026-08-25.md))
+
+- [AutoCare — Seedance 2.5 single-leg bench hip-drive recovery and phase-aware motion audit](https://github.com/AutoCare-1/trainos/commit/0c5dfacbc69d94ba7553ec77c93850079e79cea0) ([complete prompt set](https://github.com/AutoCare-1/trainos/blob/0c5dfacbc69d94ba7553ec77c93850079e79cea0/backend-laravel/database/dicas_demonstracao.php), [retained MP4](https://pub-9482945b571143e887b925bd2e0565e1.r2.dev/exercise-demos/elevacao-de-quadril-unilateral.mp4))
 
 - [Kiki / @Mayz1169 — Renoise Seedance 2.5 1080p desert-oracle continuation, generated result and complete prompt](https://x.com/Mayz1169/status/2093327980961689803) ([complete prompt](https://x.com/Mayz1169/status/2093328286650880258))
 
