@@ -355,6 +355,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Remote-work voice note to impossible-desert pullback](#339-remote-work-voice-note-to-impossible-desert-pullback)
   - [Matched paper-boat render with Mini-to-standard escalation gate](#340-matched-paper-boat-render-with-mini-to-standard-escalation-gate)
   - [Motionless ivory lead against a synchronized black crowd](#341-motionless-ivory-lead-against-a-synchronized-black-crowd)
+  - [Purple gate pillar to unfolded-letter storyboard film](#342-purple-gate-pillar-to-unfolded-letter-storyboard-film)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -21140,6 +21141,86 @@ Adapted and rewritten from Big_Maximum_92's September 14, 2026
 [original Seedance 2.5 result, complete prompt and reusable production
 method](https://www.reddit.com/r/seedance2pro/comments/1wg066l/how_to_made_this_viral_one_vs_the_crowd_fashion/).
 
+### 342. Purple gate pillar to unfolded-letter storyboard film
+
+**Verified model:** Seedance 2.5 — the original creator publishes the complete
+single-request prompt, successful task ID, cost, 30-second 720p result and
+saved last frame together in the production repository  
+**Use case:** fantasy title-sequence opening, whole-board image-to-video,
+multi-shot continuity, light-motif match cuts and readable final-state hold  
+**Mode:** image-to-video from one 2×2 storyboard board  
+**Suggested settings:** 30 seconds, 16:9, 720p, native score, effects and aged
+Chinese male narration
+
+```text
+Create one complete 30-second cinematic sequence in a single generation.
+@Image1 is the only visual reference: a clean 2×2 storyboard with four
+widescreen cells separated by thin gutters. Read the cells left to right, then
+top to bottom as four consecutive editorial shots. Never show the board itself,
+its gutters, cell edges, labels or numbers. Do not crop the board into separate
+uploads.
+
+GLOBAL CONTRACT
+Dark epic fantasy, uncluttered compositions, one dominant light source and one
+primary camera movement per shot. Keep the same monumental gate architecture
+and the same narrow purple-white vertical light across the middle two shots.
+The purple light is the visual handoff connecting city, gate, silhouettes and
+letter.
+
+Audio runs continuously: forceful brass, choir and war drums rather than
+ambient pads. Add a distant aged Chinese male narrator. Synchronize a sky-tear
+boom, gate thunder, white-flash choir impact and final candle hush to the four
+transitions. Do not add a separate replacement soundtrack.
+
+0–7 SECONDS — CITY HOOK
+Use the top-left storyboard cell as the scene authority. Begin on a vast city
+under an open night sky and perform one slow dolly inward. At five seconds, the
+warm core straightens into a single vertical purple-white pillar while city
+lamps extinguish outward in sequence. Accelerate into the pillar until its light
+fills the frame.
+
+7–13 SECONDS — GATE PRESSURE
+Match the full-frame pillar to the narrow illuminated slit in the top-right
+gate. Keep the architecture symmetrical and unchanged. Crash forward along the
+slit only, then enter the light. Do not add an orbit, crane or second movement.
+
+13–21 SECONDS — CROSSING
+Cut through a clean white flash into the bottom-left composition. Exactly four
+anonymous silhouettes walk toward the same gate, cross the threshold and
+vanish. Hold on the now-empty gate for one beat. The vertical pillar contracts
+into one tiny stable purple point at frame centre.
+
+21–30 SECONDS — LETTER AFTERMATH
+Match that purple point to a small accent beside the letter in the bottom-right
+cell. Reveal a quiet tabletop with one candle and one hat. The final image is a
+single fully unfolded Chinese letter already written on one continuous page;
+do not animate handwriting or assemble multiple sheets. Settle the camera,
+allow the music to fall into candle hush and hold the complete letter through
+the last frame. Never return to the gate and do not add a title card.
+
+No captions, subtitles, numbers, logos, watermarks, storyboard borders, panel
+layout, faces, extra figures, extra props, dissolves, duplicated camera moves,
+changed gate geometry or cropped final letter.
+```
+
+**Why it works:** the board is assigned chronology rather than being treated as
+an on-screen collage, while a single purple-light motif supplies a concrete
+match point across otherwise different spaces. Each interval owns one camera
+move, and the final shot defines an already-complete physical state, giving the
+model enough time to settle on the full letter instead of improvising a late
+writing animation.
+
+The accepted run used one uncut storyboard upload and one paid generation:
+task `cgt-20260916123209-xhfvw`, 9,085 credits, 30 seconds at 16:9 and
+720p. The creator committed both the generated MP4 and its final frame.
+
+Adapted and rewritten from FanZeros' September 16, 2026
+[Seedance 2.5 delivery commit](https://github.com/FanZeros/videoGenerate/commit/1fc1f6617ec11a26f4a81bbf09296e9d53d5492a),
+[complete source prompt](https://github.com/FanZeros/videoGenerate/blob/1fc1f6617ec11a26f4a81bbf09296e9d53d5492a/gate-of-finality-intro/VIDEO_PROMPT.md),
+[production ledger](https://github.com/FanZeros/videoGenerate/blob/1fc1f6617ec11a26f4a81bbf09296e9d53d5492a/gate-of-finality-intro/PRODUCTION.md)
+and [generated MP4](https://github.com/FanZeros/videoGenerate/blob/1fc1f6617ec11a26f4a81bbf09296e9d53d5492a/gate-of-finality-intro/output/intro_30s.mp4).
+
+
 ## Reusable templates
 
 
@@ -34904,6 +34985,16 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 ## Sources
 
+
+- [FanZeros / videoGenerate — September 16, 2026 Seedance 2.5
+single-request 30-second fantasy opening: complete 2×2-board prompt, successful
+task and 9,085-credit ledger, four-shot purple-light match structure, native
+score and narration, committed 720p MP4 and saved final
+frame](https://github.com/FanZeros/videoGenerate/commit/1fc1f6617ec11a26f4a81bbf09296e9d53d5492a)
+([complete prompt](https://github.com/FanZeros/videoGenerate/blob/1fc1f6617ec11a26f4a81bbf09296e9d53d5492a/gate-of-finality-intro/VIDEO_PROMPT.md),
+[production record](https://github.com/FanZeros/videoGenerate/blob/1fc1f6617ec11a26f4a81bbf09296e9d53d5492a/gate-of-finality-intro/PRODUCTION.md),
+[generated MP4](https://github.com/FanZeros/videoGenerate/blob/1fc1f6617ec11a26f4a81bbf09296e9d53d5492a/gate-of-finality-intro/output/intro_30s.mp4),
+[last frame](https://github.com/FanZeros/videoGenerate/blob/1fc1f6617ec11a26f4a81bbf09296e9d53d5492a/gate-of-finality-intro/output/last_frame.jpeg))
 
 - [kafeichong / sweetyshell_view_flow — September 16, 2026
 ByteDance Seedance 2.5 `doubao-seedance-2-5-260628` paid omni-reference
