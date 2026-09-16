@@ -21669,13 +21669,18 @@ and [three-second QA strip](https://github.com/robertmckinley-alt/hempclaude/blo
 
 ### Prompt-intent task routing and terminal-failure no-resubmit gate
 
-**Verified model:** Seedance 2.5 through BytePlus ModelArk and KIE
-`seedance-2-5` — one production integrator reproduced queued
-`TaskTypeMismatch` / `TaskTypeConstraint` and privacy failures; a second
-recorded two otherwise identical reference-video nodes where the prompt caused
-Seedance to classify one as a normal reference generation and the other as an
-edit requiring source-inherited ratio and duration. Both repairs include the
-provider adapter and regression tests
+**Verified model:** Seedance 2.5 through BytePlus ModelArk, KIE
+`seedance-2-5`, and fal `fal-ai/seedance-2.5/image-to-video` /
+`fal-ai/seedance-2.5/text-to-video` — one production integrator reproduced
+queued `TaskTypeMismatch` / `TaskTypeConstraint` and privacy failures; a
+second recorded two otherwise identical reference-video nodes where the prompt
+caused Seedance to classify one as a normal reference generation and the other
+as an edit requiring source-inherited ratio and duration. A third production
+run had all seven paid fal submissions accepted, then lost status access
+because the polling route's signed-claim allowlist omitted both 2.5 model IDs;
+after the shared-model repair, polling returned 200 and the client linked the
+completed clips. All three repairs preserve executable routing or regression
+evidence
 
 Use this before sending an attached-video prompt to Seedance 2.5. The declared
 UI mode is not sufficient by itself: the model also reads the words and may
@@ -21750,6 +21755,19 @@ settles to the inherited source length. If a reference duration cannot be
 measured, use the provider's documented per-clip ceiling; never re-probe a
 later-expired URL and silently shrink the stored reservation.
 
+STATUS-MODEL PARITY GATE
+Before deployment, derive one canonical set of exact provider model IDs from
+the submission adapters. Require the same set in every signed status-claim
+validator, polling route and manual-resume route. For each model, store whether
+the resume payload requires an image anchor; do not duplicate this rule in
+separate stale allowlists.
+
+If generation POSTs were accepted but polling reports "unsupported model":
+- classify this as STATUS_ROUTE_DRIFT, not a generation failure;
+- preserve every paid task ID and signed receipt;
+- repair the read/resume registry, then resume polling those same tasks;
+- never POST replacement generations merely to obtain new status claims.
+
 ASYNC CHECKPOINT
 After a successful POST, persist task_id before the first poll.
 queued or running -> keep polling on the existing task.
@@ -21799,8 +21817,9 @@ accept an explicit subtask. For gateways where Seedance itself makes the final
 classification from the prompt, the narrow three-signal fallback preserves the
 user's ratio and duration on true reference runs yet follows the source clip on
 edits. The stored duration ledger prevents the inherited-length branch from
-being under-reserved, while terminal-state isolation prevents a scheduler from
-silently purchasing the same generation again.
+being under-reserved, the shared model registry keeps a successful write
+reachable through status and resume paths, and terminal-state isolation
+prevents a scheduler from silently purchasing the same generation again.
 
 Adapted from madebyak's September 14, 2026
 [Seedance 2.5 production repair](https://github.com/madebyak/clickefy/commit/481db496b3fb37b813a641bc185ed1bfb5ccbd48),
@@ -21813,6 +21832,11 @@ Nodaro's September 15, 2026
 [one-retry KIE adapter](https://github.com/nodaroai/app.nodaro.ai/blob/98903655f34d8c276737520aa0509fd98ad4f047/backend/src/providers/kie/video.ts),
 [operator guide and worked billing example](https://github.com/nodaroai/app.nodaro.ai/blob/98903655f34d8c276737520aa0509fd98ad4f047/docs/nodes/ai-video/generate-video.md)
 and [reference-duration regression tests](https://github.com/nodaroai/app.nodaro.ai/blob/98903655f34d8c276737520aa0509fd98ad4f047/backend/src/ee/billing/__tests__/seedance2-ref-video-credits.test.ts).
+The status-model parity gate was verified by UseKineo's September 15–16, 2026
+[seven-task Seedance 2.5 production repair](https://github.com/josephsskaf-hub/UseKineo/commit/d519837064414258247cea8eb220a742b970bf24),
+[status route](https://github.com/josephsskaf-hub/UseKineo/blob/d519837064414258247cea8eb220a742b970bf24/app/api/cinematic-clip-status/route.ts),
+[resume route](https://github.com/josephsskaf-hub/UseKineo/blob/d519837064414258247cea8eb220a742b970bf24/app/api/retry-hollywood-scene/route.ts)
+and [live run record](https://github.com/josephsskaf-hub/UseKineo/commit/3b52d010b1690bb9978c09216243c07305fdd9fa).
 
 
 ### Idempotent CN-reference registration and readiness-gated submission
@@ -34687,6 +34711,15 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 ## Sources
 
+
+- [Joseph Skaf / UseKineo — September 15–16, 2026 fal Seedance 2.5
+seven-task production run: all submissions accepted, signed status claims then
+blocked by stale model allowlists, shared image/text model registry repair,
+anchor-aware resume validation, 200 polling recovery and completed-clip
+linkage](https://github.com/josephsskaf-hub/UseKineo/commit/d519837064414258247cea8eb220a742b970bf24)
+([live run record](https://github.com/josephsskaf-hub/UseKineo/commit/3b52d010b1690bb9978c09216243c07305fdd9fa),
+[status route](https://github.com/josephsskaf-hub/UseKineo/blob/d519837064414258247cea8eb220a742b970bf24/app/api/cinematic-clip-status/route.ts),
+[resume route](https://github.com/josephsskaf-hub/UseKineo/blob/d519837064414258247cea8eb220a742b970bf24/app/api/retry-hollywood-scene/route.ts))
 
 - [daddy zo / tester — September 15, 2026 Higgsfield Seedance 2.5
 sixth paid coffee-roaster take and signed follow-up: exact model and jobs,
