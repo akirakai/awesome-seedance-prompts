@@ -27210,7 +27210,8 @@ invalid control removed](https://github.com/kent0908/the-blue-wing/commit/0d6bc2
 ### Terminal-status result-body gate and likeness access-tier router
 
 **Verified models:** Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`
-on fal), Seedance 2.0 on fal plus BytePlus ModelArk
+on fal and `bytedance/seedance-2.5` through Ofox's BytePlus upstream),
+Seedance 2.0 on fal plus BytePlus ModelArk
 (`dreamina-seedance-2-0-260128`), and Seedance 2.0 Mini
 (`bytedance/seedance-2.0-mini` on OpenRouter) — the creators recorded
 zero-charge policy rejections, and the Mini probe separately reproduced a
@@ -27306,6 +27307,17 @@ real-person path, require per-user facial verification, portrait authorization,
 and the verified user's own likeness. Otherwise remove the likeness references
 or choose a separately verified policy-compatible model.
 
+For Ofox's pinned BytePlus route only, the original maintainer measured a
+single-variable authorization probe on `bytedance/seedance-2.5`: the same
+synthetic portrait, prompt, 4-second 480p image-to-video settings and upstream
+were submitted once with `--real-person true` and once without it. The declared
+arm completed as job `28eee177-1eab-4852-a72f-d6a2de695672`, delivered the
+portrait subject and cost $0.44; the control returned HTTP 400
+`input_moderation_failed` and was unbilled. Treat that flag as an explicit
+rights assertion and provider-specific preprocessing path, never as a generic
+moderation bypass: expose it only after the user confirms authorization for the
+likeness, preserve that confirmation in the request ledger, and do not silently
+add it while retrying a rejected task.
 
 POLICY SNAPSHOT AND FALLBACK ROUTER
 Treat `accepts photoreal references` as a dated route observation, not a
@@ -27343,6 +27355,8 @@ ACCEPTANCE
 - a valid output artifact, not a status label, proves success;
 - charge state is evidence-backed;
 - likeness ownership and authorization match the selected access tier;
+- Ofox's `--real-person true` is available only for a recorded authorized
+  likeness on the measured Seedance 2.5 / BytePlus route, never auto-added;
 - the refusing model-route pair cannot be selected as its own fallback;
 - warning text, action target and submitted model resolve from one snapshot;
 - when no compatible target remains, the warning stays and the action vanishes;
@@ -27357,9 +27371,18 @@ polling or retry logic, while the access-tier branch explains why the same
 capability can differ by route. The dated-policy snapshot handles a stricter
 rule arriving without a model-ID change. Excluding the refusing route and
 deriving copy plus behavior from one fallback resolver prevents a one-click
-retry from resubmitting to the model that just rejected the assets.
+retry from resubmitting to the model that just rejected the assets. The
+controlled Ofox A/B isolates the authorization flag from portrait selection,
+prompt wording and route choice while preserving the crucial boundary between
+declaring legitimate rights and evading a policy decision.
 
-Adapted from Wigly's August 29, 2026
+Adapted from Ofox's September 16, 2026
+[single-variable Seedance 2.5 authorization probe and paid job record](https://github.com/ofoxai/skills/commit/5e315efdeb5a9dbec163ab7e61be52333f9b9731),
+the maintainer's
+[repository-wide correction and evidence-scoping pass](https://github.com/ofoxai/skills/commit/2cfe6f1a6c97f56f24e57dd50a158d35954d0a08),
+and the
+[published 1.5.5 release](https://github.com/ofoxai/skills/commit/1253b21638bacc0d7ada88ade9919c42f1d2a8bc).
+Also adapted from Wigly's August 29, 2026
 [live Seedance 2.5 image/video reference re-test and routing record](https://github.com/corpomedical/picacho/commit/5fdd64be01d5857803ad58b9c04039b4572691a3),
 the [versioned endpoint and operational notes](https://github.com/corpomedical/picacho/blob/5fdd64be01d5857803ad58b9c04039b4572691a3/src/lib/generations/providers/video-models.ts),
 the September 3
@@ -35096,6 +35119,15 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 ## Sources
 
+
+- [ofoxai / skills — September 16, 2026 Ofox BytePlus
+`bytedance/seedance-2.5` authorized-likeness A/B: identical synthetic
+portrait, prompt and 4-second 480p I2V settings; `--real-person true` completed
+and billed $0.44 while the control was rejected before billing, followed by a
+repository-wide claim audit and published 1.5.5
+correction](https://github.com/ofoxai/skills/commit/5e315efdeb5a9dbec163ab7e61be52333f9b9731)
+([scope correction](https://github.com/ofoxai/skills/commit/2cfe6f1a6c97f56f24e57dd50a158d35954d0a08),
+[published release](https://github.com/ofoxai/skills/commit/1253b21638bacc0d7ada88ade9919c42f1d2a8bc))
 
 - [nodaroai / app.nodaro.ai — September 16, 2026 production-measured
 Seedance anchor-frame study: 3,000 completed-job canvas harvest, controlled
