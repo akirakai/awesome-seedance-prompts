@@ -357,6 +357,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Motionless ivory lead against a synchronized black crowd](#341-motionless-ivory-lead-against-a-synchronized-black-crowd)
   - [Purple gate pillar to unfolded-letter storyboard film](#342-purple-gate-pillar-to-unfolded-letter-storyboard-film)
   - [Permanent-HUD runaway-cart quest with micro-cutaway continuity](#343-permanent-hud-runaway-cart-quest-with-micro-cutaway-continuity)
+  - [Reef-bone colossus gauntlet with component-damage ledger](#344-reef-bone-colossus-gauntlet-with-component-damage-ledger)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -21350,6 +21351,124 @@ Adapted and rewritten from DΞV / @junwatu's September 16, 2026
 and [complete original prompt reply](https://x.com/junwatu/status/2100141098719236400).
 
 
+### 344. Reef-bone colossus gauntlet with component-damage ledger
+
+**Verified model:** Seedance 2.5 — the original creator explicitly labels the
+attached result with this version, publishes the full initial-frame prompt and
+complete 30-second animation prompt in a direct reply, and hosts a 30.144-second
+generated video in the source post  
+**Use case:** human-versus-colossus fantasy choreography, image-locked identity,
+attackable anatomy, subordinate-enemy continuity, cumulative environment damage
+and unresolved threat endings  
+**Mode:** image-to-video from one designed opening frame  
+**Suggested settings:** 30 seconds, 16:9, aggressive anamorphic 35 mm language,
+handheld tracking, whip pans, heavy motion blur and dense practical debris
+
+```text
+Create a 30-second live-action fantasy battle in harsh daylight inside one
+ruined coastal fishing village. Use @Image1 as the exact opening-frame authority
+for the combatants, their scale relationship, costume, creature construction
+and village geography. Preserve that design while movement and damage evolve.
+
+IDENTITY AND SCALE LOCK
+The human fighter is seen primarily from behind: black mohawk, red cape,
+white loose trousers with one red mark, rope belt and turquoise energy around
+both hands. He stays human-sized.
+
+The opponent is one towering reef-bone colossus: giant skull, two massive bone
+arms, black hair-like tendrils, a red coral-flesh mass, several attached
+skeletons, red eyes and a turquoise-lit mouth. The skull remains vastly larger
+than the fighter. Weathered shacks, beached boats, doors and broken docks are
+constant scale witnesses; never shrink the monster or enlarge the human.
+
+ATTACKABLE-COMPONENT LEDGER
+Treat jaw, teeth, left eye socket, each bone wrist, black tendrils, red coral
+cluster and attached skeletons as distinct owned parts. A strike affects only
+the contacted part. Damage persists:
+- the first mouth blast scorches and cracks the lower jaw;
+- exactly one diving skeleton is destroyed during the first exchange;
+- one red tendril cluster is severed during the boat-vault exchange and stays
+  absent;
+- a later skeleton is torn free and thrown, reducing the attached count once;
+- the left eye socket takes the final uppercut but the colossus survives.
+Do not regenerate detached parts, transfer wounds or replace the creature.
+
+0–4s | immediate collision
+Start at full speed with no establishing pause. The fighter explodes across wet
+sand while both hands flare turquoise and the cape snaps behind him. The
+colossus drives one bone arm into the street. Show contact before the shockwave;
+sand, seaweed and planks burst outward and one named shack collapses. Preserve
+the remaining village geography.
+
+4–8s | low tracking exchange
+Track beside the fighter close to ground level. He slides beneath the same bone
+arm and fires one compact blast into the lower jaw. Black tendrils strike the
+ground around him. Two attached skeletons release and dive; he destroys only
+one with an energy-charged elbow while the other remains active. Let bone dust
+and turquoise sparks follow the impact rather than precede it.
+
+8–13s | boat-vault orbit
+Move into an orbiting medium shot with a controlled Dutch angle. The fighter
+plants on one broken boat, vaults upward and lands two energy hammer blows on
+the skull cheek. The colossus splits a second shack with its other bone arm.
+The fighter rolls through falling timber, rises and uses one spinning back kick
+to sever the designated red tendril cluster. Keep the skull, both hands and
+contact point readable through the orbit.
+
+13–18s | close-range component relay
+Use frantic handheld coverage without losing screen direction. The fighter
+catches one black tendril, pulls himself close, tears one skeleton from the red
+coral mass and throws it clear. Continue with exactly three contacts in order:
+an upward turquoise palm under the teeth, a horizontal elbow, then a downward
+axe kick onto one bone wrist. The mouth closes after the palm; turquoise light,
+bone chips and red fragments come from their correct impact points.
+
+18–23s | controlled power spike
+Briefly stretch the impact time without freezing the scene. The fighter plants
+both feet, winds both hands into one spiralling turquoise vortex and drives a
+rising double-palm blast into the reopened mouth. The colossus recoils; its
+existing jaw crack widens, the coral mass tears and remaining attached
+skeletons are thrown outward. The shockwave flattens two additional shacks.
+Hang sand and red particles for a beat while limbs and cape continue moving.
+
+23–28s | ascent and finishing combination
+Return to real-time speed. In a wide shot, the fighter runs up the fallen bone
+arm, leaps and grips the skull ridge. Push tighter as he delivers an energy
+uppercut into the left eye socket, then one two-handed overhead strike. The
+colossus staggers but does not fall; its jaw hangs open and surviving tendrils
+lash with reduced reach. The fighter lands low with his aura still active.
+
+28–30s | unresolved reverse close-up
+Hard cut to an extreme close reverse angle. Keep the fighter blurred in the
+near foreground from behind three-quarter view, breathing hard with sand on
+skin and turquoise energy fading along his arms. Hold the damaged colossus
+sharp in the background: red eyes flare, the cracked mouth opens with a deeper
+turquoise glow and the remaining skeletons begin crawling forward. End on
+renewed danger, not a victory pose or freeze frame.
+
+CAMERA AND FAILURE CONTROL
+Use relentless tracking, motivated whip pans and heavy but readable motion blur.
+Keep daylight, coastline direction and the original spatial axis unchanged.
+Debris must originate from a visible strike and remain where it lands. Reject
+character redesign, scale collapse, duplicated fighter, replacement colossus,
+instant healing, shuffled damage, reattached skeleton, random extra limb,
+unowned explosion, consequence-free shack destruction, weightless contact,
+teleport, idle gap, premature monster death, text, subtitle, logo, game HUD or
+final still frame.
+```
+
+**Why it works:** the creature is not treated as one undifferentiated target.
+Every attack owns a named anatomical slot, a one-time state change and a
+persistent consequence, while shacks and boats make scale and collateral damage
+independently checkable. The last reverse close-up preserves accumulated damage
+but deliberately withholds victory, turning the final renewed threat into a
+story handoff rather than resetting the battle.
+
+Adapted and rewritten from TechHalla / @techhalla's September 16, 2026
+[Seedance 2.5 generated-result post](https://x.com/techhalla/status/2100170515134476750)
+and [complete initial-frame and animation prompt reply](https://x.com/techhalla/status/2100170518275981372).
+
+
 ## Reusable templates
 
 
@@ -35339,6 +35458,14 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 
 ## Sources
+
+
+- [TechHalla / @techhalla — September 16, 2026 Seedance 2.5
+30.144-second coastal fantasy battle result with complete initial-frame and
+animation prompts, image-locked shaman and reef-bone colossus identities,
+component-owned damage, detachable subordinate enemies and unresolved reverse
+close-up](https://x.com/techhalla/status/2100170515134476750)
+([complete prompt reply](https://x.com/techhalla/status/2100170518275981372))
 
 
 - [DΞV / @junwatu — September 16, 2026 Seedance 2.5 fifteen-second
