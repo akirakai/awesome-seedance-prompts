@@ -363,6 +363,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Low-axis fox attention-to-exit reference beat](#347-low-axis-fox-attention-to-exit-reference-beat)
   - [Three-shot downhill mud run with rider continuity](#348-three-shot-downhill-mud-run-with-rider-continuity)
   - [Reference-locked single-leg bench hip drive](#349-reference-locked-single-leg-bench-hip-drive)
+  - [Low-line hollow-body rocker with endpoint separation](#350-low-line-hollow-body-rocker-with-endpoint-separation)
+  - [High-arc hanging windscreen wiper with grip lock](#351-high-arc-hanging-windscreen-wiper-with-grip-lock)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -21746,6 +21748,109 @@ Adapted and rewritten from AutoCare's September 16, 2026
 and [retained generated MP4](https://pub-9482945b571143e887b925bd2e0565e1.r2.dev/exercise-demos/elevacao-de-quadril-unilateral.mp4).
 
 
+### 350. Low-line hollow-body rocker with endpoint separation
+
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`) — the original
+creator records that this corrected motion failed twice on the Mini route, then
+passed review on 2.5; the repository preserves the expanded motion prompt,
+human-approved take and retained catalogue MP4  
+**Use case:** reference-locked exercise demonstration, rigid-body rocking,
+small-clearance limb control and cyclic-motion amplitude  
+**Mode:** multi-reference image-to-video  
+**Recorded request contract:** 4 seconds, 9:16, 480p, audio off, two complete
+repetitions
+
+```text
+Use the supplied adult-athlete references only for identity, body proportions
+and training clothes. Keep exactly one athlete on an open gym floor. Use a
+static full-body side view so both hands and both heels remain visible.
+
+The athlete lies face up in one long, shallow hollow-body curve. Keep the lower
+back pressed into the floor, shoulder blades and head slightly raised, both
+legs straight and together, and both arms fully straight beside the ears,
+reaching beyond the head. Hands stay far from the neck; elbows never bend.
+Arms and legs remain low throughout, with the heels only a hand width above the
+floor. Never form a V-sit or point the limbs vertically.
+
+Show two complete controlled rocking cycles while the entire body remains one
+rigid curved unit:
+- BACK ENDPOINT — upper back touches the floor while the straight feet rise a
+  little;
+- FORWARD ENDPOINT — lower back and buttocks touch the floor while the straight
+  hands rise a little and the heels approach the floor.
+Travel visibly from one endpoint to the other and back twice, like a rocking
+chair. The motion comes from the rigid whole-body curve, not a crunch.
+
+Keep both heels off the floor in every frame and keep both arms behind the head.
+No sit-up, bent knee, hands reaching toward knees, flat resting legs, frozen
+pose, cropped limb, extra or merged limb, camera move, text, logo or native
+audio.
+```
+
+**Why it works:** the accepted correction replaces an exercise-name shortcut
+with a low-clearance geometry contract, assigns contact to different body
+regions at opposite endpoints and requires two visible round trips. Those
+checks distinguish a true hollow-body rock from the source failures: a high
+V-shape, a crunch or an almost static hold.
+
+Adapted and rewritten from AutoCare's September 16, 2026
+[primary generation and acceptance commit](https://github.com/AutoCare-1/trainos/commit/ee0731b57d0c5f80d1912c1540a0d6ad014ec38a),
+[complete production prompt structure](https://github.com/AutoCare-1/trainos/blob/ee0731b57d0c5f80d1912c1540a0d6ad014ec38a/backend-laravel/database/dicas_demonstracao.php)
+and [retained generated MP4](https://pub-9482945b571143e887b925bd2e0565e1.r2.dev/exercise-demos/hollow-rock.mp4).
+
+
+### 351. High-arc hanging windscreen wiper with grip lock
+
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`) — the original
+creator records that this corrected motion failed twice on the Mini route, then
+passed review on 2.5; the repository preserves the expanded motion prompt,
+human-approved take and retained catalogue MP4  
+**Use case:** reference-locked exercise demonstration, fixed-hand articulation,
+high-leg arc control and mirrored endpoint consistency  
+**Mode:** multi-reference image-to-video  
+**Recorded request contract:** 4 seconds, 9:16, 480p, audio off, two complete
+repetitions
+
+```text
+Use the supplied adult-athlete references only for identity, body proportions
+and training clothes. Keep exactly one athlete and one fixed pull-up bar in a
+busy gym. Use a static frontal full-body view with the bar, both hands and both
+feet visible at all times.
+
+The athlete hangs from the high bar with straight arms and feet clear of the
+floor. Both hands wrap fully around the bar in a shoulder-width overhand grip:
+fingers curl over the top and down the far side, thumbs close underneath,
+knuckles face the camera and wrists stay straight. The hands never slide or
+change grip.
+
+Keep both legs straight, together and raised high near the hands, folding the
+body into a tight pike. Show two full left-to-right-to-left sweeps:
+- LEFT ENDPOINT — the straight raised legs extend far to the athlete's left,
+  with the feet still high;
+- RIGHT ENDPOINT — the straight raised legs extend equally far to the athlete's
+  right, with the feet still high.
+Between endpoints, the feet trace one wide arc over the top and pass straight
+up near the bar between the hands. The torso rotates under fixed hands while
+the knees remain locked.
+
+The legs stay high through the entire cycle. Never drop into a dead hang or
+reset with the feet below the hips between sweeps. No bent knee, low pendulum
+swing, hand release, moving bar, grip mutation, extra person, extra or merged
+limb, cropped endpoint, camera move, text, logo or native audio.
+```
+
+**Why it works:** the prompt gives the hands, bar and feet persistent spatial
+roles, then defines mirrored high endpoints plus the required centre crossing.
+Keeping the feet high between endpoints directly addresses the reviewed failure
+where the model lowered the legs and turned the action into an ordinary hanging
+swing.
+
+Adapted and rewritten from AutoCare's September 16, 2026
+[primary generation and acceptance commit](https://github.com/AutoCare-1/trainos/commit/ee0731b57d0c5f80d1912c1540a0d6ad014ec38a),
+[complete production prompt structure](https://github.com/AutoCare-1/trainos/blob/ee0731b57d0c5f80d1912c1540a0d6ad014ec38a/backend-laravel/database/dicas_demonstracao.php)
+and [retained generated MP4](https://pub-9482945b571143e887b925bd2e0565e1.r2.dev/exercise-demos/limpador-de-para-brisa-suspenso-na-barra.mp4).
+
+
 ## Reusable templates
 
 
@@ -35743,6 +35848,18 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 
 ## Sources
+
+
+- [AutoCare-1 / trainos — September 16, 2026 Higgsfield
+`seedance_2_5` acceptance of two corrected reference-locked core motions after
+the same layouts failed twice on Mini: low-clearance hollow-body rocking and a
+high-arc hanging windscreen wiper; the repository preserves the complete prompt
+structures, human-approved take mapping and retained catalogue
+MP4s](https://github.com/AutoCare-1/trainos/commit/ee0731b57d0c5f80d1912c1540a0d6ad014ec38a)
+([production prompts](https://github.com/AutoCare-1/trainos/blob/ee0731b57d0c5f80d1912c1540a0d6ad014ec38a/backend-laravel/database/dicas_demonstracao.php),
+[hollow-rock MP4](https://pub-9482945b571143e887b925bd2e0565e1.r2.dev/exercise-demos/hollow-rock.mp4),
+[windscreen-wiper MP4](https://pub-9482945b571143e887b925bd2e0565e1.r2.dev/exercise-demos/limpador-de-para-brisa-suspenso-na-barra.mp4))
+
 
 
 - [ComfyUI official model catalogue — September 16, 2026 exact-confidence
