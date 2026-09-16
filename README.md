@@ -358,6 +358,10 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Purple gate pillar to unfolded-letter storyboard film](#342-purple-gate-pillar-to-unfolded-letter-storyboard-film)
   - [Permanent-HUD runaway-cart quest with micro-cutaway continuity](#343-permanent-hud-runaway-cart-quest-with-micro-cutaway-continuity)
   - [Reef-bone colossus gauntlet with component-damage ledger](#344-reef-bone-colossus-gauntlet-with-component-damage-ledger)
+  - [Locked-off harbour market interpolation with light-and-crowd ledger](#345-locked-off-harbour-market-interpolation-with-light-and-crowd-ledger)
+  - [Reference-locked storm courier three-shot chase](#346-reference-locked-storm-courier-three-shot-chase)
+  - [Low-axis fox attention-to-exit reference beat](#347-low-axis-fox-attention-to-exit-reference-beat)
+  - [Three-shot downhill mud run with rider continuity](#348-three-shot-downhill-mud-run-with-rider-continuity)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -21469,6 +21473,231 @@ Adapted and rewritten from TechHalla / @techhalla's September 16, 2026
 and [complete initial-frame and animation prompt reply](https://x.com/techhalla/status/2100170518275981372).
 
 
+### 345. Locked-off harbour market interpolation with light-and-crowd ledger
+
+**Verified model:** BytePlus Seedance 2.5
+(`byteplus/dreamina-seedance-2-5-260628`) — ComfyUI's official model catalogue
+publishes the exact first/last-frame request, native-audio settings and matching
+generated MP4 as an exact-confidence example  
+**Use case:** first/last-frame interpolation, controlled time passage, crowd
+population, environmental continuity and native ambience  
+**Mode:** first-and-last-frame video generation  
+**Suggested settings:** 10 seconds, 720p, adaptive aspect ratio, native audio on,
+locked camera
+
+```text
+Use @FirstFrame as the exact empty harbour square at dawn and @LastFrame as the
+same square during a busy market at noon. Preserve the camera position,
+architecture, paving, waterfront direction and stall lanes from both anchors.
+Create one continuous ten-second transformation with no cut.
+
+0–3s | time begins to advance
+Warm the dawn light gradually and shorten every existing shadow in the correct
+direction. Keep the square mostly empty. A few gulls shift on the cobbles while
+the first handcarts enter from the side streets.
+
+3–7s | market construction
+Stallholders wheel striped-awning stalls into the two designated rows and build
+them in visible causal order: frame, awning, then goods. Crates of fruit,
+flowers and bread arrive with the correct stall and remain there. Do not pop
+finished stalls into existence or move the fixed buildings.
+
+7–10s | populated end state
+Shoppers enter progressively until the square matches @LastFrame. Gulls lift
+from the cobbles as foot traffic grows. Finish exactly on the supplied noon
+composition and hold it briefly.
+
+AUDIO
+Begin with quiet water, sparse gulls and cart wheels. Layer in cloth movement,
+crate placement, footsteps and market conversation as the square fills. No
+music or intelligible announcements.
+
+FAILURE CONTROL
+Locked-off wide camera. Photorealistic motion and weight. No camera drift,
+cut, dissolve, black frame, instant crowd duplication, teleporting prop,
+unfinished stall, altered architecture, readable sign, subtitle or added text.
+```
+
+**Why it works:** the anchors define geometry and the prompt assigns every
+intermediate change to a visible construction phase. Light, props, population
+and ambience each progress in one direction, which prevents the model from
+treating the end frame as an abrupt scene replacement.
+
+Adapted and rewritten from ComfyUI's September 16, 2026
+[exact Seedance 2.5 catalogue example](https://github.com/Comfy-Org/ComfyUI_frontend/blob/3cdfff96d1d1eb400158c7ecd8fb8a2d90f55577/apps/website/src/content/workshop-display.json)
+and [generated market-day MP4](https://media.comfy.org/website/workshop/byteplus/seedance-2-5-first-last-frame/square-fills-for-market-day.mp4).
+
+
+### 346. Reference-locked storm courier three-shot chase
+
+**Verified model:** BytePlus Seedance 2.5
+(`byteplus/dreamina-seedance-2-5-260628`) — ComfyUI's official catalogue binds
+one reference image, this complete request, 10-second 720p native-audio settings
+and the matching generated MP4  
+**Use case:** action choreography, reference-character consistency, hard-cut
+coverage, wet-surface physics and native vehicle audio  
+**Mode:** reference-to-video from one character image  
+**Suggested settings:** 10 seconds, 16:9, 720p, native audio on
+
+```text
+Use @ReferenceImage as the exact courier identity in every shot. Preserve the
+red-and-white full-face helmet, mirrored visor, yellow rain shell, cafe racer,
+body proportions and vehicle paint. Night rain and the same neon street system
+continue across all three shots.
+
+0–3.2s | wheel-level pursuit
+Track beside the front wheel as the cafe racer accelerates through a flooded
+street. Tyres displace real water; neon reflections break only where the spray
+crosses them. Keep the rider seated and the reference outfit readable.
+
+HARD CUT.
+
+3.2–6.6s | corner commitment
+From a wider three-quarter angle, follow the same courier leaning deeply through
+one wet corner. The inside knee approaches the asphalt without changing limb
+ownership. Use one motivated whip-pan to retain screen direction and exit speed.
+
+HARD CUT.
+
+6.6–10s | visor proof
+Cut to an extreme close-up of the same mirrored visor while traffic lights
+streak across its surface. The courier makes one brief look back, then faces the
+road before the clip ends. Do not reveal or redesign the face.
+
+AUDIO
+Continuous rasping engine across both cuts, heavy rain, tyre hiss through water
+and one distant horn. Perspective may change, but engine pitch and rain bed
+must not reset at either cut.
+
+FAILURE CONTROL
+Exactly one rider and one motorcycle. No helmet swap, jacket recolour,
+duplicate bike, dry road, impossible lean, floating spray, reversed travel,
+extra shot, dissolve, black frame, dialogue, music, subtitle, logo or text.
+```
+
+**Why it works:** the reference owns a small set of non-negotiable identity
+features while each shot has one distinct proof task: speed, lean and visor
+continuity. A continuous sound ledger joins the hard cuts without asking for an
+unbroken camera move.
+
+Adapted and rewritten from ComfyUI's September 16, 2026
+[exact Seedance 2.5 reference-video example](https://github.com/Comfy-Org/ComfyUI_frontend/blob/3cdfff96d1d1eb400158c7ecd8fb8a2d90f55577/apps/website/src/content/workshop-display.json)
+and [generated storm-courier MP4](https://media.comfy.org/website/workshop/byteplus/seedance-2-5-reference/storm-courier-three-shots.mp4).
+
+
+### 347. Low-axis fox attention-to-exit reference beat
+
+**Verified model:** BytePlus Seedance 2.5
+(`byteplus/dreamina-seedance-2-5-260628`) — ComfyUI's official catalogue pairs
+the complete reference request and its input binding with the exact generated
+10-second 720p native-audio result  
+**Use case:** animal identity retention, restrained natural motion, motivated
+camera follow and off-lens exit  
+**Mode:** reference-to-video from one animal image  
+**Suggested settings:** 10 seconds, 16:9, 720p, native audio on, low camera axis
+
+```text
+Use @ReferenceImage as the exact young red fox and woodland location. Preserve
+its coat markings, scale, age, face, the mossy log, bluebells, birch layout and
+dappled morning light. Create one quiet continuous shot from fox height.
+
+0–2s | attention cue
+The fox stays on the log. A rustle from the ferns makes both ears rise first;
+then the head tilts toward the sound. Keep paws planted and avoid human-like
+expression.
+
+2–5s | grounded departure
+The fox hops down with a readable push, short drop and four-paw landing. It
+starts trotting toward the camera through the bluebells. Plants bend only where
+the body or paws contact them.
+
+5–8s | scent check
+Pan gently to follow at the same low height. The fox pauses once, lifts its nose
+and sniffs the air while its ears continue small independent adjustments.
+
+8–10s | lens pass
+It resumes the trot, passes close beside the lens and exits frame. Let the
+camera finish its small pan without inventing a second destination or fox.
+
+AUDIO
+Natural birdsong, the initiating fern rustle, soft paws in leaves and a light
+breeze through birch foliage. No music or vocalization unless naturally subtle.
+
+FAILURE CONTROL
+One fox only. No coat drift, adult transformation, extra tail, sliding paws,
+floating body, broken landing, crushed flowers without contact, camera jump,
+cut, black frame, anthropomorphic gesture, speech, collar, text or logo.
+```
+
+**Why it works:** the shot is driven by a simple causal chain—sound, ear
+response, head turn, jump, trot, sniff and exit. Separating those actions keeps
+the animal from performing them simultaneously, while the low axis gives the
+camera one modest job instead of competing with the subject.
+
+Adapted and rewritten from ComfyUI's September 16, 2026
+[exact Seedance 2.5 reference-video example](https://github.com/Comfy-Org/ComfyUI_frontend/blob/3cdfff96d1d1eb400158c7ecd8fb8a2d90f55577/apps/website/src/content/workshop-display.json)
+and [generated fox-kit MP4](https://media.comfy.org/website/workshop/byteplus/seedance-2-5-reference/fox-kit-leaves-the-log.mp4).
+
+
+### 348. Three-shot downhill mud run with rider continuity
+
+**Verified model:** BytePlus Seedance 2.5
+(`byteplus/dreamina-seedance-2-5-260628`) — ComfyUI's official catalogue
+publishes this text-to-video example with exact 10-second 720p native-audio
+settings and its matching generated MP4  
+**Use case:** text-to-video action, identity continuity across cuts, rain and mud
+physics, fast sports coverage and native Foley  
+**Mode:** text-to-video  
+**Suggested settings:** 10 seconds, 16:9, 720p, native audio on
+
+```text
+Create a photorealistic three-shot downhill mountain-bike run in a steep forest
+during heavy rain. The same single rider appears throughout: glossy red
+full-face helmet, black goggles, mud-caked teal jersey, black bike and unchanged
+body proportions. Maintain downhill direction and increasing momentum.
+
+0–3.3s | chute entry
+Low wide camera beside a root-laced chute. The rider drops into frame at speed;
+the suspension compresses over the first roots and the front tyre throws a
+forward fan of water and mud. Keep both wheels connected to the terrain.
+
+HARD CUT.
+
+3.3–6.7s | lateral tracking
+Handheld tracking beside the same rider through mud and ferns. The bike bucks
+over two distinct root impacts; hands remain on the bars and feet on the pedals.
+Rain streaks the lens without hiding the rider's red helmet and teal jersey.
+
+HARD CUT.
+
+6.7–10s | jump and landing
+Use a fast crash zoom as the rider launches one compact jump. Show takeoff,
+airborne body and both-wheel landing in order. The landing compresses the bike
+and throws one large fan of brown mud behind it; the rider continues downhill
+rather than stopping for a pose.
+
+AUDIO
+One continuous bed of hammering rain, tyres tearing wet earth, chain slap,
+suspension impacts and hard breathing. Carry momentum and sound across both
+cuts; no music.
+
+FAILURE CONTROL
+Exactly one rider and one bike. No identity swap, helmet recolour, duplicate,
+missing wheel, extra limb, reversed slope, hovering, skipped takeoff, landing
+before contact, mud emitted ahead of impact, dry patch, slow-motion freeze,
+fourth shot, dissolve, black frame, dialogue, subtitle, logo or text.
+```
+
+**Why it works:** each shot owns one physical event and one camera role, while
+the rider's color keys and the uninterrupted audio bed carry identity and
+momentum across cuts. Explicit takeoff-to-landing ordering makes the largest
+failure point independently verifiable.
+
+Adapted and rewritten from ComfyUI's September 16, 2026
+[exact Seedance 2.5 text-video example](https://github.com/Comfy-Org/ComfyUI_frontend/blob/3cdfff96d1d1eb400158c7ecd8fb8a2d90f55577/apps/website/src/content/workshop-display.json)
+and [generated downhill-racer MP4](https://media.comfy.org/website/workshop/byteplus/seedance-2-5-text-to-video/downhill-racer-in-the-mud.mp4).
+
+
 ## Reusable templates
 
 
@@ -35458,6 +35687,15 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 
 ## Sources
+
+
+- [ComfyUI official model catalogue — September 16, 2026 exact-confidence
+BytePlus Seedance 2.5 native examples: first/last-frame harbour market,
+reference-locked storm courier and fox kit, and multi-shot downhill T2V; each
+record includes its complete prompt, request values, input bindings and matching
+generated MP4](https://github.com/Comfy-Org/ComfyUI_frontend/commit/3cdfff96d1d1eb400158c7ecd8fb8a2d90f55577)
+([catalogue records](https://github.com/Comfy-Org/ComfyUI_frontend/blob/3cdfff96d1d1eb400158c7ecd8fb8a2d90f55577/apps/website/src/content/workshop-display.json),
+[exact model routing](https://github.com/Comfy-Org/ComfyUI_frontend/blob/3cdfff96d1d1eb400158c7ecd8fb8a2d90f55577/apps/website/src/data/workshop-content-inputs.json))
 
 
 - [TechHalla / @techhalla — September 16, 2026 Seedance 2.5
