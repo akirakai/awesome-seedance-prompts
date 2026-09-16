@@ -365,6 +365,12 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Reference-locked single-leg bench hip drive](#349-reference-locked-single-leg-bench-hip-drive)
   - [Low-line hollow-body rocker with endpoint separation](#350-low-line-hollow-body-rocker-with-endpoint-separation)
   - [High-arc hanging windscreen wiper with grip lock](#351-high-arc-hanging-windscreen-wiper-with-grip-lock)
+  - [Cut-preserving studio-to-rooftop video edit](#352-cut-preserving-studio-to-rooftop-video-edit)
+  - [Three-shot storm-jetty rescue story](#353-three-shot-storm-jetty-rescue-story)
+  - [Reference-locked serum-drop product triptych](#354-reference-locked-serum-drop-product-triptych)
+  - [Pointillist-cat first/last-frame head turn](#355-pointillist-cat-firstlast-frame-head-turn)
+  - [First-frame fisherman net-cast arc](#356-first-frame-fisherman-net-cast-arc)
+  - [Quiet pour-over push-in one-take](#357-quiet-pour-over-push-in-one-take)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -21851,6 +21857,332 @@ Adapted and rewritten from AutoCare's September 16, 2026
 and [retained generated MP4](https://pub-9482945b571143e887b925bd2e0565e1.r2.dev/exercise-demos/limpador-de-para-brisa-suspenso-na-barra.mp4).
 
 
+### 352. Cut-preserving studio-to-rooftop video edit
+
+**Verified model:** BytePlus Seedance 2.5
+(`byteplus/dreamina-seedance-2-5-260628`) — ComfyUI's official catalogue marks
+the example exact-confidence and binds the source video, complete edit request,
+5-second adaptive 720p native-audio settings and matching result  
+**Use case:** video-to-video environment replacement while preserving subjects,
+shot order, framing, camera motion and edit timing  
+**Mode:** video edit from one reference clip  
+**Suggested settings:** 5 seconds, 720p, adaptive aspect ratio, native audio on
+
+```text
+Use @ReferenceVideo as the immutable timing and subject track. Replace only the
+empty blue studio with a rain-soaked city rooftop at night.
+
+PRESERVE EXACTLY
+- the blue car, its paint and proportions;
+- the man and his silhouette;
+- every existing shot, wing-mirror close-up and rear view;
+- every cut point, camera path, subject position and action timing.
+
+CHANGE ONLY THE SETTING
+Lay wet concrete beneath the original action and let it reflect distant city
+lights. Put a faint skyline behind the car. Add light rain that drifts through
+the existing beam and reacts consistently to the original camera angles. Match
+the new reflections and rain perspective across every cut without recolouring
+the car.
+
+AUDIO AND FINISH
+Retain the source sequence's timing. Add restrained rooftop rain and distant
+city ambience without dialogue or music.
+
+FAILURE CONTROL
+No new shot, cut, camera move, person, vehicle, text or sign. Do not alter the
+car, actor, silhouette, mirror close-up, rear composition or duration. No blue
+studio surface may remain, and the replacement rooftop must not jump or reset
+at a cut.
+```
+
+**Why it works:** the request separates a frozen temporal layer from a single
+editable spatial layer. Enumerating the source elements that must survive each
+cut prevents a setting swap from becoming a reshoot, while the cross-cut
+reflection rule makes the new rooftop one coherent place.
+
+Adapted and rewritten from ComfyUI's September 16, 2026
+[official exact-confidence catalogue record](https://github.com/Comfy-Org/ComfyUI_frontend/blob/a0f2ec124d750fe7fc5ecbd6b4c105b976f5d586/apps/website/src/content/workshop-display.json),
+[exact edit-mode routing](https://github.com/Comfy-Org/ComfyUI_frontend/blob/a0f2ec124d750fe7fc5ecbd6b4c105b976f5d586/apps/website/src/data/workshop-content-inputs.json)
+and [generated rooftop-edit MP4](https://media.comfy.org/website/workshop/byteplus/seedance-2-5-edit-video/studio-car-on-a-rain-soaked-rooftop.mp4).
+
+
+### 353. Three-shot storm-jetty rescue story
+
+**Verified model:** BytePlus Seedance 2.0
+(`byteplus/dreamina-seedance-2-0-260128`) — ComfyUI's official catalogue
+publishes the complete text request, exact 10-second 1080p native-audio
+parameters and matching generated MP4  
+**Use case:** compact live-action narrative, weather continuity, animal action,
+causal rescue choreography and audio continuity across hard cuts  
+**Mode:** text-to-video  
+**Suggested settings:** 10 seconds, 16:9, 1080p, native audio on
+
+```text
+Create a photorealistic three-shot rescue story on one wet stone jetty beneath
+the same black storm sky. Keep one small brown dog, one lighthouse, one keeper
+in a yellow oilskin and one consistent direction toward the lighthouse.
+
+0–3.2s | exposed approach
+Wide shot. The dog bounds along the slick jetty toward camera as the lighthouse
+beam sweeps across sea spray. Show paw contact and cautious footing; keep the
+keeper off screen.
+
+HARD CUT.
+
+3.2–6.4s | wave and reversal
+From a closer handheld angle, a wave strikes the wall and spills across the
+stones. The dog skids only after the water arrives, becomes visibly drenched,
+flattens its ears, regains traction and turns back toward the lighthouse. Rain
+may strike the lens without obscuring the action.
+
+HARD CUT.
+
+6.4–10s | earned rescue
+At the lighthouse door, the same keeper reaches down and lifts the same dog in
+one readable motion. The rotating beam passes again as the wind pulls the door;
+the keeper and dog cross the threshold before the door slams shut.
+
+AUDIO
+Carry one continuous bed of roaring sea and wind through both cuts. Add the
+wave impact, wet paws, one bark, oilskin movement and the final door slam in
+causal order.
+
+FAILURE CONTROL
+Exactly one dog and one keeper. No breed, coat or oilskin change; no dog already
+inside before the lift; no wave before the first cut; no teleport, duplicated
+animal, dry stones, reversed lighthouse location, fourth shot, dissolve, black
+frame, dialogue, music, subtitle or text.
+```
+
+**Why it works:** the lighthouse beam, travel direction and storm bed act as
+continuity anchors, while each shot owns one cause-and-effect event. Requiring
+water before the skid and contact before the lift makes the rescue legible
+instead of merely atmospheric.
+
+Adapted and rewritten from ComfyUI's September 16, 2026
+[official exact-confidence Seedance 2.0 catalogue record](https://github.com/Comfy-Org/ComfyUI_frontend/blob/a0f2ec124d750fe7fc5ecbd6b4c105b976f5d586/apps/website/src/content/workshop-display.json)
+and [generated lighthouse MP4](https://media.comfy.org/website/workshop/byteplus/seedance-2-text-to-video/the-dog-and-the-lighthouse.mp4).
+
+
+### 354. Reference-locked serum-drop product triptych
+
+**Verified model:** BytePlus Seedance 2.0
+(`byteplus/dreamina-seedance-2-0-260128`) — ComfyUI's official catalogue binds
+one product reference, the complete request, exact 10-second 1080p native-audio
+settings and the matching generated advert  
+**Use case:** product identity consistency, multi-shot commercial coverage,
+macro liquid action and clean packshot landing  
+**Mode:** reference-to-video from one product still  
+**Suggested settings:** 10 seconds, 16:9, 1080p, native audio on
+
+```text
+@Image1 is the only product identity: one amber glass serum bottle, black
+dropper cap and white satin bow. Preserve its silhouette, glass colour, cap,
+bow attachment, label-free surfaces and scale in every shot. Build one polished
+three-shot advertisement in a bright blue cloud world.
+
+0–3.3s | recognition orbit
+The intact bottle floats upright while the camera makes a slow partial orbit.
+The satin ribbons trail with gentle drag and moving cloud reflections remain
+attached to the curved amber glass.
+
+HARD CUT.
+
+3.3–6.6s | macro action
+Macro on the same neck and dropper. Lift the dropper vertically; one golden
+droplet lengthens, detaches and falls. Keep the cap, pipette and bottle geometry
+consistent with @Image1.
+
+HARD CUT.
+
+6.6–10s | payoff packshot
+The droplet lands on a soft white cloud surface and sends one circular
+liquid-gold ripple outward. The complete bottle settles upright at its centre;
+the bow comes to rest and the final composition holds cleanly.
+
+AUDIO
+Use a gentle spatial whoosh through the orbit, one delicate liquid release,
+the soft ripple impact and a restrained finishing chime.
+
+FAILURE CONTROL
+One bottle and one droplet only. No cap mutation, missing bow, label, readable
+text, duplicate pack, floating detached ribbon, opaque glass, sideways drop,
+extra splash, fourth shot, dissolve, black frame, hand, voiceover or music.
+```
+
+**Why it works:** each cut proves a different product property—recognizable
+silhouette, functional dropper and final packshot—while the reference owns a
+short immutable identity ledger. The one-droplet rule gives the macro event a
+countable state transition.
+
+Adapted and rewritten from ComfyUI's September 16, 2026
+[official exact-confidence Seedance 2.0 reference example](https://github.com/Comfy-Org/ComfyUI_frontend/blob/a0f2ec124d750fe7fc5ecbd6b4c105b976f5d586/apps/website/src/content/workshop-display.json),
+[exact reference-mode routing](https://github.com/Comfy-Org/ComfyUI_frontend/blob/a0f2ec124d750fe7fc5ecbd6b4c105b976f5d586/apps/website/src/data/workshop-content-inputs.json)
+and [generated serum-ad MP4](https://media.comfy.org/website/workshop/byteplus/seedance-2-reference/golden-drop-from-the-cloud-sky.mp4).
+
+
+### 355. Pointillist-cat first/last-frame head turn
+
+**Verified model:** BytePlus Seedance 2.0
+(`byteplus/dreamina-seedance-2-0-260128`) — ComfyUI's official catalogue pairs
+the start and edited end images with the complete 10-second 1080p native-audio
+request and matching result  
+**Use case:** first/last-frame interpolation, illustrated-subject articulation,
+paper-texture preservation and restrained graphic animation  
+**Mode:** first-and-last-frame image-to-video  
+**Suggested settings:** 10 seconds, 1080p, adaptive aspect ratio, native audio on
+
+```text
+Use @FirstFrame and @LastFrame as exact endpoints of the same stippled black-ink
+cat pinned inside the same glowing blue mosaic niche. Preserve the paper grain,
+dot density, niche geometry, tile pattern and drawn—not photoreal—medium.
+
+0–2s | held recognition
+Begin exactly on @FirstFrame. The cat faces camera. Allow only tiny breathing in
+the stipple and a faint blue glow; do not begin the turn early.
+
+2–8s | motivated turn
+A subtle off-screen cue comes from camera right. The ears react first, folding
+slightly back, then the eyes narrow and the head turns slowly right. Re-form the
+ink dots locally around the moving head without smearing the page, growing fur
+or moving the pinned body.
+
+8–10s | exact arrival
+The mosaic brightens in one restrained pulse as the head reaches @LastFrame.
+Finish on its exact gaze, ear angle and composition, then hold.
+
+AUDIO
+One low ambient hum, a quiet off-screen tick that motivates the turn and one
+soft chime at the blue pulse.
+
+FAILURE CONTROL
+Static camera. The drawing stays flat ink on constant paper. No live-action fur,
+body rotation, loose pin, sliding niche, changed tile layout, crawling dots,
+duplicate eyes, flicker, cut, black frame, caption, logo or text.
+```
+
+**Why it works:** the two anchors lock style as well as pose, and the motion is
+broken into perceptual order—ear, eye, then head. Treating dots as a local
+redrawing problem preserves the analogue surface rather than inviting a
+photoreal transformation.
+
+Adapted and rewritten from ComfyUI's September 16, 2026
+[official exact-confidence Seedance 2.0 first/last-frame example](https://github.com/Comfy-Org/ComfyUI_frontend/blob/a0f2ec124d750fe7fc5ecbd6b4c105b976f5d586/apps/website/src/content/workshop-display.json),
+[exact first/last-mode routing](https://github.com/Comfy-Org/ComfyUI_frontend/blob/a0f2ec124d750fe7fc5ecbd6b4c105b976f5d586/apps/website/src/data/workshop-content-inputs.json)
+and [generated pointillist-cat MP4](https://media.comfy.org/website/workshop/byteplus/seedance-2-image-to-video/pointillist-cat-turns-away.mp4).
+
+
+### 356. First-frame fisherman net-cast arc
+
+**Verified model:** BytePlus Seedance 2.0 Fast
+(`byteplus/dreamina-seedance-2-0-fast-260128`) — ComfyUI's official catalogue
+binds one start image, the complete request, exact 10-second 720p native-audio
+settings and matching generated MP4  
+**Use case:** image-to-video action, cloth-and-rope topology, circular trajectory,
+water impact and causal ambience  
+**Mode:** first-frame generation through the Fast first/last route  
+**Suggested settings:** 10 seconds, 720p, adaptive aspect ratio, native audio on
+
+```text
+Use @FirstFrame as the exact fisherman, boat, net, dawn waterline and mist.
+Preserve wardrobe, boat geometry, horizon and camera position. Create one wide
+continuous action with a brief natural slow-motion emphasis only at full
+extension.
+
+0–2.5s | load and release
+The fisherman plants both feet as the boat rocks gently, rotates the torso and
+releases the net with both hands. The coiled line remains connected to him and
+the weighted rim.
+
+2.5–5.5s | circular proof
+The net unfurls in the air into one complete flat circle. Its weighted rim
+spreads evenly, catches the pink dawn light and stays topologically connected;
+do not turn it into fabric, smoke or separate ropes.
+
+5.5–8s | impact
+The full rim meets the water in order and throws a circular spray followed by
+expanding ripples. The boat responds with a small delayed rock after the
+impact.
+
+8–10s | recovery
+Mist continues drifting while the fisherman begins hauling the connected line
+back in. Do not complete an impossible instant catch.
+
+AUDIO
+Water lapping and sparse dawn birds throughout; rope hiss during release, one
+broad net splash, weighted droplets and a restrained boat creak.
+
+FAILURE CONTROL
+One fisherman, boat and net. No broken mesh, disconnected rim, duplicated arm,
+floating foot, net passing through the body, splash before contact, reversed
+ripples, camera move, cut, black frame, speech, music, subtitle or text.
+```
+
+**Why it works:** the net is defined as one connected object with a visible
+load, release, expansion, impact and retrieval chain. Making the full circle a
+proof state prevents the model from skipping directly from hand to splash.
+
+Adapted and rewritten from ComfyUI's September 16, 2026
+[official exact-confidence Seedance 2.0 Fast first-frame example](https://github.com/Comfy-Org/ComfyUI_frontend/blob/a0f2ec124d750fe7fc5ecbd6b4c105b976f5d586/apps/website/src/content/workshop-display.json),
+[exact Fast routing](https://github.com/Comfy-Org/ComfyUI_frontend/blob/a0f2ec124d750fe7fc5ecbd6b4c105b976f5d586/apps/website/src/data/workshop-content-inputs.json)
+and [generated net-cast MP4](https://media.comfy.org/website/workshop/byteplus/seedance-2-fast-first-last-frame/casting-the-net-at-dawn.mp4).
+
+
+### 357. Quiet pour-over push-in one-take
+
+**Verified model:** BytePlus Seedance 2.0 Fast
+(`byteplus/dreamina-seedance-2-0-fast-260128`) — ComfyUI's official catalogue
+publishes the complete text request, exact 10-second 720p native-audio settings
+and matching generated MP4  
+**Use case:** continuous live-action close-up, slow camera handoff, liquid and
+steam detail, barista hand continuity and quiet native sound  
+**Mode:** text-to-video  
+**Suggested settings:** 10 seconds, 16:9, 720p, native audio on, one take
+
+```text
+Create one continuous photorealistic morning shot at a warm wood-and-ceramic
+cafe counter. One barista, one kettle, one paper filter and one glass carafe
+remain consistent. Sunlight enters from the same window throughout.
+
+0–2s | establish
+Begin at counter height in a medium view. The barista holds the kettle above the
+filter while steam and a narrow sunbeam establish depth. Keep both hands and
+the entire brewing stack readable.
+
+2–7s | controlled push-in
+The barista pours hot water in slow concentric circles. Coffee blooms before it
+drips into the carafe. Push the camera forward gradually to a close-up; keep the
+stream connected from spout to grounds and let steam cross the sunbeam without
+hiding the rim.
+
+7–10s | tilt and closure
+After the final circle, the stream thins and stops. Tilt smoothly from the
+carafe and filter to the same barista's calm face as the kettle is set down on
+the counter. End only after hand contact with the surface.
+
+AUDIO
+Close pouring water, individual drips, soft kettle placement and a low
+nonverbal cafe murmur. Perspective becomes more intimate during the push-in;
+no music or intelligible speech.
+
+FAILURE CONTROL
+One uninterrupted shot. No cut, speed ramp, extra hand, changing kettle,
+overflow, reverse drip, disconnected stream, dry filter, face swap, camera
+jump, black frame, dialogue, subtitle, logo or readable text.
+```
+
+**Why it works:** the camera receives one continuous compound move—push in,
+then tilt—while the brewing action supplies clear contact states from pour to
+set-down. Audio perspective changes with distance instead of restarting, which
+reinforces the one-take illusion.
+
+Adapted and rewritten from ComfyUI's September 16, 2026
+[official exact-confidence Seedance 2.0 Fast text-video example](https://github.com/Comfy-Org/ComfyUI_frontend/blob/a0f2ec124d750fe7fc5ecbd6b4c105b976f5d586/apps/website/src/content/workshop-display.json),
+[exact Fast text-mode routing](https://github.com/Comfy-Org/ComfyUI_frontend/blob/a0f2ec124d750fe7fc5ecbd6b4c105b976f5d586/apps/website/src/data/workshop-content-inputs.json)
+and [generated pour-over MP4](https://media.comfy.org/website/workshop/byteplus/seedance-2-fast-text-to-video/coffee-pour-in-a-quiet-cafe.mp4).
+
+
 ## Reusable templates
 
 
@@ -35848,6 +36180,17 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 
 ## Sources
+
+
+- [ComfyUI official model catalogue — September 16, 2026 exact-confidence
+BytePlus examples for Seedance 2.5 video editing, Seedance 2.0 text,
+reference and first/last generation, and Seedance 2.0 Fast text and first-frame
+generation; every selected record binds a complete prompt and request values to
+its input asset where applicable, exact versioned router and generated
+MP4](https://github.com/Comfy-Org/ComfyUI_frontend/commit/a0f2ec124d750fe7fc5ecbd6b4c105b976f5d586)
+([catalogue records](https://github.com/Comfy-Org/ComfyUI_frontend/blob/a0f2ec124d750fe7fc5ecbd6b4c105b976f5d586/apps/website/src/content/workshop-display.json),
+[exact model routing](https://github.com/Comfy-Org/ComfyUI_frontend/blob/a0f2ec124d750fe7fc5ecbd6b4c105b976f5d586/apps/website/src/data/workshop-content-inputs.json))
+
 
 
 - [AutoCare-1 / trainos — September 16, 2026 Higgsfield
