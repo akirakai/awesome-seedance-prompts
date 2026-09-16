@@ -33689,6 +33689,105 @@ and the [published 15-second finished MP4](https://github.com/nodetool-ai/nodeto
 
 
 ---
+### Mesh-derived reference factory and marker-split ensemble long take
+
+**Verified model:** Higgsfield Seedance 2.5, `seedance_2_5` with
+`omni_reference` — the creator records two 25-second, 1080p, 9:16 jobs from
+the same approved inputs. Take A kept the three-character cast for the whole
+take and followed every scheduled beat; the later ledger marks Take B
+`STRONG`, including the foreground character move, water-and-mud crossing and
+a consistently furred first-person hand  
+**Use case:** long ensemble scenes whose cast, scale, seating and point of view
+must survive several action beats without rebuilding a new identity anchor for
+each segment  
+**Mode:** one restyled opening frame plus one mesh-derived multi-angle sheet per
+character, followed by marker-based editorial splitting
+
+Use this when a project already has approved 3D characters or can build them
+from licensed turnaround art. The meshes are not the final film; they are a
+deterministic reference factory for identity evidence and the opening spatial
+state.
+
+```text
+REFERENCE FACTORY
+For each approved character:
+1. Freeze the approved mesh, texture and proportions.
+2. Render one clean sheet containing front, three-quarter and profile views
+   under the same neutral light and scale.
+3. Keep one character per sheet. Reject a sheet with an invented costume,
+   altered species, hidden hands, copied panel or inconsistent face.
+4. Record CHARACTER_ID, mesh/version hash and sheet hash.
+
+OPENING-STATE FACTORY
+Build one simple 3D scene with the final camera position, cast count, seating,
+relative scale, vehicle/set geometry and first-person foreground hand or prop.
+Render only the exact opening frame. Restyle that frame once into the intended
+finish while preserving geometry and blocking.
+
+REFERENCE CONTRACT
+@Image1 = the restyled opening frame. It owns composition, point of view,
+camera height, seating, cast scale, set geometry, light and the foreground hand.
+@Image2 = [CHARACTER A] identity sheet only.
+@Image3 = [CHARACTER B] identity sheet only.
+@Image4 = [CHARACTER C] identity sheet only.
+The character sheets do not own their white backgrounds, panel layout or pose.
+No reference may redefine another character, the camera or the opening state.
+
+GENERATION
+MODEL = seedance_2_5
+TASK = omni_reference
+DURATION = [20–30] seconds
+RESOLUTION = 1080p
+ASPECT = [9:16 | 16:9]
+CUTS = none
+
+Create one continuous unbroken take beginning exactly from @Image1.
+Keep exactly [CAST COUNT] characters for the full take with the same species,
+face, costume, body scale, seat/role and screen side established by the
+references. The camera remains [FIXED POV / ONE SIMPLE CONTINUOUS PATH].
+
+[0–A s] [OPENING MOTION AND ENVIRONMENT].
+[A–B s] [BEAT 1 WITH VISIBLE CAUSE, CONTACT AND RESPONSE].
+[B–C s] [BEAT 2; PRESERVE CAST BLOCKING].
+[C–D s] [BEAT 3; FOREGROUND CHARACTER OR PROP MAY APPROACH THE LENS].
+[D–END] [FINAL ACTION, LIGHT CHANGE AND STABLE END STATE].
+
+Describe any anonymous foreground object by visible shape and grip only when
+its category or brand must remain hidden. No text, subtitle, exterior reset,
+extra character, human substitution, seat swap, species change, scale jump,
+duplicated vehicle, cut or dissolve.
+
+MARKER ASSEMBLY
+After generation, inspect the continuous master and place editorial markers at
+the first stable frame after each completed beat. Derive site chapters,
+scrub ranges or cutdowns from those markers. Do not ask Seedance to generate
+separate clips merely because the delivery interface is segmented.
+
+ACCEPTANCE
+Reject if any named character disappears, changes identity or moves into
+another character's role; the opening perspective jumps; the foreground hand
+changes material; a beat occurs before its cause; or a requested beat has no
+readable completion frame. Save the raw master, task ID, exact reference order,
+marker times and rejected-take notes before making derivatives.
+```
+
+**Why it works:** approved meshes produce repeatable identity evidence instead
+of asking unrelated hand-painted sheets to agree, while the restyled opening
+frame locks the ensemble's shared geometry. A single master lets Seedance carry
+motion continuously; downstream markers supply the multiple delivery segments
+without introducing a new generative identity boundary at every chapter.
+
+The matched 15-second Seedance 2.0 comparison was steadier but turned the driver
+toward the camera, while the accepted 25-second 2.5 take preserved the intended
+multi-character sequence. This is useful route evidence, not a universal model
+ranking.
+
+Adapted and rewritten from SynergyZAW's September 16, 2026
+[25-second Seedance 2.5 production commit](https://github.com/SynergyZAW/safari-smoke-drive/commit/c6172fecb302f14c5bf9255dc2fd5a70a80700de),
+[reference-factory and long-take notes](https://github.com/SynergyZAW/safari-smoke-drive/blob/c6172fecb302f14c5bf9255dc2fd5a70a80700de/docs/09-phase-3-pipeline.md)
+and the [Take B acceptance ledger](https://github.com/SynergyZAW/safari-smoke-drive/commit/65feac98dff93d56564bba5f8f8cb1d7b214d6d4).
+
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -34709,8 +34808,17 @@ the [complete single-clip findings and failure notes](https://github.com/KMKM333
 and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-engine/blob/5d068bb7a784ffdd63998222381d7d8e5b5ada7b/.claude/skills/ppe-reference-style/discover_looks.py).
 
 
+
 ## Sources
 
+
+- [SynergyZAW / Safari Smoke Drive — September 16, 2026 Higgsfield
+Seedance 2.5 `omni_reference` ensemble long-take test: two 25-second 1080p
+jobs, mesh-derived three-angle identity sheets, restyled spatial opening frame,
+full-cast beat retention, matched Seedance 2.0 comparison and accepted Take B
+review](https://github.com/SynergyZAW/safari-smoke-drive/commit/c6172fecb302f14c5bf9255dc2fd5a70a80700de)
+([pipeline notes](https://github.com/SynergyZAW/safari-smoke-drive/blob/c6172fecb302f14c5bf9255dc2fd5a70a80700de/docs/09-phase-3-pipeline.md),
+[Take B acceptance ledger](https://github.com/SynergyZAW/safari-smoke-drive/commit/65feac98dff93d56564bba5f8f8cb1d7b214d6d4))
 
 - [Joseph Skaf / UseKineo — September 15–16, 2026 fal Seedance 2.5
 seven-task production run: all submissions accepted, signed status claims then
