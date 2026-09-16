@@ -33788,6 +33788,99 @@ Adapted and rewritten from SynergyZAW's September 16, 2026
 and the [Take B acceptance ledger](https://github.com/SynergyZAW/safari-smoke-drive/commit/65feac98dff93d56564bba5f8f8cb1d7b214d6d4).
 
 
+### Paid reference-video formula probe and evidence-labeled settlement gate
+
+**Verified model:** ByteDance Seedance 2.5
+(`doubao-seedance-2-5-260628`, omni-reference) — the original developer
+records a successful paid four-second generation with three reference images
+and one ten-second reference video, then publishes the provider task, artifact
+hash, measured media metadata, reserved and settled cost, and exact completion
+tokens  
+**Use case:** reference-video workflows that must reserve enough balance before
+submission without presenting an untested billing floor as measured fact  
+**Mode:** Seedance 2.5 omni-reference with one or more billable reference videos
+
+```text
+IMMUTABLE QUOTE INPUT
+Exact model and provider route = [VERSIONED ID].
+Task type = omni-reference.
+Requested output seconds = [S_OUT].
+Reference-video seconds = [S_REF_TOTAL].
+Requested resolution / aspect = [RESOLUTION / RATIO].
+Expected width x height and fps = [W x H @ FPS].
+Prompt and ordered media-manifest hash = [HASH].
+Official minimum-token rule and source revision = [MINIMUM / DATE].
+
+FORMULA-PATH RESERVE
+For this exact route, calculate the provider formula as:
+formula_tokens =
+  floor(((S_REF_TOTAL + S_OUT) * FPS + 1) * W * H / 1024)
+
+Reserve:
+quote_tokens = max(formula_tokens, official_minimum_tokens)
+
+Do not replace the sum of reference-video seconds with only the longest input.
+Do not omit the extra frame. Keep the calculation route-scoped; another
+provider or Seedance version may use a different unit or reference-time rule.
+
+EVIDENCE LABELS
+Give each branch its own status:
+- FORMULA_GENERATED: a paid task with formula_tokens above the minimum has
+  settled and matches the authoritative completion-token record.
+- MINIMUM_GENERATED: a paid task with formula_tokens below the minimum has
+  settled at the minimum.
+- DOCS_ONLY: the official table or calculator states the branch, but no matching
+  paid settlement has been observed.
+- HYPOTHESIS: neither authoritative documentation nor a paid task verifies it.
+
+Never mark the whole quote policy "verified" when only one branch is generated.
+In particular, keep the minimum branch DOCS_ONLY until a deliberately chosen
+low-formula task actually settles there.
+
+PRE-SUBMIT LEDGER
+Before creating the task, persist:
+- exact model, task type and contract digest;
+- requested output duration and every measured reference-video duration;
+- W, H, FPS, formula tokens, minimum tokens and reserved amount;
+- ordered image/video/audio manifest and prompt hash;
+- idempotency key and intended evidence branch.
+
+POST-RUN SETTLEMENT
+On terminal success, save provider task ID, artifact SHA-256, bytes, actual
+width, height, frames, container duration, completion tokens and settled cost.
+Recompute from authoritative output geometry. Compare reserved versus settled;
+release only the difference. A completed row without a valid artifact or usage
+record does not promote an evidence branch.
+
+CONTROLLED FLOOR PROBE
+If the minimum branch still lacks paid evidence, derive one small, policy-safe
+request whose formula is below the documented floor. Predict both numbers
+before submission, require a strict spend cap, and run it once. Do not infer a
+minimum charge from a formula-path sample above the floor.
+
+ACCEPTANCE
+Pass only when the original task, artifact and usage record share the same model
+route and task ID; the media hash is reproducible; the observed branch matches
+its predicted formula; and every untested branch remains visibly labeled.
+```
+
+**Why it works:** reference footage can contribute billable time even when the
+delivered clip is short. Reserving the larger documented path prevents a paid
+task from outrunning its budget, while branch-level evidence labels stop one
+successful formula sample from being misreported as proof of an unexercised
+minimum.
+
+The September 16 acceptance produced 97 frames at 560×752 for a four-second
+output with a ten-second input video. The provider settled 138,591 tokens,
+matching `floor((10 + 4 + 1/24) × 560 × 752 × 24 / 1024)`. The documented
+69,090-token minimum was below that sample and therefore remains unverified by
+a real floor-triggering charge.
+
+Adapted and rewritten from kafeichong's September 16, 2026
+[paid omni-reference acceptance and branch-status
+ledger](https://github.com/kafeichong/sweetyshell_view_flow/commit/25cf3b6c771d5c22f0eeb34b423fe82de8e8968b).
+
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -34811,6 +34904,13 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 ## Sources
 
+
+- [kafeichong / sweetyshell_view_flow — September 16, 2026
+ByteDance Seedance 2.5 `doubao-seedance-2-5-260628` paid omni-reference
+acceptance: three images plus a ten-second reference video, four-second output,
+artifact hash and media metadata, exact completion-token settlement, verified
+reference-time formula path, and explicitly unverified minimum-charge
+branch](https://github.com/kafeichong/sweetyshell_view_flow/commit/25cf3b6c771d5c22f0eeb34b423fe82de8e8968b)
 
 - [SynergyZAW / Safari Smoke Drive — September 16, 2026 Higgsfield
 Seedance 2.5 `omni_reference` ensemble long-take test: two 25-second 1080p
