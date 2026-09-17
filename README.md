@@ -373,6 +373,13 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Quiet pour-over push-in one-take](#357-quiet-pour-over-push-in-one-take)
   - [Vigil crossbow draw and dark-bolt release](#358-vigil-crossbow-draw-and-dark-bolt-release)
   - [Pavilion-window cricket-ball breach](#359-pavilion-window-cricket-ball-breach)
+  - [Peking-opera identity orbit and weighted acrobatics](#360-peking-opera-identity-orbit-and-weighted-acrobatics)
+  - [White-model blocking transferred into a keyframed fairy-tale short](#361-white-model-blocking-transferred-into-a-keyframed-fairy-tale-short)
+  - [Moss-stair green-screen replacement with contact preservation](#362-moss-stair-green-screen-replacement-with-contact-preservation)
+  - [Previz-locked motorcycle and SUV pursuit](#363-previz-locked-motorcycle-and-suv-pursuit)
+  - [Detachable paper puppy crossing a realistic tabletop world](#364-detachable-paper-puppy-crossing-a-realistic-tabletop-world)
+  - [Four-performer rooftop music video with audio-owned timing](#365-four-performer-rooftop-music-video-with-audio-owned-timing)
+  - [In-car cola-and-mint reaction one-take](#366-in-car-cola-and-mint-reaction-one-take)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -22570,6 +22577,90 @@ Adapted and rewritten from Dreamina / CapCut's September 17, 2026
 [official Seedance 2.5 audio-reference showcase and source request](https://dreamina.capcut.com/).
 
 
+### 366. In-car cola-and-mint reaction one-take
+
+**Verified model:** Seedance 2.5 — the original creator published the generated
+30-second result and, in the same X thread, the complete image-first production
+prompt naming Seedance 2.5  
+**Use case:** reference-started smartphone spectacle, irreversible liquid and
+prop states, long-form escalation and distant-scale payoff  
+**Mode:** image-to-video from one locked opening still  
+**Suggested settings:** 30 seconds, 3:4, native audio on, one continuous take
+
+```text
+Generate one photorealistic 30-second vertical smartphone take from inside a
+moving car. @Image1 owns the opening windshield composition, both trucks, the
+tanker's damaged wall, the active cola jet and all visible branding. Begin
+while the car is still approaching; slow and stop before the spreading liquid.
+
+LOCKED WORLD AND CAST
+Keep one red Coca-Cola tanker on the left with cola continuously pouring from
+one ragged opening. Keep one closed Mentos box truck beside it and one clear,
+empty oversized drink jug. Use exactly one large adult man in a dark tank top,
+cargo shorts and baseball cap. He enters on foot from the right shoulder; he
+never exits a vehicle. Preserve the highway direction and vanishing point.
+
+0–3s | approach
+The trucks grow larger through the windshield. Make one digital zoom toward
+the damaged tank and cola stream; brake dip is visible near the end.
+
+3–5s | arrival
+The car stops. Zoom back slightly. The man walks in from frame right holding
+the empty transparent jug high enough to prove that it is empty.
+
+5–9s | fill and prove
+He places the jug mouth into the stream once. Hold the contact for at least two
+seconds while the liquid level visibly rises, foam spills over the rim and the
+jet continues striking the same opening. He then removes the now-heavy jug.
+
+9–12s | drink
+He drinks most of the cola in several readable gulps, keeps the same jug in
+hand, then turns toward the Mentos truck.
+
+12–16s | trigger
+He opens both rear doors once, tips one case and lets white mints roll into the
+brown puddle. Show the mint-to-liquid contact before any reaction begins.
+
+16–20s | launch
+Fizz builds into one white foam column. It contacts him from below, throws the
+jug free and lifts his feet from the road, launching him up and away along the
+highway axis. Track the first lift with a fast digital zoom.
+
+20–24s | follow
+He spins once as a dark figure riding the foam plume. Spray strikes the
+windshield; the phone jerks but remains inside the car and keeps filming through
+the wet glass.
+
+24–30s | scale payoff
+Zoom out, reacquire him over the distant lanes, then let him shrink to a speck
+and disappear into the horizon haze. Hold the empty vanishing point while the
+tanker still pours, the Mentos doors remain open and foam continues rising.
+
+CAMERA AND AUDIO
+Consumer phone optics, handheld breathing shake, windshield and A-pillar in
+frame, slight autofocus hunting and rolling shutter. No cut, hidden transition
+or external camera. Use only motivated digital pinch zooms. Native sound:
+approach road noise, brakes, liquid hiss, gulping, door latches, mint impacts,
+foam roar, Doppler scream and brief phone-microphone clipping.
+
+FAILURE CONTROL
+One man, two trucks, one jug and one continuous take. No invented vehicle,
+passenger, early eruption, instant jug fill, reversed liquid, duplicated prop,
+teleportation, camera leaving the car, brand drift, subtitle, logo overlay or
+unmotivated cut. Every new state persists through the final frame.
+```
+
+**Why it works:** the prompt proves each prerequisite before its consequence:
+empty jug before filling, sustained fill before drinking, closed doors before
+opening, and visible mint contact before eruption. A single highway axis lets
+the launch resolve as readable near-to-far scale change without breaking the
+in-car viewpoint.
+
+Adapted and rewritten from TechHalla's September 17, 2026
+[original Seedance 2.5 result](https://x.com/techhalla/status/2100526482212712584)
+and [complete image-first prompt](https://x.com/techhalla/status/2100526486113472703).
+
+
 ## Reusable templates
 
 
@@ -38071,6 +38162,8 @@ Community examples and techniques referenced in this README:
 - [Konrad Reichelt — Higgsfield Seedance 2.5 reference-audio word authority, native-1080p talking-head proofs and visual-retime gate](https://github.com/konradre/video-production-skills/commit/b43448c8fbb62cc28e7b099c55b3a3ca5a69d5d1) ([complete operating method](https://github.com/konradre/video-production-skills/blob/b43448c8fbb62cc28e7b099c55b3a3ca5a69d5d1/skills/video-gen-cost-gate/references/VENUES.md), [`audio_references` submission implementation](https://github.com/konradre/video-production-skills/blob/b43448c8fbb62cc28e7b099c55b3a3ca5a69d5d1/skills/video-gen-cost-gate/scripts/hf_submit.py))
 
 - [Dreamina / CapCut — official Seedance 2.5 prompt-and-preview showcase: one-take opera, white-model transfer, green-screen edit, vehicle previs, paper character and audio-driven ensemble](https://dreamina.capcut.com/)
+
+- [TechHalla — Seedance 2.5 in-car cola-and-mint reaction one-take, generated 30-second result and complete image-first prompt](https://x.com/techhalla/status/2100526482212712584) ([complete prompt](https://x.com/techhalla/status/2100526486113472703))
 
 Official model references:
 
