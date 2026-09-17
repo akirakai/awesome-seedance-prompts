@@ -36395,7 +36395,99 @@ and the [initial paid Seedance generation
 commit](https://github.com/koheisuzuki0626-coder/so-portfolio/commit/59d8d80cec1df7a112c402bc3d472b92dd46d408).
 
 
+### Unresolved-distance couple start and contact-escalation gate
+
+**Verified model:** Seedance 2.5 — the original creator records a real A/B of
+two 5-second generations from the same validated lean-in / almost-kiss setup;
+both passed, with the less literal “standard” take preferred  
+**Use case:** short image-to-video couple, dialogue-adjacent or relationship
+shots where two faces approach, identity must remain separated and tension
+should rise without forcing immediate contact
+
+Treat the first frame as a motion premise, not the romantic climax. Leave a
+visible approach corridor, assign every existing contact and convert abstract
+intimacy into distance, gaze, timing and a held unresolved endpoint.
+
+```text
+REFERENCE AND ROLE LOCK
+PERSON_A = [REFERENCE PACKAGE / IDENTITY].
+PERSON_B = [REFERENCE PACKAGE / IDENTITY].
+START IMAGE = [APPROVED COUPLE FRAME].
+Each face, hairline, apparent age, nose and jaw belongs only to its assigned
+person. Do not average, exchange or merge their features as the gap closes.
+
+FRAME-ZERO MOTION-ROOM GATE
+Begin in a LEAN-IN state, not at the final almost-contact state:
+- bodies are already close enough to establish the relationship;
+- faces remain visibly separated, with room for one slow approach;
+- profiles, eyes and mouths are individually readable;
+- hands touch only at [DECLARED LOCATIONS], without tangled fingers;
+- the next direction of movement is unambiguous.
+
+If the supplied frame already places the faces at minimum distance, remake the
+frame or shorten the intended action. Do not ask the model to recover motion
+space by pulling the people apart and approaching again.
+
+APPROACH BLOCKING
+At [START TIME], PERSON_[A/B] initiates a slow lean toward PERSON_[B/A].
+PERSON_[OTHER] responds with [SMALL HEAD / TORSO MOTION] while maintaining
+eye contact. Their face distance changes from [START GAP] to [END GAP] over
+[DURATION]. Head motion remains small, continuous and anatomically plausible.
+
+CONTACT LEDGER
+- [HAND / ARM] of PERSON_A stays at [LOCATION ON PERSON_B] from frame zero to
+  the final frame;
+- [HAND / ARM] of PERSON_B stays at [LOCATION ON PERSON_A] from [EVENT] to the
+  final frame;
+- no hand slides, swaps owner, disappears or penetrates a face or torso unless
+  that change is explicitly choreographed.
+
+TENSION BEAT
+APPROACH -> MICRO-PAUSE -> HOLD UNRESOLVED DISTANCE.
+Pause for [BEAT] before contact. Keep a small readable gap between the faces.
+Hold the gaze and final distance through the ending. Do not complete a kiss or
+collapse the faces together unless a later beat explicitly requires it.
+
+CAMERA AND LIGHT
+Use a medium close shot with both profiles readable. Keep the camera locked or
+apply only [SUBTLE FOLLOW]; no cut, crash push or pull competes with the facial
+approach. Use [DIRECTIONAL SIDE/BACK SOURCE] to separate both faces and hair
+from the background while protecting natural skin detail.
+
+ACCEPTANCE GATE
+Accept only if:
+1. both identities remain distinct at the smallest face distance;
+2. the initiating person, approach direction and response are readable;
+3. every declared hand contact persists without reassignment or fusion;
+4. the micro-pause is visible and the final gap remains unresolved;
+5. camera movement and lighting support, rather than replace, the relationship
+   action;
+6. stronger tension comes from timing, restraint and gaze—not an unrequested
+   escalation to completed contact.
+```
+
+**Why it works:** “more intimate” is an evaluation, not executable blocking.
+The documented standard take held a small face gap after a slow approach and
+read as more romantic and ambiguous than the explicitly more-intimate variant,
+which advanced toward contact more directly. Directional side/back window
+light also separated the faces better than the flatter high-key comparison.
+The lighting result is setup-specific; the reusable result is the physical
+sequence and its collision/identity gate.
+
+Adapted and rewritten from the original creator's September 17, 2026
+[Seedance 2.5 couple-start strategy](https://github.com/wyl19868864747-alt/-/commit/85e34883417832d32cea1f3262b2165ad2c5ad55),
+[real-generation A/B benchmark](https://github.com/wyl19868864747-alt/-/commit/7128af6358ab00a6ef453f6ed877690a6823a50c),
+[production routing integration](https://github.com/wyl19868864747-alt/-/commit/f16e0c4e009c1717c822c7a5e2c98a4f8146089d)
+and [validated operating-profile update](https://github.com/wyl19868864747-alt/-/commit/5f1da98d0bf0b52c680087bcfbc7ffcf881a61b5).
+
+
 ## Sources
+
+- [Wyl / AI Virtual Partner — September 17, 2026 Seedance 2.5 real two-take,
+5-second couple-start A/B; unresolved-distance preference, complete motion
+structure and identity/contact acceptance rules](https://github.com/wyl19868864747-alt/-/commit/7128af6358ab00a6ef453f6ed877690a6823a50c)
+([complete reusable strategy](https://github.com/wyl19868864747-alt/-/blob/85e34883417832d32cea1f3262b2165ad2c5ad55/ai-virtual-partner-skill/references/seedance-couple-video-start.md),
+[model-adaptation record](https://github.com/wyl19868864747-alt/-/commit/5f1da98d0bf0b52c680087bcfbc7ffcf881a61b5))
 
 - [AndyCA111 / VideoGen Agent — Evolink Seedance 2.0 Fast four-clip baseline generation and committed outputs](https://github.com/AndyCA111/VideoGen_Agent/commit/2d5742e5c03fbfc8677a2be2bf04f1f5f9683039) ([complete source prompts](https://github.com/AndyCA111/VideoGen_Agent/blob/2d5742e5c03fbfc8677a2be2bf04f1f5f9683039/js/demo-data.js), [Vigil crossbow MP4](https://github.com/AndyCA111/VideoGen_Agent/blob/2d5742e5c03fbfc8677a2be2bf04f1f5f9683039/videos/seedance_baselines/vks_3472_sd2.mp4), [cricket-window MP4](https://github.com/AndyCA111/VideoGen_Agent/blob/2d5742e5c03fbfc8677a2be2bf04f1f5f9683039/videos/seedance_baselines/cs_1125_sd2.mp4))
 
