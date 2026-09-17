@@ -381,6 +381,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Four-performer rooftop music video with audio-owned timing](#365-four-performer-rooftop-music-video-with-audio-owned-timing)
   - [In-car cola-and-mint reaction one-take](#366-in-car-cola-and-mint-reaction-one-take)
   - [Four-rider night-road rift crossing with silence ledger](#367-four-rider-night-road-rift-crossing-with-silence-ledger)
+  - [Bare-bar good morning with opposing-endpoint hinge proof](#368-bare-bar-good-morning-with-opposing-endpoint-hinge-proof)
+  - [Supinated bent-over row with grip-surface and torso locks](#369-supinated-bent-over-row-with-grip-surface-and-torso-locks)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -22761,6 +22763,116 @@ Adapted and rewritten from TechieSA's September 17, 2026
 and [complete 30-second prompt](https://x.com/TechieBySA/status/2100548644776579390).
 
 
+### 368. Bare-bar good morning with opposing-endpoint hinge proof
+
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`) — the original
+creator records that the earlier take became a squat, then marks this corrected
+2.5 take as accepted and installed; the repository preserves its complete
+production structure and the retained catalogue MP4  
+**Use case:** exercise demonstration, visually unambiguous hip hinge, unloaded
+bar continuity and squat-substitution control  
+**Mode:** multi-reference image-to-video  
+**Suggested settings:** 4–6 seconds, vertical, static full-body side or
+three-quarter view, native audio off, two controlled repetitions
+
+```text
+Use the supplied adult-athlete references only for identity, proportions and
+training clothes. Keep exactly one athlete and one straight steel bar in an
+open gym. Use a fixed full-body side or three-quarter camera that keeps the
+head, hips, knees, heels and both ends of the bar visible in every frame.
+
+The bar rests level across the upper back behind the neck and stays in contact
+with both shoulders. It is completely bare: plain metal extends to both ends,
+with no plates, discs, collars or clips appearing at any time. Both hands keep
+the same grip and the bar never bends, floats or moves to the front of the body.
+
+Show two slow, complete good-morning repetitions:
+- UPRIGHT ENDPOINT — torso tall, hips stacked above the heels, knees only
+  slightly soft and the bar horizontal across the shoulders;
+- HINGE ENDPOINT — the hips travel far backward beyond the heels while the
+  head and chest travel forward and downward until the back is almost parallel
+  with the floor. Keep the spine long and flat.
+
+Travel visibly from upright to the full hinge and back twice. Read the two ends
+of the body together: whenever the head moves forward and down, the buttocks
+must move backward by a comparable amount. The knees preserve nearly the same
+angle; they do not advance and the hips never descend between the feet.
+
+This is a hip hinge, not a squat. Reject knee-dominant lowering, upright torso
+at the bottom, hips dropping straight down, rounded back, shortened range,
+loaded or changing bar, shoulder-contact loss, hand release, cropped endpoint,
+extra person, extra limb, camera move, text, logo or audio.
+```
+
+**Why it works:** the failed version could satisfy “lower the body” with a
+squat. The correction couples two opposing body endpoints—head forward/down
+and hips backward—while separately freezing the knee angle. The bare-bar
+inventory also prevents the original unwanted load from returning during the
+large motion.
+
+Adapted and rewritten from AutoCare's September 17, 2026
+[Seedance 2.5 generation and human-acceptance commit](https://github.com/AutoCare-1/trainos/commit/2a8b1b7a339609a6fb0c592073498bad431c4a7d),
+[complete production prompt structure](https://github.com/AutoCare-1/trainos/blob/2a8b1b7a339609a6fb0c592073498bad431c4a7d/backend-laravel/database/dicas_demonstracao.php),
+[versioned result mapping](https://github.com/AutoCare-1/trainos/blob/2a8b1b7a339609a6fb0c592073498bad431c4a7d/backend-laravel/database/demonstracoes_geradas.php)
+and [retained generated MP4](https://pub-9482945b571143e887b925bd2e0565e1.r2.dev/exercise-demos/bom-dia-com-barra.mp4).
+
+
+### 369. Supinated bent-over row with grip-surface and torso locks
+
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`) — the original
+creator records that the earlier take used the wrong grip and stood upright,
+then marks this corrected 2.5 take as accepted and installed; the full prompt
+structure and retained catalogue MP4 remain publicly traceable  
+**Use case:** exercise demonstration, hand-orientation control, persistent
+torso angle and arm-only cyclic motion  
+**Mode:** multi-reference image-to-video  
+**Suggested settings:** 4–6 seconds, vertical, static three-quarter frontal
+full-body view, native audio off, two controlled repetitions
+
+```text
+Use the supplied adult-athlete references only for identity, proportions and
+training clothes. Keep exactly one athlete and one straight barbell in an open
+gym. Lock a static three-quarter frontal full-body view that shows both hands,
+forearms, elbows, torso, hips, knees and the entire bar throughout.
+
+Before motion begins, establish an underhand grip that remains readable in
+every frame: both palms and the pale inner forearms face upward and toward the
+camera; the knuckles and backs of the hands stay below and behind the bar. Both
+hands keep the same spacing. Never rotate into an overhand, mixed or neutral
+grip.
+
+The athlete hinges forward once and holds that geometry for the full clip:
+chest faces the floor, shoulders remain clearly below the hips, head projects
+forward over the toes and the back stays flat. The torso never rises toward
+vertical and the hips, knees and spine do not pump with the repetitions.
+
+Show two complete arm cycles while the body angle remains frozen:
+- LOW ENDPOINT — both elbows fully open, arms hanging straight down and the bar
+  level near knee height;
+- HIGH ENDPOINT — pull the same bar upward until it touches the lower abdomen,
+  driving both elbows behind the ribs and bringing the shoulder blades together;
+- return under control to the identical low endpoint before repeating.
+
+Only the arms and shoulder blades travel. Preserve the underhand palm surfaces,
+bar count, torso angle and foot positions between endpoints. Reject standing
+row, torso heave, partial arm range, overhand or mixed grip, palm disappearance,
+bar passing through the body, bent or floating bar, asymmetric elbow path,
+cropped hands, extra person, extra limb, camera move, text, logo or audio.
+```
+
+**Why it works:** “supinated” is converted into visible surface ownership—the
+camera must continuously see palms and inner forearms—rather than relying on an
+exercise label. Separating the one-time hip hinge from the repeating arm cycle
+prevents the model from standing up on every pull or replacing the row with a
+whole-body lift.
+
+Adapted and rewritten from AutoCare's September 17, 2026
+[Seedance 2.5 generation and human-acceptance commit](https://github.com/AutoCare-1/trainos/commit/2a8b1b7a339609a6fb0c592073498bad431c4a7d),
+[complete production prompt structure](https://github.com/AutoCare-1/trainos/blob/2a8b1b7a339609a6fb0c592073498bad431c4a7d/backend-laravel/database/dicas_demonstracao.php),
+[versioned result mapping](https://github.com/AutoCare-1/trainos/blob/2a8b1b7a339609a6fb0c592073498bad431c4a7d/backend-laravel/database/demonstracoes_geradas.php)
+and [retained generated MP4](https://pub-9482945b571143e887b925bd2e0565e1.r2.dev/exercise-demos/remada-curvada-pegada-supinada.mp4).
+
+
 ## Reusable templates
 
 
@@ -37243,6 +37355,8 @@ portrait generator and content-key invalidation logic.
 
 
 ## Sources
+
+- [AutoCare — September 17, 2026 Higgsfield Seedance 2.5 (`seedance_2_5`) opposing-endpoint good morning and palm-surface-locked supinated row: two corrected takes accepted and installed; the same batch explicitly excludes a Dead bug completed by Gemini](https://github.com/AutoCare-1/trainos/commit/2a8b1b7a339609a6fb0c592073498bad431c4a7d) ([complete prompt structures](https://github.com/AutoCare-1/trainos/blob/2a8b1b7a339609a6fb0c592073498bad431c4a7d/backend-laravel/database/dicas_demonstracao.php), [result mapping](https://github.com/AutoCare-1/trainos/blob/2a8b1b7a339609a6fb0c592073498bad431c4a7d/backend-laravel/database/demonstracoes_geradas.php), [good-morning MP4](https://pub-9482945b571143e887b925bd2e0565e1.r2.dev/exercise-demos/bom-dia-com-barra.mp4), [supinated-row MP4](https://pub-9482945b571143e887b925bd2e0565e1.r2.dev/exercise-demos/remada-curvada-pegada-supinada.mp4))
 
 - [TechieSA — September 17, 2026 Seedance 2.5 four-rider night-road rift crossing: generated preview, exact-version statement, complete 30-second prompt, three-bicycle ownership repair, sound-removal trigger and one-way crossing ledger](https://x.com/TechieBySA/status/2100548626942451859) ([complete prompt](https://x.com/TechieBySA/status/2100548644776579390))
 
