@@ -26973,9 +26973,13 @@ published August 9, 2026.
 
 **Verified models:** DRA Seedance 2.5 (`seedance-2-5`), Seedance 2.0 Fast
 (`seedance-2-0-fast` / `doubao-seedance-2-0-fast-260128`), and Seedance
-2.0 Mini (`seedance-2-0-mini`) — confirmed by creator-run public-route
-generations, route validation logs, billing records, output probes, and the
-official BytePlus input contract
+2.0 Mini (`seedance-2-0-mini`); BytePlus ModelArk Seedance 2.5
+(`dreamina-seedance-2-5-260628`), Seedance 2.0
+(`dreamina-seedance-2-0-260128`), Seedance 2.0 Fast
+(`dreamina-seedance-2-0-fast-260128`), and Seedance 2.0 Mini
+(`dreamina-seedance-2-0-mini-260615`) — confirmed by creator-run public-route
+generations, route validation logs, billing records, output probes, exact
+production model mapping, and the official BytePlus input contract
 
 Use this before writing shots whenever a workflow can attach videos or audio.
 Keep the asset library permissive until a model is chosen, then bind every file
@@ -26985,8 +26989,9 @@ before submission.
 ```text
 MODEL AND MODE — choose exactly one
 A. Seedance 2.5 / multimodal reference
-B. Seedance 2.0 or 2.0 Fast / multimodal reference
+B. Seedance 2.0, 2.0 Fast, or 2.0 Mini / multimodal reference
 C. Seedance 2.5 / edit or extend
+D. Seedance 2.0 family / edit intent
 
 UNBOUND INGEST
 If no model is selected yet, accept reference video or audio only within the
@@ -27006,7 +27011,7 @@ A — 2.5 reference:
   route-specific validator to other providers. A live 15-reference canary used
   9 images, 3 two-second videos, and 3 two-second audio clips in one request.
 
-B — 2.0 / 2.0 Fast reference:
+B — 2.0 / 2.0 Fast / 2.0 Mini reference:
 - Up to 9 images, 3 videos, and 3 audio clips.
 - Each video or audio clip must be 2–15 seconds.
 - Total reference-video duration must be at most 15 seconds.
@@ -27021,10 +27026,28 @@ C — 2.5 edit or extend:
 - Reject reference images and audio for this route.
 - Use the source video's geometry and timing as the edit/extension authority.
 
+D — 2.0-family edit intent:
+- Require the source video to be 4–30 seconds before buying a task.
+- Classify requests such as change, remove, replace, restyle, or background
+  replacement as editing even when the same file could be attached as a
+  multimodal reference.
+- Apply this gate to standard, Fast, Mini, and the provider's sensitive-content
+  Seedance 2.0 routes, but keep the evidence scope explicit: the measured
+  failure was standard `dreamina-seedance-2-0-260128`.
+- Do not treat task acceptance as capability success. A 1.5-second source was
+  accepted and then failed during rendering in seven of seven background-
+  replacement runs with an opaque internal error; 4-second-or-longer sources
+  succeeded with otherwise identical settings.
+- Preserve the single source unchanged. If it is shorter than 4 seconds, ask
+  for a deliberate re-export or approved padding pass rather than silently
+  stretching, truncating, changing models, or resubmitting the paid job.
+
 PRE-SUBMIT RECHECK
 Repeat the same model-and-mode gate on the server immediately before creating
 the task. Return a specific correction, for example:
 "Seedance 2.0 accepts 2–15-second reference video; this file is [N.N] seconds."
+For edit intent, return:
+"Seedance 2.0 editing requires a 4–30-second source; this file is [N.N] seconds."
 Do not truncate a file, switch models, drop an asset, or reinterpret edit as
 reference generation without explicit approval.
 
@@ -27058,7 +27081,9 @@ strip or mute the track in post when the delivery contract requires silence.
 submission-time validation alone gives late and costly failures. The two-stage
 gate preserves reusable assets, produces model-specific corrections, prevents
 front-end/server drift, and separates safe validation tests from billable task
-creation.
+creation. It also treats task acceptance as transport success rather than proof
+that the selected model can finish the requested edit, preventing repeated paid
+submissions after an opaque late-stage failure.
 
 Adapted from the [FlashMuse v1.0.0.90 implementation and measured upstream tests](https://github.com/lookxun/FlashMuse_Agent/commit/212606c7190eb90991160c924c93bbf68e8676ff),
 published August 9, 2026, and cross-checked against the official
@@ -27068,6 +27093,11 @@ Additional primary route evidence: the creator's
 [Seedance 2.5 15-reference paid run](https://github.com/btcfoxman/dra2api/blob/0790c125fd36bda612fc1467d2af5ba0529beab8/docs/verification-15-references.md),
 [Seedance 2.0 Fast 15-reference paid run](https://github.com/btcfoxman/dra2api/blob/d5546547782d19208d16cc9d5e5b709e9179c45b/docs/verification-fast-15-references.md),
 and [Fast audio-off output probe](https://github.com/btcfoxman/dra2api/commit/edf352d93b0fe2d73e0d9edae8dc96f88355eb3c).
+The Seedance 2.0 edit-duration failure mode and shared family gate were added
+from Aayush Hoichoi's [September 17 seven-run production report and merged fix](https://github.com/Aayush-hoichoi/Seedance2.0/pull/86),
+its [implementation commit](https://github.com/Aayush-hoichoi/Seedance2.0/commit/8c0a5c98e826a0eca1c38fdc47e9fd7589150339),
+[exact model registry](https://github.com/Aayush-hoichoi/Seedance2.0/blob/8c0a5c98e826a0eca1c38fdc47e9fd7589150339/lib/seedance/constants.js),
+and [constraint routing](https://github.com/Aayush-hoichoi/Seedance2.0/blob/8c0a5c98e826a0eca1c38fdc47e9fd7589150339/lib/seedance/constraints25.mjs).
 
 ### Single-shot template
 
@@ -36482,6 +36512,17 @@ and [validated operating-profile update](https://github.com/wyl19868864747-alt/-
 
 
 ## Sources
+
+- [Aayush Hoichoi / Seedance2.0 — September 17, 2026 exact-model edit-duration
+repair: standard `dreamina-seedance-2-0-260128` accepted a 1.5-second source
+then failed all seven background-replacement renders with an opaque internal
+error, while 4-second-or-longer sources succeeded under identical settings;
+the merged fix applies a 4–30-second attachment warning across the mapped 2.0,
+Fast, Mini and sensitive 2.0 edit routes while explicitly excluding 1.5
+Pro](https://github.com/Aayush-hoichoi/Seedance2.0/pull/86)
+([implementation commit](https://github.com/Aayush-hoichoi/Seedance2.0/commit/8c0a5c98e826a0eca1c38fdc47e9fd7589150339),
+[exact model registry](https://github.com/Aayush-hoichoi/Seedance2.0/blob/8c0a5c98e826a0eca1c38fdc47e9fd7589150339/lib/seedance/constants.js),
+[constraint routing](https://github.com/Aayush-hoichoi/Seedance2.0/blob/8c0a5c98e826a0eca1c38fdc47e9fd7589150339/lib/seedance/constraints25.mjs))
 
 - [Wyl / AI Virtual Partner — September 17, 2026 Seedance 2.5 real two-take,
 5-second couple-start A/B; unresolved-distance preference, complete motion
