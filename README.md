@@ -22283,6 +22283,293 @@ the [complete prompt and task ledger](https://github.com/AndyCA111/VideoGen_Agen
 and the [generated Seedance 2.0 Fast MP4](https://github.com/AndyCA111/VideoGen_Agent/blob/2d5742e5c03fbfc8677a2be2bf04f1f5f9683039/videos/seedance_baselines/cs_1125_sd2.mp4).
 
 
+### 360. Peking-opera identity orbit and weighted acrobatics
+
+**Verified model:** Dreamina Seedance 2.5 — Dreamina's official Seedance 2.5
+showcase binds the named model, source request and generated preview on one page  
+**Use case:** two-performer stage action, costume and makeup continuity, circular
+camera movement and readable traditional-performance weight  
+**Mode:** text-to-video  
+**Suggested settings:** 15 seconds, 16:9, native audio on, one continuous shot
+
+```text
+Create one continuous, photorealistic Peking-opera performance on a dark stage.
+Keep exactly two named roles throughout: Xiang Yu in heavy armor and long beard,
+and Yu Ji in an embroidered robe. Preserve each face, makeup pattern, headdress,
+costume silhouette and stage position.
+
+0–4s | establish and orbit
+Begin in a medium two-shot. Circle slowly around Xiang Yu while Yu Ji remains
+visible behind his far shoulder. Low-key stage light catches the armor edges;
+the audience space stays black.
+
+4–10s | weighted martial phrase
+Xiang Yu completes, in order, one beard swing, one armor shake, cloud hands and
+a firm stepping pose. Let sleeves, beard and armor settle after each impulse.
+The camera continues the same orbit without reversing or crossing the stage.
+
+10–15s | controlled climax
+He performs one compact spinning flip, lands with bent knees, then rises into a
+held pose as Yu Ji answers with one measured sleeve arc. Finish only after both
+costumes settle and both faces are readable.
+
+AUDIO
+Live wooden clappers, drum accents tied to the step and landing, armor rattle,
+cloth movement and stage-room reflections. No added dialogue or pop music.
+
+FAILURE CONTROL
+One take; two performers only. No face swap, makeup drift, costume exchange,
+weightless flip, duplicated limbs, floating beard, disappearing headdress,
+camera reversal, cut, audience insert, subtitle, logo or readable text.
+```
+
+**Why it works:** the orbit has one direction and the martial phrase has an
+ordered impulse-and-settle chain. Treating beard, sleeves and armor as delayed
+physical followers keeps costume motion from replacing the performer.
+
+Adapted and rewritten from Dreamina / CapCut's September 17, 2026
+[official Seedance 2.5 showcase and source request](https://dreamina.capcut.com/).
+
+
+### 361. White-model blocking transferred into a keyframed fairy-tale short
+
+**Verified model:** Dreamina Seedance 2.5 — the official showcase identifies
+the model and pairs its white-model transfer request with the displayed result  
+**Use case:** reference-video camera and blocking transfer while keyframes own
+character identity, materials and final art direction  
+**Mode:** reference-to-video with one white-model video and stage keyframes  
+**Suggested settings:** 30 seconds, 16:9, native audio on
+
+```text
+Generate a warm cinematic 3D fairy-tale short. @Video1 is the sole authority
+for camera path, cut timing, framing, subject trajectories, entrances, exits
+and performance blocking. The stage keyframes are the sole authority for each
+character's face, proportions, costume, palette, materials and environment.
+
+For every shot in @Video1:
+1. reproduce its opening composition and camera direction;
+2. map each proxy to the matching keyframed character without changing roles;
+3. preserve the proxy's contact, eyeline, path and screen side;
+4. let expressions change only when the same action beat motivates them;
+5. arrive at the corresponding final composition before the next cut.
+
+Render the proxy world as a dreamy handcrafted forest village at golden hour:
+rounded timber homes, soft grass, floating pollen and warm window light. Keep
+scale, geography and light direction coherent across every cut. Motion should
+feel weighted and childlike, never rubbery.
+
+AUDIO
+Gentle orchestral motif, close footsteps, cloth, doors and environmental birds;
+effects follow the inherited actions and cuts.
+
+FAILURE CONTROL
+Do not copy the white material or proxy faces. Do not invent shots, reorder
+beats, alter lens height, swap identities, change costumes, mirror blocking,
+teleport subjects, merge characters, add text or expose the reference rig.
+```
+
+**Why it works:** it gives motion authority and appearance authority to
+different inputs, then defines a per-shot handoff contract. This prevents a
+keyframe from flattening the previs timing or a white model from leaking into
+the finished design.
+
+Adapted and rewritten from Dreamina / CapCut's September 17, 2026
+[official Seedance 2.5 white-model showcase and source request](https://dreamina.capcut.com/).
+
+
+### 362. Moss-stair green-screen replacement with contact preservation
+
+**Verified model:** Dreamina Seedance 2.5 — Dreamina's official showcase labels
+the green-screen edit and its displayed output as Seedance 2.5  
+**Use case:** video editing that replaces only the keyed background while
+preserving the performer, practical stairs, motion and contact shadows  
+**Mode:** video edit  
+**Suggested settings:** source duration, source aspect ratio, native audio on
+
+```text
+Edit @Video1. Preserve the original girl and the complete moss-covered stair
+structure exactly: face, body, clothing, hair motion, gait, hand contacts,
+footfalls, stair geometry, framing, camera path, timing and every source cut.
+Replace only the green-screen region.
+
+Build one coherent fairy-tale forest beyond and around the stairs. Tall ancient
+trees establish depth; hanging vines and ferns overlap the stair edges without
+covering the girl; broken stone arches and pillars sit behind the practical
+stairs; small wildflowers, glowing mushrooms and restrained light particles
+fill the lower layers. Match the source lens, motion blur, grain, exposure and
+depth of field. Derive the key and fill direction from the girl, then cast the
+same light and contact shadow onto nearby plants and stone.
+
+When the camera moves, preserve parallax tiers: stair moss and nearby ferns,
+midground arches, then distant trunks and haze. Keep each foot planted on the
+same source step and let foliage react only when the source body passes close.
+
+FAILURE CONTROL
+No replacement or repainting of the girl or stairs; no changed timing, crop,
+camera, pose, foot placement or source edit. No green spill, halo, matte edge,
+floating foot, foliage through the body, sliding stairs, inconsistent light,
+new person, portal, subtitle, logo or text.
+```
+
+**Why it works:** the edit mask is defined semantically and geometrically, then
+lighting, parallax and contact are reconciled across the preserved boundary.
+That makes the practical staircase the bridge between source and replacement.
+
+Adapted and rewritten from Dreamina / CapCut's September 17, 2026
+[official Seedance 2.5 green-screen showcase and source request](https://dreamina.capcut.com/).
+
+
+### 363. Previz-locked motorcycle and SUV pursuit
+
+**Verified model:** Dreamina Seedance 2.5 — the official Dreamina showcase
+publishes the exact model, 15-second source request and matching preview  
+**Use case:** vehicle-action camera transfer with separate appearance references
+for the motorcycle and SUV  
+**Mode:** reference-to-video with @Video1, @Image1 and @Image2  
+**Suggested settings:** 15 seconds, 16:9, native audio on
+
+```text
+Turn @Video1 into a photorealistic 15-second commercial-blockbuster pursuit.
+@Video1 exclusively controls camera path, lens changes, edit points, pacing,
+vehicle trajectories, spacing, stunt blocking and final composition.
+@Image1 exclusively controls the motorcycle's model, paint, proportions,
+materials and rider-facing details. @Image2 exclusively controls the SUV's
+model, color scheme, silhouette, lights, wheels and body details.
+
+At every cut, preserve the source vehicles' screen side, travel direction,
+relative distance and road contact. Maintain one motorcycle and one SUV. Tires
+rotate at plausible speed, suspension compresses at bumps, lean angle follows
+the turn radius, and reflections remain attached to each body panel. Dust,
+sparks and debris occur only after visible tire or body contact.
+
+Keep the same rider identity, helmet and clothing through wide shots, inserts
+and occlusions. Match exposure, weather and road geography across cuts. End in
+the exact final blocking of @Video1 after both vehicles visibly settle into it.
+
+AUDIO
+Perspective-correct engines, tire scrub, suspension impacts, passing air and
+bounded debris hits; no narration or music masking the vehicle cues.
+
+FAILURE CONTROL
+No new stunt, extra vehicle, model swap, wheel deformation, tire sliding,
+reversed direction, collision before contact, changed camera path, invented
+cut, face reveal, black frame, subtitle, logo or text.
+```
+
+**Why it works:** each reference has one non-overlapping authority. Explicitly
+carrying screen side, distance and contact physics through every source cut
+turns the previs into a continuity contract rather than a loose style cue.
+
+Adapted and rewritten from Dreamina / CapCut's September 17, 2026
+[official Seedance 2.5 vehicle-previs showcase and source request](https://dreamina.capcut.com/).
+
+
+### 364. Detachable paper puppy crossing a realistic tabletop world
+
+**Verified model:** Dreamina Seedance 2.5 — Dreamina's official reference-video
+showcase explicitly names Seedance 2.5 and displays the source request/result  
+**Use case:** mixed 2D/3D physicality, small-character scale and detachable-part
+continuity driven by reference-video intent rather than literal motion copying  
+**Mode:** reference-to-video with @Video1 and @Image1  
+**Suggested settings:** 15 seconds, 16:9, native audio on
+
+```text
+Create a warm, playful interaction between a realistic tabletop world and the
+paper puppy in @Image1. Interpret @Video1's framing, pacing, emotional beats and
+cinematic language; preserve its action order, but adapt the motion to the
+puppy's paper construction instead of copying human anatomy.
+
+The puppy is exactly fist-sized and visibly two-dimensional: front and back
+faces are printed paper and the side edge is one sheet thick. Its two ears and
+four limbs are separate flat pieces attached to one torso. Preserve the same
+printed face, outline, scale and number of pieces throughout.
+
+0–5s | discovery
+On a sunlit wooden desk, the puppy rises from a postcard, turns edge-on to prove
+its paper thickness, then notices a real ceramic cup.
+
+5–11s | expressive interaction
+It trots toward the cup. One ear detaches, flutters around the handle and taps
+the cup; the torso reacts while the remaining pieces stay attached.
+
+11–15s | recovery
+The ear returns to its original socket. The complete puppy leans against the
+cup and wags both rear paper pieces; hold long enough to verify all parts.
+
+AUDIO
+Paper rustle, light taps on ceramic, small tabletop footsteps and quiet room
+tone. No speech.
+
+FAILURE CONTROL
+Exactly one torso, two ears and four limbs. No thickness inflation, plush fur,
+3D limbs, duplicated or lost piece, size drift, cup deformation, floating
+without cause, harsh shadow mismatch, text, subtitle or logo.
+```
+
+**Why it works:** thickness, scale and part count are persistent identity facts,
+while detachment is treated as a reversible state transition with a proved
+return socket. The reference controls story intent without forcing impossible
+human motion onto a paper body.
+
+Adapted and rewritten from Dreamina / CapCut's September 17, 2026
+[official Seedance 2.5 paper-character showcase and source request](https://dreamina.capcut.com/).
+
+
+### 365. Four-performer rooftop music video with audio-owned timing
+
+**Verified model:** Dreamina Seedance 2.5 — the official Dreamina showcase
+binds Seedance 2.5, four image references, @Audio1, the prompt and preview  
+**Use case:** beat-synced multi-character music video, formation continuity,
+lip sync, weather-state change and FPV exterior move  
+**Mode:** reference-to-video with @Image1–@Image4 and @Audio1  
+**Suggested settings:** 30 seconds, 16:9, native audio/reference audio on
+
+```text
+Create a rooftop performance video timed exclusively to @Audio1. Preserve the
+four performers from @Image1, @Image2, @Image3 and @Image4 as separate stable
+identities: face, hair, costume, height order and voice ownership never swap.
+Use VHS grain as a finish, not as a reason to hide faces or lip sync.
+
+0–4s | vocal pickup
+Extreme close-up of @Image1. She opens her eyes on the first pickup and begins
+lip sync only when her vocal starts.
+
+4–15s | formation performance
+Hard cut on the first downbeat to all four on the rain-soaked rooftop. Use
+front, diagonal and diamond formations; every change completes on a strong beat
+and keeps each performer on a traceable path.
+
+15–23s | escalation
+Four helicopters enter one by one above distinct roof corners. Their spotlights
+sweep across the group without replacing or obscuring anyone. On the specified
+audio accent, falling rain stops at once; existing drops continue downward and
+finish, with no reversed rain.
+
+23–30s | FPV closure
+An FPV move circles the building once, keeps the rooftop group visible, then
+pushes toward the same four performers. They complete the final lyric in sync
+and hold formation before a deliberate fade to black.
+
+AUDIO AND EDIT
+@Audio1 owns lyrics, pronunciation, vocalist, beat grid and total duration.
+Cuts and formation arrivals land on audible beats; never rewrite or duplicate
+the song.
+
+FAILURE CONTROL
+Four performers and four helicopters only. No identity, costume or voice swap;
+no fifth person, cloned face, drifting formation, helicopter teleportation,
+lip movement before a vocal, rain reversal, extra cut, subtitle, logo or text.
+```
+
+**Why it works:** audio receives sole timing and word authority, while every
+performer has a persistent identity slot and traceable formation path. The rain
+stop is a one-way state change, and the FPV move begins only after the wide-shot
+events have completed.
+
+Adapted and rewritten from Dreamina / CapCut's September 17, 2026
+[official Seedance 2.5 audio-reference showcase and source request](https://dreamina.capcut.com/).
+
+
 ## Reusable templates
 
 
@@ -37782,6 +38069,8 @@ Community examples and techniques referenced in this README:
 - [Wolkchen0 / youtube-automation — Seedance 2.0 Fast Saturn-ring camera-as-vehicle fly-through, complete prompt, committed result and QC ledger](https://github.com/Wolkchen00/youtube-automation/commit/8297f4ff36040948993f952bef52360cde3d20ef) ([complete prompt](https://github.com/Wolkchen00/youtube-automation/blob/8297f4ff36040948993f952bef52360cde3d20ef/galactic_experience/flythrough/plans/part01.json), [generated MP4](https://github.com/Wolkchen00/youtube-automation/blob/8297f4ff36040948993f952bef52360cde3d20ef/galactic_experience/hazir/saturn-rings-flythrough.mp4), [exact model route](https://github.com/Wolkchen00/youtube-automation/blob/8297f4ff36040948993f952bef52360cde3d20ef/core/kie_api.py#L475-L489), [QC ledger](https://github.com/Wolkchen00/youtube-automation/blob/8297f4ff36040948993f952bef52360cde3d20ef/galactic_experience/flythrough/qc_log.jsonl))
 
 - [Konrad Reichelt — Higgsfield Seedance 2.5 reference-audio word authority, native-1080p talking-head proofs and visual-retime gate](https://github.com/konradre/video-production-skills/commit/b43448c8fbb62cc28e7b099c55b3a3ca5a69d5d1) ([complete operating method](https://github.com/konradre/video-production-skills/blob/b43448c8fbb62cc28e7b099c55b3a3ca5a69d5d1/skills/video-gen-cost-gate/references/VENUES.md), [`audio_references` submission implementation](https://github.com/konradre/video-production-skills/blob/b43448c8fbb62cc28e7b099c55b3a3ca5a69d5d1/skills/video-gen-cost-gate/scripts/hf_submit.py))
+
+- [Dreamina / CapCut — official Seedance 2.5 prompt-and-preview showcase: one-take opera, white-model transfer, green-screen edit, vehicle previs, paper character and audio-driven ensemble](https://dreamina.capcut.com/)
 
 Official model references:
 
