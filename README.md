@@ -25630,6 +25630,25 @@ Camera grammar: [AXIS / HEIGHT / LENS / HANDHELD OR LOCKED].
 Audio bed: [VOICE / AMBIENCE / MUSIC POSITION].
 Forbidden drift: [KNOWN FAILURE MODES].
 
+SEGMENT AND REFERENCE-ROLE MANIFEST
+For every clip, record both local time [0–CLIP END] and its global interval
+[GLOBAL START–GLOBAL END]. List every state already completed before the local
+opening and every state that must remain true after it: [OBJECT LOCATION],
+[DOOR / APPLIANCE STATE], [HAND OCCUPANCY], [CHARACTER POSITION], [LAST SOUND].
+
+Assign each conditioning asset one non-overlapping job:
+- @Video1 = the current authored trajectory and event timing only;
+- @Video2 = the approved parent's short tail for identity, appearance, light
+  and incoming camera velocity only; never replay its action;
+- @Image1 = the approved parent's final frame as a soft opening cue only;
+- @Image2+ = environment or character appearance only; never reset the current
+  event state to what is visible in an older plate.
+
+When a clay previs or authored state ledger conflicts with the generated parent,
+the generated pixels at the chosen boundary are ground truth. Repair the parent
+or redesign the handoff; do not tell the child to begin from an ideal state that
+the parent did not actually reach.
+
 CLIP 1 — ESTABLISH AND SETTLE
 Generate only the first finite action. End on one readable, low-motion state
 that can safely become the next clip's input. Export the actual returned file
@@ -25646,6 +25665,14 @@ Require:
 - the final 0.5–1 second contains a clean continuation anchor;
 - audio has no stray speaker, restart, clipped line or timing jump;
 - the delivered resolution, duration and container match the request.
+
+Technical conformance is necessary but not a semantic pass. A correct duration,
+frame rate, frame count and low automated scene-change score can coexist with a
+hand reset, camera jump, duplicated cupboard or refrigerator, changed room
+geometry, lost contact or reverted object state. Inspect both sides of every
+join at normal speed and frame by frame; compare the first child frames with the
+parent's actual tail and the global state ledger. Record automated measurements
+as triage evidence, never as proof of continuity.
 
 Record PASS or FAIL plus the exact first failed frame and failed variable.
 On FAIL, regenerate this clip only. Do not create, keep or evaluate downstream
@@ -25707,6 +25734,12 @@ Join only clips from one valid approved lineage. Cut on settled motion,
 motivated contact or matched camera direction. Recheck identity, hands, prop
 state, audio phase and actual total runtime across both sides of every seam.
 Archive rejected parents separately so they cannot be selected by mistake.
+Keep one evidence master made with straight joins and exact segment trims. Do
+not use a dissolve, crossfade, optical interpolation, speed change, hidden cut,
+insert or replacement Foley to conceal a failed boundary. Editorial repair may
+be authored later only after the failure remains visible and documented in the
+acceptance ledger; it cannot turn a semantically broken chain into a verified
+continuous Seedance result.
 
 No speculative downstream render, rejected-parent continuation, silent asset
 swap, face drift propagation, room rewrite, product mutation, action replay,
@@ -25721,11 +25754,29 @@ parent invalidates its descendants. The durable round checkpoint adds a second
 invariant for automated runs: every paid task is either still pollable or its
 returned segment and progress are committed, never neither and never both.
 
+A September 17, 2026 three-segment first-person household experiment supplies
+the negative control for the new role and semantic-seam branches. Four paid
+OpenRouter `bytedance/seedance-2.5` jobs produced 18-, 20- and 22-second 720p
+segments with native audio and a technically exact 60.000-second, 1,440-frame
+assembly. The run still failed continuity review: the first join reset a hand,
+the second jumped the camera, and the apartment acquired duplicate cupboards
+and a second refrigerator. A 0.35 scene-score threshold detected neither join.
+The complete prompts already separated the clay trajectory, prior two-second
+tail, final frame, character and room references, so this evidence must not be
+misrepresented as successful object permanence; it demonstrates that soft
+reference roles and valid media metadata still require a global state ledger
+and human boundary audit.
+
 **Sources:** Sogni's official August 27, 2026
 [Seedance 2.5 30-second UGC result and sequential 10-second approval guidance](https://x.com/Sogni_Protocol/status/2092954101558497494);
 QuantumWeaveDev26's September 1, 2026
 [live ModelArk Seedance 2.5 extension probe](https://github.com/QuantumWeaveDev26/Custom-interface/commit/db9a19b1ae4b3bc093dad8b05668d637d8acc7fe)
-and [resumable round-chain implementation](https://github.com/QuantumWeaveDev26/Custom-interface/commit/829eae47a29c22c10c39d99201daa4fba2b9d53a).
+and [resumable round-chain implementation](https://github.com/QuantumWeaveDev26/Custom-interface/commit/829eae47a29c22c10c39d99201daa4fba2b9d53a);
+Ives Liu's September 17, 2026
+[four-job Seedance 2.5 continuity experiment and failure report](https://github.com/IvesLiu1026/VISTA-World/pull/25),
+with the [complete role-separated generation prompts](https://github.com/IvesLiu1026/VISTA-World/blob/46fea6571994a40af966f9c2ef57cda993557855/tools/video/vista_ego_clay_minute/generate.py),
+[straight-join assembly](https://github.com/IvesLiu1026/VISTA-World/blob/46fea6571994a40af966f9c2ef57cda993557855/tools/video/vista_ego_clay_minute/assemble.py)
+and [documented validation boundary](https://github.com/IvesLiu1026/VISTA-World/blob/46fea6571994a40af966f9c2ef57cda993557855/tools/video/vista_ego_clay_minute/README.md).
 
 ### Monotonic scrub-readiness motion audit and rejection gate
 
@@ -36609,6 +36660,16 @@ and [validated operating-profile update](https://github.com/wyl19868864747-alt/-
 
 
 ## Sources
+
+- [Ives Liu / VISTA-World — September 17, 2026 OpenRouter
+`bytedance/seedance-2.5` four-job, $23.80032 first-person continuity
+experiment: complete role-separated prompts for three 18/20/22-second 720p
+native-audio segments, exact 60.000-second straight-join assembly and an
+explicit semantic rejection despite valid duration, frame count and automated
+scene-score checks](https://github.com/IvesLiu1026/VISTA-World/pull/25)
+([generation prompts and reference roles](https://github.com/IvesLiu1026/VISTA-World/blob/46fea6571994a40af966f9c2ef57cda993557855/tools/video/vista_ego_clay_minute/generate.py),
+[assembly implementation](https://github.com/IvesLiu1026/VISTA-World/blob/46fea6571994a40af966f9c2ef57cda993557855/tools/video/vista_ego_clay_minute/assemble.py),
+[validation and failure boundary](https://github.com/IvesLiu1026/VISTA-World/blob/46fea6571994a40af966f9c2ef57cda993557855/tools/video/vista_ego_clay_minute/README.md))
 
 - [Aayush Hoichoi / Seedance2.0 — September 17, 2026 exact-model edit-duration
 repair: standard `dreamina-seedance-2-0-260128` accepted a 1.5-second source
