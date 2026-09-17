@@ -371,6 +371,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Pointillist-cat first/last-frame head turn](#355-pointillist-cat-firstlast-frame-head-turn)
   - [First-frame fisherman net-cast arc](#356-first-frame-fisherman-net-cast-arc)
   - [Quiet pour-over push-in one-take](#357-quiet-pour-over-push-in-one-take)
+  - [Vigil crossbow draw and dark-bolt release](#358-vigil-crossbow-draw-and-dark-bolt-release)
+  - [Pavilion-window cricket-ball breach](#359-pavilion-window-cricket-ball-breach)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -22183,6 +22185,104 @@ Adapted and rewritten from ComfyUI's September 16, 2026
 and [generated pour-over MP4](https://media.comfy.org/website/workshop/byteplus/seedance-2-fast-text-to-video/coffee-pour-in-a-quiet-cafe.mp4).
 
 
+### 358. Vigil crossbow draw and dark-bolt release
+
+**Verified model:** Seedance 2.0 Fast, Evolink
+`seedance-2.0-fast-text-to-video` — the creator records this exact route and
+commits the matching baseline MP4 beside the complete source prompt  
+**Use case:** compact single-character action, weapon articulation, projectile
+visibility and environment reaction in one continuous shot  
+**Mode:** text-to-video  
+**Suggested settings:** 5 seconds, 480p, 16:9, audio off
+
+```text
+Create one continuous cinematic action shot of Vigil from Arknights in ancient
+ruins beneath a cold storm sky. Preserve one hooded operative, one ornate
+crossbow, one visible cyan-glowing eye and the same dark cloak throughout.
+
+0–1.5s | draw
+Begin in a medium view as Vigil brings the crossbow across his body and draws it
+into firing position. Wind lifts the cloak without hiding the weapon or eye.
+
+1.5–3.2s | aim and release
+Push closer while the bow limbs and string stay readable. His visible eye
+narrows; he releases exactly one bolt wrapped in dark violet energy.
+
+3.2–5s | trajectory and consequence
+Track the same bolt across frame with a dense but bounded shadow trail. Its
+passage shakes dust and loose stone from the ruined columns behind him. End on
+Vigil holding the completed firing pose while debris continues to settle.
+
+FAILURE CONTROL
+One character, crossbow and bolt only. Keep the hood, single visible eye,
+weapon geometry and hand ownership stable. No duplicate projectile, vanishing
+crossbow, energy covering the face, premature ruined-column collapse, cut,
+black frame, subtitle, logo or text.
+```
+
+**Why it works:** the weapon action is split into draw, release and consequence
+instead of asking for all three simultaneously. Giving the single bolt a
+visible trajectory lets the environment reaction happen after it passes rather
+than replacing the projectile with an unexplained explosion.
+
+Use a licensed character reference or replace the named identity with an
+original operative when appropriate; this entry records the source test rather
+than granting character rights.
+
+Adapted and rewritten from AndyCA111 / VideoGen Agent's September 17, 2026
+[exact-model four-baseline generation commit](https://github.com/AndyCA111/VideoGen_Agent/commit/2d5742e5c03fbfc8677a2be2bf04f1f5f9683039),
+the [complete prompt and task ledger](https://github.com/AndyCA111/VideoGen_Agent/blob/2d5742e5c03fbfc8677a2be2bf04f1f5f9683039/js/demo-data.js)
+and the [generated Seedance 2.0 Fast MP4](https://github.com/AndyCA111/VideoGen_Agent/blob/2d5742e5c03fbfc8677a2be2bf04f1f5f9683039/videos/seedance_baselines/vks_3472_sd2.mp4).
+
+
+### 359. Pavilion-window cricket-ball breach
+
+**Verified model:** Seedance 2.0 Fast, Evolink
+`seedance-2.0-fast-text-to-video` — the creator records the exact route, keeps
+the complete baseline prompt and commits the matching generated MP4  
+**Use case:** small fast-object visibility, glass-impact causality and a human
+shielding reaction in a short interior action beat  
+**Mode:** text-to-video  
+**Suggested settings:** 5 seconds, 480p, 16:9, audio off
+
+```text
+Inside a sunlit cricket pavilion scoring room, keep one scorer seated behind
+one wooden desk with an open paper ledger. A closed glass window behind him
+looks onto the green cricket field. Create one continuous five-second shot.
+
+0–1.4s | establish the threat
+Frame the scorer, open ledger and intact window together. From outside, one red
+leather cricket ball approaches the glass on a clear path toward camera; keep
+the ball large enough to remain readable before contact.
+
+1.4–2.6s | breach
+The same ball strikes and passes through the window. Cracks radiate from the
+contact point before glass fragments travel inward. The window may not break
+before the ball arrives.
+
+2.6–5s | earned reaction
+The scorer recoils only after the impact and raises the open ledger between his
+face and the incoming ball. Keep the ball briefly visible after the breach as
+the scorer ducks and the glass finishes falling around, not through, him.
+
+FAILURE CONTROL
+Exactly one scorer, ball, window and ledger. No pre-broken glass, invisible or
+duplicated ball, outdoor scorer, closed or transformed ledger, reaction before
+impact, reversed fragments, gore, extra person, cut, dissolve, black frame,
+subtitle, logo or text.
+```
+
+**Why it works:** the ball is promoted from a disposable effect to a persistent
+causal subject with an outside origin, contact frame and post-breach position.
+The scorer's ledger has one stable defensive role, and both the crack and human
+reaction are explicitly delayed until after impact.
+
+Adapted and rewritten from AndyCA111 / VideoGen Agent's September 17, 2026
+[exact-model four-baseline generation commit](https://github.com/AndyCA111/VideoGen_Agent/commit/2d5742e5c03fbfc8677a2be2bf04f1f5f9683039),
+the [complete prompt and task ledger](https://github.com/AndyCA111/VideoGen_Agent/blob/2d5742e5c03fbfc8677a2be2bf04f1f5f9683039/js/demo-data.js)
+and the [generated Seedance 2.0 Fast MP4](https://github.com/AndyCA111/VideoGen_Agent/blob/2d5742e5c03fbfc8677a2be2bf04f1f5f9683039/videos/seedance_baselines/cs_1125_sd2.mp4).
+
+
 ## Reusable templates
 
 
@@ -36297,6 +36397,7 @@ commit](https://github.com/koheisuzuki0626-coder/so-portfolio/commit/59d8d80cec1
 
 ## Sources
 
+- [AndyCA111 / VideoGen Agent — Evolink Seedance 2.0 Fast four-clip baseline generation and committed outputs](https://github.com/AndyCA111/VideoGen_Agent/commit/2d5742e5c03fbfc8677a2be2bf04f1f5f9683039) ([complete source prompts](https://github.com/AndyCA111/VideoGen_Agent/blob/2d5742e5c03fbfc8677a2be2bf04f1f5f9683039/js/demo-data.js), [Vigil crossbow MP4](https://github.com/AndyCA111/VideoGen_Agent/blob/2d5742e5c03fbfc8677a2be2bf04f1f5f9683039/videos/seedance_baselines/vks_3472_sd2.mp4), [cricket-window MP4](https://github.com/AndyCA111/VideoGen_Agent/blob/2d5742e5c03fbfc8677a2be2bf04f1f5f9683039/videos/seedance_baselines/cs_1125_sd2.mp4))
 
 - [Kohei Suzuki — September 17, 2026 Higgsfield `seedance_2_5`
 `omni_reference` plus `start_image` production audit with eleven paid 5-second
