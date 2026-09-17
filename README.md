@@ -380,6 +380,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Detachable paper puppy crossing a realistic tabletop world](#364-detachable-paper-puppy-crossing-a-realistic-tabletop-world)
   - [Four-performer rooftop music video with audio-owned timing](#365-four-performer-rooftop-music-video-with-audio-owned-timing)
   - [In-car cola-and-mint reaction one-take](#366-in-car-cola-and-mint-reaction-one-take)
+  - [Four-rider night-road rift crossing with silence ledger](#367-four-rider-night-road-rift-crossing-with-silence-ledger)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -22661,6 +22662,105 @@ Adapted and rewritten from TechHalla's September 17, 2026
 and [complete image-first prompt](https://x.com/techhalla/status/2100526486113472703).
 
 
+### 367. Four-rider night-road rift crossing with silence ledger
+
+**Verified model:** Seedance 2.5 — the original creator published a generated
+26-second preview, named Seedance 2.5 in the result post and supplied the full
+30-second production prompt in the same X thread  
+**Use case:** ensemble anime adventure, multi-rider geography, progressive
+threat scale, dialogue ownership and deliberate absence of music  
+**Mode:** text-to-video or reference-to-video from a four-character group sheet  
+**Suggested settings:** 30 seconds, 16:9, native audio on, no music
+
+```text
+Create a 30-second cinematic cel-shaded 3D-anime sequence on one straight
+two-lane forest road at night. Four teenage friends travel on exactly three
+bicycles: RIDER_A pedals the lead bicycle with PASSENGER seated behind;
+RIDER_B and RIDER_C each own one separate bicycle. Preserve those identities,
+positions, bicycle count and ownership through every shot.
+
+Ahead, one enormous vertical rift floats above the road without touching any
+wall or object. Its ragged black edge contains red-orange light and slow
+tendrils. It remains on the road axis, first a distant glow and later a towering
+opening; it never becomes a doorway, building or second portal.
+
+0–3s | rear wide
+Track behind the three bicycles as the four friends ride toward a faint red
+glow. Establish the yellow centre line, tree walls and rider order.
+
+3–5s | rising aerial
+Pull upward and backward. Keep the group tiny against the dark forest while
+the single rift remains visibly far ahead.
+
+5–7s | low frontal pass
+Move backward just above the road as all three bicycles approach. Show each
+face once without changing rider, passenger or bicycle ownership.
+
+7–9s | side track and sound removal
+Track beside the group. RIDER_B reaches to the handlebar and clicks off the
+portable speaker. Music stops at that physical click and never returns. All
+three bicycles decelerate together.
+
+9–11s | reaction relay
+Use brief close shots of the four distinct faces as the bicycles stop: lead
+rider bracing, passenger calm and focused, one rider alarmed, one scanning for
+escape. Preserve the same red light direction across every close shot.
+
+11–14s | reverse geography
+From behind the rift, look back toward the stopped group. Red light travels
+down the road and reaches their faces; the distance and screen direction match
+the preceding shots.
+
+14–17s | threat detail and dismount
+Show the rift pulsing once, then cut low as PASSENGER steps off the rear seat
+and advances alone. The other three remain beside their bicycles.
+
+17–20s | restraint and decision
+RIDER_A gently takes PASSENGER's forearm before she reaches the rift. Assign
+one short line to each speaker in order: RIDER_B reacts, RIDER_C argues for
+retreat, RIDER_A asks whether it can be closed, PASSENGER pauses and answers
+that she can try. No overlapping mouths or off-screen reassignment.
+
+20–24s | effort and response
+PASSENGER raises one hand. Only after the hand reaches full extension does the
+rift brighten and its tendrils recoil. A small nosebleed appears once and
+persists. The other three exchange silent looks without changing position.
+
+24–27s | group commitment
+Descend from above as all four walk forward in the established order,
+PASSENGER leading with her hand raised and the bicycles left behind together.
+
+27–30s | irreversible crossing
+From behind the group, show each friend cross the same rift once. Their
+silhouettes disappear instead of duplicating on the far side. RIDER_A enters
+last; the rift narrows but remains faintly pulsing over the now-empty road.
+Cut to black only after the empty-road hold.
+
+VISUAL AND AUDIO CONTRACT
+Semi-realistic cel-shaded 3D anime, hand-painted surfaces, bold shapes, hard
+edge shadows and restrained black outlines. No score after the speaker click.
+Use only tyres on asphalt, braking chains, breathing, the four declared lines,
+the rift's low hum and night ambience. Give silence readable space around every
+line.
+
+FAILURE CONTROL
+Four people, three bicycles and one rift only. No rider swap, extra bicycle,
+duplicate silhouette, unexplained teleport, reset nosebleed, second portal,
+music restart, subtitle, logo, floating text or dialogue from the wrong mouth.
+Every change follows its visible cause and persists into the next shot.
+```
+
+**Why it works:** a rider-and-bicycle ownership ledger fixes the source
+prompt's ambiguous vehicle count, while one road axis maintains geography
+through frontal, side, aerial and reverse angles. The physical speaker click
+owns the transition into silence; the raised hand similarly owns the rift's
+response, and the one-by-one crossing creates a countable irreversible ending.
+
+Adapted and rewritten from TechieSA's September 17, 2026
+[original Seedance 2.5 generated result and version statement](https://x.com/TechieBySA/status/2100548626942451859)
+and [complete 30-second prompt](https://x.com/TechieBySA/status/2100548644776579390).
+
+
 ## Reusable templates
 
 
@@ -37037,7 +37137,116 @@ Adapted and rewritten from the original creator's September 17, 2026
 and [validated operating-profile update](https://github.com/wyl19868864747-alt/-/commit/5f1da98d0bf0b52c680087bcfbc7ffcf881a61b5).
 
 
+### Content-addressed cast portraits and selective-reshoot gate
+
+**Verified model:** BytePlus Seedance 2.5
+(`dreamina-seedance-2-5-260628`) — the original developer reports a real
+216,900-token test of shot 2.6 in which both people matched their independently
+generated portraits, including the distinguishing scar and mole  
+**Use case:** episodic or multi-shot productions where recurring actors must
+remain recognizable without invalidating every accepted shot when one portrait,
+prompt or model changes
+
+Generate one neutral portrait per recurring character, bind only the portraits
+of characters actually named in a shot, make the prompt state the ordered
+reference ownership and include every generative dependency in the shot's
+content key. A missing portrait must not masquerade as a fully referenced take.
+
+```text
+CAST ASSET CONTRACT
+For each recurring adult fictional character, create one approved head-and-
+shoulders casting portrait:
+- front-facing neutral pose;
+- plain background and top;
+- soft even light and natural skin;
+- no scene wardrobe, prop, text or second person;
+- one stable character key, file, hash and provenance record.
+
+PORTRAIT PROMPT TEMPLATE
+Photographic casting portrait of one fictional adult character, head and
+shoulders, facing camera, neutral grey studio background, soft light, natural
+skin, plain grey top, no text. Identity traits: [AGE RANGE, FACE SHAPE, HAIR,
+EYES, DISTINGUISHING NON-SENSITIVE FICTIONAL FEATURES].
+
+SHOT CAST RESOLUTION
+SHOT_TEXT = [COMPLETE SHOT ACTION].
+SHOT_CAST = only the canonical character keys explicitly present in SHOT_TEXT,
+in deterministic order. Do not attach the entire ensemble to every request.
+
+For each member of SHOT_CAST, bind one reference image and prepend:
+"[CHARACTER_KEY] is the person in reference image [N]
+([SHORT IDENTITY DESCRIPTION])."
+
+Then add:
+"No other main character appears. Background extras may appear only when the
+shot explicitly requires them."
+
+REQUEST
+Exact model = dreamina-seedance-2-5-260628.
+Reference role = reference_image.
+Aspect ratio = [RATIO].
+Duration = [4–30 WHOLE SECONDS].
+Prompt = [SERIES LOOK] + [ORDERED REFERENCE OWNERSHIP] + [SHOT_TEXT] +
+[SHOT-SPECIFIC CONTINUITY AND FAILURE CONTROLS].
+
+PRE-SUBMISSION GATE
+Fail the fully referenced route if any required portrait is missing,
+unreachable, changed since approval or appears more than once. If production
+policy allows a temporary words-only fallback, label it explicitly as
+UNREFERENCED and give it a different content key; never let it overwrite or
+count as the referenced master.
+
+CONTENT-ADDRESSED SHOT KEY
+SHOT_KEY = hash(
+  normalized complete prompt
+  + exact model identifier
+  + ordered [CHARACTER_KEY, PORTRAIT_HASH] pairs
+  + duration, ratio, resolution and audio state
+).
+
+Store the returned asset under SHOT_KEY and retain task ID, token/credit use,
+provider response and human verdict. A changed portrait invalidates only shots
+whose ordered cast contains that portrait. A changed model, prompt or delivery
+setting invalidates only the exact shots whose key changes.
+
+ACCEPTANCE
+At opening, midpoint and near-final frames verify:
+1. every named character matches only the assigned portrait;
+2. distinguishing features survive without transferring between people;
+3. no unrequested lead enters and no required lead disappears;
+4. wardrobe and action follow SHOT_TEXT rather than the neutral portrait;
+5. the accepted asset, prompt, exact model and ordered portrait hashes all
+   reproduce the same SHOT_KEY.
+
+FAILURE ROUTING
+- wrong or merged face -> inspect ordered reference ownership before rewriting
+  the action;
+- extra lead -> narrow the shot cast and retain the positive main-character
+  exclusion;
+- missing portrait -> repair that asset, then regenerate only dependent shots;
+- changed portrait/model/prompt -> compute new keys and reshoot only misses;
+- moderation refusal -> stop and review the fictional description and rights;
+  do not route around a policy decision or reuse a real person's likeness.
+```
+
+**Why it works:** words describe performance and scene state, while one neutral
+asset owns each recurring face. Shot-level cast resolution prevents irrelevant
+portraits from competing for identity. Adding the exact model and ordered
+portrait hashes to the artifact key turns continuity repair into a bounded
+dependency update: accepted, unaffected shots remain valid, and a fallback
+without references cannot be mistaken for the referenced master.
+
+Adapted and rewritten from Thomas Shanahan's September 17, 2026
+[Seedance 2.5 portrait-lock implementation and real shot-2.6 result](https://github.com/tommyshanahan-max/sage/commit/fc30dd02c68af061d1ca0553a03d0875d71d1bcd),
+including the committed exact model, ordered `reference_image` mapping, neutral
+portrait generator and content-key invalidation logic.
+
+
 ## Sources
+
+- [TechieSA — September 17, 2026 Seedance 2.5 four-rider night-road rift crossing: generated preview, exact-version statement, complete 30-second prompt, three-bicycle ownership repair, sound-removal trigger and one-way crossing ledger](https://x.com/TechieBySA/status/2100548626942451859) ([complete prompt](https://x.com/TechieBySA/status/2100548644776579390))
+
+- [Thomas Shanahan / Sage — September 17, 2026 BytePlus Seedance 2.5 (`dreamina-seedance-2-5-260628`) content-addressed cast portraits: real 216,900-token two-face test, ordered `reference_image` ownership, exact-model isolation and portrait-scoped selective reshoots](https://github.com/tommyshanahan-max/sage/commit/fc30dd02c68af061d1ca0553a03d0875d71d1bcd)
 
 - [Ives Liu / VISTA-World — September 17, 2026 OpenRouter
 `bytedance/seedance-2.5` four-job, $23.80032 first-person continuity
