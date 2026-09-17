@@ -383,6 +383,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Four-rider night-road rift crossing with silence ledger](#367-four-rider-night-road-rift-crossing-with-silence-ledger)
   - [Bare-bar good morning with opposing-endpoint hinge proof](#368-bare-bar-good-morning-with-opposing-endpoint-hinge-proof)
   - [Supinated bent-over row with grip-surface and torso locks](#369-supinated-bent-over-row-with-grip-surface-and-torso-locks)
+  - [Arcade-football choice gate to five-player goal one-take](#370-arcade-football-choice-gate-to-five-player-goal-one-take)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -22873,6 +22874,94 @@ Adapted and rewritten from AutoCare's September 17, 2026
 and [retained generated MP4](https://pub-9482945b571143e887b925bd2e0565e1.r2.dev/exercise-demos/remada-curvada-pegada-supinada.mp4).
 
 
+### 370. Arcade-football choice gate to five-player goal one-take
+
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`) — the original
+creator records the exact text-to-video model and settings, retains the
+20.1-second generated result, and verifies 15 sampled beats against two
+storyboard contact sheets rather than treating job completion as success  
+**Use case:** vertical mobile-game footage, persistent third-person tracking,
+state-changing choice gates, team-count continuity, native-audio sports payoff  
+**Mode:** text-to-video  
+**Suggested settings:** 20 seconds, 9:16, 1080p, 24 fps, native audio on,
+single continuous take, high bitrate
+
+```text
+Create a polished vertical arcade-football mobile-game sequence as one
+unbroken 20-second shot. Use stylised cel-lit 3D, chunky toy-like players,
+vivid striped green turf, crisp white markings and a floodlit night stadium.
+All kits are plain and unbranded: the attacking team is blue, every defender
+is red and the goalkeeper remains visually distinct inside the goal area.
+
+CAMERA AND WORLD CONTRACT
+Hold one continuous third-person tracking camera slightly above and behind the
+active blue ball carrier. The goal stays ahead on the same field axis for the
+whole take. The camera may ease closer for the shot and celebration, but never
+cuts, reverses sides, teleports, switches to a broadcast angle or loses the
+ball. Keep exactly one football visible and physically continuous throughout.
+
+0–4 SECONDS — CHOICE AND STATE CHANGE
+Begin with one blue player dribbling toward two large glowing choice gates that
+span separate lanes. The left cyan gate reads “+2”; the right gold gate reads
+“+4”. Both labels must be clear before the choice. The player deliberately
+enters only the gold “+4” gate. After the whole player and ball cross its plane,
+four blue teammates spawn beside and ahead of the carrier, never before. A
+small team counter visibly changes once from “1” to “5” at that same moment.
+
+4–9 SECONDS — BUILD THE ATTACK
+The five blue players continue toward goal as one formation. Two red defenders
+close down the carrier. Beat them through two fast, readable passes between
+named blue teammates followed by a return pass to the moving attack. Every kick
+must precede the ball's travel, every receiver controls the same ball, and no
+player changes kit, identity or team.
+
+9–14 SECONDS — DRAW AND RELEASE
+The red captain steps toward the current carrier and is pulled to one side.
+Only after that commitment, play one diagonal pass into the penalty area to a
+blue teammate who has become visibly free. Preserve the five-versus-red team
+state and the single-ball path while the camera tracks forward on the same axis.
+
+14–18 SECONDS — SHOT AND PHYSICAL RESULT
+The free blue attacker takes one decisive shot toward the top corner. Briefly
+ease the action into slow motion only after foot-to-ball contact. The goalkeeper
+dives toward the correct side but misses; the ball enters the goal and visibly
+ripples the net before any celebration begins.
+
+18–20 SECONDS — REWARD
+Return to normal speed. The five blue players celebrate together as confetti
+falls. Show a clean “GOAL!” reward and exactly three gold stars. End with the
+scoring goal, players, confetti and reward readable in the same continuous
+gameplay world.
+
+AUDIO
+Generate native stadium sound for the entire clip: dribble and kick impacts,
+footsteps, crowd bed and a rising cheer. Let the cheer peak only after the net
+ripple, followed by a concise arcade reward chime. No commentary, dialogue,
+licensed music or brand jingle.
+
+FAILURE CONTROL
+Exactly five blue players after the +4 gate, not before; one ball, one field,
+one goal and one continuous take. The counter changes only after the visible
+gate crossing. No incorrect gate choice, label mutation, early teammate spawn,
+extra or disappearing player, duplicated ball, possession teleport, pass
+without contact, defender colour swap, keeper save, pre-goal celebration,
+fourth star, hidden cut, camera-side reversal, subtitle, watermark or logo.
+```
+
+**Why it works:** the gate crossing is the single authority for both teammate
+creation and the counter update, so two UI/world changes cannot happen early or
+independently. Each later beat is also causal and irreversible—defender commits
+before the diagonal pass, contact precedes the shot, the net ripples before the
+reward—while the one-ball and five-player ledgers protect a long gameplay take
+from silent resets.
+
+Adapted and rewritten from Steve Milton's September 17, 2026
+[Seedance 2.5 generation and verification commit](https://github.com/stevemilton/cambridge/commit/81208d87908e0c1979f2813e6da5ca792ba1cb9a),
+[complete beat, art-direction and acceptance record](https://github.com/stevemilton/cambridge/blob/81208d87908e0c1979f2813e6da5ca792ba1cb9a/arcade-football/README.md),
+[retained generated MP4](https://github.com/stevemilton/cambridge/blob/81208d87908e0c1979f2813e6da5ca792ba1cb9a/arcade-football/arcade-football-20s-9x16.mp4)
+and [opening-to-12-second storyboard](https://github.com/stevemilton/cambridge/blob/81208d87908e0c1979f2813e6da5ca792ba1cb9a/arcade-football/storyboard-0-12s.jpg).
+
+
 ## Reusable templates
 
 
@@ -37355,6 +37444,8 @@ portrait generator and content-key invalidation logic.
 
 
 ## Sources
+
+- [Steve Milton — September 17, 2026 Higgsfield Seedance 2.5 (`seedance_2_5`) 20-second vertical arcade-football one-take: exact model and settings, retained result, five timed gameplay beats and 15-point visual verification](https://github.com/stevemilton/cambridge/commit/81208d87908e0c1979f2813e6da5ca792ba1cb9a) ([complete beat and acceptance record](https://github.com/stevemilton/cambridge/blob/81208d87908e0c1979f2813e6da5ca792ba1cb9a/arcade-football/README.md), [generated MP4](https://github.com/stevemilton/cambridge/blob/81208d87908e0c1979f2813e6da5ca792ba1cb9a/arcade-football/arcade-football-20s-9x16.mp4), [0–12-second storyboard](https://github.com/stevemilton/cambridge/blob/81208d87908e0c1979f2813e6da5ca792ba1cb9a/arcade-football/storyboard-0-12s.jpg), [13–20-second storyboard](https://github.com/stevemilton/cambridge/blob/81208d87908e0c1979f2813e6da5ca792ba1cb9a/arcade-football/storyboard-13-20s.jpg))
 
 - [AutoCare — September 17, 2026 Higgsfield Seedance 2.5 (`seedance_2_5`) opposing-endpoint good morning and palm-surface-locked supinated row: two corrected takes accepted and installed; the same batch explicitly excludes a Dead bug completed by Gemini](https://github.com/AutoCare-1/trainos/commit/2a8b1b7a339609a6fb0c592073498bad431c4a7d) ([complete prompt structures](https://github.com/AutoCare-1/trainos/blob/2a8b1b7a339609a6fb0c592073498bad431c4a7d/backend-laravel/database/dicas_demonstracao.php), [result mapping](https://github.com/AutoCare-1/trainos/blob/2a8b1b7a339609a6fb0c592073498bad431c4a7d/backend-laravel/database/demonstracoes_geradas.php), [good-morning MP4](https://pub-9482945b571143e887b925bd2e0565e1.r2.dev/exercise-demos/bom-dia-com-barra.mp4), [supinated-row MP4](https://pub-9482945b571143e887b925bd2e0565e1.r2.dev/exercise-demos/remada-curvada-pegada-supinada.mp4))
 
