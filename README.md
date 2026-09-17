@@ -36179,7 +36179,132 @@ and the [look-discovery implementation](https://github.com/KMKM333/ppe-style-eng
 
 
 
+### Start-state feasibility, observable displacement and contact-persistence gate
+
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`),
+`omni_reference` with `start_image`, 5 seconds, 1080p, 16:9, audio off —
+the creator preserves eleven paid generation charges, six initial accepted
+Seedance task IDs and result URLs, exact delivery settings, rejected takes and
+the repair history for two commercial sample productions  
+**Use case:** image-to-video product, food, workplace or human-interaction shots
+whose required action depends on a visible starting condition and uninterrupted
+hand-to-prop contact
+
+Run this gate before paying for animation. A prompt cannot visibly perform a
+transition whose endpoint is already present in frame zero. Once the start
+state is feasible, make subject displacement legible and audit every persistent
+contact instead of accepting ambient steam, oil, hair or camera motion as proof
+that the named subject acted.
+
+```text
+SHOT INTENT
+SUBJECT = [PERSON / PRODUCT / FOOD / TOOL / OTHER].
+ACTION = [START STATE] -> [VISIBLE TRANSITION] -> [END STATE].
+READABLE BY = [TIME OR FINAL FRAME].
+CAMERA = [LOCKED / DECLARED MOVE].
+AMBIENT MOTION = [STEAM / OIL / CLOTH / BACKGROUND / NONE].
+
+FRAME-ZERO FEASIBILITY GATE
+Inspect the exact start image at delivery crop and reject it if any required
+precondition is false:
+- a person who must look up is already looking up;
+- an object that must split, open, unwrap or fall is already split, open,
+  unwrapped or down;
+- a hand that must pick up an item already holds it;
+- the named prop, hand, face or travel space is occluded or outside frame;
+- the cast, prop count, product state or contact owner is already wrong.
+
+On failure, either regenerate the start image with the true precondition or
+rewrite the action to begin honestly from the visible state. Do not spend more
+video attempts asking the model to invent an unseen earlier state.
+
+OBSERVABLE SUBJECT-MOTION CLAUSE
+Within [TIME WINDOW], [SUBJECT] moves [MEASURABLE DISTANCE OR SCREEN FRACTION]
+along [PATH] at natural real-time speed. [BODY PART / TOOL] causes the motion.
+The subject reaches [VISIBLE ENDPOINT], [CONTACT / RESULT] becomes visible, and
+the endpoint holds for [DURATION].
+
+Name the subject that must move separately from AMBIENT MOTION and the camera.
+Do not rely only on weak phrases such as “a few centimetres,” “slight motion”
+or “a subtle tremble” when the editorial beat must read instantly. Steam,
+bubbling oil, lighting change or a push-in does not satisfy subject movement.
+
+CONTACT-PERSISTENCE LEDGER
+For every person or tool record:
+OWNER = [CHARACTER / HAND / TOOL].
+PROP = [IDENTITY, COUNT AND STATE].
+CONTACT START = [TIME / CAUSAL EVENT].
+CONTACT END = [TIME / FINAL FRAME].
+FORBIDDEN SUBSTITUTE = [BARE HAND / OTHER HAND / NEW PROP / NONE].
+
+Positive persistence clause:
+“[OWNER] keeps holding [PROP] with [HAND / TOOL] continuously from [START]
+through the final frame while completing [ACTION].”
+Pair it with the narrow failure guard actually observed:
+“The prop never disappears, changes owner or returns in another shape;
+[CHARACTERS] never replace [TOOL] contact with [FORBIDDEN SUBSTITUTE].”
+
+PAID TAKE AND ACCEPTANCE GATE
+Freeze model, mode, start-image hash, duration, resolution and aspect. Archive
+the task ID, charged credits, output URL/file and prompt revision for every
+take. Review playback plus frame zero, the first action frame, midpoint and a
+near-final frame. Accept only if:
+1. frame zero visibly contains every declared precondition;
+2. the named SUBJECT—not only ambience or camera—travels the declared path;
+3. cause, contact and endpoint occur in order inside the time window;
+4. every owner, prop count and contact persists through its declared end;
+5. nothing disappears, reappears, changes hand or substitutes bare contact;
+6. the endpoint remains compositionally useful rather than leaving frame.
+
+Frame-difference magnitude is a triage signal, not a quality verdict: identify
+what moved and why before promoting a high-motion take.
+
+FAILURE ROUTER
+- endpoint already present at frame zero -> remake the start image;
+- subject static while ambience moves -> strengthen subject displacement,
+  causal actor, path and deadline, then run one controlled retry;
+- motion reads as unintended slow motion -> enlarge the visible route and state
+  “natural real-time speed”; remove timid micro-motion wording;
+- prop/contact breaks -> add the positive persistence clause and one precise
+  forbidden substitution, without rewriting accepted camera or identity;
+- repeated failure after those isolated repairs -> redesign the shot or change
+  route with the replacement model disclosed; never relabel that output as a
+  Seedance success.
+```
+
+**Why it works:** the start image is treated as a physical state, not merely a
+style reference. In the documented production, a worker who already looked up
+could not perform the requested tap-then-look-up beat, and a dumpling already
+split at frame zero could only be lifted while split. Another Seedance take
+looked like accidental slow motion after the prompt asked for only a few
+centimetres of lift and subtle hand tremor. A separate family-table take lost
+its chopsticks after three seconds and replaced tool contact with bare hands;
+the corrected persistence clause kept the utensils through the ending.
+
+The same record also supplies a useful evidence boundary: a pan shot animated
+oil and steam while the dumplings stayed still, and later motion-heavy
+replacements used Kling. Those replacements are not attributed to Seedance,
+and the two hybrid finished commercials are not counted here as complete
+Seedance scenarios.
+
+Adapted and rewritten from Kohei Suzuki's September 17, 2026
+[generation, delivery and effort-audit commit](https://github.com/koheisuzuki0626-coder/so-portfolio/commit/ccfc2011952e0da1ef98ef2f78b7f1829ec0b0b2),
+the [complete exact-model task ledger, settings, costs and failure
+analysis](https://github.com/koheisuzuki0626-coder/so-portfolio/blob/ccfc2011952e0da1ef98ef2f78b7f1829ec0b0b2/%E6%88%90%E6%9E%9C%E7%89%A9/%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E6%98%A0%E5%83%8F/%E7%B4%A0%E6%9D%90%E4%B8%80%E8%A6%A7_%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E7%B4%B9%E4%BB%8B15%E7%A7%92_%E5%BA%83%E5%91%8ACM15%E7%A7%92x2.md)
+and the [initial paid Seedance generation
+commit](https://github.com/koheisuzuki0626-coder/so-portfolio/commit/59d8d80cec1df7a112c402bc3d472b92dd46d408).
+
+
 ## Sources
+
+
+- [Kohei Suzuki — September 17, 2026 Higgsfield `seedance_2_5`
+`omni_reference` plus `start_image` production audit with eleven paid 5-second
+1080p runs, six task IDs and result URLs, first-frame feasibility repairs,
+measured weak-motion failure and a successful utensil-contact persistence
+rewrite](https://github.com/koheisuzuki0626-coder/so-portfolio/commit/ccfc2011952e0da1ef98ef2f78b7f1829ec0b0b2)
+([complete task, cost and failure ledger](https://github.com/koheisuzuki0626-coder/so-portfolio/blob/ccfc2011952e0da1ef98ef2f78b7f1829ec0b0b2/%E6%88%90%E6%9E%9C%E7%89%A9/%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E6%98%A0%E5%83%8F/%E7%B4%A0%E6%9D%90%E4%B8%80%E8%A6%A7_%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E7%B4%B9%E4%BB%8B15%E7%A7%92_%E5%BA%83%E5%91%8ACM15%E7%A7%92x2.md),
+[initial generation commit](https://github.com/koheisuzuki0626-coder/so-portfolio/commit/59d8d80cec1df7a112c402bc3d472b92dd46d408))
 
 
 - [ComfyUI official model catalogue — September 16, 2026 exact-confidence
