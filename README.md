@@ -32821,6 +32821,103 @@ same problem.
 [paid Seedance 2.5 presenter test, silent-fallback diagnosis and four-level
 lip-sync recovery method](https://github.com/cindylearn/ai-content-course-C-simple/commit/413fff576f2c54a995271385543bf33a79bb15ac).
 
+### Reference-audio word authority and visual-retime gate
+
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`,
+`omni_reference`, `audio_references`, 1080p) — the original creator reports two
+real 1080×1920 proof takes that landed in about three minutes each and spoke the
+locked programme voice-over verbatim
+
+Use this when an approved voice recording must supply the exact spoken words in
+a talking-head shot. Give the audio sole authorship of the line, keep every word
+out of the text prompt, map its real speech windows to visual beats, and judge
+any timing repair by the picture rather than by a better alignment score alone.
+
+```text
+INPUT CONTRACT
+Model = seedance_2_5.
+Mode = omni_reference; t2v is not an allowed fallback.
+Resolution = 1080p native. Aspect ratio = [DELIVERY RATIO].
+@Audio1 = the approved final programme-VO segment, cut frame-exact from the
+master track. It is the sole authority for spoken words, pronunciation, voice,
+pace, pauses and line ending.
+@Image1 = optional approved start frame and identity/composition anchor.
+Duration = the supported whole-second container that holds @Audio1 plus a quiet
+tail. Silence the source after the intended line so the next line cannot leak in.
+
+WORD-AUTHORITY GATE — BEFORE SUBMISSION
+Do not write, quote, paraphrase, summarize or subtitle any word spoken in
+@Audio1 anywhere in the visual prompt. Written dialogue would compete with the
+reference and can demote it to a voice/timbre cue. The prompt may describe only
+who speaks, visible performance, camera, environment, timing windows and the
+silent terminal state.
+
+PROMPT
+Use @Audio1 as the only speech and lip-performance source. The visible adult
+presenter performs [RESTRAINED ACTION] in [SETTING] while speaking only the
+supplied audio. Synchronize mouth and jaw motion to @Audio1 without inventing,
+replacing, repeating or continuing speech.
+
+[0.0–A.A s | OPENING SPEECH WINDOW]
+[SHOT SIZE / CAMERA]. The presenter begins the supplied performance with
+[GAZE, POSTURE AND ONE SMALL GESTURE]. Mouth motion follows the active speech
+inside @Audio1; no on-screen text appears.
+
+[A.A–B.B s | MIDDLE SPEECH WINDOW]
+[ONE OBSERVABLE PERFORMANCE CHANGE]. Preserve identity, wardrobe, background,
+camera axis and natural skin detail. Do not add a second speaker or music.
+
+[B.B–C.C s | FINAL SPEECH WINDOW]
+Complete the supplied line inside this window and settle [GESTURE / GAZE]. These
+times are endpoint rails taken from the waveform, not permission to stretch an
+interior word unnaturally.
+
+[C.C s–END | SILENT TAIL]
+@Audio1 has finished. The presenter's mouth returns to a closed resting pose;
+only [BREATH / ROOM TONE / APPROVED DIEGETIC SOUND] remains. No replacement
+speech, repeated word, subtitle, caption or new line.
+
+PAYLOAD AND RETURN AUDIT
+Before queueing, require model seedance_2_5, mode omni_reference, @Audio1 in the
+audio_references field, 1080p, the approved ratio and duration, plus @Image1 only
+when used. Reject locally if the audio is absent or the route falls back to t2v.
+Persist the job ID, prompt hash, audio hash, speech-window ledger and returned
+dimensions. Keep the returned native audio as soundtrack owner.
+
+VISUAL-RETIME GATE
+Compare the unrepaired take with every proposed repair at normal speed. An
+alignment metric may rank candidates but cannot approve one. Reject a uniform
+or piecewise retime that improves measured offset while producing duplicated,
+dropped or interpolated-looking mouth frames. If the unrepaired timing is
+visually acceptable, keep it; otherwise re-roll or shorten and regenerate the
+line. Do not add a reconstructive upscale when the accepted take already equals
+the delivery raster.
+
+ACCEPTANCE
+- the exact @Audio1 words are heard once, with no prompt-authored replacement;
+- mouth motion follows the supplied performance and the line ends inside its
+  measured final window;
+- the silent tail contains no invented speech;
+- identity, camera, skin texture and 1080p raster remain intact;
+- any timing repair passes side-by-side visual review, not only a metric;
+- the job receipt proves the intended model, mode, audio reference and output.
+```
+
+**Why it works:** reference audio and written dialogue are competing semantic
+authorities. Removing the duplicated line lets the recording control both words
+and delivery, while waveform-derived windows constrain the endpoint without
+pretending that every internal phoneme is deterministic. The visual-retime gate
+also blocks a seductive failure: the creator measured much better offsets and
+correlation after uniform and five-segment repairs, yet rejected both on sight
+for dropped frames and retained the unrepaired takes.
+
+Adapted from Konrad Reichelt's September 17, 2026
+[two-take Seedance 2.5 production revision and measured retime comparison](https://github.com/konradre/video-production-skills/commit/b43448c8fbb62cc28e7b099c55b3a3ca5a69d5d1),
+the resulting
+[audio-capable route table and complete operating method](https://github.com/konradre/video-production-skills/blob/b43448c8fbb62cc28e7b099c55b3a3ca5a69d5d1/skills/video-gen-cost-gate/references/VENUES.md),
+and the committed
+[`audio_references` submission and receipt implementation](https://github.com/konradre/video-production-skills/blob/b43448c8fbb62cc28e7b099c55b3a3ca5a69d5d1/skills/video-gen-cost-gate/scripts/hf_submit.py).
+
 ### Form-locked identity card with text-only transient-state overlay
 
 **Verified model:** Seedance 2.5 — the creator identifies the repository as a
@@ -37622,6 +37719,8 @@ Community examples and techniques referenced in this README:
 - [LeN1N-NWO / Traum-App — September 13, 2026 Higgsfield Seedance 2.5 nineteen-style batch, preset-response ledger and positive-only IP repair](https://github.com/LeN1N-NWO/Traum-App/commit/490abeac72b0c7f3920100889384312e24ef28aa) ([ten-render and preset record](https://github.com/LeN1N-NWO/Traum-App/commit/8890687bae84a09965db0c8eaabd65b75766b327), [versioned generated previews](https://github.com/LeN1N-NWO/Traum-App/commit/d24a5396a5b6362947da7503aa3e90f3e5c0caa5))
 
 - [Wolkchen0 / youtube-automation — Seedance 2.0 Fast Saturn-ring camera-as-vehicle fly-through, complete prompt, committed result and QC ledger](https://github.com/Wolkchen00/youtube-automation/commit/8297f4ff36040948993f952bef52360cde3d20ef) ([complete prompt](https://github.com/Wolkchen00/youtube-automation/blob/8297f4ff36040948993f952bef52360cde3d20ef/galactic_experience/flythrough/plans/part01.json), [generated MP4](https://github.com/Wolkchen00/youtube-automation/blob/8297f4ff36040948993f952bef52360cde3d20ef/galactic_experience/hazir/saturn-rings-flythrough.mp4), [exact model route](https://github.com/Wolkchen00/youtube-automation/blob/8297f4ff36040948993f952bef52360cde3d20ef/core/kie_api.py#L475-L489), [QC ledger](https://github.com/Wolkchen00/youtube-automation/blob/8297f4ff36040948993f952bef52360cde3d20ef/galactic_experience/flythrough/qc_log.jsonl))
+
+- [Konrad Reichelt — Higgsfield Seedance 2.5 reference-audio word authority, native-1080p talking-head proofs and visual-retime gate](https://github.com/konradre/video-production-skills/commit/b43448c8fbb62cc28e7b099c55b3a3ca5a69d5d1) ([complete operating method](https://github.com/konradre/video-production-skills/blob/b43448c8fbb62cc28e7b099c55b3a3ca5a69d5d1/skills/video-gen-cost-gate/references/VENUES.md), [`audio_references` submission implementation](https://github.com/konradre/video-production-skills/blob/b43448c8fbb62cc28e7b099c55b3a3ca5a69d5d1/skills/video-gen-cost-gate/scripts/hf_submit.py))
 
 Official model references:
 
