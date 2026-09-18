@@ -390,6 +390,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Sparkler handoff through a crowded bistro](#374-sparkler-handoff-through-a-crowded-bistro)
   - [Accelerating morning-rush cuts with identical-face return](#375-accelerating-morning-rush-cuts-with-identical-face-return)
   - [Science-fair foam eruption with persistent residue](#376-science-fair-foam-eruption-with-persistent-residue)
+  - [Reference-locked lemonade test with a hidden reaction](#377-reference-locked-lemonade-test-with-a-hidden-reaction)
+  - [Tuba-platform dance cascade with train-arrival state change](#378-tuba-platform-dance-cascade-with-train-arrival-state-change)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -23394,6 +23396,151 @@ Adapted and rewritten from the creator's
 and [generated MP4](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/5e8cf26cedcb03ff9d7e6fa06699e1ffee0de9c4/docs/films/day-6-effects-that-belong-in-the-world.mp4).
 
 
+### 377. Reference-locked lemonade test with a hidden reaction
+
+**Verified model:** fal Seedance 2.5
+(`bytedance/seedance-2.5/reference-to-video`) — the creator published the
+complete prompt, two source references, returned seed `1832639636` and retained
+25-second native-audio film as one generation with no editing  
+**Use case:** stylized-character identity, two-person performance, restrained
+micro-expression, speaker ownership and delayed comic payoff  
+**Mode:** reference-to-video with one turnaround sheet and one face close-up  
+**Suggested settings:** 25 seconds, 16:9, 720p, native audio on, one continuous
+shot
+
+```text
+REFERENCE CONTRACT
+@Image1 and @Image2 depict Penny: an eight-year-old with a round puff of light
+brown curls, freckles, large dark eyes, an oversized white lab coat over a
+yellow shirt, clear goggles pushed into her hair and mismatched striped socks.
+Use @Image1 for full-body proportions and wardrobe, and @Image2 for facial
+identity. They do not prescribe the generated pose or framing.
+
+Create a warm stylized-3D family-kitchen scene in soft morning window light,
+with 35mm depth, restrained contrast, fine grain and 24 fps. Penny stands on a
+chair at frame left and runs a deadly serious lemonade test on her grandfather
+Gus, a large man with a grey mustache, brown cardigan and reading glasses.
+
+0–6 SECONDS — PROCEDURE
+Locked eye-level two-shot. Penny pours cloudy lemonade from one glass beaker
+into one tumbler, slides it across the table with two fingers, clicks a pen over
+one clipboard and says in a small flat voice: “Sample seven. Describe the
+flavor profile.” She never blinks. Gus watches the glass warily.
+
+6–14 SECONDS — DELIBERATION
+Drift slowly toward Gus while retaining Penny in frame. He lifts the tumbler,
+sniffs it like a wine judge, sips, looks toward the ceiling, performs one slow
+chew of nothing, pauses and raises one eyebrow. Penny stays perfectly still
+with the pen suspended above the clipboard.
+
+14–20 SECONDS — VERDICT
+Gus sets the glass down ceremonially, folds his hands, meets Penny's eyes and
+says, grave and slow: “Nobel Prize.”
+
+20–25 SECONDS — HIDDEN PAYOFF
+Penny nods once and writes without smiling, then makes one tiny fist pump below
+the table edge. Gus conceals one grin behind his mustache. Settle back into the
+original two-shot and hold.
+
+AUDIO AND FAILURE CONTROL
+Use lemonade pour, pen click, chair creak and distant birds; no music. Only the
+two quoted lines may be spoken. Keep exactly two people and preserve Penny's
+face, curls, goggles, coat, socks and proportions from both references. Penny
+never smiles. Do not expose readable clipboard text. No cuts, identity drift,
+extra limbs or jitter.
+```
+
+**Why it works:** the two reference images have separate identity jobs, while
+the timeline directs performance through face, hands and voice rather than
+asking for a general mood. Stillness makes the grandfather's tiny deliberation
+read clearly, and hiding the fist pump below the table preserves Penny's stern
+face while giving the audience an emotional release.
+
+Adapted and rewritten from the creator's
+[verified two-film release](https://github.com/cxbxmxcx/learn-ai-filmmaking/commit/5edb8e93b3893179b9f3fafd92526cdfd8dc3d00),
+[complete prompt, reference prompts and exact route](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/5edb8e93b3893179b9f3fafd92526cdfd8dc3d00/prompts/day-4-characters-who-act.md),
+[watch page](https://cxbxmxcx.github.io/learn-ai-filmmaking/day-4-characters-who-act/)
+and [generated MP4](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/5edb8e93b3893179b9f3fafd92526cdfd8dc3d00/docs/films/day-4-characters-who-act.mp4).
+
+
+### 378. Tuba-platform dance cascade with train-arrival state change
+
+**Verified model:** fal Seedance 2.5
+(`bytedance/seedance-2.5/reference-to-video`) — the creator published the
+complete prompt, two source references, returned seed `481698027` and retained
+30-second native-audio film as one generation with no editing  
+**Use case:** reference-locked lead character, prompt-native hard cuts, crowd
+choreography, action-propagation ladder, audio continuity and gated lighting  
+**Mode:** reference-to-video with one turnaround sheet and one face close-up  
+**Suggested settings:** 30 seconds, 16:9, 720p, native audio on, six shots
+
+```text
+REFERENCE CONTRACT
+@Image1 and @Image2 depict Moe: a round cheerful busker in his fifties with a
+full grey beard, ruddy cheeks, red knit beanie, brown corduroy jacket, green
+sweater and brass tuba. Use @Image1 for full-body proportions, clothes and
+instrument; use @Image2 for face, beard and eyes. Do not inherit their poses or
+white backgrounds.
+
+Create an evening city-subway sequence with cool fluorescent platform light,
+warm brass reflections, muted realistic color, gentle documentary sway, fine
+35mm grain and 24 fps. Moe plays a buoyant melody to commuters who ignore him
+until one toddler starts a chain reaction.
+
+0–5 SECONDS — WIDE ESTABLISHMENT
+Moe plays beside one tiled pillar, bouncing softly on his heels; his open tuba
+case stays at his feet. Twelve commuters line the platform edge, absorbed in
+their phones. Nobody looks up.
+
+5–9 SECONDS — HARD CUT, MEDIUM
+One toddler in a yellow puffy jacket releases her mother's hand and bounces to
+the beat with pumping knees and raised arms. Her mother reaches after her and
+says, flustered: “Sorry!” Between musical phrases Moe replies warmly: “Don't
+be.” He immediately continues playing.
+
+9–14 SECONDS — HARD CUT, CLOSE-UP
+Moe's cheeks puff and eyes crinkle. He recognizes the toddler's rhythm, leans
+into it and makes the melody faster and brighter.
+
+14–20 SECONDS — HARD CUT, WIDE
+Propagate the dance one person at a time: one commuter taps a foot, one woman
+sways, one suited man makes a careful shuffle, and one nurse claps on the beat.
+Then the platform moves together and the phones are forgotten.
+
+20–26 SECONDS — HARD CUT, WIDE
+One train enters from frame right. Its wind lifts scarves and the toddler's
+hair. Only after the train arrives may the platform lights pulse to the tuba.
+The doors open and reveal passengers already dancing inside the carriage.
+
+26–30 SECONDS — HARD CUT, WIDE
+Everyone boards while dancing. The toddler waves to Moe from the doorway. Moe
+plays one last note and raises the tuba in salute as the doors close; the
+platform lights remain steadily bright.
+
+AUDIO AND FAILURE CONTROL
+Carry one joyful tuba melody through all six shots, joined by platform echo,
+growing train rumble, wind, door hiss, toddler giggle, shoe scuffs, laughter
+and final claps. Only the two quoted lines may be spoken; add no other music.
+Cut only at the five listed boundaries, with no dissolve or fade. Preserve
+Moe's identity, clothes and tuba from both references. Keep one toddler and one
+mother foregrounded and all commuters secondary. The lights cannot pulse
+before the train arrives. No readable signage, identity drift, extra limbs or
+jitter.
+```
+
+**Why it works:** one visible dancer recruits one bounded participant per beat
+before the crowd joins, which converts an abstract “everyone dances” request
+into a causal escalation. The uninterrupted tuba track bridges the hard cuts,
+and the train arrival owns both the wind and lighting change so the final
+spectacle has a single unambiguous trigger.
+
+Adapted and rewritten from the creator's
+[verified two-film release](https://github.com/cxbxmxcx/learn-ai-filmmaking/commit/5edb8e93b3893179b9f3fafd92526cdfd8dc3d00),
+[complete prompt, reference prompts and exact route](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/e792e047ac6122c861a329d7a1b080597b4a3bca/prompts/day-7-the-directors-prompt.md),
+[watch page](https://cxbxmxcx.github.io/learn-ai-filmmaking/day-7-the-directors-prompt/)
+and [generated MP4](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/e792e047ac6122c861a329d7a1b080597b4a3bca/docs/films/day-7-the-directors-prompt.mp4).
+
+
 ## Reusable templates
 
 
@@ -38095,6 +38242,8 @@ portrait generator and content-key invalidation logic.
 
 ## Sources
 
+- [Micheal Lanham / Learn AI Filmmaking — September 18, 2026 fal Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`) two-film release: complete 25/30-second prompts, identity reference sheets and close-ups, returned seeds and native-audio films, each one generation with no editing](https://github.com/cxbxmxcx/learn-ai-filmmaking/commit/5edb8e93b3893179b9f3fafd92526cdfd8dc3d00) ([lemonade-test prompt](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/5edb8e93b3893179b9f3fafd92526cdfd8dc3d00/prompts/day-4-characters-who-act.md), [tuba-platform prompt](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/e792e047ac6122c861a329d7a1b080597b4a3bca/prompts/day-7-the-directors-prompt.md), [series provenance statement](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/e792e047ac6122c861a329d7a1b080597b4a3bca/README.md))
+
 - [Micheal Lanham / Learn AI Filmmaking — September 18, 2026 fal Seedance 2.5 (`bytedance/seedance-2.5/text-to-video`) four-film release: complete prompts and settings, returned seeds, retained 15/20/30/30-second native-audio films, each one generation with no editing](https://github.com/cxbxmxcx/learn-ai-filmmaking/commit/5e8cf26cedcb03ff9d7e6fa06699e1ffee0de9c4) ([light-state prompt](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/5e8cf26cedcb03ff9d7e6fa06699e1ffee0de9c4/prompts/day-2-light-lens-and-look.md), [camera-path prompt](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/5e8cf26cedcb03ff9d7e6fa06699e1ffee0de9c4/prompts/day-3-moving-the-camera.md), [prompt-native editing](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/5e8cf26cedcb03ff9d7e6fa06699e1ffee0de9c4/prompts/day-5-editing-inside-the-prompt.md), [physical-effect prompt](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/5e8cf26cedcb03ff9d7e6fa06699e1ffee0de9c4/prompts/day-6-effects-that-belong-in-the-world.md))
 
 - [Micheal Lanham / Learn AI Filmmaking — September 18, 2026 fal Seedance 2.5 (`bytedance/seedance-2.5/text-to-video`) 12-second status-call-to-backyard-pool pull-back: complete prompt and settings, returned seed, one native-audio generation, no edits and retained film](https://github.com/cxbxmxcx/learn-ai-filmmaking/commit/1f4c320438980c0ce97be6a1fb4dc16b2508e0ae) ([complete prompt and exact route](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/1f4c320438980c0ce97be6a1fb4dc16b2508e0ae/prompts/day-1-one-shot-one-story.md), [watch page](https://cxbxmxcx.github.io/learn-ai-filmmaking/day-1-one-shot-one-story/), [generated MP4](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/1f4c320438980c0ce97be6a1fb4dc16b2508e0ae/docs/films/day-1-one-shot-one-story.mp4))
@@ -38398,9 +38547,6 @@ normalization for Unicode generation keys](https://github.com/Dylan-Nihilo/OmniS
 Seedance 2.5 DarkHost CRM film: two complete 1080p one-take prompts, four- and
 nine-image authority maps, first-frame continuation, persistent chaos props,
 contact-gated order wave, UI text isolation and released three-generation
-Warning: truncated output (original token count: 31978)
-Total output lines: 800
-
 film](https://github.com/SupremeGoogle/prompt-portfolio/commit/cc2fc569a5214da97f357a615b9b8035b652e113)
 ([complete prompt file](https://github.com/SupremeGoogle/prompt-portfolio/blob/cc2fc569a5214da97f357a615b9b8035b652e113/prompts/06-2-desyat-sekund-brend-rolika-po-referensu.md),
 [finished-film release](https://disk.yandex.ru/d/mqkh8iDKnGrJcw))
@@ -38646,7 +38792,237 @@ reactive phone-camera failure and native overlapping dialogue](https://x.com/fra
 
 - [Accomplished-Tax1050 — September 1, 2026 three matched-prompt Seedance 2.0 versus Seedance 2.5 comparisons with six approximately 15.07-second 1280×720 outputs, complete prompts for quiet material contact, coordinated sports motion and Portuguese dialogue, plus an axis-scored regression-test structure](https://www.reddit.com/r/Seedance_AI/comments/1vws6ys/seedance_20_vs_25_i_compared_both_with_the_same/)
 
-- [Altus Rossouw — September 1, 2026 Higgsfield Seedance 2.0 image-to-video release with nine committed category-card MP4s and a complete end-frame-owned co…11978 tokens truncated… ([companion unresolved-knowledge record](https://github.com/vxz2datoubo/eustia-ai-film/commit/a56e11e02c78f7cc7c1bc475d77b1ddb179ee5b2))
+- [Altus Rossouw — September 1, 2026 Higgsfield Seedance 2.0 image-to-video release with nine committed category-card MP4s and a complete end-frame-owned cover-reveal workflow, including exact model call, typography entrance schedule, credit authorization, muted feed delivery and poster fallback](https://github.com/AltusRossouw/lumenx-lighting/commit/0ccfd3b420a6c2aaabff6b87d18f342bb1822bc5) ([full cover-reveal template](https://github.com/AltusRossouw/lumenx-lighting/blob/0ccfd3b420a6c2aaabff6b87d18f342bb1822bc5/.agents/skills/higgsfield-websites/references/cover-animator.md))
+
+- [Chengzi / @Chengzilhy — September 1, 2026 complete Seedance 2.5 restrained micro-expression prompt and attached eight-second result, with eye-before-head attention, contact-driven chin motion and single-droplet state control](https://x.com/Chengzilhy/status/2094774229254422579)
+- [John / @john87445528 — September 1, 2026 complete two-part Seedance 2.5 office-riddle prompt and attached 30-second result, with exact continuation state, speaker ownership, hidden-prop ledger and mask payoff](https://x.com/john87445528/status/2094752055831171247)
+- [Li Goudan / @zkgoudan — September 1, 2026 Seedance 2.5 Lamborghini-to-wasp generated sequence](https://x.com/zkgoudan/status/2094782031041585235) ([complete prompt reply](https://x.com/zkgoudan/status/2094782161953882598))
+
+- [John / @johnAGI168 — September 1, 2026 complete Seedance 2.5 fixed-scale giant-goddess one-take prompt and attached 10-second result](https://x.com/johnAGI168/status/2094710250469314941)
+- [TanLuAI / @TanLuAI — September 1, 2026 Seedance 2.5 high-altitude duel workflow, finished 20-second film and asset/repair method](https://x.com/TanLuAI/status/2094762826237894934) ([complete master and targeted repair prompts](https://x.com/TanLuAI/status/2094762832730435828))
+
+- [Nomi — September 1, 2026 live fal `bytedance/seedance-2.5` acceptance run: deep submit-path polling returned 405, owner/app-root routing restored the same task and produced a downloaded 202 KB MP4; includes the route compiler and structural regression gate](https://github.com/aqm857886159/Nomi/commit/52dc89a211aee85344a02269113434ec7d10f4e2) ([real-run matrix](https://github.com/aqm857886159/Nomi/blob/52dc89a211aee85344a02269113434ec7d10f4e2/docs/research/2026-09-02-model-acceptance-matrix.md), [provider route compiler](https://github.com/aqm857886159/Nomi/blob/52dc89a211aee85344a02269113434ec7d10f4e2/electron/catalog/falOfficial.ts), [regression gate](https://github.com/aqm857886159/Nomi/blob/52dc89a211aee85344a02269113434ec7d10f4e2/electron/catalog/vendorWireDriftFixes.test.ts))
+
+- [Agent Media — September 1, 2026 live completed Seedance 2.0 Mini product-in-hands run whose `artifacts[]` response exposed a false success-without-link delivery failure, repaired with MIME/extension-aware video selection, scalar-alias fallback and sibling-artifact reporting](https://github.com/gitroomhq/agent-media-app/commit/2319acfbed1b87d1e65a1b46ca5b91f1fc49b0cb) ([exact-model product-in-hands activity](https://github.com/gitroomhq/agent-media-app/blob/2319acfbed1b87d1e65a1b46ca5b91f1fc49b0cb/services/primitive-worker-vnext/src/activities/product-in-hands.ts), [shape-drift regression gate](https://github.com/gitroomhq/agent-media-app/blob/2319acfbed1b87d1e65a1b46ca5b91f1fc49b0cb/services/api-v2/src/__tests__/mcp-status-tool.test.ts))
+
+- [Jason Cai — September 1, 2026 LibTV Seedance 2.0 Mini real-shot voice-driven generation with measured mouth checkpoints, separate compliance-register discovery, 1.8–30.2-second audio window, 15-per-minute filing limit and native-soundtrack ownership routing](https://github.com/jasoncai0/ai-shortdrama-pipeline/commit/1d80808f5aed05342ce189806cc6eed008cce4c0) ([exact-model LibTV adapter](https://github.com/jasoncai0/ai-shortdrama-pipeline/blob/1d80808f5aed05342ce189806cc6eed008cce4c0/src/plugins/video/libtv.ts), [compliance implementation](https://github.com/jasoncai0/ai-shortdrama-pipeline/blob/1d80808f5aed05342ce189806cc6eed008cce4c0/src/lib/compliance.ts))
+
+- [QuantumWeaveDev26 — September 1, 2026 live ModelArk `dreamina-seedance-2-5-260628` video-extension probe with returned 4-second H.264/AAC output, followed by a resumable sequential round-chain implementation with atomic progress/task-ID checkpoints and per-round cost accounting](https://github.com/QuantumWeaveDev26/Custom-interface/commit/db9a19b1ae4b3bc093dad8b05668d637d8acc7fe) ([round-chain implementation and failure test](https://github.com/QuantumWeaveDev26/Custom-interface/commit/829eae47a29c22c10c39d99201daa4fba2b9d53a))
+
+- [Dan de Geest — September 1, 2026 Krea Seedance 2.5 first/last-frame continuous-journey experiment with source frame, normalized depth diagnostic, protected destination plans, four generated MP4 tests and the “never stop moving” spatial-traversal finding](https://github.com/dandegeest/TunnelVision/commit/8a85cee8542128ed18c68a424a34f3d2f0404d5f) ([workflow explanation](https://github.com/dandegeest/TunnelVision/blob/8a85cee8542128ed18c68a424a34f3d2f0404d5f/README.md), [tuning assets and outputs](https://github.com/dandegeest/TunnelVision/tree/8a85cee8542128ed18c68a424a34f3d2f0404d5f/camotion/tuning))
+
+- [Muhammad Ayan / @socialwithaayan — September 1, 2026 Seedance 2.5 nine-reference, 28-second uninterrupted phone-vlog result with character-sheet setup, ordered reference manifest, exact appearance windows and complete prompt](https://x.com/socialwithaayan/status/2094451151471296736) ([character-sheet prompt](https://x.com/socialwithaayan/status/2094451181947125848), [ordered upload rule](https://x.com/socialwithaayan/status/2094451208081850784), [reference manifest](https://x.com/socialwithaayan/status/2094451231846781265), [complete Seedance 2.5 prompt](https://x.com/socialwithaayan/status/2094451246115737859))
+
+- [PSS / @PromptSin — August 31, 2026 Dreamina Seedance 2.5 last-ferry travel sprint with complete 15-second prompt, first-frame hazard, causal ramp response, persistent cargo and attached result](https://x.com/PromptSin/status/2094377547408740379)
+
+- [John / @johnAGI168 — August 31, 2026 Seedance 2.5 adult-couple kitchen micro-drama with complete 20-second prompt and result, native Mandarin speaker/listener lanes, explicit mutual approach and cooker-off/utensil-down safety gates](https://x.com/johnAGI168/status/2094401180101206388)
+
+- [Glenn Williams / @GlennHasABeard — August 31, 2026 Seedance 2.5 candle timing test with attached 15-second result and creator-reported per-window terminal-state control for preventing pre-trigger motion](https://x.com/GlennHasABeard/status/2094387519148134418)
+
+- [Glenn Williams / @GlennHasABeard — September 1, 2026 Seedance 2.5 wave-to-ice test with attached 15-second result, two-second directional phase-change window, persistent frozen target and explicit snow/mist/sky motion exemptions](https://x.com/GlennHasABeard/status/2094488957203652685)
+
+- [Higgsfield — official Seedance 2.5 region-edit showcase for bounded label, background and wardrobe repair without a full reroll](https://higgsfield.ai/seedance/2.5); [Iret — August 31, 2026 dated verification of the separate Seedance 2.5 Edit surface, source-video slot, text-defined regions, `@` references, 1080p ceiling and no-mask workflow](https://github.com/iret77/ai-film-production/commit/e3ee5d679776f1b425fe9a9cd391b59f1c8e8f0c)
+
+
+- [OfoxAI — August 31, 2026 Seedance 2.5 execution release with a live-verified 1.9-second create checkpoint, zero-spend schema-and-price dry-run, per-take seeds, contact-sheet selection and actual-bill reconciliation](https://github.com/ofoxai/skills/commit/0e845c71cc304b421d40f61dba900d6bedab8b90) ([Seedance 2.5 scenario contract](https://github.com/ofoxai/skills/blob/0e845c71cc304b421d40f61dba900d6bedab8b90/skills/seedance-product-video/SKILL.md), [real-run and billing findings](https://github.com/ofoxai/skills/blob/0e845c71cc304b421d40f61dba900d6bedab8b90/skills/ofox-video-core/CHANGELOG.md))
+
+- [Noah1206 / Loverabbit — Higgsfield `seedance_2_5` six-second single-render relationship-map plate with exact prompt, real job/cost manifest, committed MP4, same-master poster/fallback extraction and tested runtime media fallback](https://github.com/Noah1206/loverabbit/commit/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a) ([exact prompt](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/scripts/higgsfield/prompts.md), [asset manifest](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a/scripts/higgsfield/asset-manifest.json), [generated MP4](https://github.com/Noah1206/loverabbit/blob/ccf0aadb2b3e82686422d53f1e9bb187a1e48b0a)); [follow-up one-master art-direction replacement, measured-output overlay remap and settled-frame revisit route](https://github.com/Noah1206/loverabbit/commit/19a9e35bb6196547df2525896fe46ce57677035a) ([replacement prompt](https://github.com/Noah1206/loverabbit/blob/19a9e35bb6196547df2525896fe46ce57677035a/scripts/higgsfield/prompts.md), [replacement manifest](https://github.com/Noah1206/loverabbit/blob/19a9e35bb6196547df2525896fe46ce57677035a/scripts/higgsfield/asset-manifest.json), [approved replacement MP4](https://github.com/Noah1206/loverabbit/blob/19a9e35bb6196547df2525896fe46ce57677035a/public/assets/guin-map/opening.mp4))
+
+- [John / @johnAGI168 — Seedance 2.5 twenty-second text-to-video fire-phoenix ritual with complete prompt, attached result, action-owned fluid VFX, a hard duplicate interval and original-only state reset](https://x.com/johnAGI168/status/2094061058776342862)
+
+- [KampterHarbour — August 30, 2026 re-read of ByteDance's official Seedance 2.5 creation manual, preserving the manual's multi-grid panel mapping, connective-action, composition, shot-size, camera-movement and action guidance](https://github.com/KampterHarbour/kampter-sd-25-skills/commit/f1cddc54b8e3fd05d11bddaca520e00d697b2312) ([official Seedance 2.5 manual](https://bytedance.larkoffice.com/wiki/RXh5ww6EqighMdkVTMccm2d4n7e))
+
+- [Scott Canton / Heartstamp Studio — Replicate `bytedance/seedance-2.0` and `bytedance/seedance-2.5` generated failures with exact route evidence, provider-specific `@Video1` / `[Video1]` binding, clause-safe prompt caps, mode-required `duration=-1` / `aspect_ratio=adaptive` sentinel translation and result-delivery gates](https://github.com/scanton/social-media-assets/commit/076f19347d6c5f5fa624264280b71b2689ba6a62) ([dialect diagnosis](https://github.com/scanton/social-media-assets/commit/6f8d98cf7897d0f61a0f1d0dd165c8c10a23518f), [first render and clause-safe cap handling](https://github.com/scanton/social-media-assets/commit/deb1c2fa78e8dd4e2c79c88c3116cc2aed6479ba), [exact Seedance 2.0 route](https://github.com/scanton/social-media-assets/blob/deb1c2fa78e8dd4e2c79c88c3116cc2aed6479ba/src/lib/models.ts), [delivery diagnosis](https://github.com/scanton/social-media-assets/commit/b5db9d1e5886965aef243ba94c715809cbb9b6c1))
+
+- [JennieDov — September 1, 2026 OpenRouter `bytedance/seedance-2.5` two-reference field report: collapsing a person-plus-location pack to `frame_images.first_frame` dropped the person and inherited the source's 16:9 geometry; emitting the complete ordered set through `input_references` restored reference participation and requested-aspect ownership](https://github.com/jenniedov/jenai-studio/commit/848db744e521e6e1d42d8ad4c630b39a60ba3bfd)
+
+- [Ryan Elwathiq / LuvIt — exact `bytedance/seedance-2.5` five-reference product-drop hero with two low-resolution probes, separate native desktop/mobile finals, verbatim-label evidence, measured costs and emergent-look promotion](https://github.com/RyanElwathiq/LuvIt-Priject/commit/b73e6330b35050871391d9fbf543aa441e8c7faa) ([generation findings](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/_خطة/موجة-٢-صفحة-المتجر-الموحّدة.md), [exact-model runner](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/_أدوات/gen-video.mjs), [desktop final](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/hero-sequence/drop-final-desktop.mp4), [mobile final](https://github.com/RyanElwathiq/LuvIt-Priject/blob/b73e6330b35050871391d9fbf543aa441e8c7faa/hero-sequence/drop-final-mobile.mp4))
+
+- [Amira Zairi / @azed_ai — Runway Seedance 2.5 thirty-second first-person zombie-survival simulation with attached generated result, complete prompt reply, persistent HUD, causal noise propagation, resource ledgers and round-trip geography](https://x.com/azed_ai/status/2094095009138299254) ([complete prompt](https://x.com/azed_ai/status/2094095023398945140))
+
+- [PSS / @PromptSin — Dreamina Seedance 2.5 fifteen-second one-take resin-printing dragon sequence with complete prompt, attached generated result, ordered fabrication, same-subject material conversion and contact-causal launch](https://x.com/PromptSin/status/2094070647395901652)
+
+- [John / @johnAGI168 — Seedance 2.5 fifteen-second gym vlog with complete prompt, paired comparison results, closed exercise cycles, biomechanics constraints and a non-sexual camera gate](https://x.com/johnAGI168/status/2094046192409727159)
+
+- [TechHalla — Seedance 2.5 two-pass street-food business simulation with complete 30-second primary and continuation prompts, last-ten-second video handoff, inherited inventory and queue state, and attached combined generated result](https://x.com/techhalla/status/2094023436779622494) ([complete two-pass prompts](https://x.com/techhalla/status/2094023441099760020))
+
+- [John / @johnAGI168 — Seedance 2.5 fifteen-second kendo-dojo montage with a complete six-shot prompt, equipment-state ledger, beat-locked hard cuts, contact-causal sparring and attached generated result](https://x.com/johnAGI168/status/2093978055584661519)
+
+- [Louis / @louis_vuis — CapCut Seedance 2.5 thirty-second Arctic cosmic-horror sequence with a complete prompt, immutable faceless-entity reference, owned reality-warping effects, battlefield state ledger and attached generated result](https://x.com/louis_vuis/status/2093879116928004201) ([platform-indexed complete prompt](https://youmind.com/video-prompts/cinematic-scifi-horror-arctic-video-10053))
+
+- [Jason Heaton / @JasonHeatony7 — SocialSight Seedance 2.5 thirty-second quadruped-mech mountain pursuit with complete prompt, heavy-machine physics, causal destruction and attached generated result](https://x.com/JasonHeatony7/status/2093517871024349535)
+
+- [Pyona / @pyona_ai — Seedance 2.5 two-reference school-corridor elemental continuation with a complete thirty-second prompt, contact-first VFX contract, carried USB state and attached generated result](https://x.com/pyona_ai/status/2093334200112091428)
+
+Community examples and techniques referenced in this README:
+
+- [Heather Cooper / @HBCoop_ — Dreamina Seedance 2.5 twenty-second flooded-city armor test plus twenty-second extension, with complete prompts, attached result and creator analysis of detail density versus choreography](https://x.com/HBCoop_/status/2093729949123543225) ([complete primary and extension prompts](https://x.com/HBCoop_/status/2093729967985320195))
+
+- [Sania / @saniaspeaks_ — Higgsfield Seedance 2.5 thirty-second smartphone kung-fu learning vlog with complete prompt, exact midpoint hard cut, bilingual dialogue and generated result](https://x.com/saniaspeaks_/status/2093665693015388426)
+
+- [PSS / @PromptSin — Dreamina Seedance 2.5 twelve-shot stormglass-manta chase with complete 30-second prompt, three reference-role images, cable-state physics and generated result](https://x.com/PromptSin/status/2093643612269764740)
+
+- [DeCat / @DeCat2025 — Dreamina Seedance 2.0 Fast 15-second archaeological machine awakening with a complete prompt, attached generated result, ordered activation chain and identity-recognition reversal](https://x.com/DeCat2025/status/2093504644567740693)
+
+- [Tony Payet / AutomationBoost — Seedance 2.5 ten-second vertical burger commercial with the complete creator-confirmed prompt, motion-first hook, four-texture sprint and model-route notes](https://github.com/tonyPayetDev/automationboost/commit/4fd5f0d840890d6686e46f7d786255d921760537) ([complete prompt](https://github.com/tonyPayetDev/automationboost/blob/4fd5f0d840890d6686e46f7d786255d921760537/ressources/prompt-burger-video.html), [creator page](https://automatisationboost.com/ressources/prompt-burger-video.html))
+
+- [Gegham Simonyan / Hayanim Studio — exact `seedance-2.5` same-plate five-second motion bake-off with raw output, three-checkpoint identity audit and camera/aspect-ratio findings](https://github.com/Gegham8/hayanim-studio/commit/7c849bd9ef72228e461a17c204f7d4d5ddccc01c) ([test results](https://github.com/Gegham8/hayanim-studio/blob/7c849bd9ef72228e461a17c204f7d4d5ddccc01c/docs/16-smoke-test-results.md), [generation log](https://github.com/Gegham8/hayanim-studio/blob/7c849bd9ef72228e461a17c204f7d4d5ddccc01c/episodes/EP001-champordnere/generation-log.csv))
+
+- [Auxlife32 — exact `bytedance/seedance-2.5` block-prompt workflow with an untouched timed demo, repeated-take cut-window finding and complete generation route](https://github.com/Auxlife32/ai-video-studio/commit/191f3ea21bf2296c6fd5deec579fd2790d9a01e1) ([complete prompt](https://github.com/Auxlife32/ai-video-studio/blob/191f3ea21bf2296c6fd5deec579fd2790d9a01e1/examples/demo-prompt.txt), [model route](https://github.com/Auxlife32/ai-video-studio/blob/191f3ea21bf2296c6fd5deec579fd2790d9a01e1/scripts/seedance.py))
+
+- [Alex Patrascu / @maxescu — Higgsfield Seedance 2.5 1080p precinct confrontation with a complete 30-second prompt, six progressively tighter static setups, hard-cut-only coverage and an ordered silent reaction](https://x.com/maxescu/status/2093318616389149018)
+
+- [M / @Strength04_X — Dreamina Seedance 2.5 rooftop founder satire with a complete 30-second structured prompt, localized buffer glitch, observer-reaction hold and generated result](https://x.com/Strength04_X/status/2093252876227215841)
+
+- [Kiki / @Mayz1169 — Seedance 2.5 five-slot dress-up game with a complete 15-second prompt, immutable UI assets, cumulative wardrobe ledger and generated result](https://x.com/Mayz1169/status/2093221619930161608) ([complete prompt](https://x.com/Mayz1169/status/2093221833579590087))
+
+- [Lipsync.video — Seedance 2.5 twenty-second one-take Shibuya tennis freeze with handheld-to-FPV camera transition, complete public prompt and generated result](https://x.com/Lip_sync_video/status/2093212349263909170) ([complete prompt document](https://docs.google.com/document/d/1X_d_7y_zP3nFeTzMV_zMseJBZZK9kmQ5SgD4ZCqosYA/edit))
+
+- [Simply Ray / @kingofdairyque — Higgsfield Seedance 2.5 television-contained apartment horror with a complete 30-second prompt and generated result](https://x.com/kingofdairyque/status/2093198798470402301)
+
+- [1024XEngineer / Holonic Asset — exact `bytedance/seedance-2.5` two-reference directional-animation derivation, immutable fan-out workflow and complete prompt builder](https://github.com/1024XEngineer/Holonic-Asset/commit/d70a819a4ab959152394fd9c77c689a1a6e9a895) ([prompt source](https://github.com/1024XEngineer/Holonic-Asset/blob/d70a819a4ab959152394fd9c77c689a1a6e9a895/core-api/internal/module/generator/prompts/animation_derivation.go))
+
+- [Aatir — Higgsfield Seedance 2.5 Edit motion-transfer workflow with source-frame-aligned identity generation, real reference-binding checks and an eight-part delivery gate](https://github.com/aatirs7/clonelab/commit/1d5f992233a51bc7f4ad21a5010d87c467f449de)
+
+- [Baramtop — Higgsfield Seedance 2.5 video-edit replacement with seven-attempt evidence for large-versus-small on-screen-text legibility and iterative-edit degradation](https://github.com/baramtop/wdpage/commit/874e90b1b1abbd69cdf9d4115447ee6e653a0158)
+
+- [Tanabe — Seedance 2.5 same-prompt three-sheet character-consistency comparison with attached layouts, side-by-side generated results and expression-bias findings](https://x.com/tanabe_fragm/status/2093135764452471057)
+
+- [BMX — Dreamina Seedance 2.5 offscreen-observer phone UGC with a complete prompt, private-whisper audio lane, degraded pinch-zoom and generated result](https://x.com/bmx_ai13/status/2093106533953425729)
+
+- [Beech — Seedance 2.5 ordinary summer-day diary with a complete 30-second prompt, motivated amateur-camera errors, prop continuity and generated result](https://x.com/beechinour/status/2093086602167751073)
+
+- [Syed Abuthahir — ImagineArt Seedance 2.5 six-beat seasonal romance with a complete 30-second prompt, score progression and raw generated result](https://x.com/abulu8/status/2093079796804907236)
+
+- [Ahmet Muhammed Ertugrul — Seedance 2.5 two-board freefall obstacle relay with a complete 30-second prompt and generated result](https://x.com/ahmetmertugrul/status/2093051613074149707) ([complete two-board prompt](https://x.com/ahmetmertugrul/status/2093051616580477411))
+
+- [Condz — Seedance 2.5 handcrafted clay helper-box story with a complete seven-shot Chinese prompt, foley map and 30-second generated result](https://x.com/condzxyz/status/2093032563400987056)
+
+- [TechHalla — Seedance 2.5 single-owner front-camera nightlife UGC with a complete ten-location prompt, two-person state ledger and 30-second generated result](https://x.com/techhalla/status/2093031767556968845)
+
+- [Geesta87 — Seedance 2.5 Atlas production workflow with immutable provider originals, separate finish-pass assets and an explicit Original/Grainy delivery selector](https://github.com/Geesta87/Regalos-Que-Cantan/commit/957d0a1b2650ca2500da873e49c764508f833bfa) ([exact model endpoint and generation workflow](https://github.com/Geesta87/Regalos-Que-Cantan/commit/730ae96704176112d21f9f3eeea443e48973d225))
+
+- [Dyyhoang / @Dyyaiworker — Seedance 2.5 capture-to-canyon two-part continuation, complete prompts, reference images and 44-second Flova AI result](https://x.com/Dyyaiworker/status/2093012360797807083) ([complete two-part prompts](https://x.com/Dyyaiworker/status/2093012572220059700))
+
+- [MadMax / @MadMax_Series — Seedance 2.5 20-second continuous mythic voyage with complete text-to-video prompt, generated result and disclosed unintended public-figure resemblance](https://x.com/MadMax_Series/status/2093000650938335426)
+
+- [Ihor Khort — Seedance 2.5 premise-level refusal diagnosis, successful 15-second result and complete six-shot replacement prompt](https://x.com/Ihor680847/status/2092987863243640972) ([complete successful prompt](https://x.com/Ihor680847/status/2092987866242564292))
+
+- [John / @johnAGI168 — Seedance 2.5 water-obstacle parkour show with complete 15-second prompt, generated result and contact-causal reversal](https://x.com/johnAGI168/status/2092984806367805850)
+- [Kiki / @Mayz1169 — Seedance 2.5 anime-fight rematch with a complete revised prompt, two character-sheet references, generated result and direct ghosting/body-melt failure comparison](https://x.com/Mayz1169/status/2092971460914778186) ([complete revised prompt](https://x.com/Mayz1169/status/2092972153494962387))
+
+- [Sogni — official Seedance 2.5 30-second UGC result with sequential 10-second approval guidance and failure-propagation rationale](https://x.com/Sogni_Protocol/status/2092954101558497494)
+
+- [Kiki / @Mayz1169 — Seedance 2.5 first-person cottage chore montage with complete 13-second anime prompt and generated result](https://x.com/Mayz1169/status/2092940255989313693) ([complete prompt](https://x.com/Mayz1169/status/2092941033931739605))
+
+- [AIrina / @airina_xyz — Dreamina Seedance 2.5 luxury-restaurant cat comedy with complete 30-second prompt, dialogue escalation and generated result](https://x.com/airina_xyz/status/2092926649926824038)
+
+- [ÀBDŪLLÂH / @itxabdullaa — Seedance 2.5 pool-day DV camcorder scene with complete 15-second prompt, native Korean dialogue and lens-splash transitions](https://x.com/itxabdullaa/status/2092912491395441144)
+
+- [Jayden / @SirGlavan_ — Dreamina Seedance 2.5 golden-hour concert performance with complete 30-second prompt, 360-degree orbit and generated result](https://x.com/SirGlavan_/status/2092897991099048387) ([complete prompt](https://x.com/SirGlavan_/status/2092897996451008637))
+
+- [APOB AI — Seedance 2.5 character-sheet, world-bible and storyboard-to-anime workflow with complete prompts and embedded result](https://x.com/apob_ai/article/2092872573369606378) ([canonical post](https://x.com/apob_ai/status/2092872573369606378))
+
+- [Vini / @Viniai_ — Seedance 2.5 text-only six-shot security-dog comedy with complete 30-second prompt and generated result](https://x.com/Viniai_/status/2092862214189515020) ([complete prompt](https://x.com/Viniai_/status/2092862227145740356))
+
+- [ᴍᴜʀᴘʜʏ / @Diplomeme — Seedance 2.5 viral-stunt recreation UGC with complete 24-second prompt, failed-attempt ladder, match-cut payoff and generated result](https://x.com/Diplomeme/status/2092848326983241739)
+
+- [Al-Shamus / @im_shahid7 — Seedance 2.5 single-axis cross-section morning-routine comedy, complete reference contract, 0–30-second timeline, audio map, negative constraints and generated result](https://x.com/im_shahid7/status/2092836404770586820) ([timeline](https://x.com/im_shahid7/status/2092836410482987079), [closing/audio/negative continuation](https://x.com/im_shahid7/status/2092836416065872141))
+
+- [G1zm072 — Seedance 2.5 six-character same-frame dialogue test with a group image, individual character sheets, six reference-audio lanes, complete prompt and 25-second generated result](https://www.reddit.com/r/Seedance_AI/comments/1vzfprh/how_to_make_multiple_characters_speak_in_seedance/)
+
+- [Few-Profession421 — Seedance 2.5 photoreal macaque-and-hiker head-tilt comedy, complete 15-second prompt and generated showcase result](https://www.reddit.com/r/Seedance_AI/comments/1vymg5g/tried_a_simple_monkey_prompt_in_seedance_25_and/)
+
+
+- [Baazookah_Zawadi — Seedance 2.5 ten-reference handcrafted marionette circus story, complete 30-second prompt and generated showcase result](https://www.reddit.com/r/Seedance_AI/comments/1vclapt/i_tested_seedance_25_for_a_longer_story_video_and/)
+
+
+- [AICU / Zasuko — Seedance 2.0 three-reference Shibuya reunion CM with complete R2V prompt, character sheets, image board and generated audio result](https://github.com/aicuai/Book-SG26/commit/32f2cdf7020e7fc3b0490c85556c41a5277efa96) ([complete prompt](https://github.com/aicuai/Book-SG26/blob/32f2cdf7020e7fc3b0490c85556c41a5277efa96/prompts/chap5/README.md#5-4-5), [reference notebook](https://github.com/aicuai/Book-SG26/blob/32f2cdf7020e7fc3b0490c85556c41a5277efa96/SG26_SD2_R2V.ipynb), [generated MP4](https://github.com/aicuai/Book-SG26/blob/32f2cdf7020e7fc3b0490c85556c41a5277efa96/prompts/chap5/Seedance2.0_R2V%E2%80%97Movie_720p_SAMPLE.mp4))
+
+- [Sonya / MkAnime — Seedance 2.5 earliest-failure isolation, symptom-to-control routing and single-variable patch ledger](https://mkanime.ai/guides/fix-seedance-2-5-character-camera-ending) ([five creator-generated Dreamina tests, intact exports and complete structured prompts](https://mkanime.ai/guides/seedance-2-5-anime-test))
+
+- [charbel2y16 / FujiLift — Seedance 2.5 shaft-travel generation rejected for interactive scrubbing after measured direction reversals, speed instability and cut-like jumps](https://github.com/charbel2y16-pixel/fujilift-web/commit/b3df5d6249bbfddceb45d681a2554168d1173c8f) ([executable direction/rate/cut/stall/net-travel audit](https://github.com/charbel2y16-pixel/fujilift-web/commit/33bd3bcfa06ea6b9e789671cb972babf8902b3c9), [archived rejected master](https://github.com/charbel2y16-pixel/fujilift-web/blob/b3df5d6249bbfddceb45d681a2554168d1173c8f/video/higgsfield-shaft-15s.mp4))
+
+- [Leon Harris / Next-Frame Agency — Seedance 2.0 Mini five-digit hand repair through nonessential finger-motion removal, positive topology pinning and full-span master QA](https://github.com/Leonkharris/nextframe-site/commit/de9ea60177dd894c0e367d8376fd80bbddffdc5d) ([p21 repair](https://github.com/Leonkharris/nextframe-site/blob/de9ea60177dd894c0e367d8376fd80bbddffdc5d/lucifergamingmv/clips/p21.mp4), [p58 repair](https://github.com/Leonkharris/nextframe-site/blob/de9ea60177dd894c0e367d8376fd80bbddffdc5d/lucifergamingmv/clips/p58.mp4), [rebuilt master](https://github.com/Leonkharris/nextframe-site/blob/de9ea60177dd894c0e367d8376fd80bbddffdc5d/lucifergamingmv/MOTION-PASS.mp4))
+
+- [Celeste Deng / Motiofy — Seedance 2.5 single-image product-orbit benchmark, exact prompts, all first-take clips and asymmetric-phone mirror-dodge audit](https://motiofy.ai/blog/ai-product-video-model-comparison)
+
+- [Ido Marhaim / GoalPilot — Seedance 2.5 contradictory no-text calendar failure, abstract-mark defocus repair and visually verified shot-level patch](https://github.com/idomarhaim/Android_Final_Project/commit/5771bbd96f211972eb8770bd578bf4a99959ac9e) ([initial generation and diagnosis](https://github.com/idomarhaim/Android_Final_Project/commit/8ad800d4f4f4dbe64f48d29f8b5e92faec276a48), [complete source brief](https://github.com/idomarhaim/Android_Final_Project/blob/5771bbd96f211972eb8770bd578bf4a99959ac9e/docs/marketing/explainer-video-brief.md#5--google-flow-prompts--the-opening-b-roll-only))
+
+- [Jacob Ye — Seedance 2.5 form-locked identity card and text-only transient-state method, derived from a measured six-variable sick-card identity failure](https://github.com/jacobye2017-afk/jacob-ye-seedance-prompt/commit/4f91f2cb9bfbf3f4d9647bce96cdc983ae06a574) ([complete rule](https://github.com/jacobye2017-afk/jacob-ye-seedance-prompt/blob/4f91f2cb9bfbf3f4d9647bce96cdc983ae06a574/FORMULA.md#1811-%EF%B8%8F-%E5%8D%A1%E9%94%81%E5%BD%A2%E6%96%87%E5%AD%97%E9%94%81%E6%80%81%E6%94%B9%E5%8F%98%E8%84%B8%E5%9E%8B%E7%9A%84%E7%8A%B6%E6%80%81%E7%BB%9D%E4%B8%8D%E8%83%BD%E7%94%A8%E6%94%B9%E5%9B%BE))
+
+- [cindylearn — Seedance 2.5 clone-voice plus three-photo presenter test, explicit omni-reference media-role authentication and staged lip-sync recovery](https://github.com/cindylearn/ai-content-course-C-simple/commit/413fff576f2c54a995271385543bf33a79bb15ac)
+
+- [Davit Gadyan / SocialForge — Seedance 2.5 café dialogue one-shot with uploaded-icon brand transition, complete website prompt and generated audio result](https://github.com/DavitGadyan/AIVideo_Generation_higgsfield/commit/32666b37dfa064b6b33d55648e0c533d9dca55e5) ([complete prompt](https://github.com/DavitGadyan/AIVideo_Generation_higgsfield/blob/32666b37dfa064b6b33d55648e0c533d9dca55e5/docs/generation-prompt-website.txt), [result record](https://github.com/DavitGadyan/AIVideo_Generation_higgsfield/blob/32666b37dfa064b6b33d55648e0c533d9dca55e5/docs/README.md), [generated MP4](https://github.com/DavitGadyan/AIVideo_Generation_higgsfield/blob/32666b37dfa064b6b33d55648e0c533d9dca55e5/docs/videos/seedance.mp4))
+
+- [Leon Harris / Next-Frame Agency — Seedance 2.5 thirty-second six-gate cyberpunk-anime cut with complete bilingual story and shot data](https://github.com/Leonkharris/nextframe-site/commit/d3d199a839a68ba548af9776f10cdcd422b3cfc0) ([prompt data](https://github.com/Leonkharris/nextframe-site/blob/d3d199a839a68ba548af9776f10cdcd422b3cfc0/xsino/data.js), [generated MP4](https://github.com/Leonkharris/nextframe-site/blob/d3d199a839a68ba548af9776f10cdcd422b3cfc0/xsino/assets/videos/07/take1_the_six_gates.mp4))
+
+- [Abdullah Akbar Khalid / Journey — Seedance 2.0 actual-last-frame, direction-monotonic desktop and native-portrait scroll-world chains with measured seams](https://github.com/akbar-33/journey/commit/800ff4ae8ca14ce97553a98e4cec4ade7870f0d7) ([landscape masters](https://github.com/akbar-33/journey/tree/800ff4ae8ca14ce97553a98e4cec4ade7870f0d7/assets/vid), [delivery architecture](https://github.com/akbar-33/journey/blob/800ff4ae8ca14ce97553a98e4cec4ade7870f0d7/world.html))
+
+- [H2R-Bench — Seedance 2.0 video-conditioned human-to-robot transfer gallery and function-weighted H2RCore acceptance method](https://github.com/Rongdingyi/H2R-Bench/commit/6549ae11bb9b361c8690dbb460ea3a67f590460d) ([benchmark metrics](https://github.com/Rongdingyi/H2R-Bench/blob/6549ae11bb9b361c8690dbb460ea3a67f590460d/README.md), [human source](https://github.com/Rongdingyi/H2R-Bench/blob/6549ae11bb9b361c8690dbb460ea3a67f590460d/docs/static/videos/gallery/f1-human.mp4), [Seedance result](https://github.com/Rongdingyi/H2R-Bench/blob/6549ae11bb9b361c8690dbb460ea3a67f590460d/docs/static/videos/gallery/f1-seedance.mp4))
+
+- [semoji-ai / Auto Kairos — Seedance 2.0 mixed-response PNG-as-MP4 diagnosis, result-URL classification and byte-signature quarantine gate](https://github.com/semoji-ai/auto_kairos/commit/40e0ce7c78cdf3d97c35f54d1c141e12b3e972d6) ([versioned implementation](https://github.com/semoji-ai/auto_kairos/blob/40e0ce7c78cdf3d97c35f54d1c141e12b3e972d6/adobe/backend/video.py))
+
+- [llm011 / Ethan Agent — Seedance 2.0 stable-midframe presenter splice, first-frame/omni routing and measured dashboard-value corruption](https://github.com/llm011/ethan-agent/commit/917a3316f586369778d75ee1adf1363d218b4087) ([complete workflow and failure note](https://github.com/llm011/ethan-agent/blob/917a3316f586369778d75ee1adf1363d218b4087/ethan/defaults/skills/article-to-video/references/seedance-presenter-pipeline.md), [executable pipeline](https://github.com/llm011/ethan-agent/blob/917a3316f586369778d75ee1adf1363d218b4087/ethan/defaults/skills/article-to-video/scripts/seedance_presenter_pipeline.py))
+
+- [bioauraio / Rap Clips Studio — Seedance 2.5 first-plus-last-frame adaptive-aspect correction, live provider rejection and exact request builder](https://github.com/bioauraio/rap-clips-studio/commit/70100393704d6f08cd221d2815a2ab2f5a83595d) ([model registry and request-routing implementation](https://github.com/bioauraio/rap-clips-studio/blob/70100393704d6f08cd221d2815a2ab2f5a83595d/backend/mediagen.py))
+
+- [Ankit / WOD Armour redesign — Seedance 2.5 product-inflation master, measured deformation boundary and 49-frame ping-pong delivery](https://github.com/ankitstage21/wodarmour-redesign/commit/e4477e30408d78c326971154d3bd856ea7d06f76) ([generated clip](https://github.com/ankitstage21/wodarmour-redesign/blob/e4477e30408d78c326971154d3bd856ea7d06f76/assets/inflate.mp4), [approved start frame](https://github.com/ankitstage21/wodarmour-redesign/blob/e4477e30408d78c326971154d3bd856ea7d06f76/refs/start_9x16.jpg), [retained frames](https://github.com/ankitstage21/wodarmour-redesign/tree/e4477e30408d78c326971154d3bd856ea7d06f76/assets/inf-frames), [delivery code](https://github.com/ankitstage21/wodarmour-redesign/blob/e4477e30408d78c326971154d3bd856ea7d06f76/normatec-2.js))
+
+- [Jordan Urbs / Venice Video Harness — measured Seedance 2.5 high-bitrate generation routing, model-family isolation and provenance capture](https://github.com/jordanurbs/venice-video-harness/commit/d56659e1a31c486075ec5b56ad3a43303825a546) ([queue implementation](https://github.com/jordanurbs/venice-video-harness/blob/d56659e1a31c486075ec5b56ad3a43303825a546/src/venice/video.ts), [official Venice bitrate documentation](https://github.com/veniceai/api-docs/commit/082ce65cc7dd82b24d13175c399402a0be4c21f1))
+
+
+- [Leon Harris / Project Kinmuku — three newly rendered Seedance 2.0 character-performance shots: iris-layered recognition, stillness-against-procession abandonment and grooming-mask rupture](https://github.com/Leonkharris/nextframe-site/commit/f6e63e53b1c6a33ae86566113d37c5c6fe1caa62) ([second render commit](https://github.com/Leonkharris/nextframe-site/commit/f13c1875812bd3dbcf2c0c7b0ac679f89d493380), [complete episode prompt data](https://github.com/Leonkharris/nextframe-site/blob/f13c1875812bd3dbcf2c0c7b0ac679f89d493380/ProjectKinmuku/episodes_data.js))
+
+
+- [Vlad Yasko / stopscroll-hero — production Seedance 2.0 nine-panel hero, observed beat adherence and rendered-frame chapter remapping](https://github.com/yasikvlad/stopscroll-hero/commit/48044439b7a433d14045371368b18d0b8a1c286e) ([complete prompts](https://github.com/yasikvlad/stopscroll-hero/blob/48044439b7a433d14045371368b18d0b8a1c286e/references/prompts.md), [full delivery workflow](https://github.com/yasikvlad/stopscroll-hero/blob/48044439b7a433d14045371368b18d0b8a1c286e/SKILL.md))
+
+- [ronyantonydev / Agentic Video Pipeline — paid Seedance 2.0 endpoint-frame review, parent-derived last frame and pre-generation contact-sheet gate](https://github.com/ronyantonydev/agentic-video-pipeline/commit/4db306cac227f7d8ed7fb46a5ada52ed4f8a5972) ([complete planning and readiness method](https://github.com/ronyantonydev/agentic-video-pipeline/blob/4db306cac227f7d8ed7fb46a5ada52ed4f8a5972/.claude/skills/plan-video/SKILL.md))
+
+- [xingke2023 — Seedance 2.0 lower-third reserve corrected after two unwanted native-caption generations](https://github.com/xingke2023/seedance/commit/56bd1ba01d6dd4dbee84f093ba733155b4162e7b) ([complete safe-area rule](https://github.com/xingke2023/seedance/blob/56bd1ba01d6dd4dbee84f093ba733155b4162e7b/backend/src/prompt/skills/subtitle-safe-area.md), [failure provenance](https://github.com/xingke2023/seedance/blob/56bd1ba01d6dd4dbee84f093ba733155b4162e7b/backend/src/prompt/skills/SOURCES.md))
+
+- [Hossam Daoud — Seedance 2.5 direct account test of performance-and-voice-locked vehicle and world replacement, inline beat binding and native-language routing](https://github.com/HossamDaoud83/CPS-Plugins-Official/commit/a9cbf6fce1c4f2fa380dad48ccbdf93d1fb2161b) ([versioned field notes](https://github.com/HossamDaoud83/CPS-Plugins-Official/blob/a9cbf6fce1c4f2fa380dad48ccbdf93d1fb2161b/plugins/studio/skills/cinema-pipeline/references/field-notes.md))
+
+- [Ahmad Raza / Seedance 2.5 Director — live-rendered 30-second vertical Dubai documentary with exact prompt, eight-cut identity lock and returned-frame metadata](https://github.com/ahmadsamii/seedance-2-5-director/commit/f2715d5dd3b189a787a18dbcc43b3d1c344d6d05) ([complete prompt and successful-run record](https://github.com/ahmadsamii/seedance-2-5-director/blob/f2715d5dd3b189a787a18dbcc43b3d1c344d6d05/examples/30s-vertical-documentary.md))
+
+- [GroupX / BitPredict — eight exact-model Seedance 2.5 UGC and parody generations with complete prompts, committed masters, transcript QA and full-resolution prop checks](https://github.com/GroupX-ai/ad-creative/commit/87fbc5476be6f7c75841320eebf5ceaa7c181d2a) ([prompt suite](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/_scripts/seedance-prompts-b10-bitpredict.mjs), [QA ledger](https://github.com/GroupX-ai/ad-creative/blob/87fbc5476be6f7c75841320eebf5ceaa7c181d2a/_scripts/BATCH-2026-08-18-b10-bitpredict-viral.md))
+
+- [freetag369 — three Seedance 2.5 center-safe terminal-freeze intros, retry measurement and exact 192-frame handoff](https://github.com/freetag369/tiktok-live-stats/commit/4b233c0a0c2568040d8a2a8c6b98ab193f190530) ([complete generation and validation record](https://github.com/freetag369/tiktok-live-stats/blob/4b233c0a0c2568040d8a2a8c6b98ab193f190530/src/renderer/assets/fx/CREDITS.md))
+
+- [productionkhu-tech / freewill-seedance — matched Seedance 2.5 MOV/MP4 generations, measured codec/chroma/audio trade-off and decoder verification](https://github.com/productionkhu-tech/freewill-seedance/commit/dcac55a11c17d4ac3ab9a12c1e3cd3a6146e81d3) ([format-routing and measured stream contract](https://github.com/productionkhu-tech/freewill-seedance/blob/dcac55a11c17d4ac3ab9a12c1e3cd3a6146e81d3/src/store.ts))
+
+- [William Wang / Crow Bakery — Seedance 2.5 layered-motion storybook-tree opening](https://github.com/WilliamwangADA/crow-bakery-for-ada/commit/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c) ([complete generation script](https://github.com/WilliamwangADA/crow-bakery-for-ada/blob/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c/tools/gen_intro_video.mjs), [first-frame illustration](https://github.com/WilliamwangADA/crow-bakery-for-ada/blob/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c/assets/scenes/s01_tree.jpg), [generated result](https://github.com/WilliamwangADA/crow-bakery-for-ada/blob/1c752952a587c6a7c37cdd029eb1f2a7da47ca8c/assets/video/intro.mp4))
+
+- [Hogan & Crown — Seedance 2.0 net-displacement rerender after same-start/end-frame motion lock](https://github.com/angelwingscomms/hgc/commit/a2e411b9e8c87bbabc808286eaa0b57b48ef5077) ([complete scene contract](https://github.com/angelwingscomms/hgc/blob/a2e411b9e8c87bbabc808286eaa0b57b48ef5077/marketing/tiktok/bond.json), [generated result](https://github.com/angelwingscomms/hgc/blob/a2e411b9e8c87bbabc808286eaa0b57b48ef5077/marketing/tiktok/out/hgc-bond.mp4))
+
+- [AvatarAds / Axel — Seedance 2.0 reference-identity versus prompt-scene split, first-frame handoff and match-cut drift fallback](https://github.com/axelskt/AvatarAds/commit/c7fa381d194d98286764981f97e7e797a5672526)
+
+- [Manus UGC engine — live-validated Seedance 2.0 raw-phone one-take, anti-stabilization pair, curly-brace dialogue and source-active prop physics](https://github.com/Manus-anus-spec/ugc-/commit/09b10f465532aa266027987d4789dcd791963fc0) ([complete prompting record](https://github.com/Manus-anus-spec/ugc-/blob/09b10f465532aa266027987d4789dcd791963fc0/docs/VIDEO-MODEL-PROMPTING.md))
+
+- [Anelse / AI Character Performance Director — user-verified Seedance 2.5 30-second farewell monologue and five-layer performance scaffold](https://github.com/Anelse0/ai-character-performance-director/commit/b332542297f9b9cbac4e59629f98b0c05902f15c) ([complete reusable template](https://github.com/Anelse0/ai-character-performance-director/blob/b332542297f9b9cbac4e59629f98b0c05902f15c/references/longform-performance-pattern.md), [bounded evidence record](https://github.com/Anelse0/ai-character-performance-director/blob/b332542297f9b9cbac4e59629f98b0c05902f15c/references/evidence-ledger.md))
+- [Anelse / AI Character Performance Director — user-verified Seedance 2.5 30-second triggered-layer relationship argument](https://github.com/Anelse0/ai-character-performance-director/commit/af324b73f807d344d9f0c7658cc1ec55477e2029) ([complete verified prompt](https://github.com/Anelse0/ai-character-performance-director/blob/af324b73f807d344d9f0c7658cc1ec55477e2029/tests/fixtures/seedance25-30s-argument-oscillating.verified.md), [bounded evidence record](https://github.com/Anelse0/ai-character-performance-director/blob/af324b73f807d344d9f0c7658cc1ec55477e2029/references/evidence-ledger.md))
+
+
+- [ZYNTH / Shane Caulfield — Seedance 2.0 Smart Shot production-design-sheet comparison, paid 720p audio render and one-clip pacing verdict](https://github.com/zanezynthbrain/zynth-brain/commit/b277d4bffffceac7011036927d482bd96abaa892) ([full production notes](https://github.com/zanezynthbrain/zynth-brain/blob/b277d4bffffceac7011036927d482bd96abaa892/deliverables/spec/2026-08-15_SpecFilm_KitKat_The-Break-Line_v3.md), [shot-plan sheet](https://cdn.openart.ai/openart-ai/production/2026-08/create-image/zQlwAWg6g9rSn0INEuso/gpt-image-2-responses-image_1786813667683_9e6d5043.png), [Seedance result](https://cdn.openart.ai/openart-ai/production/2026-08/create-video/zQlwAWg6g9rSn0INEuso/02178681399974800000000000000000000ffffc0a88538fdfb15_1786814135218_b94406a1.mp4))
+
+- [Leon Harris / Project Kinmuku — eleven Seedance 2.0 Mini replacements for mechanical all-at-once motion, accepted by a per-tile edge-desertion judge](https://github.com/Leonkharris/nextframe-site/commit/ce60d3476d1eb919d13e67a16ee5d86c809b9035) ([complete prompt components](https://github.com/Leonkharris/nextframe-site/blob/ce60d3476d1eb919d13e67a16ee5d86c809b9035/ProjectKinmuku/episodes_data.js), [ep3 shot 11](https://github.com/Leonkharris/nextframe-site/blob/ce60d3476d1eb919d13e67a16ee5d86c809b9035/ProjectKinmuku/assets/episodes/ep3/clips/shot11.mp4), [ep8 shot 04](https://github.com/Leonkharris/nextframe-site/blob/ce60d3476d1eb919d13e67a16ee5d86c809b9035/ProjectKinmuku/assets/episodes/ep8/clips/shot04.mp4), [ep8 shot 05](https://github.com/Leonkharris/nextframe-site/blob/ce60d3476d1eb919d13e67a16ee5d86c809b9035/ProjectKinmuku/assets/episodes/ep8/clips/shot05.mp4))
+
+
+- [Leon Harris / Project Kinmuku — Seedance 2.0 Mini four-anchor rejection repair, exact shot prompts and committed replacement clips](https://github.com/Leonkharris/nextframe-site/commit/84ccbb79dedc3ec413e5e9c86218f583da128495) ([prompt components](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/episodes_data.js), [shot 01](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/assets/episodes/ep6/clips/shot01.mp4), [shot 02](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/assets/episodes/ep6/clips/shot02.mp4), [shot 07](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/assets/episodes/ep6/clips/shot07.mp4), [shot 11](https://github.com/Leonkharris/nextframe-site/blob/84ccbb79dedc3ec413e5e9c86218f583da128495/ProjectKinmuku/assets/episodes/ep6/clips/shot11.mp4))
+
+- [GroupX — Seedance 2.5 primary-speaker phrase ownership, quote-only speech control, delivered clips and transcription QA](https://github.com/GroupX-ai/ad-creative/commit/3b0ea58a0355dc26a9951315b54901cd31e9b91d) ([complete prompts](https://github.com/GroupX-ai/ad-creative/blob/3b0ea58a0355dc26a9951315b54901cd31e9b91d/esacard/prompts-approved-batch.mjs), [exact model generator](https://github.com/GroupX-ai/ad-creative/blob/3b0ea58a0355dc26a9951315b54901cd31e9b91d/esacard/2026-08-14-approved/generate.mjs), [failure and QA ledger](https://github.com/GroupX-ai/ad-creative/blob/3b0ea58a0355dc26a9951315b54901cd31e9b91d/esacard/2026-08-14-approved/README.md))
+
+- [Livepeer Storyboard — Seedance 2.5 paid-long-take draft, duration scaling, and asynchronous recovery](https://github.com/livepeer/storyboard/commit/d408240062c1bffa1b5a7d212989e1645a1e48e2) ([playbook](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/public/playbooks/one-take-30s-spot.md), [successful 8-second master](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-showcase-master-2026-08-12.md), [paid-timeout evidence](https://github.com/livepeer/storyboard/blob/d408240062c1bffa1b5a7d212989e1645a1e48e2/docs/caps/seedance-2-5-t2v-30s-master-2026-08-12.md), [recovery fix](https://github.com/livepeer/storyboard/commit/832d5232158f1b54a03bfd3eac1a64628733c509))
+- [ShotFlow — Seedance 2.5 Ark task succeeded despite create-response timeout; safety-identifier recovery verified on three later real runs](https://github.com/windzu/shotflow/issues/12) ([regression evidence](https://github.com/windzu/shotflow/issues/12#issuecomment-5425350427))
+- [Adir Kol / Backend Hub — Seedance 2.0 live-smoke of project-scoped private-asset retry for consenting-adult person-media I2V](https://github.com/adirkol/backend-hub/commit/1b26f444f3a45c15a6d24e3c163607deb39933fe) ([main-line merge](https://github.com/adirkol/backend-hub/commit/5ae7f1f254700d96afbcda6e1772ebb5eab7e3bd))
+
+- [Dima Vasiliu / TimrX — Seedance 2.5 one-variable live probe separating a 4,000-UTF-8-byte prompt fault from accepted 30-second duration](https://github.com/DimaVasiliu/timrx-3d-print/commit/034b6d13fb7179a93ed23304151254379a5b2015) ([companion duration correction](https://github.com/DimaVasiliu/TimrX--Frontend/commit/2dc5ee324c9fb6dfb17252247c3e0a2f00f21b7c))
+
+
+- [JR Academy Omni / Brisbane Freshers Festival — three exact Seedance 2.5 returned-last-frame action continuations with successful task manifests](https://github.com/JR-Academy-Omni/orientation-festival/commit/8c34210836bc6b57344adbb1b165e586158fe0dd)
+
+
+- [vxz2datoubo / Eustia AI Film — Seedance 2.5 observed global-negation failure and positive-trajectory constraint rewrite](https://github.com/vxz2datoubo/eustia-ai-film/commit/8d1ed87efe8e1dcea275be55351caaf471e5f582) ([companion unresolved-knowledge record](https://github.com/vxz2datoubo/eustia-ai-film/commit/a56e11e02c78f7cc7c1bc475d77b1ddb179ee5b2))
 
 - [Penny Huang / Virtual KOL Studio — Seedance 2.5 identity-anchored omni-reference micro-action clip with five-point QA](https://github.com/pennyhuang-oss/Virtual_KOL_Studio/commit/cb0f2c447bec755e3030e3317021e3bd6f68d6ae) ([method and task evidence](https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/cb0f2c447bec755e3030e3317021e3bd6f68d6ae/kols/iris-chen/generation_notes.md), [generated delivery](https://github.com/pennyhuang-oss/Virtual_KOL_Studio/blob/cb0f2c447bec755e3030e3317021e3bd6f68d6ae/kols/iris-chen/videos/daily_reel_music_r1/iris_daily_reel_r1.mp4))
 
