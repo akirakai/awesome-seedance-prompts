@@ -33095,9 +33095,10 @@ and the committed
 ### Endpoint-pair adaptive-aspect routing gate
 
 **Verified model:** Seedance 2.5 (`bytedance/seedance-2-5` through kie.ai,
-480p and 720p routes) — the original developer recorded the paid production
-route, the provider's live validation failure for a first-plus-last-frame
-request with an explicit aspect ratio, and the corrected request builder
+480p and 720p routes; `doubao-seedance-2.5-face` on standard and relaxed
+routes) — the original developers recorded the paid production route, the
+provider's live validation failures for fixed-ratio endpoint requests and
+combined image dialects, and the corrected request builders and schemas
 
 Use this when Seedance must interpolate between an approved opening frame and
 an approved closing frame. In this mode, make the two images own the delivery
@@ -33146,6 +33147,19 @@ Never reuse the text-to-video or single-reference aspect payload unchanged.
 Inspect the serialized request immediately before submission. Fail closed if a
 literal 16:9, 9:16 or 1:1 value survives beside the endpoint pair.
 
+REFERENCE-FIELD OWNERSHIP
+Choose exactly one image-input dialect for the serialized request:
+- ordinary unordered references: image_urls = [URL, ...]; or
+- role-bearing references: image_with_roles = [{url, role}, ...].
+
+Never send both fields, even when they contain different images. For an
+opening or closing endpoint, use image_with_roles with role first_frame or
+last_frame and keep size = adaptive. Fail before purchase if both image fields
+survive serialization, or if a fixed size survives beside either endpoint
+role. Preserve the rejected payload and provider response for diagnosis;
+provider HTTP 400 / code 20003 means the two image dialects were combined,
+not that the prompt needs another rewrite.
+
 RETURNED-ASSET GATE
 Read the delivered stream dimensions and compare them with the endpoint ratio.
 Approve only when the returned shape, opening frame and closing state match the
@@ -33160,12 +33174,18 @@ first-plus-last-frame tasks support only adaptive aspect routing, then made the
 request builder and UI share that rule. This complements the single-reference
 crop-and-pixel-budget preflight above: that template prepares one reference for
 multiple shapes, while this one prevents a two-endpoint request from failing or
-misreporting its shape.
+misreporting its shape. A later independent Seedance 2.5 integration exposed a
+second ownership collision at the request-schema level: `image_urls` and
+`image_with_roles` are alternatives rather than additive fields, and combining
+them produces provider HTTP 400 / code 20003 before generation.
 
 **Source:** bioauraio's
 [Seedance 2.5 endpoint-aspect correction commit](https://github.com/bioauraio/rap-clips-studio/commit/70100393704d6f08cd221d2815a2ab2f5a83595d)
 and the committed
-[exact-model request builder and frame-derived aspect gate](https://github.com/bioauraio/rap-clips-studio/blob/70100393704d6f08cd221d2815a2ab2f5a83595d/backend/mediagen.py).
+[exact-model request builder and frame-derived aspect gate](https://github.com/bioauraio/rap-clips-studio/blob/70100393704d6f08cd221d2815a2ab2f5a83595d/backend/mediagen.py), plus superdesigndev's September 18, 2026
+[Seedance 2.5 field-exclusivity correction](https://github.com/superdesigndev/treg/commit/1bad98d7ad94b1813152010a3162fe702deec0aa)
+and the committed
+[standard and relaxed-route schemas](https://github.com/superdesigndev/treg/blob/1bad98d7ad94b1813152010a3162fe702deec0aa/src/treg/catalog/reapi.yaml).
 
 
 ### Reference-input graph serialization preflight
@@ -38799,6 +38819,8 @@ Community examples and techniques referenced in this README:
 - [TechHalla — Seedance 2.5 in-car cola-and-mint reaction one-take, generated 30-second result and complete image-first prompt](https://x.com/techhalla/status/2100526482212712584) ([complete prompt](https://x.com/techhalla/status/2100526486113472703))
 
 - [Hamlog — Seedance 2.5 rarity-budgeted emotional performance, explicit expression outlets and production-validated cut structure](https://github.com/hamlog-ai/ai-drama-pipeline/commit/53c2f401c5ab13a09f60617497644fad8e9fe874) ([complete reusable structure and validation notes](https://github.com/hamlog-ai/ai-drama-pipeline/blob/53c2f401c5ab13a09f60617497644fad8e9fe874/skills/seedance-cut-prompt/SKILL.md))
+
+- [superdesigndev / treg — Seedance 2.5 mutually exclusive image-input dialects, HTTP 400/code 20003 evidence and adaptive endpoint-role schema](https://github.com/superdesigndev/treg/commit/1bad98d7ad94b1813152010a3162fe702deec0aa) ([standard and relaxed-route catalog rows](https://github.com/superdesigndev/treg/blob/1bad98d7ad94b1813152010a3162fe702deec0aa/src/treg/catalog/reapi.yaml))
 
 Official model references:
 
