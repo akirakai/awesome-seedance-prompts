@@ -384,6 +384,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Bare-bar good morning with opposing-endpoint hinge proof](#368-bare-bar-good-morning-with-opposing-endpoint-hinge-proof)
   - [Supinated bent-over row with grip-surface and torso locks](#369-supinated-bent-over-row-with-grip-surface-and-torso-locks)
   - [Arcade-football choice gate to five-player goal one-take](#370-arcade-football-choice-gate-to-five-player-goal-one-take)
+  - [Rooftop apocalypse to spacecraft state-match reveal](#371-rooftop-apocalypse-to-spacecraft-state-match-reveal)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -22962,6 +22963,109 @@ Adapted and rewritten from Steve Milton's September 17, 2026
 and [opening-to-12-second storyboard](https://github.com/stevemilton/cambridge/blob/81208d87908e0c1979f2813e6da5ca792ba1cb9a/arcade-football/storyboard-0-12s.jpg).
 
 
+### 371. Rooftop apocalypse to spacecraft state-match reveal
+
+**Verified model:** Seedance 2.5 — the original creator posts the playable
+29-second generated result with an explicit version statement and links it to
+the complete 30-second source prompt in the same X thread  
+**Use case:** dialogue-driven science-fiction short, delayed reality reveal,
+identity-safe environment transformation and native-audio state change  
+**Mode:** text-to-video  
+**Suggested settings:** 30 seconds, cinematic widescreen, photoreal, native
+audio on, eight shots with one 0.4-second matched transformation
+
+```text
+Create a 30-second photoreal science-fiction short. Keep the same young adult
+man and woman throughout: unchanged faces, ages, hair, voices and body
+proportions. The man remains screen-left and the woman screen-right in every
+shared view. Their shoulders touch lightly; her right hand rests beside her;
+their lower legs hang beyond the apparent ledge. Natural skin and fabric,
+cool dusk against warm city light. No captions, narrator or music. Use
+natural English dialogue with accurate lip sync.
+
+0–3 SECONDS — ORDINARY WORLD
+Rear-right three-quarter wide, slowly moving closer. The pair sit on the edge
+of a skyscraper above an immense living city. Preserve the height, traffic and
+tiny pedestrians below. He leans a little more into her shoulder and asks,
+“Do you think the people below are happy?” She continues looking down without
+returning the lean or withdrawing. Wind moves only hair and clothing.
+
+3–5 SECONDS — QUESTION SETUP
+Cut to a rear-right oblique medium two-shot, then exactly one second of
+high-angle telephoto street coverage. He indicates a mother and child below.
+Show the two pedestrians walking hand in hand at the child's pace; their joined
+hands must be readable. Return to the same two-shot and preserve left/right
+ownership.
+
+5–15 SECONDS — RELATIONSHIP BEAT
+His hand returns to his thigh. Still watching the street, she asks where the
+child's father is. He exhales, gently challenges her pessimism and waits for an
+answer; his tired half-smile fades when none comes. Complete this exchange by
+13 seconds. A distant moving light then catches his attention. He says, “It is
+beginning.” She raises her eyes. Neither stands or changes seat position.
+
+15–18 SECONDS — CATASTROPHE
+Wide view with both people foregrounded. Meteors strike distant districts in a
+causal escalation: fire blooms, windows burst, towers fold and connected
+street blocks lose power. Tiny crowds flee. The mother-and-child street goes
+dark and their fate remains unseen. He watches the woman while she searches
+below. The two leads stay unnaturally calm and seated as impacts, alarms,
+sirens and distant screams overwhelm the traffic bed.
+
+18–21 SECONDS — FREEZE ANCHOR
+Locked rear-right three-quarter medium view, cropped above the knees. Their
+hands, shoulder contact, torso angles and eyelines match the earlier two-shot.
+A meteor hits the lower roof ahead; fire and fragments rush toward them, then
+freeze inches before their faces. Keep sparks moving only enough to preserve
+clear head-and-shoulder silhouettes. Camera and both bodies remain immobile.
+
+AT EXACTLY 21 SECONDS — 0.4-SECOND REALITY SWITCH
+One thin cyan scan crosses the frozen image. Behind the scan, the city, flame
+and contemporary clothing briefly resolve into a fine grid and switch off.
+Reveal a vast spacecraft lounge in a precise spatial match: a backless sofa
+replaces the ledge, fitted ship uniforms replace the jackets, and Earth's
+destroyed remains occupy the opening above and between their heads.
+
+Treat the two people as immutable anchors. No flash, body morph, camera move or
+focus change. Match camera height, angle, distance, focal length and depth of
+field. Register head centres and sizes, hair silhouettes, shoulder contact,
+torso angles, eyelines, hand positions and the sofa/ledge edge. Keep feet out
+of frame in both realities. Earth is not intact: show separated charred crust
+sections, exposed molten edges, debris and large empty gaps, with no central
+window divider. Match the warm fire direction with the lounge rim light.
+Clip the catastrophe sound into a brief shutdown tone by 21.4 seconds; after
+that, retain only ventilation and reactor hum. Hold the revealed room to 23s.
+
+23–30 SECONDS — CONSEQUENCE
+Cut to a rear-right oblique medium two-shot with both speaking profiles clear.
+The same planetary fragments continue a slow drift behind them; small residual
+explosions flare silently along torn edges. He turns toward her and says they
+survived and she should not carry the blame. She keeps watching the wreckage:
+“I don't.” After one controlled breath she adds, “The decision was not mine.”
+His lips part, then close without a reply. Her fingers press the seat edge;
+their shoulders remain touching. Finish dialogue by 28.5 seconds and hold the
+unresolved pair against the destroyed Earth until 30 seconds.
+
+FAILURE CONTROL
+Do not reveal the spacecraft, uniforms, interface or digital artifacts before
+21 seconds. No identity drift, position swap, changed hair, lost hand, broken
+shoulder contact, early standing, intact Earth, opaque transition flash,
+hidden cut inside the 21-second switch, camera mismatch, reset catastrophe,
+subtitle, narrator, music or dialogue after 28.5 seconds.
+```
+
+**Why it works:** the reveal is treated as a registered state substitution,
+not a free transformation. The two bodies, their contact points and the camera
+form an immutable coordinate system while environment, wardrobe and audio each
+change once at the same visible scan. Delaying every science-fiction cue until
+21 seconds protects the historical simulation premise, and the destroyed-Earth
+ledger stops the final shot from silently restoring an intact planet.
+
+Adapted and rewritten from Kōda / @aimikoda's September 15–16, 2026 thread:
+[Seedance 2.5 generated result and version statement](https://x.com/aimikoda/status/2099880230026412258)
+and [complete 30-second source prompt](https://x.com/aimikoda/status/2099880520872071648).
+
+
 ## Reusable templates
 
 
@@ -37599,6 +37703,13 @@ linkage](https://github.com/josephsskaf-hub/UseKineo/commit/d519837064414258247c
 ([live run record](https://github.com/josephsskaf-hub/UseKineo/commit/3b52d010b1690bb9978c09216243c07305fdd9fa),
 [status route](https://github.com/josephsskaf-hub/UseKineo/blob/d519837064414258247cea8eb220a742b970bf24/app/api/cinematic-clip-status/route.ts),
 [resume route](https://github.com/josephsskaf-hub/UseKineo/blob/d519837064414258247cea8eb220a742b970bf24/app/api/retry-hollywood-scene/route.ts))
+
+- [Kōda / @aimikoda — September 15–16, 2026 Seedance 2.5 rooftop-apocalypse
+simulation reveal: attached playable 29-second result, complete eight-shot
+prompt, two-person position and contact ledger, 0.4-second spatially registered
+environment / wardrobe switch, destroyed-Earth persistence and native-audio
+shutdown](https://x.com/aimikoda/status/2099880230026412258)
+([complete source prompt](https://x.com/aimikoda/status/2099880520872071648))
 
 - [daddy zo / tester — September 15, 2026 Higgsfield Seedance 2.5
 sixth paid coffee-roaster take and signed follow-up: exact model and jobs,
