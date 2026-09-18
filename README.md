@@ -31825,6 +31825,114 @@ the
 and the
 [one-clip result](https://cdn.openart.ai/openart-ai/production/2026-08/create-video/zQlwAWg6g9rSn0INEuso/02178681399974800000000000000000000ffffc0a88538fdfb15_1786814135218_b94406a1.mp4).
 
+### Rarity-budgeted emotional performance with explicit expression outlets
+
+**Verified model:** Seedance 2.5 — the original skill author says this rule set
+was distilled from a 47-entry production prompt bible, validated in a
+30-second market-walk dialogue cut that passed on the first generation, and
+used alongside a 123-prompt Higgsfield Studio feature workflow  
+**Use case:** restrained dialogue or ensemble drama in which one glance, smile,
+touch, break in composure or supernatural cue must remain rare enough to carry
+dramatic weight  
+**Mode:** text-to-video or reference-to-video; 15- or 30-second narrative cut
+
+```text
+RARITY-BUDGETED PERFORMANCE LEDGER
+
+INPUTS
+Characters = [IDENTITY / ROLE / RELATIONSHIP]
+Single emotional fact = [WHAT EACH PERSON WANTS BUT WILL NOT SAY DIRECTLY]
+Valuable gestures = [LOOK-BACK / SMILE / TOUCH / TEAR / VOICE BREAK / OTHER]
+Forbidden default = [THE EXPRESSION OR EFFECT THAT MUST NOT BECOME GENERIC]
+Duration = [15 OR 30 SECONDS]
+
+1. EMOTIONAL THESIS
+The whole cut follows one causal tension: [CHARACTER A] wants [X], has decided
+[Y], and is trying to conceal [Z]. Translate that tension into observable
+breath, gaze, jaw, eyelid, shoulder, grip and step changes. Do not add a second
+emotional storyline.
+
+2. FORBIDDEN DEFAULT -> ALLOWED OUTLETS
+[FORBIDDEN DEFAULT] never appears. The emotion may leave the body only through:
+- voice = [PITCH / CRACK / PAUSE / BREATH];
+- hands = [GRIP / RELEASE / WHITE KNUCKLES / FINGER HESITATION];
+- posture = [WEIGHT SHIFT / HELD SHOULDERS / PARTIAL TURN];
+- face = [SPECIFIC MICRO-EXPRESSION THAT DOES NOT VIOLATE THE BAN].
+Every prohibition must name at least one visible alternative; do not suppress
+the emotion without giving Seedance another way to perform it.
+
+3. RARITY BUDGET
+Reserve dramatic gestures before writing the timeline:
+- [GESTURE 1] occurs exactly [N] time(s), at [BEAT OR TIME];
+- [GESTURE 2] is withheld until [FIRST ALLOWED BEAT];
+- [CHARACTER]'s composure breaks only for [ONE LINE / ONE BREATH / N SECONDS];
+- all other beats preserve [BASELINE MANNER].
+Do not spend the same high-value gesture in setup shots. If exact seconds drift,
+preserve order, count and first-permission ownership.
+
+4. INTERPRETATION SIGNPOSTS
+For every beat that could be played two ways, state the intended reading and
+the rejected reading:
+- [ACTION] communicates [INTENDED MEANING], not [COMMON MISREADING];
+- [LINE] is delivered as [INTENDED RELATIONSHIP], never [WRONG ATTITUDE].
+Keep these signposts short and attach them directly to the relevant action or
+line.
+
+5. EXCEPTION LEDGER
+If an effect, prop action or emotional display is globally forbidden but needed
+at one or two moments, close the set explicitly:
+No [EFFECT] anywhere in the cut. The only permitted instances are:
+- [BEAT / TIME] — [EXACT INSTANCE, CAUSE AND OWNER];
+- [BEAT / TIME] — [EXACT INSTANCE, CAUSE AND OWNER].
+Nothing else produces that effect.
+
+6. LIGHT AND FOLEY AS PERFORMANCE
+Assign visible catchlight or shadow changes only to [SHOTS / BEATS] where the
+relationship opens or closes. Derive the change from camera motion crossing an
+existing light source, not an unexplained lighting reset.
+Give each person's footsteps and handling sounds their own behavioral adjectives:
+[A] = [SLOW / EVEN / GUARDED]; [B] = [QUICK / EAGER / UNEVEN]. Match these to
+their physical performance.
+
+7. BACKGROUND CEILING AND PROP MEANING
+Background characters may [LIMITED REACTION], but never [SCENE-STEALING
+REACTION]. The recurring prop means [CONSOLATION / DUTY / PROMISE / THREAT], so
+every handoff or refusal is played according to that meaning rather than as a
+neutral object move.
+
+8. TIMELINE
+[0-A s] Establish baseline manner and spatial relationship. Spend no rare gesture.
+[A-B s] Pressure increases through one allowed outlet and one line.
+[B-C s] First permission: spend [GESTURE] exactly once; hold the response.
+[C-END] Return to the baseline behavior with one measurable residue. Do not
+reset to neutral or repeat the climax gesture.
+
+FINAL PRIORITY CLOSE
+Restate only the three load-bearing rules: [FORBIDDEN DEFAULT], [GESTURE COUNT],
+and [ENDING RESIDUE]. Capitalize only those failure-prone words; all-caps prose
+everywhere destroys the priority signal. No captions, subtitles, on-screen text
+or watermark.
+
+ACCEPTANCE
+Reject if the banned expression appears, an allowed outlet is invisible, a rare
+gesture repeats or arrives early, an exception leaks into another beat, the
+performance reads as the rejected interpretation, background acting steals the
+scene, or the ending returns to a neutral face.
+```
+
+**Why it works:** negative emotion direction alone often produces either the
+forbidden expression or no readable feeling at all. Pairing every ban with a
+small set of physical outlets gives the model an executable alternative.
+Separately budgeting the count and first appearance of valuable gestures keeps
+them from being spent during setup, while interpretation signposts prevent the
+same body action from being played with the wrong relationship.
+
+Adapted and rewritten from Hamlog's September 18, 2026
+[Seedance 2.5 production-spec commit](https://github.com/hamlog-ai/ai-drama-pipeline/commit/53c2f401c5ab13a09f60617497644fad8e9fe874)
+and the creator's complete
+[cut-prompt structure, validation notes and emotional-direction rules](https://github.com/hamlog-ai/ai-drama-pipeline/blob/53c2f401c5ab13a09f60617497644fad8e9fe874/skills/seedance-cut-prompt/SKILL.md).
+
+
 ### Five-layer restrained-monologue arc with closing performance lock
 
 **Verified model:** Seedance 2.5 — the original skill author records a
@@ -38689,6 +38797,8 @@ Community examples and techniques referenced in this README:
 - [Dreamina / CapCut — official Seedance 2.5 prompt-and-preview showcase: one-take opera, white-model transfer, green-screen edit, vehicle previs, paper character and audio-driven ensemble](https://dreamina.capcut.com/)
 
 - [TechHalla — Seedance 2.5 in-car cola-and-mint reaction one-take, generated 30-second result and complete image-first prompt](https://x.com/techhalla/status/2100526482212712584) ([complete prompt](https://x.com/techhalla/status/2100526486113472703))
+
+- [Hamlog — Seedance 2.5 rarity-budgeted emotional performance, explicit expression outlets and production-validated cut structure](https://github.com/hamlog-ai/ai-drama-pipeline/commit/53c2f401c5ab13a09f60617497644fad8e9fe874) ([complete reusable structure and validation notes](https://github.com/hamlog-ai/ai-drama-pipeline/blob/53c2f401c5ab13a09f60617497644fad8e9fe874/skills/seedance-cut-prompt/SKILL.md))
 
 Official model references:
 
