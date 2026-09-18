@@ -36347,6 +36347,96 @@ the [reference-video task fixture](https://github.com/monid-ai/monid/blob/fe39d5
 and the [poll and settlement implementation](https://github.com/monid-ai/monid/blob/fe39d53e03796f15ea1e403386135fd0c4321b48/connectors/bytedance/provider.ts).
 
 
+### Multi-state prop asset pack and all-shot visibility gate
+
+**Verified model:** Dreamina Seedance 2.5 — the original creator documents a
+25-second, four-shot production in which one described letter acquired three
+different wax-seal states, then records the two-reference repair, a bounded
+14-second retake and creator approval; a separate crown failure in the same
+project provides a second successful test of the asset-first rule  
+**Use case:** a recognizable prop, accessory, wound, make-up effect or removable
+garment part must survive two or more shots and may change physical state  
+**Mode:** multi-reference image-to-video or reference-to-video
+
+```text
+PERSISTENCE TEST
+List every object that appears in more than one shot. If a viewer is expected
+to remember it across a cut, give it a dedicated asset pack before rendering.
+Do not rely on adjectives such as "the same red seal" as its only identity.
+
+PROP MANIFEST
+ID = [PROP NAME].
+Invariant signature = [SILHOUETTE / MATERIAL / DISTINCTIVE MARK / COLOR].
+States required = [FOLDED / OPEN], [INTACT / DAMAGED], [EMPTY / FULL], or other.
+Shot appearances = [SHOT AND TIME WINDOWS].
+Owner and screen side in each shot = [HAND / SURFACE / POSITION].
+Allowed occlusion = [MAXIMUM DURATION OR FRACTION].
+
+STATE-ASSET PACK
+Create one clean reference image for every state the camera must recognize:
+@Image1 = [PROP] in [STATE A].
+@Image2 = the same [PROP] in [STATE B].
+Additional images may describe another state, never another design.
+
+Before video generation, compare the assets side by side and measure the
+signature region. Confirm that silhouette, mark position, material, color area
+and mean color remain inside [TOLERANCE]. Store each image hash. If two state
+images disagree, repair the pack first; video will amplify that disagreement.
+
+REFERENCE OWNERSHIP
+The state images own the prop's appearance only.
+Character references own identity and wardrobe.
+The current shot and its incoming frame own hand, screen side, orientation and
+movement. A prop image cannot silently reassign who holds it or reverse travel.
+
+SHOT-BY-SHOT CONTRACT
+For every shot that contains the prop, state all five fields:
+[TIME / SHOT] | [REFERENCE STATE] | [OWNER] | [SCREEN POSITION] |
+[DISTINCTIVE MARK THAT MUST BE VISIBLE].
+
+Use observable language:
+"This is one physical [PROP]. In the folded state follow @Image1; in the open
+state follow @Image2. Whenever the prop is visible, [SIGNATURE MARK] is also
+visible in [FIXED LOCATION]. It does not disappear, migrate, change scale or
+change color, and no hand hides it for more than [LIMIT]."
+
+STATE TRANSITIONS
+Change state only after a named cause: [HAND UNFOLDS / IMPACT BREAKS / LIQUID
+FILLS]. Preserve the invariant signature through the transition. Do not create
+a fresh version after a cut or return to an earlier state without a visible
+cause.
+
+ALL-SHOT ACCEPTANCE MATRIX
+Review every appearance, not only the first and last frame:
+SHOT | expected state | signature present | signature position | owner |
+screen side | color/area measurement | occlusion | PASS/FAIL.
+
+Reject if an intermediate shot omits the signature, invents a new prop, moves
+the mark, changes color or scale, assigns the wrong hand, reverses orientation
+without action, or matches only the endpoints while failing the middle shots.
+
+REPAIR ROUTE
+Keep approved shots. At the nearest clean cut, extract the final accepted frame
+as the incoming-position anchor and attach only the state assets required by
+the failed interval. Restate the completed prior action so it is not replayed,
+then retake only the bounded window. Recheck the full matrix after assembly.
+```
+
+**Why it works:** a text-only prop can be independently reinterpreted after
+every cut. A state-specific image pack turns appearance into a hard reference,
+while the per-shot row separately controls ownership, position and visibility.
+The matrix also catches the source production's deceptive failure: the first
+and last frames were nearly aligned, yet the seal vanished from the middle
+shots. After two matched state images replaced prose-only identity, the seal
+survived flight, landing and the final insert on the same side and the retake
+passed creator review.
+
+Adapted and rewritten from Mr-Salticidae's September 18, 2026
+[two-production Seedance 2.5 verification commit](https://github.com/Mr-Salticidae/knowledge-base/commit/7a985976f1482c7f3dfcda2758109718e56d5155)
+and the committed
+[cross-shot prop asset rule, measurements and accepted repair](https://github.com/Mr-Salticidae/knowledge-base/blob/7a985976f1482c7f3dfcda2758109718e56d5155/04_%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%B4%9E%E5%AF%9F/04_%E8%A7%86%E9%A2%91%E5%BD%B1%E5%83%8F%E4%B8%8E%E5%A3%B0%E9%9F%B3/%E8%B7%A8%E9%95%9C%E9%81%93%E5%85%B7%E9%94%81%E5%AE%9A%E5%BE%8B_%E8%B5%84%E4%BA%A7%E5%9B%BE%E4%BC%98%E4%BA%8E%E5%BD%A2%E5%AE%B9%E8%AF%8D_v1.md).
+
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -38821,6 +38911,8 @@ Community examples and techniques referenced in this README:
 - [Hamlog — Seedance 2.5 rarity-budgeted emotional performance, explicit expression outlets and production-validated cut structure](https://github.com/hamlog-ai/ai-drama-pipeline/commit/53c2f401c5ab13a09f60617497644fad8e9fe874) ([complete reusable structure and validation notes](https://github.com/hamlog-ai/ai-drama-pipeline/blob/53c2f401c5ab13a09f60617497644fad8e9fe874/skills/seedance-cut-prompt/SKILL.md))
 
 - [superdesigndev / treg — Seedance 2.5 mutually exclusive image-input dialects, HTTP 400/code 20003 evidence and adaptive endpoint-role schema](https://github.com/superdesigndev/treg/commit/1bad98d7ad94b1813152010a3162fe702deec0aa) ([standard and relaxed-route catalog rows](https://github.com/superdesigndev/treg/blob/1bad98d7ad94b1813152010a3162fe702deec0aa/src/treg/catalog/reapi.yaml))
+
+- [Mr-Salticidae — Dreamina Seedance 2.5 multi-state prop asset pack, cross-shot visibility measurements and accepted bounded retake](https://github.com/Mr-Salticidae/knowledge-base/commit/7a985976f1482c7f3dfcda2758109718e56d5155) ([complete reusable rule](https://github.com/Mr-Salticidae/knowledge-base/blob/7a985976f1482c7f3dfcda2758109718e56d5155/04_%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%B4%9E%E5%AF%9F/04_%E8%A7%86%E9%A2%91%E5%BD%B1%E5%83%8F%E4%B8%8E%E5%A3%B0%E9%9F%B3/%E8%B7%A8%E9%95%9C%E9%81%93%E5%85%B7%E9%94%81%E5%AE%9A%E5%BE%8B_%E8%B5%84%E4%BA%A7%E5%9B%BE%E4%BC%98%E4%BA%8E%E5%BD%A2%E5%AE%B9%E8%AF%8D_v1.md))
 
 Official model references:
 
