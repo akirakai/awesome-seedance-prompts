@@ -24407,6 +24407,118 @@ and its [Trusted Asset Library measurements and generation
 record](https://github.com/JPG-GITY/byteplus-docs-sync/blob/bfbaba0fb79ec57f2fa2771a2e8975ed405291fd/skill/references/trusted-asset-library.md#8-using-the-asset-in-generation).
 
 
+### Account-wide portrait-asset pacing and no-person bypass gate
+
+**Verified model:** BytePlus Seedance 2.5
+(`dreamina-seedance-2-5-260628`) — OpenStory's production repair records a
+seven-reference Seedance job exhausting the account's three-per-minute
+`CreateAsset` allowance, the resulting 429 retry exhaustion, and the false
+fallback error; a companion provenance repair confirms that completed
+Seedance 2.5 clips were actually rendered through BytePlus rather than the
+queue-time `fal` placeholder  
+**Use case:** multi-reference Seedance jobs that must register possible human
+likenesses in BytePlus's Trusted Asset Library without wasting portrait quota
+on props, locations or other confirmed no-person plates  
+**Mode:** reference-to-video or first/last-frame generation with account-shared
+asset registration
+
+```text
+ROUTE RECEIPT
+Exact model = dreamina-seedance-2-5-260628.
+Generation via = BytePlus.
+Account-wide CreateAsset allowance = 3 per minute.
+Reference list = [ORDERED STORED URLS].
+For every reference persist: URL hash, role, likeness verdict, verdict version
+and the verdict timestamp captured before the workflow starts.
+
+REFERENCE CLASSIFICATION
+For each still assign exactly one transport class:
+
+NO_PERSON_CONFIRMED
+- the current likeness ledger explicitly clears this exact stored URL/hash;
+- send it as one fetchable plain URL;
+- do not spend CreateAsset quota merely because it is a user upload.
+
+PERSON_OR_UNKNOWN
+- a face may be present, the user supplied a signed portrait, or no current
+  verdict exists;
+- register it as a Trusted Asset Library portrait and use its asset:// handle;
+- never treat missing evidence as proof that an image contains no person.
+
+Snapshot these classes at trigger time. A later database change must not alter
+the reference set halfway through a running job.
+
+ACCOUNT-WIDE GOVERNOR
+Admission must cover every team and worker sharing the BytePlus account; a
+per-request or per-workflow semaphore is insufficient.
+
+Persist one token-bucket state outside process memory:
+- capacity = 1, so three-per-minute means one spaced write every 20 seconds,
+  not a burst of three writes followed by silence;
+- refill rate = 3 per minute;
+- state survives idle worker eviction, deployment wake-up and long sleeps;
+- reserving a turn is one atomic read-modify-write.
+
+For every PERSON_OR_UNKNOWN reference:
+1. claim or reuse its content-addressed asset reservation;
+2. reserve one account-wide write turn;
+3. sleep the returned delay without holding compute;
+4. call CreateAsset once;
+5. persist the asset ID, group ID and asset:// handle;
+6. poll readiness before the paid video request.
+
+RETRY FAIRNESS
+If CreateAsset returns a quota 429, exponential backoff alone is not enough.
+The retry is another write and must re-enter the same governor before firing.
+It may not jump ahead of jobs already sleeping on reserved turns.
+Keep quota retries separate from creative-content or likeness-rejection retry
+budgets; neither kind of failure proves that the prompt is defective.
+
+FAIL-CLOSED ROUTING
+- Asset registration failure -> fail this Seedance shot with the BytePlus
+  registration response.
+- Portrait rejected -> preserve the specific Ark error and stop.
+- Governor wait exceeds the bounded deadline -> keep the reservation and
+  expose a capacity failure; do not create a duplicate asset.
+- Never silently substitute fal, turn an unknown portrait into a public URL,
+  or report the downstream public-URL rejection as a creative prompt error.
+
+COMPLETION PROVENANCE
+The queue-time provider is provisional. On completion, overwrite it with the
+via that actually rendered the clip and persist:
+- exact model ID and model key;
+- actual provider/via;
+- prompt and ordered reference hashes;
+- plain-URL versus asset:// decision for each reference;
+- CreateAsset IDs, waits and retry count;
+- generation task ID and playable output metadata.
+
+ACCEPTANCE
+- only confirmed no-person references bypass the portrait library;
+- no two CreateAsset writes begin as an account-level burst;
+- a fresh worker instance continues the previous bucket schedule;
+- every throttled retry reacquires a write turn;
+- the generation consumes the intended ordered references;
+- the completed record says BytePlus, not the queue-time placeholder;
+- no fallback hides an ingest, likeness or quota failure.
+```
+
+**Why it works:** reference transport and generation are different scarcity
+domains. Classifying references before the workflow prevents a seven-prop job
+from consuming seven portrait writes, while a durable capacity-one bucket turns
+the documented three-per-minute limit into real spacing across all workers.
+Re-admitting retries preserves fairness, and completion-time provider stamping
+keeps a successful BytePlus render from being misdiagnosed later as a fal job.
+
+Adapted and rewritten from OpenStory's September 19, 2026
+[BytePlus governor and selective-registration production repair](https://github.com/openstory-so/openstory/commit/eac7144d6522c19e118bfd6f3b3d560574b8ea86),
+[complete route, quota and failure-boundary record](https://github.com/openstory-so/openstory/blob/eac7144d6522c19e118bfd6f3b3d560574b8ea86/CLAUDE.md),
+[durable governor implementation](https://github.com/openstory-so/openstory/blob/eac7144d6522c19e118bfd6f3b3d560574b8ea86/src/models/server/byteplus-governor.do.ts),
+[reference classifier and transport split](https://github.com/openstory-so/openstory/blob/eac7144d6522c19e118bfd6f3b3d560574b8ea86/src/studio/server/studio-video-generation.ts),
+and the companion
+[actual-provider provenance repair](https://github.com/openstory-so/openstory/commit/07d0a5ac229bc70e6ac6540c75d0755f146dcaec).
+
+
 ### Measured same-pass voice-and-mouth fallback for failed external lip sync
 
 **Verified model:** Seedance 2.5 — the original production PR replaces a
@@ -38241,6 +38353,8 @@ portrait generator and content-key invalidation logic.
 
 
 ## Sources
+
+- [OpenStory — September 19, 2026 BytePlus Seedance 2.5 (`dreamina-seedance-2-5-260628`) account-wide portrait-asset pacing repair: a seven-reference job exceeded the three-per-minute `CreateAsset` allowance; the fix persists a capacity-one governor across worker eviction, re-admits throttled retries, sends only possible-person references through the Trusted Asset Library and stamps the actual rendering provider on completion](https://github.com/openstory-so/openstory/commit/eac7144d6522c19e118bfd6f3b3d560574b8ea86) ([route and failure record](https://github.com/openstory-so/openstory/blob/eac7144d6522c19e118bfd6f3b3d560574b8ea86/CLAUDE.md), [governor](https://github.com/openstory-so/openstory/blob/eac7144d6522c19e118bfd6f3b3d560574b8ea86/src/models/server/byteplus-governor.do.ts), [selective reference transport](https://github.com/openstory-so/openstory/blob/eac7144d6522c19e118bfd6f3b3d560574b8ea86/src/studio/server/studio-video-generation.ts), [provider write-back](https://github.com/openstory-so/openstory/commit/07d0a5ac229bc70e6ac6540c75d0755f146dcaec))
 
 - [Micheal Lanham / Learn AI Filmmaking — September 18, 2026 fal Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`) two-film release: complete 25/30-second prompts, identity reference sheets and close-ups, returned seeds and native-audio films, each one generation with no editing](https://github.com/cxbxmxcx/learn-ai-filmmaking/commit/5edb8e93b3893179b9f3fafd92526cdfd8dc3d00) ([lemonade-test prompt](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/5edb8e93b3893179b9f3fafd92526cdfd8dc3d00/prompts/day-4-characters-who-act.md), [tuba-platform prompt](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/e792e047ac6122c861a329d7a1b080597b4a3bca/prompts/day-7-the-directors-prompt.md), [series provenance statement](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/e792e047ac6122c861a329d7a1b080597b4a3bca/README.md))
 
