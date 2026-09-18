@@ -385,6 +385,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Supinated bent-over row with grip-surface and torso locks](#369-supinated-bent-over-row-with-grip-surface-and-torso-locks)
   - [Arcade-football choice gate to five-player goal one-take](#370-arcade-football-choice-gate-to-five-player-goal-one-take)
   - [Rooftop apocalypse to spacecraft state-match reveal](#371-rooftop-apocalypse-to-spacecraft-state-match-reveal)
+  - [Status-call pull-back to backyard-pool reveal](#372-status-call-pull-back-to-backyard-pool-reveal)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -23066,6 +23067,72 @@ Adapted and rewritten from Kōda / @aimikoda's September 15–16, 2026 thread:
 and [complete 30-second source prompt](https://x.com/aimikoda/status/2099880520872071648).
 
 
+### 372. Status-call pull-back to backyard-pool reveal
+
+**Verified model:** fal Seedance 2.5
+(`bytedance/seedance-2.5/text-to-video`) — the original creator publishes the
+complete request and settings, returned seed and retained 12-second film, and
+states that the result is one native-audio generation with no edit or upscale  
+**Use case:** visual-comedy reveal, information-controlled framing, continuous
+camera retreat, delayed prop visibility and native ambience  
+**Mode:** text-to-video, no reference image  
+**Suggested settings:** 12 seconds, 16:9, 720p, native audio on, one take
+
+```text
+Create one continuous photorealistic phone-like summer shot of one adult woman
+attending a serious laptop status call from her backyard. Preserve her navy
+blazer, tight hair bun, face, table, laptop and body throughout. The camera
+starts eye-level in a shoulder-up view and retreats straight backward at one
+slow constant speed for the full twelve seconds.
+
+0–4 SECONDS — PROFESSIONAL COVER
+Frame only her face, shoulders, blazer, a sunlit hedge and a narrow strip of
+blue sky with a natural 35mm look and shallow depth of field. She listens,
+nods twice and types one short note below the frame edge. The table, laptop,
+pool, water, legs, drink, lawn and novelty props remain completely outside the
+frame; do not hint at the joke early.
+
+4–9 SECONDS — ORDERED DISCLOSURE
+Continue the same straight pull-back without a speed jump. Reveal in order:
+the open laptop on one white folding table, the rounded blue rim of one
+inflatable pool, then the water around her waist and her bare feet beneath the
+surface. She stays seated in the pool, keeps her attention on the call and
+never changes identity, costume or professional expression.
+
+9–12 SECONDS — WIDE PAYOFF
+Arrive at a readable wide view of the mown backyard. Keep one sprinkler
+ticking behind her and one pink flamingo float drifting across the foreground.
+Without looking away from the laptop, she lifts one tall drink with a paper
+umbrella, takes one sip and resumes the same restrained nod. Hold long enough
+for the pool, improvised workstation and her deadpan behavior to register
+together.
+
+LOOK AND AUDIO
+Bright midday sun, soft natural fill, warm skin, light film grain, modest
+handheld breathing and consumer-phone color rather than polished advertising.
+Use only backyard birds, sprinkler ticks, gentle water movement and faint
+indistinct laptop voices. No music and no intelligible dialogue.
+
+FAILURE CONTROL
+One woman, laptop, table, pool, drink, sprinkler and flamingo float only. One
+continuous retreat with no cut, hidden transition, zoom, identity change,
+extra limb, early pool or water reveal, visible laptop screen, readable text,
+logo, subtitle, violent camera shake or jitter.
+```
+
+**Why it works:** the joke is treated as an information-release problem rather
+than a generic “surprise reveal.” A strict visibility ledger protects the first
+four seconds, while the camera's constant backward motion exposes the laptop,
+pool rim, water and feet in a fixed order. The lead never changes behavior, so
+the widening frame—not a performance reset—delivers the payoff.
+
+Adapted and rewritten from Micheal Lanham's September 18, 2026
+[single-generation Seedance 2.5 commit](https://github.com/cxbxmxcx/learn-ai-filmmaking/commit/1f4c320438980c0ce97be6a1fb4dc16b2508e0ae),
+[complete prompt and exact fal route](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/1f4c320438980c0ce97be6a1fb4dc16b2508e0ae/prompts/day-1-one-shot-one-story.md),
+[published watch page](https://cxbxmxcx.github.io/learn-ai-filmmaking/day-1-one-shot-one-story/)
+and [retained generated MP4](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/1f4c320438980c0ce97be6a1fb4dc16b2508e0ae/docs/films/day-1-one-shot-one-story.mp4).
+
+
 ## Reusable templates
 
 
@@ -37766,6 +37833,8 @@ portrait generator and content-key invalidation logic.
 
 
 ## Sources
+
+- [Micheal Lanham / Learn AI Filmmaking — September 18, 2026 fal Seedance 2.5 (`bytedance/seedance-2.5/text-to-video`) 12-second status-call-to-backyard-pool pull-back: complete prompt and settings, returned seed, one native-audio generation, no edits and retained film](https://github.com/cxbxmxcx/learn-ai-filmmaking/commit/1f4c320438980c0ce97be6a1fb4dc16b2508e0ae) ([complete prompt and exact route](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/1f4c320438980c0ce97be6a1fb4dc16b2508e0ae/prompts/day-1-one-shot-one-story.md), [watch page](https://cxbxmxcx.github.io/learn-ai-filmmaking/day-1-one-shot-one-story/), [generated MP4](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/1f4c320438980c0ce97be6a1fb4dc16b2508e0ae/docs/films/day-1-one-shot-one-story.mp4))
 
 - [Steve Milton — September 17, 2026 Higgsfield Seedance 2.5 (`seedance_2_5`) 20-second vertical arcade-football one-take: exact model and settings, retained result, five timed gameplay beats and 15-point visual verification](https://github.com/stevemilton/cambridge/commit/81208d87908e0c1979f2813e6da5ca792ba1cb9a) ([complete beat and acceptance record](https://github.com/stevemilton/cambridge/blob/81208d87908e0c1979f2813e6da5ca792ba1cb9a/arcade-football/README.md), [generated MP4](https://github.com/stevemilton/cambridge/blob/81208d87908e0c1979f2813e6da5ca792ba1cb9a/arcade-football/arcade-football-20s-9x16.mp4), [0–12-second storyboard](https://github.com/stevemilton/cambridge/blob/81208d87908e0c1979f2813e6da5ca792ba1cb9a/arcade-football/storyboard-0-12s.jpg), [13–20-second storyboard](https://github.com/stevemilton/cambridge/blob/81208d87908e0c1979f2813e6da5ca792ba1cb9a/arcade-football/storyboard-13-20s.jpg))
 
