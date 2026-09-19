@@ -38509,7 +38509,97 @@ including the committed exact model, ordered `reference_image` mapping, neutral
 portrait generator and content-key invalidation logic.
 
 
+### Single-pass UGC screenplay compiler with duration-cap fallback
+
+**Verified model:** Replicate Seedance 2.5
+(`bytedance/seedance-2.5`) — the original developer reports a direct 16-second
+head-to-head generation on the same UGC advertisement: Seedance completed the
+entire plan in one pass with native dialogue and was preferred to the chained
+Veo version for its more authentic UGC look. The committed adapter preserves
+the exact model route, 9:16, 720p, native-audio and 4–30-second request envelope,
+while the complete compiler preserves the prompt-building structure. The public
+record does not retain a task ID or MP4, so this is counted as one reusable
+template and not as a complete scenario.
+
+**Use case:** turn a variable-length creator-ad plan into one self-contained
+Seedance prompt without treating every script beat as a separate generation
+**Mode:** text-to-video, or image-to-video when one approved presenter frame is
+attached
+
+```text
+INPUT PLAN
+PRESENTER = [IDENTITY-SAFE DESCRIPTION].
+SETTING = [EVERYDAY LOCATION AND LIGHT].
+PRODUCT = [OPTIONAL PRODUCT AND VISIBLE STATE].
+TONE = [WARM / DRY / EXCITED / CALM / OTHER].
+
+For every beat provide:
+BEAT [N]
+seconds = [AT LEAST 1]
+visual_brief = [ONE FILMABLE FRAMING, ACTION AND END STATE]
+dialogue = [EXACT LINE OR NONE]
+delivery = [OPTIONAL SHORT VOICE DIRECTION]
+
+DURATION GATE
+TOTAL = ceil(sum(max(1, beat.seconds))).
+If TOTAL is 4–30 seconds, compile exactly one Seedance request whose duration is
+max(4, TOTAL). If TOTAL exceeds 30 seconds, stop the single-pass route. Do not
+truncate dialogue, compress beats silently or claim the fallback as the same
+generation. Route to an explicitly named segmented workflow and record the
+actual model used for every segment.
+
+SINGLE-PASS PROMPT COMPILER
+A vertical 9:16 UGC-style creator ad, produced as one generation. [PRESENTER]
+talks directly to the phone camera in [SETTING], featuring [PRODUCT IF ANY].
+The delivery is [TONE], unpolished and believable.
+
+[VISUAL_BRIEF_1].
+[PRESENTER] says, [DELIVERY_1 IF PRESENT]: "[DIALOGUE_1]."
+
+Cut to [VISUAL_BRIEF_2].
+[PRESENTER] says, [DELIVERY_2 IF PRESENT]: "[DIALOGUE_2]."
+
+[Repeat in authored order. Omit the speech sentence when a beat has no line.]
+
+Casual creator energy and natural imperfect delivery. Handheld phone-camera
+texture, ordinary room light and natural room tone. No studio gloss, captions,
+text overlays, extra logos or watermarks.
+
+PRE-SUBMIT GATE
+- every beat appears once and in source order;
+- every quoted line belongs to one presenter and one beat only;
+- the requested duration equals the derived TOTAL, within the model envelope;
+- `generate_audio=true`, `aspect_ratio=9:16`, `resolution=720p` and
+  `watermark=false` are serialized on the verified route;
+- an optional presenter image is sent once and does not replace the screenplay;
+- no unlabelled provider or model fallback is possible.
+
+ACCEPTANCE GATE
+Review the complete returned file, not only the provider success state. Verify
+actual duration, beat order, cut placement, presenter identity, product state,
+spoken wording, lip synchronization, room tone and absence of generated text.
+Archive the final compiled prompt, request payload, model, task ID, charge and
+artifact together. A good-looking result with missing or reassigned dialogue is
+not a pass.
+```
+
+**Why it works:** the scene plan remains structured data until the last step,
+then becomes one linear screenplay instead of several independently generated
+clips with identity and audio seams. Deriving duration from the same beat list
+prevents the selector and prompt from describing different jobs, while the
+hard 30-second gate makes a necessary route change visible rather than silently
+dropping copy. Separating “one generation” from “one continuous camera take”
+also permits deliberate in-prompt cuts without making a false continuity claim.
+
+Adapted and rewritten from kolakachi / Frame-cast's September 19, 2026
+[original live-comparison and production-routing commit](https://github.com/kolakachi/Frame-cast/commit/89954461e87384e36c26a10fffdd104747a0752c),
+the [complete one-pass and segmented prompt compiler](https://github.com/kolakachi/Frame-cast/blob/89954461e87384e36c26a10fffdd104747a0752c/framecast-app/api/app/Services/Ugc/UgcOneShotCompiler.php),
+and the [exact Replicate Seedance 2.5 request adapter](https://github.com/kolakachi/Frame-cast/blob/89954461e87384e36c26a10fffdd104747a0752c/framecast-app/api/app/Services/Generation/Video/ReplicateVeoAdapter.php).
+
+
 ## Sources
+
+- [kolakachi / Frame-cast — September 19, 2026 Replicate Seedance 2.5 (`bytedance/seedance-2.5`) 16-second UGC head-to-head and single-pass screenplay compiler: original developer confirmation, exact model route, native-audio request envelope, variable-beat prompt builder and explicit over-30-second fallback](https://github.com/kolakachi/Frame-cast/commit/89954461e87384e36c26a10fffdd104747a0752c) ([compiler](https://github.com/kolakachi/Frame-cast/blob/89954461e87384e36c26a10fffdd104747a0752c/framecast-app/api/app/Services/Ugc/UgcOneShotCompiler.php), [adapter](https://github.com/kolakachi/Frame-cast/blob/89954461e87384e36c26a10fffdd104747a0752c/framecast-app/api/app/Services/Generation/Video/ReplicateVeoAdapter.php))
 
 - [OpenStory — September 19, 2026 BytePlus Seedance 2.5 (`dreamina-seedance-2-5-260628`) account-wide portrait-asset pacing repair: a seven-reference job exceeded the three-per-minute `CreateAsset` allowance; the fix persists a capacity-one governor across worker eviction, re-admits throttled retries, sends only possible-person references through the Trusted Asset Library and stamps the actual rendering provider on completion](https://github.com/openstory-so/openstory/commit/eac7144d6522c19e118bfd6f3b3d560574b8ea86) ([route and failure record](https://github.com/openstory-so/openstory/blob/eac7144d6522c19e118bfd6f3b3d560574b8ea86/CLAUDE.md), [governor](https://github.com/openstory-so/openstory/blob/eac7144d6522c19e118bfd6f3b3d560574b8ea86/src/models/server/byteplus-governor.do.ts), [selective reference transport](https://github.com/openstory-so/openstory/blob/eac7144d6522c19e118bfd6f3b3d560574b8ea86/src/studio/server/studio-video-generation.ts), [provider write-back](https://github.com/openstory-so/openstory/commit/07d0a5ac229bc70e6ac6540c75d0755f146dcaec))
 
