@@ -392,6 +392,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Science-fair foam eruption with persistent residue](#376-science-fair-foam-eruption-with-persistent-residue)
   - [Reference-locked lemonade test with a hidden reaction](#377-reference-locked-lemonade-test-with-a-hidden-reaction)
   - [Tuba-platform dance cascade with train-arrival state change](#378-tuba-platform-dance-cascade-with-train-arrival-state-change)
+  - [Shot-matched toddler vocabulary card with delayed text reveal](#379-shot-matched-toddler-vocabulary-card-with-delayed-text-reveal)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -23541,6 +23542,57 @@ Adapted and rewritten from the creator's
 and [generated MP4](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/e792e047ac6122c861a329d7a1b080597b4a3bca/docs/films/day-7-the-directors-prompt.mp4).
 
 
+### 379. Shot-matched toddler vocabulary card with delayed text reveal
+
+**Verified model:** Creative Fabrica Seedance 2.0 — the creator's public
+generation page retains the complete prompt, playable result and platform
+metadata together  
+**Use case:** children's vocabulary clip, shot-to-shot character continuity,
+single-object attention, delayed typography and spelling control  
+**Mode:** continuation prompt from one approved preceding shot  
+**Suggested settings:** 8 seconds, 9:16, 720p, no speech, locked camera
+
+```text
+CONTINUITY CONTRACT
+Continue directly from the approved preceding market shot. Reuse exactly one
+three-year-old girl in the same fluffy cream-white bunny hoodie, beside the same
+round wooden counter in the same vegetable market. Preserve her face, body,
+wardrobe, camera height, camera distance, background layout, lighting and color.
+Do not redesign or add characters.
+
+0–2 SECONDS — OBJECT SETUP
+Place exactly one fresh brown potato on the counter. The girl stands still,
+then shifts only her eyes and head toward the potato.
+
+2–5 SECONDS — ATTENTION CUE
+She gently points at the potato with one index finger, gives one small smile,
+then looks back toward the camera. Keep the gesture slow, readable and natural
+for a toddler; preserve correct hands and fingers.
+
+5–8 SECONDS — WORD REVEAL
+Only after the pointing gesture is established, let a few small golden stars
+appear around the potato. Then reveal one large lowercase word at lower center:
+“potato”. Use white letters, a thick bright-pink outline and a soft pink glow,
+with a restrained ring of tiny pink hearts and golden stars. The word must be
+spelled exactly once and remain unobstructed through the final frame.
+
+AUDIO AND FAILURE CONTROL
+No speech. Keep the camera locked with no shake or zoom. Keep one girl, one
+potato and the original market only. No identity, costume, scale, counter,
+background or lighting changes; no extra produce entering the focal area, no
+distorted hands, duplicate labels, uppercase substitution or spelling errors.
+```
+
+**Why it works:** the preceding shot owns every persistent visual variable,
+while the new clip changes only gaze, gesture, one prop effect and one label.
+Separating the pointing cue from the text reveal gives the model a clear
+attention hierarchy, and the exact-count plus exact-spelling constraints make
+the educational payoff directly testable.
+
+Adapted and rewritten from Noor Movies' September 18, 2026
+[Creative Fabrica generation page with complete prompt, result and Seedance 2.0 settings](https://studio.creativefabrica.com/ai-video-generator/3JQtS1ee6cPZ6xGPvYey350BiHM).
+
+
 ## Reusable templates
 
 
@@ -38460,6 +38512,8 @@ portrait generator and content-key invalidation logic.
 ## Sources
 
 - [OpenStory — September 19, 2026 BytePlus Seedance 2.5 (`dreamina-seedance-2-5-260628`) account-wide portrait-asset pacing repair: a seven-reference job exceeded the three-per-minute `CreateAsset` allowance; the fix persists a capacity-one governor across worker eviction, re-admits throttled retries, sends only possible-person references through the Trusted Asset Library and stamps the actual rendering provider on completion](https://github.com/openstory-so/openstory/commit/eac7144d6522c19e118bfd6f3b3d560574b8ea86) ([route and failure record](https://github.com/openstory-so/openstory/blob/eac7144d6522c19e118bfd6f3b3d560574b8ea86/CLAUDE.md), [governor](https://github.com/openstory-so/openstory/blob/eac7144d6522c19e118bfd6f3b3d560574b8ea86/src/models/server/byteplus-governor.do.ts), [selective reference transport](https://github.com/openstory-so/openstory/blob/eac7144d6522c19e118bfd6f3b3d560574b8ea86/src/studio/server/studio-video-generation.ts), [provider write-back](https://github.com/openstory-so/openstory/commit/07d0a5ac229bc70e6ac6540c75d0755f146dcaec))
+
+- [Noor Movies — September 18, 2026 Creative Fabrica Seedance 2.0 eight-second toddler vocabulary continuation: platform-retained complete prompt and playable 720p 9:16 result, fixed character/market/camera contract, one-potato attention cue, delayed exact-spelling label and no-speech failure controls](https://studio.creativefabrica.com/ai-video-generator/3JQtS1ee6cPZ6xGPvYey350BiHM)
 
 - [Micheal Lanham / Learn AI Filmmaking — September 18, 2026 fal Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`) two-film release: complete 25/30-second prompts, identity reference sheets and close-ups, returned seeds and native-audio films, each one generation with no editing](https://github.com/cxbxmxcx/learn-ai-filmmaking/commit/5edb8e93b3893179b9f3fafd92526cdfd8dc3d00) ([lemonade-test prompt](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/5edb8e93b3893179b9f3fafd92526cdfd8dc3d00/prompts/day-4-characters-who-act.md), [tuba-platform prompt](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/e792e047ac6122c861a329d7a1b080597b4a3bca/prompts/day-7-the-directors-prompt.md), [series provenance statement](https://github.com/cxbxmxcx/learn-ai-filmmaking/blob/e792e047ac6122c861a329d7a1b080597b4a3bca/README.md))
 
