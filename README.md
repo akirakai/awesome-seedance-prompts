@@ -24076,6 +24076,99 @@ render from invalid test media.
 including the [canonicalized required-input map](https://github.com/douhashi/kie-ai-cli/blob/9f60ef5beb3a2b61d154841ec20058be12b630d8/internal/catalog/gen/required.go)
 and [OpenAPI normalizer](https://github.com/douhashi/kie-ai-cli/blob/9f60ef5beb3a2b61d154841ec20058be12b630d8/internal/catalog/gen/openapi/openapi.go).
 
+### Frame-mode versus multimodal-reference scene gate
+
+**Verified model:** Kie.ai Seedance 2.5
+(`bytedance/seedance-2-5`) — the original developer preserved a live HTTP 422
+from a request that combined `first_frame_url` with
+`reference_video_urls`, the exact provider error, the corrected serializer and
+seven regression cases. The same primary commit also replaces inherited 2.0
+asset-count guesses with the documented 2.5 limits: 30 images, 10 videos and
+10 audio files, while retaining the separate 30-second aggregate duration gate  
+**Use case:** a continuation workflow derives a start frame but the user also
+attaches identity images, motion video or timing audio, causing one request to
+select two incompatible generation scenes  
+**Mode:** request-shape arbitration before upload and task creation
+
+```text
+DECLARE THE INTENDED SCENE — choose exactly one
+A. FIRST FRAME
+   first_frame_url = [URL]
+   last_frame_url = absent unless using the dedicated first-plus-last scene
+   all reference_* arrays = absent
+
+B. FIRST + LAST FRAMES
+   first_frame_url = [URL]
+   last_frame_url = [URL]
+   all reference_* arrays = absent
+
+C. MULTIMODAL REFERENCES
+   first_frame_url = absent
+   last_frame_url = absent
+   reference_image_urls = [0–30 URLs]
+   reference_video_urls = [0–10 URLs]
+   reference_audio_urls = [0–10 URLs]
+
+Do not interpret image, video and audio references as three competing scenes:
+they are channels within the single multimodal-reference scene and may coexist.
+Frame endpoints are a different scene and may not coexist with any reference_*
+channel in the serialized request.
+
+CONFLICT ARBITRATION
+If the caller supplies a derived start frame plus any deliberate reference:
+1. choose the multimodal-reference scene;
+2. remove first_frame_url and last_frame_url from the outgoing payload;
+3. deduplicate the derived frame against existing image references;
+4. prepend the unique frame as reference_image_urls[0];
+5. address it as @Image1 in the prompt so its identity or continuation role is
+   preserved without pretending it remains a hard endpoint;
+6. if a supplied last frame must remain an exact endpoint, stop and request a
+   scene choice instead of silently weakening it into an unordered reference.
+
+If the caller supplies only a start frame, keep the first-frame scene. If no
+media is supplied, submit text-to-video without inventing a frame or reference.
+
+REFERENCE LIMITS
+- image count <= 30;
+- video count <= 10 and each clip passes the current duration envelope;
+- audio count <= 10 and each clip passes the current duration envelope;
+- total reference-video duration <= 30 seconds;
+- total reference-audio duration <= 30 seconds.
+Validate counts and durations independently; a 30-second duration ceiling is
+not a three-file ceiling. Re-read the live schema before assuming these limits
+apply to another Seedance version or provider route.
+
+PRE-QUEUE ACCEPTANCE
+- exactly one of A, B or C owns the request;
+- no first_frame_url or last_frame_url survives beside reference_* fields;
+- a migrated frame appears once, at reference_image_urls[0];
+- every @ImageN / @VideoN / @AudioN mention matches serialized array order;
+- asset counts and aggregate durations pass separately;
+- exact model, serialized payload, task ID and terminal provider body are logged.
+
+ERROR OWNERSHIP
+Treat HTTP 422 “first and last frames are mutually exclusive with reference
+media” as a request-shape failure. Fix scene selection before rewriting motion,
+identity or camera prose, and never retry the same mixed payload automatically.
+```
+
+**Why it works:** the request selects one provider scene before any prompt is
+interpreted. Moving a derived start frame into the ordered image-reference list
+preserves its visual information while eliminating the contradictory endpoint
+field; explicit deduplication prevents the same frame from becoming both
+`@Image1` and `@Image2`. Separate count and duration gates also avoid carrying
+Seedance 2.0 limits into 2.5.
+
+**Evidence boundary:** the source records the paid-route request rejection and
+the deterministic repair with seven tests, but not a public post-fix MP4 or task
+ID. It therefore validates this failure-control template only and is not counted
+as a complete scenario prompt.
+
+**Source:** LennySnaider's September 19, 2026
+[Kie.ai Seedance 2.5 scene-arbitration repair](https://github.com/LennySnaider/avatar/commit/0efd618c3e55c78b330db2f4d683b3f0512d1ffb),
+including the [pure scene selector](https://github.com/LennySnaider/avatar/blob/0efd618c3e55c78b330db2f4d683b3f0512d1ffb/src/services/kie/seedance25Scene.ts)
+and [production serializer](https://github.com/LennySnaider/avatar/blob/0efd618c3e55c78b330db2f4d683b3f0512d1ffb/src/services/KieService.ts).
+
 
 ### Lexical-absence repair, positive-mechanism restatement and resolution-escalation gate
 
@@ -40333,6 +40426,7 @@ Community examples and techniques referenced in this README:
 - [reed35 / 成片拆解 — Seedance 2.5 two-miss marksmanship reset, breath-owned performance turn and single-target payoff](https://github.com/reed35/ai-video-tutorials/commit/63ce7bd1d05985cce68c144d366fa18089919acb) ([complete prompt](https://github.com/reed35/ai-video-tutorials/blob/63ce7bd1d05985cce68c144d366fa18089919acb/lib/tutorials.ts), [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/63ce7bd1d05985cce68c144d366fa18089919acb/public/tutorials/watch-her-reset-73/demo-web.mp4))
 - [douhashi / kie-ai-cli — Seedance 2.0 Fast whitespace-corrupted OpenAPI key, canonicalized input graph and live task-creation probe](https://github.com/douhashi/kie-ai-cli/commit/9f60ef5beb3a2b61d154841ec20058be12b630d8) ([required-input map](https://github.com/douhashi/kie-ai-cli/blob/9f60ef5beb3a2b61d154841ec20058be12b630d8/internal/catalog/gen/required.go), [OpenAPI normalizer](https://github.com/douhashi/kie-ai-cli/blob/9f60ef5beb3a2b61d154841ec20058be12b630d8/internal/catalog/gen/openapi/openapi.go))
 - [TAKMA — Higgsfield Seedance 2.5 rendered-first-frame poster authority, non-native delivery crop and one-pass terminal product hold](https://github.com/jakubtiuchty-arch/takma/commit/af0651b1a1748c905a22f27923ef19ca9ec2a2c0) ([generated MP4](https://github.com/jakubtiuchty-arch/takma/blob/af0651b1a1748c905a22f27923ef19ca9ec2a2c0/public/images/guides/jaka-drukarka-do-kart-plastikowych-v2.mp4), [render-derived poster](https://github.com/jakubtiuchty-arch/takma/blob/af0651b1a1748c905a22f27923ef19ca9ec2a2c0/public/images/guides/jaka-drukarka-do-kart-plastikowych-v2.webp))
+- [LennySnaider / avatar — Kie.ai Seedance 2.5 frame-mode versus multimodal-reference HTTP 422, deterministic scene arbitration and documented 2.5 reference limits](https://github.com/LennySnaider/avatar/commit/0efd618c3e55c78b330db2f4d683b3f0512d1ffb) ([pure scene selector](https://github.com/LennySnaider/avatar/blob/0efd618c3e55c78b330db2f4d683b3f0512d1ffb/src/services/kie/seedance25Scene.ts), [production serializer](https://github.com/LennySnaider/avatar/blob/0efd618c3e55c78b330db2f4d683b3f0512d1ffb/src/services/KieService.ts))
 
 Official model references:
 
