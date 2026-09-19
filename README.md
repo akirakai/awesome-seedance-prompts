@@ -37024,6 +37024,111 @@ and the committed
 [cross-shot prop asset rule, measurements and accepted repair](https://github.com/Mr-Salticidae/knowledge-base/blob/7a985976f1482c7f3dfcda2758109718e56d5155/04_%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%B4%9E%E5%AF%9F/04_%E8%A7%86%E9%A2%91%E5%BD%B1%E5%83%8F%E4%B8%8E%E5%A3%B0%E9%9F%B3/%E8%B7%A8%E9%95%9C%E9%81%93%E5%85%B7%E9%94%81%E5%AE%9A%E5%BE%8B_%E8%B5%84%E4%BA%A7%E5%9B%BE%E4%BC%98%E4%BA%8E%E5%BD%A2%E5%AE%B9%E8%AF%8D_v1.md).
 
 
+### Content-derived dialogue duration and lower-bound rhythm gate
+
+**Verified model:** Volcano Ark Seedance 2.5 — the original creator measured a
+30-second, 9:16, 480p, six-reference R2V dialogue render and records all eight
+cuts within 0.3 seconds of the prompt's integer-second marks; the same take had
+only 59% voiced time and 22 gaps of 0.3–0.9 seconds inside over-wide dialogue
+windows  
+**Use case:** a dialogue-led clip follows the requested shots but feels slow
+because its nominal duration, speech windows, silent holds and cut points were
+allocated before the actual words and functional actions were measured
+
+```text
+INPUT LEDGER
+Exact model = Seedance 2.5.
+Mode and references = [T2V / I2V / R2V + ORDERED ASSET HASHES].
+Locked dialogue = [SPEAKER + EXACT WORDS + LANGUAGE FOR EVERY LINE].
+Speech rate = [WORDS OR CHARACTERS PER SECOND].
+Dialogue fill = [DEFAULT 0.90 OR TESTED OVERRIDE].
+Functional silent beats = [ESTABLISH / REVEAL / REACTION / PROP ACTION / EXIT].
+Physical action time = [SECONDS THAT CANNOT OVERLAP SPEECH].
+
+CONTENT-DERIVED DURATION
+For each line:
+1. estimate speech time = word or character count / declared speech rate;
+2. recommended window = estimate / dialogue fill, rounded up to 0.5 seconds;
+3. give a one-word line at least 1 second;
+4. round the final prompt window to whole seconds because this model's public
+   time grammar uses integer-second marks.
+
+Add the recommended line windows, named silent beats and non-overlapping
+physical actions. Round the sum to the delivery duration. Do not begin with a
+30-second container and invent pauses or business to fill it. If the result is
+too long, split only at a natural information, space or time boundary; never
+cut through a locked line.
+
+TIME-USE TABLE
+SHOT | START-END | SPEAKER / WORD COUNT | RECOMMENDED WINDOW |
+ACTUAL WINDOW | SLACK | VISIBLE INFORMATION CHANGE | CUT REASON.
+
+Review any row where actual dialogue time exceeds its recommendation by more
+than [1.0 S]. Either tighten the window, separate a meaningful reaction, or
+record the reason for the extra time. These are review thresholds, not quotas.
+
+SHOT AND SILENCE REVIEW
+- Dialogue shots normally land in [2–4 S]; vary length when the story requires.
+- Review a fixed-camera shot that holds one whole line for 4 seconds or more.
+  Split at an information change: named person, mentioned object, listener
+  reaction or action endpoint. The latter part of one sentence may continue
+  off-screen across the cut without changing its words.
+- Review an unmoving silent shot over 5 seconds and any shot over 8 seconds;
+  keep it only when its uninterrupted duration has a stated dramatic function.
+- Calculate average shot length for dialogue-led clips; review values above
+  [4.5 S] rather than treating them as automatic failures.
+- Keep time outside dialogue windows at or below [20%] by default, with no more
+  than [2 S] of unassigned silence at either end. Name the function of every
+  retained silent interval and override the limits when the scene needs it.
+
+PROMPT COMPILATION
+[0–A s] [SHOT SIZE / CAMERA / VISIBLE ACTION]. [SPEAKER] begins the exact line
+at the start of this window. [INFORMATION CHANGE / REACTION]. HARD CUT.
+
+[A–B s] [NEW SHOT OR OBJECT]. The same locked sentence may finish off-screen,
+or [NEXT SPEAKER] begins as soon as the previous voice ends. [ACTION ENDPOINT].
+
+Continue with contiguous whole-second windows. Across the clip: speech starts
+at each assigned window edge; natural declared rate; connected delivery; no
+sentence-final drag; normal-speed decisive actions; no invented pause, repeated
+line, subtitle or slow motion. Keep only the specifically named silent beats.
+
+RENDER AUDIT
+Measure the returned file rather than judging pace from memory:
+- detected cut time versus every declared cut;
+- voiced-time share and leading / trailing silence;
+- every silence gap inside a dialogue window;
+- average shot length and longest shot;
+- whether each cut coincides with the intended information change.
+
+Store the prompt hash, asset hashes, model, settings, job ID, artifact hash and
+measurements. Change one timing variable per retake. A cleaner preflight is not
+evidence of a better render until an A/B or accepted retake confirms it.
+
+ACCEPTANCE
+- every locked line is complete, ordered and spoken once;
+- no dialogue window contains unexplained slack;
+- every silent beat and long shot has a visible dramatic function;
+- cuts follow the time-use table without hiding the speaker or key reaction;
+- the duration is justified by words and actions, not a platform maximum;
+- claims distinguish the measured source take from the still-unverified repair.
+```
+
+**Why it works:** the source take shows that Seedance 2.5 can follow the written
+integer-second cut map very closely, so unused time in that map is not neutral:
+it can become pauses and held frames. Deriving the container from the actual
+speech and functional beats exposes that slack before purchase, while the
+render audit prevents the proposed tighter timing from being promoted as a
+verified improvement without a new comparison.
+
+Adapted and rewritten from Anelse0 / film-director's September 19, 2026
+[Seedance 2.5 measurement and duration-rhythm release](https://github.com/Anelse0/film-director/commit/2e10aed408cc9d55b2d9ac08cb498085270357a1),
+the complete
+[duration, dialogue-window, shot-length and silence structure](https://github.com/Anelse0/film-director/blob/2e10aed408cc9d55b2d9ac08cb498085270357a1/references/duration-rhythm.md)
+and the
+[versioned render-measurement ledger](https://github.com/Anelse0/film-director/blob/2e10aed408cc9d55b2d9ac08cb498085270357a1/references/validation-log.md).
+
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -39508,6 +39613,8 @@ Community examples and techniques referenced in this README:
 - [superdesigndev / treg — Seedance 2.5 mutually exclusive image-input dialects, HTTP 400/code 20003 evidence and adaptive endpoint-role schema](https://github.com/superdesigndev/treg/commit/1bad98d7ad94b1813152010a3162fe702deec0aa) ([standard and relaxed-route catalog rows](https://github.com/superdesigndev/treg/blob/1bad98d7ad94b1813152010a3162fe702deec0aa/src/treg/catalog/reapi.yaml))
 
 - [Mr-Salticidae — Dreamina Seedance 2.5 multi-state prop asset pack, cross-shot visibility measurements and accepted bounded retake](https://github.com/Mr-Salticidae/knowledge-base/commit/7a985976f1482c7f3dfcda2758109718e56d5155) ([complete reusable rule](https://github.com/Mr-Salticidae/knowledge-base/blob/7a985976f1482c7f3dfcda2758109718e56d5155/04_%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%B4%9E%E5%AF%9F/04_%E8%A7%86%E9%A2%91%E5%BD%B1%E5%83%8F%E4%B8%8E%E5%A3%B0%E9%9F%B3/%E8%B7%A8%E9%95%9C%E9%81%93%E5%85%B7%E9%94%81%E5%AE%9A%E5%BE%8B_%E8%B5%84%E4%BA%A7%E5%9B%BE%E4%BC%98%E4%BA%8E%E5%BD%A2%E5%AE%B9%E8%AF%8D_v1.md))
+
+- [Anelse0 / film-director — Volcano Ark Seedance 2.5 integer-cut measurement, dialogue-window slack analysis and content-derived duration gate](https://github.com/Anelse0/film-director/commit/2e10aed408cc9d55b2d9ac08cb498085270357a1) ([complete reusable structure](https://github.com/Anelse0/film-director/blob/2e10aed408cc9d55b2d9ac08cb498085270357a1/references/duration-rhythm.md), [render-measurement ledger](https://github.com/Anelse0/film-director/blob/2e10aed408cc9d55b2d9ac08cb498085270357a1/references/validation-log.md))
 
 Official model references:
 
