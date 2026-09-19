@@ -397,6 +397,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Wide-field anamorphic-billboard product handoff](#381-wide-field-anamorphic-billboard-product-handoff)
   - [Desert-superstorm convoy to cockpit panic and airborne cut](#382-desert-superstorm-convoy-to-cockpit-panic-and-airborne-cut)
   - [Two-miss marksmanship reset with breath-owned payoff](#383-two-miss-marksmanship-reset-with-breath-owned-payoff)
+  - [Paranormal forest push-in with crossed search beams](#384-paranormal-forest-push-in-with-crossed-search-beams)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -23904,6 +23905,50 @@ Adapted and rewritten from reed35's September 19, 2026
 [complete prompt](https://github.com/reed35/ai-video-tutorials/blob/63ce7bd1d05985cce68c144d366fa18089919acb/lib/tutorials.ts)
 and [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/63ce7bd1d05985cce68c144d366fa18089919acb/public/tutorials/watch-her-reset-73/demo-web.mp4).
 
+### 384. Paranormal forest push-in with crossed search beams
+
+**Verified model:** Higgsfield Seedance 2.5
+(`bytedance/seedance-2.5/text-to-video`) — the original creator's September
+19, 2026 generation script records the exact route, full prompt and settings;
+the same release commits the downloaded result as `hero.mp4`  
+**Use case:** atmospheric web hero, compact suspense reveal, volumetric-light
+depth and restrained multi-source motion  
+**Mode:** text-to-video  
+**Suggested settings:** 6 seconds, 16:9, 720p
+
+```text
+Create a six-second photoreal paranormal-drama hero shot in a dark pine forest
+at night. Use one continuous, very slow push-in along a stable path between the
+trunks. Above the distant treeline, one disc-shaped craft hovers without
+drifting or changing scale. Its single hard white beam shines straight down
+through low volumetric fog and remains the brightest fixed point in the frame.
+
+Deeper in the forest, two small handheld flashlight beams sweep independently
+between separate trunks. Keep their movement slow, human-scaled and subordinate
+to the craft's vertical beam; they may cross briefly but must not merge into a
+third light or reveal extra people. Foreground branches create gentle parallax
+as the camera advances, while the treeline, craft and beam preserve their
+screen positions and spatial relationship.
+
+Use the restrained look of a 1990s paranormal television drama: cold teal-green
+color, deep shadows, fine 35 mm grain, soft halation in the fog and realistic
+low-light contrast. Hold the final composition instead of adding a cut or a
+second reveal. No rapid zoom, orbit, shaking camera, daylight, lightning,
+explosion, morphing craft, duplicated saucer, visible text, caption, logo or
+watermark.
+```
+
+**Why it works:** one slow camera vector, one fixed vertical light and two
+minor lateral light motions create three readable depth layers without
+overloading a six-second shot. Making the craft and its beam spatial anchors
+lets fog, flashlight sweeps and foreground parallax supply motion while the
+central silhouette stays stable enough for a looping website hero.
+
+Adapted and rewritten from Glenn Williams's September 19, 2026
+[Higgsfield Seedance 2.5 generation release](https://github.com/Glenn-castshadow/UFO_site/commit/dead168e3ed13cc9cd1ce37ad4c66c1bce03159a),
+[complete prompt and exact request](https://github.com/Glenn-castshadow/UFO_site/blob/dead168e3ed13cc9cd1ce37ad4c66c1bce03159a/generate.ts)
+and [generated MP4](https://github.com/Glenn-castshadow/UFO_site/blob/dead168e3ed13cc9cd1ce37ad4c66c1bce03159a/assets/hero.mp4).
+
 
 ## Reusable templates
 
@@ -40427,6 +40472,7 @@ Community examples and techniques referenced in this README:
 - [douhashi / kie-ai-cli — Seedance 2.0 Fast whitespace-corrupted OpenAPI key, canonicalized input graph and live task-creation probe](https://github.com/douhashi/kie-ai-cli/commit/9f60ef5beb3a2b61d154841ec20058be12b630d8) ([required-input map](https://github.com/douhashi/kie-ai-cli/blob/9f60ef5beb3a2b61d154841ec20058be12b630d8/internal/catalog/gen/required.go), [OpenAPI normalizer](https://github.com/douhashi/kie-ai-cli/blob/9f60ef5beb3a2b61d154841ec20058be12b630d8/internal/catalog/gen/openapi/openapi.go))
 - [TAKMA — Higgsfield Seedance 2.5 rendered-first-frame poster authority, non-native delivery crop and one-pass terminal product hold](https://github.com/jakubtiuchty-arch/takma/commit/af0651b1a1748c905a22f27923ef19ca9ec2a2c0) ([generated MP4](https://github.com/jakubtiuchty-arch/takma/blob/af0651b1a1748c905a22f27923ef19ca9ec2a2c0/public/images/guides/jaka-drukarka-do-kart-plastikowych-v2.mp4), [render-derived poster](https://github.com/jakubtiuchty-arch/takma/blob/af0651b1a1748c905a22f27923ef19ca9ec2a2c0/public/images/guides/jaka-drukarka-do-kart-plastikowych-v2.webp))
 - [LennySnaider / avatar — Kie.ai Seedance 2.5 frame-mode versus multimodal-reference HTTP 422, deterministic scene arbitration and documented 2.5 reference limits](https://github.com/LennySnaider/avatar/commit/0efd618c3e55c78b330db2f4d683b3f0512d1ffb) ([pure scene selector](https://github.com/LennySnaider/avatar/blob/0efd618c3e55c78b330db2f4d683b3f0512d1ffb/src/services/kie/seedance25Scene.ts), [production serializer](https://github.com/LennySnaider/avatar/blob/0efd618c3e55c78b330db2f4d683b3f0512d1ffb/src/services/KieService.ts))
+- [Glenn Williams / Nightwatch Archive — Higgsfield Seedance 2.5 six-second paranormal-forest push-in, exact request and generated result](https://github.com/Glenn-castshadow/UFO_site/commit/dead168e3ed13cc9cd1ce37ad4c66c1bce03159a) ([complete prompt and model route](https://github.com/Glenn-castshadow/UFO_site/blob/dead168e3ed13cc9cd1ce37ad4c66c1bce03159a/generate.ts), [generated MP4](https://github.com/Glenn-castshadow/UFO_site/blob/dead168e3ed13cc9cd1ce37ad4c66c1bce03159a/assets/hero.mp4))
 
 Official model references:
 
