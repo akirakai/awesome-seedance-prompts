@@ -23907,6 +23907,105 @@ and [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/63ce7bd1d0
 
 ## Reusable templates
 
+### Rendered-first-frame poster and delivery-crop parity gate
+
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`) — the original
+production repository records an accepted `omni_reference` job using one
+`start_image`, 8 seconds, 1080p, no audio and 96 credits; the delivered product
+hero was cropped from the rendered 1920×1080 master to 1920×822, then encoded
+at 1280×548. The producer measured a 20/255 visual difference between the
+source still and the generated opening, so the shipped poster was extracted
+from the rendered first frame rather than reused from the input image  
+**Use case:** a web hero starts from an approved still but Seedance subtly
+reframes it, while the published player uses a non-native panoramic crop and
+must begin without a poster-to-video flash  
+**Mode:** image-to-video generation followed by deterministic delivery
+cropping, poster extraction and playback acceptance
+
+```text
+IMMUTABLE GENERATION MANIFEST
+Exact model = seedance_2_5.
+Mode = omni_reference.
+Start image hash = [HASH]. Native generation ratio = [RATIO].
+Duration = [SECONDS]. Resolution = [RESOLUTION]. Audio = [ON/OFF].
+Final delivery geometry = [WIDTH × HEIGHT OR ASPECT].
+Delivery crop = [X, Y, WIDTH, HEIGHT].
+Preset decision = [ACCEPTED PRESET ID | DECLINED PRESET ID].
+
+START-IMAGE PREPARATION
+Preserve the approved product, subject, camera height, lighting and composition.
+Pad or outpaint to the model's accepted native ratio without scaling the
+load-bearing subject out of the final delivery crop. Mark a DELIVERY SAFE AREA
+for the final panoramic or vertical slice; keep essential products, hands,
+labels and terminal actions inside it throughout the shot.
+
+MOTION BRIEF
+@StartImage owns product identity, geometry, materials, set and light.
+Animate one ordered transformation:
+[INITIAL STATE] → [READABLE MOTION] → [FINAL PRODUCT STATE].
+Use [ONE CAMERA MOVE OR LOCKED CAMERA]. End with [FINAL STATE] fully visible and
+stable for [HOLD TIME]. Do not redesign, duplicate, replace or crop through the
+product; do not add text, logo, unrelated props or a second narrative beat.
+
+If the provider proposes a style preset that would alter the approved visual
+language, decline it through the current response's declined_preset_id and
+resubmit the byte-identical prompt once. Treat this as a provider handshake,
+not a Seedance prompt parameter.
+
+DELIVERY DERIVATION
+1. Archive the untouched generated master and probe its real dimensions,
+   duration, frame rate and audio streams.
+2. Apply the declared crop to the generated video, not to a separately
+   reconstructed still. Keep the same crop coordinates for every frame.
+3. Encode the final delivery copy at [OUTPUT SIZE], preserving aspect ratio,
+   frame cadence and fast-start metadata.
+4. Extract frame zero from the already cropped delivery timeline and encode it
+   as the player poster at exactly the delivery dimensions.
+5. Never use the input still as the poster merely because it seeded the job.
+   Seedance may alter crop, lens, object placement or exposure on frame one.
+
+PARITY MEASUREMENT
+Compare the input still, rendered opening and encoded poster with one declared
+metric and threshold. A nonzero input-to-render delta is diagnostic, not an
+automatic failure. The required invariant is:
+encoded poster ≈ decoded first delivery frame.
+If that pair exceeds [THRESHOLD], inspect crop coordinates, color conversion,
+frame selection and encoder range before publishing.
+
+PLAYBACK CONTRACT
+Use poster and video URLs with cache-safe versioned names. Test first load and
+repeat load at every responsive breakpoint. If the shot has a terminal product
+state, play once and hold the last frame; do not loop back to the unfinished
+opening. If looping is narratively required, validate the loop join separately
+rather than hiding it with the poster.
+
+ACCEPTANCE GATE
+- exact model, job, cost and source-image hash are archived
+- product identity and geometry remain stable through the final state
+- every essential action stays inside the delivery crop
+- poster dimensions and crop exactly match the delivery video
+- poster-to-frame-zero transition has no visible jump or flash
+- playback reaches the intended terminal hold without restarting
+- declared audio policy matches the encoded streams
+- no subtitle, added text, logo, watermark or provider preset leaked in
+```
+
+**Why it works:** the generated video, not the source still, is the authority
+for its own opening pixels. Cropping first and extracting the poster second
+makes both assets inherit the same framing and color pipeline, while the
+terminal hold keeps a one-pass product transformation from resetting after the
+payoff.
+
+**Evidence boundary:** the source preserves the settings, generated artifact,
+crop and measured first-frame mismatch, but not the complete creative prompt.
+It therefore validates this delivery-control template only and is not counted
+as a complete scenario prompt.
+
+**Source:** TAKMA's September 19, 2026
+[Higgsfield Seedance 2.5 product-hero generation and delivery commit](https://github.com/jakubtiuchty-arch/takma/commit/af0651b1a1748c905a22f27923ef19ca9ec2a2c0),
+including the [generated MP4](https://github.com/jakubtiuchty-arch/takma/blob/af0651b1a1748c905a22f27923ef19ca9ec2a2c0/public/images/guides/jaka-drukarka-do-kart-plastikowych-v2.mp4)
+and [render-derived poster](https://github.com/jakubtiuchty-arch/takma/blob/af0651b1a1748c905a22f27923ef19ca9ec2a2c0/public/images/guides/jaka-drukarka-do-kart-plastikowych-v2.webp).
+
 ### Schema-key canonicalization and reference-video one-of gate
 
 **Verified model:** Kie.ai Seedance 2.0 Fast
@@ -40147,6 +40246,7 @@ Community examples and techniques referenced in this README:
 - [reed35 / 成片拆解 — Seedance 2.5 desert-superstorm convoy, cockpit-panic escalation and airborne-impact finish](https://github.com/reed35/ai-video-tutorials/commit/4aa0f32ba876c914e6c3a4a5d15772262bb85d79) ([complete prompt](https://github.com/reed35/ai-video-tutorials/blob/4aa0f32ba876c914e6c3a4a5d15772262bb85d79/lib/tutorials.ts), [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/4aa0f32ba876c914e6c3a4a5d15772262bb85d79/public/tutorials/epic-desert-scene-38/demo-web.mp4))
 - [reed35 / 成片拆解 — Seedance 2.5 two-miss marksmanship reset, breath-owned performance turn and single-target payoff](https://github.com/reed35/ai-video-tutorials/commit/63ce7bd1d05985cce68c144d366fa18089919acb) ([complete prompt](https://github.com/reed35/ai-video-tutorials/blob/63ce7bd1d05985cce68c144d366fa18089919acb/lib/tutorials.ts), [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/63ce7bd1d05985cce68c144d366fa18089919acb/public/tutorials/watch-her-reset-73/demo-web.mp4))
 - [douhashi / kie-ai-cli — Seedance 2.0 Fast whitespace-corrupted OpenAPI key, canonicalized input graph and live task-creation probe](https://github.com/douhashi/kie-ai-cli/commit/9f60ef5beb3a2b61d154841ec20058be12b630d8) ([required-input map](https://github.com/douhashi/kie-ai-cli/blob/9f60ef5beb3a2b61d154841ec20058be12b630d8/internal/catalog/gen/required.go), [OpenAPI normalizer](https://github.com/douhashi/kie-ai-cli/blob/9f60ef5beb3a2b61d154841ec20058be12b630d8/internal/catalog/gen/openapi/openapi.go))
+- [TAKMA — Higgsfield Seedance 2.5 rendered-first-frame poster authority, non-native delivery crop and one-pass terminal product hold](https://github.com/jakubtiuchty-arch/takma/commit/af0651b1a1748c905a22f27923ef19ca9ec2a2c0) ([generated MP4](https://github.com/jakubtiuchty-arch/takma/blob/af0651b1a1748c905a22f27923ef19ca9ec2a2c0/public/images/guides/jaka-drukarka-do-kart-plastikowych-v2.mp4), [render-derived poster](https://github.com/jakubtiuchty-arch/takma/blob/af0651b1a1748c905a22f27923ef19ca9ec2a2c0/public/images/guides/jaka-drukarka-do-kart-plastikowych-v2.webp))
 
 Official model references:
 
