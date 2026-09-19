@@ -393,6 +393,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Reference-locked lemonade test with a hidden reaction](#377-reference-locked-lemonade-test-with-a-hidden-reaction)
   - [Tuba-platform dance cascade with train-arrival state change](#378-tuba-platform-dance-cascade-with-train-arrival-state-change)
   - [Shot-matched toddler vocabulary card with delayed text reveal](#379-shot-matched-toddler-vocabulary-card-with-delayed-text-reveal)
+  - [Rear-facing deadpan-cat bridge pursuit](#380-rear-facing-deadpan-cat-bridge-pursuit)
+  - [Wide-field anamorphic-billboard product handoff](#381-wide-field-anamorphic-billboard-product-handoff)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -23593,6 +23595,178 @@ Adapted and rewritten from Noor Movies' September 18, 2026
 [Creative Fabrica generation page with complete prompt, result and Seedance 2.0 settings](https://studio.creativefabrica.com/ai-video-generator/3JQtS1ee6cPZ6xGPvYey350BiHM).
 
 
+### 380. Rear-facing deadpan-cat bridge pursuit
+
+**Verified model:** Seedance 2.5 — the creator's repository names the exact
+model beside the complete three-reference prompt and commits the corresponding
+playable result in the same release  
+**Use case:** comic action choreography, reference-locked animal performance,
+rear-facing pursuit geography, one-take escalation and native action audio  
+**Mode:** three-image reference-to-video  
+**Suggested settings:** about 28 seconds, photoreal live action, one continuous
+tail-camera shot, sound on
+
+```text
+Create one uninterrupted 28-second action pursuit across a large red suspension
+bridge in warm daylight. The camera is a rough, unstabilized chase rig fixed just
+behind one speeding hero motorcycle. It always looks forward past a ginger cat
+sitting backward on the tail seat; the anonymous rider stays ahead of the cat
+and all pursuers stay behind it. Never cut, orbit, overtake or reverse this
+screen direction.
+
+REFERENCE OWNERSHIP
+@Image1 owns the matte-black sport motorcycle and its rider in black leathers
+and a closed black helmet. @Image2 owns only TANGO, the ginger cat. @Image3 owns
+the bridge deck, red towers, cables, bay and distant hills. Preserve the bike,
+cat and landmark independently; never merge their colours or geometry.
+
+PERFORMANCE LOCK
+Tango remains seated backward on the same tail pad and faces the pursuing traffic
+and camera throughout. His expression stays completely calm and deadpan. Keep
+him alive through wind-flattened fur, ear flicks, blinking, scanning head turns
+and a moving tail, but never make him grin, mug, stand like a human or become a
+cartoon. Weapons have visible weight and recoil without dislodging him.
+
+0–3s — APPROACH
+The hero bike races under the bridge cables. A single black pursuer closes from
+the right rear while road markings and tower structure prove forward speed.
+
+3–6s — FIRST SHOT
+Tango raises one compact rifle, shoulders it once and fires one readable round.
+Show one muzzle flash, one recoil and one impact owner while his face stays flat.
+
+6–9s — CONSEQUENCE
+The struck motorcycle erupts, tumbles away behind and leaves debris on its own
+trajectory. Tango lowers the rifle, flicks his tail and scans as a larger pack
+appears farther back.
+
+9–14s — HEAVY WEAPON
+He pulls up one belt-fed machine gun, braces it against his body and fires a
+single sustained burst across the approaching pack. The belt swings, muzzle
+flashes strobe and casings travel downwind; do not duplicate the gun.
+
+14–19s — CASCADE
+Pursuers fail one after another from visible hits: high-side, skid, then burn.
+Every crash retains forward momentum and remains behind the hero bike. Smoke and
+debris never pass through Tango, the rider or the camera.
+
+19–23s — QUIET PROOF
+The bridge behind is empty except for smoke and wreckage. Tango lowers the same
+weapon, sits upright and calmly checks the cleared road while the hero continues
+toward the far tower.
+
+23–28s — FINAL RELEASE
+One large fireball expands behind them. The hero bike emerges from smoke and
+embers without changing direction; Tango turns only his head and gives the lens
+one unchanged deadpan look. Hold that moving tableau for the final beat.
+
+AUDIO AND FAILURE CONTROL
+Run one continuous driving score beneath engines, wind, gunfire, impacts and
+explosions; no dialogue. Keep realistic bike mass, suspension, recoil, fire,
+smoke and relative velocity. Reject cuts, smooth gimbal motion, camera overtakes,
+cat rotation, rider-face reveal, extra hero bikes, pursuers appearing ahead,
+repeated crashes, floating weapons, weightless debris, text, logos or subtitles.
+```
+
+**Why it works:** the camera and role map establish one readable pursuit axis,
+while the backward-facing cat remains a stable visual anchor through escalating
+weapons and crashes. The quiet proof beat confirms that prior opponents are gone
+before the final fireball, and the deadpan-performance lock separates character
+comedy from uncontrolled facial animation.
+
+Adapted and rewritten from reed35's September 19, 2026
+[Seedance 2.5 tutorial release](https://github.com/reed35/ai-video-tutorials/commit/b928ea4ccb032ee3554c2b6ca842f9c273b0b1b6),
+[complete prompt and three reference prompts](https://github.com/reed35/ai-video-tutorials/blob/b928ea4ccb032ee3554c2b6ca842f9c273b0b1b6/lib/tutorials.ts)
+and [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/b928ea4ccb032ee3554c2b6ca842f9c273b0b1b6/public/tutorials/ride-or-paws/demo-web.mp4).
+
+
+### 381. Wide-field anamorphic-billboard product handoff
+
+**Verified model:** Seedance 2.5 — the creator's repository names the exact
+model, publishes the complete three-reference prompt and stores the playable
+generated result beside the tutorial  
+**Use case:** anamorphic outdoor advertising, virtual-to-real product transfer,
+wide-field scale control, character-state continuity and diegetic crowd audio  
+**Mode:** three-image reference-to-video  
+**Suggested settings:** about 30 seconds, 1080p, one continuous wide handheld
+shot, generated sound on and no music
+
+```text
+Create one continuous 30-second wide street-level shot at a wet neon intersection
+at night. A huge curved corner LED billboard occupies the upper frame; traffic,
+pedestrians and the full crosswalk remain visible below as permanent scale
+references. Use raw broadcast realism and imperfect handheld jitter, drift and
+breathing sway. Never cut, zoom, push in, re-centre on the performer or let the
+billboard leave the composition.
+
+REFERENCE OWNERSHIP
+@Image1 owns ELENA's face, auburn hair and two wardrobe states. @Image2 owns the
+intersection, building and empty curved billboard stage. @Image3 owns one glossy
+black-and-gold skincare jar. Keep these roles separate. The jar may change
+location and medium only at the explicit handoff; it may not duplicate.
+
+SCALE AND START-STATE LOCK
+The billboard reads as roughly ten storeys tall. Its interior stage is about
+three times Elena's standing height, so even when upright she occupies only the
+middle third with generous empty space above and beside her. She never grows
+beyond the screen. At frame one she is curled on the stage in a white crop top
+and white briefs, barefoot, with dark jeans lying separately beside her. She
+remains barefoot; the jeans move only after she touches them.
+
+0–5s — WAKE
+Elena pushes to one elbow, snaps her head toward the street and recoils into one
+large open-palmed surprise silhouette. The crowd below begins to look up.
+
+5–10s — DRESS
+She pulls on the same jeans with a readable seated leg sequence, rises and holds
+one arms-wide presentation pose. Do not skip directly from undressed to dressed;
+do not create shoes or a second garment.
+
+10–15s — TURN AND CROWD CUE
+She turns her back briefly, braces both hands on the stage, makes one exaggerated
+hip beat, then looks over her shoulder and plants one hand on her hip. Phones
+rise among the pedestrians below, but the camera stays wide.
+
+15–20s — OFFER
+She retrieves the single jar from below the screen, raises it overhead, then
+leans toward the billboard's lower edge and extends it in forced perspective.
+With accurate lip sync she says: “You go hard. I come out soft.” The virtual jar
+still belongs to her hand until the next beat.
+
+20–25s — OWNERSHIP TRANSFER
+One real foreground hand rises from the bottom of the camera frame and meets the
+extended jar at one unambiguous contact point. At contact, the jar becomes a
+single solid foreground object; Elena's screen hand closes empty. Never show two
+jars. She reacts with one mock-angry arm throw, one barefoot stamp, then covers
+her mouth and laughs.
+
+25–30s — SCALE-PROOF HOLD
+The foreground hand lowers the jar slightly so its gold edge catches street
+light. On the unchanged billboard Elena straightens and blows one two-handed
+kiss while taxis and pedestrians continue moving at normal scale. Hold the wide
+composition through the end.
+
+AUDIO AND FAILURE CONTROL
+Use only traffic rumble, horns, crowd chatter, gasps, cheers, Elena's line and
+city ambience; no music. Give each emotional beat one large silhouette-readable
+action and time to hold. Reject camera cuts, billboard-content cuts, push-in,
+scale growth, performer overflow, premature wardrobe change, extra jar, missing
+handoff contact, hand intersection, frozen street, subtitles, added screen text,
+logos or watermarks.
+```
+
+**Why it works:** tiny pedestrians and taxis continuously prove the billboard's
+scale, while the character and wardrobe states change only through visible
+actions. Treating the jar handoff as an ownership transition prevents the usual
+double-object failure, and the fixed wide camera lets the screen illusion,
+foreground hand and reacting crowd coexist in one auditable frame.
+
+Adapted and rewritten from reed35's September 19, 2026
+[Seedance 2.5 tutorial release](https://github.com/reed35/ai-video-tutorials/commit/4db9ba79b946c8ec8755cad3771f60e628059a90),
+[complete prompt and three reference prompts](https://github.com/reed35/ai-video-tutorials/blob/4db9ba79b946c8ec8755cad3771f60e628059a90/lib/tutorials.ts)
+and [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/4db9ba79b946c8ec8755cad3771f60e628059a90/public/tutorials/hr-replasty-anamorphic-billboard/demo-web.mp4).
+
+
 ## Reusable templates
 
 
@@ -39759,6 +39933,9 @@ Community examples and techniques referenced in this README:
 - [Mr-Salticidae — Dreamina Seedance 2.5 multi-state prop asset pack, cross-shot visibility measurements and accepted bounded retake](https://github.com/Mr-Salticidae/knowledge-base/commit/7a985976f1482c7f3dfcda2758109718e56d5155) ([complete reusable rule](https://github.com/Mr-Salticidae/knowledge-base/blob/7a985976f1482c7f3dfcda2758109718e56d5155/04_%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%B4%9E%E5%AF%9F/04_%E8%A7%86%E9%A2%91%E5%BD%B1%E5%83%8F%E4%B8%8E%E5%A3%B0%E9%9F%B3/%E8%B7%A8%E9%95%9C%E9%81%93%E5%85%B7%E9%94%81%E5%AE%9A%E5%BE%8B_%E8%B5%84%E4%BA%A7%E5%9B%BE%E4%BC%98%E4%BA%8E%E5%BD%A2%E5%AE%B9%E8%AF%8D_v1.md))
 
 - [Anelse0 / film-director — Volcano Ark Seedance 2.5 integer-cut measurement, dialogue-window slack analysis and content-derived duration gate](https://github.com/Anelse0/film-director/commit/2e10aed408cc9d55b2d9ac08cb498085270357a1) ([complete reusable structure](https://github.com/Anelse0/film-director/blob/2e10aed408cc9d55b2d9ac08cb498085270357a1/references/duration-rhythm.md), [render-measurement ledger](https://github.com/Anelse0/film-director/blob/2e10aed408cc9d55b2d9ac08cb498085270357a1/references/validation-log.md))
+
+- [reed35 / 成片拆解 — Seedance 2.5 rear-facing deadpan-cat bridge pursuit, complete three-reference prompt and generated result](https://github.com/reed35/ai-video-tutorials/commit/b928ea4ccb032ee3554c2b6ca842f9c273b0b1b6) ([complete prompt](https://github.com/reed35/ai-video-tutorials/blob/b928ea4ccb032ee3554c2b6ca842f9c273b0b1b6/lib/tutorials.ts), [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/b928ea4ccb032ee3554c2b6ca842f9c273b0b1b6/public/tutorials/ride-or-paws/demo-web.mp4))
+- [reed35 / 成片拆解 — Seedance 2.5 wide-field anamorphic-billboard product handoff, complete three-reference prompt and generated result](https://github.com/reed35/ai-video-tutorials/commit/4db9ba79b946c8ec8755cad3771f60e628059a90) ([complete prompt](https://github.com/reed35/ai-video-tutorials/blob/4db9ba79b946c8ec8755cad3771f60e628059a90/lib/tutorials.ts), [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/4db9ba79b946c8ec8755cad3771f60e628059a90/public/tutorials/hr-replasty-anamorphic-billboard/demo-web.mp4))
 
 Official model references:
 
