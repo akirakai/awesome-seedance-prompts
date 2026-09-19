@@ -39078,7 +39078,93 @@ the [complete one-pass and segmented prompt compiler](https://github.com/kolakac
 and the [exact Replicate Seedance 2.5 request adapter](https://github.com/kolakachi/Frame-cast/blob/89954461e87384e36c26a10fffdd104747a0752c/framecast-app/api/app/Services/Generation/Video/ReplicateVeoAdapter.php).
 
 
+### Text-cast audition and character-scoped seed lock
+
+**Verified model:** Replicate Seedance 2.5
+(`bytedance/seedance-2.5`) — the original production developer reports an
+A/B/C probe of the text-cast variant lane: a sharpened written appearance
+sheet supplied most of the repeat-take consistency, while a fixed seed added a
+smaller, free tie-break. The committed route passes that seed only to the exact
+Seedance model. Because the public record contains the method and probe verdict
+but no task ID or generated video, this is counted as one reusable template,
+not as a complete scenario.
+
+**Use case:** audition an identity-safe, text-described UGC presenter before a
+paid video render, then keep repeat variant takes near the same interpretation
+without claiming exact face identity
+**Mode:** pre-flight portrait audition followed by text-to-video
+
+```text
+CANONICAL CAST RECORD
+CHARACTER_KEY = [IMMUTABLE INTERNAL ID, NOT A DISPLAY NAME].
+APPEARANCE_SHEET = [VISIBLE ADULT AGE RANGE, FACE SHAPE, SKIN TONE, HAIR,
+DISTINGUISHING FEATURES, BUILD, WARDROBE AND CAMERA-RELEVANT DETAILS].
+Exclude biography, personality labels and private identity claims that cannot
+be judged in a frame.
+
+PRE-FLIGHT AUDITION
+Render one inexpensive 9:16 portrait from the exact APPEARANCE_SHEET:
+"Photorealistic vertical phone-camera portrait of [APPEARANCE_SHEET], looking
+into the lens in soft natural light."
+
+Show this still beside the sheet as an APPROXIMATE CASTING PREVIEW. Never label
+it the real person or promise that a different video model will reproduce it
+pixel-for-pixel. Charge and save the preview only after a valid image is
+returned. If it is rejected, revise the sheet first; do not spend on video yet.
+
+CHARACTER-SCOPED SEED
+SEED_NAMESPACE = [PROJECT-SPECIFIC CONSTANT].
+VARIANT_SEED = nonnegative_31_bit_hash(SEED_NAMESPACE + CHARACTER_KEY).
+
+Keep VARIANT_SEED stable for every Seedance variant take and retry of this
+character. Give different character keys different seeds. Do not derive the
+seed from a mutable name, prompt wording or take number.
+
+VIDEO REQUEST
+model = bytedance/seedance-2.5
+prompt = [COMPLETE UGC SCREENPLAY] + [THE SAME APPEARANCE_SHEET]
+seed = VARIANT_SEED
+aspect_ratio = 9:16
+resolution = 720p
+generate_audio = true
+duration = [4–30 SECONDS]
+watermark = false
+
+PROVENANCE LEDGER
+Store CHARACTER_KEY, APPEARANCE_SHEET_HASH, VARIANT_SEED, complete compiled
+prompt, exact model, provider task ID and returned artifact together. A changed
+appearance sheet creates a new sheet hash; keep the seed stable so the sheet
+change can be evaluated independently.
+
+ACCEPTANCE AND EVIDENCE BOUNDARY
+- compare at least opening, midpoint and final frames across repeat takes;
+- score stable visible traits separately from wardrobe, performance and scene;
+- disclose that the preview uses a still-image renderer and is only an audition;
+- treat seed as a small repeatability aid, not an identity reference or exact
+  reproducibility guarantee;
+- when testing improvements, change either sheet or seed, not both in one arm;
+- reject any result that resembles an unintended real person or transfers a
+  distinctive feature to another character.
+```
+
+**Why it works:** the appearance sheet remains the primary casting control and
+can be reviewed cheaply before video generation. A seed derived from an
+immutable character key then removes one source of arbitrary variation across
+repeat takes without hiding the fact that text-only casting is approximate.
+Keeping sheet hash and seed in the artifact ledger also makes A/B comparisons
+auditable instead of attributing every improvement to whichever field changed
+last.
+
+Adapted and rewritten from kolakachi / Frame-cast's September 19, 2026
+[variant-preview and per-character seed production commit](https://github.com/kolakachi/Frame-cast/commit/fde968267f678b7c2629e037d6745764b2d6986e),
+the [pre-flight preview and character-key implementation](https://github.com/kolakachi/Frame-cast/blob/fde968267f678b7c2629e037d6745764b2d6986e/framecast-app/api/app/Http/Controllers/Api/V1/Ugc/UgcController.php),
+the [seed-carrying generation job](https://github.com/kolakachi/Frame-cast/blob/fde968267f678b7c2629e037d6745764b2d6986e/framecast-app/api/app/Jobs/GenerateOneShotUgcJob.php),
+and the [exact Seedance 2.5 request adapter](https://github.com/kolakachi/Frame-cast/blob/fde968267f678b7c2629e037d6745764b2d6986e/framecast-app/api/app/Services/Generation/Video/ReplicateVeoAdapter.php).
+
+
 ## Sources
+
+- [kolakachi / Frame-cast — September 19, 2026 Replicate Seedance 2.5 (`bytedance/seedance-2.5`) text-cast variant A/B/C probe: a written appearance sheet carried most repeat-take consistency, a character-scoped seed added a smaller tie-break, and an explicitly approximate still audition moved rejection before the paid video](https://github.com/kolakachi/Frame-cast/commit/fde968267f678b7c2629e037d6745764b2d6986e) ([preview and seed derivation](https://github.com/kolakachi/Frame-cast/blob/fde968267f678b7c2629e037d6745764b2d6986e/framecast-app/api/app/Http/Controllers/Api/V1/Ugc/UgcController.php), [generation job](https://github.com/kolakachi/Frame-cast/blob/fde968267f678b7c2629e037d6745764b2d6986e/framecast-app/api/app/Jobs/GenerateOneShotUgcJob.php), [exact model adapter](https://github.com/kolakachi/Frame-cast/blob/fde968267f678b7c2629e037d6745764b2d6986e/framecast-app/api/app/Services/Generation/Video/ReplicateVeoAdapter.php))
 
 - [kolakachi / Frame-cast — September 19, 2026 Replicate Seedance 2.5 (`bytedance/seedance-2.5`) 16-second UGC head-to-head and single-pass screenplay compiler: original developer confirmation, exact model route, native-audio request envelope, variable-beat prompt builder and explicit over-30-second fallback](https://github.com/kolakachi/Frame-cast/commit/89954461e87384e36c26a10fffdd104747a0752c) ([compiler](https://github.com/kolakachi/Frame-cast/blob/89954461e87384e36c26a10fffdd104747a0752c/framecast-app/api/app/Services/Ugc/UgcOneShotCompiler.php), [adapter](https://github.com/kolakachi/Frame-cast/blob/89954461e87384e36c26a10fffdd104747a0752c/framecast-app/api/app/Services/Generation/Video/ReplicateVeoAdapter.php))
 
