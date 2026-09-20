@@ -29105,6 +29105,82 @@ documented failure boundary and shipped ping-pong implementation](https://github
 [retained frames](https://github.com/ankitstage21/wodarmour-redesign/tree/e4477e30408d78c326971154d3bd856ea7d06f76/assets/inf-frames),
 [delivery code](https://github.com/ankitstage21/wodarmour-redesign/blob/e4477e30408d78c326971154d3bd856ea7d06f76/normatec-2.js))
 
+### Forward-physics reverse extraction and measured seam closure
+
+**Verified model:** Seedance 2.0 (`seedance_2_0` standard on Higgsfield,
+720p, silent, landscape and portrait) — the original creator recorded eight
+accepted production jobs, both delivered frame sequences, exact endpoint
+handoffs and pixel-difference measurements for every seam
+
+Use this when the requested narrative action is causally difficult in its
+display direction but the opposite physical process is easy for the model. It
+is not a ping-pong loop: generate one self-contained causal clip in the reliable
+direction, reverse only that clip during extraction, and close both of its
+boundaries with real frames shared by neighbouring clips.
+
+```text
+STATE GRAPH
+Required display action: [FINISHED STATE F] -> [EARLIER STATE E].
+Reliable forward physics: [EARLIER STATE E] -> [FINISHED STATE F].
+Preceding clip A ends at F.
+Following clip C begins at E.
+
+ANCHOR CONTRACT
+@EarlierAnchor = exact state E, approved for the start of B and C.
+@FinishedBoundary = the actual final frame of accepted clip A, state F.
+Do not redraw either boundary from prose.
+
+ISOLATED FORWARD GENERATION
+Generate clip B alone in the physically reliable direction:
+- start_image = @EarlierAnchor;
+- end_image = @FinishedBoundary;
+- show one continuous causal process from E to F;
+- keep camera, scale, lighting, material and object identity locked;
+- no unrelated beat may share B, because every frame of B will be reversed.
+
+DELIVERY ORDER
+Extract A normally.
+Extract B in reverse frame order, producing F -> E.
+Extract C normally from @EarlierAnchor.
+Assemble A -> reversed B -> C.
+
+SEAM DESIGN
+A -> reversed B lands on the shared finished-state frame F.
+reversed B -> C lands on the shared earlier-state frame E.
+Prefer dark, frame-filling or low-detail boundaries; keep any blur-through
+inside B rather than using blur to conceal an unbound seam.
+
+MEASURED ACCEPTANCE
+For each orientation, calculate mean absolute pixel difference across:
+1. A_last -> reversed-B_first;
+2. reversed-B_last -> C_first;
+3. one ordinary adjacent-frame pair inside a continuous accepted clip.
+Approve only when each seam is no more disruptive than the internal-motion
+baseline and visual inspection shows no endpoint redraw, duplicate-frame stall,
+lighting jump or identity change.
+
+MODEL-TIER PROBE
+Before the full chain, run the same short macro prompt and settings on candidate
+tiers. Measure framing drift and dark-region luma/flicker, not source bitrate
+alone. Choose the tier that holds the handoff composition and matches the page
+or edit's black level; archive job IDs and returned model labels.
+```
+
+**Why it works:** the model solves the process in the direction where contact,
+pressure and material change follow familiar causality, while endpoint images
+make the reversed delivery deterministic at both joins. Isolating the reversed
+beat prevents other actions from inheriting backward motion, and comparing seam
+error with ordinary inter-frame motion turns “looks hidden” into a testable
+continuity decision. In the verified vinyl-manufacture sequence, the press was
+generated closing from a PVC biscuit to a finished record, then reversed to
+show un-pressing; all measured seams changed less than adjacent frames inside a
+continuous clip.
+
+**Source:** TodimuJ's September 20, 2026
+[LATHE & LACQUER production commit](https://github.com/TodimuJ/websites/commit/30e714e117ead612d27479940ef133d859b531e1),
+the [complete production notes, exact model/job ledger and endpoint method](https://github.com/TodimuJ/websites/blob/46b161a4284b29180e9b69b6f51e27c1df23e58d/sites/vinyl/production-notes.md),
+and the [measured delivery verification commit](https://github.com/TodimuJ/websites/commit/46b161a4284b29180e9b69b6f51e27c1df23e58d).
+
 ### Provider-aware generation-time bitrate-mode gate
 
 **Verified model:** Seedance 2.5 — Venice's official queue documentation exposes
@@ -40675,6 +40751,8 @@ and the [complete guarded adapter](https://github.com/Theoduras/ai-model-chat/bl
 
 
 ## Sources
+
+- [TodimuJ / LATHE & LACQUER — September 20, 2026 Higgsfield Seedance 2.0 standard (`seedance_2_0`) forward-physics/reverse-extraction chain: eight accepted 720p silent production jobs, shared endpoint frames, desktop and portrait delivery sequences, exact cost ledger and seam differences measured below ordinary adjacent-frame motion](https://github.com/TodimuJ/websites/commit/46b161a4284b29180e9b69b6f51e27c1df23e58d) ([initial production commit](https://github.com/TodimuJ/websites/commit/30e714e117ead612d27479940ef133d859b531e1), [complete production notes](https://github.com/TodimuJ/websites/blob/46b161a4284b29180e9b69b6f51e27c1df23e58d/sites/vinyl/production-notes.md))
 
 - [Theoduras / ai-model-chat — September 20, 2026 Runware Seedance 2.5 (`bytedance:seedance@2.5`) live request evidence: the exact route rejected `negativePrompt` before task creation or billing; the repaired adapter negotiates only explicitly refused optional fields while refusing to strip model, prompt, duration, frame, reference or source-video inputs](https://github.com/Theoduras/ai-model-chat/commit/ab5fbad0427cb2e4efe2f9824c7e837d2d2826f6) ([exact model integration and probe](https://github.com/Theoduras/ai-model-chat/commit/a53fab5586dd6f4bd9b1ac176e32672bc0e41666), [critical-input safeguard](https://github.com/Theoduras/ai-model-chat/commit/1fee8cb39531ba892a4a75bdcc9b0b15aa51332c), [guarded adapter](https://github.com/Theoduras/ai-model-chat/blob/1fee8cb39531ba892a4a75bdcc9b0b15aa51332c/imagegen.py))
 
