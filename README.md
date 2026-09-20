@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 100026)
-Total output lines: 6000
-
 # Awesome Seedance Prompts
 
 A curated collection of production-ready prompts, reusable structures, and practical techniques for creating cinematic, photorealistic, commercial, action, UGC, and narrative videos with **Seedance**.
@@ -2853,7 +2850,7 @@ Audio perspective matches distance: sharp edge scrape and breathing close, softe
 
 **Why it works:** every cut inherits downhill direction and already-carved tracks, so multiple viewpoints still describe one run. The final posture change gives the action a readable completion.
 
-Adapted from [Zaroon's original Seedance 2.0 skiing-documentary post](https://x.com/Xaroon_x/status/2059939135196930468), published May 28, 2026; the complete sour…26 tokens truncated…e-2-0-prompts?id=5383).
+Adapted from [Zaroon's original Seedance 2.0 skiing-documentary post](https://x.com/Xaroon_x/status/2059939135196930468), published May 28, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=5383).
 
 ---
 
