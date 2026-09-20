@@ -39847,7 +39847,93 @@ Adapted and rewritten from gbxcaillin / AI-Ads' September 20, 2026
 and [caption boundary implementation](https://github.com/gbxcaillin/AI-Ads/blob/84bd0036c71b99114670be1117342edec162963c/.claude/skills/ai-commercial/scripts/captions-9x16.py).
 
 
+### Dual-text pronunciation map for native-audio UGC
+
+**Verified model:** Replicate Seedance 2.5 (`bytedance/seedance-2.5`) — the
+production adapter sends one compiled screenplay of up to 30 seconds with
+`generate_audio: true`. The original developer reports that pronunciation
+notes previously reached the scriptwriter but not the native voice, so brand
+names were spoken arbitrarily. The repair is unit-tested through the exact
+Seedance compiler and request route, but no prediction ID or generated MP4 is
+public; this therefore counts as a reusable template, not a complete scenario.
+
+**Use case:** native-audio UGC must pronounce an unusual brand or person's name
+phonetically while captions, packaging, stored scripts and approvals preserve
+the correct written spelling
+
+```text
+CANONICAL COPY
+DISPLAY_NAME = [EXACT APPROVED SPELLING]
+DISPLAY_SCRIPT = [APPROVED SCRIPT USING DISPLAY_NAME]
+Keep this string unchanged for storage, review, captions, product labels and
+all visible text.
+
+PRONUNCIATION MAP
+One mapping per line:
+[DISPLAY_NAME]: "[SPOKEN FORM]"
+
+Also accept deliberate forms such as:
+[DISPLAY_NAME] = [SPOKEN FORM]
+Say "[DISPLAY_NAME]" as "[SPOKEN FORM]"
+[DISPLAY_NAME] ([SPOKEN FORM])
+
+Reject blank mappings, overlong values and ambiguous bare-dash notes. Match the
+complete name case-insensitively; never replace a substring inside a longer
+word. If the same name appears more than once, use one reviewed mapping.
+
+SPEECH-ONLY COMPILATION
+1. Preserve DISPLAY_SCRIPT as the canonical source of truth.
+2. Derive SPOKEN_SCRIPT by applying the pronunciation map to dialogue only.
+3. Insert SPOKEN_SCRIPT inside the Seedance speech instruction:
+   The presenter says, [DELIVERY DIRECTION]: "[SPOKEN_SCRIPT]"
+4. Keep scene direction, filenames, captions, metadata, packaging and any
+   visible spelling on DISPLAY_NAME. Never expose the phonetic surrogate as
+   on-screen copy.
+
+VIDEO PROMPT
+A vertical 9:16 UGC-style native-audio video. [PRESENTER] speaks directly to
+the phone camera in [SETTING], featuring [PRODUCT]. The delivery is [TONE],
+natural and believable.
+
+[SHOT / ACTION BEAT 1].
+The presenter says, [DELIVERY 1]: "[SPOKEN SCRIPT 1]"
+[CUT OR CONTINUOUS-ACTION INSTRUCTION].
+The presenter says, [DELIVERY 2]: "[SPOKEN SCRIPT 2]"
+
+Keep one speaker, stable identity, natural lip movement, clear speech and room
+tone. No generated subtitles, overlay text or extra dialogue. Product packaging
+retains DISPLAY_NAME exactly.
+
+ACCEPTANCE GATE
+- Before spending, inspect the compiled prompt: the speech quote contains the
+  phonetic form, while the stored script and caption source contain DISPLAY_NAME.
+- After generation, transcribe the audio and review the target word by ear.
+- Compare every other word with DISPLAY_SCRIPT; the mapping must not rewrite
+  ordinary names, stage directions or unrelated substrings.
+- Render captions from DISPLAY_SCRIPT or the approved canonical transcript,
+  never by copying SPOKEN_SCRIPT.
+- If pronunciation still fails, revise only that mapping and regenerate the
+  affected take; do not corrupt the canonical spelling to influence the voice.
+```
+
+**Why it works:** one string cannot safely serve both orthography and speech.
+Creating a canonical display layer and a derived speech layer gives the native
+voice a direct phonetic cue without leaking that cue into subtitles, approvals
+or the product itself. Whole-name matching limits collateral rewrites, while
+the compiled-prompt check catches a common integration failure before a paid
+generation.
+
+Adapted and rewritten from kolakachi / Frame-cast's September 20, 2026
+[production repair commit](https://github.com/kolakachi/Frame-cast/commit/ac802f52fc424c5695f6e38cacb7cdbb72d5675f),
+[pronunciation-map implementation](https://github.com/kolakachi/Frame-cast/blob/ac802f52fc424c5695f6e38cacb7cdbb72d5675f/framecast-app/api/app/Services/Ugc/PronunciationMap.php),
+[Seedance one-shot compiler](https://github.com/kolakachi/Frame-cast/blob/ac802f52fc424c5695f6e38cacb7cdbb72d5675f/framecast-app/api/app/Services/Ugc/UgcOneShotCompiler.php),
+[exact model adapter](https://github.com/kolakachi/Frame-cast/blob/ac802f52fc424c5695f6e38cacb7cdbb72d5675f/framecast-app/api/app/Services/Generation/Video/ReplicateVeoAdapter.php)
+and [compiler regression tests](https://github.com/kolakachi/Frame-cast/blob/ac802f52fc424c5695f6e38cacb7cdbb72d5675f/framecast-app/api/tests/Unit/PronunciationMapTest.php).
+
+
 ## Sources
+
+- [kolakachi / Frame-cast — September 20, 2026 Replicate Seedance 2.5 (`bytedance/seedance-2.5`) speech-only pronunciation repair: canonical display copy remains intact while a bounded whole-name map rewrites only the dialogue compiled into the native-audio prompt](https://github.com/kolakachi/Frame-cast/commit/ac802f52fc424c5695f6e38cacb7cdbb72d5675f) ([pronunciation map](https://github.com/kolakachi/Frame-cast/blob/ac802f52fc424c5695f6e38cacb7cdbb72d5675f/framecast-app/api/app/Services/Ugc/PronunciationMap.php), [one-shot compiler](https://github.com/kolakachi/Frame-cast/blob/ac802f52fc424c5695f6e38cacb7cdbb72d5675f/framecast-app/api/app/Services/Ugc/UgcOneShotCompiler.php), [exact model adapter](https://github.com/kolakachi/Frame-cast/blob/ac802f52fc424c5695f6e38cacb7cdbb72d5675f/framecast-app/api/app/Services/Generation/Video/ReplicateVeoAdapter.php), [regression tests](https://github.com/kolakachi/Frame-cast/blob/ac802f52fc424c5695f6e38cacb7cdbb72d5675f/framecast-app/api/tests/Unit/PronunciationMapTest.php))
 
 - [gbxcaillin / AI-Ads — September 20, 2026 OpenArt BytePlus Seedance 2.5 (`byte-plus-seedance-2-5 element2video`) multi-clip UGC production: three characters, twelve accepted dialogue clips, self-generated voice seeds reused as audio references, client-driven pose correction, job-ID ledger and caption boundary checks](https://github.com/gbxcaillin/AI-Ads/commit/84bd0036c71b99114670be1117342edec162963c) ([complete production ledger](https://github.com/gbxcaillin/AI-Ads/blob/84bd0036c71b99114670be1117342edec162963c/spots/gbx-ugc-storyboard/spot.json), [Priya voice reference](https://github.com/gbxcaillin/AI-Ads/blob/84bd0036c71b99114670be1117342edec162963c/spots/gbx-ugc-storyboard/voices/priya-voice.mp3), [caption boundary implementation](https://github.com/gbxcaillin/AI-Ads/blob/84bd0036c71b99114670be1117342edec162963c/.claude/skills/ai-commercial/scripts/captions-9x16.py))
 
