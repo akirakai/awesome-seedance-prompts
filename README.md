@@ -1,3 +1,6 @@
+Warning: truncated output (original token count: 100026)
+Total output lines: 6000
+
 # Awesome Seedance Prompts
 
 A curated collection of production-ready prompts, reusable structures, and practical techniques for creating cinematic, photorealistic, commercial, action, UGC, and narrative videos with **Seedance**.
@@ -403,6 +406,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Notebook-timeline adviser proof with narration-safe silent acting](#387-notebook-timeline-adviser-proof-with-narration-safe-silent-acting)
   - [Phone-adviser kitchen beat with a no-audio lip-motion guard](#388-phone-adviser-kitchen-beat-with-a-no-audio-lip-motion-guard)
   - [Fixed-camera invisible fitting room with a physical garment ledger](#389-fixed-camera-invisible-fitting-room-with-a-physical-garment-ledger)
+  - [Near-black liquid-ribbon hero with a measured loop crossfade](#390-near-black-liquid-ribbon-hero-with-a-measured-loop-crossfade)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -2849,7 +2853,7 @@ Audio perspective matches distance: sharp edge scrape and breathing close, softe
 
 **Why it works:** every cut inherits downhill direction and already-carved tracks, so multiple viewpoints still describe one run. The final posture change gives the action a readable completion.
 
-Adapted from [Zaroon's original Seedance 2.0 skiing-documentary post](https://x.com/Xaroon_x/status/2059939135196930468), published May 28, 2026; the complete source and model mapping are preserved in the [versioned gallery entry](https://youmind.com/en-US/seedance-2-0-prompts?id=5383).
+Adapted from [Zaroon's original Seedance 2.0 skiing-documentary post](https://x.com/Xaroon_x/status/2059939135196930468), published May 28, 2026; the complete sour…26 tokens truncated…e-2-0-prompts?id=5383).
 
 ---
 
@@ -24147,6 +24151,65 @@ Adapted and rewritten from reed35's September 20, 2026
 [complete prompt and model metadata](https://github.com/reed35/ai-video-tutorials/blob/8d5082edc5bc77fce7b4dc5f5bc0e780162d9321/lib/tutorials.ts)
 and [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/8d5082edc5bc77fce7b4dc5f5bc0e780162d9321/public/tutorials/invisible-fitting-room/demo-web.mp4).
 
+### 390. Near-black liquid-ribbon hero with a measured loop crossfade
+
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`) — the original
+producer records the complete still and motion prompts, exact mode and settings,
+35-credit generation, native 1276×722 result, post-loop measurements and
+committed MP4/poster  
+**Use case:** low-distraction website hero, dark-gradient motion texture,
+delivery-ready seamless loop  
+**Mode:** `omni_reference` image-to-video with `start_image`  
+**Suggested settings:** about 5 seconds, 16:9, 720p, audio off
+
+```text
+REFERENCE STILL
+Generate a 16:9 premium website-hero background: slow liquid energy ribbons
+across a deep near-black charcoal void. Keep the composition extremely low
+contrast with vast negative space. Place one faint desaturated cyan-teal glow
+in the upper-left corner only; the remaining frame falls into smooth darkness.
+Use soft atmospheric depth and subtle film grain. No text, logo, identifiable
+object, person, hard edge, bright highlight, particle swarm or contour grid.
+
+VIDEO REQUEST
+Exact model = seedance_2_5
+Mode = omni_reference
+start_image = [APPROVED LIQUID-RIBBON STILL]
+Resolution = 720p
+generate_audio = false
+
+Animate the approved still with extremely slow ambient drift. The ribbon
+pattern breathes and flows gently in place while the upper-left glow remains
+the only visual emphasis. Preserve the camera, composition, darkness, colour,
+negative space and object count. No cut, zoom, flash, exposure pulse, camera
+move or new element entering the frame. End calmly without freezing.
+
+DELIVERY LOOP
+Do not assume a “seamless loop” instruction returned to frame zero. Compare
+the first and last seconds. If the result drifts without closing, preserve the
+generated motion and cross-dissolve the final one-second tail onto the first
+one-second head, then place that blend before the untouched middle segment.
+For the verified 5.0417-second take: blend 4.0417–5.0417 s onto 0–1 s, then
+append 1–4.0417 s. Deliver 24 fps H.264, yuv420p, no audio and fast-start.
+
+Keep the native 1276×722 raster. Do not upscale a deliberately soft background.
+Encode dark gradients with enough headroom to prevent posterization; the
+verified delivery used CRF 18 after CRF 30 visibly blocked the ribbon edges.
+Extract the poster from the finished loop's first frame.
+```
+
+**Why it works:** the image prompt reserves the page's readable area before
+motion is introduced. The delivery gate treats loop closure as a measured
+property rather than trusting the prompt, while the native-size and dark-
+gradient encode rules avoid spending bytes on nonexistent detail or destroying
+the smooth tonal steps that make the background unobtrusive.
+
+Adapted and rewritten from imadmaroof / VTHacks' September 20, 2026
+[Seedance 2.5 hero-generation commit](https://github.com/imadmaroof/VTHacks/commit/ee95a33cc43ced73ea3ecf00e2dbb6b1a419ad49),
+[complete generation and measured loop record](https://github.com/imadmaroof/VTHacks/blob/ee95a33cc43ced73ea3ecf00e2dbb6b1a419ad49/docs/assets/README.md),
+[generated MP4](https://github.com/imadmaroof/VTHacks/blob/ee95a33cc43ced73ea3ecf00e2dbb6b1a419ad49/docs/assets/hero-bg.mp4)
+and [delivered poster](https://github.com/imadmaroof/VTHacks/blob/ee95a33cc43ced73ea3ecf00e2dbb6b1a419ad49/docs/assets/hero-bg.jpg).
+
 
 ## Reusable templates
 
@@ -39608,7 +39671,95 @@ the [clean-reference lineage rule](https://github.com/Mr-Salticidae/knowledge-ba
 and the [bounded evidence review](https://github.com/Mr-Salticidae/knowledge-base/blob/ade5e90c679860782c649b1a9bd17c121e39d27d/04_%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%B4%9E%E5%AF%9F/04_%E8%A7%86%E9%A2%91%E5%BD%B1%E5%83%8F%E4%B8%8E%E5%A3%B0%E9%9F%B3/2026-09-20_%E4%BD%99%E6%B8%A9_%E5%85%B3%E9%94%AE%E5%B8%A7%E5%85%88%E8%A1%8C%E5%88%B0%E9%94%9A%E7%82%B9%E5%88%B6_M02%E5%9B%9B%E8%BD%AE%E8%AF%95%E9%95%9C%E5%A4%8D%E7%9B%98_v1.md).
 
 
+### Echoed media-kind normalization and paid-result evidence binding
+
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`) — a September 20,
+2026 read-only production qualification measured twelve consecutive completed
+jobs carrying three or four references. Every returned media record used
+`role: "image"` and `data.type: "media_input"`, while the live model catalogue
+accepts semantic request slots such as `start_image`, `end_image` and
+`image_references`. The repair is proven against recorded live envelopes; it
+did not submit a new paid job, so this counts as a failure-control template,
+not a complete scenario.
+
+**Use case:** a Seedance client successfully generates and pays for a reference-
+media job but then discards its valid output because provider response labels
+do not repeat the request schema literally
+
+```text
+REQUEST RECEIPT
+Persist before polling:
+- acknowledged job ID;
+- exact top-level model ID and output type;
+- complete prompt and request parameters;
+- every reference in submitted order:
+  INDEX | DECLARED SLOT | DERIVED MEDIA KIND | UPLOADED MEDIA ID | INPUT HASH;
+- expected count, aspect ratio, duration, resolution and audio state.
+
+REQUEST VALIDATION
+Validate the outgoing role against the selected model's live catalogue.
+For Seedance 2.5 these may include start_image, end_image, image_references,
+video_references and audio_references. Never replace a declared request slot
+with the generic kind "image", "video" or "audio" merely because a status
+response uses that vocabulary.
+
+STATUS NORMALIZATION
+Locate exactly one entry whose id/job_id equals the acknowledged job ID.
+Support the provider's actual container shapes, including:
+- job_display: top-level results[] containing the job;
+- jobs_wait: top-level jobs[] with result_url;
+- job_status: one normalized generation object.
+If zero or multiple entries match, remain diagnostic and do not resubmit.
+
+MODEL BINDING
+Require the job entry's top-level model to equal the exact requested model.
+Treat a nested params.model value such as "default" only as a provider variant,
+never as the authoritative model ID. Reject an unexpected real model ID.
+
+REFERENCE-ECHO BINDING
+For every returned params.medias[i]:
+1. bind identity to data.id at the same submitted index;
+2. require data.id to equal the uploaded media ID exactly;
+3. map DECLARED SLOT -> EXPECTED KIND locally;
+4. if an echoed role exists, compare it with EXPECTED KIND, not with the
+   original slot string;
+5. accept the observed container label data.type = "media_input"; do not demand
+   that it repeat "image" or "video";
+6. treat returned media URL as descriptive only, not as identity authority.
+
+TERMINAL SUCCESS
+Accept only one HTTPS output URL from a completed entry already bound to job
+ID, top-level model, type and ordered media IDs. Archive the raw response,
+normalized evidence, output checksum and charge beside the request receipt.
+
+FAIL-CLOSED RECOVERY
+- A valid completed job rejected only by an unknown echo label is a contract
+  mismatch, not a generation failure and not permission to spend again.
+- Never retry creation while the acknowledged job can still be polled.
+- Record real provider envelopes as fixtures; do not fabricate a flat shape or
+  feed the submitted slot name back as the supposed provider echo.
+- Add a regression case where request role=start_image, response role=image,
+  data.type=media_input and data.id remains identical.
+```
+
+**Why it works:** semantic request slots and response media kinds answer
+different questions. Binding the artifact to immutable media IDs, job ID and
+top-level model preserves provenance without demanding that a provider echo
+the client's vocabulary. Recorded response fixtures also prevent a green test
+suite from hiding a collector that silently loses already-paid footage.
+
+Adapted and rewritten from axy-full / aimighty-workspace's September 20, 2026
+[live-envelope repair commit](https://github.com/axy-full/aimighty-workspace/commit/02172bcd6065d0e2f3cc4b7ba3358991c5a26763),
+[twelve-job qualification record](https://github.com/axy-full/aimighty-workspace/blob/f0f47de80aa4ba699f096d1f084da4d06d93dc4b/docs/connected-qualification-2026-09-20.md),
+[result evidence contract](https://github.com/axy-full/aimighty-workspace/blob/02172bcd6065d0e2f3cc4b7ba3358991c5a26763/lib/higgsfield-consumer/generation-contract.ts)
+and [recorded provider-envelope fixtures](https://github.com/axy-full/aimighty-workspace/blob/02172bcd6065d0e2f3cc4b7ba3358991c5a26763/tests/fixtures/connectedStatusEnvelopes.ts).
+
+
 ## Sources
+
+- [axy-full / aimighty-workspace — September 20, 2026 Higgsfield Seedance 2.5 (`seedance_2_5`) live response-contract repair: twelve consecutive completed reference-media jobs, provider-normalized media kinds, `media_input` container labels, immutable media-ID binding and recorded status-envelope fixtures](https://github.com/axy-full/aimighty-workspace/commit/02172bcd6065d0e2f3cc4b7ba3358991c5a26763) ([qualification record](https://github.com/axy-full/aimighty-workspace/blob/f0f47de80aa4ba699f096d1f084da4d06d93dc4b/docs/connected-qualification-2026-09-20.md), [evidence contract](https://github.com/axy-full/aimighty-workspace/blob/02172bcd6065d0e2f3cc4b7ba3358991c5a26763/lib/higgsfield-consumer/generation-contract.ts), [recorded envelopes](https://github.com/axy-full/aimighty-workspace/blob/02172bcd6065d0e2f3cc4b7ba3358991c5a26763/tests/fixtures/connectedStatusEnvelopes.ts))
+
+- [imadmaroof / VTHacks — September 20, 2026 Higgsfield Seedance 2.5 (`seedance_2_5`) near-black liquid-ribbon website hero: complete still and motion prompts, exact 720p no-audio request, 35-credit generation, committed 1276×722 result, measured one-second loop crossfade and dark-gradient compression decision](https://github.com/imadmaroof/VTHacks/commit/ee95a33cc43ced73ea3ecf00e2dbb6b1a419ad49) ([generation and delivery record](https://github.com/imadmaroof/VTHacks/blob/ee95a33cc43ced73ea3ecf00e2dbb6b1a419ad49/docs/assets/README.md), [generated MP4](https://github.com/imadmaroof/VTHacks/blob/ee95a33cc43ced73ea3ecf00e2dbb6b1a419ad49/docs/assets/hero-bg.mp4), [poster](https://github.com/imadmaroof/VTHacks/blob/ee95a33cc43ced73ea3ecf00e2dbb6b1a419ad49/docs/assets/hero-bg.jpg))
 
 - [gbxcaillin / AI-Ads — September 20, 2026 OpenArt BytePlus Seedance 2.5 (`byte-plus-seedance-2-5`) Brightday round one: four complete seven-second 480p picture-only prompts, exact request envelope, four task IDs, first-take acceptance notes, center-third dual-format composition and retained edit ledger](https://github.com/gbxcaillin/AI-Ads/commit/136a08906309fa0c9e6227959a3bfe06d78cb280) ([prompts, settings, task IDs and round record](https://github.com/gbxcaillin/AI-Ads/blob/136a08906309fa0c9e6227959a3bfe06d78cb280/spots/brightday-every-stage/spot.json))
 
