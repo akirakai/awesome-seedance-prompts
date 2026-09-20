@@ -40586,7 +40586,97 @@ Adapted and rewritten from kolakachi / Frame-cast's September 20, 2026
 and [uploaded-footage preservation tests](https://github.com/kolakachi/Frame-cast/blob/329d494b962e1b9006d31ab1f9ba7e7a9be20b12/framecast-app/api/tests/Feature/UgcExecutionTest.php).
 
 
+### Provider-refusal negotiation with a critical-input immutability gate
+
+**Verified model:** Runware Seedance 2.5 (`bytedance:seedance@2.5`) — the
+original developer's live probe reached ByteDance through Runware and was
+rejected before task creation or billing because this model did not accept
+`negativePrompt`. The exact provider route and refusal-aware adapter are
+public. No Seedance task ID or generated video is retained, so this counts as
+one reusable failure-control template, not a complete scenario. A later billed
+wrong-mode result that motivated the critical-field guard came from the
+adjacent Wan 2.7 video-swap route and is not represented as Seedance output.
+
+**Use case:** one provider endpoint serves several versioned video models with
+different parameter allow-lists, and an unsupported optional field should not
+kill the request or tempt the client to remove inputs that define its meaning
+**Mode:** pre-task request negotiation and semantic payload validation
+
+```text
+IMMUTABLE REQUEST INTENT
+Before the first create attempt, persist:
+- exact provider and versioned model ID;
+- task type and caller-generated task UUID;
+- complete prompt hash;
+- ordered reference-image, frame-image and input-video IDs/hashes;
+- duration, output size, aspect and audio state;
+- intended mode: [T2V / I2V / REFERENCE / VIDEO EDIT].
+
+Classify every serialized key before submission:
+CRITICAL = taskType, taskUUID, model, positivePrompt, duration,
+           inputVideo, referenceImages, frameImages, inputImages, video
+OPTIONAL = [PROVIDER-SPECIFIC DECORATION OR CONTROL FIELDS]
+
+Add model-specific aliases to CRITICAL. A key that carries the source clip,
+identity, anchor frame, reference ownership, model or requested duration is
+never optional merely because the provider rejects its current spelling.
+
+REFUSAL NEGOTIATION
+When create returns an explicit pre-task error of the form
+`Unsupported use of '[FIELD]' parameter`:
+1. Preserve the complete response, including the provider's allowed-field
+   list, and log only the names of the fields actually sent.
+2. Confirm that no task ID exists and that the provider reports no accepted or
+   billable job. If either is uncertain, stop; do not resubmit.
+3. If FIELD is OPTIONAL and is present in the payload, remove only that field.
+4. Recompute and record the payload hash, then make one bounded retry under the
+   same request-intent receipt.
+5. If the response names another optional field, repeat only within a strict
+   total-attempt cap. Reject an unknown error shape, a field already absent or
+   an exhausted cap instead of looping.
+
+CRITICAL-FIELD FAILURE
+If FIELD is CRITICAL, fail loudly before a new paid request. Do not downgrade
+an image-to-video or edit job into text-to-video, do not replace a reference
+with prompt-only identity, and do not invent another duration or model.
+
+Map the correct model-specific field name in configuration, rebuild the
+payload from the immutable request intent, and require a human- or test-reviewed
+diff before another create. The next payload must contain every critical value
+with the same hash, order and role as the original intent.
+
+POST-CREATE GATE
+Once any response returns a task ID, parameter negotiation is over. Persist the
+ID and poll that task only. A timeout, empty result or later delivery error does
+not authorize replaying the create request or stripping additional fields.
+
+ACCEPTANCE
+- the final serialized payload still matches the intended generation mode;
+- every critical field is present under the exact model-specific name;
+- each removed field was named explicitly by a pre-task provider refusal;
+- attempt count, error bodies, payload hashes and billing state are archived;
+- no credential, signed media URL or reference bytes appear in logs;
+- a provider-successful output is rejected if its subject, source clip,
+  reference ownership, duration or mode differs from the immutable receipt.
+```
+
+**Why it works:** an explicit provider refusal can safely teach a client that
+one optional field is unsupported, but it cannot prove that every named field
+is disposable. Separating optional controls from semantic inputs preserves the
+job's meaning while still allowing one narrow compatibility repair. Binding
+retries to a pre-task, no-charge state also prevents schema negotiation from
+becoming duplicate paid generation.
+
+Adapted and rewritten from Theoduras / ai-model-chat's September 20, 2026
+[exact Runware Seedance 2.5 integration and pre-billing probe](https://github.com/Theoduras/ai-model-chat/commit/a53fab5586dd6f4bd9b1ac176e32672bc0e41666),
+[live model-specific refusal parser](https://github.com/Theoduras/ai-model-chat/commit/ab5fbad0427cb2e4efe2f9824c7e837d2d2826f6),
+[critical-input safeguard](https://github.com/Theoduras/ai-model-chat/commit/1fee8cb39531ba892a4a75bdcc9b0b15aa51332c)
+and the [complete guarded adapter](https://github.com/Theoduras/ai-model-chat/blob/1fee8cb39531ba892a4a75bdcc9b0b15aa51332c/imagegen.py).
+
+
 ## Sources
+
+- [Theoduras / ai-model-chat — September 20, 2026 Runware Seedance 2.5 (`bytedance:seedance@2.5`) live request evidence: the exact route rejected `negativePrompt` before task creation or billing; the repaired adapter negotiates only explicitly refused optional fields while refusing to strip model, prompt, duration, frame, reference or source-video inputs](https://github.com/Theoduras/ai-model-chat/commit/ab5fbad0427cb2e4efe2f9824c7e837d2d2826f6) ([exact model integration and probe](https://github.com/Theoduras/ai-model-chat/commit/a53fab5586dd6f4bd9b1ac176e32672bc0e41666), [critical-input safeguard](https://github.com/Theoduras/ai-model-chat/commit/1fee8cb39531ba892a4a75bdcc9b0b15aa51332c), [guarded adapter](https://github.com/Theoduras/ai-model-chat/blob/1fee8cb39531ba892a4a75bdcc9b0b15aa51332c/imagegen.py))
 
 - [kolakachi / Frame-cast — September 20, 2026 Replicate Seedance 2.5 (`bytedance/seedance-2.5`) real-demo UGC route: a cutaway-aware native-audio compiler keeps device screens out of the generated picture, then a measured compositor overlays the original screen recording while preserving narration and refuses a missing or impossible insert](https://github.com/kolakachi/Frame-cast/commit/329d494b962e1b9006d31ab1f9ba7e7a9be20b12) ([prompt compiler](https://github.com/kolakachi/Frame-cast/blob/329d494b962e1b9006d31ab1f9ba7e7a9be20b12/framecast-app/api/app/Services/Ugc/UgcOneShotCompiler.php), [exact model adapter](https://github.com/kolakachi/Frame-cast/blob/329d494b962e1b9006d31ab1f9ba7e7a9be20b12/framecast-app/api/app/Services/Generation/Video/ReplicateVeoAdapter.php), [post-compositor](https://github.com/kolakachi/Frame-cast/blob/329d494b962e1b9006d31ab1f9ba7e7a9be20b12/framecast-app/api/app/Jobs/GenerateOneShotUgcJob.php), [media-preservation tests](https://github.com/kolakachi/Frame-cast/blob/329d494b962e1b9006d31ab1f9ba7e7a9be20b12/framecast-app/api/tests/Feature/UgcExecutionTest.php))
 
