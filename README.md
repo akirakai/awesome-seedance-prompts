@@ -406,6 +406,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Near-black liquid-ribbon hero with a measured loop crossfade](#390-near-black-liquid-ribbon-hero-with-a-measured-loop-crossfade)
   - [Six-reference coin relay with an exact-title terminal state](#391-six-reference-coin-relay-with-an-exact-title-terminal-state)
   - [Payday cold open with storyboard-owned cuts and a carried voice](#392-payday-cold-open-with-storyboard-owned-cuts-and-a-carried-voice)
+  - [Pay-yourself-first transfer with concept-owned balance motion](#393-pay-yourself-first-transfer-with-concept-owned-balance-motion)
+  - [Balance cards to rent shock and dead-scooter consequence chain](#394-balance-cards-to-rent-shock-and-dead-scooter-consequence-chain)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -24413,6 +24415,167 @@ Adapted and rewritten from gbxcaillin / Moneytails' September 20, 2026
 and the [generated draft MP4](https://github.com/gbxcaillin/Moneytails/blob/a09ba03ef172e11445cefcc1b75d03745857e8f4/assets/ep01/video/chunk01-draft-480p-v1.mp4).
 
 
+### 393. Pay-yourself-first transfer with concept-owned balance motion
+
+**Verified model:** OpenArt Seedance 2.5 (`element2video`) — the original
+producer records history ID `XVXZ1dgCzRyYm5CiZegB`, a 30-second 480p
+audio-on request, seven ordered image references, Kanga's accepted voice
+reference, 1,629 credits and a committed MP4. The take passed as a draft.  
+**Mode:** character sheets plus sequential storyboard panels and one voice
+reference, two edited shots in one generation  
+**Suggested settings:** 30 seconds, 16:9, 480p draft, native audio on
+
+**Reference contract:** images 1–3 are Kanga, Maggie and Hopper; images 4–7
+are the four ordered storyboard panels for the transfer and spending montage;
+audio 1 is Kanga's accepted voice.
+
+```text
+Create one 30-second 2D children's-cartoon sequence in two hard-cut shots.
+Use flat cel shading, thick clean outlines, bright saturated colour and the
+established sunny Australian coastal-town world. Preserve every character's
+sheet design. The financial mechanism is the main action: characters react to
+it, but never replace it with unrelated comedy. Generate no captions, account
+names, prices or prose; the editor will add all typography.
+
+VOICE AND SOUND
+Kanga speaks with audio 1: calm, warm, dry Australian delivery, lightly amused
+and never smug. Maggie is quick, bright and higher-pitched. Hopper is the
+lowest voice in the cast: slow, deep, relaxed and gravelly, clearly distinct
+from Kanga. Lip-sync each visible line. Keep upbeat music low under dialogue.
+Use clean coin sounds for the transfer and restrained phone-tap sounds in the
+montage. No extra speaker, narrator or invented line.
+
+SHOT 1 — 0–14 s: THE TRANSFER
+Close on Kanga's phone, composed from the first transfer storyboard. One tap
+starts a clearly visible stream of gold coins from the everyday-account tile
+into a separate pouch-shaped savings tile. As the last coins arrive, Kanga's
+real pouch glows in exact sync. Keep the two destinations spatially separate;
+coins move only toward savings and never reverse or duplicate.
+
+Maggie leans into frame and asks: "Did you just... pay someone before you've
+even had breakfast?" Kanga answers: "Yep. Paid myself." Hopper pokes into the
+opposite side and says: "That's not how money works, Kanga." Kanga grins and
+replies: "It's exactly how it works. Go on, do your thing."
+
+SHOT 2 — 14–30 s: MONEY MADE VISIBLE
+Hard cut into a brisk three-character spending montage, following the next
+three storyboard panels. Keep a large, high-contrast balance bar beside each
+character throughout their beat; the changing balance is the primary motion.
+
+Maggie taps for a sparkling phone case, sunglasses and a small speaker. Her
+orange bar loses one clean slice after every tap while a stack of grey ghost
+coins grows beside it to represent money already owed. Show no numbers or
+brand name. Hopper orders food, buys a gig ticket and pays for one round; his
+green bar shrinks in three causal steps until only a sliver remains. Kanga buys
+one coffee and one loaf of bread; her purple everyday bar loses only a thin
+slice while the full gold pouch tile remains visible behind it.
+
+ACCEPTANCE
+Reject a transfer that reverses, a missing or unsynchronised pouch glow,
+duplicate coins, balance changes without a preceding purchase, unreadably
+small bars, mixed bar colours, generated words, added purchases or a speaker
+swap. Confirm that Maggie's debt stack grows, Hopper's balance approaches zero
+and Kanga's savings remains visibly separate. Review Hopper's pitch against
+audio 1; if it overlaps Kanga, extract an accepted Hopper line as a dedicated
+future voice reference instead of pretending the distinction passed.
+```
+
+**Why it works:** every purchase has a visible balance consequence, so the
+lesson owns most of the runtime and character business stays connective. A
+single-direction coin transfer and separate savings tile turn an abstract rule
+into one causal action. The colour ledger lets three simultaneous financial
+states remain readable without relying on model-generated text.
+
+The accepted draft delivered the coin transfer, synchronized pouch glow and
+all three balance trajectories. The producer retained three limitations: the
+savings tile contains a dollar symbol, an incidental dog assistant appears,
+and Hopper's measured voice sits too close to Kanga's. Those are recorded as
+review findings, not rewritten as successes.
+
+Adapted and rewritten from gbxcaillin / Moneytails' September 20, 2026
+[three-chunk Seedance 2.5 production commit](https://github.com/gbxcaillin/Moneytails/commit/8f762a34c80568aff8ba3146dce7c00cf42b6ecd),
+[chunk-two prompt structure](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/assets/ep01/video/chunk02-prompt-v1.md),
+[canonical dialogue and action script](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/episodes/ep01/script.md),
+[history ID and acceptance ledger](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/assets/ep01/README.md)
+and the [generated MP4](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/assets/ep01/video/chunk02-draft-480p-v1.mp4).
+
+
+### 394. Balance cards to rent shock and dead-scooter consequence chain
+
+**Verified model:** OpenArt Seedance 2.5 (`element2video`) — the original
+producer records history ID `jdnvCeDRZdbzELiGa0Sc`, a 30-second 480p
+audio-on request, two character references, one environment plate, three
+storyboard panels, 1,629 credits and a committed MP4. The take passed as a
+draft without using a voice reference because Kanga does not speak.  
+**Mode:** multi-image reference-to-video, three causal shots in one generation  
+**Suggested settings:** 30 seconds, 16:9, 480p draft, native audio on
+
+**Reference contract:** Hopper sheet, wombat-mechanic sheet, overcast roadside
+plate, then the three storyboard panels for balance cards, rent letters and the
+failed scooter.
+
+```text
+Create one 30-second 2D children's-cartoon sequence with three declared shots.
+Use flat cel shading, thick clean outlines and the established character
+designs. The mood turns from financial comparison to incoming pressure to a
+physical emergency. Preserve cause before reaction. Generate no captions,
+prices, account names or other text; every card, envelope and clipboard stays
+blank for editorial overlays.
+
+SHOT 1 — 0–6 s: END-OF-DAY BALANCE CARDS
+Show three large side-by-side balance cards whose fill levels are unmistakable
+even at draft resolution. Maggie's orange card is partly depleted and carries
+a pulsing red owed strip beneath it. Hopper's green card drains until only a
+thin remainder survives. Kanga's purple everyday card settles higher, then a
+separate full gold pouch card slides upward behind it. Keep colours, ownership
+and front-to-back order fixed; no card changes owner.
+
+SHOT 2 — 6–14 s: THE SAME PRESSURE ARRIVES
+Hard cut to the coastal street as grey clouds roll over the bright town.
+Exactly three identical sealed envelopes travel one each into three distinct
+letterboxes and land with three solid thunks. After the first envelope is
+visibly committed, a dull, flat, official Australian landlord voice says:
+"Please be advised your rent will increase by forty dollars per week effective
+from next month." Show no landlord and no written notice.
+
+SHOT 3 — 14–30 s: THE EMERGENCY BECOMES PHYSICAL
+Hard cut to the overcast roadside plate. Hopper rides his little scooter into
+frame. It coughs twice, releases one brief puff of smoke, loses power and stops
+before he reacts. The wombat mechanic waddles in without looking up, inspects
+the scooter, then raises a blank clipboard with one deadpan beat. Hopper lifts
+his tiny guitar as if it were his only remaining asset and says in a relaxed,
+low Australian voice: "Six hundred and... mate, I've got forty dollars and a
+guitar." End on the unmoved wombat and Hopper holding the guitar.
+
+SOUND AND ACCEPTANCE
+Use card movement accents, three envelope thunks, distant wind, two scooter
+coughs and the two declared voices only. Reject small or ambiguous fill levels,
+fourth envelope, repeated letterbox, premature landlord speech, a scooter that
+keeps moving after failure, missing clipboard/guitar, generated writing,
+Wombat dialogue or any Kanga voice. Confirm Hopper remains visually and vocally
+the same across shots 1 and 3.
+```
+
+**Why it works:** the three shots form one readable causal ladder—remaining
+money, unavoidable new cost, then a concrete repair bill. Each state has one
+dominant moving object, so a 30-second chunk can change scale without losing
+the lesson. Removing generated numbers preserves the visual metaphor while
+letting the editor supply exact financial copy later.
+
+The accepted draft delivered the card transitions, weather change, three
+letter impacts, low official voice and complete scooter-to-clipboard-to-guitar
+sequence. The producer notes that the card fill levels are too small at 480p;
+the adapted prompt promotes their size to an explicit acceptance condition,
+without claiming a corrected 1080p take exists.
+
+Adapted and rewritten from gbxcaillin / Moneytails' September 20, 2026
+[three-chunk Seedance 2.5 production commit](https://github.com/gbxcaillin/Moneytails/commit/8f762a34c80568aff8ba3146dce7c00cf42b6ecd),
+[chunk-three prompt structure](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/assets/ep01/video/chunk03-prompt-v1.md),
+[canonical dialogue and action script](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/episodes/ep01/script.md),
+[history ID and acceptance ledger](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/assets/ep01/README.md)
+and the [generated MP4](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/assets/ep01/video/chunk03-draft-480p-v1.mp4).
+
+
 ## Reusable templates
 
 ### Rendered-first-frame poster and delivery-crop parity gate
@@ -40312,6 +40475,8 @@ and the [extracted soundtrack](https://github.com/gbxcaillin/Moneytails/blob/20c
 
 
 ## Sources
+
+- [gbxcaillin / Moneytails — September 20, 2026 OpenArt Seedance 2.5 `element2video` episode continuation: two new 30-second 480p chunks with compact prompt structures, canonical dialogue, ordered character/environment/storyboard references, OpenArt history IDs, acceptance notes, committed MP4s and a 1:26 running assembly](https://github.com/gbxcaillin/Moneytails/commit/8f762a34c80568aff8ba3146dce7c00cf42b6ecd) ([chunk-two prompt](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/assets/ep01/video/chunk02-prompt-v1.md), [chunk-three prompt](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/assets/ep01/video/chunk03-prompt-v1.md), [canonical script](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/episodes/ep01/script.md), [production ledger](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/assets/ep01/README.md), [chunk-two MP4](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/assets/ep01/video/chunk02-draft-480p-v1.mp4), [chunk-three MP4](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/assets/ep01/video/chunk03-draft-480p-v1.mp4))
 
 - [gbxcaillin / Moneytails — September 20, 2026 OpenArt Seedance 2.5 `element2video` episode chunk: complete three-shot 30-second prompt, seven ordered image references, carried Kanga voice, OpenArt history ID, draft acceptance ledger and committed 480p result](https://github.com/gbxcaillin/Moneytails/commit/a09ba03ef172e11445cefcc1b75d03745857e8f4) ([complete prompt](https://github.com/gbxcaillin/Moneytails/blob/a09ba03ef172e11445cefcc1b75d03745857e8f4/assets/ep01/video/chunk01-prompt-v1.md), [production ledger](https://github.com/gbxcaillin/Moneytails/blob/a09ba03ef172e11445cefcc1b75d03745857e8f4/assets/ep01/README.md), [generated draft MP4](https://github.com/gbxcaillin/Moneytails/blob/a09ba03ef172e11445cefcc1b75d03745857e8f4/assets/ep01/video/chunk01-draft-480p-v1.mp4))
 
