@@ -404,6 +404,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Phone-adviser kitchen beat with a no-audio lip-motion guard](#388-phone-adviser-kitchen-beat-with-a-no-audio-lip-motion-guard)
   - [Fixed-camera invisible fitting room with a physical garment ledger](#389-fixed-camera-invisible-fitting-room-with-a-physical-garment-ledger)
   - [Near-black liquid-ribbon hero with a measured loop crossfade](#390-near-black-liquid-ribbon-hero-with-a-measured-loop-crossfade)
+  - [Six-reference coin relay with an exact-title terminal state](#391-six-reference-coin-relay-with-an-exact-title-terminal-state)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -24207,6 +24208,122 @@ Adapted and rewritten from imadmaroof / VTHacks' September 20, 2026
 [generated MP4](https://github.com/imadmaroof/VTHacks/blob/ee95a33cc43ced73ea3ecf00e2dbb6b1a419ad49/docs/assets/hero-bg.mp4)
 and [delivered poster](https://github.com/imadmaroof/VTHacks/blob/ee95a33cc43ced73ea3ecf00e2dbb6b1a419ad49/docs/assets/hero-bg.jpg).
 
+### 391. Six-reference coin relay with an exact-title terminal state
+
+**Verified model:** OpenArt Seedance 2.5 (`element2video`) — the original
+producer publishes the complete prompt, six ordered references, 30-second
+1080p request, OpenArt history ID `ghUVvja70AQbyyBQvY8Y`, frame-by-frame
+acceptance notes and generated MP4  
+**Use case:** children's series opener, multi-character relay, native music,
+reference-locked title reveal  
+**Mode:** multi-reference image-to-video  
+**Suggested settings:** 30 seconds, 16:9, 1080p, audio on
+
+```text
+REFERENCE ORDER
+@Image1 = Kanga character hero.
+@Image2 = Maggie character sheet.
+@Image3 = Hopper character sheet.
+@Image4 = wombat mechanic character sheet.
+@Image5 = sunny Australian coastal main-street environment.
+@Image6 = approved MONEY TAILS title card.
+
+GLOBAL LOOK
+Create one 30-second 2D children's-cartoon opener with flat cel shading,
+clean heavy outlines, saturated colour and the same sunny coastal street from
+@Image5. Every character keeps the exact species, proportions, clothing,
+colours and accessories in its own reference. Use hard cuts between the named
+shots, except for the final fade. Generate no readable text before shot 8.
+
+PROP RULE
+Show at most one gold coin in any frame. It follows gravity, makes physical
+contact and cannot duplicate, dissolve or teleport while visible. Each new
+character beat may begin with the coin entering from off-screen; do not imply
+a continuous hand-off across a cut when the path is not shown.
+
+AUDIO
+One bright 120-BPM ukulele-and-handclap theme runs through the opener. Add the
+same three-note glockenspiel chime whenever the coin completes a landing or
+capture. No dialogue, narration, lyrics or extra voice.
+
+SHOT 1 — 0–5 s
+Static medium-wide outside a shop. Kanga stands in profile three-quarter view.
+One coin falls on her right; she catches it cleanly at shoulder height with her
+right paw and gives it a quiet knowing smile. Her left paw stays down.
+
+SHOT 2 — 5–8 s
+Hard cut to the same side of the street in a close-up of Kanga's torso. Her
+right paw lowers the coin completely into the pouch. Only after it disappears,
+she pats the pouch once; a restrained warm-gold glow answers with the chime.
+
+SHOT 3 — 8–11 s
+Return to medium-wide. Kanga nods once, crouches and exits frame right in two
+large bounds, tail balancing naturally. Begin one slow rightward street track.
+
+SHOT 4 — 11–15 s
+Continue tracking. Maggie descends after a coin falling from above, catches it
+in her beak just above the footpath, lands on her mismatched sneakers and puts
+it inside the orange sling bag. The flap closes before the chime; she exits
+right. Never show a second coin beside the one she owns.
+
+SHOT 5 — 15–20 s
+The track reaches a bench. Hopper lounges with closed eyes and strums his small
+guitar. A coin strikes the crown of his bucket hat, then lands flat on the
+guitar body. He opens one eye, picks it up between two fingers, raises one brow,
+shrugs, flicks it upward with the guitar neck and leaps after it out of the
+upper-right frame. Place the chime on the hat impact.
+
+SHOT 6 — 20–23 s
+Track past a bus shelter. The wombat mechanic wipes his hands without looking
+up. A coin arcs in from upper left. He lifts his red cap, catches the coin
+inside it, replaces the cap and gives one tiny deadpan nod. A bear and bull may
+argue over one newspaper in the distant background; they never enter the gag.
+
+SHOT 7 — 23–26 s
+Hard cut to a low, static wide at the beach end of the street. Kanga, Maggie
+and Hopper enter together from frame left and leap toward the camera in one
+joyful three-character composition. One trail of small gold sparkles follows
+them; identities, costume and relative scale remain separate.
+
+SHOT 8 — 26–29 s
+The sparkles converge in the centre and become @Image6 exactly: MONEY above
+TAILS, gold chunky lettering, coin as the O, five tails along the lower edge
+and the approved beach background. Do not redraw, respell or substitute the
+logo. Pulse the coin O once, play the same chime, then hold the card still.
+
+SHOT 9 — 29–30 s
+Fade the complete title card smoothly to full black. Resolve the music on the
+last chime and end on black.
+
+ACCEPTANCE
+Inspect at least one frame per second and four frames per second around Maggie
+and Hopper's fast prop beats. Reject an extra coin, missing bag/cap/guitar
+contact, identity blend, premature text, altered title lettering, dialogue,
+unfinished fade or any cut outside the nine declared windows. Record imperfect
+off-screen coin re-entry as an editorial limitation rather than claiming a
+literal continuous hand-off.
+```
+
+**Why it works:** the references divide authority cleanly between four cast
+members, one environment and the terminal logo, while the second ranges give a
+single 30-second generation enough editorial structure to carry nine shots.
+The one-coin visibility rule simplifies prop counting without pretending that
+unseen travel between hard cuts was generated. Reserving all typography for an
+exact referenced end card also prevents earlier frames from accumulating
+pseudo-lettering.
+
+The accepted take preserved the cast sheets, single visible coin, native music
+and exact final title. The producer explicitly records three minor limitations:
+the coin re-enters from above between characters, Kanga's pouch close-up is
+brief, and the coin rests on Hopper's hat brim before pickup. Those notes are
+retained as evidence boundaries rather than rewritten as successes.
+
+Adapted and rewritten from gbxcaillin / Moneytails' September 20, 2026
+[single-pass Seedance 2.5 production commit](https://github.com/gbxcaillin/Moneytails/commit/c79ff6dfdd6bf3545410f5536bf6ddd2973bfa6b),
+[complete prompt](https://github.com/gbxcaillin/Moneytails/blob/c79ff6dfdd6bf3545410f5536bf6ddd2973bfa6b/assets/series/opener/seedance/prompt-v1.md),
+[history ID, reference order and frame-review ledger](https://github.com/gbxcaillin/Moneytails/blob/c79ff6dfdd6bf3545410f5536bf6ddd2973bfa6b/assets/series/opener/README.md)
+and the [generated MP4](https://github.com/gbxcaillin/Moneytails/blob/c79ff6dfdd6bf3545410f5536bf6ddd2973bfa6b/assets/series/opener/seedance/opener-seedance25-v1.mp4).
+
 
 ## Reusable templates
 
@@ -40024,6 +40141,8 @@ and the [end-to-end request/settlement regression](https://github.com/superdesig
 
 
 ## Sources
+
+- [gbxcaillin / Moneytails — September 20, 2026 OpenArt Seedance 2.5 `element2video` single-pass series opener: complete nine-shot prompt, six ordered references, 30-second 1080p native-audio request, OpenArt history ID, frame-review ledger and committed result](https://github.com/gbxcaillin/Moneytails/commit/c79ff6dfdd6bf3545410f5536bf6ddd2973bfa6b) ([complete prompt](https://github.com/gbxcaillin/Moneytails/blob/c79ff6dfdd6bf3545410f5536bf6ddd2973bfa6b/assets/series/opener/seedance/prompt-v1.md), [production ledger](https://github.com/gbxcaillin/Moneytails/blob/c79ff6dfdd6bf3545410f5536bf6ddd2973bfa6b/assets/series/opener/README.md), [generated MP4](https://github.com/gbxcaillin/Moneytails/blob/c79ff6dfdd6bf3545410f5536bf6ddd2973bfa6b/assets/series/opener/seedance/opener-seedance25-v1.mp4))
 
 - [superdesigndev / treg — September 20, 2026 reAPI Seedance 2.5 (`reapi.video-gen.seedance-2-5.unrestricted`, `doubao-seedance-2.5-face`) live auto-duration edit: a real 480p `duration=-1` task reserved its resolution-specific maximum, completed with 854 reported credits, settled that terminal usage and released the unused hold](https://github.com/superdesigndev/treg/pull/594) ([live verification](https://github.com/superdesigndev/treg/pull/594#issuecomment-5749535138), [end-to-end regression](https://github.com/superdesigndev/treg/commit/665041b72b1daf627a559bfd7ecfd35e96182b69))
 
