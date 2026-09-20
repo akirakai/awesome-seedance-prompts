@@ -40474,7 +40474,121 @@ Adapted and rewritten from gbxcaillin / Moneytails' September 20, 2026
 and the [extracted soundtrack](https://github.com/gbxcaillin/Moneytails/blob/20c4198b86dcd1fe6e3bc711d336dc9c3f9d685d/assets/series/opener/seedance/opener-v2-soundtrack.m4a).
 
 
+### Dialogue-under-real-demo cutaway and generated-screen exclusion gate
+
+**Verified model:** Replicate Seedance 2.5 (`bytedance/seedance-2.5`) — the
+production route compiles one native-audio UGC take of up to 30 seconds, then
+places the original screen recording over a measured middle window while
+retaining the Seedance audio. The original developer reports that sending
+screen recordings through `reference_videos` recreated their interfaces with
+garbled text, which motivated the non-generative cutaway. The exact model
+adapter, prompt compiler, media-preservation guards, compositor and regression
+tests are public, but no prediction ID or generated master is retained; this
+therefore counts as one reusable template, not a complete scenario.
+
+**Use case:** a creator ad must show a real app, website or digital-product
+workflow verbatim while keeping the presenter's native Seedance narration
+continuous across the demonstration
+**Mode:** text-to-video presenter take plus deterministic post-composite
+
+```text
+SOURCE RECEIPT
+DEMO = [APPROVED SCREEN RECORDING]
+Record its hash, duration, resolution, frame rate, crop and audio state.
+The recording owns every interface pixel and product interaction. Seedance
+owns the presenter, delivery, room and narration; it never redraws the UI.
+
+PLAN GATE
+TOTAL = ceil(sum(max(1, beat.seconds))).
+Require 4 <= TOTAL <= 30 seconds for this single Seedance take.
+Reserve an on-camera head of [AT LEAST 3 SECONDS] and tail of [AT LEAST 2
+SECONDS]. The remaining interval must fit at least [1.5 SECONDS] of DEMO.
+If not, shorten the demo or lengthen the plan before generation. Never omit the
+paid-for demo silently, and never route an uploaded or stock clip into a fully
+generative one-shot that cannot preserve the selected file.
+
+PRESENTER PROMPT
+A vertical 9:16 UGC-style creator ad, generated as one native-audio take.
+[PRESENTER] talks directly to the phone camera in [SETTING], featuring
+[PRODUCT]. Delivery is [TONE], casual, imperfect and believable.
+
+[OPENING VISUAL BRIEF].
+The presenter says, [DELIVERY]: "[EXACT OPENING LINE]."
+
+Midway, the presenter naturally invites a demonstration, for example:
+"Here, let me show you." The presenter continues narrating [EXACT DEMO VOICEOVER]
+for several seconds, then returns to camera for [EXACT CLOSING LINE].
+
+Keep every phone, tablet and laptop screen off-camera or turned away throughout
+the generated picture. The presenter does not hold up, tilt, point to or mime
+an interface. No generated UI, screen text, subtitles, overlays or extra copy.
+The real interface will appear only in the post-produced cutaway. Keep one
+speaker, one identity, natural lip movement, ordinary room light and room tone.
+
+SEEDANCE REQUEST
+model = bytedance/seedance-2.5
+duration = TOTAL
+aspect_ratio = 9:16
+resolution = [480p DRAFT OR 720p MASTER]
+generate_audio = true
+watermark = false
+
+Do not attach DEMO as `reference_videos` on this route. A provider-successful
+reconstruction is still a failure when interface pixels or words change.
+
+POST-COMPOSITE
+Measure the returned presenter's actual width, height and duration; do not use
+nominal request values. Let AVAILABLE = BASE_DURATION - HEAD - TAIL.
+WINDOW = min(DEMO_DURATION, AVAILABLE).
+START = HEAD + max(0, (AVAILABLE - WINDOW) / 2).
+END = START + WINDOW.
+
+Trim DEMO to WINDOW, reset its timestamps, scale it to fit the presenter
+frame without distortion, and letterbox only when necessary. Overlay DEMO
+full-frame from START through END. Keep the base Seedance audio continuously;
+discard or deliberately mix the demo audio according to the approved sound
+plan. Return to the unaltered presenter picture after END.
+
+FAILURE AND ACCEPTANCE GATE
+- unreadable or reconstructed interface -> confirm the original recording,
+  not a generated reference-video result, owns the cutaway;
+- missing/empty/inaccessible recording -> stop before delivery and release or
+  retry the charge according to the recorded provider state;
+- insufficient middle window -> fail explicitly; never ship a demo-less ad;
+- generated device screen visible outside the cutaway -> reject the presenter
+  take and strengthen the screen-exclusion instruction;
+- narration does not invite or cover the cutaway -> revise only the cue and
+  voiceover beats, then regenerate the presenter take;
+- crop or letterbox hides required controls -> create and approve a delivery-
+  ratio demo crop before compositing rather than stretching the UI.
+
+Watch the final master end to end. Verify exact interface pixels and wording,
+demo start/end, continuous and intelligible narration, clean picture return,
+stable presenter identity, correct crop, preserved duration and no accidental
+demo audio. Archive the Seedance task receipt, generated presenter master,
+demo hash, timing calculation, compositor command and delivered file together.
+```
+
+**Why it works:** the generative model performs the part it handles well — an
+acted native-audio presenter — while the original recording remains the sole
+authority for dense interface detail and exact text. Writing the spoken
+cutaway cue into the prompt makes the later visual replacement feel motivated;
+measuring the returned master and preserving its audio prevents a post step
+from drifting away from the generated delivery. The explicit lane and failure
+gates also stop a valid uploaded asset from being silently discarded by a
+one-shot generator.
+
+Adapted and rewritten from kolakachi / Frame-cast's September 20, 2026
+[real-demo production-route commit](https://github.com/kolakachi/Frame-cast/commit/329d494b962e1b9006d31ab1f9ba7e7a9be20b12),
+[complete cutaway-aware prompt compiler](https://github.com/kolakachi/Frame-cast/blob/329d494b962e1b9006d31ab1f9ba7e7a9be20b12/framecast-app/api/app/Services/Ugc/UgcOneShotCompiler.php),
+[exact Seedance 2.5 adapter](https://github.com/kolakachi/Frame-cast/blob/329d494b962e1b9006d31ab1f9ba7e7a9be20b12/framecast-app/api/app/Services/Generation/Video/ReplicateVeoAdapter.php),
+[measured post-compositor](https://github.com/kolakachi/Frame-cast/blob/329d494b962e1b9006d31ab1f9ba7e7a9be20b12/framecast-app/api/app/Jobs/GenerateOneShotUgcJob.php)
+and [uploaded-footage preservation tests](https://github.com/kolakachi/Frame-cast/blob/329d494b962e1b9006d31ab1f9ba7e7a9be20b12/framecast-app/api/tests/Feature/UgcExecutionTest.php).
+
+
 ## Sources
+
+- [kolakachi / Frame-cast — September 20, 2026 Replicate Seedance 2.5 (`bytedance/seedance-2.5`) real-demo UGC route: a cutaway-aware native-audio compiler keeps device screens out of the generated picture, then a measured compositor overlays the original screen recording while preserving narration and refuses a missing or impossible insert](https://github.com/kolakachi/Frame-cast/commit/329d494b962e1b9006d31ab1f9ba7e7a9be20b12) ([prompt compiler](https://github.com/kolakachi/Frame-cast/blob/329d494b962e1b9006d31ab1f9ba7e7a9be20b12/framecast-app/api/app/Services/Ugc/UgcOneShotCompiler.php), [exact model adapter](https://github.com/kolakachi/Frame-cast/blob/329d494b962e1b9006d31ab1f9ba7e7a9be20b12/framecast-app/api/app/Services/Generation/Video/ReplicateVeoAdapter.php), [post-compositor](https://github.com/kolakachi/Frame-cast/blob/329d494b962e1b9006d31ab1f9ba7e7a9be20b12/framecast-app/api/app/Jobs/GenerateOneShotUgcJob.php), [media-preservation tests](https://github.com/kolakachi/Frame-cast/blob/329d494b962e1b9006d31ab1f9ba7e7a9be20b12/framecast-app/api/tests/Feature/UgcExecutionTest.php))
 
 - [gbxcaillin / Moneytails — September 20, 2026 OpenArt Seedance 2.5 `element2video` episode continuation: two new 30-second 480p chunks with compact prompt structures, canonical dialogue, ordered character/environment/storyboard references, OpenArt history IDs, acceptance notes, committed MP4s and a 1:26 running assembly](https://github.com/gbxcaillin/Moneytails/commit/8f762a34c80568aff8ba3146dce7c00cf42b6ecd) ([chunk-two prompt](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/assets/ep01/video/chunk02-prompt-v1.md), [chunk-three prompt](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/assets/ep01/video/chunk03-prompt-v1.md), [canonical script](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/episodes/ep01/script.md), [production ledger](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/assets/ep01/README.md), [chunk-two MP4](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/assets/ep01/video/chunk02-draft-480p-v1.mp4), [chunk-three MP4](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/assets/ep01/video/chunk03-draft-480p-v1.mp4))
 
