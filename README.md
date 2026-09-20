@@ -39931,7 +39931,101 @@ Adapted and rewritten from kolakachi / Frame-cast's September 20, 2026
 and [compiler regression tests](https://github.com/kolakachi/Frame-cast/blob/ac802f52fc424c5695f6e38cacb7cdbb72d5675f/framecast-app/api/tests/Unit/PronunciationMapTest.php).
 
 
+### Auto-duration sentinel reserve and terminal-credit settlement gate
+
+**Verified model:** reAPI Seedance 2.5
+(`reapi.video-gen.seedance-2-5.unrestricted`, provider model
+`doubao-seedance-2.5-face`) — the original developer ran a real 480p video
+edit with one five-second reference clip and `duration: -1`. The task completed
+with `usage.credits: 854`; the repaired route reserved the 480p auto-duration
+ceiling, settled exactly the reported credits and released the unused hold.
+**Use case:** a Seedance video-edit request must use an automatic-duration
+sentinel, but the billing layer normally expects a positive number of seconds
+and may multiply the sentinel, fall back to the wrong resolution ceiling or
+charge the whole reserve after success
+
+```text
+IMMUTABLE REQUEST RECEIPT
+Before submission, persist:
+- exact provider route and model ID;
+- task type, prompt hash and ordered reference-media IDs/hashes;
+- requested resolution and output format;
+- duration_mode = AUTO and raw duration = -1;
+- provider credit-to-currency rate and rate revision;
+- caller-generated idempotency key, balance before hold and submission time.
+
+SENTINEL CLASSIFICATION
+Treat -1 as a control value, never as a quantity:
+- do not multiply a per-second rate by -1;
+- do not clamp it silently to zero, four seconds or another normal duration;
+- match it to an explicit AUTO row for the requested resolution;
+- if that row is absent, reserve a documented safe ceiling and mark the quote
+  as fallback rather than inventing an expected duration.
+
+RESERVE VERSUS SETTLEMENT
+The pre-submit hold is a spend ceiling, not the final bill.
+For AUTO, reserve the maximum supported seconds at the requested resolution.
+Freeze the conversion value of one provider credit inside the task receipt so
+a later rate-table change cannot reprice a job already in flight.
+
+After terminal success, settle from the provider's authoritative
+usage.credits value using that frozen conversion. Release reserve - settled
+amount exactly once. Never settle the price-table ceiling merely because it
+was the amount held, and never reinterpret provider credits as dollars.
+
+ASYNC STATE GATE
+Persist the acknowledged task ID and poll only that task.
+- queued / processing: keep the hold; a provisional usage.credits = 0 is not
+  terminal billing evidence;
+- completed with a valid artifact and positive credits: settle once, release
+  the difference and archive the terminal body;
+- rejected before execution, such as a provider-edge 403: release the full
+  hold only when charge evidence confirms the request was not billable;
+- failed / cancelled / expired: preserve the provider body and route according
+  to its explicit charge evidence;
+- completed with missing or zero credits: move to AWAITING_USAGE or manual
+  review; do not bill zero or the ceiling automatically.
+
+The last branch is a defensive rule, not a verified provider behavior: the
+source observed zero credits while processing and a positive value at
+completion, but did not observe a completed response whose usage remained zero.
+
+RECONCILIATION LEDGER
+Store one row linking:
+request receipt -> task ID -> held amount -> every polled status -> terminal
+artifact -> terminal credits -> settled amount -> released amount.
+
+Reject settlement when the task ID, route, model or credit unit differs from
+the receipt. Flag any negative release, repeated close, missing hold or final
+balance delta that does not equal the settled amount.
+
+ACCEPTANCE
+- `duration=-1` selected the explicit AUTO reserve for the requested resolution;
+- the provider task was created once and its hold closed once;
+- processing-time zero usage did not settle the task;
+- terminal provider credits, not the reserve, determine the final debit;
+- released amount plus settled amount equals the original hold;
+- task, artifact, usage record and balance delta share one auditable lineage.
+```
+
+**Why it works:** an automatic-duration sentinel belongs to request control,
+while the reserve and final charge belong to two different billing phases.
+Separating those meanings prevents `-1` from becoming a negative multiplier
+and prevents a conservative maximum from becoming the bill. In the live test,
+the route held 3,558 credits for a 30-second 480p ceiling, then the provider
+reported 854 credits at completion; settlement charged 854 and released 2,704.
+The same request had previously been blocked by an unrelated 1080p fallback
+ceiling.
+
+Adapted and rewritten from superdesigndev / treg's September 20, 2026
+[Seedance 2.5 auto-duration settlement pull request](https://github.com/superdesigndev/treg/pull/594),
+[live provider verification](https://github.com/superdesigndev/treg/pull/594#issuecomment-5749535138)
+and the [end-to-end request/settlement regression](https://github.com/superdesigndev/treg/commit/665041b72b1daf627a559bfd7ecfd35e96182b69).
+
+
 ## Sources
+
+- [superdesigndev / treg — September 20, 2026 reAPI Seedance 2.5 (`reapi.video-gen.seedance-2-5.unrestricted`, `doubao-seedance-2.5-face`) live auto-duration edit: a real 480p `duration=-1` task reserved its resolution-specific maximum, completed with 854 reported credits, settled that terminal usage and released the unused hold](https://github.com/superdesigndev/treg/pull/594) ([live verification](https://github.com/superdesigndev/treg/pull/594#issuecomment-5749535138), [end-to-end regression](https://github.com/superdesigndev/treg/commit/665041b72b1daf627a559bfd7ecfd35e96182b69))
 
 - [kolakachi / Frame-cast — September 20, 2026 Replicate Seedance 2.5 (`bytedance/seedance-2.5`) speech-only pronunciation repair: canonical display copy remains intact while a bounded whole-name map rewrites only the dialogue compiled into the native-audio prompt](https://github.com/kolakachi/Frame-cast/commit/ac802f52fc424c5695f6e38cacb7cdbb72d5675f) ([pronunciation map](https://github.com/kolakachi/Frame-cast/blob/ac802f52fc424c5695f6e38cacb7cdbb72d5675f/framecast-app/api/app/Services/Ugc/PronunciationMap.php), [one-shot compiler](https://github.com/kolakachi/Frame-cast/blob/ac802f52fc424c5695f6e38cacb7cdbb72d5675f/framecast-app/api/app/Services/Ugc/UgcOneShotCompiler.php), [exact model adapter](https://github.com/kolakachi/Frame-cast/blob/ac802f52fc424c5695f6e38cacb7cdbb72d5675f/framecast-app/api/app/Services/Generation/Video/ReplicateVeoAdapter.php), [regression tests](https://github.com/kolakachi/Frame-cast/blob/ac802f52fc424c5695f6e38cacb7cdbb72d5675f/framecast-app/api/tests/Unit/PronunciationMapTest.php))
 
