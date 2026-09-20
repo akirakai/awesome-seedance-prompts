@@ -398,6 +398,11 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Desert-superstorm convoy to cockpit panic and airborne cut](#382-desert-superstorm-convoy-to-cockpit-panic-and-airborne-cut)
   - [Two-miss marksmanship reset with breath-owned payoff](#383-two-miss-marksmanship-reset-with-breath-owned-payoff)
   - [Paranormal forest push-in with crossed search beams](#384-paranormal-forest-push-in-with-crossed-search-beams)
+  - [Dawn-blind reveal with dual-format center-safe framing](#385-dawn-blind-reveal-with-dual-format-center-safe-framing)
+  - [Three-generation café dolly through one crop-safe lane](#386-three-generation-café-dolly-through-one-crop-safe-lane)
+  - [Notebook-timeline adviser proof with narration-safe silent acting](#387-notebook-timeline-adviser-proof-with-narration-safe-silent-acting)
+  - [Phone-adviser kitchen beat with a no-audio lip-motion guard](#388-phone-adviser-kitchen-beat-with-a-no-audio-lip-motion-guard)
+  - [Fixed-camera invisible fitting room with a physical garment ledger](#389-fixed-camera-invisible-fitting-room-with-a-physical-garment-ledger)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -23949,6 +23954,199 @@ Adapted and rewritten from Glenn Williams's September 19, 2026
 [complete prompt and exact request](https://github.com/Glenn-castshadow/UFO_site/blob/dead168e3ed13cc9cd1ce37ad4c66c1bce03159a/generate.ts)
 and [generated MP4](https://github.com/Glenn-castshadow/UFO_site/blob/dead168e3ed13cc9cd1ce37ad4c66c1bce03159a/assets/hero.mp4).
 
+### 385. Dawn-blind reveal with dual-format center-safe framing
+
+**Verified model:** OpenArt BytePlus Seedance 2.5
+(`byte-plus-seedance-2-5`) — the producer records the complete prompt, OpenArt
+task ID `1k29vcgX4hZtJUQ5JQLP`, exact request and an accepted first take  
+**Use case:** face-free brand opener, landscape master for portrait reframe  
+**Mode:** text-to-video  
+**Suggested settings:** 7 seconds, 16:9, 480p draft, audio off
+
+```text
+Create one continuous seven-second photoreal brand-film shot in a quiet
+Melbourne apartment at dawn. Keep the essential action inside the center third
+so the master can later be reframed to 9:16. Begin close on a centered bedside
+table: one face-down phone with a plain dark case, a glass of water and one
+small hot-pink ceramic cup. No screen, notification, logo or readable text.
+
+A hand reaches past the phone and pulls one blind cord. The slats open
+physically and warm first light sweeps across the table, bed and room. As the
+light reaches the window, drift slowly backward to reveal one adult sitting up
+on the bed from behind and stretching; rooftops and the city skyline remain
+soft beyond the glass. Nobody turns toward the lens. Preserve the same room,
+phone, cup, blind direction and exposure.
+
+Use clean whites, soft navy shadows, one pink accent, shallow natural depth and
+fine grain. Two beats in one shot: table detail, then the room waking. No cut,
+dialogue, lip movement, screen-pointing, extra hand, duplicated prop, text,
+subtitle, logo or watermark.
+```
+
+**Why it works:** the face-down phone removes an unreliable screen while the
+blind motivates the light transition. One center lane protects both beats when
+the wide take is cropped vertically.
+
+Adapted and rewritten from gbxcaillin / AI-Ads' September 20, 2026
+[Brightday generation commit](https://github.com/gbxcaillin/AI-Ads/commit/136a08906309fa0c9e6227959a3bfe06d78cb280)
+and [prompt, route, task ID, settings and take record](https://github.com/gbxcaillin/AI-Ads/blob/136a08906309fa0c9e6227959a3bfe06d78cb280/spots/brightday-every-stage/spot.json).
+
+### 386. Three-generation café dolly through one crop-safe lane
+
+**Verified model:** OpenArt BytePlus Seedance 2.5
+(`byte-plus-seedance-2-5`) — the producer records the complete prompt, OpenArt
+task ID `LzzDriwQn2594UmsPj51`, exact request and an accepted first take  
+**Use case:** one-take life-stage montage, portrait-safe ensemble blocking  
+**Mode:** text-to-video  
+**Suggested settings:** 7 seconds, 16:9, 480p draft, audio off
+
+```text
+Create one continuous seven-second photoreal brand-film shot in a bright
+Melbourne café in warm morning sun. A long window bench runs parallel to the
+camera. Three adults sit well apart, each absorbed in a separate routine. Move
+in one slow lateral dolly so they pass through the same center-third lane one
+after another rather than appearing as a posed group.
+
+First reveal a man in his mid-twenties with a work lanyard taking his first sip
+of coffee; a closed laptop has a plain matte lid. Next, bring a woman in her
+forties into the lane; she has rolled house plans, one pink folder and writes a
+private note without visible words. Finally, reveal a man in his sixties
+reading a folded newspaper held low, all print soft and unreadable. Each person
+keeps a distinct seat, age and wardrobe and leaves the center only through
+camera motion.
+
+Use clean whites, soft navy shadows, one pink accent, shallow depth and fine
+grain. Nobody speaks, interacts or looks at the camera. No cut, group-photo
+arrangement, identity blending, seat swap, duplicated person, readable print,
+subtitle, logo or watermark.
+```
+
+**Why it works:** the dolly owns the sequence. Reusing one arrival lane makes
+three life stages readable in seven seconds and preserves them in a tall crop.
+
+Adapted and rewritten from gbxcaillin / AI-Ads' September 20, 2026
+[Brightday generation commit](https://github.com/gbxcaillin/AI-Ads/commit/136a08906309fa0c9e6227959a3bfe06d78cb280)
+and [prompt, route, task ID, settings and take record](https://github.com/gbxcaillin/AI-Ads/blob/136a08906309fa0c9e6227959a3bfe06d78cb280/spots/brightday-every-stage/spot.json).
+
+### 387. Notebook-timeline adviser proof with narration-safe silent acting
+
+**Verified model:** OpenArt BytePlus Seedance 2.5
+(`byte-plus-seedance-2-5`) — the producer records the complete prompt, OpenArt
+task ID `CMubSni80nmVydSx7XAs`, exact request and an accepted first take  
+**Use case:** adviser-client trust beat, voice-over carrier picture without UI  
+**Mode:** text-to-video  
+**Suggested settings:** 7 seconds, 16:9, 480p draft, audio off
+
+```text
+Create one continuous seven-second photoreal brand-film shot in a bright
+meeting room with a window onto a Melbourne street. At the near corner of a
+light timber table, keep an adviser in her forties and a client in his thirties
+stacked in depth inside the center third: she sits nearer the lens and he stays
+just behind her shoulder. Both look down at one shared open notebook.
+
+The adviser draws one horizontal line with exactly three small marks, without
+letters or numbers. The client follows the pen, nods once and points with his
+own pen only after her line is complete. One pink coffee cup sits beside the
+notebook and never moves. Push in slowly while preserving face, hand, notebook
+and cup ownership. Their mouths may show only indistinct conversational motion;
+generate no speech because a separate narration track owns the edit.
+
+Use warm daylight, clean whites, soft navy shadows, shallow depth and fine
+grain. No laptop, phone, screen, readable writing, look to camera, extra pen,
+prop transfer, cut, subtitle, logo or watermark.
+```
+
+**Why it works:** one three-mark drawing communicates a plan without unreliable
+typography or interfaces. Audio-off prevents narration from being assigned to
+the adviser, while the depth stack remains portrait-safe.
+
+Adapted and rewritten from gbxcaillin / AI-Ads' September 20, 2026
+[Brightday generation commit](https://github.com/gbxcaillin/AI-Ads/commit/136a08906309fa0c9e6227959a3bfe06d78cb280)
+and [prompt, route, task ID, settings and take record](https://github.com/gbxcaillin/AI-Ads/blob/136a08906309fa0c9e6227959a3bfe06d78cb280/spots/brightday-every-stage/spot.json).
+
+### 388. Phone-adviser kitchen beat with a no-audio lip-motion guard
+
+**Verified model:** OpenArt BytePlus Seedance 2.5
+(`byte-plus-seedance-2-5`) — the producer records the complete prompt, OpenArt
+task ID `qQa9t4i2jSHLIpz1nVV4`, exact request and an accepted first take  
+**Use case:** service-access commercial, narration-led phone-call performance  
+**Mode:** text-to-video  
+**Suggested settings:** 7 seconds, 16:9, 480p draft, audio off
+
+```text
+Create one continuous seven-second photoreal brand-film shot in a sunlit
+Melbourne home kitchen. Keep one woman in her thirties inside the center third,
+relaxed against the bench with one phone held to one ear. She listens first,
+then gives one small half-smile and nod. Only after the nod, her free hand picks
+up one pen and writes one short unreadable line in an open notebook. The phone
+never changes hands; pen and notebook stay on the bench until their beat.
+
+A garden stays soft beyond the window and one pink mug remains fixed on the
+bench. Push in slowly without changing the room axis. Allow occasional natural
+lip motion that suggests a private call, but generate no voice or synchronized
+words: a separate voice-over owns the soundtrack.
+
+Use warm daylight, clean whites, soft navy shadows, shallow depth, fine grain
+and restrained performance. Nobody looks at the lens. No extra person, second
+phone, duplicated hand, readable note, interface, cut, subtitle, logo or
+watermark.
+```
+
+**Why it works:** listening, nodding and writing form a causal performance
+without audible dialogue. The picture-only contract prevents invented speech
+from competing with narration.
+
+Adapted and rewritten from gbxcaillin / AI-Ads' September 20, 2026
+[Brightday generation commit](https://github.com/gbxcaillin/AI-Ads/commit/136a08906309fa0c9e6227959a3bfe06d78cb280)
+and [prompt, route, task ID, settings and take record](https://github.com/gbxcaillin/AI-Ads/blob/136a08906309fa0c9e6227959a3bfe06d78cb280/spots/brightday-every-stage/spot.json).
+
+### 389. Fixed-camera invisible fitting room with a physical garment ledger
+
+**Verified model:** Gemini Omni · Seedance 2.0 — the public tutorial retains the
+full prompt, fifteen-panel reference, exact model label and generated MP4. Its
+prompt says 9:16 while the retained result is 16:9; this adaptation uses the
+verified output ratio  
+**Use case:** fashion transformation, fixed-stage continuity, practical wipe  
+**Mode:** storyboard-guided text/image-to-video  
+**Suggested settings:** 10 seconds, 16:9, one storyboard reference
+
+```text
+Create one locked-front-camera, ten-second ultra-photoreal fashion film on a
+black seamless stage. Keep the same tall matte-white faceless male mannequin
+centered full-body. It begins in fitted black shorts. Only female hands in long
+matte-black gloves enter; they remotely direct clothes but never touch him. Use
+real cloth weight, folds, gravity and inertia. No glow, portal, particle, body
+morph or teleport.
+
+0–2 s: espresso oversized shirt, caramel wide trousers and brown loafers dress
+him in readable order. He poses; one hand swipe pulls them off into PILE A.
+2–4 s: cream knit, cognac leather jacket, dark-chocolate trousers and boots
+assemble. After the pose, both hands pull them into PILE B beside PILE A.
+4–6 s: cream turtleneck and coffee trousers dress first; a long mocha coat
+circles once with visible inertia and settles. After the pose, one wide swipe
+removes the look into PILE C. Never erase or merge any pile.
+6–8.5 s: assemble ivory silk shirt, espresso tailored trousers, burnt-orange
+waistcoat, long dark-chocolate jacket, cognac shoes, tie and gold brooch in that
+order. Small remote gestures adjust waist, shoulders, lapels and cuffs through
+believable fabric tension.
+8.5–9.2 s: hold one final pose surrounded by three distinct discarded piles.
+9.2–10 s: one gloved hand reaches forward; he physically takes it and walks
+toward the fixed lens until his jacket creates a natural wipe to black.
+
+Use a coffee palette with one burnt-orange accent, rim light and distinct silk,
+leather, cashmere and wool. No identity change, garment fusion, disappearing
+pile, extra hand, digital fade, text, subtitle, logo or watermark.
+```
+
+**Why it works:** four wardrobe states and three persistent discard piles turn
+a vague quick-change into a material ledger. The jacket supplies a practical
+ending while the no-magic contract makes cloth physics the effect.
+
+Adapted and rewritten from reed35's September 20, 2026
+[Gemini Omni · Seedance 2.0 tutorial release](https://github.com/reed35/ai-video-tutorials/commit/8d5082edc5bc77fce7b4dc5f5bc0e780162d9321),
+[complete prompt and model metadata](https://github.com/reed35/ai-video-tutorials/blob/8d5082edc5bc77fce7b4dc5f5bc0e780162d9321/lib/tutorials.ts)
+and [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/8d5082edc5bc77fce7b4dc5f5bc0e780162d9321/public/tutorials/invisible-fitting-room/demo-web.mp4).
+
 
 ## Reusable templates
 
@@ -39411,6 +39609,10 @@ and the [bounded evidence review](https://github.com/Mr-Salticidae/knowledge-bas
 
 
 ## Sources
+
+- [gbxcaillin / AI-Ads — September 20, 2026 OpenArt BytePlus Seedance 2.5 (`byte-plus-seedance-2-5`) Brightday round one: four complete seven-second 480p picture-only prompts, exact request envelope, four task IDs, first-take acceptance notes, center-third dual-format composition and retained edit ledger](https://github.com/gbxcaillin/AI-Ads/commit/136a08906309fa0c9e6227959a3bfe06d78cb280) ([prompts, settings, task IDs and round record](https://github.com/gbxcaillin/AI-Ads/blob/136a08906309fa0c9e6227959a3bfe06d78cb280/spots/brightday-every-stage/spot.json))
+
+- [reed35 / KrevixAi — September 20, 2026 Gemini Omni · Seedance 2.0 invisible fitting room: complete ten-second prompt, fifteen-panel reference, four physical wardrobe states, persistent discard piles, fixed-camera occlusion ending and generated MP4](https://github.com/reed35/ai-video-tutorials/commit/8d5082edc5bc77fce7b4dc5f5bc0e780162d9321) ([prompt and exact model label](https://github.com/reed35/ai-video-tutorials/blob/8d5082edc5bc77fce7b4dc5f5bc0e780162d9321/lib/tutorials.ts), [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/8d5082edc5bc77fce7b4dc5f5bc0e780162d9321/public/tutorials/invisible-fitting-room/demo-web.mp4))
 
 - [Mr-Salticidae — September 20, 2026 Dreamina Seedance 2.5 four-round position-anchor and reference-lineage trial: four paid 25-second 720p previews, one-variable diagnosis, creator verdict, explicit single-project evidence boundary and reusable operating rules](https://github.com/Mr-Salticidae/knowledge-base/commit/ade5e90c679860782c649b1a9bd17c121e39d27d) ([position-only anchors](https://github.com/Mr-Salticidae/knowledge-base/blob/ade5e90c679860782c649b1a9bd17c121e39d27d/04_%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%B4%9E%E5%AF%9F/04_%E8%A7%86%E9%A2%91%E5%BD%B1%E5%83%8F%E4%B8%8E%E5%A3%B0%E9%9F%B3/%E9%94%9A%E7%82%B9%E5%8F%AA%E7%BB%99%E7%AB%99%E4%BD%8D%E5%BE%8B_%E5%8A%A8%E4%BD%9C%E4%BA%A4%E7%BB%99%E8%A7%86%E9%A2%91%E6%A8%A1%E5%9E%8B_v1.md), [clean-reference lineage](https://github.com/Mr-Salticidae/knowledge-base/blob/ade5e90c679860782c649b1a9bd17c121e39d27d/04_%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%B4%9E%E5%AF%9F/04_%E8%A7%86%E9%A2%91%E5%BD%B1%E5%83%8F%E4%B8%8E%E5%A3%B0%E9%9F%B3/%E6%B4%BE%E7%94%9F%E5%9B%BE%E4%B8%8D%E8%BF%9B%E8%A7%86%E9%A2%91%E8%BE%93%E5%85%A5%E5%BE%8B_%E5%99%AA%E7%82%B9%E9%9A%8F%E7%BC%96%E8%BE%91%E4%BB%A3%E6%95%B0%E7%B4%AF%E7%A7%AF_v1.md), [experiment review](https://github.com/Mr-Salticidae/knowledge-base/blob/ade5e90c679860782c649b1a9bd17c121e39d27d/04_%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%B4%9E%E5%AF%9F/04_%E8%A7%86%E9%A2%91%E5%BD%B1%E5%83%8F%E4%B8%8E%E5%A3%B0%E9%9F%B3/2026-09-20_%E4%BD%99%E6%B8%A9_%E5%85%B3%E9%94%AE%E5%B8%A7%E5%85%88%E8%A1%8C%E5%88%B0%E9%94%9A%E7%82%B9%E5%88%B6_M02%E5%9B%9B%E8%BD%AE%E8%AF%95%E9%95%9C%E5%A4%8D%E7%9B%98_v1.md))
 
