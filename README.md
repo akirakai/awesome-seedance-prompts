@@ -39752,7 +39752,87 @@ Adapted and rewritten from axy-full / aimighty-workspace's September 20, 2026
 and [recorded provider-envelope fixtures](https://github.com/axy-full/aimighty-workspace/blob/02172bcd6065d0e2f3cc4b7ba3358991c5a26763/tests/fixtures/connectedStatusEnvelopes.ts).
 
 
+### Self-generated voice seed handoff for a multi-clip UGC character
+
+**Verified model:** OpenArt BytePlus Seedance 2.5
+(`byte-plus-seedance-2-5 element2video`) — the original producer records three
+characters, twelve accepted dialogue clips, every OpenArt job ID, reference
+asset URLs, transcript checks and the rejected takes. Clip one of each story
+created the character's voice from its image and written voice brief; that
+audio then governed clips two through four.  
+**Use case:** a UGC story needs one stable face and voice across several short
+clips, but no external recording of the intended synthetic voice exists
+
+```text
+CHARACTER RECEIPT
+For each story, freeze one approved character image and one written voice brief:
+- appearance, wardrobe and setting = [APPROVED IMAGE];
+- voice = [RANGE, TEMPO, ACCENT LEAN, TEXTURE AND TEMPERAMENT];
+- script = [ORDERED VERBATIM LINES];
+- delivery = 9:16, 480p, generated audio on;
+- one job receipt and transcript verdict per clip.
+
+VOICE-SEED CLIP
+Input elements: [CHARACTER IMAGE] only.
+Prompt the visible person to speak line 01 verbatim in the written voice.
+Keep the face, setting and wardrobe faithful to the image. Use natural UGC
+delivery, small eye and hand movement, clean room tone and no added narrator,
+music, caption, second speaker or off-camera reply.
+
+Accept the seed only when the face matches the image, the transcript matches
+line 01 word for word and the generated voice fits the brief. Archive the
+complete result and job ID. Extract its audio without time-stretching; encode a
+clean mono 44.1 kHz reference and record the source clip ID and audio hash.
+
+FOLLOWING CLIPS
+Input elements in fixed order:
+1. the same approved character image;
+2. the accepted audio extracted from clip 01.
+
+The person in image 1 speaks line [02 / 03 / 04] using the voice in audio 1.
+Preserve the same identity, wardrobe, setting family and vocal character.
+Size each clip from the spoken line at roughly 2.5 words per second plus one
+short settling beat; do not force every line into an identical duration.
+No other voice, narrator, paraphrase, music, caption or speaker swap.
+
+POSE-CORRECTION BRANCH
+If the client rejects only body position or framing, make a new character still
+from the accepted face before regenerating the affected clips. Keep the
+already-approved voice reference: it is audio-only and must not inherit the old
+pose. Replace the still in every later request; do not mix old and new pose
+images inside the same character sequence.
+
+ACCEPTANCE LEDGER
+For every clip record:
+- requested line, actual duration, job ID and input asset IDs;
+- transcript exactness and face-to-sheet verdict;
+- audio-reference source ID and hash;
+- accepted, rejected or superseded status with reason.
+
+Assemble only accepted clips. Trim around spoken content with a small breath
+margin. If title cards or black gaps separate stories, clamp each caption's end
+to the corresponding section boundary so text never survives across the cut.
+Measure the finished reel's loudness and true peak after assembly.
+```
+
+**Why it works:** the first successful generation becomes an audible casting
+test and a reusable voice asset, so later clips do not ask text alone to
+recreate the same timbre. Separating the image-owned pose from the audio-owned
+voice also lets a client correct blocking without discarding an accepted vocal
+identity. The source's twelve accepted clips reportedly preserved both face
+and verbatim dialogue; three old-pose Mark takes were retained as superseded
+evidence rather than silently hidden.
+
+Adapted and rewritten from gbxcaillin / AI-Ads' September 20, 2026
+[twelve-clip Seedance 2.5 production commit](https://github.com/gbxcaillin/AI-Ads/commit/84bd0036c71b99114670be1117342edec162963c),
+[complete model, character, asset, job-ID and acceptance ledger](https://github.com/gbxcaillin/AI-Ads/blob/84bd0036c71b99114670be1117342edec162963c/spots/gbx-ugc-storyboard/spot.json),
+[Priya voice reference](https://github.com/gbxcaillin/AI-Ads/blob/84bd0036c71b99114670be1117342edec162963c/spots/gbx-ugc-storyboard/voices/priya-voice.mp3)
+and [caption boundary implementation](https://github.com/gbxcaillin/AI-Ads/blob/84bd0036c71b99114670be1117342edec162963c/.claude/skills/ai-commercial/scripts/captions-9x16.py).
+
+
 ## Sources
+
+- [gbxcaillin / AI-Ads — September 20, 2026 OpenArt BytePlus Seedance 2.5 (`byte-plus-seedance-2-5 element2video`) multi-clip UGC production: three characters, twelve accepted dialogue clips, self-generated voice seeds reused as audio references, client-driven pose correction, job-ID ledger and caption boundary checks](https://github.com/gbxcaillin/AI-Ads/commit/84bd0036c71b99114670be1117342edec162963c) ([complete production ledger](https://github.com/gbxcaillin/AI-Ads/blob/84bd0036c71b99114670be1117342edec162963c/spots/gbx-ugc-storyboard/spot.json), [Priya voice reference](https://github.com/gbxcaillin/AI-Ads/blob/84bd0036c71b99114670be1117342edec162963c/spots/gbx-ugc-storyboard/voices/priya-voice.mp3), [caption boundary implementation](https://github.com/gbxcaillin/AI-Ads/blob/84bd0036c71b99114670be1117342edec162963c/.claude/skills/ai-commercial/scripts/captions-9x16.py))
 
 - [axy-full / aimighty-workspace — September 20, 2026 Higgsfield Seedance 2.5 (`seedance_2_5`) live response-contract repair: twelve consecutive completed reference-media jobs, provider-normalized media kinds, `media_input` container labels, immutable media-ID binding and recorded status-envelope fixtures](https://github.com/axy-full/aimighty-workspace/commit/02172bcd6065d0e2f3cc4b7ba3358991c5a26763) ([qualification record](https://github.com/axy-full/aimighty-workspace/blob/f0f47de80aa4ba699f096d1f084da4d06d93dc4b/docs/connected-qualification-2026-09-20.md), [evidence contract](https://github.com/axy-full/aimighty-workspace/blob/02172bcd6065d0e2f3cc4b7ba3358991c5a26763/lib/higgsfield-consumer/generation-contract.ts), [recorded envelopes](https://github.com/axy-full/aimighty-workspace/blob/02172bcd6065d0e2f3cc4b7ba3358991c5a26763/tests/fixtures/connectedStatusEnvelopes.ts))
 
