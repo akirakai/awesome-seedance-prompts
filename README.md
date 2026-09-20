@@ -24578,6 +24578,126 @@ and the [generated MP4](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c8
 
 ## Reusable templates
 
+### Sequential start-plate lineage, complete-gesture extraction and story-runtime hold gate
+
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`) — the original
+producer records four `omni_reference` generations, each using one
+`start_image`, 5 seconds, 1080p, no audio and 60 credits. Four approved start
+plates carried the same adult subject, wardrobe, product label and box through
+a receive–apply–compare–react product story. Complete gestures were extracted
+from the generated clips and assembled into a committed 1920×824, 10.1-second
+MP4; the website carousel was then held for 10.5 seconds so the comparison
+payoff remained visible  
+**Use case:** a short product narrative needs more controlled state continuity
+than one long generation, but every cut must still land on a complete physical
+action and the publishing surface must not advance before the story finishes  
+**Mode:** approved start plate per shot, short Seedance generations,
+gesture-complete extraction and deterministic assembly
+
+```text
+STORY STATE LEDGER
+Write one irreversible product-state chain before making images:
+1. [SUBJECT] receives [PRODUCT PART] from [MACHINE].
+2. The same subject applies it to [PRODUCT].
+3. The finished product is placed beside [COMPARISON PRODUCT].
+4. The subject reads the visible difference and reacts once.
+
+Declare the invariant set once:
+SUBJECT = [FACE, HAIR, WARDROBE]
+MACHINE = [EXACT APPROVED DESIGN]
+PRODUCT = [BOX / BOTTLE / DEVICE GEOMETRY]
+LABEL = [APPROVED ART, COLOR AND PLACEMENT]
+LIGHT / SET / SCREEN DIRECTION = [FIXED CONTRACT]
+
+START-PLATE LINEAGE
+Create one approved start plate for each story state at the delivery aspect.
+Plate 1 uses the real product or machine render as its geometry reference.
+For each later plate, use the last approved plate only as continuity context,
+then change exactly the state needed for the next action. Compare every new
+plate against the invariant set before continuing. Reject identity, wardrobe,
+label, product, lighting or screen-direction drift immediately; do not let an
+unreviewed derived plate become the next source.
+
+The plates own shot openings, not motion. Do not pre-draw the completed gesture
+into a plate if Seedance is supposed to perform that gesture.
+
+PER-SHOT SEEDANCE BRIEF
+Exact model = seedance_2_5.
+Mode = omni_reference with start_image = [APPROVED PLATE N].
+Duration = 5 seconds. Resolution = 1080p. Audio = off.
+
+@StartImage owns the adult subject, face, wardrobe, set, product geometry,
+label design, lighting and screen direction. Animate exactly one action:
+[START STATE] -> [CONTACT OR TRANSFER] -> [COMPLETED STATE] -> [SHORT SETTLE].
+Use [LOCKED CAMERA OR ONE SMALL DECLARED MOVE]. Keep hands, product and contact
+point visible until the action is physically complete. Do not introduce the
+next story beat, duplicate the product, rewrite the label, swap hands, reverse
+the action or cut away before completion.
+
+Repeat with one approved plate and one physical action per shot. For the final
+shot, preserve both comparison products and give the subject one restrained,
+readable reaction; no new product state begins afterward.
+
+GESTURE-COMPLETE EXTRACTION
+Probe every returned clip and record task, settings, plate hash and real media
+properties. Mark four boundaries for each action:
+APPROACH | FIRST CONTACT | COMPLETION | SETTLE.
+Choose one continuous extract that includes contact through settle. Never cut
+inside a handoff, peel, placement or gaze change merely to hit a target length.
+If no continuous interval contains a complete action, reject that generation.
+
+ASSEMBLY TABLE
+SHOT | SOURCE CLIP | IN | OUT | COMPLETE ACTION | JOIN
+1    | [ID]        | .. | ..  | receive         | hard cut
+2    | [ID]        | .. | ..  | apply           | [hard cut]
+3    | [ID]        | .. | ..  | compare         | [brief dip if required]
+4    | [ID]        | .. | ..  | react + settle  | fade to black
+
+Use the shortest join that keeps the state change legible. A brief dip may
+separate two substantially different compositions, but it must not conceal a
+missing contact frame or product discontinuity. Apply opening and closing
+fades only after the action extracts are locked. The verified production used
+2.7 s + 2.1 s + 2.9 s + 2.3 s, one short dip between shots 2 and 3, and
+0.25-second black fades; treat these as measured evidence, not universal
+durations.
+
+PUBLISHING-RUNTIME GATE
+FINAL_DURATION = probed duration of the assembled master.
+DISPLAY_HOLD >= FINAL_DURATION + [SMALL PLAYBACK MARGIN].
+Use a one-shot timeout tied to the active slide, not a global interval that can
+advance midway through playback. For the verified 10.1-second master, the
+producer used a 10.5-second hold. On replay, navigation or reduced motion,
+preserve the approved poster and never expose a blank or half-finished state.
+
+ACCEPTANCE
+- every shot uses the exact model, mode, start-plate hash and audio policy;
+- face, wardrobe, machine, label and box survive every approved plate and cut;
+- each extract shows one complete action from contact through settle;
+- product ownership and comparison state progress only forward;
+- no transition hides an incomplete gesture or duplicated product;
+- final comparison is readable without narration;
+- encoded dimensions, duration and frame cadence are probed from the master;
+- the player remains visible long enough to reach the final reaction.
+```
+
+**Why it works:** continuity decisions are moved into four reviewable start
+states, while Seedance receives only one short physical action at a time. The
+editor then cuts on completed gestures rather than arbitrary seconds. Binding
+the host carousel to the measured master duration closes a separate delivery
+failure: a correct video is still ineffective if the interface replaces it
+before the comparison payoff.
+
+**Evidence boundary:** the source preserves the exact model, mode, settings,
+per-clip cost, start-plate lineage, edit timings, committed master and runtime
+hold, but not the four original motion prompts or task IDs. It therefore
+validates one reusable production template and is not counted as a complete
+scenario prompt.
+
+**Source:** TAKMA's September 20, 2026
+[four-shot Seedance 2.5 hero production commit](https://github.com/jakubtiuchty-arch/takma/commit/2f7f0aaee143643c05de49c8ff504d84e25a0a0c),
+including the [production record](https://github.com/jakubtiuchty-arch/takma/blob/2f7f0aaee143643c05de49c8ff504d84e25a0a0c/PROGRESS.md)
+and [generated 10.1-second MP4](https://github.com/jakubtiuchty-arch/takma/blob/2f7f0aaee143643c05de49c8ff504d84e25a0a0c/public/video/hero-colorworks.mp4).
+
 ### Rendered-first-frame poster and delivery-crop parity gate
 
 **Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`) — the original
@@ -40675,6 +40795,8 @@ and the [complete guarded adapter](https://github.com/Theoduras/ai-model-chat/bl
 
 
 ## Sources
+
+- [TAKMA — September 20, 2026 Higgsfield Seedance 2.5 (`seedance_2_5`) four-shot product hero: four approved sequential start plates, four five-second 1080p no-audio `omni_reference` generations, complete-gesture extraction, measured assembly timings, committed 10.1-second MP4 and a 10.5-second carousel hold](https://github.com/jakubtiuchty-arch/takma/commit/2f7f0aaee143643c05de49c8ff504d84e25a0a0c) ([production record](https://github.com/jakubtiuchty-arch/takma/blob/2f7f0aaee143643c05de49c8ff504d84e25a0a0c/PROGRESS.md), [generated MP4](https://github.com/jakubtiuchty-arch/takma/blob/2f7f0aaee143643c05de49c8ff504d84e25a0a0c/public/video/hero-colorworks.mp4))
 
 - [Theoduras / ai-model-chat — September 20, 2026 Runware Seedance 2.5 (`bytedance:seedance@2.5`) live request evidence: the exact route rejected `negativePrompt` before task creation or billing; the repaired adapter negotiates only explicitly refused optional fields while refusing to strip model, prompt, duration, frame, reference or source-video inputs](https://github.com/Theoduras/ai-model-chat/commit/ab5fbad0427cb2e4efe2f9824c7e837d2d2826f6) ([exact model integration and probe](https://github.com/Theoduras/ai-model-chat/commit/a53fab5586dd6f4bd9b1ac176e32672bc0e41666), [critical-input safeguard](https://github.com/Theoduras/ai-model-chat/commit/1fee8cb39531ba892a4a75bdcc9b0b15aa51332c), [guarded adapter](https://github.com/Theoduras/ai-model-chat/blob/1fee8cb39531ba892a4a75bdcc9b0b15aa51332c/imagegen.py))
 
