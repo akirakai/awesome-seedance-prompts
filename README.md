@@ -39300,7 +39300,119 @@ the [seed-carrying generation job](https://github.com/kolakachi/Frame-cast/blob/
 and the [exact Seedance 2.5 request adapter](https://github.com/kolakachi/Frame-cast/blob/fde968267f678b7c2629e037d6745764b2d6986e/framecast-app/api/app/Services/Generation/Video/ReplicateVeoAdapter.php).
 
 
+### Position-only anchor pack and clean-reference lineage gate
+
+**Verified model:** Dreamina Seedance 2.5, `multimodal2video`, 25 seconds,
+16:9, 720p — the original creator records four paid 500-credit previews of
+the same ensemble scene, changing one reference variable per round. Replacing
+posed-action anchors with neutral blocking improved the transition; replacing
+video-extracted anchors alone did not remove the dirty look, while replacing
+multi-generation identity derivatives with original character art did. The
+public record preserves the experiment and creator verdict but not the private
+prompt or MP4, so this is counted as one reusable technique, not a complete
+scenario.
+
+**Use case:** a multi-character scene whose blocking, prop state and entrances
+must remain controlled without forcing Seedance to interpolate through stiff
+contact poses or inherit artifacts from repeatedly edited reference images
+
+```text
+REFERENCE RECEIPT
+MODEL = Seedance 2.5
+MODE = multimodal reference-to-video
+DURATION = [4–30 SECONDS]
+RATIO = [RATIO]
+RESOLUTION = [PREVIEW RESOLUTION]
+
+For every input record:
+ID | ROLE | SOURCE FILE | SOURCE GENERATION | HASH | ALLOWED AUTHORITY
+
+IDENTITY REFERENCES
+- Use original approved character art or a first-generation casting image.
+- Each image owns identity, costume and signature accessories only.
+- Do not use an identity image produced through a chain of edits or inpainting.
+- If a required correction cannot be rebuilt from the original in one pass,
+  stop and regenerate the clean casting asset instead of extending the chain.
+
+POSITION ANCHORS
+Create only [4–6] anchors for one sequence. One anchor represents one stable
+story state, such as:
+- who is present and where each person stands;
+- facing direction and screen side;
+- whether a door is open or closed;
+- which character owns a prop;
+- whether a costume piece or story object is present.
+
+Every person uses a neutral standing or ordinary walking pose. Do not draw the
+contact action itself: no arm already blocking a chest, hand already pushing,
+weapon already striking, body frozen mid-fall or incomplete off-screen limb.
+Do not add an anchor merely to illustrate an intermediate gesture.
+
+Derive position anchors from a clean prior Seedance frame or a simple 3D
+blocking render. A white model may own camera path, timing, framing, trajectory
+and position, but never final identity, material, lighting or performance.
+
+PROMPT AUTHORITY
+@Image1...N = clean identity references, each bound to one named character.
+@ImageN+1...M = ordered position anchors, each bound to one story state.
+
+Generate one coherent [DURATION]-second scene. Preserve the named identities,
+relative scale, screen direction, room geometry and ordered state changes from
+the references. Between anchors, perform the actions naturally rather than
+matching a frozen pose.
+
+[TIME WINDOW 1]: From neutral positions, [CHARACTER] initiates [ACTION] with
+clear weight transfer and continuous limb motion. End in [STATE CHANGE 1].
+[TIME WINDOW 2]: [NEXT CAUSAL ACTION]. End in [STATE CHANGE 2].
+[CONTINUE ONLY FOR NECESSARY STORY STATES].
+
+Keep [PROP] with [OWNER] until the written transfer beat. Preserve [DOOR /
+COSTUME / OBJECT] state until its written change. No identity blending,
+reference-role leakage, pose snapping, repeated gesture, prop teleport,
+unrequested cut, text, caption or watermark.
+
+CONTROLLED DIAGNOSIS
+When a preview fails, keep prompt, duration, model, audio and all unrelated
+references frozen. Change exactly one family:
+A. posed anchors -> neutral position anchors;
+B. generated anchors -> clean video frames or white-model anchors;
+C. derivative identity images -> original or first-generation identity art.
+
+Do not claim the cause from a single simultaneous rewrite. Preserve request
+receipt, input hashes, charge, returned artifact and creator verdict per round.
+
+ACCEPTANCE GATE
+Review frame zero, every anchor transition and the final state. Accept only if:
+1. blocking and state order remain correct without snapping into anchor poses;
+2. gestures grow naturally from neutral positions with readable causality;
+3. identity, wardrobe and props remain clean and do not inherit visible noise,
+   color blotches, plastic texture or repeated-edit artifacts;
+4. every reference stays inside its declared authority;
+5. the final state is usable for the next shot.
+
+Treat image cleanliness as a human visual judgment until a metric has been
+validated against that judgment. Do not use a high-frequency noise score alone
+to overrule visible low-frequency blotches or texture contamination.
+```
+
+**Why it works:** the anchors define the sparse spatial and narrative states
+that must survive, while the prompt lets the video model perform the motion
+between them. Clean reference lineage prevents artifacts in upstream images
+from becoming part of the generated video's intended texture. The source is a
+single-project, four-preview diagnosis without a fixed seed or repeated trials;
+it supports the workflow and failure-isolation gate, not a universal quality
+claim.
+
+Adapted and rewritten from Mr-Salticidae's September 20, 2026
+[four-round Seedance 2.5 production record](https://github.com/Mr-Salticidae/knowledge-base/commit/ade5e90c679860782c649b1a9bd17c121e39d27d),
+the [position-only anchor rule](https://github.com/Mr-Salticidae/knowledge-base/blob/ade5e90c679860782c649b1a9bd17c121e39d27d/04_%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%B4%9E%E5%AF%9F/04_%E8%A7%86%E9%A2%91%E5%BD%B1%E5%83%8F%E4%B8%8E%E5%A3%B0%E9%9F%B3/%E9%94%9A%E7%82%B9%E5%8F%AA%E7%BB%99%E7%AB%99%E4%BD%8D%E5%BE%8B_%E5%8A%A8%E4%BD%9C%E4%BA%A4%E7%BB%99%E8%A7%86%E9%A2%91%E6%A8%A1%E5%9E%8B_v1.md),
+the [clean-reference lineage rule](https://github.com/Mr-Salticidae/knowledge-base/blob/ade5e90c679860782c649b1a9bd17c121e39d27d/04_%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%B4%9E%E5%AF%9F/04_%E8%A7%86%E9%A2%91%E5%BD%B1%E5%83%8F%E4%B8%8E%E5%A3%B0%E9%9F%B3/%E6%B4%BE%E7%94%9F%E5%9B%BE%E4%B8%8D%E8%BF%9B%E8%A7%86%E9%A2%91%E8%BE%93%E5%85%A5%E5%BE%8B_%E5%99%AA%E7%82%B9%E9%9A%8F%E7%BC%96%E8%BE%91%E4%BB%A3%E6%95%B0%E7%B4%AF%E7%A7%AF_v1.md)
+and the [bounded evidence review](https://github.com/Mr-Salticidae/knowledge-base/blob/ade5e90c679860782c649b1a9bd17c121e39d27d/04_%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%B4%9E%E5%AF%9F/04_%E8%A7%86%E9%A2%91%E5%BD%B1%E5%83%8F%E4%B8%8E%E5%A3%B0%E9%9F%B3/2026-09-20_%E4%BD%99%E6%B8%A9_%E5%85%B3%E9%94%AE%E5%B8%A7%E5%85%88%E8%A1%8C%E5%88%B0%E9%94%9A%E7%82%B9%E5%88%B6_M02%E5%9B%9B%E8%BD%AE%E8%AF%95%E9%95%9C%E5%A4%8D%E7%9B%98_v1.md).
+
+
 ## Sources
+
+- [Mr-Salticidae — September 20, 2026 Dreamina Seedance 2.5 four-round position-anchor and reference-lineage trial: four paid 25-second 720p previews, one-variable diagnosis, creator verdict, explicit single-project evidence boundary and reusable operating rules](https://github.com/Mr-Salticidae/knowledge-base/commit/ade5e90c679860782c649b1a9bd17c121e39d27d) ([position-only anchors](https://github.com/Mr-Salticidae/knowledge-base/blob/ade5e90c679860782c649b1a9bd17c121e39d27d/04_%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%B4%9E%E5%AF%9F/04_%E8%A7%86%E9%A2%91%E5%BD%B1%E5%83%8F%E4%B8%8E%E5%A3%B0%E9%9F%B3/%E9%94%9A%E7%82%B9%E5%8F%AA%E7%BB%99%E7%AB%99%E4%BD%8D%E5%BE%8B_%E5%8A%A8%E4%BD%9C%E4%BA%A4%E7%BB%99%E8%A7%86%E9%A2%91%E6%A8%A1%E5%9E%8B_v1.md), [clean-reference lineage](https://github.com/Mr-Salticidae/knowledge-base/blob/ade5e90c679860782c649b1a9bd17c121e39d27d/04_%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%B4%9E%E5%AF%9F/04_%E8%A7%86%E9%A2%91%E5%BD%B1%E5%83%8F%E4%B8%8E%E5%A3%B0%E9%9F%B3/%E6%B4%BE%E7%94%9F%E5%9B%BE%E4%B8%8D%E8%BF%9B%E8%A7%86%E9%A2%91%E8%BE%93%E5%85%A5%E5%BE%8B_%E5%99%AA%E7%82%B9%E9%9A%8F%E7%BC%96%E8%BE%91%E4%BB%A3%E6%95%B0%E7%B4%AF%E7%A7%AF_v1.md), [experiment review](https://github.com/Mr-Salticidae/knowledge-base/blob/ade5e90c679860782c649b1a9bd17c121e39d27d/04_%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%B4%9E%E5%AF%9F/04_%E8%A7%86%E9%A2%91%E5%BD%B1%E5%83%8F%E4%B8%8E%E5%A3%B0%E9%9F%B3/2026-09-20_%E4%BD%99%E6%B8%A9_%E5%85%B3%E9%94%AE%E5%B8%A7%E5%85%88%E8%A1%8C%E5%88%B0%E9%94%9A%E7%82%B9%E5%88%B6_M02%E5%9B%9B%E8%BD%AE%E8%AF%95%E9%95%9C%E5%A4%8D%E7%9B%98_v1.md))
 
 - [kolakachi / Frame-cast — September 19, 2026 Replicate Seedance 2.5 (`bytedance/seedance-2.5`) text-cast variant A/B/C probe: a written appearance sheet carried most repeat-take consistency, a character-scoped seed added a smaller tie-break, and an explicitly approximate still audition moved rejection before the paid video](https://github.com/kolakachi/Frame-cast/commit/fde968267f678b7c2629e037d6745764b2d6986e) ([preview and seed derivation](https://github.com/kolakachi/Frame-cast/blob/fde968267f678b7c2629e037d6745764b2d6986e/framecast-app/api/app/Http/Controllers/Api/V1/Ugc/UgcController.php), [generation job](https://github.com/kolakachi/Frame-cast/blob/fde968267f678b7c2629e037d6745764b2d6986e/framecast-app/api/app/Jobs/GenerateOneShotUgcJob.php), [exact model adapter](https://github.com/kolakachi/Frame-cast/blob/fde968267f678b7c2629e037d6745764b2d6986e/framecast-app/api/app/Services/Generation/Video/ReplicateVeoAdapter.php))
 
