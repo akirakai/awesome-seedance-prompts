@@ -405,6 +405,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Fixed-camera invisible fitting room with a physical garment ledger](#389-fixed-camera-invisible-fitting-room-with-a-physical-garment-ledger)
   - [Near-black liquid-ribbon hero with a measured loop crossfade](#390-near-black-liquid-ribbon-hero-with-a-measured-loop-crossfade)
   - [Six-reference coin relay with an exact-title terminal state](#391-six-reference-coin-relay-with-an-exact-title-terminal-state)
+  - [Payday cold open with storyboard-owned cuts and a carried voice](#392-payday-cold-open-with-storyboard-owned-cuts-and-a-carried-voice)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -24325,6 +24326,93 @@ Adapted and rewritten from gbxcaillin / Moneytails' September 20, 2026
 and the [generated MP4](https://github.com/gbxcaillin/Moneytails/blob/c79ff6dfdd6bf3545410f5536bf6ddd2973bfa6b/assets/series/opener/seedance/opener-seedance25-v1.mp4).
 
 
+### 392. Payday cold open with storyboard-owned cuts and a carried voice
+
+**Verified model:** OpenArt Seedance 2.5 (`element2video`) — the original
+producer records history ID `pRMCmfTzYD9eg6EiRBrD`, a 30-second 480p
+audio-on request, seven ordered images, one audio reference, 1,629 credits and
+the generated MP4. The take passed as a draft with one retained framing defect:
+the final split screen has a grey surround instead of filling the frame.  
+**Mode:** multi-image and voice-reference-to-video, three edited shots in one
+generation  
+**Suggested settings:** 30 seconds, 16:9, 480p draft, native audio on
+
+**Reference contract:**
+
+- image 1 = approved Kanga hero; images 2–3 = Maggie and Hopper sheets;
+- image 4 = the main-street environment plate;
+- images 5–7 = storyboard panels for shots 1–3 in order;
+- audio 1 = the accepted Kanga voice extracted from the preceding opener.
+
+```text
+Create one 30-second children's 2D cartoon in three hard-cut shots. Use flat
+cel shading, clean heavy outlines and bright colour. Keep every character
+identical to its sheet and the coastal main street identical to image 4.
+Images 5, 6 and 7 own the composition of their respective shots. Never show
+letters, numbers, captions, logos or pseudo-text; editorial titles and phone
+copy will be added later.
+
+VOICE AND MIX
+Kanga uses audio 1: warm, calm, dry Australian delivery, lightly amused and
+never smug. Maggie speaks quickly in a bright young Australian voice. Hopper
+has a slow, relaxed surfer-like Australian voice. Lip-sync every visible line.
+Keep a light ukulele-and-glockenspiel bed below speech. Use only the declared
+coin chimes and three phone buzzes; add no narrator or extra dialogue.
+
+SHOT 1 — 0–12 s
+Wide golden-morning view of the street, composed like image 5. Maggie flies low
+from left to right toward the sparkling phone case in the electronics-shop
+window, lands and presses her face to the glass. Hopper remains reclined on the
+neighbouring bench, eyes closed, gently strumming his tiny guitar. Kanga stays
+off screen. From 2 s, Kanga says in audio 1's voice: "Two mates. One payday.
+And a week that's about to go very differently for each of them."
+
+SHOT 2 — 12–16 s
+Hard cut to image 6's spare cream title composition: a dark-brown silhouette
+of Kanga's belly and pouch. Three gold coins fall one at a time into the pouch,
+each landing with a clean bright chime. A restrained warm-gold glow grows from
+inside. Leave generous blank space and generate no title lettering.
+
+SHOT 3 — 16–30 s
+Hard cut to image 7's three vertical panels: mint, peach and sky blue. Make the
+panels fill the full picture edge to edge, with no border. A phone in each panel
+buzzes and shows a blank notification block. At 18 s reveal the owners in turn.
+
+Maggie grabs her phone with both wings and beams: "Payday! Oh, I have been
+WAITING for this." Hopper glances at his phone without sitting up and drawls:
+"Sweet. Takeaway tonight. Gig on Saturday. Sorted." Kanga stands on the
+footpath, smiles at her phone and says with audio 1's voice: "Nice. Gimme one
+sec." She raises one finger, taps once, and only then her pouch gives a faint
+warm-gold glow. End at 30 s.
+
+ACCEPTANCE
+Confirm the three cut windows, character-to-sheet identity, exact spoken copy,
+Kanga-to-audio-1 voice match, empty title and notification fields, three coin
+landings and one pouch glow. Reject invented text, a fourth coin, speaker swaps,
+extra lines, off-screen replies or a bordered/inset final split screen. Record
+any remaining layout or voice-match uncertainty instead of calling it fixed.
+```
+
+**Why it works:** character sheets, an environment plate and per-shot
+storyboards have separate visual jobs, while the accepted voice clip owns only
+Kanga's vocal identity. Rendering typography as deliberately blank shapes
+keeps unreliable generated copy out of the draft and preserves room for the
+editor. A low-resolution approval pass tests composition, dialogue and timing
+before the same prompt and references are promoted to 1080p.
+
+The accepted draft matched all three panels, kept the title beat text-free and
+delivered the declared dialogue and final pouch glow. The producer still marks
+the voice match for listening review and the grey split-screen surround for
+correction; this adapted prompt turns the latter into an explicit edge-to-edge
+acceptance gate without claiming that the corrected take has been rendered.
+
+Adapted and rewritten from gbxcaillin / Moneytails' September 20, 2026
+[Seedance 2.5 episode-draft commit](https://github.com/gbxcaillin/Moneytails/commit/a09ba03ef172e11445cefcc1b75d03745857e8f4),
+[complete prompt](https://github.com/gbxcaillin/Moneytails/blob/a09ba03ef172e11445cefcc1b75d03745857e8f4/assets/ep01/video/chunk01-prompt-v1.md),
+[history ID, input order and acceptance ledger](https://github.com/gbxcaillin/Moneytails/blob/a09ba03ef172e11445cefcc1b75d03745857e8f4/assets/ep01/README.md)
+and the [generated draft MP4](https://github.com/gbxcaillin/Moneytails/blob/a09ba03ef172e11445cefcc1b75d03745857e8f4/assets/ep01/video/chunk01-draft-480p-v1.mp4).
+
+
 ## Reusable templates
 
 ### Rendered-first-frame poster and delivery-crop parity gate
@@ -40140,7 +40228,94 @@ Adapted and rewritten from superdesigndev / treg's September 20, 2026
 and the [end-to-end request/settlement regression](https://github.com/superdesigndev/treg/commit/665041b72b1daf627a559bfd7ecfd35e96182b69).
 
 
+### Picture-locked soundtrack replacement with an event-time audio ledger
+
+**Verified model:** OpenArt Seedance 2.5 (`element2video`) — the original
+producer records history ID `W81gWrT293FXcra61heI`, a 30-second 1080p
+audio-on job, the accepted picture as video reference, six supporting images,
+the generated MP4 and an extracted soundtrack. The producer reports a
+shot-for-shot picture reproduction; waveform and spectrogram review found
+voice energy, coin transients, the group cheer and terminal silence in their
+planned windows. The spoken words, accent and mix balance still require an
+audible review.  
+**Use case:** an accepted multi-shot video has the right picture but needs a
+new timed score, dialogue and effects without rebuilding its edit  
+**Mode:** video-reference soundtrack pass with event-aligned native audio
+
+```text
+LOCKED-PICTURE RECEIPT
+Freeze the accepted master and record its file hash, duration, frame rate,
+resolution and generation receipt. Trim or pad it once to the delivery length;
+that exact file is video reference 1. Keep only identity, environment or title
+images that help prevent visual drift, in the same documented order as the
+master generation.
+
+PICTURE INSTRUCTION
+Reproduce video 1 shot for shot: the same frames, actions, cuts, timing, style,
+identities and terminal state. Do not redesign, extend or re-edit the picture.
+The requested change is the soundtrack only.
+
+EVENT LEDGER
+Write one ordered table before prompting:
+[TIME OR WINDOW] | [VISIBLE EVENT] | [AUDIO OWNER] | [EXACT CUE]
+
+Give every sync point one visible event and one audible owner. Examples:
+- coin landing -> one recurring three-note chime;
+- character action -> one restrained Foley cue;
+- dialogue window -> one named speaker and verbatim line;
+- title arrival -> one group sting or cheer;
+- final fade -> one resolving chord, then silence.
+
+MUSIC ARC
+Declare tempo, key, genre and base instrument once. Add instruments only at
+named visual beats. Reserve a rise for the final action and a single title hit.
+Specify what the track must not resemble. Keep music below speech and leave no
+unplanned singing, narration or sound effect.
+
+VOICE WINDOWS
+For each line state speaker, vocal identity, delivery and exact start/end
+window. Preserve the approved wording verbatim. Ban every unnamed voice and
+all dialogue outside the listed windows. If several characters own a terminal
+cheer, state the exact words, participants, repetition count and title-frame
+sync point.
+
+DELIVERY AND ACCEPTANCE
+Archive the returned task ID, request, reference IDs and full result before
+extracting audio. Compare the new picture with the locked master at every cut
+and around fast actions; reject changed shots, timing, identity, text or end
+state. Measure the soundtrack separately:
+- speech energy remains inside its declared windows;
+- effect transients align with the visible events;
+- the title sting lands in its specified window;
+- the fade reaches silence by the final frame.
+
+Listen to the full mix for exact wording, accent, lip-sync, clipping, masking
+and unwanted sounds. Waveform alignment alone does not prove intelligibility
+or voice quality. If the picture is acceptable but the generated video cannot
+be trusted as the final master, extract the verified soundtrack and lay it
+under the original locked picture in the editor.
+```
+
+**Why it works:** the accepted video remains the timing authority, while a
+separate event ledger gives music, speech and effects unambiguous owners. The
+fallback preserves the expensive picture even when the model reproduces it
+imperfectly: a usable soundtrack can still be conformed to the original edit.
+Separating signal-timing checks from a required listening pass also prevents a
+spectrogram from being mistaken for proof of correct words or accent.
+
+Adapted and rewritten from gbxcaillin / Moneytails' September 20, 2026
+[Seedance 2.5 soundtrack-pass commit](https://github.com/gbxcaillin/Moneytails/commit/20c4198b86dcd1fe6e3bc711d336dc9c3f9d685d),
+[complete timed audio prompt](https://github.com/gbxcaillin/Moneytails/blob/20c4198b86dcd1fe6e3bc711d336dc9c3f9d685d/assets/series/opener/seedance/prompt-v2-audio.md),
+[history ID and measured review](https://github.com/gbxcaillin/Moneytails/blob/20c4198b86dcd1fe6e3bc711d336dc9c3f9d685d/assets/series/opener/README.md),
+[generated MP4](https://github.com/gbxcaillin/Moneytails/blob/20c4198b86dcd1fe6e3bc711d336dc9c3f9d685d/assets/series/opener/seedance/opener-seedance25-v2-audio.mp4)
+and the [extracted soundtrack](https://github.com/gbxcaillin/Moneytails/blob/20c4198b86dcd1fe6e3bc711d336dc9c3f9d685d/assets/series/opener/seedance/opener-v2-soundtrack.m4a).
+
+
 ## Sources
+
+- [gbxcaillin / Moneytails — September 20, 2026 OpenArt Seedance 2.5 `element2video` episode chunk: complete three-shot 30-second prompt, seven ordered image references, carried Kanga voice, OpenArt history ID, draft acceptance ledger and committed 480p result](https://github.com/gbxcaillin/Moneytails/commit/a09ba03ef172e11445cefcc1b75d03745857e8f4) ([complete prompt](https://github.com/gbxcaillin/Moneytails/blob/a09ba03ef172e11445cefcc1b75d03745857e8f4/assets/ep01/video/chunk01-prompt-v1.md), [production ledger](https://github.com/gbxcaillin/Moneytails/blob/a09ba03ef172e11445cefcc1b75d03745857e8f4/assets/ep01/README.md), [generated draft MP4](https://github.com/gbxcaillin/Moneytails/blob/a09ba03ef172e11445cefcc1b75d03745857e8f4/assets/ep01/video/chunk01-draft-480p-v1.mp4))
+
+- [gbxcaillin / Moneytails — September 20, 2026 OpenArt Seedance 2.5 `element2video` soundtrack pass: accepted picture as video reference, complete event-timed music/dialogue/effects prompt, OpenArt history ID, waveform/spectrogram review, committed 1080p result and extracted audio](https://github.com/gbxcaillin/Moneytails/commit/20c4198b86dcd1fe6e3bc711d336dc9c3f9d685d) ([complete timed prompt](https://github.com/gbxcaillin/Moneytails/blob/20c4198b86dcd1fe6e3bc711d336dc9c3f9d685d/assets/series/opener/seedance/prompt-v2-audio.md), [production review](https://github.com/gbxcaillin/Moneytails/blob/20c4198b86dcd1fe6e3bc711d336dc9c3f9d685d/assets/series/opener/README.md), [generated MP4](https://github.com/gbxcaillin/Moneytails/blob/20c4198b86dcd1fe6e3bc711d336dc9c3f9d685d/assets/series/opener/seedance/opener-seedance25-v2-audio.mp4), [extracted soundtrack](https://github.com/gbxcaillin/Moneytails/blob/20c4198b86dcd1fe6e3bc711d336dc9c3f9d685d/assets/series/opener/seedance/opener-v2-soundtrack.m4a))
 
 - [gbxcaillin / Moneytails — September 20, 2026 OpenArt Seedance 2.5 `element2video` single-pass series opener: complete nine-shot prompt, six ordered references, 30-second 1080p native-audio request, OpenArt history ID, frame-review ledger and committed result](https://github.com/gbxcaillin/Moneytails/commit/c79ff6dfdd6bf3545410f5536bf6ddd2973bfa6b) ([complete prompt](https://github.com/gbxcaillin/Moneytails/blob/c79ff6dfdd6bf3545410f5536bf6ddd2973bfa6b/assets/series/opener/seedance/prompt-v1.md), [production ledger](https://github.com/gbxcaillin/Moneytails/blob/c79ff6dfdd6bf3545410f5536bf6ddd2973bfa6b/assets/series/opener/README.md), [generated MP4](https://github.com/gbxcaillin/Moneytails/blob/c79ff6dfdd6bf3545410f5536bf6ddd2973bfa6b/assets/series/opener/seedance/opener-seedance25-v1.mp4))
 
