@@ -39672,10 +39672,12 @@ and the [bounded evidence review](https://github.com/Mr-Salticidae/knowledge-bas
 
 **Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`) — a September 20,
 2026 read-only production qualification measured twelve consecutive completed
-jobs carrying three or four references. Every returned media record used
-`role: "image"` and `data.type: "media_input"`, while the live model catalogue
-accepts semantic request slots such as `start_image`, `end_image` and
-`image_references`. The repair is proven against recorded live envelopes; it
+jobs carrying three or four references. Their image records used
+`role: "image"` and `data.type: "media_input"`, while a follow-up read of
+completed account history found `video_input` on a video reference and
+`audio_input` on an audio reference. The live catalogue accepts semantic
+request slots such as `start_image`, `end_image`, `video_references` and
+`audio_references`. The repair is proven against recorded live envelopes; it
 did not submit a new paid job, so this counts as a failure-control template,
 not a complete scenario.
 
@@ -39718,11 +39720,19 @@ For every returned params.medias[i]:
 1. bind identity to data.id at the same submitted index;
 2. require data.id to equal the uploaded media ID exactly;
 3. map DECLARED SLOT -> EXPECTED KIND locally;
-4. if an echoed role exists, compare it with EXPECTED KIND, not with the
-   original slot string;
-5. accept the observed container label data.type = "media_input"; do not demand
-   that it repeat "image" or "video";
-6. treat returned media URL as descriptive only, not as identity authority.
+4. accept an echoed role only when it equals EXPECTED KIND, the submitted slot,
+   or EXPECTED KIND + "_input";
+5. when data.type is present, accept it only when it is a bare media kind or a
+   bounded lowercase <word>[_<word>...]_input label of at most 40 characters;
+   recorded examples
+   are media_input, video_input and audio_input;
+6. reject uppercase, spaces, hyphens, a bare "_input", trailing whitespace or
+   any overlong label rather than accepting an arbitrary provider string;
+7. treat returned media URL as descriptive only, not as identity authority.
+
+Keep strict array cardinality. An extra URL-only media record with no immutable
+ID is not identity evidence and must stay diagnostic rather than being silently
+matched or discarded.
 
 TERMINAL SUCCESS
 Accept only one HTTPS output URL from a completed entry already bound to job
@@ -39735,21 +39745,28 @@ FAIL-CLOSED RECOVERY
 - Never retry creation while the acknowledged job can still be polled.
 - Record real provider envelopes as fixtures; do not fabricate a flat shape or
   feed the submitted slot name back as the supposed provider echo.
-- Add a regression case where request role=start_image, response role=image,
-  data.type=media_input and data.id remains identical.
+- Add image, video and audio regression cases: submitted start_image -> echoed
+  image/media_input; video_references -> video/video_input; audio_references ->
+  audio/audio_input. In every case data.id remains identical.
+- Retain negative cases for wrong job ID, model, media ID, role kind, malformed
+  type label and unexpected media count.
 ```
 
 **Why it works:** semantic request slots and response media kinds answer
 different questions. Binding the artifact to immutable media IDs, job ID and
 top-level model preserves provenance without demanding that a provider echo
-the client's vocabulary. Recorded response fixtures also prevent a green test
-suite from hiding a collector that silently loses already-paid footage.
+the client's vocabulary. A narrow, grammar-bounded label family admits observed
+provider variants without turning validation into accept-any-string logic.
+Recorded response fixtures also prevent a green test suite from hiding a
+collector that silently loses already-paid footage.
 
 Adapted and rewritten from axy-full / aimighty-workspace's September 20, 2026
 [live-envelope repair commit](https://github.com/axy-full/aimighty-workspace/commit/02172bcd6065d0e2f3cc4b7ba3358991c5a26763),
 [twelve-job qualification record](https://github.com/axy-full/aimighty-workspace/blob/f0f47de80aa4ba699f096d1f084da4d06d93dc4b/docs/connected-qualification-2026-09-20.md),
-[result evidence contract](https://github.com/axy-full/aimighty-workspace/blob/02172bcd6065d0e2f3cc4b7ba3358991c5a26763/lib/higgsfield-consumer/generation-contract.ts)
-and [recorded provider-envelope fixtures](https://github.com/axy-full/aimighty-workspace/blob/02172bcd6065d0e2f3cc4b7ba3358991c5a26763/tests/fixtures/connectedStatusEnvelopes.ts).
+[follow-up media-family repair](https://github.com/axy-full/aimighty-workspace/commit/37725100a2359de94df2c788bf3615df6d96cbe9),
+[bounded label implementation](https://github.com/axy-full/aimighty-workspace/blob/37725100a2359de94df2c788bf3615df6d96cbe9/lib/higgsfield-consumer/catalogue.ts),
+[result evidence contract](https://github.com/axy-full/aimighty-workspace/blob/37725100a2359de94df2c788bf3615df6d96cbe9/lib/higgsfield-consumer/generation-contract.ts)
+and [recorded provider-envelope fixtures](https://github.com/axy-full/aimighty-workspace/blob/37725100a2359de94df2c788bf3615df6d96cbe9/tests/fixtures/connectedStatusEnvelopes.ts).
 
 
 ### Self-generated voice seed handoff for a multi-clip UGC character
@@ -39834,7 +39851,7 @@ and [caption boundary implementation](https://github.com/gbxcaillin/AI-Ads/blob/
 
 - [gbxcaillin / AI-Ads — September 20, 2026 OpenArt BytePlus Seedance 2.5 (`byte-plus-seedance-2-5 element2video`) multi-clip UGC production: three characters, twelve accepted dialogue clips, self-generated voice seeds reused as audio references, client-driven pose correction, job-ID ledger and caption boundary checks](https://github.com/gbxcaillin/AI-Ads/commit/84bd0036c71b99114670be1117342edec162963c) ([complete production ledger](https://github.com/gbxcaillin/AI-Ads/blob/84bd0036c71b99114670be1117342edec162963c/spots/gbx-ugc-storyboard/spot.json), [Priya voice reference](https://github.com/gbxcaillin/AI-Ads/blob/84bd0036c71b99114670be1117342edec162963c/spots/gbx-ugc-storyboard/voices/priya-voice.mp3), [caption boundary implementation](https://github.com/gbxcaillin/AI-Ads/blob/84bd0036c71b99114670be1117342edec162963c/.claude/skills/ai-commercial/scripts/captions-9x16.py))
 
-- [axy-full / aimighty-workspace — September 20, 2026 Higgsfield Seedance 2.5 (`seedance_2_5`) live response-contract repair: twelve consecutive completed reference-media jobs, provider-normalized media kinds, `media_input` container labels, immutable media-ID binding and recorded status-envelope fixtures](https://github.com/axy-full/aimighty-workspace/commit/02172bcd6065d0e2f3cc4b7ba3358991c5a26763) ([qualification record](https://github.com/axy-full/aimighty-workspace/blob/f0f47de80aa4ba699f096d1f084da4d06d93dc4b/docs/connected-qualification-2026-09-20.md), [evidence contract](https://github.com/axy-full/aimighty-workspace/blob/02172bcd6065d0e2f3cc4b7ba3358991c5a26763/lib/higgsfield-consumer/generation-contract.ts), [recorded envelopes](https://github.com/axy-full/aimighty-workspace/blob/02172bcd6065d0e2f3cc4b7ba3358991c5a26763/tests/fixtures/connectedStatusEnvelopes.ts))
+- [axy-full / aimighty-workspace — September 20, 2026 Higgsfield Seedance 2.5 (`seedance_2_5`) live response-contract repairs: twelve consecutive completed Seedance reference-media jobs, immutable media-ID binding, then account-history confirmation of the bounded `media_input` / `video_input` / `audio_input` family without weakening job, model or media identity checks](https://github.com/axy-full/aimighty-workspace/commit/37725100a2359de94df2c788bf3615df6d96cbe9) ([initial repair](https://github.com/axy-full/aimighty-workspace/commit/02172bcd6065d0e2f3cc4b7ba3358991c5a26763), [qualification record](https://github.com/axy-full/aimighty-workspace/blob/f0f47de80aa4ba699f096d1f084da4d06d93dc4b/docs/connected-qualification-2026-09-20.md), [bounded type implementation](https://github.com/axy-full/aimighty-workspace/blob/37725100a2359de94df2c788bf3615df6d96cbe9/lib/higgsfield-consumer/catalogue.ts), [evidence contract](https://github.com/axy-full/aimighty-workspace/blob/37725100a2359de94df2c788bf3615df6d96cbe9/lib/higgsfield-consumer/generation-contract.ts), [recorded envelopes](https://github.com/axy-full/aimighty-workspace/blob/37725100a2359de94df2c788bf3615df6d96cbe9/tests/fixtures/connectedStatusEnvelopes.ts))
 
 - [imadmaroof / VTHacks — September 20, 2026 Higgsfield Seedance 2.5 (`seedance_2_5`) near-black liquid-ribbon website hero: complete still and motion prompts, exact 720p no-audio request, 35-credit generation, committed 1276×722 result, measured one-second loop crossfade and dark-gradient compression decision](https://github.com/imadmaroof/VTHacks/commit/ee95a33cc43ced73ea3ecf00e2dbb6b1a419ad49) ([generation and delivery record](https://github.com/imadmaroof/VTHacks/blob/ee95a33cc43ced73ea3ecf00e2dbb6b1a419ad49/docs/assets/README.md), [generated MP4](https://github.com/imadmaroof/VTHacks/blob/ee95a33cc43ced73ea3ecf00e2dbb6b1a419ad49/docs/assets/hero-bg.mp4), [poster](https://github.com/imadmaroof/VTHacks/blob/ee95a33cc43ced73ea3ecf00e2dbb6b1a419ad49/docs/assets/hero-bg.jpg))
 
