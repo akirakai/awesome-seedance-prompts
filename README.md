@@ -41224,7 +41224,96 @@ Adapted and rewritten from shepherdleong-art / creative-studio's September 21,
 and the [boundary and intersection tests](https://github.com/shepherdleong-art/creative-studio/blob/5f0cd62d06a5d4ef276dc3e06d8a2aebe79d87be/scripts/video-duration.test.ts).
 
 
+### Endpoint-bracketed UI-state interpolation and fixed-geometry gate
+
+**Verified model:** OpenArt Seedance 2.5 (`element2video`, image-to-video),
+480p — the creator retains the failed single-start-frame slider take, the
+corrected start/end-frame task and generated MP4, both checked endpoint stills
+with their OpenArt history IDs, and two earlier first-pass meter clips chained
+through an identical shared intermediate still. The exact per-shot prompt text
+is not public, so this counts as a reusable failure-control template rather
+than a complete scenario.
+
+**Use case:** phone sliders, progress bars, toggles, meters, gauges or flat
+diagrams where one region must change value while the device, outline, palette,
+hands and surrounding composition remain fixed
+
+```text
+STATE SPECIFICATION
+Mutable region = [SLIDER TRACK / METER FILL / TOGGLE / VALUE FIELD].
+Invariant geometry = [DEVICE, SCREEN CROP, OUTLINE, KNOB, LABEL-FREE ICONS,
+HAND COUNT AND POSITION, BACKGROUND].
+S0 = [EXACT VISIBLE START STATE].
+S1 = [EXACT VISIBLE END STATE].
+Optional S2...SN = [LATER APPROVED STATES].
+
+ENDPOINT-STILL GATE
+Create and approve every state before video generation. Derive S1...SN from
+the same parent still by changing only the mutable region. Keep crop, pixel
+dimensions, device geometry, line weight, palette, hand anatomy and lighting
+identical. Put every hand that will act in every endpoint already in frame and
+in its correct position; do not ask a new hand to enter during animation.
+
+Reject an endpoint if the outline moves, the device is redrawn, a hand count
+changes, the knob jumps lanes, labels mutate, or the requested fill contains a
+gradient, speckles or a second colour.
+
+ONE EDGE PER CHANGE
+Bind S0 to `startFrame` and S1 to `endFrame` for one image-to-video job.
+For a staged fill, build only adjacent edges S0->S1, S1->S2 ... and reuse the
+exact S1 file at both sides of the join. Never regenerate a shared boundary.
+
+PROMPT BLOCK
+Begin exactly from @StartFrame and finish exactly on @EndFrame.
+The camera, phone, screen, fixed outline, knob lane, icons, background and
+[HAND COUNT] hands remain motionless and unchanged.
+
+Only [MUTABLE REGION] changes: [S0] -> [S1].
+[FINGER / CAUSAL CONTROL] performs [ONE DECLARED ACTION]. Because that action
+lands, the fill advances smoothly from [START POSITION] to [END POSITION].
+Use one clean flat [COLOUR] fill with a sharp boundary: no gradient, stray
+colour, speckles, shimmer, invented text or extra UI. Nothing else happens.
+Settle on @EndFrame and hold it for the final [HOLD].
+
+ACCEPTANCE
+- opening and closing frames match the two approved stills;
+- the fixed outline and device do not scale, drift or change colour;
+- the mutable value moves monotonically and stays inside its track;
+- the declared hand remains the only hand and causes the state change;
+- a multi-edge chain shares a pixel-identical boundary still;
+- no generated label, number, gradient or decorative colour appears.
+
+FAILURE ROUTING
+- stray colours or wandering fill from one start still -> add a checked end
+  still and rerun the same edge;
+- geometry differs between endpoint stills -> repair the still pair before
+  spending another video attempt;
+- a long fill misses an intermediate target -> add an approved intermediate
+  state and split into adjacent edges;
+- only the last frames drift -> cut at the verified action endpoint when the
+  required state has already settled; otherwise reject the edge.
+```
+
+**Why it works:** free-form motion leaves both the changing value and its final
+appearance for the model to invent. Two checked endpoint images move those
+decisions outside the video pass, leaving Seedance only the interpolation and
+causal gesture. In the recorded repair, a single-start slider animation wandered
+through unwanted colours; the bracketed rerun produced clean flat-green fills.
+The same production's empty-to-part-filled and part-filled-to-full pouch clips
+passed while sharing the exact intermediate still, demonstrating the chained
+variant without overstating it as a universal guarantee.
+
+Adapted and rewritten from gbxcaillin / Moneytails' September 21, 2026
+[slider repair commit](https://github.com/gbxcaillin/Moneytails/commit/8bf3f71f728932a1753e9f4af7ff928b9d5ce025),
+the [complete workflow and prompt-shape record](https://github.com/gbxcaillin/Moneytails/blob/8bf3f71f728932a1753e9f4af7ff928b9d5ce025/docs/workflow.md),
+the [history-ID and acceptance ledger](https://github.com/gbxcaillin/Moneytails/blob/8bf3f71f728932a1753e9f4af7ff928b9d5ce025/assets/ep01/README.md),
+the [corrected generated clip](https://github.com/gbxcaillin/Moneytails/blob/8bf3f71f728932a1753e9f4af7ff928b9d5ce025/assets/ep01/clips/clip38-budget-planner-480p.mp4)
+and the [retained failed take](https://github.com/gbxcaillin/Moneytails/blob/8bf3f71f728932a1753e9f4af7ff928b9d5ce025/assets/ep01/clips/rejected/clip38-budget-planner-v1-480p.mp4).
+
+
 ## Sources
+
+- [gbxcaillin / Moneytails — September 21, 2026 OpenArt Seedance 2.5 `element2video` endpoint-bracketed UI-state repair: retained single-start failure, checked start/end stills, corrected slider MP4, two-stage meter chain, OpenArt history IDs and explicit acceptance notes](https://github.com/gbxcaillin/Moneytails/commit/8bf3f71f728932a1753e9f4af7ff928b9d5ce025) ([workflow](https://github.com/gbxcaillin/Moneytails/blob/8bf3f71f728932a1753e9f4af7ff928b9d5ce025/docs/workflow.md), [production ledger](https://github.com/gbxcaillin/Moneytails/blob/8bf3f71f728932a1753e9f4af7ff928b9d5ce025/assets/ep01/README.md), [corrected MP4](https://github.com/gbxcaillin/Moneytails/blob/8bf3f71f728932a1753e9f4af7ff928b9d5ce025/assets/ep01/clips/clip38-budget-planner-480p.mp4), [failed MP4](https://github.com/gbxcaillin/Moneytails/blob/8bf3f71f728932a1753e9f4af7ff928b9d5ce025/assets/ep01/clips/rejected/clip38-budget-planner-v1-480p.mp4))
 
 - [shepherdleong-art / creative-studio — September 21, 2026 exact-model Seedance duration gate: 2.5 (`doubao-seedance-2-5-260628`) at 4–30 whole seconds, 2.0 Standard/Fast at 4–15, mixed-model bulk intersection, atomic batch rejection and adapter-level no-silent-clamp regressions](https://github.com/shepherdleong-art/creative-studio/commit/5f0cd62d06a5d4ef276dc3e06d8a2aebe79d87be) ([duration registry](https://github.com/shepherdleong-art/creative-studio/blob/5f0cd62d06a5d4ef276dc3e06d8a2aebe79d87be/lib/video-duration.ts), [route regressions](https://github.com/shepherdleong-art/creative-studio/blob/5f0cd62d06a5d4ef276dc3e06d8a2aebe79d87be/scripts/video-duration-api.test.ts), [boundary/intersection tests](https://github.com/shepherdleong-art/creative-studio/blob/5f0cd62d06a5d4ef276dc3e06d8a2aebe79d87be/scripts/video-duration.test.ts))
 
