@@ -408,6 +408,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Payday cold open with storyboard-owned cuts and a carried voice](#392-payday-cold-open-with-storyboard-owned-cuts-and-a-carried-voice)
   - [Pay-yourself-first transfer with concept-owned balance motion](#393-pay-yourself-first-transfer-with-concept-owned-balance-motion)
   - [Balance cards to rent shock and dead-scooter consequence chain](#394-balance-cards-to-rent-shock-and-dead-scooter-consequence-chain)
+  - [Deadpan neon-sign maker with native dialogue and timed flicker](#395-deadpan-neon-sign-maker-with-native-dialogue-and-timed-flicker)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -24576,6 +24577,61 @@ Adapted and rewritten from gbxcaillin / Moneytails' September 20, 2026
 and the [generated MP4](https://github.com/gbxcaillin/Moneytails/blob/8f762a34c80568aff8ba3146dce7c00cf42b6ecd/assets/ep01/video/chunk03-draft-480p-v1.mp4).
 
 
+### 395. Deadpan neon-sign maker with native dialogue and timed flicker
+
+**Verified model:** PixVerse Seedance 2.5 (`seedance-2.5`) — the original
+producer published the complete request, a dedicated 6-second 720p result and
+a cost ledger recording 450 PixVerse credits ($1.80 at the stated plan rate).  
+**Mode:** first-frame image-to-video with native speech and sound  
+**Suggested settings:** 6 seconds, 9:16 source frame, 720p, native audio on
+
+**Reference contract:** one approved vertical still of the same adult neon-sign
+maker behind the same steel bench, holding a fully visible pink `SEEDANCE 2.5`
+sign. Reject the frame before video generation if the sign touches an edge or
+its lettering is already malformed.
+
+```text
+Create one six-second photoreal vertical phone clip from @Image1. Preserve the
+same adult man, short dark hair, thin glasses, black T-shirt, bare pale room,
+steel workbench, clear acrylic sign, pink tubing, framing and sign lettering.
+
+The man keeps both hands on the upper edge of the upright sign and looks
+directly into the lens with a flat, almost motionless expression. He says in a
+dry natural voice: "Seedance two point five. Best model." Give him one short,
+visible pause, then let him add: "Expensive, though."
+
+While he speaks, the pink neon switches completely off and back on exactly
+twice. Each blackout is brief but readable; the clear backing, bench reflection
+and room remain visible, and the sign never changes position or wording. Keep
+his hands planted, shoulders still and gaze on the camera through the final
+beat.
+
+Use a handheld phone-camera look with only slight operator drift, ordinary
+sensor texture and no colour grade. Keep one continuous shot. Use only the
+declared voice, quiet room tone and subtle electrical flicker. No cut, zoom,
+gesture, lip-sync drift, extra person, rewritten sign, added caption, music,
+camera orbit or exaggerated facial reaction.
+```
+
+**Why it works:** the prompt separates performance, dialogue, lighting event
+and camera behaviour into short clauses. The first frame owns the fragile long
+sign text, while the video request asks only for two bounded light-state changes
+and a restrained delivery. Keeping hands, gaze and sign position fixed gives
+native speech and flicker most of the six-second motion budget.
+
+The published result is a direct Seedance 2.5 render rather than an inferred
+attribution: the author's request uses `model: "seedance-2.5"`, `quality:
+"720p"`, `duration: 6` and `first_frame_path`; the API returned a 450-credit
+charge. The adapted dialogue softens the source's closing phrase, so that wording
+change is editorial rather than a claim about the recorded take.
+
+Adapted and rewritten from useapi.net's September 21, 2026
+[controlled four-model comparison](https://useapi.net/docs/articles/sora-2-api-alternatives),
+[versioned production commit](https://github.com/useapi/sora-2-alternatives/commit/82f53aed2690319decc57a6b7ccc5598e35becbf),
+[complete request configuration](https://github.com/useapi/sora-2-alternatives/blob/82f53aed2690319decc57a6b7ccc5598e35becbf/clips/prompts.json)
+and the [dedicated Seedance 2.5 MP4](https://demo.useapi.net/discord-cdn-proxy/?https://cdn.discordapp.com/attachments/1239264794394234985/1551387340461711360/sora2-alt-clip-2-seedance-2-5-pixverse-720p.mp4).
+
+
 ## Reusable templates
 
 ### Rendered-first-frame poster and delivery-crop parity gate
@@ -40751,6 +40807,8 @@ and the [complete guarded adapter](https://github.com/Theoduras/ai-model-chat/bl
 
 
 ## Sources
+
+- [useapi.net — September 21, 2026 PixVerse Seedance 2.5 (`seedance-2.5`) deadpan neon-sign maker: complete six-second 720p first-frame request, native dialogue and timed-flicker prompt, individual generated MP4, 450-credit ledger and same-shot four-model comparison](https://useapi.net/docs/articles/sora-2-api-alternatives) ([versioned code and prompt commit](https://github.com/useapi/sora-2-alternatives/commit/82f53aed2690319decc57a6b7ccc5598e35becbf), [complete Seedance request](https://github.com/useapi/sora-2-alternatives/blob/82f53aed2690319decc57a6b7ccc5598e35becbf/clips/prompts.json), [individual Seedance MP4](https://demo.useapi.net/discord-cdn-proxy/?https://cdn.discordapp.com/attachments/1239264794394234985/1551387340461711360/sora2-alt-clip-2-seedance-2-5-pixverse-720p.mp4), [labelled five-model reel](https://www.youtube.com/watch?v=W5vXcM2cCJs))
 
 - [TodimuJ / LATHE & LACQUER — September 20, 2026 Higgsfield Seedance 2.0 standard (`seedance_2_0`) forward-physics/reverse-extraction chain: eight accepted 720p silent production jobs, shared endpoint frames, desktop and portrait delivery sequences, exact cost ledger and seam differences measured below ordinary adjacent-frame motion](https://github.com/TodimuJ/websites/commit/46b161a4284b29180e9b69b6f51e27c1df23e58d) ([initial production commit](https://github.com/TodimuJ/websites/commit/30e714e117ead612d27479940ef133d859b531e1), [complete production notes](https://github.com/TodimuJ/websites/blob/46b161a4284b29180e9b69b6f51e27c1df23e58d/sites/vinyl/production-notes.md))
 
