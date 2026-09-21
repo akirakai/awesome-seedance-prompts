@@ -410,6 +410,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Balance cards to rent shock and dead-scooter consequence chain](#394-balance-cards-to-rent-shock-and-dead-scooter-consequence-chain)
   - [Deadpan neon-sign maker with native dialogue and timed flicker](#395-deadpan-neon-sign-maker-with-native-dialogue-and-timed-flicker)
   - [Unresolved Japanese names across carved wood and printed paper](#396-unresolved-japanese-names-across-carved-wood-and-printed-paper)
+  - [Orbit-hidden coffee-stain reset for a two-reference service ad](#397-orbit-hidden-coffee-stain-reset-for-a-two-reference-service-ad)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -24733,6 +24734,74 @@ Adapted and rewritten from GL-Kageyama / semantic-visual-loom's September 21,
 and the [raw generated MP4](https://github.com/GL-Kageyama/semantic-visual-loom/blob/7b6dcaa045861254bd8efeec0528c3ce103d1a45/projects/habits/specs/video/07_16f9c1a2-fc5d-4b9a-b50d-55842ed95308.mp4).
 
 
+### 397. Orbit-hidden coffee-stain reset for a two-reference service ad
+
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`,
+`omni_reference`) — the original producer published the complete prompt, two
+model-bound reference IDs, paid job ID, generated master URL and four-timepoint
+QA for the accepted take  
+**Mode:** two-reference image-to-video, one-take practical transformation  
+**Suggested settings:** 10 seconds, 9:16, 1080p, native audio on
+
+**Reference contract:** @Image1 owns only the adult performer's face, body,
+light-blue open shirt, white T-shirt and khaki trousers. @Image2 owns only the
+light ceramic mug and its navy Clean Bumble Bee logo. Preserve both identities;
+do not inherit either source background or pose.
+
+```text
+Create one uninterrupted ten-second vertical commercial take in a bright,
+Scandinavian-style kitchen. Use warm morning window light, white counters, a
+few soft green plants, a natural 35 mm perspective and shallow depth of field.
+
+0.0–2.0 s — Frame @Image1 from the waist up at the counter. Begin a gentle
+clockwise gimbal arc while the performer holds a phone to one ear, smiles as if
+listening and gestures casually with @Image2 in the opposite hand.
+
+2.0–3.5 s — Let the mug tip once during that gesture. A small, physically
+connected coffee splash lands on the front of the pale-blue shirt and spreads
+into one clearly visible dark wet stain. The performer reacts with a brief
+surprised laugh and then holds position. Keep the mug, phone and hands distinct.
+
+3.5–7.0 s — Continue the same clockwise arc without a cut, speed change or
+camera reversal. Pass behind the performer's shoulder so the stained shirt
+front is naturally occluded for a moment. During this hidden interval, change
+only the shirt state from wet and stained to clean, dry and pressed.
+
+7.0–9.0 s — Complete the arc back to the front. Reveal the same performer in
+the same clothing and position, now with the stain fully gone. He looks down at
+the clean shirt, then settles into a relieved half-smile; the mug hangs safely
+at his side with its logo unchanged.
+
+9.0–10.0 s — Hold the readable clean state. He gives one small satisfied nod
+and glances toward camera, leaving a stable final beat for a separately rendered
+end card.
+
+Use quiet kitchen room tone, one soft ceramic clink and a low morning hum. No
+dialogue, voice-over or music. No edit, teleport, visible cleaning action,
+second spill, extra person, face or outfit change, warped mug, rewritten logo,
+added lettering, subtitle, whip pan, zoom or orbit discontinuity.
+```
+
+**Why it works:** the camera does not merely decorate the transformation; its
+single rear-shoulder occlusion provides a motivated interval in which the
+shirt's state may change. Freezing every other identity, prop and trajectory
+makes the payoff easy to inspect, while the final hold reserves typography for
+post-production instead of asking the video model to invent it.
+
+The accepted 1080p job cost 120 Higgsfield credits and used task ID
+`7ee29229-28d6-4386-8515-a9731775cf9c`. The producer inspected frames at 1,
+4, 7 and 9.5 seconds: the same face and intact limbs persisted, the stain was
+clear by 4 seconds and absent by 7, and the mug logo remained clean at the final
+close beat. The clip was then scheduled as a live Instagram Reel and TikTok
+post; these checks apply to the generated master, not only the social upload.
+
+Adapted and rewritten from Clean Bee Instagram's September 22, 2026
+[accepted production commit](https://github.com/bayazbayev4-arch/clean-bee-instagram/commit/8f9eb29e073b26b9e463ac9507977780ef2aa7bb),
+the [complete model-bound prompt](https://github.com/bayazbayev4-arch/clean-bee-instagram/blob/8f9eb29e073b26b9e463ac9507977780ef2aa7bb/reels/20-09-2026-coffee-reset/prompt.md),
+the [paid-job metadata and QA ledger](https://github.com/bayazbayev4-arch/clean-bee-instagram/blob/8f9eb29e073b26b9e463ac9507977780ef2aa7bb/reels/20-09-2026-coffee-reset/meta.json)
+and the [generated 1080p master](https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/674a707fb3a3f8ba6122f95a2cc716ee4de64ba7/20-09-2026-coffee-reset.mp4).
+
+
 ## Reusable templates
 
 ### Rendered-first-frame poster and delivery-crop parity gate
@@ -41579,6 +41648,8 @@ and the [delivery manifest](https://github.com/TodimuJ/websites/blob/3d8bb273e34
 
 
 ## Sources
+
+- [bayazbayev4-arch / Clean Bee Instagram — September 22, 2026 Higgsfield Seedance 2.5 (`seedance_2_5`, `omni_reference`) coffee-stain reset ad: complete two-reference ten-second prompt, paid 1080p job ID, 120-credit charge, generated master, four-timepoint QA and scheduled social delivery](https://github.com/bayazbayev4-arch/clean-bee-instagram/commit/8f9eb29e073b26b9e463ac9507977780ef2aa7bb) ([complete prompt](https://github.com/bayazbayev4-arch/clean-bee-instagram/blob/8f9eb29e073b26b9e463ac9507977780ef2aa7bb/reels/20-09-2026-coffee-reset/prompt.md), [job and QA metadata](https://github.com/bayazbayev4-arch/clean-bee-instagram/blob/8f9eb29e073b26b9e463ac9507977780ef2aa7bb/reels/20-09-2026-coffee-reset/meta.json), [generated master](https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/674a707fb3a3f8ba6122f95a2cc716ee4de64ba7/20-09-2026-coffee-reset.mp4))
 
 - [TodimuJ / CLACK — September 21, 2026 Higgsfield Seedance 2.0 standard (`seedance_2_0`, `mode: "std"`) shared-cutaway camera-reversal chain: four accepted eight-second 720p silent jobs, three exact anchors per orientation, measured rendered seam, 144-credit video spend, zero retakes and two 241-frame deliveries](https://github.com/TodimuJ/websites/commit/3d8bb273e34e8ad359f01b57fac1cf22acfe9bfb) ([production ledger](https://github.com/TodimuJ/websites/blob/3d8bb273e34e8ad359f01b57fac1cf22acfe9bfb/sites/keyboard/production-notes.md), [shared interior anchor](https://github.com/TodimuJ/websites/blob/3d8bb273e34e8ad359f01b57fac1cf22acfe9bfb/sites/keyboard/_incoming/anchor-02-desktop.png), [desktop delivery](https://github.com/TodimuJ/websites/tree/3d8bb273e34e8ad359f01b57fac1cf22acfe9bfb/sites/keyboard/public/frames/desktop), [manifest](https://github.com/TodimuJ/websites/blob/3d8bb273e34e8ad359f01b57fac1cf22acfe9bfb/sites/keyboard/public/frames/manifest.json))
 
