@@ -409,6 +409,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Pay-yourself-first transfer with concept-owned balance motion](#393-pay-yourself-first-transfer-with-concept-owned-balance-motion)
   - [Balance cards to rent shock and dead-scooter consequence chain](#394-balance-cards-to-rent-shock-and-dead-scooter-consequence-chain)
   - [Deadpan neon-sign maker with native dialogue and timed flicker](#395-deadpan-neon-sign-maker-with-native-dialogue-and-timed-flicker)
+  - [Unresolved Japanese names across carved wood and printed paper](#396-unresolved-japanese-names-across-carved-wood-and-printed-paper)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -24632,6 +24633,106 @@ Adapted and rewritten from useapi.net's September 21, 2026
 and the [dedicated Seedance 2.5 MP4](https://demo.useapi.net/discord-cdn-proxy/?https://cdn.discordapp.com/attachments/1239264794394234985/1551387340461711360/sora2-alt-clip-2-seedance-2-5-pixverse-720p.mp4).
 
 
+### 396. Unresolved Japanese names across carved wood and printed paper
+
+**Verified model:** Seedance 2.5 — the original creator names this exact route
+in the generation specification, commits the returned raw clip and measures
+its frames, audio and two text-bearing surfaces. The raw result is 12.0417
+seconds, 24 fps and 1280×720, despite a 1920×1080 request.  
+**Mode:** one reference image as `reference_image`, not a first frame; native
+audio; one continuous anime take  
+**Suggested settings:** 12 seconds, 16:9, 24 fps, request 1080p but verify the
+returned stream before acceptance
+
+**Reference contract:** one approved 16:9 scene image fixing the same adult
+courier, box, wooden gatepost, nameplate, address slip, closed door, midday
+light and luminous realist-anime style. Do not attach a character sheet that
+contains readable labels; its typography can overpower the intended
+unreadable in-world names.
+
+```text
+Create one continuous 12-second luminous realist-anime shot at midday outside
+a private house on a narrow street in Adachi, Tokyo. A 26-year-old delivery
+courier stands motionless with a cardboard box held in the crook of his arm.
+The only narrative change is carried by his eyes: he compares two Japanese
+names that do not match, one carved into a wooden nameplate and one printed on
+the address slip.
+
+0-3 s — Establish the gatepost and nameplate. The square wooden plate is fixed
+to the post; two Japanese characters are recessed into the grain and filled
+black. Its upper half is faded lighter than the lower half, its corners are
+rounded and two cross-slot screw heads are visible. Hard midday sun lights the
+right half while the post shadows the left.
+
+3-6 s — Keep the same composition and reveal the address slip facing camera on
+the box. It has four ruled fields; the top field contains two flat, even-edged
+Japanese characters printed in black ink. The courier's eyes begin on this
+field and rise toward the plate, as though carrying the printed name upward.
+
+6-9 s — His eyes reach the plate, return to the slip and rise again. Repeat the
+same route at the same speed, with one stop at the top and one at the bottom.
+The head, shoulders, hands, feet, box, slip and door remain still. The eye
+movement makes no sound.
+
+9-12 s — His eyes stop at the place where the two names fail to overlap and
+remain there. His final blink is slower than the earlier blinks. Breathing
+stays shallow; the shoulders do not rise. Dust continues moving through the
+light so the ending is living stillness, not a frozen frame.
+
+VISUAL CONTRACT
+Preserve the approved adult courier: broad forehead under a shallow cap, wide
+cheekbones, short square jaw, long downward-tipped nose, large outward ears,
+short black hair, delivery jacket, cap and a handheld terminal clipped at one
+hip. Place no expression on his face. Use thin even anime linework, one crisp
+cel-shadow tone per material, saturated light, deep cyan shadow, warm wood,
+pale cardboard, white paper and grey stone. Keep both name surfaces visible in
+one medium, slightly low composition. The camera performs only a weighted
+settle of a few centimetres and never moves closer to either name.
+
+The two sets of Japanese characters must be materially distinct and present:
+the plate characters are cut into wood with dark recessed strokes; the slip
+characters are flat black printing on paper. Neither set forms a readable
+name. Do not replace either with an empty surface, pseudo-kanji, alphabetic
+text, blurred grey stains or texture without stroke structure.
+
+SOUND
+Use quiet residential ambience, distant traffic, dry air over the stone step
+and the faint paper edge held under his fingers. No dialogue, narration,
+voice-over, door sound, music, score or sting. No subtitles or captions.
+
+ACCEPTANCE
+Confirm four complete eye circuits at constant speed, a slower final blink,
+continued dust motion, a closed door, a fixed box and two distinct text
+materials. Reject readable names, blank fields, invented glyphs, grey smudges
+without strokes, painted rather than carved plate marks, printed marks that
+are lighter than the paper's own edge shadow, added people, extra screws,
+mirrored composition, rack focus, push-in, camera cut, subtitle, watermark or
+resolution below the purchased request unless the downgrade is explicitly
+recorded.
+```
+
+**Why it works:** the timeline gives a tiny eye action four observable beats
+while freezing every competing body and object motion. Naming carving and
+printing as different physical processes makes material fidelity testable,
+and the revised acceptance gate covers the third failure state the original
+two-way guard missed: marks can be neither blank nor fake glyphs, yet still
+collapse into shapeless stains.
+
+The first returned take verified the four eye movements at measured peaks of
+2.75, 4.21, 5.83 and 7.29 seconds and contained no subtitle or watermark. It
+also preserved the failure evidence: the composition mirrored the requested
+diagonal, four screws appeared instead of two, and the printed name became two
+light-grey stains whose darkest pixel was 179 while the paper edge reached
+143–148. The stain rejection above is therefore a proposed correction, not a
+claim that a second successful take exists.
+
+Adapted and rewritten from GL-Kageyama / semantic-visual-loom's September 21,
+2026 [first generated Seedance 2.5 take and measured review](https://github.com/GL-Kageyama/semantic-visual-loom/commit/7b6dcaa045861254bd8efeec0528c3ce103d1a45),
+[complete generation specification and prompt](https://github.com/GL-Kageyama/semantic-visual-loom/blob/7b6dcaa045861254bd8efeec0528c3ce103d1a45/projects/habits/specs/video/habits-ch02-seg07.md),
+[reference-image specification](https://github.com/GL-Kageyama/semantic-visual-loom/blob/7b6dcaa045861254bd8efeec0528c3ce103d1a45/projects/habits/specs/image/habits-ch02-seg07.md)
+and the [raw generated MP4](https://github.com/GL-Kageyama/semantic-visual-loom/blob/7b6dcaa045861254bd8efeec0528c3ce103d1a45/projects/habits/specs/video/07_16f9c1a2-fc5d-4b9a-b50d-55842ed95308.mp4).
+
+
 ## Reusable templates
 
 ### Rendered-first-frame poster and delivery-crop parity gate
@@ -40807,6 +40908,8 @@ and the [complete guarded adapter](https://github.com/Theoduras/ai-model-chat/bl
 
 
 ## Sources
+
+- [GL-Kageyama / semantic-visual-loom — September 21, 2026 Seedance 2.5 carved-versus-printed Japanese-name shot: complete timed 12-second reference-image prompt, committed raw generation, exact stream measurements, frame-by-frame eye-motion verification and quantified text-material failure analysis](https://github.com/GL-Kageyama/semantic-visual-loom/commit/7b6dcaa045861254bd8efeec0528c3ce103d1a45) ([complete video specification](https://github.com/GL-Kageyama/semantic-visual-loom/blob/7b6dcaa045861254bd8efeec0528c3ce103d1a45/projects/habits/specs/video/habits-ch02-seg07.md), [reference-image specification](https://github.com/GL-Kageyama/semantic-visual-loom/blob/7b6dcaa045861254bd8efeec0528c3ce103d1a45/projects/habits/specs/image/habits-ch02-seg07.md), [raw generated MP4](https://github.com/GL-Kageyama/semantic-visual-loom/blob/7b6dcaa045861254bd8efeec0528c3ce103d1a45/projects/habits/specs/video/07_16f9c1a2-fc5d-4b9a-b50d-55842ed95308.mp4))
 
 - [useapi.net — September 21, 2026 PixVerse Seedance 2.5 (`seedance-2.5`) deadpan neon-sign maker: complete six-second 720p first-frame request, native dialogue and timed-flicker prompt, individual generated MP4, 450-credit ledger and same-shot four-model comparison](https://useapi.net/docs/articles/sora-2-api-alternatives) ([versioned code and prompt commit](https://github.com/useapi/sora-2-alternatives/commit/82f53aed2690319decc57a6b7ccc5598e35becbf), [complete Seedance request](https://github.com/useapi/sora-2-alternatives/blob/82f53aed2690319decc57a6b7ccc5598e35becbf/clips/prompts.json), [individual Seedance MP4](https://demo.useapi.net/discord-cdn-proxy/?https://cdn.discordapp.com/attachments/1239264794394234985/1551387340461711360/sora2-alt-clip-2-seedance-2-5-pixverse-720p.mp4), [labelled five-model reel](https://www.youtube.com/watch?v=W5vXcM2cCJs))
 
