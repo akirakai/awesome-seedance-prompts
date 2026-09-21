@@ -41013,7 +41013,118 @@ Adapted and rewritten from thisisisheanesu / MORENA Studio's September 21,
 and the [exact Replicate adapter](https://github.com/thisisisheanesu/morena-studio/blob/5f3b29f7380409b17caa477d88f9af41f383c615/serve.py).
 
 
+### Exact-version pixel-table dispatch and delivered-stream conformance gate
+
+**Verified models:** Volcano Ark Seedance 2.0 Standard
+(`doubao-seedance-2-0-260128`) and Seedance 2.0 Fast
+(`doubao-seedance-2-0-fast-260128`) — the original developer submitted one
+real five-second 3:4 image-to-video task through each exact route on September
+21, 2026. The untouched masters measured 1248×1664 for Standard and 834×1112
+for Fast, both 5.041992 seconds, 24 fps and H.264/yuv420p. The task IDs and MP4s
+remain local rather than public, so this counts as one reusable failure-control
+template, not a complete scenario.
+
+**Use case:** several versions in one provider family share a name prefix but
+accept different resolution ceilings or pixel tables; an adapter must select
+the table from the exact model ID and verify the stream actually delivered  
+**Mode:** image-to-video or text-to-video request compilation plus original-file
+conformance inspection
+
+```text
+VERSIONED JOB CONTRACT
+Provider = [PROVIDER / GATEWAY / REGION].
+Exact model ID = [FULL IMMUTABLE MODEL ID].
+Mode = [TEXT / FIRST FRAME / FIRST + LAST FRAME / REFERENCE].
+Duration = [SUPPORTED INTEGER].
+Delivery aspect = [21:9 / 16:9 / 4:3 / 1:1 / 3:4 / 9:16].
+Reference manifest = [ORDERED FILES, HASHES AND ROLES].
+
+CAPABILITY REGISTRY
+Key every row by exact model ID and mode, never by a shared family prefix.
+
+For `doubao-seedance-2-0-260128`:
+- tier = 1080p;
+- verified live cell = 3:4 -> 1248x1664;
+- configured pixel table = 16:9 1920x1080, 4:3 1664x1248,
+  1:1 1440x1440, 3:4 1248x1664, 9:16 1080x1920,
+  21:9 2206x946.
+
+For `doubao-seedance-2-0-fast-260128`:
+- tier = 720p;
+- verified live cell = 3:4 -> 834x1112;
+- configured pixel table = 16:9 1280x720, 4:3 1112x834,
+  1:1 960x960, 3:4 834x1112, 9:16 720x1280,
+  21:9 1470x630.
+
+Treat only the two 3:4 cells as live output evidence from this test. Keep the
+remaining cells marked as provider-table or request-regression coverage until
+each is verified by a returned original stream.
+
+EXACT DISPATCH
+1. Compare the complete model ID before evaluating any family wildcard.
+2. Select exactly one capability row for that ID and mode.
+3. Convert the delivery aspect to the row's exact pixel pair.
+4. Serialize the provider's verified field dialect. For the tested gateway,
+   send `size=[WIDTH]x[HEIGHT]`; do not also send an inferred `resolution`.
+5. Preserve model, mode, duration, reference order and selected size in one
+   immutable request ledger.
+
+Never let `startsWith("doubao-seedance")`, a marketing label such as
+"Seedance 2.0", or the source image's smaller pixel dimensions silently choose
+a tier. Standard and Fast may share an aspect while requiring different pixel
+pairs.
+
+PRE-SUBMIT GATE
+Reject before billing when:
+- the model ID has no exact registry row;
+- Standard resolves to the Fast table or Fast resolves to the Standard table;
+- aspect has no pixel pair in the selected row;
+- both `size` and an unverified resolution field would be sent;
+- the UI, estimator and serialized request disagree on model, tier or aspect;
+- a first/last-frame mode changes reference order while applying the size.
+
+DELIVERED-STREAM GATE
+Download the provider's original result before any upscale, crop or transcode.
+Run a stream probe and record:
+- width and height;
+- duration and frame rate;
+- codec and pixel format;
+- task ID, exact model ID and request size;
+- original-file hash.
+
+Accept only when the returned width:height matches the requested aspect and the
+measured pixel pair matches the selected capability row. A successful provider
+status is not proof that the intended tier was used. If dimensions differ,
+quarantine the result, retain the original, and mark that exact registry cell
+as contradicted; do not repair the evidence by upscaling it to the expected
+size.
+
+REGRESSION LOCK
+For every supported model row, assert the complete aspect-to-size map and the
+serialized request keys. Add negative tests for an unknown future suffix, a
+Mini route, a family-prefix collision and a Standard/Fast table swap. Promote a
+cell from configured to live-verified only after an original returned stream
+passes the conformance gate.
+```
+
+**Why it works:** a family-level branch can be syntactically valid while sending
+the wrong resolution contract to a neighbouring model. Exact-ID dispatch makes
+that collision observable before spend, and probing the untouched result closes
+the second gap between an accepted request and the pixels actually delivered.
+Separating live-verified cells from table-derived or regression-only cells also
+prevents one successful aspect from being overstated as proof of an entire
+resolution matrix.
+
+Adapted and rewritten from shepherdleong-art / creative-studio's September 21,
+2026 [live Standard-versus-Fast resolution repair](https://github.com/shepherdleong-art/creative-studio/commit/05a86635f1100911d12a4da27b8aae9246bb665d),
+[two-task measurement record](https://github.com/shepherdleong-art/creative-studio/blob/05a86635f1100911d12a4da27b8aae9246bb665d/docs/2026-09-21-Seedance2%E6%A0%87%E5%87%86%E7%89%88%E4%B8%8EFast%E5%88%86%E8%BE%A8%E7%8E%87%E5%AE%9E%E6%B5%8B.md),
+[exact-version capability dispatch](https://github.com/shepherdleong-art/creative-studio/blob/05a86635f1100911d12a4da27b8aae9246bb665d/lib/company-gateway-size.ts)
+and the [serialized-request regressions](https://github.com/shepherdleong-art/creative-studio/blob/05a86635f1100911d12a4da27b8aae9246bb665d/scripts/openai-video-adapter.test.ts).
+
+
 ## Sources
+
+- [shepherdleong-art / creative-studio — September 21, 2026 Volcano Ark Seedance 2.0 Standard (`doubao-seedance-2-0-260128`) versus Fast (`doubao-seedance-2-0-fast-260128`) exact-version pixel-table dispatch: two real 3:4 tasks, untouched-stream measurements, family-prefix collision prevention and request regressions](https://github.com/shepherdleong-art/creative-studio/commit/05a86635f1100911d12a4da27b8aae9246bb665d) ([measurement record](https://github.com/shepherdleong-art/creative-studio/blob/05a86635f1100911d12a4da27b8aae9246bb665d/docs/2026-09-21-Seedance2%E6%A0%87%E5%87%86%E7%89%88%E4%B8%8EFast%E5%88%86%E8%BE%A8%E7%8E%87%E5%AE%9E%E6%B5%8B.md), [capability dispatch](https://github.com/shepherdleong-art/creative-studio/blob/05a86635f1100911d12a4da27b8aae9246bb665d/lib/company-gateway-size.ts), [request regressions](https://github.com/shepherdleong-art/creative-studio/blob/05a86635f1100911d12a4da27b8aae9246bb665d/scripts/openai-video-adapter.test.ts))
 
 - [thisisisheanesu / MORENA Studio — September 21, 2026 Replicate Seedance 2.5 (`bytedance/seedance-2.5`) multilingual brief compiler: exact-payload live render path, controlled camera lexicon, same-language and multi-shot framing gates, and a 120-brief held-out evaluation](https://github.com/thisisisheanesu/morena-studio/commit/5f3b29f7380409b17caa477d88f9af41f383c615) ([compiler evaluation](https://github.com/thisisisheanesu/morena-studio/blob/5f3b29f7380409b17caa477d88f9af41f383c615/README.md), [executable gates](https://github.com/thisisisheanesu/morena-studio/blob/5f3b29f7380409b17caa477d88f9af41f383c615/app/index.html), [exact model adapter](https://github.com/thisisisheanesu/morena-studio/blob/5f3b29f7380409b17caa477d88f9af41f383c615/serve.py))
 
