@@ -41400,7 +41400,92 @@ the [accepted Seedance clip](https://github.com/gbxcaillin/Moneytails/blob/b13cd
 and the [retained off-style take](https://github.com/gbxcaillin/Moneytails/blob/b13cdb0ff8f52c1afddb1cc9d22eb68719b20037/assets/ep01/clips/rejected/clip17-wombat-clipboard-v3-offstyle-480p.mp4).
 
 
+### Upstream terminal-side staging for obstacle-safe transitions
+
+**Verified model:** OpenArt Seedance 2.5 (`element2video`, image-to-video),
+480p — the creator records accepted OpenArt history IDs for the corrected
+upstream shot and bracketed transition, preserves both generated MP4s and the
+failed phasing takes, and identifies the transition as silent image-to-video.
+The exact motion prompt is not public, so this counts as a reusable production
+template rather than a complete scenario.
+
+**Use case:** a start/end-frame transition where a person, animal, vehicle or
+held object would have to cross through a solid prop to reach the next shot's
+opening pose; especially falls, get-ups, entrances and handoffs around furniture,
+vehicles, walls or other large foreground objects
+
+```text
+BOUNDARY TOPOLOGY AUDIT
+Define the final state of @UpstreamClip as P0 and the approved opening still of
+@NextShot as P1. For every persistent solid obstacle, record:
+- subject side at P0: [LEFT / RIGHT / FRONT / BEHIND / INSIDE / OUTSIDE];
+- required side at P1: [SIDE];
+- obstacle position and orientation at both endpoints;
+- a visible free corridor around or over it, if a side change is intentional.
+
+If the subject changes sides but no explicit collision-free route and enough
+screen time exist, reject the boundary. Do not ask Seedance to interpolate the
+shortest path through the obstacle.
+
+UPSTREAM RE-STAGE
+Repair @UpstreamClip so its action ends on the same obstacle side required by
+P1. [SUBJECT] completes [FALL / LAND / STEP / HANDOFF] toward [SAFE SIDE] of
+[OBSTACLE], clears it physically, settles and remains there. [OBSTACLE] stays
+solid, stationary and fully visible. Hold the settled terminal state for
+[HOLD]. Extract and inspect the true final frame; use it as @StartFrame.
+
+BRACKETED TRANSITION
+@StartFrame = corrected upstream terminal frame.
+@EndFrame = approved next-shot opening still.
+
+[SUBJECT] [RISES / TURNS / REACTS] in place on [SAFE SIDE] of [OBSTACLE].
+[SECOND SUBJECT] enters only through [FREE CORRIDOR] from [SCREEN EDGE], reaches
+[NAMED TERMINAL POSE], and does not pass through either subject or obstacle.
+The obstacle never moves, bends, vanishes or becomes transparent. Preserve
+camera, framing, style, character design, screen direction and prop state.
+Land exactly on @EndFrame and hold.
+
+ACCEPTANCE
+- no body, limb, clothing or carried object intersects the solid obstacle;
+- subject-to-obstacle side relationships stay legal throughout the transition;
+- the first frame matches the corrected upstream terminal frame;
+- the last frame matches the next shot's approved opening pose;
+- every entrance follows the named free corridor, with no teleport or duplicate;
+- the obstacle remains opaque, rigid, stationary and identity-consistent.
+
+FAILURE ROUTING
+Subject phases through obstacle -> repair the upstream terminal side; do not add
+more synonyms for "walk around" to the same contradictory endpoint pair.
+Incoming character crosses occupied space -> place them in the start frame or
+open a different corridor before regeneration.
+Start/end stills disagree on obstacle geometry -> rebuild the boundary stills.
+Only an unneeded generated music bed triggers output moderation in a dialogue-
+free bridge -> disable generation audio, keep the approved visual request and
+design footsteps/get-up effects in post.
+```
+
+**Why it works:** endpoint interpolation cannot invent a physically valid route
+when its own boundary states put the subject on opposite sides of an opaque
+object. In the retained failed transition, the shortest route from the right
+side of a fallen scooter to the left-side next-shot pose went through the
+scooter. Re-rendering the preceding fall so the character spilled left made the
+two endpoint states topologically compatible; the replacement transition then
+raised him in place while the second character entered from the open right side.
+The correction changes the causal boundary rather than trying to overpower it
+with extra wording.
+
+Adapted and rewritten from gbxcaillin / Moneytails' September 21, 2026
+[upstream-side repair commit](https://github.com/gbxcaillin/Moneytails/commit/130d2b8ab999a0a4ad20e870927bd24f89953c4c),
+the [versioned workflow](https://github.com/gbxcaillin/Moneytails/blob/130d2b8ab999a0a4ad20e870927bd24f89953c4c/docs/workflow.md),
+the [history-ID and acceptance ledger](https://github.com/gbxcaillin/Moneytails/blob/130d2b8ab999a0a4ad20e870927bd24f89953c4c/assets/ep01/README.md),
+the [accepted upstream clip](https://github.com/gbxcaillin/Moneytails/blob/130d2b8ab999a0a4ad20e870927bd24f89953c4c/assets/ep01/clips/clip16-scooter-dies-480p.mp4),
+the [accepted bracketed transition](https://github.com/gbxcaillin/Moneytails/blob/130d2b8ab999a0a4ad20e870927bd24f89953c4c/assets/ep01/clips/clip16b-getup-wombat-arrives-480p.mp4)
+and the [retained phasing failure](https://github.com/gbxcaillin/Moneytails/blob/130d2b8ab999a0a4ad20e870927bd24f89953c4c/assets/ep01/clips/rejected/clip16b-getup-v1-phasing-480p.mp4).
+
+
 ## Sources
+
+- [gbxcaillin / Moneytails — September 21, 2026 OpenArt Seedance 2.5 `element2video` obstacle-topology repair: right-side phasing failure, upstream left-side re-stage, corrected start/end-bracketed silent transition, old/new history IDs and accepted replacement MP4s](https://github.com/gbxcaillin/Moneytails/commit/130d2b8ab999a0a4ad20e870927bd24f89953c4c) ([workflow](https://github.com/gbxcaillin/Moneytails/blob/130d2b8ab999a0a4ad20e870927bd24f89953c4c/docs/workflow.md), [production ledger](https://github.com/gbxcaillin/Moneytails/blob/130d2b8ab999a0a4ad20e870927bd24f89953c4c/assets/ep01/README.md), [accepted upstream MP4](https://github.com/gbxcaillin/Moneytails/blob/130d2b8ab999a0a4ad20e870927bd24f89953c4c/assets/ep01/clips/clip16-scooter-dies-480p.mp4), [accepted transition MP4](https://github.com/gbxcaillin/Moneytails/blob/130d2b8ab999a0a4ad20e870927bd24f89953c4c/assets/ep01/clips/clip16b-getup-wombat-arrives-480p.mp4), [failed phasing MP4](https://github.com/gbxcaillin/Moneytails/blob/130d2b8ab999a0a4ad20e870927bd24f89953c4c/assets/ep01/clips/rejected/clip16b-getup-v1-phasing-480p.mp4))
 
 - [gbxcaillin / Moneytails — September 21, 2026 OpenArt Seedance 2.5 `element2video` still-first style repair: retained off-style take, rebuilt start frame, character-sheet parity check, old/new history IDs and accepted replacement MP4](https://github.com/gbxcaillin/Moneytails/commit/b13cdb0ff8f52c1afddb1cc9d22eb68719b20037) ([workflow](https://github.com/gbxcaillin/Moneytails/blob/b13cdb0ff8f52c1afddb1cc9d22eb68719b20037/docs/workflow.md), [production ledger](https://github.com/gbxcaillin/Moneytails/blob/b13cdb0ff8f52c1afddb1cc9d22eb68719b20037/assets/ep01/README.md), [approved start still](https://github.com/gbxcaillin/Moneytails/blob/b13cdb0ff8f52c1afddb1cc9d22eb68719b20037/assets/ep01/keyframes/clip17-fallen-scooter-start.png), [accepted MP4](https://github.com/gbxcaillin/Moneytails/blob/b13cdb0ff8f52c1afddb1cc9d22eb68719b20037/assets/ep01/clips/clip17-wombat-clipboard-480p.mp4), [failed MP4](https://github.com/gbxcaillin/Moneytails/blob/b13cdb0ff8f52c1afddb1cc9d22eb68719b20037/assets/ep01/clips/rejected/clip17-wombat-clipboard-v3-offstyle-480p.mp4))
 
