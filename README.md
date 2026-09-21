@@ -41311,7 +41311,98 @@ the [corrected generated clip](https://github.com/gbxcaillin/Moneytails/blob/8bf
 and the [retained failed take](https://github.com/gbxcaillin/Moneytails/blob/8bf3f71f728932a1753e9f4af7ff928b9d5ce025/assets/ep01/clips/rejected/clip38-budget-planner-v1-480p.mp4).
 
 
+### Still-first style-and-identity parity gate
+
+**Verified model:** OpenArt Seedance 2.5 (`element2video`, image-to-video),
+480p — the creator retains an off-style generated take, the rebuilt start
+still, the accepted replacement MP4 and both OpenArt history IDs. The exact
+per-shot motion prompt is not public, so this counts as a reusable preflight
+template rather than a complete scenario.
+
+**Use case:** a continuation shot whose opening still is composited from a
+previous clip and one or more character sheets, especially flat animation,
+anime, branded mascots or any project where a plausible composite can quietly
+drift away from the approved visual language before video generation
+
+```text
+SOURCE OWNERSHIP
+@PreviousFrame owns scene geometry, camera, light, prop state and continuity.
+@CharacterSheet owns face, silhouette, body proportions, wardrobe, palette and
+signature details. The new still may combine these roles but may not average,
+redesign or restyle either source.
+
+START-STILL BUILD
+Edit @PreviousFrame into the exact opening state for the next shot.
+Add or reposition only [DECLARED CHARACTER / PROP / POSE CHANGE].
+Preserve [STYLE SYSTEM]: [FLAT CEL / ANIME / PHOTOREAL / BRAND LOOK],
+[OUTLINE WEIGHT], [SHADING RULE], [PALETTE], [BODY PROPORTIONS] and
+[SIGNATURE DETAILS]. Put every acting hand, wing or prop in its correct opening
+position. One full-frame image; no sheet layout, collage, border or labels.
+
+POSITIVE STYLE BLOCK
+[STYLE-SPECIFIC POSITIVE WORDS]. For flat animation, for example:
+flat 2D cartoon, flat cel shading, thick uniform outlines, bright flat colours,
+no gradients, no painterly detail, no semi-realistic rendering.
+
+PARITY GATE — BEFORE VIDEO CREDITS
+View the candidate start still beside both @PreviousFrame and @CharacterSheet
+at the same scale. Record PASS / FAIL for:
+- scene side, crop, horizon, lighting and every persistent prop;
+- face, silhouette, limb length, head-to-body ratio and wardrobe ownership;
+- exact dominant colours and signature accessories;
+- outline weight, shadow hardness, texture density and background treatment;
+- the required opening action state and the following shot's usable motion.
+
+Reject the still if it is merely recognizable but changes style: softer or
+heavier shading, lankier anatomy, duller colours, thinner outlines, added
+texture, realistic volume, lost accessories or a redesigned prop all fail.
+Do not send a failed still to video and hope the motion model repairs it.
+
+SEEDANCE MOTION HANDOFF
+Use only the approved start still as `startFrame`; attach identity references
+only where the route supports them without changing the opening composition.
+Animate [ONE MINIMAL CAUSAL ACTION]. Keep the approved style, identity, scene,
+prop state and camera fixed. [ACTING SUBJECT] performs [ACTION]; all other
+subjects react in place. No cross-frame entrance unless the start composition
+and duration were explicitly designed for it.
+
+VIDEO ACCEPTANCE
+- first frame preserves the approved start still's style and geometry;
+- identity, palette, outline and proportions hold through the final frame;
+- the prior shot's terminal prop and environment state never reset;
+- only the declared action occurs, with no extra walk, redesign or style shift;
+- the final pose is usable by the next shot or edit.
+
+FAILURE ROUTING
+Off-style but recognizable -> rebuild the still from an already approved frame,
+front-load positive style language and recheck it beside the sheet.
+Identity drifts during motion -> reduce movement and keep the character in place.
+Continuity passes but the new subject enters awkwardly -> place that subject in
+the start still and animate only the local action.
+Any still-parity failure -> fix the image stage; do not spend another video run.
+```
+
+**Why it works:** image-to-video faithfully preserves defects in its starting
+image as readily as it preserves correct design. The recorded production first
+passed continuity but failed style: its composite produced a dull olive,
+lanky, heavily shaded character, and Seedance carried that error through the
+clip. Rebuilding from the prior flat-style frame, reattaching the character
+sheet and checking the still beside it produced an accepted replacement with
+the correct bright palette, proportions and outline treatment. The gate moves
+that decision to the cheaper, inspectable still stage.
+
+Adapted and rewritten from gbxcaillin / Moneytails' September 21, 2026
+[style-repair commit](https://github.com/gbxcaillin/Moneytails/commit/b13cdb0ff8f52c1afddb1cc9d22eb68719b20037),
+the [versioned still-first workflow](https://github.com/gbxcaillin/Moneytails/blob/b13cdb0ff8f52c1afddb1cc9d22eb68719b20037/docs/workflow.md),
+the [history-ID and acceptance ledger](https://github.com/gbxcaillin/Moneytails/blob/b13cdb0ff8f52c1afddb1cc9d22eb68719b20037/assets/ep01/README.md),
+the [approved start still](https://github.com/gbxcaillin/Moneytails/blob/b13cdb0ff8f52c1afddb1cc9d22eb68719b20037/assets/ep01/keyframes/clip17-fallen-scooter-start.png),
+the [accepted Seedance clip](https://github.com/gbxcaillin/Moneytails/blob/b13cdb0ff8f52c1afddb1cc9d22eb68719b20037/assets/ep01/clips/clip17-wombat-clipboard-480p.mp4)
+and the [retained off-style take](https://github.com/gbxcaillin/Moneytails/blob/b13cdb0ff8f52c1afddb1cc9d22eb68719b20037/assets/ep01/clips/rejected/clip17-wombat-clipboard-v3-offstyle-480p.mp4).
+
+
 ## Sources
+
+- [gbxcaillin / Moneytails — September 21, 2026 OpenArt Seedance 2.5 `element2video` still-first style repair: retained off-style take, rebuilt start frame, character-sheet parity check, old/new history IDs and accepted replacement MP4](https://github.com/gbxcaillin/Moneytails/commit/b13cdb0ff8f52c1afddb1cc9d22eb68719b20037) ([workflow](https://github.com/gbxcaillin/Moneytails/blob/b13cdb0ff8f52c1afddb1cc9d22eb68719b20037/docs/workflow.md), [production ledger](https://github.com/gbxcaillin/Moneytails/blob/b13cdb0ff8f52c1afddb1cc9d22eb68719b20037/assets/ep01/README.md), [approved start still](https://github.com/gbxcaillin/Moneytails/blob/b13cdb0ff8f52c1afddb1cc9d22eb68719b20037/assets/ep01/keyframes/clip17-fallen-scooter-start.png), [accepted MP4](https://github.com/gbxcaillin/Moneytails/blob/b13cdb0ff8f52c1afddb1cc9d22eb68719b20037/assets/ep01/clips/clip17-wombat-clipboard-480p.mp4), [failed MP4](https://github.com/gbxcaillin/Moneytails/blob/b13cdb0ff8f52c1afddb1cc9d22eb68719b20037/assets/ep01/clips/rejected/clip17-wombat-clipboard-v3-offstyle-480p.mp4))
 
 - [gbxcaillin / Moneytails — September 21, 2026 OpenArt Seedance 2.5 `element2video` endpoint-bracketed UI-state repair: retained single-start failure, checked start/end stills, corrected slider MP4, two-stage meter chain, OpenArt history IDs and explicit acceptance notes](https://github.com/gbxcaillin/Moneytails/commit/8bf3f71f728932a1753e9f4af7ff928b9d5ce025) ([workflow](https://github.com/gbxcaillin/Moneytails/blob/8bf3f71f728932a1753e9f4af7ff928b9d5ce025/docs/workflow.md), [production ledger](https://github.com/gbxcaillin/Moneytails/blob/8bf3f71f728932a1753e9f4af7ff928b9d5ce025/assets/ep01/README.md), [corrected MP4](https://github.com/gbxcaillin/Moneytails/blob/8bf3f71f728932a1753e9f4af7ff928b9d5ce025/assets/ep01/clips/clip38-budget-planner-480p.mp4), [failed MP4](https://github.com/gbxcaillin/Moneytails/blob/8bf3f71f728932a1753e9f4af7ff928b9d5ce025/assets/ep01/clips/rejected/clip38-budget-planner-v1-480p.mp4))
 
