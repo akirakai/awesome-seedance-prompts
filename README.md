@@ -41483,7 +41483,104 @@ the [accepted bracketed transition](https://github.com/gbxcaillin/Moneytails/blo
 and the [retained phasing failure](https://github.com/gbxcaillin/Moneytails/blob/130d2b8ab999a0a4ad20e870927bd24f89953c4c/assets/ep01/clips/rejected/clip16b-getup-v1-phasing-480p.mp4).
 
 
+### Motivated camera-reversal seam at a shared occlusion anchor
+
+**Verified model:** Higgsfield Seedance 2.0 standard (`seedance_2_0`,
+`mode: "std"`), 720p, silent — the production ledger records four accepted
+eight-second jobs, two landscape and two portrait, chained through three
+generated anchors. The delivered sequences, job IDs, 144-credit video spend,
+zero-retake result and rendered seam inspection are public. Full copy-paste
+video prompts remain in a private session record, so this counts as a reusable
+transition template rather than a complete scenario.
+
+**Use case:** a two-part macro journey that must enter an object, reveal its
+interior, then reverse direction and withdraw into a larger resolved state;
+product cutaways, portals, mechanisms, miniature worlds and other sequences
+where an ordinary camera reversal would look like a continuity error
+
+```text
+THREE-ANCHOR STATE MAP
+K0 — exterior opening: [SUBJECT / OBJECT], [CAMERA], [LIGHT], [COPY SPACE].
+K1 — reversal chamber: an approved full-frame [INTERIOR / PORTAL / OCCLUSION]
+anchor at the exact causal peak [SPARK / IMPACT / FLASH / DENSE BLUR].
+K2 — resolved exterior: [ASSEMBLED PRODUCT / REVEALED WORLD / TERMINAL STATE].
+
+K1 must depict one readable physical state, not a collage. Preserve object
+identity, axis, scale, material and light direction across all three anchors.
+
+CLIP A — INWARD MOVE
+start_image = K0; end_image = K1.
+The camera follows [MOVING PART / SUBJECT] continuously into [OBJECT]. The
+exterior ground passes close enough to fill and defocus the frame. Reveal the
+interior mechanism in causal order: [CONTACT 1] -> [CONTACT 2] -> [PEAK EVENT].
+Finish inside the object on K1. Do not withdraw, cut away or preview K2.
+
+CLIP B — MOTIVATED REVERSAL
+start_image = the exact same K1 file; end_image = K2.
+Begin at the causal peak with no establishing reset or beauty-shot hold. The
+camera reverses only now, retracing through the same close occlusion while
+[MECHANISM] releases or the next process begins. Withdraw into [BUILD / CASCADE
+/ WORLD REVEAL], then arrive cleanly at K2. The direction change is the story:
+one plunge in, one pull out, both pivoting on the same physical event.
+
+SEAM PLACEMENT
+Place the join where K1 already fills the frame with low-correspondence detail:
+[DARK HOUSING / WALL-CROSSING BLUR / SPARK / FLASH / PARTICLES]. Keep the
+reversal inside the same object and on the same optical axis. Never hide an
+unrelated location swap behind arbitrary blur.
+
+RENDERED-SEAM GATE
+Supplying the same K1 file does not prove the two renders reproduce it exactly.
+Decode Clip A's last frame and Clip B's first frame to the same size and colour
+space; compare geometry, moving-part position, scale, lighting and transient
+effect. Reject a housing redraw, axis jump, subject reset or different interior.
+A small local difference in a naturally flickering spark may pass only when the
+surrounding geometry and visual inspection remain continuous.
+
+ASSEMBLY
+After the rendered boundary passes, remove Clip B's first frame only if it is a
+duplicate or near-duplicate of Clip A's last frame; otherwise preserve both and
+repair the seam. Renumber the delivered sequence contiguously and verify frame
+count, orientation and playback in both directions before publication.
+
+MODEL / COST GATE
+If both clips must land on explicit end images, choose a route that exposes
+start-and-end control for each edge. Do not pay for video extension merely
+because it is newer when extension cannot target K1 and K2. Match native source
+width to delivery width before buying extra resolution; reserve the difference
+for a retake of the load-bearing interior anchor.
+
+ACCEPTANCE
+- K1 is the same requested raster on both clip edges;
+- the rendered edge frames preserve the same interior geometry and mechanism;
+- camera direction changes exactly once, at the named causal peak;
+- the close occlusion belongs to the same object on both sides;
+- Clip B begins in motion and does not visibly stop on the shared anchor;
+- K2 completes the promised resolved state without reverting to K0;
+- duplicate-boundary removal creates neither a stall nor a missing beat.
+```
+
+**Why it works:** a shared endpoint normally solves appearance continuity but
+can make motion stop at every join. Here the boundary is also a motivated
+turning point: the camera reaches the inside of the switch at actuation, then
+withdraws as assembly begins. The dense, dark cutaway and flickering spark make
+the only direction change readable as cause and effect. The recorded production
+used the same interior anchor for both clips, inspected both returned edge
+frames, removed the proved duplicate during extraction and delivered 241
+contiguous frames in each orientation. This is a narrow exception to the usual
+same-direction handoff rule, not permission for arbitrary camera resets.
+
+Adapted and rewritten from TodimuJ's September 21, 2026
+[CLACK production commit](https://github.com/TodimuJ/websites/commit/3d8bb273e34e8ad359f01b57fac1cf22acfe9bfb),
+the [complete generation, job, cost and measurement ledger](https://github.com/TodimuJ/websites/blob/3d8bb273e34e8ad359f01b57fac1cf22acfe9bfb/sites/keyboard/production-notes.md),
+the [shared interior desktop anchor](https://github.com/TodimuJ/websites/blob/3d8bb273e34e8ad359f01b57fac1cf22acfe9bfb/sites/keyboard/_incoming/anchor-02-desktop.png),
+the [delivered desktop frame sequence](https://github.com/TodimuJ/websites/tree/3d8bb273e34e8ad359f01b57fac1cf22acfe9bfb/sites/keyboard/public/frames/desktop)
+and the [delivery manifest](https://github.com/TodimuJ/websites/blob/3d8bb273e34e8ad359f01b57fac1cf22acfe9bfb/sites/keyboard/public/frames/manifest.json).
+
+
 ## Sources
+
+- [TodimuJ / CLACK — September 21, 2026 Higgsfield Seedance 2.0 standard (`seedance_2_0`, `mode: "std"`) shared-cutaway camera-reversal chain: four accepted eight-second 720p silent jobs, three exact anchors per orientation, measured rendered seam, 144-credit video spend, zero retakes and two 241-frame deliveries](https://github.com/TodimuJ/websites/commit/3d8bb273e34e8ad359f01b57fac1cf22acfe9bfb) ([production ledger](https://github.com/TodimuJ/websites/blob/3d8bb273e34e8ad359f01b57fac1cf22acfe9bfb/sites/keyboard/production-notes.md), [shared interior anchor](https://github.com/TodimuJ/websites/blob/3d8bb273e34e8ad359f01b57fac1cf22acfe9bfb/sites/keyboard/_incoming/anchor-02-desktop.png), [desktop delivery](https://github.com/TodimuJ/websites/tree/3d8bb273e34e8ad359f01b57fac1cf22acfe9bfb/sites/keyboard/public/frames/desktop), [manifest](https://github.com/TodimuJ/websites/blob/3d8bb273e34e8ad359f01b57fac1cf22acfe9bfb/sites/keyboard/public/frames/manifest.json))
 
 - [gbxcaillin / Moneytails — September 21, 2026 OpenArt Seedance 2.5 `element2video` obstacle-topology repair: right-side phasing failure, upstream left-side re-stage, corrected start/end-bracketed silent transition, old/new history IDs and accepted replacement MP4s](https://github.com/gbxcaillin/Moneytails/commit/130d2b8ab999a0a4ad20e870927bd24f89953c4c) ([workflow](https://github.com/gbxcaillin/Moneytails/blob/130d2b8ab999a0a4ad20e870927bd24f89953c4c/docs/workflow.md), [production ledger](https://github.com/gbxcaillin/Moneytails/blob/130d2b8ab999a0a4ad20e870927bd24f89953c4c/assets/ep01/README.md), [accepted upstream MP4](https://github.com/gbxcaillin/Moneytails/blob/130d2b8ab999a0a4ad20e870927bd24f89953c4c/assets/ep01/clips/clip16-scooter-dies-480p.mp4), [accepted transition MP4](https://github.com/gbxcaillin/Moneytails/blob/130d2b8ab999a0a4ad20e870927bd24f89953c4c/assets/ep01/clips/clip16b-getup-wombat-arrives-480p.mp4), [failed phasing MP4](https://github.com/gbxcaillin/Moneytails/blob/130d2b8ab999a0a4ad20e870927bd24f89953c4c/assets/ep01/clips/rejected/clip16b-getup-v1-phasing-480p.mp4))
 
