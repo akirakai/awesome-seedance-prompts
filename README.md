@@ -40907,7 +40907,115 @@ Adapted and rewritten from Theoduras / ai-model-chat's September 20, 2026
 and the [complete guarded adapter](https://github.com/Theoduras/ai-model-chat/blob/1fee8cb39531ba892a4a75bdcc9b0b15aa51332c/imagegen.py).
 
 
+### Language-preserving spoken-brief compiler with a controlled camera lexicon
+
+**Verified model:** Replicate Seedance 2.5 (`bytedance/seedance-2.5`) — the
+original developer reports that the live Studio sends the compiled arguments
+to this exact Replicate route without rewriting them and plays the returned
+clip. The public compiler was structurally evaluated on 120 held-out briefs:
+100% selected the generation endpoint, included a recognised camera clause,
+kept duration and aspect valid, and varied framing across multi-shot requests;
+99.2% preserved the input language, with 95% passing every gate together. No
+prediction ID or standalone generated file is retained, so this counts as one
+reusable template, not a complete scenario.
+
+**Use case:** a creator describes a short video by voice or text in a local
+language, and the system must turn that intent into one directly postable
+Seedance request without translating away cultural detail or inventing camera
+jargon  
+**Mode:** multilingual brief-to-prompt compilation followed by exact-payload
+text-to-video generation
+
+```text
+SOURCE BRIEF
+Language = [INPUT LANGUAGE].
+Brief = [CREATOR'S COMPLETE SPOKEN OR WRITTEN INTENT].
+Delivery channel = [REELS / STORIES / WEBSITE / LANDSCAPE / OTHER].
+
+Preserve the brief's language, named places, foods, materials, people and
+event order. Do not translate proper nouns or replace culturally specific
+details with generic equivalents.
+
+COMPILE ONE VERSIONED CALL
+Endpoint = seedance_generate.
+Model = bytedance/seedance-2.5.
+Return exactly one structured request with:
+- prompt;
+- aspect_ratio;
+- resolution;
+- integer duration from 4 through 30 seconds;
+- generate_audio;
+- camera_fixed;
+- optional seed.
+
+PROMPT STRUCTURE
+For one beat:
+[FILMABLE SUBJECT, PLACE, ACTION AND END STATE].
+The camera uses [ONE OR MORE APPROVED CAMERA TERMS].
+[LIGHT / ATMOSPHERE / SOUND IN THE SOURCE LANGUAGE].
+
+For a sequence:
+Shot 1: [FIRST FILMABLE STATE AND ACTION].
+The camera uses [SHOT SIZE + MOVEMENT + ANGLE].
+Shot 2: [NEXT STATE, PRESERVING SUBJECT AND WORLD CONTINUITY].
+The camera uses [A MEANINGFULLY DIFFERENT FRAMING].
+[CONTINUE ONLY AS REQUIRED BY THE BRIEF].
+
+CONTROLLED CAMERA LEXICON
+Use only reviewed terms the target route understands, grouped by:
+- shot size: [CLOSE-UP / MEDIUM / WIDE / INSERT / POV / OTHER APPROVED];
+- movement: [PAN / TILT / DOLLY / TRACK / ORBIT / HANDHELD / STATIC / OTHER
+  APPROVED];
+- angle: [EYE LEVEL / LOW / HIGH / OVERHEAD / DUTCH / OTHER APPROVED].
+
+Select plausible combinations from an approved frequency table or production
+guide. Never invent an impressive-sounding camera term. Keep the required
+camera clause in the same language as the rest of the generated prompt except
+for provider-recognised technical terms.
+
+PRE-SPEND STRUCTURAL GATE
+Reject or recompile when any condition fails:
+1. endpoint is not `seedance_generate`;
+2. prompt lacks an explicit camera clause;
+3. a camera term is outside the reviewed lexicon;
+4. aspect ratio is unsupported or contradicts the delivery channel;
+5. duration is missing, non-integer or outside 4–30 seconds;
+6. output language differs from the source brief;
+7. a multi-shot request has fewer than two beats;
+8. every beat repeats the same shot-size and movement set;
+9. named cultural details or event order drift from the source brief.
+
+EXACT SUBMISSION
+Display the final structured call for review. Submit the compiled model,
+prompt, duration, resolution, aspect, audio state, camera lock and seed without
+silent cleanup, translation or parameter substitution. If the provider
+rejects a field, repair the compiler and produce a new reviewed payload rather
+than mutating the accepted prompt in transit.
+
+Archive the source brief, detected language, compiled call, gate results,
+provider prediction ID, returned file and human review together. Treat a
+provider-successful result as failed when language, culturally specific
+details, shot order or framing ownership no longer matches the approved call.
+```
+
+**Why it works:** the creator can express intent in the language that carries
+its real cultural detail, while a small deterministic contract makes the
+result inspectable before money is spent. Separating semantic preservation
+from a bounded camera vocabulary reduces two different failure modes: generic
+translation drift and hallucinated cinematography. Exact-payload submission
+then makes any downstream discrepancy attributable to the model or provider,
+not a hidden adapter rewrite.
+
+Adapted and rewritten from thisisisheanesu / MORENA Studio's September 21,
+2026 [Seedance 2.5 live-render integration](https://github.com/thisisisheanesu/morena-studio/commit/5f3b29f7380409b17caa477d88f9af41f383c615),
+[complete multilingual compiler and 120-brief evaluation](https://github.com/thisisisheanesu/morena-studio/blob/5f3b29f7380409b17caa477d88f9af41f383c615/README.md),
+[executable language, camera and sequence gates](https://github.com/thisisisheanesu/morena-studio/blob/5f3b29f7380409b17caa477d88f9af41f383c615/app/index.html)
+and the [exact Replicate adapter](https://github.com/thisisisheanesu/morena-studio/blob/5f3b29f7380409b17caa477d88f9af41f383c615/serve.py).
+
+
 ## Sources
+
+- [thisisisheanesu / MORENA Studio — September 21, 2026 Replicate Seedance 2.5 (`bytedance/seedance-2.5`) multilingual brief compiler: exact-payload live render path, controlled camera lexicon, same-language and multi-shot framing gates, and a 120-brief held-out evaluation](https://github.com/thisisisheanesu/morena-studio/commit/5f3b29f7380409b17caa477d88f9af41f383c615) ([compiler evaluation](https://github.com/thisisisheanesu/morena-studio/blob/5f3b29f7380409b17caa477d88f9af41f383c615/README.md), [executable gates](https://github.com/thisisisheanesu/morena-studio/blob/5f3b29f7380409b17caa477d88f9af41f383c615/app/index.html), [exact model adapter](https://github.com/thisisisheanesu/morena-studio/blob/5f3b29f7380409b17caa477d88f9af41f383c615/serve.py))
 
 - [GL-Kageyama / semantic-visual-loom — September 21, 2026 Seedance 2.5 carved-versus-printed Japanese-name shot: complete timed 12-second reference-image prompt, committed raw generation, exact stream measurements, frame-by-frame eye-motion verification and quantified text-material failure analysis](https://github.com/GL-Kageyama/semantic-visual-loom/commit/7b6dcaa045861254bd8efeec0528c3ce103d1a45) ([complete video specification](https://github.com/GL-Kageyama/semantic-visual-loom/blob/7b6dcaa045861254bd8efeec0528c3ce103d1a45/projects/habits/specs/video/habits-ch02-seg07.md), [reference-image specification](https://github.com/GL-Kageyama/semantic-visual-loom/blob/7b6dcaa045861254bd8efeec0528c3ce103d1a45/projects/habits/specs/image/habits-ch02-seg07.md), [raw generated MP4](https://github.com/GL-Kageyama/semantic-visual-loom/blob/7b6dcaa045861254bd8efeec0528c3ce103d1a45/projects/habits/specs/video/07_16f9c1a2-fc5d-4b9a-b50d-55842ed95308.mp4))
 
