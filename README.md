@@ -41122,7 +41122,111 @@ Adapted and rewritten from shepherdleong-art / creative-studio's September 21,
 and the [serialized-request regressions](https://github.com/shepherdleong-art/creative-studio/blob/05a86635f1100911d12a4da27b8aae9246bb665d/scripts/openai-video-adapter.test.ts).
 
 
+### Mixed-model duration intersection and no-silent-clamp gate
+
+**Verified models:** Volcano Ark Seedance 2.5
+(`doubao-seedance-2-5-260628`), Seedance 2.0 Standard
+(`doubao-seedance-2-0-260128`) and Seedance 2.0 Fast
+(`doubao-seedance-2-0-fast-260128`) — the production implementation and its
+route/adapter regressions enforce whole-second ranges of 4–30 seconds for 2.5
+and 4–15 seconds for Standard/Fast. The same repository's preceding live check
+returned real five-second Standard and Fast tasks, but this change publishes no
+new task ID or result file and exercises the 2.5 30-second boundary with a
+captured request rather than a public render. It therefore counts as one
+reusable failure-control template, not a complete scenario.
+
+**Use case:** one editor, queue or bulk form can target several exact Seedance
+versions with different duration envelopes, and must never convert an invalid
+paid request into a plausible but unintended five- or fifteen-second job  
+**Mode:** single or batch request compilation for text-to-video, first-frame,
+first-plus-last-frame or reference-media generation
+
+```text
+EXACT-MODEL JOB SET
+For every row, freeze:
+- exact model ID and provider route;
+- mode and ordered reference manifest;
+- requested whole-second duration;
+- prompt, aspect, resolution and audio state.
+
+DURATION REGISTRY
+Key limits by complete model ID, not a shared `doubao-seedance` prefix:
+- `doubao-seedance-2-5-260628` -> integer 4..30 seconds;
+- `doubao-seedance-2-0-260128` -> integer 4..15 seconds;
+- `doubao-seedance-2-0-fast-260128` -> integer 4..15 seconds.
+
+Do not let an unknown suffix inherit a neighbouring model's maximum. Keep any
+fallback rule visibly separate from the verified Seedance rows and refuse an
+unregistered route on a paid production path.
+
+EDIT-TIME ASSISTANCE
+Show each row's actual minimum and maximum. A model switch may visibly move the
+draft value into the newly selected range so the editor can review it. Treat
+that as UI assistance only; it must not authorize a server or adapter to repair
+an invalid submitted value invisibly.
+
+For one "apply to all" duration control, derive the common interval:
+  shared minimum = maximum of every row minimum
+  shared maximum = minimum of every row maximum
+Offer only whole seconds inside that intersection. Preserve per-row controls so
+a 2.5 row may still request 16..30 seconds when the other rows remain at their
+own valid durations.
+
+PRE-SUBMIT PARSER
+- default only when the duration field is genuinely absent;
+- reject blank strings, null, booleans, arrays, objects and non-numeric text;
+- reject fractions, NaN and infinity;
+- reject minimum minus one and maximum plus one;
+- preserve every valid boundary value exactly.
+
+Never translate an explicit invalid value to 5 seconds, round a fraction, or
+truncate a valid 2.5 request from 30 to 15 seconds.
+
+ATOMIC BATCH GATE
+1. Resolve every row's exact provider and model before creating any job.
+2. Validate every duration against that row's registry entry.
+3. If any row fails, reject the complete batch with the failing row number.
+4. Confirm no row was stored, queued, billed or sent to a provider.
+5. When every row passes, retain each row's own valid duration; a mixed batch
+   may contain a 30-second 2.5 row beside a 15-second Fast row.
+
+NETWORK-BOUNDARY GATE
+Repeat the exact-model duration check inside every provider adapter immediately
+before network I/O. Serialize the accepted integer unchanged in the provider's
+verified field. A UI success or database row is not permission for the adapter
+to clamp, substitute or normalize it.
+
+REGRESSION MATRIX
+For every exact Seedance row, test minimum, maximum, every in-range integer,
+minimum minus one, maximum plus one, a fraction, blank, null, bad text, NaN and
+infinity. Assert valid boundaries reach the captured request unchanged and all
+invalid cases produce zero network calls. For batch routes, pair a 30-second
+2.5 row with both a valid 15-second Fast row and an invalid 30-second Fast row;
+the first pair is stored intact and the second leaves the batch empty.
+
+ARCHIVE
+Record registry revision, exact model IDs, per-row requested durations, shared
+bulk interval, rejection row/reason, created job IDs and whether network I/O
+began. Keep the UI, API, queue and adapter decisions in the same audit trail.
+```
+
+**Why it works:** a family-wide duration constant can silently shorten a valid
+2.5 job, while permissive parsing can turn malformed input into a convincing
+five-second charge. Exact-model limits close the first gap; validating the
+whole batch before persistence and repeating the check before network I/O close
+the second. The shared interval makes a bulk control honest without erasing the
+larger envelope available to an individual 2.5 row.
+
+Adapted and rewritten from shepherdleong-art / creative-studio's September 21,
+2026 [model-specific duration repair](https://github.com/shepherdleong-art/creative-studio/commit/5f0cd62d06a5d4ef276dc3e06d8a2aebe79d87be),
+[exact-model duration registry](https://github.com/shepherdleong-art/creative-studio/blob/5f0cd62d06a5d4ef276dc3e06d8a2aebe79d87be/lib/video-duration.ts),
+[single/batch route regressions](https://github.com/shepherdleong-art/creative-studio/blob/5f0cd62d06a5d4ef276dc3e06d8a2aebe79d87be/scripts/video-duration-api.test.ts)
+and the [boundary and intersection tests](https://github.com/shepherdleong-art/creative-studio/blob/5f0cd62d06a5d4ef276dc3e06d8a2aebe79d87be/scripts/video-duration.test.ts).
+
+
 ## Sources
+
+- [shepherdleong-art / creative-studio — September 21, 2026 exact-model Seedance duration gate: 2.5 (`doubao-seedance-2-5-260628`) at 4–30 whole seconds, 2.0 Standard/Fast at 4–15, mixed-model bulk intersection, atomic batch rejection and adapter-level no-silent-clamp regressions](https://github.com/shepherdleong-art/creative-studio/commit/5f0cd62d06a5d4ef276dc3e06d8a2aebe79d87be) ([duration registry](https://github.com/shepherdleong-art/creative-studio/blob/5f0cd62d06a5d4ef276dc3e06d8a2aebe79d87be/lib/video-duration.ts), [route regressions](https://github.com/shepherdleong-art/creative-studio/blob/5f0cd62d06a5d4ef276dc3e06d8a2aebe79d87be/scripts/video-duration-api.test.ts), [boundary/intersection tests](https://github.com/shepherdleong-art/creative-studio/blob/5f0cd62d06a5d4ef276dc3e06d8a2aebe79d87be/scripts/video-duration.test.ts))
 
 - [shepherdleong-art / creative-studio — September 21, 2026 Volcano Ark Seedance 2.0 Standard (`doubao-seedance-2-0-260128`) versus Fast (`doubao-seedance-2-0-fast-260128`) exact-version pixel-table dispatch: two real 3:4 tasks, untouched-stream measurements, family-prefix collision prevention and request regressions](https://github.com/shepherdleong-art/creative-studio/commit/05a86635f1100911d12a4da27b8aae9246bb665d) ([measurement record](https://github.com/shepherdleong-art/creative-studio/blob/05a86635f1100911d12a4da27b8aae9246bb665d/docs/2026-09-21-Seedance2%E6%A0%87%E5%87%86%E7%89%88%E4%B8%8EFast%E5%88%86%E8%BE%A8%E7%8E%87%E5%AE%9E%E6%B5%8B.md), [capability dispatch](https://github.com/shepherdleong-art/creative-studio/blob/05a86635f1100911d12a4da27b8aae9246bb665d/lib/company-gateway-size.ts), [request regressions](https://github.com/shepherdleong-art/creative-studio/blob/05a86635f1100911d12a4da27b8aae9246bb665d/scripts/openai-video-adapter.test.ts))
 
