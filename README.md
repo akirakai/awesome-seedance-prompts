@@ -42373,7 +42373,109 @@ the [exact Seedance 2.0 catalog contract](https://github.com/Alndaly/Mosael/blob
 the [capability-declared public-link router](https://github.com/Alndaly/Mosael/blob/3309b4688eb25d953b09c719cdf7451d513c5b33/backend/app/domain/generation/public_links.py)
 and its [failure-path regression suite](https://github.com/Alndaly/Mosael/blob/3309b4688eb25d953b09c719cdf7451d513c5b33/backend/tests/test_local_asset_becomes_a_public_link.py).
 
+### Primary-video / optional-last-frame split delivery and credential-safe refresh gate
+
+**Verified model:** Griptape Cloud Dreamina Seedance 2.5
+(`dreamina-seedance-2-5-260628`) — the production node identifies the exact
+model, saves completed video through the proxy's hosted-artifact contract and,
+when requested, saves the provider-returned last frame as a separate optional
+output. The same change includes a runnable Seedance 2.5 last-frame integration
+workflow plus regression coverage for list ordering, gaps, duplicate indices,
+expired-cache refreshes, authentication scope, download retry policy and signed-
+URL redaction. No public paid task ID or generated master accompanies the
+change, so this counts as a reusable delivery and failure-control template.
+
+**Use case:** asynchronous Seedance pipelines that need a durable primary video
+and an optional terminal frame for continuation without confusing task
+completion, artifact availability, output roles or temporary download
+credentials
+
+```text
+REQUEST RECEIPT
+Exact model = dreamina-seedance-2-5-260628.
+Persist generation ID, normalized request hash, task type, output format and
+return_last_frame before polling. Treat the video as PRIMARY and the returned
+last frame as OPTIONAL COMPANION. Never let an optional frame replace or rename
+the primary video.
+
+TERMINAL STATUS IS NOT DELIVERY
+After COMPLETED, fetch provider metadata and hosted media separately.
+A billed, completed generation whose primary video cannot be retrieved is a
+delivery failure. Do not mark it successful merely because polling ended.
+
+HOSTED-ARTIFACT MANIFEST GATE
+Read the generation's artifact list once per fresh run:
+[index, kind, content_type, size_bytes, URL].
+
+Normalize by index, then require:
+- indices begin at zero;
+- every surviving index is unique and contiguous;
+- every entry has a valid nonnegative index, kind and URL;
+- no malformed entry was silently dropped before role pairing.
+
+Reject a head-truncated list, an interior gap, duplicate index or malformed
+entry. A shorter list is trustworthy only when it is a contiguous prefix and
+still contains the required primary kind. Select output by media KIND and its
+position within that kind, never by an unverified global array slot.
+
+PRIMARY VIDEO DELIVERY
+Select video position zero. Download it to durable project storage and bind the
+saved path to video_url. Retry a connection or server failure once; fail fast
+on a permanent 4xx response. If the artifact is missing or download fails,
+clear the video output and report failure even though the remote task completed.
+
+OPTIONAL LAST-FRAME DELIVERY
+Only when return_last_frame = true, inspect provider content.last_frame_url.
+If present, download it independently and bind the saved PNG to last_frame_url.
+If absent or unretrievable, leave last_frame_url unset and record a warning;
+do not erase or downgrade an already verified primary video. Downstream
+continuation must refuse to start when the optional frame is unset.
+
+AUTHENTICATION SCOPE
+For an external presigned storage URL, send no bearer token.
+For the proxy's exact artifact-streaming route, send the bearer token only when
+the URL host also equals the configured proxy host.
+A foreign host that imitates the same path receives no token.
+Never place signed query parameters in logs or user-visible error messages;
+retain only scheme, host, path and status code.
+
+REFRESH AND CACHE DISCIPLINE
+Clear the cached artifact manifest before every new execution and manual
+refresh because its signed URLs may have expired. Refresh the existing
+generation ID; do not create a replacement task. If media parsing already
+reported failure, refresh must preserve that failure rather than overwrite it
+with a generic green COMPLETED state.
+
+ACCEPTANCE
+- task ID and exact model still match the original request;
+- primary video exists in durable storage and video_url points to that copy;
+- optional last frame is either a verified saved file or explicitly unset;
+- artifact indices passed the start-at-zero, contiguous and unique checks;
+- bearer credentials were never sent off-host;
+- signed query strings were not logged;
+- refresh used the same generation and did not hide retrieval failure.
+```
+
+**Why it works:** one asynchronous task can finish successfully while its media
+is missing, expired or paired to the wrong output. Separating status, hosted
+video and optional provider-side last frame prevents a convenient terminal
+state from masquerading as a complete delivery. The index and authentication
+checks also close two failure modes that ordinary “download the returned URL”
+logic misses: slot shifting after a malformed manifest entry and credential
+leakage to a lookalike host.
+
+Adapted and rewritten from Griptape AI's September 22, 2026
+[hosted-artifact migration commit](https://github.com/griptape-ai/griptape-nodes-library-standard/commit/0179dec7d9b6ea445e7199f417521b1c3c4a7e39),
+the [exact Seedance 2.5 delivery node](https://github.com/griptape-ai/griptape-nodes-library-standard/blob/0179dec7d9b6ea445e7199f417521b1c3c4a7e39/griptape_nodes_library/video/seedance_2_5_video_generation.py),
+[hosted-artifact contract](https://github.com/griptape-ai/griptape-nodes-library-standard/blob/0179dec7d9b6ea445e7199f417521b1c3c4a7e39/griptape_nodes_library/proxy/hosted_artifacts.py),
+[manifest and refresh regressions](https://github.com/griptape-ai/griptape-nodes-library-standard/blob/0179dec7d9b6ea445e7199f417521b1c3c4a7e39/tests/unit/test_griptape_proxy_node_hosted_artifacts.py),
+[credential-redaction tests](https://github.com/griptape-ai/griptape-nodes-library-standard/blob/0179dec7d9b6ea445e7199f417521b1c3c4a7e39/tests/unit/test_griptape_proxy_node_download.py)
+and the [Seedance last-frame integration workflow](https://github.com/griptape-ai/griptape-nodes-library-standard/blob/0179dec7d9b6ea445e7199f417521b1c3c4a7e39/tests/integration/test_seedance_2_5_last_frame_artifact.py).
+
+
 ## Sources
+
+- [Griptape AI — September 22, 2026 exact Dreamina Seedance 2.5 hosted-video and optional-last-frame delivery repair: contiguous artifact manifest, kind-scoped output pairing, expired-cache refresh, host-scoped bearer token and signed-query redaction](https://github.com/griptape-ai/griptape-nodes-library-standard/commit/0179dec7d9b6ea445e7199f417521b1c3c4a7e39) ([Seedance node](https://github.com/griptape-ai/griptape-nodes-library-standard/blob/0179dec7d9b6ea445e7199f417521b1c3c4a7e39/griptape_nodes_library/video/seedance_2_5_video_generation.py), [artifact contract](https://github.com/griptape-ai/griptape-nodes-library-standard/blob/0179dec7d9b6ea445e7199f417521b1c3c4a7e39/griptape_nodes_library/proxy/hosted_artifacts.py), [regressions](https://github.com/griptape-ai/griptape-nodes-library-standard/blob/0179dec7d9b6ea445e7199f417521b1c3c4a7e39/tests/unit/test_griptape_proxy_node_hosted_artifacts.py), [integration workflow](https://github.com/griptape-ai/griptape-nodes-library-standard/blob/0179dec7d9b6ea445e7199f417521b1c3c4a7e39/tests/integration/test_seedance_2_5_last_frame_artifact.py))
 
 - [ldebruinlars — September 22, 2026 Higgsfield Seedance 2.5 `omni_reference` padel match point: complete eight-second prompt, repaired court axis and eyelines, dense impact-frame verification, actual 56-credit cost and accepted 720p MP4](https://github.com/ldebruinlars/Event-cliniqs-poort-Padel/commit/dbebba123964dee4ef9331bf2f5e349d8c1492f7) ([complete prompt](https://github.com/ldebruinlars/Event-cliniqs-poort-Padel/blob/dbebba123964dee4ef9331bf2f5e349d8c1492f7/ai-animatie/prompt-v3-matchpoint.txt), [workflow](https://github.com/ldebruinlars/Event-cliniqs-poort-Padel/blob/dbebba123964dee4ef9331bf2f5e349d8c1492f7/ai-animatie/WORKFLOW.md), [generated MP4](https://github.com/ldebruinlars/Event-cliniqs-poort-Padel/blob/dbebba123964dee4ef9331bf2f5e349d8c1492f7/ai-animatie/assets/08-EINDVERSIE-seedance25.mp4))
 
