@@ -42104,7 +42104,187 @@ Adapted and rewritten from alialahmad2000 / Fluentia's September 22, 2026
 the [shipped 1600px H.264 loop](https://github.com/alialahmad2000/fluentia-site/blob/4684194a9e42e4ffd6d3b5a32e4cc8855c440515/public/home/cine-dawn-1600.mp4)
 and the [versioned mask and contrast notes](https://github.com/alialahmad2000/fluentia-site/blob/4684194a9e42e4ffd6d3b5a32e4cc8855c440515/src/pages/v5/V5Cinema.css).
 
+
+### Draft-to-final immutable-request handoff and expiry gate
+
+**Verified model:** EvoLink Seedance 2.5
+(`seedance-2.5-text-to-video`, `seedance-2.5-image-to-video`,
+`seedance-2.5-reference-to-video`, `seedance-2.5-video-edit` or
+`seedance-2.5-video-extend` -> `seedance-2.5-draft-to-video`) — the
+platform's versioned OpenAPI contract exposes 480p draft creation and a separate
+1080p promotion route for all five Seedance 2.5 modes. No public production task
+ID or promoted artifact accompanies the documentation, so this counts as a
+reusable delivery template rather than a complete scenario.
+
+**Use case:** paid long-form or reference-heavy generations that need a
+low-resolution creative approval before committing to the 1080p delivery
+
+```text
+DRAFT RECEIPT
+Exact source model = [ONE SEEDANCE 2.5 GENERATION MODEL].
+Set draft = true at the top request level.
+Set quality = 480p or omit quality so the draft route supplies 480p.
+Persist before submission:
+- normalized prompt and prompt hash;
+- ordered asset URLs, roles and hashes;
+- duration, aspect policy, seed, native-audio and content-filter state;
+- request ID, account and quoted draft cost.
+
+Do not place draft inside model_params. Do not request 720p or 1080p together
+with draft = true.
+
+APPROVAL
+Poll the one draft task to terminal status. On completion, record:
+- source task ID;
+- returned draft_expires_at rather than an assumed deadline;
+- actual duration and input-video duration, when any;
+- draft artifact checksum and a creative acceptance decision.
+Reject the draft or stop without promotion when story, identity, motion, edit
+intent, audio or reference binding fails. Draft spend is already committed.
+
+EXPIRY AND QUEUE GATE
+Promote only while:
+- the draft belongs to the same account;
+- its exact Seedance 2.5 source task is completed;
+- current time plus [QUEUE SAFETY MARGIN] is earlier than draft_expires_at.
+The documented default window is 24 hours after draft completion, but the
+returned timestamp is authoritative. A draft that expires while queued can
+fail, so do not submit at the last moment.
+
+IMMUTABLE PROMOTION
+Send exactly:
+model = seedance-2.5-draft-to-video
+source_task_id = [APPROVED COMPLETED DRAFT ID]
+output_format = [mp4 | mov, optional]
+callback_url = [HTTPS URL, optional]
+
+Do not resend or rewrite prompt, assets, duration, aspect ratio, seed, audio,
+content-filter state or other creative parameters. Promotion inherits them from
+the draft; extra fields are a contract error, not a chance to repair the take.
+If the approved creative brief must change, create a new draft lineage.
+
+SETTLEMENT AND DELIVERY
+Treat draft and 1080p promotion as two separately billed tasks. Persist the
+promotion task ID before polling. On unknown submission state, recover that
+task rather than buying another promotion. For video-input drafts, quote using
+the platform's video-input rule instead of assuming output duration alone.
+Download the completed final immediately because its result URL is temporary.
+
+ACCEPTANCE
+- final status is completed and echoes source_task_id;
+- final output is 1080p and belongs to the approved draft lineage;
+- creative parameters were inherited, not silently reconstructed;
+- no promotion began after the safe expiry boundary;
+- draft and final charges, IDs, formats, hashes and timestamps remain linked.
+```
+
+**Why it works:** the cheap pass is useful only if promotion is lineage-locked.
+Capturing the returned expiry, leaving queue margin and forbidding creative
+fields on the second request prevents a reviewed draft from being accidentally
+reinterpreted as a new generation. The template also separates “do not
+promote” from “promotion failed,” so rejecting a bad draft does not masquerade
+as an API error.
+
+Adapted and rewritten from EvoLink.AI's September 22, 2026
+[Seedance 2.5 draft-mode and Draft-to-Video documentation commit](https://github.com/Pharmacist9527/mintlify-docs/commit/9d818877eb6d80b037119279cb6418227a0d0e18)
+and its [versioned promotion OpenAPI contract](https://github.com/Pharmacist9527/mintlify-docs/blob/9d818877eb6d80b037119279cb6418227a0d0e18/cn/api-manual/video-series/seedance2.5/seedance-2.5-draft-to-video.json).
+
+
+### Capability-declared local-media promotion for URL-only roles
+
+**Verified model:** Volcano Ark Seedance 2.0 Standard
+(`doubao-seedance-2-0-260128`) — the developer's exact-version catalog marks
+`reference_video` as URL-only, then the production change and regression suite
+verify pre-submit upload, deterministic provider choice, role-URL replacement
+and distinct missing-config/upload-failure paths. The commit reports 3,733
+passing backend tests, but no public paid task ID or generated file, so this
+counts only as a reusable transport and failure-control template.
+
+**Use case:** local-first editors, agents or batch systems that must supply
+reference, edit or continuation video through a provider role that accepts only
+a fetchable URL
+
+```text
+MODEL AND ASSET RECEIPT
+Exact model = doubao-seedance-2-0-260128.
+Read the resolved model capability table before moving any media.
+For each ordered source record:
+[ROLE / LOCAL ASSET ID / NAME / MIME / HASH / SOURCE URL IF PRESENT].
+Keep role order immutable.
+
+ROLE-SCOPED TRANSPORT
+If the role already has a valid direct media URL, preserve it.
+If the role accepts the local transport, preserve the local binding.
+Only when the resolved role is URL-only and the asset lacks a direct URL,
+promote that asset before task creation.
+
+UPLOADER DISCOVERY
+Select an enabled adapter that explicitly declares:
+provides = ["public_url"]
+
+Never infer storage authority from an "_upload" suffix, provider brand or tool
+name. Ignore disabled or unreadable adapters. When several configured adapters
+qualify, apply one stable ordering rule and record the selected instance so the
+same request does not drift unpredictably between buckets.
+
+PRE-SUBMIT PROMOTION
+Before queueing or buying the Seedance task:
+1. verify the asset exists and belongs to the current workspace;
+2. verify the chosen adapter's required bucket and credential fields;
+3. upload by immutable asset ID;
+4. request a signed URL whose lifetime covers submission and provider fetch;
+5. validate that the adapter returned one usable URL;
+6. write the URL into the exact <role>_url field;
+7. remove the duplicate local binding for that role;
+8. log adapter, asset hash, URL expiry and resulting ordered-role manifest.
+
+Do not base64-encode a video for a URL-only role. Do not leave both local and
+URL forms in the request. Do not defer promotion to a background runner after
+the generation job has entered the paid queue.
+
+FAILURE TAXONOMY
+NO CAPABLE ADAPTER
+Stop before task creation and name the supported storage-adapter choices.
+
+ADAPTER MISCONFIGURED
+Name the selected instance and every missing configuration field. Do not fall
+through to a different undeclared uploader.
+
+UPLOAD FAILED
+Return the adapter's bucket, permission or network error together with the
+specific asset name. Preserve the failed promotion receipt.
+
+MALFORMED SUCCESS
+If the adapter reports success without a URL, treat it as an adapter defect.
+Never submit an empty role URL.
+
+ACCEPTANCE
+- every URL-only role has exactly one fetchable URL;
+- every other role retains its declared transport;
+- ordering and semantic role names are unchanged;
+- task creation begins only after all promotions succeed;
+- retrying promotion cannot create a second paid Seedance task;
+- provenance identifies the exact model, adapter, local hash and URL lifetime.
+```
+
+**Why it works:** “upload it somewhere first” is not a complete transport
+contract. Capability declaration prevents an unrelated upload-shaped tool from
+receiving private media, stable selection makes storage placement explainable,
+and pre-submit failure classes keep credential or bucket faults from appearing
+later as creative prompt failures or paid task failures.
+
+Adapted and rewritten from Alndaly / Mosael's September 22, 2026
+[automatic URL-promotion implementation](https://github.com/Alndaly/Mosael/commit/3309b4688eb25d953b09c719cdf7451d513c5b33),
+the [exact Seedance 2.0 catalog contract](https://github.com/Alndaly/Mosael/blob/3309b4688eb25d953b09c719cdf7451d513c5b33/backend/app/domain/generation/catalog.py),
+the [capability-declared public-link router](https://github.com/Alndaly/Mosael/blob/3309b4688eb25d953b09c719cdf7451d513c5b33/backend/app/domain/generation/public_links.py)
+and its [failure-path regression suite](https://github.com/Alndaly/Mosael/blob/3309b4688eb25d953b09c719cdf7451d513c5b33/backend/tests/test_local_asset_becomes_a_public_link.py).
+
 ## Sources
+
+
+- [EvoLink.AI — September 22, 2026 Seedance 2.5 480p draft and immutable 1080p Draft-to-Video contract: five source modes, returned expiry, queue-time expiry control, separate billing and exact four-field promotion request](https://github.com/Pharmacist9527/mintlify-docs/commit/9d818877eb6d80b037119279cb6418227a0d0e18) ([versioned OpenAPI contract](https://github.com/Pharmacist9527/mintlify-docs/blob/9d818877eb6d80b037119279cb6418227a0d0e18/cn/api-manual/video-series/seedance2.5/seedance-2.5-draft-to-video.json))
+
+- [Alndaly / Mosael — September 22, 2026 Volcano Ark Seedance 2.0 Standard capability-declared local-video promotion: deterministic storage selection, signed-URL role replacement and pre-submit failure taxonomy](https://github.com/Alndaly/Mosael/commit/3309b4688eb25d953b09c719cdf7451d513c5b33) ([exact model catalog](https://github.com/Alndaly/Mosael/blob/3309b4688eb25d953b09c719cdf7451d513c5b33/backend/app/domain/generation/catalog.py), [public-link router](https://github.com/Alndaly/Mosael/blob/3309b4688eb25d953b09c719cdf7451d513c5b33/backend/app/domain/generation/public_links.py), [regression suite](https://github.com/Alndaly/Mosael/blob/3309b4688eb25d953b09c719cdf7451d513c5b33/backend/tests/test_local_asset_becomes_a_public_link.py))
 
 - [alialahmad2000 / Fluentia — September 22, 2026 Higgsfield Seedance 2.0 4K website-hero production: five-second 21:9 generation, measured locked-camera drift, shipped palindrome loop, responsive H.264 deliveries and seven-frame text-contrast revalidation](https://github.com/alialahmad2000/fluentia-site/commit/4684194a9e42e4ffd6d3b5a32e4cc8855c440515) ([1600px loop](https://github.com/alialahmad2000/fluentia-site/blob/4684194a9e42e4ffd6d3b5a32e4cc8855c440515/public/home/cine-dawn-1600.mp4), [mask and contrast measurements](https://github.com/alialahmad2000/fluentia-site/blob/4684194a9e42e4ffd6d3b5a32e4cc8855c440515/src/pages/v5/V5Cinema.css))
 
