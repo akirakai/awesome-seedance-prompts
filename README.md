@@ -414,6 +414,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Storm-collision desert-road microfilm](#398-storm-collision-desert-road-microfilm)
   - [Ocean-and-sky blanket fold](#399-ocean-and-sky-blanket-fold)
   - [Gesture-mapped luxury-sofa rebuild](#400-gesture-mapped-luxury-sofa-rebuild)
+  - [Court-axis-locked padel match point with visible paint impact](#401-court-axis-locked-padel-match-point-with-visible-paint-impact)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -25068,6 +25069,99 @@ and reed35's [versioned prompt-and-media mirror](https://github.com/reed35/ai-vi
 and [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/43e1e6fd451b1a502f87cb853be743df75f6b04d/public/tutorials/krevix-sofa-workshop-reels-seedance/demo-web.mp4).
 
 
+### 401. Court-axis-locked padel match point with visible paint impact
+
+**Verified model:** Higgsfield Seedance 2.5 (`mode: "omni_reference"`) — the
+creator publishes the complete production prompt, four-reference workflow,
+accepted eight-second 720p MP4 and actual 56-credit video cost. The retained
+earlier take also documents the specific failure repaired here: both players
+faced the same direction because their court sides and opposing eyelines were
+not explicitly bound.  
+**Mode:** four-reference sports action, one continuous shot, painterly identity
+and wordmark lock  
+**Suggested settings:** 8 seconds, 720p, low near-side camera with one slow
+forward push
+
+**Reference contract:** @Image1 defines the near-side blond player, face, navy-
+and-lime kit and chest wordmark. @Image2 defines the glowing padel ball.
+@Image3 defines the blue indoor court, glass back wall, net, steel frame and
+stadium haze. @Image4 defines the burgundy opponent from the front. Keep those
+roles and their order fixed.
+
+```text
+Create one continuous eight-second padel match point with no cut, hidden edit,
+angle reset or character swap. Keep thick oil-paint brushwork, deep teal
+shadows, lime rim light and hazy stadium lamps unchanged from first to last
+frame.
+
+COURT AXIS
+Lock the camera low on the near half of the court, just behind and slightly left
+of @Image1. He remains on the near side in rear three-quarter view, looking
+across the net. Keep the net across the middle of frame. @Image4 remains beyond
+it on the far side, facing the lens and therefore facing @Image1. Both players
+track the same ball with their eyes and head turns. They must never face or look
+in the same direction.
+
+0.0–2.0 s — Pressure.
+The far-side opponent drives one fast, low ball toward the near back corner.
+The near-side player retreats close to the glass, temporarily off balance, with
+his racket late behind him. Preserve the established sides and ball path.
+
+2.0–4.0 s — Recovery.
+The ball rebounds high from the near back glass. The near-side player finds it
+with his eyes, pivots under it, plants both feet on the blue floor and launches
+upward. His racket loads behind his head while his torso arches under real
+athletic weight.
+
+4.0–5.0 s — Readable contact.
+At the jump apex, the centre of the racket face meets the ball. Show one brief
+compression against the strings, then a large lime flash and outward paint
+burst exactly at the contact point. The ball leaves flat and fast over the net
+toward the far corner. Do not hide, abbreviate or move this impact off screen.
+
+5.0–6.5 s — Failed save.
+Still on the far side and still facing the camera, the opponent dives laterally
+with one fully extended racket arm. He misses by roughly one hand. The ball
+skids behind him and throws one paint splash from the court surface.
+
+6.5–8.0 s — Release.
+The near-side player lands with believable knee compression. Continue the same
+slow push begun at the opening and settle into a chest-up medium view. He closes
+one fist, lifts his head and roars once as the won point resolves.
+
+IDENTITY AND ASSET LOCK
+Keep @Image1's wavy blond hair, short beard, jaw, apparent age and body build
+unchanged through the landing and closer framing. Do not smooth, rejuvenate or
+slim his face. Preserve both kits, racket designs and the POORT PADEL chest
+wordmark; keep the wordmark stable and legible rather than regenerating it.
+Maintain one ball, two players, one net and one court.
+
+No same-direction eyelines, side swap, net crossing, teleport, duplicate ball,
+duplicate player, extra limb, racket-through-hand contact, face drift, wardrobe
+change, disappearing wordmark, photorealistic style drift, cut, subtitle, new
+logo or watermark.
+```
+
+**Why it works:** the prompt treats court geography as a persistent coordinate
+system rather than leaving the model to infer who faces whom. The action then
+uses a complete dramatic arc — pressure, recovery, decisive contact, failed
+save and release — while a deliberately oversized impact cue keeps the crucial
+fraction of a second observable.
+
+The accepted run kept the repaired geometry, face and wordmark and made the
+impact unmissable. For quality control, inspect the contact region at a dense
+sample rate (the creator used 12 fps around the expected hit); sparse two-fps
+thumbnails can skip a valid impact. If Higgsfield proposes an unrelated visual
+preset from a keyword, decline it and render the reference-bound prompt
+literally.
+
+Adapted and rewritten from ldebruinlars' September 22, 2026
+[final-production commit](https://github.com/ldebruinlars/Event-cliniqs-poort-Padel/commit/dbebba123964dee4ef9331bf2f5e349d8c1492f7),
+[complete source prompt](https://github.com/ldebruinlars/Event-cliniqs-poort-Padel/blob/dbebba123964dee4ef9331bf2f5e349d8c1492f7/ai-animatie/prompt-v3-matchpoint.txt),
+[versioned failure-and-verification workflow](https://github.com/ldebruinlars/Event-cliniqs-poort-Padel/blob/dbebba123964dee4ef9331bf2f5e349d8c1492f7/ai-animatie/WORKFLOW.md)
+and [accepted generated MP4](https://github.com/ldebruinlars/Event-cliniqs-poort-Padel/blob/dbebba123964dee4ef9331bf2f5e349d8c1492f7/ai-animatie/assets/08-EINDVERSIE-seedance25.mp4).
+
+
 ## Reusable templates
 
 ### Rendered-first-frame poster and delivery-crop parity gate
@@ -42280,6 +42374,8 @@ the [capability-declared public-link router](https://github.com/Alndaly/Mosael/b
 and its [failure-path regression suite](https://github.com/Alndaly/Mosael/blob/3309b4688eb25d953b09c719cdf7451d513c5b33/backend/tests/test_local_asset_becomes_a_public_link.py).
 
 ## Sources
+
+- [ldebruinlars — September 22, 2026 Higgsfield Seedance 2.5 `omni_reference` padel match point: complete eight-second prompt, repaired court axis and eyelines, dense impact-frame verification, actual 56-credit cost and accepted 720p MP4](https://github.com/ldebruinlars/Event-cliniqs-poort-Padel/commit/dbebba123964dee4ef9331bf2f5e349d8c1492f7) ([complete prompt](https://github.com/ldebruinlars/Event-cliniqs-poort-Padel/blob/dbebba123964dee4ef9331bf2f5e349d8c1492f7/ai-animatie/prompt-v3-matchpoint.txt), [workflow](https://github.com/ldebruinlars/Event-cliniqs-poort-Padel/blob/dbebba123964dee4ef9331bf2f5e349d8c1492f7/ai-animatie/WORKFLOW.md), [generated MP4](https://github.com/ldebruinlars/Event-cliniqs-poort-Padel/blob/dbebba123964dee4ef9331bf2f5e349d8c1492f7/ai-animatie/assets/08-EINDVERSIE-seedance25.mp4))
 
 
 - [EvoLink.AI — September 22, 2026 Seedance 2.5 480p draft and immutable 1080p Draft-to-Video contract: five source modes, returned expiry, queue-time expiry control, separate billing and exact four-field promotion request](https://github.com/Pharmacist9527/mintlify-docs/commit/9d818877eb6d80b037119279cb6418227a0d0e18) ([versioned OpenAPI contract](https://github.com/Pharmacist9527/mintlify-docs/blob/9d818877eb6d80b037119279cb6418227a0d0e18/cn/api-manual/video-series/seedance2.5/seedance-2.5-draft-to-video.json))
