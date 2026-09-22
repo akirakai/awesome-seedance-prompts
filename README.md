@@ -41674,7 +41674,84 @@ the [delivered desktop frame sequence](https://github.com/TodimuJ/websites/tree/
 and the [delivery manifest](https://github.com/TodimuJ/websites/blob/3d8bb273e34e8ad359f01b57fac1cf22acfe9bfb/sites/keyboard/public/frames/manifest.json).
 
 
+### Empirical minimum-billing window and useful-tail gate
+
+**Verified model:** Seedance 2.5 — the original creator compared live API
+calls and the official calculator with a fixed 30-second output at 1280x720 and
+24 fps. Reference-video inputs from 1 to 20 seconds returned identical
+`usage.completion_tokens` and the same recorded price of about CNY 45; a
+30-second input plus a 30-second output was about CNY 54. The creator did not
+publish task IDs or raw response envelopes, so this counts as a reusable
+continuation workflow rather than a complete scenario.
+
+**Use case:** choosing how much of the preceding clip to send into a continuation
+without discarding useful visual or audio state merely to chase an apparent
+short-input discount
+
+```text
+LOCKED LIVE PROBE
+Freeze exact model, provider route, output duration, width, height, frame rate,
+aspect ratio and audio mode. Change only the contiguous tail length taken from
+the same source clip.
+
+For every real request, record:
+- input-tail duration and content boundary;
+- returned usage.completion_tokens;
+- calculator or settled charge at the time of the call;
+- request date, region, currency and provider route.
+
+Test at least a short, medium and longer tail. Mark an interval FLAT only when
+the returned usage, not a hand-derived price formula, stays identical. A lower
+video-input token rate does not prove a lower bill when a minimum billing
+quantity applies.
+
+USEFUL-TAIL SELECTION
+Inside the empirically flat interval, choose the longest contiguous tail that
+still helps the next beat:
+- preserve the current actor, wardrobe, set, prop and lighting state;
+- include the last readable action vector and any native-audio or ambience bed;
+- stop before an earlier scene change, obsolete pose or unrelated dialogue;
+- never pad with black, duplicate or otherwise meaningless footage merely to
+  enter a cheaper-looking input class.
+
+CONTINUATION HANDOFF
+Treat the selected tail as authority for the immediately visible and audible
+state. Continue forward from its final frame and sound; do not replay the tail.
+When a character, location or rule falls outside that recent window, restate or
+reference it explicitly instead of assuming the model remembers older clips.
+
+RE-PROBE GATE
+Invalidate the measured interval whenever output duration, resolution, aspect
+ratio, frame rate, model revision, region, currency or provider channel changes.
+Re-run the live comparison before making another pricing claim.
+
+ACCEPTANCE
+- the selected tail contains every state needed for the next beat and no stale
+  scene material;
+- returned usage proves the claimed flat interval;
+- filler media is absent;
+- the continuation begins without a visible or audible reset;
+- pricing notes state the exact tested envelope and do not generalize beyond it.
+```
+
+**Why it works:** cost optimization and continuity selection are separate
+decisions. Under the creator's tested 30-second, 720p envelope, trimming a useful
+20-second tail to five seconds did not change returned token usage, while a
+one-second black-video shortcut also produced no demonstrated saving. Once the
+billing floor is measured, the reference can be chosen for causal context
+rather than an imagined per-second discount. The 1-to-20-second plateau is
+evidence for that one envelope only; shorter outputs, other resolutions and
+other channels remain unverified.
+
+Adapted and rewritten from Imyukehan's September 22, 2026
+[Seedance 2.5 continuation-pricing experiment](https://github.com/Imyukehan/Imyukehan/commit/efec8561f29fcc0cb7ecc22f75b2d55212b6e830),
+the [complete retrospective](https://github.com/Imyukehan/Imyukehan/blob/efec8561f29fcc0cb7ecc22f75b2d55212b6e830/source/_posts/Seedance-2.5%E8%A7%86%E9%A2%91%E5%BB%B6%E9%95%BF%E6%80%8E%E4%B9%88%E7%AE%97%E9%92%B1%EF%BC%9A%E4%BB%8E%E9%BB%91%E5%B1%8F%E7%9C%81%E9%92%B1%E5%88%B0%E5%90%8C%E4%BB%B7%E4%B8%8A%E4%B8%8B%E6%96%87.md)
+and the linked [BytePlus billing documentation](https://docs.byteplus.com/docs/ModelArk/1099320).
+
+
 ## Sources
+
+- [Imyukehan — September 22, 2026 Seedance 2.5 continuation-tail billing experiment: live 30-second 1280x720/24fps API comparisons, identical returned token usage for one-to-20-second reference inputs, 30-second input boundary, rejected black-video shortcut and a content-first tail-selection rule](https://github.com/Imyukehan/Imyukehan/commit/efec8561f29fcc0cb7ecc22f75b2d55212b6e830) ([complete retrospective](https://github.com/Imyukehan/Imyukehan/blob/efec8561f29fcc0cb7ecc22f75b2d55212b6e830/source/_posts/Seedance-2.5%E8%A7%86%E9%A2%91%E5%BB%B6%E9%95%BF%E6%80%8E%E4%B9%88%E7%AE%97%E9%92%B1%EF%BC%9A%E4%BB%8E%E9%BB%91%E5%B1%8F%E7%9C%81%E9%92%B1%E5%88%B0%E5%90%8C%E4%BB%B7%E4%B8%8A%E4%B8%8B%E6%96%87.md), [BytePlus billing documentation](https://docs.byteplus.com/docs/ModelArk/1099320))
 
 - [bayazbayev4-arch / Clean Bee Instagram — September 22, 2026 Higgsfield Seedance 2.5 (`seedance_2_5`, `omni_reference`) coffee-stain reset ad: complete two-reference ten-second prompt, paid 1080p job ID, 120-credit charge, generated master, four-timepoint QA and scheduled social delivery](https://github.com/bayazbayev4-arch/clean-bee-instagram/commit/8f9eb29e073b26b9e463ac9507977780ef2aa7bb) ([complete prompt](https://github.com/bayazbayev4-arch/clean-bee-instagram/blob/8f9eb29e073b26b9e463ac9507977780ef2aa7bb/reels/20-09-2026-coffee-reset/prompt.md), [job and QA metadata](https://github.com/bayazbayev4-arch/clean-bee-instagram/blob/8f9eb29e073b26b9e463ac9507977780ef2aa7bb/reels/20-09-2026-coffee-reset/meta.json), [generated master](https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/674a707fb3a3f8ba6122f95a2cc716ee4de64ba7/20-09-2026-coffee-reset.mp4))
 
