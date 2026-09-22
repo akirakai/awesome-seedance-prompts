@@ -411,6 +411,9 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Deadpan neon-sign maker with native dialogue and timed flicker](#395-deadpan-neon-sign-maker-with-native-dialogue-and-timed-flicker)
   - [Unresolved Japanese names across carved wood and printed paper](#396-unresolved-japanese-names-across-carved-wood-and-printed-paper)
   - [Orbit-hidden coffee-stain reset for a two-reference service ad](#397-orbit-hidden-coffee-stain-reset-for-a-two-reference-service-ad)
+  - [Storm-collision desert-road microfilm](#398-storm-collision-desert-road-microfilm)
+  - [Ocean-and-sky blanket fold](#399-ocean-and-sky-blanket-fold)
+  - [Gesture-mapped luxury-sofa rebuild](#400-gesture-mapped-luxury-sofa-rebuild)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -24802,6 +24805,269 @@ the [paid-job metadata and QA ledger](https://github.com/bayazbayev4-arch/clean-
 and the [generated 1080p master](https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/674a707fb3a3f8ba6122f95a2cc716ee4de64ba7/20-09-2026-coffee-reset.mp4).
 
 
+### 398. Storm-collision desert-road microfilm
+
+**Verified model:** OpenArt Seedance 2.5 — the original creator's September
+21, 2026 X post explicitly says the film was created with Seedance 2.5 on
+OpenArt and publishes the full prompt with the result. A versioned public mirror
+preserves the prompt and generated MP4.  
+**Mode:** long-form cinematic narrative; one named identity reference for the
+woman, one text-defined man; native ambience and score  
+**Suggested settings:** 30 seconds, 16:9, 24 fps, photoreal live action, native
+audio on
+
+**Reference contract:** if an identity image is supplied, it owns only the adult
+woman's face, hair, skin tone and body proportions. The prompt owns her black
+oversized jacket, white T-shirt, dark jeans and worn boots. Keep the man, both
+vehicles and every costume unchanged through all nine beats.
+
+```text
+Create one coherent 30-second photoreal adventure microfilm about two adult
+strangers whose separate desert journeys meet in a sandstorm and divide again
+at sunrise. Use grounded feature-film photography, natural skin, real vehicle
+mass, wind-driven cloth and physically displaced sand. Let every cut advance the
+same day-night-dawn journey; never reset either character or vehicle.
+
+0-3 s — Golden hour. Track a dusty vintage 4x4 across an empty desert highway.
+Cut inside to the woman's hands shifting gear, sunlight crossing her face and
+the road receding in the mirror. End wide, with the vehicle tiny against dunes.
+
+3-6 s — Blowing sand hides the road. A man on a rugged dark motorcycle emerges,
+stops and meets her gaze without dialogue. A solid wall of dust grows behind him
+and both recognize the same approaching danger.
+
+6-10 s — She jumps into the 4x4 and he starts the motorcycle. Intercut tires
+sliding, suspension compressing, mirror checks and headlights cutting dust as
+they race one direction toward a visible abandoned stone outpost. They reach
+shelter just before the storm consumes the road.
+
+10-15 s — After a hard cut to night, place both beside one small fire outside
+the same outpost; the dust-covered vehicles remain nearby. Use moving firelight,
+sparks, boots, hands and a tilt to the Milky Way. Their only performance is one
+unforced shared smile.
+
+15-19 s — At first dawn, he uncovers a weathered metal route marker in the sand.
+It points to a hidden canyon. She shoulders her pack; both vehicles depart
+toward the marked direction.
+
+19-24 s — Follow them on foot through a narrow red-rock canyon. He reaches back
+at one difficult ledge, she accepts the hand, nearly slips and laughs once. Keep
+the exchange practical and companionable, not romantic.
+
+24-26 s — They arrive above an immense desert overlook. Begin close behind them,
+then crane steadily upward until the people, road and vehicles become small
+within the geography as the sun clears the horizon.
+
+26-28 s — Hard cut to the woman running down one dune, the man following and
+briefly losing balance. They arrive side by side, breathing hard, with their
+vehicles still visible below.
+
+28-30 s — Back on the road, the 4x4 and motorcycle travel together until the
+road forks. They stop, exchange one quiet smile and leave on opposite branches.
+End high and wide with two moving points separating across the landscape.
+
+AUDIO / EDIT
+Use one restrained cinematic electronic score that grows from low atmosphere
+to a sunrise peak. Preserve real engine, tire, storm, fire, cloth, footstep and
+bird sounds beneath it. No dialogue or narration. Use motivated hard cuts only;
+no fades, synthetic transition effects or repeated establishing shots.
+
+ACCEPTANCE
+The same two adults, clothes and vehicles persist; the storm causes the shelter
+beat; the marker causes the canyon trip; light progresses from sunset to night
+to dawn; the two routes visibly diverge at the end. No extra traveler, forced
+romance, face drift, costume reset, impossible vehicle physics, text, title,
+caption, logo, watermark, game look or plastic skin.
+```
+
+**Why it works:** nine short beats fit one causal spine rather than behaving as
+nine unrelated beauty shots. Repeated vehicles, directional travel, dust
+accumulation and the sunset-to-dawn light ledger carry continuity, while
+dialogue-free reactions leave the long generation's audio and performance load
+manageable.
+
+Adapted and rewritten from H A J R A's September 21, 2026
+[original X post](https://x.com/codewithhajra/status/2101954857233957230),
+and reed35's [versioned prompt-and-media mirror](https://github.com/reed35/ai-video-tutorials/commit/43e1e6fd451b1a502f87cb853be743df75f6b04d),
+[complete source prompt](https://github.com/reed35/ai-video-tutorials/blob/43e1e6fd451b1a502f87cb853be743df75f6b04d/lib/tutorials.ts)
+and [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/43e1e6fd451b1a502f87cb853be743df75f6b04d/public/tutorials/codewithhajra-road-between-us-seedance/demo-web.mp4).
+
+
+### 399. Ocean-and-sky blanket fold
+
+**Verified model:** Runway Seedance 2.5 — Umesh's September 21, 2026 original X
+post publishes the complete text-to-video prompt and identifies the Seedance
+result; a versioned public mirror preserves the prompt and MP4 with the exact
+Seedance 2.5 label.  
+**Mode:** pure text-to-video, seven-shot surreal physical transformation, native
+sound design  
+**Suggested settings:** 15 seconds, 16:9, photoreal, exactly two adults, native
+audio on
+
+**State contract:** one white three-seat sofa stands in shallow transparent
+green-blue seawater; cream cushions, a closed book and a slender floor lamp keep
+fixed positions. One adult woman occupies the left-middle seat and one adult man
+rests at the right arm. One sculptural white cloud hangs above a straight
+horizon. These are the same objects and people before, during and after the
+world-fold.
+
+```text
+Create a continuous 15-second photoreal surreal film in which an adult woman
+casually lifts the ocean and sky as one physical blanket for an adult man. The
+impossible action must obey contact, tension, momentum and spatial continuity;
+do not treat it as a dissolve or a sequence of unrelated scenes.
+
+0-2 s — Glide just above shallow water toward the white sofa. The woman reads;
+the man rests with eyes closed. Small waves pass around the sofa legs while the
+seat, cushions and book remain dry. Keep the lamp left of the sofa and the large
+cloud directly above and behind it.
+
+2-4 s — From a close side angle, she closes the book, leaves it beside her,
+stands and steps barefoot toward the lamp. The man remains in the same resting
+pose. Cut on her continuing movement, not after a pause.
+
+4-6 s — Track low past the lamp base to her feet. She crouches beside one
+incoming wave. Only that crest becomes still as her fingers approach; all other
+water continues moving.
+
+6-8 s — Match her hand position in extreme close-up. She pinches the crest and
+raises it several centimetres. The transparent water bends into a soft pleat;
+sun reflections stretch across it and a thin foam edge behaves like a seam.
+Nothing drips from the lifted section.
+
+8-10 s — Continue the same upward action in a wide side view. She stands without
+resetting her grip. Tension travels across the ocean as one broad fold; the
+horizon curves upward, then the teal sky and original cloud crease with it. The
+man notices but treats the event as ordinary.
+
+10-12 s — From behind her shoulder, she gathers the lifted seascape with both
+hands and draws it toward the sofa. Waves and reflections remain alive inside
+the folds and the same cloud keeps drifting. A dry wooden floor is revealed
+under the removed ocean, while sofa and lamp stay anchored. Swing the gathered
+material toward camera until it fills the frame.
+
+12-15 s — Match the downward motion into a vertical overhead view of an ordinary
+room occupying the exact same floor plan. She lowers the blue-green material
+over the man's legs and the sofa centre. It is now a soft blanket yet still
+contains the moving ocean, horizon, sky and cloud. She sits again beside the
+closed book; both adults remain calm as small waves travel through the blanket.
+
+SOUND / FAILURE CONTROL
+Begin with waves, page turn, wind, linen and bare feet in water. As the fold
+grows, merge surf with the low rush of a large sheet catching air; finish with
+quiet room tone and soft moving-water texture. No dialogue, score, extra person,
+reflection-person, duplicated limb, wet upholstery, floating furniture,
+teleport, hand-position reset, instant morph, liquid splash transition, cloud
+replacement, horizon jump, dry blanket substitution, text or watermark.
+```
+
+**Why it works:** the transformation has one conserved contact point: the same
+wave crest stays between the woman's fingers from pinch to final cover. Revealing
+the wooden floor by removal, rather than cross-fading locations, gives the final
+room a physical explanation, and the unchanged sofa, lamp, book, man and cloud
+make the impossible material legible.
+
+Adapted and rewritten from Umesh's September 21, 2026
+[original X post](https://x.com/umesh_ai/status/2102003383024648654),
+and reed35's [versioned prompt-and-media mirror](https://github.com/reed35/ai-video-tutorials/commit/43e1e6fd451b1a502f87cb853be743df75f6b04d),
+[complete source prompt](https://github.com/reed35/ai-video-tutorials/blob/43e1e6fd451b1a502f87cb853be743df75f6b04d/lib/tutorials.ts)
+and [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/43e1e6fd451b1a502f87cb853be743df75f6b04d/public/tutorials/umesh-fold-ocean-blanket-seedance/demo-web.mp4).
+
+
+### 400. Gesture-mapped luxury-sofa rebuild
+
+**Verified model:** Seedance 2.0 — KrevixAi's September 21, 2026 original X post
+is the direct source for the complete prompt and result; a versioned public
+mirror records the exact model as Seedance 2.0 and preserves the storyboard and
+generated MP4.  
+**Mode:** storyboard-guided first-person product VFX, fixed camera, gesture-to-
+mechanism mapping  
+**Suggested settings:** 10 seconds, 16:9, 20–24 mm fixed POV, native mechanical
+sound on
+
+**Reference contract:** use the published storyboard only for composition,
+component order and terminal sofa design. It does not authorize camera motion,
+extra operators or magical energy. The final object is one consistent luxury
+sofa with a dark-walnut frame, cognac leather and black-metal fittings.
+
+```text
+Create one ten-second ultra-photoreal luxury-furniture commercial in a dark
+graphite workshop. Lock a first-person 20-24 mm camera with no translation,
+rotation or zoom. Show only two matte-black gloved adult hands. Use dramatic rim
+light, deep shadow and suspended dust; every object follows heavy real physics.
+
+0.0-0.6 s — Centre one filthy broken sofa three to four metres away. Raise both
+hands into the foreground.
+
+0.6-1.2 s — A forceful outward spread breaks the sofa into its real construction
+parts: torn cover, cushions, stuffing, springs, bolts and damaged wood.
+
+1.2-1.8 s — Hold one readable exploded view. Rotate the wrists so separate
+components turn in place without duplicating.
+
+1.8-2.4 s — Sharp hand swipes throw only the rejected damaged parts out of
+frame. Let debris pass close to the lens with believable mass and air movement.
+
+2.4-3.0 s — Align the surviving structure on the original centre axis.
+
+3.0-3.6 s — One strong pull gesture attracts dark-walnut beams and black-metal
+fittings from several directions; they narrowly miss the fixed camera.
+
+3.6-4.2 s — Rotate, push and drive the pieces into exact joints. Bolts and
+brackets enter matching holes; do not let wood intersect or melt.
+
+4.2-4.8 s — Close both fists. The complete walnut frame locks once with a heavy
+impact, short vibration and settling dust.
+
+4.8-5.4 s — A single cognac-leather sheet flies over and briefly occludes the
+lens, preserving direction into the next action.
+
+5.4-6.0 s — Pull outward and down to tension that same leather around the frame;
+show stretch, contact and edge wrapping.
+
+6.0-6.6 s — Fast finger flicks send separate leather cushions into their unique
+seats. Each lands once, compresses and rebounds.
+
+6.6-7.2 s — Small wrist rotations install the remaining black hardware and
+walnut trim without changing the sofa silhouette.
+
+7.2-7.8 s — Reveal the finished sofa on the same centre axis. Hold both hands
+open and still for one short verification beat.
+
+7.8-8.8 s — Grab and pull backward. The entire sofa slides straight toward the
+camera, throwing a dense floor-level dust trail; the camera remains fixed.
+
+8.8-9.2 s — Throw both palms forward. The sofa brakes one metre from the lens,
+overshoots slightly, vibrates and lets the cushions rebound.
+
+9.2-10.0 s — Hold a premium close view of leather pores, stitching, walnut grain
+and black-metal joinery.
+
+GESTURE LANGUAGE
+SPREAD disassembles. SWIPE rejects. ROTATE turns parts. FLICK launches one part.
+PUSH drives. PULL attracts or advances. CLENCH locks. OPEN PALMS stop. A movement
+may occur only while its assigned gesture is visibly active.
+
+No third hand, arm-body reveal, person, camera movement, magic, glow, energy
+beam, levitation without gesture, duplicate component, impossible joint,
+material morph, text, logo, subtitle or watermark. Use impacts, bolt clicks,
+wood knocks, leather tension, cushion thumps, floor scrape and settling dust;
+no narration.
+```
+
+**Why it works:** a small gesture vocabulary behaves like an editing grammar:
+each hand state authorizes one mechanical verb. The locked camera and centre
+axis expose geometry errors instead of hiding them, while the leather lens
+occlusion bridges frame construction to upholstery without inventing a cutaway.
+
+Adapted and rewritten from KrevixAi's September 21, 2026
+[original X post](https://x.com/KrevixAi/status/2102063967766024619),
+and reed35's [versioned prompt-and-media mirror](https://github.com/reed35/ai-video-tutorials/commit/43e1e6fd451b1a502f87cb853be743df75f6b04d),
+[complete source prompt](https://github.com/reed35/ai-video-tutorials/blob/43e1e6fd451b1a502f87cb853be743df75f6b04d/lib/tutorials.ts),
+[reference storyboard](https://github.com/reed35/ai-video-tutorials/blob/43e1e6fd451b1a502f87cb853be743df75f6b04d/public/tutorials/krevix-sofa-workshop-reels-seedance/storyboard.jpg)
+and [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/43e1e6fd451b1a502f87cb853be743df75f6b04d/public/tutorials/krevix-sofa-workshop-reels-seedance/demo-web.mp4).
+
+
 ## Reusable templates
 
 ### Rendered-first-frame poster and delivery-crop parity gate
@@ -41750,6 +42016,12 @@ and the linked [BytePlus billing documentation](https://docs.byteplus.com/docs/M
 
 
 ## Sources
+
+- [H A J R A — September 21, 2026 OpenArt Seedance 2.5 desert-road microfilm: original X attribution and full nine-beat prompt, with a versioned public prompt and generated-video mirror](https://x.com/codewithhajra/status/2101954857233957230) ([mirror commit](https://github.com/reed35/ai-video-tutorials/commit/43e1e6fd451b1a502f87cb853be743df75f6b04d), [complete prompt](https://github.com/reed35/ai-video-tutorials/blob/43e1e6fd451b1a502f87cb853be743df75f6b04d/lib/tutorials.ts), [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/43e1e6fd451b1a502f87cb853be743df75f6b04d/public/tutorials/codewithhajra-road-between-us-seedance/demo-web.mp4))
+
+- [Umesh — September 21, 2026 Runway Seedance 2.5 ocean-and-sky blanket fold: original X post with complete seven-shot text-to-video prompt and a versioned public generated-video mirror](https://x.com/umesh_ai/status/2102003383024648654) ([mirror commit](https://github.com/reed35/ai-video-tutorials/commit/43e1e6fd451b1a502f87cb853be743df75f6b04d), [complete prompt](https://github.com/reed35/ai-video-tutorials/blob/43e1e6fd451b1a502f87cb853be743df75f6b04d/lib/tutorials.ts), [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/43e1e6fd451b1a502f87cb853be743df75f6b04d/public/tutorials/umesh-fold-ocean-blanket-seedance/demo-web.mp4))
+
+- [KrevixAi — September 21, 2026 Seedance 2.0 gesture-mapped luxury-sofa rebuild: original X prompt and result, fixed-POV storyboard, complete ten-second timing map and versioned generated-video mirror](https://x.com/KrevixAi/status/2102063967766024619) ([mirror commit](https://github.com/reed35/ai-video-tutorials/commit/43e1e6fd451b1a502f87cb853be743df75f6b04d), [complete prompt](https://github.com/reed35/ai-video-tutorials/blob/43e1e6fd451b1a502f87cb853be743df75f6b04d/lib/tutorials.ts), [storyboard](https://github.com/reed35/ai-video-tutorials/blob/43e1e6fd451b1a502f87cb853be743df75f6b04d/public/tutorials/krevix-sofa-workshop-reels-seedance/storyboard.jpg), [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/43e1e6fd451b1a502f87cb853be743df75f6b04d/public/tutorials/krevix-sofa-workshop-reels-seedance/demo-web.mp4))
 
 - [Imyukehan — September 22, 2026 Seedance 2.5 continuation-tail billing experiment: live 30-second 1280x720/24fps API comparisons, identical returned token usage for one-to-20-second reference inputs, 30-second input boundary, rejected black-video shortcut and a content-first tail-selection rule](https://github.com/Imyukehan/Imyukehan/commit/efec8561f29fcc0cb7ecc22f75b2d55212b6e830) ([complete retrospective](https://github.com/Imyukehan/Imyukehan/blob/efec8561f29fcc0cb7ecc22f75b2d55212b6e830/source/_posts/Seedance-2.5%E8%A7%86%E9%A2%91%E5%BB%B6%E9%95%BF%E6%80%8E%E4%B9%88%E7%AE%97%E9%92%B1%EF%BC%9A%E4%BB%8E%E9%BB%91%E5%B1%8F%E7%9C%81%E9%92%B1%E5%88%B0%E5%90%8C%E4%BB%B7%E4%B8%8A%E4%B8%8B%E6%96%87.md), [BytePlus billing documentation](https://docs.byteplus.com/docs/ModelArk/1099320))
 
