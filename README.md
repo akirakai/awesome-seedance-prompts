@@ -415,6 +415,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Ocean-and-sky blanket fold](#399-ocean-and-sky-blanket-fold)
   - [Gesture-mapped luxury-sofa rebuild](#400-gesture-mapped-luxury-sofa-rebuild)
   - [Court-axis-locked padel match point with visible paint impact](#401-court-axis-locked-padel-match-point-with-visible-paint-impact)
+  - [Amber perfume still life with caustic-light storytelling](#402-amber-perfume-still-life-with-caustic-light-storytelling)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -25162,6 +25163,69 @@ Adapted and rewritten from ldebruinlars' September 22, 2026
 and [accepted generated MP4](https://github.com/ldebruinlars/Event-cliniqs-poort-Padel/blob/dbebba123964dee4ef9331bf2f5e349d8c1492f7/ai-animatie/assets/08-EINDVERSIE-seedance25.mp4).
 
 
+### 402. Amber perfume still life with caustic-light storytelling
+
+**Verified model:** Fal-hosted ByteDance Seedance 2.5 US
+(`bytedance/seedance-2.5/us/text-to-video`) — the provider's newly listed
+endpoint publishes the complete input prompt and 720p/auto settings beside a
+downloadable returned MP4, file metadata and seed `549645178`  
+**Use case:** luxury fragrance launch, editorial product film, typography-safe
+brand background  
+**Mode:** text-to-video with synchronized audio  
+**Suggested settings:** 720p, duration `auto`, one restrained continuous shot
+
+```text
+Create a restrained editorial film for a luxury fragrance. No person, hand or
+human reflection enters the frame.
+
+HERO AND SET
+Place one heavy, faceted perfume bottle at eye level on a honed travertine
+slab. Its glass is warm amber and its cap is brushed brass. Beside it, keep one
+low cream linen card with a shallow abstract deboss and one dry eucalyptus
+sprig as quiet scale references. Do not add another bottle, accessory or
+readable brand copy.
+
+CAMERA AND COMPOSITION
+Use a locked three-quarter product angle with the compression of a 90 mm
+medium-format lens. Keep shallow but controlled focus: the complete bottle
+silhouette, cap and front facets remain readable while the wall falls gently
+soft. Reserve clean negative space above and frame-left for later typography;
+nothing may drift into that safe area.
+
+LIGHT AS THE ACTION
+Hard late-afternoon sunlight enters from frame-right and rakes across the
+stone. Maintain one long, sharp bottle shadow and one bright amber caustic on
+the sand-coloured plaster wall. A soft bounce lifts only the dark side of the
+bottle. Over the shot, a single liquid bead travels slowly down the bottle's
+shoulder; its highlight and the wall caustic shift naturally by a few
+centimetres while the product and camera remain still. End on the brightest
+clean caustic and hold.
+
+LOOK AND SOUND
+Amber, ivory, warm grey and muted gold; tactile real glass, stone, linen and
+metal; restrained contrast, subtle film grain, no synthetic CGI gloss. Quiet
+room tone with one faint liquid tick and distant fabric movement; no music,
+voice or slogan.
+
+No people, hands, extra bottle, floating object, changing cap, warped glass,
+melting stone, fake label, random letters, subtitle, watermark, camera orbit,
+focus pumping, sudden exposure change or movement inside the typography-safe
+area.
+```
+
+**Why it works:** the product remains almost motionless while the bead, caustic
+and shadow provide enough time-varying evidence for video. Assigning a fixed
+screen region to future type avoids asking the model to render campaign copy,
+and the single hero plus two low-profile scale cues keep the frame legible.
+For delivery, verify that the bottle geometry and empty type area remain stable
+through the full clip before adding real typography in post.
+
+Adapted and rewritten from Fal's newly listed US-hosted Seedance 2.5
+[text-to-video example and returned result](https://fal.ai/models/bytedance/seedance-2.5/us/text-to-video),
+[exact endpoint schema](https://fal.ai/models/bytedance/seedance-2.5/us/text-to-video/api)
+and [generated MP4](https://v3b.fal.media/files/b/0aaafefb/l2i1V5sd8V78AEJaBlcmJ_video.mp4).
+The provider page records the returned file as `video/mp4`, 675,668 bytes.
+
 ## Reusable templates
 
 ### Rendered-first-frame poster and delivery-crop parity gate
@@ -42474,6 +42538,8 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 
 ## Sources
+
+- [Fal — September 23, 2026 newly listed US-hosted ByteDance Seedance 2.5 text-to-video example: complete amber-perfume prompt, 720p/auto request, returned seed and downloadable MP4](https://fal.ai/models/bytedance/seedance-2.5/us/text-to-video) ([endpoint schema](https://fal.ai/models/bytedance/seedance-2.5/us/text-to-video/api), [generated MP4](https://v3b.fal.media/files/b/0aaafefb/l2i1V5sd8V78AEJaBlcmJ_video.mp4))
 
 - [Griptape AI — September 22, 2026 exact Dreamina Seedance 2.5 hosted-video and optional-last-frame delivery repair: contiguous artifact manifest, kind-scoped output pairing, expired-cache refresh, host-scoped bearer token and signed-query redaction](https://github.com/griptape-ai/griptape-nodes-library-standard/commit/0179dec7d9b6ea445e7199f417521b1c3c4a7e39) ([Seedance node](https://github.com/griptape-ai/griptape-nodes-library-standard/blob/0179dec7d9b6ea445e7199f417521b1c3c4a7e39/griptape_nodes_library/video/seedance_2_5_video_generation.py), [artifact contract](https://github.com/griptape-ai/griptape-nodes-library-standard/blob/0179dec7d9b6ea445e7199f417521b1c3c4a7e39/griptape_nodes_library/proxy/hosted_artifacts.py), [regressions](https://github.com/griptape-ai/griptape-nodes-library-standard/blob/0179dec7d9b6ea445e7199f417521b1c3c4a7e39/tests/unit/test_griptape_proxy_node_hosted_artifacts.py), [integration workflow](https://github.com/griptape-ai/griptape-nodes-library-standard/blob/0179dec7d9b6ea445e7199f417521b1c3c4a7e39/tests/integration/test_seedance_2_5_last_frame_artifact.py))
 
