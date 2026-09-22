@@ -42015,7 +42015,99 @@ the [complete retrospective](https://github.com/Imyukehan/Imyukehan/blob/efec856
 and the linked [BytePlus billing documentation](https://docs.byteplus.com/docs/ModelArk/1099320).
 
 
+
+### Palindrome-loop salvage and worst-frame overlay contrast gate
+
+**Verified model:** Higgsfield Seedance 2.0, image-to-video, 4K, five
+seconds, 21:9 — the original creator records the paid generation route and
+cost, the locked-off instruction that still returned camera drift, the shipped
+forward-then-reversed loop, two downscaled H.264 deliveries and a seven-frame
+overlay-contrast audit. The original generation prompt, task ID and untouched
+4K response are not public, so this counts as a reusable failure-control
+template rather than a complete scenario.
+
+**Use case:** atmospheric website heroes, title backgrounds and product-stage
+loops where a visually good take contains slow camera drift, while live text
+must remain readable over every frame
+
+```text
+PRECOMPOSE THE PLATE
+Design the approved input still for its final interface:
+- keep the text side simple and low-detail;
+- reserve a dark or otherwise contrast-safe band behind the longest copy;
+- place the subject and brightest atmospheric event away from critical controls;
+- record the plate hash, dimensions and intended crop at every breakpoint.
+
+GENERATION BRIEF
+Animate only [CLOUD / MIST / LIGHT / FABRIC / PARTICLES] with restrained,
+non-causal motion. Lock camera position, lens, horizon, perspective, crop and
+subject geometry. No pan, tilt, zoom, orbit, dolly, reframing, new object, text,
+logo or one-way action. Request enough source resolution to downsample into the
+largest delivery rather than enlarging a smaller result.
+
+TAKE CLASSIFICATION
+Inspect the raw clip before looping.
+A — stable camera and loopable atmosphere: build a normal end-to-start loop.
+B — small monotonic camera drift but stable subject, horizon and crop reserve:
+allow the palindrome salvage below.
+C — geometry changes, crop leaves the safe area, or motion contains an arrow of
+time such as a person acting, smoke dissipating, an object falling, a vehicle
+passing, a flare igniting or a shadow advancing: reject and regenerate. Do not
+reverse a causal event merely to hide the seam.
+
+PALINDROME SALVAGE
+Choose the longest clean interval [A,B]. Build:
+  forward A -> B, then reverse B -> A.
+Remove duplicate endpoint frames so neither turn visibly pauses. Inspect both
+turning points at full speed; reject any jerk, repeated flash, reversed particle
+physics, doubled compression frame or exposure pulse. The result may oscillate,
+but it must not pretend that irreversible story action runs backward.
+
+DELIVERY
+Derive all responsive files from the same accepted loop. Downsample with one
+documented crop and grade, encode H.264, and harvest the poster from the loop's
+actual first frame. Verify dimensions, codec, duration, file size and that the
+poster-to-video swap does not jump.
+
+WORST-FRAME TEXT GATE
+After the final crop, grade, mask and compression, sample at least seven evenly
+spaced frames including both reversal points. For each overlay element, measure
+the share of rendered text pixels below its required contrast threshold; use
+4.5:1 for normal body text unless the product's accessibility rule is stricter.
+Tune the page-side gradient or scrim against the worst frame, then repeat the
+complete sample. Never reuse contrast numbers from a placeholder or earlier
+video.
+
+ACCEPTANCE
+- both loop turns are visually continuous at delivery speed;
+- no causal motion visibly reverses;
+- the crop and subject remain stable at every responsive size;
+- every critical text/control sample passes its threshold;
+- the poster matches frame one;
+- the archived receipt names model, route, source size, delivery sizes, loop
+  construction, sample frames and measured failure percentages.
+```
+
+**Why it works:** camera locking is an instruction, not a guarantee. A
+palindrome can turn small monotonic drift into a bounded oscillation when the
+content is genuinely reversible, while the explicit rejection class prevents
+the same trick from making people, impacts or dissipating effects run backward.
+The creator's first text ramp still left 4.83% of one link below 4.5:1 on the
+new footage; re-measuring the actual seven-frame loop and moving the ramp deeper
+reduced the recorded trial, subtitle and primary-CTA failures to zero, with
+0.16% on the ghost CTA and 1.38% on trust copy. The useful technique is the
+coupled gate: salvage motion only when physics permits it, then approve the
+overlay only against the worst delivered frame.
+
+Adapted and rewritten from alialahmad2000 / Fluentia's September 22, 2026
+[Higgsfield Seedance 2.0 production commit](https://github.com/alialahmad2000/fluentia-site/commit/4684194a9e42e4ffd6d3b5a32e4cc8855c440515),
+the [shipped 1600px H.264 loop](https://github.com/alialahmad2000/fluentia-site/blob/4684194a9e42e4ffd6d3b5a32e4cc8855c440515/public/home/cine-dawn-1600.mp4)
+and the [versioned mask and contrast notes](https://github.com/alialahmad2000/fluentia-site/blob/4684194a9e42e4ffd6d3b5a32e4cc8855c440515/src/pages/v5/V5Cinema.css).
+
 ## Sources
+
+- [alialahmad2000 / Fluentia — September 22, 2026 Higgsfield Seedance 2.0 4K website-hero production: five-second 21:9 generation, measured locked-camera drift, shipped palindrome loop, responsive H.264 deliveries and seven-frame text-contrast revalidation](https://github.com/alialahmad2000/fluentia-site/commit/4684194a9e42e4ffd6d3b5a32e4cc8855c440515) ([1600px loop](https://github.com/alialahmad2000/fluentia-site/blob/4684194a9e42e4ffd6d3b5a32e4cc8855c440515/public/home/cine-dawn-1600.mp4), [mask and contrast measurements](https://github.com/alialahmad2000/fluentia-site/blob/4684194a9e42e4ffd6d3b5a32e4cc8855c440515/src/pages/v5/V5Cinema.css))
+
 
 - [H A J R A — September 21, 2026 OpenArt Seedance 2.5 desert-road microfilm: original X attribution and full nine-beat prompt, with a versioned public prompt and generated-video mirror](https://x.com/codewithhajra/status/2101954857233957230) ([mirror commit](https://github.com/reed35/ai-video-tutorials/commit/43e1e6fd451b1a502f87cb853be743df75f6b04d), [complete prompt](https://github.com/reed35/ai-video-tutorials/blob/43e1e6fd451b1a502f87cb853be743df75f6b04d/lib/tutorials.ts), [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/43e1e6fd451b1a502f87cb853be743df75f6b04d/public/tutorials/codewithhajra-road-between-us-seedance/demo-web.mp4))
 
