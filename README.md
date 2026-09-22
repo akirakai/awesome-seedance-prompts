@@ -28016,12 +28016,15 @@ plus Ahmed Ali's September 5, 2026
 [sequentially edited canonical keyframes](https://github.com/Ahmed123Ali-jr/teacher-app/commit/88235493edc8b13fe1270a25b8dc30f20e626dfd)
 and [four-clip Seedance 2.0 / 2.0 Fast assembly with measured seams and committed output frames](https://github.com/Ahmed123Ali-jr/teacher-app/commit/d02594b2e617a7fd572ae26285f69eb82d771f3f).
 
-### Per-window terminal-state gate for delayed ambient motion
+### Per-window terminal-state and overlap gate for delayed ambient motion
 
-**Verified model:** Seedance 2.5 — the creator labels both 15-second tests with
-this exact version, publishes each generated result, reports that per-window end
-states prevented pre-trigger motion, and shows that an explicit post-change
-motion inventory keeps a local material transformation from freezing the frame
+**Verified model:** Seedance 2.5 — the creator labels the tests with this exact
+version, publishes the generated results, and later runs a controlled 15-second
+A/B with the same seed, account, afternoon and 480p settings: three visible end
+states are the only difference. The end-state version reaches and holds the
+requested pose; the control reaches it briefly, reverses and returns upright.
+An explicit post-change inventory also keeps a local material transformation
+from freezing the rest of the frame.
 
 Use this when a passive element must remain quiet until one local cause arrives:
 a candle before a door opens, fabric before a gust, dust before impact, water
@@ -28060,6 +28063,7 @@ End state at T3: [EXACT SETTLED STATE].
 Hold long enough to verify that the event is over. Preserve any irreversible
 result such as [DIMMER FLAME / SHIFTED OBJECT / WET SURFACE]; otherwise return
 to BASELINE. No replay.
+End state at END: [EXACT FINAL SUBJECT, PROP, LIGHT AND FRAME POSITIONS].
 
 IRREVERSIBLE BRANCH (replace recovery + final proof)
 [T1–T2 | bounded state sweep]
@@ -28072,10 +28076,26 @@ TARGET remains completely still in POST-STATE. These independent layers continue
 moving naturally: [SNOW], [MIST], [SKY / CLOUDS], [DISTANT FOLIAGE], [CAMERA].
 Do not freeze, slow or transform any listed layer. No thaw, second sweep or
 whole-frame time stop.
+End state at END: TARGET remains fully POST-STATE while [MOVING LAYERS] retain
+their declared visible positions and motion cues.
 
 ADDITIONAL ACCEPTANCE GATE
 Reject if the transformation begins outside its window, stalls partway, spreads
 in the wrong direction, leaves TARGET moving, or freezes an unrelated layer.
+
+END-STATE HANDOFF RULE
+Describe a drawable frame, never a feeling, elapsed duration or completed
+camera move. Name object positions, pose, light, focus ownership and framing.
+For every intermediate boundary, include the first visible moment of the next
+event when the two actions should overlap:
+
+Bad: End state at T2: [CAUSE HAS FINISHED AND TARGET IS UNCHANGED].
+Better: End state at T2: [CAUSE IS VISIBLE AND TARGET HAS JUST BEGUN TO REACT].
+
+Do not make an intermediate state more final than the intended action. If one
+event should cause the next without a pause, the boundary frame must contain
+both the completed cause and the beginning response. Reserve a fully settled
+state for an intentional hold or the final window.
 
 CAMERA + FOCUS
 The camera does not create the event. If focus changes, describe the visible
@@ -28086,22 +28106,29 @@ leave the landing plane undefined.
 ACCEPTANCE GATE
 Reject if TARGET moves before T1, the response begins before TRIGGER, direction
 is reversed, the peak never completes, recovery loops, a second cause appears,
-focus lands on the wrong plane, or the final state reverts incorrectly.
+focus lands on the wrong plane, an unintended pause appears at a window boundary,
+or the final state reverts incorrectly.
 ```
 
 **Why it works:** a global phrase such as “flickering candle” can leak motion
 across the whole clip. Explicit terminal states turn each time range into a
 bounded state transition, so the model has both a start condition and a stop
-condition. The source test used a left-originating breath of air, a right-leaning
-near-extinguished flame and a defined recovery rather than asking for continuous
-atmosphere.
+condition. In the later A/B, both flames stayed comparably quiet for eight
+seconds and both initially leaned toward the opened door; only the version with
+end states held the lean through the finish. The creator also found a visible
+pause in two of four earlier takes when stage two ended with the door fully open
+but the flame unchanged. Moving the first lean into that boundary removed the
+pause. This is a controlled creator report, not a claim that one take proves a
+universal effect.
 
 Adapted from [Glenn Williams's Seedance 2.5 candle timing test, prompt fragment,
 15-second result and reported end-state finding](https://x.com/GlennHasABeard/status/2094387519148134418),
 published August 31, 2026. The irreversible branch comes from
 [his Seedance 2.5 wave-freezing test, prompt fragment, 15-second result and
 post-change motion inventory](https://x.com/GlennHasABeard/status/2094488957203652685),
-published September 1, 2026.
+published September 1, 2026. The A/B hold test, drawable-frame rewrites and
+overlapping-boundary correction come from his September 21, 2026 article
+[Every Stage Ends With Two Words](https://x.com/GlennHasABeard/status/2102006137600053280).
 
 
 ### Directional action retarget with reference-role isolation and atomic fan-out
@@ -42285,6 +42312,7 @@ reactive phone-camera failure and native overlapping dialogue](https://x.com/fra
 - [Glenn Williams / @GlennHasABeard — August 31, 2026 Seedance 2.5 candle timing test with attached 15-second result and creator-reported per-window terminal-state control for preventing pre-trigger motion](https://x.com/GlennHasABeard/status/2094387519148134418)
 
 - [Glenn Williams / @GlennHasABeard — September 1, 2026 Seedance 2.5 wave-to-ice test with attached 15-second result, two-second directional phase-change window, persistent frozen target and explicit snow/mist/sky motion exemptions](https://x.com/GlennHasABeard/status/2094488957203652685)
+- [Glenn Williams / @GlennHasABeard — September 21, 2026 Seedance 2.5 same-seed 15-second A/B: three end-state clauses versus none, frame-by-frame pose-hold result, drawable-frame rewrites and overlapping-boundary pause repair](https://x.com/GlennHasABeard/status/2102006137600053280)
 
 - [Higgsfield — official Seedance 2.5 region-edit showcase for bounded label, background and wardrobe repair without a full reroll](https://higgsfield.ai/seedance/2.5); [Iret — August 31, 2026 dated verification of the separate Seedance 2.5 Edit surface, source-video slot, text-defined regions, `@` references, 1080p ceiling and no-mask workflow](https://github.com/iret77/ai-film-production/commit/e3ee5d679776f1b425fe9a9cd391b59f1c8e8f0c)
 
