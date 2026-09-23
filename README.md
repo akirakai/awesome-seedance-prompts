@@ -25451,6 +25451,133 @@ Adapted and rewritten from Joy Purdy's September 23, 2026
 
 ## Reusable templates
 
+### Host-restart-safe NLE generation and master/preview/audio ownership gate
+
+**Verified model:** Comfy Router Seedance 2.5
+(`byteplus/dreamina-seedance-2-5-260628`; the original OpenFX implementation
+pins this exact Router ID and exposes text, first-frame, first/last-frame and
+reference-image modes)
+**Use case:** generate or continue a Seedance shot from inside a nonlinear
+editor without losing a paid task when the network drops or the host closes,
+and without mistaking a viewer proxy for the downloadable master or its audio
+**Mode:** editor frame/reference handoff -> asynchronous create -> persisted
+request lineage -> poll/collect -> master download plus local preview decode
+
+```text
+HOST BOUNDARY
+Editor project stores only:
+- local effect instance ID;
+- accepted provider request ID;
+- exact model and provider leg;
+- output-folder location;
+- video start frame and playback rule.
+
+Keep API credentials, generated media, decoded preview frames and recovery
+records outside the shared editor project. Never serialize a credential into
+the project or command history.
+
+SOURCE COMPILE
+Exact model = byteplus/dreamina-seedance-2-5-260628.
+Prompt = [COMPLETE VERSIONED PROMPT].
+Mode = [TEXT / FIRST FRAME / FIRST + LAST FRAME / REFERENCE IMAGES].
+Resolution = [480P / 720P / 1080P].
+Duration = [4–15 SECONDS].
+Aspect = [EXACT RATIO / ADAPTIVE WHEN AN INPUT OWNS IT].
+Audio = [ON / OFF].
+Seed = [VALUE].
+Provider leg = [PINNED VALUE OR REVIEWED DEFAULT].
+
+Export the current playhead frame only when the selected mode gives it a
+declared role. Keep first, last and general reference roles ordered. Fit every
+submitted image inside the route's tested size window; for this implementation,
+the long edge is at most 2048 px and a Seedance input is raised to at least
+300 px. Do not silently pass a timeline frame as both a boundary and a style
+reference.
+
+ONE CREATE, IMMEDIATE LINEAGE
+Submit through the queued route. As soon as acceptance returns a request ID,
+atomically write a pending record containing:
+[LOCAL EFFECT ID], [REQUEST ID], [MODEL], [PROVIDER], [MODE], [PROMPT],
+[CREATED TIME] and [OUTPUT FOLDER].
+
+The pending record must exist before the first status wait. A dropped
+connection, editor quit or machine sleep after acceptance is a poll/collect
+recovery, never permission for a second paid create. Reopen the project, load
+the same pending request ID and continue collection. Use the same stable local
+job key for any transport-level idempotency header; do not expect an
+idempotency key to replay a completed synchronous response.
+
+TERMINAL HANDOFF
+On completion, download the returned provider media immediately and write it
+atomically as the immutable master. Then record:
+- request ID, exact model, provider and prompt;
+- master path, container and byte size;
+- returned dropped-parameter notice and available charge data;
+- decoded width, height, fps and frame count;
+- terminal error and HTTP status when delivery fails.
+
+Delete the pending record only after terminal metadata is durable. A
+status/transport interruption keeps the pending record. A confirmed terminal
+failure keeps its diagnostic record but cannot be resumed as if still running.
+Cancellation is explicit and never silently replaced by a fresh task.
+
+THREE OUTPUT OWNERS
+1. MASTER FILE — authoritative generated MP4 and the only copy that owns the
+   Seedance audio track.
+2. VIEWER FRAMES — locally decoded visual proxy used by the OpenFX effect; it
+   does not own audio and never replaces the master.
+3. EDITOR PROJECT — placement and playback instructions only; it points to the
+   job/output folder rather than embedding credentials or media.
+
+If preview decoding fails after a successful download, preserve the master and
+report preview unavailable. Import the master into the media pool whenever its
+audio is required; an image-effect surface cannot deliver that audio merely
+because its viewer plays decoded frames.
+
+COLOR AND PROVIDER GATES
+- Treat the in-effect path as display-referred Rec.709/sRGB unless the host
+  conversion is explicitly managed around it.
+- On a wide-gamut or scene-linear timeline, convert into the tested display
+  space before the effect and convert back afterward.
+- Surface every provider-dropped parameter instead of presenting the stored UI
+  value as applied truth.
+- If a provider leg cannot disable audio or changes duration/resolution limits,
+  fail or disclose that exact effective contract before spending.
+
+ACCEPTANCE
+- a host restart resumes one accepted request and creates no replacement;
+- the saved master downloads and decodes independently of the viewer cache;
+- the request/model/prompt lineage can reproduce the paid submission record;
+- preview failure cannot delete or overwrite a valid master;
+- native audio is checked on the master, not inferred from silent OFX playback;
+- the effect's frame-zero placement and post-end hold/loop/source rule are
+  explicit;
+- credentials remain outside the editor project and repository.
+```
+
+**Why it works:** an editor effect, a queued provider task and a generated media
+file have different lifecycles. Persisting lineage at acceptance makes a host
+restart a collection problem instead of a new generation, while separating the
+master from decoded viewer frames prevents silent preview limitations from
+discarding native audio or the only paid artifact. The colour and
+dropped-parameter gates also stop a convenient in-editor preview from being
+treated as proof of finishing-path fidelity.
+
+**Evidence boundary:** the newly published implementation contains the exact
+model ID, request builder, atomic pending-record recovery, host-reopen path,
+master download, preview decode and audio/colour limitations, but no public
+provider task ID or generated master. It therefore validates one reusable
+technique only and is not counted as a complete scenario.
+
+**Source:** Purz's September 23, 2026
+[Comfy Router OpenFX production commit](https://github.com/purzbeats/comfy-router-ofx/commit/2e0cecd47ebc006dc70b3e1ae675579eb2292811),
+including the
+[versioned Seedance modes and host limitations](https://github.com/purzbeats/comfy-router-ofx/blob/2e0cecd47ebc006dc70b3e1ae675579eb2292811/README.md),
+[atomic pending-job and terminal-media handoff](https://github.com/purzbeats/comfy-router-ofx/blob/2e0cecd47ebc006dc70b3e1ae675579eb2292811/src/Jobs.cpp),
+[queued Router request implementation](https://github.com/purzbeats/comfy-router-ofx/blob/2e0cecd47ebc006dc70b3e1ae675579eb2292811/src/RouterClient.cpp)
+and the
+[CLI recovery harness](https://github.com/purzbeats/comfy-router-ofx/blob/2e0cecd47ebc006dc70b3e1ae675579eb2292811/tools/router_cli.cpp).
+
 ### Product-page truth to schema-locked shopping-short handoff
 
 **Verified model:** MuAPI Seedance 2.0 VIP
@@ -43513,6 +43640,8 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 
 ## Sources
+
+- [Purz — September 23, 2026 Comfy Router Seedance 2.5 (`byteplus/dreamina-seedance-2-5-260628`) OpenFX production path: editor-frame roles, immediate queued-request checkpoint, host-restart collection, atomic master preservation, preview/audio separation, colour boundary and provider-drop visibility](https://github.com/purzbeats/comfy-router-ofx/commit/2e0cecd47ebc006dc70b3e1ae675579eb2292811) ([model and host contract](https://github.com/purzbeats/comfy-router-ofx/blob/2e0cecd47ebc006dc70b3e1ae675579eb2292811/README.md), [job persistence and media handoff](https://github.com/purzbeats/comfy-router-ofx/blob/2e0cecd47ebc006dc70b3e1ae675579eb2292811/src/Jobs.cpp), [queued Router client](https://github.com/purzbeats/comfy-router-ofx/blob/2e0cecd47ebc006dc70b3e1ae675579eb2292811/src/RouterClient.cpp), [recovery harness](https://github.com/purzbeats/comfy-router-ofx/blob/2e0cecd47ebc006dc70b3e1ae675579eb2292811/tools/router_cli.cpp))
 
 - [kjr1728-glitch — September 23, 2026 MuAPI Seedance 2.0 VIP (`seedance-2-vip-image-to-video`) product-page-to-shopping-short pipeline: approved fact extraction, schema-locked director brief, product/identity reference roles, reviewable hero checkpoint, native-audio request and resumable stage ledger](https://github.com/kjr1728-glitch/ddong/commit/e242a037110f3182a066e25d10640899341f333d) ([brief schema](https://github.com/kjr1728-glitch/ddong/blob/e242a037110f3182a066e25d10640899341f333d/shopping-shorts/scripts/write_brief.py), [exact video request](https://github.com/kjr1728-glitch/ddong/blob/e242a037110f3182a066e25d10640899341f333d/shopping-shorts/scripts/generate_video.py), [checkpointed workflow](https://github.com/kjr1728-glitch/ddong/blob/e242a037110f3182a066e25d10640899341f333d/shopping-shorts/README.md))
 
