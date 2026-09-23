@@ -418,6 +418,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Amber perfume still life with caustic-light storytelling](#402-amber-perfume-still-life-with-caustic-light-storytelling)
   - [Storm-diverted paraglider and silent mountain rescue](#403-storm-diverted-paraglider-and-silent-mountain-rescue)
   - [Dual-palette classroom arcane clash](#404-dual-palette-classroom-arcane-clash)
+  - [Locked-waterfall two-speaker micro-comedy](#405-locked-waterfall-two-speaker-micro-comedy)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -25382,6 +25383,72 @@ Adapted and rewritten from Feyber / @woleswoosh's September 22, 2026
 [complete Seedance 2.5 prompt](https://x.com/woleswoosh/status/2102408288122130554)
 and [OpenArt generated-video post](https://x.com/woleswoosh/status/2102408281981657258).
 
+### 405. Locked-waterfall two-speaker micro-comedy
+
+**Verified model:** OpenArt Seedance 2.5 — the original creator publishes the
+generated result, complete prompt and exact UI settings together  
+**Use case:** locked-camera family micro-comedy, two-speaker native dialogue,
+listener-mouth control, restrained reaction acting  
+**Mode:** single-image reference-to-video  
+**Verified settings:** one reference image, Auto Polish off, native audio on,
+14 seconds, 3:4, 1080p
+
+```text
+Use @Image1 as the literal opening frame and as the authority for identity,
+wardrobe, seating, set geometry, light direction and lens height. Generate one
+unbroken, ultra-realistic locked-camera shot. Do not reframe, pan, zoom or cut.
+
+CAST AND WORLD LOCK
+Only the father and his eight-year-old son appear. Preserve both faces, hair,
+clothes, body proportions, seated positions and the father's hand on the boy's
+shoulder exactly as shown in @Image1. Keep the background alive without changing
+the composition: the distant waterfall flows continuously, foliage moves in one
+light breeze, loose hair and garment edges respond subtly, and both characters
+breathe naturally. Nothing new enters the frame.
+
+[00:00–00:04]
+The boy lifts his chin toward his father, raises his eyebrows a little and asks
+in a clear, unhurried child's voice:
+"Can the computer finish my homework tonight?"
+The father listens with a still face; his lips remain fully closed.
+
+[00:04–00:10]
+The father resettles his hand on the boy's shoulder, exhales once through his
+nose, meets the boy's eyes and replies in a calm, matter-of-fact adult voice:
+"Not after it made your volcano argue with the smoke alarm."
+Give him one slow blink near the middle of the line. The boy listens without
+speaking or moving his lips.
+
+[00:10–00:14]
+The boy's cheeks lift and his eyes crease before both hands rise to cover his
+mouth. His shoulders make exactly two small suppressed-laugh pulses, then stop.
+He holds the pose, inhales quietly through his nose and settles. The father
+keeps eye contact and gives the shoulder one slow, gentle squeeze. End on that
+held relationship beat.
+
+AUDIO LEDGER
+Maintain low, distant waterfall ambience and faint leaves for the entire clip.
+Generate only the two English lines at their assigned times with accurate lip
+sync, clean separation and no overlap. The non-speaker's mouth stays closed.
+After the father's line, use ambience, breathing and the boy's contained
+reaction only; no extra word, laugh track, music or narration.
+
+Natural skin texture and age-appropriate anatomy; clean detail and soft
+available light matching @Image1. Preserve faces, clothing, background,
+exposure and colour from first to last frame. No third person, face drift,
+wardrobe change, camera movement, background reset, exaggerated comedy,
+distorted hands, extra fingers, subtitle, caption, logo or watermark.
+```
+
+**Why it works:** the locked composition spends the motion budget on performance
+instead of camera movement. Each line has one owner, the listener receives an
+explicit closed-mouth state, and the final laugh is written as observable cheek,
+eye, hand, shoulder and breath changes rather than an abstract emotion. Turning
+Auto Polish off keeps those timing and silence constraints from being rewritten.
+
+Adapted and rewritten from Joy Purdy's September 23, 2026
+[OpenArt Seedance 2.5 production article, complete prompt and generated result](https://www.linkedin.com/pulse/from-numerous-renders-one-how-i-direct-ai-actors-claude-joy-purdy-mnokc).
+
 ## Reusable templates
 
 ### Rendered-first-frame poster and delivery-crop parity gate
@@ -43207,6 +43274,8 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 
 ## Sources
+
+- [Joy Purdy — September 23, 2026 OpenArt Seedance 2.5 locked-camera father-and-son waterfall micro-dialogue: one reference image, Auto Polish off, 3:4 1080p/14-second settings, full timed prompt, native ambience and generated result](https://www.linkedin.com/pulse/from-numerous-renders-one-how-i-direct-ai-actors-claude-joy-purdy-mnokc)
 
 - [Atelier — September 23, 2026 fal Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`) guidance-versus-canvas aspect repair: measured 2752×1536 reference to 720×1280 failure, exact schema semantics, explicit configured-ratio routing and frame/extension inheritance regressions](https://github.com/wiztools/atelier/commit/28c19fefd22a9f057940ac280fb0938f27406fed) ([failed-run dimensions and request tests](https://github.com/wiztools/atelier/blob/28c19fefd22a9f057940ac280fb0938f27406fed/video_aspect_ratio_test.go), [versioned endpoint schema](https://github.com/wiztools/atelier/blob/28c19fefd22a9f057940ac280fb0938f27406fed/testdata/fal-schemas/seedance-2.5-reference-to-video.json))
 
