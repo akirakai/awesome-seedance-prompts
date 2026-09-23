@@ -38664,6 +38664,109 @@ the [complete thirty-block shot and through-line manifest](https://github.com/an
 and the [locked generation, narration and assembly plan](https://github.com/anjolovic/anjolovic/blob/5dbf53cc133561865f3d13f3a137b305055c5228/production/PRODUCTION-PLAN.md).
 
 
+### Six-reference two-performer cast-swap and source-audio restoration gate
+
+**Verified model:** reAPI Seedance 2.5
+(`doubao-seedance-2.5-face`, `omni_reference_task_type: "edit"`) — the
+producer publishes the complete reusable prompt, exact request body and polling
+script from a September 23, 2026 two-performer production. The record documents
+three reference jobs per performer, multiple rejected or weak takes, a
+completed 29-second 1080p run and matched-time QC. It does not publish the task
+ID or generated master, so this counts as a reusable template rather than a
+complete scenario. Treat the route and moderation behaviour as channel-specific
+rather than proof that other Seedance 2.5 providers behave identically.
+
+Use this when an authorized adult cast must replace two performers in an
+existing continuous performance while the source clip remains authoritative
+for timing, movement, camera, set and audio. Assign every still exactly one job
+so face, wardrobe, build and source-background information do not compete.
+
+```text
+RIGHTS AND ROUTE PREFLIGHT
+Model = doubao-seedance-2.5-face.
+Task type = edit. Source video = @Video1, measured [2–30] seconds.
+Output = 1080p, adaptive source aspect, duration -1, generated audio off.
+Identity A authorization = [PUBLICITY / CONSENT BASIS].
+Identity B authorization = [PUBLICITY / CONSENT BASIS].
+If either identity lacks permission, recast before uploading references.
+Do not evade a provider refusal by renaming, disguising or repeatedly
+resubmitting the same identity.
+
+ORDERED REFERENCE CONTRACT — THREE IMAGES PER PERFORMER
+@Image1 = viewer-left performer A, PRIMARY OUTFIT only:
+[GARMENTS, COLOURS, CONSTRUCTION AND SHOES; FULL BODY WHEN POSSIBLE].
+@Image2 = performer A, BUILD + FOOTWEAR only:
+[HEIGHT / PROPORTIONS / SHOES]; ignore its clothes, props, colour cast and set.
+@Image3 = performer A, FACE + RECOGNIZABLE ERA only:
+[HAIR, FACIAL HAIR, GLASSES, LENS COLOUR AND OTHER IDENTITY DETAILS].
+
+@Image4 = viewer-right performer B, PRIMARY OUTFIT only:
+[GARMENTS, COLOURS, CONSTRUCTION AND SHOES; FULL BODY WHEN POSSIBLE].
+@Image5 = performer B, BUILD + FOOTWEAR only:
+[HEIGHT / PROPORTIONS / SHOES]; ignore its clothes, props, colour cast and set.
+@Image6 = performer B, FACE + RECOGNIZABLE ERA only:
+[HAIR, FACIAL HAIR, GLASSES, LENS COLOUR AND OTHER IDENTITY DETAILS].
+
+Choose both face references from the same intended life stage. Crop reference
+backgrounds tightly or neutralize them before submission; a saturated donor
+background must not recolour the source set. If one reference contains two
+people, identify the intended donor by position plus one visible feature.
+Reject violent imagery, embedded logos or text, an obscured face, missing
+footwear, or an image outside the provider's accepted 300–6000 px range.
+Prefer contrasting approved outfits when a busy set must keep the two people
+visually separable.
+
+EDIT PROMPT
+Edit the entire source video @Video1.
+
+Replace only the viewer-left performer with [AUTHORIZED ADULT A].
+Use @Image1 only for the exact primary outfit: [DESCRIPTION].
+Use @Image2 only for build and footwear; ignore [CONFLICTING TRAITS].
+Use @Image3 only for face and recognizable-era details: [DESCRIPTION].
+Keep [SIGNATURE ITEM] present throughout.
+
+Replace only the viewer-right performer with [AUTHORIZED ADULT B].
+Use @Image4 only for the exact primary outfit: [DESCRIPTION].
+Use @Image5 only for build and footwear; ignore [CONFLICTING TRAITS].
+Use @Image6 only for face and recognizable-era details: [DESCRIPTION].
+Keep [SIGNATURE ITEM] present throughout.
+
+All images provide identity, body and wardrobe evidence only. Ignore every
+image background, camera, pose, lighting and prop not explicitly assigned.
+@Video1 exclusively provides motion, expression, gesture, interaction, timing,
+camera cuts, framing, lighting, set and object placement. Preserve the complete
+performance. Keep A on viewer-left and B on viewer-right; do not swap positions,
+invent motion or add a person, prop, cut or scene. Preserve [SET COLOUR] and
+[SET LANDMARKS] exactly. Do not add text, logo, subtitle or watermark.
+
+DELIVERY AND QC
+Submit the six image URLs in the same order used above and exactly one source
+video URL. Set generate_audio=false; after acceptance, restore the original
+source audio rather than asking the model to imitate it.
+Compare source and result at [AT LEAST SIX MATCHED TIMESTAMPS], including turns
+and occlusions. Check performer side, cut timing, gesture phase, set colour,
+face, era, outfit, footwear and signature item. Decode the final exported file,
+not only its metadata.
+
+Reject on position swap, donor-background bleed, age mismatch, identity drift,
+missing footwear, wardrobe blend, new movement, changed edit rhythm, altered
+set, silent final delivery or unmatched source audio. Record jewelry or lens-
+tint drift as known residual defects rather than claiming they were removed.
+```
+
+**Technique:** Six references form two identical three-slot identity records:
+outfit, build/footwear and face/era. The prompt then gives the source video sole
+authority over every dynamic property. This separation prevents an attractive
+face close-up from becoming a wardrobe or background donor, while matched-time
+QC detects source-motion drift that a result-only review can miss. Disabling
+generation audio and restoring the original track preserves the performance's
+timing without spending prompt capacity on voice reconstruction.
+
+Adapted and rewritten from Recoupable's September 23, 2026
+[Seedance 2.5 character-swap production commit](https://github.com/recoupable/skills/commit/943ef55c73216c9aa2b2f0ba7a65acf75ab14ed0),
+the [complete prompt, run notes and bounded evidence](https://github.com/recoupable/skills/blob/943ef55c73216c9aa2b2f0ba7a65acf75ab14ed0/skills/recoup-internal-marketing/references/character-swap-edit.md)
+and the [exact request, polling, audio-restoration and QC script](https://github.com/recoupable/skills/blob/943ef55c73216c9aa2b2f0ba7a65acf75ab14ed0/skills/recoup-internal-marketing/scripts/reapi-edit.sh).
+
 ### Closed-swap ledger and immutable sheet-block world editor
 
 **Verified model:** Seedance 2.5 — the original creator states that this
@@ -42998,6 +43101,8 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 
 ## Sources
+
+- [Recoupable — September 23, 2026 reAPI Seedance 2.5 (`doubao-seedance-2.5-face`) two-performer edit production: six role-isolated references, source-motion authority, donor-background bleed diagnosis, exact request body, original-audio restoration and matched-time QC](https://github.com/recoupable/skills/commit/943ef55c73216c9aa2b2f0ba7a65acf75ab14ed0) ([complete prompt and run notes](https://github.com/recoupable/skills/blob/943ef55c73216c9aa2b2f0ba7a65acf75ab14ed0/skills/recoup-internal-marketing/references/character-swap-edit.md), [request and QC script](https://github.com/recoupable/skills/blob/943ef55c73216c9aa2b2f0ba7a65acf75ab14ed0/skills/recoup-internal-marketing/scripts/reapi-edit.sh))
 
 - [Amazing Indian Stories / AIStudio — September 23, 2026 direct BytePlus Seedance 2.5 (`dreamina-seedance-2-5-260628`) Draft capability repair: explicit 2.5 true/false serialization, complete omission on 2.0/2.0 Mini, independent bitrate gating and request-shape regressions](https://github.com/amazingindianstories-stack/AIStudio/commit/a94b002bb7ec381fa3953ab70ca258ac8f1a3ec2) ([exact model registry](https://github.com/amazingindianstories-stack/AIStudio/blob/a94b002bb7ec381fa3953ab70ca258ac8f1a3ec2/src/lib/model-registry.js), [request builder](https://github.com/amazingindianstories-stack/AIStudio/blob/a94b002bb7ec381fa3953ab70ca258ac8f1a3ec2/src/lib/providers/seedance.js), [regression tests](https://github.com/amazingindianstories-stack/AIStudio/blob/a94b002bb7ec381fa3953ab70ca258ac8f1a3ec2/src/lib/providers/seedance.test.js))
 
