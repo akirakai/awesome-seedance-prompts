@@ -39461,6 +39461,98 @@ The cumulative-drift calibration is adapted from Cyanjb's September 23, 2026
 [Runway Seedance 2.5 frame-by-frame cut-timing measurement](https://github.com/Cyanjb/Creative-Hub/commit/7bff454bf0b16d2da7362405df412dadc5dccb12).
 
 
+
+### Camera role, path, texture and dialogue-risk gate
+
+**Verified model:** Volcano Ark Seedance 2.5 — the creator records three
+reference-to-video clips at 22, 28 and 22 seconds, all 9:16, and audits the
+rendered camera positions and compositions against the shot plan. Side tracking,
+low-angle reverse tracking, over-the-shoulder following, front-quarter handheld,
+frontal reverse tracking during dialogue and a close push during a long line
+were visibly executed; a planned crowd of more than ten collapsed to four
+people, and the background changed from sea to a stone building across clips.
+The still-frame review could not establish whether the requested handheld
+texture was present, and lateral tracking was tested only with two short lines  
+**Use case:** a dialogue, crowd or location-reveal sequence needs deliberate
+camera movement without turning unverified motion texture or scene capacity into
+an assumed model capability
+
+```text
+SCENE CAMERA CONTRACT
+Camera role = [OBSERVER / COMPANION / FOLLOWER / PARTICIPANT / POV].
+Narrative reason for that role = [WHAT THE AUDIENCE SHOULD KNOW OR FEEL].
+Keep one camera role for the scene. A role change requires a visible story event.
+
+For every shot, specify these independently:
+- framing and axis = [SHOT SIZE / ANGLE / SCREEN DIRECTION];
+- support result = [LOCKED HORIZON / RESTRAINED BREATHING DRIFT /
+  SMOOTH LEVEL FOLLOW], written as visible motion rather than a gear name;
+- path = [START POSITION → DIRECTION / SPEED → END POSITION];
+- endpoint = [FINAL SHOT SIZE, SUBJECT POSITION AND BACKGROUND LANDMARK];
+- dialogue load = [SPEAKER / EXACT LINE / FACE ANGLE / LINE WINDOW];
+- revealed geography = [LANDMARKS, LEFT-RIGHT ORDER AND DISTANCES];
+- crowd target = [EXACT COUNT OR SMALL NAMED GROUP];
+- reference carrier = [TEXT / KEYFRAMES / BLOCKING VIDEO].
+
+RISK ROUTER
+1. Moving camera plus dialogue:
+   - use frontal or three-quarter reverse tracking, a locked frame, or a gentle
+     push for a long line;
+   - use lateral tracking or an arc with dialogue only after a route-specific
+     test. The source validates lateral tracking with short lines, not long ones.
+2. Crowd load:
+   - do not hide "many people" behind prose. Name the required visible count,
+     positions and subgroups; if the count is delivery-critical, split the shot
+     or use a reference layout and reject any count shortfall.
+3. New-space reveal:
+   - repeat the fixed horizon, architecture and landmark order in every clip.
+     A camera reveal is not permission to invent a new location.
+4. Long or compound movement:
+   - keep each shot below the route's tested motion window; split sequential
+     moves or provide keyframes / blocking video when the camera travels deeply
+     or changes direction.
+5. Movement texture:
+   - phrase texture as observable amplitude, speed, horizon behavior and
+     rise/fall. Do not mark it verified from extracted stills; inspect playback
+     and run an A/B against a locked version.
+6. POV hands or fast action:
+   - simplify the hand task and preserve one screen axis. Establish geography
+     in a wider view before the fast beat.
+
+PROMPT COMPILATION
+[SHOT N, START–END]
+[FRAMING AND AXIS]. The camera [PATH] at [SPEED], ending on [ENDPOINT].
+Its motion is [OBSERVABLE SUPPORT RESULT]. [SUBJECT ACTION].
+[SPEAKER] says, "[EXACT LINE]," while [FACE ANGLE / MOUTH VISIBILITY].
+The revealed background remains [LOCKED LANDMARKS]. [COUNTED CROWD] stay in
+their assigned lanes. Maintain the same people, wardrobe, horizon, architecture,
+light direction and screen direction.
+
+RENDER AUDIT
+- camera start, path, direction and endpoint are all visible;
+- every line is complete and the speaking face remains readable;
+- crowd count and subgroup positions match the contract;
+- horizon, architecture and landmark order remain continuous across clips;
+- texture is judged from moving playback, not a contact sheet;
+- untested combinations remain labeled "unverified" until a controlled A/B.
+```
+
+**Why it works:** the source separates camera geometry that was visible in the
+renders from properties that were not proven. The contract makes each layer
+auditable, while the router sends the two observed failures — crowd shrinkage
+and newly invented geography — to explicit count and landmark checks. It also
+keeps a successful short-line tracking shot from being generalized into an
+unsupported promise about long moving dialogue or handheld texture.
+
+Adapted and rewritten from Anelse0 / film-director's September 23, 2026
+[camera-risk release](https://github.com/Anelse0/film-director/commit/e28292751d0a57aef369ee9f77622486e7dcedd0),
+the creator's
+[Seedance 2.5 render-validation ledger](https://github.com/Anelse0/film-director/blob/e28292751d0a57aef369ee9f77622486e7dcedd0/references/validation-log.md),
+the bounded
+[camera-language and seven-risk table](https://github.com/Anelse0/film-director/blob/e28292751d0a57aef369ee9f77622486e7dcedd0/references/director-grammar.md)
+and the
+[shot-card contract](https://github.com/Anelse0/film-director/blob/e28292751d0a57aef369ee9f77622486e7dcedd0/templates/shot-card.md).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -43758,6 +43850,8 @@ Community examples and techniques referenced in this README:
 - [AvatarAds / Axel — Seedance 2.0 reference-identity versus prompt-scene split, first-frame handoff and match-cut drift fallback](https://github.com/axelskt/AvatarAds/commit/c7fa381d194d98286764981f97e7e797a5672526)
 
 - [Manus UGC engine — live-validated Seedance 2.0 raw-phone one-take, anti-stabilization pair, curly-brace dialogue and source-active prop physics](https://github.com/Manus-anus-spec/ugc-/commit/09b10f465532aa266027987d4789dcd791963fc0) ([complete prompting record](https://github.com/Manus-anus-spec/ugc-/blob/09b10f465532aa266027987d4789dcd791963fc0/docs/VIDEO-MODEL-PROMPTING.md))
+
+- [Anelse / film-director — Volcano Ark Seedance 2.5 camera-role, movement-risk and render-audit gate](https://github.com/Anelse0/film-director/commit/e28292751d0a57aef369ee9f77622486e7dcedd0) ([camera grammar and risk table](https://github.com/Anelse0/film-director/blob/e28292751d0a57aef369ee9f77622486e7dcedd0/references/director-grammar.md), [render-validation ledger](https://github.com/Anelse0/film-director/blob/e28292751d0a57aef369ee9f77622486e7dcedd0/references/validation-log.md), [shot-card contract](https://github.com/Anelse0/film-director/blob/e28292751d0a57aef369ee9f77622486e7dcedd0/templates/shot-card.md))
 
 - [Anelse / AI Character Performance Director — user-verified Seedance 2.5 30-second farewell monologue and five-layer performance scaffold](https://github.com/Anelse0/ai-character-performance-director/commit/b332542297f9b9cbac4e59629f98b0c05902f15c) ([complete reusable template](https://github.com/Anelse0/ai-character-performance-director/blob/b332542297f9b9cbac4e59629f98b0c05902f15c/references/longform-performance-pattern.md), [bounded evidence record](https://github.com/Anelse0/ai-character-performance-director/blob/b332542297f9b9cbac4e59629f98b0c05902f15c/references/evidence-ledger.md))
 - [Anelse / AI Character Performance Director — user-verified Seedance 2.5 30-second triggered-layer relationship argument](https://github.com/Anelse0/ai-character-performance-director/commit/af324b73f807d344d9f0c7658cc1ec55477e2029) ([complete verified prompt](https://github.com/Anelse0/ai-character-performance-director/blob/af324b73f807d344d9f0c7658cc1ec55477e2029/tests/fixtures/seedance25-30s-argument-oscillating.verified.md), [bounded evidence record](https://github.com/Anelse0/ai-character-performance-director/blob/af324b73f807d344d9f0c7658cc1ec55477e2029/references/evidence-ledger.md))
