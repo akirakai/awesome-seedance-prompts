@@ -42510,16 +42510,20 @@ and the [versioned mask and contrast notes](https://github.com/alialahmad2000/fl
 
 ### Draft-to-final immutable-request handoff and expiry gate
 
-**Verified models:** EvoLink Seedance 2.5
+**Verified models:** Volcano Ark Seedance 2.5
+(`doubao-seedance-2-5-260628`), EvoLink Seedance 2.5
 (`seedance-2.5-text-to-video`, `seedance-2.5-image-to-video`,
 `seedance-2.5-reference-to-video`, `seedance-2.5-video-edit` or
 `seedance-2.5-video-extend` -> `seedance-2.5-draft-to-video`) and Dreamina
-Web Seedance 2.5 Preview mode (480p) — EvoLink's versioned OpenAPI contract
-exposes 480p draft creation and a separate 1080p promotion route for all five
-Seedance 2.5 modes; Dreamina's official launch post and a creator's matched
-Preview-versus-regular-480p test verify the lower-cost web mode. No public
-promotion task ID or promoted artifact accompanies either source, so this
-remains one reusable delivery template rather than a complete scenario.
+Web Seedance 2.5 Preview mode (480p) — Ark's exact-model live ledger records
+four 480p Draft tasks, four matched direct-1080p tasks and one successful
+1080p promotion whose returned `draft_task_id` points to the selected Draft;
+EvoLink's versioned OpenAPI contract exposes a comparable two-stage route for
+all five Seedance 2.5 modes. Dreamina's official launch post and a creator's
+matched Preview-versus-regular-480p test verify the lower-cost web mode. The
+Ark experiment publishes complete prompts and task receipts but not durable
+generated media, so this remains one reusable delivery template rather than a
+new complete scenario.
 
 **Use case:** paid long-form or reference-heavy generations that need a
 low-resolution creative approval before committing to the 1080p delivery
@@ -42537,6 +42541,14 @@ Persist before submission:
 
 Do not place draft inside model_params. Do not request 720p or 1080p together
 with draft = true.
+
+CANDIDATE-COUNT GATE
+Use Draft when at least two 1080p candidates will be reviewed and only a subset
+will be promoted. If one take is already approved in concept, generate 1080p
+directly: Draft plus promotion buys two inferences and adds the 480p charge.
+Record the candidate count, promotion count and both quoted paths before
+submission. Never market Draft as a speed mode; measure queue and generation
+time independently from cost.
 
 PREVIEW-MODE A/B CALIBRATION (WHEN THE PLATFORM ALSO OFFERS ORDINARY 480P)
 Before adopting Preview as the commissioning proxy, run at least two matched
@@ -42568,16 +42580,27 @@ Promote only while:
 - the draft belongs to the same account;
 - its exact Seedance 2.5 source task is completed;
 - current time plus [QUEUE SAFETY MARGIN] is earlier than draft_expires_at.
-The documented default window is 24 hours after draft completion, but the
-returned timestamp is authoritative. A draft that expires while queued can
-fail, so do not submit at the last moment.
+Expiry is provider-specific. EvoLink returns `draft_expires_at` and documents a
+24-hour default after completion; the tested Ark route documents seven days
+from `created_at`. Persist the provider's returned or documented boundary and
+never transpose one channel's window onto another. A draft that expires while
+queued can fail, so do not submit at the last moment.
 
 IMMUTABLE PROMOTION
-Send exactly:
+Choose exactly one provider contract.
+
+EvoLink:
 model = seedance-2.5-draft-to-video
 source_task_id = [APPROVED COMPLETED DRAFT ID]
 output_format = [mp4 | mov, optional]
 callback_url = [HTTPS URL, optional]
+
+Volcano Ark:
+model = doubao-seedance-2-5-260628
+content = [{type: draft_task, draft_task: {id: [APPROVED DRAFT ID]}}]
+resolution = 1080p
+Optional delivery-only fields = [output_format, watermark,
+                                 return_last_frame, priority]
 
 Do not resend or rewrite prompt, assets, duration, aspect ratio, seed, audio,
 content-filter state or other creative parameters. Promotion inherits them from
@@ -42604,11 +42627,25 @@ Capturing the returned expiry, leaving queue margin and forbidding creative
 fields on the second request prevents a reviewed draft from being accidentally
 reinterpreted as a new generation. The template also separates “do not
 promote” from “promotion failed,” so rejecting a bad draft does not masquerade
-as an API error.
+as an API error. In the September 23 Ark test, four 4-second, 16:9, silent
+paper-boat candidates used 351,745 tokens for four 480p Drafts plus one 1080p
+promotion, versus 785,700 tokens for four direct 1080p generations: 55.23%
+fewer tokens and an estimated 57.03% lower list-price spend. One Draft plus one
+promotion was instead about 17.97% more expensive than one direct 1080p take.
+Draft median server time was 74.5 seconds versus 60.5 seconds direct, so the
+experiment supports a selection-cost advantage, not a speed claim. The
+promoted take kept the selected framing and motion direction while fine detail
+changed; treat promotion as lineage-guided regeneration, not pixel-exact
+upscaling.
 
 Adapted and rewritten from EvoLink.AI's September 22, 2026
 [Seedance 2.5 draft-mode and Draft-to-Video documentation commit](https://github.com/Pharmacist9527/mintlify-docs/commit/9d818877eb6d80b037119279cb6418227a0d0e18)
 and its [versioned promotion OpenAPI contract](https://github.com/Pharmacist9527/mintlify-docs/blob/9d818877eb6d80b037119279cb6418227a0d0e18/cn/api-manual/video-series/seedance2.5/seedance-2.5-draft-to-video.json).
+The Ark branch and measured decision gate come from Erik Lee's September 23,
+2026 [exact-model implementation and live-test commit](https://github.com/eriklee1895/erik-agent-skills/commit/af2488a9535031156ce4551721bf0b4e79e9eaa2),
+its [four complete candidate prompts](https://github.com/eriklee1895/erik-agent-skills/blob/af2488a9535031156ce4551721bf0b4e79e9eaa2/skills/seedance-video-gen/evals/draft-mode-prompts-2026-09-23.json),
+[nine-task measurement ledger](https://github.com/eriklee1895/erik-agent-skills/blob/af2488a9535031156ce4551721bf0b4e79e9eaa2/skills/seedance-video-gen/evals/draft-mode-value-2026-09-23.csv)
+and [bounded experiment report](https://github.com/eriklee1895/erik-agent-skills/blob/af2488a9535031156ce4551721bf0b4e79e9eaa2/skills/seedance-video-gen/evals/draft-mode-value-2026-09-23.md).
 The matched-lane calibration was added from JSFILMZ's September 23
 [original X test post](https://x.com/JSFILMZ0412/status/2102431009128194056)
 and [full side-by-side video](https://www.youtube.com/watch?v=JFvFxS1-5SQ),
@@ -42811,6 +42848,8 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 
 ## Sources
+
+- [Erik Lee — September 23, 2026 Volcano Ark Seedance 2.5 (`doubao-seedance-2-5-260628`) Draft selection and promotion live test: four complete candidate prompts, eight matched generation tasks, one lineage-linked 1080p promotion, token/cost timing and codec ledger](https://github.com/eriklee1895/erik-agent-skills/commit/af2488a9535031156ce4551721bf0b4e79e9eaa2) ([complete prompts](https://github.com/eriklee1895/erik-agent-skills/blob/af2488a9535031156ce4551721bf0b4e79e9eaa2/skills/seedance-video-gen/evals/draft-mode-prompts-2026-09-23.json), [nine-task ledger](https://github.com/eriklee1895/erik-agent-skills/blob/af2488a9535031156ce4551721bf0b4e79e9eaa2/skills/seedance-video-gen/evals/draft-mode-value-2026-09-23.csv), [bounded report](https://github.com/eriklee1895/erik-agent-skills/blob/af2488a9535031156ce4551721bf0b4e79e9eaa2/skills/seedance-video-gen/evals/draft-mode-value-2026-09-23.md))
 
 - [axy-full / Aimighty Workspace — September 23, 2026 BytePlus ModelArk Seedance 2.0 Edit (`dreamina-seedance-2-0-260128`) live qualification: archived-source metadata recovery, exact four-second edit instruction, $0.74 quote, $0.747 settlement and playable downloadable output](https://github.com/axy-full/aimighty-workspace/commit/2c4ab6d00304b620ae387b04c37ab1f664934c3b) ([measured-original admission repair](https://github.com/axy-full/aimighty-workspace/commit/81de0aeee144d5f2954bb5f4fbdb5700bafb097a))
 
