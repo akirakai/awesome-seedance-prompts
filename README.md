@@ -42421,14 +42421,16 @@ and the [versioned mask and contrast notes](https://github.com/alialahmad2000/fl
 
 ### Draft-to-final immutable-request handoff and expiry gate
 
-**Verified model:** EvoLink Seedance 2.5
+**Verified models:** EvoLink Seedance 2.5
 (`seedance-2.5-text-to-video`, `seedance-2.5-image-to-video`,
 `seedance-2.5-reference-to-video`, `seedance-2.5-video-edit` or
-`seedance-2.5-video-extend` -> `seedance-2.5-draft-to-video`) — the
-platform's versioned OpenAPI contract exposes 480p draft creation and a separate
-1080p promotion route for all five Seedance 2.5 modes. No public production task
-ID or promoted artifact accompanies the documentation, so this counts as a
-reusable delivery template rather than a complete scenario.
+`seedance-2.5-video-extend` -> `seedance-2.5-draft-to-video`) and Dreamina
+Web Seedance 2.5 Preview mode (480p) — EvoLink's versioned OpenAPI contract
+exposes 480p draft creation and a separate 1080p promotion route for all five
+Seedance 2.5 modes; Dreamina's official launch post and a creator's matched
+Preview-versus-regular-480p test verify the lower-cost web mode. No public
+promotion task ID or promoted artifact accompanies either source, so this
+remains one reusable delivery template rather than a complete scenario.
 
 **Use case:** paid long-form or reference-heavy generations that need a
 low-resolution creative approval before committing to the 1080p delivery
@@ -42446,6 +42448,22 @@ Persist before submission:
 
 Do not place draft inside model_params. Do not request 720p or 1080p together
 with draft = true.
+
+PREVIEW-MODE A/B CALIBRATION (WHEN THE PLATFORM ALSO OFFERS ORDINARY 480P)
+Before adopting Preview as the commissioning proxy, run at least two matched
+pairs. Hold the normalized prompt, ordered assets, duration, aspect policy,
+account, region and test window constant; submit one ordinary 480p request and
+one 480p Preview request per pair. Record quoted and settled credits, queue and
+generation time, actual dimensions, and frame-level failures—especially hands,
+weapons, contact events and the final second.
+
+Treat each separately generated clip as an independent sample unless the
+platform exposes and honors the same seed. A Preview win does not prove global
+quality superiority. Preserve both files and exact settings when one lane fails
+and the other passes. Use Preview for cheap prompt exploration only inside the
+account/region boundary actually measured. Do not claim that the promoted final
+will reproduce the Preview's motion until a real Preview-to-final lineage has
+been generated and compared.
 
 APPROVAL
 Poll the one draft task to terminal status. On completion, record:
@@ -42502,6 +42520,16 @@ as an API error.
 Adapted and rewritten from EvoLink.AI's September 22, 2026
 [Seedance 2.5 draft-mode and Draft-to-Video documentation commit](https://github.com/Pharmacist9527/mintlify-docs/commit/9d818877eb6d80b037119279cb6418227a0d0e18)
 and its [versioned promotion OpenAPI contract](https://github.com/Pharmacist9527/mintlify-docs/blob/9d818877eb6d80b037119279cb6418227a0d0e18/cn/api-manual/video-series/seedance2.5/seedance-2.5-draft-to-video.json).
+The matched-lane calibration was added from JSFILMZ's September 23
+[original X test post](https://x.com/JSFILMZ0412/status/2102431009128194056)
+and [full side-by-side video](https://www.youtube.com/watch?v=JFvFxS1-5SQ),
+cross-checked against Dreamina's
+[official Preview announcement](https://x.com/dreamina_ai/status/2102370497694781847).
+In two creator-run comparisons, ordinary 480p developed a terminal aiming
+glitch while Preview did not and generation speed was similar; this is retained
+as bounded evidence, not a universal quality claim. The creator did not test the
+Preview-to-1080p promotion in that video, so exact high-resolution motion
+reproduction remains an explicit acceptance gate.
 
 
 ### Capability-declared local-media promotion for URL-only roles
@@ -42694,6 +42722,8 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 
 ## Sources
+
+- [JSFILMZ — September 23, 2026 Dreamina Web Seedance 2.5 Preview versus ordinary 480p: repeated matched-prompt comparison, region-bound credit display, similar generation speed and terminal-artifact review](https://x.com/JSFILMZ0412/status/2102431009128194056) ([full side-by-side video](https://www.youtube.com/watch?v=JFvFxS1-5SQ), [official Dreamina Preview announcement](https://x.com/dreamina_ai/status/2102370497694781847))
 
 - [Saul Goodman / @Goodmanprotocol — September 23, 2026 Seedance 2.5 mountain-storm paraglider rescue: complete 30-second prompt and publicly embedded generated video](https://x.com/Goodmanprotocol/status/2102443854016479437)
 
