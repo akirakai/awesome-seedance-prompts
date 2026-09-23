@@ -34880,10 +34880,13 @@ and its complete
 
 ### Declared omni-reference subtask and prompt-intent agreement gate
 
-**Verified model:** Seedance 2.5 — Griptape's maintainers manually generated and
-played a 1080p text-to-video result against the BytePlus proxy, confirmed an
-unaffected 720p run in the same session, and verified that the explicit
-`omni_reference_task_type` reached the provider
+**Verified model:** BytePlus ModelArk Dreamina Seedance 2.5
+(`dreamina-seedance-2-5-260628`) — Griptape's maintainers manually generated
+and played a 1080p result against the BytePlus proxy, confirmed an unaffected
+720p run in the same session, and verified that the explicit
+`omni_reference_task_type` reached the provider. BytePlus's official tutorial,
+updated September 23, 2026, independently documents the exact subtask
+constraints and the two-stage validation behavior
 
 Use this when one Seedance 2.5 endpoint serves reference-to-video, editing and
 extension. Declare the intended subtask in the request and make the prompt say
@@ -34907,8 +34910,10 @@ video_task before billing on every non-2.5 Seedance SKU.
 
 REFERENCE
 omni_reference_task_type = reference
-Attach at least one reference image, video or audio; a reference task with no
-asset is actually text-to-video and must be rejected before submission.
+Attach at least one asset with role = reference_image, reference_video or
+reference_audio; a reference task with no asset is actually text-to-video and
+must be rejected before submission. BytePlus imposes no edit-style ratio or
+duration inheritance on this branch.
 Prompt opening:
 "Refer to @Image 1 for [IDENTITY / PRODUCT / STYLE ROLE]."
 Then describe [ONE ACTION ARC], [CAMERA], [AUDIO] and [PRESERVATION LOCKS].
@@ -34916,20 +34921,36 @@ Keep ratio and duration within the provider's reference-task choices.
 
 EDIT
 omni_reference_task_type = edit
-Attach the source clip and use an explicit edit verb:
+Attach a 4–30-second source clip with role = reference_video and use an explicit
+edit verb:
 "Edit @Video 1: [REMOVE / ADD / DELETE / MODIFY / REPLACE / CHANGE] [TARGET].
 Preserve [UNTOUCHED SUBJECTS, TIMING, CAMERA AND AUDIO]."
-Use adaptive ratio and smart duration. On the GPUniq dialect, omit duration:
-the live edit returned approximately the source length, not the route default.
+On the official BytePlus route, ratio must be adaptive and duration must be -1;
+the model inherits the selected source geometry and approximately its duration.
+On the verified GPUniq dialect, omit duration instead: the live edit returned
+approximately the source length, not the route default.
 
 EXTEND
 omni_reference_task_type = extend
-Attach the source clip and use an explicit continuation verb:
+Attach the source clip with role = reference_video and use an explicit
+continuation verb:
 "Extend @Video 1 [FORWARD / BACKWARD]. Continue from the boundary with
 [CAUSALLY NEXT ACTION], preserving [IDENTITY, MOTION VECTOR, CAMERA, LIGHT AND
 AUDIO BED]."
-Use adaptive ratio and a supported 4–30-second addition. On the GPUniq dialect,
-duration means seconds to add, not the desired final runtime.
+On BytePlus, ratio must be adaptive; request a supported 4–30-second output
+duration. On the GPUniq dialect, duration means seconds to add, not the desired
+final runtime.
+
+TWO-STAGE VALIDATION GATE
+- Declaring edit or extend lets BytePlus reject incompatible ratio, duration or
+  media synchronously at submission.
+- The running model still reads the prompt and determines the actual task. If
+  that intent disagrees with the declaration, stop on
+  InvalidParameter.TaskTypeMismatch; do not rewrite and auto-resubmit.
+- If the subtask is omitted or auto, constraint checking can happen only after
+  the task starts. Stop on InvalidParameter.TaskTypeConstraint and surface the
+  exact required route and parameters.
+A successful create response is therefore not proof that the route is valid.
 
 SOURCE-TIMING AND COST GATE
 Edit and extend inherit the source aspect ratio; do not attach image_url or
@@ -34954,18 +34975,24 @@ would describe a different operation. Never silently reclassify or fall back.
 
 OUTPUT GATE
 Supported resolution = [480p / 720p / 1080p].
-For 1080p, expect 10-bit H.265/HEVC; test playback in an HEVC-capable player
-before treating a black or unreadable preview as a failed generation.
+For the verified Griptape 1080p route, expect 10-bit H.265/HEVC; test playback
+in an HEVC-capable player before treating a black or unreadable preview as a
+failed generation. For BytePlus edit or extension intended for grading,
+keying or compositing, prefer MOV end to end and verify its professional
+H.264/yuv444p/PCM stream in VLC, mpv, ffplay or IINA rather than assuming every
+default player can decode it.
 After rendering, record declared subtask, accepted settings, actual resolution,
-codec and result URL. Reject if the provider executed a different operation.
+container, codec, pixel format, audio codec and result URL. Reject if the
+provider executed a different operation.
 ```
 
-**Why it works:** Seedance 2.5 now accepts an explicit reference subtask, but it
-still interprets the prompt during processing. The two signals are complementary:
-the payload declaration prevents incidental words such as "add" or "change" from
-reclassifying a reference request, while an operation-specific opening keeps the
-model's later intent check aligned. Local media, ratio and duration gates stop a
-known bad request before it queues and incurs wait time.
+**Why it works:** Seedance 2.5 accepts an explicit reference subtask, but still
+interprets the prompt during processing. The two signals are complementary:
+the payload declaration moves known constraint checks earlier, while an
+operation-specific opening keeps the later intent check aligned. Local media,
+ratio and duration gates stop a known bad request before it queues; terminal
+routing of both mismatch codes prevents a rejected paid job from becoming an
+unbounded auto-resubmit loop.
 
 **Source:** Griptape's
 [manual 1080p Seedance 2.5 E2E and task-routing pull request](https://github.com/griptape-ai/griptape-nodes-library-standard/pull/537)
@@ -34973,6 +35000,10 @@ and the
 [merged provider-payload implementation](https://github.com/griptape-ai/griptape-nodes-library-standard/commit/a366bbbd7a4099c249aec7933fbd9a8b39e75326).
 The provider-dialect, inherited-geometry, duration and billing gates are backed
 by GPUniq's September 9, 2026 [live edit/extend render record](https://github.com/kalinin-egor/documentationai-Docs/commit/61b342dcf213f374894694192b0c25f9b097d6ad).
+The exact BytePlus route constraints, synchronous/asynchronous validation
+boundary, error codes and MOV contract come from the official
+[Dreamina Seedance 2.5 tutorial](https://docs.byteplus.com/en/docs/ModelArk/2607688),
+updated September 23, 2026 at 12:36:25 UTC+8.
 
 
 ### Stable-midframe presenter splice with numeric-integrity routing
