@@ -38664,6 +38664,112 @@ the [complete thirty-block shot and through-line manifest](https://github.com/an
 and the [locked generation, narration and assembly plan](https://github.com/anjolovic/anjolovic/blob/5dbf53cc133561865f3d13f3a137b305055c5228/production/PRODUCTION-PLAN.md).
 
 
+### Reference-guidance versus canvas aspect-authority gate
+
+**Verified model:** fal Seedance 2.5
+(`bytedance/seedance-2.5/reference-to-video`) — the original developer records
+a real failed generation in which a 2752×1536 landscape character sheet
+produced a 720×1280 portrait clip because no concrete `aspect_ratio` reached
+fal and the endpoint's `auto` default did not inherit the reference image's
+shape. The published correction includes the exact live-schema snapshot and
+end-to-end request regressions. It does not publish the task ID or generated
+master, so this counts as a reusable template rather than a complete scenario.
+
+Use this when Seedance receives images or videos that describe identity, style
+or motion without defining frame zero. Classify every visual input by role
+before deciding which object owns the output shape; a reference's dimensions
+are evidence about that file, not necessarily an instruction for the canvas.
+
+```text
+ROUTE AND ROLE RECORD
+Provider = fal.
+Exact endpoint = bytedance/seedance-2.5/reference-to-video.
+Requested output aspect = [21:9 / 16:9 / 4:3 / 1:1 / 3:4 / 9:16 / auto].
+
+For every attached visual asset record:
+ASSET | PAYLOAD FIELD | PROMPT TOKEN | ROLE | SOURCE DIMENSIONS | SHAPE OWNER?
+
+Choose exactly one role per asset:
+- GUIDANCE: identity, wardrobe, object design, style, location, motion or audio
+  evidence addressed as @ImageN / @VideoN; it does not own output shape;
+- OPENING FRAME: the exact first composition to animate; it owns shape unless
+  the endpoint explicitly supports and honours an override;
+- CLOSING FRAME: the exact destination composition; it must agree with the
+  opening frame's shape;
+- EXTENSION SOURCE: the clip being continued; it owns the inherited shape;
+- MOTION CONTROL: a motion carrier whose dimensions do not silently become the
+  canvas unless the exact route documents that behaviour.
+
+SCHEMA CLASSIFICATION
+Read the endpoint schema used for the paid submission, not a provider-neutral
+UI label. On this verified route, plural prompt-addressed `image_urls` and
+`video_urls` are guidance arrays. A singular starting-frame field is a canvas
+input. Field spelling alone is insufficient: confirm the field description,
+accepted enum and task mode.
+
+Never infer semantics from a transport rewrite. If an integration moves a
+singular frame onto a plural wire field for compatibility, preserve its frame
+role rather than reclassifying it as guidance.
+
+ASPECT COMPILATION
+If every visual input is GUIDANCE:
+  send aspect_ratio = [THE EXPLICIT DELIVERY SHAPE];
+  never derive it from a character sheet, style board or motion clip.
+
+If REQUESTED OUTPUT ASPECT = auto:
+  send `auto` only when the exact endpoint enum accepts it;
+  otherwise omit the field and record that the model will choose.
+  Never claim that `auto` inherits a guidance asset's orientation.
+
+If an OPENING FRAME or EXTENSION SOURCE owns the canvas:
+  omit a conflicting configured default;
+  inherit the source shape unless an explicit, route-verified override was
+  requested and all authoritative endpoints agree.
+
+If opening and closing frames disagree in shape, fail before submission. Do not
+ask Seedance to repair the mismatch inside a paid generation.
+
+REFERENCE PROMPT
+Use @Image1 only for [IDENTITY / WARDROBE / PRODUCT / STYLE]. Its crop and
+dimensions do not define the output canvas. Compose the result natively at
+[EXPLICIT ASPECT RATIO], keeping [SUBJECT / PRODUCT] inside [SAFE REGION].
+Use @Video1 only for [MOTION / RHYTHM / CAMERA CHARACTER]; do not inherit its
+background, subject, crop or aspect. Preserve [DECLARED INVARIANTS]. No added
+person, role swap, accidental first-frame lock, reframing, stretched geometry,
+padding, subtitle, logo or watermark.
+
+SERIALIZED-REQUEST GATE
+Immediately before purchase, archive and assert:
+- exact endpoint and task mode;
+- ordered guidance arrays and their @ImageN / @VideoN bindings;
+- concrete aspect_ratio, or an intentional documented `auto`;
+- no image-derived ratio has replaced the configured delivery shape;
+- no frame or extension input has received an unrelated standing default.
+
+RETURNED-ASSET GATE
+Decode the delivered file and record actual width × height, aspect, duration,
+frame count and model metadata. Compare the returned shape with the serialized
+request, not with a reference thumbnail. A completed queue state fails this
+gate when the file is portrait after a landscape request, or vice versa.
+
+When shape fails, preserve the request and route evidence. Repair role
+classification or request compilation before changing the creative prompt.
+Re-run the same minimal canary after an endpoint, provider or schema change.
+```
+
+**Technique:** The template separates visual meaning from canvas authority.
+Reference arrays can guide what appears and how it moves while an explicit
+request controls where it is composed; frame and extension inputs instead own
+the geometry being continued. This prevents two opposite failures: silently
+letting `auto` choose an unrelated shape for guidance-only jobs, and stamping a
+global ratio onto a true frame continuation.
+
+Adapted and rewritten from Atelier's September 23, 2026
+[Seedance 2.5 reference-aspect production correction](https://github.com/wiztools/atelier/commit/28c19fefd22a9f057940ac280fb0938f27406fed),
+the [failed-run dimensions and end-to-end request regressions](https://github.com/wiztools/atelier/blob/28c19fefd22a9f057940ac280fb0938f27406fed/video_aspect_ratio_test.go)
+and the [versioned fal endpoint schema](https://github.com/wiztools/atelier/blob/28c19fefd22a9f057940ac280fb0938f27406fed/testdata/fal-schemas/seedance-2.5-reference-to-video.json).
+
+
 ### Six-reference two-performer cast-swap and source-audio restoration gate
 
 **Verified model:** reAPI Seedance 2.5
@@ -43101,6 +43207,8 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 
 ## Sources
+
+- [Atelier — September 23, 2026 fal Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`) guidance-versus-canvas aspect repair: measured 2752×1536 reference to 720×1280 failure, exact schema semantics, explicit configured-ratio routing and frame/extension inheritance regressions](https://github.com/wiztools/atelier/commit/28c19fefd22a9f057940ac280fb0938f27406fed) ([failed-run dimensions and request tests](https://github.com/wiztools/atelier/blob/28c19fefd22a9f057940ac280fb0938f27406fed/video_aspect_ratio_test.go), [versioned endpoint schema](https://github.com/wiztools/atelier/blob/28c19fefd22a9f057940ac280fb0938f27406fed/testdata/fal-schemas/seedance-2.5-reference-to-video.json))
 
 - [Recoupable — September 23, 2026 reAPI Seedance 2.5 (`doubao-seedance-2.5-face`) two-performer edit production: six role-isolated references, source-motion authority, donor-background bleed diagnosis, exact request body, original-audio restoration and matched-time QC](https://github.com/recoupable/skills/commit/943ef55c73216c9aa2b2f0ba7a65acf75ab14ed0) ([complete prompt and run notes](https://github.com/recoupable/skills/blob/943ef55c73216c9aa2b2f0ba7a65acf75ab14ed0/skills/recoup-internal-marketing/references/character-swap-edit.md), [request and QC script](https://github.com/recoupable/skills/blob/943ef55c73216c9aa2b2f0ba7a65acf75ab14ed0/skills/recoup-internal-marketing/scripts/reapi-edit.sh))
 
