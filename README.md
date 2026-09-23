@@ -26173,9 +26173,10 @@ and [three-second QA strip](https://github.com/robertmckinley-alt/hempclaude/blo
 
 ### Prompt-intent task routing and terminal-failure no-resubmit gate
 
-**Verified model:** Seedance 2.5 through BytePlus ModelArk, KIE
+**Verified models:** Seedance 2.5 through BytePlus ModelArk, KIE
 `seedance-2-5`, and fal `fal-ai/seedance-2.5/image-to-video` /
-`fal-ai/seedance-2.5/text-to-video` — one production integrator reproduced
+`fal-ai/seedance-2.5/text-to-video`; and BytePlus ModelArk Seedance 2.0
+(`dreamina-seedance-2-0-260128`) — one production integrator reproduced
 queued `TaskTypeMismatch` / `TaskTypeConstraint` and privacy failures; a
 second recorded two otherwise identical reference-video nodes where the prompt
 caused Seedance to classify one as a normal reference generation and the other
@@ -26183,20 +26184,24 @@ as an edit requiring source-inherited ratio and duration. A third production
 run had all seven paid fal submissions accepted, then lost status access
 because the polling route's signed-claim allowlist omitted both 2.5 model IDs;
 after the shared-model repair, polling returned 200 and the client linked the
-completed clips. All three repairs preserve executable routing or regression
-evidence
+completed clips. A fourth production run measured a stored source whose ratio
+metadata was absent, then completed a four-second 2.0 edit from an exact
+instruction: the UI quoted $0.74, the provider settled $0.747, and the playable,
+downloadable take displayed $0.75 after rounding. All four repairs preserve
+executable routing, paid-run evidence or regression coverage
 
-Use this before sending an attached-video prompt to Seedance 2.5. The declared
-UI mode is not sufficient by itself: the model also reads the words and may
-classify a request as an edit or continuation. Route semantic intent before
-credits are spent; when the provider alone can decide between reference and
-edit, allow only its exact source-inheritance correction to trigger one
-single-variable resubmission. Keep every other terminal result from escaping
-into an outer scheduler that would purchase the generation again.
+Use this before sending an attached-video prompt to Seedance 2.5, or before
+quoting an exact-version Seedance 2.0 edit. The declared UI mode is not
+sufficient by itself: the model also reads the words and may classify a request
+as an edit or continuation. Route semantic intent before credits are spent;
+when the provider alone can decide between reference and edit, allow only its
+exact source-inheritance correction to trigger one single-variable
+resubmission. Keep every other terminal result from escaping into an outer
+scheduler that would purchase the generation again.
 
 ```text
 MODEL AND INPUT RECEIPT
-Model = Seedance 2.5
+Model = [EXACT VERSIONED SEEDANCE 2.5 OR 2.0 ID]
 Provider = BytePlus ModelArk
 @Video1 = [PUBLIC URL / ASSET ID / HASH / DURATION / WIDTH / HEIGHT / FPS]
 Prompt = [COMPLETE INSTRUCTION]
@@ -26236,6 +26241,18 @@ When changing from References:
 - for Edit, remove every additional video after @Video1;
 - preserve the prompt text and its media labels;
 - revalidate source duration, shape and the requested output contract.
+
+SOURCE-METADATA PREFLIGHT FOR EDIT
+Before quoting an edit, require measured source duration, width and height.
+If a stored render has a known duration but no recorded ratio, inspect the
+archived original exactly once, bounded by its stored byte count; populate the
+missing duration, ratio and resolution from that file. Do not infer geometry
+from the player, thumbnail, UI slot, model default or requested output.
+
+Persist the measured values and original-asset identity in the quote receipt.
+If the original is missing or unreadable, reject before task creation with a
+specific source-metadata error. Do not submit an estimated quote or upload a
+replacement clip silently.
 
 TASK DECLARATION
 When the provider exposes an explicit Seedance 2.5 omni-reference task type,
@@ -26320,10 +26337,12 @@ create a new job and new submission key.
 accept an explicit subtask. For gateways where Seedance itself makes the final
 classification from the prompt, the narrow three-signal fallback preserves the
 user's ratio and duration on true reference runs yet follows the source clip on
-edits. The stored duration ledger prevents the inherited-length branch from
-being under-reserved, the shared model registry keeps a successful write
-reachable through status and resume paths, and terminal-state isolation
-prevents a scheduler from silently purchasing the same generation again.
+edits. Measuring an otherwise complete stored render prevents missing database
+metadata from blocking a valid edit or producing a fictional price. The stored
+duration ledger prevents the inherited-length branch from being under-reserved,
+the shared model registry keeps a successful write reachable through status and
+resume paths, and terminal-state isolation prevents a scheduler from silently
+purchasing the same generation again.
 
 Adapted from madebyak's September 14, 2026
 [Seedance 2.5 production repair](https://github.com/madebyak/clickefy/commit/481db496b3fb37b813a641bc185ed1bfb5ccbd48),
@@ -26341,6 +26360,10 @@ The status-model parity gate was verified by UseKineo's September 15–16, 2026
 [status route](https://github.com/josephsskaf-hub/UseKineo/blob/d519837064414258247cea8eb220a742b970bf24/app/api/cinematic-clip-status/route.ts),
 [resume route](https://github.com/josephsskaf-hub/UseKineo/blob/d519837064414258247cea8eb220a742b970bf24/app/api/retry-hollywood-scene/route.ts)
 and [live run record](https://github.com/josephsskaf-hub/UseKineo/commit/3b52d010b1690bb9978c09216243c07305fdd9fa).
+The source-metadata admission and Seedance 2.0 paid qualification come from
+axy-full's September 23, 2026
+[measured-original repair](https://github.com/axy-full/aimighty-workspace/commit/81de0aeee144d5f2954bb5f4fbdb5700bafb097a)
+and [production edit ledger](https://github.com/axy-full/aimighty-workspace/commit/2c4ab6d00304b620ae387b04c37ab1f664934c3b).
 
 
 ### Idempotent CN-reference registration and readiness-gated submission
@@ -34913,7 +34936,9 @@ omni_reference_task_type = reference
 Attach at least one asset with role = reference_image, reference_video or
 reference_audio; a reference task with no asset is actually text-to-video and
 must be rejected before submission. BytePlus imposes no edit-style ratio or
-duration inheritance on this branch.
+duration inheritance on this branch. For an explicitly declared reference
+task, accept reference video only within 2–30 seconds. Do not apply the edit
+branch's four-second floor to a two- or three-second reference clip.
 Prompt opening:
 "Refer to @Image 1 for [IDENTITY / PRODUCT / STYLE ROLE]."
 Then describe [ONE ACTION ARC], [CAMERA], [AUDIO] and [PRESERVATION LOCKS].
@@ -34942,6 +34967,9 @@ duration. On the GPUniq dialect, duration means seconds to add, not the desired
 final runtime.
 
 TWO-STAGE VALIDATION GATE
+- A declared reference task may admit a 2–30-second reference video. Auto and
+  edit routes keep the edit-safe 4–30-second source window because Seedance may
+  still classify an auto request as editing while it renders.
 - Declaring edit or extend lets BytePlus reject incompatible ratio, duration or
   media synchronously at submission.
 - The running model still reads the prompt and determines the actual task. If
@@ -35004,6 +35032,10 @@ The exact BytePlus route constraints, synchronous/asynchronous validation
 boundary, error codes and MOV contract come from the official
 [Dreamina Seedance 2.5 tutorial](https://docs.byteplus.com/en/docs/ModelArk/2607688),
 updated September 23, 2026 at 12:36:25 UTC+8.
+The branch-specific two-second reference floor and retained four-second
+auto/edit floor are backed by Aayush Hoichoi's September 23, 2026
+[task-aware validation repair](https://github.com/Aayush-hoichoi/Seedance2.0/commit/90f767d85f62a0257915a9b539f19095faecca97)
+and its regression tests.
 
 
 ### Stable-midframe presenter splice with numeric-integrity routing
@@ -42779,6 +42811,10 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 
 ## Sources
+
+- [axy-full / Aimighty Workspace — September 23, 2026 BytePlus ModelArk Seedance 2.0 Edit (`dreamina-seedance-2-0-260128`) live qualification: archived-source metadata recovery, exact four-second edit instruction, $0.74 quote, $0.747 settlement and playable downloadable output](https://github.com/axy-full/aimighty-workspace/commit/2c4ab6d00304b620ae387b04c37ab1f664934c3b) ([measured-original admission repair](https://github.com/axy-full/aimighty-workspace/commit/81de0aeee144d5f2954bb5f4fbdb5700bafb097a))
+
+- [Aayush Hoichoi / Seedance2.0 — September 23, 2026 BytePlus Seedance 2.5 declared-reference duration repair: explicit `omni_reference_task_type=reference` admits 2–30-second video references while auto/edit retains the edit-safe 4–30-second floor](https://github.com/Aayush-hoichoi/Seedance2.0/commit/90f767d85f62a0257915a9b539f19095faecca97)
 
 - [JSFILMZ — September 23, 2026 Dreamina Web Seedance 2.5 Preview versus ordinary 480p: repeated matched-prompt comparison, region-bound credit display, similar generation speed and terminal-artifact review](https://x.com/JSFILMZ0412/status/2102431009128194056) ([full side-by-side video](https://www.youtube.com/watch?v=JFvFxS1-5SQ), [official Dreamina Preview announcement](https://x.com/dreamina_ai/status/2102370497694781847))
 
