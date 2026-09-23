@@ -25451,6 +25451,127 @@ Adapted and rewritten from Joy Purdy's September 23, 2026
 
 ## Reusable templates
 
+### Ground-truth terminal-frame service reveal and non-destructive post handoff
+
+**Verified model:** Magnific Space Seedance 2.5 — the production repository
+records a completed 4-second, 1080p, locked-camera first/last-frame generation,
+preserves the 1076×1926, 24 fps, 10-bit HEVC Seedance master, documents the
+rejected variant and traces the accepted take through four client-review rounds  
+**Use case:** hands deliver real products into an initially empty set, the final
+product arrangement must resolve to approved photography, and the action will
+be retimed or repeated in a social edit  
+**Mode:** first/last-frame image-to-video followed by deterministic editorial
+finishing
+
+```text
+AUTHORITY MAP
+@StartFrame owns the empty set: camera position, table plane, perspective,
+background, lighting direction and every non-product object.
+@EndFrame owns the finished product state: exact products, packaging, logos,
+colour, scale, spacing, table contact and final pixels.
+Seedance owns only the transient delivery performance between those states:
+[NUMBER OF HANDS], [ENTRY DIRECTION], [GRIP], [PLACEMENT ORDER], [RELEASE] and
+[CLEAN EXIT].
+Do not let a generated hand redesign, enlarge, cover, duplicate or replace an
+approved product.
+
+FRAME PREPARATION
+1. Build @EndFrame from the approved high-resolution product photograph.
+   If the composition must become vertical, keep the original central product
+   pixels untouched and use generated expansion only for newly exposed bands.
+2. Derive @StartFrame from the same composition by removing the delivered
+   products while preserving table texture, shadows, reflections, background,
+   lens height and crop.
+3. Reject an erase or replace result that leaves stains, phantom shadows,
+   substitute products or altered set geometry. Rebuild the empty region from
+   a cleaner reference instead of accepting a contaminated opening.
+4. Confirm both boundary frames have identical dimensions, crop and colour
+   management before submission.
+
+GENERATION BRIEF
+Exact model = Seedance 2.5.
+Duration = [4 SECONDS OR TESTED VALUE].
+Resolution = [1080P]. Camera = locked.
+First frame = @StartFrame. Last frame = @EndFrame.
+
+Between the two supplied boundaries, [TWO NATURAL ADULT HANDS] enter from
+[EDGE], carry [PRODUCT A] and [PRODUCT B] without blocking their labels, place
+them in [ORDER] onto the exact final positions, release cleanly and leave the
+frame. Maintain believable wrists, fingers, grip pressure, object weight,
+contact shadows and table-plane perspective. Arrive at @EndFrame early enough
+for a stable terminal hold. No camera motion, giant arm, fused hand, extra hand,
+missing product, product morph, label mutation, table warp, new prop, text,
+subtitle or watermark.
+
+VARIANT AND CONTACT GATE
+Generate at least two candidates when the transient action is load-bearing.
+Reject any take with:
+- one oversized limb replacing two readable hands;
+- hands covering the products at the action peak;
+- object paths that cross, float or penetrate the table;
+- labels, packaging or product spacing drifting before the terminal hold;
+- a last frame that visibly jumps into @EndFrame instead of resolving into it.
+Select on dynamic playback and dense action-frame sampling, not on the final
+still alone.
+
+MASTER-FIRST HANDOFF
+Archive the untouched Seedance master and probe its real dimensions, frame rate,
+codec, bit depth, duration and audio streams. Every delivery file must derive
+from this master. Do not regenerate merely to change editorial pace, output
+frame rate or canvas size.
+
+RHYTHM ADAPTATION
+Measure the useful delivery interval from first hand entry through release and
+exit. If the source action is slower than the reference edit, apply one declared
+retime factor and record it in the manifest; do not treat the source's 1.4×
+production value as universal. Convert frame rate and delivery geometry only
+after retiming. For a repetition reel, cut each cycle at the same action phase,
+use hard cuts deliberately and let the final repetition continue to the
+product-only hold. This is a rhythmic repeat, not a fake seamless loop.
+
+NON-DESTRUCTIVE CLIENT FINISH
+Compare every proposed grade with the accepted Seedance master. If contrast,
+temperature, vignette or tone mapping harms approved product colour, remove it.
+Apply only the smallest approved correction, such as a measured saturation
+change. When white overlay text lacks contrast, repair the typography with a
+soft local shadow, outline or backing treatment; do not darken the entire
+product image to rescue the copy.
+
+AUDIO OWNERSHIP
+Declare whether Seedance audio, source ambience, silence or later music owns
+the final track. If the social editor will add trend audio, remove generation
+audio once and record that decision; never leave an accidental duplicate track.
+
+ACCEPTANCE GATE
+- start and end frames share one camera and crop
+- end frame retains approved product pixels and readable packaging
+- hands remain anatomically plausible and never obscure the selling proof
+- the action resolves naturally into the final photograph
+- archived master and retime/crop/grade manifest are reproducible
+- post colour changes stay within the client-approved boundary
+- repeated cycles start on the same action phase
+- final cycle holds the product-only state cleanly
+```
+
+**Why it works:** the model improvises only the brief interval that photography
+cannot supply, while the real end frame remains the product-truth authority.
+Separating generation, retiming and colour decisions prevents a client-approved
+take from being damaged during delivery, and fixing copy contrast in the text
+layer preserves the product image.
+
+**Evidence boundary:** the repository preserves exact settings, both boundary
+frames, the original generated master, a failed variant diagnosis, client
+feedback and the finishing pipeline, but not the creative generation prompt.
+It therefore validates this reusable production template only and is not
+counted as a complete scenario prompt.
+
+**Source:** Valeria / BETWEEN's September 23, 2026
+[Seedance 2.5 production commit](https://github.com/valeria272/dise-o/commit/203e023068f793f2882242631122520973bf42ff),
+including the [documented finishing script](https://github.com/valeria272/dise-o/blob/203e023068f793f2882242631122520973bf42ff/scripts/bw-reel-razon-ia-clip.py),
+[empty start frame](https://github.com/valeria272/dise-o/blob/203e023068f793f2882242631122520973bf42ff/raw/hilton/between/reel-sea-la-razon/ia/vacia-916.png),
+[real-photo terminal frame](https://github.com/valeria272/dise-o/blob/203e023068f793f2882242631122520973bf42ff/raw/hilton/between/reel-sea-la-razon/ia/fin-916.jpg)
+and [original Seedance master](https://github.com/valeria272/dise-o/blob/203e023068f793f2882242631122520973bf42ff/raw/hilton/between/reel-sea-la-razon/ia/seedance-A-orig.mp4).
+
 ### Rendered-first-frame poster and delivery-crop parity gate
 
 **Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`) — the original
@@ -43274,6 +43395,8 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 
 ## Sources
+
+- [Valeria / BETWEEN — September 23, 2026 Magnific Space Seedance 2.5 first/last-frame product-service production: empty set to real-photo terminal state, preserved generated master, failed giant-arm variant, client review and non-destructive retime/grade handoff](https://github.com/valeria272/dise-o/commit/203e023068f793f2882242631122520973bf42ff) ([finishing script](https://github.com/valeria272/dise-o/blob/203e023068f793f2882242631122520973bf42ff/scripts/bw-reel-razon-ia-clip.py), [empty start frame](https://github.com/valeria272/dise-o/blob/203e023068f793f2882242631122520973bf42ff/raw/hilton/between/reel-sea-la-razon/ia/vacia-916.png), [real-photo terminal frame](https://github.com/valeria272/dise-o/blob/203e023068f793f2882242631122520973bf42ff/raw/hilton/between/reel-sea-la-razon/ia/fin-916.jpg), [original master](https://github.com/valeria272/dise-o/blob/203e023068f793f2882242631122520973bf42ff/raw/hilton/between/reel-sea-la-razon/ia/seedance-A-orig.mp4))
 
 - [Joy Purdy — September 23, 2026 OpenArt Seedance 2.5 locked-camera father-and-son waterfall micro-dialogue: one reference image, Auto Polish off, 3:4 1080p/14-second settings, full timed prompt, native ambience and generated result](https://www.linkedin.com/pulse/from-numerous-renders-one-how-i-direct-ai-actors-claude-joy-purdy-mnokc)
 
