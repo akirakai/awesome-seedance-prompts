@@ -416,6 +416,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Gesture-mapped luxury-sofa rebuild](#400-gesture-mapped-luxury-sofa-rebuild)
   - [Court-axis-locked padel match point with visible paint impact](#401-court-axis-locked-padel-match-point-with-visible-paint-impact)
   - [Amber perfume still life with caustic-light storytelling](#402-amber-perfume-still-life-with-caustic-light-storytelling)
+  - [Storm-diverted paraglider and silent mountain rescue](#403-storm-diverted-paraglider-and-silent-mountain-rescue)
+  - [Dual-palette classroom arcane clash](#404-dual-palette-classroom-arcane-clash)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -25226,6 +25228,160 @@ Adapted and rewritten from Fal's newly listed US-hosted Seedance 2.5
 and [generated MP4](https://v3b.fal.media/files/b/0aaafefb/l2i1V5sd8V78AEJaBlcmJ_video.mp4).
 The provider page records the returned file as `video/mp4`, 675,668 bytes.
 
+
+### 403. Storm-diverted paraglider and silent mountain rescue
+
+**Verified model:** Seedance 2.5 on iCreat AI — the original creator names the
+exact version beside the complete prompt and publicly embedded generated video  
+**Use case:** 30-second live-action drama, weather escalation, restrained
+two-character performance  
+**Mode:** text-to-video with native environmental audio  
+**Suggested settings:** 30 seconds, 2.39:1, photorealistic cinematic widescreen
+
+```text
+Create an original 30-second mountain-survival drama in one coherent visual
+world. Use two unrelated adult characters only: one paraglider and one remote
+mountain patrol officer. Keep faces, clothing, injuries, weather direction and
+screen geography continuous across every cut.
+
+[0–6 s | storm deviation]
+Begin high above a vast mountain range. Violent crosswind pushes the paraglider
+off the safe line as rain and cloud swallow the valley below. Alternate one
+wide geography shot with tight coverage of wet risers, gloved hands and a
+partly collapsing canopy. Wind, fabric snaps and strained breathing dominate;
+do not add dialogue or heroic music.
+
+[6–11 s | survivable landing]
+The pilot steers toward a narrow forest clearing and makes one hard but
+physically survivable emergency landing. Show the canopy losing lift, boots
+touching wet grass, a controlled roll and the wing settling into trees. Do not
+teleport from sky to ground, turn the landing into a crash explosion or change
+the character's wardrobe.
+
+[11–17 s | dawn aftermath]
+Dissolve only through natural mist into cold dawn. The same pilot wakes in wet
+grass with one minor leg injury, frightened and disoriented. Hold on visible
+breath, soaked fabric, trembling hands and the silent scale of pine trees and
+distant ridges. Preserve the landed canopy as a background continuity marker.
+
+[17–23 s | cautious approach]
+A patrol officer in a dark field coat appears between the trees at a believable
+distance. Establish both positions before cutting to restrained close-ups:
+the pilot freezes; the officer stops, reads the injury and approaches slowly
+with open hands. Their eyelines must meet across the established axis. No
+weapon, threat, extra rescuer or melodramatic reaction.
+
+[23–30 s | wordless trust]
+The officer places the coat over the pilot's shoulders without changing either
+identity, then supports a careful walk through the fog. Soft sunlight begins to
+break through the same clouds. End in an extreme wide shot of the two small
+figures crossing the enormous mist-covered valley, moving in one direction
+with the collapsed canopy left behind.
+
+Natural adult performances and micro-expressions; realistic wet skin, cloth,
+rain, canopy physics, cold breath, volumetric fog and handheld restraint.
+Anamorphic depth, subtle grain and premium natural colour. Carry storm wind
+into damp forest ambience, footsteps and wet leaves. No dialogue, subtitle,
+caption, logo, fantasy element, face drift, duplicated person, instant weather
+reset, impossible injury recovery or exaggerated romance.
+```
+
+**Why it works:** the prompt treats weather, geography and injury as persistent
+story state rather than five disconnected beauty shots. Establishing the
+landing and the two eyeline positions before emotional close-ups makes the
+wordless exchange readable, while one coat transfer supplies a small,
+observable trust beat before the scale-reveal ending.
+
+Adapted and rewritten from Saul Goodman / @Goodmanprotocol's September 23,
+2026 [complete Seedance 2.5 prompt and generated-video post](https://x.com/Goodmanprotocol/status/2102443854016479437).
+
+
+### 404. Dual-palette classroom arcane clash
+
+**Verified model:** OpenArt Seedance 2.5 — the original creator labels the full
+prompt with this exact version and publishes the generated video in the parent
+post  
+**Use case:** retro anime action, two-character identity consistency, opposing
+power systems, progressive environment destruction  
+**Mode:** character-sheet reference-to-video  
+**Suggested settings:** 12 seconds, 16:9, native audio
+
+```text
+Use @Image1 only as an identity sheet for two adult academy rivals; never
+recreate its labels, panels, poses or duplicate figures.
+
+IDENTITY AND POWER LEDGER
+BLUE RIVAL stays frame-left: messy black hair, narrow face, slim athletic
+build, closed black blazer, white shirt and loose navy tie. His eyes, lightning
+and geometric spell circles are always electric blue-white. His performance is
+quiet, economical and precise.
+CRIMSON RIVAL stays frame-right: spiked dark-red hair, broader athletic build,
+open black blazer, rumpled white shirt and loose burgundy tie. His eyes,
+flame and broken runes are always crimson-purple-black. His posture is forward,
+confident and volatile.
+Never swap faces, clothes, sides, power colours, spell geometry or behaviour.
+
+ROOM AND STATE
+One empty, old secondary-school classroom after hours: four rows of wooden
+desks, chairs, green chalkboard, books, papers, chalk and large windows
+frame-right. Golden-hour light begins as the dominant source. Damage advances
+only once: intact room → vibrating furniture → lifted paper and floor cracks →
+shattered windows and displaced desks → smoke and falling debris. Nothing
+repairs itself.
+
+[0–2 s]
+Low wide camera between desks, slow push toward both rivals six metres apart.
+They hold eye contact; only hair, ties and curtains move in the breeze.
+
+[2–4 s]
+Two matched close-ups. Blue eyes ignite and clean electricity crawls from
+fingers into one circular sigil. Crimson eyes ignite; dark heat leaks from the
+floor, flame wraps the forearm and broken runes rotate unevenly. Return to the
+same axis after each close-up.
+
+[4–6 s]
+Wide state check. Their pressure makes desks vibrate, chairs scrape backward,
+papers lift, curtains whip, chalk dust spiral and small cracks spread from the
+space between them. Keep each effect sourced from its correct character.
+
+[6–8 s]
+The blue rival raises three concentric spell circles and compresses lightning
+through their shared centre. The crimson rival forms one dense flame sphere
+inside fractured runes. Accelerate the camera only toward the empty collision
+point; neither character crosses the room.
+
+[8–10 s]
+Both attacks release simultaneously and meet at centre. Hold one fraction of a
+second in near silence, then send a spherical shockwave outward: windows break,
+desks slide, chairs lift, books open and paper spirals. Use one fast controlled
+orbit without crossing or mirroring the action axis. Add at most three
+single-frame, hand-drawn impact accents; immediately return to the same designs.
+
+[10–12 s]
+Smoke thins into a medium-wide tableau. Blue remains left, calm, with residual
+electricity; crimson remains right, grinning slightly through falling embers.
+Papers descend between them and the ruined room proves the collision happened.
+End unresolved; neither advances or wins.
+
+Premium late-1980s/1990s hand-drawn anime: painted backgrounds, fine ink,
+strong cel shadows, restrained grain and no glossy 3D look. Audio begins with
+quiet room tone, separates clean electric crackle from low flame rumble, grows
+a pressure tone, drops to brief silence before impact, then resolves through
+glass, wood, debris, ringing ears and wind. No third character, weapon, extra
+limb, malformed hand, face morph, costume change, colour swap, regenerated
+room, subtitle, logo or watermark.
+```
+
+**Why it works:** identity, screen side, temperament and effect colour are
+paired in one ledger, so two similar uniforms do not collapse into one
+character. The irreversible damage ladder gives every timestamp a visible
+state change, and the silent pre-impact beat makes the collision legible
+without lengthening it.
+
+Adapted and rewritten from Feyber / @woleswoosh's September 22, 2026
+[complete Seedance 2.5 prompt](https://x.com/woleswoosh/status/2102408288122130554)
+and [OpenArt generated-video post](https://x.com/woleswoosh/status/2102408281981657258).
+
 ## Reusable templates
 
 ### Rendered-first-frame poster and delivery-crop parity gate
@@ -42538,6 +42694,10 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 
 ## Sources
+
+- [Saul Goodman / @Goodmanprotocol — September 23, 2026 Seedance 2.5 mountain-storm paraglider rescue: complete 30-second prompt and publicly embedded generated video](https://x.com/Goodmanprotocol/status/2102443854016479437)
+
+- [Feyber / @woleswoosh — September 22, 2026 OpenArt Seedance 2.5 dual-character classroom magic clash: complete identity/power ledger and generated result](https://x.com/woleswoosh/status/2102408288122130554) ([generated-video post](https://x.com/woleswoosh/status/2102408281981657258))
 
 - [Fal — September 23, 2026 newly listed US-hosted ByteDance Seedance 2.5 text-to-video example: complete amber-perfume prompt, 720p/auto request, returned seed and downloadable MP4](https://fal.ai/models/bytedance/seedance-2.5/us/text-to-video) ([endpoint schema](https://fal.ai/models/bytedance/seedance-2.5/us/text-to-video/api), [generated MP4](https://v3b.fal.media/files/b/0aaafefb/l2i1V5sd8V78AEJaBlcmJ_video.mp4))
 
