@@ -39263,11 +39263,13 @@ and the committed
 
 ### Content-derived dialogue duration and lower-bound rhythm gate
 
-**Verified model:** Volcano Ark Seedance 2.5 — the original creator measured a
-30-second, 9:16, 480p, six-reference R2V dialogue render and records all eight
-cuts within 0.3 seconds of the prompt's integer-second marks; the same take had
-only 59% voiced time and 22 gaps of 0.3–0.9 seconds inside over-wide dialogue
-windows  
+**Verified model:** Volcano Ark Seedance 2.5 and Runway Seedance 2.5 — one
+creator measured a 30-second, 9:16, 480p, six-reference R2V dialogue render and
+records all eight cuts within 0.3 seconds of the prompt's integer-second marks;
+the same take had only 59% voiced time and 22 gaps of 0.3–0.9 seconds inside
+over-wide dialogue windows. A second frame-by-frame three-shot test requested
+cuts at 3.30 and 6.60 seconds but measured them at 3.08 and 6.21 seconds,
+showing an early bias that grew later in the clip  
 **Use case:** a dialogue-led clip follows the requested shots but feels slow
 because its nominal duration, speech windows, silent holds and cut points were
 allocated before the actual words and functional actions were measured
@@ -39330,9 +39332,26 @@ at each assigned window edge; natural declared rate; connected delivery; no
 sentence-final drag; normal-speed decisive actions; no invented pause, repeated
 line, subtitle or slow motion. Keep only the specifically named silent beats.
 
+ROUTE-SPECIFIC CUT CALIBRATION
+When sub-second synchronization matters, calibrate the exact provider route,
+model label, duration, resolution and timestamp grammar before production:
+1. render a disposable three-shot test with at least two non-integer cut marks;
+2. measure each returned boundary frame by frame and record signed error as
+   actual time minus requested time;
+3. do not average the errors away or assume they cancel. If absolute error grows
+   at later cuts, classify it as cumulative drift and reserve a route-specific
+   tolerance and edit-handle budget;
+4. treat every shot duration as a request, not a frame-accurate guarantee. Lock
+   audio, captions and downstream edits to the returned boundaries, not only to
+   the requested timestamps;
+5. recalibrate after any provider, model, duration, resolution or prompt-grammar
+   change. One measured run bounds that route observation; it does not prove a
+   universal correction offset.
+
 RENDER AUDIT
 Measure the returned file rather than judging pace from memory:
-- detected cut time versus every declared cut;
+- detected cut time versus every declared cut, signed error at each boundary
+  and whether the absolute error accumulates or cancels;
 - voiced-time share and leading / trailing silence;
 - every silence gap inside a dialogue window;
 - average shot length and longest shot;
@@ -39347,6 +39366,8 @@ ACCEPTANCE
 - no dialogue window contains unexplained slack;
 - every silent beat and long shot has a visible dramatic function;
 - cuts follow the time-use table without hiding the speaker or key reaction;
+- sub-second work has a route-specific measured tolerance, and downstream timing
+  uses actual returned boundaries rather than assuming exact prompt timestamps;
 - the duration is justified by words and actions, not a platform maximum;
 - claims distinguish the measured source take from the still-unverified repair.
 ```
@@ -39356,7 +39377,10 @@ integer-second cut map very closely, so unused time in that map is not neutral:
 it can become pauses and held frames. Deriving the container from the actual
 speech and functional beats exposes that slack before purchase, while the
 render audit prevents the proposed tighter timing from being promoted as a
-verified improvement without a new comparison.
+verified improvement without a new comparison. The independent Runway test
+adds the opposite boundary condition: correct cut order can coexist with a
+growing early offset, so timeline assembly needs measured per-route tolerance
+rather than a global belief that written timestamps are exact.
 
 Adapted and rewritten from Anelse0 / film-director's September 19, 2026
 [Seedance 2.5 measurement and duration-rhythm release](https://github.com/Anelse0/film-director/commit/2e10aed408cc9d55b2d9ac08cb498085270357a1),
@@ -39364,6 +39388,8 @@ the complete
 [duration, dialogue-window, shot-length and silence structure](https://github.com/Anelse0/film-director/blob/2e10aed408cc9d55b2d9ac08cb498085270357a1/references/duration-rhythm.md)
 and the
 [versioned render-measurement ledger](https://github.com/Anelse0/film-director/blob/2e10aed408cc9d55b2d9ac08cb498085270357a1/references/validation-log.md).
+The cumulative-drift calibration is adapted from Cyanjb's September 23, 2026
+[Runway Seedance 2.5 frame-by-frame cut-timing measurement](https://github.com/Cyanjb/Creative-Hub/commit/7bff454bf0b16d2da7362405df412dadc5dccb12).
 
 
 ## Camera language
@@ -43995,6 +44021,8 @@ Community examples and techniques referenced in this README:
 - [Mr-Salticidae — Dreamina Seedance 2.5 multi-state prop asset pack, cross-shot visibility measurements and accepted bounded retake](https://github.com/Mr-Salticidae/knowledge-base/commit/7a985976f1482c7f3dfcda2758109718e56d5155) ([complete reusable rule](https://github.com/Mr-Salticidae/knowledge-base/blob/7a985976f1482c7f3dfcda2758109718e56d5155/04_%E6%96%B9%E6%B3%95%E8%AE%BA%E4%B8%8E%E6%B4%9E%E5%AF%9F/04_%E8%A7%86%E9%A2%91%E5%BD%B1%E5%83%8F%E4%B8%8E%E5%A3%B0%E9%9F%B3/%E8%B7%A8%E9%95%9C%E9%81%93%E5%85%B7%E9%94%81%E5%AE%9A%E5%BE%8B_%E8%B5%84%E4%BA%A7%E5%9B%BE%E4%BC%98%E4%BA%8E%E5%BD%A2%E5%AE%B9%E8%AF%8D_v1.md))
 
 - [Anelse0 / film-director — Volcano Ark Seedance 2.5 integer-cut measurement, dialogue-window slack analysis and content-derived duration gate](https://github.com/Anelse0/film-director/commit/2e10aed408cc9d55b2d9ac08cb498085270357a1) ([complete reusable structure](https://github.com/Anelse0/film-director/blob/2e10aed408cc9d55b2d9ac08cb498085270357a1/references/duration-rhythm.md), [render-measurement ledger](https://github.com/Anelse0/film-director/blob/2e10aed408cc9d55b2d9ac08cb498085270357a1/references/validation-log.md))
+
+- [Cyanjb / Creative Hub — Runway Seedance 2.5 frame-by-frame three-shot cut measurement, growing early drift and per-engine tolerance finding](https://github.com/Cyanjb/Creative-Hub/commit/7bff454bf0b16d2da7362405df412dadc5dccb12)
 
 - [reed35 / 成片拆解 — Seedance 2.5 rear-facing deadpan-cat bridge pursuit, complete three-reference prompt and generated result](https://github.com/reed35/ai-video-tutorials/commit/b928ea4ccb032ee3554c2b6ca842f9c273b0b1b6) ([complete prompt](https://github.com/reed35/ai-video-tutorials/blob/b928ea4ccb032ee3554c2b6ca842f9c273b0b1b6/lib/tutorials.ts), [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/b928ea4ccb032ee3554c2b6ca842f9c273b0b1b6/public/tutorials/ride-or-paws/demo-web.mp4))
 - [reed35 / 成片拆解 — Seedance 2.5 wide-field anamorphic-billboard product handoff, complete three-reference prompt and generated result](https://github.com/reed35/ai-video-tutorials/commit/4db9ba79b946c8ec8755cad3771f60e628059a90) ([complete prompt](https://github.com/reed35/ai-video-tutorials/blob/4db9ba79b946c8ec8755cad3771f60e628059a90/lib/tutorials.ts), [generated MP4](https://github.com/reed35/ai-video-tutorials/blob/4db9ba79b946c8ec8755cad3771f60e628059a90/public/tutorials/hr-replasty-anamorphic-billboard/demo-web.mp4))
