@@ -25451,6 +25451,124 @@ Adapted and rewritten from Joy Purdy's September 23, 2026
 
 ## Reusable templates
 
+### Product-page truth to schema-locked shopping-short handoff
+
+**Verified model:** MuAPI Seedance 2.0 VIP
+(`seedance-2-vip-image-to-video`; the source repository names the generated
+director brief explicitly for Seedance 2.0 and records the exact routed endpoint)  
+**Use case:** convert one product page and approved product photograph into a
+reviewable vertical UGC or product-only short without letting generated copy,
+rendered text or a rejected hero frame contaminate later stages  
+**Mode:** product-fact extraction -> schema-locked creative brief -> hero image
+-> Seedance image-to-video with native audio
+
+```text
+SOURCE-OF-TRUTH CONTRACT
+Product facts = [APPROVED TITLE / PRICE / DESCRIPTION / SELLING POINTS].
+@ProductPhoto owns exact product type, silhouette, dimensions, colour,
+materials, packaging, label and logo. Never infer a claim from appearance.
+@PersonPhoto, when supplied, owns only the adult presenter's face and visible
+identity. Keep reference order fixed and record each asset's role.
+
+If the product page is blocked, incomplete or dynamically rendered, stop before
+creative generation. Require a manually approved title and local or public
+product image; do not fabricate missing facts or continue with a placeholder.
+
+SCHEMA-LOCKED BRIEF
+Return one machine-readable brief with all fields present and no extra fields:
+- product_summary = one factual sentence;
+- selling_points = exactly three approved claims;
+- hero_prompt = vertical photoreal still-image direction;
+- video_prompt = Seedance 2.0 one-shot direction containing camera, action,
+  product lock, sound and dialogue or voice-over;
+- spoken_line = one or two short natural sentences;
+- hook = post-production copy only;
+- publishing_title, description and hashtags = delivery metadata only;
+- style = UGC or CINEMATIC;
+- duration = [4–15 SECONDS].
+
+The generated image and video must never render the hook, price, captions,
+subtitles, watermark or publishing metadata. Those fields belong to the edit
+and upload layers.
+
+STYLE ROUTE
+UGC:
+A real-looking adult presenter in a plausible home, café or use environment
+holds or demonstrates the unchanged product and speaks to camera like a
+trusted peer. Use one simple physical proof, natural lip movement, restrained
+handheld camera behaviour and real room ambience. If @PersonPhoto is supplied,
+preserve that identity; do not let the product reference alter the face.
+
+CINEMATIC:
+No presenter. Place the unchanged product in one environment appropriate to its
+real use. Choose one slow move only: [DOLLY-IN / SMALL ORBIT / RACK FOCUS].
+Use realistic reflections, surface contact, practical light and ambience. The
+short approved line becomes soft off-screen voice-over, not a talking product.
+
+HERO-FRAME GATE
+Generate the vertical hero from the approved facts and references before paying
+for motion. Reject any candidate with changed packaging, invented text,
+unreadable logo, wrong colour, incorrect scale, merged person/product features
+or a setting that contradicts use. Select one candidate and freeze its URL,
+dimensions, crop and reference order for the video request.
+
+SEEDANCE REQUEST
+Exact endpoint = seedance-2-vip-image-to-video.
+prompt = approved video_prompt.
+images_list = [APPROVED HERO URL].
+aspect_ratio = 9:16.
+duration = clamp(approved duration, 4, 15).
+
+If spoken_line is absent from video_prompt, append it exactly once with its
+speaker and language. If it is already present, do not duplicate or paraphrase
+it. Keep product geometry and label unchanged from the hero frame. One
+continuous shot; no cut, scene change, extra person, extra product, unsupported
+claim, generated copy or random music. Generate only the declared dialogue or
+voice-over, material sounds and environment ambience.
+
+REVIEWABLE CHECKPOINTS
+Persist four separate artifacts:
+1. product record + approved product image;
+2. structured brief;
+3. selected hero image + request record;
+4. Seedance video + exact model, endpoint, prompt, duration and returned URL.
+
+Allow a stop after each stage. A reviewer may edit the brief before hero
+generation. Rejecting the hero invalidates only the hero and downstream video;
+it must not silently rescrape or rewrite approved facts. Re-running a completed
+stage requires an explicit invalidation record rather than overwriting evidence.
+
+ACCEPTANCE
+- all claims trace to the approved product record;
+- product shape, colour, packaging, label and logo match @ProductPhoto;
+- optional presenter identity remains independent from product appearance;
+- final video is 9:16, 4–15 seconds and one readable shot;
+- dialogue is short, single-owned and synchronized; ambience remains plausible;
+- no prompt field intended for post appears as generated text;
+- the saved ledger reproduces the exact paid request and selected hero;
+- a blocked source, missing image or empty provider output fails closed.
+```
+
+**Why it works:** factual extraction, creative planning, still-image approval,
+motion generation and publishing copy have separate owners. The fixed schema
+prevents an attractive but unreviewable prose brief, while the hero checkpoint
+catches product drift before a video charge. Recording the resolved endpoint
+and effective prompt also makes a resumed job auditable instead of treating a
+folder's existence as proof of success.
+
+**Evidence boundary:** the newly published repository contains the complete
+brief-writing contract, resumable stage structure and exact Seedance request
+builder, but no public provider task ID or generated master. It therefore
+validates a reusable template only and is not counted as a complete scenario.
+
+**Source:** kjr1728-glitch's September 23, 2026
+[shopping-short production commit](https://github.com/kjr1728-glitch/ddong/commit/e242a037110f3182a066e25d10640899341f333d),
+including the
+[schema-locked Seedance 2.0 brief writer](https://github.com/kjr1728-glitch/ddong/blob/e242a037110f3182a066e25d10640899341f333d/shopping-shorts/scripts/write_brief.py),
+[exact Seedance 2 VIP request builder](https://github.com/kjr1728-glitch/ddong/blob/e242a037110f3182a066e25d10640899341f333d/shopping-shorts/scripts/generate_video.py)
+and the
+[checkpointed workflow](https://github.com/kjr1728-glitch/ddong/blob/e242a037110f3182a066e25d10640899341f333d/shopping-shorts/README.md).
+
 ### Ground-truth terminal-frame service reveal and non-destructive post handoff
 
 **Verified model:** Magnific Space Seedance 2.5 — the production repository
@@ -43395,6 +43513,8 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 
 ## Sources
+
+- [kjr1728-glitch — September 23, 2026 MuAPI Seedance 2.0 VIP (`seedance-2-vip-image-to-video`) product-page-to-shopping-short pipeline: approved fact extraction, schema-locked director brief, product/identity reference roles, reviewable hero checkpoint, native-audio request and resumable stage ledger](https://github.com/kjr1728-glitch/ddong/commit/e242a037110f3182a066e25d10640899341f333d) ([brief schema](https://github.com/kjr1728-glitch/ddong/blob/e242a037110f3182a066e25d10640899341f333d/shopping-shorts/scripts/write_brief.py), [exact video request](https://github.com/kjr1728-glitch/ddong/blob/e242a037110f3182a066e25d10640899341f333d/shopping-shorts/scripts/generate_video.py), [checkpointed workflow](https://github.com/kjr1728-glitch/ddong/blob/e242a037110f3182a066e25d10640899341f333d/shopping-shorts/README.md))
 
 - [Valeria / BETWEEN — September 23, 2026 Magnific Space Seedance 2.5 first/last-frame product-service production: empty set to real-photo terminal state, preserved generated master, failed giant-arm variant, client review and non-destructive retime/grade handoff](https://github.com/valeria272/dise-o/commit/203e023068f793f2882242631122520973bf42ff) ([finishing script](https://github.com/valeria272/dise-o/blob/203e023068f793f2882242631122520973bf42ff/scripts/bw-reel-razon-ia-clip.py), [empty start frame](https://github.com/valeria272/dise-o/blob/203e023068f793f2882242631122520973bf42ff/raw/hilton/between/reel-sea-la-razon/ia/vacia-916.png), [real-photo terminal frame](https://github.com/valeria272/dise-o/blob/203e023068f793f2882242631122520973bf42ff/raw/hilton/between/reel-sea-la-razon/ia/fin-916.jpg), [original master](https://github.com/valeria272/dise-o/blob/203e023068f793f2882242631122520973bf42ff/raw/hilton/between/reel-sea-la-razon/ia/seedance-A-orig.mp4))
 
