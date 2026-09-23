@@ -28391,12 +28391,16 @@ and the same commit's [complete end-frame cover-reveal workflow and prompt](http
 
 ### Voice-first compliance register and native-soundtrack ownership gate
 
-**Verified models:** LibTV Seedance 2.0 Mini and Higgsfield Seedance 2.5 — the
-LibTV adapter fixes the first exact model as its default and its creator reports
-a real mixed-reference shot whose mouth moved with supplied speech at four
-measured checkpoints; Hossam Daoud's September 1, 2026 studio record explicitly
-verifies an audio reference accepted by Seedance 2.5 on Higgsfield while the
-generation remained inside the website Unlimited entitlement
+**Verified models:** LibTV Seedance 2.0 Mini; fal Seedance 2.0
+(`bytedance/seedance-2.0/text-to-video` or `reference-to-video`) and Seedance
+2.5 (`bytedance/seedance-2.5/text-to-video` or `reference-to-video`); and
+Higgsfield Seedance 2.5 — the LibTV adapter fixes the first exact model as its
+default and its creator reports a real mixed-reference shot whose mouth moved
+with supplied speech at four measured checkpoints; Hossam Daoud's September 1,
+2026 studio record explicitly verifies an audio reference accepted by Seedance
+2.5 on Higgsfield; Wigly's September 23 production change binds the two exact
+fal families and proves that their character lanes expose an audio on/off switch
+but no selectable voice identity
 
 Use this when a shot contains people who may speak, remain silent or carry a
 line without showing a synchronized mouth. Classify the speech state before
@@ -28476,6 +28480,27 @@ unsynchronized one.
 For a non-registerable short line, mark NATIVE_LIP_SYNC = false and retain the
 explicit fallback route. Never silently mix the two ownership policies.
 
+5 — CHARACTER MICROPHONE OWNERSHIP
+Apply this gate when the exact Seedance route can generate sound but exposes no
+voice-identity parameter and the shot will be dubbed by a separate lane:
+- if a character is present, submit native audio OFF even when the account
+  default says ON; an unspecified human scene may invent a different voice on
+  every render;
+- if a separate dialogue pipeline will replace the track, submit native audio
+  OFF regardless of whether the mouth is visible;
+- for multi-angle generation, hard-code audio OFF on every angle. Do not read a
+  shared sound preference that could reopen N independently invented voices;
+- record the same Boolean condition in the job ledger as in the submitted
+  payload. A row may say ENGINE only when the engine was actually asked for
+  audio; otherwise record SILENT or the later approved dub owner;
+- when a provider cannot disable its soundtrack, strip the complete native
+  audio track locally before dubbing and record that fallback. Do not claim
+  ambience-only control when the route cannot separate ambience from speech.
+
+This gate deliberately sacrifices engine-made room tone when speech cannot be
+disabled independently. Rebuild ambience and Foley from approved sources after
+the dub; never preserve an invented voice merely to save the ambient bed.
+
 ACCEPTANCE
 - job record contains the intended model, mixed2video mode, @Image1 and @Audio1;
 - the opening frame preserves the approved identity and composition;
@@ -28484,6 +28509,10 @@ ACCEPTANCE
 - the full line completes before the tail pad and no extra speech appears;
 - OFF_CAMERA_SAFE never reveals the speaking mouth, and EXPLICIT_SILENCE shows
   closed resting mouths with no invented words;
+- a post-dub character job sent native audio OFF, and every multi-angle child
+  job did the same;
+- the persisted soundtrack-owner flag matches the submitted audio Boolean;
+- when the route lacked an off switch, the native track was removed before dub;
 - the returned file has the expected native audio track and duration;
 - no later stage overlays another voice on a NATIVE_LIP_SYNC clip.
 
@@ -28501,7 +28530,11 @@ returned English-looking mouth motion from an English visual prompt before the
 Arabic line existed, while explicit closed-mouth direction or off-camera staging
 removed that failure surface. A short line can still be a valid creative beat
 while ineligible for a provider's audio window, so fallback remains explicit
-per shot.
+per shot. The character-microphone gate closes a different failure surface:
+when the model can synthesize speech but cannot accept a chosen voice, silence
+is a safer intermediate asset than a convincing performance owned by nobody.
+Mirroring the submit condition in the job record makes that decision auditable
+instead of merely aspirational.
 
 **Sources:** Jason Cai's September 1, 2026
 [real-shot lip-sync verification, compliance findings and pipeline implementation](https://github.com/jasoncai0/ai-shortdrama-pipeline/commit/1d80808f5aed05342ce189806cc6eed008cce4c0),
@@ -28509,7 +28542,11 @@ the versioned [Seedance 2.0 Mini LibTV adapter and mixed-reference binding](http
 and the [compliance-register implementation](https://github.com/jasoncai0/ai-shortdrama-pipeline/blob/1d80808f5aed05342ce189806cc6eed008cce4c0/src/lib/compliance.ts); plus Hossam Daoud's September 1, 2026
 [Seedance 2.5 voice-first field verification and failure record](https://github.com/HossamDaoud83/CPS-Plugins-Official/commit/2ca64bdee63f7611a1383f4fed2de3ecc38822b1),
 the same commit's [measured order-of-work and speech-state routing](https://github.com/HossamDaoud83/CPS-Plugins-Official/blob/2ca64bdee63f7611a1383f4fed2de3ecc38822b1/plugins/studio/knowledge/PLAYBOOK.md),
-and its [explicit-silence and off-camera staging rules](https://github.com/HossamDaoud83/CPS-Plugins-Official/blob/2ca64bdee63f7611a1383f4fed2de3ecc38822b1/plugins/studio/skills/directing-principles/SKILL.md).
+and its [explicit-silence and off-camera staging rules](https://github.com/HossamDaoud83/CPS-Plugins-Official/blob/2ca64bdee63f7611a1383f4fed2de3ecc38822b1/plugins/studio/skills/directing-principles/SKILL.md); plus Wigly's September 23, 2026
+[character-microphone production change](https://github.com/corpomedical/picacho/commit/04261f3e31e528e5334e481c46364ff9007061b1),
+the [shared Seedance submit gate](https://github.com/corpomedical/picacho/blob/04261f3e31e528e5334e481c46364ff9007061b1/src/lib/generations/pipeline.ts),
+[payload and multi-angle ownership logic](https://github.com/corpomedical/picacho/blob/04261f3e31e528e5334e481c46364ff9007061b1/src/lib/generations/actions.ts), and
+[cross-file regression test](https://github.com/corpomedical/picacho/blob/04261f3e31e528e5334e481c46364ff9007061b1/src/lib/generations/voice-lock.test.ts).
 
 
 ### Through-motion canonical-anchor chain and spatial-displacement gate
@@ -44088,6 +44125,8 @@ Community examples and techniques referenced in this README:
 - [John Stocker — Higgsfield Seedance 2.5 full-frame graphic match, primary generation record, measured transition and reference-authority repair](https://github.com/johnstockertutorial-afk/film-thealzheimer/commit/e5cd09c7a3727f681856631d711c4eb5735a17ac) ([complete 25-second prompt](https://github.com/johnstockertutorial-afk/film-thealzheimer/blob/e5cd09c7a3727f681856631d711c4eb5735a17ac/02_PRODUCTION-SCENES/SCENE03_DECISION-AND-DEPARTURE/MASTER-PROMPT/LONGTAKE/25s/ALZHEIMER_VID_S04-S05_DECISION-AND-DEPARTURE_LT_GEN_v001.md))
 
 - [Wigly — fal Seedance 2.5/2.0 likeness-policy re-tests, terminal response-body trap, dated capability state and capability-owned fallback routing](https://github.com/corpomedical/picacho/commit/1a1b49b065a05357ec21d3793a119bd92c25c12e) ([August 29 Seedance 2.5 evidence](https://github.com/corpomedical/picacho/commit/5fdd64be01d5857803ad58b9c04039b4572691a3), [versioned endpoint notes](https://github.com/corpomedical/picacho/blob/5fdd64be01d5857803ad58b9c04039b4572691a3/src/lib/generations/providers/video-models.ts))
+
+- [Wigly / Picacho — September 23, 2026 fal Seedance 2.0/2.5 character-microphone ownership gate, multi-angle silence rule and submit-record regression lock](https://github.com/corpomedical/picacho/commit/04261f3e31e528e5334e481c46364ff9007061b1) ([exact model catalog](https://github.com/corpomedical/picacho/blob/04261f3e31e528e5334e481c46364ff9007061b1/src/lib/generations/providers/video-models.ts), [regression tests](https://github.com/corpomedical/picacho/blob/04261f3e31e528e5334e481c46364ff9007061b1/src/lib/generations/voice-lock.test.ts))
 
 - [Rajamobeen Ashraf / Chloe — Seedance 2.5 text-placement failure, owner-approved still-first `omni_reference` repair, returned-mode semantics and persistent model-behavior ledger](https://github.com/rajamobeenashraf-jpg/chloe/commit/a8dd825a1497d0c7a236e96650a1170d84dfc87c) ([verified ledger](https://github.com/rajamobeenashraf-jpg/chloe/blob/cd4e91da8f879b0a7ab7b69e1524e56312bfd164/PROMPT_LEARNINGS.md), [prompt assembler](https://github.com/rajamobeenashraf-jpg/chloe/blob/cd4e91da8f879b0a7ab7b69e1524e56312bfd164/pai-pro-tooling/alexander/build_prompt.mjs))
 
