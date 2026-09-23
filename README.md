@@ -42519,7 +42519,10 @@ Web Seedance 2.5 Preview mode (480p) — Ark's exact-model live ledger records
 four 480p Draft tasks, four matched direct-1080p tasks and one successful
 1080p promotion whose returned `draft_task_id` points to the selected Draft;
 EvoLink's versioned OpenAPI contract exposes a comparable two-stage route for
-all five Seedance 2.5 modes. Dreamina's official launch post and a creator's
+all five Seedance 2.5 modes. A separate exact-model Ark integration and its
+regression suite verify that `draft` is a Seedance 2.5-only request capability,
+independent of bitrate controls, and that Seedance 2.0 rejects the field even
+when its value is false. Dreamina's official launch post and a creator's
 matched Preview-versus-regular-480p test verify the lower-cost web mode. The
 Ark experiment publishes complete prompts and task receipts but not durable
 generated media, so this remains one reusable delivery template rather than a
@@ -42541,6 +42544,18 @@ Persist before submission:
 
 Do not place draft inside model_params. Do not request 720p or 1080p together
 with draft = true.
+
+MODEL-CAPABILITY GATE
+Build the request from an exact model-capability record, not a `Seedance` name
+substring or one shared render-controls flag. On the validated direct Ark
+Seedance 2.5 route, send top-level draft explicitly for both lanes:
+- draft = true for the 480p selection pass;
+- draft = false for a direct final request.
+For Seedance 2.0 or 2.0 Mini, omit the draft key entirely—even false is an
+unsupported field. Treat bitrate as a separate capability: do not hide Draft
+because bitrate is unavailable, and do not emit bitrate_mode unless the exact
+model contract independently declares it. Re-run request-shape regressions
+whenever a model ID or provider route changes.
 
 CANDIDATE-COUNT GATE
 Use Draft when at least two 1080p candidates will be reviewed and only a subset
@@ -42656,6 +42671,12 @@ glitch while Preview did not and generation speed was similar; this is retained
 as bounded evidence, not a universal quality claim. The creator did not test the
 Preview-to-1080p promotion in that video, so exact high-resolution motion
 reproduction remains an explicit acceptance gate.
+The request-shape guard comes from Amazing Indian Stories' September 23, 2026
+[Seedance Draft capability fix](https://github.com/amazingindianstories-stack/AIStudio/commit/a94b002bb7ec381fa3953ab70ca258ac8f1a3ec2),
+including the exact `dreamina-seedance-2-5-260628`
+[capability record](https://github.com/amazingindianstories-stack/AIStudio/blob/a94b002bb7ec381fa3953ab70ca258ac8f1a3ec2/src/lib/model-registry.js),
+[version-gated request builder](https://github.com/amazingindianstories-stack/AIStudio/blob/a94b002bb7ec381fa3953ab70ca258ac8f1a3ec2/src/lib/providers/seedance.js)
+and [2.0/2.5 request-shape regressions](https://github.com/amazingindianstories-stack/AIStudio/blob/a94b002bb7ec381fa3953ab70ca258ac8f1a3ec2/src/lib/providers/seedance.test.js).
 
 
 ### Capability-declared local-media promotion for URL-only roles
@@ -42848,6 +42869,8 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 
 ## Sources
+
+- [Amazing Indian Stories / AIStudio — September 23, 2026 direct BytePlus Seedance 2.5 (`dreamina-seedance-2-5-260628`) Draft capability repair: explicit 2.5 true/false serialization, complete omission on 2.0/2.0 Mini, independent bitrate gating and request-shape regressions](https://github.com/amazingindianstories-stack/AIStudio/commit/a94b002bb7ec381fa3953ab70ca258ac8f1a3ec2) ([exact model registry](https://github.com/amazingindianstories-stack/AIStudio/blob/a94b002bb7ec381fa3953ab70ca258ac8f1a3ec2/src/lib/model-registry.js), [request builder](https://github.com/amazingindianstories-stack/AIStudio/blob/a94b002bb7ec381fa3953ab70ca258ac8f1a3ec2/src/lib/providers/seedance.js), [regression tests](https://github.com/amazingindianstories-stack/AIStudio/blob/a94b002bb7ec381fa3953ab70ca258ac8f1a3ec2/src/lib/providers/seedance.test.js))
 
 - [Erik Lee — September 23, 2026 Volcano Ark Seedance 2.5 (`doubao-seedance-2-5-260628`) Draft selection and promotion live test: four complete candidate prompts, eight matched generation tasks, one lineage-linked 1080p promotion, token/cost timing and codec ledger](https://github.com/eriklee1895/erik-agent-skills/commit/af2488a9535031156ce4551721bf0b4e79e9eaa2) ([complete prompts](https://github.com/eriklee1895/erik-agent-skills/blob/af2488a9535031156ce4551721bf0b4e79e9eaa2/skills/seedance-video-gen/evals/draft-mode-prompts-2026-09-23.json), [nine-task ledger](https://github.com/eriklee1895/erik-agent-skills/blob/af2488a9535031156ce4551721bf0b4e79e9eaa2/skills/seedance-video-gen/evals/draft-mode-value-2026-09-23.csv), [bounded report](https://github.com/eriklee1895/erik-agent-skills/blob/af2488a9535031156ce4551721bf0b4e79e9eaa2/skills/seedance-video-gen/evals/draft-mode-value-2026-09-23.md))
 
