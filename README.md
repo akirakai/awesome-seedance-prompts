@@ -35964,16 +35964,17 @@ and the
 generated scene 99 through the exact Higgsfield job type, then used `ffprobe`
 to establish that the saved `.mp4` was actually a 1792×1024 PNG returned
 alongside the real video candidates; plus GenVideo Seedance 2.5
-(`p-sceneflow-genvideo-2-5` / `seedance2.5`) — a live five-second request
-completed once, produced an extensionless `outputUrl`, downloaded successfully
-and probed as a 5.05-second 1280×720 video
+(`p-sceneflow-genvideo-2-5` / `seedance2.5`) — the original developer first
+recovered a live extensionless `outputUrl` and probed it as a 5.05-second
+1280×720 video, then corrected the versioned create contract and produced a
+second live 30.04-second 1280×720 H.264/AAC result
 
-Use this after any successful Seedance task whose response may contain the input
-frame, poster image, thumbnail and generated video together, or whose terminal
-video URL has no filename extension. Treat both the status route and result
-object as untrusted routing data: poll the accepted task through the provider's
-declared status path, identify the semantically strongest video candidate, then
-authenticate its bytes before attaching the asset or marking delivery complete.
+Use this around any paid Seedance task whose adapter may silently ignore
+unknown controls or unreachable references, return the input frame beside the
+generated video, or expose an extensionless expiring result URL. Treat request
+compilation, reference transport, status routing and result media as separate
+contracts; authenticate each before charging, attaching an asset or marking
+delivery complete.
 
 ```text
 SUBMISSION RECEIPT
@@ -35984,11 +35985,43 @@ Record:
 - raw create response, every status response and any charge fields.
 Do not discard a response merely because the provider reports success.
 
+VERSIONED CREATE-CONTRACT GATE
+Derive controls, wire-field names and fixed values from one pinned model/provider
+declaration; use that same declaration for UI choices, request compilation and
+contract tests. For the verified GenVideo route:
+- send `mode=2.5`; omission selects that provider's 2.0 behavior;
+- map internal duration to `durationSeconds`, not `duration`;
+- expose the route's verified 2.5 duration as 30 seconds and reject or explicitly
+  correct incompatible cached values before charging;
+- send ratios exactly as 21:9, 16:9, 4:3, 1:1, 3:4 or 9:16;
+- translate ordered `image_urls` into at most ten `images: [{url}]` records;
+- preserve every returned long task ID as a string.
+These are route-specific facts, not universal Seedance limits. Reject unknown
+wire fields and missing required values before submission: a provider may ignore
+an unknown field while still returning a successful but semantically wrong clip.
+
+REFERENCE-REACHABILITY GATE
+Before a paid reference request, prove that the provider can fetch every ordered
+image URL. Accept an absolute HTTP(S) URL only after a successful probe; use
+HEAD first and fall back to GET for 405 or 501. Convert a workspace-relative
+path only through a configured public asset base, and reject data URLs,
+unresolved relative paths, non-2xx responses and unreachable hosts. Preserve
+order and hashes in the receipt. The verified route silently ignored
+unfetchable images and still generated and charged, so a reachability failure
+must stop before create rather than become an unexplained identity failure.
+
 STATUS-ROUTE GATE
-Resolve the polling URL from the pinned provider configuration before create.
-If the provider declares /v1/tasks/{id}, use exactly that template. Do not
-assume status lives at [CREATE ENDPOINT]/{id}; create and status paths may be
-different resources.
+Resolve the polling URL and schedule from pinned provider configuration before
+create. If the provider declares /v1/tasks/{id}, use exactly that template. Do
+not assume status lives at [CREATE ENDPOINT]/{id}; create and status paths may
+be different resources.
+
+For the verified GenVideo route, wait five minutes before the first query, then
+use interruptible 15-to-30-second backoff within a two-hour budget. These values
+belong to that route and revision; do not copy them to another provider without
+evidence. Treat only `status=succeeded` plus a non-empty `outputUrl` as
+delivery-ready. On failure, timeout or cancellation, write one durable terminal
+record, emit one terminal event and reconcile the matching refund.
 
 After acceptance, poll only the recorded task ID. If the status-path mapping is
 missing or wrong, repair that transport mapping and resume the same task. Never
@@ -36021,6 +36054,14 @@ Then probe and record container, codec, width, height, duration and audio state.
 Do not trust the destination suffix, explicit field name, query mime hint or
 HTTP Content-Type by itself.
 
+SIGNED-URL MATERIALIZATION
+After byte and probe acceptance, copy the artifact immediately into durable
+owned storage and persist its local path, hash, size, MIME and probe receipt.
+Do not store a temporary provider CDN URL as the delivered asset. If that URL
+has expired or returns 403, use the versioned output-refresh endpoint for the
+same accepted task, download the refreshed URL once and continue the same
+receipt. Never create a replacement generation to refresh delivery credentials.
+
 QUARANTINE AND STATE GATE
 If the signature or probe is not video:
 - move the bytes to [NAME].notvideo without deleting evidence;
@@ -36031,11 +36072,13 @@ Only attach the asset and expose playback after routing and byte validation pass
 
 CHARGE RECONCILIATION
 Link estimate, accepted task ID, provider charge record, stored artifact and
-account balance delta in one receipt. A live GenVideo check observed
-estimate 20, charge 20 and balance 59 -> 39 for the same task; this proves that
-one route's accounting closed, not that 20 is a universal Seedance price.
-Mark placeholder or provisional rate-table rows as such, and do not infer
-per-second pricing from a provider response that reports a per-task point value.
+account balance delta in one receipt. One live GenVideo check observed estimate
+20, charge 20 and balance 59 -> 39. A later route revision separately recorded
+five upstream points for one 30-second provider task while the application used
+its own 60-point customer tariff. Keep provider cost, internal reserve and
+customer settlement as named units; neither observation is a universal
+Seedance price. Mark provisional rate-table rows as such, and do not infer
+per-second pricing from a response that reports a per-task point value.
 
 RETRY RULE
 On a terminal task, first retry media selection from the untouched raw response,
@@ -36045,21 +36088,26 @@ and task-history or billing reconciliation proves the original cannot be
 recovered.
 ```
 
-**Why it works:** generation, polling, result selection, byte authentication
-and billing are separate contracts. The Seedance 2.0 failure selected a PNG
-whose saved name looked like video; the Seedance 2.5 failure completed
-generation but polled the wrong route and later rejected a real TOS video
-because its `outputUrl` lacked `.mp4`. Keeping the accepted task immutable while
-repairing transport mapping recovered the paid artifact. The second live run
-then verified 5.05 seconds at 1280×720 and reconciled estimate, charge and
-balance delta without promoting its placeholder price into a general rule.
+**Why it works:** request compilation, reference transport, generation,
+polling, result selection, byte authentication and billing are separate
+contracts. The Seedance 2.0 failure selected a PNG whose saved name looked like
+video; the first Seedance 2.5 failure completed generation but polled the wrong
+route and later rejected a real TOS video because its `outputUrl` lacked
+`.mp4`. Keeping the accepted task immutable recovered that paid artifact. The
+later request-contract repair then proved that an omitted `mode` and ignored
+`duration` field had silently selected the wrong behavior: the corrected
+`mode=2.5` plus `durationSeconds=30` request returned a measured 30.04-second
+clip. The same change makes unfetchable references fail before payment and
+keeps provider cost distinct from the application's customer tariff.
 
 **Sources:** semoji-ai's
 [live Seedance 2.0 failure diagnosis and fix](https://github.com/semoji-ai/auto_kairos/commit/40e0ce7c78cdf3d97c35f54d1c141e12b3e972d6),
 the
 [versioned result-selection, signature-check and quarantine implementation](https://github.com/semoji-ai/auto_kairos/blob/40e0ce7c78cdf3d97c35f54d1c141e12b3e972d6/adobe/backend/video.py),
 and king5012996533's
-[live GenVideo Seedance 2.5 delivery and billing repair](https://github.com/king5012996533/solid-funicular/commit/4f6da5c3a8f6c46bff25a6354f64c74c6b11d53b).
+[live GenVideo Seedance 2.5 delivery and billing repair](https://github.com/king5012996533/solid-funicular/commit/4f6da5c3a8f6c46bff25a6354f64c74c6b11d53b)
+plus the follow-up
+[versioned create-contract, reference-reachability, polling and durable-storage verification](https://github.com/king5012996533/solid-funicular/commit/4c69742b5f539cf6dea652dc394107324db0ea64).
 
 ### Profile locomotion source and cycle-recovery contract
 
@@ -44194,6 +44242,7 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 ## Sources
 
+- [king5012996533 / solid-funicular — September 25, 2026 GenVideo Seedance 2.5 (`p-sceneflow-genvideo-2-5` / `seedance2.5`) versioned create-contract repair: explicit `mode=2.5`, `durationSeconds=30`, six-ratio and ordered-reference compilation, provider-fetch preflight, bounded polling, terminal refund tests, durable signed-URL storage and a live 30.04-second 1280×720 H.264/AAC result](https://github.com/king5012996533/solid-funicular/commit/4c69742b5f539cf6dea652dc394107324db0ea64)
 - [king5012996533 / solid-funicular — September 25, 2026 GenVideo Seedance 2.5 (`p-sceneflow-genvideo-2-5` / `seedance2.5`) live delivery repair: versioned status-path propagation, extensionless explicit `outputUrl` recovery, 5.05-second 1280×720 ffprobe validation and estimate/charge/balance reconciliation](https://github.com/king5012996533/solid-funicular/commit/4f6da5c3a8f6c46bff25a6354f64c74c6b11d53b)
 - [Wanrd0Geri / aigc-video — September 24, 2026 JiMeng Seedance 2.5 four-shot fantasy production case: eight image references plus one voice, creator-accepted 20-second result, measured cut points, per-second frame audit, shared-gaze staging, colossus scale controls and full-frame palm blackout](https://github.com/Wanrd0Geri/aigc-video/commit/27c0d2ef215e66ba59fdf43727adcb7910ca2005) ([complete M005 prompt and result audit](https://github.com/Wanrd0Geri/aigc-video/blob/27c0d2ef215e66ba59fdf43727adcb7910ca2005/references/cases/my-cases.md), [versioned Seedance 2.5 skill contract](https://github.com/Wanrd0Geri/aigc-video/blob/27c0d2ef215e66ba59fdf43727adcb7910ca2005/SKILL.md), [evidence rules and tested lessons](https://github.com/Wanrd0Geri/aigc-video/blob/27c0d2ef215e66ba59fdf43727adcb7910ca2005/references/lessons/seedance-2.5.md))
 - [Ecinaro / Brainlab Estate Cinematic — September 24, 2026 Higgsfield Seedance 2.5 (`seedance_2_5`, `omni_reference`) six-scene real-estate route: property-photo geometry authority, identity-board style isolation, estimated-view disclosure, positional 3×3 panel calls, pre-video color correction, non-literal board rendering and measured timing drift](https://github.com/ecinaro/brainlab-estate-cinematic/commit/29ca0c0abdd50897758e23e660a8bbaed8071036) ([complete video template](https://github.com/ecinaro/brainlab-estate-cinematic/blob/29ca0c0abdd50897758e23e660a8bbaed8071036/references/video-prompt-template.md), [exact request contract](https://github.com/ecinaro/brainlab-estate-cinematic/blob/29ca0c0abdd50897758e23e660a8bbaed8071036/references/higgsfield-pipeline.md), [run and failure log](https://github.com/ecinaro/brainlab-estate-cinematic/blob/29ca0c0abdd50897758e23e660a8bbaed8071036/references/lessons.md))
