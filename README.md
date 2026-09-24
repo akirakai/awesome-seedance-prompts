@@ -32488,6 +32488,13 @@ issuing a task ID or charge. Earlier fal jobs also showed why `COMPLETED` must
 not be trusted alone: their response bodies contained
 `partner_validation_failed` instead of a video artifact
 
+The route-managed review branch below is additionally verified on Kinovi
+Seedance 2.5 (`seedance2-5`). Its September 24 API record separates reference
+fetch/review errors from generated-output review, publishes exact media
+admission limits, and reports aggregate behaviour across roughly 100,000
+September tasks. These are dated Kinovi route observations, not universal
+Seedance policy or visual-quality claims.
+
 Use this after the preceding input preflight when a real-person reference may
 behave differently across distribution routes. It does not authorize likeness
 use or bypass a rejection; it prevents a terminal queue label from being
@@ -32591,6 +32598,42 @@ permanent model constant. Store exact model, endpoint, input hashes, observed
 result and `observed_at`. A previous success may rank a candidate, but it
 cannot guarantee the next submission after a provider-policy change.
 
+PROVIDER-OWNED MULTI-ROUTE REVIEW
+Before implementing a client fallback, determine whether the paid endpoint
+already owns a multi-route review. On the verified Kinovi route, a first-route
+review rejection is automatically submitted to a second route under the same
+request with no second charge. The platform reports that this recovered about
+two in five tasks rejected by the first route during September 2026.
+
+Treat that internal handoff as one unresolved provider task:
+- keep polling the original task ID;
+- do not create a replacement while either route is still unresolved;
+- do not infer success from the hidden handoff;
+- accept only a delivered video artifact;
+- if both routes reject, preserve terminal code `1001`, verify the refund and
+  change the prompt or authorized references before any new request.
+
+This does not override the client-side fallback rules below. They begin only
+after the provider has returned a terminal result and must never race the
+provider's own second route.
+
+REFERENCE ADMISSION AND FAILURE TRIAGE
+Compile the exact route limits before debit. For `seedance2-5`, images must be
+300–6000 pixels wide with width/height from 0.4 to 2.5; each reference video
+must be 2–30 seconds at 24–60 fps and all reference videos together must not
+exceed 30 seconds. Audio cannot be the only reference.
+
+Do not let input count silently choose the wrong operation:
+- one or two images with omitted mode become opening/closing keyframes;
+- three or more images, or any video/audio, become reference mode;
+- one or two identity/style images require explicit `mode = reference`.
+
+When `asset_review_failed` names an asset, first distinguish unreachable or
+out-of-envelope media from a review refusal. Re-host only when fetchability or
+format evidence failed; replace or revise authorized content when review
+failed. Never treat repeated upload of the same rejected bytes as a recovery
+strategy.
+
 After a likeness rejection:
 1. Parse the refusing model and route from the response; add that exact pair
    to the retry exclusion set.
@@ -32642,6 +32685,12 @@ controlled Ofox A/B isolates the authorization flag from portrait selection,
 prompt wording and route choice while preserving the crucial boundary between
 declaring legitimate rights and evading a policy decision.
 
+The provider-owned review extension prevents an equally expensive race: a
+client must not buy a second task while the platform is already trying its own
+second route. Exact media admission checks also keep network fetch failures,
+parameter rejection and policy review from collapsing into the same retry
+button.
+
 Adapted from Ofox's September 16, 2026
 [single-variable Seedance 2.5 authorization probe and paid job record](https://github.com/ofoxai/skills/commit/5e315efdeb5a9dbec163ab7e61be52333f9b9731),
 the maintainer's
@@ -32660,6 +32709,10 @@ adapted from sageryza's September 9, 2026
 [Seedance 2.0 Mini matched-background probe and two recorded output refusals](https://github.com/sageryza/imageforge/commit/79a06251cf9ccb4dac8a4433617162b5b9c2299a)
 and the creator's
 [full request, prompt, job-state and failure ledger](https://github.com/sageryza/imageforge/blob/79a06251cf9ccb4dac8a4433617162b5b9c2299a/docs/modules/audio-and-film.md#seedance).
+The route-managed review, input-admission and failure-triage extension is
+adapted from Kinovi's September 24, 2026
+[Seedance 2.5 API and aggregate production FAQ](https://github.com/kinovi-ai/kinovi-models/blob/97556b76e7c07c02799cc07f53c9ce811d148ad3/models/seedance2-5/README.md)
+and its [dated source commit](https://github.com/kinovi-ai/kinovi-models/commit/97556b76e7c07c02799cc07f53c9ce811d148ad3).
 
 ### Storyboard-to-short parameter preflight and moving-hook template
 
@@ -43727,6 +43780,8 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 
 ## Sources
+
+- [Kinovi — September 24, 2026 Seedance 2.5 (`seedance2-5`) production API update: exact image/video/audio admission limits, deterministic keyframe/reference routing, named-asset failure triage, same-request second-route review, aggregate recovery rate and terminal refund semantics](https://github.com/kinovi-ai/kinovi-models/commit/97556b76e7c07c02799cc07f53c9ce811d148ad3) ([complete versioned model reference and production FAQ](https://github.com/kinovi-ai/kinovi-models/blob/97556b76e7c07c02799cc07f53c9ce811d148ad3/models/seedance2-5/README.md))
 
 - [GYZ001 / MJAgent2 — September 24, 2026 HiAgent Seedance 2.0 (`d7jf6nd5boeaebtfbdqg`) project-to-provider aspect repair: immutable enqueue snapshot, explicit compiler propagation, final-payload precedence, legacy-task compatibility and read-only migration impact](https://github.com/GYZ001/MJAgent2/commit/e266e256e84132238f3bc1c5f3f94cca70e037fe) ([compiler contract](https://github.com/GYZ001/MJAgent2/blob/e266e256e84132238f3bc1c5f3f94cca70e037fe/app/compiler.py), [Seedance adapter](https://github.com/GYZ001/MJAgent2/blob/e266e256e84132238f3bc1c5f3f94cca70e037fe/app/seedance.py), [request-priority tests](https://github.com/GYZ001/MJAgent2/blob/e266e256e84132238f3bc1c5f3f94cca70e037fe/tests/test_aspect_ratio_generation.py), [snapshot and impact tests](https://github.com/GYZ001/MJAgent2/blob/e266e256e84132238f3bc1c5f3f94cca70e037fe/tests/test_aspect_ratio_generation_snapshot.py))
 
