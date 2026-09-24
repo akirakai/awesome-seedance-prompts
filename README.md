@@ -31866,6 +31866,97 @@ The measured camera leash and three-stage terminal-state branch are adapted from
 [Glenn Williams's September 1, 2026 Seedance 2.5 30-second spiral-staircase
 one-take, complete prompt and generated result](https://x.com/GlennHasABeard/status/2094526206343299417).
 
+### Measured segment-cap and resumable long-form assembly gate
+
+**Verified model:** Seedance 2.5 (`bytedance/seedance-2.5`) — the original
+pipeline author records eight paid staging probes: 30, 29, 28, 25, 20, 15, 12
+and 10 seconds rendered, while 59 and 60 seconds returned HTTP 400; 31–58
+seconds were not tested  
+**Use case:** a 60–180-second narrative assembled from independent Seedance
+parts without cutting inside a shot, re-buying completed parts after a failed
+session or mistaking a schema ceiling for an observed model limit  
+**Mode:** planned text-to-video segments, persistent per-segment checkpoints
+and deterministic local assembly
+
+```text
+CAP QUALIFICATION
+Pin the exact provider, route and model before planning.
+Treat a schema maximum as request syntax, not proof that the model delivers it.
+Use only a separately authorised paid canary suite to establish a working cap.
+
+For this dated route test:
+- largest observed working duration = 30 seconds;
+- 30, 29, 28, 25, 20, 15, 12 and 10 seconds rendered;
+- 59 and 60 seconds were rejected;
+- 31–58 seconds remain unknown, not failed and not supported.
+
+Invalidate the cap when the provider route, model version or request contract
+changes. A length refusal is a STOP: do not automatically retry successively
+shorter paid jobs to discover the limit.
+
+SHOT-BOUNDARY PACKING
+Write the whole film as ordered shots with explicit durations. No individual
+shot may exceed the verified cap. Greedily pack complete shots into segments no
+longer than 30 seconds; never split a shot merely to fill a segment.
+
+Every boundary must be an intentional editorial cut. End the outgoing segment
+on [STABLE SUBJECT / PROP / GEOGRAPHY / LIGHT / AUDIO STATE], and begin the next
+from a separately stated compatible state. Do not carry uninterrupted camera
+motion, physical contact, a spoken syllable or a causally indivisible action
+across two independently generated parts.
+
+Reject the plan before spending when:
+- any shot exceeds the cap;
+- a required beat cannot end at a visible shot boundary;
+- packed segment count exceeds the approved budget;
+- the final assembled duration falls outside the delivery window.
+
+PERSISTENT SEGMENT LEDGER
+Before the first render, create one immutable row per packed segment:
+project_id, segment_index, source shot range, complete prompt slice, model,
+settings, requested seconds, task id, output id/hash, status and actual charge.
+
+Name every stored output with project_id + segment_index. On resume, discover
+those files before submitting anything. Fetch and validate completed segments;
+render only the missing or failed index. Never restart the full film because a
+session, agent or network connection ended halfway through it.
+
+PER-SEGMENT GATE
+Probe every returned file before assembly. Record actual duration, container,
+video codec, dimensions, frame rate and audio layout. A too-short file is a
+failed segment wearing a success response. Do not join until every ledger row
+passes and the ordered indices are contiguous.
+
+ASSEMBLY
+Build an ordered concat manifest from the validated ledger. Use ffmpeg concat
+demuxing with stream copy only when the streams are actually compatible. If
+they differ, stop or perform an explicitly approved normalisation pass; never
+silently publish fragments or conceal a missing segment with a duplicated one.
+
+Probe the assembled master for total duration and track layout. Review a window
+on both sides of every join for identity, screen direction, geography, light,
+motion state and audio continuity. Preserve the validated segment files and the
+manifest so a local repair replaces one segment rather than the entire film.
+```
+
+**Why it works:** the measured cap becomes a versioned production fact rather
+than a guess inherited from the API schema. Packing complete shots turns an
+unavoidable generation boundary into a planned cut, while the persistent
+ledger makes six independent paid renders resumable and auditable. Per-segment
+probing prevents a nominal success, missing index or incompatible stream from
+poisoning the final join.
+
+The public source contains the complete reusable crew prompts and executable
+packing/assembly design, but no public task IDs or generated masters. It is
+therefore counted as a reusable template, not as a complete scenario, and its
+30-second observation must not be generalised beyond the tested route and date.
+
+Adapted and rewritten from Naive's September 24, 2026
+[Seedance 2.5 long-form pipeline release and paid-probe record](https://github.com/usenaive/media-blueprint/commit/8ae84f7359c2c8b0d966dfeeaf7fd4fbb65ae062),
+the [complete writer/producer prompt implementation](https://github.com/usenaive/media-blueprint/blob/8ae84f7359c2c8b0d966dfeeaf7fd4fbb65ae062/templates/longform.ts),
+[measured-cap compiler](https://github.com/usenaive/media-blueprint/blob/8ae84f7359c2c8b0d966dfeeaf7fd4fbb65ae062/templates/template.ts)
+and [assembly contract](https://github.com/usenaive/media-blueprint/blob/8ae84f7359c2c8b0d966dfeeaf7fd4fbb65ae062/docs/how-it-works.md#longform).
+
 ### Full-frame graphic-match calibration and reference-authority gate
 
 **Verified model:** Higgsfield Seedance 2.5, `omni_reference` — the creator
@@ -43811,6 +43902,8 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 
 ## Sources
+
+- [Naive / media-blueprint — September 24, 2026 Seedance 2.5 (`bytedance/seedance-2.5`) long-form route qualification and resumable assembly release: eight paid working-duration probes through 30 seconds, rejected 59/60-second requests, shot-boundary packing, persistent segment checkpoints, per-part ffprobe and ffmpeg concat assembly](https://github.com/usenaive/media-blueprint/commit/8ae84f7359c2c8b0d966dfeeaf7fd4fbb65ae062) ([complete writer/producer prompts](https://github.com/usenaive/media-blueprint/blob/8ae84f7359c2c8b0d966dfeeaf7fd4fbb65ae062/templates/longform.ts), [measured-cap compiler](https://github.com/usenaive/media-blueprint/blob/8ae84f7359c2c8b0d966dfeeaf7fd4fbb65ae062/templates/template.ts), [assembly contract](https://github.com/usenaive/media-blueprint/blob/8ae84f7359c2c8b0d966dfeeaf7fd4fbb65ae062/docs/how-it-works.md#longform))
 
 - [Manor 09 — September 24, 2026 Seedance 2.5 (`seedance_2_5`) 21:9 haunted-ident re-generation after a 16:9 first pass lost protected landmarks in the cinema-band delivery; 8-second 1080p native-audio master, uncropped 16:9 stage placement, HTML-owned typography and render-derived poster](https://github.com/jaws97/manor-09-haunting/commit/13d61f7d5c92bfc869450afc0ebe6e126bca93f4) ([generated MP4](https://github.com/jaws97/manor-09-haunting/blob/13d61f7d5c92bfc869450afc0ebe6e126bca93f4/public/media/ident.mp4), [poster](https://github.com/jaws97/manor-09-haunting/blob/13d61f7d5c92bfc869450afc0ebe6e126bca93f4/public/media/ident.webp))
 - [Kinovi — September 24, 2026 Seedance 2.5 (`seedance2-5`) production API update: exact image/video/audio admission limits, deterministic keyframe/reference routing, named-asset failure triage, same-request second-route review, aggregate recovery rate and terminal refund semantics](https://github.com/kinovi-ai/kinovi-models/commit/97556b76e7c07c02799cc07f53c9ce811d148ad3) ([complete versioned model reference and production FAQ](https://github.com/kinovi-ai/kinovi-models/blob/97556b76e7c07c02799cc07f53c9ce811d148ad3/models/seedance2-5/README.md))
