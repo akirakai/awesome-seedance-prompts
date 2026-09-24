@@ -25863,7 +25863,7 @@ including the [documented finishing script](https://github.com/valeria272/dise-o
 [real-photo terminal frame](https://github.com/valeria272/dise-o/blob/203e023068f793f2882242631122520973bf42ff/raw/hilton/between/reel-sea-la-razon/ia/fin-916.jpg)
 and [original Seedance master](https://github.com/valeria272/dise-o/blob/203e023068f793f2882242631122520973bf42ff/raw/hilton/between/reel-sea-la-razon/ia/seedance-A-orig.mp4).
 
-### Rendered-first-frame poster and delivery-crop parity gate
+### Rendered-first-frame poster, generation-canvas and delivery-crop parity gate
 
 **Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`) — the original
 production repository records an accepted `omni_reference` job using one
@@ -25871,12 +25871,17 @@ production repository records an accepted `omni_reference` job using one
 hero was cropped from the rendered 1920×1080 master to 1920×822, then encoded
 at 1280×548. The producer measured a 20/255 visual difference between the
 source still and the generated opening, so the shipped poster was extracted
-from the rendered first frame rather than reused from the input image  
+from the rendered first frame rather than reused from the input image. A second
+production records the same exact `seedance_2_5` identifier, 8 seconds, 1080p
+and native audio: its first 16:9 pass lost the manor and moon when placed in a
+cinema band, so the creator rebuilt the source still and generated again at
+21:9, then played that master uncropped inside a 16:9 stage  
 **Use case:** a web hero starts from an approved still but Seedance subtly
-reframes it, while the published player uses a non-native panoramic crop and
-must begin without a poster-to-video flash  
+reframes it, or a generated ident must occupy a panoramic band inside a
+different stage ratio, while the published player must preserve the intended
+composition and begin without a poster-to-video flash  
 **Mode:** image-to-video generation followed by deterministic delivery
-cropping, poster extraction and playback acceptance
+geometry, poster extraction and playback acceptance
 
 ```text
 IMMUTABLE GENERATION MANIFEST
@@ -25886,14 +25891,19 @@ Start image hash = [HASH]. Native generation ratio = [RATIO].
 Duration = [SECONDS]. Resolution = [RESOLUTION]. Audio = [ON/OFF].
 Final delivery geometry = [WIDTH × HEIGHT OR ASPECT].
 Delivery crop = [X, Y, WIDTH, HEIGHT].
+Outer stage geometry = [NONE | WIDTH × HEIGHT OR ASPECT].
+Placement = [FULL BLEED | UNCROPPED BAND + DECLARED BLACK BARS].
 Preset decision = [ACCEPTED PRESET ID | DECLINED PRESET ID].
 
 START-IMAGE PREPARATION
 Preserve the approved product, subject, camera height, lighting and composition.
-Pad or outpaint to the model's accepted native ratio without scaling the
-load-bearing subject out of the final delivery crop. Mark a DELIVERY SAFE AREA
-for the final panoramic or vertical slice; keep essential products, hands,
-labels and terminal actions inside it throughout the shot.
+If the model accepts the final delivery ratio, build the authoritative still at
+that ratio and generate there. Do not generate at the outer stage ratio and
+depend on `object-fit: cover` to discover the composition. Otherwise, pad or
+outpaint to the model's accepted native ratio without scaling the load-bearing
+subject out of the final delivery crop. Mark a DELIVERY SAFE AREA for the final
+panoramic or vertical slice; keep essential products, hands, labels and
+terminal actions inside it throughout the shot.
 
 MOTION BRIEF
 @StartImage owns product identity, geometry, materials, set and light.
@@ -25911,14 +25921,27 @@ not a Seedance prompt parameter.
 DELIVERY DERIVATION
 1. Archive the untouched generated master and probe its real dimensions,
    duration, frame rate and audio streams.
-2. Apply the declared crop to the generated video, not to a separately
-   reconstructed still. Keep the same crop coordinates for every frame.
-3. Encode the final delivery copy at [OUTPUT SIZE], preserving aspect ratio,
+2. When the master already matches final delivery geometry, preserve every
+   pixel and place it as an uncropped band inside the outer stage. Keep black
+   bars, captions, titles and other stage furniture outside the generated
+   pixels. Never use `object-fit: cover` on this branch.
+3. Otherwise, apply the declared crop to the generated video, not to a
+   separately reconstructed still. Keep the same crop coordinates for every
+   frame.
+4. Encode the final delivery copy at [OUTPUT SIZE], preserving aspect ratio,
    frame cadence and fast-start metadata.
-4. Extract frame zero from the already cropped delivery timeline and encode it
+5. Extract frame zero from the final delivery timeline and encode it
    as the player poster at exactly the delivery dimensions.
-5. Never use the input still as the poster merely because it seeded the job.
+6. Never use the input still as the poster merely because it seeded the job.
    Seedance may alter crop, lens, object placement or exposure on frame one.
+
+STAGE-PLAYBACK PROBE
+Render the real player or projector container at its intended dimensions, not
+only the raw MP4. Inspect every protected landmark at frame zero, peak motion
+and the final hold. If a full-stage first pass loses a landmark when converted
+to the delivery band, reject that generation and rebuild both the source still
+and Seedance request at the band ratio. Do not spend another crop, zoom or CSS
+cover operation trying to rescue incompatible geometry.
 
 PARITY MEASUREMENT
 Compare the input still, rendered opening and encoded poster with one declared
@@ -25940,6 +25963,7 @@ ACCEPTANCE GATE
 - product identity and geometry remain stable through the final state
 - every essential action stays inside the delivery crop
 - poster dimensions and crop exactly match the delivery video
+- an uncropped band preserves every protected landmark in the real stage
 - poster-to-frame-zero transition has no visible jump or flash
 - playback reaches the intended terminal hold without restarting
 - declared audio policy matches the encoded streams
@@ -25950,7 +25974,10 @@ ACCEPTANCE GATE
 for its own opening pixels. Cropping first and extracting the poster second
 makes both assets inherit the same framing and color pipeline, while the
 terminal hold keeps a one-pass product transformation from resetting after the
-payoff.
+payoff. When delivery is a band inside a larger stage, generating at the band
+ratio prevents the stage renderer from becoming an accidental second camera;
+HTML-owned typography also stays deterministic and does not consume the
+composition reserve.
 
 **Evidence boundary:** the source preserves the settings, generated artifact,
 crop and measured first-frame mismatch, but not the complete creative prompt.
@@ -25961,6 +25988,10 @@ as a complete scenario prompt.
 [Higgsfield Seedance 2.5 product-hero generation and delivery commit](https://github.com/jakubtiuchty-arch/takma/commit/af0651b1a1748c905a22f27923ef19ca9ec2a2c0),
 including the [generated MP4](https://github.com/jakubtiuchty-arch/takma/blob/af0651b1a1748c905a22f27923ef19ca9ec2a2c0/public/images/guides/jaka-drukarka-do-kart-plastikowych-v2.mp4)
 and [render-derived poster](https://github.com/jakubtiuchty-arch/takma/blob/af0651b1a1748c905a22f27923ef19ca9ec2a2c0/public/images/guides/jaka-drukarka-do-kart-plastikowych-v2.webp).
+The band-ratio branch is adapted from Manor 09's September 24, 2026
+[Seedance 2.5 re-generation and stage-integration commit](https://github.com/jaws97/manor-09-haunting/commit/13d61f7d5c92bfc869450afc0ebe6e126bca93f4),
+including the committed [21:9 native-audio MP4](https://github.com/jaws97/manor-09-haunting/blob/13d61f7d5c92bfc869450afc0ebe6e126bca93f4/public/media/ident.mp4)
+and [render-derived poster](https://github.com/jaws97/manor-09-haunting/blob/13d61f7d5c92bfc869450afc0ebe6e126bca93f4/public/media/ident.webp).
 
 ### Schema-key canonicalization and reference-video one-of gate
 
@@ -43781,6 +43812,7 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 ## Sources
 
+- [Manor 09 — September 24, 2026 Seedance 2.5 (`seedance_2_5`) 21:9 haunted-ident re-generation after a 16:9 first pass lost protected landmarks in the cinema-band delivery; 8-second 1080p native-audio master, uncropped 16:9 stage placement, HTML-owned typography and render-derived poster](https://github.com/jaws97/manor-09-haunting/commit/13d61f7d5c92bfc869450afc0ebe6e126bca93f4) ([generated MP4](https://github.com/jaws97/manor-09-haunting/blob/13d61f7d5c92bfc869450afc0ebe6e126bca93f4/public/media/ident.mp4), [poster](https://github.com/jaws97/manor-09-haunting/blob/13d61f7d5c92bfc869450afc0ebe6e126bca93f4/public/media/ident.webp))
 - [Kinovi — September 24, 2026 Seedance 2.5 (`seedance2-5`) production API update: exact image/video/audio admission limits, deterministic keyframe/reference routing, named-asset failure triage, same-request second-route review, aggregate recovery rate and terminal refund semantics](https://github.com/kinovi-ai/kinovi-models/commit/97556b76e7c07c02799cc07f53c9ce811d148ad3) ([complete versioned model reference and production FAQ](https://github.com/kinovi-ai/kinovi-models/blob/97556b76e7c07c02799cc07f53c9ce811d148ad3/models/seedance2-5/README.md))
 
 - [GYZ001 / MJAgent2 — September 24, 2026 HiAgent Seedance 2.0 (`d7jf6nd5boeaebtfbdqg`) project-to-provider aspect repair: immutable enqueue snapshot, explicit compiler propagation, final-payload precedence, legacy-task compatibility and read-only migration impact](https://github.com/GYZ001/MJAgent2/commit/e266e256e84132238f3bc1c5f3f94cca70e037fe) ([compiler contract](https://github.com/GYZ001/MJAgent2/blob/e266e256e84132238f3bc1c5f3f94cca70e037fe/app/compiler.py), [Seedance adapter](https://github.com/GYZ001/MJAgent2/blob/e266e256e84132238f3bc1c5f3f94cca70e037fe/app/seedance.py), [request-priority tests](https://github.com/GYZ001/MJAgent2/blob/e266e256e84132238f3bc1c5f3f94cca70e037fe/tests/test_aspect_ratio_generation.py), [snapshot and impact tests](https://github.com/GYZ001/MJAgent2/blob/e266e256e84132238f3bc1c5f3f94cca70e037fe/tests/test_aspect_ratio_generation_snapshot.py))
