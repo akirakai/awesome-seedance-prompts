@@ -419,6 +419,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Storm-diverted paraglider and silent mountain rescue](#403-storm-diverted-paraglider-and-silent-mountain-rescue)
   - [Dual-palette classroom arcane clash](#404-dual-palette-classroom-arcane-clash)
   - [Locked-waterfall two-speaker micro-comedy](#405-locked-waterfall-two-speaker-micro-comedy)
+  - [Palace-summoning colossus tableau and full-frame palm blackout](#406-palace-summoning-colossus-tableau-and-full-frame-palm-blackout)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -25449,6 +25450,151 @@ Auto Polish off keeps those timing and silence constraints from being rewritten.
 Adapted and rewritten from Joy Purdy's September 23, 2026
 [OpenArt Seedance 2.5 production article, complete prompt and generated result](https://www.linkedin.com/pulse/from-numerous-renders-one-how-i-direct-ai-actors-claude-joy-purdy-mnokc).
 
+### 406. Palace-summoning colossus tableau and full-frame palm blackout
+
+**Verified model:** JiMeng Seedance 2.5 — the original creator publishes the
+complete submitted prompt, accepted finished-file record, decoded output
+properties and a per-second frame audit under an explicitly versioned Seedance
+2.5 production skill  
+**Use case:** multi-reference fantasy action, six energy colossi, perspective
+scale, shared group gaze, native Mandarin dialogue, full-frame impact ending  
+**Mode:** reference-to-video with eight images and one voice reference  
+**Verified settings:** 20 seconds; four planned shots; native audio; delivered
+result measured at 992×432 and 24 fps
+
+```text
+INPUT AUTHORITY
+@Image1 = Master Yuan, including face, white fur, gold shoulder armour, prayer
+beads and the long black staff with gold-lit fissures.
+@Image2 = the central great-ape colossus, the largest of the six.
+@Image3 = the red-eyed colossus; @Image4 = the long-limbed colossus;
+@Image5 = the small crouching colossus; @Image6 = the black-orb colossus;
+@Image7 = the draped colossus. Each image owns only that character's identity,
+body proportions and signature prop. Do not import its black background, water
+plane or floating pose.
+@Image8 = the mountain palace: a long central stair, summit hall, layered dark
+roofs, two towers and snowy peaks. It owns architecture and geography, not its
+original frontal composition.
+@Audio1 = Master Yuan's low, resonant voice identity only. Do not reuse words,
+music or background sound from the reference.
+
+CAST AND WORLD LOCK
+Only one Master Yuan and exactly six distinct colossi exist. Master Yuan stands
+on the summit hall's main ridge, facing down the central stair. The great-ape
+colossus remains directly behind the hall; the other five hold fixed positions
+to its left and right. Before each shot, derive the visible faces, distances and
+occlusions from that shot's camera position. Every colossus looks toward the
+same target at the foot of the stairs. Never mirror, merge, duplicate or swap
+their identities.
+
+LOOK
+Chinese-fantasy cinematic CG at stormy dusk. Cold blue-grey shadow covers the
+palace; one low gold break in the clouds lights the left peaks and roof edges.
+Wind carries snow down the central stair.
+
+Each colossus is translucent magical energy, not solid fur. Build it in three
+layers: a soft volumetric gold-white core; uneven light filaments tracing
+muscle and hair direction; sparse sparks with short trails at the outer edge.
+Add mild heat-haze refraction and warm interaction light on nearby cloud, roof
+and fur. Background architecture must remain visible through the dimmer parts
+of each body. These luminous figures cast changing warm light, not hard black
+shadows.
+
+SHOT 1 — 00:00–00:04 — SUMMONING CLOSE-UP
+Low camera at Master Yuan's left front, looking up; frame from chest to head.
+Foreground wisps cross the lower-left corner out of focus, Master Yuan is sharp
+on the right third, and rolling storm cloud fills the background.
+
+He keeps his head lowered toward the stair and says in Mandarin, slowly:
+“小子……你的天分，确实不俗。”
+His mouth owns the line; the staff and head remain still while he speaks. Gold
+fissures wake beneath his right hand and send fine light threads into the cloud.
+At two seconds a diagonal rift opens behind his shoulder. The great ape's one
+gold eye and brow appear at the centre of the rift; partial faces of the
+red-eyed and black-orb colossi emerge at its edges, each larger than Master
+Yuan and one focus layer softer. Push in only to the collarbone. End with a
+clean gold rim around his back fur.
+
+SHOT 2 — 00:04–00:10 — PALACE AND COLOSSUS TABLEAU
+Wide low-angle lens from above the left roofline. A near eave and roof beast
+fill the lower-left foreground and are soft; the summit hall and tiny Master
+Yuan occupy the middle layer; the six colossi fill the distant layer. The near
+eave must slide out of frame as the camera rises and moves right, creating
+clear parallax.
+
+Keep Master Yuan visible on the ridge. The great ape rises behind the hall with
+its chest and head above the roof, larger than every tower; snowy peaks reach
+only its chest. Keep its face clear of foreground cloud and place a brighter
+cloud bank behind its silhouette. Arrange the five others at decreasing size
+and contrast with distance, while keeping all six identifiable.
+
+During the rise, give each colossus one different readable action without
+leaving its position: the red-eyed one raises a fist and leans forward; the
+black-orb one carries its orb from abdomen to shoulder; the small one crouches
+and peers over a roof; the long-limbed one opens both arms; the draped one
+clenches both fists and folds forward; the great ape slowly lowers its chin.
+Every face and action remains aimed at the foot of the stairs. End by shifting
+focus from Master Yuan to the great ape as both gold eyes open.
+
+SHOT 3 — 00:10–00:15 — SENTENCE AND COMMAND
+Low medium close-up from Master Yuan's right front. His face is the sharp middle
+layer; the staff head is a soft near foreground only at the end; far behind,
+the great ape is paler and shows only chest, underside of jaw and gold eyes.
+Arc from his right front to straight on. The distant jaw moves across frame
+more slowly than Master Yuan, proving depth.
+
+Master Yuan holds his head and staff motionless and says in Mandarin:
+“可惜，有人买你的命。”
+After a half-beat he whips the staff from his shoulder toward camera and says:
+“杀了他。”
+The black staff head stops near lens as a controlled soft silhouette while his
+face stays sharp behind it. Do not let the dialogue, head turn and staff strike
+compete in the same beat.
+
+SHOT 4 — 00:15–00:20 — GIANT PALM TAKEOVER
+Camera almost touches the bottom stair, looking up the stair axis. Snowy steps
+and rails form the soft foreground, the summit hall and Master Yuan's tiny
+silhouette sit in the middle, and the great ape is sharp behind the roof. The
+other five colossi remain in their established positions and lean toward the
+same target.
+
+The great ape alone attacks. It raises one hand over the hall and presses its
+open palm down the stair toward camera. The palm first becomes wider than the
+hall, then fills the upper half of frame; light filaments follow each finger,
+sparks fall from the fingertips, and pressure lifts warm-lit snow toward lens.
+The camera retreats close to the ground while tilting up. Near rails slide in
+from both edges. As the palm reaches the middle stair, roll into a slight Dutch
+angle. At 19 seconds the palm reaches lens: palm lines and light filaments fill
+the entire image, impact shakes the camera once, then the image falls to pure
+black for the final half-second.
+
+AUDIO AND FAILURE CONTROL
+Use @Audio1 only for Master Yuan's three Mandarin lines, with exact lip timing.
+Keep storm wind, low thunder, staff hum, roof-level snow hiss, one staff whoosh
+and a deep pressure impact. No other voice, chant, music, subtitle, caption,
+logo or watermark.
+
+No human feet on energy bodies, cloud cap across the great ape's face, missing
+small colossus, identical group motion, cross-shot position reset, hard shadow
+from a luminous palm, extra attack, partial end-frame cover or bright frame
+after the blackout.
+```
+
+**What was verified:** the creator's accepted result preserved the four-shot
+order with measured cuts near 4.2, 10.0 and 14.7 seconds; the visible colossi
+largely shared one downward gaze and changed poses independently; the final
+great-ape palm expanded past the palace, produced warm interaction light and
+reached a pure-black final half-second. The audit also records misses instead
+of hiding them: the smallest colossus disappeared, the villain rendered much
+smaller than requested, one roof diagonal stayed level, the relative colossus
+scale drifted and some light-thread beats did not appear. The rewritten prompt
+therefore makes input ownership, shared gaze, per-shot world projection,
+single-attacker routing and the full-frame terminal state explicit.
+
+Adapted and rewritten from Wanrd0Geri's September 24, 2026
+[Seedance 2.5 production commit](https://github.com/Wanrd0Geri/aigc-video/commit/27c0d2ef215e66ba59fdf43727adcb7910ca2005)
+and [complete M005 prompt plus frame-by-frame result audit](https://github.com/Wanrd0Geri/aigc-video/blob/27c0d2ef215e66ba59fdf43727adcb7910ca2005/references/cases/my-cases.md).
+
 ## Reusable templates
 
 ### Host-restart-safe NLE generation and master/preview/audio ownership gate
@@ -44012,6 +44158,7 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 ## Sources
 
+- [Wanrd0Geri / aigc-video — September 24, 2026 JiMeng Seedance 2.5 four-shot fantasy production case: eight image references plus one voice, creator-accepted 20-second result, measured cut points, per-second frame audit, shared-gaze staging, colossus scale controls and full-frame palm blackout](https://github.com/Wanrd0Geri/aigc-video/commit/27c0d2ef215e66ba59fdf43727adcb7910ca2005) ([complete M005 prompt and result audit](https://github.com/Wanrd0Geri/aigc-video/blob/27c0d2ef215e66ba59fdf43727adcb7910ca2005/references/cases/my-cases.md), [versioned Seedance 2.5 skill contract](https://github.com/Wanrd0Geri/aigc-video/blob/27c0d2ef215e66ba59fdf43727adcb7910ca2005/SKILL.md), [evidence rules and tested lessons](https://github.com/Wanrd0Geri/aigc-video/blob/27c0d2ef215e66ba59fdf43727adcb7910ca2005/references/lessons/seedance-2.5.md))
 - [Ecinaro / Brainlab Estate Cinematic — September 24, 2026 Higgsfield Seedance 2.5 (`seedance_2_5`, `omni_reference`) six-scene real-estate route: property-photo geometry authority, identity-board style isolation, estimated-view disclosure, positional 3×3 panel calls, pre-video color correction, non-literal board rendering and measured timing drift](https://github.com/ecinaro/brainlab-estate-cinematic/commit/29ca0c0abdd50897758e23e660a8bbaed8071036) ([complete video template](https://github.com/ecinaro/brainlab-estate-cinematic/blob/29ca0c0abdd50897758e23e660a8bbaed8071036/references/video-prompt-template.md), [exact request contract](https://github.com/ecinaro/brainlab-estate-cinematic/blob/29ca0c0abdd50897758e23e660a8bbaed8071036/references/higgsfield-pipeline.md), [run and failure log](https://github.com/ecinaro/brainlab-estate-cinematic/blob/29ca0c0abdd50897758e23e660a8bbaed8071036/references/lessons.md))
 
 - [OpenStory — September 24, 2026 Ark Seedance 2.5 (`dreamina-seedance-2-5-260628`) Draft-first production release: Ark-only route refusal before credit hold, no cross-model fallback after a content rejection, input-audio-specific recovery, immutable final-from-Draft request and one hold/workflow per draft attempt](https://github.com/openstory-so/openstory/commit/dc3644503282ec63ee8def3a70feb0db8a3e450e) ([exact final request](https://github.com/openstory-so/openstory/blob/dc3644503282ec63ee8def3a70feb0db8a3e450e/src/models/server/byteplus-final-render.ts), [idempotent promotion gate](https://github.com/openstory-so/openstory/blob/dc3644503282ec63ee8def3a70feb0db8a3e450e/src/motion/server/render-at-quality.ts), [Ark lifecycle contract](https://github.com/openstory-so/openstory/blob/dc3644503282ec63ee8def3a70feb0db8a3e450e/docs/architecture/byteplus-ark.md))
