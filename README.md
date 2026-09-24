@@ -39154,6 +39154,14 @@ shape. The published correction includes the exact live-schema snapshot and
 end-to-end request regressions. It does not publish the task ID or generated
 master, so this counts as a reusable template rather than a complete scenario.
 
+The project-to-provider propagation gate below is also verified against
+HiAgent Seedance 2.0 (configured model ID `d7jf6nd5boeaebtfbdqg`). A September
+24 production correction preserves an immutable enqueue-time aspect snapshot,
+removes the compiler's silent `9:16` rewrite and proves the final Seedance
+payload priority with regression tests. Those tests stub the network, so this
+additional source verifies request construction and recovery semantics, not
+returned visual quality.
+
 Use this when Seedance receives images or videos that describe identity, style
 or motion without defining frame zero. Classify every visual input by role
 before deciding which object owns the output shape; a reference's dimensions
@@ -39208,6 +39216,31 @@ If an OPENING FRAME or EXTENSION SOURCE owns the canvas:
 If opening and closing frames disagree in shape, fail before submission. Do not
 ask Seedance to repair the mismatch inside a paid generation.
 
+PROJECT-TO-PROVIDER PROPAGATION
+Resolve the delivery aspect once when the task is enqueued and write it into
+immutable version metadata. Project-setting changes after enqueue must not
+retarget an existing paid or recoverable task.
+
+Require the explicit snapshot at every deterministic stage that can rewrite the
+prompt: normalization, argument splitting, sanitization, source-text cleanup and
+provider serialization. New-task functions have no standing aspect default;
+missing or unsupported values fail before submission. Test the historical bug
+directly: a `16:9` input must still end in `--ratio 16:9` and a top-level
+`ratio = 16:9` after every compiler pass.
+
+At the final Seedance adapter use this precedence:
+1. immutable enqueue/call metadata;
+2. a validated trailing prompt ratio only for compatible paths that lack the
+   structured field;
+3. a documented legacy default only for already-queued records created before
+   aspect snapshots existed.
+
+Never let the legacy branch become a default for new work. Before changing a
+project's aspect, produce a read-only impact report for adopted videos and
+prepared scene assets. Report unknown dimensions as unknown, not as a guessed
+match, and regenerate only the assets whose recorded authority conflicts with
+the target canvas.
+
 REFERENCE PROMPT
 Use @Image1 only for [IDENTITY / WARDROBE / PRODUCT / STYLE]. Its crop and
 dimensions do not define the output canvas. Compose the result natively at
@@ -39241,12 +39274,20 @@ Reference arrays can guide what appears and how it moves while an explicit
 request controls where it is composed; frame and extension inputs instead own
 the geometry being continued. This prevents two opposite failures: silently
 letting `auto` choose an unrelated shape for guidance-only jobs, and stamping a
-global ratio onto a true frame continuation.
+global ratio onto a true frame continuation. Snapshotting the chosen canvas and
+requiring it through every compiler boundary also prevents a third failure:
+correct project intent being silently rewritten before the paid request.
 
 Adapted and rewritten from Atelier's September 23, 2026
 [Seedance 2.5 reference-aspect production correction](https://github.com/wiztools/atelier/commit/28c19fefd22a9f057940ac280fb0938f27406fed),
 the [failed-run dimensions and end-to-end request regressions](https://github.com/wiztools/atelier/blob/28c19fefd22a9f057940ac280fb0938f27406fed/video_aspect_ratio_test.go)
 and the [versioned fal endpoint schema](https://github.com/wiztools/atelier/blob/28c19fefd22a9f057940ac280fb0938f27406fed/testdata/fal-schemas/seedance-2.5-reference-to-video.json).
+The project-to-provider propagation and legacy-recovery extension is adapted
+from MJAgent2's September 24, 2026
+[Seedance 2.0 aspect-ratio correction](https://github.com/GYZ001/MJAgent2/commit/e266e256e84132238f3bc1c5f3f94cca70e037fe),
+the [compiler contract](https://github.com/GYZ001/MJAgent2/blob/e266e256e84132238f3bc1c5f3f94cca70e037fe/app/compiler.py),
+the [final Seedance request adapter](https://github.com/GYZ001/MJAgent2/blob/e266e256e84132238f3bc1c5f3f94cca70e037fe/app/seedance.py),
+and the [enqueue-snapshot and impact regressions](https://github.com/GYZ001/MJAgent2/blob/e266e256e84132238f3bc1c5f3f94cca70e037fe/tests/test_aspect_ratio_generation_snapshot.py).
 
 
 ### Six-reference two-performer cast-swap and source-audio restoration gate
@@ -43686,6 +43727,8 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 
 ## Sources
+
+- [GYZ001 / MJAgent2 — September 24, 2026 HiAgent Seedance 2.0 (`d7jf6nd5boeaebtfbdqg`) project-to-provider aspect repair: immutable enqueue snapshot, explicit compiler propagation, final-payload precedence, legacy-task compatibility and read-only migration impact](https://github.com/GYZ001/MJAgent2/commit/e266e256e84132238f3bc1c5f3f94cca70e037fe) ([compiler contract](https://github.com/GYZ001/MJAgent2/blob/e266e256e84132238f3bc1c5f3f94cca70e037fe/app/compiler.py), [Seedance adapter](https://github.com/GYZ001/MJAgent2/blob/e266e256e84132238f3bc1c5f3f94cca70e037fe/app/seedance.py), [request-priority tests](https://github.com/GYZ001/MJAgent2/blob/e266e256e84132238f3bc1c5f3f94cca70e037fe/tests/test_aspect_ratio_generation.py), [snapshot and impact tests](https://github.com/GYZ001/MJAgent2/blob/e266e256e84132238f3bc1c5f3f94cca70e037fe/tests/test_aspect_ratio_generation_snapshot.py))
 
 - [BecreativeLTD / PURIST — September 24, 2026 Higgsfield ByteDance Seedance 2.5 (`bytedance/seedance-2.5/{text,image}-to-video`) schema-derived catalogue and request path: dated official JSON schemas, endpoint-specific controls/defaults/required fields, outgoing-field allowlist and pre-debit pending-job reuse](https://github.com/BecreativeLTD/Purist/commit/a38f4b670816ca172fb8facca48a6dfb1af5e14e) ([schema snapshot](https://github.com/BecreativeLTD/Purist/blob/a38f4b670816ca172fb8facca48a6dfb1af5e14e/src/data/higgsfield-schemas.json), [catalogue compiler](https://github.com/BecreativeLTD/Purist/blob/a38f4b670816ca172fb8facca48a6dfb1af5e14e/src/data/studio-catalog.ts), [request and duplicate-submit gate](https://github.com/BecreativeLTD/Purist/blob/a38f4b670816ca172fb8facca48a6dfb1af5e14e/src/pages/api/studio/generate.ts))
 
