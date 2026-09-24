@@ -25453,10 +25453,13 @@ Adapted and rewritten from Joy Purdy's September 23, 2026
 
 ### Host-restart-safe NLE generation and master/preview/audio ownership gate
 
-**Verified model:** Comfy Router Seedance 2.5
+**Verified models:** Comfy Router Seedance 2.5
 (`byteplus/dreamina-seedance-2-5-260628`; the original OpenFX implementation
 pins this exact Router ID and exposes text, first-frame, first/last-frame and
-reference-image modes)
+reference-image modes), plus Higgsfield ByteDance Seedance 2.5
+(`bytedance/seedance-2.5/text-to-video` and
+`bytedance/seedance-2.5/image-to-video`; the production catalogue and outgoing
+payload are derived from the versioned official endpoint schemas)
 **Use case:** generate or continue a Seedance shot from inside a nonlinear
 editor without losing a paid task when the network drops or the host closes,
 and without mistaking a viewer proxy for the downloadable master or its audio
@@ -25494,10 +25497,34 @@ the long edge is at most 2048 px and a Seedance input is raised to at least
 300 px. Do not silently pass a timeline frame as both a boundary and a style
 reference.
 
+SCHEMA-BOUND REQUEST
+Archive the exact endpoint schema, route ID, retrieval time and hash before
+exposing controls. Derive selectable ratios, resolutions, durations, defaults,
+required fields, reference key and reference count from that snapshot. Build
+the outgoing payload from the same property allowlist:
+- an unknown field is rejected locally, especially when the schema declares
+  additionalProperties = false;
+- a required field missing after compilation stops before debit or submission;
+- a visible UI value that is absent from the pinned schema is never serialized;
+- a schema or route change invalidates the compiled request and triggers the
+  request-structure regression suite.
+Do not combine controls from a marketing page, another provider leg or another
+Seedance version merely because their labels look alike.
+
 ONE CREATE, IMMEDIATE LINEAGE
+When the provider exposes no idempotency key, first compute an INTENT
+FINGERPRINT over [ACCOUNT], [EXACT MODEL], [PROVIDER LEG], [MODE], [COMPLETE
+PROMPT], [ORDERED REFERENCE IDS/HASHES] and every effective control. Atomically
+reserve one pending local job under that fingerprint before debit and create.
+Within a short, documented double-click/retry window, an identical request
+returns the same pending local job rather than buying another render. The same
+prompt with a different reference, order, mode or control must produce a
+different fingerprint and must never be coalesced.
+
 Submit through the queued route. As soon as acceptance returns a request ID,
 atomically write a pending record containing:
-[LOCAL EFFECT ID], [REQUEST ID], [MODEL], [PROVIDER], [MODE], [PROMPT],
+[LOCAL EFFECT ID], [INTENT FINGERPRINT], [REQUEST ID], [MODEL], [PROVIDER],
+[MODE], [PROMPT], [ORDERED INPUT MANIFEST], [EFFECTIVE CONTROLS],
 [CREATED TIME] and [OUTPUT FOLDER].
 
 The pending record must exist before the first status wait. A dropped
@@ -25505,7 +25532,9 @@ connection, editor quit or machine sleep after acceptance is a poll/collect
 recovery, never permission for a second paid create. Reopen the project, load
 the same pending request ID and continue collection. Use the same stable local
 job key for any transport-level idempotency header; do not expect an
-idempotency key to replay a completed synchronous response.
+idempotency key to replay a completed synchronous response. If create outcome
+is uncertain and no request ID was observed, keep the intent lease unresolved
+and reconcile provider history or billing before authorizing another create.
 
 TERMINAL HANDOFF
 On completion, download the returned provider media immediately and write it
@@ -25546,6 +25575,10 @@ COLOR AND PROVIDER GATES
 
 ACCEPTANCE
 - a host restart resumes one accepted request and creates no replacement;
+- a rapid duplicate submit returns the same local job, while changed references
+  or controls cannot collide merely because their prompt text matches;
+- every sent field, default and required value is traceable to the exact
+  endpoint-schema snapshot used by the UI;
 - the saved master downloads and decodes independently of the viewer cache;
 - the request/model/prompt lineage can reproduce the paid submission record;
 - preview failure cannot delete or overwrite a valid master;
@@ -25563,11 +25596,17 @@ discarding native audio or the only paid artifact. The colour and
 dropped-parameter gates also stop a convenient in-editor preview from being
 treated as proof of finishing-path fidelity.
 
-**Evidence boundary:** the newly published implementation contains the exact
-model ID, request builder, atomic pending-record recovery, host-reopen path,
-master download, preview decode and audio/colour limitations, but no public
-provider task ID or generated master. It therefore validates one reusable
-technique only and is not counted as a complete scenario.
+**Evidence boundary:** the OpenFX implementation contains its exact model ID,
+request builder, atomic pending-record recovery, host-reopen path, master
+download, preview decode and audio/colour limitations. The newer Higgsfield
+implementation contains the exact 2.5 endpoint IDs, a dated copy of the
+official JSON schemas, schema-derived controls and field allowlisting, required-
+field enforcement, and a pre-debit fifteen-second pending-job reuse gate. It
+does not publish a provider task ID or generated master, and its implementation
+matches duplicates by account, model and prompt rather than the stricter full
+intent fingerprint specified above. The combined evidence therefore strengthens
+this one reusable technique only and is not counted as a complete scenario or
+a second template.
 
 **Source:** Purz's September 23, 2026
 [Comfy Router OpenFX production commit](https://github.com/purzbeats/comfy-router-ofx/commit/2e0cecd47ebc006dc70b3e1ae675579eb2292811),
@@ -25576,7 +25615,14 @@ including the
 [atomic pending-job and terminal-media handoff](https://github.com/purzbeats/comfy-router-ofx/blob/2e0cecd47ebc006dc70b3e1ae675579eb2292811/src/Jobs.cpp),
 [queued Router request implementation](https://github.com/purzbeats/comfy-router-ofx/blob/2e0cecd47ebc006dc70b3e1ae675579eb2292811/src/RouterClient.cpp)
 and the
-[CLI recovery harness](https://github.com/purzbeats/comfy-router-ofx/blob/2e0cecd47ebc006dc70b3e1ae675579eb2292811/tools/router_cli.cpp).
+[CLI recovery harness](https://github.com/purzbeats/comfy-router-ofx/blob/2e0cecd47ebc006dc70b3e1ae675579eb2292811/tools/router_cli.cpp). The schema and
+pre-submit gates are adapted from BecreativeLTD / PURIST's September 24, 2026
+[schema-driven Higgsfield catalogue commit](https://github.com/BecreativeLTD/Purist/commit/a38f4b670816ca172fb8facca48a6dfb1af5e14e),
+including the
+[versioned official endpoint schemas](https://github.com/BecreativeLTD/Purist/blob/a38f4b670816ca172fb8facca48a6dfb1af5e14e/src/data/higgsfield-schemas.json),
+[schema-to-catalog compiler](https://github.com/BecreativeLTD/Purist/blob/a38f4b670816ca172fb8facca48a6dfb1af5e14e/src/data/studio-catalog.ts)
+and
+[allowlisted request plus pending-job reuse gate](https://github.com/BecreativeLTD/Purist/blob/a38f4b670816ca172fb8facca48a6dfb1af5e14e/src/pages/api/studio/generate.ts).
 
 ### Product-page truth to schema-locked shopping-short handoff
 
@@ -43640,6 +43686,8 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 
 ## Sources
+
+- [BecreativeLTD / PURIST — September 24, 2026 Higgsfield ByteDance Seedance 2.5 (`bytedance/seedance-2.5/{text,image}-to-video`) schema-derived catalogue and request path: dated official JSON schemas, endpoint-specific controls/defaults/required fields, outgoing-field allowlist and pre-debit pending-job reuse](https://github.com/BecreativeLTD/Purist/commit/a38f4b670816ca172fb8facca48a6dfb1af5e14e) ([schema snapshot](https://github.com/BecreativeLTD/Purist/blob/a38f4b670816ca172fb8facca48a6dfb1af5e14e/src/data/higgsfield-schemas.json), [catalogue compiler](https://github.com/BecreativeLTD/Purist/blob/a38f4b670816ca172fb8facca48a6dfb1af5e14e/src/data/studio-catalog.ts), [request and duplicate-submit gate](https://github.com/BecreativeLTD/Purist/blob/a38f4b670816ca172fb8facca48a6dfb1af5e14e/src/pages/api/studio/generate.ts))
 
 - [Purz — September 23, 2026 Comfy Router Seedance 2.5 (`byteplus/dreamina-seedance-2-5-260628`) OpenFX production path: editor-frame roles, immediate queued-request checkpoint, host-restart collection, atomic master preservation, preview/audio separation, colour boundary and provider-drop visibility](https://github.com/purzbeats/comfy-router-ofx/commit/2e0cecd47ebc006dc70b3e1ae675579eb2292811) ([model and host contract](https://github.com/purzbeats/comfy-router-ofx/blob/2e0cecd47ebc006dc70b3e1ae675579eb2292811/README.md), [job persistence and media handoff](https://github.com/purzbeats/comfy-router-ofx/blob/2e0cecd47ebc006dc70b3e1ae675579eb2292811/src/Jobs.cpp), [queued Router client](https://github.com/purzbeats/comfy-router-ofx/blob/2e0cecd47ebc006dc70b3e1ae675579eb2292811/src/RouterClient.cpp), [recovery harness](https://github.com/purzbeats/comfy-router-ofx/blob/2e0cecd47ebc006dc70b3e1ae675579eb2292811/tools/router_cli.cpp))
 
