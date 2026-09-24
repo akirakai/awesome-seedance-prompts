@@ -43634,6 +43634,34 @@ from `created_at`. Persist the provider's returned or documented boundary and
 never transpose one channel's window onto another. A draft that expires while
 queued can fail, so do not submit at the last moment.
 
+ROUTE, REJECTION AND RETRY OWNERSHIP
+Resolve the exact model and actual provider route before reserving credits.
+Draft is valid only when the request resolves to Seedance 2.5 on Ark. If the
+same catalog key would route to fal, the selected model has been retired, or
+the route cannot prove Draft support, refuse before the hold; do not silently
+render a full-resolution clip that the operator believed was a cheap preview.
+
+A content-filtered Draft remains a Seedance rejection. Do not fall back to
+Grok or another model: that would create an unrelated sample whose 480p label,
+price and future promotion path are false. The operator must explicitly choose
+another model, which starts a new lineage. When Ark names
+InputAudioSensitiveContentDetected, do not soften the visual prompt or reseed;
+replace the rejected recording, request another approved reading, or revise the
+dialogue itself.
+
+IDEMPOTENT FINAL ATTEMPT
+Create one attempt key from [APPROVED DRAFT VERSION ID + ATTEMPT INDEX]. Use
+that exact key for both the credit reservation and workflow trigger, and make
+the claim atomic. Double-clicks, two browser tabs, and simultaneous shot/batch
+controls must resolve to one hold and one final job.
+
+Before the hold, reject an unfinished or expired Draft, a retired model key, a
+Draft with no task ID, or one whose segment already has a generating sibling.
+Keep the final task ID in a final-version field; never stamp it back into the
+Draft slot. A content refusal during promotion is terminal for that attempt:
+do not swap models, create a fresh full render, or resubmit outside the same
+idempotent recovery path.
+
 IMMUTABLE PROMOTION
 Choose exactly one provider contract.
 
@@ -43710,6 +43738,18 @@ including the exact `dreamina-seedance-2-5-260628`
 [capability record](https://github.com/amazingindianstories-stack/AIStudio/blob/a94b002bb7ec381fa3953ab70ca258ac8f1a3ec2/src/lib/model-registry.js),
 [version-gated request builder](https://github.com/amazingindianstories-stack/AIStudio/blob/a94b002bb7ec381fa3953ab70ca258ac8f1a3ec2/src/lib/providers/seedance.js)
 and [2.0/2.5 request-shape regressions](https://github.com/amazingindianstories-stack/AIStudio/blob/a94b002bb7ec381fa3953ab70ca258ac8f1a3ec2/src/lib/providers/seedance.test.js).
+
+
+The provider-route refusal, no-cross-model Draft fallback, input-audio
+diagnosis and shared hold/workflow idempotency key are adapted from OpenStory's
+September 24, 2026 [Seedance 2.5 Draft-first production
+release](https://github.com/openstory-so/openstory/commit/dc3644503282ec63ee8def3a70feb0db8a3e450e),
+its [exact final-from-Draft request](https://github.com/openstory-so/openstory/blob/dc3644503282ec63ee8def3a70feb0db8a3e450e/src/models/server/byteplus-final-render.ts),
+[one-hold/one-workflow promotion gate](https://github.com/openstory-so/openstory/blob/dc3644503282ec63ee8def3a70feb0db8a3e450e/src/motion/server/render-at-quality.ts)
+and [Ark lifecycle contract](https://github.com/openstory-so/openstory/blob/dc3644503282ec63ee8def3a70feb0db8a3e450e/docs/architecture/byteplus-ark.md).
+That release publishes implementation and regression evidence rather than a
+new public task/output pair, so it strengthens this template without adding a
+complete scenario.
 
 
 ### Capability-declared local-media promotion for URL-only roles
@@ -43902,6 +43942,8 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 
 ## Sources
+
+- [OpenStory — September 24, 2026 Ark Seedance 2.5 (`dreamina-seedance-2-5-260628`) Draft-first production release: Ark-only route refusal before credit hold, no cross-model fallback after a content rejection, input-audio-specific recovery, immutable final-from-Draft request and one hold/workflow per draft attempt](https://github.com/openstory-so/openstory/commit/dc3644503282ec63ee8def3a70feb0db8a3e450e) ([exact final request](https://github.com/openstory-so/openstory/blob/dc3644503282ec63ee8def3a70feb0db8a3e450e/src/models/server/byteplus-final-render.ts), [idempotent promotion gate](https://github.com/openstory-so/openstory/blob/dc3644503282ec63ee8def3a70feb0db8a3e450e/src/motion/server/render-at-quality.ts), [Ark lifecycle contract](https://github.com/openstory-so/openstory/blob/dc3644503282ec63ee8def3a70feb0db8a3e450e/docs/architecture/byteplus-ark.md))
 
 - [Naive / media-blueprint — September 24, 2026 Seedance 2.5 (`bytedance/seedance-2.5`) long-form route qualification and resumable assembly release: eight paid working-duration probes through 30 seconds, rejected 59/60-second requests, shot-boundary packing, persistent segment checkpoints, per-part ffprobe and ffmpeg concat assembly](https://github.com/usenaive/media-blueprint/commit/8ae84f7359c2c8b0d966dfeeaf7fd4fbb65ae062) ([complete writer/producer prompts](https://github.com/usenaive/media-blueprint/blob/8ae84f7359c2c8b0d966dfeeaf7fd4fbb65ae062/templates/longform.ts), [measured-cap compiler](https://github.com/usenaive/media-blueprint/blob/8ae84f7359c2c8b0d966dfeeaf7fd4fbb65ae062/templates/template.ts), [assembly contract](https://github.com/usenaive/media-blueprint/blob/8ae84f7359c2c8b0d966dfeeaf7fd4fbb65ae062/docs/how-it-works.md#longform))
 
