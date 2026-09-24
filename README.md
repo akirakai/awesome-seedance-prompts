@@ -35960,70 +35960,106 @@ and the
 
 ### Provider-response media-type authentication and quarantine gate
 
-**Verified model:** Seedance 2.0 (`seedance_2_0`) — the original developer
+**Verified models:** Seedance 2.0 (`seedance_2_0`) — the original developer
 generated scene 99 through the exact Higgsfield job type, then used `ffprobe`
 to establish that the saved `.mp4` was actually a 1792×1024 PNG returned
-alongside the real video candidates
+alongside the real video candidates; plus GenVideo Seedance 2.5
+(`p-sceneflow-genvideo-2-5` / `seedance2.5`) — a live five-second request
+completed once, produced an extensionless `outputUrl`, downloaded successfully
+and probed as a 5.05-second 1280×720 video
 
 Use this after any successful Seedance task whose response may contain the input
-frame, poster image, thumbnail and generated video together. Treat the result
-object as untrusted routing data: identify a likely video before download, then
-authenticate the bytes before attaching the asset to a scene or marking the job
-complete.
+frame, poster image, thumbnail and generated video together, or whose terminal
+video URL has no filename extension. Treat both the status route and result
+object as untrusted routing data: poll the accepted task through the provider's
+declared status path, identify the semantically strongest video candidate, then
+authenticate its bytes before attaching the asset or marking delivery complete.
 
 ```text
-SUBMISSION RECORD
-Exact model = Seedance 2.0
-Record job ID, submitted prompt, input-frame IDs and the raw provider response.
-Do not discard the response merely because the provider reports success.
+SUBMISSION RECEIPT
+Record:
+- exact public model, provider model ID and provider route;
+- create endpoint and versioned status-path template;
+- accepted task ID, submitted prompt, controls and input manifest;
+- raw create response, every status response and any charge fields.
+Do not discard a response merely because the provider reports success.
+
+STATUS-ROUTE GATE
+Resolve the polling URL from the pinned provider configuration before create.
+If the provider declares /v1/tasks/{id}, use exactly that template. Do not
+assume status lives at [CREATE ENDPOINT]/{id}; create and status paths may be
+different resources.
+
+After acceptance, poll only the recorded task ID. If the status-path mapping is
+missing or wrong, repair that transport mapping and resume the same task. Never
+buy a replacement generation merely because the client polled the wrong URL.
+Archive the terminal response before selecting any media.
 
 CANDIDATE ROUTING
-Walk every returned field without assuming that the first key containing "url"
-is the generated video.
-1. Strong candidates: URLs whose path ends in .mp4, .mov, .m4v or .webm after
-   removing query and fragment components.
+Inspect semantically explicit terminal fields first:
+outputUrl, output_url, video_url, videoUrl, file_url and download_url.
+A valid HTTP(S) value in one of these fields is a video candidate even when its
+path has no .mp4 suffix. Preserve the complete signed URL and query string;
+mime_type=video_mp4 in a query is supporting routing evidence, not byte proof.
+
+Then walk the remaining returned fields without assuming that the first key
+containing "url" is the generated video:
+1. Strong candidates: paths ending in .mp4, .mov, .m4v or .webm after removing
+   query and fragment components.
 2. Reject known image paths: .png, .jpg, .jpeg, .webp, .gif or .avif, even when
    their field name contains "url".
-3. Weak fallback: an extensionless URL only when its field name or path states
-   that it is video.
-Preserve the full selected URL, including its signed query string.
-If no candidate survives, fail visibly with "no video result"; never substitute
-the submitted first frame or a preview image.
+3. Weak fallback: another extensionless URL only when its field name or path
+   explicitly states that it is video.
+If no candidate survives, record "terminal task, no video result". Do not
+substitute the submitted frame, poster or thumbnail.
 
 BYTE-LEVEL ACCEPTANCE
-Download the candidate to a temporary path.
+Download the selected candidate to a temporary path.
 Accept ISO-BMFF video only when bytes 4–7 equal "ftyp".
 Accept WebM only when the first four bytes equal 1A 45 DF A3.
-Then probe the stream and record container, codec, width, height and duration.
-Do not trust the destination suffix or HTTP Content-Type by itself.
+Then probe and record container, codec, width, height, duration and audio state.
+Do not trust the destination suffix, explicit field name, query mime hint or
+HTTP Content-Type by itself.
 
 QUARANTINE AND STATE GATE
 If the signature or probe is not video:
-- move the bytes to [NAME].notvideo without deleting the evidence;
-- report the observed Content-Type and detected media kind;
+- move the bytes to [NAME].notvideo without deleting evidence;
+- report the selected response path, Content-Type and detected media kind;
 - leave the scene's video reference unset;
-- mark the generation/download step failed, even if the provider task said
-  completed.
-Only attach the asset and expose playback after both candidate routing and
-byte-level validation pass.
+- mark delivery failed even if generation itself completed.
+Only attach the asset and expose playback after routing and byte validation pass.
+
+CHARGE RECONCILIATION
+Link estimate, accepted task ID, provider charge record, stored artifact and
+account balance delta in one receipt. A live GenVideo check observed
+estimate 20, charge 20 and balance 59 -> 39 for the same task; this proves that
+one route's accounting closed, not that 20 is a universal Seedance price.
+Mark placeholder or provisional rate-table rows as such, and do not infer
+per-second pricing from a provider response that reports a per-task point value.
 
 RETRY RULE
-Retry selection from the untouched raw response, preferring the next strong
-video candidate. Do not spend credits on a new Seedance generation until all
-returned candidates have been classified.
+On a terminal task, first retry media selection from the untouched raw response,
+then repair status or content-path mapping, and re-collect the same task. Spend
+credits on a new generation only after every returned candidate is classified
+and task-history or billing reconciliation proves the original cannot be
+recovered.
 ```
 
-**Why it works:** a provider can complete generation correctly while a client
-chooses the wrong sibling URL. The measured failure looked valid in project
-state because a PNG carried an MP4 filename; separating URL classification from
-container authentication converts that silent false success into a recoverable
-transport error and preserves the paid generation for another selection pass.
+**Why it works:** generation, polling, result selection, byte authentication
+and billing are separate contracts. The Seedance 2.0 failure selected a PNG
+whose saved name looked like video; the Seedance 2.5 failure completed
+generation but polled the wrong route and later rejected a real TOS video
+because its `outputUrl` lacked `.mp4`. Keeping the accepted task immutable while
+repairing transport mapping recovered the paid artifact. The second live run
+then verified 5.05 seconds at 1280×720 and reconciled estimate, charge and
+balance delta without promoting its placeholder price into a general rule.
 
 **Sources:** semoji-ai's
-[live Seedance 2.0 failure diagnosis and fix](https://github.com/semoji-ai/auto_kairos/commit/40e0ce7c78cdf3d97c35f54d1c141e12b3e972d6)
-and the
-[versioned result-selection, signature-check and quarantine implementation](https://github.com/semoji-ai/auto_kairos/blob/40e0ce7c78cdf3d97c35f54d1c141e12b3e972d6/adobe/backend/video.py).
-
+[live Seedance 2.0 failure diagnosis and fix](https://github.com/semoji-ai/auto_kairos/commit/40e0ce7c78cdf3d97c35f54d1c141e12b3e972d6),
+the
+[versioned result-selection, signature-check and quarantine implementation](https://github.com/semoji-ai/auto_kairos/blob/40e0ce7c78cdf3d97c35f54d1c141e12b3e972d6/adobe/backend/video.py),
+and king5012996533's
+[live GenVideo Seedance 2.5 delivery and billing repair](https://github.com/king5012996533/solid-funicular/commit/4f6da5c3a8f6c46bff25a6354f64c74c6b11d53b).
 
 ### Profile locomotion source and cycle-recovery contract
 
@@ -44158,6 +44194,7 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 ## Sources
 
+- [king5012996533 / solid-funicular — September 25, 2026 GenVideo Seedance 2.5 (`p-sceneflow-genvideo-2-5` / `seedance2.5`) live delivery repair: versioned status-path propagation, extensionless explicit `outputUrl` recovery, 5.05-second 1280×720 ffprobe validation and estimate/charge/balance reconciliation](https://github.com/king5012996533/solid-funicular/commit/4f6da5c3a8f6c46bff25a6354f64c74c6b11d53b)
 - [Wanrd0Geri / aigc-video — September 24, 2026 JiMeng Seedance 2.5 four-shot fantasy production case: eight image references plus one voice, creator-accepted 20-second result, measured cut points, per-second frame audit, shared-gaze staging, colossus scale controls and full-frame palm blackout](https://github.com/Wanrd0Geri/aigc-video/commit/27c0d2ef215e66ba59fdf43727adcb7910ca2005) ([complete M005 prompt and result audit](https://github.com/Wanrd0Geri/aigc-video/blob/27c0d2ef215e66ba59fdf43727adcb7910ca2005/references/cases/my-cases.md), [versioned Seedance 2.5 skill contract](https://github.com/Wanrd0Geri/aigc-video/blob/27c0d2ef215e66ba59fdf43727adcb7910ca2005/SKILL.md), [evidence rules and tested lessons](https://github.com/Wanrd0Geri/aigc-video/blob/27c0d2ef215e66ba59fdf43727adcb7910ca2005/references/lessons/seedance-2.5.md))
 - [Ecinaro / Brainlab Estate Cinematic — September 24, 2026 Higgsfield Seedance 2.5 (`seedance_2_5`, `omni_reference`) six-scene real-estate route: property-photo geometry authority, identity-board style isolation, estimated-view disclosure, positional 3×3 panel calls, pre-video color correction, non-literal board rendering and measured timing drift](https://github.com/ecinaro/brainlab-estate-cinematic/commit/29ca0c0abdd50897758e23e660a8bbaed8071036) ([complete video template](https://github.com/ecinaro/brainlab-estate-cinematic/blob/29ca0c0abdd50897758e23e660a8bbaed8071036/references/video-prompt-template.md), [exact request contract](https://github.com/ecinaro/brainlab-estate-cinematic/blob/29ca0c0abdd50897758e23e660a8bbaed8071036/references/higgsfield-pipeline.md), [run and failure log](https://github.com/ecinaro/brainlab-estate-cinematic/blob/29ca0c0abdd50897758e23e660a8bbaed8071036/references/lessons.md))
 
