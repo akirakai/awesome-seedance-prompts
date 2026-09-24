@@ -43084,6 +43084,13 @@ for Fast, both 5.041992 seconds, 24 fps and H.264/yuv420p. The task IDs and MP4s
 remain local rather than public, so this counts as one reusable failure-control
 template, not a complete scenario.
 
+The legacy-size normalization extension is verified against Dreamina Seedance
+2.0 (`dreamina-seedance-2-0`, R2V). Two real video requests carrying the
+cached PiAPI portrait size `736x1312` were rejected because a generic
+greatest-common-divisor reduction serialized `23:41`, which Ark does not
+accept. The published repair and tests verify request construction, not a
+corrected returned stream.
+
 **Use case:** several versions in one provider family share a name prefix but
 accept different resolution ceilings or pixel tables; an adapter must select
 the table from the exact model ID and verify the stream actually delivered  
@@ -43134,12 +43141,35 @@ Never let `startsWith("doubao-seedance")`, a marketing label such as
 a tier. Standard and Fast may share an aspect while requiring different pixel
 pairs.
 
+LEGACY PIXEL-SIZE NORMALIZATION
+When an upstream UI or cached project supplies a pixel pair rather than a
+provider ratio enum:
+1. preserve the raw width, height and originating preset in the request ledger;
+2. calculate the numeric aspect only for comparison;
+3. choose only from the exact route's accepted video vocabulary;
+4. snap to the nearest supported ratio only within a documented tolerance and
+   record the relative error;
+5. preserve an already-supported ratio label unchanged;
+6. treat blank or `auto` as an intentional omission only when the route allows
+   inference;
+7. when no supported ratio is close, omit only on an endpoint that safely owns
+   geometry; otherwise fail before billing.
+
+Never serialize the pixel pair's reduced fraction unless that literal value is
+in the route schema. Keep this video-only normalizer separate from image
+dimension logic: an image pipeline may legitimately need the exact `23:41`
+fraction while the Seedance video endpoint accepts only `16:9`, `9:16`,
+`1:1`, `4:3`, `3:4` and `21:9`.
+
 PRE-SUBMIT GATE
 Reject before billing when:
 - the model ID has no exact registry row;
 - Standard resolves to the Fast table or Fast resolves to the Standard table;
 - aspect has no pixel pair in the selected row;
 - both `size` and an unverified resolution field would be sent;
+- a raw pixel preset is reduced to a ratio outside the exact video enum;
+- a snapped ratio exceeds the declared tolerance or conflicts with a separate
+  explicit ratio;
 - the UI, estimator and serialized request disagree on model, tier or aspect;
 - a first/last-frame mode changes reference order while applying the size.
 
@@ -43162,15 +43192,20 @@ size.
 REGRESSION LOCK
 For every supported model row, assert the complete aspect-to-size map and the
 serialized request keys. Add negative tests for an unknown future suffix, a
-Mini route, a family-prefix collision and a Standard/Fast table swap. Promote a
-cell from configured to live-verified only after an original returned stream
-passes the conformance gate.
+Mini route, a family-prefix collision and a Standard/Fast table swap. Also pin
+one off-grid legacy preset, one already-supported label, `auto`, an empty
+value and an extreme aspect that must not snap. Assert that image requests keep
+their exact-ratio behavior while video requests never emit an unsupported
+fraction. Promote a cell from configured to live-verified only after an
+original returned stream passes the conformance gate.
 ```
 
 **Why it works:** a family-level branch can be syntactically valid while sending
-the wrong resolution contract to a neighbouring model. Exact-ID dispatch makes
-that collision observable before spend, and probing the untouched result closes
-the second gap between an accepted request and the pixels actually delivered.
+the wrong resolution contract to a neighbouring model, while a generic
+pixel-to-fraction helper can be mathematically exact and still violate the
+video endpoint's enum. Exact-ID dispatch and video-only ratio normalization
+make both failures observable before spend; probing the untouched result closes
+the separate gap between an accepted request and the pixels actually delivered.
 Separating live-verified cells from table-derived or regression-only cells also
 prevents one successful aspect from being overstated as proof of an entire
 resolution matrix.
@@ -43180,6 +43215,8 @@ Adapted and rewritten from shepherdleong-art / creative-studio's September 21,
 [two-task measurement record](https://github.com/shepherdleong-art/creative-studio/blob/05a86635f1100911d12a4da27b8aae9246bb665d/docs/2026-09-21-Seedance2%E6%A0%87%E5%87%86%E7%89%88%E4%B8%8EFast%E5%88%86%E8%BE%A8%E7%8E%87%E5%AE%9E%E6%B5%8B.md),
 [exact-version capability dispatch](https://github.com/shepherdleong-art/creative-studio/blob/05a86635f1100911d12a4da27b8aae9246bb665d/lib/company-gateway-size.ts)
 and the [serialized-request regressions](https://github.com/shepherdleong-art/creative-studio/blob/05a86635f1100911d12a4da27b8aae9246bb665d/scripts/openai-video-adapter.test.ts).
+The legacy-size extension is adapted from kizzymason / JTCANVAS's September 25,
+2026 [two-task Dreamina Seedance 2.0 ratio rejection and video-only enum-snapping repair](https://github.com/kizzymason/JTCANVAS/commit/f7037b3d02bc6227c4f0bc110cc84d4af5649f02).
 
 
 ### Mixed-model duration intersection and no-silent-clamp gate
@@ -44242,6 +44279,7 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 ## Sources
 
+- [kizzymason / JTCANVAS — September 25, 2026 Dreamina Seedance 2.0 (`dreamina-seedance-2-0`, R2V) request-geometry repair: two real `736x1312` tasks rejected after generic reduction to unsupported `23:41`, followed by video-only snapping to Ark's fixed ratio enum and negative regressions for auto, empty and extreme geometry](https://github.com/kizzymason/JTCANVAS/commit/f7037b3d02bc6227c4f0bc110cc84d4af5649f02)
 - [king5012996533 / solid-funicular — September 25, 2026 GenVideo Seedance 2.5 (`p-sceneflow-genvideo-2-5` / `seedance2.5`) versioned create-contract repair: explicit `mode=2.5`, `durationSeconds=30`, six-ratio and ordered-reference compilation, provider-fetch preflight, bounded polling, terminal refund tests, durable signed-URL storage and a live 30.04-second 1280×720 H.264/AAC result](https://github.com/king5012996533/solid-funicular/commit/4c69742b5f539cf6dea652dc394107324db0ea64)
 - [king5012996533 / solid-funicular — September 25, 2026 GenVideo Seedance 2.5 (`p-sceneflow-genvideo-2-5` / `seedance2.5`) live delivery repair: versioned status-path propagation, extensionless explicit `outputUrl` recovery, 5.05-second 1280×720 ffprobe validation and estimate/charge/balance reconciliation](https://github.com/king5012996533/solid-funicular/commit/4f6da5c3a8f6c46bff25a6354f64c74c6b11d53b)
 - [Wanrd0Geri / aigc-video — September 24, 2026 JiMeng Seedance 2.5 four-shot fantasy production case: eight image references plus one voice, creator-accepted 20-second result, measured cut points, per-second frame audit, shared-gaze staging, colossus scale controls and full-frame palm blackout](https://github.com/Wanrd0Geri/aigc-video/commit/27c0d2ef215e66ba59fdf43727adcb7910ca2005) ([complete M005 prompt and result audit](https://github.com/Wanrd0Geri/aigc-video/blob/27c0d2ef215e66ba59fdf43727adcb7910ca2005/references/cases/my-cases.md), [versioned Seedance 2.5 skill contract](https://github.com/Wanrd0Geri/aigc-video/blob/27c0d2ef215e66ba59fdf43727adcb7910ca2005/SKILL.md), [evidence rules and tested lessons](https://github.com/Wanrd0Geri/aigc-video/blob/27c0d2ef215e66ba59fdf43727adcb7910ca2005/references/lessons/seedance-2.5.md))
