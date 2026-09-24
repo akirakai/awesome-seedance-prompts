@@ -31353,6 +31353,14 @@ A — 2.5 reference:
   together within a 30-second combined bucket. Do not generalize that
   route-specific validator to other providers. A live 15-reference canary used
   9 images, 3 two-second videos, and 3 two-second audio clips in one request.
+- Provider override — fal `bytedance/seedance-2.5/reference-to-video` permits
+  up to 50 files total: at most 30 images, 10 videos, and 10 audio clips. Its
+  public Schema allows each video or audio file from 1.8 to 30.2 seconds and
+  caps combined video duration and combined audio duration separately at 30.2
+  seconds. Audio still requires at least one image or video. Keep 2–30 seconds
+  as the portable cross-provider contract; use fal's decimal tolerance only
+  when the exact fal endpoint is already bound, so normal encoder rounding is
+  accepted without advertising the tolerance as extra creative duration.
 
 B — 2.0 / 2.0 Fast / 2.0 Mini reference:
 - Up to 9 images, 3 videos, and 3 audio clips.
@@ -31368,6 +31376,21 @@ C — 2.5 edit or extend:
 - Accept exactly one source video, 4–30 seconds.
 - Reject reference images and audio for this route.
 - Use the source video's geometry and timing as the edit/extension authority.
+
+FAL 2.5 TASK AND ENCODE ROUTING
+- The exact reference endpoint exposes `task = reference | editing | extension`;
+  never infer the task only from prompt verbs.
+- For `editing`, let the provider coerce both `aspect_ratio` and `duration`
+  to `auto`. For `extension`, let it coerce `aspect_ratio` to `auto`.
+  Reject or remove contradictory explicit fields before paid submission.
+- On fal image-to-video, aspect ratio is always `auto` and follows the
+  authoritative image geometry; do not forward a project-level ratio.
+- `bitrate_mode = standard | high` and `codec = auto | H264 | H265` are
+  delivery-encode controls, not prose instructions. Freeze them in the task
+  fingerprint with model, task, prompt, references, duration and resolution.
+- This fal evidence is a live platform-Schema snapshot, not a generated-output
+  quality test. Record the chosen task and encode fields, then probe the
+  delivered streams before claiming codec, bitrate, audio or visual fidelity.
 
 D — 2.0-family edit intent:
 - Require the source video to be 4–30 seconds before buying a task.
@@ -31441,6 +31464,11 @@ from Aayush Hoichoi's [September 17 seven-run production report and merged fix](
 its [implementation commit](https://github.com/Aayush-hoichoi/Seedance2.0/commit/8c0a5c98e826a0eca1c38fdc47e9fd7589150339),
 [exact model registry](https://github.com/Aayush-hoichoi/Seedance2.0/blob/8c0a5c98e826a0eca1c38fdc47e9fd7589150339/lib/seedance/constants.js),
 and [constraint routing](https://github.com/Aayush-hoichoi/Seedance2.0/blob/8c0a5c98e826a0eca1c38fdc47e9fd7589150339/lib/seedance/constraints25.mjs).
+The fal-specific decimal tolerances, task coercions and encode fields come from
+Artificer's [September 24 catalog refresh](https://github.com/bthurlow/artificer-mcp/commit/4e10709630097d251fe967d9347120f56478cb81),
+which commits fal's versioned [Seedance 2.5 reference Schema](https://github.com/bthurlow/artificer-mcp/blob/4e10709630097d251fe967d9347120f56478cb81/src/catalog/fal-specs/seedance-2.5-ref/llms.md),
+[image-to-video Schema](https://github.com/bthurlow/artificer-mcp/blob/4e10709630097d251fe967d9347120f56478cb81/src/catalog/fal-specs/seedance-2.5-i2v/llms.md),
+and [text-to-video Schema](https://github.com/bthurlow/artificer-mcp/blob/4e10709630097d251fe967d9347120f56478cb81/src/catalog/fal-specs/seedance-2.5-t2v/llms.md).
 
 ### Single-shot template
 
