@@ -37160,6 +37160,11 @@ standard mode, high bitrate, audio off) — the original creator publishes the
 complete production route, reports its observed six-to-seven-beat adherence,
 and documents a shipped 44-second, seven-chapter scroll-scrub implementation
 
+**Additional verified route:** Higgsfield Seedance 2.5 (`seedance_2_5`,
+`omni_reference`, 15 seconds, 720p, 16:9) — the original creator records a
+six-scene property film made from one 3×3 board, with all six scenes in order
+and no grid frame rendered
+
 Use this when a landing-page hero will be explored by scrolling rather than
 watched linearly. Give Seedance a clean opening frame plus a compact 3×3 visual
 plan, but derive all interactive chapter boundaries from the returned video.
@@ -37183,6 +37188,27 @@ REFERENCE OWNERSHIP
 every beat.
 @Image2 owns only shot order, framing intent, action progression and visual
 rhythm. Never render its grid, gutters, number badges or all nine panels at once.
+
+PROPERTY-TRUTH PREPASS (REAL LISTINGS)
+Before @Image2 becomes an authorized video input, build it from two separately
+owned sources:
+- @PropertyPhoto is the sole authority for architecture, geometry, materials,
+  rooflines, balconies, doors and landscaping;
+- @IdentityBoard owns only camera language, light, atmosphere and color grade.
+Never import the identity board's building, objects or geometry into the listing.
+Symmetry is a framing choice, not permission to redesign an asymmetric property.
+Label every view unsupported by @PropertyPhoto as ESTIMATED, and withhold those
+views from a client-facing listing deliverable until approved.
+
+Reject the grid before a paid run if it changes the real building, transfers
+donor architecture, presents an estimated area as observed fact, or carries a
+color cast. Correct color on the board first because its grade propagates into
+the video. For the verified 15-second Seedance 2.5 route, call six panels by
+position (for example, top center or bottom right) and treat each 2.5-second
+allocation as an order-and-budget cue, not a frame-exact boundary; the creator
+observed some shots stretching to about three seconds. If the channel recommends
+an unrelated cinematic preset, explicitly decline it without changing the
+validated reference or prompt contract.
 
 TIMELINE
 [0.0–1.6s] Beat 1 — [VISIBLE HOOK ACTION] with [ONE CAMERA MOVE].
@@ -37242,6 +37268,12 @@ the committed
 [complete nine-panel and Seedance prompt suite](https://github.com/yasikvlad/stopscroll-hero/blob/48044439b7a433d14045371368b18d0b8a1c286e/references/prompts.md),
 and the
 [full generation, contact-sheet remapping and delivery method](https://github.com/yasikvlad/stopscroll-hero/blob/48044439b7a433d14045371368b18d0b8a1c286e/SKILL.md).
+
+**Additional Seedance 2.5 validation:** Ecinaro's September 24, 2026
+[real-estate production commit](https://github.com/ecinaro/brainlab-estate-cinematic/commit/29ca0c0abdd50897758e23e660a8bbaed8071036),
+the [complete positional-panel video template](https://github.com/ecinaro/brainlab-estate-cinematic/blob/29ca0c0abdd50897758e23e660a8bbaed8071036/references/video-prompt-template.md),
+the [exact Higgsfield request contract](https://github.com/ecinaro/brainlab-estate-cinematic/blob/29ca0c0abdd50897758e23e660a8bbaed8071036/references/higgsfield-pipeline.md),
+and the creator's [six-scene result and failure log](https://github.com/ecinaro/brainlab-estate-cinematic/blob/29ca0c0abdd50897758e23e660a8bbaed8071036/references/lessons.md).
 
 ### Audio-first omni-reference presenter with payload and lip-sync recovery gate
 
@@ -43979,6 +44011,8 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 
 ## Sources
+
+- [Ecinaro / Brainlab Estate Cinematic — September 24, 2026 Higgsfield Seedance 2.5 (`seedance_2_5`, `omni_reference`) six-scene real-estate route: property-photo geometry authority, identity-board style isolation, estimated-view disclosure, positional 3×3 panel calls, pre-video color correction, non-literal board rendering and measured timing drift](https://github.com/ecinaro/brainlab-estate-cinematic/commit/29ca0c0abdd50897758e23e660a8bbaed8071036) ([complete video template](https://github.com/ecinaro/brainlab-estate-cinematic/blob/29ca0c0abdd50897758e23e660a8bbaed8071036/references/video-prompt-template.md), [exact request contract](https://github.com/ecinaro/brainlab-estate-cinematic/blob/29ca0c0abdd50897758e23e660a8bbaed8071036/references/higgsfield-pipeline.md), [run and failure log](https://github.com/ecinaro/brainlab-estate-cinematic/blob/29ca0c0abdd50897758e23e660a8bbaed8071036/references/lessons.md))
 
 - [OpenStory — September 24, 2026 Ark Seedance 2.5 (`dreamina-seedance-2-5-260628`) Draft-first production release: Ark-only route refusal before credit hold, no cross-model fallback after a content rejection, input-audio-specific recovery, immutable final-from-Draft request and one hold/workflow per draft attempt](https://github.com/openstory-so/openstory/commit/dc3644503282ec63ee8def3a70feb0db8a3e450e) ([exact final request](https://github.com/openstory-so/openstory/blob/dc3644503282ec63ee8def3a70feb0db8a3e450e/src/models/server/byteplus-final-render.ts), [idempotent promotion gate](https://github.com/openstory-so/openstory/blob/dc3644503282ec63ee8def3a70feb0db8a3e450e/src/motion/server/render-at-quality.ts), [Ark lifecycle contract](https://github.com/openstory-so/openstory/blob/dc3644503282ec63ee8def3a70feb0db8a3e450e/docs/architecture/byteplus-ark.md))
 
