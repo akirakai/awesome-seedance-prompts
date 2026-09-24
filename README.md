@@ -43548,7 +43548,8 @@ and the [versioned mask and contrast notes](https://github.com/alialahmad2000/fl
 (`seedance-2.5-text-to-video`, `seedance-2.5-image-to-video`,
 `seedance-2.5-reference-to-video`, `seedance-2.5-video-edit` or
 `seedance-2.5-video-extend` -> `seedance-2.5-draft-to-video`) and Dreamina
-Web Seedance 2.5 Preview mode (480p) — Ark's exact-model live ledger records
+Web Seedance 2.5 Preview/Sample mode (`dreamina_seedance_45_pro_draft`,
+verified at 480p × 5 seconds) — Ark's exact-model live ledger records
 four 480p Draft tasks, four matched direct-1080p tasks and one successful
 1080p promotion whose returned `draft_task_id` points to the selected Draft;
 EvoLink's versioned OpenAPI contract exposes a comparable two-stage route for
@@ -43589,6 +43590,33 @@ unsupported field. Treat bitrate as a separate capability: do not hide Draft
 because bitrate is unavailable, and do not emit bitrate_mode unless the exact
 model contract independently declares it. Re-run request-shape regressions
 whenever a model ID or provider route changes.
+
+WEB PREVIEW ROUTE-TRUTH GATE
+Some adapters accept an Ark-shaped public model name while executing a Dreamina
+Web route. Persist both identities and never report the façade as the actual
+provider:
+- requested public model and endpoint;
+- resolved provider, exact internal model key and billing contract;
+- request-shape discriminator and settled debit.
+
+For the verified no-input Web sample lane, require all of:
+  internal_model = dreamina_seedance_45_pro_draft
+  resolution = 480p
+  duration = 5 seconds
+  min_version = 3.3.28
+  min_features includes AIGC_Video_Seedance25ResultAction
+  video_gen_inputs[0].is_draft_mode = true
+  metrics.videoStage = draft
+  benefit_type = seedance_25_draft_480p_no_input_video_output
+Reject images, video or audio on this narrow lane instead of silently changing
+it into an omni-reference task. Do not infer support for
+`dreamina_seedance_45_pro`, 720p, 1080p or promotion merely because the
+sample route worked; each needs its own captured request and paid qualification.
+
+Treat versioned probes as evidence artifacts, not timeless invocation examples.
+Before reuse, compare their endpoint with the current service contract. If that
+endpoint was removed in the same or a later release, preserve the old probe and
+ledger for provenance but route new work only through the current endpoint.
 
 CANDIDATE-COUNT GATE
 Use Draft when at least two 1080p candidates will be reviewed and only a subset
@@ -43750,6 +43778,15 @@ and [Ark lifecycle contract](https://github.com/openstory-so/openstory/blob/dc36
 That release publishes implementation and regression evidence rather than a
 new public task/output pair, so it strengthens this template without adding a
 complete scenario.
+The Dreamina Web route-truth gate comes from rsfree/jimeng's September 24, 2026
+[Seedance 2.5 sample-mode production commit](https://github.com/rsfree/jimeng/commit/863112d645c9a9f01dcd4aa67e640b6a18806b77),
+[exact capability record and paid ledger](https://github.com/rsfree/jimeng/blob/863112d645c9a9f01dcd4aa67e640b6a18806b77/app/models.py),
+[captured request discriminators](https://github.com/rsfree/jimeng/blob/863112d645c9a9f01dcd4aa67e640b6a18806b77/app/upstream/jimeng/client.py)
+and [paid probe evidence](https://github.com/rsfree/jimeng/blob/863112d645c9a9f01dcd4aa67e640b6a18806b77/scripts/probe_t2v_25_draft.py).
+Two creator-run submissions each settled at 45 credits; the adapter run
+completed a 480p, five-second take in 156 seconds. The checked-in probe still
+uses the old `/async/v1/videos/generations` route removed by that same commit,
+so it is cited as provenance rather than copied as a current API recipe.
 
 
 ### Capability-declared local-media promotion for URL-only roles
