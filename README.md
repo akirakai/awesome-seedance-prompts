@@ -420,6 +420,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Dual-palette classroom arcane clash](#404-dual-palette-classroom-arcane-clash)
   - [Locked-waterfall two-speaker micro-comedy](#405-locked-waterfall-two-speaker-micro-comedy)
   - [Palace-summoning colossus tableau and full-frame palm blackout](#406-palace-summoning-colossus-tableau-and-full-frame-palm-blackout)
+  - [Job-linked two-clip Kraken coaster descent](#407-job-linked-two-clip-kraken-coaster-descent)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -25595,6 +25596,82 @@ Adapted and rewritten from Wanrd0Geri's September 24, 2026
 [Seedance 2.5 production commit](https://github.com/Wanrd0Geri/aigc-video/commit/27c0d2ef215e66ba59fdf43727adcb7910ca2005)
 and [complete M005 prompt plus frame-by-frame result audit](https://github.com/Wanrd0Geri/aigc-video/blob/27c0d2ef215e66ba59fdf43727adcb7910ca2005/references/cases/my-cases.md).
 
+### 407. Job-linked two-clip Kraken coaster descent
+
+**Verified model:** Higgsfield Seedance 2.0 (`seedance_2_0`) — the original
+creator publishes the exact route settings, two submitted job IDs, both full
+prompts and an output note identifying the renders as flat 16:9 rather than
+360-degree video  
+**Use case:** first-person ride film, multi-clip horror continuity, native
+sound design, creature-scale reveal, deterministic post-production text  
+**Mode:** text-to-video, two separately submitted clips  
+**Verified settings:** 15 seconds per clip; 16:9; 720p; horror genre;
+`generate_audio: true`; 67.5 Higgsfield credits recorded per job
+
+```text
+SEQUENCE CONTRACT
+Create two independent 15-second first-person ride clips. Keep the horizon
+level and preserve one saturated cinematic 3D-CG look, the same weathered
+wooden coaster, front-car viewpoint, stormy ocean, sunset direction and
+Kraken scale across both jobs. No visible passenger faces and no generated
+captions. The deliverable is ordinary flat 16:9 video, never an equirectangular
+or 360-degree frame.
+
+CLIP A — JOB be612590-3a05-4b45-984d-cf4417bc1492
+00:00-00:03 — Begin in total black. A pair of enormous yellow cephalopod eyes
+opens at arm's length; narrow pupils tighten and one tentacle lashes across the
+lens from screen right to screen left. End this beat with a hard cut.
+00:03-00:09 — Reveal the rider seated in the front car on a decaying seaside
+pier at golden sunset. The lap bar closes visibly in the foreground. A small
+retro robot attendant stands screen left, waves once and shows a brief red eye
+flicker while gulls cross overhead. The car begins moving toward track that
+extends above a dark, wind-roughened sea.
+00:09-00:15 — Climb a steep chain lift. Tilt upward into gathering storm cloud,
+then crest just enough to look down and reveal a ship-sized shadow travelling
+beneath the water. Do not reveal the full creature.
+Audio progression: submerged bass rumble and heartbeat in the black; tentacle
+whoosh; pier timber creaks, gulls and faint distant carnival music; chain
+clatter and strengthening wind on the ascent.
+
+CLIP B — JOB cd22a7cc-345d-40ff-b637-ba471eaaa61c
+Reuse the same viewpoint, coaster materials, saturated CG treatment, horizon
+discipline, sunset-storm lighting and ocean established by Clip A.
+00:00-00:04 — From the crest, plunge down a nearly vertical rail toward the
+ocean and cross the surface in one forceful splash.
+00:04-00:09 — Continue at speed through a transparent underwater tube. Blue-
+green shafts and bubbles move past the car. Silver fish divide around the tube
+while a shark keeps pace on screen right; a moment later both fish and shark
+reverse their behaviour and flee past camera.
+00:09-00:15 — One colossal sucker-lined tentacle strikes the tube on screen
+right. A spiderweb crack grows overhead, droplets begin entering, red emergency
+lights pulse and the car accelerates into darkness. Keep the tube, rail and
+tentacle spatially coherent; do not substitute another monster.
+Audio progression: rushing descent, surface impact, muffled underwater boom,
+bubbles and rail vibration; deep nonverbal growl; one sharp glass fracture,
+warning klaxon and restrained horror score at the escape.
+
+POST AND CONTINUITY GATE
+Use exactly three readable beats per 15-second job; do not compress extra story
+events into either render. Repeat the opening style/POV lock when extending the
+sequence. For later clips, derive a clean boundary frame from the accepted
+previous render and pass it through the route's documented reference field;
+do not treat a text job ID itself as an image. Add deterministic messages such
+as LOOK BEHIND YOU or DEPTH: 50 m only in the edit, never in the paid render.
+Archive each prompt, exact settings, returned job ID, accepted output and chosen
+handoff frame together.
+```
+
+**Why it works:** Clip A establishes identity, geography and threat scale before
+Clip B spends its motion budget on the drop, underwater pursuit and single
+impact. Repeating the compact style lock gives separately paid jobs a shared
+visual contract, while the three-beat ceiling protects timing. Text is assigned
+to post, and the continuity handoff distinguishes a provider task identifier
+from an actual reference image.
+
+Adapted and rewritten from 6ix411's September 24, 2026
+[Higgsfield Seedance 2.0 Kraken test-clip commit](https://github.com/6ix411/Higgsfield/commit/56d28072a58b92ea6d8ba09e7f157b16ffaec1f2)
+and [complete prompts, settings, job IDs and output note](https://github.com/6ix411/Higgsfield/blob/56d28072a58b92ea6d8ba09e7f157b16ffaec1f2/brightside-vr360/kraken-test-clips.md).
+
 ## Reusable templates
 
 ### Host-restart-safe NLE generation and master/preview/audio ownership gate
@@ -44307,6 +44384,7 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 ## Sources
 
+- [6ix411 / Higgsfield — September 24, 2026 Seedance 2.0 (`seedance_2_0`) Kraken ride production record: two complete 15-second 720p 16:9 prompts, native-audio route settings, submitted job IDs, flat-video output note, repeated POV/style lock, three-beat pacing and post-owned typography](https://github.com/6ix411/Higgsfield/commit/56d28072a58b92ea6d8ba09e7f157b16ffaec1f2) ([complete prompt file](https://github.com/6ix411/Higgsfield/blob/56d28072a58b92ea6d8ba09e7f157b16ffaec1f2/brightside-vr360/kraken-test-clips.md))
 - [kizzymason / JTCANVAS — September 25, 2026 Dreamina Seedance 2.0 (`dreamina-seedance-2-0`, R2V) request-geometry repair: two real `736x1312` tasks rejected after generic reduction to unsupported `23:41`, followed by video-only snapping to Ark's fixed ratio enum and negative regressions for auto, empty and extreme geometry](https://github.com/kizzymason/JTCANVAS/commit/f7037b3d02bc6227c4f0bc110cc84d4af5649f02)
 - [king5012996533 / solid-funicular — September 25, 2026 GenVideo Seedance 2.5 (`p-sceneflow-genvideo-2-5` / `seedance2.5`) versioned create-contract repair: explicit `mode=2.5`, `durationSeconds=30`, six-ratio and ordered-reference compilation, provider-fetch preflight, bounded polling, terminal refund tests, durable signed-URL storage and a live 30.04-second 1280×720 H.264/AAC result](https://github.com/king5012996533/solid-funicular/commit/4c69742b5f539cf6dea652dc394107324db0ea64)
 - [king5012996533 / solid-funicular — September 25, 2026 GenVideo Seedance 2.5 (`p-sceneflow-genvideo-2-5` / `seedance2.5`) live delivery repair: versioned status-path propagation, extensionless explicit `outputUrl` recovery, 5.05-second 1280×720 ffprobe validation and estimate/charge/balance reconciliation](https://github.com/king5012996533/solid-funicular/commit/4f6da5c3a8f6c46bff25a6354f64c74c6b11d53b)
