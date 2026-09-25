@@ -25839,10 +25839,12 @@ and its [render-derived poster](https://github.com/rdmbtc/mercenta/blob/c133c4f0
 
 ### Canonical task-ID normalization and deterministic verdict gate
 
-**Verified model:** Seedance 2.0 (production catalogue model ID `15`) — the
-original test operator records paid task `239545` completing the full
-submit → wait → verify path after the boundary fix, with task, media, billing
-and diversion assertions matched  
+**Verified model:** Seedance 2.0 (production catalogue model ID `15`);
+the follow-up gateway proof resolves `upstream_model_name:
+doubao-seedance-2.0` — the original operator records paid task `239545`
+completing submit → wait → verify after the task-ID fix, and real routed task
+`239541` resolving to channel `4` / provider `databao` / terminal
+`SUCCESS` through the database evidence chain  
 **Use case:** prevent a successful paid generation from becoming unverifiable
 when a gateway serializes its task ID as a JSON string, while refusing malformed
 IDs instead of silently attaching them to the wrong task  
@@ -25890,6 +25892,36 @@ At the verification boundary, defensively normalize a numeric string once more
 for compatibility with older stored records. Preserve genuinely invalid values
 for the strict validator to reject; do not turn them into a passing identity.
 
+ROUTING PROVENANCE
+Reconcile predicted routing against immutable server records rather than UI
+labels or client-side intent:
+
+frontend task extra.diversion
+  → backend task line and extra.newapi_log_id
+  → gateway task-log row
+  → channel_id, provider_code, upstream_model_name and terminal status
+
+Read only an explicit safe-column allowlist. Exclude request bodies, provider
+responses, credentials and other raw payload fields from the evidence snapshot.
+
+A routed-channel snapshot is valid only when:
+- the linked gateway row exists;
+- channel_id is a positive finite value;
+- provider/model identifiers come from that same row;
+- terminal status is SUCCESS;
+- provenance names the read-only collector and capture time.
+
+If the contract predicted gateway diversion but the stored execution proves a
+direct route, emit a separate ROUTING_PREDICTION_MISMATCH result. Keep the
+overall verdict UNVERIFIED pending an explicit decision about whether the
+direct route was an allowed capability downgrade. Do not silently pass because
+no gateway channel applies, and do not call the completed media a failed
+generation.
+
+A successfully collected mismatch envelope records its reason in normalized
+fields. Reserve the error field for collection failures; mixing an error into a
+successful evidence envelope can make strict validators discard the evidence.
+
 DETERMINISTIC VERDICT
 A confirmed generation requires separate matched evidence for:
 1. TASK — the canonical ID resolves to the intended submitted job.
@@ -25924,15 +25956,23 @@ that joins a paid request to its media and charge. The second normalization at
 verification protects historical records without forgiving malformed IDs. In
 the published production proof, Seedance 2.0 task `239545` reached
 `PASS/CONFIRMED`, the 60-point net charge and diversion value 10 matched, and
-the earlier `INVALID_TEST_SPEC` short-circuit disappeared. The gateway-channel
-collector was still untrusted, so channel attribution remains explicitly
-`UNVERIFIED` instead of being inferred from the successful video.
+the earlier `INVALID_TEST_SPEC` short-circuit disappeared. The follow-up then
+closes the former channel-evidence gap for genuinely routed work: task
+`239541` resolves through the read-only rows to channel `4`, provider
+`databao`, model `doubao-seedance-2.0` and `SUCCESS`. It also demonstrates
+the opposite case on task `239545`: predicted diversion but stored direct
+execution remains `UNVERIFIED` with a reconciliation blocker, rather than
+being promoted to a false channel PASS.
 
 Adapted from CAoyinggo's September 25, 2026
 [real Seedance 2.0 closed-loop repair and task evidence](https://github.com/CAoyinggo/panqu-Test-agent/commit/da7903dca05ec5d960a9d7131030a1a4c92b3f0f),
 the [submission-boundary normalization](https://github.com/CAoyinggo/panqu-Test-agent/blob/da7903dca05ec5d960a9d7131030a1a4c92b3f0f/src/devtest/media-flow.ts),
-the [canonical verdict projection](https://github.com/CAoyinggo/panqu-Test-agent/blob/da7903dca05ec5d960a9d7131030a1a4c92b3f0f/src/devtest/verdict-projection.ts)
-and the [numeric-string and dirty-ID regressions](https://github.com/CAoyinggo/panqu-Test-agent/blob/da7903dca05ec5d960a9d7131030a1a4c92b3f0f/tests/unit/devtest/media-flow.test.ts).
+the [canonical verdict projection](https://github.com/CAoyinggo/panqu-Test-agent/blob/da7903dca05ec5d960a9d7131030a1a4c92b3f0f/src/devtest/verdict-projection.ts),
+the [numeric-string and dirty-ID regressions](https://github.com/CAoyinggo/panqu-Test-agent/blob/da7903dca05ec5d960a9d7131030a1a4c92b3f0f/tests/unit/devtest/media-flow.test.ts),
+and the follow-up [real gateway-channel provenance and reconciliation proof](https://github.com/CAoyinggo/panqu-Test-agent/commit/7dedaa02930d451b9c6b2f078d3d53440538cb8f)
+with its [safe-column database collector](https://github.com/CAoyinggo/panqu-Test-agent/blob/7dedaa02930d451b9c6b2f078d3d53440538cb8f/scripts/verify-db-change.py),
+[trusted snapshot builder](https://github.com/CAoyinggo/panqu-Test-agent/blob/7dedaa02930d451b9c6b2f078d3d53440538cb8f/src/devtest/routing.ts)
+and [evidence reconciliation](https://github.com/CAoyinggo/panqu-Test-agent/blob/7dedaa02930d451b9c6b2f078d3d53440538cb8f/src/devtest/evidence-collectors.ts).
 
 ### Host-restart-safe NLE generation and master/preview/audio ownership gate
 
@@ -46282,6 +46322,8 @@ Community examples and techniques referenced in this README:
 
 
 - [CAoyinggo / panqu-Test-agent — Seedance 2.0 real-task numeric-string ID repair, canonical task/media/billing/diversion verdict and fail-closed dirty-ID regressions](https://github.com/CAoyinggo/panqu-Test-agent/commit/da7903dca05ec5d960a9d7131030a1a4c92b3f0f) ([submission normalization](https://github.com/CAoyinggo/panqu-Test-agent/blob/da7903dca05ec5d960a9d7131030a1a4c92b3f0f/src/devtest/media-flow.ts), [verdict projection](https://github.com/CAoyinggo/panqu-Test-agent/blob/da7903dca05ec5d960a9d7131030a1a4c92b3f0f/src/devtest/verdict-projection.ts), [regression tests](https://github.com/CAoyinggo/panqu-Test-agent/blob/da7903dca05ec5d960a9d7131030a1a4c92b3f0f/tests/unit/devtest/media-flow.test.ts))
+
+- [CAoyinggo / panqu-Test-agent — Seedance 2.0 read-only gateway provenance, real routed task proof and predicted-diversion/direct-execution reconciliation](https://github.com/CAoyinggo/panqu-Test-agent/commit/7dedaa02930d451b9c6b2f078d3d53440538cb8f) ([safe-column database collector](https://github.com/CAoyinggo/panqu-Test-agent/blob/7dedaa02930d451b9c6b2f078d3d53440538cb8f/scripts/verify-db-change.py), [trusted snapshot builder](https://github.com/CAoyinggo/panqu-Test-agent/blob/7dedaa02930d451b9c6b2f078d3d53440538cb8f/src/devtest/routing.ts), [evidence reconciliation](https://github.com/CAoyinggo/panqu-Test-agent/blob/7dedaa02930d451b9c6b2f078d3d53440538cb8f/src/devtest/evidence-collectors.ts))
 
 Official model references:
 
