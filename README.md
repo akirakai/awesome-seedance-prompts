@@ -42723,6 +42723,38 @@ Size each clip from the spoken line at roughly 2.5 words per second plus one
 short settling beat; do not force every line into an identical duration.
 No other voice, narrator, paraphrase, music, caption or speaker swap.
 
+LONG-FORM CLONE HANDOFF (OPTIONAL)
+Use this branch only when the accepted Seedance voice must drive narration,
+bookends or renderers that cannot consume the original audio reference. Keep
+the direct Seedance-audio route above as the default for later Seedance clips.
+
+1. Generate one 10-second 720p 9:16 ingredients-mode source clip from the
+   approved face image. Put [VOICE RANGE, TEMPO, ACCENT, TEXTURE AND
+   TEMPERAMENT] before one plain verbatim line that fits the time budget.
+   Ask for level, even, unhurried delivery, one speaker, clean room tone and
+   no music.
+2. Accept only after face, transcript, speaker count and vocal character pass.
+   Extract the complete audio by stream copy. This untrimmed file and its hash
+   remain the canonical voice master; never overwrite it with a training edit.
+3. If the downstream clone route has a measured minimum longer than the clean
+   source, make a separate, fully logged carrier: trim only leading/trailing
+   silence, optionally use pitch-preserving tempo adjustment, and repeat the
+   complete utterance at word boundaries until the minimum is met. Never cut
+   or splice inside a word, and do not present repetition as new vocal data.
+4. Refuse a shared or pre-made voice. Create one character-scoped clone name;
+   a collision is a hard stop or requires a new character-qualified name.
+5. Render several downstream takes of the exact script, transcribe every take
+   and diff it against the locked text. Keep the best passing take; do not
+   repair a failed transcript by silently rewriting the line.
+6. Archive the Seedance task ID, source and derived audio hashes, clone ID,
+   transformation ledger, transcript diffs and final use map. Deleting or
+   replacing a clone must not erase the canonical Seedance master.
+
+A separate production route reports 42 paid Seedance calls behind this pattern
+and compiles the exact Kie model as `bytedance/seedance-2-5`. That evidence
+supports the handoff mechanics, not a universal credit price or a claim that
+looped training audio is better than a naturally longer clean recording.
+
 POSE-CORRECTION BRANCH
 If the client rejects only body position or framing, make a new character still
 from the accepted face before regenerating the affected clips. Keep the
@@ -42742,6 +42774,11 @@ margin. If title cards or black gaps separate stories, clamp each caption's end
 to the corresponding section boundary so text never survives across the cut.
 Measure the finished reel's loudness and true peak after assembly.
 ```
+
+The optional long-form clone handoff is adapted from keys-exe / global-manual-ai's
+September 25, 2026 [42-task production-standard update](https://github.com/keys-exe/global-manual-ai/commit/d990c28fd92889f61e78f3ebd578d23c84479d2c),
+[exact Kie Seedance 2.5 client](https://github.com/keys-exe/global-manual-ai/blob/d990c28fd92889f61e78f3ebd578d23c84479d2c/.claude/skills/ai-prompt-engineer/scripts/kie.py)
+and [voice-origin and clone-name gate](https://github.com/keys-exe/global-manual-ai/commit/e753c1c9d0dbf69ad9d8f0c09056719af0ab3355).
 
 **Why it works:** the first successful generation becomes an audible casting
 test and a reusable voice asset, so later clips do not ask text alone to
@@ -44529,6 +44566,7 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 ## Sources
 
+- [keys-exe / global-manual-ai — September 25, 2026 Kie Seedance 2.5 (`bytedance/seedance-2-5`) production standard: 42 paid calls, a 10-second image-first voice source, lossless canonical-master extraction, separately logged minimum-length clone carrier, unique clone naming, verbatim transcript QA and line-timed B-roll](https://github.com/keys-exe/global-manual-ai/commit/d990c28fd92889f61e78f3ebd578d23c84479d2c) ([exact Kie model and task client](https://github.com/keys-exe/global-manual-ai/blob/d990c28fd92889f61e78f3ebd578d23c84479d2c/.claude/skills/ai-prompt-engineer/scripts/kie.py), [voice-origin lock and clone-name gate](https://github.com/keys-exe/global-manual-ai/commit/e753c1c9d0dbf69ad9d8f0c09056719af0ab3355), [complete production standard](https://github.com/keys-exe/global-manual-ai/blob/d990c28fd92889f61e78f3ebd578d23c84479d2c/standards/AI_Prompt_Engineer_Global_Standards.md))
 - [tonnooooo / Kleo — September 25, 2026 ePhone official-channel Seedance 2.5 (`doubao-seedance-2-5-260628`) successful follow-up: four-second 480p first-frame clip, 38,759 measured output tokens, $0.0864/s channel sample and completion-usage audit](https://github.com/tonnooooo/kleo-mcp/commit/70946ac4389f2f499970f78809d2170f53f6d269) ([measured route configuration](https://github.com/tonnooooo/kleo-mcp/blob/70946ac4389f2f499970f78809d2170f53f6d269/wrangler.jsonc), [request and usage ledger](https://github.com/tonnooooo/kleo-mcp/blob/70946ac4389f2f499970f78809d2170f53f6d269/src/footage.ts), [first-call adaptive-ratio and quota correction](https://github.com/tonnooooo/kleo-mcp/commit/e9bf1a0ab5c22f177c4ac467b5072f05e389309d), [initial official-route integration](https://github.com/tonnooooo/kleo-mcp/commit/3433f62507444c552073a7d2a7a719283cbf86a1))
 - [llPekoll / Rabbit Royale — September 25, 2026 Higgsfield Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`) mounted social-game teaser: complete four-shot clay prompt, ordered identity/style references, exact 8-second 1:1 720p silent request, one-request recovery ledger, creator result notes and generated-to-gameplay assembly](https://github.com/llPekoll/rabbit-royale/commit/6fef07e2654c33a3d9f031267796733954186844) ([complete prompt and review](https://github.com/llPekoll/rabbit-royale/blob/6fef07e2654c33a3d9f031267796733954186844/episodes/ep01-carotte-bombe/shots/SEEDANCE.md), [exact request](https://github.com/llPekoll/rabbit-royale/blob/6fef07e2654c33a3d9f031267796733954186844/examples/higgsfield/episode-video.ts), [assembly record](https://github.com/llPekoll/rabbit-royale/blob/6fef07e2654c33a3d9f031267796733954186844/episodes/README.md))
 - [6ix411 / Higgsfield — September 24, 2026 Seedance 2.0 (`seedance_2_0`) Kraken ride production record: two complete 15-second 720p 16:9 prompts, native-audio route settings, submitted job IDs, flat-video output note, repeated POV/style lock, three-beat pacing and post-owned typography](https://github.com/6ix411/Higgsfield/commit/56d28072a58b92ea6d8ba09e7f157b16ffaec1f2) ([complete prompt file](https://github.com/6ix411/Higgsfield/blob/56d28072a58b92ea6d8ba09e7f157b16ffaec1f2/brightside-vr360/kraken-test-clips.md))
