@@ -422,6 +422,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Palace-summoning colossus tableau and full-frame palm blackout](#406-palace-summoning-colossus-tableau-and-full-frame-palm-blackout)
   - [Job-linked two-clip Kraken coaster descent](#407-job-linked-two-clip-kraken-coaster-descent)
   - [Four-beat carrot-to-bomb clay game teaser](#408-four-beat-carrot-to-bomb-clay-game-teaser)
+  - [Obsidian data-corridor forward-dolly web film](#409-obsidian-data-corridor-forward-dolly-web-film)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -25761,6 +25762,79 @@ the [complete prompt and result notes](https://github.com/llPekoll/rabbit-royale
 the [exact Higgsfield request and duplicate-submit guard](https://github.com/llPekoll/rabbit-royale/blob/6fef07e2654c33a3d9f031267796733954186844/examples/higgsfield/episode-video.ts)
 and the [episode assembly record](https://github.com/llPekoll/rabbit-royale/blob/6fef07e2654c33a3d9f031267796733954186844/episodes/README.md).
 
+
+### 409. Obsidian data-corridor forward-dolly web film
+
+**Verified model:** Higgsfield Seedance 2.5
+(`bytedance/seedance-2.5/text-to-video`) — the original developer publishes
+the exact endpoint, complete prompt and request arguments together with the
+generated MP4 and render-derived poster; the same production commit fully
+decodes the asset and rejects identical sampled frames before publication  
+**Use case:** silent enterprise-tech landing-page film, scroll-scrub background,
+single-axis camera motion, dark UI backdrop  
+**Mode:** text-to-video  
+**Verified settings:** 5 seconds; 16:9; 720p; MP4; `generate_audio: false`
+
+```text
+Create one uninterrupted five-second photoreal enterprise-technology film.
+
+CAMERA
+Begin centred at eye level inside a long, symmetrical server corridor. Move
+straight forward along the corridor's central axis at one slow, constant speed
+from first frame to last. Use a perfectly smooth stabilized dolly: no pan,
+tilt, roll, orbit, zoom, lateral drift, acceleration, cut or speed ramp.
+Preserve a level horizon and let the repeating server bays produce clean,
+continuous parallax.
+
+ENVIRONMENT
+Build the corridor from tall minimalist obsidian server monoliths with crisp
+parallel edges. Use a polished black-glass floor that reflects the architecture
+without turning into a mirror maze. Thin electric-cyan and deep-blue
+fiber-optic rails run toward the vanishing point and pulse gently in place.
+Add only a trace of volumetric mist so depth remains readable and the central
+route never closes.
+
+LIGHT AND MATERIAL
+Keep the palette near-black, cyan and deep blue. Light the space with restrained
+anamorphic edge glow and controlled specular highlights; retain detail in the
+shadows and prevent clipped neon. Materials remain black glass, dark metal and
+subtle illuminated fiber throughout. The result should feel like clean,
+credible infrastructure rather than a fantasy vault.
+
+MOTION BUDGET
+The forward dolly is the only large motion. Light pulses may travel softly
+along their existing rails, reflections may shift naturally with the camera,
+and mist may drift almost imperceptibly. Nothing enters, leaves, transforms,
+opens or flies toward the lens.
+
+FAILURE CONTROL
+No person, vehicle, robot, coin, cryptocurrency symbol, gold, cash, token,
+interface, number, letter, logo or watermark. No floating particles crossing
+the camera, strobing, flicker, warped racks, changing corridor width, bent
+verticals, duplicated architecture, crushed blacks, overexposed cyan or frozen
+frames. Finish on a clean centred corridor view that can remain legible beneath
+web copy.
+```
+
+**Why it works:** a single camera axis, fixed vanishing point and one restrained
+secondary-motion family make the short clip easy to scrub without exposing
+cuts or contradictory movement. The rewritten version removes the source's
+resolution-mismatched “8K” language, separates geometry from lighting, and
+turns financial-symbol exclusions into a complete semantic ban. The source
+pipeline then treats generation and delivery as different stages: it archives
+the provider original, fully decodes it, checks three separated frames have
+different hashes, creates a silent H.264 web derivative with a 12-frame GOP and
+fast-start metadata, verifies dimensions and frame count, derives the poster
+from the accepted render, and replaces public media atomically. No public
+provider request ID is preserved, so this entry verifies the committed result
+and production contract rather than independent provider-history provenance.
+
+Adapted and rewritten from rdmbtc's September 25, 2026
+[Mercenta production commit](https://github.com/rdmbtc/mercenta/commit/c133c4f015546dcda45f48f5c8e1ca0ec731562a),
+the [complete prompt, exact request and acceptance pipeline](https://github.com/rdmbtc/mercenta/blob/c133c4f015546dcda45f48f5c8e1ca0ec731562a/main.py),
+the [generated MP4](https://github.com/rdmbtc/mercenta/blob/c133c4f015546dcda45f48f5c8e1ca0ec731562a/web/public/videos/mercenta-vault.mp4)
+and its [render-derived poster](https://github.com/rdmbtc/mercenta/blob/c133c4f015546dcda45f48f5c8e1ca0ec731562a/web/public/videos/mercenta-vault-poster.jpg).
+
 ## Reusable templates
 
 ### Host-restart-safe NLE generation and master/preview/audio ownership gate
@@ -46105,6 +46179,9 @@ Community examples and techniques referenced in this README:
 - [TAKMA — Higgsfield Seedance 2.5 rendered-first-frame poster authority, non-native delivery crop and one-pass terminal product hold](https://github.com/jakubtiuchty-arch/takma/commit/af0651b1a1748c905a22f27923ef19ca9ec2a2c0) ([generated MP4](https://github.com/jakubtiuchty-arch/takma/blob/af0651b1a1748c905a22f27923ef19ca9ec2a2c0/public/images/guides/jaka-drukarka-do-kart-plastikowych-v2.mp4), [render-derived poster](https://github.com/jakubtiuchty-arch/takma/blob/af0651b1a1748c905a22f27923ef19ca9ec2a2c0/public/images/guides/jaka-drukarka-do-kart-plastikowych-v2.webp))
 - [LennySnaider / avatar — Kie.ai Seedance 2.5 frame-mode versus multimodal-reference HTTP 422, deterministic scene arbitration and documented 2.5 reference limits](https://github.com/LennySnaider/avatar/commit/0efd618c3e55c78b330db2f4d683b3f0512d1ffb) ([pure scene selector](https://github.com/LennySnaider/avatar/blob/0efd618c3e55c78b330db2f4d683b3f0512d1ffb/src/services/kie/seedance25Scene.ts), [production serializer](https://github.com/LennySnaider/avatar/blob/0efd618c3e55c78b330db2f4d683b3f0512d1ffb/src/services/KieService.ts))
 - [Glenn Williams / Nightwatch Archive — Higgsfield Seedance 2.5 six-second paranormal-forest push-in, exact request and generated result](https://github.com/Glenn-castshadow/UFO_site/commit/dead168e3ed13cc9cd1ce37ad4c66c1bce03159a) ([complete prompt and model route](https://github.com/Glenn-castshadow/UFO_site/blob/dead168e3ed13cc9cd1ce37ad4c66c1bce03159a/generate.ts), [generated MP4](https://github.com/Glenn-castshadow/UFO_site/blob/dead168e3ed13cc9cd1ce37ad4c66c1bce03159a/assets/hero.mp4))
+
+
+- [rdmbtc / Mercenta — Higgsfield Seedance 2.5 obsidian server-corridor forward dolly, complete prompt, committed generated MP4 and decode/static-frame delivery gate](https://github.com/rdmbtc/mercenta/commit/c133c4f015546dcda45f48f5c8e1ca0ec731562a) ([complete prompt and exact request](https://github.com/rdmbtc/mercenta/blob/c133c4f015546dcda45f48f5c8e1ca0ec731562a/main.py), [generated MP4](https://github.com/rdmbtc/mercenta/blob/c133c4f015546dcda45f48f5c8e1ca0ec731562a/web/public/videos/mercenta-vault.mp4), [render-derived poster](https://github.com/rdmbtc/mercenta/blob/c133c4f015546dcda45f48f5c8e1ca0ec731562a/web/public/videos/mercenta-vault-poster.jpg))
 
 Official model references:
 
