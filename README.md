@@ -25837,6 +25837,103 @@ and its [render-derived poster](https://github.com/rdmbtc/mercenta/blob/c133c4f0
 
 ## Reusable templates
 
+### Canonical task-ID normalization and deterministic verdict gate
+
+**Verified model:** Seedance 2.0 (production catalogue model ID `15`) — the
+original test operator records paid task `239545` completing the full
+submit → wait → verify path after the boundary fix, with task, media, billing
+and diversion assertions matched  
+**Use case:** prevent a successful paid generation from becoming unverifiable
+when a gateway serializes its task ID as a JSON string, while refusing malformed
+IDs instead of silently attaching them to the wrong task  
+**Mode:** request adapter → durable raw receipt → canonical task identity →
+poll/media/billing verification
+
+```text
+SUBMISSION CONTRACT
+Before sending [COMPLETE PROMPT], persist:
+- exact Seedance version and internal catalogue/model ID;
+- prompt, inputs, requested duration and resolution;
+- quoted price and expected balance movement;
+- submit timestamp, project/user scope and a stable local intent ID.
+
+Store the complete provider response before interpreting it. Keep the raw task
+identifier and its JSON type as evidence.
+
+BOUNDARY NORMALIZATION
+The response may return the task identifier as a number or a numeric string.
+
+raw_task_id = response.data.id or response.data
+parsed_task_id = Number(raw_task_id)
+
+Accept only when all are true:
+- the submission response itself reports success;
+- parsed_task_id is finite;
+- parsed_task_id is an integer;
+- parsed_task_id is greater than zero.
+
+On acceptance, persist one canonical numeric task ID. If any condition fails,
+set the normalized value to a non-routable sentinel, mark submission invalid
+and stop. Never poll, bill-match, verify or resubmit by guessing an ID from a
+dirty value.
+
+IDENTITY PROPAGATION
+Use the same canonical integer in every downstream location:
+- durable job/request record;
+- poll and media lookup;
+- target.taskId;
+- inputs.taskId;
+- billing and diversion correlation;
+- final evidence bundle.
+
+At the verification boundary, defensively normalize a numeric string once more
+for compatibility with older stored records. Preserve genuinely invalid values
+for the strict validator to reject; do not turn them into a passing identity.
+
+DETERMINISTIC VERDICT
+A confirmed generation requires separate matched evidence for:
+1. TASK — the canonical ID resolves to the intended submitted job.
+2. MEDIA — the job owns a terminal playable output with expected media type.
+3. BILLING — the observed balance delta matches the recorded price contract.
+4. DIVERSION — any provider/channel remapping is measured against the intended
+   route and stored as its own assertion.
+
+Do not collapse these into one provider success flag. A task may generate media
+and charge correctly while its gateway/channel attribution remains unverified.
+
+REGRESSION MATRIX
+Run the integrated submit → wait → verify path and the standalone
+verify-by-task path with:
+- numeric ID;
+- numeric-string ID;
+- zero;
+- negative integer;
+- decimal;
+- empty string;
+- nonnumeric string;
+- missing data.id.
+
+Numeric and numeric-string cases must converge to the same integer and evaluate
+the same assertions. Every malformed case must fail closed before polling.
+Archive the raw receipt, canonical spec and final assertion results together.
+```
+
+**Why it works:** the gateway's transport representation is normalized exactly
+once at the trust boundary, while the canonical identity is reused everywhere
+that joins a paid request to its media and charge. The second normalization at
+verification protects historical records without forgiving malformed IDs. In
+the published production proof, Seedance 2.0 task `239545` reached
+`PASS/CONFIRMED`, the 60-point net charge and diversion value 10 matched, and
+the earlier `INVALID_TEST_SPEC` short-circuit disappeared. The gateway-channel
+collector was still untrusted, so channel attribution remains explicitly
+`UNVERIFIED` instead of being inferred from the successful video.
+
+Adapted from CAoyinggo's September 25, 2026
+[real Seedance 2.0 closed-loop repair and task evidence](https://github.com/CAoyinggo/panqu-Test-agent/commit/da7903dca05ec5d960a9d7131030a1a4c92b3f0f),
+the [submission-boundary normalization](https://github.com/CAoyinggo/panqu-Test-agent/blob/da7903dca05ec5d960a9d7131030a1a4c92b3f0f/src/devtest/media-flow.ts),
+the [canonical verdict projection](https://github.com/CAoyinggo/panqu-Test-agent/blob/da7903dca05ec5d960a9d7131030a1a4c92b3f0f/src/devtest/verdict-projection.ts)
+and the [numeric-string and dirty-ID regressions](https://github.com/CAoyinggo/panqu-Test-agent/blob/da7903dca05ec5d960a9d7131030a1a4c92b3f0f/tests/unit/devtest/media-flow.test.ts).
+
 ### Host-restart-safe NLE generation and master/preview/audio ownership gate
 
 **Verified models:** Comfy Router Seedance 2.5
@@ -46182,6 +46279,9 @@ Community examples and techniques referenced in this README:
 
 
 - [rdmbtc / Mercenta — Higgsfield Seedance 2.5 obsidian server-corridor forward dolly, complete prompt, committed generated MP4 and decode/static-frame delivery gate](https://github.com/rdmbtc/mercenta/commit/c133c4f015546dcda45f48f5c8e1ca0ec731562a) ([complete prompt and exact request](https://github.com/rdmbtc/mercenta/blob/c133c4f015546dcda45f48f5c8e1ca0ec731562a/main.py), [generated MP4](https://github.com/rdmbtc/mercenta/blob/c133c4f015546dcda45f48f5c8e1ca0ec731562a/web/public/videos/mercenta-vault.mp4), [render-derived poster](https://github.com/rdmbtc/mercenta/blob/c133c4f015546dcda45f48f5c8e1ca0ec731562a/web/public/videos/mercenta-vault-poster.jpg))
+
+
+- [CAoyinggo / panqu-Test-agent — Seedance 2.0 real-task numeric-string ID repair, canonical task/media/billing/diversion verdict and fail-closed dirty-ID regressions](https://github.com/CAoyinggo/panqu-Test-agent/commit/da7903dca05ec5d960a9d7131030a1a4c92b3f0f) ([submission normalization](https://github.com/CAoyinggo/panqu-Test-agent/blob/da7903dca05ec5d960a9d7131030a1a4c92b3f0f/src/devtest/media-flow.ts), [verdict projection](https://github.com/CAoyinggo/panqu-Test-agent/blob/da7903dca05ec5d960a9d7131030a1a4c92b3f0f/src/devtest/verdict-projection.ts), [regression tests](https://github.com/CAoyinggo/panqu-Test-agent/blob/da7903dca05ec5d960a9d7131030a1a4c92b3f0f/tests/unit/devtest/media-flow.test.ts))
 
 Official model references:
 
