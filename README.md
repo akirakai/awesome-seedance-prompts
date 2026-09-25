@@ -37067,24 +37067,47 @@ and the committed
 
 **Verified model:** Seedance 2.5 (`bytedance/seedance-2-5` through kie.ai,
 480p and 720p routes; `doubao-seedance-2.5-face` on standard and relaxed
-routes) — the original developers recorded the paid production route, the
-provider's live validation failures for fixed-ratio endpoint requests and
-combined image dialects, and the corrected request builders and schemas
+routes; `doubao-seedance-2-5-260628` through ePhone AI's official channel) —
+the original developers recorded paid production routes, live validation
+failures for fixed-ratio frame requests and combined image dialects, and the
+corrected request builders and schemas. The ePhone evidence is a live
+request-contract probe, not returned-image quality evidence: its first task was
+rejected for the fixed ratio, and a later attempt reached the route's
+pre-charge gate on an empty account.
 
-Use this when Seedance must interpolate between an approved opening frame and
-an approved closing frame. In this mode, make the two images own the delivery
-shape and route the request with `aspect_ratio: "adaptive"`; do not leave an
-apparently active aspect picker that the provider will reject or ignore.
+Use this when Seedance must animate one approved opening frame or interpolate
+between approved opening and closing frames. In either frame-owned mode, make
+the authoritative image or image pair own the delivery shape and route the
+request with `aspect_ratio: "adaptive"`; do not leave an apparently active
+aspect picker that the provider will reject or ignore.
 
 ```text
 MODEL AND TASK CONTRACT
 Provider = [PROVIDER].
-Exact model = bytedance/seedance-2-5.
-Task = image-to-video with first frame + last frame.
+Exact model = [bytedance/seedance-2-5 / doubao-seedance-2-5-260628].
+Task = [FIRST FRAME / FIRST + LAST FRAME].
 Resolution = [480p / 720p].
 Duration = [4–30 WHOLE SECONDS].
 Audio = [ON / OFF].
-Delivery aspect = derived from the endpoint pair, not a separate selector.
+Delivery aspect = derived from the authoritative frame or endpoint pair, not a
+separate selector.
+
+SINGLE-FIRST-FRAME PREFLIGHT — EPHONE OFFICIAL ROUTE
+@Image1 = approved first frame whose pixels already encode the delivery shape.
+
+Serialize:
+  model = doubao-seedance-2-5-260628
+  first_frame = @Image1
+  aspect_ratio = "adaptive"
+  resolution = [480p / 720p]
+  duration = [SECONDS]
+
+Do not preserve 16:9, 9:16 or 1:1 merely because that value was selected before
+@Image1 was attached. The first live ePhone request rejected fixed `9:16` with
+the provider statement that first-frame and first-plus-last-frame tasks support
+only adaptive ratio. When no first frame exists and the task is text-to-video,
+an explicit supported ratio may remain; this rule is mode-specific, not a
+global rewrite.
 
 ENDPOINT-PAIR PREFLIGHT
 @Image1 = approved first frame.
@@ -37114,9 +37137,10 @@ If both endpoint frames are present:
   resolution = [480p / 720p]
   duration = [SECONDS]
 
-Never reuse the text-to-video or single-reference aspect payload unchanged.
+Never reuse the text-to-video or generic-reference aspect payload unchanged.
 Inspect the serialized request immediately before submission. Fail closed if a
-literal 16:9, 9:16 or 1:1 value survives beside the endpoint pair.
+literal 16:9, 9:16 or 1:1 value survives beside a first-frame field or endpoint
+pair on a route whose live contract requires adaptive.
 
 REFERENCE-FIELD OWNERSHIP
 Choose exactly one image-input dialect for the serialized request:
@@ -37131,32 +37155,53 @@ role. Preserve the rejected payload and provider response for diagnosis;
 provider HTTP 400 / code 20003 means the two image dialects were combined,
 not that the prompt needs another rewrite.
 
+ERROR-OWNERSHIP GATE
+Classify the response before changing creative instructions:
+- a message that first-frame or first-plus-last-frame tasks support only
+  `ratio=adaptive` is a request-shape failure; rebuild the same unpaid intent
+  with adaptive ratio;
+- ePhone HTTP 403 with `insufficient_user_quota` or a pre-charge failure is a
+  balance refusal; stop before ordering more shots and do not rewrite the
+  prompt, drop the first frame or fall back to another channel;
+- an accepted task ID is durable lineage. Poll that task; never submit a second
+  paid request merely because status collection was interrupted.
+
 RETURNED-ASSET GATE
-Read the delivered stream dimensions and compare them with the endpoint ratio.
-Approve only when the returned shape, opening frame and closing state match the
-contract. If they do not, retain the failed request and provider response; do
-not silently crop the paid output or claim that the disabled UI selection was
-honored.
+Read the delivered stream dimensions and compare them with the authoritative
+frame ratio. Approve only when the returned shape, opening frame and requested
+closing state match the contract. If they do not, retain the failed request and
+provider response; do not silently crop the paid output or claim that the
+disabled UI selection was honored.
 ```
 
-**Why it works:** the endpoint images and the API field stop competing for
-ownership of composition. The source captured the provider rejection that
+**Why it works:** the frame assets and the API field stop competing for
+ownership of composition. One source captured the provider rejection that
 first-plus-last-frame tasks support only adaptive aspect routing, then made the
-request builder and UI share that rule. This complements the single-reference
-crop-and-pixel-budget preflight above: that template prepares one reference for
-multiple shapes, while this one prevents a two-endpoint request from failing or
-misreporting its shape. A later independent Seedance 2.5 integration exposed a
-second ownership collision at the request-schema level: `image_urls` and
-`image_with_roles` are alternatives rather than additive fields, and combining
-them produces provider HTTP 400 / code 20003 before generation.
+request builder and UI share that rule. A later independent live ePhone probe
+showed that the same rule applies to its single-first-frame Seedance 2.5 route,
+while text-to-video still keeps an explicit supported ratio. Separating its
+subsequent quota refusal from the ratio error prevents a creative rewrite or
+cross-channel fallback from hiding a billing failure.
 
-**Source:** bioauraio's
+This complements the single-reference crop-and-pixel-budget preflight above:
+that template prepares one reference for several shapes, while this one
+prevents a frame-owned request from failing or misreporting its shape. A
+separate Seedance 2.5 integration exposed another ownership collision at the
+request-schema level: `image_urls` and `image_with_roles` are alternatives
+rather than additive fields, and combining them produces provider HTTP 400 /
+code 20003 before generation.
+
+**Sources:** bioauraio's
 [Seedance 2.5 endpoint-aspect correction commit](https://github.com/bioauraio/rap-clips-studio/commit/70100393704d6f08cd221d2815a2ab2f5a83595d)
 and the committed
-[exact-model request builder and frame-derived aspect gate](https://github.com/bioauraio/rap-clips-studio/blob/70100393704d6f08cd221d2815a2ab2f5a83595d/backend/mediagen.py), plus superdesigndev's September 18, 2026
+[exact-model request builder and frame-derived aspect gate](https://github.com/bioauraio/rap-clips-studio/blob/70100393704d6f08cd221d2815a2ab2f5a83595d/backend/mediagen.py);
+superdesigndev's September 18, 2026
 [Seedance 2.5 field-exclusivity correction](https://github.com/superdesigndev/treg/commit/1bad98d7ad94b1813152010a3162fe702deec0aa)
-and the committed
-[standard and relaxed-route schemas](https://github.com/superdesigndev/treg/blob/1bad98d7ad94b1813152010a3162fe702deec0aa/src/treg/catalog/reapi.yaml).
+and [standard and relaxed-route schemas](https://github.com/superdesigndev/treg/blob/1bad98d7ad94b1813152010a3162fe702deec0aa/src/treg/catalog/reapi.yaml);
+and tonnooooo's September 25, 2026
+[ePhone Seedance 2.5 official-route integration](https://github.com/tonnooooo/kleo-mcp/commit/3433f62507444c552073a7d2a7a719283cbf86a1)
+plus [first-live-call adaptive-ratio and quota correction](https://github.com/tonnooooo/kleo-mcp/commit/e9bf1a0ab5c22f177c4ac467b5072f05e389309d)
+([request compiler](https://github.com/tonnooooo/kleo-mcp/blob/e9bf1a0ab5c22f177c4ac467b5072f05e389309d/src/footage.ts)).
 
 
 ### Reference-input graph serialization preflight
@@ -44473,6 +44518,7 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 ## Sources
 
+- [tonnooooo / Kleo — September 25, 2026 ePhone official-channel Seedance 2.5 (`doubao-seedance-2-5-260628`) request qualification: exact unified-task payload, live first-frame rejection proving `aspect_ratio: adaptive`, separate text-to-video ratio path, official-only provider headers and terminal `insufficient_user_quota` classification](https://github.com/tonnooooo/kleo-mcp/commit/e9bf1a0ab5c22f177c4ac467b5072f05e389309d) ([initial official-route integration](https://github.com/tonnooooo/kleo-mcp/commit/3433f62507444c552073a7d2a7a719283cbf86a1), [request compiler](https://github.com/tonnooooo/kleo-mcp/blob/e9bf1a0ab5c22f177c4ac467b5072f05e389309d/src/footage.ts))
 - [llPekoll / Rabbit Royale — September 25, 2026 Higgsfield Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`) mounted social-game teaser: complete four-shot clay prompt, ordered identity/style references, exact 8-second 1:1 720p silent request, one-request recovery ledger, creator result notes and generated-to-gameplay assembly](https://github.com/llPekoll/rabbit-royale/commit/6fef07e2654c33a3d9f031267796733954186844) ([complete prompt and review](https://github.com/llPekoll/rabbit-royale/blob/6fef07e2654c33a3d9f031267796733954186844/episodes/ep01-carotte-bombe/shots/SEEDANCE.md), [exact request](https://github.com/llPekoll/rabbit-royale/blob/6fef07e2654c33a3d9f031267796733954186844/examples/higgsfield/episode-video.ts), [assembly record](https://github.com/llPekoll/rabbit-royale/blob/6fef07e2654c33a3d9f031267796733954186844/episodes/README.md))
 - [6ix411 / Higgsfield — September 24, 2026 Seedance 2.0 (`seedance_2_0`) Kraken ride production record: two complete 15-second 720p 16:9 prompts, native-audio route settings, submitted job IDs, flat-video output note, repeated POV/style lock, three-beat pacing and post-owned typography](https://github.com/6ix411/Higgsfield/commit/56d28072a58b92ea6d8ba09e7f157b16ffaec1f2) ([complete prompt file](https://github.com/6ix411/Higgsfield/blob/56d28072a58b92ea6d8ba09e7f157b16ffaec1f2/brightside-vr360/kraken-test-clips.md))
 - [kizzymason / JTCANVAS — September 25, 2026 Dreamina Seedance 2.0 (`dreamina-seedance-2-0`, R2V) request-geometry repair: two real `736x1312` tasks rejected after generic reduction to unsupported `23:41`, followed by video-only snapping to Ark's fixed ratio enum and negative regressions for auto, empty and extreme geometry](https://github.com/kizzymason/JTCANVAS/commit/f7037b3d02bc6227c4f0bc110cc84d4af5649f02)
