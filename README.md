@@ -44703,7 +44703,109 @@ Adapted and rewritten from andreteow's September 25, 2026
 and [creator production description](https://github.com/andreteow/jev-sky-islands/blob/0b6784512edf7f60bf87dbdfdc91d27c46841f77/README.md).
 
 
+
+### Visible-price, editor-state and timeout-receipt submission gate
+
+**Verified model:** Higgsfield Seedance 2.5 (shown as `Seedance 2.5` in
+Higgsfield Usage History) — the original production record documents a
+130-credit Seedance 2.5 Rerun, repeated multi-paragraph prompt truncation, two
+unintended 135-credit submissions while troubleshooting a nearby control and
+the validated recovery path. No public job IDs or visual masters accompany the
+operator ledger; count this as verified production structure, not a
+visual-quality benchmark.  
+**Use case:** browser-operated Seedance generation where a stale duplicate
+control, partially written prompt or ambiguous timeout could spend credits on
+the wrong request  
+**Mode:** active-composer selection -> prompt-state proof -> visible-price proof
+-> one submit -> usage receipt
+
+```text
+IMMUTABLE INTENT RECEIPT
+Before touching the composer, record:
+[PROJECT URL], [MODEL], [PROMPT HASH / LENGTH], [FIRST 80 CHARACTERS],
+[LAST 80 CHARACTERS], [ORDERED REFERENCES], [DURATION], [RATIO],
+[RESOLUTION], [AUDIO], [EXPECTED PRICE STATE] and [ATTEMPT ID].
+
+HISTORY ACTION
+Never use Rerun to reopen a previous job: it may submit immediately.
+Use Recreate only, confirm that it merely loads the prior request, then edit
+and revalidate the complete composer before any generation.
+
+ACTIVE-SURFACE GATE
+1. Use the named project URL and a desktop-width composer.
+2. Find the visible prompt editor; reject any overlapping contenteditable whose
+   computed visibility is hidden.
+3. Treat a loose DOM match as untrusted: both the editor and Generate control
+   may have stale or hidden twins.
+
+PROMPT WRITE AND PROOF
+Insert the complete multi-paragraph prompt with one synthetic ClipboardEvent
+paste. Do not simulate keystrokes and do not dispatch a second synthetic input
+event after paste.
+
+Read the selected visible editor three ways:
+- rendered inner text;
+- the editor's exposed Lexical text value;
+- serialized editor state, when accessible.
+
+All available reads must match the receipt's length and opening/closing
+fingerprints. If they disagree, are partial or target the hidden twin, clear the
+active editor and paste again before submission. Never accept a first-sentence
+fragment just because it is visible.
+
+CONTROL PROOF
+Recheck model, references, duration, ratio, resolution and audio after every
+reload or Recreate. If duration is an ARIA slider, set and verify its
+aria-valuenow; do not type into a nearby read-only label.
+
+Inspect the real visible Generate button itself:
+- struck-through price followed by zero = Unlimited pass;
+- bare Generate with no price = pass only when that is the verified surface;
+- live unstruck price = STOP and obtain explicit paid approval.
+
+Do not infer price from the Unlimited toggle alone, a stale DOM duplicate or a
+previous screen state. Confirm no account-wide Unlimited video is still
+processing before taking the single slot.
+
+ONE-ACTION RULE
+On a priced or state-changing control, make one intentional click. Do not
+double-click, fall back to raw coordinates, press Enter nearby or retry merely
+because no toast appears. Persist the click time and attempt ID immediately.
+
+UNKNOWN-RESULT RECOVERY
+Any browser error or timeout makes the request state UNKNOWN, not FAILED.
+Before touching the composer again:
+1. open a separate tab;
+2. inspect Usage History for a matching charge or Unlimited receipt;
+3. inspect account-wide generation history for an in-flight or completed job;
+4. compare its time, model and settings with the immutable intent receipt.
+
+If a matching job exists, resume or collect that same job. If a charge landed,
+record it even when the UI call reported failure. Resubmit only after a bounded
+check proves that no job and no charge were created; reuse the same attempt
+intent and change no creative field.
+
+RETURN AUDIT
+Open the finished card's Prompt / Info panel and compare the serialized prompt,
+model, settings and references with the receipt. Reject a visually plausible
+clip if the stored prompt is partial or the returned task belongs to a
+different attempt. Record the final Usage line beside the accepted artifact.
+```
+
+**Why it works:** submission is admitted only when the intended request, the
+framework-bound prompt and the visible price agree. The post-timeout receipt
+check closes the dangerous gap between “the automation call failed” and “the
+provider accepted it,” while the one-action rule prevents uncertainty from
+turning into duplicate spend.
+
+Adapted and rewritten from PASAKON's September 25, 2026
+[Seedance/Higgsfield production-skill publication](https://github.com/PASAKON/Agents-Core/commit/0220f4e44a85414e6758a899f8f05a44c28a9d33),
+the [complete incident-backed operator contract](https://github.com/PASAKON/Agents-Core/blob/0220f4e44a85414e6758a899f8f05a44c28a9d33/.claude/skills/CTO_Seedance2.5_Higgsfield/SKILL.md)
+and its [source-overlap and evidence inventory](https://github.com/PASAKON/Agents-Core/blob/0220f4e44a85414e6758a899f8f05a44c28a9d33/docs/ops/skill-film-inventory-2026-09-25.md).
+
 ## Sources
+
+- [PASAKON / Agents-Core — September 25, 2026 Higgsfield Seedance 2.5 incident-backed operating contract: 130-credit Rerun, multi-paragraph Lexical truncation, visible-versus-decoy editor and Generate controls, struck-price/zero proof, one-click paid controls and Usage-History recovery after timeouts](https://github.com/PASAKON/Agents-Core/commit/0220f4e44a85414e6758a899f8f05a44c28a9d33) ([complete operator contract](https://github.com/PASAKON/Agents-Core/blob/0220f4e44a85414e6758a899f8f05a44c28a9d33/.claude/skills/CTO_Seedance2.5_Higgsfield/SKILL.md), [evidence inventory](https://github.com/PASAKON/Agents-Core/blob/0220f4e44a85414e6758a899f8f05a44c28a9d33/docs/ops/skill-film-inventory-2026-09-25.md))
 
 - [andreteow / Sky Island Hatchlings — September 25, 2026 Higgsfield Seedance 2.5 personalized story-reel system: exact `bytedance/seedance-2.5/image-to-video` and `reference-to-video` routes, fifteen creator-reported ten-second movies per player, journal-conditioned prompt compiler, progress-gated prefetch, ordered role manifests, restart recovery and private master collection](https://github.com/andreteow/jev-sky-islands/commit/0b6784512edf7f60bf87dbdfdc91d27c46841f77) ([complete prompt compiler and lifecycle](https://github.com/andreteow/jev-sky-islands/blob/0b6784512edf7f60bf87dbdfdc91d27c46841f77/src/lib/media.ts), [exact request client](https://github.com/andreteow/jev-sky-islands/blob/0b6784512edf7f60bf87dbdfdc91d27c46841f77/src/lib/ai/higgsfield.ts), [creator production description](https://github.com/andreteow/jev-sky-islands/blob/0b6784512edf7f60bf87dbdfdc91d27c46841f77/README.md))
 - [keys-exe / global-manual-ai — September 25, 2026 Kie Seedance 2.5 (`bytedance/seedance-2-5`) production standard: 42 paid calls, a 10-second image-first voice source, lossless canonical-master extraction, separately logged minimum-length clone carrier, unique clone naming, verbatim transcript QA and line-timed B-roll](https://github.com/keys-exe/global-manual-ai/commit/d990c28fd92889f61e78f3ebd578d23c84479d2c) ([exact Kie model and task client](https://github.com/keys-exe/global-manual-ai/blob/d990c28fd92889f61e78f3ebd578d23c84479d2c/.claude/skills/ai-prompt-engineer/scripts/kie.py), [voice-origin lock and clone-name gate](https://github.com/keys-exe/global-manual-ai/commit/e753c1c9d0dbf69ad9d8f0c09056719af0ab3355), [complete production standard](https://github.com/keys-exe/global-manual-ai/blob/d990c28fd92889f61e78f3ebd578d23c84479d2c/standards/AI_Prompt_Engineer_Global_Standards.md))
