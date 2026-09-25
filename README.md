@@ -421,6 +421,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Locked-waterfall two-speaker micro-comedy](#405-locked-waterfall-two-speaker-micro-comedy)
   - [Palace-summoning colossus tableau and full-frame palm blackout](#406-palace-summoning-colossus-tableau-and-full-frame-palm-blackout)
   - [Job-linked two-clip Kraken coaster descent](#407-job-linked-two-clip-kraken-coaster-descent)
+  - [Four-beat carrot-to-bomb clay game teaser](#408-four-beat-carrot-to-bomb-clay-game-teaser)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -25672,6 +25673,94 @@ Adapted and rewritten from 6ix411's September 24, 2026
 [Higgsfield Seedance 2.0 Kraken test-clip commit](https://github.com/6ix411/Higgsfield/commit/56d28072a58b92ea6d8ba09e7f157b16ffaec1f2)
 and [complete prompts, settings, job IDs and output note](https://github.com/6ix411/Higgsfield/blob/56d28072a58b92ea6d8ba09e7f157b16ffaec1f2/brightside-vr360/kraken-test-clips.md).
 
+
+### 408. Four-beat carrot-to-bomb clay game teaser
+
+**Verified model:** Higgsfield Seedance 2.5
+(`bytedance/seedance-2.5/reference-to-video`) — the original creator publishes
+the exact endpoint, runnable request, complete prompt, reference order and
+settings, then records the clay result as successful inside a mounted episode  
+**Use case:** silent social-game teaser, miniature stop-motion comedy,
+multi-character identity separation, generated-to-gameplay handoff  
+**Mode:** reference-to-video with two ordered images  
+**Verified settings:** 8 seconds; 1:1; 720p; `generate_audio: false`; one
+billable request per style; submitted-request record written before polling
+
+```text
+FORMAT AND REFERENCE CONTRACT
+Create one continuous eight-second square stop-motion sequence with only the
+four written shots. Use no generated audio.
+
+Image 1 owns the white hero, oversized carrot and complete visual medium:
+hand-shaped matte clay with visible fingerprints, slightly stepped stop-motion
+movement, felt grass, sculpted clay pines and mushrooms, miniature studio set
+and warm physical lighting. Image 2 owns only the second rabbit's design and
+brown identity. It does not replace the hero, carrot, set or clay treatment.
+
+Keep the same two rabbit designs, miniature clearing, daylight direction and
+handmade materials across every cut. Trees, bushes, mushrooms, dirt and effects
+must remain sculpted stop-motion props; never drift into flat game sprites or
+generic smooth CGI.
+
+SHOT 1 — 00:00–00:02 — DISCOVERY
+Locked wide view of a small sunny clearing. The ground begins empty except for
+one tuft of carrot leaves at centre. The white rabbit hops into frame, grips the
+leaves with both paws, plants its feet, leans back under visible resistance and
+pulls. A carrot much larger than its torso tears free; crumbs of clay dirt and
+felt grass scatter from the contact point.
+
+SHOT 2 — 00:02–00:03.5 — TROPHY
+Continue from the same action. Make one smooth zoom from the wide view to a
+front-facing medium close-up. The white rabbit lifts the giant carrot above its
+head with both arms, closes its eyes and holds a proud trophy pose. The zoom is
+the only camera movement in this shot.
+
+SHOT 3 — 00:03.5–00:04.3 — OFF-SCREEN WARNING
+Hold the close framing. A hard orange light arrives from off-screen right,
+lighting that side of the face and carrot without showing flame. The rabbit's
+eyes open, its ears jolt upright and its head begins turning right. Cut in the
+middle of that turn.
+
+SHOT 4 — 00:04.3–00:08 — BACKGROUND PAYOFF
+Hard cut to a wide rear view. Place the white rabbit small in the bottom-left
+foreground, still holding the carrot overhead. It becomes a motionless statue
+for the rest of the clip and never looks back.
+
+The brown rabbit enters in the background on screen right. A ring of glowing
+yellow clay tiles rotates continuously around its feet like a turning player
+marker and follows its short happy hops. The brown rabbit steps on one patch of
+ground. One orange clay fireball erupts with a low circular shockwave and dirt
+chunks. Preserve the rabbit's body and ears while the blast sends it backward
+in a low arc, turns it twice, drops it flat farther away and gives it one small
+bounce. Black cotton-like smoke rises. Add one brief camera shake at impact,
+then return immediately to the locked wide view.
+
+DELIVERY AND FAILURE CONTROL
+No title, caption, letter, logo or interface inside the generated frames. Add
+the joke copy and game branding in post. No clothes, crown or cape. Do not merge
+the two rabbits, recolour the hero, move the foreground statue during the
+explosion, freeze the player-marker ring, introduce a third character, change
+the set material between shots or morph either body during the flight.
+```
+
+**What was verified:** the creator's production script preserves the prompt,
+ordered references and full paid request before polling, refuses a second
+submission when that record already exists, and identifies the resulting clay
+clip as successful. The published review also exposes two correctable misses:
+the yellow player ring looked fixed rather than rotating, and a later wide shot
+borrowed flat game-world trees. The rewritten version therefore gives each
+reference one owner, repeats the clay set lock at the sequence level, turns the
+foreground hero into an explicit statue during the payoff, and assigns all
+deterministic typography to the edit. The same episode then hands off to
+captured gameplay, so the generated eight-second setup and the product footage
+can be replaced or re-cut independently.
+
+Adapted and rewritten from llPekoll's September 25, 2026
+[Rabbit Royale production commit](https://github.com/llPekoll/rabbit-royale/commit/6fef07e2654c33a3d9f031267796733954186844),
+the [complete prompt and result notes](https://github.com/llPekoll/rabbit-royale/blob/6fef07e2654c33a3d9f031267796733954186844/episodes/ep01-carotte-bombe/shots/SEEDANCE.md),
+the [exact Higgsfield request and duplicate-submit guard](https://github.com/llPekoll/rabbit-royale/blob/6fef07e2654c33a3d9f031267796733954186844/examples/higgsfield/episode-video.ts)
+and the [episode assembly record](https://github.com/llPekoll/rabbit-royale/blob/6fef07e2654c33a3d9f031267796733954186844/episodes/README.md).
+
 ## Reusable templates
 
 ### Host-restart-safe NLE generation and master/preview/audio ownership gate
@@ -44384,6 +44473,7 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 ## Sources
 
+- [llPekoll / Rabbit Royale — September 25, 2026 Higgsfield Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`) mounted social-game teaser: complete four-shot clay prompt, ordered identity/style references, exact 8-second 1:1 720p silent request, one-request recovery ledger, creator result notes and generated-to-gameplay assembly](https://github.com/llPekoll/rabbit-royale/commit/6fef07e2654c33a3d9f031267796733954186844) ([complete prompt and review](https://github.com/llPekoll/rabbit-royale/blob/6fef07e2654c33a3d9f031267796733954186844/episodes/ep01-carotte-bombe/shots/SEEDANCE.md), [exact request](https://github.com/llPekoll/rabbit-royale/blob/6fef07e2654c33a3d9f031267796733954186844/examples/higgsfield/episode-video.ts), [assembly record](https://github.com/llPekoll/rabbit-royale/blob/6fef07e2654c33a3d9f031267796733954186844/episodes/README.md))
 - [6ix411 / Higgsfield — September 24, 2026 Seedance 2.0 (`seedance_2_0`) Kraken ride production record: two complete 15-second 720p 16:9 prompts, native-audio route settings, submitted job IDs, flat-video output note, repeated POV/style lock, three-beat pacing and post-owned typography](https://github.com/6ix411/Higgsfield/commit/56d28072a58b92ea6d8ba09e7f157b16ffaec1f2) ([complete prompt file](https://github.com/6ix411/Higgsfield/blob/56d28072a58b92ea6d8ba09e7f157b16ffaec1f2/brightside-vr360/kraken-test-clips.md))
 - [kizzymason / JTCANVAS — September 25, 2026 Dreamina Seedance 2.0 (`dreamina-seedance-2-0`, R2V) request-geometry repair: two real `736x1312` tasks rejected after generic reduction to unsupported `23:41`, followed by video-only snapping to Ark's fixed ratio enum and negative regressions for auto, empty and extreme geometry](https://github.com/kizzymason/JTCANVAS/commit/f7037b3d02bc6227c4f0bc110cc84d4af5649f02)
 - [king5012996533 / solid-funicular — September 25, 2026 GenVideo Seedance 2.5 (`p-sceneflow-genvideo-2-5` / `seedance2.5`) versioned create-contract repair: explicit `mode=2.5`, `durationSeconds=30`, six-ratio and ordered-reference compilation, provider-fetch preflight, bounded polling, terminal refund tests, durable signed-URL storage and a live 30.04-second 1280×720 H.264/AAC result](https://github.com/king5012996533/solid-funicular/commit/4c69742b5f539cf6dea652dc394107324db0ea64)
