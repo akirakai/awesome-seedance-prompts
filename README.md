@@ -37070,10 +37070,12 @@ and the committed
 routes; `doubao-seedance-2-5-260628` through ePhone AI's official channel) —
 the original developers recorded paid production routes, live validation
 failures for fixed-ratio frame requests and combined image dialects, and the
-corrected request builders and schemas. The ePhone evidence is a live
-request-contract probe, not returned-image quality evidence: its first task was
-rejected for the fixed ratio, and a later attempt reached the route's
-pre-charge gate on an empty account.
+corrected request builders and schemas. After the first ePhone task failed on
+fixed ratio and an empty-account probe stopped at pre-charge, the same developer
+recorded a successful four-second 480p first-frame clip: 38,759 output tokens
+and a measured $0.0864 per second. That later record verifies acceptance and
+usage reconciliation, not visual quality; it publishes no reviewable task ID
+or master asset.
 
 Use this when Seedance must animate one approved opening frame or interpolate
 between approved opening and closing frames. In either frame-owned mode, make
@@ -37164,7 +37166,12 @@ Classify the response before changing creative instructions:
   balance refusal; stop before ordering more shots and do not rewrite the
   prompt, drop the first frame or fall back to another channel;
 - an accepted task ID is durable lineage. Poll that task; never submit a second
-  paid request merely because status collection was interrupted.
+  paid request merely because status collection was interrupted;
+- on completion, persist task ID, shot ID, duration, resolution and the
+  provider's usage object in one audit row, then reconcile output tokens and
+  the account charge before updating a default price. The developer's 38,759
+  output tokens and $0.0864/s are one four-second 480p channel measurement, not
+  a portable Seedance price.
 
 RETURNED-ASSET GATE
 Read the delivered stream dimensions and compare them with the authoritative
@@ -37181,7 +37188,9 @@ request builder and UI share that rule. A later independent live ePhone probe
 showed that the same rule applies to its single-first-frame Seedance 2.5 route,
 while text-to-video still keeps an explicit supported ratio. Separating its
 subsequent quota refusal from the ratio error prevents a creative rewrite or
-cross-channel fallback from hiding a billing failure.
+cross-channel fallback from hiding a billing failure. The later successful
+four-second run closes the request-path loop; keeping its usage sample separate
+from visual acceptance avoids turning a billing probe into a quality claim.
 
 This complements the single-reference crop-and-pixel-budget preflight above:
 that template prepares one reference for several shapes, while this one
@@ -37200,8 +37209,10 @@ superdesigndev's September 18, 2026
 and [standard and relaxed-route schemas](https://github.com/superdesigndev/treg/blob/1bad98d7ad94b1813152010a3162fe702deec0aa/src/treg/catalog/reapi.yaml);
 and tonnooooo's September 25, 2026
 [ePhone Seedance 2.5 official-route integration](https://github.com/tonnooooo/kleo-mcp/commit/3433f62507444c552073a7d2a7a719283cbf86a1)
-plus [first-live-call adaptive-ratio and quota correction](https://github.com/tonnooooo/kleo-mcp/commit/e9bf1a0ab5c22f177c4ac467b5072f05e389309d)
-([request compiler](https://github.com/tonnooooo/kleo-mcp/blob/e9bf1a0ab5c22f177c4ac467b5072f05e389309d/src/footage.ts)).
+plus [first-live-call adaptive-ratio and quota correction](https://github.com/tonnooooo/kleo-mcp/commit/e9bf1a0ab5c22f177c4ac467b5072f05e389309d), followed by the
+[successful four-second 480p usage measurement](https://github.com/tonnooooo/kleo-mcp/commit/70946ac4389f2f499970f78809d2170f53f6d269)
+([request compiler and completion-usage audit](https://github.com/tonnooooo/kleo-mcp/blob/70946ac4389f2f499970f78809d2170f53f6d269/src/footage.ts),
+[measured route configuration](https://github.com/tonnooooo/kleo-mcp/blob/70946ac4389f2f499970f78809d2170f53f6d269/wrangler.jsonc)).
 
 
 ### Reference-input graph serialization preflight
@@ -44518,7 +44529,7 @@ and the [Seedance last-frame integration workflow](https://github.com/griptape-a
 
 ## Sources
 
-- [tonnooooo / Kleo — September 25, 2026 ePhone official-channel Seedance 2.5 (`doubao-seedance-2-5-260628`) request qualification: exact unified-task payload, live first-frame rejection proving `aspect_ratio: adaptive`, separate text-to-video ratio path, official-only provider headers and terminal `insufficient_user_quota` classification](https://github.com/tonnooooo/kleo-mcp/commit/e9bf1a0ab5c22f177c4ac467b5072f05e389309d) ([initial official-route integration](https://github.com/tonnooooo/kleo-mcp/commit/3433f62507444c552073a7d2a7a719283cbf86a1), [request compiler](https://github.com/tonnooooo/kleo-mcp/blob/e9bf1a0ab5c22f177c4ac467b5072f05e389309d/src/footage.ts))
+- [tonnooooo / Kleo — September 25, 2026 ePhone official-channel Seedance 2.5 (`doubao-seedance-2-5-260628`) successful follow-up: four-second 480p first-frame clip, 38,759 measured output tokens, $0.0864/s channel sample and completion-usage audit](https://github.com/tonnooooo/kleo-mcp/commit/70946ac4389f2f499970f78809d2170f53f6d269) ([measured route configuration](https://github.com/tonnooooo/kleo-mcp/blob/70946ac4389f2f499970f78809d2170f53f6d269/wrangler.jsonc), [request and usage ledger](https://github.com/tonnooooo/kleo-mcp/blob/70946ac4389f2f499970f78809d2170f53f6d269/src/footage.ts), [first-call adaptive-ratio and quota correction](https://github.com/tonnooooo/kleo-mcp/commit/e9bf1a0ab5c22f177c4ac467b5072f05e389309d), [initial official-route integration](https://github.com/tonnooooo/kleo-mcp/commit/3433f62507444c552073a7d2a7a719283cbf86a1))
 - [llPekoll / Rabbit Royale — September 25, 2026 Higgsfield Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`) mounted social-game teaser: complete four-shot clay prompt, ordered identity/style references, exact 8-second 1:1 720p silent request, one-request recovery ledger, creator result notes and generated-to-gameplay assembly](https://github.com/llPekoll/rabbit-royale/commit/6fef07e2654c33a3d9f031267796733954186844) ([complete prompt and review](https://github.com/llPekoll/rabbit-royale/blob/6fef07e2654c33a3d9f031267796733954186844/episodes/ep01-carotte-bombe/shots/SEEDANCE.md), [exact request](https://github.com/llPekoll/rabbit-royale/blob/6fef07e2654c33a3d9f031267796733954186844/examples/higgsfield/episode-video.ts), [assembly record](https://github.com/llPekoll/rabbit-royale/blob/6fef07e2654c33a3d9f031267796733954186844/episodes/README.md))
 - [6ix411 / Higgsfield — September 24, 2026 Seedance 2.0 (`seedance_2_0`) Kraken ride production record: two complete 15-second 720p 16:9 prompts, native-audio route settings, submitted job IDs, flat-video output note, repeated POV/style lock, three-beat pacing and post-owned typography](https://github.com/6ix411/Higgsfield/commit/56d28072a58b92ea6d8ba09e7f157b16ffaec1f2) ([complete prompt file](https://github.com/6ix411/Higgsfield/blob/56d28072a58b92ea6d8ba09e7f157b16ffaec1f2/brightside-vr360/kraken-test-clips.md))
 - [kizzymason / JTCANVAS — September 25, 2026 Dreamina Seedance 2.0 (`dreamina-seedance-2-0`, R2V) request-geometry repair: two real `736x1312` tasks rejected after generic reduction to unsupported `23:41`, followed by video-only snapping to Ark's fixed ratio enum and negative regressions for auto, empty and extreme geometry](https://github.com/kizzymason/JTCANVAS/commit/f7037b3d02bc6227c4f0bc110cc84d4af5649f02)
