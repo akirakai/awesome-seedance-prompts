@@ -44564,8 +44564,148 @@ the [exact Seedance 2.5 delivery node](https://github.com/griptape-ai/griptape-n
 and the [Seedance last-frame integration workflow](https://github.com/griptape-ai/griptape-nodes-library-standard/blob/0179dec7d9b6ea445e7199f417521b1c3c4a7e39/tests/integration/test_seedance_2_5_last_frame_artifact.py).
 
 
+
+### Progress-gated personalized story-reel compiler
+
+**Verified model:** Higgsfield ByteDance Seedance 2.5
+(`bytedance/seedance-2.5/image-to-video` and
+`bytedance/seedance-2.5/reference-to-video`) — the original implementation
+routes every clip through these exact endpoints at 10 seconds, 720p with
+generated audio. Its creator describes fifteen personalized movies per player
+and about 13 MB per downloaded provider clip before web transcode. The public
+repository preserves the complete prompt compiler and delivery code, but no
+public task IDs or private player masters; treat this as verified production
+structure, not an independent visual-quality benchmark.  
+**Use case:** an interactive story, game or learning journey must turn evolving
+user state into a coherent reel without asking one monolithic prompt to know
+the whole future  
+**Mode:** persistent story state -> bounded prompt compiler -> progress-gated
+first/last-frame or ordered-reference request -> asynchronous collect
+
+```text
+CANONICAL STORY RECEIPT
+Persist one versioned record per participant:
+- participant and companion visual descriptions;
+- immutable portrait IDs/hashes for every approved character stage;
+- current story position and completed events;
+- personality or choice scores;
+- up to [N] recent journal facts, kept in chronological order;
+- optional favorite, fear, prop, location and spoken-line fields.
+
+A generated clip may read only facts already present at its unlock point.
+Never let a later choice leak backward into an earlier scene.
+
+SLOT GRAPH
+Define every possible reel slot before generation:
+[OPENING / CHAPTER INTRO 01..N / TRANSFORMATION 01..M / ENDING].
+
+Each slot declares:
+- prerequisite assets and story milestone;
+- exact Seedance endpoint;
+- ordered reference-role manifest;
+- duration, aspect, resolution and audio contract;
+- one stable key: [PARTICIPANT ID]:[STORY VERSION]:[SLOT ID].
+
+Do not create a slot until all prerequisites pass. A completed slot cannot be
+silently regenerated because the participant refreshed the page.
+
+BOUNDED PROMPT COMPILER
+System instruction:
+Write one vivid [DURATION]-second Seedance 2.5 clip under [WORD LIMIT].
+Include camera movement, ordered action beats, lighting and one sound-design
+line. Use at most one short spoken line or creature sound. Make the clip
+recognizably personal by using specific facts from the supplied journal.
+Address every reference only by its declared role. Return exactly
+{"prompt":"[FINAL PROMPT]"}.
+
+Runtime context:
+PARTICIPANT = [NAME + APPROVED VISUAL SUMMARY]
+COMPANION = [NAME + APPROVED STAGE VISUAL + CURRENT PERSONALITY]
+PERSONAL FACTS = [FAVORITE / FEAR / PROP]
+JOURNAL = [LAST N QUALIFYING FACTS]
+SLOT BRIEF = [ONE COMPLETE SCENE INTENT]
+
+Reject an empty prompt, an answer over the word cap, undeclared characters,
+future-story facts, more than one spoken line or a reference number absent from
+the slot manifest. Archive the compiled final prompt, not only this compiler.
+
+REFERENCE ROUTES
+A. Boundary transformation:
+- image 1 = approved start state;
+- image 2 = approved end state;
+- use first/last-frame image-to-video;
+- describe the causal motion between them without redesigning either endpoint.
+
+B. Chapter arrival:
+- image 1 = current companion stage;
+- image 2 = participant;
+- image 3 = destination environment;
+- optional image 4 = chapter character who appears only at the end;
+- use reference-to-video and state each role in the scene brief.
+
+C. Ending:
+- order hero, companion, final environment and antagonist references once;
+- ground the victory in journal evidence;
+- resolve existing threads instead of introducing a new character or location.
+
+PROGRESS-GATED PREFETCH
+Start the next chapter's media at the current chapter's final safe milestone,
+not after the transition screen opens. Freeze any branch-defining choice when
+its first dependent portrait is created. Generate that portrait first; only its
+accepted immutable asset may unlock the matching video.
+
+Run preparation after the user response has been saved. The interactive request
+must not wait for a paid render. Show a still or explicit rendering state until
+the clip is collected; never substitute a different slot's video.
+
+ONE JOB PER SLOT
+Before submit, atomically reserve the stable slot key with:
+[STATE SNAPSHOT HASH], [FINAL PROMPT], [ENDPOINT], [ORDERED REFERENCE HASHES],
+[EFFECTIVE CONTROLS], [ATTEMPT COUNT] and [CREATED TIME].
+
+After acceptance, persist [REQUEST ID] and [STATUS URL] immediately. A server
+restart resumes that request. A stale local preparation lease may be reclaimed;
+an accepted remote request is polled, never bought again. Bound automatic
+retries and keep every terminal failure reason.
+
+COLLECT AND DELIVER
+Poll at a documented minimum interval. On completion:
+1. download the provider result before its URL expires;
+2. store the immutable master in participant-scoped private storage;
+3. record measured duration, dimensions, audio presence and file hash;
+4. create any web-optimized derivative separately;
+5. expose only a short-lived signed playback URL.
+
+The derivative never replaces the master. A transcode failure returns the
+master rather than marking the generation failed.
+
+ACCEPTANCE
+- every clip can be traced to the exact story-state snapshot it was allowed to
+  know;
+- hatching and transformations begin and end on their approved states;
+- chapter intros preserve the ordered character and place ownership;
+- at least one journal fact is visible or audible without inventing history;
+- refreshes and host restarts do not create duplicate paid tasks;
+- the final reel contains one slot once, in story order, with no future-state
+  leakage.
+```
+
+**Why it works:** it separates story truth, prompt compilation, reference
+ownership and job recovery. Progress-gated prefetch hides render latency while
+the stable slot key prevents that latency optimization from becoming duplicate
+spend. First/last frames own transformations; ordered reference packs own
+chapter identity and geography.
+
+Adapted and rewritten from andreteow's September 25, 2026
+[Sky Island Hatchlings production commit](https://github.com/andreteow/jev-sky-islands/commit/0b6784512edf7f60bf87dbdfdc91d27c46841f77),
+[complete personalized prompt compiler and progress gates](https://github.com/andreteow/jev-sky-islands/blob/0b6784512edf7f60bf87dbdfdc91d27c46841f77/src/lib/media.ts),
+[exact Higgsfield Seedance 2.5 request client](https://github.com/andreteow/jev-sky-islands/blob/0b6784512edf7f60bf87dbdfdc91d27c46841f77/src/lib/ai/higgsfield.ts)
+and [creator production description](https://github.com/andreteow/jev-sky-islands/blob/0b6784512edf7f60bf87dbdfdc91d27c46841f77/README.md).
+
+
 ## Sources
 
+- [andreteow / Sky Island Hatchlings — September 25, 2026 Higgsfield Seedance 2.5 personalized story-reel system: exact `bytedance/seedance-2.5/image-to-video` and `reference-to-video` routes, fifteen creator-reported ten-second movies per player, journal-conditioned prompt compiler, progress-gated prefetch, ordered role manifests, restart recovery and private master collection](https://github.com/andreteow/jev-sky-islands/commit/0b6784512edf7f60bf87dbdfdc91d27c46841f77) ([complete prompt compiler and lifecycle](https://github.com/andreteow/jev-sky-islands/blob/0b6784512edf7f60bf87dbdfdc91d27c46841f77/src/lib/media.ts), [exact request client](https://github.com/andreteow/jev-sky-islands/blob/0b6784512edf7f60bf87dbdfdc91d27c46841f77/src/lib/ai/higgsfield.ts), [creator production description](https://github.com/andreteow/jev-sky-islands/blob/0b6784512edf7f60bf87dbdfdc91d27c46841f77/README.md))
 - [keys-exe / global-manual-ai — September 25, 2026 Kie Seedance 2.5 (`bytedance/seedance-2-5`) production standard: 42 paid calls, a 10-second image-first voice source, lossless canonical-master extraction, separately logged minimum-length clone carrier, unique clone naming, verbatim transcript QA and line-timed B-roll](https://github.com/keys-exe/global-manual-ai/commit/d990c28fd92889f61e78f3ebd578d23c84479d2c) ([exact Kie model and task client](https://github.com/keys-exe/global-manual-ai/blob/d990c28fd92889f61e78f3ebd578d23c84479d2c/.claude/skills/ai-prompt-engineer/scripts/kie.py), [voice-origin lock and clone-name gate](https://github.com/keys-exe/global-manual-ai/commit/e753c1c9d0dbf69ad9d8f0c09056719af0ab3355), [complete production standard](https://github.com/keys-exe/global-manual-ai/blob/d990c28fd92889f61e78f3ebd578d23c84479d2c/standards/AI_Prompt_Engineer_Global_Standards.md))
 - [tonnooooo / Kleo — September 25, 2026 ePhone official-channel Seedance 2.5 (`doubao-seedance-2-5-260628`) successful follow-up: four-second 480p first-frame clip, 38,759 measured output tokens, $0.0864/s channel sample and completion-usage audit](https://github.com/tonnooooo/kleo-mcp/commit/70946ac4389f2f499970f78809d2170f53f6d269) ([measured route configuration](https://github.com/tonnooooo/kleo-mcp/blob/70946ac4389f2f499970f78809d2170f53f6d269/wrangler.jsonc), [request and usage ledger](https://github.com/tonnooooo/kleo-mcp/blob/70946ac4389f2f499970f78809d2170f53f6d269/src/footage.ts), [first-call adaptive-ratio and quota correction](https://github.com/tonnooooo/kleo-mcp/commit/e9bf1a0ab5c22f177c4ac467b5072f05e389309d), [initial official-route integration](https://github.com/tonnooooo/kleo-mcp/commit/3433f62507444c552073a7d2a7a719283cbf86a1))
 - [llPekoll / Rabbit Royale — September 25, 2026 Higgsfield Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`) mounted social-game teaser: complete four-shot clay prompt, ordered identity/style references, exact 8-second 1:1 720p silent request, one-request recovery ledger, creator result notes and generated-to-gameplay assembly](https://github.com/llPekoll/rabbit-royale/commit/6fef07e2654c33a3d9f031267796733954186844) ([complete prompt and review](https://github.com/llPekoll/rabbit-royale/blob/6fef07e2654c33a3d9f031267796733954186844/episodes/ep01-carotte-bombe/shots/SEEDANCE.md), [exact request](https://github.com/llPekoll/rabbit-royale/blob/6fef07e2654c33a3d9f031267796733954186844/examples/higgsfield/episode-video.ts), [assembly record](https://github.com/llPekoll/rabbit-royale/blob/6fef07e2654c33a3d9f031267796733954186844/episodes/README.md))
