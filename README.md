@@ -44341,7 +44341,8 @@ and the [versioned mask and contrast notes](https://github.com/alialahmad2000/fl
 ### Draft-to-final immutable-request handoff and expiry gate
 
 **Verified models:** Volcano Ark Seedance 2.5
-(`doubao-seedance-2-5-260628`), EvoLink Seedance 2.5
+(`doubao-seedance-2-5-260628`), ComfyUI Partner Node Seedance 2.5 Draft
+(`dreamina-seedance-2-5-260628`), EvoLink Seedance 2.5
 (`seedance-2.5-text-to-video`, `seedance-2.5-image-to-video`,
 `seedance-2.5-reference-to-video`, `seedance-2.5-video-edit` or
 `seedance-2.5-video-extend` -> `seedance-2.5-draft-to-video`) and Dreamina
@@ -44387,6 +44388,27 @@ unsupported field. Treat bitrate as a separate capability: do not hide Draft
 because bitrate is unavailable, and do not emit bitrate_mode unless the exact
 model contract independently declares it. Re-run request-shape regressions
 whenever a model ID or provider route changes.
+
+COMFYUI GRAPH-LINEAGE GATE
+When using the official Partner Nodes, select `Seedance 2.5 Draft` on the
+text-to-video, first/last-frame or reference node. Draft resolution is fixed at
+480p. Connect that node's `draft_task_id` output to the dedicated
+`ByteDance Seedance 2.5 Draft to Final Video` node, or paste the reviewed ID
+there.
+
+Treat the task-ID edge as a typed lineage edge:
+- if a non-Draft model has a connected `draft_task_id` output, fail before
+  submission instead of returning an empty or misleading ID;
+- fix the upstream node's seed/control before approving the draft, so executing
+  the final node cannot re-run the graph and silently create a different Draft;
+- promote only the reviewed ID within its documented seven-day window;
+- let the final node reuse prompt, ordered references, duration, aspect ratio
+  and audio setting from that ID; expose only delivery-owned controls such as
+  watermark.
+
+Persist both the upstream generation-node execution ID and returned Draft task
+ID. A graph cache hit, UI preview or video file alone is not proof that the
+promotion consumed the reviewed lineage.
 
 WEB PREVIEW ROUTE-TRUTH GATE
 Some adapters accept an Ark-shaped public model name while executing a Dreamina
@@ -44564,6 +44586,17 @@ including the exact `dreamina-seedance-2-5-260628`
 [version-gated request builder](https://github.com/amazingindianstories-stack/AIStudio/blob/a94b002bb7ec381fa3953ab70ca258ac8f1a3ec2/src/lib/providers/seedance.js)
 and [2.0/2.5 request-shape regressions](https://github.com/amazingindianstories-stack/AIStudio/blob/a94b002bb7ec381fa3953ab70ca258ac8f1a3ec2/src/lib/providers/seedance.test.js).
 
+
+The ComfyUI graph-lineage gate is adapted from Comfy-Org's September 25,
+2026 [official Seedance 2.5 Draft Partner Node release](https://github.com/Comfy-Org/ComfyUI/commit/9f932548ffb6f7e1c62d56037c19600281f72074),
+including the [typed Draft request and promotion node](https://github.com/Comfy-Org/ComfyUI/blob/9f932548ffb6f7e1c62d56037c19600281f72074/comfy_api_nodes/nodes_bytedance.py)
+and [versioned API schema](https://github.com/Comfy-Org/ComfyUI/blob/9f932548ffb6f7e1c62d56037c19600281f72074/comfy_api_nodes/apis/bytedance.py).
+The implementation fixes Draft to 480p, exposes a task-ID edge on text,
+first/last-frame and reference workflows, rejects that output on non-Draft
+models, warns that an unfixed upstream seed creates a new Draft, and renders the
+reviewed lineage through a dedicated 1080p node. It validates workflow
+semantics, not a new public visual-quality case, so it strengthens this template
+without adding a scenario or template count.
 
 The provider-route refusal, no-cross-model Draft fallback, input-audio
 diagnosis and shared hold/workflow idempotency key are adapted from OpenStory's
@@ -45015,6 +45048,8 @@ the [complete incident-backed operator contract](https://github.com/PASAKON/Agen
 and its [source-overlap and evidence inventory](https://github.com/PASAKON/Agents-Core/blob/0220f4e44a85414e6758a899f8f05a44c28a9d33/docs/ops/skill-film-inventory-2026-09-25.md).
 
 ## Sources
+
+- [Comfy-Org / ComfyUI — September 25, 2026 official ByteDance Partner Node release for Seedance 2.5 Draft (`dreamina-seedance-2-5-260628`): 480p Draft selection across text, first/last-frame and reference workflows, typed `draft_task_id` lineage, non-Draft output refusal, fixed-seed rerun warning, seven-day promotion window and dedicated inherited-parameter 1080p final node](https://github.com/Comfy-Org/ComfyUI/commit/9f932548ffb6f7e1c62d56037c19600281f72074) ([node implementation](https://github.com/Comfy-Org/ComfyUI/blob/9f932548ffb6f7e1c62d56037c19600281f72074/comfy_api_nodes/nodes_bytedance.py), [request schema](https://github.com/Comfy-Org/ComfyUI/blob/9f932548ffb6f7e1c62d56037c19600281f72074/comfy_api_nodes/apis/bytedance.py))
 
 - [PASAKON / Agents-Core — September 25, 2026 Higgsfield Seedance 2.5 incident-backed operating contract: 130-credit Rerun, multi-paragraph Lexical truncation, visible-versus-decoy editor and Generate controls, struck-price/zero proof, one-click paid controls and Usage-History recovery after timeouts](https://github.com/PASAKON/Agents-Core/commit/0220f4e44a85414e6758a899f8f05a44c28a9d33) ([complete operator contract](https://github.com/PASAKON/Agents-Core/blob/0220f4e44a85414e6758a899f8f05a44c28a9d33/.claude/skills/CTO_Seedance2.5_Higgsfield/SKILL.md), [evidence inventory](https://github.com/PASAKON/Agents-Core/blob/0220f4e44a85414e6758a899f8f05a44c28a9d33/docs/ops/skill-film-inventory-2026-09-25.md))
 
