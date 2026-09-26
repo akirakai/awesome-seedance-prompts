@@ -29180,7 +29180,8 @@ implementation, complete source-clip template, measured paid run, extracted
 16-frame result and visual comparison  
 **Use case:** convert a smooth AI-generated character performance into keyed,
 aligned sprite frames without asking a sheet generator to invent the
-in-betweens  
+in-betweens, or stream the measured closed-cycle plate when an atlas would
+consume too much memory  
 **Mode:** image-to-video source clip followed by deterministic frame extraction
 
 ```text
@@ -29242,6 +29243,28 @@ DETERMINISTIC HARVEST
    detected window, sampling times, key value, alignment measurements and
    prompt as provenance.
 
+OPTIONAL RUNTIME-VIDEO DELIVERY
+Choose this lane when full-quality atlas memory grows with frame count and the
+target engine can stream a short video:
+1. Keep the complete generated green-plate MP4 as the immutable master. Cut
+   only the measured closed-cycle window; do not rebuild it from sampled frames.
+2. Encode one broadly decodable delivery copy with explicit color metadata,
+   then decode it into a runtime texture. Do not assume a nominal alpha-video
+   format will decode consistently on every target platform.
+3. Key each decoded pixel from green excess rather than hue alone:
+   excess = G - max(R, B); feather alpha across one recorded threshold band,
+   require a minimum G value so dark detail survives, and despill by clamping G
+   toward max(R, B). Validate the thresholds on costume, hair and effects.
+4. Give the live video path priority over an atlas, and the atlas priority over
+   the static source. On decoder or texture failure, fall back to the static
+   character instead of displaying a black or green rectangle.
+5. Randomize playback phase only after seam validation. Pause on the current
+   decoded frame for freeze or defeat states; release decoder, texture and
+   material resources when the unit leaves memory.
+6. Record visible-unit count, texture dimensions and measured runtime memory.
+   Do not compare a single streamed texture only with compressed MP4 file size;
+   compare it with the decoded resident atlas it replaces.
+
 ACCEPTANCE AND REPAIR
 Accept only if every pose is complete; body/contact-point drift is below 5% of
 cell width; the largest adjacent-frame jump is below 8%; scale drift is below
@@ -29278,12 +29301,28 @@ remained essentially unchanged. This isolates cycle selection from anchoring:
 the camera can be stable and the body well aligned while the wrong time window
 still makes a visibly broken loop.
 
+A September 27 production independently validated the runtime-video lane with a
+Seedance 2.5 first-frame green-plate generation (the provider endpoint ID is not
+published): the source was 960 × 960 and 5 seconds, and the selected loop was
+frames 70–143, or 74 frames / 2.47 seconds. Its last-to-first difference was
+0.72 against ordinary adjacent-frame differences of 0.57–0.89, so the seam
+stayed inside the clip's normal motion range. The game streams the loop through
+a video decoder and render texture, keys it at runtime with a green-excess
+shader, pauses the current frame for frozen or defeated states and falls back
+to the static standee after decoder failure. The creator reports about 3.7 MB
+for one 960² RGBA render texture, independent of clip frame count; treat that as
+this implementation's measured memory, not a universal engine estimate.
+
 Adapted and rewritten from pandazki's September 10, 2026
 [Sprite-mode release with the complete implementation and generated evidence](https://github.com/pandazki/pneuma-skills/commit/36b5f5dcd7be3fcc66191fa43c875d3bba587d06),
 the [full source-clip template and first measured run](https://github.com/pandazki/pneuma-skills/blob/36b5f5dcd7be3fcc66191fa43c875d3bba587d06/modes/sprite/skill/references/video-preview.md#the-motion-source-clip),
 the [September 14 closed-cycle validation](https://github.com/pandazki/pneuma-skills/commit/062c29ebc2810584c01e2e639fe1b7f709d11e1d),
 its [complete measurements and comparison table](https://github.com/pandazki/pneuma-skills/blob/062c29ebc2810584c01e2e639fe1b7f709d11e1d/modes/sprite/skill/references/video-preview.md#measured-the-documented-walk-workflow-on-lumi-2026-09-14),
-and the [real sheet-versus-video derived-frame showcase](https://github.com/pandazki/pneuma-skills/blob/36b5f5dcd7be3fcc66191fa43c875d3bba587d06/modes/sprite/showcase/highlight-sheet-or-video.png).
+and the [real sheet-versus-video derived-frame showcase](https://github.com/pandazki/pneuma-skills/blob/36b5f5dcd7be3fcc66191fa43c875d3bba587d06/modes/sprite/showcase/highlight-sheet-or-video.png). The optional runtime-video branch is independently validated by
+xiaoding521234's September 27, 2026 [Seedance 2.5 green-plate deployment commit](https://github.com/xiaoding521234/gic/commit/66a9eda77b4bb643c79988fba3be6ddf4d25a8c4),
+its [frame-level production record](https://github.com/xiaoding521234/gic/blob/66a9eda77b4bb643c79988fba3be6ddf4d25a8c4/docs/18-%E6%88%98%E6%96%97%E7%B3%BB%E7%BB%9F%E5%86%B3%E7%AD%96%E8%AE%B0%E5%BD%95.md),
+[committed loop MP4](https://github.com/xiaoding521234/gic/blob/66a9eda77b4bb643c79988fba3be6ddf4d25a8c4/Assets/Art/PaperDoll/amber_fly_loop.mp4) and
+[runtime chroma shader](https://github.com/xiaoding521234/gic/blob/66a9eda77b4bb643c79988fba3be6ddf4d25a8c4/Assets/Shaders/ChromaKeyVideo.shader).
 
 ---
 
@@ -46080,6 +46119,7 @@ and the [capability-gated generation runner](https://github.com/liamrobert209/Ve
 
 ## Sources
 
+- [xiaoding521234 / gic — September 27, 2026 Seedance 2.5 first-frame green-plate loop: committed 960² source derivative, measured 74-frame closed window, runtime ChromaKey shader, streamed render-texture deployment and static failure fallback](https://github.com/xiaoding521234/gic/commit/66a9eda77b4bb643c79988fba3be6ddf4d25a8c4) ([production record](https://github.com/xiaoding521234/gic/blob/66a9eda77b4bb643c79988fba3be6ddf4d25a8c4/docs/18-%E6%88%98%E6%96%97%E7%B3%BB%E7%BB%9F%E5%86%B3%E7%AD%96%E8%AE%B0%E5%BD%95.md), [loop MP4](https://github.com/xiaoding521234/gic/blob/66a9eda77b4bb643c79988fba3be6ddf4d25a8c4/Assets/Art/PaperDoll/amber_fly_loop.mp4), [shader](https://github.com/xiaoding521234/gic/blob/66a9eda77b4bb643c79988fba3be6ddf4d25a8c4/Assets/Shaders/ChromaKeyVideo.shader))
 - [voraventures / jotva — September 26, 2026 Higgsfield Seedance 2.5 image-to-video logo-loop production: four committed MP4 tests, corrected mark-only inputs, identical first/last endpoint binding and measured-background re-key](https://github.com/voraventures/jotva/commit/14030999398316008a37772b8fd19fbc53712346) ([initial comparison](https://github.com/voraventures/jotva/commit/d05f6b5a78f8fc31044431c928ae060bfd297032))
 - [kaganduran / lunaplum-site — September 22, 2026 Higgsfield Seedance 2.5 reference-to-video paper-world A/B production: full prompts, ordered reference hashes, provider task IDs, original MP4s, measured 960×960/6.041667-second outputs, deviation review and selected interactive website deployment](https://github.com/kaganduran/lunaplum-site/commit/b5210f77c8c2de6ecc3885d2a10e815660a316a2) ([selected request record](https://github.com/kaganduran/lunaplum-site/blob/b5210f77c8c2de6ecc3885d2a10e815660a316a2/assets/generated/hero-motion-a-prompt.json), [A/B review](https://github.com/kaganduran/lunaplum-site/blob/b5210f77c8c2de6ecc3885d2a10e815660a316a2/assets/generated/HERO-MOTION.md), [original MP4](https://github.com/kaganduran/lunaplum-site/blob/b5210f77c8c2de6ecc3885d2a10e815660a316a2/assets/generated/hero-motion-a.mp4), [deployed derivative](https://github.com/kaganduran/lunaplum-site/blob/b5210f77c8c2de6ecc3885d2a10e815660a316a2/assets/generated/paper-doorway.mp4))
 
