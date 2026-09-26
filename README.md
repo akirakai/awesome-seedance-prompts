@@ -45047,7 +45047,149 @@ Adapted and rewritten from PASAKON's September 25, 2026
 the [complete incident-backed operator contract](https://github.com/PASAKON/Agents-Core/blob/0220f4e44a85414e6758a899f8f05a44c28a9d33/.claude/skills/CTO_Seedance2.5_Higgsfield/SKILL.md)
 and its [source-overlap and evidence inventory](https://github.com/PASAKON/Agents-Core/blob/0220f4e44a85414e6758a899f8f05a44c28a9d33/docs/ops/skill-film-inventory-2026-09-25.md).
 
+
+### Whole-beat multi-prompt compiler with local reference rebinding
+
+**Verified model:** fal ByteDance Seedance 2.5
+(`bytedance/seedance-2.5/reference-to-video`) — the original production
+release makes this exact endpoint the default for generated prompt rows, binds
+their ordered references to `image_urls` and preserves the row prompt,
+duration and model on completion. Its author also records a live API check of
+the strict schema and handle binding. The public release contains the complete
+compiler and end-to-end request regressions but no public provider task ID or
+visual master, so count this as verified production structure rather than an
+independent visual-quality benchmark.  
+**Use case:** turn one screenplay beat, its scene bible and a large character/
+set image catalog into several self-contained Seedance generations without
+losing story coverage or letting global asset numbers drift away from each
+request's local `@Image1…N` order  
+**Mode:** beat snapshot -> coverage partition -> per-prompt reference rebinding
+-> payload preview -> independently tracked reference-to-video jobs
+
+```text
+IMMUTABLE BEAT SNAPSHOT
+Freeze one versioned planning input:
+- directorial voice and complete beat text;
+- scene bible, time of day, light, palette and location rules;
+- character and set dossiers;
+- director notes and dialogue turn order;
+- a numbered global reference catalog.
+
+The dialogue map supplies speaker order, pauses, mouth activity and listener
+behaviour only. If final speech will be recorded and lip-synced in post, do not
+copy quoted dialogue, voice-over or sound effects into the generation prompt.
+
+GLOBAL REFERENCE CATALOG
+Give every candidate image one stable catalog record:
+GLOBAL INDEX | ASSET ID/HASH | CHARACTER OR SET | OWNER | IMAGE KIND |
+SHORT DESCRIPTION.
+
+Priority for one character is approved character sheet, then neutral portrait,
+then scene artwork. Deduplicate identical asset IDs before planning. The global
+catalog is for selection only; its numbers are never sent to Seedance directly.
+
+WHOLE-BEAT COVERAGE PLAN
+Partition the beat into the fewest independent generations that cover it once,
+in story order, with no gap and no overlap.
+For every generation declare:
+- title and exact story interval;
+- duration from 4 to 30 seconds;
+- one to four shots;
+- opening state, causal action and visibly different endpoint;
+- characters and set required by that interval;
+- selected GLOBAL reference indexes.
+
+Each generation must restate everything it needs. Never say “continue the
+previous prompt” or rely on an earlier clip to define identity, location,
+lighting, prop state or camera side.
+
+LOCAL REBINDING CONTRACT
+For each generation independently:
+1. resolve its selected global indexes;
+2. discard unknown entries and duplicate asset IDs;
+3. keep at most nine references;
+4. preserve the remaining order exactly;
+5. renumber that local list from 1.
+
+LOCAL @Image1 = [ROLE, OWNER, ASSET HASH]
+LOCAL @Image2 = [ROLE, OWNER, ASSET HASH]
+...
+PAYLOAD image_urls = [THE SAME ASSETS IN THE SAME ORDER]
+
+The prompt's first sentence binds every local handle:
+“@Image1 is [CHARACTER/ROLE], @Image2 is [CHARACTER/ROLE], and @Image3 is
+[LOCATION/ROLE].”
+
+After that sentence, refer to subjects and places by their local handles, not by
+unbound screenplay names. A global catalog number may never appear as an
+`@ImageN` token unless it also happens to be that prompt's local position.
+
+SHOT GRAMMAR
+Write 120–350 words of plain prose per generation. Use only bracketed camera
+marks as structure.
+
+[SHOT SIZE, ANGLE, ONE MOTIVATED CAMERA MOVE — ROUGH TIME BUDGET]
+Describe composition, blocking, performance, material/light behaviour, speaker
+turn and listener reaction, then a readable endpoint.
+
+Use one primary camera move per shot. Preserve reference-owned identity,
+wardrobe, set geometry, palette and prop state. No subtitles, generated titles,
+logos, name labels, dialogue text, camera-action contradictions, repeated
+establishing resets or unrelated second beat.
+
+NORMALIZATION AND REVIEW
+Before replacing any approved prompt rows:
+- reject an empty result and preserve the existing rows;
+- cap the batch at [MAX PROMPTS];
+- clamp each duration to 4–30 seconds and report every correction;
+- report every unknown, duplicate or over-limit reference removed;
+- scan all `@ImageK` tokens after local rebinding;
+- neutralize any handle beyond the attached count and flag the row for review;
+- fail review if that repair changes an identity-, location- or continuity-
+  critical clause.
+
+Never silently publish a repaired prompt merely because its text is now
+syntactically valid.
+
+PAYLOAD PREVIEW AND SUBMISSION
+For every accepted row, show and archive:
+[ROW ID], [FINAL PROMPT], [DURATION], [EXACT MODEL],
+[ORDERED LOCAL REFERENCES + HASHES], [image_urls COUNT], [AUDIO POLICY] and
+[ATTEMPT ID].
+
+Require byte-equivalent prompt text and identical local reference order between
+the approved preview and submitted payload. Route the finished job back to the
+same row ID; do not attach it to a storyboard shot or another beat. Replace an
+older row video only after the new job completes and its receipt is durable.
+
+ACCEPTANCE
+- the ordered prompt set covers the frozen beat once, with no gap or overlap;
+- every prompt is independently intelligible and stays within 30 seconds;
+- every local handle resolves to exactly one uploaded asset in the same order;
+- no unlisted image, dangling handle or name-only identity instruction remains;
+- shot count, duration, dialogue policy and endpoint match the approved row;
+- returned model, task, settings and artifact belong to the intended row;
+- an empty or failed planning pass never erases previously approved prompts.
+```
+
+**Why it works:** a project-wide image catalog and a Seedance request solve
+different indexing problems. Rebinding the chosen assets locally prevents a
+prompt that selected global images 6, 14 and 27 from referring to nonexistent
+`@Image6`, `@Image14` and `@Image27` after only three files are uploaded.
+Partitioning coverage before writing prose also stops independent prompts from
+repeating attractive beats while quietly omitting connective action. The
+receipt and empty-result rules make both automated repair and regeneration
+auditable instead of destructive.
+
+Adapted and rewritten from keysforthewin / screenplay's September 26, 2026
+[Prompts-tab production release](https://github.com/keysforthewin/screenplay/commit/f89fab42e1743e8bf871f010646fad5317b26fd7),
+the [complete beat-to-prompt compiler](https://github.com/keysforthewin/screenplay/blob/f89fab42e1743e8bf871f010646fad5317b26fd7/src/web/videoPromptGenerate.js),
+the [exact Seedance request and row lifecycle](https://github.com/keysforthewin/screenplay/blob/f89fab42e1743e8bf871f010646fad5317b26fd7/src/web/falVideoGenerate.js)
+and the [ordered-reference end-to-end regressions](https://github.com/keysforthewin/screenplay/blob/f89fab42e1743e8bf871f010646fad5317b26fd7/tests/fal-video-generate.test.js).
+
 ## Sources
+
+- [keysforthewin / screenplay — September 26, 2026 fal ByteDance Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`) whole-beat prompt compiler: story-complete partitioning, one-to-four-shot self-contained rows, global catalog selection, local `@Image1…N` rebinding, ordered `image_urls`, dangling-handle repair, duration/reference caps, empty-result preservation and row-scoped job persistence](https://github.com/keysforthewin/screenplay/commit/f89fab42e1743e8bf871f010646fad5317b26fd7) ([complete compiler](https://github.com/keysforthewin/screenplay/blob/f89fab42e1743e8bf871f010646fad5317b26fd7/src/web/videoPromptGenerate.js), [exact Seedance request lifecycle](https://github.com/keysforthewin/screenplay/blob/f89fab42e1743e8bf871f010646fad5317b26fd7/src/web/falVideoGenerate.js), [end-to-end regressions](https://github.com/keysforthewin/screenplay/blob/f89fab42e1743e8bf871f010646fad5317b26fd7/tests/fal-video-generate.test.js))
 
 - [Comfy-Org / ComfyUI — September 25, 2026 official ByteDance Partner Node release for Seedance 2.5 Draft (`dreamina-seedance-2-5-260628`): 480p Draft selection across text, first/last-frame and reference workflows, typed `draft_task_id` lineage, non-Draft output refusal, fixed-seed rerun warning, seven-day promotion window and dedicated inherited-parameter 1080p final node](https://github.com/Comfy-Org/ComfyUI/commit/9f932548ffb6f7e1c62d56037c19600281f72074) ([node implementation](https://github.com/Comfy-Org/ComfyUI/blob/9f932548ffb6f7e1c62d56037c19600281f72074/comfy_api_nodes/nodes_bytedance.py), [request schema](https://github.com/Comfy-Org/ComfyUI/blob/9f932548ffb6f7e1c62d56037c19600281f72074/comfy_api_nodes/apis/bytedance.py))
 
