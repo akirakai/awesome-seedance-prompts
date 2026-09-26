@@ -26332,6 +26332,68 @@ and the [deployed derivative](https://github.com/kaganduran/lunaplum-site/blob/b
 
 ## Reusable templates
 
+### Endpoint-identical isolated-mark logo loop and measured-background re-key
+
+**Verified model:** Higgsfield Seedance 2.5 image-to-video — the original
+creator commits four generated MP4 tests and identifies the Higgsfield API and
+model version; the corrected pass uses each isolated mark as both first and
+last frame so the motion closes on the same artwork  
+**Use case:** seamless logo or icon micro-loop, mark-only motion, UI splash,
+dark-plate compositing, endpoint-controlled brand animation  
+**Mode:** image-to-video with identical first- and last-frame assets
+
+Use this when the animated mark must return to the exact delivery artwork
+instead of relying on a nearly matching generated ending.
+
+```text
+ASSET PREP
+Extract only [LOGO MARK] from its app-icon, badge or presentation frame.
+Place it at the final delivery scale and position on one flat [BACKGROUND
+COLOR]. Measure that plate color; remove residual tint and matte fringe before
+generation.
+
+ENDPOINT CONTRACT
+@FirstFrame and @LastFrame are the same approved mark-only image.
+They own the exact canvas, crop, mark geometry, scale, position, palette,
+background value and transparent-edge treatment.
+Begin on @FirstFrame and finish on @LastFrame. Keep camera, crop, exposure and
+background locked for the entire clip.
+
+ONE CLOSED MOTION
+The mark performs one readable cycle: [FAN OPEN AND CLOSE / DOT ORBIT AND
+RETURN / FOLD OUT AND REFOLD / STROKE TRAVEL AND SETTLE].
+Use one continuous path with restrained easing. Reach the widest or fastest
+state near [45–60%], then reverse or complete the path without inventing a
+second action. Settle exactly into the approved endpoint for the final
+[10–15%] of the clip.
+
+BRAND AND PLATE LOCKS
+Preserve the number, order, thickness, spacing and color of every component.
+No enclosing app-icon frame, text, extra symbol, new glow, camera movement,
+background gradient, exposure pulse, edge halo or geometry drift.
+
+ACCEPTANCE AND DELIVERY
+Compare the first and final decoded frames against the approved asset and test
+the last-to-first cut at normal and half speed. Reject if the endpoint jumps,
+the centre or scale drifts, the background value changes, or a fringe survives
+the key. Re-key only against the measured plate color; keep the generated MP4
+as the immutable master and export a separate UI derivative.
+```
+
+**Why it works:** a first-frame-only loop still asks the model to approximate
+its ending. Reusing the approved mark as both endpoints turns closure into an
+explicit constraint, while isolating the mark prevents the model from animating
+the surrounding app-icon frame. Measuring the actual plate color before
+re-keying avoids the faint residual tint found in the creator's first tests.
+
+Adapted from voraventures' September 26, 2026
+[corrected mark-only Seedance 2.5 loop commit](https://github.com/voraventures/jotva/commit/14030999398316008a37772b8fd19fbc53712346)
+and the earlier [Higgsfield image-to-video comparison](https://github.com/voraventures/jotva/commit/d05f6b5a78f8fc31044431c928ae060bfd297032).
+The exact submitted prompts and provider task IDs are not public, so this entry
+verifies the production structure and committed outputs rather than serving as
+an independently auditable prompt-to-quality benchmark.
+
+
 ### Asset-bound summary-to-timeline spine with a scoped-edit fork
 
 **Verified model:** Runway-hosted ByteDance Seedance 2.5 — Runway's official
@@ -46018,6 +46080,7 @@ and the [capability-gated generation runner](https://github.com/liamrobert209/Ve
 
 ## Sources
 
+- [voraventures / jotva — September 26, 2026 Higgsfield Seedance 2.5 image-to-video logo-loop production: four committed MP4 tests, corrected mark-only inputs, identical first/last endpoint binding and measured-background re-key](https://github.com/voraventures/jotva/commit/14030999398316008a37772b8fd19fbc53712346) ([initial comparison](https://github.com/voraventures/jotva/commit/d05f6b5a78f8fc31044431c928ae060bfd297032))
 - [kaganduran / lunaplum-site — September 22, 2026 Higgsfield Seedance 2.5 reference-to-video paper-world A/B production: full prompts, ordered reference hashes, provider task IDs, original MP4s, measured 960×960/6.041667-second outputs, deviation review and selected interactive website deployment](https://github.com/kaganduran/lunaplum-site/commit/b5210f77c8c2de6ecc3885d2a10e815660a316a2) ([selected request record](https://github.com/kaganduran/lunaplum-site/blob/b5210f77c8c2de6ecc3885d2a10e815660a316a2/assets/generated/hero-motion-a-prompt.json), [A/B review](https://github.com/kaganduran/lunaplum-site/blob/b5210f77c8c2de6ecc3885d2a10e815660a316a2/assets/generated/HERO-MOTION.md), [original MP4](https://github.com/kaganduran/lunaplum-site/blob/b5210f77c8c2de6ecc3885d2a10e815660a316a2/assets/generated/hero-motion-a.mp4), [deployed derivative](https://github.com/kaganduran/lunaplum-site/blob/b5210f77c8c2de6ecc3885d2a10e815660a316a2/assets/generated/paper-doorway.mp4))
 
 - [liamrobert209 / VerticalFlash — September 26, 2026 real-call migration to Higgsfield Seedance 2.5 text-to-video: schema-validated per-shot prompt compilation, server-owned product-description grounding, explicit loss of reference/extend capabilities and measured 720×1280, 5.04-second output](https://github.com/liamrobert209/VerticalFlash/commit/91906203b3bf0952f299e69bf43e79a798a8906a) ([prompt compiler](https://github.com/liamrobert209/VerticalFlash/blob/91906203b3bf0952f299e69bf43e79a798a8906a/src/lib/generation-prompts.ts), [exact client](https://github.com/liamrobert209/VerticalFlash/blob/91906203b3bf0952f299e69bf43e79a798a8906a/src/lib/higgsfield.ts), [generation gate](https://github.com/liamrobert209/VerticalFlash/blob/91906203b3bf0952f299e69bf43e79a798a8906a/src/lib/generate-clip.ts))
