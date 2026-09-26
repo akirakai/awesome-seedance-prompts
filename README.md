@@ -428,6 +428,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Three-blade sky-duel route reversal](#412-three-blade-sky-duel-route-reversal)
   - [Reed-marsh samurai-cat pursuit](#413-reed-marsh-samurai-cat-pursuit)
   - [Persistent-site city-build time-lapse](#414-persistent-site-city-build-time-lapse)
+  - [Click-to-open botanical paper card and pop-up doorway](#415-click-to-open-botanical-paper-card-and-pop-up-doorway)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -26248,6 +26249,87 @@ preserved in the
 
 
 
+### 415. Click-to-open botanical paper card and pop-up doorway
+
+**Verified model:** Higgsfield ByteDance Seedance 2.5
+(\`bytedance/seedance-2.5/reference-to-video\`) — the original creator
+preserves the full submitted request, three reference hashes, two provider
+request IDs, both original MP4s and measured output metadata; candidate A was
+selected and deployed as an interactive website illustration  
+**Use case:** tactile paper-craft reveal, locked web-compositing plate,
+reference-role separation, reduced-motion endpoint stills  
+**Mode:** reference-to-video with three ordered images  
+**Verified settings:** requested 6 seconds, 1:1, 720p, MP4 and
+\`generate_audio=false\`; the selected task returned a silent 960×960,
+6.041667-second file
+
+\`\`\`text
+Create a six-second square paper-craft animation for a website interaction. It
+must read as a bespoke illustration rather than an app screen, phone mock-up or
+UI recording.
+
+REFERENCE OWNERSHIP
+@Image 1 owns the sealed starting object and overall visual language: one pale
+scalloped botanical card, a fine plum cord and bow, one eyelet, delicate painted
+leaves and flowers, matte fibrous paper and restrained lilac, blush and deep-plum
+colour.
+@Image 2 owns only the softly illuminated doorway that appears inside the card.
+@Image 3 owns only one loose paper petal near the doorway.
+Do not merge the doorway or loose petal into the closed opening frame, and do not
+borrow new decoration from one reference for another role.
+
+COMPOSITING PLATE
+Keep a uniform pale-lilac background fixed to all four edges. Lock the camera
+straight on: no pan, tilt, orbit, zoom, reframing, cut or scene change. Keep the
+entire performance inside the central 72 percent of the canvas, leaving generous
+unchanging margins for responsive placement. Preserve the card's paper texture,
+painted leaf veins, fine ink lines and soft natural shadows; avoid glossy,
+metallic or plastic surfaces.
+
+ACTION
+0.0–0.5 s — Hold the sealed card perfectly still so the first frame works as a
+closed-state poster.
+0.5–1.8 s — Let the small bow loosen and the cord fall slack with legible,
+tactile motion. The card and background do not slide.
+1.8–4.6 s — Open the painted front cover smoothly on a left-hand hinge like a
+miniature paper book. Keep the botanical print attached to the moving cover.
+Reveal a deep-plum inner sheet, then raise @Image 2 from it as a precise pop-up
+paper doorway. The opening and pop-up actions are continuous physical folds,
+not a dissolve, morph or burst.
+4.6–5.0 s — Let the single @Image 3 petal drift into a quiet position beside the
+doorway. Nothing else floats.
+5.0–6.0 s — Finish fully open and motionless. Hold a clean final frame that can
+serve as the reduced-motion and replay endpoint.
+
+LIGHT AND SOUND
+Confine a soft warm glow to the doorway interior. Keep the outer paper and flat
+background softly lit with no glowing rim, flare, sparkle or particles. Silent
+delivery; do not create dialogue, music, ambience or interface sounds.
+
+FAILURE CONTROLS
+No hand, person, phone, control, logo, word, caption, watermark, extra prop,
+second petal, new ornament, changing background colour, cropped card, camera
+movement, detached artwork, instant transformation or unstable end pose.
+\`\`\`
+
+**Why it works:** each of the three source images receives one narrow job, while
+the central safe area, fixed edge colour and locked camera make the result usable
+as a responsive web asset rather than merely a pretty clip. Explicit closed and
+open holds create deterministic poster frames and an accessible reduced-motion
+fallback. The published A/B test also records the failure honestly: the
+alternative diagonal-letter request became another hinged book, the bow
+slackened instead of clearly untying and both outputs showed a slight background
+tone boundary. Candidate A was chosen for its fuller doorway and clearer petal,
+then downscaled without regeneration to a 720×720 fast-start derivative.
+
+Adapted and rewritten from kaganduran's September 22, 2026
+[production integration commit](https://github.com/kaganduran/lunaplum-site/commit/b5210f77c8c2de6ecc3885d2a10e815660a316a2),
+the [complete request, hashes, task ID and measured output](https://github.com/kaganduran/lunaplum-site/blob/b5210f77c8c2de6ecc3885d2a10e815660a316a2/assets/generated/hero-motion-a-prompt.json),
+the [A/B review and deployment record](https://github.com/kaganduran/lunaplum-site/blob/b5210f77c8c2de6ecc3885d2a10e815660a316a2/assets/generated/HERO-MOTION.md),
+the [selected original MP4](https://github.com/kaganduran/lunaplum-site/blob/b5210f77c8c2de6ecc3885d2a10e815660a316a2/assets/generated/hero-motion-a.mp4)
+and the [deployed derivative](https://github.com/kaganduran/lunaplum-site/blob/b5210f77c8c2de6ecc3885d2a10e815660a316a2/assets/generated/paper-doorway.mp4).
+
+
 ## Reusable templates
 
 ### Asset-bound summary-to-timeline spine with a scoped-edit fork
@@ -45935,6 +46017,8 @@ the [exact Higgsfield Seedance client](https://github.com/liamrobert209/Vertical
 and the [capability-gated generation runner](https://github.com/liamrobert209/VerticalFlash/blob/91906203b3bf0952f299e69bf43e79a798a8906a/src/lib/generate-clip.ts).
 
 ## Sources
+
+- [kaganduran / lunaplum-site — September 22, 2026 Higgsfield Seedance 2.5 reference-to-video paper-world A/B production: full prompts, ordered reference hashes, provider task IDs, original MP4s, measured 960×960/6.041667-second outputs, deviation review and selected interactive website deployment](https://github.com/kaganduran/lunaplum-site/commit/b5210f77c8c2de6ecc3885d2a10e815660a316a2) ([selected request record](https://github.com/kaganduran/lunaplum-site/blob/b5210f77c8c2de6ecc3885d2a10e815660a316a2/assets/generated/hero-motion-a-prompt.json), [A/B review](https://github.com/kaganduran/lunaplum-site/blob/b5210f77c8c2de6ecc3885d2a10e815660a316a2/assets/generated/HERO-MOTION.md), [original MP4](https://github.com/kaganduran/lunaplum-site/blob/b5210f77c8c2de6ecc3885d2a10e815660a316a2/assets/generated/hero-motion-a.mp4), [deployed derivative](https://github.com/kaganduran/lunaplum-site/blob/b5210f77c8c2de6ecc3885d2a10e815660a316a2/assets/generated/paper-doorway.mp4))
 
 - [liamrobert209 / VerticalFlash — September 26, 2026 real-call migration to Higgsfield Seedance 2.5 text-to-video: schema-validated per-shot prompt compilation, server-owned product-description grounding, explicit loss of reference/extend capabilities and measured 720×1280, 5.04-second output](https://github.com/liamrobert209/VerticalFlash/commit/91906203b3bf0952f299e69bf43e79a798a8906a) ([prompt compiler](https://github.com/liamrobert209/VerticalFlash/blob/91906203b3bf0952f299e69bf43e79a798a8906a/src/lib/generation-prompts.ts), [exact client](https://github.com/liamrobert209/VerticalFlash/blob/91906203b3bf0952f299e69bf43e79a798a8906a/src/lib/higgsfield.ts), [generation gate](https://github.com/liamrobert209/VerticalFlash/blob/91906203b3bf0952f299e69bf43e79a798a8906a/src/lib/generate-clip.ts))
 
