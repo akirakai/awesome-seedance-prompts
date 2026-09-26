@@ -26252,7 +26252,7 @@ preserved in the
 ### 415. Click-to-open botanical paper card and pop-up doorway
 
 **Verified model:** Higgsfield ByteDance Seedance 2.5
-(\`bytedance/seedance-2.5/reference-to-video\`) — the original creator
+(`bytedance/seedance-2.5/reference-to-video`) — the original creator
 preserves the full submitted request, three reference hashes, two provider
 request IDs, both original MP4s and measured output metadata; candidate A was
 selected and deployed as an interactive website illustration  
@@ -26260,10 +26260,10 @@ selected and deployed as an interactive website illustration
 reference-role separation, reduced-motion endpoint stills  
 **Mode:** reference-to-video with three ordered images  
 **Verified settings:** requested 6 seconds, 1:1, 720p, MP4 and
-\`generate_audio=false\`; the selected task returned a silent 960×960,
+`generate_audio=false`; the selected task returned a silent 960×960,
 6.041667-second file
 
-\`\`\`text
+```text
 Create a six-second square paper-craft animation for a website interaction. It
 must read as a bespoke illustration rather than an app screen, phone mock-up or
 UI recording.
@@ -26310,7 +26310,7 @@ FAILURE CONTROLS
 No hand, person, phone, control, logo, word, caption, watermark, extra prop,
 second petal, new ornament, changing background colour, cropped card, camera
 movement, detached artwork, instant transformation or unstable end pose.
-\`\`\`
+```
 
 **Why it works:** each of the three source images receives one narrow job, while
 the central safe area, fixed edge colour and locked camera make the result usable
