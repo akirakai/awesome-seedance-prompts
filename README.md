@@ -44411,6 +44411,27 @@ Persist both the upstream generation-node execution ID and returned Draft task
 ID. A graph cache hit, UI preview or video file alone is not proof that the
 promotion consumed the reviewed lineage.
 
+CONTINUATION-REFERENCE GATE
+Never use a 480p Draft as Video 1, the previous-clip input or any other
+downstream continuation reference. Promotion inherits the Draft's ordered
+references; promoting that later downstream clip cannot replace a Draft image
+already baked into its lineage. First promote the predecessor to 1080p, verify
+the Final, then create the next clip from that Final. When continuation is
+enabled, disable multi-clip Draft batches because clip two would otherwise
+consume clip one's unpromoted Draft.
+
+Treat every locally hosted or uploaded reference copy as version-bound cache,
+not as the clip identity. Whenever a clip is regenerated, promoted, restored
+or rolled back:
+- invalidate the cached public/upload URL before another task can read it;
+- store `is_draft`, `draft_task_id` and `draft_at` with the historical take;
+- restore those fields together with the take rather than restoring media only;
+- block continuation if the selected predecessor is still marked Draft.
+
+If a public URL exists but belongs to an older clip version, fail closed and
+republish the selected version. A reachable URL is not evidence that it points
+to the current generation.
+
 QUEUE RECEIPT AND ECHO-TRUTH GATE
 Prefer an asynchronous queue when a generation may outlive one HTTP connection.
 Keep its two identifiers separate:
@@ -44632,6 +44653,18 @@ The release publishes completed queue receipts with distinct generation and
 Draft IDs, Final-to-Draft linkage and temporary artifact URLs. It verifies the
 production contract rather than a new reusable visual prompt, so it strengthens
 this template without changing either strict count.
+
+The continuation-reference gate is adapted from jungjinsori / OXYZN Studio's
+September 26, 2026 [Seedance 2.5 Draft integration and lineage-repair
+commit](https://github.com/jungjinsori/OXYZN-Studio/commit/1b23bfd9781226bf7df9e40b083ae04e43cf86d3),
+including the [versioned project implementation](https://github.com/jungjinsori/OXYZN-Studio/blob/1b23bfd9781226bf7df9e40b083ae04e43cf86d3/src/App.jsx).
+The implementation fixes Draft to 480p, promotes through an immutable
+`draft_task_id`, blocks a Draft predecessor from becoming the next clip's
+Video 1, disables continuation batches that would cross that boundary,
+invalidates stale public copies on clip replacement, and restores Draft
+metadata with historical takes. It verifies a production failure-control path
+rather than a new public visual-quality case, so it strengthens this template
+without changing either strict count.
 
 The provider-route refusal, no-cross-model Draft fallback, input-audio
 diagnosis and shared hold/workflow idempotency key are adapted from OpenStory's
@@ -45225,6 +45258,8 @@ and the [ordered-reference end-to-end regressions](https://github.com/keysforthe
 ## Sources
 
 - [Oxen.ai — September 26, 2026 verified Seedance 2.5 Draft walkthrough (`bytedance-seedance-2-5-text-to-video`): completed async queue receipts, distinct `generation_id`/`draft_task_id` lineage, returned expiry, Final echo-truth warning, one-Draft/many-Finals billing boundary, sync-timeout guidance and terminal unknown/expired-ID handling](https://github.com/Oxen-AI/docs/commit/9eb981eee84495b81c673a48981cdf57c27da678) ([complete walkthrough and reference implementation](https://github.com/Oxen-AI/docs/blob/9eb981eee84495b81c673a48981cdf57c27da678/inference-api/reference/models/walkthroughs/seedance_2_5_draft_mode.mdx))
+
+- [jungjinsori / OXYZN Studio — September 26, 2026 Volcano Ark Seedance 2.5 Draft continuation guard: fixed-480p Drafts, immutable `draft_task_id` promotion, prevention of Draft-as-Video-1 reference leakage, version-bound public-copy invalidation and history-safe Draft metadata restoration](https://github.com/jungjinsori/OXYZN-Studio/commit/1b23bfd9781226bf7df9e40b083ae04e43cf86d3) ([versioned implementation](https://github.com/jungjinsori/OXYZN-Studio/blob/1b23bfd9781226bf7df9e40b083ae04e43cf86d3/src/App.jsx))
 
 - [keysforthewin / screenplay — September 26, 2026 fal ByteDance Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`) whole-beat prompt compiler: story-complete partitioning, one-to-four-shot self-contained rows, global catalog selection, local `@Image1…N` rebinding, ordered `image_urls`, dangling-handle repair, duration/reference caps, empty-result preservation and row-scoped job persistence](https://github.com/keysforthewin/screenplay/commit/f89fab42e1743e8bf871f010646fad5317b26fd7) ([complete compiler](https://github.com/keysforthewin/screenplay/blob/f89fab42e1743e8bf871f010646fad5317b26fd7/src/web/videoPromptGenerate.js), [exact Seedance request lifecycle](https://github.com/keysforthewin/screenplay/blob/f89fab42e1743e8bf871f010646fad5317b26fd7/src/web/falVideoGenerate.js), [end-to-end regressions](https://github.com/keysforthewin/screenplay/blob/f89fab42e1743e8bf871f010646fad5317b26fd7/tests/fal-video-generate.test.js))
 
