@@ -33542,7 +33542,12 @@ preserves the tested provider fallback on the main line.
 public fal proxy with paid, polled outputs from the same adult-subject project;
 Seedance 2.0 Mini and Seedance 2.5 through SIRAYA — the original integrator
 recorded model-returned `camera_fixed` rejections in both text-to-video and
-multi-reference R2V, then removed the invalid control
+multi-reference R2V, then removed the invalid control. A separate September 26
+Seedance 2.0 Mini Omni run (`doubao-seedance-2-0-mini-260615`) records a
+real-person motion-reference rejection before task creation, followed by a
+user-approved three-AI-keyframe pivot that completed as task
+`cgt-20260926201218-ccjn8` and delivered a hashed 720×1280, 24 fps,
+10.042-second silent master
 
 Use this when a shot has one approved opening keyframe plus a separate portrait
 or multi-angle identity pack. Decide between start-frame and reference mode
@@ -33601,6 +33606,53 @@ route may be used under the preceding template. Otherwise stop using that
 identity pack, route to the approved medium/wide keyframe alone in start-frame
 mode, or choose another policy-compatible engine.
 
+PRIVACY-SAFE MOTION-INTENT PIVOT — new request, never a disguised retry
+If a real-person motion video is refused before a task ID exists, stop using
+that video. Do not crop, blur, re-encode, shorten, restyle or extract frames from
+the rejected media to obtain a different verdict. Preserve the refusal, exact
+model/route, no-task result and authoritative charge evidence.
+
+Proceed only after the user approves a materially new input plan built from
+original, synthetic or otherwise authorized images that do not reproduce the
+blocked person's identity. Create and review three images of one fictional
+character in one fixed environment:
+- @Image1 owns the opening pose, identity, wardrobe, camera and background;
+- @Image2 owns only the lowest or maximum-extension action state;
+- @Image3 owns only the terminal pose and final limb direction.
+
+Hash and order the three files explicitly. Use them as sparse pose waypoints,
+not as three scenes and not as evidence that the rejected video was accepted.
+Submit a new Omni request with a new intent/version record; never retain the
+rejected video URL in the payload.
+
+```text
+Use @Image1, @Image2 and @Image3 as ordered action keyframes for one continuous
+10-second vertical performance by the same fictional character. Preserve the
+face, moon-crown silhouette, red historical costume, grey-blue environment,
+camera height, lens and lighting established by @Image1. Do not create a cut,
+duplicate the performer or restage the background.
+
+[0–2s] Begin exactly from @Image1 and initiate one controlled descent.
+[2–6s] Continue smoothly into @Image2's low action state and hold its weight
+briefly; keep feet, knees, hips and hands anatomically connected.
+[6–8s] Rise once without resetting to the opening pose.
+[8–10s] Resolve into @Image3's clear right-diagonal extension and hold the final
+shape long enough to read.
+
+No subtitle, split screen, extra character, identity swap, wardrobe change,
+background drift or generated audio.
+```
+
+REQUEST AND ACCEPTANCE
+Record exact model `doubao-seedance-2-0-mini-260615`, Omni mode, ordered image
+hashes, task ID, server usage, output hash and decoded media metadata. Inspect
+the whole clip plus contact frames. Require one continuous descent, low-state
+hold, rise and terminal diagonal extension. A low waypoint that already reads
+as seated may yield a low sit or one-knee support rather than a textbook squat;
+replace that synthetic waypoint before spending again if the distinction is
+essential. Reject duplicated characters, split frames, captions or obvious
+background drift.
+
 MOTION
 From the accepted opening state, [SUBJECT] performs [ONE FINITE ACTION] through
 [PREPARATION → ACTION → RECOVERY]. Camera: [ONE MOTIVATED MOVE].
@@ -33650,6 +33702,12 @@ Kent's September 4, 2026 [initial T2V rejection and provisional
 reference-presence hypothesis](https://github.com/kent0908/the-blue-wing/commit/4bbe7627c395ec8be057dc1c096f3e475d09f27d)
 and the immediate [corrective R2V tests on Seedance 2.0 Mini and 2.5, with the
 invalid control removed](https://github.com/kent0908/the-blue-wing/commit/0d6bc2070aa3f72d9519991688612d16b4ebf7e7).
+
+The privacy-safe motion-intent branch is adapted from Windy Hu's September 26,
+2026 [Seedance 2.0 Mini generation record and committed master](https://github.com/outliner/tempimg/commit/74ec5445191e5d1099b556e9c3dafb46872ba202),
+including the [three-keyframe input history](https://github.com/outliner/tempimg/commit/db216eab8e3cdfc36b3e28335d0aa30725931cbf),
+[generated MP4](https://github.com/outliner/tempimg/blob/74ec5445191e5d1099b556e9c3dafb46872ba202/seedance-videos/chang-e-toothmark-20260926/S1-mini/S1_Seedance20Mini_v2_10s_720p.mp4)
+and [contact-sheet verification](https://github.com/outliner/tempimg/blob/74ec5445191e5d1099b556e9c3dafb46872ba202/seedance-videos/chang-e-toothmark-20260926/S1-mini/S1_Seedance20Mini_v2_contact.jpg).
 
 ### Terminal-status result-body gate and likeness access-tier router
 
@@ -47093,6 +47151,8 @@ Community examples and techniques referenced in this README:
 - [Just_sharon7 — TapNow Seedance 2.5 reed-marsh samurai-cat pursuit, complete text prompt and generated result](https://x.com/Just_sharon7/status/2103453974980591826) ([versioned tutorial and public render](https://github.com/reed35/ai-video-tutorials/commit/d9166a0f4f6066c478f8957787185f4c43d51c34))
 
 - [husky__create — BytePlus Lumina Seedance 2.5 persistent-site construction time-lapse, complete 30-second prompt and generated result](https://x.com/husky__create/status/2101876852029825290) ([complete prompt thread](https://x.com/husky__create/status/2101876857004319206), [versioned tutorial and public render](https://github.com/reed35/ai-video-tutorials/commit/d9166a0f4f6066c478f8957787185f4c43d51c34))
+
+- [Windy Hu / tempimg — September 26, 2026 Seedance 2.0 Mini (`doubao-seedance-2-0-mini-260615`) real-person motion-reference rejection followed by a user-approved three-AI-keyframe Omni pivot, public task ID, usage, output hash and committed 10-second 720p result](https://github.com/outliner/tempimg/commit/74ec5445191e5d1099b556e9c3dafb46872ba202) ([generated MP4](https://github.com/outliner/tempimg/blob/74ec5445191e5d1099b556e9c3dafb46872ba202/seedance-videos/chang-e-toothmark-20260926/S1-mini/S1_Seedance20Mini_v2_10s_720p.mp4), [contact sheet](https://github.com/outliner/tempimg/blob/74ec5445191e5d1099b556e9c3dafb46872ba202/seedance-videos/chang-e-toothmark-20260926/S1-mini/S1_Seedance20Mini_v2_contact.jpg))
 
 Official model references:
 
