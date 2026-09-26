@@ -26058,7 +26058,7 @@ the model state it can carry across cuts. The creator's reference-image
 generation text was not published, so the entry verifies the complete video
 prompt and visible character assets, not a reproducible upstream image recipe.
 
-Adapted and rewritten from @aimikoda's September 26, 2026
+Adapted and rewritten from @aimikoda's September 25, 2026
 [Seedance 2.5 result](https://x.com/aimikoda/status/2103512083778216062)
 and [complete prompt reply](https://x.com/aimikoda/status/2103512353920754134),
 preserved with the two character references and render in the
@@ -26140,7 +26140,7 @@ source's montage language into gap-free cause and effect, locks the cat's
 wearable props and explicitly handles the generated result's unprompted
 upright ending as a staged transition instead of accepting an anatomical jump.
 
-Adapted and rewritten from @Just_sharon7's September 26, 2026
+Adapted and rewritten from @Just_sharon7's September 25, 2026
 [complete TapNow Seedance 2.5 prompt and result](https://x.com/Just_sharon7/status/2103453974980591826),
 preserved in the
 [versioned tutorial commit](https://github.com/reed35/ai-video-tutorials/commit/d9166a0f4f6066c478f8957787185f4c43d51c34)
@@ -26239,7 +26239,7 @@ to prove the construction story. The public result reaches its ending slightly
 earlier than the written time map, so the last beat includes a deliberate hold
 instead of inventing more construction.
 
-Adapted and rewritten from @husky__create's September 25, 2026
+Adapted and rewritten from @husky__create's September 21, 2026
 [Seedance 2.5 result](https://x.com/husky__create/status/2101876852029825290)
 and [complete prompt thread](https://x.com/husky__create/status/2101876857004319206),
 preserved in the
