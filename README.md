@@ -45820,7 +45820,123 @@ the [complete beat-to-prompt compiler](https://github.com/keysforthewin/screenpl
 the [exact Seedance request and row lifecycle](https://github.com/keysforthewin/screenplay/blob/f89fab42e1743e8bf871f010646fad5317b26fd7/src/web/falVideoGenerate.js)
 and the [ordered-reference end-to-end regressions](https://github.com/keysforthewin/screenplay/blob/f89fab42e1743e8bf871f010646fad5317b26fd7/tests/fal-video-generate.test.js).
 
+### Text-only capability downgrade and product-grounding handoff gate
+
+**Verified model:** Higgsfield ByteDance Seedance 2.5
+(`bytedance/seedance-2.5/text-to-video`) — the original production release
+pins this exact endpoint and records a successful non-dry-run generation that
+downloaded as a 720×1280, 5.04-second clip. The public release contains the
+complete shot-prompt compiler, request client and capability downgrade, but no
+provider task ID or public visual master; count it as verified production
+structure rather than an independent visual-quality benchmark.  
+**Use case:** migrate a per-shot generator from a multimodal or source-video
+route to text-to-video without pretending that reference media or continuation
+still work, while preserving product identity through an auditable text handoff  
+**Mode:** analyzed shot -> schema-validated self-contained prompt -> immutable
+product descriptor -> text-to-video request; unsupported operations fail before
+media preparation or paid submission
+
+```text
+FREEZE THE ROUTE CONTRACT
+Record the selected endpoint, supported inputs and unsupported operations before
+compiling any prompt.
+
+ROUTE = bytedance/seedance-2.5/text-to-video
+SUPPORTED = prompt + duration + resolution + aspect ratio
+UNSUPPORTED = attached image/video references, source-video continuation
+
+Do not leave legacy reference selectors in the UI as if their files will reach
+the model. If they remain visible for provenance, label them informational only
+and exclude them from the submitted payload.
+
+SHOT SNAPSHOT
+For each source shot freeze:
+- shot ID and story position;
+- requested duration derived from its in/out times;
+- subject, product role and concrete action;
+- camera size, angle and one primary movement;
+- time of day, light and environment;
+- spoken and on-screen text as editorial metadata only;
+- the approved product identity sentence and its version/hash.
+
+PROMPT COMPILER
+Emit exactly one self-contained paragraph for each requested shot ID:
+[SUBJECT + PRODUCT ROLE]. [CAUSAL ACTION AND VISIBLE END STATE].
+[CAMERA SIZE/ANGLE + ONE CAMERA MOVE]. [LIGHT, PLACE AND MATERIAL DETAIL].
+Vertical 9:16 smartphone footage, realistic and highly detailed, about
+[DURATION] seconds. No generated captions, subtitles, logos or spoken
+dialogue; editorial text and final audio are added later.
+
+Require every requested shot ID exactly once. Reject missing IDs, duplicates,
+empty prompts or prose outside the schema. One repair pass may return only
+valid structured data; after that, fail without erasing approved prompts.
+
+PRODUCT-GROUNDING HANDOFF
+Append one server-owned identity clause after the approved creative prompt:
+
+PRODUCT = [REAL BRAND/PRODUCT NAME] — [VISIBLE COLORS, MATERIALS, SHAPE,
+PROPORTIONS AND DISTINCTIVE PARTS]. Preserve that appearance precisely;
+do not substitute another design.
+
+The clause must come from a versioned product record, not from filenames,
+model inference or stale reference thumbnails. Show the final combined prompt
+in the preflight receipt. Text grounding is an explicit downgrade, not proof
+that likeness will match an omitted reference asset.
+
+PAYLOAD PREFLIGHT
+Submit only:
+- the byte-equivalent combined prompt;
+- integer duration derived from the frozen shot;
+- approved resolution and aspect ratio;
+- the exact endpoint above;
+- a new attempt ID linked to the shot ID.
+
+Fail if an image URL, video URL, source-clip field, reference token or legacy
+extend flag survives serialization. Do not silently drop one unsupported field
+and continue with a semantically different paid request.
+
+UNSUPPORTED-OPERATION GATE
+If the user requests continuation or extension:
+1. stop before trimming, uploading or preparing a source clip;
+2. return a capability-specific explanation;
+3. keep the original clip, prompt and attempt history unchanged;
+4. offer a separately approved Generate action only as a new intent.
+
+Never relabel an unrelated text-to-video generation as an extension. Never
+retry by paraphrasing the prompt, removing identity constraints or switching
+providers without explicit approval.
+
+RECEIPT AND ACCEPTANCE
+Archive [SHOT ID], [ATTEMPT ID], [PROMPT HASH], [PRODUCT RECORD HASH],
+[MODEL], [DURATION], [RESOLUTION], [ASPECT], [RETURNED STATUS],
+[DOWNLOADED MIME], [PROBED WIDTH/HEIGHT/DURATION] and [ARTIFACT HASH].
+
+Accept the production structure only when:
+- the compiler covers every frozen shot once;
+- the submitted prompt and product clause match the approved receipt;
+- no unsupported media or continuation intent was discarded;
+- the returned file decodes and its measured geometry/duration are recorded;
+- dry-run placeholders cannot be mistaken for provider output;
+- absent provider task IDs or public masters remain disclosed.
+```
+
+**Why it works:** a provider swap can leave a polished interface that still
+suggests capabilities the new route never receives. Freezing the route contract
+before prompt compilation prevents reference controls from becoming decorative
+metadata, while the server-owned product clause makes the identity downgrade
+visible and reproducible. The hard continuation gate also prevents a source
+clip from being processed and charged under a request that cannot honor its
+temporal intent.
+
+Adapted and rewritten from liamrobert209 / VerticalFlash's September 26, 2026
+[production migration and real-call record](https://github.com/liamrobert209/VerticalFlash/commit/91906203b3bf0952f299e69bf43e79a798a8906a),
+the [complete per-shot prompt compiler](https://github.com/liamrobert209/VerticalFlash/blob/91906203b3bf0952f299e69bf43e79a798a8906a/src/lib/generation-prompts.ts),
+the [exact Higgsfield Seedance client](https://github.com/liamrobert209/VerticalFlash/blob/91906203b3bf0952f299e69bf43e79a798a8906a/src/lib/higgsfield.ts)
+and the [capability-gated generation runner](https://github.com/liamrobert209/VerticalFlash/blob/91906203b3bf0952f299e69bf43e79a798a8906a/src/lib/generate-clip.ts).
+
 ## Sources
+
+- [liamrobert209 / VerticalFlash — September 26, 2026 real-call migration to Higgsfield Seedance 2.5 text-to-video: schema-validated per-shot prompt compilation, server-owned product-description grounding, explicit loss of reference/extend capabilities and measured 720×1280, 5.04-second output](https://github.com/liamrobert209/VerticalFlash/commit/91906203b3bf0952f299e69bf43e79a798a8906a) ([prompt compiler](https://github.com/liamrobert209/VerticalFlash/blob/91906203b3bf0952f299e69bf43e79a798a8906a/src/lib/generation-prompts.ts), [exact client](https://github.com/liamrobert209/VerticalFlash/blob/91906203b3bf0952f299e69bf43e79a798a8906a/src/lib/higgsfield.ts), [generation gate](https://github.com/liamrobert209/VerticalFlash/blob/91906203b3bf0952f299e69bf43e79a798a8906a/src/lib/generate-clip.ts))
 
 - [Runway / Leah Retta — September 25, 2026 official Seedance 2.5 prompt guide: role-bound assets, one-sentence scene anchor, gap-free integer-second timeline, repeated primary traits, closing consistency lock, scope/change/protected-remainder edits and published product, animation, architecture and multi-character generations](https://runway.com/resources/seedance-2-5-prompt-guide) ([official model page](https://runway.com/product/seedance-2.5), [version-specific modes, settings and Draft documentation](https://help.runwayml.com/hc/en-us/articles/53542207042323-Creating-with-Seedance-2-5))
 
