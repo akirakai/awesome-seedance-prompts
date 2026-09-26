@@ -423,6 +423,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Job-linked two-clip Kraken coaster descent](#407-job-linked-two-clip-kraken-coaster-descent)
   - [Four-beat carrot-to-bomb clay game teaser](#408-four-beat-carrot-to-bomb-clay-game-teaser)
   - [Obsidian data-corridor forward-dolly web film](#409-obsidian-data-corridor-forward-dolly-web-film)
+  - [Audio-cued moka-pot launch broadcast](#410-audio-cued-moka-pot-launch-broadcast)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -25835,7 +25836,146 @@ the [complete prompt, exact request and acceptance pipeline](https://github.com/
 the [generated MP4](https://github.com/rdmbtc/mercenta/blob/c133c4f015546dcda45f48f5c8e1ca0ec731562a/web/public/videos/mercenta-vault.mp4)
 and its [render-derived poster](https://github.com/rdmbtc/mercenta/blob/c133c4f015546dcda45f48f5c8e1ca0ec731562a/web/public/videos/mercenta-vault-poster.jpg).
 
+
+### 410. Audio-cued moka-pot launch broadcast
+
+**Verified model:** Runway-hosted ByteDance Seedance 2.5 — Runway's official
+model-specific guide publishes the complete source prompt beside its displayed
+Seedance 2.5 generation; the public surface identifies the version but does not
+expose an endpoint ID  
+**Use case:** 30-second product film, finished-voiceover edit authority,
+metaphor-driven live-action commercial, cue-locked native sound design  
+**Mode:** Reference mode with one product image and one finished audio track  
+**Verified settings:** 30 seconds; live action; `@Image 1` product authority;
+`@Audio 1` sole voice authority; aspect ratio and resolution are not published
+
+```text
+Create one complete 30-second live-action commercial that treats a morning
+moka-pot ritual with the visual seriousness of a space-launch broadcast.
+
+ASSET BINDING
+@Image 1 is the only product authority. Preserve the pot's octagonal body,
+metal finish, lid, handle, proportions and approved visible mark in every shot.
+@Audio 1 is the locked mission-control voiceover and the only spoken voice.
+Use its four editorial cues — countdown, pressure confirmation, launch and
+closing line — to time the picture. Do not paraphrase, replace or add speech.
+
+WORLD AND CONTINUITY
+One restrained graphite kitchen at dawn. A pale stone counter, black gas hob,
+steel-framed window at screen left, chipped white cup, open notebook, child's
+rocket drawing and small basil plant remain in fixed positions. Low warm sun
+from the window is the only key; the blue burner is the only cool accent.
+
+0–6 s — From a centred overhead wide, descend slowly with a slight quarter
+rotation toward @Image 1 on the hob. On the countdown cue, cut to extreme macro:
+the burner clicks, then forms one blue ring beneath the pot.
+
+6–12 s — Three short preparation inserts, all physically continuous: water
+reaches the valve line; grounds settle once into the funnel; the upper chamber
+turns closed. Let each camera move stop when its mechanical action stops.
+
+12–18 s — Low medium push-in. Pressure produces a restrained tremor in the pot
+and a matching micro-vibration in camera. A tabby cat in the left background
+stays motionless and watches. Land the pressure-confirmation cue here.
+
+18–24 s — On the launch cue, make one fast half-orbit in extreme macro as dark
+coffee rises through the glass dome with believable liquid mass. Ease the orbit
+to rest as the surge settles; do not cut away from the peak event.
+
+24–30 s — Follow the pour into the white cup, then crane upward and pull back
+in one continuous move to a clean hero tableau: the same pot steaming on the
+hob, the cat now asleep and the child's drawing still only background texture.
+Hold the final composition through the closing line.
+
+CONSISTENCY AND SOUND
+Use grounded 35 mm photochemical texture, honest motion blur and one coherent
+dawn-light direction. Generate burner clicks, water, metal contact, pressure,
+coffee flow and room tone beneath @Audio 1. No music, extra voice, subtitle,
+invented packaging text, product redesign, duplicate pot, changing kitchen,
+weightless liquid, impossible camera teleport or pre-finished coffee.
+```
+
+**Why it works:** the finished audio is treated as editorial authority rather
+than decoration, while each cue owns one visible causal state. The product
+reference owns geometry only; the prompt owns environment, action and camera.
+The five gap-free beats carry the launch metaphor without asking the model to
+render literal spacecraft, and the final crane converts the effect sequence
+back into a usable product end frame. The rewrite keeps Runway's demonstrated
+audio-cued structure while replacing source-specific copy with reusable cue
+roles and making the continuity and failure boundaries explicit.
+
+Adapted and rewritten from Leah Retta / Runway's September 25, 2026
+[official Seedance 2.5 prompt guide and displayed generation](https://runway.com/resources/seedance-2-5-prompt-guide),
+the [Runway Seedance 2.5 model page](https://runway.com/product/seedance-2.5)
+and the [version-specific creation-mode documentation](https://help.runwayml.com/hc/en-us/articles/53542207042323-Creating-with-Seedance-2-5).
+
+
 ## Reusable templates
+
+### Asset-bound summary-to-timeline spine with a scoped-edit fork
+
+**Verified model:** Runway-hosted ByteDance Seedance 2.5 — Runway's official
+September 25, 2026 guide defines this four-part prompt structure specifically
+for Seedance 2.5 and demonstrates it with published model outputs; no endpoint
+ID is exposed on the public creation surface  
+**Use case:** keep a 4–30-second multi-shot request coherent when many assets,
+characters, sounds or edits would otherwise compete for authority  
+**Mode:** Reference or Keyframe generation, with an optional Edit branch
+
+```text
+ASSET BINDING
+@Image 1 = [PRIMARY SUBJECT OR PRODUCT]. It controls only [EXACT TRAITS].
+@Image 2 = [ENVIRONMENT]. It controls only [LAYOUT / MATERIAL / PALETTE].
+@Video 1 = [MOTION OR CAMERA DONOR]. Transfer [ONE NAMED PROPERTY], not its
+subject, costume, background, text or audio.
+@Audio 1 = [VOICE / MUSIC / RHYTHM AUTHORITY]. It controls [EXACT FUNCTION].
+Delete unused references before submission; every retained asset has one role.
+
+ONE-SENTENCE SUMMARY
+[SUBJECT] performs [ONE COMPLETE EVENT] in [LOCATION], as a [GENRE / LOOK],
+captured with [PRIMARY CAMERA RELATIONSHIP], ending on [VISIBLE END STATE].
+
+GAP-FREE TIMELINE
+0–[A] s — [VISIBLE STATE, ACTION, CAMERA, AUDIO CUE AND END STATE].
+[A]–[B] s — [NEXT CAUSAL ACTION; begin from the prior end state].
+[B]–[C] s — [TURN OR PAYOFF; repeat two or three fixed traits of the primary
+subject instead of assuming the opening description still governs].
+[C]–[TOTAL] s — [DECISIVE END FRAME AND REQUIRED HOLD].
+Cover every integer second once: no gaps, overlaps or duplicated story beats.
+Treat timestamps as pacing regions, not frame-exact edit points.
+
+CONSISTENCY CLOSE
+Keep [IDENTITY TRAITS], [WARDROBE / PRODUCT GEOMETRY], [WORLD LAYOUT],
+[LIGHT DIRECTION], [CAMERA TEXTURE] and [AUDIO AUTHORITY] unchanged throughout.
+Only [LIST OF ALLOWED CHANGES] may evolve. No subtitles or music unless they
+are deliberately assigned above; add deterministic typography in post.
+
+OPTIONAL EDIT BRANCH
+Scope: change only [TIME WINDOW / REGION / SUBJECT PROPERTY] in @Video 1.
+Change: transform [A] into [B] with [OBSERVABLE RESULT].
+Protected remainder: preserve composition, camera, timing, identity, lighting,
+performance rhythm, audio and every frame outside the declared scope.
+
+PREFLIGHT
+Choose Reference, Keyframe or Edit before writing. In Keyframe mode, supply the
+actual approved first and last frames rather than relying on prose endpoints.
+Record duration, aspect ratio, resolution, audio toggle, ordered asset list and
+prompt together; inherited settings in Edit remain owned by the source video.
+```
+
+**Why it works:** Seedance 2.5 receives one authority map before narrative
+language, one summary that keeps all shots inside the same dramatic object, a
+continuous timeline, and a short final lock. Repeating only the primary asset's
+fixed traits at major beats counters long-form drift without re-describing the
+entire scene. The Edit branch is intentionally separate: it converts a vague
+revision into scope, change and protected remainder, so a local repair cannot
+silently become a global restyle.
+
+Adapted and rewritten from Leah Retta / Runway's September 25, 2026
+[official Seedance 2.5 prompt guide](https://runway.com/resources/seedance-2-5-prompt-guide),
+the [Runway Seedance 2.5 model page](https://runway.com/product/seedance-2.5)
+and the [four-mode creation contract](https://help.runwayml.com/hc/en-us/articles/53542207042323-Creating-with-Seedance-2-5).
+
 
 ### Canonical task-ID normalization and deterministic verdict gate
 
@@ -45285,6 +45425,8 @@ the [exact Seedance request and row lifecycle](https://github.com/keysforthewin/
 and the [ordered-reference end-to-end regressions](https://github.com/keysforthewin/screenplay/blob/f89fab42e1743e8bf871f010646fad5317b26fd7/tests/fal-video-generate.test.js).
 
 ## Sources
+
+- [Runway / Leah Retta — September 25, 2026 official Seedance 2.5 prompt guide: role-bound assets, one-sentence scene anchor, gap-free integer-second timeline, repeated primary traits, closing consistency lock, scope/change/protected-remainder edits and published product, animation, architecture and multi-character generations](https://runway.com/resources/seedance-2-5-prompt-guide) ([official model page](https://runway.com/product/seedance-2.5), [version-specific modes, settings and Draft documentation](https://help.runwayml.com/hc/en-us/articles/53542207042323-Creating-with-Seedance-2-5))
 
 - [Oxen.ai — September 26, 2026 verified Seedance 2.5 Draft walkthrough (`bytedance-seedance-2-5-text-to-video`): completed async queue receipts, distinct `generation_id`/`draft_task_id` lineage, returned expiry, Final echo-truth warning, one-Draft/many-Finals billing boundary, sync-timeout guidance and terminal unknown/expired-ID handling](https://github.com/Oxen-AI/docs/commit/9eb981eee84495b81c673a48981cdf57c27da678) ([complete walkthrough and reference implementation](https://github.com/Oxen-AI/docs/blob/9eb981eee84495b81c673a48981cdf57c27da678/inference-api/reference/models/walkthroughs/seedance_2_5_draft_mode.mdx))
 
