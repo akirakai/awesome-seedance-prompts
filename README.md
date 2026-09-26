@@ -44341,7 +44341,8 @@ and the [versioned mask and contrast notes](https://github.com/alialahmad2000/fl
 ### Draft-to-final immutable-request handoff and expiry gate
 
 **Verified models:** Volcano Ark Seedance 2.5
-(`doubao-seedance-2-5-260628`), ComfyUI Partner Node Seedance 2.5 Draft
+(`doubao-seedance-2-5-260628`), OXYZN ModelArk Seedance 2.5
+(`dreamina-seedance-2-5-260628`), ComfyUI Partner Node Seedance 2.5 Draft
 (`dreamina-seedance-2-5-260628`), EvoLink Seedance 2.5
 (`seedance-2.5-text-to-video`, `seedance-2.5-image-to-video`,
 `seedance-2.5-reference-to-video`, `seedance-2.5-video-edit` or
@@ -44658,7 +44659,8 @@ The continuation-reference gate is adapted from jungjinsori / OXYZN Studio's
 September 26, 2026 [Seedance 2.5 Draft integration and lineage-repair
 commit](https://github.com/jungjinsori/OXYZN-Studio/commit/1b23bfd9781226bf7df9e40b083ae04e43cf86d3),
 including the [versioned project implementation](https://github.com/jungjinsori/OXYZN-Studio/blob/1b23bfd9781226bf7df9e40b083ae04e43cf86d3/src/App.jsx).
-The implementation fixes Draft to 480p, promotes through an immutable
+The exact source model is `dreamina-seedance-2-5-260628`; the implementation
+fixes Draft to 480p, promotes through an immutable
 `draft_task_id`, blocks a Draft predecessor from becoming the next clip's
 Video 1, disables continuation batches that would cross that boundary,
 invalidates stale public copies on clip replacement, and restores Draft
@@ -45259,7 +45261,7 @@ and the [ordered-reference end-to-end regressions](https://github.com/keysforthe
 
 - [Oxen.ai — September 26, 2026 verified Seedance 2.5 Draft walkthrough (`bytedance-seedance-2-5-text-to-video`): completed async queue receipts, distinct `generation_id`/`draft_task_id` lineage, returned expiry, Final echo-truth warning, one-Draft/many-Finals billing boundary, sync-timeout guidance and terminal unknown/expired-ID handling](https://github.com/Oxen-AI/docs/commit/9eb981eee84495b81c673a48981cdf57c27da678) ([complete walkthrough and reference implementation](https://github.com/Oxen-AI/docs/blob/9eb981eee84495b81c673a48981cdf57c27da678/inference-api/reference/models/walkthroughs/seedance_2_5_draft_mode.mdx))
 
-- [jungjinsori / OXYZN Studio — September 26, 2026 Volcano Ark Seedance 2.5 Draft continuation guard: fixed-480p Drafts, immutable `draft_task_id` promotion, prevention of Draft-as-Video-1 reference leakage, version-bound public-copy invalidation and history-safe Draft metadata restoration](https://github.com/jungjinsori/OXYZN-Studio/commit/1b23bfd9781226bf7df9e40b083ae04e43cf86d3) ([versioned implementation](https://github.com/jungjinsori/OXYZN-Studio/blob/1b23bfd9781226bf7df9e40b083ae04e43cf86d3/src/App.jsx))
+- [jungjinsori / OXYZN Studio — September 26, 2026 ModelArk Seedance 2.5 (`dreamina-seedance-2-5-260628`) Draft continuation guard: fixed-480p Drafts, immutable `draft_task_id` promotion, prevention of Draft-as-Video-1 reference leakage, version-bound public-copy invalidation and history-safe Draft metadata restoration](https://github.com/jungjinsori/OXYZN-Studio/commit/1b23bfd9781226bf7df9e40b083ae04e43cf86d3) ([versioned implementation](https://github.com/jungjinsori/OXYZN-Studio/blob/1b23bfd9781226bf7df9e40b083ae04e43cf86d3/src/App.jsx))
 
 - [keysforthewin / screenplay — September 26, 2026 fal ByteDance Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`) whole-beat prompt compiler: story-complete partitioning, one-to-four-shot self-contained rows, global catalog selection, local `@Image1…N` rebinding, ordered `image_urls`, dangling-handle repair, duration/reference caps, empty-result preservation and row-scoped job persistence](https://github.com/keysforthewin/screenplay/commit/f89fab42e1743e8bf871f010646fad5317b26fd7) ([complete compiler](https://github.com/keysforthewin/screenplay/blob/f89fab42e1743e8bf871f010646fad5317b26fd7/src/web/videoPromptGenerate.js), [exact Seedance request lifecycle](https://github.com/keysforthewin/screenplay/blob/f89fab42e1743e8bf871f010646fad5317b26fd7/src/web/falVideoGenerate.js), [end-to-end regressions](https://github.com/keysforthewin/screenplay/blob/f89fab42e1743e8bf871f010646fad5317b26fd7/tests/fal-video-generate.test.js))
 
