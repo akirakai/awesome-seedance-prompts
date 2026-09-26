@@ -424,6 +424,10 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Four-beat carrot-to-bomb clay game teaser](#408-four-beat-carrot-to-bomb-clay-game-teaser)
   - [Obsidian data-corridor forward-dolly web film](#409-obsidian-data-corridor-forward-dolly-web-film)
   - [Audio-cued moka-pot launch broadcast](#410-audio-cued-moka-pot-launch-broadcast)
+  - [Frozen-crowd motion-role inversion](#411-frozen-crowd-motion-role-inversion)
+  - [Three-blade sky-duel route reversal](#412-three-blade-sky-duel-route-reversal)
+  - [Reed-marsh samurai-cat pursuit](#413-reed-marsh-samurai-cat-pursuit)
+  - [Persistent-site city-build time-lapse](#414-persistent-site-city-build-time-lapse)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -25910,6 +25914,340 @@ the [Runway Seedance 2.5 model page](https://runway.com/product/seedance-2.5)
 and the [version-specific creation-mode documentation](https://help.runwayml.com/hc/en-us/articles/53542207042323-Creating-with-Seedance-2-5).
 
 
+### 411. Frozen-crowd motion-role inversion
+
+**Verified model:** OpenArt Seedance 2.5 — the original creator labels the
+generated result with this exact version and publishes both complete shot
+prompts in a reply; the versioned tutorial commit preserves the prompt, source
+links and public render together  
+**Use case:** surreal live action, two-shot performance contrast, large-cast
+blocking, edit-safe hard cut  
+**Mode:** image-to-video with one hero reference, generated as two clips  
+**Verified settings:** 16:9; shot 1 is 14 seconds; shot 2 is 15 seconds; no
+music; hard cut when the crowd first moves
+
+```text
+Create two photoreal period-drama clips on the same broad stone staircase in
+front of one neoclassical museum. Use cool overcast daylight, a restrained
+35 mm grain and real skin, hair, fabric and prop texture.
+
+REFERENCE AND CAST LOCK
+The reference image owns only the hero's face, hair and outfit. Keep that
+identity unchanged in both clips. Build a dense crowd of real actors in
+historical costumes across fixed rows: mourning dress, white ballet tutu,
+bowler hat with a practical green apple, blue work jacket, gilded armour,
+embroidered doublet, Renaissance gowns, a red floral dress and a bicorne
+uniform. Preserve every actor's row, neighbour, costume and orientation across
+the cut. Leave no aisle and no empty halo around the hero.
+
+SHOT 1 — 00:00–00:14 — CROWD FROZEN, HERO MOVES
+00:00–00:03: close front portrait. The hero takes one drag from a cigarette
+and exhales smoke across the lens.
+00:03–00:06: pull back smoothly as the smoke clears, revealing the packed
+staircase. Every extra is statue-still and unblinking.
+00:06–00:12: the hero turns, walks up at normal speed and squeezes through the
+body-width gaps. Nobody steps aside. Shoulders may make contact, but no extra
+changes pose or position.
+00:12–00:14: the hero reaches the exact centre of the third row, turns back to
+camera and holds.
+
+SHOT 2 — 00:00–00:15 — CROWD MOVES, HERO FROZEN
+Open in a wide view on the first frame with the same cast and blocking already
+in violent motion. Different crowd sections repeat a full-body wave out of
+phase: head and spine arch back, torso folds almost to the knees, then the body
+unrolls and snaps back again. Arms, hats and fabric follow the momentum. The
+cycle never pauses at neutral and never becomes synchronized.
+00:00–00:10: pull back and rise slightly to reveal the complete façade.
+00:10–00:15: lock the camera while the crowd continues at full intensity.
+The hero remains relaxed, upright and absolutely motionless at centre.
+
+SOUND AND FAILURE CONTROL
+Use only wind, shoes, fabric, breath and armour rattle. No music, dialogue,
+caption or watermark. Do not paint or smooth faces, rearrange the crowd, form
+an aisle, slow the hero, make the first-shot extras move, let the second-shot
+crowd rest, move the hero in shot 2, add an internal cut or morph a face.
+```
+
+**Why it works:** the two clips share one cast map but reverse the ownership of
+motion, making the hard cut legible without needing a new location or stunt.
+The rewrite reduces the source's long costume catalogue to visible identity
+anchors, repeats the fixed-neighbour rule at the sequence level and separates
+the two incompatible motion states into independent generations. The public
+result also shows a useful limitation: some named fine-grained costume
+identities collapse into repeated archetypes, so row position and silhouette
+should carry continuity rather than unverified art-historical likeness.
+
+Adapted and rewritten from @iamsofiaijaz's September 26, 2026
+[Seedance 2.5 result](https://x.com/iamsofiaijaz/status/2103685419695280351)
+and [complete two-shot prompt](https://x.com/iamsofiaijaz/status/2103686813600944332),
+preserved with the public render in the
+[versioned tutorial commit](https://github.com/reed35/ai-video-tutorials/commit/d9166a0f4f6066c478f8957787185f4c43d51c34)
+([generated MP4](https://github.com/reed35/ai-video-tutorials/blob/d9166a0f4f6066c478f8957787185f4c43d51c34/public/tutorials/iamsofiaijaz-museum-steps-frozen-crowd-seedance/demo-web.mp4)).
+
+
+### 412. Three-blade sky-duel route reversal
+
+**Verified model:** Seedance 2.5 — the original creator publishes the complete
+six-shot prompt beside the generated result and identifies the exact version;
+the versioned tutorial commit preserves both character images and the render  
+**Use case:** anime action choreography, two-character consistency,
+weapon-count control, route-based tactical storytelling  
+**Mode:** reference-to-video with two ordered character images  
+**Verified settings:** 30 seconds; 16:9; six timed shots; native effects only
+
+```text
+Create a 30-second hand-painted anime sky duel in six continuous tactical
+beats. @Image 1 owns the red-haired fighter's face, costume and two swords.
+@Image 2 owns the brown-clad fighter's face, costume and single katana.
+References do not own pose: redraw complete moving bodies rather than sliding
+or rotating the source silhouettes.
+
+GLOBAL ACTION CONTRACT
+Exactly three swords exist: the red-haired fighter holds one in each hand; the
+brown-clad fighter holds one in the right hand and keeps the left hand empty.
+Hilts stay with their owners. Use fast real-time sakuga with full hip turns,
+extended limbs, directional smears that resolve into clear anatomy at contact,
+and impacts that visibly redirect both flight paths. No slow motion, hit-stop,
+long blade lock, hovering stare, dropped weapon, duplicated blade or energy
+beam.
+
+00:00–00:04 — DIAGONAL ESCAPE
+Wide rushing track. Red dives from upper left with a right-hand descending cut
+and keeps the left blade open. Brown rises from lower right, deflects, rolls
+under Red's left arm and exits behind that shoulder. Both immediately reverse
+toward the fight.
+
+00:04–00:10 — HABIT ESTABLISHED
+Lateral chase. Red chains alternating cuts; Brown bends under one sweep,
+answers upward, then repeats the same low passage under the left arm and emerges
+behind the left shoulder already attacking.
+
+00:10–00:14 — CONSEQUENCE
+Side-on full-body view. Brown cuts the edge of Red's left sleeve and side-kicks
+the upper arm. Red tumbles end over end, keeps eyes on the pursuer and draws
+both swords close to recover. Preserve the torn sleeve afterward.
+
+00:14–00:20 — BAIT AND CLOSED EXIT
+Follow the fall. Red repeats the right-hand descending attack and deliberately
+opens the same low lane, but reserves the left sword. Brown takes the familiar
+route. Red turns toward his destination and snaps the delayed blade across the
+exit. One brief steel contact forces Brown into a sideways corkscrew.
+
+00:20–00:25 — COUNTER-ADAPTATION
+Rise with Brown's rotation into an overhead cut. Red rolls below it, redirects
+the katana with the right sword and sweeps the separate left blade across the
+return path. A glancing contact sends them apart on opposing arcs; both use
+that separation to accelerate back together.
+
+00:25–00:30 — REVERSED OUTCOME
+Reprise the opening diagonal at greater speed. Red turns Brown's crossing cut
+aside with the right sword and again closes the low escape with the left. Pull
+wide after the violent crossing contact so Red drives through centre while
+Brown corkscrews away. Two thin brushlike slash trails cross displaced cloud
+haze; end with both bodies still travelling.
+
+Use pale blue-grey sky, diffuse daylight, elastic ink contours and compact
+painted shading. Audio is only air cuts, cloth snaps, dry steel cracks and one
+blunt kick. No dialogue, music, subtitle, screen text or portal.
+```
+
+**Why it works:** the fight is not a list of attractive moves; it establishes
+one repeated escape vector, punishes it, then makes the first fighter exploit
+it. Exact weapon cardinality, hand ownership and persistent sleeve damage give
+the model state it can carry across cuts. The creator's reference-image
+generation text was not published, so the entry verifies the complete video
+prompt and visible character assets, not a reproducible upstream image recipe.
+
+Adapted and rewritten from @aimikoda's September 26, 2026
+[Seedance 2.5 result](https://x.com/aimikoda/status/2103512083778216062)
+and [complete prompt reply](https://x.com/aimikoda/status/2103512353920754134),
+preserved with the two character references and render in the
+[versioned tutorial commit](https://github.com/reed35/ai-video-tutorials/commit/d9166a0f4f6066c478f8957787185f4c43d51c34)
+([generated MP4](https://github.com/reed35/ai-video-tutorials/blob/d9166a0f4f6066c478f8957787185f4c43d51c34/public/tutorials/aimikoda-sky-duel-seedance-2-5/demo-web.mp4)).
+
+
+### 413. Reed-marsh samurai-cat pursuit
+
+**Verified model:** TapNow Seedance 2.5 — the original creator identifies this
+exact platform/version and publishes the complete text prompt with the
+generated result; the versioned tutorial commit preserves the public render  
+**Use case:** photoreal animal action, absurdist samurai short, pursuit
+escalation, location-to-location physical handoff  
+**Mode:** text-to-video  
+**Verified settings:** 30 seconds; 16:9; 24 fps film look; native ambience,
+no dialogue
+
+```text
+Create one 30-second photoreal action short in a misty Japanese wetland.
+
+CHARACTER LOCK
+One orange tabby cat has a white chest, white paws and green-gold eyes. It wears
+a woven conical straw hat and a small sheathed katana secured diagonally across
+its back by a leather harness, with one dry reed held in its mouth. Preserve
+fur pattern, body scale, hat, harness, sheath and reed across every cut. The
+cat begins on four paws; if it rises for the final walk, make the change visible
+after landing rather than silently replacing its anatomy.
+
+WORLD
+Overcast grey sky, tall beige reeds, mossy rocks, damp soil, light fog and a
+still lake. Use muted earth colours, wet physical surfaces, natural motion
+blur, restrained grain and shallow depth of field.
+
+00:00–00:03 — PORTRAIT
+Locked profile close-up on a mossy rock. Hat low, the cat slowly turns toward
+camera and gives one calm direct stare.
+
+00:03–00:07 — ACCELERATION
+Rear three-quarter tracking shot. The cat walks from behind a boulder, then
+breaks into a sprint toward camera. Reeds part from body contact; the hat
+bounces but remains worn.
+
+00:07–00:12 — FIRST ATTACK
+Two black-clad masked attackers emerge from separate reed lanes. From a
+ground-level track, the cat changes direction between them at speed. One short
+blade flash, displaced dirt and leaves establish the pass; nobody teleports or
+duplicates.
+
+00:12–00:17 — TUNNEL AND RELEASE
+The cat drops low through a dense reed tunnel, bursts into open space and jumps.
+Use one low angle as the body stretches against the sky, then one overhead view
+as it completes a corkscrew and rolls on wet grass.
+
+00:17–00:22 — DODGE
+An attacker swings once. The cat clears the blade in mid-air, the hat shifts
+slightly off-centre without vanishing, and the landing continues immediately
+into a slide and second leap.
+
+00:22–00:26 — LAKE HANDOFF
+The last jump carries the cat from bank to the bow of one dark wooden rowboat.
+Show the arc, contact and spreading ripples. Several attackers jump from the
+same bank toward the boat behind it; preserve their origin and splash points.
+
+00:26–00:30 — HERO CLOSE
+The cat absorbs the landing in a low stance, then advances along the boat's
+centreline toward the lens while distant attackers fall into the water behind.
+Make one slow push toward its unreadable face and end before it reaches camera.
+
+Use wind, reeds, footfalls, water, wood and distant steel only. No speech,
+music, caption or watermark. No extra cat, changing coat pattern, loose or
+duplicated sword, flying hat, dry ground, weightless jump, impossible boat
+motion, attacker reset or morph between quadruped and upright motion.
+```
+
+**Why it works:** every location change is earned by a visible trajectory:
+rock to chase lane, lane to jump, bank to boat. The rewrite converts the
+source's montage language into gap-free cause and effect, locks the cat's
+wearable props and explicitly handles the generated result's unprompted
+upright ending as a staged transition instead of accepting an anatomical jump.
+
+Adapted and rewritten from @Just_sharon7's September 26, 2026
+[complete TapNow Seedance 2.5 prompt and result](https://x.com/Just_sharon7/status/2103453974980591826),
+preserved in the
+[versioned tutorial commit](https://github.com/reed35/ai-video-tutorials/commit/d9166a0f4f6066c478f8957787185f4c43d51c34)
+([generated MP4](https://github.com/reed35/ai-video-tutorials/blob/d9166a0f4f6066c478f8957787185f4c43d51c34/public/tutorials/just-sharon7-samurai-cat-reeds-seedance-2-5/demo-web.mp4)).
+
+
+### 414. Persistent-site city-build time-lapse
+
+**Verified model:** BytePlus Lumina Seedance 2.5 — the original creator
+publishes the complete 30-second prompt in the result thread and identifies the
+exact platform/version; the versioned tutorial commit preserves the render  
+**Use case:** construction-company brand film, accelerated process
+visualization, persistent-environment time-lapse, final aerial reveal  
+**Mode:** text-to-video  
+**Verified settings:** 30 seconds; 9:16; one fixed development site; generated
+audio is not specified
+
+```text
+Create one 30-second vertical photoreal construction-company film: an empty
+urban site becomes a credible modern Japanese business district. The build
+process is the subject, not a magical morph.
+
+SITE MAP AND PERSISTENCE
+Use one fixed geography. Centre is the future plaza; left is a medium-rise
+cluster; right is one signature glass tower; background holds later office
+towers; foreground becomes the main boulevard and pedestrian zone. Every
+finished structure must originate in a previously visible work area. Completed
+work persists while the camera visits another zone. Materials and machines
+leave only after visible use or removal.
+
+00:00–00:03 — ZERO
+Before sunrise, make a slow aerial push over bare soil, survey marks, temporary
+fences, staged steel and concrete. Engineers place markers and inspect plans;
+idle cranes and excavators establish scale.
+
+00:03–00:06 — GROUNDWORK
+Across the same map, excavators open foundations, trucks remove soil, piles and
+reinforcement cages enter, concrete pours and the future boulevard is marked.
+Activity is dense but routed, never chaotic.
+
+00:06–00:09 — FOUNDATIONS
+Accelerated time-lapse: foundations cure, columns rise, cranes lift beams and
+workers guide each connection. Keep neighbouring buildings at visibly
+different completion stages.
+
+00:09–00:12 — STRUCTURE
+Track upward beside the right-hand tower while steel frames, slabs,
+scaffolding and construction lifts add floors from the existing base. The
+other zones continue behind at different speeds; no floor appears unsupported.
+
+00:12–00:15 — ENVELOPE
+Move close as cranes place curtain-wall glass and crews fix aluminium frames.
+Raw structure becomes a finished façade in the order structure, frame, panel,
+seal. Existing floors and skyline do not reset.
+
+00:15–00:18 — INFRASTRUCTURE
+At street level, show utilities, drainage, compacted road base, asphalt,
+markings, kerbs, paving, lights and signals in physical sequence.
+
+00:18–00:21 — PUBLIC REALM
+Trucks deliver soil and mature trees; crews lift, plant and brace them. Install
+grass, benches, bicycle parking, plaza paving and one shallow water feature
+only after ground preparation.
+
+00:21–00:24 — COMMISSIONING
+Remove protective film and barriers, dismantle scaffolding, test entrances and
+lights, complete final lifts and keep workers visible during inspection.
+
+00:24–00:27 — OCCUPANCY
+Shift gradually from daylight to warm late afternoon. Office workers, cyclists,
+buses and cars enter established routes; trees move in wind and construction
+crews finish the last checks.
+
+00:27–00:30 — REVEAL
+Begin behind one helmeted engineer in the completed central plaza. Pull back,
+then rise smoothly to reveal that the final district occupies the original
+empty site. Hold a clean centred aerial hero frame for the final 1.5 seconds.
+Keep the city moving. Reserve one quiet contrast-safe centre area for the
+company name, but add all typography in post.
+
+Use believable concrete, steel, glass, asphalt, soil and vegetation with
+architectural-commercial photography. Camera motion stays physically
+achievable; lighting progresses blue hour to morning, day and golden hour
+without abrupt resets. No instant building, floating beam, duplicate worker,
+giant person, impossible crane, changing geography, unsupported floor,
+collapsing structure, toy miniature, cyberpunk city, random logo, generated
+text or watermark.
+```
+
+**Why it works:** a named site map turns a potentially incoherent time-lapse
+into persistent state, while each asset follows an observable build chain.
+Staggered completion prevents every tower from morphing in unison. The rewrite
+keeps the source's ten-beat progression, shortens repeated material adjectives,
+and moves the exact brand title to post because native typography is not needed
+to prove the construction story. The public result reaches its ending slightly
+earlier than the written time map, so the last beat includes a deliberate hold
+instead of inventing more construction.
+
+Adapted and rewritten from @husky__create's September 25, 2026
+[Seedance 2.5 result](https://x.com/husky__create/status/2101876852029825290)
+and [complete prompt thread](https://x.com/husky__create/status/2101876857004319206),
+preserved in the
+[versioned tutorial commit](https://github.com/reed35/ai-video-tutorials/commit/d9166a0f4f6066c478f8957787185f4c43d51c34)
+([generated MP4](https://github.com/reed35/ai-video-tutorials/blob/d9166a0f4f6066c478f8957787185f4c43d51c34/public/tutorials/husky-nexbuild-city-timelapse-seedance/demo-web.mp4)).
+
+
+
 ## Reusable templates
 
 ### Asset-bound summary-to-timeline spine with a scoped-edit fork
@@ -46746,6 +47084,15 @@ Community examples and techniques referenced in this README:
 - [CAoyinggo / panqu-Test-agent — Seedance 2.0 read-only gateway provenance, real routed task proof and predicted-diversion/direct-execution reconciliation](https://github.com/CAoyinggo/panqu-Test-agent/commit/7dedaa02930d451b9c6b2f078d3d53440538cb8f) ([safe-column database collector](https://github.com/CAoyinggo/panqu-Test-agent/blob/7dedaa02930d451b9c6b2f078d3d53440538cb8f/scripts/verify-db-change.py), [trusted snapshot builder](https://github.com/CAoyinggo/panqu-Test-agent/blob/7dedaa02930d451b9c6b2f078d3d53440538cb8f/src/devtest/routing.ts), [evidence reconciliation](https://github.com/CAoyinggo/panqu-Test-agent/blob/7dedaa02930d451b9c6b2f078d3d53440538cb8f/src/devtest/evidence-collectors.ts))
 
 - [CAoyinggo / panqu-Test-agent — September 26, 2026 Seedance 2.0 (`doubao-seedance-2.0`, catalogue model ID `15`) real-task billing correction: task `239541`, 720p × 4 seconds, 30 points/second, expected 120, net debit 120, billing `PASS`, `overCharged=false`, with a regression preventing report-template placeholders from contaminating production verdicts](https://github.com/CAoyinggo/panqu-Test-agent/commit/8885d18d8d4ab968e0bd6dd9f4447b61b3c5b738) ([billing and diversion regression](https://github.com/CAoyinggo/panqu-Test-agent/blob/8885d18d8d4ab968e0bd6dd9f4447b61b3c5b738/tests/unit/devtest/diversion-pipeline-integration.test.ts))
+
+
+- [iamsofiaijaz — OpenArt Seedance 2.5 frozen-crowd / moving-hero inversion, complete two-shot prompt and generated result](https://x.com/iamsofiaijaz/status/2103685419695280351) ([complete prompt reply](https://x.com/iamsofiaijaz/status/2103686813600944332), [versioned tutorial and public render](https://github.com/reed35/ai-video-tutorials/commit/d9166a0f4f6066c478f8957787185f4c43d51c34))
+
+- [aimikoda — Seedance 2.5 three-blade sky duel, two character references, route-reversal choreography and complete six-shot prompt](https://x.com/aimikoda/status/2103512083778216062) ([complete prompt reply](https://x.com/aimikoda/status/2103512353920754134), [versioned tutorial and public render](https://github.com/reed35/ai-video-tutorials/commit/d9166a0f4f6066c478f8957787185f4c43d51c34))
+
+- [Just_sharon7 — TapNow Seedance 2.5 reed-marsh samurai-cat pursuit, complete text prompt and generated result](https://x.com/Just_sharon7/status/2103453974980591826) ([versioned tutorial and public render](https://github.com/reed35/ai-video-tutorials/commit/d9166a0f4f6066c478f8957787185f4c43d51c34))
+
+- [husky__create — BytePlus Lumina Seedance 2.5 persistent-site construction time-lapse, complete 30-second prompt and generated result](https://x.com/husky__create/status/2101876852029825290) ([complete prompt thread](https://x.com/husky__create/status/2101876857004319206), [versioned tutorial and public render](https://github.com/reed35/ai-video-tutorials/commit/d9166a0f4f6066c478f8957787185f4c43d51c34))
 
 Official model references:
 
