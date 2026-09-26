@@ -44347,7 +44347,8 @@ and the [versioned mask and contrast notes](https://github.com/alialahmad2000/fl
 `seedance-2.5-reference-to-video`, `seedance-2.5-video-edit` or
 `seedance-2.5-video-extend` -> `seedance-2.5-draft-to-video`) and Dreamina
 Web Seedance 2.5 Preview/Sample mode (`dreamina_seedance_45_pro_draft`,
-verified at 480p × 5 seconds) — Ark's exact-model live ledger records
+verified at 480p × 5 seconds), and Oxen.ai Seedance 2.5
+(`bytedance-seedance-2-5-text-to-video`) — Ark's exact-model live ledger records
 four 480p Draft tasks, four matched direct-1080p tasks and one successful
 1080p promotion whose returned `draft_task_id` points to the selected Draft;
 EvoLink's versioned OpenAPI contract exposes a comparable two-stage route for
@@ -44409,6 +44410,26 @@ Treat the task-ID edge as a typed lineage edge:
 Persist both the upstream generation-node execution ID and returned Draft task
 ID. A graph cache hit, UI preview or video file alone is not proof that the
 promotion consumed the reviewed lineage.
+
+QUEUE RECEIPT AND ECHO-TRUTH GATE
+Prefer an asynchronous queue when a generation may outlive one HTTP connection.
+Keep its two identifiers separate:
+- `generation_id` tracks one queued Draft or Final request;
+- `draft_task_id` identifies the completed Draft lineage that may be promoted.
+
+On Draft success, read and persist `videos[0].draft_task_id` and
+`videos[0].draft_expires_at`; a successful media URL without those fields is
+not promotable evidence. On Final success, require the queue record's top-level
+`draft_task_id` to equal the approved Draft ID. Signed Draft and Final URLs are
+delivery locations, not lineage identifiers, and must be downloaded before
+they expire.
+
+Submit a Final with only the exact source model and unchanged `draft_task_id`.
+Some queue wrappers echo any resent prompt, duration, resolution or other
+settings even though the provider ignores them and inherits the Draft state.
+Never interpret that echo as proof that a Final used those values: reconstruct
+its creative settings from the archived Draft receipt. If a synchronous call
+times out, inspect the provider's generation history before submitting again.
 
 WEB PREVIEW ROUTE-TRUTH GATE
 Some adapters accept an Ark-shaped public model name while executing a Dreamina
@@ -44495,6 +44516,12 @@ another model, which starts a new lineage. When Ark names
 InputAudioSensitiveContentDetected, do not soften the visual prompt or reseed;
 replace the rejected recording, request another approved reading, or revise the
 dialogue itself.
+
+An expired or unknown `draft_task_id` is terminal for that promotion request;
+create and review a new Draft instead of retrying the same ID. A provider may
+technically permit several Finals from one unexpired Draft, but every Final is
+separately billed: use that only as an explicit operator decision, never as an
+automatic retry policy.
 
 IDEMPOTENT FINAL ATTEMPT
 Create one attempt key from [APPROVED DRAFT VERSION ID + ATTEMPT INDEX]. Use
@@ -44597,6 +44624,14 @@ models, warns that an unfixed upstream seed creates a new Draft, and renders the
 reviewed lineage through a dedicated 1080p node. It validates workflow
 semantics, not a new public visual-quality case, so it strengthens this template
 without adding a scenario or template count.
+
+The queue-receipt and echo-truth gate is adapted from Oxen.ai's September 26,
+2026 [verified Seedance 2.5 Draft walkthrough release](https://github.com/Oxen-AI/docs/commit/9eb981eee84495b81c673a48981cdf57c27da678)
+and its [complete async/sync request, receipt, expiry, billing and error contract](https://github.com/Oxen-AI/docs/blob/9eb981eee84495b81c673a48981cdf57c27da678/inference-api/reference/models/walkthroughs/seedance_2_5_draft_mode.mdx).
+The release publishes completed queue receipts with distinct generation and
+Draft IDs, Final-to-Draft linkage and temporary artifact URLs. It verifies the
+production contract rather than a new reusable visual prompt, so it strengthens
+this template without changing either strict count.
 
 The provider-route refusal, no-cross-model Draft fallback, input-audio
 diagnosis and shared hold/workflow idempotency key are adapted from OpenStory's
@@ -45188,6 +45223,8 @@ the [exact Seedance request and row lifecycle](https://github.com/keysforthewin/
 and the [ordered-reference end-to-end regressions](https://github.com/keysforthewin/screenplay/blob/f89fab42e1743e8bf871f010646fad5317b26fd7/tests/fal-video-generate.test.js).
 
 ## Sources
+
+- [Oxen.ai — September 26, 2026 verified Seedance 2.5 Draft walkthrough (`bytedance-seedance-2-5-text-to-video`): completed async queue receipts, distinct `generation_id`/`draft_task_id` lineage, returned expiry, Final echo-truth warning, one-Draft/many-Finals billing boundary, sync-timeout guidance and terminal unknown/expired-ID handling](https://github.com/Oxen-AI/docs/commit/9eb981eee84495b81c673a48981cdf57c27da678) ([complete walkthrough and reference implementation](https://github.com/Oxen-AI/docs/blob/9eb981eee84495b81c673a48981cdf57c27da678/inference-api/reference/models/walkthroughs/seedance_2_5_draft_mode.mdx))
 
 - [keysforthewin / screenplay — September 26, 2026 fal ByteDance Seedance 2.5 (`bytedance/seedance-2.5/reference-to-video`) whole-beat prompt compiler: story-complete partitioning, one-to-four-shot self-contained rows, global catalog selection, local `@Image1…N` rebinding, ordered `image_urls`, dangling-handle repair, duration/reference caps, empty-result preservation and row-scoped job persistence](https://github.com/keysforthewin/screenplay/commit/f89fab42e1743e8bf871f010646fad5317b26fd7) ([complete compiler](https://github.com/keysforthewin/screenplay/blob/f89fab42e1743e8bf871f010646fad5317b26fd7/src/web/videoPromptGenerate.js), [exact Seedance request lifecycle](https://github.com/keysforthewin/screenplay/blob/f89fab42e1743e8bf871f010646fad5317b26fd7/src/web/falVideoGenerate.js), [end-to-end regressions](https://github.com/keysforthewin/screenplay/blob/f89fab42e1743e8bf871f010646fad5317b26fd7/tests/fal-video-generate.test.js))
 
