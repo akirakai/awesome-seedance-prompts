@@ -25933,6 +25933,24 @@ A confirmed generation requires separate matched evidence for:
 Do not collapse these into one provider success flag. A task may generate media
 and charge correctly while its gateway/channel attribution remains unverified.
 
+BILLING-SOURCE TRUTH GATE
+Derive expected charge from the versioned production catalogue and the task's
+actual model, resolution and duration. Never promote a number from a report
+template, example fixture or placeholder into a real-task assertion merely
+because the task ID appears nearby.
+
+For every billing verdict, preserve and reconcile:
+- exact catalogue model ID and upstream model name;
+- requested resolution and duration;
+- unit price and the formula that produced expected points;
+- every debit and refund row linked to the canonical task;
+- net deducted points, comparison result and source timestamps.
+
+If a narrative report conflicts with task, catalogue and score-ledger rows,
+treat the narrative as untrusted until corrected. Replace the false assertion,
+add a regression for the real record shape, and recompute the verdict; do not
+carry the old overcharge label forward as historical truth.
+
 REGRESSION MATRIX
 Run the integrated submit → wait → verify path and the standalone
 verify-by-task path with:
@@ -25962,7 +25980,13 @@ closes the former channel-evidence gap for genuinely routed work: task
 `databao`, model `doubao-seedance-2.0` and `SUCCESS`. It also demonstrates
 the opposite case on task `239545`: predicted diversion but stored direct
 execution remains `UNVERIFIED` with a reconciliation blocker, rather than
-being promoted to a false channel PASS.
+being promoted to a false channel PASS. The September 26 billing correction
+also proves that task `239541` was not overcharged: model ID `15`, 720p and
+4 seconds resolve to 30 points/second × 4 = 120 expected points; the linked
+score ledger contains one 120-point debit and no refund, so net 120 equals
+expected 120, billing is `PASS`, `overCharged` is false and the verdict must
+not become `FAIL`. The earlier “45 expected / 75 overcharge” claim came from a
+report-template example, not this task's production records.
 
 Adapted from CAoyinggo's September 25, 2026
 [real Seedance 2.0 closed-loop repair and task evidence](https://github.com/CAoyinggo/panqu-Test-agent/commit/da7903dca05ec5d960a9d7131030a1a4c92b3f0f),
@@ -25972,7 +25996,10 @@ the [numeric-string and dirty-ID regressions](https://github.com/CAoyinggo/panqu
 and the follow-up [real gateway-channel provenance and reconciliation proof](https://github.com/CAoyinggo/panqu-Test-agent/commit/7dedaa02930d451b9c6b2f078d3d53440538cb8f)
 with its [safe-column database collector](https://github.com/CAoyinggo/panqu-Test-agent/blob/7dedaa02930d451b9c6b2f078d3d53440538cb8f/scripts/verify-db-change.py),
 [trusted snapshot builder](https://github.com/CAoyinggo/panqu-Test-agent/blob/7dedaa02930d451b9c6b2f078d3d53440538cb8f/src/devtest/routing.ts)
-and [evidence reconciliation](https://github.com/CAoyinggo/panqu-Test-agent/blob/7dedaa02930d451b9c6b2f078d3d53440538cb8f/src/devtest/evidence-collectors.ts).
+and [evidence reconciliation](https://github.com/CAoyinggo/panqu-Test-agent/blob/7dedaa02930d451b9c6b2f078d3d53440538cb8f/src/devtest/evidence-collectors.ts),
+plus the September 26 [real-task billing correction and regression](https://github.com/CAoyinggo/panqu-Test-agent/commit/8885d18d8d4ab968e0bd6dd9f4447b61b3c5b738)
+that binds catalogue price, task dimensions and score-ledger debit instead of
+reusing illustrative report numbers.
 
 ### Host-restart-safe NLE generation and master/preview/audio ownership gate
 
@@ -46575,6 +46602,8 @@ Community examples and techniques referenced in this README:
 - [CAoyinggo / panqu-Test-agent — Seedance 2.0 real-task numeric-string ID repair, canonical task/media/billing/diversion verdict and fail-closed dirty-ID regressions](https://github.com/CAoyinggo/panqu-Test-agent/commit/da7903dca05ec5d960a9d7131030a1a4c92b3f0f) ([submission normalization](https://github.com/CAoyinggo/panqu-Test-agent/blob/da7903dca05ec5d960a9d7131030a1a4c92b3f0f/src/devtest/media-flow.ts), [verdict projection](https://github.com/CAoyinggo/panqu-Test-agent/blob/da7903dca05ec5d960a9d7131030a1a4c92b3f0f/src/devtest/verdict-projection.ts), [regression tests](https://github.com/CAoyinggo/panqu-Test-agent/blob/da7903dca05ec5d960a9d7131030a1a4c92b3f0f/tests/unit/devtest/media-flow.test.ts))
 
 - [CAoyinggo / panqu-Test-agent — Seedance 2.0 read-only gateway provenance, real routed task proof and predicted-diversion/direct-execution reconciliation](https://github.com/CAoyinggo/panqu-Test-agent/commit/7dedaa02930d451b9c6b2f078d3d53440538cb8f) ([safe-column database collector](https://github.com/CAoyinggo/panqu-Test-agent/blob/7dedaa02930d451b9c6b2f078d3d53440538cb8f/scripts/verify-db-change.py), [trusted snapshot builder](https://github.com/CAoyinggo/panqu-Test-agent/blob/7dedaa02930d451b9c6b2f078d3d53440538cb8f/src/devtest/routing.ts), [evidence reconciliation](https://github.com/CAoyinggo/panqu-Test-agent/blob/7dedaa02930d451b9c6b2f078d3d53440538cb8f/src/devtest/evidence-collectors.ts))
+
+- [CAoyinggo / panqu-Test-agent — September 26, 2026 Seedance 2.0 (`doubao-seedance-2.0`, catalogue model ID `15`) real-task billing correction: task `239541`, 720p × 4 seconds, 30 points/second, expected 120, net debit 120, billing `PASS`, `overCharged=false`, with a regression preventing report-template placeholders from contaminating production verdicts](https://github.com/CAoyinggo/panqu-Test-agent/commit/8885d18d8d4ab968e0bd6dd9f4447b61b3c5b738) ([billing and diversion regression](https://github.com/CAoyinggo/panqu-Test-agent/blob/8885d18d8d4ab968e0bd6dd9f4447b61b3c5b738/tests/unit/devtest/diversion-pipeline-integration.test.ts))
 
 Official model references:
 
