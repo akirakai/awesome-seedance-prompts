@@ -46375,7 +46375,117 @@ the [complete per-shot prompt compiler](https://github.com/liamrobert209/Vertica
 the [exact Higgsfield Seedance client](https://github.com/liamrobert209/VerticalFlash/blob/91906203b3bf0952f299e69bf43e79a798a8906a/src/lib/higgsfield.ts)
 and the [capability-gated generation runner](https://github.com/liamrobert209/VerticalFlash/blob/91906203b3bf0952f299e69bf43e79a798a8906a/src/lib/generate-clip.ts).
 
+### Bidirectional endpoint-frame pose graph with a neutral-hub router
+
+**Verified model:** Seedance 2.5 — the original creator records four generated
+four-second clips whose start and end frames are pinned to matching centre,
+left-looking and right-looking portrait stills, then deploys those clips in a
+working pose-state router. The release publishes the four generated media URLs
+and runtime implementation but not the original submitted prompt or provider
+task IDs; count this as verified production structure, not as an independent
+visual-quality benchmark.  
+**Use case:** an interactive portrait, avatar, game character or product whose
+view must move reversibly among several approved poses without reversing video,
+jumping directly across incompatible endpoints or regenerating at runtime  
+**Mode:** approved pose stills -> one Seedance generation per directed edge ->
+endpoint QC -> finite-state playback through a canonical neutral pose
+
+```text
+FREEZE THE POSE GRAPH
+Choose one canonical neutral state and only the side states the experience
+actually needs.
+
+STATE C = [CENTRE / REST POSE STILL + HASH]
+STATE L = [LEFT-LOOKING POSE STILL + HASH]
+STATE R = [RIGHT-LOOKING POSE STILL + HASH]
+
+Define legal directed edges explicitly:
+C -> L, L -> C, C -> R, R -> C.
+Do not assume that one generated clip can be played backward. Do not generate a
+direct L -> R or R -> L edge unless the product truly needs it and both endpoint
+stills have passed identity and framing review.
+
+REFERENCE CONTRACT FOR EACH EDGE
+@Image1 = exact source-state still. It owns the first frame, identity, crop,
+wardrobe, background geometry, lighting and colour.
+@Image2 = exact destination-state still. It owns the final pose and endpoint
+composition only.
+
+Both stills must depict the same subject, lens height, crop, background,
+lighting direction and exposure. Reject the edge before generation if those
+fixed properties disagree.
+
+EDGE PROMPT
+Four-second locked-camera portrait transition from @Image1 to @Image2.
+Begin on the exact @Image1 composition. Preserve the same face, hair, clothing,
+body scale, crop, background, light and colour throughout. The subject performs
+only one natural [HEAD / BODY / PRODUCT] turn toward the destination pose, with
+subtle breathing and physically plausible eye lead, neck rotation and settling.
+No camera movement and no unrelated gesture. Arrive at the exact @Image2 pose by
+3.5 seconds, then hold it steadily through the final frame so the endpoint can
+be used as a persistent UI state. No dialogue, lip movement, cut, zoom, morph,
+identity drift, background motion, extra limb, text, logo or watermark.
+
+Compile the bracketed direction separately for every legal edge. The return
+edge starts from the approved side still and ends on the approved neutral still;
+it is not a reversed export of the outbound clip.
+
+EDGE RECEIPT
+For every generation archive:
+[EDGE ID], [SOURCE HASH], [DESTINATION HASH], [FINAL PROMPT HASH],
+[EXACT MODEL], [DURATION], [OUTPUT URL/HASH] and [FIRST/LAST-FRAME CHECK].
+
+Accept an edge only when:
+- frame zero matches its declared source state without an entry pop;
+- the final held frames match the declared destination state;
+- identity, crop, background and exposure remain stable;
+- motion has one readable direction and no mid-clip pose reset;
+- the last frame can remain on screen without visible residual motion.
+
+RUNTIME ROUTER
+Track CONFIRMED_STATE separately from REQUESTED_STATE and TRANSITIONING.
+Update CONFIRMED_STATE only after the selected edge plays to completion.
+
+Use three input zones with hysteresis:
+LEFT < [LEFT THRESHOLD]
+CENTRE between [CENTRE LOW] and [CENTRE HIGH]
+RIGHT > [RIGHT THRESHOLD]
+
+Require a short dwell before changing REQUESTED_STATE. A side-to-side request
+must route SIDE -> C -> OTHER SIDE. If speech, prayer, checkout, capture or
+another protected action requires the neutral pose, C takes priority and side
+requests wait until that action ends.
+
+During an edge, ignore duplicate triggers. Hold the destination clip's final
+frame after completion. If media loading or decoding fails, disable animated
+turns for the session and reveal the canonical neutral still; never leave a
+half-transitioned overlay or invent state from elapsed time alone.
+
+SESSION ACCEPTANCE
+Test C->L->C, C->R->C and rapid L->R/R->L requests. Confirm that every join uses
+the same approved still, no edge plays backward, no transition overlaps, the
+neutral state is restored for protected actions and the static fallback remains
+usable with reduced motion or failed decoding.
+```
+
+**Why it works:** generation and interaction are separated into two auditable
+graphs. Seedance solves one visually bounded directed transition at a time,
+while the neutral-hub router prevents incompatible endpoints from being joined
+directly. Separate outbound and return clips preserve natural motion direction;
+confirmed-state updates and a static fallback stop loading or timing failures
+from corrupting the visible pose.
+
+Adapted and rewritten from JosephVang1108 / 417boom's September 27, 2026
+[Seedance 2.5 four-edge production commit](https://github.com/JosephVang1108/417boom/commit/d553d8ace95905dc38bcfc0bfd8c85991afbea09),
+the [deployed pose router](https://github.com/JosephVang1108/417boom/blob/d553d8ace95905dc38bcfc0bfd8c85991afbea09/app/src/components/JesusPortrait.tsx)
+and its four public generated clips:
+[centre→left](https://g.tlcdn.com/gen/2c35f43b20614618a6df8424dce2761e.mp4),
+[left→centre](https://g.tlcdn.com/gen/c36abfc605874e88b389009f96dc3605.mp4),
+[centre→right](https://g.tlcdn.com/gen/dc2ec7ec9b46464b825df9c71fa4a0ef.mp4) and
+[right→centre](https://g.tlcdn.com/gen/e2aaa43ad04d4f42963b55e2c6ebb964.mp4).
+
 ## Sources
+- [JosephVang1108 / 417boom — September 27, 2026 Seedance 2.5 four-edge portrait pose graph: exact centre/left/right endpoint stills, separate outbound and return clips, neutral-hub routing, protected-action return and static failure fallback](https://github.com/JosephVang1108/417boom/commit/d553d8ace95905dc38bcfc0bfd8c85991afbea09) ([deployed state router](https://github.com/JosephVang1108/417boom/blob/d553d8ace95905dc38bcfc0bfd8c85991afbea09/app/src/components/JesusPortrait.tsx), [centre→left](https://g.tlcdn.com/gen/2c35f43b20614618a6df8424dce2761e.mp4), [left→centre](https://g.tlcdn.com/gen/c36abfc605874e88b389009f96dc3605.mp4), [centre→right](https://g.tlcdn.com/gen/dc2ec7ec9b46464b825df9c71fa4a0ef.mp4), [right→centre](https://g.tlcdn.com/gen/e2aaa43ad04d4f42963b55e2c6ebb964.mp4))
 
 - [xiaoding521234 / gic — September 27, 2026 Seedance 2.5 first-frame green-plate loop: committed 960² source derivative, measured 74-frame closed window, runtime ChromaKey shader, streamed render-texture deployment and static failure fallback](https://github.com/xiaoding521234/gic/commit/66a9eda77b4bb643c79988fba3be6ddf4d25a8c4) ([production record](https://github.com/xiaoding521234/gic/blob/66a9eda77b4bb643c79988fba3be6ddf4d25a8c4/docs/18-%E6%88%98%E6%96%97%E7%B3%BB%E7%BB%9F%E5%86%B3%E7%AD%96%E8%AE%B0%E5%BD%95.md), [loop MP4](https://github.com/xiaoding521234/gic/blob/66a9eda77b4bb643c79988fba3be6ddf4d25a8c4/Assets/Art/PaperDoll/amber_fly_loop.mp4), [shader](https://github.com/xiaoding521234/gic/blob/66a9eda77b4bb643c79988fba3be6ddf4d25a8c4/Assets/Shaders/ChromaKeyVideo.shader))
 - [voraventures / jotva — September 26, 2026 Higgsfield Seedance 2.5 image-to-video logo-loop production: four committed MP4 tests, corrected mark-only inputs, identical first/last endpoint binding and measured-background re-key](https://github.com/voraventures/jotva/commit/14030999398316008a37772b8fd19fbc53712346) ([initial comparison](https://github.com/voraventures/jotva/commit/d05f6b5a78f8fc31044431c928ae060bfd297032))
