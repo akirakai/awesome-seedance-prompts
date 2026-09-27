@@ -429,6 +429,12 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Reed-marsh samurai-cat pursuit](#413-reed-marsh-samurai-cat-pursuit)
   - [Persistent-site city-build time-lapse](#414-persistent-site-city-build-time-lapse)
   - [Click-to-open botanical paper card and pop-up doorway](#415-click-to-open-botanical-paper-card-and-pop-up-doorway)
+  - [Locked paper-invoice corner flutter](#416-locked-paper-invoice-corner-flutter)
+  - [Endpoint-anchored invoice-to-plane self-fold](#417-endpoint-anchored-invoice-to-plane-self-fold)
+  - [Static-camera paper-plane take-off and frame exit](#418-static-camera-paper-plane-take-off-and-frame-exit)
+  - [Thread-locked paper-plane world-map traversal](#419-thread-locked-paper-plane-world-map-traversal)
+  - [Revenge-bedtime dark-circle escalation](#420-revenge-bedtime-dark-circle-escalation)
+  - [Same-axis hunter-versus-THAROG cave chase](#421-same-axis-hunter-versus-tharog-cave-chase)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -26559,6 +26565,178 @@ the [complete source prompt and endpoint method](https://github.com/segalitoo/Vi
 and the [delivered 9:16 ad](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/deliver/driftpay-paper-planes_9x16.mp4).
 
 
+### 420. Revenge-bedtime dark-circle escalation
+
+**Verified model:** Seedance 2.5 — the original creator publishes the complete
+prompt with the generation; the traceable tutorial record preserves that post,
+the version label and the public result MP4\
+**Use case:** relatable lifestyle comedy, time-lapse state escalation,
+five-beat social short, typography-led punchline\
+**Mode:** text-to-video\
+**Verified output:** 30 seconds; 16:9. The source prompt itself asks for 9:16
+and 15–20 seconds, so treat the platform settings as authoritative when
+reproducing the published result.
+
+```text
+Create a polished, realistic lifestyle comedy about a tired young woman who
+finally has time to herself after work and therefore refuses to go to sleep.
+Keep the same woman, bedroom, clothing and phone throughout.
+
+0–5s — AFTER WORK
+In a warm, cozy bedroom late at night, she arrives exhausted, drops her bag,
+changes into comfortable clothes and collapses face-first onto the bed. Her
+relief should read before the joke begins.
+
+5–12s — FINALLY, ME TIME
+She picks up her phone and smiles. Let the room fall darker and quieter while
+cool screen light becomes the main light on her face. She scrolls through
+messages, memes and short videos. Show: “Me: I should sleep early tonight.”
+Then show 11:47 PM. She shrugs and keeps scrolling.
+
+12–21s — THE TIME THIEF
+Hold nearly the same face-and-phone composition for a smooth time-lapse:
+11:47 PM → 12:38 AM → 1:52 AM → 3:07 AM. At every jump, deepen the same dark
+circles under her eyes without changing her identity or pose. The phone stays
+bright and inviting. Show: “But I didn’t get enough ME TIME today.”
+
+21–26s — VISUAL METAPHOR
+The phone gradually appears larger while she appears smaller, as if it is
+consuming the night. Her dark circles become soft ink-like shadows. She checks
+her reflection: messy hair, exhausted face, huge dark circles. She looks from
+the mirror to the phone, then immediately unlocks it again.
+
+26–30s — PUNCHLINE
+At 3:47 AM, push to a close-up lit only by the screen. She whispers, “Tomorrow
+I’ll fix my sleep schedule.” Cut to black. Show “Tomorrow’s problem.” followed
+by small copy: “Me time: 4 hours / Sleep: 3 hours / Regrets: loading…”
+
+STYLE AND CONTINUITY
+Cinematic realistic skin and fabric, warm bedroom practicals against cool
+phone light, expressive but restrained acting, shallow depth of field, smooth
+transitions and only subtle handheld motion. Let the dark circles gradually
+suggest a clock shadow, never a literal object pasted onto the face.
+
+FAILURE CONTROLS
+No extra person, second phone, identity drift, wardrobe change, room reset,
+random cutaway, illegible replacement copy or dark-circle reset between time
+jumps. Preserve the escalating cause-and-effect chain through the black-screen
+payoff.
+```
+
+**Why it works:** the central gag is stored in one measurable state variable —
+the same dark circles becoming darker while the phone remains bright — so the
+time-lapse reads even if the typography is imperfect. The retained generation
+did not realize the growing-phone/shrinking-person metaphor or clock-shaped
+shadow, rendered the clock changes unclearly and misspelled some tiny final
+copy; those are recorded as result limits, not silently promoted as successes.
+
+Adapted and rewritten from @Naiknelofar788's September 27, 2026
+[original Seedance 2.5 post and prompt](https://x.com/Naiknelofar788/status/2103770487117713631),
+reed35's [versioned tutorial source](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/lib/tutorials.ts),
+[evidence commit](https://github.com/reed35/ai-video-tutorials/commit/693ea00a55d36544d525a1d451f520c80ff51188)
+and the [public result MP4](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/public/tutorials/naiknelofar788-me-time-dark-circles-seedance/demo-web.mp4).
+
+
+### 421. Same-axis hunter-versus-THAROG cave chase
+
+**Verified model:** Seedance 2.5 on videoduck — the creator's result post and
+prompt reply explicitly identify the version; the traceable tutorial record
+preserves the two role references, full second-by-second prompt and public MP4\
+**Use case:** creature pursuit, action geography, reference-locked characters,
+progressive injury and damage continuity\
+**Mode:** reference-to-video with two character sheets\
+**Verified settings:** 30 seconds; 16:9; 13 retained visual beats
+
+```text
+STRICT ROLE LOCK
+Bind references by visible content, not upload order:
+HUNTER = the human character sheet. Preserve the same face, hair, beard,
+physique, fur-and-leather clothing, bow, arrows, quiver and materials.
+THAROG = the giant creature sheet. Preserve the same scale, skull, crescent
+horns, armored dorsal plates, fur, hide colors, limbs and tail.
+
+The same arrow must remain embedded in THAROG’s same injured eye after impact.
+Treat the full 30 seconds as one physical event: every beat inherits the prior
+positions, travel direction, body momentum, camera trajectory, dust, damage,
+bow/quiver state and cave location.
+
+0–6s — STALK AND DRAW
+Begin with a 24mm extreme-wide low aerial descent. The Hunter crouches behind
+one boulder on frame left; THAROG stands 30–35 metres away on frame right. A
+small cave is faintly visible in the cliff along the Hunter’s eventual escape
+direction. Push toward the same boulder, follow his gaze to the quiver, track
+one arrow continuously into the bow, rise with him into an over-shoulder aim,
+then end on a taut full-draw hand close-up.
+
+6–10s — ARROW FLIGHT AND IMPACT
+On release, accelerate beside the same arrow, rotate into arrow-follow POV and
+let THAROG’s head grow rapidly in frame. Overtake the arrow just before impact.
+In restrained 120fps slow motion, the arrow enters one eye without excessive
+gore; keep the close-up as the head snaps back, the arrow stays fixed and the
+front foot shifts from the shock.
+
+10–14s — ROAR, SEARCH, DETECTION
+Drop to a low 24mm frontal view for a territorial roar that shakes dust from
+armor and stones. Push through the functional eye into THAROG’s POV; it finds
+the Hunter beside the original boulder. Match back to the Hunter’s reaction as
+he keeps the bow, pivots once and starts running toward the established cliff.
+
+14–20s — SAME-AXIS PURSUIT
+Show THAROG launch directly behind him, horns lowered. Keep both moving in one
+screen direction through lateral tracking, a ground-level rear chase and a
+rising overhead reveal. The distance closes; the Hunter clears a rock, then
+THAROG smashes through a dead tree. Use debris as a motivated wipe. The cave
+must grow from faint background fact into a clearly readable destination.
+
+20–23s — DECISION AND GEOGRAPHY PROOF
+From Hunter POV, reveal the narrow opening: large enough for him, too small for
+THAROG’s horn crown. He accelerates without stopping or speaking. Finish in a
+wide profile that keeps Hunter → THAROG → cave entrance visible together.
+
+23–26s — DIVE INTO THE CAVE
+Move the camera through the opening before him and look outward with an 18mm
+lens. He leaps through holding the bow, lands, shoulder-rolls and slides deeper
+inside. THAROG reaches the same entrance too fast to stop. Rack focus from the
+Hunter in foreground to the oncoming creature outside.
+
+26–28s — BRAKE AND HORN IMPACT
+THAROG plants all four feet, claws trenching the soil, but inertia carries its
+skull into solid stone. On impact, shake the camera, fracture rock and break
+only several outer horn sections while the primary bases stay attached. Let
+the resulting dust fill frame as a natural wipe.
+
+28–30s — AFTERMATH
+Inside the cave, the Hunter shields his face, then grips his bow and breathes
+hard. Outside, THAROG pulls back with the same arrow still in the same eye;
+broken horn pieces remain on the ground. Dolly backward until the Hunter is a
+dark silhouette against the bright entrance and THAROG is visibly unable to
+enter. Cut to black at exactly 30.00 seconds.
+
+FAILURE CONTROLS
+Never reset either character, reverse the chase axis, teleport the cave, move
+the arrow to another eye, heal an injury, break horns before 27 seconds, alter
+reference identity, add a second weapon or use unrelated establishing shots.
+No dialogue and no excessive gore.
+```
+
+**Why it works:** the prompt treats time as inherited state rather than thirty
+independent images. Early cave establishment, a fixed chase axis, a same-eye
+injury ledger and a single three-subject geography proof make the final escape
+causally legible. Bind the two sheets by role because the source prompt's
+`image1`/`image2` labels conflict with the attachment order. In the retained
+result, the arrow sits slightly above the eye, dust hides most of the horn
+break and horn geometry drifts; audio was not transcribed.
+
+Adapted and rewritten from @ShamsAmin56's September 27, 2026
+[original Seedance 2.5 result](https://x.com/ShamsAmin56/status/2103849845467537562)
+and [complete prompt/reference reply](https://x.com/ShamsAmin56/status/2103849855114518601),
+reed35's [versioned tutorial source](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/lib/tutorials.ts),
+[evidence commit](https://github.com/reed35/ai-video-tutorials/commit/693ea00a55d36544d525a1d451f520c80ff51188),
+[Hunter sheet](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/public/tutorials/shamsamin56-tharog-hunter-cave-chase-seedance/refs/ref-hunter.jpg),
+[THAROG sheet](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/public/tutorials/shamsamin56-tharog-hunter-cave-chase-seedance/refs/ref-tharog.jpg)
+and the [public result MP4](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/public/tutorials/shamsamin56-tharog-hunter-cave-chase-seedance/demo-web.mp4).
+
+
 ## Reusable templates
 
 ### Endpoint-identical isolated-mark logo loop and measured-background re-key
@@ -46485,6 +46663,8 @@ and its four public generated clips:
 [right→centre](https://g.tlcdn.com/gen/e2aaa43ad04d4f42963b55e2c6ebb964.mp4).
 
 ## Sources
+- [Naiknelofar788 — September 27, 2026 Seedance 2.5 revenge-bedtime comedy: complete five-scene prompt, published 30-second 16:9 result, progressive dark-circle state, typography plan and openly recorded metaphor/text deviations](https://x.com/Naiknelofar788/status/2103770487117713631) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/lib/tutorials.ts), [public MP4](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/public/tutorials/naiknelofar788-me-time-dark-circles-seedance/demo-web.mp4))
+- [ShamsAmin56 — September 27, 2026 Seedance 2.5 on videoduck hunter-versus-THAROG pursuit: complete second-by-second prompt, two role references, inherited physical state, same-axis cave geography and published 30-second 16:9 result](https://x.com/ShamsAmin56/status/2103849845467537562) ([prompt/reference reply](https://x.com/ShamsAmin56/status/2103849855114518601), [versioned prompt and review](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/lib/tutorials.ts), [public MP4](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/public/tutorials/shamsamin56-tharog-hunter-cave-chase-seedance/demo-web.mp4))
 - [JosephVang1108 / 417boom — September 27, 2026 Seedance 2.5 four-edge portrait pose graph: exact centre/left/right endpoint stills, separate outbound and return clips, neutral-hub routing, protected-action return and static failure fallback](https://github.com/JosephVang1108/417boom/commit/d553d8ace95905dc38bcfc0bfd8c85991afbea09) ([deployed state router](https://github.com/JosephVang1108/417boom/blob/d553d8ace95905dc38bcfc0bfd8c85991afbea09/app/src/components/JesusPortrait.tsx), [centre→left](https://g.tlcdn.com/gen/2c35f43b20614618a6df8424dce2761e.mp4), [left→centre](https://g.tlcdn.com/gen/c36abfc605874e88b389009f96dc3605.mp4), [centre→right](https://g.tlcdn.com/gen/dc2ec7ec9b46464b825df9c71fa4a0ef.mp4), [right→centre](https://g.tlcdn.com/gen/e2aaa43ad04d4f42963b55e2c6ebb964.mp4))
 
 - [xiaoding521234 / gic — September 27, 2026 Seedance 2.5 first-frame green-plate loop: committed 960² source derivative, measured 74-frame closed window, runtime ChromaKey shader, streamed render-texture deployment and static failure fallback](https://github.com/xiaoding521234/gic/commit/66a9eda77b4bb643c79988fba3be6ddf4d25a8c4) ([production record](https://github.com/xiaoding521234/gic/blob/66a9eda77b4bb643c79988fba3be6ddf4d25a8c4/docs/18-%E6%88%98%E6%96%97%E7%B3%BB%E7%BB%9F%E5%86%B3%E7%AD%96%E8%AE%B0%E5%BD%95.md), [loop MP4](https://github.com/xiaoding521234/gic/blob/66a9eda77b4bb643c79988fba3be6ddf4d25a8c4/Assets/Art/PaperDoll/amber_fly_loop.mp4), [shader](https://github.com/xiaoding521234/gic/blob/66a9eda77b4bb643c79988fba3be6ddf4d25a8c4/Assets/Shaders/ChromaKeyVideo.shader))
