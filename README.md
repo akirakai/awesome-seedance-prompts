@@ -36899,6 +36899,13 @@ and played a 1080p result against the BytePlus proxy, confirmed an unaffected
 updated September 23, 2026, independently documents the exact subtask
 constraints and the two-stage validation behavior
 
+**Additional verified billing surfaces:** SnapGen Seedance 2.0 standard, Fast,
+Mini and 2.5 reference-to-video (`seedance-2.0-r2v`,
+`seedance-2.0-fast-r2v`, `seedance-2.0-mini-r2v` and `seedance-2.5-r2v`) —
+the platform's versioned API manuals define gateway-measured MP4/MOV reference
+duration, whole-second rounding and a fail-closed maximum-duration charge when
+the media header cannot be measured
+
 Use this when one Seedance 2.5 endpoint serves reference-to-video, editing and
 extension. Declare the intended subtask in the request and make the prompt say
 the same operation explicitly; the declaration moves ratio and duration errors
@@ -36979,6 +36986,25 @@ duration and intended added duration. After completion:
 Treat the observed roughly 0.4-second edit-length tolerance as dated gateway
 evidence, not a promise of frame-identical preservation or a universal price.
 
+SNAPGEN MEASURED-HEADER BRANCH
+For `seedance-2.0-r2v`, `seedance-2.0-fast-r2v`,
+`seedance-2.0-mini-r2v` or `seedance-2.5-r2v`, do not send the retired
+`source_video_duration_seconds` field. The gateway reads every public
+`video_urls` MP4/MOV header through HTTP range requests, rounds each measured
+reference upward to a whole second and caps its counted length at 15 seconds.
+Host the source where byte-range reads work, and run a zero-spend reachability
+and range-response probe before submission. If a clip cannot be measured, the
+channel bills the full 15-second reference allowance rather than trusting a
+client-declared duration.
+
+Before queueing, store [SOURCE URL], [CONTAINER], [LOCAL MEASURED DURATION],
+[RANGE-PROBE STATUS], [LAST-MODIFIED / ETAG], [OUTPUT SECONDS], [RESOLUTION]
+and a dated SnapGen catalogue snapshot. Estimate this channel's bill from
+output seconds plus the gateway-counted reference seconds, then reconcile it
+against the terminal charge. A changed source object invalidates the estimate.
+Never generalize SnapGen's rounding, fallback charge or posted per-second rate
+to BytePlus, fal, Higgsfield or another provider.
+
 PROMPT–ROUTE AGREEMENT
 Before queueing, require all three to agree:
 1. the UI operation selected by the user;
@@ -37024,6 +37050,9 @@ The branch-specific two-second reference floor and retained four-second
 auto/edit floor are backed by Aayush Hoichoi's September 23, 2026
 [task-aware validation repair](https://github.com/Aayush-hoichoi/Seedance2.0/commit/90f767d85f62a0257915a9b539f19095faecca97)
 and its regression tests.
+The measured-header billing branch is backed by SnapGen's September 27, 2026
+[versioned reference-billing correction](https://github.com/bytevirts/snapgen-doc/commit/c7e7ce471e8f4b1a469076cbe34c83aebd853ebd)
+and the exact [`seedance-2.5-r2v` API manual](https://github.com/bytevirts/snapgen-doc/blob/c7e7ce471e8f4b1a469076cbe34c83aebd853ebd/api-manual/video/seedance-2-5-r2v.mdx).
 
 
 ### Stable-midframe presenter splice with numeric-integrity routing
@@ -47456,6 +47485,8 @@ Community examples and techniques referenced in this README:
 - [husky__create — BytePlus Lumina Seedance 2.5 persistent-site construction time-lapse, complete 30-second prompt and generated result](https://x.com/husky__create/status/2101876852029825290) ([complete prompt thread](https://x.com/husky__create/status/2101876857004319206), [versioned tutorial and public render](https://github.com/reed35/ai-video-tutorials/commit/d9166a0f4f6066c478f8957787185f4c43d51c34))
 
 - [Windy Hu / tempimg — September 26, 2026 Seedance 2.0 Mini (`doubao-seedance-2-0-mini-260615`) real-person motion-reference rejection followed by a user-approved three-AI-keyframe Omni pivot, public task ID, usage, output hash and committed 10-second 720p result](https://github.com/outliner/tempimg/commit/74ec5445191e5d1099b556e9c3dafb46872ba202) ([generated MP4](https://github.com/outliner/tempimg/blob/74ec5445191e5d1099b556e9c3dafb46872ba202/seedance-videos/chang-e-toothmark-20260926/S1-mini/S1_Seedance20Mini_v2_10s_720p.mp4), [contact sheet](https://github.com/outliner/tempimg/blob/74ec5445191e5d1099b556e9c3dafb46872ba202/seedance-videos/chang-e-toothmark-20260926/S1-mini/S1_Seedance20Mini_v2_contact.jpg))
+
+- [SnapGen — September 27, 2026 Seedance 2.0 / Fast / Mini / 2.5 R2V gateway-measured MP4/MOV reference duration, whole-second rounding, HTTP range requirement and 15-second unmeasurable-source billing fallback](https://github.com/bytevirts/snapgen-doc/commit/c7e7ce471e8f4b1a469076cbe34c83aebd853ebd) ([Seedance 2.5 R2V contract](https://github.com/bytevirts/snapgen-doc/blob/c7e7ce471e8f4b1a469076cbe34c83aebd853ebd/api-manual/video/seedance-2-5-r2v.mdx), [Seedance 2.0 R2V contract](https://github.com/bytevirts/snapgen-doc/blob/c7e7ce471e8f4b1a469076cbe34c83aebd853ebd/api-manual/video/seedance-2-0-r2v.mdx))
 
 Official model references:
 
