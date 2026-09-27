@@ -46931,7 +46931,141 @@ the [role-swap failure and bounded-reroll repair](https://github.com/ahnbingbing
 the [exact Seedance 2.0 request client](https://github.com/ahnbingbing/rainileo_agent/blob/d531fdb9dc57da4f94dae17525aa628ba8158d7f/scripts/animate_seedance_i2v.py)
 and the [production default-model and paid-call ceiling](https://github.com/ahnbingbing/rainileo_agent/blob/d531fdb9dc57da4f94dae17525aa628ba8158d7f/agents/cameraman.py).
 
+### Dependency-gated short-film state ledger and paid generation waves
+
+**Verified model:** Higgsfield Seedance 2.5 — the original creator's newly
+published workflow says it was written from the August–September 2026
+production of *Sorry, Sir* on this exact platform and model. The same workflow
+also names other engines, but only its Seedance 2.5 branch is counted here.
+The public source supplies the complete order, gates, ownership map and
+restart ledger; it does not publish provider task IDs or the private film
+master, so treat this as verified production structure rather than an
+independent visual-quality benchmark.  
+**Use case:** multi-shot short film, trailer or challenge entry that must survive
+handoffs, prevent premature paid generation and keep prompts, assets, receipts
+and continuity decisions synchronized  
+**Mode:** versioned project state -> dependency gates -> free previz -> prompt
+compile -> capped generation waves -> visual/mechanical QC -> finish and archive
+
+Use this when a film has enough moving parts that “write prompts, generate,
+then edit” is not a safe or reproducible plan.
+
+```text
+PROJECT STATE — CREATE BEFORE ANY SHOT
+Project: [TITLE]
+Exact model and platform: Higgsfield Seedance 2.5
+Rules source and deadline: [URL / LOCAL TIME]
+Budget ceiling: [CREDITS AND CURRENCY]
+Current step: [0–13]
+Current gate: [OPEN / PASSED, EVIDENCE]
+Approved story version: [HASH OR COMMIT]
+Approved asset registry: [VERSION]
+Approved shot plan: [VERSION]
+Paid attempts used / remaining: [N / N]
+Completed task IDs and artifact hashes: [LEDGER]
+Waiting on director: [ONE CONSOLIDATED DECISION LIST]
+
+DEPENDENCY RULE
+Do not start a step until every named upstream gate has passed. After each
+step, update this state file, commit prompts and task IDs, and file the outputs.
+A returning operator reads this record first and resumes at the first open
+gate; memory, chat scrollback and browser history are not project state.
+
+0 — BRIEF, RULES AND BUDGET
+Record eligible model, delivery constraints, deadline, public-post rules,
+watermark requirements and the hard spend ceiling.
+Gate: director approves model, deadline and budget.
+
+1 — MARKET AND IDEA
+Collect traceable references and write three to five loglines with a reason
+each can work for the target audience or judging rubric.
+Gate: one logline is selected.
+
+2 — STORY
+Lock goal, obstacle, tactic, reversal, value shift, ending and every spoken
+line. Estimate length from planned shots rather than from prose.
+Gate: script version approved.
+
+3 — CAST, LOCATIONS AND PROP STATES
+Create one named role per character, location and stateful prop. Separate
+plates that must differ across time; bind every plate to one stable handle.
+Gate: every reference approved by number on one contact sheet.
+
+4 — SHOT AND CONTINUITY PLAN
+For each shot record duration, camera mode, subjects, location, incoming state,
+terminal state, dialogue owner and continuity obligations.
+Gate: all open questions answered and written into the plan.
+
+5 — FREE PREVIS
+Block difficult camera movement and assemble a cheap animatic. Treat the
+previz as timing and motion authority, never as final footage.
+Gate: director approves order, pacing and camera paths.
+
+6 — PROMPT COMPILE
+Generate prompts from the locked data instead of hand-editing copies.
+For every shot render:
+- reference declarations with one responsibility per asset;
+- a scene anchor and the shot's observable beginning state;
+- gap-free timed beats with camera, action, contact and dialogue;
+- the exact inherited terminal state;
+- native-audio directions and targeted failure controls;
+- model, duration, aspect ratio, resolution and audio settings.
+Run reference-count, dangling-handle, duration and prompt-length checks.
+Gate: prompt manifest and per-shot cost table approved.
+
+7 — GENERATION WAVE 1
+Submit each approved shot once. Store the provider task ID before polling,
+then preserve the serialized prompt, settings, references, receipt and returned
+artifact hash. A failed or refunded refire is still a new attempt.
+Gate: every submitted task has a terminal record and every result is filed.
+
+8 — QC AND RETAKE DECISION
+Review a numbered start/middle/end contact sheet first. Then check transcript,
+burned text, resolution, duration, reference drift, continuity and terminal
+state mechanically. Mark keeper, repair or reject with a reason.
+Gate: director marks keepers and approves one capped retake wave.
+
+7B — GENERATION WAVE 2
+Change one variable per rejected shot, keep the accepted request fields frozen
+and repeat the full receipt ledger. Never silently spend beyond the approved
+wave.
+Gate: shot list locked.
+
+9 — EDIT AND FINISH
+Assemble only approved artifacts. Verify dialogue, subtitles, credits, grade,
+music rights, watermark and exact frame count; inspect the existing tail before
+adding credits so they cannot be duplicated.
+Gate: full master watched and approved.
+
+10–12 — PACKAGING, RULE CHECK AND PUBLISH
+Create poster variants from an approved key frame, check every delivery rule
+against evidence, publish, and verify the public link anonymously.
+Gate: public playback works and any submission receipt is stored.
+
+13 — FILE AND CLEAN
+For every master, prompt, reference, task receipt and derivative, record path,
+version and checksum. Delete temporary copies only after a matching durable
+copy is verified and the director approves cleanup.
+
+FAIL-CLOSED RULE
+If model identity, source asset, prompt version, task ID, charge or artifact
+lineage cannot be proven, label the item UNVERIFIED and stop that branch. A
+plausible-looking clip never closes a missing evidence gate.
+```
+
+**Why it works:** the prompt is only one compiled stage in a dependency graph,
+so late story or reference changes cannot quietly invalidate already-paid
+shots. Free planning and previz settle structure before spend; capped waves
+bound cost; the persistent state ledger makes handoffs and restarts
+deterministic; and separate visual, transcript, metadata and lineage checks keep
+“finished” from being confused with “verified.”
+
+Adapted and rewritten from PASAKON's September 27, 2026
+[ordered short-film workflow publication](https://github.com/PASAKON/Agents-Core/commit/2bb55b51f3f1cc88b1939ddf2dd688ce5493f043)
+and the [complete gate, owner, status-ledger and filing contract](https://github.com/PASAKON/Agents-Core/blob/2bb55b51f3f1cc88b1939ddf2dd688ce5493f043/.claude/skills/CTO_Film_Workflow/SKILL.md).
+
 ## Sources
+- [PASAKON / Agents-Core — September 27, 2026 Higgsfield Seedance 2.5 restartable short-film workflow: thirteen dependency-gated stages, versioned STATUS ledger, free previz before paid prompts, capped generation waves, contact-sheet and mechanical QC, rules check, publishing proof and checksum-backed filing](https://github.com/PASAKON/Agents-Core/commit/2bb55b51f3f1cc88b1939ddf2dd688ce5493f043) ([complete workflow contract](https://github.com/PASAKON/Agents-Core/blob/2bb55b51f3f1cc88b1939ddf2dd688ce5493f043/.claude/skills/CTO_Film_Workflow/SKILL.md))
 - [Ryani Leo PD / rainileo_agent — September 27, 2026 BytePlus Seedance 2.0 Fast (`dreamina-seedance-2-0-fast-260128`) live-batch failure record: paid role-swap premise leak, downstream semantic 5/10 rejection, morphology-aware lexical prefilter, bounded fresh-concept reroll, shared paid-call ceiling and fail-closed empty slot](https://github.com/ahnbingbing/rainileo_agent/commit/d531fdb9dc57da4f94dae17525aa628ba8158d7f) ([repair commit and regressions](https://github.com/ahnbingbing/rainileo_agent/commit/75eac28d0b665f69c373ee86e36fda9f02545e46), [exact request client](https://github.com/ahnbingbing/rainileo_agent/blob/d531fdb9dc57da4f94dae17525aa628ba8158d7f/scripts/animate_seedance_i2v.py), [production model and cost gate](https://github.com/ahnbingbing/rainileo_agent/blob/d531fdb9dc57da4f94dae17525aa628ba8158d7f/agents/cameraman.py))
 - [osaykancuno / NEONFACES — September 27, 2026 Higgsfield Seedance 2.0 Mini dual-clip production: two complete four-second 720p 16:9 native-audio prompts, endpoint assets, original generated MP4s, per-clip deviations, six-color pixel-grid repair and final 18-second assembly](https://github.com/osaykancuno/neonfaces/commit/6bf8174c46d7220e5914105a81c1b015c3b94466) ([complete prompt and result record](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/README.md), [eye-chamber original](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/raw/a-inside.mp4), [human-reveal original](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/raw/b-human.mp4), [assembled film](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/neonfaces-inside.mp4))
 - [Naiknelofar788 — September 27, 2026 Seedance 2.5 revenge-bedtime comedy: complete five-scene prompt, published 30-second 16:9 result, progressive dark-circle state, typography plan and openly recorded metaphor/text deviations](https://x.com/Naiknelofar788/status/2103770487117713631) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/lib/tutorials.ts), [public MP4](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/public/tutorials/naiknelofar788-me-time-dark-circles-seedance/demo-web.mp4))
