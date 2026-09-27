@@ -435,6 +435,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Thread-locked paper-plane world-map traversal](#419-thread-locked-paper-plane-world-map-traversal)
   - [Revenge-bedtime dark-circle escalation](#420-revenge-bedtime-dark-circle-escalation)
   - [Same-axis hunter-versus-THAROG cave chase](#421-same-axis-hunter-versus-tharog-cave-chase)
+  - [Glitch-push through a pixel eye into a market chamber](#422-glitch-push-through-a-pixel-eye-into-a-market-chamber)
+  - [Pixel portrait resolving into a breathing human](#423-pixel-portrait-resolving-into-a-breathing-human)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -26737,6 +26739,129 @@ reed35's [versioned tutorial source](https://github.com/reed35/ai-video-tutorial
 and the [public result MP4](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/public/tutorials/shamsamin56-tharog-hunter-cave-chase-seedance/demo-web.mp4).
 
 
+### 422. Glitch-push through a pixel eye into a market chamber
+
+**Verified model:** Higgsfield Seedance 2.0 Mini — the original creator records
+the model, MCP surface, exact generation settings, two endpoint assets, credit
+charge, original generated MP4 and observed deviations; the public record does
+not expose the provider endpoint ID or task ID\
+**Use case:** branded pixel-art reveal, eye-portal transition, abstract finance
+or inventory chamber, native-audio micro-hook\
+**Mode:** first-and-last-frame image-to-video\
+**Verified settings:** 4 seconds; 720p; 16:9; native audio without voice; 4
+Higgsfield credits
+
+```text
+REFERENCE AUTHORITY
+@FirstFrame owns the exact bright pixel-face composition, hard square-cell
+geometry, open eye position and black/olive/acid-lime palette.
+@LastFrame owns the final chamber layout: a few small rising chart bars, one
+unmarked round coin, one gold bar and one silver bar. Preserve these objects
+and do not add text, numbers, logos or extra symbols.
+
+0.00–0.45s — Begin in motion. Hit the face with one hard horizontal glitch:
+several pixel rows snap sideways and return while the camera immediately
+punches toward the same wide-open acid-lime eye. Pair the first frame with one
+sharp electric crack and a restrained bass impact.
+
+0.45–1.70s — Keep the eye open and stable. Accelerate straight through its
+dark pupil as if it were a circular doorway; use one fast air-whoosh. Do not
+morph the face, smooth the square cells or introduce realistic skin.
+
+1.70–3.20s — Resolve inside the dark eye chamber. The four approved market
+objects float in the @LastFrame positions and pulse gently while the camera
+finishes its forward travel. Add a low electrical hum and sparse soft metallic
+chimes; no speech, narration or lyric music.
+
+3.20–4.00s — Decelerate completely and settle on @LastFrame. Hold the endpoint
+long enough for a clean edit. Keep flat 2D pixel art, hard cell edges, subtle
+grain and faint CRT scan lines throughout. Acid lime means #CCFF00, never
+orange or pure yellow; pale highlights are rare.
+
+FAILURE CONTROLS
+No blink, second face, person, extra prop, readable mark, subtitle, number,
+logo, smooth vector edge, 3D volume, photoreal skin or palette drift.
+```
+
+**Why it works:** the prompt gives the first frame an immediate audiovisual
+hook, assigns the pupil one continuous portal trajectory and lets the final
+frame own both inventory and layout. The retained result delivered the eye
+opening, push-in and chamber; one corner cell briefly turned orange and the
+last 1.6 seconds were nearly static, so the production cut retained only the
+strongest 3.5 seconds.
+
+Adapted and rewritten from osaykancuno’s September 27, 2026
+[production commit](https://github.com/osaykancuno/neonfaces/commit/6bf8174c46d7220e5914105a81c1b015c3b94466),
+[complete prompt and result record](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/README.md),
+[first frame](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/a-inside-start.png),
+[last frame](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/a-inside-end.png)
+and [original generated MP4](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/raw/a-inside.mp4).
+
+
+### 423. Pixel portrait resolving into a breathing human
+
+**Verified model:** Higgsfield Seedance 2.0 Mini — the original creator records
+the model, MCP surface, exact settings, submitted first frame, original result,
+post-repair script and final assembled film; the public record does not expose
+the provider endpoint ID or task ID\
+**Use case:** stylized portrait awakening, generated-character reveal,
+controlled style-break, deterministic repair after style-adherence failure\
+**Mode:** first-frame image-to-video followed by a measured post-production
+pixel-grid repair\
+**Verified settings:** 4 seconds; 720p; 16:9; native audio without voice; 4
+Higgsfield credits
+
+```text
+FIRST-FRAME AND IDENTITY LOCK
+Open exactly on @FirstFrame: one fictional pixel-art face built from large hard
+square cells. Preserve the face identity, crop, eye line and limited black,
+olive and acid-lime #CCFF00 palette. Only this face may appear.
+
+0.00–0.35s — Start with motion and sound on frame one: one sharp neon flicker
+and brief row-glitch, synchronized to a deep bass hit. The face must already be
+bright enough to read against black.
+
+0.35–2.60s — Let the same person become subtly alive beneath the visible
+pixel grid: a slow breath, a few degrees of head turn toward camera, lips
+parting slightly and a restrained half-smile. The eyes open wider, lock onto
+the viewer and then never blink. Push slowly toward the eyes.
+
+2.60–4.00s — In the dark pupils, reveal only tiny reflections of rising chart
+bars and one plain round coin. End on the same identity looking directly into
+the lens. Sound remains nonverbal: close breath, slow sub pulse and low neon
+buzz; no speech, narration or lyric music.
+
+STYLE AND OCCLUSION LOCK
+Hard square cells stay visible over the living face for the whole generated
+clip; no smooth HD portrait, white highlight, microphone, hand, foreground
+object, second person, text, subtitle, number or logo.
+
+REPAIR BRANCH
+If the model produces a smooth natural-color face, preserve that original MP4
+as evidence. Derive a separate version by sampling the approved start-frame
+grid, quantizing every frame to the six production colors and keeping cell
+size fixed. If the delivery intentionally reveals the human face, dissolve the
+repaired grid only during the final 1.5 seconds; never overwrite the master.
+```
+
+**Why it works:** the generation request isolates one performance arc and one
+camera move, while the repair branch converts a known style-adherence failure
+into a deterministic delivery choice. In the observed result the model ignored
+the persistent pixel-grid instruction, kept the eyes closed until about 1.5
+seconds and then produced a smooth natural-color person; it did preserve the
+smile, pupil glints and no-blink ending. The creator quantized a derivative
+back to the six-color grid and deliberately resolved it to the real face at the
+end.
+
+Adapted and rewritten from osaykancuno’s September 27, 2026
+[production commit](https://github.com/osaykancuno/neonfaces/commit/6bf8174c46d7220e5914105a81c1b015c3b94466),
+[complete prompt and result record](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/README.md),
+[first frame](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/b-human-start.png),
+[original generated MP4](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/raw/b-human.mp4),
+[deterministic repair script](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/pixelate.py)
+and [final assembled film](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/neonfaces-inside.mp4).
+
+
 ## Reusable templates
 
 ### Endpoint-identical isolated-mark logo loop and measured-background re-key
@@ -46663,6 +46788,7 @@ and its four public generated clips:
 [right→centre](https://g.tlcdn.com/gen/e2aaa43ad04d4f42963b55e2c6ebb964.mp4).
 
 ## Sources
+- [osaykancuno / NEONFACES — September 27, 2026 Higgsfield Seedance 2.0 Mini dual-clip production: two complete four-second 720p 16:9 native-audio prompts, endpoint assets, original generated MP4s, per-clip deviations, six-color pixel-grid repair and final 18-second assembly](https://github.com/osaykancuno/neonfaces/commit/6bf8174c46d7220e5914105a81c1b015c3b94466) ([complete prompt and result record](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/README.md), [eye-chamber original](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/raw/a-inside.mp4), [human-reveal original](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/raw/b-human.mp4), [assembled film](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/neonfaces-inside.mp4))
 - [Naiknelofar788 — September 27, 2026 Seedance 2.5 revenge-bedtime comedy: complete five-scene prompt, published 30-second 16:9 result, progressive dark-circle state, typography plan and openly recorded metaphor/text deviations](https://x.com/Naiknelofar788/status/2103770487117713631) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/lib/tutorials.ts), [public MP4](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/public/tutorials/naiknelofar788-me-time-dark-circles-seedance/demo-web.mp4))
 - [ShamsAmin56 — September 27, 2026 Seedance 2.5 on videoduck hunter-versus-THAROG pursuit: complete second-by-second prompt, two role references, inherited physical state, same-axis cave geography and published 30-second 16:9 result](https://x.com/ShamsAmin56/status/2103849845467537562) ([prompt/reference reply](https://x.com/ShamsAmin56/status/2103849855114518601), [versioned prompt and review](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/lib/tutorials.ts), [public MP4](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/public/tutorials/shamsamin56-tharog-hunter-cave-chase-seedance/demo-web.mp4))
 - [JosephVang1108 / 417boom — September 27, 2026 Seedance 2.5 four-edge portrait pose graph: exact centre/left/right endpoint stills, separate outbound and return clips, neutral-hub routing, protected-action return and static failure fallback](https://github.com/JosephVang1108/417boom/commit/d553d8ace95905dc38bcfc0bfd8c85991afbea09) ([deployed state router](https://github.com/JosephVang1108/417boom/blob/d553d8ace95905dc38bcfc0bfd8c85991afbea09/app/src/components/JesusPortrait.tsx), [centre→left](https://g.tlcdn.com/gen/2c35f43b20614618a6df8424dce2761e.mp4), [left→centre](https://g.tlcdn.com/gen/c36abfc605874e88b389009f96dc3605.mp4), [centre→right](https://g.tlcdn.com/gen/dc2ec7ec9b46464b825df9c71fa4a0ef.mp4), [right→centre](https://g.tlcdn.com/gen/e2aaa43ad04d4f42963b55e2c6ebb964.mp4))
