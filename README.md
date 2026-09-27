@@ -46822,7 +46822,117 @@ and its four public generated clips:
 [centre→right](https://g.tlcdn.com/gen/dc2ec7ec9b46464b825df9c71fa4a0ef.mp4) and
 [right→centre](https://g.tlcdn.com/gen/e2aaa43ad04d4f42963b55e2c6ebb964.mp4).
 
+### Lexical-premise prefilter, semantic authority and bounded fresh-concept reroll
+
+**Verified model:** BytePlus Seedance 2.0 Fast
+(`dreamina-seedance-2-0-fast-260128`) — the original creator records a live
+six-slot production run in which one paid AV generation carried a prohibited
+role/routine-swap premise through a lexical gate, then failed the semantic
+reviewer at 5/10 and left its slot empty. The source publishes the exact default
+model route, render dispatcher, failed premise, deployed repair and regression
+cases. The repaired reroll had not yet produced a public replacement at release;
+count this as verified production structure and failure-boundary evidence, not
+as an independent visual-quality benchmark.  
+**Use case:** an automated Seedance batch in which cheap prompt screening should
+prevent known bad premise families, while a semantic reviewer remains the
+authority and one failed paid take may be replaced without an unbounded
+cost spiral  
+**Mode:** candidate concept -> lexical preflight -> Seedance render -> semantic
+acceptance -> at most one entirely new candidate
+
+```text
+FREEZE THE SLOT CONTRACT
+Slot = [DATE / TIME / CAMPAIGN POSITION].
+Required lane = [AV / PRODUCT / UGC / OTHER].
+Exact model = [VERSIONED MODEL ID].
+Maximum paid Seedance attempts for this slot = [1 + BOUNDED REROLLS].
+Acceptance threshold = [SCORE / VERDICT].
+Forbidden premise families = [ROLE SWAP / FALSE FIRST MEETING / EMPTY META
+FRAMING / OTHER STORY-LEVEL FAILURE].
+Approved exception set = [KNOWN INNOCENT PHRASES OR STRUCTURES].
+
+For every candidate archive:
+[CANDIDATE ID], [CONCEPT HASH], [COMPILED PROMPT HASH], [REFERENCE HASHES],
+[MODEL], [ATTEMPT NUMBER] and [PARENT FAILURE CODE].
+The slot may own only one accepted video ID.
+
+LAYER 1 — CHEAP LEXICAL PREFLIGHT
+Run before any paid request. Match the entire concept object—title, theme,
+actions, captions and prop relations—not only the final prompt.
+
+For each forbidden premise family, maintain:
+- core nouns and synonyms;
+- active, passive, contracted and inflected verb forms;
+- relational patterns such as "each other's [OBJECT] changed";
+- positive regression cases that must be rejected;
+- innocent near-neighbours that must remain allowed.
+
+A lexical hit rejects the candidate before rendering and requests a different
+concept. Record the matched family and surface phrase.
+
+This layer is only a cost-saving prefilter. A miss is not approval, and adding
+more synonyms never promotes it to semantic authority.
+
+LAYER 2 — PAID RENDER AND SEMANTIC AUTHORITY
+Submit only a preflight-clean candidate. Preserve its exact request receipt and
+task ID. After delivery, review the complete concept, prompt, playable result
+and captions together.
+
+The semantic reviewer must decide whether the STORY PREMISE is allowed, even
+when no forbidden keyword appears. It also checks visible coherence, narrative
+kick, caption-to-image truth and every project-specific hard rule.
+
+A semantic hard-cap or render failure is terminal for that candidate. Never
+publish a low-scoring result merely to fill the slot, and never relabel the same
+premise as a new concept.
+
+BOUNDED FRESH-CONCEPT REROLL
+If Layer 2 rejects attempt N and N is below the paid-attempt cap:
+1. archive the rejected task, output and semantic failure codes;
+2. add its candidate ID, premise fingerprint and reference packet to the recent
+   exclusion ledger;
+3. originate a completely new concept for the same slot contract;
+4. rerun Layer 1 from the beginning;
+5. submit once only after the new candidate passes preflight.
+
+Do not "repair" the rejected premise by swapping synonyms, changing tense or
+rewriting captions. Do not replay a create request after a timeout until task
+history proves that no job was accepted. Do not let an inner cut retry and an
+outer concept reroll multiply without one shared paid-call ceiling.
+
+FAIL-CLOSED EXIT
+If the final allowed attempt fails, leave the slot empty or route it to an
+already approved non-generated fallback. Report:
+[ATTEMPTS USED], [TASK IDS], [LEXICAL HITS], [SEMANTIC FAILURES],
+[ACCEPTED VIDEO ID OR EMPTY] and [TOTAL PAID CALLS].
+
+ACCEPTANCE TEST
+- every paid request passed lexical preflight;
+- the semantic reviewer, not regex, made the final decision;
+- a rejected premise cannot return under different wording;
+- only a genuinely new concept consumes the bounded reroll;
+- the attempt cap is enforced across nested render and retry layers;
+- one slot has at most one accepted output;
+- empty is preferred to publishing known-bad material.
+```
+
+**Why it works:** the two gates solve different problems. A lexical screen is
+fast and cheap but structurally unable to enumerate every synonym, inflection or
+paraphrase. A semantic reviewer can catch the underlying premise, but only after
+a paid render when placed downstream. Keeping semantic review authoritative,
+feeding each failure into a premise-level exclusion ledger and allowing one
+fresh concept prevents both silent policy leakage and same-idea retry loops.
+A shared paid-attempt ceiling turns the recovery into a predictable production
+cost rather than a nested retry multiplier.
+
+Adapted and rewritten from Ryani Leo PD's September 27, 2026
+[first-live-run production record](https://github.com/ahnbingbing/rainileo_agent/commit/d531fdb9dc57da4f94dae17525aa628ba8158d7f),
+the [role-swap failure and bounded-reroll repair](https://github.com/ahnbingbing/rainileo_agent/commit/75eac28d0b665f69c373ee86e36fda9f02545e46),
+the [exact Seedance 2.0 request client](https://github.com/ahnbingbing/rainileo_agent/blob/d531fdb9dc57da4f94dae17525aa628ba8158d7f/scripts/animate_seedance_i2v.py)
+and the [production default-model and paid-call ceiling](https://github.com/ahnbingbing/rainileo_agent/blob/d531fdb9dc57da4f94dae17525aa628ba8158d7f/agents/cameraman.py).
+
 ## Sources
+- [Ryani Leo PD / rainileo_agent — September 27, 2026 BytePlus Seedance 2.0 Fast (`dreamina-seedance-2-0-fast-260128`) live-batch failure record: paid role-swap premise leak, downstream semantic 5/10 rejection, morphology-aware lexical prefilter, bounded fresh-concept reroll, shared paid-call ceiling and fail-closed empty slot](https://github.com/ahnbingbing/rainileo_agent/commit/d531fdb9dc57da4f94dae17525aa628ba8158d7f) ([repair commit and regressions](https://github.com/ahnbingbing/rainileo_agent/commit/75eac28d0b665f69c373ee86e36fda9f02545e46), [exact request client](https://github.com/ahnbingbing/rainileo_agent/blob/d531fdb9dc57da4f94dae17525aa628ba8158d7f/scripts/animate_seedance_i2v.py), [production model and cost gate](https://github.com/ahnbingbing/rainileo_agent/blob/d531fdb9dc57da4f94dae17525aa628ba8158d7f/agents/cameraman.py))
 - [osaykancuno / NEONFACES — September 27, 2026 Higgsfield Seedance 2.0 Mini dual-clip production: two complete four-second 720p 16:9 native-audio prompts, endpoint assets, original generated MP4s, per-clip deviations, six-color pixel-grid repair and final 18-second assembly](https://github.com/osaykancuno/neonfaces/commit/6bf8174c46d7220e5914105a81c1b015c3b94466) ([complete prompt and result record](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/README.md), [eye-chamber original](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/raw/a-inside.mp4), [human-reveal original](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/raw/b-human.mp4), [assembled film](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/neonfaces-inside.mp4))
 - [Naiknelofar788 — September 27, 2026 Seedance 2.5 revenge-bedtime comedy: complete five-scene prompt, published 30-second 16:9 result, progressive dark-circle state, typography plan and openly recorded metaphor/text deviations](https://x.com/Naiknelofar788/status/2103770487117713631) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/lib/tutorials.ts), [public MP4](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/public/tutorials/naiknelofar788-me-time-dark-circles-seedance/demo-web.mp4))
 - [ShamsAmin56 — September 27, 2026 Seedance 2.5 on videoduck hunter-versus-THAROG pursuit: complete second-by-second prompt, two role references, inherited physical state, same-axis cave geography and published 30-second 16:9 result](https://x.com/ShamsAmin56/status/2103849845467537562) ([prompt/reference reply](https://x.com/ShamsAmin56/status/2103849855114518601), [versioned prompt and review](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/lib/tutorials.ts), [public MP4](https://github.com/reed35/ai-video-tutorials/blob/693ea00a55d36544d525a1d451f520c80ff51188/public/tutorials/shamsamin56-tharog-hunter-cave-chase-seedance/demo-web.mp4))
