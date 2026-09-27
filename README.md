@@ -37766,6 +37766,30 @@ Then probe and record container, codec, width, height, duration and audio state.
 Do not trust the destination suffix, explicit field name, query mime hint or
 HTTP Content-Type by itself.
 
+ARTIFACT-TRUTH AND DURATION-BILLING GATE
+After materialization, measure the owned artifact rather than copying requested
+settings into its record. For MP4 or MOV, parse the movie header for duration
+and the video track header for dimensions. Read one bounded head chunk; when the
+movie header is absent, read a bounded tail chunk because a non-fast-start file
+may place it there. For remote media, use byte ranges instead of downloading an
+entire large file merely to discover metadata.
+
+Prefer a known MIME derived from the selected response, URL or HTTP header over
+sniffing an arbitrary tail fragment. Never treat a coincidental MP3 frame-sync
+pattern inside video bytes as audio evidence. Persist only finite positive
+measurements; if a field cannot be proved, omit it rather than writing zero or a
+guessed value. Keep a flag when an audio duration is only bitrate-estimated.
+
+Reconcile three separate values:
+- requested duration and the model's declared duration options;
+- the single normalized duration shared by estimate and settlement;
+- measured artifact duration stored with the delivered master.
+A global default clamp must not silently turn a model-declared 30-second request
+into a 20-second charge. Conversely, do not invent a new tariff from measured
+runtime alone. A mismatch opens a named review record linking task, model,
+request, charge and artifact; it never silently edits the prompt or buys a new
+generation.
+
 SIGNED-URL MATERIALIZATION
 After byte and probe acceptance, copy the artifact immediately into durable
 owned storage and persist its local path, hash, size, MIME and probe receipt.
@@ -37809,8 +37833,13 @@ route and later rejected a real TOS video because its `outputUrl` lacked
 later request-contract repair then proved that an omitted `mode` and ignored
 `duration` field had silently selected the wrong behavior: the corrected
 `mode=2.5` plus `durationSeconds=30` request returned a measured 30.04-second
-clip. The same change makes unfetchable references fail before payment and
-keeps provider cost distinct from the application's customer tariff.
+clip. A September 27 follow-up then re-probed the live 45 MB artifact as
+1280×720 and 30.08 seconds, and exposed a separate accounting defect: a global
+20-second clamp had undercounted the model's declared 30-second request by one
+third. Bounded head-and-tail probing and model-declared duration normalization
+close that gap without treating artifact runtime as a universal price. The same
+change makes unfetchable references fail before payment and keeps provider cost
+distinct from the application's customer tariff.
 
 **Sources:** semoji-ai's
 [live Seedance 2.0 failure diagnosis and fix](https://github.com/semoji-ai/auto_kairos/commit/40e0ce7c78cdf3d97c35f54d1c141e12b3e972d6),
@@ -37819,7 +37848,13 @@ the
 and king5012996533's
 [live GenVideo Seedance 2.5 delivery and billing repair](https://github.com/king5012996533/solid-funicular/commit/4f6da5c3a8f6c46bff25a6354f64c74c6b11d53b)
 plus the follow-up
-[versioned create-contract, reference-reachability, polling and durable-storage verification](https://github.com/king5012996533/solid-funicular/commit/4c69742b5f539cf6dea652dc394107324db0ea64).
+[versioned create-contract, reference-reachability, polling and durable-storage verification](https://github.com/king5012996533/solid-funicular/commit/4c69742b5f539cf6dea652dc394107324db0ea64),
+and the September 27
+[artifact-truth and 30-second billing repair](https://github.com/king5012996533/solid-funicular/commit/ed7aaf8504aad6d51603e0365d4e017fd81e81f3), including its
+[bounded local/Range head-and-tail probe](https://github.com/king5012996533/solid-funicular/blob/ed7aaf8504aad6d51603e0365d4e017fd81e81f3/server/media/probe-artifact.ts),
+[pure MP4 metadata parser](https://github.com/king5012996533/solid-funicular/blob/ed7aaf8504aad6d51603e0365d4e017fd81e81f3/server/media/artifact-metadata.ts)
+and
+[shared model-declared duration normalization](https://github.com/king5012996533/solid-funicular/blob/ed7aaf8504aad6d51603e0365d4e017fd81e81f3/src/shared/model-pricing-rules.ts).
 
 ### Profile locomotion source and cycle-recovery contract
 
@@ -46819,6 +46854,7 @@ and its four public generated clips:
 - [kizzymason / JTCANVAS — September 25, 2026 Dreamina Seedance 2.0 (`dreamina-seedance-2-0`, R2V) request-geometry repair: two real `736x1312` tasks rejected after generic reduction to unsupported `23:41`, followed by video-only snapping to Ark's fixed ratio enum and negative regressions for auto, empty and extreme geometry](https://github.com/kizzymason/JTCANVAS/commit/f7037b3d02bc6227c4f0bc110cc84d4af5649f02)
 - [king5012996533 / solid-funicular — September 25, 2026 GenVideo Seedance 2.5 (`p-sceneflow-genvideo-2-5` / `seedance2.5`) versioned create-contract repair: explicit `mode=2.5`, `durationSeconds=30`, six-ratio and ordered-reference compilation, provider-fetch preflight, bounded polling, terminal refund tests, durable signed-URL storage and a live 30.04-second 1280×720 H.264/AAC result](https://github.com/king5012996533/solid-funicular/commit/4c69742b5f539cf6dea652dc394107324db0ea64)
 - [king5012996533 / solid-funicular — September 25, 2026 GenVideo Seedance 2.5 (`p-sceneflow-genvideo-2-5` / `seedance2.5`) live delivery repair: versioned status-path propagation, extensionless explicit `outputUrl` recovery, 5.05-second 1280×720 ffprobe validation and estimate/charge/balance reconciliation](https://github.com/king5012996533/solid-funicular/commit/4f6da5c3a8f6c46bff25a6354f64c74c6b11d53b)
+- [king5012996533 / solid-funicular — September 27, 2026 GenVideo Seedance 2.5 artifact-truth and duration-billing repair: bounded local/Range head-and-tail metadata probing, measured 45 MB 1280×720 / 30.08-second output, and model-declared 30-second estimate/settlement normalization](https://github.com/king5012996533/solid-funicular/commit/ed7aaf8504aad6d51603e0365d4e017fd81e81f3)
 - [Wanrd0Geri / aigc-video — September 24, 2026 JiMeng Seedance 2.5 four-shot fantasy production case: eight image references plus one voice, creator-accepted 20-second result, measured cut points, per-second frame audit, shared-gaze staging, colossus scale controls and full-frame palm blackout](https://github.com/Wanrd0Geri/aigc-video/commit/27c0d2ef215e66ba59fdf43727adcb7910ca2005) ([complete M005 prompt and result audit](https://github.com/Wanrd0Geri/aigc-video/blob/27c0d2ef215e66ba59fdf43727adcb7910ca2005/references/cases/my-cases.md), [versioned Seedance 2.5 skill contract](https://github.com/Wanrd0Geri/aigc-video/blob/27c0d2ef215e66ba59fdf43727adcb7910ca2005/SKILL.md), [evidence rules and tested lessons](https://github.com/Wanrd0Geri/aigc-video/blob/27c0d2ef215e66ba59fdf43727adcb7910ca2005/references/lessons/seedance-2.5.md))
 - [Ecinaro / Brainlab Estate Cinematic — September 24, 2026 Higgsfield Seedance 2.5 (`seedance_2_5`, `omni_reference`) six-scene real-estate route: property-photo geometry authority, identity-board style isolation, estimated-view disclosure, positional 3×3 panel calls, pre-video color correction, non-literal board rendering and measured timing drift](https://github.com/ecinaro/brainlab-estate-cinematic/commit/29ca0c0abdd50897758e23e660a8bbaed8071036) ([complete video template](https://github.com/ecinaro/brainlab-estate-cinematic/blob/29ca0c0abdd50897758e23e660a8bbaed8071036/references/video-prompt-template.md), [exact request contract](https://github.com/ecinaro/brainlab-estate-cinematic/blob/29ca0c0abdd50897758e23e660a8bbaed8071036/references/higgsfield-pipeline.md), [run and failure log](https://github.com/ecinaro/brainlab-estate-cinematic/blob/29ca0c0abdd50897758e23e660a8bbaed8071036/references/lessons.md))
 
