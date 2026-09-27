@@ -47064,7 +47064,162 @@ Adapted and rewritten from PASAKON's September 27, 2026
 [ordered short-film workflow publication](https://github.com/PASAKON/Agents-Core/commit/2bb55b51f3f1cc88b1939ddf2dd688ce5493f043)
 and the [complete gate, owner, status-ledger and filing contract](https://github.com/PASAKON/Agents-Core/blob/2bb55b51f3f1cc88b1939ddf2dd688ce5493f043/.claude/skills/CTO_Film_Workflow/SKILL.md).
 
+### Named-element shot compiler with notes/paste isolation and terminal-state handoff
+
+**Verified model:** Higgsfield Seedance 2.5 — the original creator publishes
+this complete multi-engine compiler beside an ordered production workflow
+written from the August–September 2026 *Sorry, Sir* Seedance 2.5 production.
+A follow-up correction records the operator's rule that every reference keeps
+its registry name instead of being renumbered as a positional image. Only the
+Seedance 2.5 branch is counted here. No provider task IDs or private master are
+public, so treat it as verified production structure rather than an independent
+visual-quality benchmark.  
+**Use case:** compile a story beat and approved asset registry into
+self-contained multi-shot Seedance prompts while keeping internal notes,
+reference responsibilities, continuity handoffs and regeneration impact
+outside the text sent to the model  
+**Mode:** registry freeze -> visible-asset walk -> camera-mode allocation ->
+notes/paste split -> timed prompt -> terminal-state and dependency ledger
+
+```text
+INPUT CONTRACT
+PROJECT = [TITLE]
+MODEL = Higgsfield Seedance 2.5
+FORMAT = [4–30 s] · [RESOLUTION] · [ASPECT]
+LOOK = [ONE VERBATIM FILM-LOOK LINE]
+SOUND = [NATIVE DIALOGUE + WORLD SOUND / WORLD SOUND ONLY / SILENT]
+TOLERANCE = [IDENTITY, COLOR, GEOMETRY AND STATE LIMITS]
+
+ELEMENT REGISTRY
+For every character, creature, location, mount, key prop and alternate state:
+@TAG — TYPE · reference present [YES/NO] · one 15–30-word visual anchor ·
+never [FORBIDDEN DRIFT].
+
+The registry is authoritative:
+- one tag names one entity or state for the whole project;
+- one reference has one primary job;
+- a state that contradicts a picture gets a separate state element;
+- a location plate containing people is not reused as a neutral location;
+- changing an approved asset creates a new version and invalidates every
+  dependent shot.
+
+SCENE INPUT
+Purpose: [ONE SENTENCE]
+Director's beats: [EVENTS IN ORDER; DO NOT ADD OR DROP]
+Dialogue: [SPEAKER + EXACT LINE]
+Starts: [OBSERVABLE INCOMING STATE]
+Ends: [REQUIRED LAST-FRAME STATE]
+Mode: [LOCKED / LONGTAKE / MULTICUT / MONTAGE]
+Continues previous accepted clip: [YES/NO]
+
+VISIBLE-ASSET WALK
+Before writing, inspect the intended frame beat by beat. List every visible
+character, creature, mount, location and stateful prop. Every listed item must
+have one registry tag. Stop if an asset is missing; do not let the model invent
+it.
+
+REFERENCE DECLARATION
+Inside each generated prompt, declare every visible reference exactly once:
+@TAG — NAME: [WHAT TO TAKE]; ignore [WHAT NOT TO TRANSFER].
+
+Keep @TAG exactly as registered. Do not replace it with @Image1, an upload
+number or a newly invented alias. After the declaration, use the plain NAME in
+capitals. Reuse the registry's visual anchor verbatim; do not paraphrase it,
+replace it with a pronoun or write “same as before.”
+
+CAMERA-MODE BUDGET
+LOCKED: one tripod composition, no cuts or zoom; three or four readable beats.
+LONGTAKE: one continuous start-to-end camera path with stated speed; no cuts.
+MULTICUT: distinct shots joined by hard cuts; normally allocate 4–6 seconds to
+each angle so action and identity remain readable.
+MONTAGE: 0.5–2-second shots only when fast cutting is intentional; place
+must-have shots first and keep the total density within the clip length.
+
+=== NOTES — NEVER SEND TO THE MODEL ===
+Scene: [ID / TITLE]
+Purpose: [ONE LINE]
+Mode and duration: [MODE / SECONDS]
+Starts: [STATE]
+Ends: [STATE]
+Bound registry tags: [@TAG LIST]
+Open questions: [NONE / QUESTION + RECOMMENDED ANSWER]
+=== END NOTES ===
+
+=== PASTE INTO SEEDANCE ===
+[Continue shot from the previous accepted video.]  <- only when true
+[DURATION] · [RESOLUTION] · [ASPECT] · [CAMERA-MODE SENTENCE]
+
+[In the first 60–100 words, state the location, named subjects, composition and
+the decisive event. Use only visible or audible direction.]
+
+REFERENCES:
+@TAG — NAME: [IDENTITY / SHAPE / WARDROBE / MOTION JOB]; ignore [BACKGROUND /
+POSE / LIGHT / OTHER NON-OWNED DETAIL].
+NAME: [VERBATIM REGISTRY ANCHOR].
+[Repeat once for every visible registry item.]
+[If non-human, state the exact species of every person visible.]
+
+THE FRAME:
+[START FRAMING, SCREEN POSITION, SCALE, FACING AND 180-DEGREE DIRECTION.]
+
+STATE:
+[ONLY FACTS THAT DIFFER FROM THE NORMAL REFERENCE STATE.]
+
+WHAT HAPPENS:
+[0s–Xs] [SHOT SIZE, ANGLE, LENS]. NAME [COUNTABLE PHYSICAL ACTION, DIRECTION
+AND CONTACT]. [CAMERA MOVE OR LOCK]. [MOTIVATED LIGHT / WEATHER / PARTICLES].
+NAME, [MANNER IN FIVE WORDS OR FEWER]: "[DIALOGUE, ABOUT 2.5 WORDS PER SECOND]."
+
+[Xs–Ys] [NEXT BEAT; BEGIN FROM THE PREVIOUS BEAT'S PHYSICAL STATE.]
+[Ys–END] [FINAL ACTION AND REACTION]. End on [EXACT LAST FRAME].
+
+SOUND:
+[TIMED DIALOGUE, WORLD AMBIENCE AND PHYSICAL EFFECTS]; [MUSIC RULE].
+
+LOOK:
+[VERBATIM PROJECT LOOK LINE].
+
+CRITICAL FAILURE CONTROLS:
+[5–12 SHOT-SPECIFIC CONTROLS], no on-screen text, no subtitles, no watermark,
+no stage directions spoken aloud.
+=== END SEEDANCE PASTE ===
+
+TERMINAL HANDOFF
+END STATE -> next scene:
+- exact positions, facing and eyelines;
+- prop ownership and physical condition;
+- wardrobe, injury, wetness and contamination state;
+- light, weather and time;
+- last-frame camera height, direction and distance.
+
+DEPENDENCY OUTPUT
+CONTINUITY TABLE = scene | start state | end state | next-scene risk.
+ELEMENT USAGE = scene -> registry tags it binds.
+If an element version changes, regenerate every scene in its usage list; do not
+repair only the first visible mismatch.
+
+PRE-FIRE CHECK
+Every visible item has one tag and one job; no positional @Image labels remain;
+anchors are verbatim; timed beats cover the full duration without overlap;
+camera mode and cuts agree; scene N's end equals scene N+1's start; the prompt
+contains only filmable or audible direction; model, duration, resolution,
+aspect, audio and references match the submission UI.
+```
+
+**Why it works:** the notes/paste boundary prevents production metadata and
+operator instructions from leaking into generation. Stable named references
+survive scene reordering, while verbatim anchors and a visible-asset walk reduce
+identity omission and pronoun drift. Explicit terminal state turns continuity
+into a testable interface, and the reverse element index identifies the full
+reshoot surface when any reference changes.
+
+Adapted and rewritten from PASAKON's September 27, 2026
+[complete cinematic-shot compiler publication](https://github.com/PASAKON/Agents-Core/commit/50ba19836215b83bae6ca94b89b354408640de91),
+the [stable registry-tag correction and operator ruling](https://github.com/PASAKON/Agents-Core/commit/fc82e003ffcced3b124e4c3a0c369434b4151c7c)
+and the [corrected v1.1 compiler](https://github.com/PASAKON/Agents-Core/blob/fc82e003ffcced3b124e4c3a0c369434b4151c7c/docs/prompts/MASTER-PROMPT-cinematic.md).
+
 ## Sources
+- [PASAKON / Agents-Core — September 27, 2026 Higgsfield Seedance 2.5 cinematic-shot compiler: named element registry, visible-asset declaration, stable @TAG ownership, notes/paste isolation, four camera-density modes, gap-free timed beats, explicit terminal-state handoff and reverse element-to-scene regeneration index](https://github.com/PASAKON/Agents-Core/commit/50ba19836215b83bae6ca94b89b354408640de91) ([stable-tag correction](https://github.com/PASAKON/Agents-Core/commit/fc82e003ffcced3b124e4c3a0c369434b4151c7c), [corrected v1.1 compiler](https://github.com/PASAKON/Agents-Core/blob/fc82e003ffcced3b124e4c3a0c369434b4151c7c/docs/prompts/MASTER-PROMPT-cinematic.md))
 - [PASAKON / Agents-Core — September 27, 2026 Higgsfield Seedance 2.5 restartable short-film workflow: thirteen dependency-gated stages, versioned STATUS ledger, free previz before paid prompts, capped generation waves, contact-sheet and mechanical QC, rules check, publishing proof and checksum-backed filing](https://github.com/PASAKON/Agents-Core/commit/2bb55b51f3f1cc88b1939ddf2dd688ce5493f043) ([complete workflow contract](https://github.com/PASAKON/Agents-Core/blob/2bb55b51f3f1cc88b1939ddf2dd688ce5493f043/.claude/skills/CTO_Film_Workflow/SKILL.md))
 - [Ryani Leo PD / rainileo_agent — September 27, 2026 BytePlus Seedance 2.0 Fast (`dreamina-seedance-2-0-fast-260128`) live-batch failure record: paid role-swap premise leak, downstream semantic 5/10 rejection, morphology-aware lexical prefilter, bounded fresh-concept reroll, shared paid-call ceiling and fail-closed empty slot](https://github.com/ahnbingbing/rainileo_agent/commit/d531fdb9dc57da4f94dae17525aa628ba8158d7f) ([repair commit and regressions](https://github.com/ahnbingbing/rainileo_agent/commit/75eac28d0b665f69c373ee86e36fda9f02545e46), [exact request client](https://github.com/ahnbingbing/rainileo_agent/blob/d531fdb9dc57da4f94dae17525aa628ba8158d7f/scripts/animate_seedance_i2v.py), [production model and cost gate](https://github.com/ahnbingbing/rainileo_agent/blob/d531fdb9dc57da4f94dae17525aa628ba8158d7f/agents/cameraman.py))
 - [osaykancuno / NEONFACES — September 27, 2026 Higgsfield Seedance 2.0 Mini dual-clip production: two complete four-second 720p 16:9 native-audio prompts, endpoint assets, original generated MP4s, per-clip deviations, six-color pixel-grid repair and final 18-second assembly](https://github.com/osaykancuno/neonfaces/commit/6bf8174c46d7220e5914105a81c1b015c3b94466) ([complete prompt and result record](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/README.md), [eye-chamber original](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/raw/a-inside.mp4), [human-reveal original](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/raw/b-human.mp4), [assembled film](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/neonfaces-inside.mp4))
