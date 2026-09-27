@@ -26330,6 +26330,235 @@ the [selected original MP4](https://github.com/kaganduran/lunaplum-site/blob/b52
 and the [deployed derivative](https://github.com/kaganduran/lunaplum-site/blob/b5210f77c8c2de6ecc3885d2a10e815660a316a2/assets/generated/paper-doorway.mp4).
 
 
+### 416. Locked paper-invoice corner flutter
+
+**Verified model:** Higgsfield ByteDance Seedance 2.5
+(`bytedance/seedance-2.5/image-to-video`) — the creator preserves the exact
+request, successful task `dcdd7a67-5986-4aea-870c-901b512a1c88`, returned MP4,
+final 720p strip and assembled delivery; the retained clip scored 94/100\
+**Use case:** tactile product-ad hook, material-specific micro-motion, stable
+caption plate, native paper foley\
+**Mode:** image-to-video from one 9:16 start frame\
+**Verified settings:** 4 seconds; 720p; `generate_audio=true`; edited to the
+first 2 seconds in a 15-second vertical campaign
+
+```text
+Create a four-second vertical macro shot from the supplied handmade-paper desk
+frame. Treat every pixel outside the invoice corner as locked production
+design.
+
+ACTION
+Only the already-curled corner of the flat white invoice rises in a light
+draft, gives two small irregular flutters and settles back onto the kraft-paper
+desk. The motion begins immediately but stays delicate; the rest of the sheet
+never slides. Keep the small paper laptop, paper cup, desk, window light and
+shadows fixed.
+
+CAMERA AND MATERIAL
+Use a completely static camera with no crop, zoom, rack focus or exposure
+change. Preserve visible paper fibres, scored creases, imperfect cut edges and
+real sheet thickness. The lifted corner bends like light paper under air and
+keeps its crisp edge; it must not stretch, liquefy or become fabric.
+
+AUDIO
+Generate one close, soft paper-flutter effect synchronized to the lift and
+settle. No music, voice, room narration or extra impact.
+
+FAILURE CONTROLS
+No letters, numbers, watermark, glossy plastic, CGI sheen, new prop, hand,
+person, moving laptop, moving cup, desk drift, morph, melting edge, rubber-like
+paper, camera shake or background animation. Finish on a calm frame compatible
+with the opening composition.
+```
+
+**Why it works:** the prompt spends its specificity on a single deformation
+and explicitly freezes every neighbouring object. That makes a tiny material
+cue strong enough to carry a two-second hook without sacrificing the quiet top
+band needed for post typography. The published evaluation found a steady desk,
+believable draft and paper motion; the creator then typeset the headline in the
+edit rather than asking Seedance to draw it.
+
+Adapted and rewritten from segalitoo's September 27, 2026
+[Driftpay production commit](https://github.com/segalitoo/Video-ad-art-direction-/commit/63b7a37e04945790105a5d074038c433fac7fe16),
+the [complete five-shot prompt plan](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/prompts.md),
+[exact request and successful task ledger](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/runs.jsonl),
+[per-clip review](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/judge-clips.md)
+and the [delivered 9:16 ad](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/deliver/driftpay-paper-planes_9x16.mp4).
+
+
+### 417. Endpoint-anchored invoice-to-plane self-fold
+
+**Verified model:** Higgsfield ByteDance Seedance 2.5
+(`bytedance/seedance-2.5/image-to-video`) — the creator preserves both submitted
+endpoint URLs, the exact prompt, successful task
+`ca1d86a2-d45b-4b95-8ad8-b51ad66d94f0`, returned MP4 and final review; the
+retained 720p clip scored 82/100\
+**Use case:** object-state transformation, origami action, first/last-frame
+continuity, synchronized native foley\
+**Mode:** image-to-video with distinct start and end frames\
+**Verified settings:** 4 seconds; 720p; `generate_audio=true`; edited from
+0.9 seconds for a 3-second campaign beat
+
+```text
+Create a four-second vertical paper-craft transformation between the supplied
+start and end frames. The opening frame owns the room, camera and unfolded
+invoice; the closing frame owns the completed paper plane and its exact resting
+place.
+
+ACTION CHAIN
+Begin on the flat invoice without a hold. Fold one long edge inward along a
+clean scored line, fold the opposite edge to meet it, then close the two wings
+into one crisp paper plane. Each fold must visibly cause the next. Keep the thin
+coral stripe attached to the same paper edge so it ends along the correct wing.
+After the last crease, let the plane settle softly on the same point of the
+desk and match the supplied end frame.
+
+CAMERA, SET AND PHYSICS
+Lock camera, crop, focus, window light, kraft desk, paper laptop, cup and every
+shadow. Paper may lift only as required by the fold. It remains thin, fibrous
+and crisp: no rubber stretch, swelling, liquid morph or hidden object swap.
+Move continuously from the approved start state to the approved end state
+without a cut or dissolve.
+
+AUDIO
+Generate exactly three close paper-fold sounds, one for each decisive crease.
+No music, speech, ambience swell or synthetic transformation sound.
+
+FAILURE CONTROLS
+No text, numbers, watermark, hand, person, extra sheet, duplicate plane,
+floating prop, camera move, lighting reset, desk motion, melting geometry or
+unmotivated flip. End with the plane fully supported and still.
+```
+
+**Why it works:** start and end assets divide authority cleanly while the
+middle is expressed as observable fold events rather than the abstract verb
+“transform.” The production result reached the correct dart and kept the desk
+stable. Its review also records the remaining weakness instead of hiding it:
+the sheet briefly tipped upright mid-fold, so the prompt should preserve the
+stepwise crease order on future runs.
+
+Adapted and rewritten from segalitoo's September 27, 2026
+[Driftpay production commit](https://github.com/segalitoo/Video-ad-art-direction-/commit/63b7a37e04945790105a5d074038c433fac7fe16),
+the [complete source prompt](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/prompts.md),
+[submitted request JSON](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/S02-clip.json),
+[successful task ledger](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/runs.jsonl)
+and [per-clip review](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/judge-clips.md).
+
+
+### 418. Static-camera paper-plane take-off and frame exit
+
+**Verified model:** Higgsfield ByteDance Seedance 2.5
+(`bytedance/seedance-2.5/image-to-video`) — the creator preserves the exact
+single-frame request, successful task `df5cbd56-dbbb-4310-95ef-e26f04bab0c1`,
+returned MP4, 720p inspection strip and final review; the retained clip scored
+91/100\
+**Use case:** clean directional exit, edit handle, lightweight material flight,
+stable product-ad environment\
+**Mode:** image-to-video from one 9:16 start frame\
+**Verified settings:** 4 seconds; 720p; `generate_audio=true`; edited from
+1.0 seconds for a 2.5-second campaign beat
+
+```text
+Create a four-second vertical macro shot from the supplied frame of one folded
+paper plane just beyond the edge of a kraft-paper desk.
+
+ACTION
+The plane is already moving when the clip begins. It gains a little lift,
+glides diagonally upward toward the upper-left corner and passes completely out
+of frame. Show one continuous, readable flight path from its starting position
+to the exit; do not pause, reverse or re-enter. The plane stays one rigid folded
+object with only a faint natural wing tremor.
+
+CAMERA AND CONTINUITY
+Keep the camera static and preserve the exact paper-craft room, window
+backlight, depth of field, palette and crop from the start image. The desk and
+all background props remain fixed after the plane leaves. Maintain the coral
+wing stripe, invoice-paper thickness and crisp folds through the final visible
+frame. Leave a short clean plate after the exit for the editor.
+
+AUDIO
+Generate one light close whoosh that follows the take-off and fades as the
+plane exits. No music, voice, spoken copy or added room event.
+
+FAILURE CONTROLS
+No text, number, watermark, second plane, hand, person, string, propulsion,
+flapping bird motion, rubber paper, glossy CGI, morph, melting edge, camera
+follow, zoom, shake, relighting or moving background.
+```
+
+**Why it works:** one subject gets one directional verb and one exit target,
+while the static plate is explicitly protected after departure. The prompt
+avoids asking the camera to chase a small fast object, which gives the editor a
+clean outgoing transition and preserves the quiet set. The retained result was
+judged light, floaty and consistent with the established paper world.
+
+Adapted and rewritten from segalitoo's September 27, 2026
+[Driftpay production commit](https://github.com/segalitoo/Video-ad-art-direction-/commit/63b7a37e04945790105a5d074038c433fac7fe16),
+the [complete source prompt](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/prompts.md),
+[exact request and successful task ledger](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/runs.jsonl),
+[per-clip review](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/judge-clips.md)
+and the [delivered 9:16 ad](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/deliver/driftpay-paper-planes_9x16.mp4).
+
+
+### 419. Thread-locked paper-plane world-map traversal
+
+**Verified model:** Higgsfield ByteDance Seedance 2.5
+(`bytedance/seedance-2.5/image-to-video`) — the creator preserves both endpoint
+URLs, exact prompt, successful task `e1de7fd5-3b97-48b2-9d56-10c6369bbb1d`,
+returned MP4 and final review; the retained 720p clip scored 84/100 after an
+earlier start-frame-only flight re-routed the guide thread\
+**Use case:** route-following product metaphor, protected guide geometry,
+first/last-frame repair, map-based directional motion\
+**Mode:** image-to-video with distinct start and end frames\
+**Verified settings:** 4 seconds; 720p; `generate_audio=true`; edited from
+0.3 seconds for a 3.5-second campaign beat
+
+```text
+Create a four-second vertical top-down paper-craft shot between the supplied
+start and end frames. The coral thread is a fixed route painted into the set;
+only the paper plane travels.
+
+GEOMETRY LOCK
+Preserve the folded world map, raised mint continents, coral thread, clock
+faces, kraft tabletop, camera, crop and daylight exactly. The thread may never
+shift, redraw, shorten, grow, detach or follow the plane. Keep every clock face
+free of numerals and keep all land pieces attached to the map.
+
+ACTION
+From its start-frame position, the white invoice plane with the coral wing
+stripe glides nose-first along the existing thread. Follow every major bend in
+one continuous path, cross the ocean and arrive at the exact far-end position
+shown by the supplied end frame. Use smooth light-paper momentum with no hover,
+teleport, route shortcut or overshoot. Settle briefly at the endpoint while the
+whole map remains still.
+
+CAMERA, MATERIAL AND AUDIO
+Camera is locked straight overhead. Preserve paper fibres, scored folds, true
+thickness and soft contact shadows; no plastic or synthetic shine. Generate one
+soft paper-glide sound synchronized to the crossing. No music or voice.
+
+FAILURE CONTROLS
+No text, number, watermark, extra plane, hand, person, new route, moving thread,
+spinning map, changing continent, camera pan, zoom, tilt, dissolve, melting,
+stretching or unrelated object motion. Finish by matching the approved end
+frame.
+```
+
+**Why it works:** the correction does not merely add another destination image;
+it separates movable subject from protected route geometry and names the exact
+failure the first test exposed. The end frame then supplies an unambiguous
+terminal heading and location. The retained result followed the thread while
+keeping it fixed, converting a weak start-only probe into an 84/100 campaign
+shot.
+
+Adapted and rewritten from segalitoo's September 27, 2026
+[Driftpay production commit](https://github.com/segalitoo/Video-ad-art-direction-/commit/63b7a37e04945790105a5d074038c433fac7fe16),
+the [complete source prompt and endpoint method](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/prompts.md),
+[exact request and successful task ledger](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/runs.jsonl),
+[per-clip review](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/judge-clips.md)
+and the [delivered 9:16 ad](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/deliver/driftpay-paper-planes_9x16.mp4).
+
+
 ## Reusable templates
 
 ### Endpoint-identical isolated-mark logo loop and measured-background re-key
@@ -47487,6 +47716,8 @@ Community examples and techniques referenced in this README:
 - [Windy Hu / tempimg — September 26, 2026 Seedance 2.0 Mini (`doubao-seedance-2-0-mini-260615`) real-person motion-reference rejection followed by a user-approved three-AI-keyframe Omni pivot, public task ID, usage, output hash and committed 10-second 720p result](https://github.com/outliner/tempimg/commit/74ec5445191e5d1099b556e9c3dafb46872ba202) ([generated MP4](https://github.com/outliner/tempimg/blob/74ec5445191e5d1099b556e9c3dafb46872ba202/seedance-videos/chang-e-toothmark-20260926/S1-mini/S1_Seedance20Mini_v2_10s_720p.mp4), [contact sheet](https://github.com/outliner/tempimg/blob/74ec5445191e5d1099b556e9c3dafb46872ba202/seedance-videos/chang-e-toothmark-20260926/S1-mini/S1_Seedance20Mini_v2_contact.jpg))
 
 - [SnapGen — September 27, 2026 Seedance 2.0 / Fast / Mini / 2.5 R2V gateway-measured MP4/MOV reference duration, whole-second rounding, HTTP range requirement and 15-second unmeasurable-source billing fallback](https://github.com/bytevirts/snapgen-doc/commit/c7e7ce471e8f4b1a469076cbe34c83aebd853ebd) ([Seedance 2.5 R2V contract](https://github.com/bytevirts/snapgen-doc/blob/c7e7ce471e8f4b1a469076cbe34c83aebd853ebd/api-manual/video/seedance-2-5-r2v.mdx), [Seedance 2.0 R2V contract](https://github.com/bytevirts/snapgen-doc/blob/c7e7ce471e8f4b1a469076cbe34c83aebd853ebd/api-manual/video/seedance-2-0-r2v.mdx))
+
+- [segalitoo / Video Ad Art Direction — September 27, 2026 Higgsfield Seedance 2.5 five-shot Driftpay paper-craft campaign, exact API request/task ledger, endpoint-frame repair, per-clip scoring and committed 9:16/4:5 deliveries](https://github.com/segalitoo/Video-ad-art-direction-/commit/63b7a37e04945790105a5d074038c433fac7fe16) ([complete prompt plan](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/prompts.md), [exact request and completion ledger](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/runs.jsonl), [per-clip review](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/judge-clips.md), [delivered 9:16 MP4](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/deliver/driftpay-paper-planes_9x16.mp4))
 
 Official model references:
 
