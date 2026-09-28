@@ -438,6 +438,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Glitch-push through a pixel eye into a market chamber](#422-glitch-push-through-a-pixel-eye-into-a-market-chamber)
   - [Pixel portrait resolving into a breathing human](#423-pixel-portrait-resolving-into-a-breathing-human)
   - [Clay-bust touch match-cuts into a Super 8 memory](#424-clay-bust-touch-match-cuts-into-a-super-8-memory)
+  - [Zodiac-wheel awakening at a locked fantasy gate](#425-zodiac-wheel-awakening-at-a-locked-fantasy-gate)
+  - [One-step-behind memory apparition and disappearance](#426-one-step-behind-memory-apparition-and-disappearance)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -26981,6 +26983,142 @@ the [versioned prompt-and-review commit](https://github.com/reed35/ai-video-tuto
 and [disclosed sculptor reference](https://github.com/reed35/ai-video-tutorials/blob/955d417e8dce89e515805e6d3ccd31b0fdf43a54/public/tutorials/kiber-alla-sculptor-clay-bust-super8-memory/refs/01-sculptor-ref.jpg).
 
 
+### 425. Zodiac-wheel awakening at a locked fantasy gate
+
+**Verified model:** Higgsfield Seedance 2.0 (`seedance_2_0`) — the original
+production record supplies the exact prompt, start frame, character reference,
+completed job ID, shipped MP4 and timestamped frame review  \
+**Use case:** fantasy game story beat, post-boss revelation, quiet character
+performance, reference-locked environment, silent in-game cinematic  \
+**Mode:** start-frame plus one character reference; single continuous take  \
+**Verified settings:** standard mode; 720p; 8 seconds; 16:9; drama;
+`generate_audio: false`; 36 credits; one generation attempt; completed job
+`a61b9181-6411-4afb-b80b-022ada73b08b`
+
+```text
+REFERENCE CONTRACT
+@FRAME1 is the exact opening location: a monumental carved-stone gate in a
+crimson forest at night, a luminous hourglass inside its arch, braziers burning
+beside worn steps. Preserve this geography, architecture, color palette and
+light direction throughout.
+@MIRA is the only identity and costume authority: one silver-haired woman in
+white-and-gold robes. Ignore the reference background and do not introduce a
+second person.
+
+FORMAT AND CAMERA
+Create one unbroken eight-second 16:9 dark-fantasy shot. Begin from @FRAME1 at
+the gate. Use a very slow, stable push-in that ends over Mira's shoulder; no
+cut, teleport, orbit, reverse angle or establishing reset. Hyper-detailed
+cinematic rendering, shallow depth of field, volumetric firelight and
+starlight, fine film grain, hushed epic scale.
+
+ACTION TIMELINE
+0.0–2.0s — Mira sits alone on the final stone step, very small beneath the
+gate. The hourglass and braziers glow steadily. Embers rise; she remains still.
+2.0–4.2s — Twelve distinct zodiac constellations illuminate one after another
+above the arch, close into one enormous wheel and begin a slow coherent turn.
+Their golden arcs sweep across the existing star field without moving the gate.
+4.2–6.0s — A warm wind reaches the steps. Mira lifts her head and rises once,
+naturally transferring her weight; her long hair and robe hems trail and settle.
+The camera continues the same slow push.
+6.0–8.0s — She turns toward the road below. End just behind her shoulder as she
+looks toward one distant town at the edge of dawn. Her eyes glisten with quiet,
+bittersweet resolve. Hold the final composition.
+
+CONTINUITY AND EXCLUSIONS
+Keep one Mira, one gate, one hourglass, twelve constellations and one continuous
+camera path. Preserve face, silver hair, white-and-gold clothing, body scale,
+step layout, road direction and the night-to-dawn distance cue. The zodiac wheel
+belongs in the sky and must not become a sign, clock, portal or halo. Natural
+cloth, hair, ember and rising-body physics. No dialogue, music, generated audio,
+caption, title, logo, interface, decorative lettering, extra character,
+duplicate body, costume change, facial drift, jump cut or camera shake.
+```
+
+**Why it works:** the start frame owns the full location while the character
+reference owns only identity and costume. A single forward camera path and four
+causal states — stillness, constellation ignition, standing, distant look —
+fit the eight-second budget without sacrificing the reveal. The shipped result
+preserved the gate, on-model Mira, turning wheel and over-shoulder destination,
+but produced decorative pseudo-lettering around the wheel rim; keep the
+no-lettering clause as an explicit failure check.
+
+Adapted and rewritten from dpeh001-x's September 28, 2026
+[Seedance 2.0 production commit](https://github.com/dpeh001-x/Mojiworld/commit/0431c2e7ecba5ce6d760fbfd993921117d94c86c),
+[complete generation record](https://github.com/dpeh001-x/Mojiworld/blob/0431c2e7ecba5ce6d760fbfd993921117d94c86c/steam/higgsfield/cinematics/clip_mira_twelve.SPEC.md)
+and [shipped generated MP4](https://github.com/dpeh001-x/Mojiworld/blob/0431c2e7ecba5ce6d760fbfd993921117d94c86c/steam/higgsfield/cinematics/clip_mira_twelve.mp4).
+
+
+### 426. One-step-behind memory apparition and disappearance
+
+**Verified model:** Higgsfield Seedance 2.0 (`seedance_2_0`) — the original
+production record supplies the exact prompt, start frame, two character
+references, completed job ID, shipped MP4 and timestamped frame review  \
+**Use case:** fantasy game story beat, sibling-memory reveal, apparition effect,
+two-character reference consistency, silent emotional cinematic  \
+**Mode:** start-frame plus two character references; single continuous take  \
+**Verified settings:** standard mode; 720p; 8 seconds; 16:9; drama;
+`generate_audio: false`; 36 credits; one generation attempt; completed job
+`f448dcae-fdbf-4ffb-82b3-2da2b5fb3f76`
+
+```text
+REFERENCE CONTRACT
+@FRAME1 is the exact opening town: a pastel fantasy square before dawn, blossom
+trees, timbered houses, distant cathedral spires and one long road rising to a
+faintly glowing gate. Preserve its street map, architecture, palette and light.
+@WANDERER is the sole identity and costume authority for the foreground man:
+one hooded figure in a worn amber cloak.
+@MIRA is the sole identity and costume authority for the memory: one
+silver-haired woman in white-and-gold robes. She may appear only as the
+translucent apparition described below. Ignore both character backgrounds.
+
+FORMAT AND CAMERA
+Create one unbroken eight-second 16:9 fantasy-drama shot in @FRAME1. Begin with
+the wanderer small and still in the square. Make one restrained push-in along
+the road axis, ending close on his face. Soft volumetric pre-dawn light,
+shallow depth of field, tactile film grain, intimate and bittersweet rather
+than spectacular.
+
+ACTION TIMELINE
+0.0–1.5s — The wanderer faces the distant gate and slowly rubs his bare thumb
+against the finger where a ring used to be. Petals cross the road on a light
+wind; nothing else changes.
+1.5–3.7s — A softly glowing, translucent Mira resolves exactly one human step
+behind him. She remains correctly scaled, recognisable and still, like a memory
+occupying the real space. Her light touches nearby petals but does not relight
+the whole town.
+3.7–4.5s — Mira dissolves once into individual luminous petals that join the
+existing wind. She leaves no duplicate, shadow, garment or residual silhouette.
+The wanderer remains in his original position.
+4.5–8.0s — Continue the same slow push to his face. He turns his eyes slightly
+toward the now-empty space, then forward; recognition, grief and tenderness
+arrive without exaggeration. End with his lips parting as if a name will come,
+but no word is spoken. Hold the final frame.
+
+CONTINUITY AND EXCLUSIONS
+Keep one wanderer and at most one temporary Mira. Preserve both faces, amber
+cloak, white-and-gold robes, human scale, road axis, gate location and town
+layout. The absent ring stays absent. The apparition must appear behind him,
+never overlap or replace him, and disappear only through the specified
+petal-dissolve. Natural breathing, gaze, cloth and petal physics. No dialogue,
+music, generated audio, caption, title, logo, interface, new building, extra
+character, clone, costume change, identity blend, ring materialisation,
+teleport, flash cut, camera orbit or restart.
+```
+
+**Why it works:** three references have cleanly separated authority, and the
+apparition is bounded by position, time and a one-way dissolve. The empty-ring
+gesture, one-step-behind placement and final parted lips form a readable
+cause-and-effect chain without dialogue. The shipped result kept the
+on-model wanderer, recognisable Mira, timed disappearance and final push-in
+across one continuous 193-frame clip.
+
+Adapted and rewritten from dpeh001-x's September 28, 2026
+[Seedance 2.0 production commit](https://github.com/dpeh001-x/Mojiworld/commit/0431c2e7ecba5ce6d760fbfd993921117d94c86c),
+[complete generation record](https://github.com/dpeh001-x/Mojiworld/blob/0431c2e7ecba5ce6d760fbfd993921117d94c86c/steam/higgsfield/cinematics/clip_amnesiac_twelve.SPEC.md)
+and [shipped generated MP4](https://github.com/dpeh001-x/Mojiworld/blob/0431c2e7ecba5ce6d760fbfd993921117d94c86c/steam/higgsfield/cinematics/clip_amnesiac_twelve.mp4).
+
+
 ## Reusable templates
 
 ### Reference-audio talking-head qualification with measured lip-sync lag
@@ -47523,6 +47661,7 @@ the [provider-attempt review implementation](https://github.com/WilderC10000/ai-
 and the [pre-submit model, cost and endpoint gate](https://github.com/WilderC10000/ai-video-factory/commit/46435221da28c97b106b92ff17c309ac0fff0750).
 
 ## Sources
+- [dpeh001-x / Mojiworld — September 28, 2026 Higgsfield Seedance 2.0 sibling-reveal production: two complete eight-second 720p silent prompts, one environment start frame per clip, role-scoped character references, completed provider job IDs, 36-credit receipts, shipped generated MP4s and timestamped frame QA](https://github.com/dpeh001-x/Mojiworld/commit/0431c2e7ecba5ce6d760fbfd993921117d94c86c) ([Mira gate-wheel record](https://github.com/dpeh001-x/Mojiworld/blob/0431c2e7ecba5ce6d760fbfd993921117d94c86c/steam/higgsfield/cinematics/clip_mira_twelve.SPEC.md), [Amnesiac apparition record](https://github.com/dpeh001-x/Mojiworld/blob/0431c2e7ecba5ce6d760fbfd993921117d94c86c/steam/higgsfield/cinematics/clip_amnesiac_twelve.SPEC.md))
 - [Aydoucorp / labo — September 28, 2026 KIE-hosted ByteDance Seedance 2.5 reference-audio talking-head trial: six exact prompts, successful 720p task IDs, 2,268 charged credits, silent masters, voice-muxed derivatives and measured −0.667 to +1.000-second mouth-to-voice offsets that fail closed instead of being claimed as lip sync](https://github.com/Aydoucorp/labo/commit/48e32f847cffef146ccabf57f6393273b76e0da4) ([five additional completed jobs](https://github.com/Aydoucorp/labo/commit/24212ab8fea2bf272250d7373e174672e814e305), [measurement and results](https://github.com/Aydoucorp/labo/commit/294b29d50ddb4ac21a6c19863958c4f974765edf), [measurement script](https://github.com/Aydoucorp/labo/blob/294b29d50ddb4ac21a6c19863958c4f974765edf/runs/2026-09-28_claire-cheveux-gris-carences_talking-head/mesurer_synchro.py))
 - [Kiber Alla — September 28, 2026 Higgsfield Seedance 2.5 sculptor-and-memory film: complete 24-second 26-shot prompt, four role-scoped references, screen-axis lock, thumb-to-lip match cut, Super 8 memory grammar, four native-dialogue lines, published 1080p result and recorded no-music deviation](https://x.com/Kiber_Alla/status/2104220821992636469) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/commit/955d417e8dce89e515805e6d3ccd31b0fdf43a54), [complete prompt record](https://github.com/reed35/ai-video-tutorials/blob/955d417e8dce89e515805e6d3ccd31b0fdf43a54/lib/tutorials.ts), [published MP4](https://github.com/reed35/ai-video-tutorials/blob/955d417e8dce89e515805e6d3ccd31b0fdf43a54/public/tutorials/kiber-alla-sculptor-clay-bust-super8-memory/demo-web.mp4))
 - [WilderC10000 / ai-video-factory — September 28, 2026 Higgsfield Seedance 2.5 endpoint-bracketed visible-labor proof: complete six-second 480p silent payload, approved frame hashes, real completed job ID, $1.248 settlement, append-only provider-attempt ledger and synchronized comparison review](https://github.com/WilderC10000/ai-video-factory/commit/a798f82052527148eb596da5dc49e5540daa9bcd) ([exact request and receipt](https://github.com/WilderC10000/ai-video-factory/blob/a798f82052527148eb596da5dc49e5540daa9bcd/data/train_car_video_2/manifest.json), [attempt review UI](https://github.com/WilderC10000/ai-video-factory/blob/a798f82052527148eb596da5dc49e5540daa9bcd/studio-ui/src/components/Attempts.tsx), [pre-submit provider and cost gate](https://github.com/WilderC10000/ai-video-factory/commit/46435221da28c97b106b92ff17c309ac0fff0750))
