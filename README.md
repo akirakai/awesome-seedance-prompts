@@ -437,6 +437,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Same-axis hunter-versus-THAROG cave chase](#421-same-axis-hunter-versus-tharog-cave-chase)
   - [Glitch-push through a pixel eye into a market chamber](#422-glitch-push-through-a-pixel-eye-into-a-market-chamber)
   - [Pixel portrait resolving into a breathing human](#423-pixel-portrait-resolving-into-a-breathing-human)
+  - [Clay-bust touch match-cuts into a Super 8 memory](#424-clay-bust-touch-match-cuts-into-a-super-8-memory)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -26862,6 +26863,124 @@ Adapted and rewritten from osaykancuno’s September 27, 2026
 and [final assembled film](https://github.com/osaykancuno/neonfaces/blob/6bf8174c46d7220e5914105a81c1b015c3b94466/marketing/inside/neonfaces-inside.mp4).
 
 
+### 424. Clay-bust touch match-cuts into a Super 8 memory
+
+**Verified model:** Higgsfield Seedance 2.5 — original creator Kiber Alla names
+the model and platform in the source post, publishes the complete prompt in a
+self-reply, and publishes the generated result; the independent versioned
+record preserves the prompt, one disclosed reference image and the MP4  \
+**Use case:** intimate dramatic short, present-to-memory match cut, character
+consistency across two ages, native dialogue and sound, multi-shot one-pass
+storytelling  \
+**Mode:** reference-to-video with four role-scoped images and a 26-shot timed
+montage  \
+**Verified settings:** about 24 seconds; 16:9; published result 1920×1080,
+30fps, 23.6 seconds
+
+```text
+REFERENCE ROLES
+@SCULPTOR = the present-day man: face, thin metal glasses, damp wavy dark hair,
+grey-threaded stubble, muscular build, charcoal sleeveless shirt, black vinyl
+bib overalls and clay-covered hands. Ignore any tool or background.
+@BUST = one life-size grey-brown clay head-and-shoulders sculpture of Sarah:
+closed eyes, slightly raised face, full lips, loose updo, fine cracks and tool
+marks. Keep her head slightly smaller than his and place her on the studio
+pedestal.
+@STUDIO = bottle-green panelling, plum sloped ceiling, angled skylight, wooden
+bench, brush jars, wet clay, warm black desk lamp, faded photo, stool, pedestal
+and corner sheets. Ignore any person or substitute bust in this reference.
+@SARAH = the flashback woman: exact face, green-hazel eyes, freckles, long
+dark-brown waves, black sleeveless V-neck dress and small gold hoops. Ignore
+the source background.
+
+STORY AND GRAMMAR
+Create one approximately 24-second dramatic film. A sculptor unveils the clay
+bust of the woman he lost. His thumb crossing its clay lip becomes a
+same-framing match cut into warm memories, then the film returns to his silent
+grief. Use 26 short shots, cutting on action and alternating size or angle.
+The widest view is a medium close-up: no establishing, wide or full-body shot.
+In the studio he always remains screen-left and the bust screen-right; never
+cross their axis. Present time is crisp digital cinema with cool skylight,
+warm lamp pools, deep contrast and shallow depth. Every memory is handheld
+Super 8 with grain, weave, halation, faded warmth, flicker and orange leaks;
+never apply that texture to the present.
+
+TIMELINE — ALL SHOTS ARE REQUIRED
+1, 0.0–1.0s: from an extreme low angle he grips a heavy white canvas covering
+the blurred bust and yanks it toward himself.
+2, 1.0–1.5s: the cloth fills the lens as a physical whip transition.
+3, 1.5–2.5s: low orbit as the last corner catches briefly on the clay lips,
+then slides away and reveals the closed eyes.
+4, 2.5–3.5s: over the blurred clay shoulder, he pushes his glasses up with
+the back of his dirty wrist.
+5, 3.5–4.3s: macro, his wet thumb presses and smooths one cheekbone.
+6, 4.3–5.2s: pedestal-height angle; his open palm glides up the clay neck.
+7, 5.2–6.5s: slow eye-level orbit, racking from clay hair to his eyes while
+his fingers refine the temple.
+8, 6.5–7.3s: macro, wet clay squeezes between his knuckles.
+9, 7.3–8.0s: his tight profile is seen through the soft foreground lamp glow.
+10, 8.0–9.0s: close profile two-shot; faces one hand apart as he raises a thumb
+toward the bust's mouth.
+11, 9.0–9.7s: extreme close-up; his eyes close behind reflected skylight.
+12, 9.7–10.5s: macro, the clay-coated thumb travels once across the lower lip,
+leaving a slight physical indentation.
+13, 10.5–11.3s: match on the same moving thumb, now clean and crossing Sarah's
+real lip; she smiles as an orange leak enters. Super 8 begins here.
+14, 11.3–12.2s: in a hazy red-blue nightclub Sarah turns over her shoulder,
+hair swinging and settling.
+15, 12.2–13.2s: younger sculptor, no glasses, says softly: "Hi, Sarah."
+16, 13.2–14.4s: she answers, "Hey, handsome," then gives a small laugh.
+17, 14.4–15.2s: golden-hour park, hip-height tracking as she bumps his shoulder.
+18, 15.2–15.8s: their hands brush, then interlock against the sun.
+19, 15.8–16.9s: she walks backward, pulls him forward and laughs,
+"Come on, slowpoke!"
+20, 16.9–18.2s: orbit as she draws him in by the jaw, whispers
+"Don't let go," and they kiss.
+21, 18.2–18.8s: her fingers enter the hair at the back of his neck.
+22, 18.8–19.3s: the Super 8 frame burns inward to white.
+23, 19.3–20.2s: clean present day; rack focus from brush jars to Sarah's old
+photo and finally to his opening eyes.
+24, 20.2–21.2s: from below the bust's chin, his clay-covered hands cup both
+cheeks and his face approaches.
+25, 21.2–22.6s: orbit to a true profile as his forehead meets the clay forehead;
+his eyes close and the glasses shift slightly.
+26, 22.6–24.0s: locked extreme profile. One tear leaves his closed eye, travels
+down his cheek and stops in the stubble. Hold there and end.
+
+AUDIO
+No narrator, subtitle, on-screen text or present-day speech. Use only the four
+memory lines above plus canvas snap, cloth whoosh, stool creak, lamp hum, wet
+clay, breath, camera click, quiet Super 8 projector, muffled crowd without club
+music, leaves, laughter, film flutter and projector wind-down. End with one
+shaky exhale, lamp hum and silence. No score, song, piano, strings or pad.
+
+PHYSICS, IDENTITY AND FAILURE CONTROLS
+Canvas has delayed weight and ripples; it catches, releases and falls naturally.
+Wet clay yields, smears and holds the new shape but never crumbles. Hair and
+dress trail turns and settle. The bust stays life-size, closed-eyed, immobile,
+unchanged and dry-eyed. The sculptor keeps glasses and overalls only in the
+present; his younger version has neither. Sarah exists only inside Super 8
+memories. Preserve faces, hands, finger count, wardrobe, studio map, axis,
+material and shot order. No extra people, character swap, lip-sync reassignment,
+split screen, grid or repeated tear.
+```
+
+**Why it works:** the references have non-overlapping authority, the studio
+axis and medium-close shot ceiling keep 26 cuts spatially legible, and the
+thumb action supplies a precise visual bridge between materials and eras.
+The published result retained all four spoken lines, the tactile sound design
+and the match-cut structure. It did add a low musical bed and later rhythm
+despite the no-music instruction, so treat the audio exclusion as a known
+failure check rather than a guaranteed outcome.
+
+Adapted and rewritten from Kiber Alla's September 28, 2026
+[original Seedance 2.5 result and attribution](https://x.com/Kiber_Alla/status/2104220821992636469),
+the [versioned prompt-and-review commit](https://github.com/reed35/ai-video-tutorials/commit/955d417e8dce89e515805e6d3ccd31b0fdf43a54),
+[complete preserved prompt and audit](https://github.com/reed35/ai-video-tutorials/blob/955d417e8dce89e515805e6d3ccd31b0fdf43a54/lib/tutorials.ts),
+[published MP4](https://github.com/reed35/ai-video-tutorials/blob/955d417e8dce89e515805e6d3ccd31b0fdf43a54/public/tutorials/kiber-alla-sculptor-clay-bust-super8-memory/demo-web.mp4)
+and [disclosed sculptor reference](https://github.com/reed35/ai-video-tutorials/blob/955d417e8dce89e515805e6d3ccd31b0fdf43a54/public/tutorials/kiber-alla-sculptor-clay-bust-super8-memory/refs/01-sculptor-ref.jpg).
+
+
 ## Reusable templates
 
 ### Endpoint-identical isolated-mark logo loop and measured-background re-key
@@ -47313,6 +47432,7 @@ the [provider-attempt review implementation](https://github.com/WilderC10000/ai-
 and the [pre-submit model, cost and endpoint gate](https://github.com/WilderC10000/ai-video-factory/commit/46435221da28c97b106b92ff17c309ac0fff0750).
 
 ## Sources
+- [Kiber Alla — September 28, 2026 Higgsfield Seedance 2.5 sculptor-and-memory film: complete 24-second 26-shot prompt, four role-scoped references, screen-axis lock, thumb-to-lip match cut, Super 8 memory grammar, four native-dialogue lines, published 1080p result and recorded no-music deviation](https://x.com/Kiber_Alla/status/2104220821992636469) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/commit/955d417e8dce89e515805e6d3ccd31b0fdf43a54), [complete prompt record](https://github.com/reed35/ai-video-tutorials/blob/955d417e8dce89e515805e6d3ccd31b0fdf43a54/lib/tutorials.ts), [published MP4](https://github.com/reed35/ai-video-tutorials/blob/955d417e8dce89e515805e6d3ccd31b0fdf43a54/public/tutorials/kiber-alla-sculptor-clay-bust-super8-memory/demo-web.mp4))
 - [WilderC10000 / ai-video-factory — September 28, 2026 Higgsfield Seedance 2.5 endpoint-bracketed visible-labor proof: complete six-second 480p silent payload, approved frame hashes, real completed job ID, $1.248 settlement, append-only provider-attempt ledger and synchronized comparison review](https://github.com/WilderC10000/ai-video-factory/commit/a798f82052527148eb596da5dc49e5540daa9bcd) ([exact request and receipt](https://github.com/WilderC10000/ai-video-factory/blob/a798f82052527148eb596da5dc49e5540daa9bcd/data/train_car_video_2/manifest.json), [attempt review UI](https://github.com/WilderC10000/ai-video-factory/blob/a798f82052527148eb596da5dc49e5540daa9bcd/studio-ui/src/components/Attempts.tsx), [pre-submit provider and cost gate](https://github.com/WilderC10000/ai-video-factory/commit/46435221da28c97b106b92ff17c309ac0fff0750))
 - [PASAKON / Agents-Core — September 27, 2026 Higgsfield Seedance 2.5 cinematic-shot compiler: named element registry, visible-asset declaration, stable @TAG ownership, notes/paste isolation, four camera-density modes, gap-free timed beats, explicit terminal-state handoff and reverse element-to-scene regeneration index](https://github.com/PASAKON/Agents-Core/commit/50ba19836215b83bae6ca94b89b354408640de91) ([stable-tag correction](https://github.com/PASAKON/Agents-Core/commit/fc82e003ffcced3b124e4c3a0c369434b4151c7c), [corrected v1.1 compiler](https://github.com/PASAKON/Agents-Core/blob/fc82e003ffcced3b124e4c3a0c369434b4151c7c/docs/prompts/MASTER-PROMPT-cinematic.md))
 - [PASAKON / Agents-Core — September 27, 2026 Higgsfield Seedance 2.5 restartable short-film workflow: thirteen dependency-gated stages, versioned STATUS ledger, free previz before paid prompts, capped generation waves, contact-sheet and mechanical QC, rules check, publishing proof and checksum-backed filing](https://github.com/PASAKON/Agents-Core/commit/2bb55b51f3f1cc88b1939ddf2dd688ce5493f043) ([complete workflow contract](https://github.com/PASAKON/Agents-Core/blob/2bb55b51f3f1cc88b1939ddf2dd688ce5493f043/.claude/skills/CTO_Film_Workflow/SKILL.md))
