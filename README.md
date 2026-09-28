@@ -47218,7 +47218,102 @@ Adapted and rewritten from PASAKON's September 27, 2026
 the [stable registry-tag correction and operator ruling](https://github.com/PASAKON/Agents-Core/commit/fc82e003ffcced3b124e4c3a0c369434b4151c7c)
 and the [corrected v1.1 compiler](https://github.com/PASAKON/Agents-Core/blob/fc82e003ffcced3b124e4c3a0c369434b4151c7c/docs/prompts/MASTER-PROMPT-cinematic.md).
 
+
+### Endpoint-bracketed visible-work frontier and provider-attempt proof ledger
+
+**Verified model:** Higgsfield ByteDance Seedance 2.5
+(`bytedance/seedance-2.5/image-to-video`) — the original operator records
+the complete submitted payload, approved first- and last-frame hashes, real
+provider job ID `2a0451fb-791a-4cad-9b16-f39d220c01bd`, completed six-second
+480p silent generation and the final $1.248 charge. The generated master remains
+a local production path and the attempt has not yet received a public proof
+verdict, so this entry verifies the production structure and execution receipt,
+not visual quality.  
+**Use case:** manual work, construction, restoration or cleanup that must show
+causal progress between approved endpoint frames, plus controlled comparison of
+provider attempts without overwriting the current primary result  
+**Mode:** first/last-frame I2V -> single paid proof -> append-only attempt
+ledger -> synchronized review -> explicit promotion or rejection
+
+```text
+IMMUTABLE PROOF PACKET
+Task = [ONE PHYSICAL JOB].
+First frame = [APPROVED FILE + SHA-256].
+Last frame = [APPROVED FILE + SHA-256].
+Continuity locks = [SUBJECT, SITE, OBJECT GEOMETRY, LIGHT AND CAMERA].
+Model / provider = [EXACT SEEDANCE ENDPOINT] / [PROVIDER].
+Settings = [DURATION, RESOLUTION, AUDIO].
+Budget = [ESTIMATE BASIS] / [APPROVED CEILING].
+
+Verify both endpoint hashes immediately before submission. If the endpoint has
+no aspect-ratio field, validate the first frame's dimensions instead of sending
+an unsupported ratio. Persist the provider job ID as soon as submission
+succeeds; a timeout may recover that same job but must never create a paid
+duplicate.
+
+SHOT CONTRACT
+Lock one readable composition: [CAMERA POSITION, HEIGHT, DISTANCE AND ANGLE].
+Begin on the approved first frame and finish on the approved last frame.
+Everything between them shows one worker or mechanism performing one job.
+Keep every protected object, identity, site coordinate, weather condition and
+light direction unchanged.
+
+VISIBLE-WORK LOOP
+Show roughly 70–90% of the important work on screen. Repeat one causal cycle:
+1. acquire [MATERIAL / DEBRIS / COMPONENT] from a visible source;
+2. make readable tool or hand contact;
+3. carry, push, lift or guide it along a visible path;
+4. deposit, fasten, remove or finish it at the active boundary;
+5. move the active boundary one step toward the endpoint.
+
+Keep three zones legible in every frame:
+COMPLETED WORK | ACTIVE WORK AREA | UNTOUCHED AREA.
+Progress travels steadily in one direction. Already completed work persists.
+Nothing appears, disappears or completes away from the visible worker, tool or
+material path.
+
+ENDPOINT APPROACH
+Spend the final [10–20%] completing the same job, not beginning another phase.
+Approach the approved last-frame state through visible causes; do not dissolve,
+morph or snap toward it. Hold the endpoint long enough to inspect continuity.
+
+FAILURE CONTROLS
+No camera move, cut, zoom or angle change; no extra worker, vehicle, tool or
+material; no autonomous debris; no instant cleanup; no one gesture completes
+the whole task; no changing structure, landscape, wardrobe, weather or light;
+no unrequested audio, caption, logo or watermark.
+
+APPEND-ONLY ATTEMPT LEDGER
+For every primary, retry or provider comparison, store:
+- attempt key, provider, exact model and provider job ID;
+- submitted / completed / failed / cancelled status and timestamps;
+- immutable prompt, endpoint hashes, settings and estimate basis;
+- approved ceiling, estimated cost and recorded cost;
+- raw output path or URL, endpoint previews and proof verdict;
+- first failing timestamp, failure class and factual findings.
+
+Never overwrite the accepted primary with a challenger. Review two completed
+attempts from frame zero with synchronized playback. Score separately:
+mechanism, causal transfer, continuity, endpoint fidelity and camera lock.
+Promote only an attempt that receives an explicit PASS. A completed but
+unreviewed local master remains evidence of execution, not evidence of quality.
+```
+
+**Why it works:** endpoint frames define the required state change, while the
+three-zone frontier makes every increment of progress attributable to visible
+labor instead of a convenient morph. The append-only attempt ledger preserves
+cost and lineage for failed, cancelled and comparison runs, and synchronized
+playback prevents a visually attractive challenger from silently replacing an
+already reviewed primary.
+
+Adapted and rewritten from WilderC10000's September 28, 2026
+[completed Higgsfield Seedance 2.5 comparison attempt and manifest](https://github.com/WilderC10000/ai-video-factory/commit/a798f82052527148eb596da5dc49e5540daa9bcd),
+the [exact request and execution receipt](https://github.com/WilderC10000/ai-video-factory/blob/a798f82052527148eb596da5dc49e5540daa9bcd/data/train_car_video_2/manifest.json),
+the [provider-attempt review implementation](https://github.com/WilderC10000/ai-video-factory/blob/a798f82052527148eb596da5dc49e5540daa9bcd/studio-ui/src/components/Attempts.tsx)
+and the [pre-submit model, cost and endpoint gate](https://github.com/WilderC10000/ai-video-factory/commit/46435221da28c97b106b92ff17c309ac0fff0750).
+
 ## Sources
+- [WilderC10000 / ai-video-factory — September 28, 2026 Higgsfield Seedance 2.5 endpoint-bracketed visible-labor proof: complete six-second 480p silent payload, approved frame hashes, real completed job ID, $1.248 settlement, append-only provider-attempt ledger and synchronized comparison review](https://github.com/WilderC10000/ai-video-factory/commit/a798f82052527148eb596da5dc49e5540daa9bcd) ([exact request and receipt](https://github.com/WilderC10000/ai-video-factory/blob/a798f82052527148eb596da5dc49e5540daa9bcd/data/train_car_video_2/manifest.json), [attempt review UI](https://github.com/WilderC10000/ai-video-factory/blob/a798f82052527148eb596da5dc49e5540daa9bcd/studio-ui/src/components/Attempts.tsx), [pre-submit provider and cost gate](https://github.com/WilderC10000/ai-video-factory/commit/46435221da28c97b106b92ff17c309ac0fff0750))
 - [PASAKON / Agents-Core — September 27, 2026 Higgsfield Seedance 2.5 cinematic-shot compiler: named element registry, visible-asset declaration, stable @TAG ownership, notes/paste isolation, four camera-density modes, gap-free timed beats, explicit terminal-state handoff and reverse element-to-scene regeneration index](https://github.com/PASAKON/Agents-Core/commit/50ba19836215b83bae6ca94b89b354408640de91) ([stable-tag correction](https://github.com/PASAKON/Agents-Core/commit/fc82e003ffcced3b124e4c3a0c369434b4151c7c), [corrected v1.1 compiler](https://github.com/PASAKON/Agents-Core/blob/fc82e003ffcced3b124e4c3a0c369434b4151c7c/docs/prompts/MASTER-PROMPT-cinematic.md))
 - [PASAKON / Agents-Core — September 27, 2026 Higgsfield Seedance 2.5 restartable short-film workflow: thirteen dependency-gated stages, versioned STATUS ledger, free previz before paid prompts, capped generation waves, contact-sheet and mechanical QC, rules check, publishing proof and checksum-backed filing](https://github.com/PASAKON/Agents-Core/commit/2bb55b51f3f1cc88b1939ddf2dd688ce5493f043) ([complete workflow contract](https://github.com/PASAKON/Agents-Core/blob/2bb55b51f3f1cc88b1939ddf2dd688ce5493f043/.claude/skills/CTO_Film_Workflow/SKILL.md))
 - [Ryani Leo PD / rainileo_agent — September 27, 2026 BytePlus Seedance 2.0 Fast (`dreamina-seedance-2-0-fast-260128`) live-batch failure record: paid role-swap premise leak, downstream semantic 5/10 rejection, morphology-aware lexical prefilter, bounded fresh-concept reroll, shared paid-call ceiling and fail-closed empty slot](https://github.com/ahnbingbing/rainileo_agent/commit/d531fdb9dc57da4f94dae17525aa628ba8158d7f) ([repair commit and regressions](https://github.com/ahnbingbing/rainileo_agent/commit/75eac28d0b665f69c373ee86e36fda9f02545e46), [exact request client](https://github.com/ahnbingbing/rainileo_agent/blob/d531fdb9dc57da4f94dae17525aa628ba8158d7f/scripts/animate_seedance_i2v.py), [production model and cost gate](https://github.com/ahnbingbing/rainileo_agent/blob/d531fdb9dc57da4f94dae17525aa628ba8158d7f/agents/cameraman.py))
