@@ -26983,6 +26983,97 @@ and [disclosed sculptor reference](https://github.com/reed35/ai-video-tutorials/
 
 ## Reusable templates
 
+### Reference-audio talking-head qualification with measured lip-sync lag
+
+**Verified model:** KIE-hosted ByteDance Seedance 2.5
+(`bytedance/seedance-2-5`) — the original production record commits six
+successful 720p jobs, their exact prompts, provider task IDs, credit charges,
+silent generated masters, voice-muxed derivatives and per-clip sync
+measurements  \
+**Use case:** podcast avatar, multilingual talking head, supplied-voice
+performance, lip-sync acceptance testing, fail-closed delivery  \
+**Mode:** one identity image plus one reference-audio clip; model audio disabled,
+followed by post-mux and measured QC
+
+Use this when a provider accepts reference audio as motion guidance but does not
+guarantee that the visible mouth will follow the supplied waveform closely
+enough for delivery.
+
+```text
+GENERATION CONTRACT
+Create one [DURATION]-second [ASPECT RATIO] photoreal talking-head clip at
+natural real-time speed, in one locked shot.
+
+@Image1 is the exact first frame and the only authority for identity, wardrobe,
+microphone, desk, background, lighting, crop and starting pose.
+@Audio1 is the immutable voice timeline from its first to final syllable. Do not
+rewrite, replace, translate, stretch or accelerate it.
+
+Start with the mouth closed and hands below the microphone. Keep the face fully
+visible. Use restrained breathing, blinks and small head motion. Assign each
+gesture to one named phrase; do not loop gestures or cover the mouth.
+
+TIMELINE
+[START–END] — exact spoken phrase: "[VERBATIM LINE]".
+[START–END] — visible emphasis: [ONE SMALL NOD / OPEN PALM / THREE FINGERS].
+During every silence, close and settle the mouth.
+
+Keep one person, one face, one costume and one set. Camera never moves, zooms
+or cuts. No generated music, sound effect, extra voice, subtitle, text or logo.
+
+SUBMISSION AND LINEAGE
+Submit Seedance 2.5 with @Image1 and @Audio1 as references and
+generate_audio=false. Save before further processing:
+- exact model ID, prompt and duration;
+- hashes or immutable paths for both references;
+- provider task ID, status and credits;
+- untouched silent generated MP4.
+
+Create a separate delivery candidate by muxing the unchanged @Audio1 onto the
+silent master. Never overwrite the generated master.
+
+MEASURED SYNC SCREEN
+1. Decode video at its native frame rate and track a stable mouth region.
+2. Derive one mouth-opening signal per frame. A landmark aperture is preferred;
+   a fixed dark-pixel or frame-difference proxy is acceptable only for a
+   locked face and fixed crop.
+3. Decode @Audio1 to mono 16 kHz. For every video-frame interval, calculate
+   RMS energy to form an audio envelope.
+4. Normalize both signals, test cross-correlation over lags from -1.0 to +1.0
+   seconds, and store:
+   - best lag in seconds;
+   - peak correlation at that lag;
+   - correlation at zero lag.
+   Positive lag means the mouth follows the voice; negative lag means it leads.
+5. Review sentence onsets, closures, long vowels and visible plosives manually.
+   The correlation is a screening signal, not proof of phoneme accuracy.
+
+FAIL-CLOSED DECISION
+Accept only against a project-specific tolerance established on known-good
+clips. If the best lag is stable and correlation remains strong, make any audio
+offset as a separate derivative and remeasure it. If correlation is weak,
+different phrases require different offsets, the mouth moves through silence,
+or manual phoneme review fails, reject or regenerate; do not label the clip
+"lip-synced." Preserve every measurement beside the immutable master.
+```
+
+**Why it works:** prompt wording such as “precise on every syllable” is an
+instruction, not evidence. This workflow separates generation, muxing and
+qualification, then converts an easily missed perceptual defect into a
+repeatable gate. In the recorded six-clip run, best lags ranged from
+−0.667 to +1.000 seconds; peak correlations were only 0.19–0.50 and zero-lag
+correlations ranged from −0.21 to 0.08. The creator therefore recorded that
+Seedance 2.5 reference mode had not aligned the lips to the supplied French
+voice, despite all six tasks completing successfully.
+
+Adapted and rewritten from Aydoucorp's September 28, 2026
+[initial Seedance 2.5 prompt, runner and A02 result commit](https://github.com/Aydoucorp/labo/commit/48e32f847cffef146ccabf57f6393273b76e0da4),
+[five additional completed jobs with task IDs and charges](https://github.com/Aydoucorp/labo/commit/24212ab8fea2bf272250d7373e174672e814e305),
+and [measured lip-sync failure record](https://github.com/Aydoucorp/labo/commit/294b29d50ddb4ac21a6c19863958c4f974765edf)
+([measurement script](https://github.com/Aydoucorp/labo/blob/294b29d50ddb4ac21a6c19863958c4f974765edf/runs/2026-09-28_claire-cheveux-gris-carences_talking-head/mesurer_synchro.py),
+[results JSON](https://github.com/Aydoucorp/labo/blob/294b29d50ddb4ac21a6c19863958c4f974765edf/runs/2026-09-28_claire-cheveux-gris-carences_talking-head/sorties/mesure_synchro.json)).
+
+
 ### Endpoint-identical isolated-mark logo loop and measured-background re-key
 
 **Verified model:** Higgsfield Seedance 2.5 image-to-video — the original
@@ -47432,6 +47523,7 @@ the [provider-attempt review implementation](https://github.com/WilderC10000/ai-
 and the [pre-submit model, cost and endpoint gate](https://github.com/WilderC10000/ai-video-factory/commit/46435221da28c97b106b92ff17c309ac0fff0750).
 
 ## Sources
+- [Aydoucorp / labo — September 28, 2026 KIE-hosted ByteDance Seedance 2.5 reference-audio talking-head trial: six exact prompts, successful 720p task IDs, 2,268 charged credits, silent masters, voice-muxed derivatives and measured −0.667 to +1.000-second mouth-to-voice offsets that fail closed instead of being claimed as lip sync](https://github.com/Aydoucorp/labo/commit/48e32f847cffef146ccabf57f6393273b76e0da4) ([five additional completed jobs](https://github.com/Aydoucorp/labo/commit/24212ab8fea2bf272250d7373e174672e814e305), [measurement and results](https://github.com/Aydoucorp/labo/commit/294b29d50ddb4ac21a6c19863958c4f974765edf), [measurement script](https://github.com/Aydoucorp/labo/blob/294b29d50ddb4ac21a6c19863958c4f974765edf/runs/2026-09-28_claire-cheveux-gris-carences_talking-head/mesurer_synchro.py))
 - [Kiber Alla — September 28, 2026 Higgsfield Seedance 2.5 sculptor-and-memory film: complete 24-second 26-shot prompt, four role-scoped references, screen-axis lock, thumb-to-lip match cut, Super 8 memory grammar, four native-dialogue lines, published 1080p result and recorded no-music deviation](https://x.com/Kiber_Alla/status/2104220821992636469) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/commit/955d417e8dce89e515805e6d3ccd31b0fdf43a54), [complete prompt record](https://github.com/reed35/ai-video-tutorials/blob/955d417e8dce89e515805e6d3ccd31b0fdf43a54/lib/tutorials.ts), [published MP4](https://github.com/reed35/ai-video-tutorials/blob/955d417e8dce89e515805e6d3ccd31b0fdf43a54/public/tutorials/kiber-alla-sculptor-clay-bust-super8-memory/demo-web.mp4))
 - [WilderC10000 / ai-video-factory — September 28, 2026 Higgsfield Seedance 2.5 endpoint-bracketed visible-labor proof: complete six-second 480p silent payload, approved frame hashes, real completed job ID, $1.248 settlement, append-only provider-attempt ledger and synchronized comparison review](https://github.com/WilderC10000/ai-video-factory/commit/a798f82052527148eb596da5dc49e5540daa9bcd) ([exact request and receipt](https://github.com/WilderC10000/ai-video-factory/blob/a798f82052527148eb596da5dc49e5540daa9bcd/data/train_car_video_2/manifest.json), [attempt review UI](https://github.com/WilderC10000/ai-video-factory/blob/a798f82052527148eb596da5dc49e5540daa9bcd/studio-ui/src/components/Attempts.tsx), [pre-submit provider and cost gate](https://github.com/WilderC10000/ai-video-factory/commit/46435221da28c97b106b92ff17c309ac0fff0750))
 - [PASAKON / Agents-Core — September 27, 2026 Higgsfield Seedance 2.5 cinematic-shot compiler: named element registry, visible-asset declaration, stable @TAG ownership, notes/paste isolation, four camera-density modes, gap-free timed beats, explicit terminal-state handoff and reverse element-to-scene regeneration index](https://github.com/PASAKON/Agents-Core/commit/50ba19836215b83bae6ca94b89b354408640de91) ([stable-tag correction](https://github.com/PASAKON/Agents-Core/commit/fc82e003ffcced3b124e4c3a0c369434b4151c7c), [corrected v1.1 compiler](https://github.com/PASAKON/Agents-Core/blob/fc82e003ffcced3b124e4c3a0c369434b4151c7c/docs/prompts/MASTER-PROMPT-cinematic.md))
