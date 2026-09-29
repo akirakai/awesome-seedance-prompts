@@ -443,6 +443,12 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Rain-soaked paper bicycle rescue](#427-rain-soaked-paper-bicycle-rescue)
   - [Painterly swordsman versus sky-creature swarm](#428-painterly-swordsman-versus-sky-creature-swarm)
   - [Strawberry-to-kitchen K-pop dance chain](#429-strawberry-to-kitchen-k-pop-dance-chain)
+  - [Reference-locked cherry-can campaign with circular object wipes](#430-reference-locked-cherry-can-campaign-with-circular-object-wipes)
+  - [Y2K lip-tint ad inside an ad with product-authority repair](#431-y2k-lip-tint-ad-inside-an-ad-with-product-authority-repair)
+  - [Depth-guided red-lead crowd pullback](#432-depth-guided-red-lead-crowd-pullback)
+  - [Millisecond-cut black-and-white cat fashion commercial](#433-millisecond-cut-black-and-white-cat-fashion-commercial)
+  - [One-identity cliff rescue with contact-gated duplicate roles](#434-one-identity-cliff-rescue-with-contact-gated-duplicate-roles)
+  - [Fixed-axis gardener rescue with a carried prop ledger](#435-fixed-axis-gardener-rescue-with-a-carried-prop-ledger)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -27358,6 +27364,394 @@ the [versioned tutorial commit and snapshot record](https://github.com/reed35/ai
 [complete preserved prompt and review](https://github.com/reed35/ai-video-tutorials/blob/1fdc5999b413e4e1ee65a820e1e69db3703e8af3/lib/tutorials.ts)
 and [public MP4](https://github.com/reed35/ai-video-tutorials/blob/1fdc5999b413e4e1ee65a820e1e69db3703e8af3/public/tutorials/imastudio-kpop-strawberry-kitchen-dance-mv-seedance-2-5/demo-web.mp4).
 
+
+### 430. Reference-locked cherry-can campaign with circular object wipes
+
+**Verified model:** Seedance 2.5 reference-to-video — Ima Studio's official
+public canvas names the model and preserves the complete prompt, product
+reference, settings and generated result; the versioned archive independently
+records the same canvas and output  \
+**Use case:** beverage campaign, four-person ensemble, object-wipe transitions,
+macro product photography, native dialogue and sound  \
+**Mode:** one product image plus text prompt; native audio  \
+**Verified settings:** 30 seconds; 16:9; 720p request; published result
+1280×720, 24fps; no watermark
+
+```text
+Create a 30-second 16:9 photoreal Japanese beverage commercial with playful
+late-1990s color, cream-and-red sets and four distinct adult friends.
+
+REFERENCE CONTRACT
+@Image1 is the only authority for the package: container type, silhouette,
+dimensions, cap or pull-tab, materials, colors, artwork, readable brand text
+and logo. Never convert it into a carton, bottle or different can. If any word
+below conflicts with @Image1, @Image1 wins. Use [BRAND] in speech only when the
+label is clearly readable; otherwise omit the spoken brand name.
+
+TIMELINE
+0–3s — 85 mm macro on @Image1 against cream. A red drinking straw crosses lens
+and becomes a clean circular red wipe.
+3–7s — Burst through the circle into a bright Tokyo-inspired studio street.
+All four friends are already walking toward camera in coordinated red, pink,
+cream and charcoal looks. Use one short rectilinear 18 mm push; keep every face
+distinct.
+7–10s — A friend passes the can through a round wall aperture. Match its
+screen position into another friend's hand inside a retro photo booth; she
+takes one sip.
+10–14s — Overhead 24 mm radial handoff around a small table. Exactly four hands
+pass one can clockwise. Three cherries roll toward lens and produce the next
+red object wipe.
+14–19s — Product montage: condensation beads, opening hardware, straw entering
+the real opening, liquid movement, and a clean three-quarter label view.
+Preserve the same package in every insert.
+19–24s — Low 20 mm group shot in the cream studio. The four friends circle the
+product pedestal once while the camera counter-arcs no more than 90 degrees.
+24–27s — Locked 35 mm medium-wide. They raise four identical cans and complete
+one synchronized toast without crossed or fused hands.
+27–30s — Hero packshot: one cold can from @Image1, two cherries, soft cream
+background, red circular shadow. Hold the label front-on for the final second.
+
+AUDIO AND CONTROL
+Use an original light city-pop instrumental, can opening, fizz, ice, footsteps
+and one natural laugh. One friend may say: “Cold, bright, and made for us.”
+No subtitles, generated slogan, extra logo or off-reference package copy.
+Exactly four people; no identity swaps, extra fingers, duplicate floating cans,
+fisheye distortion, warped typography, black frames or unmotivated transitions.
+Every wipe must be caused by a visible red object reaching the lens.
+```
+
+**Why it works:** the reference is promoted above every conflicting noun, so a
+prompt cannot silently replace a can with an invented carton or voice a
+different brand. The official result used the supplied can despite source text
+describing another package and introduced fisheye distortion after asking for
+none; both conflicts become explicit regeneration checks here.
+
+Adapted and rewritten from Ima Studio's September 29, 2026
+[official Seedance 2.5 canvas](https://www.imastudio.com/community/canvas-detail/90c6b360309f4cde9126740390897636),
+the [versioned discovery commit](https://github.com/reed35/ai-video-tutorials/commit/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1),
+[complete preserved prompt and review](https://github.com/reed35/ai-video-tutorials/blob/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1/lib/tutorials.ts)
+and [public result](https://media.liuyidaoai.com/tutorials/imastudio-cherry-can-tokyo-girls-ad-seedance-2-5/demo-web.mp4).
+
+### 431. Y2K lip-tint ad inside an ad with product-authority repair
+
+**Verified model:** Seedance 2.5 reference-to-video — the public official Ima
+Studio project records the exact model, one product input, full prompt, settings
+and generated result; a versioned archive preserves the record  \
+**Use case:** cosmetics ad, screen-within-screen reveal, Y2K styling, macro
+texture, four-person beauty ensemble, native voice-over  \
+**Mode:** one product image plus text prompt; native audio  \
+**Verified settings:** 30 seconds; 16:9; 720p request; published result
+1280×720, 24fps; no watermark
+
+```text
+Create a 30-second 16:9 high-gloss Y2K lip-product commercial. Use icy silver,
+translucent acrylic, pale blue and one accent color sampled from @Image1.
+Exactly four adult performers remain individually recognizable throughout.
+
+PRODUCT AUTHORITY
+@Image1 alone defines the product name, tube or container geometry, cap,
+applicator, material, color, logo and label. Do not replace it with a named
+product from the prose. When the label is not confidently readable, call it
+“the lip tint” in audio and generate no packaging text beyond what @Image1
+already contains.
+
+TIMELINE
+0–4s — Macro beneath a clear acrylic floor: four hands slide the same product
+toward the centre. Maintain plausible wrists and one product per hand.
+4–7s — A circular lens reflection expands into a clean wipe. Reveal a silver
+studio with the four performers already posed around a translucent console.
+7–10s — One performer places @Image1 upright into a fitted circular recess.
+Cut on contact to a 65 mm portrait.
+10–14s — She removes the correct applicator, applies one controlled stroke to
+her lower lip and returns it without changing product geometry or shade.
+14–18s — Three macro inserts: applicator texture, translucent gloss on lips,
+then the package rotating no more than 90 degrees while the label stays legible.
+18–22s — Four equal-duration portraits, each with a distinct pose and the same
+product shade. Preserve faces, hair and wardrobe color codes between cuts.
+22–25s — A hand holds a blank smartphone frame beside the product. Reserve
+negative space for a real review added in post; generate no fake interface,
+rating, price or testimonial.
+25–30s — All four gather behind a silver plinth. Finish on one reference-true
+hero product, cap and applicator correctly assembled, with a pale-blue halo.
+
+AUDIO AND CONTROL
+Original minimal electro beat, soft studio room tone, cap click and one neutral
+voice-over: “[PRODUCT NAME]. Hydrate, tint, and shine.” Omit the product name
+when unreadable. No subtitles, auto-generated claims, duplicated performers,
+extra products, warped lips, applicator through skin, liquid changing color,
+brand substitution, label drift, fisheye or black tail.
+```
+
+**Why it works:** an “ad inside an ad” smartphone beat is retained without
+asking the model to invent tiny UI text. More importantly, the product image is
+made the sole truth source: the official project prompt and its visible input
+used different brand identities, and the generated result followed the image
+while the voice-over followed the conflicting prose. That failure is prevented
+rather than hidden.
+
+Adapted and rewritten from Ima Studio's September 29, 2026
+[official Seedance 2.5 project](https://www.imastudio.com/canvas-editor/prj_1790653664778_97ac7da658a8d1dc),
+the [versioned discovery commit](https://github.com/reed35/ai-video-tutorials/commit/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1),
+[complete preserved prompt and review](https://github.com/reed35/ai-video-tutorials/blob/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1/lib/tutorials.ts)
+and [public result](https://media.liuyidaoai.com/tutorials/imastudio-lip-tint-y2k-studio-ad-seedance-2-5/demo-web.mp4).
+
+### 432. Depth-guided red-lead crowd pullback
+
+**Verified model:** Seedance 2.5 reference-to-video — the original creator's X
+post explicitly names Seedance 2.5 and publishes the result; the accompanying
+record preserves the complete prompt, disclosed depth reference and portrait
+role  \
+**Use case:** camera-transfer music-video tableau, depth-guided blocking,
+one-take pullback, timed crowd choreography, single-color hero isolation  \
+**Mode:** motion video, depth or white-model video, and one identity portrait  \
+**Verified settings:** about 30 seconds; 4:3; published result 1920×1440,
+30fps; creator and platform watermarks
+
+```text
+Create one continuous 30-second 4:3 pullback through a masked crowd.
+
+REFERENCE PRIORITY
+@Video1 owns duration, camera path, lens changes, subject trajectory, timing,
+screen direction and every crowd movement. @Video2 is depth and occlusion
+guidance only; do not copy its surface design, identity or color. @Image1 owns
+the lead performer's adult face, hair and wardrobe cut.
+When references conflict: motion and timing follow @Video1, spatial layering
+follows @Video2, and the lead identity follows @Image1.
+
+CAST AND COLOR LOCK
+There is exactly one visible unmasked face: the lead. The lead wears the only
+saturated red coat in the film. Every other person wears a matte blank silver
+mask and one of several charcoal-grey coats. Vary collar, hem and sleeve
+silhouettes by row so the crowd does not become clones. No second red garment,
+no second copy of the lead and no uncovered crowd face.
+
+ONE-TAKE TIMELINE
+0–2s — Medium rear three-quarter view. The lead turns away from camera.
+2–9s — The lead walks into the narrow central corridor as the camera retreats
+on @Video1's path. Foreground shoulders may occlude the frame edges, never the
+lead's face after the turn.
+9–14s — The lead stops and turns back over one shoulder. Continue the pullback;
+do not cut or teleport.
+14–18s — The lead holds still while the nearest two rows remain upright.
+18–27s — Reproduce @Video1's bowing order as distinct waves from front to back.
+Each row completes its own motion before the next begins; masks and bodies keep
+their depth order and do not intersect.
+27–30s — Reach the final wide composition. The lead remains centered and
+upright in red while all scheduled rows finish below the lead's eye line.
+
+Use only restrained room tone, cloth movement and synchronized footfalls unless
+a separately licensed track is supplied in post. No generated song, dialogue,
+subtitle, logo, flicker, costume morph, mask drift, time reversal, hidden cut,
+speed ramp or camera path invented outside @Video1.
+```
+
+**Why it works:** each input receives one non-overlapping job, while an explicit
+conflict order stops the depth pass from overwriting wardrobe or identity.
+Row-by-row crowd timing and a single-color ledger make a complex pullback
+auditable. The published result broadly preserved the pullback and hero
+isolation but altered parts of the final crowd pose, so row timing and the last
+frame remain required comparison points.
+
+Adapted and rewritten from jackzhang123vip's September 29, 2026
+[original Seedance 2.5 post](https://x.com/jackzhang123vip/status/2102296936149872723),
+the [versioned discovery commit](https://github.com/reed35/ai-video-tutorials/commit/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1),
+[complete preserved prompt and review](https://github.com/reed35/ai-video-tutorials/blob/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1/lib/tutorials.ts)
+and [public result](https://media.liuyidaoai.com/tutorials/jackzhang123vip-red-coat-silver-mask-crowd-depth-seedance-2-5/demo-web.mp4).
+
+
+### 433. Millisecond-cut black-and-white cat fashion commercial
+
+**Verified model:** Seedance 2.5 image-to-video — Pollo's official breakdown
+publishes the complete prompt and reference, while the delivered video carries
+Seedance 2.5 platform attribution  \
+**Use case:** premium pet-fashion spot, exact hard-cut schedule, anatomy and
+coat-pattern continuity, multi-look finale, clean typography plates  \
+**Mode:** one cat identity image plus text prompt; native sound  \
+**Verified settings:** 15.069 seconds; 16:9; published result 1920×1080,
+30fps; Pollo and Seedance watermarks
+
+```text
+Create a 15.069-second 16:9 monochrome studio fashion commercial for the adult
+black-and-white cat in @Image1.
+
+IDENTITY CONTRACT
+@Image1 owns the cat's facial proportions, ear shape, black-and-white coat map,
+eye color and body scale. Preserve that exact coat map in every shot and every
+costume. Clothing sits over normal feline anatomy; the cat never becomes
+human-shaped, gains human hands or walks bipedally.
+
+EDIT MAP — HARD CUT ONLY
+00.000–01.100 — 100 mm macro of one ear and coat boundary, slow blink.
+01.100–02.567 — 50 mm tilt from front paws to a full seated portrait.
+02.567–03.367 — 85 mm profile of one clean four-paw leap across a white seam.
+03.367–05.067 — Static 65 mm; the cat peeks from the right edge, then withdraws.
+05.067–05.833 — Macro of a tailored pocket and one paw resting beside it.
+05.833–07.033 — 35 mm low angle; the cat rises from a crouch in a dark coat.
+07.033–08.200 — 85 mm portrait; one gloved adult hand strokes the head once.
+08.200–10.067 — Two cats with the same coat map but distinct collars approach
+and touch noses once; no fusion or third animal.
+10.067–13.633 — Locked wide: exactly five cats, each with the same identity
+markings and a different restrained look — trench, knit, collar, harness and
+plain coat. They hold a symmetrical editorial tableau.
+13.633–15.069 — Return to the original unclothed @Image1 cat in a centered
+hero portrait. Hold the final 0.7 seconds still.
+
+LOOK, AUDIO AND CONTROL
+High-key white cyclorama, hard black graphic shadows, fine fur detail, premium
+35 mm film grain. Reserve clean negative space at upper left for post-produced
+copy; generate no text, brand, price or logo in the video. Use dry shutter
+clicks, soft paw steps and room tone only: no music, voice or meow. Every cut
+occurs at the stated boundary; no dissolve, morph, zoom transition, extra tail,
+missing paw, costume bleed, coat-map drift or frame after 15.069 seconds.
+```
+
+**Why it works:** an exact cut ledger turns a fast commercial into ten
+independently checkable shots, while identity and anatomy are repeated where
+costumes and duplicates create the highest risk. Text is deliberately reserved
+for post: the source output shifted some generated copy and added loud music
+despite a no-music instruction, so both typography and the audio stem must be
+qualified outside the visual prompt.
+
+Adapted and rewritten from Pollo AI's September 29, 2026
+[official Seedance 2.5 breakdown](https://pollo.ai/hub/premium-black-and-white-cat-commercial-video-breakdown),
+the [versioned discovery commit](https://github.com/reed35/ai-video-tutorials/commit/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1),
+[complete preserved prompt and review](https://github.com/reed35/ai-video-tutorials/blob/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1/lib/tutorials.ts)
+and [public result](https://media.liuyidaoai.com/tutorials/pollo-bw-cat-studio-commercial-seedance-2-5/demo-web.mp4).
+
+### 434. One-identity cliff rescue with contact-gated duplicate roles
+
+**Verified model:** Seedance 2.5 image-to-video — Pollo's official breakdown
+publishes the full prompt and identity reference, and the delivered video shows
+Seedance 2.5 platform attribution  \
+**Use case:** one actor in two roles, vertical rescue drama, face continuity,
+hand-contact choreography, duration-overrun control  \
+**Mode:** one identity image used for both endangered and rescuer roles  \
+**Verified settings:** source requests 15 seconds at 9:16; published result
+1920×1080, 30fps, about 23.1 seconds; Pollo and Seedance watermarks
+
+```text
+Create a 15.000-second 9:16 photoreal rescue scene in one coherent rocky
+location. @Image1 is the sole identity authority for both adult roles.
+
+ROLE SPLIT
+Role A is the endangered person: @Image1 face and hair, dark outdoor clothes,
+dust on sleeves. Role B is the rescuer: the same face and hair, a clean white
+jacket and pale brimmed hat. These are two simultaneous physical people, not a
+morph or reflection. Wardrobe is the permanent role key. Never swap clothing,
+merge bodies or create a third copy.
+
+TIMELINE
+0.000–02.000 — Overhead 28 mm establishes Role A gripping a ledge with both
+feet visible against the rock. Role B is not yet visible.
+02.000–04.500 — Side 50 mm. Role A secures the left hand, raises the right arm
+once and calls, “Help!”
+04.500–05.600 — Tight face insert on Role A; preserve @Image1 exactly.
+05.600–07.100 — Insert of the raised hand against sky. No rescuer contact yet.
+07.100–08.400 — Reverse angle reveals Role B kneeling at the rim, white jacket
+and hat readable, extending the right hand.
+08.400–10.500 — Contact gate: show both complete hands, wrist orientation and
+fingers before the grip closes. Hold the joined grip for at least 12 frames.
+10.500–13.200 — Role B leans backward and pulls while Role A uses both feet
+against the rock. Maintain one continuous arm chain; no cut through contact.
+13.200–15.000 — Both reach stable ground and embrace once. End on a locked
+two-shot with the dark and white costumes fully visible. No extra hold.
+
+AUDIO AND CONTROL
+Natural wind, grit, cloth strain, one “Help!”, one exertion breath and silence
+after the embrace. No music, subtitle, title or logo. Keep geography, sun
+direction, face, hair and body scale fixed. No fall, teleport, hand fusion,
+limb hiding at the grip, costume exchange, slow-motion padding, recap, black
+tail or frame beyond exactly 15.000 seconds.
+```
+
+**Why it works:** costume-gated roles and a visible-contact checkpoint address
+the two hardest duplication errors: identity collapse and impossible grip
+geometry. The official example proves the concept but the delivered clip ran
+about 23 seconds from a 15-second request and placed its title late rather than
+throughout. The adaptation therefore removes generated text, caps every beat
+and makes overrun a hard rejection.
+
+Adapted and rewritten from Pollo AI's September 29, 2026
+[official Seedance 2.5 breakdown](https://pollo.ai/hub/self-rescue-cliff-video-breakdown),
+the [versioned discovery commit](https://github.com/reed35/ai-video-tutorials/commit/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1),
+[complete preserved prompt and review](https://github.com/reed35/ai-video-tutorials/blob/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1/lib/tutorials.ts)
+and [public result](https://media.liuyidaoai.com/tutorials/pollo-self-rescue-cliff-two-versions/demo-web.mp4).
+
+### 435. Fixed-axis gardener rescue with a carried prop ledger
+
+**Verified model:** Seedance 2.5 reference-to-video — the original creator names
+Seedance 2.5 and Pollo MCP in the X post, publishes the result and supplies the
+complete 30-second first-part prompt in a reply; the versioned record preserves
+the references and review  \
+**Use case:** stylized live-action rescue, multi-character cause and effect,
+screen-axis continuity, persistent prop states, native dialogue  \
+**Mode:** five role and environment references plus text prompt; native audio  \
+**Verified settings:** 30-second prompt segment; 16:9; published combined result
+3840×2160, 30fps, about 57 seconds; creator overlay and platform watermark
+
+```text
+Create a 30-second 16:9 stylized live-action garden rescue with restrained
+comic tension and physically readable cause and effect.
+
+REFERENCE ROLES
+@Image1 owns the eccentric adult gardener's face, hair and clothes.
+@Image2 owns the infected solar flower's face, leaves and stem.
+@Image3 owns four small scavenger creatures; keep exactly four.
+@Image4 owns the red grounds machine.
+@Image5 owns the overgrown yard, house and broken fence.
+
+GEOGRAPHY AND AXIS
+House remains frame-left, flower centre-right, broken fence far right, red
+machine near the left path. Keep the camera on the south side of this axis in
+every shot. Characters may cross within the yard, but reverse angles never
+flip left and right.
+
+STATE LEDGER AT START
+The red machine is off. Its pull cord is down. The gardener has empty hands.
+The shovel leans beside the porch. The flower is rooted in one spot. Four
+creatures approach from the broken fence. One light orb rests on the flower's
+left leaf.
+
+TIMELINE
+0–5s — 28 mm wide establishes all positions. The flower looks ill; four
+creatures advance. The machine remains silent and motionless.
+5–8s — 65 mm on the flower. It releases the single leaf-held light orb toward
+the gardener; no new orb appears.
+8–13s — The gardener catches the orb, notices the danger, leaves the machine
+off, takes the shovel in the right hand and says, “Hold on — I'm coming.”
+13–18s — Track left-to-right on the stone path. The gardener keeps the shovel,
+pushes exactly one creature aside with the shoulder and never teleports.
+18–22s — At the flower, the gardener plants the shovel once and digs beside
+the root, not through it. The displaced creature remains behind on the path.
+22–26s — The flower snaps toward the gardener, then recognizes the light orb
+and turns away without biting.
+26–30s — One leaf pushes the gardener safely backward while visible roots bind
+two of the remaining creatures. The fourth creature freezes at the fence.
+Finish in a stable wide shot: machine still off, shovel on the ground beside
+the gardener, flower still rooted and every creature accounted for.
+
+AUDIO AND CONTROL
+Wind, insects, shoes on stone, shovel in soil and three short lines only:
+“Hold on — I'm coming,” “Easy,” and “We're okay.” No music, subtitle, game
+interface, trademark, logo or extra character. Preserve the axis, identities,
+prop ownership and every carried state across cuts. No working machine, second
+orb, vanishing shovel, instant travel, creature duplication, root-through-body
+collision, wardrobe swap or unexplained reset.
+```
+
+**Why it works:** location, character and prop facts are written as a ledger
+that every later beat must inherit. The screen-axis rule gives multi-shot action
+a stable map, and each consequence names its surviving state. The source is an
+IP-inspired fan experiment; this adaptation keeps the verified causal technique
+while replacing protected names and designs with an original scenario.
+
+Adapted and rewritten from Chengzilhy's September 29, 2026
+[original Seedance 2.5 result and model attribution](https://x.com/Chengzilhy/status/2104856708535443641),
+[complete prompt reply](https://x.com/Chengzilhy/status/2104864175222907058),
+the [versioned discovery commit](https://github.com/reed35/ai-video-tutorials/commit/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1),
+[complete preserved prompt and review](https://github.com/reed35/ai-video-tutorials/blob/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1/lib/tutorials.ts)
+and [public result](https://media.liuyidaoai.com/tutorials/chengzilhy-pvz-dave-shovel-infected-sunflower-seedance-2-5/demo-web.mp4).
+
 ## Reusable templates
 
 ### Reference-audio talking-head qualification with measured lip-sync lag
@@ -47900,6 +48294,12 @@ the [provider-attempt review implementation](https://github.com/WilderC10000/ai-
 and the [pre-submit model, cost and endpoint gate](https://github.com/WilderC10000/ai-video-factory/commit/46435221da28c97b106b92ff17c309ac0fff0750).
 
 ## Sources
+- [Ima Studio official — September 29, 2026 Seedance 2.5 cherry-can campaign: public canvas, complete 30-second prompt, product reference, native audio, generated result and recorded package/fisheye conflicts](https://www.imastudio.com/community/canvas-detail/90c6b360309f4cde9126740390897636) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/commit/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1), [public MP4](https://media.liuyidaoai.com/tutorials/imastudio-cherry-can-tokyo-girls-ad-seedance-2-5/demo-web.mp4))
+- [Ima Studio official — September 29, 2026 Seedance 2.5 Y2K lip-tint campaign: public project, complete 30-second prompt, product reference, native audio, generated result and recorded image/prompt brand mismatch](https://www.imastudio.com/canvas-editor/prj_1790653664778_97ac7da658a8d1dc) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/commit/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1), [public MP4](https://media.liuyidaoai.com/tutorials/imastudio-lip-tint-y2k-studio-ad-seedance-2-5/demo-web.mp4))
+- [jackzhang123vip — September 29, 2026 Seedance 2.5 red-lead masked-crowd pullback: original post, complete motion/depth/portrait reference contract, timed one-take choreography, published result and recorded final-pose deviation](https://x.com/jackzhang123vip/status/2102296936149872723) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/commit/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1), [public MP4](https://media.liuyidaoai.com/tutorials/jackzhang123vip-red-coat-silver-mask-crowd-depth-seedance-2-5/demo-web.mp4))
+- [Pollo AI official — September 29, 2026 Seedance 2.5 black-and-white cat fashion commercial: complete millisecond cut schedule, identity reference, published result and recorded text/music deviations](https://pollo.ai/hub/premium-black-and-white-cat-commercial-video-breakdown) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/commit/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1), [public MP4](https://media.liuyidaoai.com/tutorials/pollo-bw-cat-studio-commercial-seedance-2-5/demo-web.mp4))
+- [Pollo AI official — September 29, 2026 Seedance 2.5 one-identity cliff rescue: complete dual-role prompt, identity reference, published result and measured 15-to-23-second overrun](https://pollo.ai/hub/self-rescue-cliff-video-breakdown) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/commit/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1), [public MP4](https://media.liuyidaoai.com/tutorials/pollo-self-rescue-cliff-two-versions/demo-web.mp4))
+- [Chengzilhy — September 29, 2026 Seedance 2.5 fixed-axis garden rescue: original Pollo MCP result, complete first-part prompt, five reference roles, native dialogue and state-carried action](https://x.com/Chengzilhy/status/2104856708535443641) ([prompt reply](https://x.com/Chengzilhy/status/2104864175222907058), [versioned prompt and review](https://github.com/reed35/ai-video-tutorials/commit/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1), [public MP4](https://media.liuyidaoai.com/tutorials/chengzilhy-pvz-dave-shovel-infected-sunflower-seedance-2-5/demo-web.mp4))
 - [Umesh — September 29, 2026 Adobe Firefly Seedance 2.5 rainy paper-bicycle friendship film: complete twelve-shot 30-second prompt, four public role references, native dialogue and sound, published 4K-upscaled result and recorded missing-fifth-reference mismatch](https://x.com/umesh_ai/status/2104516798981025827) ([prompt and model attribution](https://x.com/umesh_ai/status/2104516804223926724), [versioned prompt and review](https://github.com/reed35/ai-video-tutorials/commit/1fdc5999b413e4e1ee65a820e1e69db3703e8af3), [public MP4](https://github.com/reed35/ai-video-tutorials/blob/1fdc5999b413e4e1ee65a820e1e69db3703e8af3/public/tutorials/umesh-rainy-bike-paper-friendship-seedance-2-5/demo-web.mp4))
 - [Kōda / aimikoda — September 29, 2026 Seedance 2.5 painterly swordsman-versus-sky-creature film: complete action grammar, four disclosed reference images, reactive multi-opponent choreography, native combat sound, published 1440p result and disclosed creator watermark](https://x.com/aimikoda/status/2104619926702932219) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/commit/1fdc5999b413e4e1ee65a820e1e69db3703e8af3), [public MP4](https://github.com/reed35/ai-video-tutorials/blob/1fdc5999b413e4e1ee65a820e1e69db3703e8af3/public/tutorials/aimikoda-sword-vs-sky-creatures-seedance-2-5/demo-web.mp4))
 - [Ima Studio official template — September 29, 2026 Seedance 2.5 strawberry-to-kitchen K-pop micro-MV: public official canvas, complete eight-shot prompt, native audio, four-member dance priority, snapshot lineage, published result and recorded shot/balloon/black-tail deviations](https://www.imastudio.com/canvas-editor/prj_1790589516398_bb5719f0d5d6a7c9) ([versioned snapshot and review](https://github.com/reed35/ai-video-tutorials/commit/1fdc5999b413e4e1ee65a820e1e69db3703e8af3), [public MP4](https://github.com/reed35/ai-video-tutorials/blob/1fdc5999b413e4e1ee65a820e1e69db3703e8af3/public/tutorials/imastudio-kpop-strawberry-kitchen-dance-mv-seedance-2-5/demo-web.mp4))
