@@ -30061,9 +30061,9 @@ for direct A/B provenance.
 mode) — the original creator publishes the exact workflow, three complete
 render prompts and their results, and reports two real generations for the
 ten-second pet example  
-**Use case:** complex camera paths, multi-character blocking, dialogue coverage
-or vehicle stunts that need cheap spatial previs before an expensive semantic
-render  
+**Use case:** complex camera paths, multi-character blocking, dialogue coverage,
+attention-directed performance or vehicle stunts that need cheap spatial previs
+before an expensive semantic render  
 **Mode:** reference-video plus character, prop and environment stills; the
 whitebox controls space and time while Seedance regenerates appearance and
 natural motion
@@ -30154,6 +30154,29 @@ State when each asset first appears. An absent or concealed asset stays absent
 until its named reveal; it is never summoned, grown or teleported unless that
 event is explicitly part of the story.
 
+ACTING TASK PER VISIBLE CHARACTER
+For every shot in which a character is visibly performing, add one compact
+attention contract:
+
+ACTING TASK — [ROLE]
+Attention target: [SPECIFIC VISIBLE PERSON, OBJECT, REFLECTION OR EVENT].
+Task: [WHAT THE ROLE IS TRYING TO NOTICE, CHECK, UNDERSTAND OR ACCOMPLISH].
+Progression: [INITIAL ATTENTION] → [SCRIPTED STIMULUS] → [RESULTING ATTENTION
+OR ACTION].
+The portrait supplies identity, hair and approved appearance, not a frozen
+expression. The whitebox supplies camera, position, gesture and gross timing,
+not facial performance or mannequin anatomy. Use natural breathing, blinking
+and small gaze adaptation only when they support the named task.
+
+Do not invent a partner, backstory, conflict or emotional turn merely to fill
+the block. Do not assign fear, delight, surprise or triumph unless the approved
+scene requires it. A precise target such as “their own eyes in the mirror” is
+stronger than “looks down.” If a hand or prop hides the target and becomes the
+apparent focus, repair the blocking or composition instead of intensifying
+emotion adjectives. In a rear or distant shot, express the task through head,
+shoulders, breathing and gesture; never demand facial detail the camera cannot
+see.
+
 WORLD AND CONTINUITY LEDGER
 Lighting / weather = [ONE COHERENT PROGRESSION].
 A owns [PROP]; B owns [PROP]. Hands are [FREE / OCCUPIED] per shot.
@@ -30219,9 +30242,11 @@ Store the submitted prompt, reference manifest, task ID and playable artifact.
 **Why it works:** the authority matrix resolves a common reference-video
 conflict. Blender owns the hard-to-infer camera, geography, cuts and paths,
 while Seedance is explicitly told to discard the whitebox's poor anatomy and
-rebuild natural performance. A colour-to-role map and per-shot terminal states
-make multi-character continuity testable instead of relying on visual
-resemblance alone.
+rebuild natural performance. The attention contract separates identity,
+blocking and performance ownership, so a neutral portrait does not become a
+frozen face and a mannequin does not become the actor's emotional model. A
+colour-to-role map and per-shot terminal states make multi-character continuity
+testable instead of relying on visual resemblance alone.
 
 **Evidence boundary:** the creator demonstrates this method on a complex
 nine-shot rooftop action scene, a four-shot dialogue and a seven-shot vehicle
@@ -30233,6 +30258,9 @@ Adapted and rewritten from TanLuAI's September 13, 2026
 [original Seedance 2.5 article, complete prompts and generated examples](https://x.com/TanLuAI/status/2099124935285461329).
 A compact archival copy of the attached preview is preserved in the
 [X-RayLuan workflow record](https://github.com/X-RayLuan/awesome-gpt-6-astra-prompts/commit/da6b1d29caee57fda421b909629d7cf309b54ab8).
+The attention-task refinement is adapted from ZAURAN's September 29, 2026
+[Seedance 2.5 workflow commit](https://github.com/ZAURAN/ZAURAN-AI-CREATIVE/commit/9ccc4778e9b9c0f35661d0eb2fa828772db7bb52)
+and its [model-specific production guide](https://github.com/ZAURAN/ZAURAN-AI-CREATIVE/blob/9ccc4778e9b9c0f35661d0eb2fa828772db7bb52/references/seedance-2.5.md).
 
 ---
 
@@ -48294,6 +48322,7 @@ the [provider-attempt review implementation](https://github.com/WilderC10000/ai-
 and the [pre-submit model, cost and endpoint gate](https://github.com/WilderC10000/ai-video-factory/commit/46435221da28c97b106b92ff17c309ac0fff0750).
 
 ## Sources
+- [ZAURAN / ZAURAN-AI-CREATIVE — September 29, 2026 Seedance 2.5 attention-task refinement for Blender blocking transfer: portrait-as-identity boundary, whitebox-as-gross-motion boundary, visible attention target, causal performance progression and no-invented-emotion guard](https://github.com/ZAURAN/ZAURAN-AI-CREATIVE/commit/9ccc4778e9b9c0f35661d0eb2fa828772db7bb52) ([model-specific production guide](https://github.com/ZAURAN/ZAURAN-AI-CREATIVE/blob/9ccc4778e9b9c0f35661d0eb2fa828772db7bb52/references/seedance-2.5.md))
 - [Ima Studio official — September 29, 2026 Seedance 2.5 cherry-can campaign: public canvas, complete 30-second prompt, product reference, native audio, generated result and recorded package/fisheye conflicts](https://www.imastudio.com/community/canvas-detail/90c6b360309f4cde9126740390897636) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/commit/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1), [public MP4](https://media.liuyidaoai.com/tutorials/imastudio-cherry-can-tokyo-girls-ad-seedance-2-5/demo-web.mp4))
 - [Ima Studio official — September 29, 2026 Seedance 2.5 Y2K lip-tint campaign: public project, complete 30-second prompt, product reference, native audio, generated result and recorded image/prompt brand mismatch](https://www.imastudio.com/canvas-editor/prj_1790653664778_97ac7da658a8d1dc) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/commit/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1), [public MP4](https://media.liuyidaoai.com/tutorials/imastudio-lip-tint-y2k-studio-ad-seedance-2-5/demo-web.mp4))
 - [jackzhang123vip — September 29, 2026 Seedance 2.5 red-lead masked-crowd pullback: original post, complete motion/depth/portrait reference contract, timed one-take choreography, published result and recorded final-pose deviation](https://x.com/jackzhang123vip/status/2102296936149872723) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/commit/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1), [public MP4](https://media.liuyidaoai.com/tutorials/jackzhang123vip-red-coat-silver-mask-crowd-depth-seedance-2-5/demo-web.mp4))
