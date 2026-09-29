@@ -440,6 +440,9 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Clay-bust touch match-cuts into a Super 8 memory](#424-clay-bust-touch-match-cuts-into-a-super-8-memory)
   - [Zodiac-wheel awakening at a locked fantasy gate](#425-zodiac-wheel-awakening-at-a-locked-fantasy-gate)
   - [One-step-behind memory apparition and disappearance](#426-one-step-behind-memory-apparition-and-disappearance)
+  - [Rain-soaked paper bicycle rescue](#427-rain-soaked-paper-bicycle-rescue)
+  - [Painterly swordsman versus sky-creature swarm](#428-painterly-swordsman-versus-sky-creature-swarm)
+  - [Strawberry-to-kitchen K-pop dance chain](#429-strawberry-to-kitchen-k-pop-dance-chain)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -27119,6 +27122,242 @@ Adapted and rewritten from dpeh001-x's September 28, 2026
 and [shipped generated MP4](https://github.com/dpeh001-x/Mojiworld/blob/0431c2e7ecba5ce6d760fbfd993921117d94c86c/steam/higgsfield/cinematics/clip_amnesiac_twelve.mp4).
 
 
+### 427. Rain-soaked paper bicycle rescue
+
+**Verified model:** Adobe Firefly Seedance 2.5 — original creator Umesh names
+Seedance 2.5 and Adobe Firefly in the prompt reply, publishes the generated
+film, and the versioned record preserves the complete prompt, four public
+reference images and the MP4  \
+**Use case:** handcrafted storybook short, child friendship, weather-to-shelter
+arc, native dialogue and sound, twelve-shot one-pass narrative  \
+**Mode:** multi-reference video with one style/location board, two child
+identity boards and one cottage-interior board; the source prompt names a fifth
+forest/waterfall reference that is not present in the public archive  \
+**Verified settings:** about 30 seconds; 16:9; published derivative 3840×2160,
+24fps after Topaz Astra upscale
+
+```text
+REFERENCE CONTRACT
+@Image1 establishes the tactile world: handmade paper and cardboard, visible
+folds and cut edges, low-poly forms, miniature depth and stop-motion-like
+imperfection. It also owns the rainy school exterior, bicycle and cool
+blue-grey palette.
+@Image2 owns only the bicycling schoolchild's face, proportions, uniform,
+backpack and yellow rain layer.
+@Image3 owns only the stranded child's face, proportions, soaked school uniform
+and damaged umbrella.
+@Image4 owns the warm cottage kitchen: paper-cut stove, table, mugs, amber lamp
+and dry towels. Ignore any people in the location board.
+If the original fifth forest/waterfall board is available, use it only for the
+woodland path and water geography; otherwise extend the environment language
+of @Image1 without introducing a new visual style.
+
+Create a 30-second 16:9 handcrafted paper-film story. Preserve both children's
+faces, scale and clothing through every cut. Rain, bicycle wheels, umbrella,
+steam and paper edges move with believable weight while retaining the
+miniature crafted look. Begin cold and lonely, then move gradually toward warm
+amber shelter.
+
+TWELVE-SHOT STORY
+1. Wide school exterior in heavy rain. The bicycling child pedals out through
+puddles while paper trees flex in the wind.
+2. Low side tracking beside the wheels; water fans from the tyres and the
+backpack bounces once per pedal cycle.
+3. Ahead on the forest road, reveal the stranded child crouched beside a torn
+umbrella. Keep the rider approaching on the same road axis.
+4. Brake to a natural stop. The rider plants one foot, looks over and asks,
+"Are you okay?"
+5. Close on the stranded child squeezing rain from one sleeve: "My umbrella
+broke. I can't get home."
+6. Two-shot. The rider opens the rear foot pegs and says, "Come with me."
+7. The second child climbs on behind and grips the backpack straps. Do not
+merge hands, bodies, uniforms or bags.
+8. Rear three-quarter tracking as the bicycle climbs the wet woodland path.
+Rain streaks diagonally; the pair lean together through one turn.
+9. Pass the waterfall or swollen stream without changing the road direction.
+The stranded child laughs once as spray catches the broken umbrella.
+10. Arrive at the small cottage. The door opens onto warm amber light; cut on
+their forward movement from rain into shelter.
+11. Inside, both sit at the paper kitchen table under dry towels. Steam rises
+from two mugs as the rider says, "You can wait here until the storm stops."
+12. Close two-shot. The rescued child answers, "Thank you, my friend." They
+smile quietly while rain continues at the window. Hold on the warmer palette.
+
+AUDIO AND FAILURE CONTROLS
+Use natural child voices, intelligible English lip sync for only the four lines
+above, continuous rain perspective, bicycle chain and tyre spray, wet cloth,
+door hinge, stove crackle, mug placement and gentle wordless music that warms
+inside the cottage. No narrator, subtitle, caption, logo or extra dialogue.
+Keep exactly two children, one bicycle, one broken umbrella and one cottage.
+No crowd, adult, vehicle duplication, costume swap, face drift, changing
+weather direction, plastic surfaces, photoreal skin or glossy CGI. Cuts may
+advance the story but must preserve road direction, carried objects, wetness
+and the children's relationship.
+```
+
+**Why it works:** each reference has one job, the rescue is expressed as a
+twelve-step cause-and-effect chain, and the palette change marks the emotional
+turn without changing the paper-world material. The public archive contains
+four files although the source prompt refers to five images, so the missing
+forest board and numbering mismatch are recorded rather than silently
+reconstructed. The reviewed film retained all twelve dialogue beats and the
+rain-to-cottage arc, with some shot durations differing from the written plan.
+
+Adapted and rewritten from Umesh's September 29, 2026
+[original generated film](https://x.com/umesh_ai/status/2104516798981025827),
+[Seedance 2.5 prompt reply and model attribution](https://x.com/umesh_ai/status/2104516804223926724),
+the [versioned tutorial commit](https://github.com/reed35/ai-video-tutorials/commit/1fdc5999b413e4e1ee65a820e1e69db3703e8af3),
+[complete preserved prompt and review](https://github.com/reed35/ai-video-tutorials/blob/1fdc5999b413e4e1ee65a820e1e69db3703e8af3/lib/tutorials.ts)
+and [public MP4](https://github.com/reed35/ai-video-tutorials/blob/1fdc5999b413e4e1ee65a820e1e69db3703e8af3/public/tutorials/umesh-rainy-bike-paper-friendship-seedance-2-5/demo-web.mp4).
+
+
+### 428. Painterly swordsman versus sky-creature swarm
+
+**Verified model:** Seedance 2.5 — original creator Kōda / aimikoda explicitly
+credits Seedance 2.5, publishes the result and names Midjourney v8.2 for the
+visual inputs; the versioned record preserves the full action prompt, four
+references and the MP4  \
+**Use case:** painterly sakuga action, airborne sword choreography,
+multi-opponent continuity, reactive camera, native combat sound  \
+**Mode:** four-image reference-to-video: one warrior/weapon style frame plus
+three creature design boards  \
+**Verified settings:** about 30 seconds; 16:9; published result 2560×1440,
+30fps; creator watermark present
+
+```text
+REFERENCE ROLES
+@Image1 is the only authority for the swordsman's identity, clothing, blade,
+ink-and-paint rendering, line weight, palette and atmospheric lighting.
+@Image2, @Image3 and @Image4 jointly define one creature species: elongated
+manta-eel bodies, horned heads, trailing tendrils and clustered orange eyes.
+Use them for anatomy and variation only; do not copy their backgrounds or
+invent unrelated monsters.
+
+START IN MOTION
+Open mid-fight above a storm-lit cloud sea. The swordsman is already falling
+and rotating as the first creature crosses behind him. Do not spend time on a
+pose, introduction or transformation. Preserve the painterly two-dimensional
+sakuga look in every frame: expressive smears on fast movement, crisp readable
+silhouettes at impacts, controlled texture boil and no photoreal conversion.
+
+ACTION GRAMMAR
+- Establish a broad swarm at different depths, then let only one or two
+creatures attack at a time. Every attack must have approach, threat, response
+and visible consequence.
+- The first creature dives from high rear-left. The warrior hears it, tucks,
+lets the jaws pass his shoulder and draws one short defensive arc.
+- A second creature rises from below. He plants one foot briefly on its brow,
+compresses, then launches away; the body bends under the force and continues
+past camera.
+- A third sweeps laterally with its tendrils. Track alongside the warrior as he
+folds under the first tendril, parries the second and uses the recoil to change
+direction.
+- Accelerate into alternating ambush and counter beats. Keep the swarm reacting
+to each miss rather than freezing in the background. Orange eyes turn toward
+him before bodies commit.
+- For the finish, pull wide as several creatures converge. He grips the sword
+with both hands, completes one clear multi-axis rotation and releases a
+continuous luminous cutting arc through the closing formation. Follow the arc,
+not his face.
+- End after the consequence: separated creature silhouettes tumble away while
+the warrior drops through the opened space, blade low, still falling. Hold long
+enough to read the new formation; no victory pose.
+
+CAMERA, SOUND AND CONTINUITY
+Use aggressive but motivated camera transfer: chase, whip-pan, brief orbit,
+impact shake and one wide reset before the finish. Never teleport the camera or
+cross the warrior's travel direction inside a single exchange. Depth changes
+must be supported by cloud parallax and creature scale.
+
+No music, dialogue, narration or text. Build the soundtrack from high-altitude
+wind shear, cloth snaps, blade resonance, body rushes, tendril whips, shrieks,
+impacts and a short pressure-drop silence before the final arc. Keep one
+warrior, one sword and one creature species. Preserve face, costume, weapon
+length, handedness, creature anatomy and orange-eye placement. No extra limbs,
+duplicate sword, fused bodies, stationary crowd, random explosion, firearm,
+ground plane, logo or photoreal 3D rendering.
+```
+
+**Why it works:** the sequence begins at full kinetic energy but every exchange
+still has readable stimulus and response. Reference authority prevents the
+three creature boards from becoming three species, while the wide reset and
+post-impact hold keep a dense swarm legible. The source result includes a
+"Kōda" creator watermark, which is documented rather than presented as a clean
+delivery master.
+
+Adapted and rewritten from Kōda / aimikoda's September 29, 2026
+[original Seedance 2.5 result and attribution](https://x.com/aimikoda/status/2104619926702932219),
+the [versioned tutorial commit](https://github.com/reed35/ai-video-tutorials/commit/1fdc5999b413e4e1ee65a820e1e69db3703e8af3),
+[complete preserved prompt and review](https://github.com/reed35/ai-video-tutorials/blob/1fdc5999b413e4e1ee65a820e1e69db3703e8af3/lib/tutorials.ts)
+and [public MP4](https://github.com/reed35/ai-video-tutorials/blob/1fdc5999b413e4e1ee65a820e1e69db3703e8af3/public/tutorials/aimikoda-sword-vs-sky-creatures-seedance-2-5/demo-web.mp4).
+
+
+### 429. Strawberry-to-kitchen K-pop dance chain
+
+**Verified model:** Seedance 2.5 text-to-video — the public Ima Studio canvas is
+an official platform template, and its versioned clone preserves the exact
+model, prompt, settings, snapshot lineage and generated MP4  \
+**Use case:** food-to-performance music video, rapid match transitions,
+four-member choreography, lens-specific shot list, native K-pop audio  \
+**Mode:** text-to-video with native audio; no image reference  \
+**Verified settings:** 10 seconds; 4:3; 720p request; native audio enabled;
+published result 1112×834, 24fps, about 10.1 seconds; no watermark; final
+approximately 0.4 seconds are black
+
+```text
+Create a ten-second 4:3 candy-bright K-pop micro-MV. The first half takes place
+in a sunlit cream kitchen; the second in a pastel-pink living room. Four adult
+performers remain the same people throughout, wearing coordinated strawberry
+red, leaf green, cream and soft pink. Prioritise approximately five seconds of
+clear synchronized dancing rather than walking, posing or beauty coverage.
+
+SHOT CHAIN
+1. Macro 100 mm: a ripe strawberry falls into a transparent glass of sparkling
+soda. Follow the fruit through bubbles and use its red surface to fill frame.
+2. Match from the red fill to a fast 24 mm push into the kitchen. Reveal all
+four performers already on the first count, not entering or finding marks.
+3. Front 35 mm medium-wide: two counts of synchronized choreography — arms
+travel right, cross at the chest, open upward; feet step left then snap
+together. Keep all four bodies readable.
+4. Low 20 mm dolly: they travel toward camera for one count, pivot together and
+send a second strawberry directly toward lens.
+5. The fruit fills frame again. Use it as a clean object wipe, not a red flash
+or unrelated cut.
+6. Emerge in the pastel-pink living room on the same beat. A large red
+strawberry-shaped balloon floats near the group as the camera arcs 45 degrees.
+7. Front 35 mm: repeat the earlier arm phrase with a new lower-body pattern —
+step back, heel tap, quarter-turn and return — maintaining exact group timing.
+8. Close 50 mm: the centre performer catches the small strawberry prop, looks
+into lens and smiles. The other three finish one shared pose behind her. Hold
+the final picture through the last beat; do not cut to black inside the
+requested duration.
+
+MUSIC, EDIT AND FAILURE CONTROLS
+Generate one upbeat original K-pop hook with bright electronic drums, bass,
+claps and a short sung strawberry-themed refrain. No spoken dialogue, subtitle,
+lyric caption, title, logo or crowd noise. Cut and transition only on musical
+beats. Keep the four performers' faces, hair, outfits and positions consistent;
+do not add or remove a member. Hands remain anatomically correct and never fuse
+during crossed-arm moves. The two strawberry transitions must preserve screen
+centre and motion direction. The living-room balloon stays recognisably
+strawberry-shaped and large enough to read; do not substitute a plain small
+sphere. No idle posing, solo-only coverage, wardrobe swap, floating furniture,
+camera collision, duplicated fruit or premature black frames.
+```
+
+**Why it works:** food macro, object wipe and choreography share the same red
+visual motif, while explicit count-level movement makes "dance priority"
+testable. The public result delivered seven visible segments rather than all
+eight written shots, changed the giant strawberry balloon into a smaller red
+sphere and ended with roughly 0.4 seconds of black; those deviations are
+retained as regeneration checks.
+
+Adapted and rewritten from Ima Studio's September 29, 2026
+[official public Seedance 2.5 canvas](https://www.imastudio.com/canvas-editor/prj_1790589516398_bb5719f0d5d6a7c9),
+the [versioned tutorial commit and snapshot record](https://github.com/reed35/ai-video-tutorials/commit/1fdc5999b413e4e1ee65a820e1e69db3703e8af3),
+[complete preserved prompt and review](https://github.com/reed35/ai-video-tutorials/blob/1fdc5999b413e4e1ee65a820e1e69db3703e8af3/lib/tutorials.ts)
+and [public MP4](https://github.com/reed35/ai-video-tutorials/blob/1fdc5999b413e4e1ee65a820e1e69db3703e8af3/public/tutorials/imastudio-kpop-strawberry-kitchen-dance-mv-seedance-2-5/demo-web.mp4).
+
 ## Reusable templates
 
 ### Reference-audio talking-head qualification with measured lip-sync lag
@@ -47661,6 +47900,9 @@ the [provider-attempt review implementation](https://github.com/WilderC10000/ai-
 and the [pre-submit model, cost and endpoint gate](https://github.com/WilderC10000/ai-video-factory/commit/46435221da28c97b106b92ff17c309ac0fff0750).
 
 ## Sources
+- [Umesh — September 29, 2026 Adobe Firefly Seedance 2.5 rainy paper-bicycle friendship film: complete twelve-shot 30-second prompt, four public role references, native dialogue and sound, published 4K-upscaled result and recorded missing-fifth-reference mismatch](https://x.com/umesh_ai/status/2104516798981025827) ([prompt and model attribution](https://x.com/umesh_ai/status/2104516804223926724), [versioned prompt and review](https://github.com/reed35/ai-video-tutorials/commit/1fdc5999b413e4e1ee65a820e1e69db3703e8af3), [public MP4](https://github.com/reed35/ai-video-tutorials/blob/1fdc5999b413e4e1ee65a820e1e69db3703e8af3/public/tutorials/umesh-rainy-bike-paper-friendship-seedance-2-5/demo-web.mp4))
+- [Kōda / aimikoda — September 29, 2026 Seedance 2.5 painterly swordsman-versus-sky-creature film: complete action grammar, four disclosed reference images, reactive multi-opponent choreography, native combat sound, published 1440p result and disclosed creator watermark](https://x.com/aimikoda/status/2104619926702932219) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/commit/1fdc5999b413e4e1ee65a820e1e69db3703e8af3), [public MP4](https://github.com/reed35/ai-video-tutorials/blob/1fdc5999b413e4e1ee65a820e1e69db3703e8af3/public/tutorials/aimikoda-sword-vs-sky-creatures-seedance-2-5/demo-web.mp4))
+- [Ima Studio official template — September 29, 2026 Seedance 2.5 strawberry-to-kitchen K-pop micro-MV: public official canvas, complete eight-shot prompt, native audio, four-member dance priority, snapshot lineage, published result and recorded shot/balloon/black-tail deviations](https://www.imastudio.com/canvas-editor/prj_1790589516398_bb5719f0d5d6a7c9) ([versioned snapshot and review](https://github.com/reed35/ai-video-tutorials/commit/1fdc5999b413e4e1ee65a820e1e69db3703e8af3), [public MP4](https://github.com/reed35/ai-video-tutorials/blob/1fdc5999b413e4e1ee65a820e1e69db3703e8af3/public/tutorials/imastudio-kpop-strawberry-kitchen-dance-mv-seedance-2-5/demo-web.mp4))
 - [dpeh001-x / Mojiworld — September 28, 2026 Higgsfield Seedance 2.0 sibling-reveal production: two complete eight-second 720p silent prompts, one environment start frame per clip, role-scoped character references, completed provider job IDs, 36-credit receipts, shipped generated MP4s and timestamped frame QA](https://github.com/dpeh001-x/Mojiworld/commit/0431c2e7ecba5ce6d760fbfd993921117d94c86c) ([Mira gate-wheel record](https://github.com/dpeh001-x/Mojiworld/blob/0431c2e7ecba5ce6d760fbfd993921117d94c86c/steam/higgsfield/cinematics/clip_mira_twelve.SPEC.md), [Amnesiac apparition record](https://github.com/dpeh001-x/Mojiworld/blob/0431c2e7ecba5ce6d760fbfd993921117d94c86c/steam/higgsfield/cinematics/clip_amnesiac_twelve.SPEC.md))
 - [Aydoucorp / labo — September 28, 2026 KIE-hosted ByteDance Seedance 2.5 reference-audio talking-head trial: six exact prompts, successful 720p task IDs, 2,268 charged credits, silent masters, voice-muxed derivatives and measured −0.667 to +1.000-second mouth-to-voice offsets that fail closed instead of being claimed as lip sync](https://github.com/Aydoucorp/labo/commit/48e32f847cffef146ccabf57f6393273b76e0da4) ([five additional completed jobs](https://github.com/Aydoucorp/labo/commit/24212ab8fea2bf272250d7373e174672e814e305), [measurement and results](https://github.com/Aydoucorp/labo/commit/294b29d50ddb4ac21a6c19863958c4f974765edf), [measurement script](https://github.com/Aydoucorp/labo/blob/294b29d50ddb4ac21a6c19863958c4f974765edf/runs/2026-09-28_claire-cheveux-gris-carences_talking-head/mesurer_synchro.py))
 - [Kiber Alla — September 28, 2026 Higgsfield Seedance 2.5 sculptor-and-memory film: complete 24-second 26-shot prompt, four role-scoped references, screen-axis lock, thumb-to-lip match cut, Super 8 memory grammar, four native-dialogue lines, published 1080p result and recorded no-music deviation](https://x.com/Kiber_Alla/status/2104220821992636469) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/commit/955d417e8dce89e515805e6d3ccd31b0fdf43a54), [complete prompt record](https://github.com/reed35/ai-video-tutorials/blob/955d417e8dce89e515805e6d3ccd31b0fdf43a54/lib/tutorials.ts), [published MP4](https://github.com/reed35/ai-video-tutorials/blob/955d417e8dce89e515805e6d3ccd31b0fdf43a54/public/tutorials/kiber-alla-sculptor-clay-bust-super8-memory/demo-web.mp4))
