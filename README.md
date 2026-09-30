@@ -27825,8 +27825,11 @@ and [workflow notes](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9
 `ark-task-gateway-video-25` relay protocol — the original developer records the
 tested running and success response shapes, the chat-shaped response returned
 by the wrong poll route, and the corrected provider manifest and application
-integration. This verifies one relay-gateway contract and recovery method, not
-a universal Volcano Ark endpoint or a visual-quality benchmark.  
+integration. Independent provider-schema evidence records Runway `seedance2_5`
+and `seedance2`, plus MuAPI Seedance 2.5 endpoints, and tests the same selected
+options from preview through the paid request. This verifies request-control
+contracts and recovery methods, not a universal endpoint or visual-quality
+benchmark.  
 **Use case:** task-based API integration, image-to-video request routing, stuck
 "upstream generating" diagnosis, result-URL recovery, duplicate-spend
 prevention  
@@ -27861,6 +27864,23 @@ For Seedance 2.5 on this relay:
 The sibling 2.0 / 2.0 Fast adapter may use content[] and poll
 /v1/contents/generations/tasks/{task_id}. Never copy that body or task path
 into a 2.5 job merely because both versions use the same host and create URL.
+
+OPTION PARITY GATE
+Snapshot the exact model's provider schema with its retrieval date. For every
+user-selectable duration, ratio, resolution, audio state, endpoint frame,
+draft flag or seed:
+1. preview and estimate expose only values admitted by that exact schema;
+2. changing a value reruns preview and pricing from the same serialized value;
+3. the paid create request and streaming path carry that identical field/value;
+4. a value outside the schema is refused by name before upload or spend;
+5. a capability absent from the schema is shown as unavailable, never accepted
+   and then silently dropped.
+
+Persist hashes of the preview payload and final paid payload. Compare the
+protected option subset, excluding provider-generated task metadata. Fail if a
+selector changes only the UI or estimate while the create request falls back
+to a shot-card or project default. Unset is allowed only when it deterministically
+preserves the documented model default.
 
 IMAGE CARDINALITY GATE
 If image count = 0:
@@ -27911,6 +27931,8 @@ On success:
 
 ACCEPTANCE
 - exact model and provider contract are pinned before serialization;
+- every selected option is identical in preview, estimate and paid payload;
+- unsupported values fail before spend and absent capabilities stay unavailable;
 - 2.5 uses a top-level prompt and never content[];
 - image cardinality selects one mutually exclusive field;
 - unsupported reference types fail visibly before purchase;
@@ -27925,12 +27947,23 @@ extraction are treated as one versioned contract. In the recorded failure, the
 message with neither `status` nor `video_url`, so the client could wait
 forever despite having a real task. Reading the same job through
 `/v1/videos/{task_id}` exposed normal running and succeeded states. Repairing
-only the read path preserves the paid task and the original prompt.
+only the read path preserves the paid task and the original prompt. The second
+record catches a subtler drift: `duration_s` changed the estimate while the
+actual clip still inherited the shot-card length. Schema-derived controls and
+preview-to-purchase payload equality prevent a correct price from masking a
+wrong generation request.
 
 Adapted and rewritten from kun's September 30, 2026
 [Seedance 2.5 gateway implementation](https://github.com/liangkunnhello/BeefTV/commit/d7c869566e009433918b012e4004f23e57295192)
 and its follow-up
 [measured interface record](https://github.com/liangkunnhello/BeefTV/commit/be920dcdbd3c979da5c5771cf2e20b17cc8793b1).
+
+The option-parity extension is adapted from GRIDLIGHT-INC / film-engine's
+September 30, 2026
+[model-option implementation and recorded duration bug](https://github.com/GRIDLIGHT-INC/film-engine/commit/6aa5829742ad381c6524801e0ae9d01020357107),
+[dated provider-schema snapshot](https://github.com/GRIDLIGHT-INC/film-engine/blob/6aa5829742ad381c6524801e0ae9d01020357107/backend/lib/providers/video-model-fields.json),
+[request builder](https://github.com/GRIDLIGHT-INC/film-engine/blob/6aa5829742ad381c6524801e0ae9d01020357107/backend/lib/model-options.js)
+and [set-based preview/purchase tests](https://github.com/GRIDLIGHT-INC/film-engine/blob/6aa5829742ad381c6524801e0ae9d01020357107/backend/tests/video-model-options.test.js).
 
 
 
@@ -48593,6 +48626,7 @@ the [provider-attempt review implementation](https://github.com/WilderC10000/ai-
 and the [pre-submit model, cost and endpoint gate](https://github.com/WilderC10000/ai-video-factory/commit/46435221da28c97b106b92ff17c309ac0fff0750).
 
 ## Sources
+- [GRIDLIGHT-INC / film-engine — September 30, 2026 Runway Seedance 2.5/2.0 and MuAPI Seedance 2.5 option-parity gate: dated provider schemas, free 422 field probes, preview/paid payload equality, pre-spend refusal and the recorded estimate-only duration bug](https://github.com/GRIDLIGHT-INC/film-engine/commit/6aa5829742ad381c6524801e0ae9d01020357107) ([schema](https://github.com/GRIDLIGHT-INC/film-engine/blob/6aa5829742ad381c6524801e0ae9d01020357107/backend/lib/providers/video-model-fields.json), [builder](https://github.com/GRIDLIGHT-INC/film-engine/blob/6aa5829742ad381c6524801e0ae9d01020357107/backend/lib/model-options.js), [tests](https://github.com/GRIDLIGHT-INC/film-engine/blob/6aa5829742ad381c6524801e0ae9d01020357107/backend/tests/video-model-options.test.js))
 - [Oren Gozlan / omer-gozlan — September 30, 2026 Higgsfield Seedance 2.5 single-athlete night-court bullet-time spike: real-photo crop, executable 10-second 720p request, complete prompt, committed result and documented actor-selection / long-prompt 1080p failure controls](https://github.com/OrenGozlan/omer-gozlan/commit/10eec2f8caa9d42e8cce1516752daed069f7b033) ([runner](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/scripts/hf-generate.ts), [input](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/public/photos/night-court-omer.jpg), [output](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/public/ai/night-bullet.mp4), [workflow notes](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/README.md))
 - [kun / BeefTV — September 30, 2026 Seedance 2.5 relay contract: top-level prompt, cardinality-safe image fields, version-specific /v1/videos task polling, wrong-route chat-response detection and no-resubmit recovery](https://github.com/liangkunnhello/BeefTV/commit/d7c869566e009433918b012e4004f23e57295192) ([measured response record](https://github.com/liangkunnhello/BeefTV/commit/be920dcdbd3c979da5c5771cf2e20b17cc8793b1))
 - [Jordan Moreno / Personal-Website — September 30, 2026 Higgsfield Seedance 2.5 measured source-to-extension handoff: visible continuity cue, motion-cadence ramp, destination-frame alignment and endpoint loop, with two committed results and reproducible assembly scripts](https://github.com/johrmohr/Personal-Website/commit/47f7a3af896f6b2c7b35f09c49abee60e060fd30) ([workflow](https://github.com/johrmohr/Personal-Website/blob/47f7a3af896f6b2c7b35f09c49abee60e060fd30/explorations/journey-concepts/README.md), [moon result](https://github.com/johrmohr/Personal-Website/blob/47f7a3af896f6b2c7b35f09c49abee60e060fd30/explorations/journey-concepts/media/journey_moon.mp4), [sun result](https://github.com/johrmohr/Personal-Website/blob/47f7a3af896f6b2c7b35f09c49abee60e060fd30/explorations/journey-concepts/media/journey_sun.mp4))
