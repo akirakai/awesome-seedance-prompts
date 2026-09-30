@@ -449,6 +449,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Millisecond-cut black-and-white cat fashion commercial](#433-millisecond-cut-black-and-white-cat-fashion-commercial)
   - [One-identity cliff rescue with contact-gated duplicate roles](#434-one-identity-cliff-rescue-with-contact-gated-duplicate-roles)
   - [Fixed-axis gardener rescue with a carried prop ledger](#435-fixed-axis-gardener-rescue-with-a-carried-prop-ledger)
+  - [Night-court volleyball freeze-orbit lens impact](#436-night-court-volleyball-freeze-orbit-lens-impact)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -27752,6 +27753,69 @@ the [versioned discovery commit](https://github.com/reed35/ai-video-tutorials/co
 [complete preserved prompt and review](https://github.com/reed35/ai-video-tutorials/blob/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1/lib/tutorials.ts)
 and [public result](https://media.liuyidaoai.com/tutorials/chengzilhy-pvz-dave-shovel-infected-sunflower-seedance-2-5/demo-web.mp4).
 
+### 436. Night-court volleyball freeze-orbit lens impact
+
+**Verified model:** Higgsfield `bytedance/seedance-2.5/image-to-video`
+(Seedance 2.5) — the creator committed the executable request, the real-photo
+input, workflow notes and the generated MP4 in the same repository  \
+**Use case:** real-photo sports image-to-video, single-subject role ownership,
+bullet-time orbit, direct-to-lens impact  \
+**Mode:** one opening-frame photo plus text prompt; no generated audio  \
+**Verified settings:** 10 seconds; 720p; one continuous shot; the executable
+request is authoritative where its companion README's 1080p summary differs
+
+```text
+Create a 10-second photorealistic night beach-volleyball shot from @Image1.
+
+REFERENCE AUTHORITY
+@Image1 owns the visible athlete's face, curly hair, white number-1 sleeveless
+jersey, black shorts, body proportions, court, net and floodlight layout. Show
+only this athlete. A teammate may set the ball from off screen but never enters
+the frame or becomes the hitter. Preserve the athlete's identity and jersey
+number through the entire shot.
+
+0–3s — APPROACH AND TAKE-OFF
+In one continuous shot, the athlete takes a fast three-step approach, plants
+hard and explodes upward as sand sprays from both feet. Track low from behind
+and tilt up with the leap. The hitting arm cocks back while the other hand
+reaches toward a blue-yellow-white ball set high above the net.
+
+3–7s — TRUE FREEZE AND ORBIT
+At the exact apex, freeze time completely. Lock the athlete, ball, airborne
+sand and dust in world space. Only the camera moves: orbit 180 degrees to the
+opposite side of the net, keeping the ball centred and ending with the
+athlete's face and raised hitting arm directly behind it. Do not add, drift,
+re-pose or duplicate any person or object during the orbit.
+
+7–10s — RELEASE AND LENS HIT
+Time snaps back once the orbit is complete. The athlete strikes the ball
+straight down the optical axis. The spinning ball grows with natural
+perspective, collides with the lens, jolts the camera and cuts the frame to
+black. Motion blur begins only after time resumes.
+
+LOOK AND CONTROL
+Bright stadium floodlights, dark sky, warm rim light, shallow depth of field,
+fine sand in the air and natural athletic mechanics. No text, logo, watermark,
+crowd duplication, visible setter, second jumper, identity drift, jersey
+change, early orbit, frozen-object drift, off-axis miss, unrelated cut or
+slow-motion impact.
+```
+
+**Why it works:** the prompt assigns the only visible athlete exclusive
+ownership of the jump before any action begins, then separates the effect into
+approach, frozen world/camera-only orbit and released impact states. The
+creator's first two failure controls are reusable: crop a multi-person source
+to the intended performer when the model transfers the hero action to a
+partner, and condense the prompt plus use 720p when a long request over five
+seconds fails at 1080p.
+
+Adapted and rewritten from Oren Gozlan's September 30, 2026
+[versioned Seedance 2.5 generation commit](https://github.com/OrenGozlan/omer-gozlan/commit/10eec2f8caa9d42e8cce1516752daed069f7b033),
+[executable full prompt and request](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/scripts/hf-generate.ts),
+[real-photo opening frame](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/public/photos/night-court-omer.jpg),
+[committed generated result](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/public/ai/night-bullet.mp4)
+and [workflow notes](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/README.md).
+
 ## Reusable templates
 
 
@@ -48529,6 +48593,7 @@ the [provider-attempt review implementation](https://github.com/WilderC10000/ai-
 and the [pre-submit model, cost and endpoint gate](https://github.com/WilderC10000/ai-video-factory/commit/46435221da28c97b106b92ff17c309ac0fff0750).
 
 ## Sources
+- [Oren Gozlan / omer-gozlan — September 30, 2026 Higgsfield Seedance 2.5 single-athlete night-court bullet-time spike: real-photo crop, executable 10-second 720p request, complete prompt, committed result and documented actor-selection / long-prompt 1080p failure controls](https://github.com/OrenGozlan/omer-gozlan/commit/10eec2f8caa9d42e8cce1516752daed069f7b033) ([runner](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/scripts/hf-generate.ts), [input](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/public/photos/night-court-omer.jpg), [output](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/public/ai/night-bullet.mp4), [workflow notes](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/README.md))
 - [kun / BeefTV — September 30, 2026 Seedance 2.5 relay contract: top-level prompt, cardinality-safe image fields, version-specific /v1/videos task polling, wrong-route chat-response detection and no-resubmit recovery](https://github.com/liangkunnhello/BeefTV/commit/d7c869566e009433918b012e4004f23e57295192) ([measured response record](https://github.com/liangkunnhello/BeefTV/commit/be920dcdbd3c979da5c5771cf2e20b17cc8793b1))
 - [Jordan Moreno / Personal-Website — September 30, 2026 Higgsfield Seedance 2.5 measured source-to-extension handoff: visible continuity cue, motion-cadence ramp, destination-frame alignment and endpoint loop, with two committed results and reproducible assembly scripts](https://github.com/johrmohr/Personal-Website/commit/47f7a3af896f6b2c7b35f09c49abee60e060fd30) ([workflow](https://github.com/johrmohr/Personal-Website/blob/47f7a3af896f6b2c7b35f09c49abee60e060fd30/explorations/journey-concepts/README.md), [moon result](https://github.com/johrmohr/Personal-Website/blob/47f7a3af896f6b2c7b35f09c49abee60e060fd30/explorations/journey-concepts/media/journey_moon.mp4), [sun result](https://github.com/johrmohr/Personal-Website/blob/47f7a3af896f6b2c7b35f09c49abee60e060fd30/explorations/journey-concepts/media/journey_sun.mp4))
 - [ZAURAN / ZAURAN-AI-CREATIVE — September 29, 2026 Seedance 2.5 attention-task refinement for Blender blocking transfer: portrait-as-identity boundary, whitebox-as-gross-motion boundary, visible attention target, causal performance progression and no-invented-emotion guard](https://github.com/ZAURAN/ZAURAN-AI-CREATIVE/commit/9ccc4778e9b9c0f35661d0eb2fa828772db7bb52) ([model-specific production guide](https://github.com/ZAURAN/ZAURAN-AI-CREATIVE/blob/9ccc4778e9b9c0f35661d0eb2fa828772db7bb52/references/seedance-2.5.md))
