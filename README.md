@@ -27754,6 +27754,122 @@ and [public result](https://media.liuyidaoai.com/tutorials/chengzilhy-pvz-dave-s
 
 ## Reusable templates
 
+
+### Version-separated gateway payload and poll-response shape gate
+
+**Verified model:** `doubao-seedance-2.5` through BeefTV's
+`ark-task-gateway-video-25` relay protocol — the original developer records the
+tested running and success response shapes, the chat-shaped response returned
+by the wrong poll route, and the corrected provider manifest and application
+integration. This verifies one relay-gateway contract and recovery method, not
+a universal Volcano Ark endpoint or a visual-quality benchmark.  
+**Use case:** task-based API integration, image-to-video request routing, stuck
+"upstream generating" diagnosis, result-URL recovery, duplicate-spend
+prevention  
+**Mode:** Seedance 2.5 through a relay whose create request uses a top-level
+prompt and whose task resource lives under `/v1/videos`
+
+Use this when a gateway exposes Seedance 2.0 and 2.5 behind the same host. Do
+not assume that a shared create path means the two versions share a payload,
+poll route or response schema.
+
+```text
+CHANNEL RECEIPT
+Gateway base URL = [PINNED URL].
+Provider contract = ark-task-gateway-video-25.
+Exact model = doubao-seedance-2.5.
+Prompt = [COMPLETE VERSIONED PROMPT].
+Images = [ORDERED PUBLIC URL LIST OR NONE].
+Ratio = [SUPPORTED VALUE].
+Resolution = [SUPPORTED VALUE].
+Duration = [SUPPORTED VALUE].
+Watermark = [TRUE / FALSE].
+Persist this receipt and a prompt/reference hash before submission.
+
+VERSION FENCE
+Select the contract from the exact model before serializing any request.
+For Seedance 2.5 on this relay:
+- create resource = POST /v1/contents/generations/tasks;
+- prompt lives in the top-level prompt field, never inside content[];
+- task read/cancel resource = /v1/videos/{task_id};
+- completed media comes from video_url, falling back to metadata.url.
+
+The sibling 2.0 / 2.0 Fast adapter may use content[] and poll
+/v1/contents/generations/tasks/{task_id}. Never copy that body or task path
+into a 2.5 job merely because both versions use the same host and create URL.
+
+IMAGE CARDINALITY GATE
+If image count = 0:
+  omit input_reference and image_urls.
+If image count = 1:
+  input_reference = the one approved image URL;
+  omit image_urls.
+If image count > 1:
+  image_urls = the complete ordered URL list;
+  omit input_reference.
+
+Fail before purchase if both image fields survive serialization, if an empty
+image field is emitted, or if order differs from the immutable reference
+ledger. On this verified gateway contract, reference video and reference audio
+are unsupported; surface that limitation instead of silently dropping either
+asset or translating it into an image field.
+
+CREATE ONCE
+Build one 2.5 body from the channel receipt:
+  model, prompt, ratio, resolution, duration, watermark,
+  plus exactly one permitted image field when images exist.
+Submit once. Require an id or task_id, store it durably and attach it to the
+request hash before the first status read. A polling problem never authorizes a
+second create call.
+
+POLL-SHAPE GATE
+Read only GET /v1/videos/{stored_task_id}.
+
+A valid task body must contain a status:
+- queued / running -> retain the same task ID and continue polling;
+- succeeded -> require a non-empty video_url or metadata.url;
+- failed / cancelled -> preserve the terminal body and stop;
+- transient transport error -> retry the read, not the generation.
+
+If the body instead resembles a chat message — for example it has
+type=message and role=assistant but no status or video URL — classify it as
+WRONG TASK RESOURCE. Do not leave the job indefinitely "generating," parse the
+message as a result, rewrite the creative prompt or submit again. Change only
+the read route to /v1/videos/{stored_task_id}, then recover the same paid task.
+
+RESULT AND LINEAGE GATE
+On success:
+1. verify that the returned task ID matches the stored lineage;
+2. choose video_url, otherwise metadata.url;
+3. download the expiring asset immediately and record its checksum;
+4. persist terminal status, usage, provider response and selected URL field;
+5. reject "success" when both result fields are empty.
+
+ACCEPTANCE
+- exact model and provider contract are pinned before serialization;
+- 2.5 uses a top-level prompt and never content[];
+- image cardinality selects one mutually exclusive field;
+- unsupported reference types fail visibly before purchase;
+- every status read uses the stored ID and the 2.5 task resource;
+- a chat-shaped wrong-route response triggers poll repair, never resubmission;
+- success requires a durable, checksummed artifact.
+```
+
+**Why it works:** request construction, image binding, task lookup and result
+extraction are treated as one versioned contract. In the recorded failure, the
+2.5 task queried through the sibling Ark-style path returned an assistant
+message with neither `status` nor `video_url`, so the client could wait
+forever despite having a real task. Reading the same job through
+`/v1/videos/{task_id}` exposed normal running and succeeded states. Repairing
+only the read path preserves the paid task and the original prompt.
+
+Adapted and rewritten from kun's September 30, 2026
+[Seedance 2.5 gateway implementation](https://github.com/liangkunnhello/BeefTV/commit/d7c869566e009433918b012e4004f23e57295192)
+and its follow-up
+[measured interface record](https://github.com/liangkunnhello/BeefTV/commit/be920dcdbd3c979da5c5771cf2e20b17cc8793b1).
+
+
+
 ### Measured source-to-extension handoff with cadence ramp and endpoint loop
 
 **Verified model:** Higgsfield Seedance 2.5 `video_extension` — the
@@ -48413,6 +48529,7 @@ the [provider-attempt review implementation](https://github.com/WilderC10000/ai-
 and the [pre-submit model, cost and endpoint gate](https://github.com/WilderC10000/ai-video-factory/commit/46435221da28c97b106b92ff17c309ac0fff0750).
 
 ## Sources
+- [kun / BeefTV — September 30, 2026 Seedance 2.5 relay contract: top-level prompt, cardinality-safe image fields, version-specific /v1/videos task polling, wrong-route chat-response detection and no-resubmit recovery](https://github.com/liangkunnhello/BeefTV/commit/d7c869566e009433918b012e4004f23e57295192) ([measured response record](https://github.com/liangkunnhello/BeefTV/commit/be920dcdbd3c979da5c5771cf2e20b17cc8793b1))
 - [Jordan Moreno / Personal-Website — September 30, 2026 Higgsfield Seedance 2.5 measured source-to-extension handoff: visible continuity cue, motion-cadence ramp, destination-frame alignment and endpoint loop, with two committed results and reproducible assembly scripts](https://github.com/johrmohr/Personal-Website/commit/47f7a3af896f6b2c7b35f09c49abee60e060fd30) ([workflow](https://github.com/johrmohr/Personal-Website/blob/47f7a3af896f6b2c7b35f09c49abee60e060fd30/explorations/journey-concepts/README.md), [moon result](https://github.com/johrmohr/Personal-Website/blob/47f7a3af896f6b2c7b35f09c49abee60e060fd30/explorations/journey-concepts/media/journey_moon.mp4), [sun result](https://github.com/johrmohr/Personal-Website/blob/47f7a3af896f6b2c7b35f09c49abee60e060fd30/explorations/journey-concepts/media/journey_sun.mp4))
 - [ZAURAN / ZAURAN-AI-CREATIVE — September 29, 2026 Seedance 2.5 attention-task refinement for Blender blocking transfer: portrait-as-identity boundary, whitebox-as-gross-motion boundary, visible attention target, causal performance progression and no-invented-emotion guard](https://github.com/ZAURAN/ZAURAN-AI-CREATIVE/commit/9ccc4778e9b9c0f35661d0eb2fa828772db7bb52) ([model-specific production guide](https://github.com/ZAURAN/ZAURAN-AI-CREATIVE/blob/9ccc4778e9b9c0f35661d0eb2fa828772db7bb52/references/seedance-2.5.md))
 - [Ima Studio official — September 29, 2026 Seedance 2.5 cherry-can campaign: public canvas, complete 30-second prompt, product reference, native audio, generated result and recorded package/fisheye conflicts](https://www.imastudio.com/community/canvas-detail/90c6b360309f4cde9126740390897636) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/commit/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1), [public MP4](https://media.liuyidaoai.com/tutorials/imastudio-cherry-can-tokyo-girls-ad-seedance-2-5/demo-web.mp4))
