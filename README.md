@@ -27876,6 +27876,103 @@ Adapted and rewritten from Busy-Conversation-24's September 30, 2026
 ## Reusable templates
 
 
+### Reference-presence matrix and render-headroom cut gate
+
+**Verified model:** Higgsfield `seedance_2_5` at 1080p — the source production
+generated nine separate clips, 65 seconds total, for a delivered 45.21-second
+vertical advertisement. All nine usable ranges began at frame zero and ended
+within roughly the first 64–73% of their source clips; five product shots shared
+one packshot anchor, while four product-free shots intentionally received no
+product reference. Treat those ratios as one measured production result, not a
+universal Seedance constant.  
+**Use case:** multi-shot advertisements, selective product/reference control,
+clean editorial out-points, reflection-safe product QA, hard-cut repair  
+**Mode:** one separately generated Seedance 2.5 clip per edit beat; typography,
+claims and final grade remain post-production layers
+
+Use this when the same campaign alternates between product and non-product
+shots. The reference list is part of each shot's exclusion contract: an asset
+that is absent from the intended frame should not be attached merely for
+campaign consistency.
+
+```text
+SHOT RECEIPT
+Shot ID = [STABLE ID].
+Edit beat = [ONE SENTENCE].
+Target duration = [SECONDS].
+Required visible subjects/products = [LIST OR NONE].
+Forbidden visible subjects/products = [LIST OR NONE].
+Approved references = [ORDERED LIST WITH ONE ROLE PER ASSET].
+Reference omissions = [ASSETS DELIBERATELY WITHHELD AND WHY].
+Text/claims = POST ONLY; generate a clean picture plate with no lettering,
+digits, logo or invented mark.
+
+REFERENCE-PRESENCE GATE
+For each candidate reference, ask whether its owned subject must be visible in
+this exact shot.
+- If yes, attach the approved reference and name its ownership once.
+- If no, omit it from the request and repeat the subject under FORBIDDEN.
+- Never attach a product reference to a product-free beat for general style.
+- Keep palette, lighting and lens continuity in the prompt or a separate style
+  reference that does not contain the forbidden product.
+
+RENDER-HEADROOM PLAN
+Choose headroom from measured tests for this model, route and motion class.
+Source observation, not a default: target duration × about 1.4 produced clean
+out-points within the first roughly 64–73% on nine Seedance 2.5 ad clips.
+
+Generate duration = [TARGET × TESTED HEADROOM FACTOR].
+Planned usable window = [IN] to [OUT].
+Tail risk being avoided = [SETTLING / REPEATED MOTION / POSE RESET / OTHER].
+Extra credit cost accepted = [AMOUNT].
+
+Do not trim by percentage alone. Review the whole clip, then keep the earliest
+continuous range that contains the complete action and ends before visible
+settling, looping, drift or reset. Record actual generated duration, selected
+in/out points, usable percentage and reason for the cut. If the clean range
+does not exist, rerender; do not conceal a bad endpoint with a dissolve.
+
+PRODUCT-GEOMETRY GATE
+For any measured package, bottle or vial:
+1. select a matte or otherwise non-reflective inspection frame;
+2. measure only the physical silhouette, excluding reflection and shadow;
+3. compare the ratio with the approved packshot tolerance;
+4. reject a take whose apparent dimensions pass only because a reflection was
+   counted as product.
+
+CUT-SEPARATION GATE
+Assemble hard cuts, then inspect every boundary visually and with the chosen
+scene-change detector. If two adjacent shots merge because both use the same
+value, silhouette and cool/dark geometry, rerender the later shot with a
+different form or luminance structure. Do not insert a flash merely to force a
+detector hit.
+
+DELIVERY QA
+- Product appears in every required shot and in no forbidden shot.
+- Every attached reference has one visible job; no campaign-wide attachment
+  leaks an absent subject into frame.
+- Each selected range contains the complete action and a clean out-point.
+- Generated, used and discarded durations plus credit cost are logged.
+- Product geometry is checked on a non-reflective frame.
+- Typography, claims and logos are burned after picture approval.
+- One grade pass is applied after stitching, before type.
+- Human review covers between-sample leakage, cross-shot product identity and
+  any cut that automated detection misses.
+```
+
+**Why it works:** it separates campaign continuity from shot-level visibility,
+so a product reference cannot become an accidental instruction to place the
+product everywhere. Measured render headroom gives the editor a clean ending
+without pretending that one percentage fits every motion. The matte-frame and
+cut-separation gates turn two common visual ambiguities—reflection-inflated
+geometry and near-identical adjacent shots—into explicit rerender decisions.
+
+Adapted and rewritten from AdsAgencyCollab's September 30, 2026
+[Higgsfield Seedance 2.5 nine-clip production commit](https://github.com/AdsAgencyCollab/adsgenerator/commit/fc06577a87cd5b4c272e181962b144da5f2c327a),
+the [complete 45-second build, cost and QA record](https://github.com/AdsAgencyCollab/adsgenerator/blob/fc06577a87cd5b4c272e181962b144da5f2c327a/CLIENT%20ADS/_AGENCY/Flagship%2045s%2030%20Sep/00_VIDEO_LOG.md)
+and the [delivered MP4](https://d2ol7oe51mr4n9.cloudfront.net/user_33uTwjMVb5NBs9hREmEUJfVFSFg/21731a6f-ea71-4780-a797-4a4209ba6f88.mp4).
+
+
 ### Version-separated gateway payload and poll-response shape gate
 
 **Verified model:** `doubao-seedance-2.5` through BeefTV's
@@ -48781,6 +48878,7 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [AdsAgencyCollab — September 30, 2026 Higgsfield Seedance 2.5 nine-clip advertising production: shot-level reference omission, measured 1.4× render headroom, first-64–73% clean-cut windows, matte-ground geometry QA, hard-cut separation audit and exact 780-credit video spend](https://github.com/AdsAgencyCollab/adsgenerator/commit/fc06577a87cd5b4c272e181962b144da5f2c327a) ([complete build log](https://github.com/AdsAgencyCollab/adsgenerator/blob/fc06577a87cd5b4c272e181962b144da5f2c327a/CLIENT%20ADS/_AGENCY/Flagship%2045s%2030%20Sep/00_VIDEO_LOG.md), [delivered MP4](https://d2ol7oe51mr4n9.cloudfront.net/user_33uTwjMVb5NBs9hREmEUJfVFSFg/21731a6f-ea71-4780-a797-4a4209ba6f88.mp4))
 - [LigoLabs / Stedi — September 30, 2026 Higgsfield Seedance 2.0 Chinese absolute-rule production: same-plan Chinese/English exclusion A/B, exact `seedance_2_0` settings, fourteen motion prompts, unusual-anatomy continuity controls and committed 63.96-second intro](https://github.com/LigoLabs/Stedi/commit/f116dd300d6bbadc962c569d9981f8ddd0adcfd5) ([scenario and A/B record](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/tools/intro-video/scenario.md), [failure-control notes](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/tools/intro-video/decoupage-technique.md), [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.webm), [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4))
 - [Busy-Conversation-24 — September 30, 2026 Seedance 2.5 image-to-video customer-service-smile decay: original creator post, full 15-second prompt, input-to-result continuity, static-camera micro-expression choreography and published result](https://www.reddit.com/r/Akool_Official/comments/1wty6z5/testing_emotional_decay_in_seedance_25/)
 - [GRIDLIGHT-INC / film-engine — September 30, 2026 Runway Seedance 2.5/2.0 and MuAPI Seedance 2.5 option-parity gate: dated provider schemas, free 422 field probes, preview/paid payload equality, pre-spend refusal and the recorded estimate-only duration bug](https://github.com/GRIDLIGHT-INC/film-engine/commit/6aa5829742ad381c6524801e0ae9d01020357107) ([schema](https://github.com/GRIDLIGHT-INC/film-engine/blob/6aa5829742ad381c6524801e0ae9d01020357107/backend/lib/providers/video-model-fields.json), [builder](https://github.com/GRIDLIGHT-INC/film-engine/blob/6aa5829742ad381c6524801e0ae9d01020357107/backend/lib/model-options.js), [tests](https://github.com/GRIDLIGHT-INC/film-engine/blob/6aa5829742ad381c6524801e0ae9d01020357107/backend/tests/video-model-options.test.js))
