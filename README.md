@@ -450,6 +450,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [One-identity cliff rescue with contact-gated duplicate roles](#434-one-identity-cliff-rescue-with-contact-gated-duplicate-roles)
   - [Fixed-axis gardener rescue with a carried prop ledger](#435-fixed-axis-gardener-rescue-with-a-carried-prop-ledger)
   - [Night-court volleyball freeze-orbit lens impact](#436-night-court-volleyball-freeze-orbit-lens-impact)
+  - [Locked-shot customer-service smile decaying into fatigue](#437-locked-shot-customer-service-smile-decaying-into-fatigue)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -27816,6 +27817,62 @@ Adapted and rewritten from Oren Gozlan's September 30, 2026
 [committed generated result](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/public/ai/night-bullet.mp4)
 and [workflow notes](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/README.md).
 
+### 437. Locked-shot customer-service smile decaying into fatigue
+
+**Verified model:** Seedance 2.5 — the original creator names the exact model
+in the title and body, applies the platform's Seedance 2.5 model flair, shows
+the generated video and publishes the full prompt in the same post  \
+**Use case:** image-to-video micro-performance, gradual emotional transition,
+facial continuity, restrained acting  \
+**Mode:** one opening image plus text prompt  \
+**Verified settings:** 15 seconds; static eye-level medium shot; audio not
+specified
+
+```text
+Create a 15-second continuous performance from @Image1 inside the same warm
+cafe. Keep the camera fixed at eye level in a medium shot across the counter,
+with shallow depth of field on the male barista. No pan, zoom, cut or shake.
+
+0–3s — HOLD THE SERVICE PERSONA
+The customer draws the takeaway cup out of frame to the left. The barista
+maintains the bright, practiced smile from @Image1, gives one friendly nod and
+forms the words “Have a great day” with cheerful lip movement.
+
+3–6s — FOLLOW THE EXIT
+The customer leaves fully through frame left and does not return. The
+barista's gaze follows her toward the far left while the smile remains in
+place. Keep his head and shoulders calm; do not begin the emotional change
+early.
+
+6–10s — LET THE MASK FALL GRADUALLY
+Without a jump, cut or face morph, let the smile decay through small observable
+changes: the lips close and soften, the cheeks lower, the eyes lose their wide
+brightness and the eyelids become heavier. His chest completes one long,
+visible exhale. Every change is continuous and anatomically natural.
+
+10–15s — LAND ON QUIET EXHAUSTION
+He turns his gaze back toward the centre foreground, lowers both shoulders by
+a small but visible amount and places one hand on the counter edge. End on a
+stable hold: heavy eyelids, relaxed mouth and a quiet deadpan expression, with
+no renewed smile.
+
+CONTINUITY AND CONTROL
+Preserve the input face, beard, pores, cap, apron, body proportions, counter
+layout and warm cafe lighting. Keep realistic anatomy and subtle
+micro-movements. No identity drift, facial warping, sudden expression switch,
+customer re-entry, added person, prop teleport, camera movement, subtitle,
+logo or watermark.
+```
+
+**Why it works:** the performance is directed as a sequence of visible muscle,
+gaze, breath and posture changes instead of an abstract instruction to “look
+tired.” The locked camera makes every transition legible, while the delayed
+onset and final no-reset state stop the model from collapsing the emotional arc
+into one sudden face change.
+
+Adapted and rewritten from Busy-Conversation-24's September 30, 2026
+[original Seedance 2.5 image-to-video result, full prompt and model attribution](https://www.reddit.com/r/Akool_Official/comments/1wty6z5/testing_emotional_decay_in_seedance_25/).
+
 ## Reusable templates
 
 
@@ -48626,6 +48683,7 @@ the [provider-attempt review implementation](https://github.com/WilderC10000/ai-
 and the [pre-submit model, cost and endpoint gate](https://github.com/WilderC10000/ai-video-factory/commit/46435221da28c97b106b92ff17c309ac0fff0750).
 
 ## Sources
+- [Busy-Conversation-24 — September 30, 2026 Seedance 2.5 image-to-video customer-service-smile decay: original creator post, full 15-second prompt, input-to-result continuity, static-camera micro-expression choreography and published result](https://www.reddit.com/r/Akool_Official/comments/1wty6z5/testing_emotional_decay_in_seedance_25/)
 - [GRIDLIGHT-INC / film-engine — September 30, 2026 Runway Seedance 2.5/2.0 and MuAPI Seedance 2.5 option-parity gate: dated provider schemas, free 422 field probes, preview/paid payload equality, pre-spend refusal and the recorded estimate-only duration bug](https://github.com/GRIDLIGHT-INC/film-engine/commit/6aa5829742ad381c6524801e0ae9d01020357107) ([schema](https://github.com/GRIDLIGHT-INC/film-engine/blob/6aa5829742ad381c6524801e0ae9d01020357107/backend/lib/providers/video-model-fields.json), [builder](https://github.com/GRIDLIGHT-INC/film-engine/blob/6aa5829742ad381c6524801e0ae9d01020357107/backend/lib/model-options.js), [tests](https://github.com/GRIDLIGHT-INC/film-engine/blob/6aa5829742ad381c6524801e0ae9d01020357107/backend/tests/video-model-options.test.js))
 - [Oren Gozlan / omer-gozlan — September 30, 2026 Higgsfield Seedance 2.5 single-athlete night-court bullet-time spike: real-photo crop, executable 10-second 720p request, complete prompt, committed result and documented actor-selection / long-prompt 1080p failure controls](https://github.com/OrenGozlan/omer-gozlan/commit/10eec2f8caa9d42e8cce1516752daed069f7b033) ([runner](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/scripts/hf-generate.ts), [input](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/public/photos/night-court-omer.jpg), [output](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/public/ai/night-bullet.mp4), [workflow notes](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/README.md))
 - [kun / BeefTV — September 30, 2026 Seedance 2.5 relay contract: top-level prompt, cardinality-safe image fields, version-specific /v1/videos task polling, wrong-route chat-response detection and no-resubmit recovery](https://github.com/liangkunnhello/BeefTV/commit/d7c869566e009433918b012e4004f23e57295192) ([measured response record](https://github.com/liangkunnhello/BeefTV/commit/be920dcdbd3c979da5c5771cf2e20b17cc8793b1))
@@ -50003,3 +50061,4 @@ Official model references:
 ---
 
 If this collection helps, consider starring the repository. Contributions, tested variations, and failure notes are especially valuable.
+              
