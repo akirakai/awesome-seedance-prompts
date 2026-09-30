@@ -48682,7 +48682,106 @@ the [exact request and execution receipt](https://github.com/WilderC10000/ai-vid
 the [provider-attempt review implementation](https://github.com/WilderC10000/ai-video-factory/blob/a798f82052527148eb596da5dc49e5540daa9bcd/studio-ui/src/components/Attempts.tsx)
 and the [pre-submit model, cost and endpoint gate](https://github.com/WilderC10000/ai-video-factory/commit/46435221da28c97b106b92ff17c309ac0fff0750).
 
+### Chinese absolute-rule stack for negative-constraint fidelity
+
+**Verified model:** Higgsfield Seedance 2.0 (`seedance_2_0`, `std`) — the
+original creator published the exact model, 1080p production settings, fourteen
+motion prompts, reference boards and the shipped 63.96-second intro assembled
+from Seedance rushes. The same production record reports a controlled Chinese
+versus English run with the same eight-shot plan and references: the Chinese
+version obeyed all four tested exclusions, while the English version missed
+each one. Treat that four-case observation as project evidence, not a universal
+language benchmark.  
+**Use case:** reference-guided animation with unusual anatomy, strict screen
+direction, forbidden visual elements or several short action beats where a
+single loose negative prompt is not reliable  
+**Mode:** approved start frame + role-bound references -> Chinese rule stack ->
+timed shots -> final prohibition checksum
+
+Use this after the visual identity is already present in the start frame. Keep
+the positive scene description compact; spend the control budget on continuity,
+state and failure boundaries.
+
+```text
+【技术参数】
+[STYLE]，16:9，24fps，[DURATION]秒，[SHOT COUNT]个镜头。
+模型：Seedance 2.0。画面节奏：[CALM / BUILD / IMPACT / RELEASE]。
+
+【参考素材】
+@图片1为首帧和构图基准，只继承[IDENTITY / ANATOMY / WARDROBE]。
+@图片2为[LOCATION / PROP / OPPONENT]参考，只继承[OWNED ATTRIBUTES]。
+[Repeat one role per reference; do not let a storyboard own character anatomy.]
+
+【铁则一：身份与解剖连续】
+[SUBJECT]从第一帧到最后一帧始终保持同一[FACE / SILHOUETTE / PART MAP]。
+如果身体包含分离部件，描述可见的空隙：[BACKGROUND]始终能从
+[PART A]与[PART B]之间清楚穿过。任何角度、转身或高速动作都不得闭合该空隙。
+
+【铁则二：方向】
+[SUBJECT / OBJECT]始终从画面[LEFT]向[RIGHT]移动；不得反向、瞬移或换轴。
+
+【铁则三：数量与归属】
+[PROP LIST]始终由[OWNER]持有，直到[VISIBLE RELEASE EVENT]发生。
+释放后保持[TRAJECTORY / TERMINAL STATE]，不得回手、复制或消失。
+
+【铁则四：动作可读性】
+每个镜头只安排一个主要碰撞或攻击。每次先显示准备，再显示接触，
+然后显示反应与恢复。多个对手用[COLOR / SIZE / DAMAGE MARK]区分。
+
+【铁则五：情绪状态】
+每个镜头都重新写明[SUBJECT]的眼神、嘴部、呼吸与姿态；情绪只能按
+[STATE A -> STATE B -> STATE C]前进，不回到前一状态。
+
+【铁则六：镜头语言】
+使用专业术语写[景别 + 角度 + 运动]。固定机位写“机位完全固定”，
+不要让“相机”或“三脚架”成为句子中的可见主语。
+
+【铁则七：独立运动证明】
+当[OBJECT]必须被读作下落、飞离或脱手时，给它一个不包含同向运动主体的
+独立镜头，使相对运动和重力方向可见。
+
+【铁则八：声音所有权】
+只生成[PRECISE DIEGETIC SOUNDS]。对白由[SPEAKER]独占。
+[NO VOICE / NO MUSIC / NATIVE AUDIO RULE]。
+
+【分镜】
+0–[A]秒｜[景别]，[角度]，[镜头运动或“机位完全固定”]。
+[SUBJECT]从[START STATE]完成[ONE BODY ACTION]；[VISIBLE CONSEQUENCE]。
+当前情绪：[EYES + MOUTH + BREATH + POSTURE]。
+
+[A]–[B]秒｜[NEW SCALE / ANGLE / MOVE]。
+[NEXT ACTION begins from the prior terminal state].
+[Repeat with gap-free timecodes; one major contact per shot.]
+
+【音效】
+[TIMED WIND / IMPACT / FOLEY / AMBIENCE].
+
+【风格】
+[RENDER METHOD]，[LIGHT]，[MOTION QUALITY]，稳定画面，细节清晰。
+
+【禁止】
+禁止身份变化、比例变化、部件自动连接、重复主体、道具数量漂移、
+运动方向反转、动作前无准备、接触无反应、情绪复位、柔和串场、字幕、
+水印，以及画面中出现相机、三脚架或摄影设备。
+```
+
+**Why it works:** the source's same-plan A/B suggests that Seedance 2.0 gave
+Chinese exclusions more weight than their English equivalents in this
+production. Numbered rules make the invariants easy to audit, while repeating
+emotion and terminal state inside each shot prevents later beats from inheriting
+the wrong face or action state. Describing visible empty space gives unusual
+anatomy a positive image target; naming a fixed position without making a camera
+the grammatical subject avoids accidentally materializing filming equipment.
+
+Adapted and rewritten from LigoLabs' September 30, 2026
+[Seedance 2.0 intro production commit](https://github.com/LigoLabs/Stedi/commit/f116dd300d6bbadc962c569d9981f8ddd0adcfd5),
+the [complete scenario, fourteen motion prompts and Chinese/English A/B notes](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/tools/intro-video/scenario.md),
+the [iteration and failure-control record](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/tools/intro-video/decoupage-technique.md)
+and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.webm)
+and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
+
 ## Sources
+- [LigoLabs / Stedi — September 30, 2026 Higgsfield Seedance 2.0 Chinese absolute-rule production: same-plan Chinese/English exclusion A/B, exact `seedance_2_0` settings, fourteen motion prompts, unusual-anatomy continuity controls and committed 63.96-second intro](https://github.com/LigoLabs/Stedi/commit/f116dd300d6bbadc962c569d9981f8ddd0adcfd5) ([scenario and A/B record](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/tools/intro-video/scenario.md), [failure-control notes](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/tools/intro-video/decoupage-technique.md), [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.webm), [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4))
 - [Busy-Conversation-24 — September 30, 2026 Seedance 2.5 image-to-video customer-service-smile decay: original creator post, full 15-second prompt, input-to-result continuity, static-camera micro-expression choreography and published result](https://www.reddit.com/r/Akool_Official/comments/1wty6z5/testing_emotional_decay_in_seedance_25/)
 - [GRIDLIGHT-INC / film-engine — September 30, 2026 Runway Seedance 2.5/2.0 and MuAPI Seedance 2.5 option-parity gate: dated provider schemas, free 422 field probes, preview/paid payload equality, pre-spend refusal and the recorded estimate-only duration bug](https://github.com/GRIDLIGHT-INC/film-engine/commit/6aa5829742ad381c6524801e0ae9d01020357107) ([schema](https://github.com/GRIDLIGHT-INC/film-engine/blob/6aa5829742ad381c6524801e0ae9d01020357107/backend/lib/providers/video-model-fields.json), [builder](https://github.com/GRIDLIGHT-INC/film-engine/blob/6aa5829742ad381c6524801e0ae9d01020357107/backend/lib/model-options.js), [tests](https://github.com/GRIDLIGHT-INC/film-engine/blob/6aa5829742ad381c6524801e0ae9d01020357107/backend/tests/video-model-options.test.js))
 - [Oren Gozlan / omer-gozlan — September 30, 2026 Higgsfield Seedance 2.5 single-athlete night-court bullet-time spike: real-photo crop, executable 10-second 720p request, complete prompt, committed result and documented actor-selection / long-prompt 1080p failure controls](https://github.com/OrenGozlan/omer-gozlan/commit/10eec2f8caa9d42e8cce1516752daed069f7b033) ([runner](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/scripts/hf-generate.ts), [input](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/public/photos/night-court-omer.jpg), [output](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/public/ai/night-bullet.mp4), [workflow notes](https://github.com/OrenGozlan/omer-gozlan/blob/10eec2f8caa9d42e8cce1516752daed069f7b033/promo/README.md))
