@@ -27754,6 +27754,97 @@ and [public result](https://media.liuyidaoai.com/tutorials/chengzilhy-pvz-dave-s
 
 ## Reusable templates
 
+### Measured source-to-extension handoff with cadence ramp and endpoint loop
+
+**Verified model:** Higgsfield Seedance 2.5 `video_extension` — the
+original creator commits two finished 1920×1080 journeys, their matching loop
+clips, the exact source/extension time boundaries and the assembly and
+measurement scripts. The submitted provider prompt and task IDs are not public,
+so this counts as one verified production template rather than a complete
+scenario prompt or an independently auditable quality benchmark.  
+**Use case:** source-footage continuation, synthetic environment reveal,
+scroll-scrubbed website hero, seamless generated loop, day/night alternate
+ending  
+**Mode:** video extension from a measured source tail, with a destination image
+reference and a separately aligned endpoint loop
+
+Use this when a real, simulated or archival shot must become a generated scene
+without a visible speed break, semantic pop or sliding loop seam.
+
+```text
+SOURCE AND AUTHORITY MAP
+@Video1 = the approved source tail. It owns camera direction, optical flow,
+feature trajectories and handoff speed. Upload enough lead-in to establish
+motion, but cut before the source completes the visual transformation.
+@Image1 = the approved destination composition. It owns only the final horizon,
+major landmark position, palette and resting camera relationship.
+Do not inherit text, overlays or unrelated objects from either reference.
+
+VISIBLE HANDOFF CUE
+During the last [N] source frames, introduce one small destination cue at the
+exact place where the generated scene will grow: [TOP OF SUN / MOON / OBJECT /
+COLOR BAND]. The cue must already be visible at the source/extension boundary.
+It is a continuity seed, not a new cut.
+
+EXTENSION BRIEF
+Continue @Video1 forward for [DURATION] seconds in one uninterrupted camera
+path. Preserve its motion direction and apparent speed at the join.
+Transform [SOURCE STRUCTURE] continuously into [DESTINATION ENVIRONMENT].
+Keep [ANCHOR FEATURE] moving along the same trajectory while [SECONDARY
+FEATURES] resolve around it. Ease the camera onto @Image1's framing and reach a
+stable resting composition for the final [HOLD] seconds.
+No reverse motion, restart, extra subject, text, logo, new cut or unassigned
+audio.
+
+IMMUTABLE RAW RECORD
+Save the exact model/version, submitted references and hashes, prompt, source
+frame interval, raw extension, nominal duration and native frame rate before
+retiming or compositing.
+
+CADENCE MATCH
+1. Track the same high-contrast feature on both sides of the join.
+2. Drop only duplicated or stalled opening frames from the extension.
+3. Measure the source exit velocity and generated entry velocity.
+4. If they differ, retime the extension with a short continuous ramp from
+   [ENTRY RATE] to 1.0×; never use a hard speed step.
+5. Motion-interpolate only after the timing curve is fixed, then normalize both
+   sections to the delivery frame rate.
+
+ENDPOINT AND LOOP ALIGNMENT
+Create a separate [LOOP LENGTH]-second resting loop from the approved endpoint.
+Make its last [CROSSFADE] seconds blend into its first [CROSSFADE] seconds.
+Before joining the extension to the loop, measure [LANDMARK 1] and [LANDMARK 2]
+on both sides. Correct only small translation and scale differences; reject and
+regenerate if alignment requires a perspective repair or changes the scene.
+Blend the extension's final [JOIN BLEND] seconds into the aligned loop and begin
+loop playback after that blend, not again from frame zero.
+
+QC
+Inspect the source/extension join, extension/loop join and loop wrap at normal
+speed, half speed and frame-by-frame. Reject if the cue jumps, motion pauses or
+reverses, the horizon or landmark slides, the final camera still drifts, a loop
+pulse appears, or fast browser playback drops enough frames to expose the seam.
+For web use, pre-render any accelerated scroll cut and keep the full-resolution
+journey as the review master.
+```
+
+**Why it works:** the generator receives a visible bridge and separate
+authorities for motion and destination, while post-generation measurements
+repair only cadence and sub-frame endpoint differences. The recorded production
+continued a measured NASA black-hole plunge with an eight-second Seedance 2.5
+extension, eased both endings to the same 7.614-second generated segment,
+aligned the disc and horizon before a half-second handoff, and used a
+one-second wrap crossfade for the resting loops.
+
+Adapted and rewritten from Jordan Moreno's September 30, 2026
+[production commit](https://github.com/johrmohr/Personal-Website/commit/47f7a3af896f6b2c7b35f09c49abee60e060fd30),
+[workflow and measurements](https://github.com/johrmohr/Personal-Website/blob/47f7a3af896f6b2c7b35f09c49abee60e060fd30/explorations/journey-concepts/README.md),
+[assembly script](https://github.com/johrmohr/Personal-Website/blob/47f7a3af896f6b2c7b35f09c49abee60e060fd30/explorations/journey-concepts/tools/build_ext.sh),
+and the committed [moon](https://github.com/johrmohr/Personal-Website/blob/47f7a3af896f6b2c7b35f09c49abee60e060fd30/explorations/journey-concepts/media/journey_moon.mp4)
+and [sun](https://github.com/johrmohr/Personal-Website/blob/47f7a3af896f6b2c7b35f09c49abee60e060fd30/explorations/journey-concepts/media/journey_sun.mp4)
+results.
+
+
 ### Reference-audio talking-head qualification with measured lip-sync lag
 
 **Verified model:** KIE-hosted ByteDance Seedance 2.5
@@ -48322,6 +48413,7 @@ the [provider-attempt review implementation](https://github.com/WilderC10000/ai-
 and the [pre-submit model, cost and endpoint gate](https://github.com/WilderC10000/ai-video-factory/commit/46435221da28c97b106b92ff17c309ac0fff0750).
 
 ## Sources
+- [Jordan Moreno / Personal-Website — September 30, 2026 Higgsfield Seedance 2.5 measured source-to-extension handoff: visible continuity cue, motion-cadence ramp, destination-frame alignment and endpoint loop, with two committed results and reproducible assembly scripts](https://github.com/johrmohr/Personal-Website/commit/47f7a3af896f6b2c7b35f09c49abee60e060fd30) ([workflow](https://github.com/johrmohr/Personal-Website/blob/47f7a3af896f6b2c7b35f09c49abee60e060fd30/explorations/journey-concepts/README.md), [moon result](https://github.com/johrmohr/Personal-Website/blob/47f7a3af896f6b2c7b35f09c49abee60e060fd30/explorations/journey-concepts/media/journey_moon.mp4), [sun result](https://github.com/johrmohr/Personal-Website/blob/47f7a3af896f6b2c7b35f09c49abee60e060fd30/explorations/journey-concepts/media/journey_sun.mp4))
 - [ZAURAN / ZAURAN-AI-CREATIVE — September 29, 2026 Seedance 2.5 attention-task refinement for Blender blocking transfer: portrait-as-identity boundary, whitebox-as-gross-motion boundary, visible attention target, causal performance progression and no-invented-emotion guard](https://github.com/ZAURAN/ZAURAN-AI-CREATIVE/commit/9ccc4778e9b9c0f35661d0eb2fa828772db7bb52) ([model-specific production guide](https://github.com/ZAURAN/ZAURAN-AI-CREATIVE/blob/9ccc4778e9b9c0f35661d0eb2fa828772db7bb52/references/seedance-2.5.md))
 - [Ima Studio official — September 29, 2026 Seedance 2.5 cherry-can campaign: public canvas, complete 30-second prompt, product reference, native audio, generated result and recorded package/fisheye conflicts](https://www.imastudio.com/community/canvas-detail/90c6b360309f4cde9126740390897636) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/commit/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1), [public MP4](https://media.liuyidaoai.com/tutorials/imastudio-cherry-can-tokyo-girls-ad-seedance-2-5/demo-web.mp4))
 - [Ima Studio official — September 29, 2026 Seedance 2.5 Y2K lip-tint campaign: public project, complete 30-second prompt, product reference, native audio, generated result and recorded image/prompt brand mismatch](https://www.imastudio.com/canvas-editor/prj_1790653664778_97ac7da658a8d1dc) ([versioned prompt and review](https://github.com/reed35/ai-video-tutorials/commit/f2cd39c1a8a215a5df70aa9f59e222232c25b6a1), [public MP4](https://media.liuyidaoai.com/tutorials/imastudio-lip-tint-y2k-studio-ad-seedance-2-5/demo-web.mp4))
