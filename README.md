@@ -34553,6 +34553,81 @@ Adapted from the verified production's [video assembly script](https://github.co
 and [generation/acceptance notes](https://github.com/vovalukashov/render-seedance-prompts/blob/872ea65e64732a2316a60113294098dbc85c3179/README.md),
 published August 9, 2026.
 
+### Reference-mechanics skit compiler with per-character reaction harvest
+
+**Verified model:** Seedance 2.5 — Higgsfield
+`bytedance/seedance-2.5/image-to-video`, 720p, native audio enabled; verified
+across four committed long-take outputs, request IDs, transcripts, edit scripts,
+and four delivered aspect ratios
+
+Use this when a reference clip supplies a strong conversational format but the
+new branded skit must remain original. The core technique is to borrow only the
+reference's mechanics, generate each performer as a separate direct-to-lens
+long take, and turn their silent listening pauses into reaction coverage.
+
+```text
+REFERENCE-MECHANICS ABSTRACT
+Extract only:
+- actor count and conversational roles
+- direct-to-lens or over-the-shoulder camera relationship
+- turn-taking rhythm, reaction length, punch-in cadence, and escalation pattern
+- where the product reveal enters the joke
+Do not reuse the reference's characters, premise, line wording, recognizable
+staging, props, music, captions, or punchline.
+
+ORIGINAL SKIT CONTRACT
+Write a new [CONFLICT] for [CHARACTER A] and [CHARACTER B].
+The viewer stands in for the absent scene partner: each actor speaks straight
+to lens as if the other performer is holding the phone.
+Place [PRODUCT / BRAND] once, as a causal punchline rather than a feature demo.
+Give every speaker an immutable start image, wardrobe, location, and one prop.
+
+CAST-STILL PREFLIGHT
+Neutral closed-mouth expression; identity, wardrobe, set, and prop already
+correct; no text, logo, extra person, or unexplained object.
+Disable prompt enhancement if it adds smiles, logos, or commercial gloss.
+
+PER-CHARACTER LONG-TAKE PROMPT
+Single continuous vertical smartphone shot, no cuts. [CAMERA HEIGHT AND
+HANDHELD / LOCKED BEHAVIOR]. [CHARACTER] stays in place and talks directly into
+the lens with accurate lip sync. Define [VOICE] once.
+
+In this exact order:
+1. [LINE + restrained performance direction + at most one prop action]
+Pause — listens silently; specify the reaction.
+2. [LINE + next escalation beat]
+Pause — listens silently; specify the reaction.
+3. [LINE + product-triggered payoff]
+Hold the final reaction for [SECONDS].
+
+Only [VOICE] and [ROOM TONE]. No music, other people, captions, subtitles, logo,
+or generated text. Preserve identity, wardrobe, location, prop, and eyeline.
+
+EDIT CONTRACT
+Generate one or two long takes per actor. Use word-level transcription to mark
+every spoken phrase. Alternate the approved lines in script order, and harvest
+the explicit listening pauses for reaction shots. Add punch-ins, notifications,
+captions, cutaways, exact brand text, and end cards only in post. One audio owner
+per shot; mute the reaction source while the opposite character speaks.
+
+ACCEPTANCE GATE
+- every approved line exists, is in order, and is not cut off
+- lip sync, voice, identity, wardrobe, eyeline, and prop remain consistent
+- each listening pause contains usable silent business
+- no generated overlay, extra speaker, music, or unauthorized claim
+- transcript timings, frame sheets, and the final dialogue timeline agree
+If one take fails, regenerate only that actor/take. Repair a missing reaction,
+overlay, or cutaway in the edit instead of rerendering accepted performances.
+```
+
+Adapted and rewritten from YesOpen's October 1, 2026
+[verified Seedance 2.5 production commit](https://github.com/behavio1/yesopen-higgsfield-skits/commit/ff41318fab8c843202cdd8b0a62046f54a734764),
+the [complete case study](https://github.com/behavio1/yesopen-higgsfield-skits/blob/ff41318fab8c843202cdd8b0a62046f54a734764/references/case-study-gym-breakup.md),
+the committed [owner](https://github.com/behavio1/yesopen-higgsfield-skits/blob/ff41318fab8c843202cdd8b0a62046f54a734764/examples/gym-breakup/args/take-owner-1-720p.json)
+and [agency](https://github.com/behavio1/yesopen-higgsfield-skits/blob/ff41318fab8c843202cdd8b0a62046f54a734764/examples/gym-breakup/args/take-agency-1-720p.json)
+long-take requests, the [request/output ledger](https://github.com/behavio1/yesopen-higgsfield-skits/blob/ff41318fab8c843202cdd8b0a62046f54a734764/examples/gym-breakup/takes/jobs.jsonl),
+and the [delivered vertical MP4](https://github.com/behavio1/yesopen-higgsfield-skits/blob/ff41318fab8c843202cdd8b0a62046f54a734764/examples/gym-breakup/final/its-not-you-its-your-invoices-9x16.mp4).
+
 ### Anti-gloss dialogue ad with transcript QA
 
 **Verified model:** Seedance 2.5 — validated across three 30-second
@@ -49265,6 +49340,7 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [YesOpen / yesopen-higgsfield-skits — October 1, 2026 Higgsfield Seedance 2.5 four-take UGC comedy production: reference-mechanics abstraction, per-character direct-to-lens long takes, silent reaction harvest, word-timed dialogue assembly and four-format delivery](https://github.com/behavio1/yesopen-higgsfield-skits/commit/ff41318fab8c843202cdd8b0a62046f54a734764) ([complete case study](https://github.com/behavio1/yesopen-higgsfield-skits/blob/ff41318fab8c843202cdd8b0a62046f54a734764/references/case-study-gym-breakup.md), [request/output ledger](https://github.com/behavio1/yesopen-higgsfield-skits/blob/ff41318fab8c843202cdd8b0a62046f54a734764/examples/gym-breakup/takes/jobs.jsonl), [delivered MP4](https://github.com/behavio1/yesopen-higgsfield-skits/blob/ff41318fab8c843202cdd8b0a62046f54a734764/examples/gym-breakup/final/its-not-you-its-your-invoices-9x16.mp4))
 - [Adnan / itsadnanai — October 1, 2026 Higgsfield Seedance 2.5 single-reference house-construction time-lapse: complete 12-second prompt, 270-degree descending orbit, selected 84-credit take, discarded 105-credit endpoint attempt, early-pool reference leak and scroll-sequence delivery workflow](https://github.com/itsadnanai/scroll-website-workflow/commit/264315513a9300c3a5a1e15170197ef83c125431) ([versioned workflow](https://github.com/itsadnanai/scroll-website-workflow/blob/264315513a9300c3a5a1e15170197ef83c125431/README.md))
 - [spiritform / ComfyBlockoutApp — October 1, 2026 Comfy Router Seedance 2.0 (`byteplus/dreamina-seedance-2-0-260128`) end-to-end R2V verification: signed asset URL, typed `content[]` reference role, metricless-ingestion negative canary and measured HTTP 400 `invalid_input` failure](https://github.com/spiritform/ComfyBlockoutApp/commit/e204d814765e84042a0e558e8522d645adbba561) ([reference-input contract](https://github.com/spiritform/ComfyBlockoutApp/blob/e204d814765e84042a0e558e8522d645adbba561/README.md#on-video-reference-input), [Seedance 2.0 R2V workflow](https://github.com/spiritform/ComfyBlockoutApp/blob/e204d814765e84042a0e558e8522d645adbba561/server/workflows/api_seedance2_0_r2v.json))
 - [Alin / @Alin_Reaper05 — September 30, 2026 Seedance 2.5 research-vessel stellar escape, complete prompt, generated result, lateral-to-rear camera handoff and shockwave-lit derelict scale field](https://x.com/Alin_Reaper05/status/2105274207193952341) ([complete prompt reply](https://x.com/Alin_Reaper05/status/2105274209312063891))
