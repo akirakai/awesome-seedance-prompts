@@ -453,6 +453,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Locked-shot customer-service smile decaying into fatigue](#437-locked-shot-customer-service-smile-decaying-into-fatigue)
   - [Catch-before-spill cafe one-take with contact-gated prop physics](#438-catch-before-spill-cafe-one-take-with-contact-gated-prop-physics)
   - [Lateral-to-rear stellar-escape pursuit](#439-lateral-to-rear-stellar-escape-pursuit)
+  - [Single-reference orbit construction time-lapse](#440-single-reference-orbit-construction-time-lapse)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -27989,6 +27990,77 @@ Adapted and rewritten from Alin / @Alin_Reaper05's September 30, 2026
 and [complete prompt reply](https://x.com/Alin_Reaper05/status/2105274209312063891).
 
 
+### 440. Single-reference orbit construction time-lapse
+
+**Verified model:** Seedance 2.5 through Higgsfield — the original creator
+states that the published prompt, settings and costs are the ones used for the
+clip in his reel, including the discarded first attempt and the selected take  \
+**Use case:** architectural construction reveal, one-take process visualization,
+scroll-scrub website hero, reference-versus-camera-priority control  \
+**Mode:** Reference; one finished-house image only  \
+**Verified settings:** 12 seconds; 720p; 16:9; audio off; 84 Higgsfield credits
+for the selected take
+
+```text
+Using @Image1 only as the finished-house authority, create a photorealistic
+12-second construction time-lapse of that exact house rising from an empty,
+dry plot. Film the entire build as one unbroken aerial drone move with no cut.
+
+CAMERA ROUTE
+Keep the plot and house centred while the drone travels clockwise through
+approximately 270 degrees. Begin high and wide above one rear corner; descend
+continuously as the orbit advances; finish low at the front three-quarter angle
+shown in @Image1. Each construction phase must therefore be seen from a new,
+physically connected side of the site. Never pause the orbit, jump to the next
+angle or let the building rotate in place beneath a static camera.
+
+0–3s — GROUNDWORK FROM ABOVE
+Show the genuinely empty plot first. One excavator opens the footprint, then
+formwork and reinforcement establish the same foundation before concrete is
+poured into a single stable slab. Do not show the finished pool, lawn or garden
+during this phase.
+
+3–6s — STRUCTURE FROM THE SECOND SIDE
+As the drone swings closer and lower, columns rise from the visible slab and
+the structural frame advances floor by floor. Every new member connects to the
+existing structure; no complete wall or roof appears before its support.
+
+6–9s — ENVELOPE FROM THE THIRD SIDE
+At mid-height, place the flat roof on the completed frame, then finish exterior
+walls, timber cladding and glazing in that order. Preserve the footprint,
+storey count, openings and material identity from @Image1.
+
+9–12s — LANDSCAPE AND REFERENCE MATCH
+Settle into the low front three-quarter view. Only now complete and fill the
+pool, establish the lawn and garden, clear construction equipment and finish
+on the exact house, mountain backdrop and composition of @Image1. Hold the
+completed property briefly without stopping the camera abruptly.
+
+Keep one golden-hour sunset state and the same mountains for the full take.
+Use smooth steady drone motion, credible machinery and causal construction
+order. No cut, camera stall, reverse orbit, rotating site, flicker, geometry
+reset, instant complete house, early pool or finished landscaping, close person,
+generated text, logo or watermark.
+```
+
+**Why it works:** one destination reference leaves Seedance enough freedom to
+execute a large continuous orbit, while the timed altitude and angle changes
+make the camera path auditable. The creator's first 105-credit attempt used
+near-matching empty-site and finished-house endpoints: construction succeeded,
+but the camera barely moved. The selected single-reference take restored the
+orbit, yet its pool was already visible in frame one because the final reference
+contained it. That residual failure is important: when final-only assets must
+arrive late, mask them out of the single motion reference and describe their
+late reintroduction, then enforce an early-phase occupancy audit rather than
+assuming timeline prose will override the pixels. The delivered clip was then
+interpolated from 24 to 60 fps and
+exported as a roughly 720-frame sequence for scroll-controlled playback; that
+post process does not count as native Seedance motion evidence.
+
+Adapted and rewritten from Adnan / itsadnanai's October 1, 2026
+[complete Seedance 2.5 production workflow, prompt, settings, costs and failure notes](https://github.com/itsadnanai/scroll-website-workflow/commit/264315513a9300c3a5a1e15170197ef83c125431)
+([versioned README](https://github.com/itsadnanai/scroll-website-workflow/blob/264315513a9300c3a5a1e15170197ef83c125431/README.md)).
+
 ## Reusable templates
 
 
@@ -49076,6 +49148,7 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [Adnan / itsadnanai — October 1, 2026 Higgsfield Seedance 2.5 single-reference house-construction time-lapse: complete 12-second prompt, 270-degree descending orbit, selected 84-credit take, discarded 105-credit endpoint attempt, early-pool reference leak and scroll-sequence delivery workflow](https://github.com/itsadnanai/scroll-website-workflow/commit/264315513a9300c3a5a1e15170197ef83c125431) ([versioned workflow](https://github.com/itsadnanai/scroll-website-workflow/blob/264315513a9300c3a5a1e15170197ef83c125431/README.md))
 - [spiritform / ComfyBlockoutApp — October 1, 2026 Comfy Router Seedance 2.0 (`byteplus/dreamina-seedance-2-0-260128`) end-to-end R2V verification: signed asset URL, typed `content[]` reference role, metricless-ingestion negative canary and measured HTTP 400 `invalid_input` failure](https://github.com/spiritform/ComfyBlockoutApp/commit/e204d814765e84042a0e558e8522d645adbba561) ([reference-input contract](https://github.com/spiritform/ComfyBlockoutApp/blob/e204d814765e84042a0e558e8522d645adbba561/README.md#on-video-reference-input), [Seedance 2.0 R2V workflow](https://github.com/spiritform/ComfyBlockoutApp/blob/e204d814765e84042a0e558e8522d645adbba561/server/workflows/api_seedance2_0_r2v.json))
 - [Alin / @Alin_Reaper05 — September 30, 2026 Seedance 2.5 research-vessel stellar escape, complete prompt, generated result, lateral-to-rear camera handoff and shockwave-lit derelict scale field](https://x.com/Alin_Reaper05/status/2105274207193952341) ([complete prompt reply](https://x.com/Alin_Reaper05/status/2105274209312063891))
 - [AdsAgencyCollab — September 30, 2026 Higgsfield Seedance 2.5 nine-clip advertising production: shot-level reference omission, measured 1.4× render headroom, first-64–73% clean-cut windows, matte-ground geometry QA, hard-cut separation audit and exact 780-credit video spend](https://github.com/AdsAgencyCollab/adsgenerator/commit/fc06577a87cd5b4c272e181962b144da5f2c327a) ([complete build log](https://github.com/AdsAgencyCollab/adsgenerator/blob/fc06577a87cd5b4c272e181962b144da5f2c327a/CLIENT%20ADS/_AGENCY/Flagship%2045s%2030%20Sep/00_VIDEO_LOG.md), [delivered MP4](https://d2ol7oe51mr4n9.cloudfront.net/user_33uTwjMVb5NBs9hREmEUJfVFSFg/21731a6f-ea71-4780-a797-4a4209ba6f88.mp4))
