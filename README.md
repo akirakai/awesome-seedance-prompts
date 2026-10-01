@@ -452,6 +452,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Night-court volleyball freeze-orbit lens impact](#436-night-court-volleyball-freeze-orbit-lens-impact)
   - [Locked-shot customer-service smile decaying into fatigue](#437-locked-shot-customer-service-smile-decaying-into-fatigue)
   - [Catch-before-spill cafe one-take with contact-gated prop physics](#438-catch-before-spill-cafe-one-take-with-contact-gated-prop-physics)
+  - [Lateral-to-rear stellar-escape pursuit](#439-lateral-to-rear-stellar-escape-pursuit)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -27934,6 +27935,60 @@ the final held reaction supplies a clear terminal state without adding a cut.
 Adapted and rewritten from u/Altruistic-Gap-8979's October 1, 2026 (JST)
 [original Seedance 2.5 result, complete prompt and exact-model attribution](https://www.reddit.com/r/Akool_Official/comments/1wu3eby/seedance_25_on_akool_the_coffee_was_not_ready/).
 
+### 439. Lateral-to-rear stellar-escape pursuit
+
+**Verified model:** Seedance 2.5 — the original creator explicitly labels the
+generated video “SD 2.5” and publishes the complete prompt in a direct reply  \
+**Use case:** large-scale science-fiction escape, camera-position handoff,
+shockwave-driven illumination, depth and scale control  \
+**Mode:** text-to-video  \
+**Verified settings:** duration, aspect ratio, resolution and audio are not
+specified in the source
+
+```text
+Create one continuous photorealistic deep-space escape shot. One research
+vessel flees an exploding star through a field of abandoned ships. Preserve
+one vessel design, one forward escape direction and one expanding stellar
+event behind it.
+
+BEGIN BESIDE THE VESSEL
+Race the camera alongside the research vessel at matching speed. Keep the ship
+large and readable in the foreground while abandoned hulls occupy distinct
+depth layers beyond it. The star erupts behind the route. Its first expanding
+shockwave reaches each derelict in spatial order, briefly revealing silhouette,
+surface damage and scale before the light passes.
+
+SWING INTO THE WAKE
+Without a cut, arc the camera smoothly around the research vessel and settle
+behind it on the same direction of travel. Preserve the vessel's velocity and
+screen-space continuity during the move; background wrecks should cross frame
+through believable parallax rather than sliding as one flat layer.
+
+END ON THE OVERTAKING LIGHT
+The expanding stellar light consumes more of the horizon while the research
+vessel continues its escape. Let brightness, hull reflections and camera
+vibration rise only as the wave approaches. Finish with the vessel still
+recognizable against the advancing light, emphasizing intense motion and
+physically convincing scale.
+
+No cut, camera teleport, vessel redesign, direction reversal, duplicate hero
+ship, moving-star jump, simultaneous illumination of every depth layer,
+weightless debris, arbitrary shake, flat background, subtitle, logo or
+watermark.
+```
+
+**Why it works:** the camera has two explicit positions—matched lateral pursuit
+and rear pursuit—with a continuous arc between them. The ordered illumination
+of the derelict field turns the shockwave into a depth ruler, while the fixed
+escape direction prevents the camera swing from becoming a ship reversal.
+Ending before impact preserves the source's pursuit tension instead of
+inventing an unsupported collision.
+
+Adapted and rewritten from Alin / @Alin_Reaper05's September 30, 2026
+[original Seedance 2.5 generated result and exact-model statement](https://x.com/Alin_Reaper05/status/2105274207193952341)
+and [complete prompt reply](https://x.com/Alin_Reaper05/status/2105274209312063891).
+
+
 ## Reusable templates
 
 
@@ -48939,6 +48994,7 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [Alin / @Alin_Reaper05 — September 30, 2026 Seedance 2.5 research-vessel stellar escape, complete prompt, generated result, lateral-to-rear camera handoff and shockwave-lit derelict scale field](https://x.com/Alin_Reaper05/status/2105274207193952341) ([complete prompt reply](https://x.com/Alin_Reaper05/status/2105274209312063891))
 - [AdsAgencyCollab — September 30, 2026 Higgsfield Seedance 2.5 nine-clip advertising production: shot-level reference omission, measured 1.4× render headroom, first-64–73% clean-cut windows, matte-ground geometry QA, hard-cut separation audit and exact 780-credit video spend](https://github.com/AdsAgencyCollab/adsgenerator/commit/fc06577a87cd5b4c272e181962b144da5f2c327a) ([complete build log](https://github.com/AdsAgencyCollab/adsgenerator/blob/fc06577a87cd5b4c272e181962b144da5f2c327a/CLIENT%20ADS/_AGENCY/Flagship%2045s%2030%20Sep/00_VIDEO_LOG.md), [delivered MP4](https://d2ol7oe51mr4n9.cloudfront.net/user_33uTwjMVb5NBs9hREmEUJfVFSFg/21731a6f-ea71-4780-a797-4a4209ba6f88.mp4))
 - [LigoLabs / Stedi — September 30, 2026 Higgsfield Seedance 2.0 Chinese absolute-rule production: same-plan Chinese/English exclusion A/B, exact `seedance_2_0` settings, fourteen motion prompts, unusual-anatomy continuity controls and committed 63.96-second intro](https://github.com/LigoLabs/Stedi/commit/f116dd300d6bbadc962c569d9981f8ddd0adcfd5) ([scenario and A/B record](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/tools/intro-video/scenario.md), [failure-control notes](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/tools/intro-video/decoupage-technique.md), [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.webm), [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4))
 - [Busy-Conversation-24 — September 30, 2026 Seedance 2.5 image-to-video customer-service-smile decay: original creator post, full 15-second prompt, input-to-result continuity, static-camera micro-expression choreography and published result](https://www.reddit.com/r/Akool_Official/comments/1wty6z5/testing_emotional_decay_in_seedance_25/)
