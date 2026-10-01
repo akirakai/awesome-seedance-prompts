@@ -31840,6 +31840,40 @@ or token-efficient without measuring both: one published five-second pair took
 difference came from the rate, not the token count. Treat this as one calibration
 pair, not a universal quality ranking.
 
+PROVIDER-MIGRATION SHADOW CELL
+When the exact Seedance model moves between providers, keep one request
+immutable across the old and candidate routes:
+- exact prompt hash and ordered reference hashes;
+- requested duration, resolution, aspect ratio and audio state;
+- one declared quality acceptance rule;
+- original files, provider task IDs, wall-clock render time and actual charge.
+
+Run and archive one accepted take on each route before changing production
+traffic. Record the provider slug and returned model, probe the delivered
+container, and compare cost, latency and quality separately. A cheaper take
+does not pass when its picture fails; a slower take does not fail when it meets
+the project's latency budget.
+
+Build a capability-delta ledger for first frame, last frame, reference images,
+reference video, reference audio, extension, native audio and every resolution.
+Carry a mode to the new provider only after that exact input shape has completed
+there. A schema field or a history of zero attempts is not live proof. Remove
+untested controls from the UI and refuse them before upload or spend; never
+silently send them to the old provider, clamp the request or preserve a stale
+marketing claim.
+
+Download the candidate output immediately when its URL is temporary. Preserve
+the old and new artifacts beside the migration decision so a later price or
+schema change cannot rewrite the evidence.
+
+CALIBRATION, NOT A UNIVERSAL RANKING
+One published Seedance 2.5 migration cell held the prompt, 5-second duration,
+480p and generated audio constant. Replicate returned the accepted take in 196
+seconds for $0.514; Runway returned the matched take in 176 seconds for $1.00,
+with the producer judging visual quality equivalent. Treat those figures as one
+dated provider calibration. Re-run the shadow cell for another region, tier,
+prompt class or provider revision.
+
 ROUTING DECISION
 Choose the model separately for each production need. Begin with the published
 observations only as hypotheses:
@@ -31876,6 +31910,12 @@ outputs, credit ledger and failure notes](https://www.kapwing.com/resources/is-s
 with the Mini-first billing and output gate verified against Jasper Li / Monid's
 September 15, 2026 [matched Seedance 2.0 Mini and 2.0 successful-run
 record](https://monid.ai/blog/guides/how-to-use-seedance-2-0-api).
+
+The provider-migration shadow cell is adapted from wei917 / modelxd-website's
+October 1, 2026 [measured Seedance 2.5 Runway-to-Replicate production
+switch](https://github.com/wei917/modelxd-website/commit/75f4aa58808fa7e3b579fcbae407de7fc2830993)
+and its [exact Replicate request, refusal and expiring-output
+adapter](https://github.com/wei917/modelxd-website/commit/08d53184de0853436c01a504803e7465b044a86b).
 
 ### Medium-native animation-style compiler and timing-matched story harness
 
@@ -50524,6 +50564,8 @@ Community examples and techniques referenced in this README:
 - [SnapGen — September 27, 2026 Seedance 2.0 / Fast / Mini / 2.5 R2V gateway-measured MP4/MOV reference duration, whole-second rounding, HTTP range requirement and 15-second unmeasurable-source billing fallback](https://github.com/bytevirts/snapgen-doc/commit/c7e7ce471e8f4b1a469076cbe34c83aebd853ebd) ([Seedance 2.5 R2V contract](https://github.com/bytevirts/snapgen-doc/blob/c7e7ce471e8f4b1a469076cbe34c83aebd853ebd/api-manual/video/seedance-2-5-r2v.mdx), [Seedance 2.0 R2V contract](https://github.com/bytevirts/snapgen-doc/blob/c7e7ce471e8f4b1a469076cbe34c83aebd853ebd/api-manual/video/seedance-2-0-r2v.mdx))
 
 - [segalitoo / Video Ad Art Direction — September 27, 2026 Higgsfield Seedance 2.5 five-shot Driftpay paper-craft campaign, exact API request/task ledger, endpoint-frame repair, per-clip scoring and committed 9:16/4:5 deliveries](https://github.com/segalitoo/Video-ad-art-direction-/commit/63b7a37e04945790105a5d074038c433fac7fe16) ([complete prompt plan](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/prompts.md), [exact request and completion ledger](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/runs.jsonl), [per-clip review](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/judge-clips.md), [delivered 9:16 MP4](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/deliver/driftpay-paper-planes_9x16.mp4))
+
+- [wei917 / modelxd-website — October 1, 2026 Seedance 2.5 matched Runway-to-Replicate migration cell: identical 5-second 480p audio request, measured latency/cost/quality, capability removals and pre-spend refusal](https://github.com/wei917/modelxd-website/commit/75f4aa58808fa7e3b579fcbae407de7fc2830993) ([exact Replicate adapter](https://github.com/wei917/modelxd-website/commit/08d53184de0853436c01a504803e7465b044a86b))
 
 Official model references:
 
