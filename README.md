@@ -28237,6 +28237,88 @@ and [set-based preview/purchase tests](https://github.com/GRIDLIGHT-INC/film-eng
 
 
 
+### Metricless R2V reference-ingestion canary
+
+**Verified model:** Seedance 2.0
+`byteplus/dreamina-seedance-2-0-260128` through Comfy Router — the original
+developer records a working end-to-end reference-video generation, the exact
+typed-content request shape and the measured `400 invalid_input` response for
+an unreachable reference. The workflow was verified independently of the
+editor integration, which still fell back to first-frame extraction. This is a
+Comfy Router contract and failure-control method, not a universal Seedance API
+schema.
+**Use case:** reference-video-to-video ingestion proof, URL-based R2V gateway
+integration, silent-reference-drop detection, paid-render preflight
+**Mode:** URL-hosted reference video through a synchronous model endpoint
+
+Use this when a successful Seedance response does not report input-video
+duration or another field that proves the reference was read. A completed task
+proves that the prompt ran; it does not by itself prove that the gateway
+parsed, fetched or forwarded the reference video.
+
+```text
+REFERENCE CONTRACT
+Exact model = byteplus/dreamina-seedance-2-0-260128.
+Reference clip = [AUTHORIZED 2-15 SECOND VIDEO].
+Reference job = [MOTION / CAMERA / TIMING / OTHER SINGLE ROLE].
+Prompt = [MINIMAL COMPLETE PROMPT THAT REQUIRES THAT ROLE].
+
+Register the clip with the gateway's asset host. Resolve an anonymously
+fetchable signed URL using the provider's documented asset-content flow; do
+not substitute a local path, authenticated dashboard URL or stale redirect.
+Record the asset hash, URL issue time and expiry when exposed.
+
+SERIALIZATION GATE
+Submit exactly one typed content part:
+content = [{
+  type: "video_url",
+  video_url: {url: SIGNED_REFERENCE_URL},
+  role: "reference_video"
+}]
+
+Fail before spend if the route instead receives another model family's
+media[] shape, if the role is absent, or if the URL cannot be fetched without
+the submitter's session. Keep model, operation and all non-reference settings
+identical between the canary and live request.
+
+NEGATIVE INGESTION CANARY — RUN BEFORE THE PAID PROMPT
+1. Replace only SIGNED_REFERENCE_URL with a deliberately unreachable URL.
+2. Submit the smallest otherwise-valid request.
+3. PASS only when the request is rejected before generation with an explicit
+   reference/input error. The verified route returned HTTP 400 invalid_input.
+4. FAIL CLOSED if the request is accepted, queued or completed. Do not assume
+   the reference was ingested; stop and inspect the model route, typed-part
+   shape, role field, URL reachability and gateway adapter.
+
+LIVE RUN
+Restore a fresh signed URL for the approved reference. Recompute and persist
+the payload hash, then submit once. Because this route is synchronous and the
+source observed multi-minute latency, a client timeout never authorizes an
+automatic duplicate request.
+
+OUTPUT ACCEPTANCE
+- returned model/route equals the receipt;
+- reference URL was valid and unexpired at submission;
+- output visibly satisfies the named reference job;
+- prompt-only cues cannot explain the claimed transfer;
+- request, response, asset hash and output checksum are preserved;
+- any accepted negative canary blocks production instead of becoming a paid
+  "maybe the reference worked" test.
+```
+
+**Why it works:** it turns a missing positive telemetry field into an
+observable negative contract. On the verified route, an unreachable video is
+rejected as invalid input; acceptance of that same canary therefore indicates
+that the reference path is being ignored, mis-serialized or routed elsewhere.
+The live output still needs motion/camera acceptance checks—the error probe
+establishes ingestion, not transfer quality.
+
+Adapted and rewritten from spiritform / ComfyBlockoutApp's October 1, 2026
+[Seedance 2.0 R2V verification commit](https://github.com/spiritform/ComfyBlockoutApp/commit/e204d814765e84042a0e558e8522d645adbba561),
+the [versioned reference-input contract](https://github.com/spiritform/ComfyBlockoutApp/blob/e204d814765e84042a0e558e8522d645adbba561/README.md#on-video-reference-input)
+and its [Seedance 2.0 R2V workflow](https://github.com/spiritform/ComfyBlockoutApp/blob/e204d814765e84042a0e558e8522d645adbba561/server/workflows/api_seedance2_0_r2v.json).
+
+
 ### Measured source-to-extension handoff with cadence ramp and endpoint loop
 
 **Verified model:** Higgsfield Seedance 2.5 `video_extension` — the
@@ -48994,6 +49076,7 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [spiritform / ComfyBlockoutApp — October 1, 2026 Comfy Router Seedance 2.0 (`byteplus/dreamina-seedance-2-0-260128`) end-to-end R2V verification: signed asset URL, typed `content[]` reference role, metricless-ingestion negative canary and measured HTTP 400 `invalid_input` failure](https://github.com/spiritform/ComfyBlockoutApp/commit/e204d814765e84042a0e558e8522d645adbba561) ([reference-input contract](https://github.com/spiritform/ComfyBlockoutApp/blob/e204d814765e84042a0e558e8522d645adbba561/README.md#on-video-reference-input), [Seedance 2.0 R2V workflow](https://github.com/spiritform/ComfyBlockoutApp/blob/e204d814765e84042a0e558e8522d645adbba561/server/workflows/api_seedance2_0_r2v.json))
 - [Alin / @Alin_Reaper05 — September 30, 2026 Seedance 2.5 research-vessel stellar escape, complete prompt, generated result, lateral-to-rear camera handoff and shockwave-lit derelict scale field](https://x.com/Alin_Reaper05/status/2105274207193952341) ([complete prompt reply](https://x.com/Alin_Reaper05/status/2105274209312063891))
 - [AdsAgencyCollab — September 30, 2026 Higgsfield Seedance 2.5 nine-clip advertising production: shot-level reference omission, measured 1.4× render headroom, first-64–73% clean-cut windows, matte-ground geometry QA, hard-cut separation audit and exact 780-credit video spend](https://github.com/AdsAgencyCollab/adsgenerator/commit/fc06577a87cd5b4c272e181962b144da5f2c327a) ([complete build log](https://github.com/AdsAgencyCollab/adsgenerator/blob/fc06577a87cd5b4c272e181962b144da5f2c327a/CLIENT%20ADS/_AGENCY/Flagship%2045s%2030%20Sep/00_VIDEO_LOG.md), [delivered MP4](https://d2ol7oe51mr4n9.cloudfront.net/user_33uTwjMVb5NBs9hREmEUJfVFSFg/21731a6f-ea71-4780-a797-4a4209ba6f88.mp4))
 - [LigoLabs / Stedi — September 30, 2026 Higgsfield Seedance 2.0 Chinese absolute-rule production: same-plan Chinese/English exclusion A/B, exact `seedance_2_0` settings, fourteen motion prompts, unusual-anatomy continuity controls and committed 63.96-second intro](https://github.com/LigoLabs/Stedi/commit/f116dd300d6bbadc962c569d9981f8ddd0adcfd5) ([scenario and A/B record](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/tools/intro-video/scenario.md), [failure-control notes](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/tools/intro-video/decoupage-technique.md), [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.webm), [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4))
