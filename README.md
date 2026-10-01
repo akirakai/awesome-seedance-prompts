@@ -454,6 +454,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Catch-before-spill cafe one-take with contact-gated prop physics](#438-catch-before-spill-cafe-one-take-with-contact-gated-prop-physics)
   - [Lateral-to-rear stellar-escape pursuit](#439-lateral-to-rear-stellar-escape-pursuit)
   - [Single-reference orbit construction time-lapse](#440-single-reference-orbit-construction-time-lapse)
+  - [Long-lens path denial for a fixed-landing dialogue](#441-long-lens-path-denial-for-a-fixed-landing-dialogue)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -28061,6 +28062,82 @@ Adapted and rewritten from Adnan / itsadnanai's October 1, 2026
 [complete Seedance 2.5 production workflow, prompt, settings, costs and failure notes](https://github.com/itsadnanai/scroll-website-workflow/commit/264315513a9300c3a5a1e15170197ef83c125431)
 ([versioned README](https://github.com/itsadnanai/scroll-website-workflow/blob/264315513a9300c3a5a1e15170197ef83c125431/README.md)).
 
+### 441. Long-lens path denial for a fixed-landing dialogue
+
+**Verified model:** Kie AI `bytedance/seedance-2-5` — the versioned request,
+successful task log and generated MP4 URL identify the exact model; the
+creator's extraction review confirms that the actor stayed on the landing and
+delivered the line as written  \
+**Use case:** restrained live-action dialogue, blocking repair, reference-locked
+interior, native voice continuity  \
+**Mode:** ingredients/reference mode with identity, location and voice assets;
+no start or end frame  \
+**Verified settings:** 7 seconds; 9:16; 720p; native dialogue audio; 441 Kie
+credits
+
+```text
+Create a seven-second vertical prestige-drama shot in one ordinary 1930s
+semi-detached house at night. Use natural 24 fps motion, a spherical long-lens
+look, shallow optical depth of field, motivated 2800K practical light, real skin
+texture and restrained performance.
+
+REFERENCE ROLES
+@Image1 owns only the woman's face, age, steel-grey bob, body proportions and
+identity. Dress her in one green crew-neck jumper, charcoal skirt and black
+low-heeled shoes; do not copy any sheet layout or alternate costume.
+@Image2 owns the hall architecture, staircase, landing, furniture, materials,
+light side and lived-in condition. Do not turn it into a cutaway.
+@Audio1 owns only the woman's Lancashire voice, pitch, accent and unhurried
+pace. The prose below owns her emotion and timing.
+
+BLOCKING AND FRAME
+She begins and ends on the small top landing, her right hand resting on the top
+newel post. Place a locked long-lens camera low in the hall, looking upward, but
+frame ONLY the top four steps, the newel post and the landing. The rest of the
+flight remains below the lower frame edge. A descent must be physically
+unreadable inside this composition: taking a step down would remove her from
+the shot.
+
+Frame her from the knees up with both feet planted on the landing for the full
+take. She looks toward her husband below frame and says, softly but clearly:
+“Leave the bags downstairs, love. I'll deal with them tomorrow.”
+
+Give the seven seconds a small performance budget rather than empty stillness:
+her mouth forms the line; midway, her weight shifts once by a few centimetres;
+on “tomorrow,” her fingers tighten once around the newel post and her eyes leave
+the stairwell. Those are the only body actions. The fear of using the stairs is
+covered by a light, tired voice and revealed only by that hand pressure and
+averted gaze. End on a one-second quiet hold with her still on the landing.
+
+CAMERA, FOCUS AND SOUND
+Tripod locked: no push, zoom, orbit, reframe, sway or cut. If a tiny operator
+correction is unavoidable, allow only one late pan or tilt of a few degrees that
+partially follows the weight shift. Keep her eyes sharp and the nearest visible
+step softly out of focus. Record clean close boom dialogue with faint room tone;
+the microphone and crew never enter frame. No score, foley flourish or other
+speaker.
+
+CONTINUITY AND FAILURE CONTROL
+Keep one face, hairstyle, wardrobe, landing geometry, step count, rail shape,
+light direction and hand-to-post contact throughout. No step onto the flight,
+walk down, foot slide, leaving the landing, walking toward camera, theatrical
+gesture, repeated nod, exaggerated fear, gaze to lens, duplicate person,
+background bend, staircase morph, finger fusion, subtitle, logo or watermark.
+```
+
+**Why it works:** repeated “stay still” wording had not solved the earlier
+blocking failure because a fully visible staircase still offered the model a
+strong action path. The successful repair changes the image-space affordance:
+the walkable route is cropped out, while three small owned movements give the
+actor enough business to fill the duration. That pairs a positive motion budget
+with compositional path denial instead of relying on a long negative list alone.
+
+Adapted and rewritten from keys-exe's October 1, 2026
+[seven-clip Seedance 2.5 production commit](https://github.com/keys-exe/global-manual-ai/commit/0cedf52d777258a7964328d5a7cdf95204e66dcd)
+([complete versioned request and prompt](https://github.com/keys-exe/global-manual-ai/blob/0cedf52d777258a7964328d5a7cdf95204e66dcd/builds/stryde-half-my-age/body/SC02/SC02-SH01.call.json),
+[successful task log and generated MP4 URL](https://github.com/keys-exe/global-manual-ai/blob/0cedf52d777258a7964328d5a7cdf95204e66dcd/builds/stryde-half-my-age/body/SC02/SC02-SH01.sd1.kie.log),
+[creator review and seven-shot batch ledger](https://github.com/keys-exe/global-manual-ai/blob/0cedf52d777258a7964328d5a7cdf95204e66dcd/builds/stryde-half-my-age/BUILD_NOTES.md)).
+
 ## Reusable templates
 
 
@@ -50566,6 +50643,8 @@ Community examples and techniques referenced in this README:
 - [segalitoo / Video Ad Art Direction — September 27, 2026 Higgsfield Seedance 2.5 five-shot Driftpay paper-craft campaign, exact API request/task ledger, endpoint-frame repair, per-clip scoring and committed 9:16/4:5 deliveries](https://github.com/segalitoo/Video-ad-art-direction-/commit/63b7a37e04945790105a5d074038c433fac7fe16) ([complete prompt plan](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/prompts.md), [exact request and completion ledger](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/runs.jsonl), [per-clip review](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/judge-clips.md), [delivered 9:16 MP4](https://github.com/segalitoo/Video-ad-art-direction-/blob/63b7a37e04945790105a5d074038c433fac7fe16/examples/driftpay/final/deliver/driftpay-paper-planes_9x16.mp4))
 
 - [wei917 / modelxd-website — October 1, 2026 Seedance 2.5 matched Runway-to-Replicate migration cell: identical 5-second 480p audio request, measured latency/cost/quality, capability removals and pre-spend refusal](https://github.com/wei917/modelxd-website/commit/75f4aa58808fa7e3b579fcbae407de7fc2830993) ([exact Replicate adapter](https://github.com/wei917/modelxd-website/commit/08d53184de0853436c01a504803e7465b044a86b))
+
+- [keys-exe / global-manual-ai — October 1, 2026 Kie AI Seedance 2.5 seven-shot family-drama batch, complete requests, successful task logs, public render URLs and long-lens path-denial review](https://github.com/keys-exe/global-manual-ai/commit/0cedf52d777258a7964328d5a7cdf95204e66dcd) ([fixed-landing request](https://github.com/keys-exe/global-manual-ai/blob/0cedf52d777258a7964328d5a7cdf95204e66dcd/builds/stryde-half-my-age/body/SC02/SC02-SH01.call.json), [task log and generated MP4 URL](https://github.com/keys-exe/global-manual-ai/blob/0cedf52d777258a7964328d5a7cdf95204e66dcd/builds/stryde-half-my-age/body/SC02/SC02-SH01.sd1.kie.log), [batch review](https://github.com/keys-exe/global-manual-ai/blob/0cedf52d777258a7964328d5a7cdf95204e66dcd/builds/stryde-half-my-age/BUILD_NOTES.md))
 
 Official model references:
 
