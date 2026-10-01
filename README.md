@@ -451,6 +451,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Fixed-axis gardener rescue with a carried prop ledger](#435-fixed-axis-gardener-rescue-with-a-carried-prop-ledger)
   - [Night-court volleyball freeze-orbit lens impact](#436-night-court-volleyball-freeze-orbit-lens-impact)
   - [Locked-shot customer-service smile decaying into fatigue](#437-locked-shot-customer-service-smile-decaying-into-fatigue)
+  - [Catch-before-spill cafe one-take with contact-gated prop physics](#438-catch-before-spill-cafe-one-take-with-contact-gated-prop-physics)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -27873,6 +27874,66 @@ into one sudden face change.
 Adapted and rewritten from Busy-Conversation-24's September 30, 2026
 [original Seedance 2.5 image-to-video result, full prompt and model attribution](https://www.reddit.com/r/Akool_Official/comments/1wty6z5/testing_emotional_decay_in_seedance_25/).
 
+
+### 438. Catch-before-spill cafe one-take with contact-gated prop physics
+
+**Verified model:** Seedance 2.5 — the original creator names the exact model
+in the title and body, applies the platform's Seedance 2.5 model flair, shows
+the generated video and publishes the full prompt in the same post  \
+**Use case:** continuous-action comedy, human-animal interaction, cause-and-effect
+prop physics, restrained reaction acting  \
+**Mode:** text-to-video  \
+**Verified settings:** 10 seconds; one continuous scene; generated on AKOOL;
+aspect ratio, resolution and audio not specified
+
+```text
+Create a 10-second photorealistic cinematic comedy in one warm, modern cafe.
+Use one seated adult man, one server, one small dog, one ceramic coffee cup and
+one fixed table. Keep every identity, prop and position continuous. The cup may
+move only after the dog's visible contact with the table.
+
+0-2s — WAITING BASELINE
+Begin in a medium three-quarter view of the man seated at the table, calmly
+looking at his phone. The cup is not yet on the table. Track very gently while
+keeping the tabletop and the man's reaching hand readable.
+
+2-4s — CLEAN HANDOFF
+The server enters once, sets the single cup near the man and visibly releases
+it before withdrawing. The man looks up from the phone and starts one natural
+reach toward the cup. Do not move the cup before the next contact event.
+
+4-6s — CONTACT AND SLIDE
+One small dog runs past the table on a single path and bumps the near table leg.
+The impact gives the cup one believable sideways impulse. It slides toward the
+edge while staying upright; the liquid responds to the same impulse. The dog
+continues forward and does not stop, duplicate or reverse direction.
+
+6-8s — LAST-SECOND CATCH
+The man completes the reach and catches the cup just before it leaves the edge.
+His hand closes around the cup once, absorbs its remaining momentum and returns
+it to a secure position on the tabletop. Preserve the cup's shape and liquid
+volume; do not teleport it into his hand.
+
+8-10s — COMEDIC RELEASE
+Keeping the rescued cup in hand, he follows the departing dog with his eyes and
+turns his head slightly, moving from surprise into a small amused smile. End on
+that stable reaction while the server remains out of the action lane.
+
+Natural body mechanics, subtle facial performance, realistic dog locomotion,
+warm cafe lighting, shallow cinematic depth and smooth continuous tracking.
+No cut, transition, slow motion, extra person, second dog, duplicate cup,
+pre-contact slide, unexplained spill, broken table, stretched hand, face drift,
+subtitle, logo or watermark.
+```
+
+**Why it works:** the joke is one auditable chain: placement, release, contact,
+slide, catch and reaction. Giving the cup a single legal motion trigger and the
+dog a one-way route prevents premature movement or repeated collisions, while
+the final held reaction supplies a clear terminal state without adding a cut.
+
+Adapted and rewritten from u/Altruistic-Gap-8979's October 1, 2026 (JST)
+[original Seedance 2.5 result, complete prompt and exact-model attribution](https://www.reddit.com/r/Akool_Official/comments/1wu3eby/seedance_25_on_akool_the_coffee_was_not_ready/).
+
 ## Reusable templates
 
 
@@ -50228,6 +50289,8 @@ Community examples and techniques referenced in this README:
 
 - [rdmbtc / Mercenta — Higgsfield Seedance 2.5 obsidian server-corridor forward dolly, complete prompt, committed generated MP4 and decode/static-frame delivery gate](https://github.com/rdmbtc/mercenta/commit/c133c4f015546dcda45f48f5c8e1ca0ec731562a) ([complete prompt and exact request](https://github.com/rdmbtc/mercenta/blob/c133c4f015546dcda45f48f5c8e1ca0ec731562a/main.py), [generated MP4](https://github.com/rdmbtc/mercenta/blob/c133c4f015546dcda45f48f5c8e1ca0ec731562a/web/public/videos/mercenta-vault.mp4), [render-derived poster](https://github.com/rdmbtc/mercenta/blob/c133c4f015546dcda45f48f5c8e1ca0ec731562a/web/public/videos/mercenta-vault-poster.jpg))
 
+
+- [u/Altruistic-Gap-8979 — AKOOL Seedance 2.5 catch-before-spill cafe one-take, complete prompt and generated result](https://www.reddit.com/r/Akool_Official/comments/1wu3eby/seedance_25_on_akool_the_coffee_was_not_ready/)
 
 - [CAoyinggo / panqu-Test-agent — Seedance 2.0 real-task numeric-string ID repair, canonical task/media/billing/diversion verdict and fail-closed dirty-ID regressions](https://github.com/CAoyinggo/panqu-Test-agent/commit/da7903dca05ec5d960a9d7131030a1a4c92b3f0f) ([submission normalization](https://github.com/CAoyinggo/panqu-Test-agent/blob/da7903dca05ec5d960a9d7131030a1a4c92b3f0f/src/devtest/media-flow.ts), [verdict projection](https://github.com/CAoyinggo/panqu-Test-agent/blob/da7903dca05ec5d960a9d7131030a1a4c92b3f0f/src/devtest/verdict-projection.ts), [regression tests](https://github.com/CAoyinggo/panqu-Test-agent/blob/da7903dca05ec5d960a9d7131030a1a4c92b3f0f/tests/unit/devtest/media-flow.test.ts))
 
