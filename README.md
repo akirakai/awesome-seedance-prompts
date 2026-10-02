@@ -45146,6 +45146,85 @@ the bounded
 and the
 [shot-card contract](https://github.com/Anelse0/film-director/blob/e28292751d0a57aef369ee9f77622486e7dcedd0/templates/shot-card.md).
 
+### Soft-motion phrase ablation and tight-reference sanitation gate
+
+**Verified model:** Seedance 2.5 through Higgsfield. GraiLogic identifies the
+exact model, marks the work as first-hand testing on October 1, 2026, and
+reports the paired failures and successful rewrites from its own commercial
+clips and site-header loops. The same record reports 5-, 10- and 15-second
+runs, 1080p completion, 24 fps output and no duplicate padding frames.
+
+**Evidence boundary:** The source publishes its full prompt structures and
+first-hand test table, but not immutable job receipts or downloadable result
+files. Count this as one reusable troubleshooting template, not as several
+complete scenario prompts or a provider benchmark.
+
+Use this when a take looks inexplicably slow, a vehicle slides with static
+wheels, or a reference image overrides the requested body proportions,
+composition or background. Freeze the useful parts of the request, repair one
+failure class at a time, and prove motion before paying for final resolution.
+
+```text
+CONTROLLED RETRY RECORD
+Exact model = Seedance 2.5.
+Mode = [TEXT / IMAGE / REFERENCE TO VIDEO].
+Freeze across A and B = [DURATION, ASPECT, SUBJECT, LOCATION, CAMERA, LIGHT,
+AUDIO, REFERENCES NOT UNDER TEST].
+Observed failure and first timestamp = [STALL / REPEATED POSE / STATIC WHEELS /
+REFERENCE COMPOSITION LEAK / PROPORTION DRIFT].
+Change exactly one block below; do not rewrite the whole prompt between takes.
+
+A — SUBJECT-SPEED ABLATION
+Remove soft subject-motion words such as [SLOWLY / CALMLY / GLIDES / GENTLY].
+Keep those words only when they describe the camera.
+Replace them with:
+"Real-time motion at natural speed; no automatic slow motion.
+[SUBJECT] begins [ACTION] at [TIME], crosses [VISIBLE CHECKPOINT] at [TIME],
+reaches [END STATE] by [TIME], then holds for [DURATION].
+Travel speed = [NUMERIC SPEED OR DISTANCE OVER TIME]."
+
+For contact, pouring or braking, write the visible causal order:
+[APPROACH] -> [CONTACT OR FORCE] -> [REACTION] -> [SETTLED STATE].
+For a rolling vehicle, require visible side or three-quarter evidence:
+wheel rotation matches ground speed, tyres remain in contact, suspension and
+background parallax agree with travel, and the vehicle never slides.
+
+B — REFERENCE SANITATION
+Reject a finished scene reference when it contains a bad crop, short limbs,
+floating cloth, broken product geometry, unwanted background or wrong camera.
+Replace it with the smallest clean evidence pack:
+@Image1 = tight identity/costume evidence only.
+@Image2..N = clean product angles or one isolated detail only.
+Do not inherit framing, camera height, lens, background, pose or light.
+State [HEIGHT / GARMENT LANDMARK / CAMERA HEIGHT / PRODUCT PARTS] positively in
+text. Exactly one [SUBJECT / PRODUCT]; do not complete unseen parts arbitrarily.
+
+DRAFT GATE
+Run the shortest useful 480p draft with the delivery duration and composition.
+Inspect decoded frames at early, middle and late times:
+- the subject advances monotonically through the named checkpoints;
+- wheel, foot, hand or liquid contact is physically visible;
+- there are no repeated padding frames or long unmotivated holds;
+- reference-owned identity/product traits survive without scene leakage;
+- the terminal state lands before the clip ends and holds cleanly.
+
+If motion fails, change only event density, numeric speed or one checkpoint.
+If reference leakage fails, remove or crop one donor instead of adding more
+negative prose. Promote to delivery resolution only after both gates pass;
+the high-resolution render is a new take and must be reviewed again.
+```
+
+**Why it works:** the source's soft verbs produced low-event, slow-motion
+behavior, while explicit real-time wording, timestamped events and numeric speed
+restored readable movement. A full-scene reference also overruled corrections
+and carried its proportion and cloth defects forward; tight face/product donors
+plus written proportions produced the usable retry. The one-variable ledger
+preserves that causal evidence instead of hiding it inside a wholesale rewrite.
+
+Adapted and rewritten from GraiLogic's
+[October 1 first-hand Seedance 2.5 test table and complete prompting guide](https://grailogic.com/articles/seedance-2-5-prompt-guide/),
+facts checked October 2, 2026.
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -50035,6 +50114,8 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [GraiLogic — October 1, 2026 first-hand Higgsfield Seedance 2.5 motion-language and reference-contamination tests: soft subject-motion words versus timestamped real-time events, wheel-contact repair, full-scene donor failure versus tight identity/product references, 5/10/15-second and 1080p completion, 24 fps and unique-frame observations](https://grailogic.com/articles/seedance-2-5-prompt-guide/)
+
 - [dpeh001-x / Mojiworld — October 2, 2026 Higgsfield Seedance 2.5 five-plate four-character teaser: 480p motion drafts, selected 1080p finals, explicit reference assignments, readability-driven variant choice, post-owned voices/SFX/titles, finished film, mastering values and SSIM-based delivery encode](https://github.com/dpeh001-x/Mojiworld/commit/23fb07f19f033fda18bf28823c1a1ba2c90fb671) ([production record](https://github.com/dpeh001-x/Mojiworld/blob/23fb07f19f033fda18bf28823c1a1ba2c90fb671/steam/higgsfield/cinematics/clip_four_captains.SPEC.md), [finished MP4](https://github.com/dpeh001-x/Mojiworld/blob/23fb07f19f033fda18bf28823c1a1ba2c90fb671/steam/higgsfield/cinematics/clip_four_captains.mp4))
 
 - [Jinhyung Lee / seedance-audio-lab — October 2, 2026 controlled audio-reference study: 66 Higgsfield generations across exact Seedance 2.0 and 2.5 routes, with frozen prompts, public inputs, job IDs, outputs, and timing measurements](https://github.com/x0te/seedance-audio-lab/commit/93a262a980487259e3a9f7ba8ab5c957721bed4d) ([frozen prompts](https://github.com/x0te/seedance-audio-lab/blob/93a262a980487259e3a9f7ba8ab5c957721bed4d/research/scripts/prompts.py), [interactive report](https://x0te.github.io/seedance-audio-lab/), [dataset](https://github.com/x0te/seedance-audio-lab/blob/93a262a980487259e3a9f7ba8ab5c957721bed4d/data/data.json), [analysis](https://github.com/x0te/seedance-audio-lab/blob/93a262a980487259e3a9f7ba8ab5c957721bed4d/research/analysis/results_e12.json), [recommendations](https://github.com/x0te/seedance-audio-lab/blob/93a262a980487259e3a9f7ba8ab5c957721bed4d/assets/content.js))
