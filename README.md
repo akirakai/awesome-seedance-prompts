@@ -28223,6 +28223,108 @@ and the creator's
 
 ## Reusable templates
 
+### Voice-driven face-sprite harvest with clip-wide viseme calibration
+
+**Verified model:** Seedance 2.5 — the original creator committed a render of
+his own face driven by his authorized cloned voice, graded the face workflow A+,
+and published 24 idle plus 48 talk frames extracted from that take. The corrected
+mouth-area plan reached 0.87 correlation with the target; treat that value as
+one production result, not a universal threshold.  
+**Use case:** talking avatars, lightweight UI face loops, voice-reactive sprites,
+viseme atlases, accessibility assistants, kiosk characters  
+**Mode:** one identity- and voice-authorized Seedance generation followed by
+deterministic face-crop, loop and viseme extraction
+
+Use this when the final interface cannot play a full video continuously but can
+swap a compact set of face frames in response to speech. Generate one stable,
+well-lit performance with both quiet and phonetic range, then derive the idle
+and talk atlases from the same take instead of mixing identities or lighting
+across separate renders.
+
+```text
+AUTHORITY AND SOURCE LOCK
+@Image1 = the authorized adult subject's identity only: face geometry, apparent
+age, hair, glasses if worn and stable skin detail.
+@Audio1 = that same subject's authorized cloned-voice track. It owns voice
+identity, pronunciation, timing and amplitude. Use no other person's likeness
+or voice.
+SCRIPT = [CONSENTED PHONETICALLY VARIED COPY WITH NATURAL PAUSES].
+Record the identity-reference hash, audio hash, exact model and route before
+generation.
+
+GENERATION PROMPT
+Create one [8–15]-second front-facing head-and-shoulders performance for a
+small talking-avatar interface. Locked camera, fixed focal length, even
+front-three-quarter key light, plain low-detail background. Keep the face
+centered inside a square-safe crop with the full hairline, both eyes, nose,
+mouth, chin and a small margin visible in every frame.
+
+The subject speaks SCRIPT exactly in @Audio1's authorized voice. Preserve the
+source timing, including at least [TWO] quiet pauses long enough to harvest a
+neutral idle loop. During speech, allow natural jaw travel and clearly distinct
+closed, slightly open, medium-open and wide-open mouth shapes. Include ordinary
+blinks and breathing, but keep head translation and rotation minimal. Finish on
+the same neutral closed-mouth pose used at the beginning.
+
+No camera motion, cut, zoom, face turn beyond [SMALL ANGLE], hand over the face,
+prop, hair crossing the eyes or mouth, beauty-filter smoothing, relighting,
+background animation, subtitle, logo, second speaker, added line, altered
+pronunciation, dubbed timing or music.
+
+SPRITE EXTRACTION
+1. Preserve the raw clip and audio. Crop one identical square face box from
+   every frame and resample to [OUTPUT SIZE] at [FIXED FPS].
+2. Define fixed eye and mouth regions once for the whole clip. Do not move the
+   boxes per frame unless a separately logged face tracker owns that transform.
+3. For mouth openness, stack every grayscale mouth crop and compute one dark
+   threshold across the complete clip. Measure dark area under that single
+   threshold per frame, then rank the result from closed to open.
+4. Never compute an independent percentile inside every frame: that forces a
+   constant dark-pixel share and can invert open and closed mouths.
+5. Align the ranked mouth series with the speech envelope or word/phoneme
+   timings. Build the talk atlas from frames that cover the required openness
+   range without identity, light or crop drift.
+6. Build the idle loop only from quiet audio. Prefer a fixed-length window with
+   low inter-frame movement and natural blinking.
+
+EYE-WINDOW FALLBACK
+If glasses rims, shadows or eyelids cause the detector to find no fully
+open-eyed window of the requested length, do not collapse the loop to the
+shortest all-open run. Keep the requested duration and choose the window with
+the fewest frames classified as shut; one or two natural blinks are preferable
+to a visibly frantic eight-frame loop. Record the closed-eye count.
+
+ACCEPTANCE GATE
+- identity, glasses, hairline, light and crop remain stable across both atlases;
+- idle frames contain no speech mouth shapes and loop without a pose jump;
+- talk frames span closed through wide-open states without anatomical warping;
+- one fixed mouth metric has positive correspondence with the frozen audio
+  target, using a documented crop, threshold, FPS and lag convention;
+- the chosen talk plan is not inverted on held-out words;
+- no frame exposes a cut, subtitle, watermark, occlusion or different speaker;
+- archive raw render, audio, extraction settings, atlas frames, metric plot and
+  the final idle/talk counts.
+
+DELIVERY
+Export [IDLE COUNT] idle frames and [TALK COUNT] talk frames with deterministic
+names and identical dimensions. Keep the source production's 24/48 counts and
+12 fps only as a tested example; size the atlas for the target renderer's memory,
+latency and animation budget.
+```
+
+**Why it works:** a single Seedance pass keeps identity, lighting and voice
+performance coupled before the footage is reduced to sprites. One clip-wide
+mouth threshold preserves real changes in dark mouth area, while the
+fixed-duration minimum-blink fallback avoids turning an imperfect eye detector
+into a visibly short loop.
+
+Adapted and rewritten from Joshua Trommel's October 2, 2026
+[Seedance 2.5 production commit](https://github.com/nulljosh/joshuatree/commit/4d574f5c14e8708aa708e49163e69cdbc8688626),
+[creator-authored production PR](https://github.com/nulljosh/joshuatree/pull/341),
+[clip-wide viseme extractor](https://github.com/nulljosh/joshuatree/blob/4d574f5c14e8708aa708e49163e69cdbc8688626/tools/gen/face_visemes.py),
+[fixed-length idle/talk frame selector](https://github.com/nulljosh/joshuatree/blob/4d574f5c14e8708aa708e49163e69cdbc8688626/tools/gen/face_frames.py)
+and [committed 24/48-frame output](https://github.com/nulljosh/joshuatree/tree/4d574f5c14e8708aa708e49163e69cdbc8688626/landing/face-joshua).
+
 ### Clay-blockout photoreal rerender with product-fidelity and title-matte recovery
 
 **Verified model:** Seedance 2.5 — Higgsfield `omni_reference`; verified by
@@ -49767,6 +49869,7 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [Joshua Trommel / Joshua Tree — October 2, 2026 Seedance 2.5 authorized cloned-voice face render: creator-graded A+ take, committed 24-frame idle and 48-frame talk atlases, clip-wide mouth threshold with 0.87 target correlation and fixed-length minimum-blink fallback](https://github.com/nulljosh/joshuatree/commit/4d574f5c14e8708aa708e49163e69cdbc8688626) ([production PR](https://github.com/nulljosh/joshuatree/pull/341), [viseme extractor](https://github.com/nulljosh/joshuatree/blob/4d574f5c14e8708aa708e49163e69cdbc8688626/tools/gen/face_visemes.py), [frame selector](https://github.com/nulljosh/joshuatree/blob/4d574f5c14e8708aa708e49163e69cdbc8688626/tools/gen/face_frames.py), [published atlases](https://github.com/nulljosh/joshuatree/tree/4d574f5c14e8708aa708e49163e69cdbc8688626/landing/face-joshua))
 - [Snow / @iamrealsnow — October 1, 2026 Seedance 2.5 one-seed planetary-regrowth short: complete 30-second prompt, generated video, model attribution, single-character continuity and outward biome-wave payoff](https://x.com/iamrealsnow/status/2105635182284046443) ([complete prompt reply](https://x.com/iamrealsnow/status/2105635273866670355))
 - [BytePlus SA Seed Studio — October 2, 2026 official Seedance 2.5 storyboard-annotation leakage fix: planning-only board binding, positional panel addressing, per-shot clean-frame clauses, repeated closing exclusion and explicit four-corner gate](https://github.com/byteplus-sa/seed-studio/commit/5a406b3a063dfff8ee1ff7de6ebe4d960d0e4405) ([storyboard handoff reference](https://github.com/byteplus-sa/seed-studio/blob/5a406b3a063dfff8ee1ff7de6ebe4d960d0e4405/.agents/skills/seedance-prompt-25/references/keyframes-storyboards-blockouts.md))
 - [Likelyfad Prompt System — October 2, 2026 ByteDance Seedance 2.0 realistic-UGC production structure: role-owned references, camera-owner truth, frame-side hand and prop ledgers, frame-zero micro-performance, word-linked gestures, locked delivery register and open/closed multi-clip cadence](https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System/commit/d5fd0b37e2d90d18b4e7ac451b163aae8d5397bf) ([prompt chassis](https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System/blob/d5fd0b37e2d90d18b4e7ac451b163aae8d5397bf/skills/ai-ugc-seedance/references/chassis.md), [Seedance 2.0 model layer](https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System/blob/d5fd0b37e2d90d18b4e7ac451b163aae8d5397bf/skills/ai-ugc-seedance/references/models/seedance.md), [multi-clip handoff rules](https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System/blob/d5fd0b37e2d90d18b4e7ac451b163aae8d5397bf/skills/ai-ugc-seedance/references/delivery/clip-series.md))
