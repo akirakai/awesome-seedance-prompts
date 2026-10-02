@@ -28223,6 +28223,101 @@ and the creator's
 
 ## Reusable templates
 
+### Five-plate character-introduction teaser with post-owned voice and readability gates
+
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`, `omni_reference`). The original creator published a finished 45.33-second game teaser, its five-shot production record, the generated MP4, exact picture settings, reference assignments, draft/final credit costs, rejected variant, edit timings, voice selection, effect cues, mastering values, and encode-quality measurements. Each Seedance shot was generated as an eight-second silent 16:9 plate: 480p drafts first, then selected takes finalized at 1080p with high bitrate. [Production commit](https://github.com/dpeh001-x/Mojiworld/commit/23fb07f19f033fda18bf28823c1a1ba2c90fb671) · [Complete production record](https://github.com/dpeh001-x/Mojiworld/blob/23fb07f19f033fda18bf28823c1a1ba2c90fb671/steam/higgsfield/cinematics/clip_four_captains.SPEC.md) · [Finished MP4](https://github.com/dpeh001-x/Mojiworld/blob/23fb07f19f033fda18bf28823c1a1ba2c90fb671/steam/higgsfield/cinematics/clip_four_captains.mp4)
+
+**Evidence boundary:** The source publishes complete shot beats and the shipped film, but not the literal per-shot provider prompts. Count this as a reusable production template and technique, not as five complete scenario prompts.
+
+**Use when:** Introducing a four-person cast, game faction, hero team, product family, or ensemble whose members each need one readable signature beat before a group reveal.
+
+```text
+PRODUCTION CONTRACT
+- Generate five silent clean plates: four individual portraits plus one ensemble shot.
+- Duration per plate: [8 seconds].
+- Aspect ratio: [16:9].
+- Draft at the lowest useful resolution; upscale/finalize only accepted motion.
+- Titles, names, dialogue, music, and sound effects belong to post-production.
+- If the provider proposes an automatic style preset, decline it when it would
+  override the authored prompt or reference ownership.
+
+REFERENCE ROLES
+For each individual plate:
+- @StartImageN: environment, composition, palette, and opening camera position only.
+- @HeroN: identity, face, hair, costume, silhouette, and signature prop only.
+- Do not copy text, UI, borders, or background characters from either reference.
+
+For the ensemble plate:
+- @StartImage5: final environment and rupture/reveal geometry only.
+- @Hero1, @Hero2, @Hero3, @Hero4: one identity each; never blend faces, costumes,
+  props, colors, or body positions.
+- Keep four separated silhouettes and four readable lanes before they move together.
+
+INDIVIDUAL PLATE — repeat once per hero
+A cinematic character-introduction clean plate for [HERO] in [THEIR LOCATION].
+Start in one instantly readable pose. The environment reacts first: [shadow spreads /
+pages lift / petals turn / lanterns flicker]. [HERO] performs exactly one signature
+action: [DRAW OR CAST]. Show a clear anticipation, one decisive release, a visible
+consequence in the environment, then a short recognition hold. Preserve the reference
+identity and costume throughout. Use one motivated camera move that ends on a clean
+hero frame with empty title-card space. No dialogue, music, captions, logos, names,
+UI, or baked typography.
+
+ENSEMBLE PLATE
+Open behind four separated heroes facing [THE THREAT OR PORTAL]. The environment
+changes once: [the sky tears / gate opens / storm splits]. They turn toward camera
+without changing lanes. Four distinct identity-colored lights appear, one around each
+hero. They take one unified step toward the threat. End on a stable, front-facing
+group frame with all four faces, costumes, silhouettes, and props readable and with
+clean negative space for the final title. No merged bodies, duplicate heroes, extra
+characters, dialogue, captions, logos, or baked typography.
+
+DRAFT AND VARIANT GATE
+1. Render every plate at draft resolution before any expensive final.
+2. Judge action at normal playback speed, not from a paused beauty frame.
+3. For a failed signature move, write two mutually exclusive variants:
+   A. [simpler action with one readable consequence]
+   B. [alternative action with one different consequence]
+   Do not stack both concepts into one prompt.
+4. Select the take whose silhouette, contact, and consequence read most clearly.
+5. Finalize only the selected take at delivery resolution and high bitrate.
+
+EDIT MAP
+- 0.0–[2.5] s: post-generated opening card on black.
+- Then place the four individual plates in narrative order.
+- Use one consistent transition family; reserve the strongest transition for the
+  ensemble reveal.
+- Hold the ensemble tail long enough for the final card, then fade to black.
+- Never rely on generated lettering; render all names and titles in the editor.
+
+VOICE AND SOUND OWNERSHIP
+- Give each hero one short line that fits inside their plate.
+- Audition voices on the actual line; choose by intelligibility, duration, and pitch,
+  not only by a generic preview.
+- Align one stressed word with the hero's visible action cue.
+- Trim, high-pass, compress, and loudness-normalize each voice consistently.
+- Sidechain the score beneath speech.
+- Place SFX on measured picture events—flash, contact, release, impact, sheath—not on
+  assumed prompt timestamps.
+
+DELIVERY GATE
+- Identity: each hero remains distinct in solo and ensemble shots.
+- Readability: the signature action is understandable at playback speed.
+- Reference hygiene: no environment, character, text, or UI leakage.
+- Clean plate: no generated titles, captions, logos, or unwanted speech.
+- Edit: every transition preserves orientation and the ensemble reveal gets the
+  strongest emphasis.
+- Mix: dialogue is intelligible; music ducks cleanly; peaks do not clip.
+- Encode: compare candidate compression settings against the master and keep the
+  smallest file that meets the chosen perceptual-quality threshold.
+- Archive model route, settings, references, draft/final job IDs, selected/rejected
+  variants, edit timecodes, mix targets, master hash, and delivery hash.
+```
+
+**Why it works:** Each generation has one character, one environment, one signature action, and one visual consequence; the difficult multi-identity burden is reserved for a simpler final group beat. Cheap drafts test motion before expensive finalization, while mutually exclusive repair variants optimize screen readability instead of spectacle density. Moving language, typography, scoring, and effects into post prevents four separate control problems from competing with identity and action inside Seedance.
+
+**Production note:** In the verified source, the harder ninja shot was tested as two different concepts; the version with clearer slashes was selected and finalized. The finished film then aligned each voice and sound effect to measured picture events, rather than asking Seedance to generate the complete audiovisual trailer in one pass.
+
 ### Audio-gravity dual-lock timing and temporal-owner conflict gate
 
 **Verified models:** Seedance 2.0 (`seedance_2_0`, Higgsfield `std`) and Seedance 2.5 (`seedance_2_5`, Higgsfield `omni_reference`). In a creator-published controlled study, 66 generations—33 per model—used frozen prompts, public inputs, job IDs, outputs, and per-run measurements at 720p, 16:9, 24 fps. The study found that reference audio can pull a scene's broad semantic climax earlier or later, but is not a sample-accurate clock or pass-through soundtrack. Exact text timestamps were at least as dependable for event timing; supplied dialogue and music were regenerated rather than preserved bit-for-bit. [Primary study and commit](https://github.com/x0te/seedance-audio-lab/commit/93a262a980487259e3a9f7ba8ab5c957721bed4d) · [Frozen prompts](https://github.com/x0te/seedance-audio-lab/blob/93a262a980487259e3a9f7ba8ab5c957721bed4d/research/scripts/prompts.py) · [Interactive report](https://x0te.github.io/seedance-audio-lab/)
@@ -49940,6 +50035,8 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [dpeh001-x / Mojiworld — October 2, 2026 Higgsfield Seedance 2.5 five-plate four-character teaser: 480p motion drafts, selected 1080p finals, explicit reference assignments, readability-driven variant choice, post-owned voices/SFX/titles, finished film, mastering values and SSIM-based delivery encode](https://github.com/dpeh001-x/Mojiworld/commit/23fb07f19f033fda18bf28823c1a1ba2c90fb671) ([production record](https://github.com/dpeh001-x/Mojiworld/blob/23fb07f19f033fda18bf28823c1a1ba2c90fb671/steam/higgsfield/cinematics/clip_four_captains.SPEC.md), [finished MP4](https://github.com/dpeh001-x/Mojiworld/blob/23fb07f19f033fda18bf28823c1a1ba2c90fb671/steam/higgsfield/cinematics/clip_four_captains.mp4))
+
 - [Jinhyung Lee / seedance-audio-lab — October 2, 2026 controlled audio-reference study: 66 Higgsfield generations across exact Seedance 2.0 and 2.5 routes, with frozen prompts, public inputs, job IDs, outputs, and timing measurements](https://github.com/x0te/seedance-audio-lab/commit/93a262a980487259e3a9f7ba8ab5c957721bed4d) ([frozen prompts](https://github.com/x0te/seedance-audio-lab/blob/93a262a980487259e3a9f7ba8ab5c957721bed4d/research/scripts/prompts.py), [interactive report](https://x0te.github.io/seedance-audio-lab/), [dataset](https://github.com/x0te/seedance-audio-lab/blob/93a262a980487259e3a9f7ba8ab5c957721bed4d/data/data.json), [analysis](https://github.com/x0te/seedance-audio-lab/blob/93a262a980487259e3a9f7ba8ab5c957721bed4d/research/analysis/results_e12.json), [recommendations](https://github.com/x0te/seedance-audio-lab/blob/93a262a980487259e3a9f7ba8ab5c957721bed4d/assets/content.js))
 
 - [Joshua Trommel / Joshua Tree — October 2, 2026 Seedance 2.5 authorized cloned-voice face render: creator-graded A+ take, committed 24-frame idle and 48-frame talk atlases, clip-wide mouth threshold with 0.87 target correlation and fixed-length minimum-blink fallback](https://github.com/nulljosh/joshuatree/commit/4d574f5c14e8708aa708e49163e69cdbc8688626) ([production PR](https://github.com/nulljosh/joshuatree/pull/341), [viseme extractor](https://github.com/nulljosh/joshuatree/blob/4d574f5c14e8708aa708e49163e69cdbc8688626/tools/gen/face_visemes.py), [frame selector](https://github.com/nulljosh/joshuatree/blob/4d574f5c14e8708aa708e49163e69cdbc8688626/tools/gen/face_frames.py), [published atlases](https://github.com/nulljosh/joshuatree/tree/4d574f5c14e8708aa708e49163e69cdbc8688626/landing/face-joshua))
