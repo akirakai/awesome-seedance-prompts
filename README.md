@@ -28223,6 +28223,100 @@ and the creator's
 
 ## Reusable templates
 
+### Clay-blockout photoreal rerender with product-fidelity and title-matte recovery
+
+**Verified model:** Seedance 2.5 — Higgsfield `omni_reference`; verified by
+the original creator's released 40-second, 1920×1080, 24 fps jewellery film,
+whose public production ledger records five cut-aligned Seedance prompt groups,
+their product-image references, retained ranges, retimes and two isolated repair
+generations  
+**Use case:** luxury-product films, CG/previs-to-photoreal transfer, exact
+catalogue-item preservation, typography-safe generative finishing, local shot
+repair  
+**Mode:** reference-to-video with one clean clay/white-model motion plate plus
+one or more product appearance references
+
+Use this when camera motion, object choreography and timing are already approved
+in a deterministic blockout, but the final needs photographed materials and
+catalogue-accurate products. Let the motion plate own space and time; let each
+still own only one product's design. Generate without titles, then restore type
+from a deterministic matte.
+
+```text
+MASTER CONTRACT
+The edit master, beat grid and approved blockout are immutable.
+@Video1 owns only geometry, object count, spatial layout, action order, cuts,
+camera position/path and timing. It does not own grey clay material or colour.
+Each @ImageN owns only the named product's exact silhouette, construction,
+stone/metal arrangement, colour, translucency and finish. Ignore its background,
+shadow, stand, chain, hand and crop unless explicitly assigned.
+
+CHUNK PLAN
+Split the blockout at real editorial cuts and material-world changes.
+For each chunk record:
+[MASTER IN], [REQUESTED WHOLE-SECOND DURATION], [KEEP RANGE],
+[PRODUCT REFERENCE IDS], [EXPECTED FIRST FRAME], [EXPECTED LAST FRAME].
+When a provider requires whole seconds, pad with a short terminal freeze or the
+next shot's first frames. Mark the padding as discard-only and trim back to the
+master clock after generation.
+
+SHOT PROMPT
+@Video1 is a clean blockout of [ONE CONTINUOUS MOVE / NAMED CUT SEQUENCE].
+Preserve its geometry, object count, positions, motion paths, camera path, cuts
+and timing. Replace only its placeholder material treatment.
+
+@Image1 defines [PRODUCT A] only: [DISTINCTIVE SHAPE, CONSTRUCTION, MATERIALS].
+@Image2 defines [PRODUCT B] only: [DISTINCTIVE SHAPE, CONSTRUCTION, MATERIALS].
+Do not inherit any reference photo background, support, chain, hand or lighting.
+
+Re-render as photographed [LIVE-ACTION / TABLETOP / LOCATION] footage captured
+with [CAMERA / LENS CLASS] for a premium [CATEGORY] commercial.
+
+[TIME A–B] [VISIBLE ACTION, CAMERA RELATIONSHIP, MATERIAL AND LIGHT].
+[TIME B–C] [NEXT ACTION OR CUT, CAMERA ENDPOINT, REQUIRED OBJECT STATE].
+End on [PRECISE TERMINAL FRAME] so the master edit can cut without hiding drift.
+
+Material truth: [JADE / GLASS / METAL / FABRIC / CLOUD / SKIN] has physically
+plausible transmission, reflection, texture and contact shadow under the stated
+light. State the intended palette explicitly; never ask a grey blockout to keep
+its colours.
+
+No generated titles, captions, logos, people, hands, tools, stands, extra
+products or unassigned props. Do not redesign, merge or multiply any product.
+
+ACCEPTANCE GATE
+- Compare every hero item with its assigned catalogue image: silhouette,
+  component count, mounting, proportions, material, colour and finish.
+- Compare the take with the blockout at every cut and action landmark.
+- Verify the kept interval begins and ends on the master edit's expected state.
+- Reject invented tools, lost products, changed object counts, premature
+  material changes, text leakage or camera/timing drift.
+
+LOCAL REPAIR
+If only one material beat or sub-shot drifts, extract that exact master interval,
+freeze-pad it to an accepted request length and regenerate it alone with only
+the references it needs. Do not rerun an already accepted long chunk.
+If the accepted motion lands late, record an explicit piecewise retime map and
+inspect the splice; never hide the correction in an undocumented speed change.
+
+POST HANDOFF
+Trim all discard padding. Restore approved titles and logos from the original
+code-render matte after the generative pass. Preserve the master audio and beat
+grid. Assemble only accepted ranges, then run frame, audio, product-fidelity and
+splice checks on the delivered file.
+```
+
+The separation of motion authority, product appearance and typography ownership
+prevents a product still from overriding the approved camera path and prevents
+the video model from improvising brand text. Isolating only the failed beat also
+avoids sacrificing accepted motion elsewhere in a long generation.
+
+Adapted and rewritten from pupubird's October 2, 2026
+[released Seedance 2.5 production commit](https://github.com/pupubird/claude-motion-reel/commit/31a73138cb27ee40370b70355c769fb9de17fc0e),
+[complete prompt/reference/retime ledger](https://github.com/pupubird/claude-motion-reel/blob/31a73138cb27ee40370b70355c769fb9de17fc0e/projects/feiyuehui/v4/tools/seedance_plan.json),
+[production guide](https://github.com/pupubird/claude-motion-reel/blob/31a73138cb27ee40370b70355c769fb9de17fc0e/projects/feiyuehui/v4/README.md)
+and [published final film](https://github.com/pupubird/claude-motion-reel/releases/tag/feiyuehui-v1.0).
+
 ### Storyboard-annotation triple fence and corner-clean frame gate
 
 **Verified model:** Seedance 2.5 — confirmed by an official BytePlus
@@ -51058,6 +51152,8 @@ Community examples and techniques referenced in this README:
 - [wei917 / modelxd-website — October 1, 2026 Seedance 2.5 matched Runway-to-Replicate migration cell: identical 5-second 480p audio request, measured latency/cost/quality, capability removals and pre-spend refusal](https://github.com/wei917/modelxd-website/commit/75f4aa58808fa7e3b579fcbae407de7fc2830993) ([exact Replicate adapter](https://github.com/wei917/modelxd-website/commit/08d53184de0853436c01a504803e7465b044a86b))
 
 - [keys-exe / global-manual-ai — October 1, 2026 Kie AI Seedance 2.5 seven-shot family-drama batch, complete requests, successful task logs, public render URLs and long-lens path-denial review](https://github.com/keys-exe/global-manual-ai/commit/0cedf52d777258a7964328d5a7cdf95204e66dcd) ([fixed-landing request](https://github.com/keys-exe/global-manual-ai/blob/0cedf52d777258a7964328d5a7cdf95204e66dcd/builds/stryde-half-my-age/body/SC02/SC02-SH01.call.json), [task log and generated MP4 URL](https://github.com/keys-exe/global-manual-ai/blob/0cedf52d777258a7964328d5a7cdf95204e66dcd/builds/stryde-half-my-age/body/SC02/SC02-SH01.sd1.kie.log), [batch review](https://github.com/keys-exe/global-manual-ai/blob/0cedf52d777258a7964328d5a7cdf95204e66dcd/builds/stryde-half-my-age/BUILD_NOTES.md))
+
+- [pupubird / 翡月荟 — October 2, 2026 Higgsfield Seedance 2.5 clay-blockout photoreal rerender, five-chunk prompt plan, isolated drift repair, title-matte restoration and released 40-second film](https://github.com/pupubird/claude-motion-reel/commit/31a73138cb27ee40370b70355c769fb9de17fc0e) ([prompt/reference/retime ledger](https://github.com/pupubird/claude-motion-reel/blob/31a73138cb27ee40370b70355c769fb9de17fc0e/projects/feiyuehui/v4/tools/seedance_plan.json), [production guide](https://github.com/pupubird/claude-motion-reel/blob/31a73138cb27ee40370b70355c769fb9de17fc0e/projects/feiyuehui/v4/README.md), [released film](https://github.com/pupubird/claude-motion-reel/releases/tag/feiyuehui-v1.0))
 
 Official model references:
 
