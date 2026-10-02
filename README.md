@@ -28140,6 +28140,123 @@ Adapted and rewritten from keys-exe's October 1, 2026
 
 ## Reusable templates
 
+### Role-owned UGC performance chassis and open/closed stitch handoff
+
+**Verified model:** ByteDance Seedance 2.0, with Higgsfield as the source
+workflow's default surface — the original creator states that the chassis below
+was distilled from realistic UGC prompts that rendered successfully across at
+least two separate production ad series. The public worked examples are
+invented and have not themselves been rendered, so this is counted as one
+verified reusable structure, not a complete scenario or an independent visual
+quality benchmark.  
+**Use case:** native-audio creator ads, selfie/friend-held/tripod talking heads,
+multi-clip product testimonials, prop and label continuity, stitched dialogue  
+**Mode:** one 5–12-second vertical clip per generation, planned as a series
+before any individual prompt is compiled
+
+Use this when a creator performance must feel alive while the product, voice,
+delivery register and editorial handoff remain deterministic. Give each
+reference and each hand one job, bind gestures to spoken words, and declare
+whether the last syllable closes the thought or hands it to the next clip.
+
+```text
+PROJECT RECEIPT
+Finished script = [VERBATIM SCRIPT FOR THE WHOLE SERIES].
+Persona/register = [AGE RANGE, ACCENT, TEMPERAMENT, ENERGY].
+Camera owner = [SELFIE / FRIEND-HELD / TRIPOD].
+Forbidden content = [OBJECTS, PEOPLE, TEXT OR BEHAVIOUR].
+Clip map = [CLIP ID, DURATION, LINES, OPEN OR CLOSED ENDING].
+Do not compile Clip 01 until every later line and handoff is known.
+
+REFERENCE OWNERSHIP
+@Image1 = first-frame composition, location, lighting and crop.
+@Image2 = performer identity only: face, hair and stable body features.
+@Image3 = product/package appearance and exact approved label, if present.
+@Audio1 = voice character only: accent, pitch, texture and room quality.
+It owns no words; the performer says only the dialogue written below.
+Remove unused references rather than attaching them for general consistency.
+
+CAMERA TRUTH
+Create one vertical 9:16 creator clip, [DURATION] seconds.
+The phone is held by [OWNER] at [HEIGHT / DISTANCE / ANGLE].
+Allowed motion = [NATURAL HAND TREMOR / LOCKED TRIPOD / ONE NAMED MOVE].
+Internal hard cuts = [COUNT AND TIMES].
+For every cut, state the angle change, framing change and which props remain
+visible. Keep dialogue continuous and add no transition sound.
+
+SUBJECT AND PROP LEDGER
+Performer = [WARDROBE, HAIR, ACCESSORIES], repeated verbatim across the series.
+Viewer-left hand = [ONE JOB OR EMPTY].
+Viewer-right hand = [ONE JOB OR EMPTY].
+Product position = [HAND + VIEWER-SIDE]; it never swaps sides.
+Resting hand baseline = [LAP / TABLE / SIDE].
+Background objects = [COUNTED LIST]; they remain dressing unless a beat assigns
+contact. Only [COUNT] copies of each critical prop exist.
+
+ALIVE FROM FRAME ZERO
+Before speech begins, preserve breathing, small eye and facial changes, natural
+blinks and subtle posture adjustments. Distribute at least [BLINK COUNT]
+blinks across the clip, including one in the opening second. Keep gestures small
+and return the hands to their declared baseline between beats.
+
+TIMED PERFORMANCE
+[0.0–X.X s] Start in [POSE / EXPRESSION]. Say exactly: "[LINE]."
+On "[WORD 1]," perform [SMALL GESTURE + FACIAL CHANGE].
+On "[WORD 2]," perform [SMALL GESTURE + FACIAL CHANGE].
+End this beat in [VISIBLE STATE].
+
+[CUT AT X.X s, if any]
+Instant cut to [SHOT SIZE / ANGLE]. Preserve identity, wardrobe, prop side,
+label orientation and dialogue continuity. No dissolve, blur, zoom substitute
+or transition effect.
+
+[X.X–Y.Y s] Say exactly: "[NEXT LINE]."
+On "[WORD]," perform [ACTION]. Hold [EYE / HAND / PROP STATE] for [SECONDS].
+End the clip in the declared handoff state.
+
+AUDIO OWNERSHIP
+Voice = [AGE, ACCENT, PACE, REGISTER], captured like a nearby phone microphone
+with [ROOM] ambience.
+Pronunciation map = [DISPLAY SPELLING -> SPOKEN FORM].
+Named pauses = [AFTER WORD, DURATION].
+Internal cuts are silent. Action sounds are [NAMED LIST OR NONE].
+No score competes with dialogue.
+
+ENDING CONTRACT — choose one
+OPEN: final pitch stays slightly raised or suspended, lips remain ready to
+continue, and one soft inhale leads into the next clip. The next clip starts
+from that exact unfinished performance state.
+CLOSED: final pitch settles, expression resolves, and a short exhale marks the
+thought as complete. Do not leak the next clip's action.
+
+REGISTER OVERRIDE — only when the words imply the wrong delivery
+The content remains verbatim, but performance stays [LOCKED REGISTER] from the
+first word to the last. Reject [LIKELY WRONG READINGS]. The emotional target is
+[TARGET], not the viewer. Carry the same register from [PREVIOUS CLIP] without
+resetting it.
+
+MAINTAIN
+Same performer, wardrobe, camera ownership, background, voice character,
+product geometry, viewer-side placement and object counts throughout.
+Keep hands anatomically plausible and the approved package text stable.
+No invented people, props, overlays, captions, watermarks or alternate labels.
+
+FINAL LINE
+No music, logos, screen text or subtitles.
+```
+
+**Why it works:** the structure separates identity, composition, product and
+voice ownership before motion is described. The frame-side prop ledger prevents
+mirrored hand assumptions; frame-zero micro-performance avoids frozen starts;
+word-linked gestures make action auditable; and the open/closed ending contract
+gives the editor a deliberate stitch point instead of an ambiguous tail.
+
+Adapted and rewritten from Likelyfad Prompt System's October 2, 2026
+[Seedance 2.0 UGC production-structure release](https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System/commit/d5fd0b37e2d90d18b4e7ac451b163aae8d5397bf),
+including its [source-labelled prompt chassis](https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System/blob/d5fd0b37e2d90d18b4e7ac451b163aae8d5397bf/skills/ai-ugc-seedance/references/chassis.md),
+[exact Seedance 2.0 model layer](https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System/blob/d5fd0b37e2d90d18b4e7ac451b163aae8d5397bf/skills/ai-ugc-seedance/references/models/seedance.md)
+and [multi-clip handoff rules](https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System/blob/d5fd0b37e2d90d18b4e7ac451b163aae8d5397bf/skills/ai-ugc-seedance/references/delivery/clip-series.md).
+
 
 ### Reference-presence matrix and render-headroom cut gate
 
@@ -49407,6 +49524,7 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [Likelyfad Prompt System — October 2, 2026 ByteDance Seedance 2.0 realistic-UGC production structure: role-owned references, camera-owner truth, frame-side hand and prop ledgers, frame-zero micro-performance, word-linked gestures, locked delivery register and open/closed multi-clip cadence](https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System/commit/d5fd0b37e2d90d18b4e7ac451b163aae8d5397bf) ([prompt chassis](https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System/blob/d5fd0b37e2d90d18b4e7ac451b163aae8d5397bf/skills/ai-ugc-seedance/references/chassis.md), [Seedance 2.0 model layer](https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System/blob/d5fd0b37e2d90d18b4e7ac451b163aae8d5397bf/skills/ai-ugc-seedance/references/models/seedance.md), [multi-clip handoff rules](https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System/blob/d5fd0b37e2d90d18b4e7ac451b163aae8d5397bf/skills/ai-ugc-seedance/references/delivery/clip-series.md))
 - [Fendi / ai-video-tool — October 2, 2026 Higgsfield Seedance 2.5 source-clock multi-angle R2V test: two paid runs, exact endpoint and prompts, same-duration versus stretched-duration A/B, identity and 30 fps lip-motion fits, explicit wardrobe-lock failure analysis](https://github.com/fendifrost-dot/ai-video-tool/commit/3eea776d87fa02debcd1fcb1c86657f728d2e865) ([complete two-run report](https://github.com/fendifrost-dot/ai-video-tool/blob/3eea776d87fa02debcd1fcb1c86657f728d2e865/docs/research/results/2026-10-02-seedance-multiangle/SEEDANCE_MULTIANGLE_TEST_2026-10-02.md), [new-environment prompt](https://github.com/fendifrost-dot/ai-video-tool/blob/3eea776d87fa02debcd1fcb1c86657f728d2e865/docs/research/results/2026-10-02-seedance-multiangle/T1_bentley.prompt.txt), [same-room prompt](https://github.com/fendifrost-dot/ai-video-tool/blob/3eea776d87fa02debcd1fcb1c86657f728d2e865/docs/research/results/2026-10-02-seedance-multiangle/T2_angle_only.prompt.txt), [matched source/result evidence](https://github.com/fendifrost-dot/ai-video-tool/blob/3eea776d87fa02debcd1fcb1c86657f728d2e865/docs/research/results/2026-10-02-seedance-multiangle/T2_lips_src_vs_result.jpg))
 - [YesOpen / yesopen-higgsfield-skits — October 1, 2026 Higgsfield Seedance 2.5 four-take UGC comedy production: reference-mechanics abstraction, per-character direct-to-lens long takes, silent reaction harvest, word-timed dialogue assembly and four-format delivery](https://github.com/behavio1/yesopen-higgsfield-skits/commit/ff41318fab8c843202cdd8b0a62046f54a734764) ([complete case study](https://github.com/behavio1/yesopen-higgsfield-skits/blob/ff41318fab8c843202cdd8b0a62046f54a734764/references/case-study-gym-breakup.md), [request/output ledger](https://github.com/behavio1/yesopen-higgsfield-skits/blob/ff41318fab8c843202cdd8b0a62046f54a734764/examples/gym-breakup/takes/jobs.jsonl), [delivered MP4](https://github.com/behavio1/yesopen-higgsfield-skits/blob/ff41318fab8c843202cdd8b0a62046f54a734764/examples/gym-breakup/final/its-not-you-its-your-invoices-9x16.mp4))
 - [Adnan / itsadnanai — October 1, 2026 Higgsfield Seedance 2.5 single-reference house-construction time-lapse: complete 12-second prompt, 270-degree descending orbit, selected 84-credit take, discarded 105-credit endpoint attempt, early-pool reference leak and scroll-sequence delivery workflow](https://github.com/itsadnanai/scroll-website-workflow/commit/264315513a9300c3a5a1e15170197ef83c125431) ([versioned workflow](https://github.com/itsadnanai/scroll-website-workflow/blob/264315513a9300c3a5a1e15170197ef83c125431/README.md))
