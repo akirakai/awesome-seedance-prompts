@@ -456,6 +456,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Single-reference orbit construction time-lapse](#440-single-reference-orbit-construction-time-lapse)
   - [Long-lens path denial for a fixed-landing dialogue](#441-long-lens-path-denial-for-a-fixed-landing-dialogue)
   - [One-seed planetary regrowth with an irreversible biome wave](#442-one-seed-planetary-regrowth-with-an-irreversible-biome-wave)
+  - [Fixed-lens letterbox frame-break sword rush](#443-fixed-lens-letterbox-frame-break-sword-rush)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -28221,6 +28222,84 @@ Adapted and rewritten from Snow / @iamrealsnow's October 1, 2026
 and the creator's
 [complete prompt reply](https://x.com/iamrealsnow/status/2105635273866670355).
 
+
+### 443. Fixed-lens letterbox frame-break sword rush
+
+**Verified model:** Seedance 2.5 — the original creator labels the generated
+video as Seedance 2.5 and publishes the complete prompt in a direct reply  
+**Use case:** anime action choreography, frame-break illusion, extreme
+foreshortening, single-character identity lock  
+**Mode:** image-to-video with one clean character reference  
+**Suggested settings:** 10–15 seconds, 16:9, fixed wide-angle camera, angular
+painterly anime rendering, native sword and cloth sound, no dialogue
+
+```text
+Create an explosive high-speed sword performance built around a strong
+FRAME-BREAK EFFECT. Preserve the reference character's exact face, white hair,
+red eyes, oversized black cropped top, long cream skirt with orange lining,
+bare feet and one slender sword. Keep the same angular painterly anime linework,
+brush texture, proportions and costume in every frame.
+
+DEPTH PLANE
+Place rigid solid-black horizontal bars over the top and bottom 15 percent of
+the image for the entire shot. Treat the bars as one motionless foreground
+plane, not as a changing aspect ratio or transition. The arena, dust and distant
+architecture remain visible only inside the central picture band. At designated
+action beats, the character's sword, hand, hair, skirt edge or foot may pass in
+front of a bar and remain fully visible over black, creating a clean pop-out
+illusion. Everything not crossing that depth plane stays clipped behind it.
+
+CAMERA CONTRACT
+One stationary wide-angle camera for the whole take. No pan, tilt, dolly, orbit,
+zoom, reframing, cut or lens change. The character creates the apparent camera
+energy by sprinting rapidly from deep background toward the lens and back
+through depth. Use strong but coherent perspective and extreme foreshortening;
+keep the face, torso, two arms and two legs anatomically connected.
+
+ACTION PATH
+0.0–2.0s — Begin small in the far center of the arena in a low sword stance.
+Wind pulls the hair and skirt sideways while dust moves through the middle band.
+
+2.0–5.0s — She explodes straight toward camera in three readable footfalls.
+The sword stays on one continuous arc. On the final step, the blade tip and
+leading hand cross over the upper black bar while her face remains readable in
+the central band. Add one sharp sword rush and one cloth snap.
+
+5.0–8.0s — Without stopping, she plants one foot, pivots once and performs a
+single diagonal slash. The blade travels from lower-left depth to upper-right
+foreground; the blade, forearm and trailing skirt edge briefly overlap both
+bars at different moments. Dust and one orange slash trail remain behind the
+body inside the arena, proving the separation of depth planes.
+
+8.0–11.0s — She springs past the foreground, twists in the air and lands back
+inside the central band at mid-distance. One bare foot crosses the lower bar
+only at the leap apex, then returns behind it before landing. The sword never
+duplicates, changes hands or leaves her grip.
+
+11.0–13.0s — Finish in a stable three-quarter guard. Hold the face and complete
+silhouette for the last second as the orange trail dissipates. Keep the black
+bars perfectly fixed through the final frame.
+
+LIGHT, SOUND AND FAILURE GATE
+Use directional warm light, cool painted shadows, fast readable motion, one
+sword whoosh per completed strike, foot impacts, dust and cloth movement. No
+music or dialogue required. Reject moving, shrinking, bending or disappearing
+bars; a full-screen crop; camera motion; random cuts; a second character; extra
+swords; detached limbs; fused fingers; hidden face; costume or eye-color drift;
+slow floating action; repeated strike; unreadable smear; text, logo or watermark.
+```
+
+**Why it works:** the stationary lens and immutable black bars establish a
+measurable foreground plane. The character then supplies all screen energy by
+moving along depth, while a short allowlist names exactly which parts may cross
+the matte at each beat. That separates the desired illusion from accidental
+cropping, bar motion or a generic zoom, and the return behind the bars proves
+that the effect is occlusion rather than an aspect-ratio change.
+
+Adapted and rewritten from Kōda / @aimikoda's October 2, 2026
+[Seedance 2.5 result and model attribution](https://x.com/aimikoda/status/2106044483863191748) and
+[complete frame-break prompt reply](https://x.com/aimikoda/status/2106044848310452333).
+
 ## Reusable templates
 
 ### Author-paid template trial with model-provenance lock and fail-before-spend reuse gate
@@ -50180,6 +50259,8 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [Kōda / @aimikoda — October 2, 2026 Seedance 2.5 fixed-wide-lens sword performance: complete prompt, published result, rigid top/bottom matte plane, depth-driven foreshortening and controlled limb/blade frame breaks](https://x.com/aimikoda/status/2106044483863191748) ([complete prompt reply](https://x.com/aimikoda/status/2106044848310452333))
+
 - [Tianbin Liu / IdeaHub — October 2, 2026 Seedance 2.5 R2V author-trial evidence chain: exact model captured at accepted task creation, provider-succeeded polling, idempotent proven-model storage, client-proof rejection, historical single-route migration and model-locked pre-spend reuse](https://github.com/TianbinLiu/ideahub-server/commit/76c64edb8fc3f4da0e04611af42fe753908e910c) ([workflow and model-lock rationale](https://github.com/TianbinLiu/ideahub-app/blob/704ca78ccbaeab78bfc43ea5cedb8e4f833848fb/docs/template-workflow-research.md), [API contract](https://github.com/TianbinLiu/ideahub-server/blob/76c64edb8fc3f4da0e04611af42fe753908e910c/docs/api-contract.md))
 
 - [GraiLogic — October 1, 2026 first-hand Higgsfield Seedance 2.5 motion-language and reference-contamination tests: soft subject-motion words versus timestamped real-time events, wheel-contact repair, full-scene donor failure versus tight identity/product references, 5/10/15-second and 1080p completion, 24 fps and unique-frame observations](https://grailogic.com/articles/seedance-2-5-prompt-guide/)
