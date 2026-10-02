@@ -28140,6 +28140,72 @@ Adapted and rewritten from keys-exe's October 1, 2026
 
 ## Reusable templates
 
+### Storyboard-annotation triple fence and corner-clean frame gate
+
+**Verified model:** Seedance 2.5 — confirmed by an official BytePlus
+`seedance-prompt-25` handoff that records generated takes in which storyboard
+corner numerals survived a single negative instruction and appeared in every shot  
+**Use case:** storyboard-to-video, annotated grids, image-reference shot plans,
+panel-number leakage, clean full-frame delivery  
+**Mode:** image/reference-to-video with one storyboard grid plus optional identity
+references
+
+Use this when a storyboard is useful for order and composition but contains
+numbers, captions, arrows, dividers or sketch marks that must not enter the
+video. Treat the board as a control document, address panels by position, and
+repeat the exclusion at three different scopes.
+
+```text
+BOARD BINDING
+@Image1 = an [N]-panel planning board. It owns only [READING ORDER], approximate
+composition and shot sequence. Read it [LEFT TO RIGHT, TOP TO BOTTOM].
+Every non-scene mark is a planning annotation: numerals, letters, badges,
+captions, arrows, divider lines, borders, paper texture and sketch style.
+None of those marks belongs to the world or may appear in the generated video.
+
+@Image2 = [SUBJECT / PRODUCT] identity only, if supplied.
+@Image3 = [LOCATION / COSTUME / PROP] appearance only, if supplied.
+Unused references are omitted.
+
+POSITION-BASED SHOT MAP
+Call each board cell by reading position, never by a numeral printed inside it.
+Shot 1 — first / upper-left panel:
+[SHOT SIZE, SUBJECT ACTION, SCENE STATE, CAMERA MOVE].
+Deliver one clean edge-to-edge frame with an empty upper-left, upper-right,
+lower-left and lower-right corner; no board marks or layout boundaries.
+
+Shot 2 — next / upper-middle panel:
+[SHOT SIZE, SUBJECT ACTION, ACHIEVED END STATE, CAMERA MOVE].
+Deliver one clean edge-to-edge frame with all four corners free of annotations.
+
+[REPEAT FOR EVERY CELL, USING READING POSITION]
+Shot N — final / lower-right panel:
+[CLOSING ACTION, FINAL VISIBLE STATE, CAMERA SETTLE].
+Deliver one clean edge-to-edge frame with no planning marks.
+
+GLOBAL FILM DIRECTION
+Render one continuous [STYLE] video with [LIGHT], [LENS FEEL], [COLOR] and
+[AUDIO PLAN]. Preserve [IDENTITY, SCREEN DIRECTION, PROP STATE] across shots.
+The grid guides editorial order; it is never a split screen or a visible object.
+
+CLOSING LEAK GATE
+Every frame must contain photographed or rendered scene content from edge to
+edge. No numerals, letters, badges, arrows, captions, subtitles, labels,
+timecodes, watermarks, paper, grid, panel border or split screen anywhere,
+including every corner. If any planning mark survives, reject the whole take.
+```
+
+**Why it works:** the reference contract separates scene content from director
+annotations, position-based addressing avoids reinforcing printed numerals, and
+the same ban is restated locally for each shot and globally at delivery. That
+redundancy targets the documented failure in which one broad exclusion was
+underweighted while a repeated corner mark remained visually salient.
+
+Adapted and rewritten from BytePlus SA's October 2, 2026
+[official Seedance 2.5 prompt-fix commit](https://github.com/byteplus-sa/seed-studio/commit/5a406b3a063dfff8ee1ff7de6ebe4d960d0e4405)
+and the updated
+[storyboard handoff reference](https://github.com/byteplus-sa/seed-studio/blob/5a406b3a063dfff8ee1ff7de6ebe4d960d0e4405/.agents/skills/seedance-prompt-25/references/keyframes-storyboards-blockouts.md).
+
 ### Role-owned UGC performance chassis and open/closed stitch handoff
 
 **Verified model:** ByteDance Seedance 2.0, with Higgsfield as the source
@@ -49524,6 +49590,7 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [BytePlus SA Seed Studio — October 2, 2026 official Seedance 2.5 storyboard-annotation leakage fix: planning-only board binding, positional panel addressing, per-shot clean-frame clauses, repeated closing exclusion and explicit four-corner gate](https://github.com/byteplus-sa/seed-studio/commit/5a406b3a063dfff8ee1ff7de6ebe4d960d0e4405) ([storyboard handoff reference](https://github.com/byteplus-sa/seed-studio/blob/5a406b3a063dfff8ee1ff7de6ebe4d960d0e4405/.agents/skills/seedance-prompt-25/references/keyframes-storyboards-blockouts.md))
 - [Likelyfad Prompt System — October 2, 2026 ByteDance Seedance 2.0 realistic-UGC production structure: role-owned references, camera-owner truth, frame-side hand and prop ledgers, frame-zero micro-performance, word-linked gestures, locked delivery register and open/closed multi-clip cadence](https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System/commit/d5fd0b37e2d90d18b4e7ac451b163aae8d5397bf) ([prompt chassis](https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System/blob/d5fd0b37e2d90d18b4e7ac451b163aae8d5397bf/skills/ai-ugc-seedance/references/chassis.md), [Seedance 2.0 model layer](https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System/blob/d5fd0b37e2d90d18b4e7ac451b163aae8d5397bf/skills/ai-ugc-seedance/references/models/seedance.md), [multi-clip handoff rules](https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System/blob/d5fd0b37e2d90d18b4e7ac451b163aae8d5397bf/skills/ai-ugc-seedance/references/delivery/clip-series.md))
 - [Fendi / ai-video-tool — October 2, 2026 Higgsfield Seedance 2.5 source-clock multi-angle R2V test: two paid runs, exact endpoint and prompts, same-duration versus stretched-duration A/B, identity and 30 fps lip-motion fits, explicit wardrobe-lock failure analysis](https://github.com/fendifrost-dot/ai-video-tool/commit/3eea776d87fa02debcd1fcb1c86657f728d2e865) ([complete two-run report](https://github.com/fendifrost-dot/ai-video-tool/blob/3eea776d87fa02debcd1fcb1c86657f728d2e865/docs/research/results/2026-10-02-seedance-multiangle/SEEDANCE_MULTIANGLE_TEST_2026-10-02.md), [new-environment prompt](https://github.com/fendifrost-dot/ai-video-tool/blob/3eea776d87fa02debcd1fcb1c86657f728d2e865/docs/research/results/2026-10-02-seedance-multiangle/T1_bentley.prompt.txt), [same-room prompt](https://github.com/fendifrost-dot/ai-video-tool/blob/3eea776d87fa02debcd1fcb1c86657f728d2e865/docs/research/results/2026-10-02-seedance-multiangle/T2_angle_only.prompt.txt), [matched source/result evidence](https://github.com/fendifrost-dot/ai-video-tool/blob/3eea776d87fa02debcd1fcb1c86657f728d2e865/docs/research/results/2026-10-02-seedance-multiangle/T2_lips_src_vs_result.jpg))
 - [YesOpen / yesopen-higgsfield-skits — October 1, 2026 Higgsfield Seedance 2.5 four-take UGC comedy production: reference-mechanics abstraction, per-character direct-to-lens long takes, silent reaction harvest, word-timed dialogue assembly and four-format delivery](https://github.com/behavio1/yesopen-higgsfield-skits/commit/ff41318fab8c843202cdd8b0a62046f54a734764) ([complete case study](https://github.com/behavio1/yesopen-higgsfield-skits/blob/ff41318fab8c843202cdd8b0a62046f54a734764/references/case-study-gym-breakup.md), [request/output ledger](https://github.com/behavio1/yesopen-higgsfield-skits/blob/ff41318fab8c843202cdd8b0a62046f54a734764/examples/gym-breakup/takes/jobs.jsonl), [delivered MP4](https://github.com/behavio1/yesopen-higgsfield-skits/blob/ff41318fab8c843202cdd8b0a62046f54a734764/examples/gym-breakup/final/its-not-you-its-your-invoices-9x16.mp4))
