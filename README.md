@@ -28223,6 +28223,72 @@ and the creator's
 
 ## Reusable templates
 
+### Author-paid template trial with model-provenance lock and fail-before-spend reuse gate
+
+**Verified model:** ByteDance Seedance 2.5 R2V, exact historical route `doubao-seedance-2-5-260628`. The original platform implementation records the requested model when the author's paid R2V task is accepted, then adds that immutable model ID to the template only after the provider returns `succeeded`. Its migration rule maps older proven templates to this exact route only because the contemporaneous R2V price table contained one allowed model and rejected every other route before task acceptance. [Server-side proof commit](https://github.com/TianbinLiu/ideahub-server/commit/76c64edb8fc3f4da0e04611af42fe753908e910c) · [Model-lock workflow record](https://github.com/TianbinLiu/ideahub-app/blob/704ca78ccbaeab78bfc43ea5cedb8e4f833848fb/docs/template-workflow-research.md) · [API contract](https://github.com/TianbinLiu/ideahub-server/blob/76c64edb8fc3f4da0e04611af42fe753908e910c/docs/api-contract.md)
+
+**Evidence boundary:** The source proves accepted tasks, author ownership, provider success, exact-model attribution, and idempotent storage, but it does not publish each underlying prompt and result. Count this as one reusable failure-control and template-governance technique, not as a complete scenario prompt or visual-quality benchmark.
+
+**Use when:** Publishing a reference-video prompt/template for other creators, migrating a prompt library across model versions, or preventing an unverified provider/model substitution from charging users for a workflow that only succeeded on another route.
+
+```text
+TEMPLATE PROOF OBJECT
+- Template snapshot hash: [PROMPT + ROLE MAP + TIMELINE + CONSTRAINTS].
+- Reference manifest: [ASSET HASH, ROLE, RIGHTS, REQUIRED INPUT COUNT/TYPE].
+- Exact model ID: [IMMUTABLE PROVIDER ROUTE, NOT A MOVING DISPLAY ALIAS].
+- Mode: [R2V / I2V / T2V / EDIT].
+- Trial owner: [TEMPLATE AUTHOR ACCOUNT].
+- Accepted task ID: [PROVIDER JOB ID].
+- Accepted-at / succeeded-at timestamps: [UTC].
+- Result record: [OUTPUT URL OR HASH, DURATION, ASPECT, RESOLUTION].
+- Proof state: [UNPROVEN / ACCEPTED / SUCCEEDED / FAILED / RETIRED].
+
+AUTHOR-PAID RELEASE GATE
+1. Freeze the template snapshot and reference manifest before the trial.
+2. Require the template author—not a downstream user—to launch the paid trial.
+3. Validate the exact model against the mode-specific allowlist and price table
+   before forwarding the request.
+4. When the provider accepts the request, store task ID, author ID, template ID,
+   and exact model ID together. Do not trust a client-supplied success claim.
+5. Poll that existing task ID. Never create a second paid task while checking status.
+6. Only when the provider returns SUCCEEDED:
+   - stamp the template as proven;
+   - add the exact model ID to PROVEN_MODELS with set semantics;
+   - retain the frozen snapshot and result evidence.
+7. FAILED, rejected, missing-output, wrong-owner, or unknown-model trials do not
+   unlock publication and do not add a proven model.
+8. To support another model/version, rerun the same frozen template on that exact
+   route. A previous success does not transfer by family name or marketing alias.
+
+REUSE CONTRACT
+- Show the exact proven model beside the template before the user commits spend.
+- Filter the template shelf by models the account can actually run.
+- Lock generation to a proven model; offer no silent fallback or model override.
+- Validate input count, input type, reference reachability, Content-Type, duration,
+  and account entitlement before task creation.
+- If a required asset or model is unavailable, refuse before spend and name the
+  failing dependency.
+- Preserve the historical proof record when a tier's default model changes:
+  label "verified on [OLD EXACT MODEL]" until a new paid trial succeeds.
+
+LEGACY MIGRATION
+- Infer an exact model only when immutable historical controls prove that precisely
+  one route could have accepted the task at the recorded time.
+- Keep provenance UNKNOWN when several routes were possible or evidence is missing.
+- Never rewrite a historical proof to the current constant, alias, or tier default.
+- Do not backfill success from screenshots, creator assertions, or client metadata.
+
+AUDIT
+- Reusing the same successful task is idempotent: one model entry, one proof.
+- A later success on a second route adds that route without changing the first.
+- Client attempts to write proof fields are stripped or rejected.
+- Public template payloads expose proven model IDs so consumers can fail closed.
+```
+
+**Why it works:** A prompt template is inseparable from the exact model and mode on which it was proven. Capturing the model at paid-task acceptance and promoting it only on a provider-owned success response closes three costly gaps: self-attested success, moving model aliases, and downstream users discovering incompatibility after payment. The author absorbs the first validation cost, while every later user gets a pre-spend compatibility decision backed by an auditable task.
+
+**Production note:** Keep prompt quality review separate from this operational proof. A task can succeed technically while producing a weak take; publication should therefore require both the provider-success ledger above and a human acceptance check for identity, action readability, reference leakage, audio, and endpoint quality.
+
 ### Five-plate character-introduction teaser with post-owned voice and readability gates
 
 **Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`, `omni_reference`). The original creator published a finished 45.33-second game teaser, its five-shot production record, the generated MP4, exact picture settings, reference assignments, draft/final credit costs, rejected variant, edit timings, voice selection, effect cues, mastering values, and encode-quality measurements. Each Seedance shot was generated as an eight-second silent 16:9 plate: 480p drafts first, then selected takes finalized at 1080p with high bitrate. [Production commit](https://github.com/dpeh001-x/Mojiworld/commit/23fb07f19f033fda18bf28823c1a1ba2c90fb671) · [Complete production record](https://github.com/dpeh001-x/Mojiworld/blob/23fb07f19f033fda18bf28823c1a1ba2c90fb671/steam/higgsfield/cinematics/clip_four_captains.SPEC.md) · [Finished MP4](https://github.com/dpeh001-x/Mojiworld/blob/23fb07f19f033fda18bf28823c1a1ba2c90fb671/steam/higgsfield/cinematics/clip_four_captains.mp4)
@@ -50114,6 +50180,8 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [Tianbin Liu / IdeaHub — October 2, 2026 Seedance 2.5 R2V author-trial evidence chain: exact model captured at accepted task creation, provider-succeeded polling, idempotent proven-model storage, client-proof rejection, historical single-route migration and model-locked pre-spend reuse](https://github.com/TianbinLiu/ideahub-server/commit/76c64edb8fc3f4da0e04611af42fe753908e910c) ([workflow and model-lock rationale](https://github.com/TianbinLiu/ideahub-app/blob/704ca78ccbaeab78bfc43ea5cedb8e4f833848fb/docs/template-workflow-research.md), [API contract](https://github.com/TianbinLiu/ideahub-server/blob/76c64edb8fc3f4da0e04611af42fe753908e910c/docs/api-contract.md))
+
 - [GraiLogic — October 1, 2026 first-hand Higgsfield Seedance 2.5 motion-language and reference-contamination tests: soft subject-motion words versus timestamped real-time events, wheel-contact repair, full-scene donor failure versus tight identity/product references, 5/10/15-second and 1080p completion, 24 fps and unique-frame observations](https://grailogic.com/articles/seedance-2-5-prompt-guide/)
 
 - [dpeh001-x / Mojiworld — October 2, 2026 Higgsfield Seedance 2.5 five-plate four-character teaser: 480p motion drafts, selected 1080p finals, explicit reference assignments, readability-driven variant choice, post-owned voices/SFX/titles, finished film, mastering values and SSIM-based delivery encode](https://github.com/dpeh001-x/Mojiworld/commit/23fb07f19f033fda18bf28823c1a1ba2c90fb671) ([production record](https://github.com/dpeh001-x/Mojiworld/blob/23fb07f19f033fda18bf28823c1a1ba2c90fb671/steam/higgsfield/cinematics/clip_four_captains.SPEC.md), [finished MP4](https://github.com/dpeh001-x/Mojiworld/blob/23fb07f19f033fda18bf28823c1a1ba2c90fb671/steam/higgsfield/cinematics/clip_four_captains.mp4))
