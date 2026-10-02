@@ -28223,6 +28223,77 @@ and the creator's
 
 ## Reusable templates
 
+### Audio-gravity dual-lock timing and temporal-owner conflict gate
+
+**Verified models:** Seedance 2.0 (`seedance_2_0`, Higgsfield `std`) and Seedance 2.5 (`seedance_2_5`, Higgsfield `omni_reference`). In a creator-published controlled study, 66 generations—33 per model—used frozen prompts, public inputs, job IDs, outputs, and per-run measurements at 720p, 16:9, 24 fps. The study found that reference audio can pull a scene's broad semantic climax earlier or later, but is not a sample-accurate clock or pass-through soundtrack. Exact text timestamps were at least as dependable for event timing; supplied dialogue and music were regenerated rather than preserved bit-for-bit. [Primary study and commit](https://github.com/x0te/seedance-audio-lab/commit/93a262a980487259e3a9f7ba8ab5c957721bed4d) · [Frozen prompts](https://github.com/x0te/seedance-audio-lab/blob/93a262a980487259e3a9f7ba8ab5c957721bed4d/research/scripts/prompts.py) · [Interactive report](https://x0te.github.io/seedance-audio-lab/)
+
+**Use when:** A music build or drop should shape a reveal; a camera-motion reference must coexist with music; dialogue or an SFX needs a timed entrance; or the final edit must reuse an exact licensed track or authorized voice.
+
+**Mode:** Image/reference/video-to-video with optional audio. For a timing experiment, freeze the seed-facing prompt, images, duration, aspect ratio, and all generation settings; change only one variable such as audio presence, drop position, or reference-role wording.
+
+```text
+REFERENCE ROLES — keep them separate:
+- @Image1: character identity, face, hair, clothing, and proportions only.
+- @Image2: environment, palette, lighting, and art direction only.
+- @Video1: camera path and lens movement only; do not copy its subject or location.
+- @Audio1: musical style, instrumentation, energy curve, and broad pacing only.
+  Treat it as an influence, not an exact waveform, voice pass-through, or master clock.
+
+TEMPORAL OWNER:
+- The written timeline owns exact semantic event timing.
+- @Audio1 supplies energy and pacing around that timeline.
+- If precise camera motion is mission-critical:
+  • Seedance 2.5: retain @Video1 and @Audio1, but isolate their roles explicitly.
+  • Seedance 2.0: A/B this combined prompt against a camera-only pass; if camera
+    fidelity degrades, render camera motion without audio and restore music in edit.
+
+SCENE:
+[One subject] performs [one continuous action] in [one coherent location].
+The energy builds from restrained to intense, ending in [single visual climax].
+Preserve identity, wardrobe, spatial layout, and screen direction throughout.
+
+TIMELINE — [12 seconds]:
+0.0–6.0 s: [quiet setup and readable action].
+6.0–8.0 s: [acceleration/build; camera and performance gain urgency].
+Exactly at 8.0 s: [one observable semantic event: reveal, impact, gesture, or cut].
+8.0–12.0 s: [reaction and short hold so the climax is judgeable].
+
+AUDIO:
+Let @Audio1 guide the overall build and emotional contour. Do not invent rapid
+beat-by-beat cutting. The strongest musical peak should support the written climax,
+but event timing must follow the explicit timestamp above. Generate native ambience
+and effects appropriate to the scene.
+
+DIALOGUE, if any:
+At exactly [time], the character says: "[exact line]".
+Natural delivery, correct speaker, visible lip sync, no subtitles unless requested.
+If the exact supplied voice must survive unchanged, plan to replace the generated
+voice in post rather than expecting audio pass-through.
+
+TAKE PLAN:
+Generate at least three takes. Also create one controlled comparison with @Audio1
+removed (or @Video1 removed when testing camera/music conflict). Change no other
+input. Archive the exact model route, prompt, reference hashes, duration, seed if
+available, and job ID.
+
+ACCEPTANCE GATE:
+1. Measure the requested semantic event against the written timestamp.
+2. Inspect the generated soundtrack and measure its actual peak/drop; do not assume
+   it matches the source-audio drop.
+3. Compare the event with both the requested time and generated-audio peak. Reject
+   a take that merely feels synchronized but misses the measurable tolerance.
+4. Do not claim beat-level synchronization from isolated coincidences.
+5. Check that @Video1 transferred camera motion without subject/environment leakage.
+6. Check cadence for duplicate frames before optical-flow retiming; decimate repeats
+   first if the output uses a 3- or 4-frame hold pattern.
+7. Keep the take only if identity, camera direction, timing, dialogue, and audio all
+   pass their separate gates.
+```
+
+**Why it works:** The template gives each reference one job and names a single owner for exact timing. It uses text timestamps plus audio energy as a dual lock, while treating the generated soundtrack as a new artifact that must be measured. The controlled A/B and three-take rule distinguish reproducible control from a lucky result; the cadence check prevents repeated-frame structure from masquerading as beat synchronization.
+
+**Delivery note:** For an exact commercial track or exact authorized voice, generate the visual performance with enough tolerance, then restore the original audio in the editor. For music-driven editorial cuts, place cuts against the final track after generation instead of assuming Seedance will preserve every source beat.
+
 ### Voice-driven face-sprite harvest with clip-wide viseme calibration
 
 **Verified model:** Seedance 2.5 — the original creator committed a render of
@@ -49869,6 +49940,8 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [Jinhyung Lee / seedance-audio-lab — October 2, 2026 controlled audio-reference study: 66 Higgsfield generations across exact Seedance 2.0 and 2.5 routes, with frozen prompts, public inputs, job IDs, outputs, and timing measurements](https://github.com/x0te/seedance-audio-lab/commit/93a262a980487259e3a9f7ba8ab5c957721bed4d) ([frozen prompts](https://github.com/x0te/seedance-audio-lab/blob/93a262a980487259e3a9f7ba8ab5c957721bed4d/research/scripts/prompts.py), [interactive report](https://x0te.github.io/seedance-audio-lab/), [dataset](https://github.com/x0te/seedance-audio-lab/blob/93a262a980487259e3a9f7ba8ab5c957721bed4d/data/data.json), [analysis](https://github.com/x0te/seedance-audio-lab/blob/93a262a980487259e3a9f7ba8ab5c957721bed4d/research/analysis/results_e12.json), [recommendations](https://github.com/x0te/seedance-audio-lab/blob/93a262a980487259e3a9f7ba8ab5c957721bed4d/assets/content.js))
+
 - [Joshua Trommel / Joshua Tree — October 2, 2026 Seedance 2.5 authorized cloned-voice face render: creator-graded A+ take, committed 24-frame idle and 48-frame talk atlases, clip-wide mouth threshold with 0.87 target correlation and fixed-length minimum-blink fallback](https://github.com/nulljosh/joshuatree/commit/4d574f5c14e8708aa708e49163e69cdbc8688626) ([production PR](https://github.com/nulljosh/joshuatree/pull/341), [viseme extractor](https://github.com/nulljosh/joshuatree/blob/4d574f5c14e8708aa708e49163e69cdbc8688626/tools/gen/face_visemes.py), [frame selector](https://github.com/nulljosh/joshuatree/blob/4d574f5c14e8708aa708e49163e69cdbc8688626/tools/gen/face_frames.py), [published atlases](https://github.com/nulljosh/joshuatree/tree/4d574f5c14e8708aa708e49163e69cdbc8688626/landing/face-joshua))
 - [Snow / @iamrealsnow — October 1, 2026 Seedance 2.5 one-seed planetary-regrowth short: complete 30-second prompt, generated video, model attribution, single-character continuity and outward biome-wave payoff](https://x.com/iamrealsnow/status/2105635182284046443) ([complete prompt reply](https://x.com/iamrealsnow/status/2105635273866670355))
 - [BytePlus SA Seed Studio — October 2, 2026 official Seedance 2.5 storyboard-annotation leakage fix: planning-only board binding, positional panel addressing, per-shot clean-frame clauses, repeated closing exclusion and explicit four-corner gate](https://github.com/byteplus-sa/seed-studio/commit/5a406b3a063dfff8ee1ff7de6ebe4d960d0e4405) ([storyboard handoff reference](https://github.com/byteplus-sa/seed-studio/blob/5a406b3a063dfff8ee1ff7de6ebe4d960d0e4405/.agents/skills/seedance-prompt-25/references/keyframes-storyboards-blockouts.md))
