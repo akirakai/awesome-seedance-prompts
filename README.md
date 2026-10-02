@@ -34553,6 +34553,73 @@ Adapted from the verified production's [video assembly script](https://github.co
 and [generation/acceptance notes](https://github.com/vovalukashov/render-seedance-prompts/blob/872ea65e64732a2316a60113294098dbc85c3179/README.md),
 published August 9, 2026.
 
+### Source-clock multi-angle performance router and fidelity gate
+
+**Verified model:** Seedance 2.5 — Higgsfield
+`seedance-2.5-reference`, endpoint
+`/bytedance/seedance-2.5/reference-to-video`, 720p, 9:16; verified by two
+paid reference-to-video runs from the same four-second live-action performance,
+with committed prompts, contact strips, identity measurements and source/result
+lip-motion fits
+
+Use this when one approved performance take must become a profile, low angle,
+tighter lens or new-environment cutaway without asking the performer to repeat
+the line. Match the output clock to the source before changing the camera.
+
+```text
+SOURCE PREP
+Trim @Video1 to exactly the action or spoken bar the new angle will cover.
+Measure its duration at native frame rate. Request the same output duration,
+rounded only as the provider requires. Do not send the full master take.
+
+REFERENCE ROLES
+@Video1 owns identity, body and hand motion, facial performance, mouth shapes,
+word timing, wardrobe, room state and action order.
+@Image1 is optional and may own only the replacement environment and its
+motivated light. It must not retime or redesign the performer.
+
+PROMPT
+@Video1 is [PERFORMER / SUBJECT]. Re-shoot the exact same performance from one
+new camera: [SIDE / LOW THREE-QUARTER / OTHER ANGLE], [SHOT SIZE], [LENS], with
+one restrained [DRIFT / PUSH / LOCKED] move.
+
+Keep the same face, skin, hair, body, action order and every mouth movement at
+the same moments from first frame to last. List each fragile visible constant
+literally: [HEADWEAR], [CLEAR-LENS GLASSES, NOT TINTED], [PATCH], [JEWELRY],
+[PROP], [ROOM OBJECT]. If @Image1 is present, place the performer in that
+environment and relight naturally from its practical sources. Nothing moves
+except the performer, motivated environment motion and the named camera move.
+
+SOURCE-CLOCK GATE
+Compare result to @Video1 at native cadence, not a sparse 8 fps sample.
+- lip-motion correlation on the unretimed source clock: target >= 0.60
+- identity distance against the source: target <= 0.25
+- offset and retime should remain approximately 0 seconds and 1.00
+- every explicitly named wardrobe constant survives the whole shot
+- camera angle changes, but performance order and room or replacement-world
+  geometry stay stable
+
+If duration mismatch stretches the line, reject it for visible on-mic use.
+Reserve approximate lip matches for profiles, turns, walk-ins, walk-outs and
+brief cutaways. Keep the original take or a frame-accurate composite for a
+full frontal line. Regenerate only after changing one variable: duration,
+camera instruction, environment reference or one missing appearance lock.
+```
+
+**Why it works:** the source experiment held a four-second performance at four
+seconds with lip-motion correlation 0.66, retime 1.00 and zero offset. Asking
+the same four-second take to fill five seconds stretched its clock and reduced
+lip fidelity. Explicitly naming clear glasses and patches also preserved them;
+omitting the glasses constraint in the environment-transfer run produced tinted
+lenses.
+
+Adapted and rewritten from Fendi's October 2, 2026
+[Seedance 2.5 paid-test commit](https://github.com/fendifrost-dot/ai-video-tool/commit/3eea776d87fa02debcd1fcb1c86657f728d2e865),
+the [complete two-run report](https://github.com/fendifrost-dot/ai-video-tool/blob/3eea776d87fa02debcd1fcb1c86657f728d2e865/docs/research/results/2026-10-02-seedance-multiangle/SEEDANCE_MULTIANGLE_TEST_2026-10-02.md),
+the [new-environment prompt](https://github.com/fendifrost-dot/ai-video-tool/blob/3eea776d87fa02debcd1fcb1c86657f728d2e865/docs/research/results/2026-10-02-seedance-multiangle/T1_bentley.prompt.txt),
+the [same-room angle prompt](https://github.com/fendifrost-dot/ai-video-tool/blob/3eea776d87fa02debcd1fcb1c86657f728d2e865/docs/research/results/2026-10-02-seedance-multiangle/T2_angle_only.prompt.txt),
+and the committed [source/result lip and identity evidence](https://github.com/fendifrost-dot/ai-video-tool/blob/3eea776d87fa02debcd1fcb1c86657f728d2e865/docs/research/results/2026-10-02-seedance-multiangle/T2_lips_src_vs_result.jpg).
+
 ### Reference-mechanics skit compiler with per-character reaction harvest
 
 **Verified model:** Seedance 2.5 — Higgsfield
@@ -49340,6 +49407,7 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [Fendi / ai-video-tool — October 2, 2026 Higgsfield Seedance 2.5 source-clock multi-angle R2V test: two paid runs, exact endpoint and prompts, same-duration versus stretched-duration A/B, identity and 30 fps lip-motion fits, explicit wardrobe-lock failure analysis](https://github.com/fendifrost-dot/ai-video-tool/commit/3eea776d87fa02debcd1fcb1c86657f728d2e865) ([complete two-run report](https://github.com/fendifrost-dot/ai-video-tool/blob/3eea776d87fa02debcd1fcb1c86657f728d2e865/docs/research/results/2026-10-02-seedance-multiangle/SEEDANCE_MULTIANGLE_TEST_2026-10-02.md), [new-environment prompt](https://github.com/fendifrost-dot/ai-video-tool/blob/3eea776d87fa02debcd1fcb1c86657f728d2e865/docs/research/results/2026-10-02-seedance-multiangle/T1_bentley.prompt.txt), [same-room prompt](https://github.com/fendifrost-dot/ai-video-tool/blob/3eea776d87fa02debcd1fcb1c86657f728d2e865/docs/research/results/2026-10-02-seedance-multiangle/T2_angle_only.prompt.txt), [matched source/result evidence](https://github.com/fendifrost-dot/ai-video-tool/blob/3eea776d87fa02debcd1fcb1c86657f728d2e865/docs/research/results/2026-10-02-seedance-multiangle/T2_lips_src_vs_result.jpg))
 - [YesOpen / yesopen-higgsfield-skits — October 1, 2026 Higgsfield Seedance 2.5 four-take UGC comedy production: reference-mechanics abstraction, per-character direct-to-lens long takes, silent reaction harvest, word-timed dialogue assembly and four-format delivery](https://github.com/behavio1/yesopen-higgsfield-skits/commit/ff41318fab8c843202cdd8b0a62046f54a734764) ([complete case study](https://github.com/behavio1/yesopen-higgsfield-skits/blob/ff41318fab8c843202cdd8b0a62046f54a734764/references/case-study-gym-breakup.md), [request/output ledger](https://github.com/behavio1/yesopen-higgsfield-skits/blob/ff41318fab8c843202cdd8b0a62046f54a734764/examples/gym-breakup/takes/jobs.jsonl), [delivered MP4](https://github.com/behavio1/yesopen-higgsfield-skits/blob/ff41318fab8c843202cdd8b0a62046f54a734764/examples/gym-breakup/final/its-not-you-its-your-invoices-9x16.mp4))
 - [Adnan / itsadnanai — October 1, 2026 Higgsfield Seedance 2.5 single-reference house-construction time-lapse: complete 12-second prompt, 270-degree descending orbit, selected 84-credit take, discarded 105-credit endpoint attempt, early-pool reference leak and scroll-sequence delivery workflow](https://github.com/itsadnanai/scroll-website-workflow/commit/264315513a9300c3a5a1e15170197ef83c125431) ([versioned workflow](https://github.com/itsadnanai/scroll-website-workflow/blob/264315513a9300c3a5a1e15170197ef83c125431/README.md))
 - [spiritform / ComfyBlockoutApp — October 1, 2026 Comfy Router Seedance 2.0 (`byteplus/dreamina-seedance-2-0-260128`) end-to-end R2V verification: signed asset URL, typed `content[]` reference role, metricless-ingestion negative canary and measured HTTP 400 `invalid_input` failure](https://github.com/spiritform/ComfyBlockoutApp/commit/e204d814765e84042a0e558e8522d645adbba561) ([reference-input contract](https://github.com/spiritform/ComfyBlockoutApp/blob/e204d814765e84042a0e558e8522d645adbba561/README.md#on-video-reference-input), [Seedance 2.0 R2V workflow](https://github.com/spiritform/ComfyBlockoutApp/blob/e204d814765e84042a0e558e8522d645adbba561/server/workflows/api_seedance2_0_r2v.json))
