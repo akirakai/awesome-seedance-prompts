@@ -455,6 +455,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Lateral-to-rear stellar-escape pursuit](#439-lateral-to-rear-stellar-escape-pursuit)
   - [Single-reference orbit construction time-lapse](#440-single-reference-orbit-construction-time-lapse)
   - [Long-lens path denial for a fixed-landing dialogue](#441-long-lens-path-denial-for-a-fixed-landing-dialogue)
+  - [One-seed planetary regrowth with an irreversible biome wave](#442-one-seed-planetary-regrowth-with-an-irreversible-biome-wave)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -28138,6 +28139,88 @@ Adapted and rewritten from keys-exe's October 1, 2026
 [successful task log and generated MP4 URL](https://github.com/keys-exe/global-manual-ai/blob/0cedf52d777258a7964328d5a7cdf95204e66dcd/builds/stryde-half-my-age/body/SC02/SC02-SH01.sd1.kie.log),
 [creator review and seven-shot batch ledger](https://github.com/keys-exe/global-manual-ai/blob/0cedf52d777258a7964328d5a7cdf95204e66dcd/builds/stryde-half-my-age/BUILD_NOTES.md)).
 
+### 442. One-seed planetary regrowth with an irreversible biome wave
+
+**Verified model:** Seedance 2.5 — the original creator names the model beside
+the attached generated video and publishes the complete 30-second prompt in a
+direct reply  
+**Use case:** hopeful 3D animation, environmental transformation, one-way state
+propagation, character-led time-lapse  
+**Mode:** text-to-video  
+**Suggested settings:** 30 seconds, 16:9, 24 fps, polished theatrical
+family-animation rendering, no dialogue or on-screen text
+
+```text
+Create a thirty-second 3D animated short about one small repair robot restoring
+life to an abandoned planet. Use soft feature-film lighting, tactile weathered
+metal, expressive but mechanically plausible movement, shallow optical depth,
+volumetric dust and rich color separation. Keep one robot, one seed and one
+continuous planetary location for the entire film.
+
+CONTINUITY LEDGER
+The robot is knee-high, rusty and dented, with two large blue optical lenses,
+thin articulated arms and one worn utility pack. Preserve the same proportions,
+damage marks and eye color in every shot. It carries exactly one luminous seed.
+The seed may become the central tree but must never duplicate. Restored ground
+only expands outward; no region returns to gray once the growth wave reaches it.
+
+0.0–6.0s — LAST LIVING OBJECT
+Open wide on a silent gray planet at dusk: dry dust, cracked soil, dead channels
+and distant eroded hills. The robot trudges across frame against the wind,
+cupping the single seed in both hands. Dust trails behind its feet while a slow
+forward camera move makes the seed's faint warm light the only saturated color.
+End with the cracked riverbed visible ahead.
+
+6.0–14.0s — PLANTING AND PROTECTION
+Move to a medium lateral track without changing screen direction. The robot
+reaches the riverbed, kneels, opens one small cavity and places the seed inside.
+It covers the seed once, then leans its body into the wind as a shield. Cut close
+enough to read hope and worry through the blue lenses and head angle, not a
+human mouth. The soil remains barren until the seed is fully covered.
+
+14.0–22.0s — OUTWARD BIOME WAVE
+The first sprout breaks the surface at the robot's hands. Begin an accelerated
+but physically ordered growth event: roots darken the nearby soil; green vines
+follow the river cracks; flowers open behind the advancing vine tips; grass and
+small trees rise only after the ground changes. The turquoise, gold and pink
+wave travels continuously from the seed toward the horizon. The robot steps back
+once in astonishment as petals orbit past it. Do not teleport vegetation, reset
+the landscape or spawn a second growth origin.
+
+22.0–30.0s — SCALE PAYOFF
+Transition into a high crane pullback that preserves the robot and original
+riverbed as spatial anchors. Water begins flowing only after plant life reaches
+the distant channel, then forms one waterfall in the restored terrain. Settle at
+warm golden hour beneath the fully grown luminous tree. The same robot sits
+against its trunk; one tiny flower opens on its shoulder as the final small
+payoff. Hold the completed world for the last second.
+
+LIGHT, MOTION AND SOUND
+Move from cold gray dusk to warm gold as life spreads; let the color boundary
+travel with the biome wave rather than grading the whole frame at once. Motion
+stays smooth and readable at 24 fps. Use restrained wind, metal footfalls,
+soil movement, leaves, water and a gentle non-vocal musical lift. No spoken
+dialogue, captions, title card, logo or watermark.
+
+FAILURE GATE
+Reject extra robots, extra seeds, changing robot geometry, vegetation appearing
+before the planting contact, several disconnected growth zones, backward or
+resetting growth, water arriving before the channel is restored, floating roots,
+human facial features, unreadable action, split screen, text or an invented
+outro after the final tree composition.
+```
+
+**Why it works:** each beat hands a visible achieved state to the next: carried
+seed, planted seed, local sprout, expanding biome, then restored watershed. The
+single-origin rule and ordered material ladder prevent a generic instant
+makeover, while keeping the robot in frame during the time-lapse gives the
+transformation a stable scale and emotional witness.
+
+Adapted and rewritten from Snow / @iamrealsnow's October 1, 2026
+[Seedance 2.5 generated short and model attribution](https://x.com/iamrealsnow/status/2105635182284046443)
+and the creator's
+[complete prompt reply](https://x.com/iamrealsnow/status/2105635273866670355).
+
 ## Reusable templates
 
 ### Storyboard-annotation triple fence and corner-clean frame gate
@@ -49590,6 +49673,7 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [Snow / @iamrealsnow — October 1, 2026 Seedance 2.5 one-seed planetary-regrowth short: complete 30-second prompt, generated video, model attribution, single-character continuity and outward biome-wave payoff](https://x.com/iamrealsnow/status/2105635182284046443) ([complete prompt reply](https://x.com/iamrealsnow/status/2105635273866670355))
 - [BytePlus SA Seed Studio — October 2, 2026 official Seedance 2.5 storyboard-annotation leakage fix: planning-only board binding, positional panel addressing, per-shot clean-frame clauses, repeated closing exclusion and explicit four-corner gate](https://github.com/byteplus-sa/seed-studio/commit/5a406b3a063dfff8ee1ff7de6ebe4d960d0e4405) ([storyboard handoff reference](https://github.com/byteplus-sa/seed-studio/blob/5a406b3a063dfff8ee1ff7de6ebe4d960d0e4405/.agents/skills/seedance-prompt-25/references/keyframes-storyboards-blockouts.md))
 - [Likelyfad Prompt System — October 2, 2026 ByteDance Seedance 2.0 realistic-UGC production structure: role-owned references, camera-owner truth, frame-side hand and prop ledgers, frame-zero micro-performance, word-linked gestures, locked delivery register and open/closed multi-clip cadence](https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System/commit/d5fd0b37e2d90d18b4e7ac451b163aae8d5397bf) ([prompt chassis](https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System/blob/d5fd0b37e2d90d18b4e7ac451b163aae8d5397bf/skills/ai-ugc-seedance/references/chassis.md), [Seedance 2.0 model layer](https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System/blob/d5fd0b37e2d90d18b4e7ac451b163aae8d5397bf/skills/ai-ugc-seedance/references/models/seedance.md), [multi-clip handoff rules](https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System/blob/d5fd0b37e2d90d18b4e7ac451b163aae8d5397bf/skills/ai-ugc-seedance/references/delivery/clip-series.md))
 - [Fendi / ai-video-tool — October 2, 2026 Higgsfield Seedance 2.5 source-clock multi-angle R2V test: two paid runs, exact endpoint and prompts, same-duration versus stretched-duration A/B, identity and 30 fps lip-motion fits, explicit wardrobe-lock failure analysis](https://github.com/fendifrost-dot/ai-video-tool/commit/3eea776d87fa02debcd1fcb1c86657f728d2e865) ([complete two-run report](https://github.com/fendifrost-dot/ai-video-tool/blob/3eea776d87fa02debcd1fcb1c86657f728d2e865/docs/research/results/2026-10-02-seedance-multiangle/SEEDANCE_MULTIANGLE_TEST_2026-10-02.md), [new-environment prompt](https://github.com/fendifrost-dot/ai-video-tool/blob/3eea776d87fa02debcd1fcb1c86657f728d2e865/docs/research/results/2026-10-02-seedance-multiangle/T1_bentley.prompt.txt), [same-room prompt](https://github.com/fendifrost-dot/ai-video-tool/blob/3eea776d87fa02debcd1fcb1c86657f728d2e865/docs/research/results/2026-10-02-seedance-multiangle/T2_angle_only.prompt.txt), [matched source/result evidence](https://github.com/fendifrost-dot/ai-video-tool/blob/3eea776d87fa02debcd1fcb1c86657f728d2e865/docs/research/results/2026-10-02-seedance-multiangle/T2_lips_src_vs_result.jpg))
