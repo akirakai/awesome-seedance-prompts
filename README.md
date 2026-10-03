@@ -460,6 +460,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Lagging-camera dual-sword castle pursuit in one take](#444-lagging-camera-dual-sword-castle-pursuit-in-one-take)
   - [Animal-height cake retrieval with exact-two-puppy reveal](#445-animal-height-cake-retrieval-with-exact-two-puppy-reveal)
   - [Cooling-forged blade circuit reveal in one macro take](#446-cooling-forged-blade-circuit-reveal-in-one-macro-take)
+  - [Vanity self-recognition spiral with persistent product-cluster patch](#447-vanity-self-recognition-spiral-with-persistent-product-cluster-patch)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -28569,6 +28570,113 @@ and [committed frame
 sequence](https://github.com/Thesharaavakian/hzortech/tree/ed0e4108e8079fd30ada676c16be7fdae09b07e2/business_page/static/business_page/seq/forge-d90931a5).
 
 
+
+### 447. Vanity self-recognition spiral with persistent product-cluster patch
+
+**Verified model:** Higgsfield Seedance 2.5, exact logged route
+`seedance_2_5`; the creator's production record contains the complete
+reference request, provider job
+`cf9fd80f-2f4d-4723-85da-7082a6ba6963`, 24-second 720p 9:16 settings,
+178.5-credit charge, public MP4 and a post-run review confirming that the added
+vanity products persist through the final shot and the spoken lines remain
+verbatim  \
+**Use case:** animated adult drama, mirror performance, environment repair,
+persistent prop clusters, native dialogue  \
+**Mode:** multimodal reference-to-video with three images and one voice
+reference  \
+**Suggested settings:** 24 seconds, 9:16, 720p, six shots, native audio
+
+```text
+Create one quiet 24-second theatrical 3D-animated drama in six connected shots.
+The emotional arc is recognition -> shame -> concealment -> withdrawal. Keep
+the performance small enough for close camera work.
+
+REFERENCE CONTRACT
+@Image1 owns only the woman's identity: face, age, hair, body and proportions.
+@Image2 owns the bedroom geography: cream bed on frame-left; white vanity,
+oval mirror and stool right of center; curtained window on frame-right.
+@Image3 owns only the vanity-top cluster: many plain, unlabelled skincare
+bottles, pump bottles, droppers and silver-lidded jars. Transfer their count,
+variety, scale and crowded arrangement, but transfer no hands, clothes, people,
+logos or text from this crop.
+@Audio1 owns the woman's voice only.
+
+CONTINUITY STATE
+One woman, one bedroom, one night and one outfit throughout. She wears a faded
+grey cotton robe over a pale nightdress and soft grey slippers. Vanity bulbs
+are the sole facial key; every face keeps a gentle shadow side. The product
+cluster from @Image3 is already present in frame 1 and stays on the vanity in
+every later angle where the surface is visible. It does not thin out, migrate,
+duplicate or become branded.
+
+TIMELINE
+[0.0-4.0] Rear medium shot with her reflected face in the oval mirror. Begin
+with one second of stillness. She leans a few centimeters toward her reflection
+while the camera makes one restrained creep forward. The crowded product
+cluster is plainly readable around the mirror base.
+
+[4.0-8.0] Close-up, slow push. Her fingertip touches the skin below one eye,
+then falls. She says quietly, "When did I start looking this tired?"
+
+[8.0-12.0] Medium close-up, following tilt. Her hand drops from her cheek to
+the vanity. She says, "I barely recognize who is looking back." Keep the jars
+and bottles in the same positions.
+
+[12.0-16.0] Insert shot. Her fingers pass between, but never grasp, the product
+containers; thumb and forefinger close on the edge of one small photograph
+frame. She turns that frame face-down and lays it flat among the jars. The
+camera tilts only enough to keep the photograph contact readable.
+
+[16.0-21.0] Medium close-up. She presses foundation onto her face three
+separate times. A slow partial orbit moves from mirror-side to her front; each
+press completes before the next begins. The makeup accumulates rather than
+resetting.
+
+[21.0-24.0] Medium handheld hold with only slight breathing motion. Her eyes
+drop away from the mirror. Finish with her face visibly heavy with foundation,
+head lowered, while the same crowded product cluster remains on the vanity.
+
+SOUND
+Use @Audio1 for this woman only. No other voice and no music. Keep the room
+nearly silent: light glass contact when the photograph moves between the jars,
+three soft sponge pats and one slow breath. Dialogue must finish inside its
+assigned shot; silence all other shots.
+
+IMAGE AND PERFORMANCE CONTROL
+Stylised feature-animation adults with expressive eyes, soft skin, sculpted
+hair and cloth that carries weight; natural, ungraded colour. Preserve the same
+identity, hair, robe and room orientation through every cut. Maintain matched
+eyelines between the woman and her reflection; neither looks into the lens.
+Hands have five fingers and touch only their named target.
+
+PROP-PATCH GATE
+Treat @Image3 as an additive repair layer, not a replacement scene. Repeat its
+product cluster in the opening frame, the photograph insert, the final frame
+and the continuity state. The photograph remains a distinct flat rectangular
+object with a visible edge; jars remain upright cylindrical objects. At
+12-16 seconds, reject any take in which her hand lands on a jar instead of the
+photograph.
+
+REJECTION GATE
+Reject identity or wardrobe drift, flipped room geography, disappearing or
+multiplying bottles, labels or logos, extra people, unassigned speech, music,
+makeup resetting between shots, photograph/jar contact confusion, rubber hands,
+camera motion that fights the named shot, subtitles, captions or watermarks.
+```
+
+**Why it works:** the repair reference has one narrow authority—object density
+and arrangement—while the character and room retain their existing owners.
+Writing the patch into the opening, action, ending and persistent state gives a
+multi-shot model four separate opportunities to preserve it. Separating the
+photograph's geometry from the jars also targets the one residual failure found
+in the otherwise successful source take.
+
+Adapted and rewritten from the creator's October 3, 2026 Seedance 2.5
+[production fix and completed provider record](https://github.com/keys-exe/global-manual-ai/commit/fec8f287eebc3c61501b6862027f95b3ca387497),
+the [complete generation request](https://github.com/keys-exe/global-manual-ai/blob/fec8f287eebc3c61501b6862027f95b3ca387497/builds/facelove-walmart/takes/SC03-T1.call.json),
+the [post-run continuity, dialogue and residual-contact review](https://github.com/keys-exe/global-manual-ai/blob/fec8f287eebc3c61501b6862027f95b3ca387497/builds/facelove-walmart/BUILD_NOTES.md),
+and the [generated 24.06-second MP4](https://d8j0ntlcm91z4.cloudfront.net/user_3AViUeU5dIz6pgsjYszQ9iux9YN/hf_20261003_231459_cf9fd80f-2f4d-4723-85da-7082a6ba6963.mp4).
+
 ## Reusable templates
 
 
@@ -52460,6 +52568,8 @@ Community examples and techniques referenced in this README:
 - [David0524 / MyFastRX — October 3, 2026 Higgsfield Seedance 2.0 standard-mode phone-tap plate: complete first-frame and motion prompts, three provider job IDs, committed generated MP4s, measured contact frame and tracked-screen handoff](https://github.com/David0524/MyFastRX/commit/fa3c96c88251e2530f14852df15a2803ffc642eb) ([complete prompt pack](https://github.com/David0524/MyFastRX/blob/fa3c96c88251e2530f14852df15a2803ffc642eb/ads/glp1-glass/RECAST_V7.md), [job and frame-level result ledger](https://github.com/David0524/MyFastRX/blob/fa3c96c88251e2530f14852df15a2803ffc642eb/ads/glp1-glass/footage/gen/README.md), [generated tap MP4](https://github.com/David0524/MyFastRX/blob/fa3c96c88251e2530f14852df15a2803ffc642eb/ads/glp1-glass/footage/gen/recast_tap_take1.mp4))
 
 - [storyverse2025 / canvas_timeline — October 3, 2026 Seedance 2.0 direction-marked blockout: 26-run failure study, per-clip stale-proxy gate, validated request-shape lock and successful turn-following rerender](https://github.com/storyverse2025/canvas_timeline/commit/fc69594f5d1e8e35b15fa826c2be4da85c8fd0e5) ([complete prompt builder](https://github.com/storyverse2025/canvas_timeline/blob/fc69594f5d1e8e35b15fa826c2be4da85c8fd0e5/src/lib/previs-export/blockout-reshoot-prompt.ts), [request and validation path](https://github.com/storyverse2025/canvas_timeline/blob/fc69594f5d1e8e35b15fa826c2be4da85c8fd0e5/src/lib/previs-export/blockout-reshoot.ts), [regression tests](https://github.com/storyverse2025/canvas_timeline/blob/fc69594f5d1e8e35b15fa826c2be4da85c8fd0e5/src/lib/previs-export/__tests__/blockout-reshoot.test.ts))
+
+- [keys-exe / global-manual-ai — October 3, 2026 Higgsfield Seedance 2.5 24-second vanity-drama repair: complete multimodal prompt, shot-local product-cluster reference patch, provider job/cost ledger, public render and continuity/dialogue/contact review](https://github.com/keys-exe/global-manual-ai/commit/fec8f287eebc3c61501b6862027f95b3ca387497) ([complete request](https://github.com/keys-exe/global-manual-ai/blob/fec8f287eebc3c61501b6862027f95b3ca387497/builds/facelove-walmart/takes/SC03-T1.call.json), [post-run review](https://github.com/keys-exe/global-manual-ai/blob/fec8f287eebc3c61501b6862027f95b3ca387497/builds/facelove-walmart/BUILD_NOTES.md), [generated MP4](https://d8j0ntlcm91z4.cloudfront.net/user_3AViUeU5dIz6pgsjYszQ9iux9YN/hf_20261003_231459_cf9fd80f-2f4d-4723-85da-7082a6ba6963.mp4))
 
 Official model references:
 
