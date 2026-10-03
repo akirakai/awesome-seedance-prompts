@@ -45568,6 +45568,112 @@ Adapted and rewritten from GraiLogic's
 [October 1 first-hand Seedance 2.5 test table and complete prompting guide](https://grailogic.com/articles/seedance-2-5-prompt-guide/),
 facts checked October 2, 2026.
 
+
+### Four-asset authority map with exposure-causality and optical-flaw budget
+
+**Verified model:** Seedance 2.5. Abdul Shakoor's October 3, 2026
+original X thread identifies the model in the complete prompt, publishes the
+generated result, and exposes the full four-reference workflow: one exact
+first-frame/look donor, two separate character sheets, and one environment-only
+location sheet.
+
+**Use case:** a photorealistic UGC or narrative one-take must move between
+interior and exterior light, keep two people recognizable, and feel captured by
+an imperfect handheld phone rather than by a polished virtual camera
+
+```text
+REFERENCE AUTHORITY MAP
+@Image1 = exact frame 0, opening blocking, composition and whole-take camera look.
+@Image2 = CHARACTER_A identity only: face, hair, body, wardrobe and jewellery.
+@Image3 = CHARACTER_B identity only: face, hair, body and wardrobe.
+@Image4 = environment only: room/deck geometry, landmark order, materials,
+weathering and fixed light direction.
+
+For every donor, write both what it owns and what it may not overwrite.
+Environment evidence never supplies a person. Character sheets never replace
+the opening composition. Image1 starts the take but does not outrank the two
+identity sheets after motion begins.
+
+PHYSICAL OWNERSHIP
+CHARACTER_A: [RIGHT HAND = TALKING GESTURES]; [LEFT HAND = SUPPORT / PROP TASK].
+CHARACTER_B: [PROP / EXIT / RETURN LANE].
+Never swap assigned hands, jewellery, costume pieces or screen-side routes.
+The unseen filmer never enters frame, touches either actor or invents dialogue.
+
+PERFORMANCE SCORE
+For every spoken phrase, declare:
+[EXACT WORDS] -> [INTENTION] -> [FACE / EYE MICRO-REACTION] ->
+[ONE DISTINCT GESTURE] -> [BREATH OR LAUGH BEAT] -> [PHYSICAL END STATE].
+Do not reuse a gesture for a different line. Keep faces alive between words
+with blinks, breaths and attention shifts; nobody freezes into a presentation
+pose.
+
+CONTINUOUS TAKE MAP
+Duration = [N S], one real-time take, no editorial cuts.
+0.0 s = @Image1 exactly; no settle-in.
+[0–A] [CHARACTER_A action and line]. Camera begins at [HEIGHT / DISTANCE].
+[A–B] Actor crosses [PHYSICAL CHECKPOINT]. Camera follows [LATE / EARLY] by
+[VISIBLE AMOUNT], then reacquires.
+[B–C] Physical lean-in to [DETAIL] until lens distance is [DISTANCE]; never a
+digital zoom or crop.
+[C–D] Pull back / tilt toward [BRIGHT REGION]. Character stays partly visible.
+[D–E] Cross the interior-to-exterior boundary by walking or climbing through
+it; every movement has a visible beginning, middle and end.
+[E–F] Camera lands on CHARACTER_B with no dead air. Deliver the second line,
+turn, and hard-cut mid-motion at [F].
+
+OPTICAL-FLAW BUDGET
+Allowed, counted and placed:
+- constant one-hand drift = [AMPLITUDE / HORIZON BEHAVIOUR];
+- late pan = [COUNT + TIME];
+- frame-edge clip = [COUNT + SUBJECT + TIME];
+- autofocus hunt = [SUBJECT + COUNT + APPROXIMATE DURATION];
+- close-focus breathing = [COUNT + TIME];
+- auto-exposure adaptation = [COUNT + FROM/TO BRIGHTNESS ZONES];
+- natural flare = [COUNT + LIGHT SOURCE];
+- reaction shake tied to a real laugh or footstep = [COUNT + TIME].
+Anything not listed is forbidden. Focus and exposure changes are silent.
+
+EXPOSURE-CAUSALITY LOCK
+Sun, practical fixtures and light direction remain constant for the whole take.
+A brightness shift may occur only because the camera meters a new region while
+its physical viewpoint changes. Describe the slow recovery of highlight and
+shadow detail as auto-exposure; never describe the sun, flash or room light
+changing to create that shift.
+
+RAW AUDIO CONTRACT
+Use one phone microphone with [THIN / BOXY / ROOMY] response, mild auto-gain,
+handling noise and environment appropriate to each space. Map footsteps, cloth,
+wind, water and prop contact to visible causes. Voice distance changes with the
+camera. No music, denoising, invented line, focus sound, exposure sound or
+transition whoosh unless explicitly required.
+
+ACCEPTANCE
+- frame 0 matches @Image1 and both faces remain owned by their character sheets;
+- location geometry and landmark order stay owned by @Image4;
+- assigned hands, props and screen-side exits never swap;
+- every line occurs once, in order, with its declared emotional and gesture beat;
+- camera imperfections occur only at their counted times and stay physically
+  motivated;
+- apparent brightness changes follow viewpoint and metering while the actual
+  light stays constant;
+- the path from one space to the next is continuously traversed, not teleported;
+- the clip ends on the specified moving action with no hold, fade or black frame.
+```
+
+**Why it works:** the source separates four kinds of visual evidence before
+generation, then limits each asset to a declared authority instead of letting
+all references compete for the whole frame. Its strongest realism control is
+causal: the environment light remains fixed while the phone's focus, exposure
+and handling react imperfectly to physical movement. Counting those flaws keeps
+"handheld realism" from degenerating into arbitrary shake, light pops or
+unmotivated lens effects.
+
+Adapted and rewritten from Abdul Shakoor / @abxxai's October 3, 2026
+[original Seedance 2.5 result and workflow thread](https://x.com/abxxai/status/2106036747260039561),
+including the [complete four-reference video prompt](https://x.com/abxxai/status/2106036847470354881)
+and the creator's [three-rule failure-control summary](https://x.com/abxxai/status/2106036859357040922).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -50457,6 +50563,8 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [Abdul Shakoor / @abxxai — October 3, 2026 Seedance 2.5 four-asset continuous-handheld workflow: generated result, exact first-frame donor, separate identity sheets, environment-only location sheet, complete 15-second prompt, counted optical flaws, constant-light auto-exposure causality and emotion-mapped dialogue](https://x.com/abxxai/status/2106036747260039561) ([complete video prompt](https://x.com/abxxai/status/2106036847470354881), [three-rule summary](https://x.com/abxxai/status/2106036859357040922))
+
 - [Mira Sterling / @Chaemate_ — October 2, 2026 Seedance 2.5 one-take castle assault: attached generated result, complete 30-second prompt, three role-scoped references, persistent dual-sword ledger, camera-lag reacquisition grammar, path-bound jade effects and physically connected hall-to-courtyard-to-roof travel](https://x.com/Chaemate_/status/2105958420088328486)
 
 - [Kōda / @aimikoda — October 2, 2026 Seedance 2.5 fixed-wide-lens sword performance: complete prompt, published result, rigid top/bottom matte plane, depth-driven foreshortening and controlled limb/blade frame breaks](https://x.com/aimikoda/status/2106044483863191748) ([complete prompt reply](https://x.com/aimikoda/status/2106044848310452333))
