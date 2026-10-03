@@ -458,6 +458,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [One-seed planetary regrowth with an irreversible biome wave](#442-one-seed-planetary-regrowth-with-an-irreversible-biome-wave)
   - [Fixed-lens letterbox frame-break sword rush](#443-fixed-lens-letterbox-frame-break-sword-rush)
   - [Lagging-camera dual-sword castle pursuit in one take](#444-lagging-camera-dual-sword-castle-pursuit-in-one-take)
+  - [Animal-height cake retrieval with exact-two-puppy reveal](#445-animal-height-cake-retrieval-with-exact-two-puppy-reveal)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -28400,6 +28401,105 @@ give the long take measurable continuity checks across three action zones.
 Adapted and rewritten from Mira Sterling / @Chaemate_'s October 2, 2026
 [Seedance 2.5 result, model attribution and complete prompt](https://x.com/Chaemate_/status/2105958420088328486).
 
+
+### 445. Animal-height cake retrieval with exact-two-puppy reveal
+
+**Verified model:** Seedance 2.5 — original creator M-studioAi / @Strength04_X
+names Seedance 2.5 on ImagineArt, attaches the generated result and publishes
+the complete 15-second prompt in the same October 3, 2026 post  
+**Use case:** photoreal animal micro-story, continuous backyard geography,
+prop-carry physics, timed emotional reveal, dialogue plus native ambience  
+**Mode:** text-to-video  
+**Suggested settings:** 15 seconds, one continuous shot, 16:9 or 9:16,
+late-afternoon natural light, native audio
+
+```text
+Create a warm photorealistic 15-second story as one uninterrupted real-time
+take. Keep motion grounded, fur natural, paws weight-bearing, object contacts
+visible and the patio layout unchanged.
+
+CAST AND OBJECT LEDGER
+Exactly one adult golden retriever mother, one young boy in a mustard sweater,
+and exactly two small puppies. Use one closed cardboard cake box containing one
+small white-frosted birthday cake with one unlit blue candle. The box, cake and
+candle never duplicate, vanish, resize or change hands without visible contact.
+
+GEOGRAPHY
+Use one connected backyard patio in bright late-afternoon light. A low wooden
+picnic table is nearest camera; two garden chairs form a passable lane; a small
+covered dog bed sits beside a garden shed at the far end. Preserve their order,
+distances, screen direction and sunlight for the entire take.
+
+CAMERA CONTRACT
+Begin almost touching the cake box with an 18 mm close-focus wide-angle view at
+dog-eye height. When the dog moves, retreat smoothly just ahead of her, then
+track beside her through the chair lane. Curve around the second chair to reveal
+the bed and rise only enough to include the kneeling boy, mother and both
+puppies. Finish in a gentle close orbit. No cut, teleport, digital zoom, reverse
+axis or location reset.
+
+TIMELINE
+0.0–2.0 s — The mother braces her front paws against the low table, grips only
+the cardboard handle, pulls the closed box down and cushions its short landing.
+She immediately takes the handle again and trots toward the shed. Show the full
+pull, landing, re-grip and departure.
+
+2.0–4.0 s — Race backward at animal height. The boy notices, follows on the same
+route and calls once: "Hey—that's my birthday cake!" Keep him behind the dog and
+do not let him overtake or touch the box.
+
+4.0–6.5 s — Slide alongside the dog as she passes between the two chairs. The
+box swings a little and lightly taps the paving in sync with her steps without
+opening, deforming or striking her legs. The boy remains visibly connected to
+the pursuit in the background.
+
+6.5–8.5 s — Arc around the final chair. Reveal the covered dog bed. The mother
+slows, lowers the box beside it, releases the handle, then looks toward the dark
+opening. The box is upright and the cake remains inside.
+
+8.5–10.5 s — Puppy one crawls out and rests its chin near the closed box. Puppy
+two appears behind it but remains partly under the cover. The boy arrives,
+kneels beside the box and changes from confusion to recognition.
+
+10.5–12.5 s — Rise slightly. The boy opens the box while keeping it outside the
+bed. Both puppies are now clearly visible together; no additional animal
+appears. He says softly: "Oh. You wanted a party, too."
+
+12.5–14.0 s — Continue the close orbit. The mother nudges the closed edge of the
+box once. The boy steadies the cake beyond paw reach while the two puppies
+wiggle in place. Preserve the candle and frosting.
+
+14.0–15.0 s — Puppy two leans forward for one curious sniff toward the unlit
+blue candle without touching it. The boy gives one quiet laugh. End on the
+shared reaction with all four characters and the single cake readable; do not
+hold, fade or add an outro.
+
+AUDIO
+Use only the two quoted lines. Add synchronized paw steps, one soft cardboard
+landing, faint box taps, cloth movement, garden birds, small puppy sounds and
+the final laugh. Voice distance follows camera distance. No narrator, talking
+animal, music, subtitle or invented line.
+
+REJECTION GATE
+Reject any cut; duplicated or missing puppy; extra person, dog, cake or candle;
+open box during the carry; floating box; mouth or paw passing through cardboard;
+humanlike animal gesture; candle flame; puppy-candle contact; route reversal;
+changed chair/bed placement; sudden weather or light change; broken anatomy;
+morphing fur; lip-sync error; text, logo or watermark.
+```
+
+**Why it works:** an explicit cast-and-object ledger resolves the source
+prompt's reveal into exactly two puppies, while the fixed table-chair-bed route
+makes every beat physically connected. The low lens motivates the pursuit,
+the single planned rise marks the emotional turn, and contact-by-contact box
+handling gives both animal motion and prop continuity observable acceptance
+criteria.
+
+Adapted and rewritten from M-studioAi / @Strength04_X's October 3, 2026
+[original Seedance 2.5 result, model attribution and complete 15-second
+prompt](https://x.com/Strength04_X/status/2106369245886226743).
+
+
 ## Reusable templates
 
 ### Author-paid template trial with model-provenance lock and fail-before-spend reuse gate
@@ -50563,6 +50663,8 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [M-studioAi / @Strength04_X — October 3, 2026 Seedance 2.5 backyard birthday retrieval: attached generated result, complete 15-second one-take prompt, animal-height pursuit, connected patio geography, exact cast/object counts, two spoken lines, native ambience and continuity restrictions](https://x.com/Strength04_X/status/2106369245886226743)
+
 - [Abdul Shakoor / @abxxai — October 3, 2026 Seedance 2.5 four-asset continuous-handheld workflow: generated result, exact first-frame donor, separate identity sheets, environment-only location sheet, complete 15-second prompt, counted optical flaws, constant-light auto-exposure causality and emotion-mapped dialogue](https://x.com/abxxai/status/2106036747260039561) ([complete video prompt](https://x.com/abxxai/status/2106036847470354881), [three-rule summary](https://x.com/abxxai/status/2106036859357040922))
 
 - [Mira Sterling / @Chaemate_ — October 2, 2026 Seedance 2.5 one-take castle assault: attached generated result, complete 30-second prompt, three role-scoped references, persistent dual-sword ledger, camera-lag reacquisition grammar, path-bound jade effects and physically connected hall-to-courtyard-to-roof travel](https://x.com/Chaemate_/status/2105958420088328486)
