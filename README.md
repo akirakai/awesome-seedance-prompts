@@ -28502,6 +28502,120 @@ prompt](https://x.com/Strength04_X/status/2106369245886226743).
 
 ## Reusable templates
 
+### Measured endpoint-seam calibration for a two-stage transformation
+
+**Verified model:** Higgsfield Seedance 2.5 `omni_reference`, 16:9,
+`generate_audio: false` — the original production record publishes the
+reference plan, two rejected draft diagnoses, exact draft/final settings,
+credit spend, post-production measurements and committed 1920×1080 final film.
+Each of the two shots was tested with two 480p drafts before one 1080p
+high-bitrate final.
+
+**Evidence boundary:** the provider prompts are not public, so this counts as
+one reusable generation, seam-repair and delivery technique rather than two
+complete scenario prompts.
+
+**Use case:** a death, ageing, costume, creature or environment transformation
+must span two Seedance jobs; both clips reach the intended handoff state, but
+their decoded endpoint frames still differ slightly in crop, scale or centre
+
+```text
+THREE-STATE TRANSFORMATION MAP
+S0 = approved origin frame: [ORIGINAL PERSON / FORM / WORLD].
+S1 = shared handoff plate: [EXACT INTERMEDIATE PERSON, POSE, CAMERA AND SET].
+S2 = approved destination frame: [TRANSFORMED FORM / FINAL WORLD].
+
+@OriginRef owns identity and costume before the change.
+@DestinationRef owns identity, silhouette and materials after the change.
+@EffectRef owns only [CRACK / RIFT / FIRE / SHATTER] behaviour and colour.
+No reference may replace the camera, set or another identity outside its phase.
+
+SHOT A — ORIGIN TO HANDOFF
+start_image = S0.
+end_image = S1.
+Generate [DURATION A] seconds. Move through one causal chain:
+[DESTABILISE] -> [VISIBLE FRACTURE / EFFECT] -> [BREAK OR FLASH] ->
+[PHYSICAL ARRIVAL AT S1].
+The final [TAIL WINDOW] must contain little independent body motion so it can be
+calibrated without creating a frozen-action contradiction. Do not preview S2.
+
+SHOT B — HANDOFF TO DESTINATION
+start_image = the destination set plate derived from S1.
+Generate [DURATION B] seconds. Continue from the same body position and screen
+axis:
+[FALL / CONTACT] -> [EFFECT ENTERS] -> [BODY LIFTS OR CHANGES] ->
+[ARMOUR / FORM CLOSES] -> [LANDING / FINAL IMPACT].
+Finish in a decisive S2 action; never replay Shot A's fracture or flash.
+
+DRAFT-TO-FINAL GATE
+1. Make at least two low-resolution drafts of each shot.
+2. Reject a draft for unsafe or unwanted visible content, identity substitution,
+   costume-change spinning, blood, broken anatomy, wrong transformation order,
+   early final-form leakage or missing physical contact.
+3. Choose the draft whose motion and endpoint are structurally strongest.
+4. Finalise that exact shot configuration at delivery resolution. Do not spend
+   final credits merely because one frame looks attractive.
+5. Record model route, reference files, duration, resolution, audio flag, job
+   receipt, cost and accepted/rejected reason.
+
+DECODED-FRAME SEAM TEST
+Never assume an end-image request guarantees pixel-identical output.
+Decode the final frame of Shot A and first frame of Shot B.
+Overlay them at 50% opacity and test a bounded grid of:
+- uniform scale [MIN...MAX];
+- x offset [MIN...MAX px];
+- y offset [MIN...MAX px].
+
+Minimise double edges on stable landmarks, face centre, shoulders and floor/set
+lines. Record the winning scale and offsets. If geometry, pose, lighting or
+identity cannot align with one uniform transform, reject the seam and regenerate;
+do not hide a structural mismatch with blur.
+
+TAIL-ONLY REPAIR
+If the seam differs only by small scale/translation:
+- upscale Shot A before transforming so subpixel motion cannot jitter;
+- apply no correction at the start of the tail window;
+- ease toward the measured scale and offsets with a cosine curve;
+- arrive exactly on the calibrated handoff at Shot A's final decoded frame;
+- cross-dissolve into Shot B for [0.1–0.25 s] while motion is quiet;
+- compare a difference image and 50/50 overlay for double edges.
+
+Never stretch one axis, warp a face, retime the whole action or transform Shot B
+to chase a moving target. A repair owns only the quiet tail of Shot A.
+
+POST-OWNED SOUND LEDGER
+Generate both shots silent. Build one continuous master timeline after the
+picture seam is fixed. For each cue, record:
+[TIMECODE] [VISIBLE CAUSE] [SOURCE] [GAIN / TRIM].
+Offset every Shot B cue by the measured joined-picture start time, not by the
+nominal requested duration. Duck or remove the upstream music before playback
+and restore it only after the film closes. Use one static premix gain, then a
+true-peak limiter; measure integrated loudness and peak on the delivered file.
+
+FINAL ACCEPTANCE
+- S0, S1 and S2 remain distinct, ordered states;
+- the origin identity cannot survive into the final form except where declared;
+- the effect causes the transformation instead of masking a costume swap;
+- the seam has no visible centre jump, double edge, scale pulse or freeze;
+- the final impact and every sound cue share the same measured timeline;
+- the encoded master preserves target dimensions, frame rate, sync and quality;
+- rejected drafts, calibration values and final checks remain in the record.
+```
+
+**Why it works:** endpoint images constrain semantic state but do not guarantee
+identical decoded framing. This workflow first rejects structural failures at
+draft resolution, then treats the remaining seam as a measurable plate-alignment
+problem. A tail-only cosine correction preserves the generated action while the
+short dissolve absorbs residual texture change; post-owned audio is conformed
+only after the picture duration is real.
+
+Adapted and rewritten from dpeh001-x / Mojiworld's October 3, 2026
+[Barnaby transformation production commit](https://github.com/dpeh001-x/Mojiworld/commit/7e97853048b6227ff60780863aa60cf562401607)
+and [complete specification](https://github.com/dpeh001-x/Mojiworld/blob/7e97853048b6227ff60780863aa60cf562401607/steam/higgsfield/cinematics/clip_barnaby_fall.SPEC.md);
+the committed [24.88-second 1080p final film](https://github.com/dpeh001-x/Mojiworld/blob/7e97853048b6227ff60780863aa60cf562401607/steam/higgsfield/cinematics/clip_barnaby_fall.mp4)
+is the public result.
+
+
 ### Author-paid template trial with model-provenance lock and fail-before-spend reuse gate
 
 **Verified model:** ByteDance Seedance 2.5 R2V, exact historical route `doubao-seedance-2-5-260628`. The original platform implementation records the requested model when the author's paid R2V task is accepted, then adds that immutable model ID to the template only after the provider returns `succeeded`. Its migration rule maps older proven templates to this exact route only because the contemporaneous R2V price table contained one allowed model and rejected every other route before task acceptance. [Server-side proof commit](https://github.com/TianbinLiu/ideahub-server/commit/76c64edb8fc3f4da0e04611af42fe753908e910c) · [Model-lock workflow record](https://github.com/TianbinLiu/ideahub-app/blob/704ca78ccbaeab78bfc43ea5cedb8e4f833848fb/docs/template-workflow-research.md) · [API contract](https://github.com/TianbinLiu/ideahub-server/blob/76c64edb8fc3f4da0e04611af42fe753908e910c/docs/api-contract.md)
@@ -50663,6 +50777,8 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [dpeh001-x / Mojiworld — October 3, 2026 Higgsfield Seedance 2.5 `omni_reference` two-stage Barnaby transformation: two 480p drafts per shot, 1080p finals, rejected-draft diagnoses, decoded-frame grid-search calibration, measured 1.035 scale and offsets, cosine tail correction, 0.2-second dissolve, post-owned sound timeline, delivery metrics and committed final film](https://github.com/dpeh001-x/Mojiworld/commit/7e97853048b6227ff60780863aa60cf562401607) ([specification](https://github.com/dpeh001-x/Mojiworld/blob/7e97853048b6227ff60780863aa60cf562401607/steam/higgsfield/cinematics/clip_barnaby_fall.SPEC.md), [final film](https://github.com/dpeh001-x/Mojiworld/blob/7e97853048b6227ff60780863aa60cf562401607/steam/higgsfield/cinematics/clip_barnaby_fall.mp4))
+
 - [M-studioAi / @Strength04_X — October 3, 2026 Seedance 2.5 backyard birthday retrieval: attached generated result, complete 15-second one-take prompt, animal-height pursuit, connected patio geography, exact cast/object counts, two spoken lines, native ambience and continuity restrictions](https://x.com/Strength04_X/status/2106369245886226743)
 
 - [Abdul Shakoor / @abxxai — October 3, 2026 Seedance 2.5 four-asset continuous-handheld workflow: generated result, exact first-frame donor, separate identity sheets, environment-only location sheet, complete 15-second prompt, counted optical flaws, constant-light auto-exposure causality and emotion-mapped dialogue](https://x.com/abxxai/status/2106036747260039561) ([complete video prompt](https://x.com/abxxai/status/2106036847470354881), [three-rule summary](https://x.com/abxxai/status/2106036859357040922))
