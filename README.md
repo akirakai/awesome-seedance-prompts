@@ -459,6 +459,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Fixed-lens letterbox frame-break sword rush](#443-fixed-lens-letterbox-frame-break-sword-rush)
   - [Lagging-camera dual-sword castle pursuit in one take](#444-lagging-camera-dual-sword-castle-pursuit-in-one-take)
   - [Animal-height cake retrieval with exact-two-puppy reveal](#445-animal-height-cake-retrieval-with-exact-two-puppy-reveal)
+  - [Cooling-forged blade circuit reveal in one macro take](#446-cooling-forged-blade-circuit-reveal-in-one-macro-take)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -28500,6 +28501,74 @@ Adapted and rewritten from M-studioAi / @Strength04_X's October 3, 2026
 prompt](https://x.com/Strength04_X/status/2106369245886226743).
 
 
+### 446. Cooling-forged blade circuit reveal in one macro take
+
+**Verified model:** Seedance 2.0 — exact Higgsfield route
+`bytedance/seedance-2.0/text-to-video`; the creator's public ledger records
+completed request `d90931a5-dac8-4881-8918-d844b21d5221`, the full prompt,
+12-second 1080p 16:9 arguments, result URL and extracted production frames  
+**Use case:** technology branding, forged-material transformation, website
+scroll film, restrained macro product reveal  
+**Mode:** text-to-video  
+**Suggested settings:** 12 seconds, 16:9, 1080p, one continuous macro shot,
+locked exposure
+
+```text
+Create a 12-second cinematic macro film as one uninterrupted shot. Use one
+single forged-steel blade lying diagonally across one matte-black anvil in a
+seamless black space. At the opening, the complete blade is visibly red-hot:
+deep crimson steel, a narrow orange core along the bevel, sparse embers rising.
+Nothing else enters the frame.
+
+CAMERA
+Begin close to the blade tip at a low grazing angle. Make one very slow,
+constant-speed push along the blade toward its center while rising only a few
+centimeters. Preserve the diagonal composition, anvil position and screen
+direction. Do not cut, orbit, reverse, zoom digitally or rack focus.
+
+MATERIAL CHANGE
+Across the entire take, let the blade cool in one direction only. The orange
+heat recedes first, then the deep red glow falls evenly; thin steam wisps lift
+from the steel and the embers become fewer. Cooling gradually reveals a
+flawless dark-polished surface and fine geometric circuit-like engraving
+already cut into the metal. The steel body becomes fully cool, but every etched
+line retains one stable soft-crimson emission. The engraving never slides,
+redraws, duplicates or leaves the blade.
+
+FINAL FRAME
+During the final second, settle on the cool dark blade. A razor edge catches
+one thin white rim highlight while the crimson etched lines remain readable.
+Hold this finished material state without fading to black.
+
+IMAGE CONTROL
+Use one warm key from camera-left and the final narrow white rim only. Keep
+exposure locked, background pure black, depth of field shallow, machining
+detail tack-sharp and motion blur minimal. Restrained anamorphic product-film
+texture, no person, hand, tool, text, logo or watermark.
+
+REJECTION GATE
+Reject any cut, black-frame interruption, duplicate blade, moving anvil,
+liquid-metal morph, melting edge, reversed reheating, traveling or changing
+engraving, random sparks hiding the steel, new prop, camera shake, exposure
+pump, synthetic game-CGI gloss or unreadable final material.
+```
+
+**Why it works:** the prompt gives the model one monotonic state change rather
+than several competing forge events: heat can only recede, while the engraving
+is a persistent property revealed by cooling. The single camera vector, locked
+exposure and explicit final hold make the clip usable as a scrubbed website
+sequence as well as a standalone material film.
+
+Adapted and rewritten from HZORTECH creator Theshara Avakian's September 30,
+2026 completed Seedance 2.0 generation, first published with the repository on
+October 3, 2026: [production
+commit](https://github.com/Thesharaavakian/hzortech/commit/ed0e4108e8079fd30ada676c16be7fdae09b07e2),
+[exact request ledger](https://github.com/Thesharaavakian/hzortech/blob/ed0e4108e8079fd30ada676c16be7fdae09b07e2/assets/higgsfield-ledger.json),
+[original prompt](https://github.com/Thesharaavakian/hzortech/blob/ed0e4108e8079fd30ada676c16be7fdae09b07e2/assets/prompts/home-forge.txt)
+and [committed frame
+sequence](https://github.com/Thesharaavakian/hzortech/tree/ed0e4108e8079fd30ada676c16be7fdae09b07e2/business_page/static/business_page/seq/forge-d90931a5).
+
+
 ## Reusable templates
 
 ### Measured endpoint-seam calibration for a two-stage transformation
@@ -50777,6 +50846,8 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [Theshara Avakian / HZORTECH — September 30, 2026 completed Higgsfield Seedance 2.0 text-to-video forge film, first published October 3: exact `bytedance/seedance-2.0/text-to-video` route, request ID, complete prompt, 12-second 1080p 16:9 arguments, completed result URL and 145-frame website extraction](https://github.com/Thesharaavakian/hzortech/commit/ed0e4108e8079fd30ada676c16be7fdae09b07e2) ([request ledger](https://github.com/Thesharaavakian/hzortech/blob/ed0e4108e8079fd30ada676c16be7fdae09b07e2/assets/higgsfield-ledger.json), [original prompt](https://github.com/Thesharaavakian/hzortech/blob/ed0e4108e8079fd30ada676c16be7fdae09b07e2/assets/prompts/home-forge.txt), [committed frame sequence](https://github.com/Thesharaavakian/hzortech/tree/ed0e4108e8079fd30ada676c16be7fdae09b07e2/business_page/static/business_page/seq/forge-d90931a5))
+
 - [dpeh001-x / Mojiworld — October 3, 2026 Higgsfield Seedance 2.5 `omni_reference` two-stage Barnaby transformation: two 480p drafts per shot, 1080p finals, rejected-draft diagnoses, decoded-frame grid-search calibration, measured 1.035 scale and offsets, cosine tail correction, 0.2-second dissolve, post-owned sound timeline, delivery metrics and committed final film](https://github.com/dpeh001-x/Mojiworld/commit/7e97853048b6227ff60780863aa60cf562401607) ([specification](https://github.com/dpeh001-x/Mojiworld/blob/7e97853048b6227ff60780863aa60cf562401607/steam/higgsfield/cinematics/clip_barnaby_fall.SPEC.md), [final film](https://github.com/dpeh001-x/Mojiworld/blob/7e97853048b6227ff60780863aa60cf562401607/steam/higgsfield/cinematics/clip_barnaby_fall.mp4))
 
 - [M-studioAi / @Strength04_X — October 3, 2026 Seedance 2.5 backyard birthday retrieval: attached generated result, complete 15-second one-take prompt, animal-height pursuit, connected patio geography, exact cast/object counts, two spoken lines, native ambience and continuity restrictions](https://x.com/Strength04_X/status/2106369245886226743)
