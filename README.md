@@ -31631,6 +31631,104 @@ frame sequences, and the
 [rejected single-flight baseline](https://github.com/Reaf-9/ai-linqs-site-v2/commit/a1a577824ec205ca5f7d4451c5b0101fbe550be9)
 for direct A/B provenance.
 
+### End-state-first shot chain with single-job references and retake patches
+
+**Verified model:** Dreamfort Seedance 2.5 Pro — the original creator states
+that this exact provider model was used throughout a 25-shot trailer and
+publishes the finished film, continuity method, observed failures and one
+targeted regeneration repair  
+**Use case:** multi-clip narrative continuity, endpoint planning, character and
+prop reference routing, text/audio control and low-cost retakes  
+**Mode:** start/end-frame image-to-video with numbered supporting references
+
+**Evidence boundary:** the source publishes a reusable production method and
+failure-derived prompt patches, but not all 25 complete shot prompts. Count this
+as one reusable template, not as a complete scenario prompt.
+
+```text
+PROJECT CONTRACT
+Exact model = Dreamfort Seedance 2.5 Pro.
+One generation = one continuous shot. Put every cut in the edit, never inside
+a generated clip. Record SHOT ID, start frame, end frame, reference roles,
+accepted output and any retake patch before moving to the next shot.
+
+END-STATE-FIRST DESIGN
+1. Design the exact final frame of the take first: completed action, character
+   positions, gaze targets, prop ownership, camera side, crop, light and sound.
+2. Derive the opening frame from that approved ending while keeping the same
+   take, compatible angle, lens height, screen geography and identity.
+3. Change only the state needed to create a readable path from opening to ending.
+4. Reject endpoint pairs that imply a jump in angle, scale, location, wardrobe
+   or body pose that cannot happen continuously within [DURATION].
+
+REFERENCE ROLE LEDGER
+@Image1 = exact opening frame; use only for composition, camera and scene state.
+@Image2 = exact closing frame; use only for the terminal pose and scene state.
+@Image3 = [CHARACTER A]; use only for face, hair, skin details and wardrobe.
+@Image4 = [CHARACTER B]; use only for face, hair, skin details and wardrobe.
+@Image5 = [PROP / SET / VEHICLE]; use only for its named geometry and material.
+
+Every numbered upload has one job. State “use only for” and its allowed
+attributes; a character sheet must not donate its poses, background, framing or
+layout. If two references claim the same attribute, stop and resolve ownership
+before generation.
+
+SHOT PROMPT
+Generate one continuous [DURATION]-second shot from @Image1 to @Image2.
+Preserve [IDENTITIES], [WARDROBE], [PROP OWNERSHIP], [CAMERA SIDE], [CROP],
+[LIGHT DIRECTION] and [LOCATION GEOMETRY].
+
+[CHARACTER] performs [ONE ACTION] toward [VISIBLE TERMINAL STATE].
+The camera performs [ONE SIMPLE MOVE] and remains [MEASURED DISTANCE / SHOT
+SIZE] throughout. [CHARACTER] keeps attention on [SCENE PARTNER / OBJECT] at
+[SCREEN POSITION] and never addresses the lens. Only one instance of each named
+character appears.
+
+Describe emotion as observable behaviour — [JAW TIGHTENS], [HANDS PRESS FLAT],
+[BREATH SHORTENS], [SHOULDERS DROP] — rather than an abstract intensity label.
+
+TEXT AND AUDIO CONTRACT
+Do not generate readable titles, tickers, case labels, binder text or interface
+copy. Supply important typography as a separate reference plate or add it in
+post after the shot is accepted.
+
+No BGM, score, ambient pad, drone, swelling tone or stinger. Fill every time
+window with a real diegetic sound source instead:
+[0–T1] [ROOM TONE / CRICKETS / TRAFFIC / NEON BUZZ]
+[T1–T2] [FOOTSTEPS / CLOTH / PROP CONTACT]
+[T2–END] [TERMINAL ACTION SOUND + CONTINUING ROOM TONE].
+No silent gap that invites an invented music cue.
+
+TARGETED RETAKE PATCH
+When an otherwise usable take fails, retain the approved endpoint pair and add
+only the violated rule:
+- framing drift -> camera and crop match @Image1 from first frame to last;
+- lens address -> [CHARACTER] watches [TARGET] on [SCREEN SIDE] throughout;
+- duplicate person -> exactly one visible instance of [CHARACTER];
+- pose leakage -> @ImageN supplies identity and wardrobe only, never pose;
+- invented text -> remove generated lettering and reserve a clean post plate.
+
+Do not rewrite successful action, lighting, timing or sound instructions to fix
+one local failure. Regenerate only the failed shot, then verify its first and
+last frames against the neighbouring edit boundaries.
+
+ACCEPTANCE
+- opening and ending frames remain compatible views of the same take;
+- every reference contributes only its assigned attributes;
+- one continuous action reaches the approved terminal state;
+- subject count, gaze, crop, camera side and prop ownership stay stable;
+- no generated text or unrequested music survives;
+- the repaired shot cuts cleanly to both neighbours without continuity debt.
+```
+
+**Why it works:** planning backward from a concrete terminal frame removes an
+ambiguous ending before generation begins. Single-job reference ownership stops
+a character sheet from leaking pose or layout, while local retake patches repair
+the observed failure without destabilizing an otherwise accepted shot.
+
+Adapted and rewritten from u/Pale_Coyote7451's October 3, 2026
+[Seedance 2.5 Pro trailer, continuity tutorial and failure-derived repair notes](https://www.reddit.com/r/Seedance_AI/comments/1wvybt6/tutorial_how_to_stitch_together_multiple_clips_to/).
+
 ---
 
 ### Role-mapped Blender whitebox to natural-motion semantic rerender
@@ -51657,6 +51755,8 @@ Community examples and techniques referenced in this README:
 - [keys-exe / global-manual-ai — October 1, 2026 Kie AI Seedance 2.5 seven-shot family-drama batch, complete requests, successful task logs, public render URLs and long-lens path-denial review](https://github.com/keys-exe/global-manual-ai/commit/0cedf52d777258a7964328d5a7cdf95204e66dcd) ([fixed-landing request](https://github.com/keys-exe/global-manual-ai/blob/0cedf52d777258a7964328d5a7cdf95204e66dcd/builds/stryde-half-my-age/body/SC02/SC02-SH01.call.json), [task log and generated MP4 URL](https://github.com/keys-exe/global-manual-ai/blob/0cedf52d777258a7964328d5a7cdf95204e66dcd/builds/stryde-half-my-age/body/SC02/SC02-SH01.sd1.kie.log), [batch review](https://github.com/keys-exe/global-manual-ai/blob/0cedf52d777258a7964328d5a7cdf95204e66dcd/builds/stryde-half-my-age/BUILD_NOTES.md))
 
 - [pupubird / 翡月荟 — October 2, 2026 Higgsfield Seedance 2.5 clay-blockout photoreal rerender, five-chunk prompt plan, isolated drift repair, title-matte restoration and released 40-second film](https://github.com/pupubird/claude-motion-reel/commit/31a73138cb27ee40370b70355c769fb9de17fc0e) ([prompt/reference/retime ledger](https://github.com/pupubird/claude-motion-reel/blob/31a73138cb27ee40370b70355c769fb9de17fc0e/projects/feiyuehui/v4/tools/seedance_plan.json), [production guide](https://github.com/pupubird/claude-motion-reel/blob/31a73138cb27ee40370b70355c769fb9de17fc0e/projects/feiyuehui/v4/README.md), [released film](https://github.com/pupubird/claude-motion-reel/releases/tag/feiyuehui-v1.0))
+
+- [u/Pale_Coyote7451 — October 3, 2026 Dreamfort Seedance 2.5 Pro 25-shot trailer: end-state-first shot design, one-job numbered references, behaviour-not-emotion direction, post-produced text/audio exclusions and targeted framing/gaze retake repair](https://www.reddit.com/r/Seedance_AI/comments/1wvybt6/tutorial_how_to_stitch_together_multiple_clips_to/)
 
 Official model references:
 
