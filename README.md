@@ -457,6 +457,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Long-lens path denial for a fixed-landing dialogue](#441-long-lens-path-denial-for-a-fixed-landing-dialogue)
   - [One-seed planetary regrowth with an irreversible biome wave](#442-one-seed-planetary-regrowth-with-an-irreversible-biome-wave)
   - [Fixed-lens letterbox frame-break sword rush](#443-fixed-lens-letterbox-frame-break-sword-rush)
+  - [Lagging-camera dual-sword castle pursuit in one take](#444-lagging-camera-dual-sword-castle-pursuit-in-one-take)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -28300,6 +28301,105 @@ Adapted and rewritten from Kōda / @aimikoda's October 2, 2026
 [Seedance 2.5 result and model attribution](https://x.com/aimikoda/status/2106044483863191748) and
 [complete frame-break prompt reply](https://x.com/aimikoda/status/2106044848310452333).
 
+
+### 444. Lagging-camera dual-sword castle pursuit in one take
+
+**Verified model:** Seedance 2.5 — original creator Mira Sterling / @Chaemate_
+names Seedance 2.5 and TapNow AI beside the generated result and publishes the
+complete prompt in the same post  
+**Use case:** live-action samurai pursuit, multi-location one-take, dual-weapon
+continuity, camera-lag impact emphasis, restrained path-bound VFX  
+**Mode:** reference-to-video with one hero board, one guard-family board and one
+captain board  
+**Suggested settings:** 30 seconds, 16:9, natural daylight, native combat sound,
+no dialogue or music
+
+```text
+Create one continuous 30-second live-action pursuit that carries the same
+dual-sword fighter from a palace hall, through its courtyard and onto the roof.
+Every change of location must happen through visible travel in real time. Use
+photoreal human anatomy, practical-feeling stunt weight, muted daylight and
+restrained jade wind traces rather than a glowing fantasy aura.
+
+REFERENCE ROLES
+@Image1 is the sole authority for the lead fighter: adult face, silver-white
+ponytail, torn ivory kimono, charcoal split hakama, forearm tattoo and earrings.
+@Image2 defines one coherent family of elite guards; vary faces and small armour
+details without changing their faction design.
+@Image3 owns the captain's face, armour and naginata.
+Ignore all reference backgrounds.
+
+INVARIANTS
+There is exactly one lead fighter and she carries exactly two steel katanas,
+one in each hand, from first frame to last. Keep both weapons separate,
+attached to the correct hands and readable at every contact. Bodies must cross
+all distances physically: no teleporting, cloning, instant location swap or
+enemy respawn. A defeated opponent stays down and does not re-enter.
+
+CAMERA CHASE CONTRACT
+Use one connected handheld pursuit at a persistent 25–35-degree dutch angle.
+Begin around a 24 mm field of view in the hall and courtyard, then tighten
+gradually toward 35 mm for the rooftop duel. The fighter initiates every burst;
+the operator reacts 0.1–0.3 seconds late, whip-pans past her path, corrects and
+reacquires her at the next blade contact. Allow brief loss of framing during
+acceleration, but never cut, dissolve, reset geography or jump ahead. Camera
+momentum must bridge every doorway, railing and roof climb.
+
+PATH-BOUND EFFECT
+Fast movement leaves only a thin jade-green pressure trace on the exact route
+of a foot, body or blade. Each trace appears after the physical motion and
+vanishes within a moment. It cannot lead the fighter, detach, form smoke, cover
+her face or become a full-body glow.
+
+0–8s — AUDIENCE HALL
+Start over her shoulder as three guards close in. She steps inside the first
+attack: left blade parries, right blade completes one diagonal strike. She
+plants a foot against a timber pillar, redirects into the second guard and
+lands on a sliding lacquer table. The table's motion carries her toward the
+third guard; she vaults his spear and finishes behind him. Silk, dust and one
+folding screen react to real contact. Keep the camera a fraction late, then
+reacquire on each metal clash.
+
+8–18s — COURTYARD TRANSIT
+Without posing, she drives through paper doors; torn paper crosses the lens and
+reveals the veranda, stone court, arched bridge, pond and roofline as one
+connected space. Two arrows arrive from the roof. She deflects one and lets the
+second tear only her sleeve. She runs the bridge rail, uses one swordsman as a
+pivot, lands once in the pond and exits in the same direction. Water remains on
+her clothes. Three steps up a pine trunk carry her onto the tiles as the camera
+tilts and climbs behind her.
+
+18–28s — ROOFTOP CAPTAIN
+The captain from @Image3 sweeps the naginata across the roof. She ducks and
+crosses both swords to stop the shaft; his weight pushes her back one full
+step. Continue with one readable exchange: left parry, right cut to an armour
+cord, low pole sweep, jump, foot contact on the shaft and a controlled landing
+behind him. He turns for one final thrust. She accelerates along the ridge,
+slides under it and severs the wooden shaft with a single rising cross-cut.
+The captain drops to one knee alive; no gore.
+
+28–30s — ENDPOINT
+Hold both swords in her hands as the last jade filaments disappear. She looks
+down to the courtyard where reinforcements enter far below. Pull back only now
+to show the continuous route from roof to court and finish with her lowering
+into the next attack stance.
+
+AUDIO AND REJECTION GATE
+Use distinct left/right blade clashes, footfalls that match each surface,
+paper tear, table scrape, arrow pass, pond splash, tile crack and rooftop wind.
+Reject any hidden cut, time jump, reversed travel direction, duplicated fighter,
+third sword, swapped weapon hand, detached effect, floating stunt, broken limb,
+plastic skin, night lighting, blood, subtitle, logo or watermark.
+```
+
+**Why it works:** the fighter owns initiative while the camera owns a delayed
+reaction, so speed is communicated by recoverable framing errors rather than
+random shake. The location route, two-sword ledger and effect-after-motion rule
+give the long take measurable continuity checks across three action zones.
+
+Adapted and rewritten from Mira Sterling / @Chaemate_'s October 2, 2026
+[Seedance 2.5 result, model attribution and complete prompt](https://x.com/Chaemate_/status/2105958420088328486).
+
 ## Reusable templates
 
 ### Author-paid template trial with model-provenance lock and fail-before-spend reuse gate
@@ -50357,6 +50457,8 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [Mira Sterling / @Chaemate_ — October 2, 2026 Seedance 2.5 one-take castle assault: attached generated result, complete 30-second prompt, three role-scoped references, persistent dual-sword ledger, camera-lag reacquisition grammar, path-bound jade effects and physically connected hall-to-courtyard-to-roof travel](https://x.com/Chaemate_/status/2105958420088328486)
+
 - [Kōda / @aimikoda — October 2, 2026 Seedance 2.5 fixed-wide-lens sword performance: complete prompt, published result, rigid top/bottom matte plane, depth-driven foreshortening and controlled limb/blade frame breaks](https://x.com/aimikoda/status/2106044483863191748) ([complete prompt reply](https://x.com/aimikoda/status/2106044848310452333))
 
 - [Tianbin Liu / IdeaHub — October 2, 2026 Seedance 2.5 R2V author-trial evidence chain: exact model captured at accepted task creation, provider-succeeded polling, idempotent proven-model storage, client-proof rejection, historical single-route migration and model-locked pre-spend reuse](https://github.com/TianbinLiu/ideahub-server/commit/76c64edb8fc3f4da0e04611af42fe753908e910c) ([workflow and model-lock rationale](https://github.com/TianbinLiu/ideahub-app/blob/704ca78ccbaeab78bfc43ea5cedb8e4f833848fb/docs/template-workflow-research.md), [API contract](https://github.com/TianbinLiu/ideahub-server/blob/76c64edb8fc3f4da0e04611af42fe753908e910c/docs/api-contract.md))
