@@ -40249,6 +40249,107 @@ The Seedance 2.5 extension is adapted from Ajwad Rauf's September 4, 2026
 backed by the earlier [finished frame-locked clay/final pair and exact worked prompt](https://github.com/ajwadrauf/portfolio/commit/96e21ac2859216962734a5e56831cb208f738dc1)
 and [exact fal route verification](https://github.com/ajwadrauf/portfolio/commit/9d75d33aed07d74473e2fad192f9d511b96b51e0).
 
+### Direction-marked blockout provenance and request-shape lock
+
+**Verified model:** Seedance 2.0
+(`dreamina-seedance-2-0-260128`, reference-video mode, 720p, 10 seconds,
+audio disabled) — the original developer records 26 comparison renders in
+which prompt, image and model changes did not make a symmetric white-model
+mannequin's heading legible. They then added dark face/chest orientation
+markers, rerendered the blockout clips, kept the previously successful
+prompt-plus-video-plus-three-images request shape, and generated a take that
+followed the planned turn from back-facing to front-facing.
+
+Use this when a proxy or clay blockout contains turns, reversals or over-
+shoulder beats that a visually symmetric mannequin cannot communicate.
+
+```text
+VALIDATED REQUEST SHAPE
+Exact model = dreamina-seedance-2-0-260128.
+Mode = reference video to video.
+Output = 720p, 10 seconds.
+Inputs = one approved blockout video + exactly three shot-approved images +
+this prompt.
+Audio reference = none. Keep generation audio off for the transfer test.
+
+BLOCKOUT ORIENTATION CONTRACT
+Before rendering the proxy, give every actor an asymmetric facing code:
+- a dark face patch marks FRONT;
+- a dark chest panel reinforces FRONT at wider shot sizes;
+- the unmarked head and torso mean BACK.
+
+These patches are semantic direction guides only. They must never become final
+makeup, wardrobe, logos, props, shadows or set dressing.
+
+STALE-ASSET GATE
+Store per-clip provenance:
+BLOCKOUT_ID = [CLIP / SHOT ID]
+RENDERED_AT = [TIMESTAMP]
+FACING_MARKERS = true
+BLOCKOUT_HASH = [CONTENT HASH]
+
+Reject and rerender any clip whose own record is missing, predates the marker
+change, reports FACING_MARKERS=false, or no longer matches its hash. Do not use
+an episode-level timestamp as proof that every shot was regenerated.
+
+REFERENCE AUTHORITY
+@white-model owns:
+- camera start, height, shot size, framing and movement;
+- cuts and their exact order;
+- actor count, screen position, routes, contacts and motion timing;
+- front/back orientation at every beat.
+
+@character-1, @character-2 and @scene own:
+- identity, face, body, costume and props;
+- final location, materials, lighting, palette and visual style.
+
+Ignore the blockout's primitive geometry, grey materials, guide marks and
+temporary set design. Interpret face/chest patches only as orientation. If a
+character image is a multi-view sheet, treat every view as the same one person,
+never as duplicates.
+
+TRANSFER PROMPT
+Recreate the exact staging and camera path from @white-model. At [BEAT 1],
+[ACTOR] is [FRONT/BACK/SIDE] to camera at [SHOT SCALE] and [SCREEN POSITION].
+At [BEAT 2], [ACTION / TURN / CONTACT] completes by [TIME]. At [BEAT 3], hold
+[FINAL ORIENTATION / COMPOSITION]. Preserve the reference's person count and
+shot scale moment by moment. Render the characters and world only from the
+three appearance images. Do not reproduce orientation patches or proxy
+materials.
+
+REQUEST-SHAPE LOCK
+For the first acceptance render, change only the corrected blockout. Keep model,
+duration, resolution, prompt, three images and audio-off state identical to the
+last validated request. Do not add dialogue audio as a fourth authority source.
+If audio is required later, add it in post or validate it in a separate
+controlled comparison.
+
+RETRY LEDGER
+For every attempt, record the exact prompt, model, duration, resolution, audio
+flag, reference order and hashes. Change one variable only.
+
+TRANSFER ACCEPTANCE
+Compare setup, turn onset, turn completion and final frame. Pass only if:
+- front/back direction matches the marked blockout at every checkpoint;
+- actor count, shot scale, camera path, blocking and timing remain recognizable;
+- no face/chest guide patch or proxy styling appears in the final;
+- the final identity, costume, scene and lighting come from the images.
+Classify failures as ORIENTATION, CAMERA, BLOCKING, SCALE, IDENTITY,
+PROXY-LEAKAGE or REQUEST-SHAPE before retrying.
+```
+
+**Why it works:** a symmetric proxy can encode motion while remaining ambiguous
+about heading. The non-rendering asymmetry turns front/back into visible
+evidence, per-clip provenance prevents an old markerless render from silently
+re-entering the batch, and the request-shape lock protects the successful
+comparison from a new audio or reference variable.
+
+**Sources:** storyverse2025's October 3, 2026
+[26-run failure study, marker rerender and validated turn-following result](https://github.com/storyverse2025/canvas_timeline/commit/fc69594f5d1e8e35b15fa826c2be4da85c8fd0e5),
+the [complete prompt builder](https://github.com/storyverse2025/canvas_timeline/blob/fc69594f5d1e8e35b15fa826c2be4da85c8fd0e5/src/lib/previs-export/blockout-reshoot-prompt.ts),
+the [exact request and validation path](https://github.com/storyverse2025/canvas_timeline/blob/fc69594f5d1e8e35b15fa826c2be4da85c8fd0e5/src/lib/previs-export/blockout-reshoot.ts),
+and the [regression tests](https://github.com/storyverse2025/canvas_timeline/blob/fc69594f5d1e8e35b15fa826c2be4da85c8fd0e5/src/lib/previs-export/__tests__/blockout-reshoot.test.ts).
+
 ### Optional-video reference-stack compiler and counted-seconds delivery gate
 
 **Verified model:** Seedance 2.5
@@ -52357,6 +52458,8 @@ Community examples and techniques referenced in this README:
 - [u/Pale_Coyote7451 — October 3, 2026 Dreamfort Seedance 2.5 Pro 25-shot trailer: end-state-first shot design, one-job numbered references, behaviour-not-emotion direction, post-produced text/audio exclusions and targeted framing/gaze retake repair](https://www.reddit.com/r/Seedance_AI/comments/1wvybt6/tutorial_how_to_stitch_together_multiple_clips_to/)
 
 - [David0524 / MyFastRX — October 3, 2026 Higgsfield Seedance 2.0 standard-mode phone-tap plate: complete first-frame and motion prompts, three provider job IDs, committed generated MP4s, measured contact frame and tracked-screen handoff](https://github.com/David0524/MyFastRX/commit/fa3c96c88251e2530f14852df15a2803ffc642eb) ([complete prompt pack](https://github.com/David0524/MyFastRX/blob/fa3c96c88251e2530f14852df15a2803ffc642eb/ads/glp1-glass/RECAST_V7.md), [job and frame-level result ledger](https://github.com/David0524/MyFastRX/blob/fa3c96c88251e2530f14852df15a2803ffc642eb/ads/glp1-glass/footage/gen/README.md), [generated tap MP4](https://github.com/David0524/MyFastRX/blob/fa3c96c88251e2530f14852df15a2803ffc642eb/ads/glp1-glass/footage/gen/recast_tap_take1.mp4))
+
+- [storyverse2025 / canvas_timeline — October 3, 2026 Seedance 2.0 direction-marked blockout: 26-run failure study, per-clip stale-proxy gate, validated request-shape lock and successful turn-following rerender](https://github.com/storyverse2025/canvas_timeline/commit/fc69594f5d1e8e35b15fa826c2be4da85c8fd0e5) ([complete prompt builder](https://github.com/storyverse2025/canvas_timeline/blob/fc69594f5d1e8e35b15fa826c2be4da85c8fd0e5/src/lib/previs-export/blockout-reshoot-prompt.ts), [request and validation path](https://github.com/storyverse2025/canvas_timeline/blob/fc69594f5d1e8e35b15fa826c2be4da85c8fd0e5/src/lib/previs-export/blockout-reshoot.ts), [regression tests](https://github.com/storyverse2025/canvas_timeline/blob/fc69594f5d1e8e35b15fa826c2be4da85c8fd0e5/src/lib/previs-export/__tests__/blockout-reshoot.test.ts))
 
 Official model references:
 
