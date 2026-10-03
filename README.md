@@ -28571,6 +28571,105 @@ sequence](https://github.com/Thesharaavakian/hzortech/tree/ed0e4108e8079fd30ada6
 
 ## Reusable templates
 
+
+### Post-owned phone UI with measured touch-contact handoff
+
+**Verified model:** Higgsfield Seedance 2.0, exact account route
+`seedance_2_0` in standard mode; 720p, 5 seconds, 9:16,
+`generate_audio: false`. The original production record publishes the
+complete image and video prompts, three generated MP4s, provider job IDs,
+credit cost and frame-level acceptance notes. The touch take records its first
+clear screen contact at frame 15 (about 0.63 seconds) and keeps the display
+black for post-production.
+
+**Evidence boundary:** the source generated three related lifestyle shots. This
+entry counts only the newly useful touch-to-compositor workflow as one reusable
+template; it does not count the three short beats as separate scenarios.
+
+**Use when:** a phone, tablet, kiosk or control panel must receive a readable
+tap in generated footage, while interface text, buttons and state changes need
+deterministic typography and timing in post.
+
+```text
+REFERENCE AND PLATE CONTRACT
+@IdentityRef owns face, hair, skin tone and wardrobe only.
+@FirstFrame owns the over-shoulder composition, device geometry, hand placement,
+lighting and background. The device screen begins fully black and blank.
+
+Build the first frame with:
+- the device facing camera and large enough for later tracking;
+- the tapping fingertip visible just off the target;
+- hands and device sharp, background softly separated;
+- no text, logo, icon, glare, reflection or generated interface.
+
+GENERATION PROMPT
+Locked camera with no reframing. The index finger approaches the centre of the
+black screen, makes one gentle visible contact, then rests. The display remains
+fully black for the entire take. Preserve the hand count, device shape, screen
+corners, wardrobe, lighting and background. Natural micro-motion only. No UI,
+text, logo, screen glow, second tap, camera move or audio.
+
+ACTION CONTRACT
+A0 = fingertip clearly separated from screen.
+A1 = fingertip travels on one readable path toward [TARGET REGION].
+A2 = one unambiguous contact frame; no finger-device interpenetration.
+A3 = fingertip settles without tapping again.
+The device stays in the same hand and the screen plane remains trackable from
+A0 through A3.
+
+LOW-RESOLUTION ACCEPTANCE GATE
+Decode the generated take before any upscale. Reject it if:
+- the screen activates, gains text, icons, reflections or brightness changes;
+- contact is hidden, repeated, missed or anatomically impossible;
+- the device bends, changes size, loses a corner or swaps hands;
+- extra fingers appear or the tapping finger crosses behind the device;
+- the camera moves enough to make the screen unreadable;
+- background motion or expression changes steal attention from the tap.
+
+MEASURED HANDOFF
+On the accepted 720p take:
+1. Record the first frame with unmistakable fingertip-to-screen contact.
+2. Record both the frame number and decoded time; do not infer timing from the
+   requested prompt.
+3. Mark the fingertip coordinate at contact.
+4. Track the four screen corners through the usable interval and save one
+   screen quadrilateral per frame.
+5. Inspect the track for corner swaps, sudden area changes and off-screen loss.
+6. After upscaling, transform the recorded geometry by the exact scale factor
+   or retrack the delivery file; never mix coordinate spaces.
+7. Give the compositor the clean plate, contact frame/time, fingertip point,
+   screen-corner track, output dimensions and frame rate as one handoff object.
+
+POST-OWNED INTERFACE
+Composite every label, button, animation and state change after generation.
+Anchor the insert to the tracked screen plane, preserve finger occlusion, match
+screen black level and perspective, and let the interface react at the measured
+contact time. Add screen light spill only in post and only when the intended UI
+turns on. Keep master text, logos and regulated claims out of the generated
+plate.
+
+FINAL ACCEPTANCE
+- exactly one readable approach-contact-rest action;
+- no invented pixels on the black plate before compositing;
+- stable four-corner geometry across the insert window;
+- interface response aligned to measured contact, not nominal timing;
+- no typography warp, corner slip, finger overlap error or brightness pop;
+- prompt, exact model route, provider job, accepted frame/time, track data and
+  delivery transform remain archived together.
+```
+
+**Why it works:** asking the video model to perform the physical tap while
+keeping the display blank separates two jobs with different tolerances. Seedance
+owns anatomy and motion; the compositor owns exact text, UI state and response
+timing. Measuring the real contact frame and screen geometry turns a plausible
+generated gesture into a deterministic post-production trigger.
+
+Adapted and rewritten from David0524 / MyFastRX's October 3, 2026
+[three-take Seedance 2.0 production commit](https://github.com/David0524/MyFastRX/commit/fa3c96c88251e2530f14852df15a2803ffc642eb),
+[complete recast prompt pack](https://github.com/David0524/MyFastRX/blob/fa3c96c88251e2530f14852df15a2803ffc642eb/ads/glp1-glass/RECAST_V7.md),
+[job and frame-level result ledger](https://github.com/David0524/MyFastRX/blob/fa3c96c88251e2530f14852df15a2803ffc642eb/ads/glp1-glass/footage/gen/README.md)
+and [generated tap MP4](https://github.com/David0524/MyFastRX/blob/fa3c96c88251e2530f14852df15a2803ffc642eb/ads/glp1-glass/footage/gen/recast_tap_take1.mp4).
+
 ### Measured endpoint-seam calibration for a two-stage transformation
 
 **Verified model:** Higgsfield Seedance 2.5 `omni_reference`, 16:9,
@@ -52256,6 +52355,8 @@ Community examples and techniques referenced in this README:
 - [pupubird / 翡月荟 — October 2, 2026 Higgsfield Seedance 2.5 clay-blockout photoreal rerender, five-chunk prompt plan, isolated drift repair, title-matte restoration and released 40-second film](https://github.com/pupubird/claude-motion-reel/commit/31a73138cb27ee40370b70355c769fb9de17fc0e) ([prompt/reference/retime ledger](https://github.com/pupubird/claude-motion-reel/blob/31a73138cb27ee40370b70355c769fb9de17fc0e/projects/feiyuehui/v4/tools/seedance_plan.json), [production guide](https://github.com/pupubird/claude-motion-reel/blob/31a73138cb27ee40370b70355c769fb9de17fc0e/projects/feiyuehui/v4/README.md), [released film](https://github.com/pupubird/claude-motion-reel/releases/tag/feiyuehui-v1.0))
 
 - [u/Pale_Coyote7451 — October 3, 2026 Dreamfort Seedance 2.5 Pro 25-shot trailer: end-state-first shot design, one-job numbered references, behaviour-not-emotion direction, post-produced text/audio exclusions and targeted framing/gaze retake repair](https://www.reddit.com/r/Seedance_AI/comments/1wvybt6/tutorial_how_to_stitch_together_multiple_clips_to/)
+
+- [David0524 / MyFastRX — October 3, 2026 Higgsfield Seedance 2.0 standard-mode phone-tap plate: complete first-frame and motion prompts, three provider job IDs, committed generated MP4s, measured contact frame and tracked-screen handoff](https://github.com/David0524/MyFastRX/commit/fa3c96c88251e2530f14852df15a2803ffc642eb) ([complete prompt pack](https://github.com/David0524/MyFastRX/blob/fa3c96c88251e2530f14852df15a2803ffc642eb/ads/glp1-glass/RECAST_V7.md), [job and frame-level result ledger](https://github.com/David0524/MyFastRX/blob/fa3c96c88251e2530f14852df15a2803ffc642eb/ads/glp1-glass/footage/gen/README.md), [generated tap MP4](https://github.com/David0524/MyFastRX/blob/fa3c96c88251e2530f14852df15a2803ffc642eb/ads/glp1-glass/footage/gen/recast_tap_take1.mp4))
 
 Official model references:
 
