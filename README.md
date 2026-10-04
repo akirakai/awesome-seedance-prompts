@@ -51588,85 +51588,122 @@ Adapted and rewritten from Ferrem's October 4, 2026
 and [raw-output audio ownership correction](https://github.com/ferrem01/media-producer-mcp/commit/ee7d94b0bcfe0a3a1ef169dacfd3a6541dc3c5fd).
 
 
-### Persistent room-anchor reference for chained-scene drift
+### Person-free room anchor for chained-scene drift
 
 **Verified model:** Seedance 2.5 — the original operator's scene-performance
-system sends every accepted take to
+system sends accepted takes to
 `bytedance/seedance-2.5/reference-to-video` through Higgsfield and Atlas.
 After seven dialogue scenes were chained from each preceding scene's last frame,
 the apartment and couch changed slightly from shot to shot, with the drift
-becoming most visible in later reverse views. The implemented repair sends one
-canonical image of the set with every take as the final reference image and
-names its environment-only authority in the prompt.
+becoming most visible in later reverse views. A persistent room image stopped
+that drift. The follow-up implementation makes the anchor a person-free clean
+plate, uses it while drawing each scene's start frame, and sends the same plate
+to Seedance as the final environment-only reference.
+
+**Evidence boundary:** the seven-scene production record validates the
+persistent room-anchor repair. The person-free plate creation, reference order,
+location-switch invalidation and pre-spend blocking rules are additionally
+verified by the operator's shipped implementation and regression tests. This
+refines the existing room-anchor technique and does not add another template to
+the count.
 
 **Use case:** keep one interior, storefront, vehicle cabin or other recurring
-set stable across separately generated scenes, especially when continuation
-frames accumulate small redraw errors  
-**Mode:** current start frame + identity references + persistent canonical set
+set stable across separately generated scenes without letting a person, pose or
+framing from the environment reference contaminate the current shot  
+**Mode:** current start frame + identity references + persistent person-free set
 anchor + optional approved audio -> Seedance reference-to-video
 
 ```text
 CANONICAL SET ANCHOR
-Choose one accepted, clean image of the recurring set, normally the first
-scene's approved drawn frame. It must clearly show the fixed spatial facts:
+Create one CLEAN_PLATE_V1 of the recurring set with nobody in it. It must show
+the fixed spatial facts clearly:
 [WALLS / DOORS / WINDOWS / LARGE FURNITURE / PLANTS / PRACTICAL LIGHTS].
-Store its asset hash as ROOM_ANCHOR_V1. Do not silently replace this file after
-later generations have begun.
+Store the exact asset hash. Never substitute a later generated scene frame or
+silently replace the plate after production begins.
+
+CLEAN-PLATE CONSTRUCTION
+Choose one path:
+A. Prompt-built: describe the exact room and request a real empty-set
+   photograph from a practical filming position; no people, text or logos.
+B. Frame-cleaned: start from an approved scene frame, remove every person and
+   reconstruct everything they occluded while preserving camera position,
+   walls, furniture, plants, windows, art, colour and motivated light.
+C. Uploaded: accept only an already empty set image; do not bypass cleaning for
+   a frame that contains a person, reflection, shadow or partial limb.
+
+Reject the plate if it retains a performer, pose cue, face, clothing fragment,
+reflection, invented doorway, duplicated furniture, altered window, text or
+logo. A clean plate owns the place, not a character or action.
 
 ORDERED REFERENCE ROLES
 @Image1 is the exact first frame for this scene. It owns current composition,
 camera position, character pose and the first visible moment.
 @Image2 [and any following identity images] own the recurring person's face,
 body, hair and wardrobe only.
-@ImageN is ROOM_ANCHOR_V1. It owns only the room: keep this exact architecture,
-furniture, plants, windows and motivated light throughout.
+@ImageN is CLEAN_PLATE_V1. It owns only the room: keep this exact architecture,
+furniture, plants, windows, art and motivated light throughout.
 
-Place the room anchor last so its role remains unambiguous. It must not replace
-@Image1, impose its camera angle, copy a person from the anchor or overwrite the
+Place the clean plate last so its authority remains unambiguous. It must not
+replace @Image1, impose its camera angle, invent a person or overwrite the
 current character pose.
+
+SCENE-BINDING GATE
+Use CLEAN_PLATE_V1 twice:
+1. draw the scene's first frame from the identity references plus the plate;
+2. send the same plate as the final room reference in the Seedance request.
+
+If the selected location changes, discard any first frame drawn in the old
+location and invalidate its draft. Before spending generation credits, block
+the request if the plate is missing, still being created or failed to render.
+Archive the location ID and plate hash with every accepted take.
 
 CHAINED-SCENE RULE
 When this scene starts from the previous accepted scene's final frame, use that
-frame as @Image1 and still attach ROOM_ANCHOR_V1 as @ImageN. The previous frame
-preserves immediate action continuity; the persistent room anchor restores the
+frame as @Image1 and still attach CLEAN_PLATE_V1 as @ImageN. The previous frame
+preserves immediate action continuity; the persistent clean plate restores the
 global set identity that a chain of local redraws can otherwise lose.
 
 SHOT CONTRACT
 [SUBJECT] performs [ONE READABLE ACTION] in [CURRENT SHOT SIZE / ANGLE].
 The camera [ONE MOTIVATED MOVE OR LOCKED POSITION] and ends on [CLEAR ENDPOINT].
 Keep the room's wall openings, couch or counter geometry, large-object count,
-window placement and light direction identical to ROOM_ANCHOR_V1 even when
+window placement and light direction identical to CLEAN_PLATE_V1 even when
 they are partly off-screen.
 
 INTENTIONAL SET CHANGE
-If the story deliberately changes the set, create ROOM_ANCHOR_V2 and declare
-the exact change and first scene where it applies. Never mix two room anchors
+If the story deliberately changes the set, create CLEAN_PLATE_V2 and declare
+the exact change and first scene where it applies. Never mix two room versions
 in one request or let an accidental generated variation become the new canon.
 
 ACCEPTANCE GATE
+- the plate is empty and contributes no person, pose, wardrobe or action;
 - @Image1 matches the preceding accepted endpoint when this is a continuation;
 - doors, windows and large furniture retain their positions and proportions;
 - no duplicate couch, cupboard, plant, window or practical light appears;
 - reverse angles reveal the same topology rather than a redesigned room;
-- character identity and current pose follow their own references, not the room
-  anchor;
+- character identity and current pose follow their own references, not the
+  plate;
 - exposure and motivated light remain compatible with the canonical set;
-- the final frame is suitable for the next scene but does not redefine the set.
+- the final frame may continue the action but never redefines the set.
 ```
 
-**Why it works:** using only the previous scene's final frame preserves local
-continuity but also carries every small environment redraw into the next
-generation. A separate persistent room image provides a global spatial anchor
-on every call. Assigning it environment-only authority prevents the anchor from
-fighting the current shot's composition or the identity references.
+**Why it works:** a previous scene's final frame preserves local continuity but
+also carries every small redraw into the next generation. A persistent clean
+plate supplies global spatial identity on every call without importing a
+performer or pose. Giving it environment-only authority, and using the same
+asset for both first-frame construction and video generation, stops the two
+stages from disagreeing about the set.
 
 Adapted and rewritten from Ferrem's October 4, 2026
-[seven-scene drift report and room-reference implementation](https://github.com/ferrem01/media-producer-mcp/commit/d0571579eecb14c75293cf628e064b91eb8caf3a),
-including the pinned
-[reference ordering and performance path](https://github.com/ferrem01/media-producer-mcp/blob/d0571579eecb14c75293cf628e064b91eb8caf3a/src/core/scene-performance.ts),
+[seven-scene drift report and room-reference implementation](https://github.com/ferrem01/media-producer-mcp/commit/d0571579eecb14c75293cf628e064b91eb8caf3a)
+and the later
+[person-free location-plate implementation](https://github.com/ferrem01/media-producer-mcp/commit/5cc0146bd42e34ba1c214211ecb956dd64a60659),
+including the
+[clean-plate builder](https://github.com/ferrem01/media-producer-mcp/blob/5cc0146bd42e34ba1c214211ecb956dd64a60659/src/core/locations.ts),
+[reference and pre-spend path](https://github.com/ferrem01/media-producer-mcp/blob/5cc0146bd42e34ba1c214211ecb956dd64a60659/src/core/scene-performance.ts),
 [Seedance 2.5 room-role prompt builder](https://github.com/ferrem01/media-producer-mcp/blob/d0571579eecb14c75293cf628e064b91eb8caf3a/src/core/seedance.ts)
 and
-[regression tests](https://github.com/ferrem01/media-producer-mcp/blob/d0571579eecb14c75293cf628e064b91eb8caf3a/test/scene-performance.test.ts).
+[regression tests](https://github.com/ferrem01/media-producer-mcp/blob/5cc0146bd42e34ba1c214211ecb956dd64a60659/test/scene-performance.test.ts).
 
 ### Delivery-mark isolation and pre-spend voice-audition gate
 
@@ -51902,6 +51939,7 @@ and the same-day [three committed Seedance 2.0 720p cuts](https://github.com/yum
 
 ---
 ## Sources
+- [Ferrem / media-producer-mcp — October 4, 2026 person-free Seedance 2.5 location plate: prompt-built, frame-cleaned or uploaded empty-set anchor; the same plate guides first-frame drawing and becomes the final environment-only Seedance reference; location changes invalidate incompatible frames and drafts, while missing or unfinished plates block spend](https://github.com/ferrem01/media-producer-mcp/commit/5cc0146bd42e34ba1c214211ecb956dd64a60659) ([clean-plate builder](https://github.com/ferrem01/media-producer-mcp/blob/5cc0146bd42e34ba1c214211ecb956dd64a60659/src/core/locations.ts), [performance path](https://github.com/ferrem01/media-producer-mcp/blob/5cc0146bd42e34ba1c214211ecb956dd64a60659/src/core/scene-performance.ts), [tests](https://github.com/ferrem01/media-producer-mcp/blob/5cc0146bd42e34ba1c214211ecb956dd64a60659/test/scene-performance.test.ts))
 - [David0524 / MyFastRX — October 4, 2026 Seedance 2.5 `omni_reference` drift-preserving counter-warp: exact 480p/11-second/33-credit job, ByteDance 1080p upscale job, ORB/RANSAC similarity-path repair from 6.7 seconds, 0.25-second ease, minimal border-cover zoom, repaired output and final-timeline substitution](https://github.com/David0524/MyFastRX/commit/bfbe21ab8363adbd58205e73167603b76f1f9a0b) ([generation ledger](https://github.com/David0524/MyFastRX/blob/bfbe21ab8363adbd58205e73167603b76f1f9a0b/ads/glp1-glass/footage/gen/README.md), [implementation](https://github.com/David0524/MyFastRX/blob/bfbe21ab8363adbd58205e73167603b76f1f9a0b/ads/glp1-glass/tools/stabilize-clipA.py), [repaired clip](https://github.com/David0524/MyFastRX/blob/bfbe21ab8363adbd58205e73167603b76f1f9a0b/ads/glp1-glass/footage/gen/car_clipA_1080p_stab.mp4))
 - [Evelyn Park / SandBase — October 4, 2026 matched product-video benchmark: complete prompts, exact `bytedance/seedance/2.5/text-to-video` and `bytedance/seedance/2.0/fast/text-to-video` routes, five-second 720p output metadata, billed tasks, fixed rubric and frame-reviewed text, pour, camera and object-continuity results](https://blog.sandbase.ai/ai-video-generation-api-benchmark-veo-3-1-kling-seedance-2026/)
 - [Ferrem / media-producer-mcp — October 4, 2026 Seedance 2.5 chained-set continuity repair: exact `bytedance/seedance-2.5/reference-to-video` pipeline, seven-scene apartment and couch drift report, persistent canonical room image appended as the final reference, explicit environment-only role, asset validation and regression tests](https://github.com/ferrem01/media-producer-mcp/commit/d0571579eecb14c75293cf628e064b91eb8caf3a) ([performance path](https://github.com/ferrem01/media-producer-mcp/blob/d0571579eecb14c75293cf628e064b91eb8caf3a/src/core/scene-performance.ts), [reference-role builder](https://github.com/ferrem01/media-producer-mcp/blob/d0571579eecb14c75293cf628e064b91eb8caf3a/src/core/seedance.ts), [tests](https://github.com/ferrem01/media-producer-mcp/blob/d0571579eecb14c75293cf628e064b91eb8caf3a/test/scene-performance.test.ts))
