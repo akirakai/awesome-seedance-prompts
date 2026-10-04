@@ -51394,6 +51394,93 @@ Adapted and rewritten from Ferrem's October 4, 2026
 and [raw-output audio ownership correction](https://github.com/ferrem01/media-producer-mcp/commit/ee7d94b0bcfe0a3a1ef169dacfd3a6541dc3c5fd).
 
 
+### Pre-conversion pitch gate with timbre-preserving second pass
+
+**Verified model:** Seedance 2.5 — the original operator records live
+`bytedance/seedance-2.5/reference-to-video` performances through Higgsfield
+and Atlas, then measures a three-scene voice inconsistency: the converted third
+line landed near 160 Hz while the approved actor voice lived around 186–200 Hz.
+Seedance reproduced that low delivery faithfully. Laying the exact converted
+file over the generated picture could not repair it because Seedance had
+re-performed the line and the mouth timing was different. A first repair that
+pitch-shifted the converted voice directly damaged its formants and sounded
+unnaturally high; the corrected implementation shifts the source performance
+and runs voice conversion again before Seedance receives it.
+
+**Use case:** keep one approved actor voice across separately generated
+talking-head scenes when speech-to-speech conversion preserves the temporary
+performer's pitch  
+**Mode:** recorded performance -> first voice conversion -> measured pitch gate
+-> source-pitch correction -> second voice conversion -> Seedance audio
+reference, while retaining Seedance's synchronized output audio
+
+```text
+VOICE AUTHORITY
+@Audio1 owns the exact words, delivery order, pauses and approved actor timbre.
+The completed Seedance file owns final mouth-synchronous audio timing.
+Do not replace the generated soundtrack with @Audio1 after rendering.
+
+BASELINE
+Create one neutral sample in the approved actor voice and measure its median
+voiced fundamental frequency: TARGET_HZ. Cache it with the exact voice ID; if
+the voice ID changes, invalidate and remeasure the baseline.
+
+FIRST PASS
+Extract the chosen human performance as mono PCM. Convert it into the approved
+actor voice without changing the performance timing. Measure the converted
+result as FIRST_HZ.
+
+PITCH GATE
+ratio = TARGET_HZ / FIRST_HZ.
+If either measurement is unavailable, stop for review.
+If abs(ratio - 1) <= 0.03, keep the first conversion.
+If ratio is outside 0.60–1.70, reject the take instead of applying an extreme
+repair.
+
+TIMBRE-PRESERVING SECOND PASS
+When the difference exceeds 3 percent, do not pitch-shift the already converted
+voice. That moves its formants and can create a chipmunk-like result.
+Instead, pitch-shift the original source performance by ratio while preserving
+its duration, then run speech-to-speech conversion into the approved actor
+voice a second time. The converter rebuilds the actor timbre around the raised
+or lowered performance.
+
+Measure the second conversion as RESULT_HZ. Log FIRST_HZ, TARGET_HZ, ratio,
+RESULT_HZ, source hash, voice ID and whether the second pass ran. Loudness-
+normalize only after this decision.
+
+SEEDANCE SUBMISSION
+Submit the accepted converted audio as the sole voice reference with the
+approved identity/start image and silent motion reference. Keep generated audio
+enabled. Ask the visible adult performer to speak the supplied audio once with
+natural mouth motion; add no written replacement line.
+
+OUTPUT OWNERSHIP AND ACCEPTANCE
+- preserve Seedance's own generated audio through transcode and assembly;
+- reject a post-laid voice file that drifts from the mouth, even if its waveform
+  aligns better globally;
+- compare actor likeness by timbre and median pitch, not pitch alone;
+- reject formant damage, metallic artifacts, doubled voices or an invented line;
+- verify RESULT_HZ moved toward TARGET_HZ and the last phrase finishes before
+  the final frame;
+- if the generated read still varies, revise the input performance or rerun;
+  never repair identity by shifting the finished Seedance soundtrack.
+```
+
+**Why it works:** speech-to-speech conversion can copy the donor's temporary
+pitch even while changing vocal identity, and Seedance can then reproduce that
+mismatch accurately. Measuring before generation catches it early. Moving the
+source performance and converting again lets the voice model rebuild its own
+formants, while preserving Seedance's self-voiced output avoids destroying the
+lip sync that the video model actually generated.
+
+Adapted and rewritten from Ferrem's October 4, 2026
+[measured Seedance voice and lip-sync correction](https://github.com/ferrem01/media-producer-mcp/commit/be48641823761bae098366999d681509a55606ce)
+and the follow-up
+[timbre-preserving two-pass repair](https://github.com/ferrem01/media-producer-mcp/commit/6040e868ec45b7566a38378ac668dc54f39a926f),
+including the
+[implemented measurement, reconversion and acceptance ledger](https://github.com/ferrem01/media-producer-mcp/blob/6040e868ec45b7566a38378ac668dc54f39a926f/src/core/scene-performance.ts).
+
 ### Dormant-state ignition and one-shot reaction gate
 
 **Verified model:** Seedance 2.0 — the creator's project rules label the video
@@ -51458,6 +51545,7 @@ and the same-day [three committed Seedance 2.0 720p cuts](https://github.com/yum
 
 ---
 ## Sources
+- [Ferrem / media-producer-mcp — October 4, 2026 Seedance 2.5 voice-consistency repair: live `bytedance/seedance-2.5/reference-to-video` performances, measured 160 Hz drift against an 186–200 Hz actor baseline, failed post-laid audio sync, rejected direct pitch shift after formant damage, and the source-shift-plus-reconversion implementation with first/target/result pitch ledger](https://github.com/ferrem01/media-producer-mcp/commit/be48641823761bae098366999d681509a55606ce) ([timbre-preserving second pass](https://github.com/ferrem01/media-producer-mcp/commit/6040e868ec45b7566a38378ac668dc54f39a926f), [implementation](https://github.com/ferrem01/media-producer-mcp/blob/6040e868ec45b7566a38378ac668dc54f39a926f/src/core/scene-performance.ts))
 - [keys-exe / global-manual-ai — October 4, 2026 Kie AI Seedance 2.5 staircase-descent repair: complete four-reference two-shot prompt, exact `bytedance/seedance-2-5` request, per-contact carpet/wood footstep timing, successful task ID, 441-credit ledger and generated MP4 URL](https://github.com/keys-exe/global-manual-ai/commit/966072be6acd9d6e91cedb74bb7724bebc1ac9ef) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/99091945cfc0002d2672b12e82bace376ed1f1fa/builds/stryde-her-dad/body/SC07/SC07-T1.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/99091945cfc0002d2672b12e82bace376ed1f1fa/builds/stryde-her-dad/body/SC07/SC07-T1.call.json), [successful task and result](https://github.com/keys-exe/global-manual-ai/blob/99091945cfc0002d2672b12e82bace376ed1f1fa/builds/stryde-her-dad/body/SC07/SC07-T1.v2.kie.log))
 - [yumeai-fantasy88 / flova — October 4, 2026 Seedance 2.0 production lessons: paired directional wording caused rhythmic repeated motion, body-timed effects looked self-generated, the documented repairs use a single irregular reaction and a prebuilt dormant effect with one ignition; followed by three committed 720p Seedance 2.0 cuts](https://github.com/yumeai-fantasy88/flova/commit/29d3fdf5faa4c64f4ed97181eb7e032e4a1b8d51) ([production rules](https://github.com/yumeai-fantasy88/flova/blob/29d3fdf5faa4c64f4ed97181eb7e032e4a1b8d51/CLAUDE.md), [finished cuts](https://github.com/yumeai-fantasy88/flova/commit/430431a8d0ebcab3646efbed59dc4867f14a5a2f))
 
