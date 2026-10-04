@@ -462,6 +462,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Cooling-forged blade circuit reveal in one macro take](#446-cooling-forged-blade-circuit-reveal-in-one-macro-take)
   - [Vanity self-recognition spiral with persistent product-cluster patch](#447-vanity-self-recognition-spiral-with-persistent-product-cluster-patch)
   - [Frame-synchronous stair footsteps across a matched-axis cut](#448-frame-synchronous-stair-footsteps-across-a-matched-axis-cut)
+  - [Text-safe skincare sale-sign benchmark](#449-text-safe-skincare-sale-sign-benchmark)
+  - [Continuous lemon-soda pour with observable dolly parallax](#450-continuous-lemon-soda-pour-with-observable-dolly-parallax)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -28767,6 +28769,112 @@ the [complete prompt](https://github.com/keys-exe/global-manual-ai/blob/99091945
 [versioned request](https://github.com/keys-exe/global-manual-ai/blob/99091945cfc0002d2672b12e82bace376ed1f1fa/builds/stryde-her-dad/body/SC07/SC07-T1.call.json)
 and [successful provider task with generated MP4 URL](https://github.com/keys-exe/global-manual-ai/blob/99091945cfc0002d2672b12e82bace376ed1f1fa/builds/stryde-her-dad/body/SC07/SC07-T1.v2.kie.log).
 
+
+### 449. Text-safe skincare sale-sign benchmark
+
+**Verified model:** SandBase `bytedance/seedance/2.5/text-to-video` and
+`bytedance/seedance/2.0/fast/text-to-video` — the original operator sent the
+same complete prompt to both exact routes on October 4, 2026. Each returned a
+five-second 1280×720, 24 fps clip with an audio stream. Under the published
+four-part rubric, Seedance 2.5 scored 8/8 for product, exact sign text, push-in
+and absence of unwanted text; Seedance 2.0 Fast scored 7/8.  
+**Use case:** sale creative, skincare or cosmetics advertising, short
+typography-constrained product shots  
+**Mode:** text-to-video  
+**Verified settings:** 5 seconds; 16:9; 720p; audio left at the route default
+
+```text
+Create a five-second, 16:9 studio product commercial. Centre one unbranded
+matte-white skincare bottle on a pastel-pink podium against a clean, brightly
+lit seamless backdrop.
+
+A large sign behind the bottle displays exactly this copy and nothing else:
+
+SALE 30%
+
+Use bold, high-contrast lettering. Keep every character fully inside frame,
+sharp, correctly ordered and continuously readable from the opening frame to
+the end. The bottle may overlap a small part of the sign but must never hide a
+whole letter or digit.
+
+CAMERA
+Begin on a stable medium product shot and make one slow, smooth push toward the
+bottle. Preserve the bottle silhouette, cap, podium edge, sign position,
+exposure and focus throughout. End on a clean hero frame with the complete
+offer still readable.
+
+TEXT AND BRAND SAFETY
+The bottle, cap, podium and background remain blank and unbranded. Do not add a
+label, logo, ingredient copy, pseudo-letters, second discount, subtitle,
+caption, watermark or any character other than the single approved sign.
+```
+
+**Why it works:** the copy is isolated as one immutable visual asset, while
+every other surface is explicitly text-free. The continuous readability rule
+and full-frame boundary make spelling, occlusion and crop failures easy to
+judge rather than leaving typography as a vague styling request.
+
+Adapted and rewritten from Evelyn Park / SandBase's October 4, 2026
+[matched eight-model product-clip benchmark, exact Seedance routes, complete
+prompt and scored outputs](https://blog.sandbase.ai/ai-video-generation-api-benchmark-veo-3-1-kling-seedance-2026/#three-product-clip-prompts-and-the-rubric)
+and its
+[model-by-model result table](https://blog.sandbase.ai/ai-video-generation-api-benchmark-veo-3-1-kling-seedance-2026/#results-everyone-can-spell-few-follow-the-camera).
+
+
+### 450. Continuous lemon-soda pour with observable dolly parallax
+
+**Verified model:** SandBase `bytedance/seedance/2.0/fast/text-to-video` — the
+original operator's complete five-second product prompt scored 7/8 on the
+published rubric: the named objects, pour, rising level, retained ice and fizz
+were present, while the requested camera travel was only partial. The output
+was 1280×720 at 24 fps with an audio stream. The same source also tested
+`bytedance/seedance/2.5/text-to-video`, but its liquid turned milky and its ice
+faded, so that result is recorded as a failure boundary rather than claimed as
+a successful version for this entry.  
+**Use case:** beverage advertising, liquid-physics tests, camera-motion
+compliance, short product demonstrations  
+**Mode:** text-to-video  
+**Verified settings:** 5 seconds; 16:9; 720p
+
+```text
+Create a five-second, 16:9 realistic beverage close-up in soft window daylight.
+On a wooden bar counter, one adult hand lifts one green glass bottle of
+sparkling lemon soda and pours a single uninterrupted stream into one tall,
+clear glass already filled with visible ice cubes.
+
+ACTION AND MATERIAL LEDGER
+The glass, bottle and ice keep the same shapes and positions throughout. The
+soda remains transparent pale lemon-yellow. Its level rises continuously; the
+ice stays visible and is displaced naturally rather than dissolving or
+vanishing. Fine bubbles climb through the drink, a thin foam line forms at the
+surface, and two or three small drops splash onto the counter. The stream never
+misses the glass and never reverses.
+
+CAMERA
+Dolly slowly from left to right at constant speed for the full take. Prove real
+lateral translation with changing parallax between the glass, bottle and
+background; do not substitute a pan, zoom, crop or static frame. Keep the glass
+and pouring stream sharp while the background moves gently behind them.
+
+CONTINUITY AND SOUND
+One bottle, one hand, one glass and one set of ice cubes only. No extra vessel,
+duplicate finger, changing label, beer-coloured liquid, milky drink, disappearing
+ice, cut, speed ramp, text, caption, logo or watermark. Use only the pour,
+effervescence, ice clink and quiet room tone; no dialogue or music.
+```
+
+**Why it works:** the liquid is described as a one-way state change with
+visible conservation checks, while camera motion is made measurable through
+parallax instead of the ambiguous word “dolly.” The prompt also turns the
+source test's observed colour and ice failures into explicit rejection
+conditions without claiming that the repair itself was separately generated.
+
+Adapted and rewritten from Evelyn Park / SandBase's October 4, 2026
+[matched product-clip benchmark with the complete pour prompt, exact Seedance
+routes and scoring rubric](https://blog.sandbase.ai/ai-video-generation-api-benchmark-veo-3-1-kling-seedance-2026/#three-product-clip-prompts-and-the-rubric)
+and the operator's
+[pour and camera review](https://blog.sandbase.ai/ai-video-generation-api-benchmark-veo-3-1-kling-seedance-2026/#results-everyone-can-spell-few-follow-the-camera).
+
 ## Reusable templates
 
 
@@ -51708,6 +51816,7 @@ and the same-day [three committed Seedance 2.0 720p cuts](https://github.com/yum
 
 ---
 ## Sources
+- [Evelyn Park / SandBase — October 4, 2026 matched product-video benchmark: complete prompts, exact `bytedance/seedance/2.5/text-to-video` and `bytedance/seedance/2.0/fast/text-to-video` routes, five-second 720p output metadata, billed tasks, fixed rubric and frame-reviewed text, pour, camera and object-continuity results](https://blog.sandbase.ai/ai-video-generation-api-benchmark-veo-3-1-kling-seedance-2026/)
 - [Ferrem / media-producer-mcp — October 4, 2026 Seedance 2.5 chained-set continuity repair: exact `bytedance/seedance-2.5/reference-to-video` pipeline, seven-scene apartment and couch drift report, persistent canonical room image appended as the final reference, explicit environment-only role, asset validation and regression tests](https://github.com/ferrem01/media-producer-mcp/commit/d0571579eecb14c75293cf628e064b91eb8caf3a) ([performance path](https://github.com/ferrem01/media-producer-mcp/blob/d0571579eecb14c75293cf628e064b91eb8caf3a/src/core/scene-performance.ts), [reference-role builder](https://github.com/ferrem01/media-producer-mcp/blob/d0571579eecb14c75293cf628e064b91eb8caf3a/src/core/seedance.ts), [tests](https://github.com/ferrem01/media-producer-mcp/blob/d0571579eecb14c75293cf628e064b91eb8caf3a/test/scene-performance.test.ts))
 - [Ferrem / media-producer-mcp — October 4, 2026 Seedance 2.5 delivery-control gate: exact `bytedance/seedance-2.5/reference-to-video` pipeline, separate canonical script and delivery fields, ElevenLabs v4 acting marks, voice-only preview with duration and pitch, and pre-spend human acceptance before video generation](https://github.com/ferrem01/media-producer-mcp/commit/db391e1e6ca91f0d6f0cc353e41087108901011d) ([implementation](https://github.com/ferrem01/media-producer-mcp/blob/db391e1e6ca91f0d6f0cc353e41087108901011d/src/core/scene-performance.ts), [route](https://github.com/ferrem01/media-producer-mcp/blob/db391e1e6ca91f0d6f0cc353e41087108901011d/src/core/seedance.ts), [tests](https://github.com/ferrem01/media-producer-mcp/blob/db391e1e6ca91f0d6f0cc353e41087108901011d/test/scene-performance.test.ts))
 - [Ferrem / media-producer-mcp — October 4, 2026 Seedance 2.5 voice-pitch failure control: exact live `bytedance/seedance-2.5/reference-to-video` workflow, measured 160 Hz outlier against 186–200 Hz same-actor scene takes, rollback after direct shifting damaged formants and source-shift reconversion garbled words, then a measurement-only 10% pre-spend block with logged force override](https://github.com/ferrem01/media-producer-mcp/commit/37108777c0c4d7339c3f9bf3ab5da0b0aae2e722) ([failed repairs rolled back](https://github.com/ferrem01/media-producer-mcp/commit/4f9aca2f0e0a15369c2868d88f766964e886c11f), [implemented gate](https://github.com/ferrem01/media-producer-mcp/blob/37108777c0c4d7339c3f9bf3ab5da0b0aae2e722/src/core/scene-performance.ts))
