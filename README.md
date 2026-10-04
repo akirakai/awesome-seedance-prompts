@@ -42866,6 +42866,82 @@ the [complete positional-panel video template](https://github.com/ecinaro/brainl
 the [exact Higgsfield request contract](https://github.com/ecinaro/brainlab-estate-cinematic/blob/29ca0c0abdd50897758e23e660a8bbaed8071036/references/higgsfield-pipeline.md),
 and the creator's [six-scene result and failure log](https://github.com/ecinaro/brainlab-estate-cinematic/blob/29ca0c0abdd50897758e23e660a8bbaed8071036/references/lessons.md).
 
+### Exact-duration black-video audio carrier with scene-image authority
+
+**Verified model:** Seedance 2.5 — the original creator published the generated
+result and disclosed that its ElevenLabs v4 performance was embedded in a
+black-frame video, trimmed exactly to the intended character-shot length, then
+paired with a still image of the shot as the visual reference
+
+**Evidence boundary:** the literal generation prompt and provider request are
+not public, so this counts as one reusable reference-authority technique, not a
+complete scenario prompt.
+
+Use this when an approved external voice performance must drive timing and lip
+motion, but the Seedance surface accepts video more reliably than a standalone
+audio reference. Make the black carrier audibly informative and visually
+powerless; let the still image own every visible choice.
+
+```text
+REFERENCE PREP
+@Video1 = a full-black video whose soundtrack is the approved final voice
+performance. Trim it to the exact intended shot duration; no preroll, postroll,
+extra black tail, time stretch or duplicate audio.
+@Image1 = the sole visual authority for the adult character, wardrobe, set,
+framing, lighting and palette.
+Requested duration = the decoded duration of @Video1.
+
+AUTHORITY CONTRACT
+Use @Video1 only for spoken words, voice identity, pronunciation, pauses,
+emotion, rhythm and exact timing. Its black pixels have zero authority over the
+picture.
+Use @Image1 only for visible identity and scene design. Do not infer dialogue
+timing from the still image.
+
+SHOT
+Create one continuous [CLOSE-UP / MEDIUM CLOSE-UP] matching @Image1. The same
+character performs the full soundtrack from @Video1 once, with readable mouth
+shapes, restrained jaw and head motion, natural blinks and no camera cut.
+Keep the mouth visible for every voiced phrase. End only after the final word
+and preserve the closing expression for the remaining frames.
+
+SOUND LOCK
+The soundtrack from @Video1 is the complete audio master. Do not invent,
+replace, paraphrase, repeat or reorder speech. Add no narrator, second voice,
+music, crowd bed, room tone or sound effect unless one item is explicitly
+listed here: [OPTIONAL SINGLE SOUND].
+
+FAILURE CONTROL
+No black screen, fade from black, dark-scene inheritance, image-to-black
+transition, visual use of @Video1, identity drift, hidden mouth, new person,
+subtitle, caption, logo or generated text.
+
+PRE-SUBMIT GATE
+1. Decode @Video1 and record its exact duration, frame rate and audio presence.
+2. Make the requested duration and output timeline match that decoded length.
+3. Confirm @Image1 and @Video1 are attached once and assigned different roles.
+4. Preview the carrier: every video frame is black, while the approved audio
+   starts and ends at the intended character-performance boundaries.
+
+ACCEPTANCE AND REPAIR
+Pass only if @Image1 controls the entire picture, @Video1 controls the complete
+soundtrack, the final word lands before the last frame and no extra sound
+appears. If picture inherits black, restate zero visual authority for @Video1
+and move the visual lock to the first sentence. If speech changes, shorten to
+one clean phrase and forbid all native additions. If lip sync drifts, recut the
+carrier to the accepted performance instead of stretching either stream.
+```
+
+**Why it works:** the container solves an interface problem without confusing
+creative ownership. Exact-duration trimming turns the video reference into a
+single timing ruler, while the still reference remains the only source of
+visible identity and composition. Explicitly denying the carrier's black pixels
+any visual role prevents the transport workaround from becoming an unintended
+fade or dark scene.
+
+**Source:** Ori Silver's October 3, 2026
+[Seedance 2.5 generated result and black-video audio-reference workflow](https://x.com/OriSilver/status/2106380515276165463).
+
 ### Audio-first omni-reference presenter with payload and lip-sync recovery gate
 
 **Verified model:** Seedance 2.5 (`seedance_2_5`, `omni_reference`) — the
@@ -51154,6 +51230,8 @@ and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
 ## Sources
+- [Ori Silver — October 3, 2026 Seedance 2.5 external-voice performance: generated result plus the disclosed workflow of embedding ElevenLabs v4 audio in a full-black video, trimming it exactly to the character-shot duration and pairing it with the shot image as visual reference](https://x.com/OriSilver/status/2106380515276165463)
+
 - [Theshara Avakian / HZORTECH — September 30, 2026 completed Higgsfield Seedance 2.0 text-to-video forge film, first published October 3: exact `bytedance/seedance-2.0/text-to-video` route, request ID, complete prompt, 12-second 1080p 16:9 arguments, completed result URL and 145-frame website extraction](https://github.com/Thesharaavakian/hzortech/commit/ed0e4108e8079fd30ada676c16be7fdae09b07e2) ([request ledger](https://github.com/Thesharaavakian/hzortech/blob/ed0e4108e8079fd30ada676c16be7fdae09b07e2/assets/higgsfield-ledger.json), [original prompt](https://github.com/Thesharaavakian/hzortech/blob/ed0e4108e8079fd30ada676c16be7fdae09b07e2/assets/prompts/home-forge.txt), [committed frame sequence](https://github.com/Thesharaavakian/hzortech/tree/ed0e4108e8079fd30ada676c16be7fdae09b07e2/business_page/static/business_page/seq/forge-d90931a5))
 
 - [dpeh001-x / Mojiworld — October 3, 2026 Higgsfield Seedance 2.5 `omni_reference` two-stage Barnaby transformation: two 480p drafts per shot, 1080p finals, rejected-draft diagnoses, decoded-frame grid-search calibration, measured 1.035 scale and offsets, cosine tail correction, 0.2-second dissolve, post-owned sound timeline, delivery metrics and committed final film](https://github.com/dpeh001-x/Mojiworld/commit/7e97853048b6227ff60780863aa60cf562401607) ([specification](https://github.com/dpeh001-x/Mojiworld/blob/7e97853048b6227ff60780863aa60cf562401607/steam/higgsfield/cinematics/clip_barnaby_fall.SPEC.md), [final film](https://github.com/dpeh001-x/Mojiworld/blob/7e97853048b6227ff60780863aa60cf562401607/steam/higgsfield/cinematics/clip_barnaby_fall.mp4))
