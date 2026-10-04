@@ -51394,6 +51394,86 @@ Adapted and rewritten from Ferrem's October 4, 2026
 and [raw-output audio ownership correction](https://github.com/ferrem01/media-producer-mcp/commit/ee7d94b0bcfe0a3a1ef169dacfd3a6541dc3c5fd).
 
 
+### Persistent room-anchor reference for chained-scene drift
+
+**Verified model:** Seedance 2.5 — the original operator's scene-performance
+system sends every accepted take to
+`bytedance/seedance-2.5/reference-to-video` through Higgsfield and Atlas.
+After seven dialogue scenes were chained from each preceding scene's last frame,
+the apartment and couch changed slightly from shot to shot, with the drift
+becoming most visible in later reverse views. The implemented repair sends one
+canonical image of the set with every take as the final reference image and
+names its environment-only authority in the prompt.
+
+**Use case:** keep one interior, storefront, vehicle cabin or other recurring
+set stable across separately generated scenes, especially when continuation
+frames accumulate small redraw errors  
+**Mode:** current start frame + identity references + persistent canonical set
+anchor + optional approved audio -> Seedance reference-to-video
+
+```text
+CANONICAL SET ANCHOR
+Choose one accepted, clean image of the recurring set, normally the first
+scene's approved drawn frame. It must clearly show the fixed spatial facts:
+[WALLS / DOORS / WINDOWS / LARGE FURNITURE / PLANTS / PRACTICAL LIGHTS].
+Store its asset hash as ROOM_ANCHOR_V1. Do not silently replace this file after
+later generations have begun.
+
+ORDERED REFERENCE ROLES
+@Image1 is the exact first frame for this scene. It owns current composition,
+camera position, character pose and the first visible moment.
+@Image2 [and any following identity images] own the recurring person's face,
+body, hair and wardrobe only.
+@ImageN is ROOM_ANCHOR_V1. It owns only the room: keep this exact architecture,
+furniture, plants, windows and motivated light throughout.
+
+Place the room anchor last so its role remains unambiguous. It must not replace
+@Image1, impose its camera angle, copy a person from the anchor or overwrite the
+current character pose.
+
+CHAINED-SCENE RULE
+When this scene starts from the previous accepted scene's final frame, use that
+frame as @Image1 and still attach ROOM_ANCHOR_V1 as @ImageN. The previous frame
+preserves immediate action continuity; the persistent room anchor restores the
+global set identity that a chain of local redraws can otherwise lose.
+
+SHOT CONTRACT
+[SUBJECT] performs [ONE READABLE ACTION] in [CURRENT SHOT SIZE / ANGLE].
+The camera [ONE MOTIVATED MOVE OR LOCKED POSITION] and ends on [CLEAR ENDPOINT].
+Keep the room's wall openings, couch or counter geometry, large-object count,
+window placement and light direction identical to ROOM_ANCHOR_V1 even when
+they are partly off-screen.
+
+INTENTIONAL SET CHANGE
+If the story deliberately changes the set, create ROOM_ANCHOR_V2 and declare
+the exact change and first scene where it applies. Never mix two room anchors
+in one request or let an accidental generated variation become the new canon.
+
+ACCEPTANCE GATE
+- @Image1 matches the preceding accepted endpoint when this is a continuation;
+- doors, windows and large furniture retain their positions and proportions;
+- no duplicate couch, cupboard, plant, window or practical light appears;
+- reverse angles reveal the same topology rather than a redesigned room;
+- character identity and current pose follow their own references, not the room
+  anchor;
+- exposure and motivated light remain compatible with the canonical set;
+- the final frame is suitable for the next scene but does not redefine the set.
+```
+
+**Why it works:** using only the previous scene's final frame preserves local
+continuity but also carries every small environment redraw into the next
+generation. A separate persistent room image provides a global spatial anchor
+on every call. Assigning it environment-only authority prevents the anchor from
+fighting the current shot's composition or the identity references.
+
+Adapted and rewritten from Ferrem's October 4, 2026
+[seven-scene drift report and room-reference implementation](https://github.com/ferrem01/media-producer-mcp/commit/d0571579eecb14c75293cf628e064b91eb8caf3a),
+including the pinned
+[reference ordering and performance path](https://github.com/ferrem01/media-producer-mcp/blob/d0571579eecb14c75293cf628e064b91eb8caf3a/src/core/scene-performance.ts),
+[Seedance 2.5 room-role prompt builder](https://github.com/ferrem01/media-producer-mcp/blob/d0571579eecb14c75293cf628e064b91eb8caf3a/src/core/seedance.ts)
+and
+[regression tests](https://github.com/ferrem01/media-producer-mcp/blob/d0571579eecb14c75293cf628e064b91eb8caf3a/test/scene-performance.test.ts).
+
 ### Delivery-mark isolation and pre-spend voice-audition gate
 
 **Verified model:** Seedance 2.5 — the original operator's live scene-performance
@@ -51628,6 +51708,7 @@ and the same-day [three committed Seedance 2.0 720p cuts](https://github.com/yum
 
 ---
 ## Sources
+- [Ferrem / media-producer-mcp — October 4, 2026 Seedance 2.5 chained-set continuity repair: exact `bytedance/seedance-2.5/reference-to-video` pipeline, seven-scene apartment and couch drift report, persistent canonical room image appended as the final reference, explicit environment-only role, asset validation and regression tests](https://github.com/ferrem01/media-producer-mcp/commit/d0571579eecb14c75293cf628e064b91eb8caf3a) ([performance path](https://github.com/ferrem01/media-producer-mcp/blob/d0571579eecb14c75293cf628e064b91eb8caf3a/src/core/scene-performance.ts), [reference-role builder](https://github.com/ferrem01/media-producer-mcp/blob/d0571579eecb14c75293cf628e064b91eb8caf3a/src/core/seedance.ts), [tests](https://github.com/ferrem01/media-producer-mcp/blob/d0571579eecb14c75293cf628e064b91eb8caf3a/test/scene-performance.test.ts))
 - [Ferrem / media-producer-mcp — October 4, 2026 Seedance 2.5 delivery-control gate: exact `bytedance/seedance-2.5/reference-to-video` pipeline, separate canonical script and delivery fields, ElevenLabs v4 acting marks, voice-only preview with duration and pitch, and pre-spend human acceptance before video generation](https://github.com/ferrem01/media-producer-mcp/commit/db391e1e6ca91f0d6f0cc353e41087108901011d) ([implementation](https://github.com/ferrem01/media-producer-mcp/blob/db391e1e6ca91f0d6f0cc353e41087108901011d/src/core/scene-performance.ts), [route](https://github.com/ferrem01/media-producer-mcp/blob/db391e1e6ca91f0d6f0cc353e41087108901011d/src/core/seedance.ts), [tests](https://github.com/ferrem01/media-producer-mcp/blob/db391e1e6ca91f0d6f0cc353e41087108901011d/test/scene-performance.test.ts))
 - [Ferrem / media-producer-mcp — October 4, 2026 Seedance 2.5 voice-pitch failure control: exact live `bytedance/seedance-2.5/reference-to-video` workflow, measured 160 Hz outlier against 186–200 Hz same-actor scene takes, rollback after direct shifting damaged formants and source-shift reconversion garbled words, then a measurement-only 10% pre-spend block with logged force override](https://github.com/ferrem01/media-producer-mcp/commit/37108777c0c4d7339c3f9bf3ab5da0b0aae2e722) ([failed repairs rolled back](https://github.com/ferrem01/media-producer-mcp/commit/4f9aca2f0e0a15369c2868d88f766964e886c11f), [implemented gate](https://github.com/ferrem01/media-producer-mcp/blob/37108777c0c4d7339c3f9bf3ab5da0b0aae2e722/src/core/scene-performance.ts))
 - [keys-exe / global-manual-ai — October 4, 2026 Kie AI Seedance 2.5 staircase-descent repair: complete four-reference two-shot prompt, exact `bytedance/seedance-2-5` request, per-contact carpet/wood footstep timing, successful task ID, 441-credit ledger and generated MP4 URL](https://github.com/keys-exe/global-manual-ai/commit/966072be6acd9d6e91cedb74bb7724bebc1ac9ef) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/99091945cfc0002d2672b12e82bace376ed1f1fa/builds/stryde-her-dad/body/SC07/SC07-T1.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/99091945cfc0002d2672b12e82bace376ed1f1fa/builds/stryde-her-dad/body/SC07/SC07-T1.call.json), [successful task and result](https://github.com/keys-exe/global-manual-ai/blob/99091945cfc0002d2672b12e82bace376ed1f1fa/builds/stryde-her-dad/body/SC07/SC07-T1.v2.kie.log))
