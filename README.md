@@ -51394,6 +51394,89 @@ Adapted and rewritten from Ferrem's October 4, 2026
 and [raw-output audio ownership correction](https://github.com/ferrem01/media-producer-mcp/commit/ee7d94b0bcfe0a3a1ef169dacfd3a6541dc3c5fd).
 
 
+### Delivery-mark isolation and pre-spend voice-audition gate
+
+**Verified model:** Seedance 2.5 — the original operator's live scene-performance
+system submits approved speech to
+`bytedance/seedance-2.5/reference-to-video` through Higgsfield and Atlas.
+The October 4 implementation adds a separate delivery field, an ElevenLabs v4
+script-voice pass, and a voice-only preview before any Seedance request.
+
+**Evidence boundary:** this is a reusable voice-authoring and paid-generation
+control technique rather than a complete scenario prompt. Its primary evidence
+is the operator's implemented request path, saved preview asset, model-route
+code and regression tests.
+
+**Use case:** control pauses, inflection, emphasis and pronunciation without
+leaking performance markup into captions, visible text or another character's
+voice  
+**Mode:** canonical dialogue -> isolated delivery layer -> voice-only preview
+and measurement -> human acceptance -> Seedance audio reference
+
+```text
+CANONICAL WORDS
+SCRIPT_TEXT contains only the exact words the audience should hear and the
+plain text that captions or transcripts may use. Do not place emotion tags,
+pronunciation notation or timing commands in SCRIPT_TEXT.
+
+ISOLATED DELIVERY LAYER
+DELIVERY_TEXT repeats the same intended words but may add only provider-tested
+performance marks:
+- [EMOTION OR VOCAL ACTION] for a supported acting cue;
+- ... or an em dash for an audible pause;
+- CAPITALS for selective emphasis;
+- /IPA/ for a pronunciation that must be disambiguated.
+
+For the verified ElevenLabs v4 path, do not use SSML <break> tags. Keep the
+delivery field separate from the script so its marks cannot reach captions,
+on-screen text, another voice provider or Seedance's visual prompt.
+
+VOICE-ONLY PREFLIGHT
+Render only the proposed voice before any video-generation request. Save its
+asset URL, duration, actor/voice ID, model ID, delivery text hash and measured
+pitch when available. Listen all the way through and check:
+- every canonical word is present once and in order;
+- pauses occur at the intended boundaries;
+- emphasis does not distort a neighboring word;
+- the requested pronunciation is intelligible;
+- emotion fits the visible performance that will be requested;
+- the final word leaves enough duration for the planned Seedance shot.
+
+ONE-VARIABLE REPAIR
+If the preview fails, do not send it to Seedance. Change only one delivery
+variable per retry: one tag, one pause, one emphasis span or one pronunciation.
+Never repair delivery by changing the canonical line, unless the script itself
+is explicitly revised and captions are updated from that canonical source.
+
+SEEDANCE SUBMISSION
+After human acceptance, submit the approved preview-equivalent voice as the
+sole speech authority with the approved identity/start image and any silent
+motion reference. Keep the same delivery field for reproducibility. Preserve
+Seedance's generated mouth-synchronous output audio through assembly.
+
+ACCEPTANCE AND AUDIT GATE
+- rejected previews trigger zero Seedance or intermediary video calls;
+- delivery marks never appear in captions, visible text or spoken output;
+- transcript, voice asset and submitted audio resolve to the same words;
+- actor identity, scene ID, duration, pitch and acceptance decision are logged;
+- no doubled voice, invented phrase, clipped final word or post-laid lip drift;
+- if delivery remains wrong, revise and preview the audio again before video.
+```
+
+**Why it works:** words and performance direction are different authorities.
+Keeping them in separate fields preserves a clean transcript while still
+giving the voice model explicit acting controls. A cheap voice-only audition
+catches language, timing and performance errors before an expensive video call,
+and the saved preview plus delivery hash makes the accepted input traceable.
+
+Adapted and rewritten from Ferrem's October 4, 2026
+[delivery-control and voice-preview implementation](https://github.com/ferrem01/media-producer-mcp/commit/db391e1e6ca91f0d6f0cc353e41087108901011d),
+including the pinned
+[voice-authoring and preview path](https://github.com/ferrem01/media-producer-mcp/blob/db391e1e6ca91f0d6f0cc353e41087108901011d/src/core/scene-performance.ts),
+[Seedance 2.5 route](https://github.com/ferrem01/media-producer-mcp/blob/db391e1e6ca91f0d6f0cc353e41087108901011d/src/core/seedance.ts)
+and
+[regression tests](https://github.com/ferrem01/media-producer-mcp/blob/db391e1e6ca91f0d6f0cc353e41087108901011d/test/scene-performance.test.ts).
+
 ### Pre-spend cross-scene voice-pitch deviation gate
 
 **Verified model:** Seedance 2.5 — the original operator runs live
@@ -51545,6 +51628,7 @@ and the same-day [three committed Seedance 2.0 720p cuts](https://github.com/yum
 
 ---
 ## Sources
+- [Ferrem / media-producer-mcp — October 4, 2026 Seedance 2.5 delivery-control gate: exact `bytedance/seedance-2.5/reference-to-video` pipeline, separate canonical script and delivery fields, ElevenLabs v4 acting marks, voice-only preview with duration and pitch, and pre-spend human acceptance before video generation](https://github.com/ferrem01/media-producer-mcp/commit/db391e1e6ca91f0d6f0cc353e41087108901011d) ([implementation](https://github.com/ferrem01/media-producer-mcp/blob/db391e1e6ca91f0d6f0cc353e41087108901011d/src/core/scene-performance.ts), [route](https://github.com/ferrem01/media-producer-mcp/blob/db391e1e6ca91f0d6f0cc353e41087108901011d/src/core/seedance.ts), [tests](https://github.com/ferrem01/media-producer-mcp/blob/db391e1e6ca91f0d6f0cc353e41087108901011d/test/scene-performance.test.ts))
 - [Ferrem / media-producer-mcp — October 4, 2026 Seedance 2.5 voice-pitch failure control: exact live `bytedance/seedance-2.5/reference-to-video` workflow, measured 160 Hz outlier against 186–200 Hz same-actor scene takes, rollback after direct shifting damaged formants and source-shift reconversion garbled words, then a measurement-only 10% pre-spend block with logged force override](https://github.com/ferrem01/media-producer-mcp/commit/37108777c0c4d7339c3f9bf3ab5da0b0aae2e722) ([failed repairs rolled back](https://github.com/ferrem01/media-producer-mcp/commit/4f9aca2f0e0a15369c2868d88f766964e886c11f), [implemented gate](https://github.com/ferrem01/media-producer-mcp/blob/37108777c0c4d7339c3f9bf3ab5da0b0aae2e722/src/core/scene-performance.ts))
 - [keys-exe / global-manual-ai — October 4, 2026 Kie AI Seedance 2.5 staircase-descent repair: complete four-reference two-shot prompt, exact `bytedance/seedance-2-5` request, per-contact carpet/wood footstep timing, successful task ID, 441-credit ledger and generated MP4 URL](https://github.com/keys-exe/global-manual-ai/commit/966072be6acd9d6e91cedb74bb7724bebc1ac9ef) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/99091945cfc0002d2672b12e82bace376ed1f1fa/builds/stryde-her-dad/body/SC07/SC07-T1.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/99091945cfc0002d2672b12e82bace376ed1f1fa/builds/stryde-her-dad/body/SC07/SC07-T1.call.json), [successful task and result](https://github.com/keys-exe/global-manual-ai/blob/99091945cfc0002d2672b12e82bace376ed1f1fa/builds/stryde-her-dad/body/SC07/SC07-T1.v2.kie.log))
 - [yumeai-fantasy88 / flova — October 4, 2026 Seedance 2.0 production lessons: paired directional wording caused rhythmic repeated motion, body-timed effects looked self-generated, the documented repairs use a single irregular reaction and a prebuilt dormant effect with one ignition; followed by three committed 720p Seedance 2.0 cuts](https://github.com/yumeai-fantasy88/flova/commit/29d3fdf5faa4c64f4ed97181eb7e032e4a1b8d51) ([production rules](https://github.com/yumeai-fantasy88/flova/blob/29d3fdf5faa4c64f4ed97181eb7e032e4a1b8d51/CLAUDE.md), [finished cuts](https://github.com/yumeai-fantasy88/flova/commit/430431a8d0ebcab3646efbed59dc4867f14a5a2f))
