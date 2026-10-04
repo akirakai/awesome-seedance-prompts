@@ -461,6 +461,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Animal-height cake retrieval with exact-two-puppy reveal](#445-animal-height-cake-retrieval-with-exact-two-puppy-reveal)
   - [Cooling-forged blade circuit reveal in one macro take](#446-cooling-forged-blade-circuit-reveal-in-one-macro-take)
   - [Vanity self-recognition spiral with persistent product-cluster patch](#447-vanity-self-recognition-spiral-with-persistent-product-cluster-patch)
+  - [Frame-synchronous stair footsteps across a matched-axis cut](#448-frame-synchronous-stair-footsteps-across-a-matched-axis-cut)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -28677,6 +28678,95 @@ the [complete generation request](https://github.com/keys-exe/global-manual-ai/b
 the [post-run continuity, dialogue and residual-contact review](https://github.com/keys-exe/global-manual-ai/blob/fec8f287eebc3c61501b6862027f95b3ca387497/builds/facelove-walmart/BUILD_NOTES.md),
 and the [generated 24.06-second MP4](https://d8j0ntlcm91z4.cloudfront.net/user_3AViUeU5dIz6pgsjYszQ9iux9YN/hf_20261003_231459_cf9fd80f-2f4d-4723-85da-7082a6ba6963.mp4).
 
+
+### 448. Frame-synchronous stair footsteps across a matched-axis cut
+
+**Verified model:** Kie AI `bytedance/seedance-2-5` — the versioned request
+records the exact model, complete prompt, 7-second 720p 9:16 settings and native
+audio; the provider log records successful task
+`b7697d62645e7e5f4385e01f54cb971d`, a 441-credit charge and the generated MP4  \
+**Use case:** restrained live-action drama, stair blocking, matched-axis
+internal cut, frame-synchronous native foley, wearable-product continuity  \
+**Mode:** four-image ingredient/reference mode; no start frame  \
+**Verified settings:** 7 seconds; 9:16; 720p; two shots; native audio
+
+```text
+Create a seven-second vertical live-action prestige-drama scene at 24 fps with
+natural motion blur, restrained performance and one continuous descent across
+two matched-axis shots.
+
+REFERENCE AUTHORITY
+@Image1 owns only the older builder's face, hair, age and identity. Do not copy
+its clothes or crop.
+@Image2 owns the house staircase: one straight light-grey carpeted flight,
+handrail on frame-left when seen from above, plain wall on frame-right, oak
+hall floor and glazed front door at the foot. Keep its step count, rail and
+wall geometry unchanged.
+@Image3 is an outfit information card. It owns only the blue T-shirt, open grey
+fleece, black work shorts, socks and boots. Never render its card layout,
+caption strip or text.
+@Image4 owns only the shape and materials of one black patellar knee strap.
+Place that single strap on his bare RIGHT knee, just below the kneecap. Do not
+redesign, duplicate or move it to the other leg.
+
+SCENE STATE
+Bright weekday morning. Warm 5600K sunlight from the front-door glass travels
+up the flight and is the only key light. Nobody else is in the house. He begins
+at the top facing straight down the stairs, hands loose at his sides, never on
+the rail. He descends forwards at an easy even pace, one foot per step. His
+knees bend normally and his weight settles fully before the next step.
+
+SHOT 1 — 0.0-3.5s
+Full shot from high on the landing behind him, looking down the exact staircase
+from @Image2. Locked tripod. He walks down the first steps, left then right then
+left, hands free. End only when the current boot is fully planted and carrying
+weight.
+
+SHOT 2 — 3.5-7.0s
+Cut on that completed step to a full shot low in the hall, still on the same
+side of the action axis, looking up the flight. Resume from the exact planted
+foot, body phase and travel direction left by Shot 1. He comes down the final
+steps, the right-knee strap visible below the shorts, then steps onto the oak
+hall floor. His mouth stays closed. End with him standing fully settled at the
+foot of the stairs.
+
+CAMERA AND PHYSICS
+Both views are tripod-framed with no drift, sway, push, orbit or reframe. Permit
+at most one small late pan or tilt to keep him inside the composition. Weight
+transfers before each step; hips lead the torso; fabric and the strap lag
+slightly and settle after the body. Boots grip the carpet and never slide.
+Light direction, exposure, wardrobe, anatomy and staircase geometry remain
+continuous through the cut.
+
+FRAME-SYNCHRONOUS SOUND LEDGER
+For every visible boot-to-carpet contact, generate exactly one soft muffled
+thud whose onset is the first frame the sole touches that step. Add one faint
+tread creak only as weight loads onto that same foot. Let both decay before the
+next landing. Never play a step early, late, twice or without visible contact.
+When the final boot reaches the oak floor, replace the carpet thud with one
+firmer dry wooden knock exactly on contact. Underneath, use only quiet morning
+house tone. No voice, mouth movement, music or off-screen footsteps.
+
+REJECTION GATE
+Reject hand-to-rail contact, sideways descent, pausing on every step, changed
+step count, reversed screen direction, foot sliding, missing or doubled
+footfalls, carpet sound on the oak landing, strap on the left knee, covered
+knees, duplicate brace, wardrobe drift, extra person, bent stairs, cut-axis
+crossing, camera equipment, subtitles, logos or watermarks.
+```
+
+**Why it works:** the sound design is written as a contact ledger rather than
+the vague instruction "add footsteps." Each audible onset has one visible
+owner, surface and frame, while the final surface change receives a different
+sound. Cutting only after a planted step and resuming from the same gait phase
+also gives the second view a concrete motion state to inherit.
+
+Adapted and rewritten from keys-exe's October 4, 2026
+[Seedance 2.5 synchronized-footstep repair](https://github.com/keys-exe/global-manual-ai/commit/966072be6acd9d6e91cedb74bb7724bebc1ac9ef),
+the [complete prompt](https://github.com/keys-exe/global-manual-ai/blob/99091945cfc0002d2672b12e82bace376ed1f1fa/builds/stryde-her-dad/body/SC07/SC07-T1.prompt.txt),
+[versioned request](https://github.com/keys-exe/global-manual-ai/blob/99091945cfc0002d2672b12e82bace376ed1f1fa/builds/stryde-her-dad/body/SC07/SC07-T1.call.json)
+and [successful provider task with generated MP4 URL](https://github.com/keys-exe/global-manual-ai/blob/99091945cfc0002d2672b12e82bace376ed1f1fa/builds/stryde-her-dad/body/SC07/SC07-T1.v2.kie.log).
+
 ## Reusable templates
 
 
@@ -51368,6 +51458,7 @@ and the same-day [three committed Seedance 2.0 720p cuts](https://github.com/yum
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 4, 2026 Kie AI Seedance 2.5 staircase-descent repair: complete four-reference two-shot prompt, exact `bytedance/seedance-2-5` request, per-contact carpet/wood footstep timing, successful task ID, 441-credit ledger and generated MP4 URL](https://github.com/keys-exe/global-manual-ai/commit/966072be6acd9d6e91cedb74bb7724bebc1ac9ef) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/99091945cfc0002d2672b12e82bace376ed1f1fa/builds/stryde-her-dad/body/SC07/SC07-T1.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/99091945cfc0002d2672b12e82bace376ed1f1fa/builds/stryde-her-dad/body/SC07/SC07-T1.call.json), [successful task and result](https://github.com/keys-exe/global-manual-ai/blob/99091945cfc0002d2672b12e82bace376ed1f1fa/builds/stryde-her-dad/body/SC07/SC07-T1.v2.kie.log))
 - [yumeai-fantasy88 / flova — October 4, 2026 Seedance 2.0 production lessons: paired directional wording caused rhythmic repeated motion, body-timed effects looked self-generated, the documented repairs use a single irregular reaction and a prebuilt dormant effect with one ignition; followed by three committed 720p Seedance 2.0 cuts](https://github.com/yumeai-fantasy88/flova/commit/29d3fdf5faa4c64f4ed97181eb7e032e4a1b8d51) ([production rules](https://github.com/yumeai-fantasy88/flova/blob/29d3fdf5faa4c64f4ed97181eb7e032e4a1b8d51/CLAUDE.md), [finished cuts](https://github.com/yumeai-fantasy88/flova/commit/430431a8d0ebcab3646efbed59dc4867f14a5a2f))
 
 - [Ferrem / media-producer-mcp — October 4, 2026 live Seedance 2.5 reference-to-video actor tests: exact Higgsfield and Atlas request routes, complete performance-transfer prompt, silent-motion preprocessing after measured double-voice leakage, one-second speech headroom after late lip-sync loss, and self-voiced raw-audio preservation after an export replaced it with another take](https://github.com/ferrem01/media-producer-mcp/commit/35c5781ea67a3ad6907a9d22ba8d0281630a7bd6) ([headroom repair](https://github.com/ferrem01/media-producer-mcp/commit/ba737870dda9202f175d7cb7f268ba6b2e6652bb), [silent-motion fix](https://github.com/ferrem01/media-producer-mcp/commit/de8ed2721cdd0c14036266d77d5f0816979c0c65), [raw-audio correction](https://github.com/ferrem01/media-producer-mcp/commit/ee7d94b0bcfe0a3a1ef169dacfd3a6541dc3c5fd))
