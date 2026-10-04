@@ -51229,7 +51229,83 @@ the [iteration and failure-control record](https://github.com/LigoLabs/Stedi/blo
 and the committed [WebM](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.webm)
 and [MP4](https://github.com/LigoLabs/Stedi/blob/f116dd300d6bbadc962c569d9981f8ddd0adcfd5/assets/video/intro.mp4) results.
 
+### Silent-motion reference, voice-headroom and self-voiced-output gate
+
+**Verified model:** Seedance 2.5 — the original operator documents live
+`bytedance/seedance-2.5/reference-to-video` runs through Higgsfield and Atlas
+Cloud, the exact multimodal request shape, and three measured failures: a
+voiced motion reference produced two competing speakers, a duration matched
+too tightly to the supplied speech lost lip sync near the end, and a finishing
+step replaced the model's correctly synchronized raw audio with another take.
+
+**Use case:** transfer an adult performer's motion while a separate approved
+voice track controls the words, timing and lip sync  
+**Mode:** identity/start image + silent motion video + voice audio ->
+reference-to-video with generated audio -> raw-audio-preserving finish
+
+```text
+REFERENCE AUTHORITY
+@Image1 = FIRST-FRAME AND IDENTITY ANCHOR: [FACE, HAIR, WARDROBE, FRAMING].
+@Image2..N = optional CHARACTER SHEETS: [IDENTITY DETAILS ONLY].
+@Video1 = MOTION CARRIER: [HEAD MOVEMENT, GESTURES, TIMING AND ENERGY ONLY].
+@Audio1 = SOLE SPEECH AUTHORITY: [WORDS, VOICE, PRONUNCIATION, PAUSES, EMOTION].
+
+PRE-SUBMIT AUDIO ISOLATION
+Decode @Video1. If it contains any audio stream, make a video-only copy without
+re-encoding its picture; submit that silent copy as @Video1. Never let the
+donor performance's voice compete with @Audio1.
+
+Measure the decoded duration of @Audio1 as D. Request enough room for the final
+word and closing mouth state: start with ceil(D) + 1 second, bounded by the
+route's supported duration. Do not time-stretch the approved speech to fill the
+clip. Enable generated audio because Seedance must render the supplied voice
+where it synchronizes the mouth.
+
+PROMPT CONTRACT
+@Image1 is the first frame and visible identity. @Image2..N describe the same
+person. @Video1 supplies only performance motion and timing; ignore its person,
+face, hair, clothes, setting and all sound. @Audio1 supplies the exact spoken
+words, voice and timing. The person from @Image1 performs @Video1's head and
+hand movement while speaking @Audio1 once with accurate lip sync.
+
+Keep the mouth readable, the identity and wardrobe stable, and the camera and
+setting fixed to [SHOT CONTRACT]. Dry close voice, no second speaker, no donor
+voice, no paraphrase, no repeated line, no music, no caption or on-screen text.
+
+RAW-OUTPUT AUDIO OWNERSHIP
+The completed Seedance file is self-voiced: its own audio is the authority
+because that is the stream generated against its mouth motion. Preserve that
+stream through transcode and assembly. Do not replace it with @Audio1, the
+original @Video1 soundtrack or another take merely because those files share
+the script. If the raw output has no audio, fail the job instead of silently
+substituting one.
+
+ACCEPTANCE GATE
+- confirm the submitted motion carrier has zero audio streams;
+- compare raw output and final export for identical speech and timing;
+- reject overlapping voices, donor-voice leakage, extra words or music;
+- verify the final phrase finishes before the last frame and lip sync holds;
+- if sync drifts late, increase output headroom before changing performance;
+- if only the finished export is wrong, restore the raw Seedance audio rather
+  than regenerating the picture.
+```
+
+**Why it works:** motion, identity and speech are independent inputs, but a
+video reference can smuggle in an undeclared second voice. Removing that stream
+makes the authority map real rather than rhetorical. A small measured duration
+buffer prevents the model from compressing the last phrase, while preserving
+the self-voiced raw result avoids destroying the synchronization Seedance
+already solved.
+
+Adapted and rewritten from Ferrem's October 4, 2026
+[Higgsfield Seedance 2.5 performance-transfer implementation](https://github.com/ferrem01/media-producer-mcp/commit/35c5781ea67a3ad6907a9d22ba8d0281630a7bd6),
+[one-voice and duration-headroom repair](https://github.com/ferrem01/media-producer-mcp/commit/ba737870dda9202f175d7cb7f268ba6b2e6652bb),
+[measured Atlas double-voice failure and silent-motion fix](https://github.com/ferrem01/media-producer-mcp/commit/de8ed2721cdd0c14036266d77d5f0816979c0c65)
+and [raw-output audio ownership correction](https://github.com/ferrem01/media-producer-mcp/commit/ee7d94b0bcfe0a3a1ef169dacfd3a6541dc3c5fd).
+
+---
 ## Sources
+- [Ferrem / media-producer-mcp — October 4, 2026 live Seedance 2.5 reference-to-video actor tests: exact Higgsfield and Atlas request routes, complete performance-transfer prompt, silent-motion preprocessing after measured double-voice leakage, one-second speech headroom after late lip-sync loss, and self-voiced raw-audio preservation after an export replaced it with another take](https://github.com/ferrem01/media-producer-mcp/commit/35c5781ea67a3ad6907a9d22ba8d0281630a7bd6) ([headroom repair](https://github.com/ferrem01/media-producer-mcp/commit/ba737870dda9202f175d7cb7f268ba6b2e6652bb), [silent-motion fix](https://github.com/ferrem01/media-producer-mcp/commit/de8ed2721cdd0c14036266d77d5f0816979c0c65), [raw-audio correction](https://github.com/ferrem01/media-producer-mcp/commit/ee7d94b0bcfe0a3a1ef169dacfd3a6541dc3c5fd))
 - [Ori Silver — October 3, 2026 Seedance 2.5 external-voice performance: generated result plus the disclosed workflow of embedding ElevenLabs v4 audio in a full-black video, trimming it exactly to the character-shot duration and pairing it with the shot image as visual reference](https://x.com/OriSilver/status/2106380515276165463)
 
 - [Theshara Avakian / HZORTECH — September 30, 2026 completed Higgsfield Seedance 2.0 text-to-video forge film, first published October 3: exact `bytedance/seedance-2.0/text-to-video` route, request ID, complete prompt, 12-second 1080p 16:9 arguments, completed result URL and 145-frame website extraction](https://github.com/Thesharaavakian/hzortech/commit/ed0e4108e8079fd30ada676c16be7fdae09b07e2) ([request ledger](https://github.com/Thesharaavakian/hzortech/blob/ed0e4108e8079fd30ada676c16be7fdae09b07e2/assets/higgsfield-ledger.json), [original prompt](https://github.com/Thesharaavakian/hzortech/blob/ed0e4108e8079fd30ada676c16be7fdae09b07e2/assets/prompts/home-forge.txt), [committed frame sequence](https://github.com/Thesharaavakian/hzortech/tree/ed0e4108e8079fd30ada676c16be7fdae09b07e2/business_page/static/business_page/seq/forge-d90931a5))
