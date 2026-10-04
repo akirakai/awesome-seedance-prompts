@@ -28878,6 +28878,92 @@ and the operator's
 ## Reusable templates
 
 
+### Similarity-transform counter-warp that preserves handheld jitter
+
+**Verified model:** Higgsfield Seedance 2.5 `omni_reference`, draft 480p,
+11 seconds, 33 credits. The production ledger identifies job
+`29917519-7846-4363-a6aa-c410c4fd5e5d`; its accepted picture was upscaled
+with ByteDance's UGC preset to 1080p/24 fps as job
+`534bab01-9bcc-4e83-9666-7e0642331766`. The shipped repair corrects a 6.7%
+counter-zoom plus translation drift beginning at 6.7 seconds and is used by
+the final edit.
+
+**Evidence boundary:** this is a post-generation failure-control template for
+an explicitly logged Seedance 2.5 take. It counts as one reusable technique,
+not as a new complete scenario prompt.
+
+**Use when:** an otherwise usable UGC, selfie or locked-composition take slowly
+zooms or drifts after a gesture, but its natural handheld micro-jitter,
+performance, identity, speech and lip sync should remain untouched.
+
+```text
+DIAGNOSE BEFORE REPAIR
+Confirm that the defect is low-frequency camera framing, not subject motion,
+lens breathing that carries narrative intent, rolling shutter or geometry
+collapse. Choose the last clean frame before the drift as [REFERENCE TIME].
+Record [CORRECTION START], [EASE DURATION] and the stable background region
+used for motion estimation.
+
+ONE-VARIABLE REPAIR CONTRACT
+Change only camera geometry after [CORRECTION START].
+Do not regenerate, retime, interpolate or alter the performer, dialogue,
+expression, gesture, identity, lighting or audio. Preserve the original
+high-frequency handheld movement.
+
+MOTION ESTIMATION
+1. Downscale analysis frames for speed while preserving aspect ratio.
+2. Detect and match background features between adjacent frames.
+3. Reject bad matches with a robust estimator such as RANSAC.
+4. Estimate a per-frame similarity transform: uniform scale plus X/Y
+   translation; include rotation only if the shot truly needs it.
+5. Accumulate the transforms into a camera path.
+6. Smooth only the slow path component. Do not smooth the source frames
+   themselves and do not erase short handheld fluctuations.
+
+COUNTER-WARP
+At [REFERENCE TIME], store the clean accumulated scale and translation.
+For each later frame:
+- calculate the inverse transform from its smoothed camera path back to the
+  reference framing;
+- ease the correction from zero to full strength over about 0.2–0.3 seconds;
+- apply the similarity warp at high resampling quality;
+- add only the minimum centre zoom needed to cover exposed borders;
+- keep the original frame before the correction start unchanged.
+
+DELIVERY
+Encode a high-quality video-only repair, preserve the source frame rate and
+dimensions, and remux or reconnect the untouched production audio in the edit.
+Archive the source take, model/job metadata, reference time, motion-estimation
+settings, maximum correction scale and repaired output together.
+
+ACCEPTANCE GATE
+- subject size and background framing no longer drift after the trigger;
+- intended handheld jitter remains visible rather than becoming tripod-static;
+- no sudden correction ramp, border exposure or repeated-edge smear;
+- no wobbling faces, bending car interiors or foreground/background parallax
+  conflict;
+- gesture timing, mouth motion, dialogue and audio remain frame-aligned;
+- the smallest sufficient crop or zoom is used;
+- compare repaired and source frames before replacing the timeline asset.
+If feature tracks attach to the moving subject or foreground occlusion, mask
+those regions or select a more stable background; do not increase smoothing
+until the error is hidden.
+```
+
+**Why it works:** accidental reframing and believable handheld movement occupy
+different temporal bands. Estimating a robust similarity path and correcting
+only its slow component removes the unwanted zoom/drift while retaining the
+small irregular motion that makes UGC footage feel photographed rather than
+mechanically stabilized.
+
+Adapted and rewritten from David0524 / MyFastRX's October 4, 2026
+[shipped stabilization commit](https://github.com/David0524/MyFastRX/commit/bfbe21ab8363adbd58205e73167603b76f1f9a0b),
+[exact Seedance generation ledger](https://github.com/David0524/MyFastRX/blob/bfbe21ab8363adbd58205e73167603b76f1f9a0b/ads/glp1-glass/footage/gen/README.md),
+[repair implementation](https://github.com/David0524/MyFastRX/blob/bfbe21ab8363adbd58205e73167603b76f1f9a0b/ads/glp1-glass/tools/stabilize-clipA.py)
+and the [repaired delivery clip](https://github.com/David0524/MyFastRX/blob/bfbe21ab8363adbd58205e73167603b76f1f9a0b/ads/glp1-glass/footage/gen/car_clipA_1080p_stab.mp4).
+
+
+
 ### Post-owned phone UI with measured touch-contact handoff
 
 **Verified model:** Higgsfield Seedance 2.0, exact account route
@@ -51816,6 +51902,7 @@ and the same-day [three committed Seedance 2.0 720p cuts](https://github.com/yum
 
 ---
 ## Sources
+- [David0524 / MyFastRX — October 4, 2026 Seedance 2.5 `omni_reference` drift-preserving counter-warp: exact 480p/11-second/33-credit job, ByteDance 1080p upscale job, ORB/RANSAC similarity-path repair from 6.7 seconds, 0.25-second ease, minimal border-cover zoom, repaired output and final-timeline substitution](https://github.com/David0524/MyFastRX/commit/bfbe21ab8363adbd58205e73167603b76f1f9a0b) ([generation ledger](https://github.com/David0524/MyFastRX/blob/bfbe21ab8363adbd58205e73167603b76f1f9a0b/ads/glp1-glass/footage/gen/README.md), [implementation](https://github.com/David0524/MyFastRX/blob/bfbe21ab8363adbd58205e73167603b76f1f9a0b/ads/glp1-glass/tools/stabilize-clipA.py), [repaired clip](https://github.com/David0524/MyFastRX/blob/bfbe21ab8363adbd58205e73167603b76f1f9a0b/ads/glp1-glass/footage/gen/car_clipA_1080p_stab.mp4))
 - [Evelyn Park / SandBase — October 4, 2026 matched product-video benchmark: complete prompts, exact `bytedance/seedance/2.5/text-to-video` and `bytedance/seedance/2.0/fast/text-to-video` routes, five-second 720p output metadata, billed tasks, fixed rubric and frame-reviewed text, pour, camera and object-continuity results](https://blog.sandbase.ai/ai-video-generation-api-benchmark-veo-3-1-kling-seedance-2026/)
 - [Ferrem / media-producer-mcp — October 4, 2026 Seedance 2.5 chained-set continuity repair: exact `bytedance/seedance-2.5/reference-to-video` pipeline, seven-scene apartment and couch drift report, persistent canonical room image appended as the final reference, explicit environment-only role, asset validation and regression tests](https://github.com/ferrem01/media-producer-mcp/commit/d0571579eecb14c75293cf628e064b91eb8caf3a) ([performance path](https://github.com/ferrem01/media-producer-mcp/blob/d0571579eecb14c75293cf628e064b91eb8caf3a/src/core/scene-performance.ts), [reference-role builder](https://github.com/ferrem01/media-producer-mcp/blob/d0571579eecb14c75293cf628e064b91eb8caf3a/src/core/seedance.ts), [tests](https://github.com/ferrem01/media-producer-mcp/blob/d0571579eecb14c75293cf628e064b91eb8caf3a/test/scene-performance.test.ts))
 - [Ferrem / media-producer-mcp — October 4, 2026 Seedance 2.5 delivery-control gate: exact `bytedance/seedance-2.5/reference-to-video` pipeline, separate canonical script and delivery fields, ElevenLabs v4 acting marks, voice-only preview with duration and pitch, and pre-spend human acceptance before video generation](https://github.com/ferrem01/media-producer-mcp/commit/db391e1e6ca91f0d6f0cc353e41087108901011d) ([implementation](https://github.com/ferrem01/media-producer-mcp/blob/db391e1e6ca91f0d6f0cc353e41087108901011d/src/core/scene-performance.ts), [route](https://github.com/ferrem01/media-producer-mcp/blob/db391e1e6ca91f0d6f0cc353e41087108901011d/src/core/seedance.ts), [tests](https://github.com/ferrem01/media-producer-mcp/blob/db391e1e6ca91f0d6f0cc353e41087108901011d/test/scene-performance.test.ts))
