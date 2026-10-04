@@ -51303,8 +51303,73 @@ Adapted and rewritten from Ferrem's October 4, 2026
 [measured Atlas double-voice failure and silent-motion fix](https://github.com/ferrem01/media-producer-mcp/commit/de8ed2721cdd0c14036266d77d5f0816979c0c65)
 and [raw-output audio ownership correction](https://github.com/ferrem01/media-producer-mcp/commit/ee7d94b0bcfe0a3a1ef169dacfd3a6541dc3c5fd).
 
+
+### Dormant-state ignition and one-shot reaction gate
+
+**Verified model:** Seedance 2.0 — the creator's project rules label the video
+workflow as Seedance 2.0, record the two observed failure modes below, and the
+same production repository commits three finished 720p files whose names
+explicitly identify Seedance 2.0.
+
+**Use case:** make a light, magic mark, apparition or other effect appear
+autonomously without looking emitted by a character, while keeping surprise
+from turning into a rhythmic left-right dance  
+**Mode:** approved start frame containing the complete dormant effect -> one
+independent state change -> one non-periodic reaction
+
+```text
+START-FRAME CONTRACT
+@Image1 is the exact first frame. [EFFECT] already exists at [WORLD-LOCKED
+LOCATION] with its complete final geometry visible, but it is dormant:
+[UNLIT / DARK / TRANSPARENT / INACTIVE STATE]. It is a separate scene object,
+not attached to [SUBJECT]'s hands, feet, body or motion path.
+
+0–[A]s — BASELINE
+Fixed [SHOT SIZE / ANGLE]. [SUBJECT] performs only [ONE SMALL BASELINE ACTION].
+[EFFECT] remains in the same position, scale and shape and stays dormant.
+No glow, emission trail, connecting beam or body-synchronized pulse.
+
+At exactly [A]s — AUTONOMOUS IGNITION
+Without contact or gesture from [SUBJECT], [EFFECT] lights up once from
+[INTERNAL OR ENVIRONMENTAL ORIGIN]. Change only [BRIGHTNESS / COLOR / OPACITY];
+keep its geometry and world position unchanged. No energy travels from the
+character to the effect.
+
+[A]–[B]s — SINGLE REACTION
+Only after the ignition is visible, [SUBJECT] notices it and makes one
+asymmetrical surprise response: [EYES] -> [HEAD OR TORSO] -> [ONE SETTLING
+POSE]. The response is irregular and happens once. Do not alternate left and
+right, return through center, repeat, bounce, sway or establish a beat.
+
+CAMERA AND SOUND
+Camera remains [FIXED / SINGLE CONTROLLED MOVE]. [PRECISE AMBIENCE OR COMPLETE
+SILENCE]. No music, captions or on-screen text unless explicitly required.
+
+ACCEPTANCE GATE
+- the complete effect is visibly present but dormant before it activates;
+- ignition occurs once and is not temporally coupled to hands, feet or gesture;
+- the subject reacts after the event, not simultaneously or beforehand;
+- there is no left-center-right-center cycle or other repeated motion;
+- effect geometry, subject identity, anatomy, wardrobe and scene layout remain
+  stable through the final settled pose.
+```
+
+**Why it works:** asking the model to create an effect during a foot or hand
+movement can visually assign that effect to the performer. Prebuilding the
+whole effect as a dormant scene object turns generation into a small state
+change instead of simultaneous invention, placement and animation. A single
+asymmetrical reaction also removes the paired directional wording that the
+creator observed becoming a repeated dance pattern.
+
+Adapted and rewritten from yumeai-fantasy88's October 4, 2026
+[Seedance 2.0 motion-failure notes](https://github.com/yumeai-fantasy88/flova/commit/29d3fdf5faa4c64f4ed97181eb7e032e4a1b8d51),
+the version-labeled [production rules](https://github.com/yumeai-fantasy88/flova/blob/29d3fdf5faa4c64f4ed97181eb7e032e4a1b8d51/CLAUDE.md)
+and the same-day [three committed Seedance 2.0 720p cuts](https://github.com/yumeai-fantasy88/flova/commit/430431a8d0ebcab3646efbed59dc4867f14a5a2f).
+
 ---
 ## Sources
+- [yumeai-fantasy88 / flova — October 4, 2026 Seedance 2.0 production lessons: paired directional wording caused rhythmic repeated motion, body-timed effects looked self-generated, the documented repairs use a single irregular reaction and a prebuilt dormant effect with one ignition; followed by three committed 720p Seedance 2.0 cuts](https://github.com/yumeai-fantasy88/flova/commit/29d3fdf5faa4c64f4ed97181eb7e032e4a1b8d51) ([production rules](https://github.com/yumeai-fantasy88/flova/blob/29d3fdf5faa4c64f4ed97181eb7e032e4a1b8d51/CLAUDE.md), [finished cuts](https://github.com/yumeai-fantasy88/flova/commit/430431a8d0ebcab3646efbed59dc4867f14a5a2f))
+
 - [Ferrem / media-producer-mcp — October 4, 2026 live Seedance 2.5 reference-to-video actor tests: exact Higgsfield and Atlas request routes, complete performance-transfer prompt, silent-motion preprocessing after measured double-voice leakage, one-second speech headroom after late lip-sync loss, and self-voiced raw-audio preservation after an export replaced it with another take](https://github.com/ferrem01/media-producer-mcp/commit/35c5781ea67a3ad6907a9d22ba8d0281630a7bd6) ([headroom repair](https://github.com/ferrem01/media-producer-mcp/commit/ba737870dda9202f175d7cb7f268ba6b2e6652bb), [silent-motion fix](https://github.com/ferrem01/media-producer-mcp/commit/de8ed2721cdd0c14036266d77d5f0816979c0c65), [raw-audio correction](https://github.com/ferrem01/media-producer-mcp/commit/ee7d94b0bcfe0a3a1ef169dacfd3a6541dc3c5fd))
 - [Ori Silver — October 3, 2026 Seedance 2.5 external-voice performance: generated result plus the disclosed workflow of embedding ElevenLabs v4 audio in a full-black video, trimming it exactly to the character-shot duration and pairing it with the shot image as visual reference](https://x.com/OriSilver/status/2106380515276165463)
 
