@@ -475,6 +475,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Multi-view product truth with placement-only wear reference](#459-multi-view-product-truth-with-placement-only-wear-reference)
   - [Cross-scene dialogue oner with endpoint position lock](#460-cross-scene-dialogue-oner-with-endpoint-position-lock)
   - [Accepted-prefix kitchen-dialogue tail repair with continuity-frame handoff](#461-accepted-prefix-kitchen-dialogue-tail-repair-with-continuity-frame-handoff)
+  - [Sideways stair descent with tread-scale and distant doorway lock](#462-sideways-stair-descent-with-tread-scale-and-distant-doorway-lock)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -29916,6 +29917,104 @@ the [exact request and reference ledger](https://github.com/keys-exe/global-manu
 the [successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/210f4b219aeebe5f49186b36fe201ffe16b4fa1b/builds/stryde-the-impression/film/SC06/SC06-T.g2part.kie.log)
 and the [join and QC notes](https://github.com/keys-exe/global-manual-ai/blob/210f4b219aeebe5f49186b36fe201ffe16b4fa1b/builds/stryde-the-impression/BUILD_NOTES.md).
 
+### 462. Sideways stair descent with tread-scale and distant doorway lock
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the creator published the complete second-generation
+prompt and request after reviewing the first take, then recorded a successful
+567-credit task and returned MP4. The first take made the older man descend
+upright, forward-facing and hands-free while moving the watching woman out of
+her assigned doorway. The repair turns both failures into explicit physical and
+spatial contracts. The second take remained `To check`, so generation and the
+repair structure are verified here without claiming final artistic approval.
+
+**Use case:** physically readable older-person stair movement while a second
+character remains a distant, stationary observer in a deep domestic set  
+**Mode:** two identity references + two outfit references + one canonical
+hall/stair reference -> reference-to-video  
+**Verified settings:** 9s, 9:16, 720p, generated audio off, two-shot scene
+
+```text
+REFERENCE CONTRACT
+@Image1 owns only the older woman's face, age, hair and build.
+@Image2 owns only her lilac crew-neck jumper, grey straight trousers and navy
+felt slippers.
+@Image3 owns only the older man's face, age, hair and build.
+@Image4 owns only his grey cardigan, blue checked shirt, tan chinos and brown
+suede slippers.
+@Image5 owns the hall and staircase geometry, furniture, doorway positions and
+light direction. It is spatial evidence, never a cutaway or a source of clothing.
+
+FIXED SET GEOGRAPHY
+View the hall from just inside the front door. The tiled hall runs straight away
+from camera to the open kitchen doorway at the far end. A single straight flight
+of fourteen equal carpeted steps climbs away along the left wall. Each tread is
+about 24 cm deep and each riser about 19 cm high. The dark banister and large
+bottom newel post are on the flight's open hall side. Beside the foot of the
+stairs is a small table holding one brass dish and one pair of reading glasses.
+
+BLOCKING LOCK
+The older man begins at the top of the stairs, side-on to the flight, both hands
+already gripping the banister. The older woman stands inside the distant kitchen
+doorway with a tea towel in both hands. She stays inside that doorway for the
+entire scene: never entering the hall, approaching the stairs or appearing at
+their foot.
+
+SHOT 1 — 0–6s
+Full shot at standing eye height from just inside the front door. Keep the
+stairs at left and the kitchen doorway visible at the far end. The man descends
+toward camera slowly and with effort, body side-on to the flight.
+
+For every step:
+1. both hands keep contact with the rail and slide only far enough for the next
+   movement;
+2. he lowers one foot onto the next tread;
+3. his weight settles visibly through that foot and braced arms;
+4. the other foot joins it on the same tread before the next descent begins.
+
+His shoulders tense, elbows bear weight and knees flex under gravity. He never
+walks forward down the stairs, skips a tread, lets go, stumbles or falls. Far
+down the hall, the woman remains small but sharp inside the kitchen doorway,
+watching him without moving. Hold the tripod position and tilt down only a few
+degrees as he approaches.
+
+SHOT 2 — 6–9s
+Cut to an eye-level profile close-up of the woman while preserving the same
+screen direction. The white kitchen doorframe remains beside her and the lit
+kitchen stays soft behind. She holds the tea towel still, looks along the hall
+toward him and slowly breathes out through her nose. She does not speak or leave
+the doorway.
+
+ENDPOINT
+The man reaches the bottom safely, keeps one hand on the large newel post and
+reaches with the other toward the reading glasses in the brass dish. The woman
+is still inside the distant kitchen doorway with the tea towel in both hands.
+
+LOOK AND FAILURE GATE
+Use restrained live-action family-drama photography, warm evening practical
+light, real skin and fabric, natural 24 fps motion blur and consistent scale.
+The man must remain proportionate to the staircase: feet occupy the same or
+neighbouring treads, never widely separated steps. Reject forward-facing stair
+walking, free hands, floating feet, reversed stairs, changed rail side, missing
+treads, body resizing, a fall, the woman in the hall, doorway teleportation,
+camera-axis reversal, extra person, text, logo or watermark.
+```
+
+**Why it works:** “struggle downstairs” is too abstract to control posture,
+support and timing. The repaired prompt describes a repeatable four-phase step
+cycle—rail contact, foot placement, load transfer and feet reunited—while real
+tread dimensions stop the performer from growing or spanning impossible
+distances. Repeating the observer's doorway state in blocking, both shots,
+endpoint and rejection criteria prevents a close-up from silently relocating
+her.
+
+Adapted and rewritten from keys-exe's October 5, 2026
+[review-driven Seedance 2.5 repair commit](https://github.com/keys-exe/global-manual-ai/commit/e252fd322c9ce14e224a4a86b2229c22dd4a52a7),
+the [complete second-generation prompt](https://github.com/keys-exe/global-manual-ai/blob/e252fd322c9ce14e224a4a86b2229c22dd4a52a7/builds/stryde-the-impression/film/SC07/SC07-T.prompt.txt),
+the [exact request and failure ledger](https://github.com/keys-exe/global-manual-ai/blob/e252fd322c9ce14e224a4a86b2229c22dd4a52a7/builds/stryde-the-impression/film/SC07/SC07-T.call.json),
+the [successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/e252fd322c9ce14e224a4a86b2229c22dd4a52a7/builds/stryde-the-impression/film/SC07/SC07-T.v2.kie.log)
+and the [creator review history](https://github.com/keys-exe/global-manual-ai/blob/e252fd322c9ce14e224a4a86b2229c22dd4a52a7/builds/stryde-the-impression/BUILD_NOTES.md).
+
 ## Reusable templates
 
 
@@ -53432,6 +53531,7 @@ and the immediately preceding
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 5, 2026 Seedance 2.5 sideways stair-descent repair: complete second-generation prompt, exact `bytedance/seedance-2-5` request, successful 567-credit task, explicit rail-contact and tread-scale mechanics, and a distant observer locked inside the kitchen doorway](https://github.com/keys-exe/global-manual-ai/commit/e252fd322c9ce14e224a4a86b2229c22dd4a52a7) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/e252fd322c9ce14e224a4a86b2229c22dd4a52a7/builds/stryde-the-impression/film/SC07/SC07-T.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/e252fd322c9ce14e224a4a86b2229c22dd4a52a7/builds/stryde-the-impression/film/SC07/SC07-T.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/e252fd322c9ce14e224a4a86b2229c22dd4a52a7/builds/stryde-the-impression/film/SC07/SC07-T.v2.kie.log), [review history](https://github.com/keys-exe/global-manual-ai/blob/e252fd322c9ce14e224a4a86b2229c22dd4a52a7/builds/stryde-the-impression/BUILD_NOTES.md))
 - [keys-exe / global-manual-ai — October 5, 2026 Seedance 2.5 accepted-prefix kitchen-dialogue tail repair: complete replacement prompt, exact `bytedance/seedance-2-5` request, successful 693-credit task, actual 8.9-second continuity frame, retained 0–9-second prefix, 11-second suffix and inspected 20.07-second join](https://github.com/keys-exe/global-manual-ai/commit/210f4b219aeebe5f49186b36fe201ffe16b4fa1b) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/210f4b219aeebe5f49186b36fe201ffe16b4fa1b/builds/stryde-the-impression/film/SC06/SC06-T.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/210f4b219aeebe5f49186b36fe201ffe16b4fa1b/builds/stryde-the-impression/film/SC06/SC06-T.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/210f4b219aeebe5f49186b36fe201ffe16b4fa1b/builds/stryde-the-impression/film/SC06/SC06-T.g2part.kie.log), [join/QC](https://github.com/keys-exe/global-manual-ai/blob/210f4b219aeebe5f49186b36fe201ffe16b4fa1b/builds/stryde-the-impression/BUILD_NOTES.md))
 - [ferrem01 / media-producer-mcp — October 5, 2026 Seedance 2.5 native-voice room-match audition: non-destructive copies preserve the native lip-sync clock and picture while testing phone/lav shaping, short room decay, continuous room tone and a linear -17 LUFS pass; regression proves the signal path and prevents automatic attachment](https://github.com/ferrem01/media-producer-mcp/commit/48242e771340d6b398d9c3a45134f8db197e3231) ([workflow](https://github.com/ferrem01/media-producer-mcp/blob/48242e771340d6b398d9c3a45134f8db197e3231/src/core/scene-performance.ts), [treatment](https://github.com/ferrem01/media-producer-mcp/blob/48242e771340d6b398d9c3a45134f8db197e3231/src/core/voice-room.ts), [exact route](https://github.com/ferrem01/media-producer-mcp/blob/48242e771340d6b398d9c3a45134f8db197e3231/src/core/seedance.ts), [regressions](https://github.com/ferrem01/media-producer-mcp/blob/48242e771340d6b398d9c3a45134f8db197e3231/test/voice-room.test.ts))
 - [ferrem01 / media-producer-mcp — October 5, 2026 Seedance 2.5 voice-preview identity and tempo gate: pitch-preserving 0.80–1.25 tempo preprocessing, exact audition-to-generation audio reuse, voice-ID fingerprints, draft invalidation and stale-take detection](https://github.com/ferrem01/media-producer-mcp/commit/d5c402844ca0f34a47c2d36f78d52adfa8c938a0) ([pipeline](https://github.com/ferrem01/media-producer-mcp/blob/d5c402844ca0f34a47c2d36f78d52adfa8c938a0/src/core/scene-performance.ts), [exact route](https://github.com/ferrem01/media-producer-mcp/blob/d5c402844ca0f34a47c2d36f78d52adfa8c938a0/src/core/seedance.ts), [regressions](https://github.com/ferrem01/media-producer-mcp/blob/d5c402844ca0f34a47c2d36f78d52adfa8c938a0/test/scene-performance.test.ts))
