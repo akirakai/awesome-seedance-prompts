@@ -52030,8 +52030,96 @@ Adapted and rewritten from yumeai-fantasy88's October 4, 2026
 the version-labeled [production rules](https://github.com/yumeai-fantasy88/flova/blob/29d3fdf5faa4c64f4ed97181eb7e032e4a1b8d51/CLAUDE.md)
 and the same-day [three committed Seedance 2.0 720p cuts](https://github.com/yumeai-fantasy88/flova/commit/430431a8d0ebcab3646efbed59dc4867f14a5a2f).
 
+
+### Neutral character-voice master with continuous-read and transcript gate
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the original production record contains three
+successful 720p, 9:16 character-voice jobs, their complete prompts, paid task
+receipts and returned MP4s. The operator preserved each generated soundtrack,
+trimmed only idle silence outside the spoken region, ran a no-music check and
+logged the heard transcript. The three structurally identical character runs
+support one reusable template, not three separately counted scenarios.
+
+**Evidence boundary:** generation and technical audio checks are complete; the
+board still labels the voice masters for human review. Treat this as a verified
+master-capture workflow, not proof that every accent or performance choice was
+artistically approved.
+
+**Use case:** generate a clean, reusable native-audio voice master for one
+recurring animated or stylized character before producing dialogue scenes  
+**Mode:** face-only identity crop + continuous neutral read -> Seedance native
+audio -> silence-trimmed, transcript-checked master
+
+```text
+REFERENCE AUTHORITY
+@Image1 is [CHARACTER]'s confirmed face, apparent age and hair only. It does
+not own pose, background, clothing, camera, action or editing. The prose below
+owns the shot and performance. Do not cut to or reproduce the reference sheet.
+
+NEUTRAL MASTER SHOT
+A single uninterrupted [ANIMATION / FILM] frame: plain medium close-up of
+[CHARACTER DESCRIPTION] against a plain [BACKGROUND COLOR] wall. Soft daylight
+from [LEFT / RIGHT]. Locked camera, nothing else in frame. The character looks
+just off the lens at a person beside the camera, never directly into it.
+
+CONTINUOUS READ
+Starting immediately, [CHARACTER] says every sentence below once, in order,
+clearly and completely, with only an ordinary breath between sentences:
+"[CANONICAL MASTER LINES]"
+
+Keep speaking from the first second to the last. No long silence, restart,
+paraphrase, repeated phrase or omitted word. Mouth shapes remain clear and
+readable; jaw motion carries every spoken word.
+
+VOICE FINGERPRINT
+[AGE / REGION / ACCENT / REGISTER / TIMBRE / RHYTHM / SOCIAL BACKGROUND].
+Statements [FALL / LIFT] at their ends. Keep the performance level, even and
+unhurried at conversational volume. This is a neutral calibration read: no
+scene-specific emotion, no theatrical projection and no caricature.
+
+AUDIO CONTRACT
+Clean close studio voice recorded for animation, with natural breath, texture
+and small human sounds; never flat or synthetic. One speaker only. No room
+echo, phone quality, music, score, singing, humming or background soundtrack.
+
+VISUAL AND TEXT NEGATIVES
+No other person, second voice, direct-to-lens stare, camera move, cut, caption,
+subtitle, logo, watermark, visible text, long pause or silent dramatic beat.
+
+MASTER EXTRACTION GATE
+1. Preserve Seedance's generated audio by stream copy; do not replace, remix,
+   pitch-shift or time-stretch it.
+2. Measure the first and last voiced samples. Trim only idle silence outside
+   speech, leaving small natural handles such as [0.4 s] before and [0.5 s]
+   after; never cut a breath, consonant or word ending.
+3. Run a music/soundtrack detector and require CLEAN.
+4. Listen through and store the exact heard transcript beside the task ID,
+   model, credits, raw duration, voiced interval and master duration.
+5. Reject a master with a missing, invented, repeated or reordered word,
+   competing voice, music, clipped edge, unstable identity or unreadable mouth.
+6. Keep separate masters per character. Reuse the accepted master as a voice
+   source later; do not regenerate it merely because a scene changes.
+```
+
+**Why it works:** a plain locked shot removes scene acting, camera motion and
+environmental sound as competing variables, while the off-lens eyeline keeps
+the character from reading like a presenter. Immediate continuous speech
+spends the clip on useful phonetic coverage. Preserving native audio and
+trimming only measured exterior silence keeps the timing and mouth relationship
+Seedance actually produced; the heard-transcript ledger makes omissions and
+invented words auditable before the master is reused.
+
+Adapted and rewritten from keys-exe's October 5, 2026
+[three successful Seedance 2.5 voice-master jobs](https://github.com/keys-exe/global-manual-ai/commit/13ca06b0c15b33bced32341aacce1dac8e2c6f30),
+including the [complete Susan prompt, model and returned result](https://github.com/keys-exe/global-manual-ai/blob/13ca06b0c15b33bced32341aacce1dac8e2c6f30/builds/stryde-anniversary-shoes/board/json/gen_VOICE-N.json),
+the [successful Kie task receipt](https://github.com/keys-exe/global-manual-ai/blob/13ca06b0c15b33bced32341aacce1dac8e2c6f30/builds/stryde-anniversary-shoes/voice/VOICE-N.kie.json),
+the [three measured transcripts and trim windows](https://github.com/keys-exe/global-manual-ai/blob/13ca06b0c15b33bced32341aacce1dac8e2c6f30/builds/stryde-anniversary-shoes/voice/masters.json)
+and the [production notes and no-music checks](https://github.com/keys-exe/global-manual-ai/blob/13ca06b0c15b33bced32341aacce1dac8e2c6f30/builds/stryde-anniversary-shoes/BUILD_NOTES.md).
+
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 neutral character-voice masters: three complete face-only locked-shot prompts, exact `bytedance/seedance-2-5` model records, successful paid task receipts, returned MP4s, native-audio stream-copy extraction, measured silence trims, no-music checks and heard-transcript ledgers](https://github.com/keys-exe/global-manual-ai/commit/13ca06b0c15b33bced32341aacce1dac8e2c6f30) ([complete prompt and result](https://github.com/keys-exe/global-manual-ai/blob/13ca06b0c15b33bced32341aacce1dac8e2c6f30/builds/stryde-anniversary-shoes/board/json/gen_VOICE-N.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/13ca06b0c15b33bced32341aacce1dac8e2c6f30/builds/stryde-anniversary-shoes/voice/VOICE-N.kie.json), [measured masters](https://github.com/keys-exe/global-manual-ai/blob/13ca06b0c15b33bced32341aacce1dac8e2c6f30/builds/stryde-anniversary-shoes/voice/masters.json))
 - [Ferrem / media-producer-mcp — October 4, 2026 person-free Seedance 2.5 location plate: prompt-built, frame-cleaned or uploaded empty-set anchor; the same plate guides first-frame drawing and becomes the final environment-only Seedance reference; location changes invalidate incompatible frames and drafts, while missing or unfinished plates block spend](https://github.com/ferrem01/media-producer-mcp/commit/5cc0146bd42e34ba1c214211ecb956dd64a60659) ([clean-plate builder](https://github.com/ferrem01/media-producer-mcp/blob/5cc0146bd42e34ba1c214211ecb956dd64a60659/src/core/locations.ts), [performance path](https://github.com/ferrem01/media-producer-mcp/blob/5cc0146bd42e34ba1c214211ecb956dd64a60659/src/core/scene-performance.ts), [tests](https://github.com/ferrem01/media-producer-mcp/blob/5cc0146bd42e34ba1c214211ecb956dd64a60659/test/scene-performance.test.ts))
 - [David0524 / MyFastRX — October 4, 2026 Seedance 2.5 `omni_reference` drift-preserving counter-warp: exact 480p/11-second/33-credit job, ByteDance 1080p upscale job, ORB/RANSAC similarity-path repair from 6.7 seconds, 0.25-second ease, minimal border-cover zoom, repaired output and final-timeline substitution](https://github.com/David0524/MyFastRX/commit/bfbe21ab8363adbd58205e73167603b76f1f9a0b) ([generation ledger](https://github.com/David0524/MyFastRX/blob/bfbe21ab8363adbd58205e73167603b76f1f9a0b/ads/glp1-glass/footage/gen/README.md), [implementation](https://github.com/David0524/MyFastRX/blob/bfbe21ab8363adbd58205e73167603b76f1f9a0b/ads/glp1-glass/tools/stabilize-clipA.py), [repaired clip](https://github.com/David0524/MyFastRX/blob/bfbe21ab8363adbd58205e73167603b76f1f9a0b/ads/glp1-glass/footage/gen/car_clipA_1080p_stab.mp4))
 - [Evelyn Park / SandBase — October 4, 2026 matched product-video benchmark: complete prompts, exact `bytedance/seedance/2.5/text-to-video` and `bytedance/seedance/2.0/fast/text-to-video` routes, five-second 720p output metadata, billed tasks, fixed rubric and frame-reviewed text, pour, camera and object-continuity results](https://blog.sandbase.ai/ai-video-generation-api-benchmark-veo-3-1-kling-seedance-2026/)
