@@ -470,6 +470,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Six-shot bedroom disclosure with position-held dual voices](#454-six-shot-bedroom-disclosure-with-position-held-dual-voices)
   - [Accepted-state confession continuation with hand-contact payoff](#455-accepted-state-confession-continuation-with-hand-contact-payoff)
   - [Seven-chair occupancy ledger for five-person dialogue blocking](#456-seven-chair-occupancy-ledger-for-five-person-dialogue-blocking)
+  - [Dawn hospital threshold-to-hand-clasp emotional arc](#457-dawn-hospital-threshold-to-hand-clasp-emotional-arc)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -29443,6 +29444,100 @@ the [complete revised prompt](https://github.com/keys-exe/global-manual-ai/blob/
 [successful provider receipt](https://github.com/keys-exe/global-manual-ai/blob/51eda7e1f16b5d30128d45add45ed99125424c24/builds/stryde-the-impression/film/SC01/SC01-T2.v6.kie.log)
 and the [creator's observed-result note](https://github.com/keys-exe/global-manual-ai/commit/51eda7e1f16b5d30128d45add45ed99125424c24).
 
+
+### 457. Dawn hospital threshold-to-hand-clasp emotional arc
+
+**Verified model:** Seedance 2.5 — the version-labeled public prompt record
+identifies the model, 30-second duration and 16:9 format and maps them to the
+original creator's X post, which carries the complete timed prompt and result.
+Published October 2, 2026 and refreshed October 5, 2026. No provider route,
+resolution or attempt count is claimed because the primary post does not expose
+those fields.
+
+**Use case:** photorealistic live-action family drama, restrained dialogue,
+threshold blocking, multi-character emotional progression and native hospital
+ambience  
+**Mode:** text-to-video  
+**Verified settings:** 30s, 16:9, generated dialogue and ambience
+
+```text
+Create a 30-second photorealistic family-drama scene in a pediatric ward just
+before sunrise. Keep every performance quiet and observational: small changes
+in breath, gaze, posture and hand tension carry the story. Avoid melodrama.
+
+CHARACTER AND SPACE CONTINUITY
+- Father: office shirt and trousers, loosened tie, slightly rumpled, carrying a
+  small bunch of bruised flowers.
+- Mother: tired but composed, seated beside the bed from the opening until the
+  final beat.
+- Daughter: young child resting in the same hospital bed with one IV line
+  attached consistently to the same arm.
+- Preserve the corridor-to-doorway-to-bed geography, every character's screen
+  direction, the IV side, wardrobe and flower count across all six beats.
+
+0–5s — ARRIVAL.
+Track backward at walking speed in front of the father as he hurries down the
+nearly empty corridor. His breath is audible; he grips the flowers too tightly.
+Mix cool dawn light from the windows with practical ceiling light. End as the
+room doorway enters behind him.
+
+5–10s — DISCOVERY.
+Move to a restrained view through the partly open door. The father slows and
+stops outside. Inside, the daughter sleeps in bed while the mother sits close
+beside her. Let him study them for one silent beat before entering.
+
+10–14s — RECOGNITION.
+Cut close on the father at the threshold. His urgency drains into guilt; his
+eyes wet without a theatrical breakdown. The mother notices him and turns only
+her eyes and head. Hold their silent eye contact across the room.
+
+14–19s — THE QUESTION.
+The daughter wakes gradually, sees her father in the doorway and whispers,
+“Did you miss it?” Use a gentle push toward him so the reaction remains more
+important than the camera move.
+
+19–24s — THE ANSWER.
+He crosses to the bed, kneels rather than towering over her and answers,
+“Not this.” Keep the delivery soft, broken and controlled. His hand moves
+toward hers but does not complete contact before the next beat.
+
+24–30s — TOGETHER.
+The daughter takes one parent's hand, then reaches for the other. Both adults
+close around her hand without changing the IV placement. Pull back slowly to a
+balanced three-person frame in the cool morning light. Finish on the joined
+hands and hold the last composition for one full second.
+
+CAMERA AND LOOK
+Natural handheld restraint, shallow depth of field only when it does not hide
+the room geography, realistic skin texture and tired eyes. Use muted grey,
+blue and pale medical green with believable mixed-color lighting. No beauty
+filter, exaggerated tears, glossy commercial hospital or artificial glow.
+
+SOUND
+Only corridor room tone, ventilation, distant footsteps, faint monitor beeps,
+fabric movement, breathing and the two short spoken lines. No score, narrator,
+extra dialogue, captions, logos, watermarks or readable hospital branding.
+
+ACCEPTANCE
+The father remains outside the room until the planned crossing; the mother
+never changes sides; the child stays in the same bed; the IV remains attached
+to the same arm; each dialogue line belongs to the named speaker; hand contact
+occurs once and completes only in the final beat. Reject duplicate family
+members, wandering medical props, premature embrace, lip-sync mismatch,
+dramatic crying, music or a final frame without all three hands joined.
+```
+
+**Why it works:** the doorway is both a stable spatial anchor and the emotional
+turning point. Each timed beat changes only one relationship—arrival, seeing,
+recognition, question, answer, contact—so the 30-second prompt has a clear
+causal spine. Delaying the hand clasp until the last beat gives the model one
+visible endpoint that can be checked independently from facial performance.
+
+Adapted and rewritten from
+[Saul Goodman / Goodman Protocol's original October 2, 2026 X post](https://x.com/Goodmanprotocol/status/2106073803076124792)
+and its [Seedance 2.5 version-labeled public prompt record](https://www.wikiprompt.org/ultra-realistic-pediatric-hospital-emotional-drama-video-pro),
+updated October 5, 2026.
+
 ## Reusable templates
 
 
@@ -52761,6 +52856,7 @@ and the immediately preceding
 
 ---
 ## Sources
+- [Saul Goodman / Goodman Protocol — October 2, 2026 complete 30-second pediatric-hospital emotional-drama prompt and original result on X](https://x.com/Goodmanprotocol/status/2106073803076124792) ([Seedance 2.5 version label, 16:9 metadata and full timed prompt record, updated October 5, 2026](https://www.wikiprompt.org/ultra-realistic-pediatric-hospital-emotional-drama-video-pro))
 - [yumeai-fantasy88 / flova — October 5, 2026 Seedance 2.0 exposure-and-color repair rule: after new 720p production cuts, the creator records that “cinematic” and “clean cinematic” darkened and desaturated results; replace them with explicit brightness and palette instructions and add decorative bokeh in post](https://github.com/yumeai-fantasy88/flova/commit/8a193d15d0dc06045d86d92e0fb36bbc244f9afe) ([version-labeled rules](https://github.com/yumeai-fantasy88/flova/blob/8a193d15d0dc06045d86d92e0fb36bbc244f9afe/CLAUDE.md), [preceding Seedance 2.0 cuts](https://github.com/yumeai-fantasy88/flova/commit/65dba19fc262273342eee62084c702679ce5e28f))
 - [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 mirror-side anatomical-contact scene: complete four-shot dual-voice prompt, role-scoped identity, room, contact-card and prior-set references, successful 945-credit task, returned 720 × 1280 MP4, picture-preserving music removal and measured rendered-contact pass](https://github.com/keys-exe/global-manual-ai/commit/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/SC01-T1.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/SC01-T1.call.json), [task](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/SC01-T1.kie.json), [contact check](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/touch_landed.json))
 - [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 morning shoebox-refusal scene: complete five-shot dual-voice prompt, role-scoped face, room, prop and voice references, closed-box state ledger, successful 945-credit task, returned 720 × 1280 MP4 and picture-preserving music removal](https://github.com/keys-exe/global-manual-ai/commit/191a481bb672080dad37836445c897e3c16472c1) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/191a481bb672080dad37836445c897e3c16472c1/builds/stryde-anniversary-shoes/hooks/HK2/HK2-T1.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/191a481bb672080dad37836445c897e3c16472c1/builds/stryde-anniversary-shoes/hooks/HK2/HK2-T1.call.json), [task and result](https://github.com/keys-exe/global-manual-ai/blob/191a481bb672080dad37836445c897e3c16472c1/builds/stryde-anniversary-shoes/board/json/gen_HK2-T1.json))
