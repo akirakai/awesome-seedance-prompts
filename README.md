@@ -476,6 +476,9 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Cross-scene dialogue oner with endpoint position lock](#460-cross-scene-dialogue-oner-with-endpoint-position-lock)
   - [Accepted-prefix kitchen-dialogue tail repair with continuity-frame handoff](#461-accepted-prefix-kitchen-dialogue-tail-repair-with-continuity-frame-handoff)
   - [Sideways stair descent with tread-scale and distant doorway lock](#462-sideways-stair-descent-with-tread-scale-and-distant-doorway-lock)
+  - [Café bully redirection with furniture-state payoff](#463-café-bully-redirection-with-furniture-state-payoff)
+  - [Charred-hand memory match cut and recognition reversal](#464-charred-hand-memory-match-cut-and-recognition-reversal)
+  - [Era-locked Tokyo MiniDV gym-day continuity vlog](#465-era-locked-tokyo-minidv-gym-day-continuity-vlog)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -30015,6 +30018,265 @@ the [exact request and failure ledger](https://github.com/keys-exe/global-manual
 the [successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/e252fd322c9ce14e224a4a86b2229c22dd4a52a7/builds/stryde-the-impression/film/SC07/SC07-T.v2.kie.log)
 and the [creator review history](https://github.com/keys-exe/global-manual-ai/blob/e252fd322c9ce14e224a4a86b2229c22dd4a52a7/builds/stryde-the-impression/BUILD_NOTES.md).
 
+### 463. Café bully redirection with furniture-state payoff
+
+**Verified model:** Seedance 2.5 — the original creator labels the attached
+result as Seedance 2.5 and publishes the complete prompt in the same post  
+**Use case:** grounded live-action action comedy, compact café geography,
+contact-readable self-defense and calm character payoff  
+**Mode:** text-to-video  
+**Suggested settings:** exactly 30 seconds, 16:9, 24 fps, photoreal Korean
+live action, native location sound and no score
+
+```text
+Create an exactly 30-second hyper-realistic Korean live-action action-comedy
+scene inside one modern café. All characters are adults. Establish one fixed
+geography before anyone moves: the woman's table and chair in the foreground,
+one empty impact table along the man's approach lane and one soft sofa behind
+him. Preserve that layout, left-right screen direction, faces and wardrobe.
+
+0–5s — PROVOCATION
+Begin in an eye-level medium-wide. The woman sits calmly with one coffee cup on
+her table. An arrogant man approaches, says “야, 비켜,” then kicks only the leg
+of her chair. Show the contact before the reaction: shoe touches chair, chair
+jerks sideways, her balance breaks and she lands on the floor without a head
+impact. The cup rattles but stays on the table. He smirks.
+
+5–9s — RESET AND WARNING
+Hold long enough to prove her location. She plants one hand, stands under her
+own weight, faces him and says, “너 지금 뭐 한 거야?” Keep the displaced chair
+where it stopped. Customers remain background observers and do not join.
+
+9–15s — FIRST REDIRECTION
+He reaches toward her. She catches the reaching wrist, steps outside his line
+and turns his existing momentum toward the empty table. His hip and hands make
+readable contact; the table shifts a small plausible distance and cups rattle.
+She releases him and regains balance. No invisible strike or body teleport.
+
+15–21s — COUNTER AND RECOVERY
+He throws one desperate punch. She ducks after the shoulder telegraphs, gives
+one controlled body strike, grips his jacket and redirects him into the same
+already-shifted table. Preserve the table's new position and his accumulated
+fatigue. No blood, bone break, head hit or supernatural force.
+
+21–26s — SOFA PAYOFF
+He panics and charges along the established lane. She waits until his weight is
+committed, sidesteps and guides him backward into the soft sofa. Show feet
+losing traction, knees folding, torso landing and cushions compressing before
+rebounding. The sofa never moves to meet him.
+
+26–30s — CALM RETURN
+Let the room fall silent. She rights the same displaced chair, returns it to her
+table, sits and takes one sip from the same cup. She glances toward the sofa.
+The man sinks lower into the cushions while the customers stare. Cut to black
+only after the cup returns to the table.
+
+CAMERA AND SOUND
+Use restrained handheld coverage with clear impact framing, short motivated
+reframes and consistent axis. Keep bodies wide enough to read feet, contact,
+weight transfer and furniture response; reserve close-ups for the warning and
+final glance. Use only café room tone, footsteps, chair scrape, table and cup
+rattle, clothing, breath, cushion compression and customer reactions. Dialogue
+belongs only to the visible speaker.
+
+ACCEPTANCE GATE
+Reject duplicated or changing characters, premature falls, invisible contact,
+floating bodies, reversed screen direction, reset furniture, extra attackers,
+excessive shake, slow-motion padding, gore, subtitles, captions, logo or
+watermark. End with the woman seated at her original table, the chair restored,
+the cup intact and the man visibly contained by the same sofa.
+```
+
+**Why it works:** the choreography is a state ledger rather than a list of
+hits. Each beat starts from the previous furniture position and converts the
+man's visible momentum into a readable collision. The restored chair and
+untouched coffee turn spatial continuity into the final joke.
+
+Adapted and rewritten from @nawalsehar's October 5, 2026
+[original Seedance 2.5 post with the complete prompt and result](https://x.com/nawalsehar/status/2106975147806576802).
+
+---
+
+### 464. Charred-hand memory match cut and recognition reversal
+
+**Verified model:** Seedance 2.5 on Higgsfield — the original creator names the
+model and surface, publishes the full 27-second prompt and attaches the generated
+result in the same post  
+**Use case:** psychological thriller, present-to-memory match cut, identity and
+wardrobe continuity, emotional horror reversal  
+**Mode:** text-to-video  
+**Suggested settings:** 27 seconds, 2.39:1, photoreal live action, anamorphic
+composition, natural dialogue-free sound and precise edit timing
+
+```text
+Create a 27-second ultra-realistic psychological-thriller sequence that crosses
+from a terrifying present into a joyful romantic memory and back. Use restrained
+premium live action: real skin pores and asymmetry, individual hair strands,
+believable fabric, practical light, shallow depth of field, subtle grain,
+natural motion blur and emotionally specific acting. No text or subtitles.
+
+CHARACTER CONTRACT
+One adult woman in her mid-twenties has long dark-brown hair, brown eyes and one
+fitted sleeveless black dress. One adult man in his late twenties is tall and
+lean with dark hair, white dinner jacket, white shirt, black bow tie and black
+trousers. Preserve both identities, proportions and clothing across every cut.
+In the present only, the man's exposed hand and small visible skin areas are
+dark, charred and corpse-like but cinematic and non-graphic. In the memory he
+is healthy. The white jacket remains the same bridge between states.
+
+0–6s — TUNNEL CHASE
+In a long tiled pedestrian tunnel, cold cyan-green fluorescent rectangles recede
+toward one vanishing point. Track backward directly in front of the woman as she
+runs, breathes hard and checks over her shoulder. Briefly cut to one wider side
+view proving that the same man follows on the same axis. Return close as his
+damaged hand reaches toward her bare shoulder. End before contact with the hand,
+shoulder and white sleeve occupying a reproducible composition.
+
+6–12s — EXACT HAND MATCH INTO MEMORY
+On that exact frame, replace the damaged hand with his healthy hand at the same
+screen coordinates, reach distance and finger pose. Simultaneously replace the
+tunnel with a sunset beach and cold light with golden backlight. Do not dissolve
+through an intermediate hybrid. The woman now runs barefoot beside the ocean,
+laughs, turns toward him and takes his hand. They continue along the shoreline
+together. Use intimate handheld tracking, restrained lens flare and wind moving
+hair, dress and jacket in one direction.
+
+12–13s — SNAP BACK
+Smash-cut from the healthy hand to the damaged hand using the same framing,
+coordinates and reach vector. Restore the tunnel's harsh cyan-green light in one
+frame. The cut must feel like one physical gesture crossing two times.
+
+13–20s — CORNERED RECOGNITION
+She reaches one tiled side wall, backs against it and raises a small black knife
+defensively with both shaking hands. The man slows and approaches without
+striking. Push in gradually as her expression passes through terror, confusion
+and recognition. His damaged hand enters shallow focus cautiously. She lifts the
+knife once but cannot use it; no lunge, slash or contact.
+
+20–27s — EMOTIONAL REVERSAL
+He closes the last step and embraces her. She freezes for one beat, lowers the
+knife completely out of the interaction, then wraps both arms around him.
+Hold close over his white-jacket shoulder as she sobs, grips the fabric and
+breathes unevenly. Do not restore his healthy appearance or explain whether he
+is real, dead, remembered or imagined. End on her wet eyes and trembling hand
+clutching the same white jacket.
+
+CAMERA, AUDIO AND ACCEPTANCE
+The chase uses energetic tracking, the memory intimate handheld motion and the
+ending a slow controlled push. Bridge tunnel footsteps and breath into beach
+surf and wind, then cut them back to fluorescent hum and tunnel echo. Use no
+score swell to explain the emotion. Reject a different face, changed dress or
+jacket, mismatched hand pose, gradual morph, extra fingers, graphic gore, knife
+contact, identity swap, plastic skin, exaggerated expression, logo or watermark.
+The three hand frames—damaged, healthy, damaged—must align before judging the
+take.
+```
+
+**Why it works:** the hand is simultaneously a moving match-cut key, a time-state
+marker and the emotional clue. Locking screen coordinates, reach vector, sleeve
+and wardrobe makes the memory readable as the same relationship instead of an
+unrelated insert; withholding the transformation at the embrace preserves the
+ambiguity.
+
+Adapted and rewritten from @Just_sharon7's October 4, 2026
+[original Seedance 2.5 on Higgsfield post with the complete prompt and result](https://x.com/Just_sharon7/status/2106808592523571360).
+
+---
+
+### 465. Era-locked Tokyo MiniDV gym-day continuity vlog
+
+**Verified model:** Seedance 2.5 on OpenArt — the original creator explicitly
+names the model and surface and publishes the complete 30-second prompt with the
+generated result  
+**Use case:** period-authentic UGC, everyday lifestyle montage, one-character
+multi-location continuity and anti-anachronism control  
+**Mode:** single-character-reference image-to-video  
+**Suggested settings:** 30 seconds; source does not specify aspect ratio, so
+choose the delivery ratio before generation and keep it fixed; friend-operated
+consumer MiniDV look with natural location sound
+
+```text
+Create a highly photorealistic 30-second Japanese gym-day vlog set in Tokyo in
+2003–2004. @Image1 owns one clearly adult woman's face, hairstyle, hair length,
+body proportions, training outfit, shoes and accessories. Preserve them in every
+location. One friend owns the same physical consumer MiniDV camcorder throughout.
+
+ERA EVIDENCE LOCK
+Build an ordinary Tokyo neighborhood, small period gym, reception, lockers,
+paper notices, older vending machines and older cars from 2003–2004. Use
+period-appropriate sportswear, interiors and exercise equipment. Prohibit
+smartphones, smartwatches, wireless earbuds, modern touchscreens, LED exercise
+displays, contemporary branding and visibly recent vehicles. Do not simulate the
+period with a modern room plus a color filter.
+
+CAPTURE MODEL
+Render genuine consumer MiniDV behavior: soft DV detail, modest digital noise,
+slight grip shake, imperfect framing, brief autofocus hunting, small exposure
+corrections and natural motion blur. Alternate ordinary front, side,
+three-quarter, medium, occasional close-up, mirror and brief over-shoulder views
+only when the friend could physically stand there. No DSLR depth, 4K crispness,
+gimbal, drone, VHS damage or generic “retro” overlay.
+
+0–4s — HOME DEPARTURE
+In one modest Japanese bedroom, she places a towel and water bottle into one gym
+bag, closes it, puts on the same sneakers and leaves. Show each object entering
+the bag before the room is abandoned.
+
+4–7s — NEIGHBORHOOD WALK
+The friend walks beside or ahead of her through one period-accurate street. The
+closed gym bag remains on the same shoulder; use a small exposure adjustment
+when moving from the building shade into daylight.
+
+7–11s — ARRIVAL AND CHECK-IN
+She pauses outside one small gym, opens the door, enters, greets the receptionist
+and checks in. Preserve travel direction across the threshold and use the
+reception counter as the spatial bridge into the gym.
+
+11–13s — LOCKER STATE
+She places the gym bag in one numbered locker, closes the door and keeps one
+physical key. The towel and bottle may be removed first; record exactly which
+items remain in her hands.
+
+13–19s — WARM-UP AND MACHINE SET
+She walks on an older treadmill, then uses one simple weight machine. Include one
+close view of her hands adjusting a mechanical pin before one light, controlled
+set. Equipment motion must follow contact and resistance; effort stays moderate.
+
+19–23s — STRETCH AND WATER
+In one open area, she completes a short overhead stretch and one leg stretch,
+then drinks from the same bottle and wipes her face with the same towel. No
+posing loop or sudden body-shape change.
+
+23–28s — RETRIEVAL AND EXIT
+She returns to the same numbered locker, uses the retained key, retrieves the
+same bag and remaining items, closes the locker, passes reception and exits. Do
+not reverse, duplicate or reset any prop action.
+
+28–30s — HOMEWARD ENDPOINT
+Outside in early-evening Tokyo, she takes one refreshing breath, adjusts the
+same shoulder bag and walks home. The friend's camera drifts slightly aside to
+reveal the period street, then ends while she is still moving naturally.
+
+CONTINUITY AND AUDIO GATE
+Every action must physically enable the next: packed bag -> carried bag ->
+locker deposit -> retained key -> same-locker retrieval -> carried bag home.
+Use bedroom cloth and zipper, street ambience, door and reception room tone,
+locker metal, older machine mechanics, shoes, breathing, water and evening
+traffic. The woman need not smile or perform for the lens; allow only occasional
+natural glances. Reject identity, hair or wardrobe drift, teleportation, skipped
+threshold, repeated scene, reversed action, changed locker, duplicated prop or
+person, modern device, impossible camera position, cinematic polish, text, logo
+or watermark.
+```
+
+**Why it works:** the period is enforced as an evidence system—technology,
+vehicles, interiors, equipment and capture behavior—not merely a grade. A
+bag/key/towel/bottle ledger ties eleven short locations into one causal day, so
+the montage can be checked for both anachronisms and state continuity.
+
+Adapted and rewritten from @saniaspeaks_'s October 3, 2026
+[original Seedance 2.5 on OpenArt post with the complete prompt and result](https://x.com/saniaspeaks_/status/2106247874296062303).
+
 ## Reusable templates
 
 
@@ -53531,6 +53793,9 @@ and the immediately preceding
 
 ---
 ## Sources
+- [@nawalsehar — October 5, 2026 Seedance 2.5 café action-comedy: complete 30-second prompt, attached result, contact-readable redirections and persistent chair/table/sofa state](https://x.com/nawalsehar/status/2106975147806576802)
+- [@Just_sharon7 — October 4, 2026 Seedance 2.5 on Higgsfield psychological thriller: complete 27-second prompt and result with damaged-hand / healthy-hand / damaged-hand match cuts](https://x.com/Just_sharon7/status/2106808592523571360)
+- [@saniaspeaks_ — October 3, 2026 Seedance 2.5 on OpenArt Tokyo gym-day vlog: complete 30-second prompt and result with 2003–2004 era lock, MiniDV capture model and prop continuity](https://x.com/saniaspeaks_/status/2106247874296062303)
 - [keys-exe / global-manual-ai — October 5, 2026 Seedance 2.5 sideways stair-descent repair: complete second-generation prompt, exact `bytedance/seedance-2-5` request, successful 567-credit task, explicit rail-contact and tread-scale mechanics, and a distant observer locked inside the kitchen doorway](https://github.com/keys-exe/global-manual-ai/commit/e252fd322c9ce14e224a4a86b2229c22dd4a52a7) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/e252fd322c9ce14e224a4a86b2229c22dd4a52a7/builds/stryde-the-impression/film/SC07/SC07-T.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/e252fd322c9ce14e224a4a86b2229c22dd4a52a7/builds/stryde-the-impression/film/SC07/SC07-T.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/e252fd322c9ce14e224a4a86b2229c22dd4a52a7/builds/stryde-the-impression/film/SC07/SC07-T.v2.kie.log), [review history](https://github.com/keys-exe/global-manual-ai/blob/e252fd322c9ce14e224a4a86b2229c22dd4a52a7/builds/stryde-the-impression/BUILD_NOTES.md))
 - [keys-exe / global-manual-ai — October 5, 2026 Seedance 2.5 accepted-prefix kitchen-dialogue tail repair: complete replacement prompt, exact `bytedance/seedance-2-5` request, successful 693-credit task, actual 8.9-second continuity frame, retained 0–9-second prefix, 11-second suffix and inspected 20.07-second join](https://github.com/keys-exe/global-manual-ai/commit/210f4b219aeebe5f49186b36fe201ffe16b4fa1b) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/210f4b219aeebe5f49186b36fe201ffe16b4fa1b/builds/stryde-the-impression/film/SC06/SC06-T.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/210f4b219aeebe5f49186b36fe201ffe16b4fa1b/builds/stryde-the-impression/film/SC06/SC06-T.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/210f4b219aeebe5f49186b36fe201ffe16b4fa1b/builds/stryde-the-impression/film/SC06/SC06-T.g2part.kie.log), [join/QC](https://github.com/keys-exe/global-manual-ai/blob/210f4b219aeebe5f49186b36fe201ffe16b4fa1b/builds/stryde-the-impression/BUILD_NOTES.md))
 - [ferrem01 / media-producer-mcp — October 5, 2026 Seedance 2.5 native-voice room-match audition: non-destructive copies preserve the native lip-sync clock and picture while testing phone/lav shaping, short room decay, continuous room tone and a linear -17 LUFS pass; regression proves the signal path and prevents automatic attachment](https://github.com/ferrem01/media-producer-mcp/commit/48242e771340d6b398d9c3a45134f8db197e3231) ([workflow](https://github.com/ferrem01/media-producer-mcp/blob/48242e771340d6b398d9c3a45134f8db197e3231/src/core/scene-performance.ts), [treatment](https://github.com/ferrem01/media-producer-mcp/blob/48242e771340d6b398d9c3a45134f8db197e3231/src/core/voice-room.ts), [exact route](https://github.com/ferrem01/media-producer-mcp/blob/48242e771340d6b398d9c3a45134f8db197e3231/src/core/seedance.ts), [regressions](https://github.com/ferrem01/media-producer-mcp/blob/48242e771340d6b398d9c3a45134f8db197e3231/test/voice-room.test.ts))
