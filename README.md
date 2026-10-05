@@ -474,6 +474,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Phrase-synchronous four-finger count with cut-state handoff](#458-phrase-synchronous-four-finger-count-with-cut-state-handoff)
   - [Multi-view product truth with placement-only wear reference](#459-multi-view-product-truth-with-placement-only-wear-reference)
   - [Cross-scene dialogue oner with endpoint position lock](#460-cross-scene-dialogue-oner-with-endpoint-position-lock)
+  - [Accepted-prefix kitchen-dialogue tail repair with continuity-frame handoff](#461-accepted-prefix-kitchen-dialogue-tail-repair-with-continuity-frame-handoff)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -29814,6 +29815,107 @@ and the later [successful task, no-cut check, ordered transcript and observed
 position report](https://github.com/keys-exe/global-manual-ai/commit/18f7b4f160c0cc87e1f8b32e775c733d8a38348c).
 
 
+### 461. Accepted-prefix kitchen-dialogue tail repair with continuity-frame handoff
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the creator published the complete second-generation
+prompt, its exact reference/request record and a successful 693-credit task with
+a returned MP4. Production kept the earlier take's accepted 0–9.0 seconds,
+started the replacement from its actual 8.9-second frame, generated only the
+remaining 11 seconds and joined both parts into a 20.07-second file. The joined
+copy passed the creator's music check and fast-start check, but remained
+`To check`; this entry therefore verifies the repair and delivery workflow, not
+final artistic approval.
+
+**Use case:** repairing only the failed suffix of a long native-audio dialogue
+scene without sacrificing the accepted opening or replaying completed lines  
+**Mode:** two identity references + two outfit references + canonical room +
+actual accepted-boundary frame + two voice masters -> suffix reference-to-video
+-> inspected join  
+**Verified settings:** 11-second replacement, 9:16, 720p, native audio on;
+final joined scene 20.07 seconds
+
+```text
+IMMUTABLE ACCEPTED PREFIX
+Keep the existing scene from 0.0 through 9.0 seconds exactly as rendered. Do not
+regenerate, retime, revoice or restage it. Export its actual frame at 8.9 seconds
+as @Image6 and treat that frame as the replacement part's continuity boundary.
+The replacement generates only the unfinished last 11 seconds.
+
+REFERENCE CONTRACT
+@Image1 owns only the older woman's face, age, hair and build.
+@Image2 owns only her lilac jumper, grey straight trousers and navy slippers.
+@Image3 owns only the older man's face, age, hair and build.
+@Image4 owns only his grey cardigan, blue checked shirt, tan chinos and brown
+slippers.
+@Image5 owns the galley kitchen: sink and worktop on the right, square pine table
+on the left, back window, cooker, doors, tiles, furniture and light direction.
+@Image6 owns the opening state of this replacement: the same kitchen and light,
+the woman seated at the table, and the exact composition inherited from the
+accepted prefix. It is a starting state, never an insert or cutaway.
+@Audio1 owns only the woman's voice identity. @Audio2 owns only the man's voice
+identity. The prose owns emotion and delivery.
+
+FIXED STATE
+From the first replacement frame to the last, the woman remains seated at the
+left-side table. The man moves into position directly behind her chair, then
+stays there with his body and face turned toward her and his gaze lowered to
+her. He never returns to the worktop, faces the lens or leaves her side. The mug
+is set on the table in front of her once; it remains untouched.
+
+REPLACEMENT TIMELINE
+0–4s — Medium two-shot at eye level. The woman is seated in the foreground; the
+man stands directly behind her chair. He leans past her shoulder, sets down her
+mug and says in @Audio2, gently to her: “It’s the same thing, love.”
+
+4–7s — Eye-level three-quarter close-up on the woman. The man remains behind her,
+soft but whole in frame, still turned toward her. She does not touch the tea and
+answers in @Audio1: “It isn’t the same thing.”
+
+7–11s — Slightly high over-shoulder medium close-up from the woman toward the man.
+He is still directly behind her, puts one hand on the chair back and says in
+@Audio2: “It’s what we can do.” She does not turn around.
+
+End on the woman seated with the untouched mug before her; the man remains behind
+her chair, hand on its back, head bowed and eyes directed toward her.
+
+CAMERA, LOOK AND SOUND
+Use three restrained tripod setups, all on the same side of the action line.
+Allow only a tiny late pan or tilt to keep a performer framed; no drift, orbit,
+axis reversal or viewpoint reset. Preserve the accepted kitchen light, lens
+character, natural skin and costume texture. Carry quiet kitchen room tone,
+mug contact, cloth and chair movement beneath the three assigned lines. No
+music, narrator, extra speech, repeated earlier line, subtitle or generated text.
+
+FAILURE GATE
+Reject a take if the man returns to the sink, appears only as a cropped torso,
+faces camera, changes side or leaves the woman's chair; if she stands, touches
+the tea or changes seat; if the room flips, the mug doubles, a line changes
+speaker, the accepted opening is replayed, or the boundary frame is shown as a
+cutaway.
+
+ASSEMBLY AND QC
+Trim the replacement to its intended 11-second action, then join it after the
+untouched 0–9-second prefix. Inspect the splice frame by frame for position,
+light, eyeline, room-axis and audio continuity. Confirm the full scene preserves
+the five-line order, introduces no music and keeps the accepted prefix byte-for-
+byte or through an equivalent stream-copy path.
+```
+
+**Why it works:** the failed suffix was a local staging error, not a reason to
+risk the already usable opening. The actual 8.9-second frame transfers observed
+state into the repair, while the prompt narrows the new generation to three
+remaining lines and repeats the critical “behind the chair, facing her” relation
+in the state, timeline, endpoint and rejection gate. The explicit join check
+keeps generation success separate from continuity approval.
+
+Adapted and rewritten from keys-exe's October 5, 2026
+[partial-repair production commit](https://github.com/keys-exe/global-manual-ai/commit/210f4b219aeebe5f49186b36fe201ffe16b4fa1b),
+the [complete replacement prompt](https://github.com/keys-exe/global-manual-ai/blob/210f4b219aeebe5f49186b36fe201ffe16b4fa1b/builds/stryde-the-impression/film/SC06/SC06-T.prompt.txt),
+the [exact request and reference ledger](https://github.com/keys-exe/global-manual-ai/blob/210f4b219aeebe5f49186b36fe201ffe16b4fa1b/builds/stryde-the-impression/film/SC06/SC06-T.call.json),
+the [successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/210f4b219aeebe5f49186b36fe201ffe16b4fa1b/builds/stryde-the-impression/film/SC06/SC06-T.g2part.kie.log)
+and the [join and QC notes](https://github.com/keys-exe/global-manual-ai/blob/210f4b219aeebe5f49186b36fe201ffe16b4fa1b/builds/stryde-the-impression/BUILD_NOTES.md).
+
 ## Reusable templates
 
 
@@ -53330,6 +53432,7 @@ and the immediately preceding
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 5, 2026 Seedance 2.5 accepted-prefix kitchen-dialogue tail repair: complete replacement prompt, exact `bytedance/seedance-2-5` request, successful 693-credit task, actual 8.9-second continuity frame, retained 0–9-second prefix, 11-second suffix and inspected 20.07-second join](https://github.com/keys-exe/global-manual-ai/commit/210f4b219aeebe5f49186b36fe201ffe16b4fa1b) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/210f4b219aeebe5f49186b36fe201ffe16b4fa1b/builds/stryde-the-impression/film/SC06/SC06-T.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/210f4b219aeebe5f49186b36fe201ffe16b4fa1b/builds/stryde-the-impression/film/SC06/SC06-T.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/210f4b219aeebe5f49186b36fe201ffe16b4fa1b/builds/stryde-the-impression/film/SC06/SC06-T.g2part.kie.log), [join/QC](https://github.com/keys-exe/global-manual-ai/blob/210f4b219aeebe5f49186b36fe201ffe16b4fa1b/builds/stryde-the-impression/BUILD_NOTES.md))
 - [ferrem01 / media-producer-mcp — October 5, 2026 Seedance 2.5 native-voice room-match audition: non-destructive copies preserve the native lip-sync clock and picture while testing phone/lav shaping, short room decay, continuous room tone and a linear -17 LUFS pass; regression proves the signal path and prevents automatic attachment](https://github.com/ferrem01/media-producer-mcp/commit/48242e771340d6b398d9c3a45134f8db197e3231) ([workflow](https://github.com/ferrem01/media-producer-mcp/blob/48242e771340d6b398d9c3a45134f8db197e3231/src/core/scene-performance.ts), [treatment](https://github.com/ferrem01/media-producer-mcp/blob/48242e771340d6b398d9c3a45134f8db197e3231/src/core/voice-room.ts), [exact route](https://github.com/ferrem01/media-producer-mcp/blob/48242e771340d6b398d9c3a45134f8db197e3231/src/core/seedance.ts), [regressions](https://github.com/ferrem01/media-producer-mcp/blob/48242e771340d6b398d9c3a45134f8db197e3231/test/voice-room.test.ts))
 - [ferrem01 / media-producer-mcp — October 5, 2026 Seedance 2.5 voice-preview identity and tempo gate: pitch-preserving 0.80–1.25 tempo preprocessing, exact audition-to-generation audio reuse, voice-ID fingerprints, draft invalidation and stale-take detection](https://github.com/ferrem01/media-producer-mcp/commit/d5c402844ca0f34a47c2d36f78d52adfa8c938a0) ([pipeline](https://github.com/ferrem01/media-producer-mcp/blob/d5c402844ca0f34a47c2d36f78d52adfa8c938a0/src/core/scene-performance.ts), [exact route](https://github.com/ferrem01/media-producer-mcp/blob/d5c402844ca0f34a47c2d36f78d52adfa8c938a0/src/core/seedance.ts), [regressions](https://github.com/ferrem01/media-producer-mcp/blob/d5c402844ca0f34a47c2d36f78d52adfa8c938a0/test/scene-performance.test.ts))
 - [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 cross-scene oner repair: complete second-generation prompt, previous-endpoint and target-endpoint reference ledger, exact `bytedance/seedance-2-5` request, successful 504-credit task, returned MP4, no-cut check, ordered transcript and observed position report](https://github.com/keys-exe/global-manual-ai/commit/18f7b4f160c0cc87e1f8b32e775c733d8a38348c) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/129ee975805fba663e4e3c85e58928d7b906fa8e/builds/stryde-anniversary-shoes/edit/SC01-SC02-ONER.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/129ee975805fba663e4e3c85e58928d7b906fa8e/builds/stryde-anniversary-shoes/edit/SC01-SC02-ONER.call.json), [task](https://github.com/keys-exe/global-manual-ai/blob/18f7b4f160c0cc87e1f8b32e775c733d8a38348c/builds/stryde-anniversary-shoes/edit/SC01-SC02-ONER_v2.kie.json))
