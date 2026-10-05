@@ -464,6 +464,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Frame-synchronous stair footsteps across a matched-axis cut](#448-frame-synchronous-stair-footsteps-across-a-matched-axis-cut)
   - [Text-safe skincare sale-sign benchmark](#449-text-safe-skincare-sale-sign-benchmark)
   - [Continuous lemon-soda pour with observable dolly parallax](#450-continuous-lemon-soda-pour-with-observable-dolly-parallax)
+  - [Morning shoebox refusal with dual-voice object-state lock](#451-morning-shoebox-refusal-with-dual-voice-object-state-lock)
+  - [High-shelf gift avoidance with same-set continuation anchor](#452-high-shelf-gift-avoidance-with-same-set-continuation-anchor)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -28875,6 +28877,162 @@ routes and scoring rubric](https://blog.sandbase.ai/ai-video-generation-api-benc
 and the operator's
 [pour and camera review](https://blog.sandbase.ai/ai-video-generation-api-benchmark-veo-3-1-kling-seedance-2026/#results-everyone-can-spell-few-follow-the-camera).
 
+
+### 451. Morning shoebox refusal with dual-voice object-state lock
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the original production record includes the
+complete prompt and ordered ingredients, a successful 945-credit task, a
+returned 720 × 1280 MP4 and model metadata. The source then removed unintended
+music without altering picture, speech or effects. The result remains marked
+for artistic review, so the verified claim is generation and delivery rather
+than final editorial approval.
+
+**Use case:** animated character drama, product-led emotional storytelling,
+dual-speaker native audio  
+**Mode:** reference-to-video with four image roles and two approved voice
+masters  
+**Suggested settings:** 15s, 9:16, 720p, generated audio enabled
+
+```text
+REFERENCES
+@Image1 = Elias: face, apparent age, silver ponytail, moustache and build only.
+@Image2 = Mara: face, apparent age, copper-grey plait and build only.
+@Image3 = the kitchen-diner environment: pine table and chairs on frame-left,
+sink and window at rear centre, cream cupboards and clear worktop on frame-right.
+@Image4 = the product state: one plain sage-green shoebox, no printing, lid
+closed; the shoes must remain hidden throughout.
+@Audio1 = Elias's approved voice only.
+@Audio2 = Mara's approved voice only.
+
+15-second vertical animated family-drama scene, five connected shots. Early
+morning. Elias prepares to run and gently asks Mara to try the unopened shoes;
+she deflects without touching or opening the box.
+
+0–3s — High wide, slow jib down, 28mm. Elias sits at the table with one trainer
+on the adjacent chair and tightens its lace. Mara stands at the cupboards,
+holding a mug with both hands and blowing across it. The closed box is already
+on the clear end of the worktop.
+
+3–7s — Low three-quarter medium, locked 50mm. Elias completes the knot, looks
+toward Mara, smiles hopefully and nods once toward the worktop. Using @Audio1
+once, he says: “Come on. Just try them today. To the mailbox and back.”
+
+7–9s — Worktop close-up, short slider move. Mara's fingertips push the same
+closed box only a few centimetres farther away. The lid never lifts; the box
+does not duplicate, rotate or reveal the shoes.
+
+9–13s — Three-quarter close-up on Mara, slow 75mm creep. She sips, turns her
+eyes from Elias toward the window, then looks down. Using @Audio2 once, she
+says lightly: “Maybe tomorrow. I want to catch my shows.”
+
+13–15s — Medium on Elias, restrained creep-in. His hopeful expression settles;
+he nods, rises and closes his running jacket. End with Mara still at the
+cupboards facing the window, Elias standing beside the table, and the one
+closed box still on the worktop.
+
+LOOK
+Warm theatrical 3D feature animation. Cool grey-blue dawn enters from the rear
+window; the pendant over the table adds a warm practical pool and every face
+keeps a readable shadow side. Elias wears layered blue running clothes, grey
+shorts, black gloves and grey-white trainers. Mara wears lilac striped
+pyjamas, an oversized oatmeal jumper, sheepskin slippers and glasses on a cord.
+
+AUDIO
+Natural British voices from their assigned references only. Lace tension, a
+breath over the mug, card sliding on wood, jacket zip, cooling-kettle ticks and
+quiet kitchen ambience. No music, narration, extra dialogue or captions.
+
+CONTINUITY LOCK
+Same two faces, hair and clothes in every shot. Elias remains on the table side;
+Mara remains at the cupboards and nobody crosses the room. Exactly one closed,
+unprinted shoebox; no visible shoes. Five fingers per hand, eyes off lens, no
+additional people, text, logo or watermark.
+```
+
+**Why it works:** the closed box is defined as a persistent state rather than
+generic product decoration, then its location and permitted displacement are
+repeated at every relevant beat. The two voice references receive separate
+speaking windows, while the silent insert carries the emotional decision
+through a measurable prop movement instead of extra exposition.
+
+Adapted and rewritten from keys-exe's October 5, 2026
+[successful Seedance 2.5 Hook 2 production commit](https://github.com/keys-exe/global-manual-ai/commit/191a481bb672080dad37836445c897e3c16472c1),
+the [complete original prompt](https://github.com/keys-exe/global-manual-ai/blob/191a481bb672080dad37836445c897e3c16472c1/builds/stryde-anniversary-shoes/hooks/HK2/HK2-T1.prompt.txt),
+the [exact request](https://github.com/keys-exe/global-manual-ai/blob/191a481bb672080dad37836445c897e3c16472c1/builds/stryde-anniversary-shoes/hooks/HK2/HK2-T1.call.json),
+the [successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/191a481bb672080dad37836445c897e3c16472c1/builds/stryde-anniversary-shoes/hooks/HK2/HK2-T1.kie.json)
+and the [versioned result record](https://github.com/keys-exe/global-manual-ai/blob/191a481bb672080dad37836445c897e3c16472c1/builds/stryde-anniversary-shoes/board/json/gen_HK2-T1.json).
+
+### 452. High-shelf gift avoidance with same-set continuation anchor
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the original creator published the complete
+two-shot prompt, exact ingredient roles, successful 378-credit task, clean
+native-audio check and returned 720 × 1280 MP4. The result is technically
+complete and awaits subjective board review.
+
+**Use case:** quiet emotional aftermath, object-state storytelling,
+same-location continuation across independently generated clips  
+**Mode:** face identity + canonical room plate + prop state + prior accepted-set
+frame -> reference-to-video  
+**Suggested settings:** 6s, 9:16, 720p, native ambience
+
+```text
+REFERENCES
+@Image1 = Mara's face, apparent age, copper-grey plait and build only.
+@Image2 = canonical bedroom: built-in wardrobe with a high open shelf on the
+left, picture window ahead, dressing table and oval mirror on the right.
+@Image3 = one plain sage-green shoebox, no printing, lid closed; the shoes stay
+hidden.
+@Image4 = the same bedroom as previously filmed. Preserve its walls, wardrobe,
+window, bed and dressing table positions; change only the time to night.
+
+Six-second vertical animated family-drama aftermath. Mara is alone. Her single
+action is to put the unwanted gift on the high shelf and turn away.
+
+0–3s — Medium low three-quarter from behind, 35mm, slow crane upward. First
+frame: Mara stands directly before the wardrobe holding the one closed box at
+chest height. She raises it with both hands; the crane follows the lift. She
+slides the box fully onto the open shelf above the wardrobe doors. The shelf,
+box proportions and lid remain stable through contact.
+
+3–6s — Three-quarter medium close-up, slow 75mm creep. Her hands fall naturally.
+She keeps her eyes on the shelved box for one long beat, then turns toward the
+bed without reaching back. End with the same closed box resting securely on
+the high shelf and Mara facing away from it.
+
+LOOK
+Warm theatrical 3D feature animation. Night outside the black window. A small
+pleated bedside lamp is the only motivated source, warm from frame-left with
+deep soft shadows. Mara wears a green-and-cream striped tea dress below the
+knee, open cream cardigan, single pearl strand and tan loafers.
+
+AUDIO
+Nobody speaks. Card sliding on wood, cardigan rustle, one soft pivot on carpet
+and a distant clock tick in the quiet room. No music, voice, narration or text.
+
+CONTINUITY AND ENDPOINT
+Mara remains the only person. Keep the same face, plait, clothes and room
+topology. Exactly one box, lid closed, no revealed shoes. No duplicated shelf,
+wardrobe, window or mirror. Five fingers per hand, eyes off lens, no caption,
+logo or watermark. The terminal state is inspectable: box stationary on the
+high shelf, performer separated from it and turned toward the bed.
+```
+
+**Why it works:** the canonical empty-room plate owns global geometry, while
+the prior filmed-set frame carries the production's local appearance. The
+prompt reduces the drama to one weight-bearing lift, one contact state and one
+emotional turn, then defines an inspectable endpoint so the box cannot vanish,
+open itself or follow the performer.
+
+Adapted and rewritten from keys-exe's October 5, 2026
+[successful Seedance 2.5 Hook 3 production commit](https://github.com/keys-exe/global-manual-ai/commit/114dfaacc8c8e31f99f6697a12d258ef58337577),
+the [complete original prompt](https://github.com/keys-exe/global-manual-ai/blob/114dfaacc8c8e31f99f6697a12d258ef58337577/builds/stryde-anniversary-shoes/hooks/HK3/HK3-T2.prompt.txt),
+the [exact request](https://github.com/keys-exe/global-manual-ai/blob/114dfaacc8c8e31f99f6697a12d258ef58337577/builds/stryde-anniversary-shoes/hooks/HK3/HK3-T2.call.json),
+the [successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/114dfaacc8c8e31f99f6697a12d258ef58337577/builds/stryde-anniversary-shoes/hooks/HK3/HK3-T2.kie.json)
+and the [versioned result record](https://github.com/keys-exe/global-manual-ai/blob/114dfaacc8c8e31f99f6697a12d258ef58337577/builds/stryde-anniversary-shoes/board/json/gen_HK3-T2.json).
+
+
 ## Reusable templates
 
 
@@ -52119,6 +52277,8 @@ and the [production notes and no-music checks](https://github.com/keys-exe/globa
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 morning shoebox-refusal scene: complete five-shot dual-voice prompt, role-scoped face, room, prop and voice references, closed-box state ledger, successful 945-credit task, returned 720 × 1280 MP4 and picture-preserving music removal](https://github.com/keys-exe/global-manual-ai/commit/191a481bb672080dad37836445c897e3c16472c1) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/191a481bb672080dad37836445c897e3c16472c1/builds/stryde-anniversary-shoes/hooks/HK2/HK2-T1.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/191a481bb672080dad37836445c897e3c16472c1/builds/stryde-anniversary-shoes/hooks/HK2/HK2-T1.call.json), [task and result](https://github.com/keys-exe/global-manual-ai/blob/191a481bb672080dad37836445c897e3c16472c1/builds/stryde-anniversary-shoes/board/json/gen_HK2-T1.json))
+- [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 high-shelf gift-aftermath scene: complete two-shot prompt, identity, canonical room, closed-prop and prior-filmed-set references, successful 378-credit task, clean native-audio check and returned 720 × 1280 MP4](https://github.com/keys-exe/global-manual-ai/commit/114dfaacc8c8e31f99f6697a12d258ef58337577) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/114dfaacc8c8e31f99f6697a12d258ef58337577/builds/stryde-anniversary-shoes/hooks/HK3/HK3-T2.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/114dfaacc8c8e31f99f6697a12d258ef58337577/builds/stryde-anniversary-shoes/hooks/HK3/HK3-T2.call.json), [task and result](https://github.com/keys-exe/global-manual-ai/blob/114dfaacc8c8e31f99f6697a12d258ef58337577/builds/stryde-anniversary-shoes/board/json/gen_HK3-T2.json))
 - [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 neutral character-voice masters: three complete face-only locked-shot prompts, exact `bytedance/seedance-2-5` model records, successful paid task receipts, returned MP4s, native-audio stream-copy extraction, measured silence trims, no-music checks and heard-transcript ledgers](https://github.com/keys-exe/global-manual-ai/commit/13ca06b0c15b33bced32341aacce1dac8e2c6f30) ([complete prompt and result](https://github.com/keys-exe/global-manual-ai/blob/13ca06b0c15b33bced32341aacce1dac8e2c6f30/builds/stryde-anniversary-shoes/board/json/gen_VOICE-N.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/13ca06b0c15b33bced32341aacce1dac8e2c6f30/builds/stryde-anniversary-shoes/voice/VOICE-N.kie.json), [measured masters](https://github.com/keys-exe/global-manual-ai/blob/13ca06b0c15b33bced32341aacce1dac8e2c6f30/builds/stryde-anniversary-shoes/voice/masters.json))
 - [Ferrem / media-producer-mcp — October 4, 2026 person-free Seedance 2.5 location plate: prompt-built, frame-cleaned or uploaded empty-set anchor; the same plate guides first-frame drawing and becomes the final environment-only Seedance reference; location changes invalidate incompatible frames and drafts, while missing or unfinished plates block spend](https://github.com/ferrem01/media-producer-mcp/commit/5cc0146bd42e34ba1c214211ecb956dd64a60659) ([clean-plate builder](https://github.com/ferrem01/media-producer-mcp/blob/5cc0146bd42e34ba1c214211ecb956dd64a60659/src/core/locations.ts), [performance path](https://github.com/ferrem01/media-producer-mcp/blob/5cc0146bd42e34ba1c214211ecb956dd64a60659/src/core/scene-performance.ts), [tests](https://github.com/ferrem01/media-producer-mcp/blob/5cc0146bd42e34ba1c214211ecb956dd64a60659/test/scene-performance.test.ts))
 - [David0524 / MyFastRX — October 4, 2026 Seedance 2.5 `omni_reference` drift-preserving counter-warp: exact 480p/11-second/33-credit job, ByteDance 1080p upscale job, ORB/RANSAC similarity-path repair from 6.7 seconds, 0.25-second ease, minimal border-cover zoom, repaired output and final-timeline substitution](https://github.com/David0524/MyFastRX/commit/bfbe21ab8363adbd58205e73167603b76f1f9a0b) ([generation ledger](https://github.com/David0524/MyFastRX/blob/bfbe21ab8363adbd58205e73167603b76f1f9a0b/ads/glp1-glass/footage/gen/README.md), [implementation](https://github.com/David0524/MyFastRX/blob/bfbe21ab8363adbd58205e73167603b76f1f9a0b/ads/glp1-glass/tools/stabilize-clipA.py), [repaired clip](https://github.com/David0524/MyFastRX/blob/bfbe21ab8363adbd58205e73167603b76f1f9a0b/ads/glp1-glass/footage/gen/car_clipA_1080p_stab.mp4))
