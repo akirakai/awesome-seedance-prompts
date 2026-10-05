@@ -469,6 +469,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Anatomical contact check with mirror-space continuity](#453-anatomical-contact-check-with-mirror-space-continuity)
   - [Six-shot bedroom disclosure with position-held dual voices](#454-six-shot-bedroom-disclosure-with-position-held-dual-voices)
   - [Accepted-state confession continuation with hand-contact payoff](#455-accepted-state-confession-continuation-with-hand-contact-payoff)
+  - [Seven-chair occupancy ledger for five-person dialogue blocking](#456-seven-chair-occupancy-ledger-for-five-person-dialogue-blocking)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -29324,6 +29325,124 @@ the [complete continuation prompt](https://github.com/keys-exe/global-manual-ai/
 [exact parent-state and request ledger](https://github.com/keys-exe/global-manual-ai/blob/4240ca3fd075e71ae02e8a2df534b222356b87e1/builds/stryde-anniversary-shoes/scenes/SC02/SC02-T2.call.json)
 and [successful provider receipt](https://github.com/keys-exe/global-manual-ai/blob/4240ca3fd075e71ae02e8a2df534b222356b87e1/builds/stryde-anniversary-shoes/scenes/SC02/SC02-T2.kie.json).
 
+
+### 456. Seven-chair occupancy ledger for five-person dialogue blocking
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the primary production records an 11-second
+720 × 1280 request, complete prompt and ordered reference manifest, then a
+successful 693-credit sixth generation with a returned MP4. The creator
+observed that the specifically repaired empty chair was restored beside the
+grandfather; another background head remained more visible than intended, so
+only the generation, delivery and chair-topology repair are claimed as
+verified.
+
+**Use case:** live-action ensemble drama, fixed dining-table geography,
+multi-character eyelines, persistent furniture and single-variable repair  
+**Mode:** five identity references + room plate + top-down occupancy card + two
+voice masters -> reference-to-video  
+**Verified settings:** 11s, 9:16, 720p, generated audio enabled, four shots
+
+```text
+REFERENCE AUTHORITY
+@Image1 owns only Theo's face, age, hair, build and striped shirt with navy
+shorts. Theo is four years old.
+@Image2 owns only Leah's adult face, hair, build, grey sweatshirt, dark jeans
+and small gold chain.
+@Image3 owns only Martin's adult face, hair, build, dark-green half-zip and
+charcoal trousers.
+@Image4 owns only George's older face, hair, build, navy gilet, pale-blue shirt
+and tan trousers.
+@Image5 owns only Ruth's older face, hair, build, oatmeal cardigan, navy top
+and grey skirt.
+@Image6 owns the Victorian dining room, doorway, long table, sideboard,
+fireplace, bay window, curtains and light direction.
+@Image7 is an informational top-down occupancy card. It owns chair count,
+chair positions, place settings and character marks only. Never show this
+card, its top-down viewpoint, borders, labels or arrows in the video.
+@Audio1 is Ruth's voice only. @Audio2 is Leah's voice only.
+
+Create an 11-second vertical live-action British family-drama scene in four
+shots, all on the same side of the action axis. Use restrained performances,
+natural skin and 24 fps motion blur. Cool overcast daylight enters through the
+far bay window; one warm pendant hangs above the table. No camera crosses the
+table line.
+
+ROOM AND TABLE LEDGER
+The long table runs away from the doorway. Preserve exactly seven dining
+chairs: one at each table end, three along the sideboard side on frame-left and
+two along the fireplace side on frame-right.
+
+Assigned places never change:
+- Ruth sits at the far end with the bay window behind her.
+- George sits at the near end with his back to the doorway camera.
+- Leah sits in the middle chair on frame-left.
+- Theo's chair is the near frame-left chair, immediately beside George.
+- Martin sits in the middle chair on frame-right, directly opposite Leah.
+- The two chairs nearest Ruth remain unoccupied.
+- There is no chair between Martin and George on frame-right.
+
+Exactly five empty scraped plates, five water glasses and one white jug remain
+fixed on the cloth. No food, serving dish or added place setting appears.
+
+0–4s — WIDE FROM THE DOORWAY, locked 28mm.
+The door edge and brass knob remain at frame-left. George's back occupies the
+near centre; Ruth is visible at the far end; Leah and Martin face one another
+across the middle. Theo begins beside the sideboard at the far end and walks
+toward his own chair along the narrow frame-left aisle. He imitates Ruth's
+uneven walk innocently: right leg slightly stiff, left shoulder dipping, one
+hand briefly touching each chair back for balance. Theo's assigned chair stays
+empty, pulled in and continuously visible immediately to the left of George's
+back. Nobody laughs.
+
+4–6s — STRAIGHT CLOSE-UP ON RUTH, locked 75mm.
+Bay window and green curtains stay behind her. She watches Theo reach his
+chair, takes one quiet breath and asks with @Audio1: “Is that really how I
+walk?”
+
+6–9s — MEDIUM CLOSE-UP ON LEAH FROM THE FIREPLACE SIDE, locked 50mm.
+The sideboard, lamp and photographs remain behind Leah. Theo climbs onto his
+own near-left chair; Leah steadies his back with one hand. Martin stays across
+the table outside this camera direction and never appears seated beside her.
+Leah replies with @Audio2, slightly too quickly: “He is four, Mum. He copies
+everyone.”
+
+9–11s — OVER LEAH TOWARD RUTH, locked 50mm.
+Ruth turns her gaze from Leah toward Martin across the table. Only Martin's
+shoulder may enter the right edge; George remains at the near end and Theo is
+now seated in his assigned chair. Ruth asks quietly with @Audio1: “Martin?”
+Hold her look for the final half-second.
+
+CAMERA, PERFORMANCE AND SOUND
+Each cut occurs only after the previous movement or line completes. Match
+eyelines and preserve every person's screen side. Camera is tripod-locked;
+allow at most one late correction of a few degrees. Use only chair creaks,
+cloth movement, a small footstep rhythm, quiet room tone and the three written
+lines. No laughter, music, narration, overlapping speech or extra dialogue.
+
+REJECTION GATE
+Reject any eighth chair, missing chair, seat swap, Martin beside Leah, Theo
+using another chair, top-down layout-card shot, mirrored room, changed plate
+count, food reappearing, speaker swap, background mismatch, extra family
+member, camera-axis crossing, subtitle, logo or watermark.
+```
+
+**Why it works:** identity references, room plate and occupancy card have
+separate authority. The prompt converts a floor plan into a persistent
+chair-and-seat ledger, then distinguishes an assigned chair from its changing
+occupancy while the child walks and sits. Naming the background behind each
+speaker also makes a spatial error observable in close coverage. The source's
+sixth generation changed only the missing-chair instruction, providing direct
+evidence for a narrow furniture-topology repair rather than an unsupported
+claim that every aspect of the take passed.
+
+Adapted and rewritten from keys-exe's October 5, 2026
+[Seedance 2.5 chair-repair submission](https://github.com/keys-exe/global-manual-ai/commit/e63ae2b87c87f02d473ef4cbd8f6c2b3d0c82e9b),
+the [complete revised prompt](https://github.com/keys-exe/global-manual-ai/blob/51eda7e1f16b5d30128d45add45ed99125424c24/builds/stryde-the-impression/film/SC01/SC01-T2.prompt.txt),
+[exact request and one-variable repair note](https://github.com/keys-exe/global-manual-ai/blob/51eda7e1f16b5d30128d45add45ed99125424c24/builds/stryde-the-impression/film/SC01/SC01-T2.call.json),
+[successful provider receipt](https://github.com/keys-exe/global-manual-ai/blob/51eda7e1f16b5d30128d45add45ed99125424c24/builds/stryde-the-impression/film/SC01/SC01-T2.v6.kie.log)
+and the [creator's observed-result note](https://github.com/keys-exe/global-manual-ai/commit/51eda7e1f16b5d30128d45add45ed99125424c24).
+
 ## Reusable templates
 
 
@@ -54080,6 +54199,10 @@ Community examples and techniques referenced in this README:
 
 
 - [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 chained bedroom dialogue: two complete six-shot prompts, role-scoped identity/room/set/endpoint/voice references, successful task receipts, returned MP4s and explicit parent-retake invalidation](https://github.com/keys-exe/global-manual-ai/commit/4240ca3fd075e71ae02e8a2df534b222356b87e1) ([take 1 prompt](https://github.com/keys-exe/global-manual-ai/blob/4240ca3fd075e71ae02e8a2df534b222356b87e1/builds/stryde-anniversary-shoes/scenes/SC02/SC02-T1.prompt.txt), [take 1 receipt](https://github.com/keys-exe/global-manual-ai/blob/4240ca3fd075e71ae02e8a2df534b222356b87e1/builds/stryde-anniversary-shoes/scenes/SC02/SC02-T1.kie.json), [take 2 prompt](https://github.com/keys-exe/global-manual-ai/blob/4240ca3fd075e71ae02e8a2df534b222356b87e1/builds/stryde-anniversary-shoes/scenes/SC02/SC02-T2.prompt.txt), [take 2 receipt](https://github.com/keys-exe/global-manual-ai/blob/4240ca3fd075e71ae02e8a2df534b222356b87e1/builds/stryde-anniversary-shoes/scenes/SC02/SC02-T2.kie.json))
+
+
+
+- [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 five-person dining-room take: top-down occupancy card, exact seven-chair topology, complete prompt, sixth-generation single-variable chair repair, successful task receipt and observed restored chair](https://github.com/keys-exe/global-manual-ai/commit/51eda7e1f16b5d30128d45add45ed99125424c24) ([submission and revised prompt](https://github.com/keys-exe/global-manual-ai/commit/e63ae2b87c87f02d473ef4cbd8f6c2b3d0c82e9b), [exact request](https://github.com/keys-exe/global-manual-ai/blob/51eda7e1f16b5d30128d45add45ed99125424c24/builds/stryde-the-impression/film/SC01/SC01-T2.call.json), [successful receipt](https://github.com/keys-exe/global-manual-ai/blob/51eda7e1f16b5d30128d45add45ed99125424c24/builds/stryde-the-impression/film/SC01/SC01-T2.v6.kie.log))
 
 
 Official model references:
