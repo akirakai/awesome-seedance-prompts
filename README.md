@@ -28878,6 +28878,99 @@ and the operator's
 ## Reusable templates
 
 
+### Provider-floor B-roll generation and sub-shot montage assembly
+
+**Verified model:** Seedance 2.5, exact route
+`bytedance/seedance-2.5/reference-to-video` — the creator's production
+implementation makes silent actor cutaways at 720p, enforces the route's
+four-second generation floor, and independently schedules 0.6- to 2.5-second
+on-screen montage beats. The committed regression covers two 4-second
+generations displayed for 0.6 and 1.2 seconds, multiple clips in one scene and
+same-start retake replacement.  
+**Evidence boundary:** this is one reusable generation-and-editing technique,
+not a new complete scenario prompt. The short test actions are examples of the
+structure, not separately counted prompts.  
+**Use case:** rapid UGC, creator-ad and documentary B-roll montages whose edit
+beats are shorter than the model's minimum generation duration  
+**Mode:** one silent Seedance clip per beat; the scene's approved voice, music
+and mix remain under editor control
+
+```text
+MONTAGE LEDGER
+For every beat record:
+- beat ID and story job: [ID / PURPOSE]
+- timeline slot: at = [START SECOND]
+- on-screen duration: show = [0.6-2.5 s OR MEASURED VALUE]
+- visual action: [ONE COMPLETE, READABLE MICRO-ACTION]
+- location mode: [INHERIT SCENE PLATE / ONE-OFF PLACE]
+- reference roles: [START FRAME = COMPOSITION / SHEET = IDENTITY /
+  OPTIONAL CLEAN PLATE = ENVIRONMENT]
+- generated master, task receipt and selected in/out range: [VALUES]
+
+GENERATION-DURATION CONTRACT
+Generate seconds = max([EXACT ROUTE MINIMUM], ceil(show)), unless the visible
+action itself needs a longer measured master. For the verified route, use at
+least 4 seconds. Do not ask the model to create a 0.6-second file and do not
+lengthen a sub-second edit beat merely to expose the whole generated tail.
+
+Each source clip contains one actor, one micro-action and one place. Begin with
+usable movement immediately; keep enough clean motion to cover the planned
+show window. No dialogue, lip-sync, voiceover, music, captions, logos or
+watermarks. Produce a silent picture master so the scene's approved soundtrack
+can continue beneath the montage.
+
+REFERENCE AND LOCATION AUTHORITY
+- The start frame owns framing and the opening pose.
+- The actor sheet owns identity and wardrobe.
+- If the beat remains in the scene's established room, attach its approved
+  person-free clean plate.
+- If the beat is a one-off car, park, street or other place described only for
+  this insert, explicitly clear the inherited room reference. Do not let the
+  previous scene's architecture compete with the new location.
+- Never reuse a generated tail as an identity or room reference.
+
+SUB-SHOT ASSEMBLY
+Place each accepted master at its recorded `at` time and cut it out at
+`at + show`. Several independent Seedance clips may occupy one storyboard
+scene. Keep one active take per start time: a retake at the same `at` replaces
+that slot only and must not delete neighboring beats.
+
+Use hard cuts unless the story specifies another transition. Do not speed up,
+freeze, loop or interpolate the unused tail merely to make its full generated
+duration visible. Preserve every full master outside the delivery timeline for
+later slip edits or alternate pacing.
+
+ACCEPTANCE
+- the request used the exact verified model route and a supported generation
+  duration;
+- each beat starts with readable action and covers its complete show window;
+- the exported B-roll masters contain no audio track;
+- actor identity, wardrobe and prop ownership remain stable;
+- inherited rooms appear only where intended; one-off places carry no stale
+  room anchor;
+- timeline intervals equal the ledger, and no two active takes share one start
+  time;
+- generated duration, shown duration, discarded tail and retake lineage are
+  logged separately.
+```
+
+**Why it works:** the model's billable duration floor is a generation
+constraint, not an editorial rhythm. Separating `seconds`, `show` and
+`at` lets a short-form edit use fast 0.6- to 2.5-second beats without asking
+Seedance for unsupported clip lengths or forcing every generated tail into the
+cut. Explicit location inheritance also prevents a rapid montage from carrying
+the prior room into a car or park insert.
+
+Adapted and rewritten from ferrem01 / media-producer-mcp's October 5, 2026
+[B-roll montage implementation](https://github.com/ferrem01/media-producer-mcp/commit/cee256984e04d050c9a35f7500678988446edf41),
+the
+[duration, location and assembly path](https://github.com/ferrem01/media-producer-mcp/blob/cee256984e04d050c9a35f7500678988446edf41/src/core/scene-performance.ts),
+the
+[exact Seedance 2.5 route](https://github.com/ferrem01/media-producer-mcp/blob/cee256984e04d050c9a35f7500678988446edf41/src/core/seedance.ts)
+and the
+[montage regression](https://github.com/ferrem01/media-producer-mcp/blob/cee256984e04d050c9a35f7500678988446edf41/test/scene-performance.test.ts).
+
+
 ### Similarity-transform counter-warp that preserves handheld jitter
 
 **Verified model:** Higgsfield Seedance 2.5 `omni_reference`, draft 480p,
@@ -53367,6 +53460,8 @@ Community examples and techniques referenced in this README:
 - [storyverse2025 / canvas_timeline — October 3, 2026 Seedance 2.0 direction-marked blockout: 26-run failure study, per-clip stale-proxy gate, validated request-shape lock and successful turn-following rerender](https://github.com/storyverse2025/canvas_timeline/commit/fc69594f5d1e8e35b15fa826c2be4da85c8fd0e5) ([complete prompt builder](https://github.com/storyverse2025/canvas_timeline/blob/fc69594f5d1e8e35b15fa826c2be4da85c8fd0e5/src/lib/previs-export/blockout-reshoot-prompt.ts), [request and validation path](https://github.com/storyverse2025/canvas_timeline/blob/fc69594f5d1e8e35b15fa826c2be4da85c8fd0e5/src/lib/previs-export/blockout-reshoot.ts), [regression tests](https://github.com/storyverse2025/canvas_timeline/blob/fc69594f5d1e8e35b15fa826c2be4da85c8fd0e5/src/lib/previs-export/__tests__/blockout-reshoot.test.ts))
 
 - [keys-exe / global-manual-ai — October 3, 2026 Higgsfield Seedance 2.5 24-second vanity-drama repair: complete multimodal prompt, shot-local product-cluster reference patch, provider job/cost ledger, public render and continuity/dialogue/contact review](https://github.com/keys-exe/global-manual-ai/commit/fec8f287eebc3c61501b6862027f95b3ca387497) ([complete request](https://github.com/keys-exe/global-manual-ai/blob/fec8f287eebc3c61501b6862027f95b3ca387497/builds/facelove-walmart/takes/SC03-T1.call.json), [post-run review](https://github.com/keys-exe/global-manual-ai/blob/fec8f287eebc3c61501b6862027f95b3ca387497/builds/facelove-walmart/BUILD_NOTES.md), [generated MP4](https://d8j0ntlcm91z4.cloudfront.net/user_3AViUeU5dIz6pgsjYszQ9iux9YN/hf_20261003_231459_cf9fd80f-2f4d-4723-85da-7082a6ba6963.mp4))
+
+- [ferrem01 / media-producer-mcp — October 5, 2026 Seedance 2.5 provider-floor B-roll generation and sub-shot montage assembly: silent 720p masters, four-second route floor, independent 0.6–2.5-second show windows, per-start retake replacement and location inheritance control](https://github.com/ferrem01/media-producer-mcp/commit/cee256984e04d050c9a35f7500678988446edf41) ([duration, location and assembly path](https://github.com/ferrem01/media-producer-mcp/blob/cee256984e04d050c9a35f7500678988446edf41/src/core/scene-performance.ts), [exact Seedance 2.5 route](https://github.com/ferrem01/media-producer-mcp/blob/cee256984e04d050c9a35f7500678988446edf41/src/core/seedance.ts), [montage regression](https://github.com/ferrem01/media-producer-mcp/blob/cee256984e04d050c9a35f7500678988446edf41/test/scene-performance.test.ts))
 
 Official model references:
 
