@@ -471,6 +471,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Accepted-state confession continuation with hand-contact payoff](#455-accepted-state-confession-continuation-with-hand-contact-payoff)
   - [Seven-chair occupancy ledger for five-person dialogue blocking](#456-seven-chair-occupancy-ledger-for-five-person-dialogue-blocking)
   - [Dawn hospital threshold-to-hand-clasp emotional arc](#457-dawn-hospital-threshold-to-hand-clasp-emotional-arc)
+  - [Phrase-synchronous four-finger count with cut-state handoff](#458-phrase-synchronous-four-finger-count-with-cut-state-handoff)
+  - [Multi-view product truth with placement-only wear reference](#459-multi-view-product-truth-with-placement-only-wear-reference)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -29538,6 +29540,183 @@ Adapted and rewritten from
 and its [Seedance 2.5 version-labeled public prompt record](https://www.wikiprompt.org/ultra-realistic-pediatric-hospital-emotional-drama-video-pro),
 updated October 5, 2026.
 
+
+### 458. Phrase-synchronous four-finger count with cut-state handoff
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the primary production record contains the complete
+ninth-generation repair prompt, exact request, successful 315-credit task and
+returned MP4. The creator then explicitly confirmed the assembled v9 take on
+October 5, 2026.
+
+**Use case:** dialogue-synchronised hand gestures, finger-count repair,
+micro-retakes and state inheritance across a cut  
+**Mode:** two identity images + two clothing images + room plate + one approved
+voice -> reference-to-video  
+**Verified settings:** 5s repair segment, 9:16, 720p, generated audio enabled,
+two shots; generation 9 accepted
+
+```text
+REFERENCE ROLES
+@Image1 owns only Evelyn's face, age, hair and build.
+@Image2 owns only Evelyn's clothes.
+@Image3 owns only Mara's face, age, hair and build.
+@Image4 owns only Mara's clothes.
+@Image5 owns the sitting-room layout: bay window, wing chair, sofa and coffee
+table.
+@Audio1 is Mara's voice for the single written line.
+
+Create a five-second vertical theatrical 3D family-drama insert. Mara counts
+four diagnoses on four fingers while Evelyn remains seated nearby. The hand
+state must advance exactly once per spoken phrase. Use two shots so the cut
+carries an already-completed count rather than asking one uninterrupted hand
+to perform four fragile transformations.
+
+0–3s — 75mm close-up, eye level, slow dolly push.
+Begin already tight on Mara's right hand in front of her jacket. On the first
+word, “Arthritis,” her index finger is already fully raised; middle, ring and
+little fingers remain curled and her thumb stays folded across the palm. At
+1.4 seconds, exactly as “bone on bone” begins, the middle finger flicks up in
+one quick quarter-second movement. Hold two fingers clearly until the cut.
+Evelyn remains in the armchair; Mara remains on the sofa edge.
+
+3–5s — New 50mm three-quarter medium close-up, locked camera.
+From the first frame after the cut, three fingers are already raised—index,
+middle and ring—so the cut itself owns the transition for “worn cartilage.”
+At 4.1 seconds, exactly as “meniscus” begins, the little finger flicks up and
+stays up. The thumb remains folded and never joins the count. Mara says once:
+“Arthritis, bone on bone, worn cartilage, meniscus.” End with exactly four
+fingers raised beside her chin.
+
+LOOK AND SOUND
+Stylised theatrical 3D feature animation, expressive but stable faces, soft
+morning window light from frame-left and a readable shadow side. Use @Audio1
+once, verbatim. Add only sofa creak, a faint mantel clock and distant birds.
+No music, extra word, subtitle or caption.
+
+ACCEPTANCE
+One new finger appears at each phrase boundary; raised fingers never fold back;
+shot two begins with three fingers already visible; thumb stays folded; final
+state is four fingers, never five. Preserve both identities, clothes, seats and
+room landmarks. Reject delayed counts, blurred hand substitutions, duplicated
+digits, speaker swap, repeated dialogue, text, logo or watermark.
+```
+
+**Why it works:** four successive anatomical changes overloaded the original
+single-shot gesture. The accepted repair turns the cut into a state checkpoint:
+shot one only has to move from one to two, while shot two begins at three and
+performs only the final change. Preloading the first and third counts makes
+timing observable at the first frame of each shot, and the folded-thumb rule
+separates “four fingers” from an ambiguous open hand.
+
+Adapted and rewritten from keys-exe's October 5, 2026
+[Seedance 2.5 accepted-take commit](https://github.com/keys-exe/global-manual-ai/commit/3af72c12c9fb017f2a5c5e065b88c9ebdd0df6d2),
+the [complete v9 repair prompt](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T4/fix8.prompt.txt),
+[exact generation-nine request](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T4/fix8.call.json)
+and [successful provider receipt](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T4/kie8.log).
+
+
+### 459. Multi-view product truth with placement-only wear reference
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the source publishes the full repaired prompt,
+ordered reference manifest, successful 1,900-credit task and returned
+720 × 1280 MP4. The creator explicitly confirmed version 2 on October 5,
+2026. Production notes also record that the shell still appeared somewhat
+undersized in several shots and the effect landed just above the intended
+tendon, so this entry verifies the accepted structure and reference-separation
+technique without claiming perfect product fidelity.
+
+**Use case:** animated product demonstration, multi-angle product identity,
+placement-only reference control and anatomical cutaway  
+**Mode:** two identities + two clothing cards + canonical room + prior set,
+last frame and muted clip + four-view product sheet + wear-placement image +
+one voice master -> reference-to-video  
+**Verified settings:** 26s, 9:16, 720p, generated audio enabled, six shots
+
+```text
+REFERENCE AUTHORITY
+@Image1 owns only Evelyn's face, age, hair and build.
+@Image2 owns only Evelyn's clothes.
+@Image3 owns only Mara's face, age, hair and build.
+@Image4 owns only Mara's clothes.
+@Image5 owns permanent sitting-room geometry.
+@Image6 owns the room's most recently accepted furniture and prop state.
+@Image7 is the previous take's actual last frame and owns opening positions.
+@Video1 is the previous take with sound disabled; use it only for positions,
+light and room continuity.
+@Image8 is a four-view product truth sheet—front, three-quarter, side and inner
+pad. It alone owns shape, scale, materials, clips, band and wordmark.
+@Image9 shows where the product sits on a knee. It owns placement only; do not
+copy its person, room, camera or lighting.
+@Audio1 is Mara's voice only.
+
+Create a 26-second vertical theatrical 3D product-demonstration scene in six
+shots. Evelyn sits in the bay-window wing chair and Mara sits at the near end
+of the sofa. The support strap is a hand-length rigid matte-black shell with
+two raised humps, one silver clip at each end, a black woven band through both
+clips and a grey grooved inner pad. Preserve that whole object in every view.
+
+0–3s — 75mm high close-up, gentle tilt.
+Begin from @Image7. Mara lifts the complete strap from the basket and turns
+only the pad toward camera. She says: “This.”
+
+3–7s — 40mm eye-level medium, follow the hand.
+Mara holds the whole strap flat; Evelyn leans forward to inspect it. Mara says:
+“This is the Stride Support.”
+
+7–12s — 100mm macro, controlled tilt along the pad.
+Mara's thumb makes one continuous slide down the single raised ridge. She says
+off-screen: “The inner pad presses directly onto the support point.”
+
+12–17s — 75mm close-up, slow orbit around Evelyn's knee.
+Use a restrained anatomical cutaway: the unchanged strap sits just below the
+kneecap exactly as positioned by @Image9; its pad contacts the central tendon.
+A small amber pulse appears on that tendon beneath the pad, then cools to blue.
+Mara says off-screen: “It catches the load there before it reaches the joint.”
+
+17–21s — 50mm medium close-up, locked camera.
+Mara lays the complete strap across her open palm and nods once. She says:
+“Measured strain is reduced by thirty-four percent.”
+
+21–26s — 40mm medium, slow arc.
+Evelyn takes the strap with both hands and rotates it once so the shell, clips,
+band and pad remain readable. Mara says off-screen: “Developed with specialists
+over three years, and already worn every day by thousands.” End with Evelyn
+holding the full strap and Mara watching from the sofa.
+
+LOOK, VOICE AND SOUND
+Warm stylised 3D feature animation with soft morning daylight from the bay
+window at frame-left and the lamp off. Keep the product hand-length and rigid;
+never reduce it to a pad, stick or loose band. Use @Audio1 once for each written
+line and no other voice. Add sofa creak, clock and birds only. No music,
+caption or extra text except the product's own small wordmark.
+
+CONTINUITY AND PRODUCT GATE
+Preserve the two seats, fruit basket, faces, hair, clothes and room geometry.
+@Image8 always wins for product identity; @Image9 may influence placement only.
+The cutaway changes visibility, not knee or product geometry. Reject a
+miniature shell, missing clip, bent rigid body, duplicated strap, placement on
+the kneecap, glow on the joint, repeated word, extra person, logo mutation or
+watermark.
+```
+
+**Why it works:** one reference carries product truth while another supplies
+wear position only. A four-view sheet exposes the surfaces needed across
+handling, macro and anatomical shots, while the placement image is explicitly
+barred from transferring its person or environment. The source's earlier
+two-photo prompt produced a pad-like substitute; the repaired prompt restored
+the recognisable shell, clips and band well enough for the creator to accept
+the take, while its recorded residual scale and contact errors remain useful
+rejection criteria.
+
+Adapted and rewritten from keys-exe's October 5, 2026
+[Seedance 2.5 repair and creator-confirmation commit](https://github.com/keys-exe/global-manual-ai/commit/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa),
+the [complete repaired prompt](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T5/fix.prompt.txt),
+[exact request and reference ledger](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T5/fix.call.json)
+and [successful provider receipt](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T5/kie.log).
+
+
 ## Reusable templates
 
 
@@ -52856,6 +53035,8 @@ and the immediately preceding
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 5, 2026 accepted Kie AI Seedance 2.5 phrase-synchronous four-finger repair: complete ninth-generation prompt, exact `bytedance/seedance-2-5` request, successful 315-credit task, returned MP4 and explicit creator confirmation](https://github.com/keys-exe/global-manual-ai/commit/3af72c12c9fb017f2a5c5e065b88c9ebdd0df6d2) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T4/fix8.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T4/fix8.call.json), [task](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T4/kie8.log))
+- [keys-exe / global-manual-ai — October 5, 2026 accepted Kie AI Seedance 2.5 multi-view product-truth repair: complete six-shot prompt, four-view identity sheet versus placement-only wear reference, exact request, successful 1,900-credit task, returned MP4, observed-result limitations and creator confirmation](https://github.com/keys-exe/global-manual-ai/commit/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T5/fix.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T5/fix.call.json), [task](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T5/kie.log))
 - [Saul Goodman / Goodman Protocol — October 2, 2026 complete 30-second pediatric-hospital emotional-drama prompt and original result on X](https://x.com/Goodmanprotocol/status/2106073803076124792) ([Seedance 2.5 version label, 16:9 metadata and full timed prompt record, updated October 5, 2026](https://www.wikiprompt.org/ultra-realistic-pediatric-hospital-emotional-drama-video-pro))
 - [yumeai-fantasy88 / flova — October 5, 2026 Seedance 2.0 exposure-and-color repair rule: after new 720p production cuts, the creator records that “cinematic” and “clean cinematic” darkened and desaturated results; replace them with explicit brightness and palette instructions and add decorative bokeh in post](https://github.com/yumeai-fantasy88/flova/commit/8a193d15d0dc06045d86d92e0fb36bbc244f9afe) ([version-labeled rules](https://github.com/yumeai-fantasy88/flova/blob/8a193d15d0dc06045d86d92e0fb36bbc244f9afe/CLAUDE.md), [preceding Seedance 2.0 cuts](https://github.com/yumeai-fantasy88/flova/commit/65dba19fc262273342eee62084c702679ce5e28f))
 - [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 mirror-side anatomical-contact scene: complete four-shot dual-voice prompt, role-scoped identity, room, contact-card and prior-set references, successful 945-credit task, returned 720 × 1280 MP4, picture-preserving music removal and measured rendered-contact pass](https://github.com/keys-exe/global-manual-ai/commit/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/SC01-T1.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/SC01-T1.call.json), [task](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/SC01-T1.kie.json), [contact check](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/touch_landed.json))
