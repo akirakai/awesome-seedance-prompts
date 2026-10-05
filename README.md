@@ -29817,6 +29817,105 @@ position report](https://github.com/keys-exe/global-manual-ai/commit/18f7b4f160c
 ## Reusable templates
 
 
+### Voice-preview identity and tempo fingerprint before Seedance
+
+**Verified model:** Seedance 2.5, exact route
+`bytedance/seedance-2.5/reference-to-video` — the creator's production
+implementation preprocesses the selected voice file before it becomes the
+Seedance audio reference. The committed regression verifies tempo conversion,
+preview reuse, speed clamping, voice-ID tracking and stale-take detection.  
+**Evidence boundary:** this is one reusable native-audio input and state-control
+technique, not a new scenario prompt. It verifies which audio file reaches
+Seedance and when a prior draft becomes invalid; it does not claim that tempo
+processing repairs lip sync or acting quality by itself.  
+**Use case:** creator ads, talking heads and dialogue scenes that need a faster
+or slower read while preserving voice pitch and ensuring the generated take
+uses exactly the voice auditioned by the director  
+**Mode:** selected/recorded voice -> pitch-preserving tempo and loudness pass ->
+preview fingerprint -> Seedance audio reference -> stale-state gate
+
+```text
+VOICE INPUT CONTRACT
+For each scene record:
+- ACTOR_ID = [stable cast ID]
+- VOICE_ID = [exact selected voice ID]
+- LINE = [exact spoken text]
+- DELIVERY = [acting direction and pronunciation marks]
+- SOURCE = [script TTS / accepted recorded take]
+- VOICE_SPEED = [0.80–1.25; 1.00 means the original read]
+- TARGET_LEVEL = [project loudness target]
+- MODEL_ROUTE = bytedance/seedance-2.5/reference-to-video
+
+AUDITION WITHOUT MUTATION
+A temporary “hear this line” test may use any candidate VOICE_ID, but auditioning
+must not silently change the actor's production voice, the scene plan or the
+saved preview. Only an explicit “use this voice” action changes the actor's
+VOICE_ID. Keep candidate samples separate from production assets.
+
+PRE-SEEDANCE AUDIO BUILD
+1. Render or select the complete line using ACTOR_ID, VOICE_ID, LINE, DELIVERY
+   and SOURCE.
+2. Apply a tempo-only change at VOICE_SPEED while preserving pitch. Do not
+   resample into a chipmunk or slowed-down pitch effect.
+3. Normalize to the project's target loudness, sample rate, channel count and
+   delivery codec.
+4. Measure the resulting duration. If it exceeds the supported shot window,
+   split the scene instead of squeezing the read beyond the approved speed
+   range.
+5. Save the exact processed file as the scene's voice preview. This file—not a
+   freshly rendered approximation—is the audio reference sent to Seedance.
+
+PREVIEW FINGERPRINT
+Bind every saved preview to this complete tuple:
+(ACTOR_ID, VOICE_ID, LINE, DELIVERY, SOURCE, VOICE_SPEED).
+
+Reuse the preview only when every field still matches. A change to text,
+delivery, source, voice or speed creates a new read. Never show one cadence to
+the director and send another cadence to the video model.
+
+DRAFT INVALIDATION
+Changing VOICE_SPEED invalidates the current Seedance draft immediately.
+Changing the actor's production VOICE_ID marks every take made with the former
+voice as STALE: MADE IN ANOTHER VOICE. Preserve the old take for comparison,
+but never present it as current.
+
+GENERATION LEDGER
+For every generated take store:
+- model route and quality stage;
+- ACTOR_ID and VOICE_ID actually used;
+- preview URL or asset hash;
+- LINE, DELIVERY, SOURCE and VOICE_SPEED fingerprint;
+- processed duration and audio format;
+- Seedance task receipt, returned clip and creation time.
+
+ACCEPTANCE GATE
+- VOICE_SPEED is within 0.80–1.25 and the conversion preserved pitch;
+- the processed preview duration fits the shot;
+- the exact heard preview is the Seedance audio reference;
+- actor, voice, line, delivery, source and speed all match the saved fingerprint;
+- no candidate audition changed production state;
+- no old-speed draft or old-voice take is marked current;
+- speech occurs once, in order, with no substituted voice, music or extra line.
+```
+
+**Why it works:** voice identity and cadence become versioned generation inputs
+rather than invisible UI choices. The source sends the already-heard processed
+file to Seedance, records the voice ID on the resulting take and treats speed
+or voice changes as cache invalidations. This prevents a common native-audio
+failure mode in which the director approves one read but the model receives a
+new render with different timing or a replaced voice.
+
+Adapted and rewritten from ferrem01 / media-producer-mcp's October 5, 2026
+[voice-picker and read-speed implementation](https://github.com/ferrem01/media-producer-mcp/commit/d5c402844ca0f34a47c2d36f78d52adfa8c938a0),
+the
+[pitch-preserving preprocessing and preview-state gate](https://github.com/ferrem01/media-producer-mcp/blob/d5c402844ca0f34a47c2d36f78d52adfa8c938a0/src/core/scene-performance.ts),
+the
+[exact Seedance 2.5 route](https://github.com/ferrem01/media-producer-mcp/blob/d5c402844ca0f34a47c2d36f78d52adfa8c938a0/src/core/seedance.ts)
+and the
+[voice identity and tempo regressions](https://github.com/ferrem01/media-producer-mcp/blob/d5c402844ca0f34a47c2d36f78d52adfa8c938a0/test/scene-performance.test.ts).
+
+
+
 ### Provider-floor B-roll generation and sub-shot montage assembly
 
 **Verified model:** Seedance 2.5, exact route
@@ -53132,6 +53231,7 @@ and the immediately preceding
 
 ---
 ## Sources
+- [ferrem01 / media-producer-mcp — October 5, 2026 Seedance 2.5 voice-preview identity and tempo gate: pitch-preserving 0.80–1.25 tempo preprocessing, exact audition-to-generation audio reuse, voice-ID fingerprints, draft invalidation and stale-take detection](https://github.com/ferrem01/media-producer-mcp/commit/d5c402844ca0f34a47c2d36f78d52adfa8c938a0) ([pipeline](https://github.com/ferrem01/media-producer-mcp/blob/d5c402844ca0f34a47c2d36f78d52adfa8c938a0/src/core/scene-performance.ts), [exact route](https://github.com/ferrem01/media-producer-mcp/blob/d5c402844ca0f34a47c2d36f78d52adfa8c938a0/src/core/seedance.ts), [regressions](https://github.com/ferrem01/media-producer-mcp/blob/d5c402844ca0f34a47c2d36f78d52adfa8c938a0/test/scene-performance.test.ts))
 - [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 cross-scene oner repair: complete second-generation prompt, previous-endpoint and target-endpoint reference ledger, exact `bytedance/seedance-2-5` request, successful 504-credit task, returned MP4, no-cut check, ordered transcript and observed position report](https://github.com/keys-exe/global-manual-ai/commit/18f7b4f160c0cc87e1f8b32e775c733d8a38348c) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/129ee975805fba663e4e3c85e58928d7b906fa8e/builds/stryde-anniversary-shoes/edit/SC01-SC02-ONER.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/129ee975805fba663e4e3c85e58928d7b906fa8e/builds/stryde-anniversary-shoes/edit/SC01-SC02-ONER.call.json), [task](https://github.com/keys-exe/global-manual-ai/blob/18f7b4f160c0cc87e1f8b32e775c733d8a38348c/builds/stryde-anniversary-shoes/edit/SC01-SC02-ONER_v2.kie.json))
 - [keys-exe / global-manual-ai — October 5, 2026 accepted Kie AI Seedance 2.5 phrase-synchronous four-finger repair: complete ninth-generation prompt, exact `bytedance/seedance-2-5` request, successful 315-credit task, returned MP4 and explicit creator confirmation](https://github.com/keys-exe/global-manual-ai/commit/3af72c12c9fb017f2a5c5e065b88c9ebdd0df6d2) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T4/fix8.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T4/fix8.call.json), [task](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T4/kie8.log))
 - [keys-exe / global-manual-ai — October 5, 2026 accepted Kie AI Seedance 2.5 multi-view product-truth repair: complete six-shot prompt, four-view identity sheet versus placement-only wear reference, exact request, successful 1,900-credit task, returned MP4, observed-result limitations and creator confirmation](https://github.com/keys-exe/global-manual-ai/commit/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T5/fix.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T5/fix.call.json), [task](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T5/kie.log))
