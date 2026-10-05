@@ -466,6 +466,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Continuous lemon-soda pour with observable dolly parallax](#450-continuous-lemon-soda-pour-with-observable-dolly-parallax)
   - [Morning shoebox refusal with dual-voice object-state lock](#451-morning-shoebox-refusal-with-dual-voice-object-state-lock)
   - [High-shelf gift avoidance with same-set continuation anchor](#452-high-shelf-gift-avoidance-with-same-set-continuation-anchor)
+  - [Anatomical contact check with mirror-space continuity](#453-anatomical-contact-check-with-mirror-space-continuity)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -29033,6 +29034,105 @@ the [successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/
 and the [versioned result record](https://github.com/keys-exe/global-manual-ai/blob/114dfaacc8c8e31f99f6697a12d258ef58337577/builds/stryde-anniversary-shoes/board/json/gen_HK3-T2.json).
 
 
+
+### 453. Anatomical contact check with mirror-space continuity
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the creator published the complete prompt, exact
+request, successful 945-credit task and returned 720 × 1280 MP4. The source
+removed unintended music without changing picture, dialogue or effects, then
+measured the rendered contact point and recorded a pass. The take remains under
+subjective board review, so generation, delivery and the contact check are
+verified rather than final editorial approval.
+
+**Use case:** precise anatomical contact, mirror staging, same-room
+continuation, two-character native dialogue  
+**Mode:** five role-scoped image references + two approved voice references ->
+reference-to-video  
+**Suggested settings:** 15s, 9:16, 720p, generated audio enabled
+
+```text
+REFERENCES
+@Image1 = Mira: face, apparent age, dark-grey braid and body proportions only.
+@Image2 = Colin: face, apparent age, silver hair, moustache and build only.
+@Image3 = canonical bedroom geometry: wardrobe and high shelf on frame-left,
+window ahead, dressing table and oval mirror on frame-right, door near the
+right edge.
+@Image4 = anatomical action card only: fingertips contact the band below the
+kneecap, between the kneecap's lower tip and the upper-shin bump. Do not copy
+skin tone, clothing or framing from this card.
+@Image5 = the last accepted view of this same room: preserve the wardrobe,
+closed box on the high shelf and warm bedside lamp; do not copy character
+positions.
+@Audio1 = Mira's approved voice only.
+@Audio2 = Colin's approved voice only.
+
+Fifteen-second vertical animated family-drama scene, four connected shots.
+Evening. Mira quietly tests the exact sore point while seated at the mirror;
+Colin enters only in the final shot.
+
+0–4s — Three-quarter medium, slow 35mm orbit. Start with Mira seated at the
+dressing table, looking into the oval mirror. The window behind her is deep
+blue and the bedside lamp is on. She rolls the right trouser leg just above the
+knee and places her right hand at the outside of the joint. Keep her on the
+same stool and preserve the room landmarks.
+
+4–7s — Locked front-on macro, 85mm. Her fingertips move to the patellar tendon:
+below the kneecap, centred between its lower tip and the bony rise of the shin,
+matching @Image4. The whole kneecap stays visible above the fingers and does
+not deform or shift. The fingers make one shallow press; the tissue dents
+slightly and the leg gives one restrained flinch. Do not press the kneecap or
+the side of the knee.
+
+7–11s — Close on Mira's reflection, slow 75mm creep. Her gaze rises from the
+knee to her reflected eyes; she releases a small breath. The single closed box
+remains visible on the high shelf behind her. Using @Audio1 once, she says:
+“This isn't going to settle by itself, is it?”
+
+11–15s — Medium through the mirror, gentle pan toward the door, 50mm. The door
+opens only now. Colin steps just inside, winded from a run, and removes his
+cap while Mira lowers the trouser leg. Using @Audio2 once, he says: “Mira?
+You've gone quiet.” End with Mira still seated and turned halfway toward the
+door, trousers restored, Colin stationary just inside, cap in hand, and the
+closed box still on the high shelf.
+
+LOOK
+Warm theatrical 3D feature animation. The bedside lamp motivates amber light
+from frame-left; cool blue evening remains outside and every face keeps a soft
+shadow side. Mira wears a rust knit over a cream blouse, navy trousers and tan
+slippers. Colin wears a yellow running shell, grey layers, dark tights and
+light trainers.
+
+AUDIO
+Only the two assigned British voices in their stated windows. Cloth roll, a
+small breath, door latch, hinge movement, cap fabric and low bedroom room tone.
+No music, narration, extra speech or captions.
+
+CONTINUITY AND QC
+Same identities, hair and wardrobe throughout. Mira never leaves the stool;
+Colin is absent before 11 seconds. Exactly one closed box. Five fingers per
+hand, eyes off lens, no extra people, text, logo or watermark. After rendering,
+inspect a frame during peak pressure: the contact must lie within the landmark
+band defined by @Image4; reject or repair if it lands on the kneecap or lateral
+joint.
+```
+
+**Why it works:** the anatomical card owns only the contact location, while
+the canonical room and prior accepted set frame separately own geometry and
+local continuity. A front-on locked insert makes the high-risk action
+measurable, and the post-render landmark check tests what the model actually
+did instead of trusting the prompt. The mirror shot then carries the emotion
+without losing the persistent shelf prop or allowing the second character to
+appear early.
+
+Adapted and rewritten from keys-exe's October 5, 2026
+[Seedance 2.5 production commit](https://github.com/keys-exe/global-manual-ai/commit/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214),
+the [complete source prompt](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/SC01-T1.prompt.txt),
+the [exact request](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/SC01-T1.call.json),
+the [successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/SC01-T1.kie.json),
+the [measured contact result](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/touch_landed.json)
+and the [versioned result record](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/board/json/gen_SC01-T1.json).
+
 ## Reusable templates
 
 
@@ -52277,6 +52377,7 @@ and the [production notes and no-music checks](https://github.com/keys-exe/globa
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 mirror-side anatomical-contact scene: complete four-shot dual-voice prompt, role-scoped identity, room, contact-card and prior-set references, successful 945-credit task, returned 720 × 1280 MP4, picture-preserving music removal and measured rendered-contact pass](https://github.com/keys-exe/global-manual-ai/commit/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/SC01-T1.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/SC01-T1.call.json), [task](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/SC01-T1.kie.json), [contact check](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/touch_landed.json))
 - [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 morning shoebox-refusal scene: complete five-shot dual-voice prompt, role-scoped face, room, prop and voice references, closed-box state ledger, successful 945-credit task, returned 720 × 1280 MP4 and picture-preserving music removal](https://github.com/keys-exe/global-manual-ai/commit/191a481bb672080dad37836445c897e3c16472c1) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/191a481bb672080dad37836445c897e3c16472c1/builds/stryde-anniversary-shoes/hooks/HK2/HK2-T1.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/191a481bb672080dad37836445c897e3c16472c1/builds/stryde-anniversary-shoes/hooks/HK2/HK2-T1.call.json), [task and result](https://github.com/keys-exe/global-manual-ai/blob/191a481bb672080dad37836445c897e3c16472c1/builds/stryde-anniversary-shoes/board/json/gen_HK2-T1.json))
 - [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 high-shelf gift-aftermath scene: complete two-shot prompt, identity, canonical room, closed-prop and prior-filmed-set references, successful 378-credit task, clean native-audio check and returned 720 × 1280 MP4](https://github.com/keys-exe/global-manual-ai/commit/114dfaacc8c8e31f99f6697a12d258ef58337577) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/114dfaacc8c8e31f99f6697a12d258ef58337577/builds/stryde-anniversary-shoes/hooks/HK3/HK3-T2.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/114dfaacc8c8e31f99f6697a12d258ef58337577/builds/stryde-anniversary-shoes/hooks/HK3/HK3-T2.call.json), [task and result](https://github.com/keys-exe/global-manual-ai/blob/114dfaacc8c8e31f99f6697a12d258ef58337577/builds/stryde-anniversary-shoes/board/json/gen_HK3-T2.json))
 - [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 neutral character-voice masters: three complete face-only locked-shot prompts, exact `bytedance/seedance-2-5` model records, successful paid task receipts, returned MP4s, native-audio stream-copy extraction, measured silence trims, no-music checks and heard-transcript ledgers](https://github.com/keys-exe/global-manual-ai/commit/13ca06b0c15b33bced32341aacce1dac8e2c6f30) ([complete prompt and result](https://github.com/keys-exe/global-manual-ai/blob/13ca06b0c15b33bced32341aacce1dac8e2c6f30/builds/stryde-anniversary-shoes/board/json/gen_VOICE-N.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/13ca06b0c15b33bced32341aacce1dac8e2c6f30/builds/stryde-anniversary-shoes/voice/VOICE-N.kie.json), [measured masters](https://github.com/keys-exe/global-manual-ai/blob/13ca06b0c15b33bced32341aacce1dac8e2c6f30/builds/stryde-anniversary-shoes/voice/masters.json))
