@@ -29817,6 +29817,105 @@ position report](https://github.com/keys-exe/global-manual-ai/commit/18f7b4f160c
 ## Reusable templates
 
 
+### Native-voice room-match audition before attachment
+
+**Verified model:** Seedance 2.5, exact route
+`bytedance/seedance-2.5/reference-to-video` — the creator's production
+pipeline generates the speaking take with Seedance's own lip-synced audio, then
+builds non-destructive room-match audition copies from that returned take. The
+committed regression verifies the signal chain, scalable room amount, unchanged
+picture stream, unchanged take length and the rule that audition copies are
+never attached automatically.  
+**Evidence boundary:** this is one reusable post-generation audio-QC and repair
+technique, not a new scenario prompt. The filter path and synthetic silence-gap
+test are verified; the source explicitly leaves the final artistic choice to
+human listening, so this entry does not claim that the treated copy was selected
+for the finished film.  
+**Use case:** Seedance dialogue, presenter and creator scenes whose native
+lip-synced voice keeps the dry, close-mic character of its reference audio and
+therefore sounds pasted over a visibly distant room performance  
+**Mode:** Seedance native-audio take -> parallel room-match test copies ->
+director A/B listen -> optional explicit attachment
+
+```text
+SOURCE-TAKE CONTRACT
+- MODEL_ROUTE = bytedance/seedance-2.5/reference-to-video
+- INPUT = the returned Seedance take with its own generated, lip-synced audio
+- Do not lay the reference TTS or voice file over the take again.
+- Preserve the video stream, sample timing, lip sync and full take duration.
+- Treat the original as immutable; every room version is an audition copy.
+
+DIAGNOSIS GATE
+Use this pass only when the voice sounds unnaturally forward or layered on top
+of a person who is visibly several metres from the camera, or when gaps between
+phrases fall to digital silence. Do not use room processing to hide wrong words,
+bad acting, duplicated speech or lip-sync drift; those require a new take or
+voice repair.
+
+A/B AUDITION PLAN
+Choose up to four ROOM_AMOUNT values in [0.0, 1.0]. Include the untreated
+original beside the copies. ROOM_AMOUNT controls three linked properties:
+- DECAY = 0.30–0.55 seconds;
+- WET_GAIN = 0.08–0.38 beneath the dry voice;
+- ROOM_TONE = 0.0015–0.0055 linear amplitude.
+A practical living-room starting point is ROOM_AMOUNT = 0.5.
+
+ROOM-MATCH SIGNAL CHAIN
+1. Convert the take audio to mono, 48 kHz.
+2. Shape it like an in-room phone or lav capture:
+   high-pass at 95 Hz; low-pass at 10.5 kHz; ease the 3.2 kHz presence by
+   about 3 dB; add about 1.5 dB near 220 Hz; apply gentle 2.2:1 compression
+   with roughly 12 ms attack and 220 ms release.
+3. Split dry and send paths. Convolve the send with a short, band-limited,
+   decaying room impulse; mix the result under the dry path at WET_GAIN.
+4. Add faint, low-passed room tone across the whole take so pauses remain
+   acoustically connected instead of dropping to zero.
+5. Trim the treatment exactly to the source duration.
+6. Measure loudness, then apply one linear normalization pass to approximately
+   -17 LUFS, -1.5 dB true peak and LRA 11. Avoid pumping the room tone upward
+   inside speech gaps.
+7. Copy the original picture unchanged and encode only the replacement audio
+   at 48 kHz AAC.
+
+NON-DESTRUCTIVE STATE RULE
+Label every output TEST ONLY with its ROOM_AMOUNT. Do not replace the current
+take, mark a test as accepted or alter the film timeline merely because the
+render succeeded. Attachment requires an explicit human selection after
+listening to the original and every candidate at matched playback level.
+
+ACCEPTANCE GATE
+- picture frames and duration match the Seedance source;
+- lip movements remain sample-aligned with the same words;
+- no second voice layer, repeated line, music or new sound event appears;
+- phrase tails decay naturally without washing consonants or muddying dialogue;
+- pauses contain subtle room energy but remain below audible distraction;
+- the treated voice appears to occupy the pictured distance and room;
+- the director records the chosen amount, or rejects all tests and keeps the
+  untouched native take.
+```
+
+**Why it works:** a dry voice reference can give Seedance accurate identity,
+timing and lip sync while also teaching the model an implausibly close acoustic
+perspective. Processing the returned native track—not layering another read—
+keeps the performance clock intact. Parallel, unattached test copies separate
+technical rendering from editorial approval and make the room amount a
+single-variable listening decision.
+
+Adapted and rewritten from ferrem01 / media-producer-mcp's October 5, 2026
+[room-match audition implementation](https://github.com/ferrem01/media-producer-mcp/commit/48242e771340d6b398d9c3a45134f8db197e3231),
+the
+[non-destructive scene-copy workflow](https://github.com/ferrem01/media-producer-mcp/blob/48242e771340d6b398d9c3a45134f8db197e3231/src/core/scene-performance.ts),
+the
+[complete audio treatment](https://github.com/ferrem01/media-producer-mcp/blob/48242e771340d6b398d9c3a45134f8db197e3231/src/core/voice-room.ts),
+the
+[exact Seedance 2.5 route](https://github.com/ferrem01/media-producer-mcp/blob/48242e771340d6b398d9c3a45134f8db197e3231/src/core/seedance.ts)
+and the
+[signal-chain and non-attachment regressions](https://github.com/ferrem01/media-producer-mcp/blob/48242e771340d6b398d9c3a45134f8db197e3231/test/voice-room.test.ts).
+
+
+
+
+
 ### Voice-preview identity and tempo fingerprint before Seedance
 
 **Verified model:** Seedance 2.5, exact route
@@ -53231,6 +53330,7 @@ and the immediately preceding
 
 ---
 ## Sources
+- [ferrem01 / media-producer-mcp — October 5, 2026 Seedance 2.5 native-voice room-match audition: non-destructive copies preserve the native lip-sync clock and picture while testing phone/lav shaping, short room decay, continuous room tone and a linear -17 LUFS pass; regression proves the signal path and prevents automatic attachment](https://github.com/ferrem01/media-producer-mcp/commit/48242e771340d6b398d9c3a45134f8db197e3231) ([workflow](https://github.com/ferrem01/media-producer-mcp/blob/48242e771340d6b398d9c3a45134f8db197e3231/src/core/scene-performance.ts), [treatment](https://github.com/ferrem01/media-producer-mcp/blob/48242e771340d6b398d9c3a45134f8db197e3231/src/core/voice-room.ts), [exact route](https://github.com/ferrem01/media-producer-mcp/blob/48242e771340d6b398d9c3a45134f8db197e3231/src/core/seedance.ts), [regressions](https://github.com/ferrem01/media-producer-mcp/blob/48242e771340d6b398d9c3a45134f8db197e3231/test/voice-room.test.ts))
 - [ferrem01 / media-producer-mcp — October 5, 2026 Seedance 2.5 voice-preview identity and tempo gate: pitch-preserving 0.80–1.25 tempo preprocessing, exact audition-to-generation audio reuse, voice-ID fingerprints, draft invalidation and stale-take detection](https://github.com/ferrem01/media-producer-mcp/commit/d5c402844ca0f34a47c2d36f78d52adfa8c938a0) ([pipeline](https://github.com/ferrem01/media-producer-mcp/blob/d5c402844ca0f34a47c2d36f78d52adfa8c938a0/src/core/scene-performance.ts), [exact route](https://github.com/ferrem01/media-producer-mcp/blob/d5c402844ca0f34a47c2d36f78d52adfa8c938a0/src/core/seedance.ts), [regressions](https://github.com/ferrem01/media-producer-mcp/blob/d5c402844ca0f34a47c2d36f78d52adfa8c938a0/test/scene-performance.test.ts))
 - [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 cross-scene oner repair: complete second-generation prompt, previous-endpoint and target-endpoint reference ledger, exact `bytedance/seedance-2-5` request, successful 504-credit task, returned MP4, no-cut check, ordered transcript and observed position report](https://github.com/keys-exe/global-manual-ai/commit/18f7b4f160c0cc87e1f8b32e775c733d8a38348c) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/129ee975805fba663e4e3c85e58928d7b906fa8e/builds/stryde-anniversary-shoes/edit/SC01-SC02-ONER.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/129ee975805fba663e4e3c85e58928d7b906fa8e/builds/stryde-anniversary-shoes/edit/SC01-SC02-ONER.call.json), [task](https://github.com/keys-exe/global-manual-ai/blob/18f7b4f160c0cc87e1f8b32e775c733d8a38348c/builds/stryde-anniversary-shoes/edit/SC01-SC02-ONER_v2.kie.json))
 - [keys-exe / global-manual-ai — October 5, 2026 accepted Kie AI Seedance 2.5 phrase-synchronous four-finger repair: complete ninth-generation prompt, exact `bytedance/seedance-2-5` request, successful 315-credit task, returned MP4 and explicit creator confirmation](https://github.com/keys-exe/global-manual-ai/commit/3af72c12c9fb017f2a5c5e065b88c9ebdd0df6d2) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T4/fix8.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T4/fix8.call.json), [task](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T4/kie8.log))
