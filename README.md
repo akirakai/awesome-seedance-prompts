@@ -473,6 +473,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Dawn hospital threshold-to-hand-clasp emotional arc](#457-dawn-hospital-threshold-to-hand-clasp-emotional-arc)
   - [Phrase-synchronous four-finger count with cut-state handoff](#458-phrase-synchronous-four-finger-count-with-cut-state-handoff)
   - [Multi-view product truth with placement-only wear reference](#459-multi-view-product-truth-with-placement-only-wear-reference)
+  - [Cross-scene dialogue oner with endpoint position lock](#460-cross-scene-dialogue-oner-with-endpoint-position-lock)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -29717,6 +29718,102 @@ the [complete repaired prompt](https://github.com/keys-exe/global-manual-ai/blob
 and [successful provider receipt](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T5/kie.log).
 
 
+
+### 460. Cross-scene dialogue oner with endpoint position lock
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the creator published the complete prompt and
+reference manifest, a second-generation successful 504-credit task and its
+returned MP4. Production checks found no internal cut, transcribed all three
+lines in order and recorded that both actors held their assigned places and
+the ending matched the target frame. The take remained on the creator's
+`To check` board at publication, so this entry verifies generation, continuity
+checks and the repair structure rather than final artistic approval.
+
+**Use case:** replacing a hard scene join with one continuous dialogue take,
+preserving actor marks across a doorway reveal and landing on a known endpoint  
+**Mode:** two identity references + canonical room + accepted set state +
+previous clip endpoint + target endpoint + two voice masters -> reference-to-video  
+**Verified settings:** 8s, 9:16, 720p, native audio on, one continuous shot
+
+```text
+REFERENCE CONTRACT
+@Image1 owns only the older woman's face, age, hair and build.
+@Image2 owns only the older man's face, age, hair and build.
+@Image3 owns permanent bedroom geometry: wardrobe at left, window ahead,
+dressing table, oval mirror and rose stool at right, and the nearby door.
+@Image4 owns the latest accepted furniture and prop state, including one closed
+shoebox on the high shelf.
+@Image5 is the actual final frame of the preceding clip. It owns the opening
+positions: the woman remains seated at the mirror and the door starts closed.
+@Image6 owns only the required endpoint: the woman stays on the stool, turned
+halfway toward the door; the man stops just inside the doorway with his beanie.
+@Audio1 is the woman's voice only. @Audio2 is the man's voice only.
+
+FORMAT AND INTENTION
+Create an eight-second vertical theatrical 3D family-drama take. One continuous
+shot, no cut, hidden edit, viewpoint reset or room-axis reversal. The emotional
+turn is a quiet homecoming becoming an uneasy disclosure.
+
+ACTION, CAMERA AND DIALOGUE
+Begin in a medium over-shoulder view behind the woman, looking past her toward
+her reflection. Her back faces camera; she is seated on the rose stool at the
+dressing table; the door is closed at frame-right.
+
+Across the full take, move the camera only with a slow pull backward and a
+gentle pan right toward the door. Never orbit, arc around the room or cross the
+established axis.
+
+0–2.5s — The door opens. The man steps just inside, stops there and removes his
+beanie. The woman remains seated and turns only her upper body halfway toward
+him. He says in @Audio2: “Susan? You're quiet tonight.”
+
+2.5–5.8s — Keep pulling back slowly. The man remains planted inside the
+doorway; the woman remains on the stool. She says in @Audio1: “I saw you and
+Denise. From the window.”
+
+5.8–8s — Settle into one wide two-shot that matches @Image6 without moving
+either person to obtain the composition. He answers in @Audio2: “We just did
+our usual loop.” End with her on the stool and him inside the doorway, beanie
+in hand.
+
+LOOK
+Warm stylised 3D feature animation at evening. Deep-blue window light outside;
+one pleated bedside lamp gives warm light from frame-left and soft natural
+shadow. The woman wears a cream blouse, rust-red cable-knit jumper, navy
+trousers, tan slippers and a small paisley neck scarf. The man wears a yellow
+running jacket over a thin grey hoodie, grey shorts over black running tights
+and grey-white trainers. Preserve faces, hair, age and clothing throughout.
+
+SOUND
+Use each voice reference only for its assigned speaker and line. Add only the
+door latch, a quiet carpet step, stool creak, beanie cloth and low bedroom room
+tone. No music, narrator, overlapping speech, subtitle or generated text.
+
+CONTINUITY GATE
+Nobody changes place: the woman stays seated on the rose stool and the man
+stays just inside the doorway. Preserve the room axis, mirror, furniture and
+single closed shoebox. Keep five fingers per hand and eyes away from camera.
+Reject any internal cut, 180-degree camera swing, actor teleport, seat change,
+extra person, changed prop state, repeated line, logo or watermark.
+```
+
+**Why it works:** the failed first take used an “arc back and round,” which
+invited a 180-degree room swing and pulled the entering actor across the set.
+The repair changes only the camera path, adds the desired downstream frame as
+an endpoint authority and repeats fixed actor marks in the action, final frame
+and rejection gate. This turns a vague “seamless transition” request into a
+measurable one-take contract without asking either performer to relocate for
+the final composition.
+
+Adapted and rewritten from keys-exe's October 5, 2026
+[Seedance 2.5 repair request](https://github.com/keys-exe/global-manual-ai/commit/129ee975805fba663e4e3c85e58928d7b906fa8e),
+the [complete second-generation prompt](https://github.com/keys-exe/global-manual-ai/blob/129ee975805fba663e4e3c85e58928d7b906fa8e/builds/stryde-anniversary-shoes/edit/SC01-SC02-ONER.prompt.txt),
+[exact request and reference ledger](https://github.com/keys-exe/global-manual-ai/blob/129ee975805fba663e4e3c85e58928d7b906fa8e/builds/stryde-anniversary-shoes/edit/SC01-SC02-ONER.call.json)
+and the later [successful task, no-cut check, ordered transcript and observed
+position report](https://github.com/keys-exe/global-manual-ai/commit/18f7b4f160c0cc87e1f8b32e775c733d8a38348c).
+
+
 ## Reusable templates
 
 
@@ -53035,6 +53132,7 @@ and the immediately preceding
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 cross-scene oner repair: complete second-generation prompt, previous-endpoint and target-endpoint reference ledger, exact `bytedance/seedance-2-5` request, successful 504-credit task, returned MP4, no-cut check, ordered transcript and observed position report](https://github.com/keys-exe/global-manual-ai/commit/18f7b4f160c0cc87e1f8b32e775c733d8a38348c) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/129ee975805fba663e4e3c85e58928d7b906fa8e/builds/stryde-anniversary-shoes/edit/SC01-SC02-ONER.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/129ee975805fba663e4e3c85e58928d7b906fa8e/builds/stryde-anniversary-shoes/edit/SC01-SC02-ONER.call.json), [task](https://github.com/keys-exe/global-manual-ai/blob/18f7b4f160c0cc87e1f8b32e775c733d8a38348c/builds/stryde-anniversary-shoes/edit/SC01-SC02-ONER_v2.kie.json))
 - [keys-exe / global-manual-ai — October 5, 2026 accepted Kie AI Seedance 2.5 phrase-synchronous four-finger repair: complete ninth-generation prompt, exact `bytedance/seedance-2-5` request, successful 315-credit task, returned MP4 and explicit creator confirmation](https://github.com/keys-exe/global-manual-ai/commit/3af72c12c9fb017f2a5c5e065b88c9ebdd0df6d2) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T4/fix8.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T4/fix8.call.json), [task](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T4/kie8.log))
 - [keys-exe / global-manual-ai — October 5, 2026 accepted Kie AI Seedance 2.5 multi-view product-truth repair: complete six-shot prompt, four-view identity sheet versus placement-only wear reference, exact request, successful 1,900-credit task, returned MP4, observed-result limitations and creator confirmation](https://github.com/keys-exe/global-manual-ai/commit/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T5/fix.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T5/fix.call.json), [task](https://github.com/keys-exe/global-manual-ai/blob/c13efb8a7103fee6d6c510ea7739f16c8e4d0bfa/builds/stryde-wedding-dance/film/SC05/fix_T5/kie.log))
 - [Saul Goodman / Goodman Protocol — October 2, 2026 complete 30-second pediatric-hospital emotional-drama prompt and original result on X](https://x.com/Goodmanprotocol/status/2106073803076124792) ([Seedance 2.5 version label, 16:9 metadata and full timed prompt record, updated October 5, 2026](https://www.wikiprompt.org/ultra-realistic-pediatric-hospital-emotional-drama-video-pro))
