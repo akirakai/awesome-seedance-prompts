@@ -467,6 +467,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Morning shoebox refusal with dual-voice object-state lock](#451-morning-shoebox-refusal-with-dual-voice-object-state-lock)
   - [High-shelf gift avoidance with same-set continuation anchor](#452-high-shelf-gift-avoidance-with-same-set-continuation-anchor)
   - [Anatomical contact check with mirror-space continuity](#453-anatomical-contact-check-with-mirror-space-continuity)
+  - [Six-shot bedroom disclosure with position-held dual voices](#454-six-shot-bedroom-disclosure-with-position-held-dual-voices)
+  - [Accepted-state confession continuation with hand-contact payoff](#455-accepted-state-confession-continuation-with-hand-contact-payoff)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -29133,6 +29135,195 @@ the [successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/
 the [measured contact result](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/touch_landed.json)
 and the [versioned result record](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/board/json/gen_SC01-T1.json).
 
+
+### 454. Six-shot bedroom disclosure with position-held dual voices
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the creator published the complete prompt and
+ordered reference manifest, a successful 1,197-credit task and its returned
+720 × 1280 MP4. The source also records a clean no-music check. The take is
+still awaiting subjective board review, so this entry verifies generation,
+delivery and prompt structure rather than final editorial approval.
+
+**Use case:** dialogue-heavy animated drama, two-voice ownership, multiple
+shot sizes inside one continuous room moment  
+**Mode:** two identity images + canonical room + prior set sheet + accepted
+last frame + two approved voice masters -> reference-to-video  
+**Verified settings:** 19s, 9:16, 720p, generated audio enabled, six shots
+
+```text
+REFERENCE ROLES
+@Image1 owns only June's face, apparent age, grey-copper braid and body scale.
+@Image2 owns only Arthur's face, apparent age, silver ponytail, moustache and
+body scale.
+@Image3 owns the bedroom topology: wardrobe and high shelf at frame-left,
+picture window ahead, dressing table with oval mirror at frame-right and door
+near the right edge.
+@Image4 owns the room's most recently accepted local state: furniture, lamp,
+mirror, door and exactly one closed box on the high shelf.
+@Image5 is the accepted final frame of the preceding scene. It owns the opening
+marks and poses only; begin from that state without replaying the earlier beat.
+@Audio1 is June's voice only. @Audio2 is Arthur's voice only.
+
+Create a 19-second vertical theatrical 3D family-drama scene. It is one
+continuous conversation expressed through six shots. June has noticed Arthur
+running comfortably with a friend but is not yet ready to explain why that
+hurts. Keep the room, wardrobe and positions coherent across every cut.
+
+0–4s — Wide 28mm master, gentle arc. Begin exactly from @Image5: June sits on
+the rose stool at the dressing table, turned partly toward the door; Arthur
+stands just inside holding a knitted cap. She turns a little farther and he
+takes one step into the room. June, using @Audio1, says: “I saw you on the path
+this morning.” Arthur, using @Audio2, answers: “We only took the usual loop.”
+
+4–8s — Medium close-up on June past Arthur, locked 50mm. She rotates her
+wedding ring once, keeps her eyes on her hands, then glances at him. June says:
+“She makes it look effortless. You never have to slow down for her.”
+
+8–10s — Medium on Arthur past June, slow 40mm pan. He inclines his head without
+moving from his mark. Arthur says: “It was only a jog.”
+
+10–12s — Three-quarter medium close-up on June, locked 75mm. She nods too
+quickly twice and draws one short breath. June says: “I know. Of course I know.”
+
+12–16s — Extreme close-up on June's eyes and mouth, restrained 85mm creep.
+Her gaze shifts toward the window and her chin trembles once. June says:
+“Watching you both, I realised I could not keep up even if I tried—”
+
+16–19s — Low three-quarter medium, 35mm pan following Arthur. He crosses two
+steps, places the cap on the bed and crouches beside the stool. He remains
+below her eye line and asks: “Why do you think you could not?” End with June
+still seated, Arthur crouched beside her and the cap stationary on the bed.
+
+LOOK AND LIGHT
+Warm theatrical 3D feature animation. Evening blue fills the window; one
+pleated bedside lamp motivates warm side light and soft shadow. June wears a
+rust cable-knit jumper over a cream blouse, navy trousers, tan slippers and a
+small paisley scarf. Arthur wears a yellow running shell over grey layers,
+plain grey shorts over black tights and grey-white trainers. No logos.
+
+VOICE AND SOUND
+Only the named speaker may use the assigned voice during each quoted line.
+Use stool creak, ring movement, quiet carpet steps, the cap landing and low
+bedroom tone. No music, narration, extra speech, subtitle or caption.
+
+STATE LOCK
+June stays on the stool. Arthur stays near the door until the final shot.
+Exactly one closed box remains on the high shelf. Preserve faces, hair,
+clothes, room geometry and screen direction. Five fingers per hand, eyes off
+lens, only these two people, no text, brand mark or watermark.
+```
+
+**Why it works:** the accepted last frame owns only the opening marks, while a
+separate set sheet and canonical room image protect local appearance and
+global geometry. Alternating wide, medium, close and extreme-close views
+prevents six dialogue beats from collapsing into one repeated framing.
+Assigning every line to one voice reference and freezing each performer's
+movement window makes speaker swaps and position resets directly testable.
+
+Adapted and rewritten from keys-exe's October 5, 2026
+[Seedance 2.5 Scene 2 production commit](https://github.com/keys-exe/global-manual-ai/commit/4240ca3fd075e71ae02e8a2df534b222356b87e1),
+the [complete first-take prompt](https://github.com/keys-exe/global-manual-ai/blob/4240ca3fd075e71ae02e8a2df534b222356b87e1/builds/stryde-anniversary-shoes/scenes/SC02/SC02-T1.prompt.txt),
+[exact request and reference ledger](https://github.com/keys-exe/global-manual-ai/blob/4240ca3fd075e71ae02e8a2df534b222356b87e1/builds/stryde-anniversary-shoes/scenes/SC02/SC02-T1.call.json)
+and [successful provider receipt](https://github.com/keys-exe/global-manual-ai/blob/4240ca3fd075e71ae02e8a2df534b222356b87e1/builds/stryde-anniversary-shoes/scenes/SC02/SC02-T1.kie.json).
+
+
+### 455. Accepted-state confession continuation with hand-contact payoff
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the creator generated this take only after the
+preceding take completed, then published its full prompt, dependency manifest,
+successful 1,449-credit task and returned 720 × 1280 MP4. The source records a
+clean no-music check and explicitly requires this continuation to be rebuilt
+from a new endpoint if its parent take changes. Subjective board approval is
+still pending.
+
+**Use case:** chained dialogue continuation, emotional hand-contact insert,
+dependency-safe retakes  
+**Mode:** two identities + canonical room + parent take's set sheet and actual
+last frame + two voice masters -> reference-to-video  
+**Verified settings:** 23s, 9:16, 720p, generated audio enabled, six shots
+
+```text
+REFERENCE ROLES
+@Image1 owns only June's face, apparent age, grey-copper braid and body scale.
+@Image2 owns only Arthur's face, apparent age, silver ponytail, moustache and
+body scale.
+@Image3 owns the bedroom's permanent topology.
+@Image4 is the parent take's accepted set sheet and owns its current walls,
+mirror, bed, lamp, door and single closed box on the high shelf.
+@Image5 is the parent take's actual final frame and owns every opening mark:
+June seated on the rose stool; Arthur crouched beside her; his cap on the bed.
+@Audio1 is June's voice only. @Audio2 is Arthur's voice only.
+
+Create the next 23 seconds of the same vertical theatrical 3D family drama in
+six connected shots. Do not repeat the previous exchange or restage Arthur's
+entrance. June finally explains why the unopened gift remains on the shelf;
+Arthur reaches for her hand and listens.
+
+0–4s — Three-quarter close-up on June, slow 75mm push. Start exactly from
+@Image5. June remains seated and Arthur remains crouched. Her hand settles on
+her right knee and her eyes travel once from him to the closed box and back.
+June, using @Audio1, says: “It is my knee. I have hidden how bad it has become.”
+
+4–8s — Medium on June past Arthur, locked 40mm. Her eyes rise to the one box on
+the high shelf, then return to him. June says: “Those shoes stayed unopened
+because I did not know how to tell you I cannot use them.”
+
+8–12s — Three-quarter close-up on June, restrained 85mm creep. Her hand stays
+on her knee; her eyes fill but no tear falls. June says: “I cannot move the way
+I used to, and I was afraid you would see it.”
+
+12–15s — Low three-quarter medium close-up on Arthur, slow 75mm creep. His face
+softens. Without standing, he exhales and extends one hand toward hers. Arthur,
+using @Audio2, says only: “June.”
+
+15–18s — Profile macro on both hands, slow 100mm slider. Arthur's hand closes
+gently over June's hand on her knee. Show one anatomically coherent contact:
+one hand arrives, covers, then settles; no finger crossing, duplicate hand or
+grip change. June whispers: “I am sorry.”
+
+18–23s — Eye-level medium, slow 35mm pull-back revealing the unchanged room.
+Arthur squeezes once and shakes his head gently. He says: “Do not apologise.
+You should have told me.” June releases a breath that almost becomes a laugh.
+End with her still seated, him still crouched, their joined hands resting on
+her knee, his cap on the bed and the closed box stationary on the high shelf.
+
+LOOK AND LIGHT
+Continue the exact parent-take styling: warm theatrical 3D feature animation,
+deep-blue evening window and one pleated bedside lamp as the warm motivated
+source. Preserve June's rust jumper, cream blouse, navy trousers, slippers and
+scarf; preserve Arthur's yellow running shell, grey layers, plain shorts,
+black tights and trainers.
+
+VOICE AND SOUND
+Use each approved voice only for its owner's quoted line. Add a held breath,
+fabric settling, one hand contact, one gentle squeeze and low bedroom ambience.
+No music, narration, extra dialogue, subtitle, caption or visible text.
+
+CONTINUITY AND DEPENDENCY GATE
+June never leaves the stool and Arthur never leaves the crouch. Preserve their
+opening marks, screen direction, clothes, faces, hair and room layout. Keep
+exactly one closed box. If the parent take is rejected or regenerated, discard
+this take and rebuild it from the replacement parent's set sheet and actual
+last frame; never continue from a stale endpoint. Five fingers per hand, no
+extra person, logo or watermark.
+```
+
+**Why it works:** the continuation inherits two different kinds of accepted
+state: the parent set sheet protects the room, while the actual endpoint
+protects poses, prop placement and camera-side continuity. The only large
+physical change is one hand reaching and settling, so the emotional turn has a
+clear contact receipt. Treating the child as invalid whenever its parent is
+replaced prevents a polished downstream take from preserving a rejected
+upstream world state.
+
+Adapted and rewritten from the same October 5, 2026
+[primary production commit](https://github.com/keys-exe/global-manual-ai/commit/4240ca3fd075e71ae02e8a2df534b222356b87e1),
+the [complete continuation prompt](https://github.com/keys-exe/global-manual-ai/blob/4240ca3fd075e71ae02e8a2df534b222356b87e1/builds/stryde-anniversary-shoes/scenes/SC02/SC02-T2.prompt.txt),
+[exact parent-state and request ledger](https://github.com/keys-exe/global-manual-ai/blob/4240ca3fd075e71ae02e8a2df534b222356b87e1/builds/stryde-anniversary-shoes/scenes/SC02/SC02-T2.call.json)
+and [successful provider receipt](https://github.com/keys-exe/global-manual-ai/blob/4240ca3fd075e71ae02e8a2df534b222356b87e1/builds/stryde-anniversary-shoes/scenes/SC02/SC02-T2.kie.json).
+
 ## Reusable templates
 
 
@@ -53886,6 +54077,10 @@ Community examples and techniques referenced in this README:
 - [keys-exe / global-manual-ai — October 3, 2026 Higgsfield Seedance 2.5 24-second vanity-drama repair: complete multimodal prompt, shot-local product-cluster reference patch, provider job/cost ledger, public render and continuity/dialogue/contact review](https://github.com/keys-exe/global-manual-ai/commit/fec8f287eebc3c61501b6862027f95b3ca387497) ([complete request](https://github.com/keys-exe/global-manual-ai/blob/fec8f287eebc3c61501b6862027f95b3ca387497/builds/facelove-walmart/takes/SC03-T1.call.json), [post-run review](https://github.com/keys-exe/global-manual-ai/blob/fec8f287eebc3c61501b6862027f95b3ca387497/builds/facelove-walmart/BUILD_NOTES.md), [generated MP4](https://d8j0ntlcm91z4.cloudfront.net/user_3AViUeU5dIz6pgsjYszQ9iux9YN/hf_20261003_231459_cf9fd80f-2f4d-4723-85da-7082a6ba6963.mp4))
 
 - [ferrem01 / media-producer-mcp — October 5, 2026 Seedance 2.5 provider-floor B-roll generation and sub-shot montage assembly: silent 720p masters, four-second route floor, independent 0.6–2.5-second show windows, per-start retake replacement and location inheritance control](https://github.com/ferrem01/media-producer-mcp/commit/cee256984e04d050c9a35f7500678988446edf41) ([duration, location and assembly path](https://github.com/ferrem01/media-producer-mcp/blob/cee256984e04d050c9a35f7500678988446edf41/src/core/scene-performance.ts), [exact Seedance 2.5 route](https://github.com/ferrem01/media-producer-mcp/blob/cee256984e04d050c9a35f7500678988446edf41/src/core/seedance.ts), [montage regression](https://github.com/ferrem01/media-producer-mcp/blob/cee256984e04d050c9a35f7500678988446edf41/test/scene-performance.test.ts))
+
+
+- [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 chained bedroom dialogue: two complete six-shot prompts, role-scoped identity/room/set/endpoint/voice references, successful task receipts, returned MP4s and explicit parent-retake invalidation](https://github.com/keys-exe/global-manual-ai/commit/4240ca3fd075e71ae02e8a2df534b222356b87e1) ([take 1 prompt](https://github.com/keys-exe/global-manual-ai/blob/4240ca3fd075e71ae02e8a2df534b222356b87e1/builds/stryde-anniversary-shoes/scenes/SC02/SC02-T1.prompt.txt), [take 1 receipt](https://github.com/keys-exe/global-manual-ai/blob/4240ca3fd075e71ae02e8a2df534b222356b87e1/builds/stryde-anniversary-shoes/scenes/SC02/SC02-T1.kie.json), [take 2 prompt](https://github.com/keys-exe/global-manual-ai/blob/4240ca3fd075e71ae02e8a2df534b222356b87e1/builds/stryde-anniversary-shoes/scenes/SC02/SC02-T2.prompt.txt), [take 2 receipt](https://github.com/keys-exe/global-manual-ai/blob/4240ca3fd075e71ae02e8a2df534b222356b87e1/builds/stryde-anniversary-shoes/scenes/SC02/SC02-T2.kie.json))
+
 
 Official model references:
 
