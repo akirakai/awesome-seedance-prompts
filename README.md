@@ -52375,8 +52375,83 @@ the [successful Kie task receipt](https://github.com/keys-exe/global-manual-ai/b
 the [three measured transcripts and trim windows](https://github.com/keys-exe/global-manual-ai/blob/13ca06b0c15b33bced32341aacce1dac8e2c6f30/builds/stryde-anniversary-shoes/voice/masters.json)
 and the [production notes and no-music checks](https://github.com/keys-exe/global-manual-ai/blob/13ca06b0c15b33bced32341aacce1dac8e2c6f30/builds/stryde-anniversary-shoes/BUILD_NOTES.md).
 
+
+### Explicit exposure-and-palette lock without cinematic shorthand
+
+**Verified model:** Seedance 2.0 — the original creator added this rule inside
+the project's version-labeled Seedance 2.0 production section immediately after
+committing new 720p Seedance 2.0 cuts. The operator reports that the generic
+words “cinematic” and “clean cinematic” repeatedly pushed results toward darker,
+less saturated imagery, so this template replaces those labels with observable
+exposure and color targets.
+
+**Evidence boundary:** this is a creator-observed production rule, not a claim
+that every Seedance surface maps the words identically. Use it as a controlled
+repair: remove only the vague style shorthand, keep action and camera fixed,
+then compare exposure and palette.
+
+**Use case:** bright live action, colorful hybrid animation, daylight UGC or
+any scene where generic film-language prompts produce crushed shadows or an
+unwanted muted grade  
+**Mode:** T2V, I2V or reference-to-video; one-variable style repair
+
+```text
+SUBJECT AND ACTION
+[SUBJECT] performs [ONE VISIBLE ACTION] from [START STATE] to [CLEAR ENDPOINT].
+Keep identity, anatomy, wardrobe, object count and environment stable.
+
+CAMERA
+[SHOT SIZE], [VIEWPOINT], [LENS FEEL], [ONE CAMERA MOVE OR LOCKED CAMERA].
+Start on [START COMPOSITION] and stop on [END COMPOSITION].
+
+EXPOSURE — WRITE THE IMAGE, NOT A MOOD LABEL
+Bright [MORNING / DAY / NIGHT] exposure. [NAMED PRACTICAL OR NATURAL SOURCE]
+lights the subject from [DIRECTION]. Preserve readable midtones on the face,
+clothing and set; retain detail in both [SHADOW AREA] and [HIGHLIGHT AREA].
+Shadows are [SOFT / CRISP] but not crushed. Whites stay [NEUTRAL / WARM] and
+highlights do not bloom over important detail.
+
+COLOR
+Use [DOMINANT COLOR 1], [DOMINANT COLOR 2] and [ACCENT COLOR] at natural,
+clearly visible saturation. Skin remains [NATURAL DESCRIPTION]. Background
+colors stay distinct instead of collapsing into a blanket grey, teal or brown
+grade. State the intended contrast directly: [LOW / MEDIUM / HIGH] contrast.
+
+TEXTURE AND FINISH
+[REALISTIC PHONE / DRY MATTE LIVE ACTION / FLAT 2D CHARACTER AGAINST LIVE
+ACTION / OTHER SPECIFIC FINISH]. Keep surfaces [MATTE / DRY / CLEAN] with
+[DEFINED GRAIN OR NO GENERATED GRAIN]. Do not request “cinematic” or “clean
+cinematic.” Add lens bokeh, halation, vignette or decorative grain in post
+unless it is physically required in the shot.
+
+AUDIO
+[EXACT AMBIENCE / EFFECT / DIALOGUE / COMPLETE SILENCE]. No unintended music,
+caption, logo or visible text.
+
+ACCEPTANCE GATE
+- subject and action match the unchanged control prompt;
+- face and important surfaces retain midtone detail;
+- named colors remain separately readable at the requested saturation;
+- no automatic dark mood grade, crushed blacks or blanket desaturation;
+- camera, timing and endpoint did not change while exposure language changed.
+```
+
+**Why it works:** “cinematic” bundles many possible grading, lighting and lens
+assumptions into one word. Replacing it with a motivated source, readable
+midtone targets, explicit shadow and highlight limits, a named palette and a
+post-production boundary makes the visual request inspectable. Keeping the rest
+of the prompt unchanged also isolates whether the repair actually came from
+exposure and color language.
+
+Adapted and rewritten from yumeai-fantasy88's October 5, 2026
+[Seedance 2.0 production-rule update](https://github.com/yumeai-fantasy88/flova/commit/8a193d15d0dc06045d86d92e0fb36bbc244f9afe),
+the version-labeled [project rules](https://github.com/yumeai-fantasy88/flova/blob/8a193d15d0dc06045d86d92e0fb36bbc244f9afe/CLAUDE.md)
+and the immediately preceding
+[720p Seedance 2.0 production cuts](https://github.com/yumeai-fantasy88/flova/commit/65dba19fc262273342eee62084c702679ce5e28f).
+
 ---
 ## Sources
+- [yumeai-fantasy88 / flova — October 5, 2026 Seedance 2.0 exposure-and-color repair rule: after new 720p production cuts, the creator records that “cinematic” and “clean cinematic” darkened and desaturated results; replace them with explicit brightness and palette instructions and add decorative bokeh in post](https://github.com/yumeai-fantasy88/flova/commit/8a193d15d0dc06045d86d92e0fb36bbc244f9afe) ([version-labeled rules](https://github.com/yumeai-fantasy88/flova/blob/8a193d15d0dc06045d86d92e0fb36bbc244f9afe/CLAUDE.md), [preceding Seedance 2.0 cuts](https://github.com/yumeai-fantasy88/flova/commit/65dba19fc262273342eee62084c702679ce5e28f))
 - [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 mirror-side anatomical-contact scene: complete four-shot dual-voice prompt, role-scoped identity, room, contact-card and prior-set references, successful 945-credit task, returned 720 × 1280 MP4, picture-preserving music removal and measured rendered-contact pass](https://github.com/keys-exe/global-manual-ai/commit/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/SC01-T1.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/SC01-T1.call.json), [task](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/SC01-T1.kie.json), [contact check](https://github.com/keys-exe/global-manual-ai/blob/88a8ed15ffa74cd78d6f2c214aaec8ec270ef214/builds/stryde-anniversary-shoes/scenes/SC01/touch_landed.json))
 - [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 morning shoebox-refusal scene: complete five-shot dual-voice prompt, role-scoped face, room, prop and voice references, closed-box state ledger, successful 945-credit task, returned 720 × 1280 MP4 and picture-preserving music removal](https://github.com/keys-exe/global-manual-ai/commit/191a481bb672080dad37836445c897e3c16472c1) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/191a481bb672080dad37836445c897e3c16472c1/builds/stryde-anniversary-shoes/hooks/HK2/HK2-T1.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/191a481bb672080dad37836445c897e3c16472c1/builds/stryde-anniversary-shoes/hooks/HK2/HK2-T1.call.json), [task and result](https://github.com/keys-exe/global-manual-ai/blob/191a481bb672080dad37836445c897e3c16472c1/builds/stryde-anniversary-shoes/board/json/gen_HK2-T1.json))
 - [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 high-shelf gift-aftermath scene: complete two-shot prompt, identity, canonical room, closed-prop and prior-filmed-set references, successful 378-credit task, clean native-audio check and returned 720 × 1280 MP4](https://github.com/keys-exe/global-manual-ai/commit/114dfaacc8c8e31f99f6697a12d258ef58337577) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/114dfaacc8c8e31f99f6697a12d258ef58337577/builds/stryde-anniversary-shoes/hooks/HK3/HK3-T2.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/114dfaacc8c8e31f99f6697a12d258ef58337577/builds/stryde-anniversary-shoes/hooks/HK3/HK3-T2.call.json), [task and result](https://github.com/keys-exe/global-manual-ai/blob/114dfaacc8c8e31f99f6697a12d258ef58337577/builds/stryde-anniversary-shoes/board/json/gen_HK3-T2.json))
