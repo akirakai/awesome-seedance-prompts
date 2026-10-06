@@ -479,6 +479,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Café bully redirection with furniture-state payoff](#463-café-bully-redirection-with-furniture-state-payoff)
   - [Charred-hand memory match cut and recognition reversal](#464-charred-hand-memory-match-cut-and-recognition-reversal)
   - [Era-locked Tokyo MiniDV gym-day continuity vlog](#465-era-locked-tokyo-minidv-gym-day-continuity-vlog)
+  - [Playful basketball mascot with a one-ball handoff ledger](#466-playful-basketball-mascot-with-a-one-ball-handoff-ledger)
+  - [Cause-gated suburban lawn monster emergence](#467-cause-gated-suburban-lawn-monster-emergence)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -30277,6 +30279,129 @@ the montage can be checked for both anachronisms and state continuity.
 Adapted and rewritten from @saniaspeaks_'s October 3, 2026
 [original Seedance 2.5 on OpenArt post with the complete prompt and result](https://x.com/saniaspeaks_/status/2106247874296062303).
 
+
+### 466. Playful basketball mascot with a one-ball handoff ledger
+
+**Verified model:** Seedance 2.0 — the versioned YouMind prompt-gallery
+record maps the complete prompt and generated result to the original creator's
+post  
+**Use case:** two-character sports comedy, human/mascot scale consistency,
+single-prop continuity and smooth wide-to-medium coverage  
+**Mode:** text-to-video  
+**Suggested settings:** source does not specify duration or aspect ratio, so lock
+both before generation; photorealistic live action; soft overcast daylight;
+high-detail 4K finish
+
+```text
+Create a photorealistic live-action basketball vignette on one orange outdoor
+court surrounded by dense green trees under soft overcast daylight.
+
+CAST AND GEOGRAPHY
+WOMAN = one clearly adult Korean woman with long dark hair, natural skin,
+realistic facial features, a fitted black sleeveless top, black athletic shorts
+and white sneakers. Preserve her face, hair, body proportions and clothing.
+MASCOT = one oversized white cartoon dog mascot with the same black floppy ears,
+round proportions and soft costume texture in every shot. Keep one hoop, one
+court, one mascot and exactly one basketball.
+
+OPENING WIDE
+Begin with a cinematic wide near the hoop. The woman faces the mascot across a
+short playable distance. The mascot owns the ball first, gives it one readable
+bounce and passes it toward her. She catches the same ball cleanly; the court
+lines, hoop and tree line establish the screen direction.
+
+PLAYFUL EXCHANGE
+Move smoothly into a medium two-shot as she dribbles the same ball and feints
+left, then right. The mascot reacts with one delayed, friendly defensive step
+and a clear head turn. Keep their feet planted on the court plane, preserve the
+large but believable height difference and let her hair, limbs and clothing
+respond naturally to each move.
+
+CONFIDENT APPROACH
+She gathers the ball with both hands and walks closer to camera. Ease into a
+medium close-up without losing the mascot in the background. She gives the lens
+one confident, slightly playful look while the mascot reacts behind her; neither
+character addresses an unseen third person.
+
+RETURN AND PAYOFF
+She turns back toward the same hoop, resumes one controlled dribble and prepares
+for another playful basketball move. Let the camera drift sideways so the
+mascot becomes a readable foreground layer while she and the hoop remain visible
+behind it. End before the action resets.
+
+REALISM GATE
+Use smooth friend-operated handheld movement, shallow depth of field, natural
+shadows, realistic skin, individual hair strands, correct joint motion,
+believable ball weight and contact-led bounces. The ball may change owner only
+through the visible opening pass. Reject identity drift, changing outfit,
+mascot redesign or scale drift, duplicated ball, floating ball, hand/ball
+intersection, foot sliding, extra fingers or limbs, broken anatomy, relocated
+hoop, teleportation, abrupt camera jump, text, logo or watermark.
+```
+
+**Why it works:** one visible handoff resolves the source scene's ambiguous
+ball ownership, while the woman, mascot, hoop and ball each keep a stable role
+through a simple wide -> two-shot -> close approach -> layered return arc.
+
+Adapted and rewritten from @ayzalnooor24521's October 6, 2026
+[original creator post](https://x.com/ayzalnooor24521/status/2107340030536741222);
+[versioned Seedance 2.0 gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=11984).
+
+### 467. Cause-gated suburban lawn monster emergence
+
+**Verified model:** Seedance 2.0 — the versioned YouMind prompt-gallery record
+maps the complete prompt and generated result to the original creator's post  
+**Use case:** short-form creature VFX, ground-contact destruction, scale reveal
+and witness-reaction staging  
+**Mode:** text-to-video  
+**Suggested settings:** vertical 9:16; photorealistic live action; dramatic
+golden-hour light; source does not specify duration, so choose it before
+generation and keep the event readable rather than over-cut
+
+```text
+Create an ultra-realistic vertical 9:16 cinematic VFX shot in one upscale
+suburban front yard at sunset. Keep the luxury house, lawn, sidewalk and one
+adult male witness fixed in the same geography.
+
+CAUSE FIRST
+Open on a mysterious object already resting in the grass, emitting a restrained
+green-white glow. Hold long enough to establish its position relative to the
+house and the man standing several metres away. The glow intensifies; nearby
+grass bends outward and loose soil begins to tremble before anything appears.
+
+BREACH
+The lawn buckles from that exact point. A crack spreads, then soil, roots, dust
+and small debris lift as one enormous grotesque green creature forces its upper
+body through the opening. Its mass must displace the ground: shoulders push
+against earth, slime stretches across textured skin and debris falls back under
+gravity. Angry expressive eyes lock toward the witness.
+
+SCALE AND REACTION
+Use a controlled forward camera move with a slight low-angle adjustment as the
+creature rises, preserving the house as a scale reference. Keep the witness in
+the middle distance; he recoils one step and raises his arms defensively instead
+of vanishing or approaching the breach. End with the creature dominant in the
+foreground, the damaged lawn beneath it, the witness readable behind and the
+house still spatially stable.
+
+LOOK AND FAILURE GATE
+Use dramatic golden-hour rim light, atmospheric haze, shallow depth of field,
+realistic skin, slime, soil, dust, shadows and high-detail Hollywood creature
+VFX. Keep the creature's anatomy and scale stable after it appears. Reject an
+instant pop-in, intact ground beneath the body, clipping through soil, weightless
+debris, repeated emergence, growing/shrinking creature, duplicated witness,
+moving house, camera teleport, cartoon rendering, text, logo or watermark.
+```
+
+**Why it works:** the glow, grass deformation, crack, displaced earth and rising
+body form an observable causal chain. The fixed house and persistent witness
+supply two independent scale anchors, preventing a generic creature reveal from
+turning into an ungrounded VFX montage.
+
+Adapted and rewritten from @AIwithMinal's October 6, 2026
+[original creator post](https://x.com/AIwithMinal/status/2107333962402341067);
+[versioned Seedance 2.0 gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=11985).
+
 ## Reusable templates
 
 
@@ -54066,6 +54191,8 @@ and its [successful paid task receipt](https://github.com/keys-exe/global-manual
 
 ---
 ## Sources
+- [@ayzalnooor24521 — October 6, 2026 Seedance 2.0 playful basketball scene: complete prompt and result with an adult player, oversized dog mascot, one court and smooth wide-to-medium coverage](https://x.com/ayzalnooor24521/status/2107340030536741222) ([versioned gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=11984))
+- [@AIwithMinal — October 6, 2026 Seedance 2.0 suburban monster emergence: complete vertical VFX prompt and result with a glowing lawn trigger, fixed witness, house scale anchor and creature breach](https://x.com/AIwithMinal/status/2107333962402341067) ([versioned gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=11985))
 - [keys-exe / global-manual-ai — October 6, 2026 Seedance 2.5 720p fine-performance pixel-budget gate, low-loss assembly and single picture-locked final upscale](https://github.com/keys-exe/global-manual-ai/commit/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea) ([rule](https://github.com/keys-exe/global-manual-ai/blob/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea/standards/AI_Prompt_Engineer_Global_Standards.md), [preflight](https://github.com/keys-exe/global-manual-ai/blob/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea/.claude/skills/ai-prompt-engineer/scripts/preflight.py), [exact Seedance 2.5 call](https://github.com/keys-exe/global-manual-ai/blob/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea/builds/stryde-anniversary-shoes/scenes/SC04/SC04-T1.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea/builds/stryde-anniversary-shoes/scenes/SC04/SC04-T1.kie.json))
 - [ferrem01 / media-producer-mcp — October 6, 2026 Seedance 2.5 motion-ready cutaway in-point, immediate-action prompt and anchor-preserving same-slot retake](https://github.com/ferrem01/media-producer-mcp/commit/c44a45ce5833425d8a37a2242dd3947e61a2c23b) ([generation and timing path](https://github.com/ferrem01/media-producer-mcp/blob/c44a45ce5833425d8a37a2242dd3947e61a2c23b/src/core/scene-performance.ts), [source-time playback](https://github.com/ferrem01/media-producer-mcp/blob/c44a45ce5833425d8a37a2242dd3947e61a2c23b/src/components/media/video.component.html), [exact route and regression](https://github.com/ferrem01/media-producer-mcp/blob/c44a45ce5833425d8a37a2242dd3947e61a2c23b/test/scene-performance.test.ts))
 - [ferrem01 / media-producer-mcp — October 6, 2026 Seedance 2.5 per-scene native-audio slot assembly across rendered transitions, short/long stream normalization and frame-level sync regression](https://github.com/ferrem01/media-producer-mcp/commit/e42cdb5bf9b1faa4ffe3a50848baa6dc2d90fedf) ([slot implementation](https://github.com/ferrem01/media-producer-mcp/blob/e42cdb5bf9b1faa4ffe3a50848baa6dc2d90fedf/src/core/speaker-track.ts), [render integration](https://github.com/ferrem01/media-producer-mcp/blob/e42cdb5bf9b1faa4ffe3a50848baa6dc2d90fedf/src/core/render.ts), [sync regression](https://github.com/ferrem01/media-producer-mcp/blob/e42cdb5bf9b1faa4ffe3a50848baa6dc2d90fedf/test/speaker-slots.test.ts))
