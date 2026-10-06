@@ -483,6 +483,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Cause-gated suburban lawn monster emergence](#467-cause-gated-suburban-lawn-monster-emergence)
   - [Long-lens animated supermarket collision](#468-long-lens-animated-supermarket-collision)
   - [Vanity product purge with irreversible floor-state carryover](#469-vanity-product-purge-with-irreversible-floor-state-carryover)
+  - [Landmark-crossing mobility reveal with two-speaker state handoff](#470-landmark-crossing-mobility-reveal-with-two-speaker-state-handoff)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -30627,6 +30628,128 @@ Adapted and rewritten from keys-exe's October 6, 2026 production record:
 [owner-confirmation commit and production notes](https://github.com/keys-exe/global-manual-ai/commit/2640c7de4262f8a4e00ff30a7a8cb83a00b03b54)
 and [generated MP4](https://d8j0ntlcm91z4.cloudfront.net/user_3AViUeU5dIz6pgsjYszQ9iux9YN/hf_20261006_160700_e6617901-44ce-4dfa-a10b-ec1a7386556c.mp4).
 
+
+### 470. Landmark-crossing mobility reveal with two-speaker state handoff
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the committed request names the model and complete
+16-second prompt; task `f3732f21bc9618245cd0bb3a78532227` succeeded for
+1,008 credits and returned an MP4; the source owner later instructed the
+production to restore version 1 and marked it confirmed  
+**Use case:** live-action mobility reveal, measurable environmental landmark,
+two-person dialogue, hidden product continuity and restrained reaction acting  
+**Mode:** five image references and two voice references; four-shot vertical
+reference-to-video generation with native audio  
+**Verified settings:** 16 seconds; 9:16; 720p; native audio; no start frame
+
+```text
+REFERENCE AUTHORITY
+@Image1 = OLDER_WOMAN_IDENTITY: her face, age, hair, build and proportions only.
+@Image2 = OLDER_WOMAN_WARDROBE: light sage linen shirt, cream straight trousers
+and white trainers. It controls clothes only.
+@Image3 = YOUNGER_WOMAN_IDENTITY: her face, age, hair, build and proportions
+only.
+@Image4 = YOUNGER_WOMAN_WARDROBE: white vest, khaki shorts, grey trainers and
+sunglasses resting on her head. It controls clothes only.
+@Image5 = HILL_GEOGRAPHY: a steep terraced street, waist-high stone wall along
+the left pavement, one red pillar box halfway uphill, parked cars on the right
+and school railings at the crest. Preserve the slope, sides and landmark
+positions; do not copy people or poses.
+@Audio1 = the older woman's voice identity, accent, pitch and pace only.
+@Audio2 = the younger woman's voice identity, accent, pitch and pace only.
+
+SCENE CONTRACT
+Create one restrained 16-second British family-drama scene in four shots. The
+older woman walks uphill at an easy, even pace and passes the red pillar box
+that previously marked where she had to stop. The younger woman comes downhill
+pushing a navy buggy, recognizes the achievement, asks what changed and watches
+the older woman continue toward the crest. The mobility aid remains hidden
+under the older woman's right trouser leg. Keep every shot on the same side of
+the action line and carry positions, walking phase, wardrobe, voices, light and
+emotion forward without reset.
+
+ENVIRONMENT AND LIGHT
+Clear late-summer morning. Warm sunlight enters from frame-right at roughly
+5600K, giving every face a soft shadow side and casting short pavement shadows.
+The left-side stone wall and red pillar box remain stable scale witnesses.
+Signs, number plates and door numbers are blank.
+
+TIMELINE
+[0.0-4.0 s] Full eye-level profile from across the left pavement, locked tripod
+with only a small following pan. The older woman walks uphill below the pillar
+box, upright, hands free, arms swinging naturally, both knees bending evenly
+at about one step per second. She passes the pillar box without slowing. The
+younger woman and buggy approach downhill from above. Nobody speaks.
+
+[4.0-9.0 s] Medium three-quarter view, still from the same side of the axis.
+Resume the actors at the exact step and positions left by shot 1. The younger
+woman stops the buggy just above the pillar box, hands tightening on its handle
+a beat after she recognizes what happened. Using @Audio2, she says warmly,
+"You walked straight past the postbox." The older woman stops beside her,
+smiles slightly and answers with @Audio1, "I did." The younger woman asks,
+"What changed?"
+
+[9.0-13.0 s] Close three-quarter view on the older woman; the younger woman's
+shoulder remains soft at frame edge. The older woman taps her right trouser leg
+once just below the knee. The hidden aid never becomes visible. Using @Audio1,
+she says, "A small support under my trousers." Using @Audio2 from off-screen,
+the younger woman asks, "Since when?" Her mouth is not visible while speaking.
+
+[13.0-16.0 s] Full three-quarter view from slightly below. The older woman
+resumes uphill from the foot and body phase established in shot 3, looks back
+over one shoulder and answers with @Audio1, "Every morning for five weeks." She
+then faces uphill and continues with even hands-free steps. The younger woman
+stays beside the buggy, looking after her with a delayed, restrained smile.
+Final frame: older woman above the pillar box moving toward the crest; younger
+woman and buggy stationary below.
+
+PERFORMANCE
+Play the scene small and specific. The older woman's pride leaks only through
+the single trouser-leg tap and a brief smile; her voice remains quiet, warm and
+level. The younger woman's surprise arrives after the visual evidence, then
+turns to curiosity and delight. A listener keeps their mouth closed, eyes on
+the speaker and face alive. No nodding on every phrase, presentational gestures
+or performance to the lens.
+
+MOVEMENT AND CUT HANDOFF
+Every cut begins from the completed footfall, hand position, gaze and screen
+direction left by the previous shot. The older woman carries body weight fully
+onto one planted foot before the next step. The buggy remains grounded, keeps
+its scale and rolls only when pushed. The pillar box first passes behind the
+older woman, then remains below her for the rest of the scene; it never jumps
+uphill or changes sides.
+
+SOUND
+Only the assigned speaker talks. Use @Audio1 for every older-woman line and
+@Audio2 for every younger-woman line; never swap, overlap or clone the voices.
+Dialogue is close and clean with light outdoor room tone. Add soft trainer
+footfalls on pavement, quiet buggy wheels and distant residential ambience.
+No music, singing, humming or fabricated narration.
+
+CONTINUITY AND FAILURE GATE
+Keep both identities, ages, outfits, shoes, the navy buggy, toddler, landmark
+map, right-side sunlight and uphill screen direction fixed. The hidden support
+never becomes visible. Reject a limp, cane, wall contact, fall, skipped steps,
+floating feet, premature reaction, frozen listener, wrong speaker, moving lips
+on the listener, axis crossing, reversed slope, relocated pillar box, missing
+buggy, extra pedestrians, wardrobe reset, camera drift, phone-video processing,
+logos, legible signs, captions, watermarks or music.
+```
+
+**Why it works:** the red pillar box converts improvement into a visible,
+repeatable threshold rather than a spoken claim. Position and walking phase are
+handed across every cut, while the landmark's below/above state proves forward
+progress. Narrow reference roles separate identity from wardrobe, the aid stays
+hidden, each line has one voice owner, and the listener's delayed reaction is
+specified as causally following the evidence.
+
+Adapted and rewritten from keys-exe's October 6, 2026 production record:
+[owner-confirmation and restoration commit](https://github.com/keys-exe/global-manual-ai/commit/4513065fec3c591ef65cf3f1cb478177e4db5ae4),
+[complete generation prompt](https://github.com/keys-exe/global-manual-ai/blob/4513065fec3c591ef65cf3f1cb478177e4db5ae4/builds/stryde-the-impression/film/SC12/SC12-T.prompt.txt),
+[exact Seedance 2.5 request](https://github.com/keys-exe/global-manual-ai/blob/4513065fec3c591ef65cf3f1cb478177e4db5ae4/builds/stryde-the-impression/film/SC12/SC12-T.call.json),
+[successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/4513065fec3c591ef65cf3f1cb478177e4db5ae4/builds/stryde-the-impression/film/SC12/SC12-T.v1.kie.log)
+and [production notes](https://github.com/keys-exe/global-manual-ai/blob/4513065fec3c591ef65cf3f1cb478177e4db5ae4/builds/stryde-the-impression/BUILD_NOTES.md).
+
 ## Reusable templates
 
 
@@ -54717,6 +54840,7 @@ and the follow-up
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 6, 2026 confirmed Seedance 2.5 landmark-crossing mobility reveal: complete 16-second five-image/two-voice prompt, exact `bytedance/seedance-2-5` request, successful 1,008-credit task and explicit source-owner restoration of version 1](https://github.com/keys-exe/global-manual-ai/commit/4513065fec3c591ef65cf3f1cb478177e4db5ae4) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/4513065fec3c591ef65cf3f1cb478177e4db5ae4/builds/stryde-the-impression/film/SC12/SC12-T.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/4513065fec3c591ef65cf3f1cb478177e4db5ae4/builds/stryde-the-impression/film/SC12/SC12-T.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/4513065fec3c591ef65cf3f1cb478177e4db5ae4/builds/stryde-the-impression/film/SC12/SC12-T.v1.kie.log))
 - [keys-exe / global-manual-ai — October 6, 2026 confirmed Seedance 2.5 vanity product purge: complete 16-second reference request, exact `seedance_2_5` route, provider job and credit ledger, public generated MP4, clean-audio audit, irreversible scattered-floor state and explicit source-owner acceptance](https://github.com/keys-exe/global-manual-ai/commit/2640c7de4262f8a4e00ff30a7a8cb83a00b03b54) ([generation/result commit](https://github.com/keys-exe/global-manual-ai/commit/36ad9360aae37315ff5563998a07c8d2b1379652), [complete prompt and ledger](https://github.com/keys-exe/global-manual-ai/blob/2640c7de4262f8a4e00ff30a7a8cb83a00b03b54/builds/facelove-walmart/board/json/sc04_g4.json), [generated MP4](https://d8j0ntlcm91z4.cloudfront.net/user_3AViUeU5dIz6pgsjYszQ9iux9YN/hf_20261006_160700_e6617901-44ce-4dfa-a10b-ec1a7386556c.mp4))
 - [keys-exe / global-manual-ai — October 6, 2026 Seedance 2.5 state-preloaded prop pickup: complete 4-second reference-matched request, successful 252-credit Kie task, envelope-measured dialogue window and assembled-file read-back](https://github.com/keys-exe/global-manual-ai/commit/f2180f3a6c14e81dca5454c7f361165fd929a030) ([complete request](https://github.com/keys-exe/global-manual-ai/blob/f2180f3a6c14e81dca5454c7f361165fd929a030/builds/stryde-other-nana/film/SC01/SC01-T1-P1.call.json), [successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/f2180f3a6c14e81dca5454c7f361165fd929a030/builds/stryde-other-nana/film/SC01/SC01-T1-P1.kie.log), [final splice correction](https://github.com/keys-exe/global-manual-ai/commit/3ed0497670ef7c0cc566bc836fe377a3452d7ab9))
 - [keys-exe / global-manual-ai — October 6, 2026 Kie AI Seedance 2.5 A/B/A intervention proof: complete five-reference 26-second request, matched on/off/on task trials, fixed test geometry, successful 1,638-credit task and explicit `To check` review boundary](https://github.com/keys-exe/global-manual-ai/commit/049f8116fe688bc25e28e3c52c5a07e8af464594) ([complete request](https://github.com/keys-exe/global-manual-ai/blob/049f8116fe688bc25e28e3c52c5a07e8af464594/builds/stryde-the-impression/film/SC11/SC11-TB.call.json), [successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/049f8116fe688bc25e28e3c52c5a07e8af464594/builds/stryde-the-impression/film/SC11/SC11-TB.v1.kie.log), [production notes](https://github.com/keys-exe/global-manual-ai/blob/049f8116fe688bc25e28e3c52c5a07e8af464594/builds/stryde-the-impression/BUILD_NOTES.md))
