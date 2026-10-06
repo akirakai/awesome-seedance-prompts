@@ -54496,8 +54496,119 @@ the [automatic fine-hand and fine-face preflight](https://github.com/keys-exe/gl
 the [exact Seedance 2.5 720p production call](https://github.com/keys-exe/global-manual-ai/blob/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea/builds/stryde-anniversary-shoes/scenes/SC04/SC04-T1.call.json)
 and its [successful paid task receipt](https://github.com/keys-exe/global-manual-ai/blob/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea/builds/stryde-anniversary-shoes/scenes/SC04/SC04-T1.kie.json).
 
+
+### State-preloaded prop pickup with envelope-verified splice
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the creator generated a 4-second 720p vertical
+pickup through Seedance; task `74b37ad0fbbbd4a1d3e49051071cee80`
+succeeded for 252 credits and returned an MP4. The subsequent production record
+documents the corrected splice window and confirms that the repaired one-word
+line is audible on read-back.  
+**Evidence boundary:** the generation, paid receipt and assembled-file
+read-back are verified, but the latest board cut was still awaiting final
+artistic review. This entry verifies the local repair method, not acceptance of
+the surrounding film.  
+**Use case:** repair one short interval where a hand-held prop dissolves while
+being placed into a rack, drawer, slot, container or fixture, without
+regenerating an otherwise usable Seedance take  
+**Mode:** accepted master -> reference-matched Seedance pickup -> measured
+audio-window splice -> assembled-file transcript check
+
+```text
+DEFECT LEDGER
+MASTER = [FILE / VERSION]
+REPAIR_WINDOW = [MASTER_START–MASTER_END]
+EXPECTED = [PROP travels into TARGET and remains visible while SPEAKER says LINE]
+OBSERVED = [PROP dissolves during travel / LINE is missing or cut in the splice]
+PRESERVE = every frame outside REPAIR_WINDOW, especially the master last frame
+if a later clip continues from it.
+
+PICKUP REFERENCE ROLES
+@Image1 = SPEAKER_IDENTITY: face, hair, age and build only.
+@Image2 = SPEAKER_WARDROBE: exact clothes for this scene.
+@Image3 = SET_GEOGRAPHY: fixed room, fixture and landmark positions.
+@Image4 = MASTER_MATCH_FRAME from the failed shot: framing, camera height,
+screen direction, light and surrounding prop state only.
+@Audio1 = SPEAKER_VOICE containing only LINE, padded with silence if the
+generation surface rejects a very short source.
+
+STATE-PRELOAD REPAIR
+Generate one continuous [DURATION]-second pickup matching @Image4.
+Frame 1: SPEAKER is already at [FIXTURE] in [PROFILE / REAR / OTHER ANGLE].
+PROP is already fully seated in its required destination state:
+[EXACT POSITION, ORIENTATION AND CONTACT]. Do not animate PROP travelling into
+the slot, crossing an occlusion or becoming hidden.
+
+SPEAKER performs only one low-entropy settling action:
+[hand presses PROP down / fingers release / drawer moves the final centimetre].
+PROP remains whole, visible and in the same count for the entire pickup.
+SPEAKER keeps [BODY AND EYELINE CONSTRAINT] and says LINE once:
+"[EXACT LINE]"
+End with [EXACT HAND, PROP AND BODY STATE] that can cut back to the master.
+
+MATCH CONTRACT
+Copy the master shot's framing, lens feel, camera height, light direction,
+wardrobe, set geometry and screen direction. Keep the camera locked unless the
+master window contains a necessary move. No new character, cutaway, insert,
+reverse angle, score, subtitle, logo or text.
+
+FAILURE GATE
+Reject prop disappearance, a second prop, prop travel into the destination,
+hand/prop fusion, hidden destination, changed fixture, changed camera side,
+speaker turning away from the master pose, repeated or missing dialogue,
+invented words, music or an endpoint that cannot hand back to the master.
+
+AUDIO-WINDOW MEASUREMENT
+1. Inspect the pickup waveform or short-time loudness profile.
+2. Mark the real voiced interval as PICKUP_SPEECH = [ONSET–OFFSET]. Treat ASR
+   word times as a clue only; do not trust them when they disagree with the
+   audible envelope.
+3. Listen to the isolated window and verify LINE word for word.
+4. Add small handles, for example 0.30 s before ONSET and 0.35 s after OFFSET,
+   without clipping a consonant, breath or room tail.
+5. If LINE is extremely short, keep enough lead-in to make the edit natural but
+   never replace the whole pickup merely to fill time.
+
+SPLICE ASSEMBLY
+- copy MASTER from 0 to REPAIR_WINDOW.start;
+- insert the measured pickup window with its native Seedance audio;
+- resume MASTER at REPAIR_WINDOW.end;
+- use low-loss working settings and preserve sync;
+- never alter MASTER's final frame or downstream continuity unless the repair
+  explicitly targets that endpoint.
+
+ASSEMBLED-FILE QC
+Listen to the rendered splice, not only the source pickup. Require LINE to be
+audible once, in order, with no clipped edge or duplicated syllable. Confirm
+PROP remains in its destination state through the pickup, both cuts preserve
+screen direction and exposure, total duration is logged, and any continuation
+frame still matches the next clip. If read-back misses the word, move the
+measured pickup window; do not spend another Seedance generation until the
+existing waveform has been ruled out.
+```
+
+**Why it works:** the failure came from asking the model to solve a fragile
+transition—carrying a plate into a narrow rack—inside a short dramatic beat.
+Starting the pickup with the plate already seated converts that transition into
+a small, stable settling action while the master-match frame protects visual
+continuity. Measuring the actual voice envelope separately fixes the second
+failure class: a correct generated word can disappear when an inaccurate
+transcript timestamp chooses the splice. Final read-back tests the assembled
+artifact rather than trusting either source in isolation.
+
+Adapted and generalized from keys-exe's October 6, 2026
+[prop-state pickup and successful Seedance 2.5 task](https://github.com/keys-exe/global-manual-ai/commit/f2180f3a6c14e81dca5454c7f361165fd929a030),
+including the [complete pickup request](https://github.com/keys-exe/global-manual-ai/blob/f2180f3a6c14e81dca5454c7f361165fd929a030/builds/stryde-other-nana/film/SC01/SC01-T1-P1.call.json),
+[plain-text prompt](https://github.com/keys-exe/global-manual-ai/blob/f2180f3a6c14e81dca5454c7f361165fd929a030/builds/stryde-other-nana/film/SC01/SC01-T1-P1.prompt.txt),
+[successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/f2180f3a6c14e81dca5454c7f361165fd929a030/builds/stryde-other-nana/film/SC01/SC01-T1-P1.kie.log)
+and the follow-up
+[envelope-measured, read-back-verified splice correction](https://github.com/keys-exe/global-manual-ai/commit/3ed0497670ef7c0cc566bc836fe377a3452d7ab9).
+
+
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 6, 2026 Seedance 2.5 state-preloaded prop pickup: complete 4-second reference-matched request, successful 252-credit Kie task, envelope-measured dialogue window and assembled-file read-back](https://github.com/keys-exe/global-manual-ai/commit/f2180f3a6c14e81dca5454c7f361165fd929a030) ([complete request](https://github.com/keys-exe/global-manual-ai/blob/f2180f3a6c14e81dca5454c7f361165fd929a030/builds/stryde-other-nana/film/SC01/SC01-T1-P1.call.json), [successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/f2180f3a6c14e81dca5454c7f361165fd929a030/builds/stryde-other-nana/film/SC01/SC01-T1-P1.kie.log), [final splice correction](https://github.com/keys-exe/global-manual-ai/commit/3ed0497670ef7c0cc566bc836fe377a3452d7ab9))
 - [keys-exe / global-manual-ai — October 6, 2026 Kie AI Seedance 2.5 A/B/A intervention proof: complete five-reference 26-second request, matched on/off/on task trials, fixed test geometry, successful 1,638-credit task and explicit `To check` review boundary](https://github.com/keys-exe/global-manual-ai/commit/049f8116fe688bc25e28e3c52c5a07e8af464594) ([complete request](https://github.com/keys-exe/global-manual-ai/blob/049f8116fe688bc25e28e3c52c5a07e8af464594/builds/stryde-the-impression/film/SC11/SC11-TB.call.json), [successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/049f8116fe688bc25e28e3c52c5a07e8af464594/builds/stryde-the-impression/film/SC11/SC11-TB.v1.kie.log), [production notes](https://github.com/keys-exe/global-manual-ai/blob/049f8116fe688bc25e28e3c52c5a07e8af464594/builds/stryde-the-impression/BUILD_NOTES.md))
 - [keys-exe / global-manual-ai — October 6, 2026 Higgsfield Seedance 2.5 long-lens animated supermarket collision: complete five-image/two-voice prompt, exact `seedance_2_5` route, provider job and credit ledger, public generated MP4, non-destructive music removal and committed review limitation](https://github.com/keys-exe/global-manual-ai/commit/3c2b0f9d8a07e62b26e2c50d49ba63dfdb1db480) ([complete request](https://github.com/keys-exe/global-manual-ai/blob/3c2b0f9d8a07e62b26e2c50d49ba63dfdb1db480/builds/facelove-walmart/takes/SC01-T1.call.json), [result ledger and review](https://github.com/keys-exe/global-manual-ai/blob/3c2b0f9d8a07e62b26e2c50d49ba63dfdb1db480/builds/facelove-walmart/board/json/sc01_g3.json), [generated MP4](https://d8j0ntlcm91z4.cloudfront.net/user_3AViUeU5dIz6pgsjYszQ9iux9YN/hf_20261006_133013_9098202d-ed47-4cff-a984-cd3e892ff6dd.mp4))
 - [keys-exe / global-manual-ai — October 6, 2026 Seedance 2.5 coupled-scale wearable repair: complete prompt, exact `bytedance/seedance-2-5` request, successful 630-credit task, preserved-tail join and technical QC](https://github.com/keys-exe/global-manual-ai/commit/fae43702ded6991df2476983bab493e6375f166d) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/fae43702ded6991df2476983bab493e6375f166d/builds/stryde-the-impression/film/SC09/SC09-TD.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/fae43702ded6991df2476983bab493e6375f166d/builds/stryde-the-impression/film/SC09/SC09-TD.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/fae43702ded6991df2476983bab493e6375f166d/builds/stryde-the-impression/film/SC09/SC09-TD.g2part.kie.log), [review notes](https://github.com/keys-exe/global-manual-ai/blob/fae43702ded6991df2476983bab493e6375f166d/builds/stryde-the-impression/BUILD_NOTES.md))
