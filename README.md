@@ -30571,6 +30571,194 @@ and the
 [montage regression](https://github.com/ferrem01/media-producer-mcp/blob/cee256984e04d050c9a35f7500678988446edf41/test/scene-performance.test.ts).
 
 
+
+### Motion-ready cutaway in-point and anchor-preserving retake
+
+**Verified model:** Seedance 2.5, exact route
+`bytedance/seedance-2.5/reference-to-video` — the creator's production
+implementation generates 720p cutaway masters through this route, then applies
+a source in-point when a much shorter montage beat enters the edit. The
+committed regression verifies the exact model route, four-second generated
+master, one-second default in-point, immediate-motion prompt, silent export and
+anchor-preserving same-slot retake.  
+**Evidence boundary:** this is one reusable prompting-and-editing repair
+technique, not a new scenario prompt. The source records the creator's observed
+slow first second and tests the repaired state path; it does not claim that
+every clip should discard exactly one second or that the resulting montage has
+passed a separate artistic review.  
+**Use case:** UGC, documentary and creator-ad cutaways displayed for roughly
+0.6–2.5 seconds, where Seedance's opening ease-in consumes most of the visible
+beat or a retake loses its word-synchronous landing  
+**Mode:** longer silent Seedance master -> measured source in-point -> short
+timeline window -> anchor-preserving retake
+
+```text
+CUTAWAY LEDGER
+For every beat record:
+- BEAT_ID and narrative job = [VALUES]
+- MODEL_ROUTE = bytedance/seedance-2.5/reference-to-video
+- GENERATED_SECONDS = [SUPPORTED MASTER DURATION]
+- TIMELINE_AT = [WHERE THE BEAT APPEARS]
+- SHOW_SECONDS = [VISIBLE DURATION]
+- CLIP_IN = [SOURCE-TIME IN-POINT]
+- ACTION = [ONE READABLE MICRO-ACTION]
+- WORD_ANCHOR = [OPTIONAL SPOKEN WORD OR PHRASE IN THE BASE TRACK]
+- ACCEPTED_MASTER, task receipt and chosen source range = [VALUES]
+
+MOTION-FIRST GENERATION
+Use the first frame for composition and the character sheet for identity and
+wardrobe. Ask for continuous natural movement from frame one: gesture, shift,
+react, walk or perform the named action immediately; never hold the opening
+pose while waiting for a later cue.
+
+Do not tell a visually silent cutaway “no speech” when that instruction causes
+the seated or listening performer to freeze. Instead state that the delivery
+uses the scene's approved soundtrack and that the cutaway master contributes no
+music. Strip the generated audio track before assembly.
+
+IN-POINT RULE
+Choose CLIP_IN only after checking the master. It must satisfy:
+0 <= CLIP_IN <= GENERATED_SECONDS - SHOW_SECONDS.
+
+When the opening second is only model ease-in and usable motion follows, a
+one-second starting value is a practical test. Reduce it when the action begins
+earlier; move it later only when the complete visible action still fits. A
+source in-point is an editorial slip, not permission to hide a missing action.
+
+TIMELINE PLACEMENT
+At TIMELINE_AT, show the source interval:
+[CLIP_IN, CLIP_IN + SHOW_SECONDS].
+The delivery interval remains:
+[TIMELINE_AT, TIMELINE_AT + SHOW_SECONDS].
+Keep source time and film time separate; do not subtract the scene start twice,
+freeze the exhausted tail or stretch the short beat to reveal the whole master.
+
+ANCHOR-PRESERVING RETAKE
+A retake at the same logical slot replaces that cutaway only. Copy forward the
+accepted WORD_ANCHOR and its resolved timeline entry/exit times before swapping
+the media. Do not let the replacement fall back to its nominal TIMELINE_AT and
+drift away from the spoken phrase. Neighboring cutaways keep their own slots.
+
+ACCEPTANCE GATE
+- motion is already readable at the chosen source in-point;
+- the complete micro-action covers the visible window;
+- source and delivery intervals match the ledger;
+- the exported cutaway is silent and the base soundtrack remains continuous;
+- a same-slot retake preserves word anchors and resolved entry/exit times;
+- no adjacent beat is deleted, duplicated or shifted;
+- identity, wardrobe, location and prop ownership remain stable.
+```
+
+**Why it works:** generation duration, source in-point and visible edit duration
+solve different problems. Prompting continuous movement protects the master;
+slipping past a measured ease-in protects a sub-second cut; carrying forward
+the resolved word anchor protects the montage rhythm when the take is remade.
+The technique fixes pacing without accelerating footage or regenerating an
+already approved scene soundtrack.
+
+Adapted and rewritten from ferrem01 / media-producer-mcp's October 6, 2026
+[cutaway in-point and motion repair](https://github.com/ferrem01/media-producer-mcp/commit/c44a45ce5833425d8a37a2242dd3947e61a2c23b),
+the
+[generation, replacement and timing path](https://github.com/ferrem01/media-producer-mcp/blob/c44a45ce5833425d8a37a2242dd3947e61a2c23b/src/core/scene-performance.ts),
+the
+[source-time playback implementation](https://github.com/ferrem01/media-producer-mcp/blob/c44a45ce5833425d8a37a2242dd3947e61a2c23b/src/components/media/video.component.html),
+the
+[exact Seedance 2.5 route](https://github.com/ferrem01/media-producer-mcp/blob/c44a45ce5833425d8a37a2242dd3947e61a2c23b/src/core/seedance.ts)
+and the
+[motion, in-point and anchor regressions](https://github.com/ferrem01/media-producer-mcp/blob/c44a45ce5833425d8a37a2242dd3947e61a2c23b/test/scene-performance.test.ts).
+
+
+### Per-scene native-audio slots across rendered transitions
+
+**Verified model:** Seedance 2.5, exact route
+`bytedance/seedance-2.5/reference-to-video` — the creator's production
+pipeline uses separate Seedance native-audio takes for successive scenes. The
+new assembly path assigns each take to its measured film slot and the committed
+regression verifies Seedance-like 24 fps inputs whose audio ends 0.2 seconds
+short or 0.3 seconds long, with every test tone landing within one output frame
+of the intended scene start.  
+**Evidence boundary:** this is one reusable post-generation continuity and
+delivery technique, not a new scenario prompt. Its slot math and synthetic
+audio/video mismatch tests are verified; it does not establish subjective voice
+quality or replace listening and picture review of the real takes.  
+**Use case:** multi-scene dialogue, presenter and creator films assembled from
+one native-audio Seedance take per scene, especially when rendered whip-pans,
+glitch cuts or other transitions otherwise accumulate picture/audio offset  
+**Mode:** accepted per-scene Seedance takes -> measured film-start ledger ->
+one normalized A/V slot per take -> filter-based concatenation
+
+```text
+SLOT LEDGER
+For each accepted take record:
+- SCENE_INDEX = [STRICTLY INCREASING INTEGER]
+- SOURCE_TAKE and task receipt = [VALUES]
+- SOURCE_TRIM_START / SOURCE_TRIM_END = [VALUES]
+- FILM_START = [MEASURED START AFTER PRECEDING TRANSITIONS]
+- NEXT_TAKE_FILM_START = [VALUE OR FILM END]
+- SLOT_LENGTH = NEXT_TAKE_FILM_START - FILM_START
+- HAS_VIDEO / HAS_AUDIO, source fps, sample rate and channel layout = [VALUES]
+
+SLOT AUTHORITY
+Compute starts from the rendered film timeline, including every transition
+duration. A take owns the interval from its scene's FILM_START to the next
+take's FILM_START; therefore the transition leading into the next scene remains
+inside the current slot. The final take ends at the film's exact duration.
+
+If the first accepted take belongs to a later scene, prepend one black-and-silent
+lead equal to its FILM_START. Do not pull that take earlier to fill an unowned
+opening.
+
+NORMALIZE EACH SLOT
+1. Apply the approved source trim.
+2. Convert picture to the delivery canvas and a single project frame rate.
+3. If picture ends early, hold its final frame until SLOT_LENGTH; if it runs
+   long, trim exactly at the boundary.
+4. Resample audio to the project rate and channel layout.
+5. If audio ends early, pad silence; if it runs long, trim at SLOT_LENGTH.
+6. Reset picture and audio timestamps to zero for the normalized slot.
+7. Keep the native Seedance speech once; do not overlay the reference voice.
+
+ASSEMBLY
+Concatenate normalized picture/audio pairs with a filter graph that retimes
+every stream. Do not rely on a demuxer that trusts incompatible source
+timestamps. Encode one delivery clock and trim the assembled base to the exact
+film duration.
+
+Use this slotted path only when clips have unique, strictly increasing
+SCENE_INDEX values and represent per-scene takes. A single continuous
+performance track, duplicate scene indices or unordered clips must remain on a
+separate audited path.
+
+SYNC ACCEPTANCE GATE
+- every take begins at its ledgered FILM_START, not at the sum of raw clip
+  durations;
+- transition durations appear once and do not create cumulative voice lead;
+- the first word or test marker lands within one output frame of its scene;
+- no join freezes, repeats, drops audio or scrambles channels;
+- picture and audio for every slot have identical duration and reset timestamps;
+- the complete base equals the measured film duration;
+- the original per-scene takes and slot ledger remain archived for correction.
+```
+
+**Why it works:** raw Seedance takes may have different picture and sound end
+times, while the edited film inserts transition time that does not exist inside
+those source files. Giving every take a film-derived slot makes the transition
+part of the timing model, then independently holding picture and padding audio
+forces both streams onto one clock. This prevents the voice from advancing by
+the accumulated transition duration and removes timestamp shocks at joins.
+
+Adapted and rewritten from ferrem01 / media-producer-mcp's October 6, 2026
+[per-scene speaker-slot repair](https://github.com/ferrem01/media-producer-mcp/commit/e42cdb5bf9b1faa4ffe3a50848baa6dc2d90fedf),
+the
+[slot math and normalized assembly](https://github.com/ferrem01/media-producer-mcp/blob/e42cdb5bf9b1faa4ffe3a50848baa6dc2d90fedf/src/core/speaker-track.ts),
+the
+[render integration](https://github.com/ferrem01/media-producer-mcp/blob/e42cdb5bf9b1faa4ffe3a50848baa6dc2d90fedf/src/core/render.ts),
+the
+[exact Seedance 2.5 route](https://github.com/ferrem01/media-producer-mcp/blob/e42cdb5bf9b1faa4ffe3a50848baa6dc2d90fedf/src/core/seedance.ts)
+and the
+[transition, duration-mismatch and sync regression](https://github.com/ferrem01/media-producer-mcp/blob/e42cdb5bf9b1faa4ffe3a50848baa6dc2d90fedf/test/speaker-slots.test.ts).
+
+
 ### Similarity-transform counter-warp that preserves handheld jitter
 
 **Verified model:** Higgsfield Seedance 2.5 `omni_reference`, draft 480p,
@@ -53793,6 +53981,8 @@ and the immediately preceding
 
 ---
 ## Sources
+- [ferrem01 / media-producer-mcp — October 6, 2026 Seedance 2.5 motion-ready cutaway in-point, immediate-action prompt and anchor-preserving same-slot retake](https://github.com/ferrem01/media-producer-mcp/commit/c44a45ce5833425d8a37a2242dd3947e61a2c23b) ([generation and timing path](https://github.com/ferrem01/media-producer-mcp/blob/c44a45ce5833425d8a37a2242dd3947e61a2c23b/src/core/scene-performance.ts), [source-time playback](https://github.com/ferrem01/media-producer-mcp/blob/c44a45ce5833425d8a37a2242dd3947e61a2c23b/src/components/media/video.component.html), [exact route and regression](https://github.com/ferrem01/media-producer-mcp/blob/c44a45ce5833425d8a37a2242dd3947e61a2c23b/test/scene-performance.test.ts))
+- [ferrem01 / media-producer-mcp — October 6, 2026 Seedance 2.5 per-scene native-audio slot assembly across rendered transitions, short/long stream normalization and frame-level sync regression](https://github.com/ferrem01/media-producer-mcp/commit/e42cdb5bf9b1faa4ffe3a50848baa6dc2d90fedf) ([slot implementation](https://github.com/ferrem01/media-producer-mcp/blob/e42cdb5bf9b1faa4ffe3a50848baa6dc2d90fedf/src/core/speaker-track.ts), [render integration](https://github.com/ferrem01/media-producer-mcp/blob/e42cdb5bf9b1faa4ffe3a50848baa6dc2d90fedf/src/core/render.ts), [sync regression](https://github.com/ferrem01/media-producer-mcp/blob/e42cdb5bf9b1faa4ffe3a50848baa6dc2d90fedf/test/speaker-slots.test.ts))
 - [@nawalsehar — October 5, 2026 Seedance 2.5 café action-comedy: complete 30-second prompt, attached result, contact-readable redirections and persistent chair/table/sofa state](https://x.com/nawalsehar/status/2106975147806576802)
 - [@Just_sharon7 — October 4, 2026 Seedance 2.5 on Higgsfield psychological thriller: complete 27-second prompt and result with damaged-hand / healthy-hand / damaged-hand match cuts](https://x.com/Just_sharon7/status/2106808592523571360)
 - [@saniaspeaks_ — October 3, 2026 Seedance 2.5 on OpenArt Tokyo gym-day vlog: complete 30-second prompt and result with 2003–2004 era lock, MiniDV capture model and prop continuity](https://x.com/saniaspeaks_/status/2106247874296062303)
