@@ -30753,6 +30753,118 @@ and [production notes](https://github.com/keys-exe/global-manual-ai/blob/4513065
 ## Reusable templates
 
 
+### Confirmed-version scene freeze with whole-take native-audio assembly
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — all eleven committed source calls for the assembled
+scene identify this route; the source owner confirmed the selected take
+versions, and the final assembly record reports a 176.6-second technical pass
+with the original clip sound, ducked scene music, −14.2 LUFS output and no
+decode errors at joins  
+**Evidence boundary:** the eleven component takes were owner-confirmed and the
+assembly passed technical QC; the newly assembled full scene remained
+`To check`, so this template verifies selection integrity, audio preservation
+and delivery mechanics rather than final-film artistic approval  
+**Use case:** long dialogue, narrative or product scenes built from many
+separately generated Seedance takes where the exact approved versions—not
+whatever happens to be on a mutable “Current” board—must reach the final edit  
+**Mode:** confirmed take-version manifest -> exact asset rehydration -> whole
+take concatenation -> native-audio reconstruction -> score ducking -> read-back
+QC
+
+```text
+CONFIRMED-VERSION MANIFEST
+Before editing, freeze one immutable record per take:
+- ORDER = [1..N]
+- TAKE_ID = [SCENE-TAKE]
+- APPROVED_VERSION = [EXACT VERSION]
+- OWNER_CONFIRMATION = [DIRECT MESSAGE / BOARD ACTION / COMMIT URL]
+- MODEL = [EXACT SEEDANCE VERSION OR ROUTE]
+- TASK_ID and successful receipt = [VALUES]
+- SOURCE_ASSET_ID / SOURCE_URL = [VALUE]
+- SHA256 = [VALUE AFTER DOWNLOAD]
+- EXPECTED_DURATION, frame rate, resolution, audio presence = [VALUES]
+
+Reject aliases such as “latest,” “current,” “best” or an unversioned filename.
+A later regeneration, board move or replacement must not alter this manifest.
+
+REHYDRATE AND VERIFY
+1. Fetch the exact APPROVED_VERSION for every TAKE_ID.
+2. Hash each downloaded file and compare it with the frozen manifest.
+3. Probe picture and audio streams before assembly.
+4. Fail closed on a missing asset, hash mismatch, wrong version, decode error,
+   route mismatch or duplicate TAKE_ID.
+5. Preserve the original confirmed files unchanged in an archive.
+
+PICTURE ASSEMBLY
+Place takes in manifest ORDER. Use each confirmed take whole unless the owner's
+confirmation explicitly records an approved trim. Do not choose a newer render,
+reframe, interpolate, speed-change or regenerate during assembly. When codec,
+dimensions, frame rate and time base are compatible, concatenate without
+re-encoding picture; otherwise normalize once to a single delivery profile
+before the join and record that conversion.
+
+NATIVE-AUDIO RECONSTRUCTION
+For each selected take:
+- use its generated production audio exactly once;
+- resample to 48 kHz stereo and reset timestamps;
+- trim or silence-pad audio to that take's probed picture duration;
+- if the confirmed take intentionally has no audio, create silence of the exact
+  same duration rather than pulling the next take early.
+Concatenate the normalized audio segments in the same manifest order, then
+remux them against the assembled picture. Never overlay the voice references
+on top of speech already generated in the take.
+
+SCENE MUSIC
+Add only the approved scene-music master after the native-dialogue track is
+whole. Start from:
+- confirmed clip sound = 0 dB;
+- music bed = about −18 dB;
+- dialogue-triggered music duck = about 8 dB.
+Adjust only after listening and measuring. Do not duck the production dialogue,
+retrigger music at every cut or let score cover a word boundary.
+
+DELIVERY RECORD
+Write a machine-readable scene record containing:
+- manifest revision and confirmation evidence;
+- ordered take/version/task/hash list;
+- picture assembly method;
+- audio sample rate and channel layout;
+- music asset, music gain and duck amount;
+- final duration, frame rate, loudness and true peak;
+- output hash, board asset ID and review status.
+
+ACCEPTANCE GATE
+- every output segment matches the frozen approved version;
+- take order is complete, unique and unchanged;
+- no unapproved trim, repeated frame, missing tail or later-board substitution;
+- picture decodes through every join;
+- native speech and effects appear once and remain synchronized;
+- silence occupies intentionally silent intervals;
+- no reference-voice doubling, clipped dialogue or score restart at cuts;
+- final picture and audio durations agree;
+- measured loudness and peaks meet the chosen delivery specification;
+- component confirmation and full-scene artistic approval remain separate
+  status fields.
+```
+
+**Why it works:** a mutable review board is not a reliable edit decision list.
+Freezing take ID, version, task and hash converts owner approvals into a
+reproducible assembly contract. Rebuilding one duration-matched native-audio
+segment per confirmed picture take protects dialogue at joins, while score is
+introduced only after the speech track is complete. The explicit distinction
+between confirmed components and a still-unreviewed full scene prevents a
+technical pass from being misreported as artistic acceptance.
+
+Adapted and rewritten from keys-exe's October 6, 2026 production record:
+[confirmed-take final assembly commit](https://github.com/keys-exe/global-manual-ai/commit/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963),
+[scene assembly implementation](https://github.com/keys-exe/global-manual-ai/blob/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963/builds/stryde-her-dad/edit/build_scene.py),
+[committed scene mix specification](https://github.com/keys-exe/global-manual-ai/blob/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963/builds/stryde-her-dad/edit/SC05/SC05.scene.json),
+[representative exact Seedance 2.5 call](https://github.com/keys-exe/global-manual-ai/blob/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963/builds/stryde-her-dad/body/SC05/SC05-T1.call.json),
+[successful first-take receipt](https://github.com/keys-exe/global-manual-ai/blob/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963/builds/stryde-her-dad/body/SC05/SC05-T1.v1.kie.log)
+and [successful closing-take receipt](https://github.com/keys-exe/global-manual-ai/blob/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963/builds/stryde-her-dad/body/SC05/SC05-T11.v3.kie.log).
+
+
 ### A/B/A intervention proof with failure-signature return
 
 **Verified model:** Seedance 2.5, exact route
@@ -54840,6 +54952,7 @@ and the follow-up
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 6, 2026 confirmed Seedance 2.5 eleven-take scene freeze and assembly: exact approved versions, whole-take picture joins, duration-matched native audio, ducked scene music, measured loudness and join-decode QC](https://github.com/keys-exe/global-manual-ai/commit/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963) ([assembly implementation](https://github.com/keys-exe/global-manual-ai/blob/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963/builds/stryde-her-dad/edit/build_scene.py), [scene mix specification](https://github.com/keys-exe/global-manual-ai/blob/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963/builds/stryde-her-dad/edit/SC05/SC05.scene.json), [representative exact Seedance call](https://github.com/keys-exe/global-manual-ai/blob/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963/builds/stryde-her-dad/body/SC05/SC05-T1.call.json))
 - [keys-exe / global-manual-ai — October 6, 2026 confirmed Seedance 2.5 landmark-crossing mobility reveal: complete 16-second five-image/two-voice prompt, exact `bytedance/seedance-2-5` request, successful 1,008-credit task and explicit source-owner restoration of version 1](https://github.com/keys-exe/global-manual-ai/commit/4513065fec3c591ef65cf3f1cb478177e4db5ae4) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/4513065fec3c591ef65cf3f1cb478177e4db5ae4/builds/stryde-the-impression/film/SC12/SC12-T.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/4513065fec3c591ef65cf3f1cb478177e4db5ae4/builds/stryde-the-impression/film/SC12/SC12-T.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/4513065fec3c591ef65cf3f1cb478177e4db5ae4/builds/stryde-the-impression/film/SC12/SC12-T.v1.kie.log))
 - [keys-exe / global-manual-ai — October 6, 2026 confirmed Seedance 2.5 vanity product purge: complete 16-second reference request, exact `seedance_2_5` route, provider job and credit ledger, public generated MP4, clean-audio audit, irreversible scattered-floor state and explicit source-owner acceptance](https://github.com/keys-exe/global-manual-ai/commit/2640c7de4262f8a4e00ff30a7a8cb83a00b03b54) ([generation/result commit](https://github.com/keys-exe/global-manual-ai/commit/36ad9360aae37315ff5563998a07c8d2b1379652), [complete prompt and ledger](https://github.com/keys-exe/global-manual-ai/blob/2640c7de4262f8a4e00ff30a7a8cb83a00b03b54/builds/facelove-walmart/board/json/sc04_g4.json), [generated MP4](https://d8j0ntlcm91z4.cloudfront.net/user_3AViUeU5dIz6pgsjYszQ9iux9YN/hf_20261006_160700_e6617901-44ce-4dfa-a10b-ec1a7386556c.mp4))
 - [keys-exe / global-manual-ai — October 6, 2026 Seedance 2.5 state-preloaded prop pickup: complete 4-second reference-matched request, successful 252-credit Kie task, envelope-measured dialogue window and assembled-file read-back](https://github.com/keys-exe/global-manual-ai/commit/f2180f3a6c14e81dca5454c7f361165fd929a030) ([complete request](https://github.com/keys-exe/global-manual-ai/blob/f2180f3a6c14e81dca5454c7f361165fd929a030/builds/stryde-other-nana/film/SC01/SC01-T1-P1.call.json), [successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/f2180f3a6c14e81dca5454c7f361165fd929a030/builds/stryde-other-nana/film/SC01/SC01-T1-P1.kie.log), [final splice correction](https://github.com/keys-exe/global-manual-ai/commit/3ed0497670ef7c0cc566bc836fe377a3452d7ab9))
