@@ -485,6 +485,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Vanity product purge with irreversible floor-state carryover](#469-vanity-product-purge-with-irreversible-floor-state-carryover)
   - [Landmark-crossing mobility reveal with two-speaker state handoff](#470-landmark-crossing-mobility-reveal-with-two-speaker-state-handoff)
   - [First-step knee-failure rescue with anti-freeze aftermath](#471-first-step-knee-failure-rescue-with-anti-freeze-aftermath)
+  - [Silent background conversation with foreground focus-isolation push-in](#472-silent-background-conversation-with-foreground-focus-isolation-push-in)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -30896,6 +30897,148 @@ Adapted and rewritten from keys-exe's October 7, 2026 production record:
 and the later [owner-confirmation record](https://github.com/keys-exe/global-manual-ai/blob/82d056c48478be4376351193d8713a242b2c4bca/builds/stryde-her-dad/BUILD_NOTES.md#L260-L274).
 
 
+### 472. Silent background conversation with foreground focus-isolation push-in
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the committed request contains the complete
+eight-reference prompt; task `2802f9eb3e474745875eb67329365a09`
+succeeded for 504 credits, and the source owner later confirmed this take
+before it was assembled into the scene  
+**Evidence boundary:** the generated picture was silent by design; the audible
+inner monologue was added in the edit. The component take was owner-confirmed,
+while the later full-scene sound assembly remained `To check`  
+**Use case:** subjective dramatic isolation, where two background characters
+continue an unheard conversation while a physically separated foreground
+character remains the emotional and optical subject  
+**Mode:** eight-role image-reference package; one continuous vertical
+live-action take; silent generation with editorial voice-over  
+**Verified settings:** 8 seconds; 9:16; 720p; reference-to-video; generated
+audio off
+
+```text
+REFERENCE AUTHORITY
+@Image1 = CONTINUITY_FRAME: the previous take's accepted handoff. Copy only the
+starting positions, screen direction, current prop state, light and location:
+the older man is down on one knee by the hatchback's front bumper with a
+cracked pot beside him; the woman and young worker stand by the rear door; the
+van is stopped behind the open boot.
+@Image2 = FOREGROUND_IDENTITY: older man's face, age, hair, crooked nose and
+eyebrow scar only.
+@Image3 = PLACE_GEOMETRY: wet garden-centre car park, glass storefront, vehicle
+orientation, trolley shelter and the camera side of the action line.
+@Image4 = FOREGROUND_WARDROBE: charcoal sweatshirt, full-length faded navy work
+trousers and worn tan boots; ignore all card text and background.
+@Image5 = WOMAN_IDENTITY: face, age and honey-blonde bob only.
+@Image6 = WOMAN_WARDROBE: navy quilted jacket, plain white T-shirt, light jeans
+and white trainers; ignore all card text and background.
+@Image7 = WORKER_IDENTITY_AND_UNIFORM: face, age, build, short curls and plain
+green work uniform.
+@Image8 = LAYOUT_AUTHORITY: silver hatchback side-on in front of the glass
+storefront, bonnet left and open boot right. Use placement and scale only.
+
+No reference is a shot to display. Never reproduce a sheet panel, crop border,
+caption strip, grey backdrop or reference pose.
+
+SCENE CONTRACT
+Create one restrained eight-second British family-drama shot immediately after
+a near accident. The older man remains down on his right knee in the foreground
+beside the car's front bumper and cracked flowerpot. Several steps behind him,
+the woman and young worker stand together against the car's side near its rear
+door. The white van is already stopped behind the empty open boot. Preserve
+this completed incident state; no rescue, fall, collision or relocation
+replays.
+
+Frame 1 matches @Image1's positions exactly. The older man is nearest camera,
+three-quarter profile, low on the right side of frame. The woman and worker are
+fully visible behind him on frame-left. Nobody jumps into a new position.
+
+TIMELINE
+[0.0-1.5 s] Begin a low medium shot at the older man's shoulder height from the
+same side of the parking lane as the continuity frame. His nearest eye is
+already sharp. He watches the pair behind him, mouth closed, right palm grounded
+and cracked pot beside the hand. The woman and worker are recognisable but
+slightly soft.
+
+[1.5-6.5 s] Dolly forward only about 30 centimetres in one level, steady move.
+Keep the older man's nearest eye locked in focus for the entire move. Do not
+rack focus. As camera-to-subject distance closes, let the woman and worker fall
+gradually into stronger natural optical blur until they read as soft human
+shapes while retaining their positions, clothing colours and quiet activity.
+
+Throughout the push, the worker and woman hold an ordinary private
+conversation: the worker asks a short question with one small nod; the woman
+answers in two brief phrases and glances toward the older man once. Their lips
+move naturally, but their words are completely unheard. They never freeze,
+perform to camera, wave, approach him or pull visual focus.
+
+The older man stays physically still in place but not emotionally frozen. His
+jaw sets, one slow breath lifts and releases his chest, and his eyes remain on
+the pair. The breath and gaze are the only foreground performance. He does not
+stand, speak, mouth the voice-over, cry or look into the lens.
+
+[6.5-8.0 s] Ease the dolly without stopping. Hold the optical hierarchy:
+foreground eye crisp, background pair softly blurred and still conversing.
+Final frame: older man down on one knee nearest camera, cracked pot at his hand,
+watching the two soft figures by the rear door; van stopped behind the open
+boot. All positions and prop states remain inspectable.
+
+CAMERA AND FOCUS CONTRACT
+Use a large-format digital-cinema look with a spherical prime, 24 fps and
+natural 180-degree-shutter motion blur. Camera starts moving on frame 1 and
+continues creeping through the last frame; no cut, jump, orbit, handheld sway,
+zoom, axis crossing or reframe. The effect comes from the short dolly and
+depth-of-field progression, not digital blur, smeared motion or a rack focus.
+The foreground subject's nearest eye never leaves the focus plane. Background blur stays soft and
+round, never painted or warped.
+
+LIGHT, TEXTURE AND PERFORMANCE
+Flat grey overcast sky is the single soft source from above and frame-left,
+about 6500K. Wet tarmac and shallow puddles hold muted reflections. Preserve
+real skin texture, worn clothes, restrained natural colour and an ungraded
+prestige-drama image. Play humiliation quietly: one set jaw, one breath and a
+held gaze. The background conversation remains casual and compassionate rather
+than theatrical or mocking.
+
+SOUND AND EDIT HANDOFF
+Generate a silent picture element: no audible dialogue, voice, ambience, music
+or effects. Background mouths may move, but no speech is heard. The older man's
+mouth remains closed. In post, lay the pre-recorded inner monologue over this
+silent take; do not lip-sync it to any visible person. Add music or ambience
+only in the scene mix, with voice intelligibility checked separately.
+
+CONTINUITY AND FAILURE GATE
+Lock the older man's kneeling side, planted hand, cracked-pot position, covered
+knees, gaze direction and distance from the pair. Lock the woman and worker at
+the rear door, the worker's hand near her upper arm, the car orientation, open
+boot, stopped van, wet ground and light direction.
+
+Reject: replayed accident; standing or crawling foreground subject; background
+pair missing, approaching camera or becoming sharp; any rack focus away from
+the foreground eye; digital blur; background smear; frozen speakers; audible
+background voices; foreground mouth movement; lip-sync to the voice-over;
+tears, melodrama or lens address; relocated pot, car, van or people; new props
+behind the boot; axis crossing; camera bounce; duplicate or merged people;
+warped geometry; phone-video processing; captions, logos, watermarks or native
+music.
+```
+
+**Why it works:** the shot separates three different channels that generators
+often collapse: visible background speech, audible dialogue and narrative
+voice-over. Background mouths carry social activity without owning the
+soundtrack; the foreground subject owns the viewer's attention without
+speaking; the edit owns the inner voice. Starting with the foreground eye
+already sharp and deepening only the background blur avoids an ambiguous rack
+focus, while the tiny dolly adds emotional pressure without changing blocking
+or replaying the completed action.
+
+Adapted and rewritten from keys-exe's October 7, 2026 production record:
+[generation commit](https://github.com/keys-exe/global-manual-ai/commit/85e798d0f75f69569f93b26f7dd384589db1fcf4),
+[complete prompt](https://github.com/keys-exe/global-manual-ai/blob/85e798d0f75f69569f93b26f7dd384589db1fcf4/builds/stryde-her-dad/hooks/SC01/new/n2fix/SC01-N2_v3.prompt.txt),
+[exact Seedance 2.5 request](https://github.com/keys-exe/global-manual-ai/blob/85e798d0f75f69569f93b26f7dd384589db1fcf4/builds/stryde-her-dad/hooks/SC01/new/n2fix/SC01-N2_v3.call.json),
+[successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/85e798d0f75f69569f93b26f7dd384589db1fcf4/builds/stryde-her-dad/hooks/SC01/new/n2fix/SC01-N2_v3.kie.log)
+and the later [owner-confirmation and assembly record](https://github.com/keys-exe/global-manual-ai/blob/e7babaa4edcb6c4a49fb4d21c1308e5b13bfb48a/builds/stryde-her-dad/BUILD_NOTES.md#L268-L290).
+
+
 ## Reusable templates
 
 
@@ -55221,6 +55364,7 @@ and the follow-up
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 7, 2026 confirmed Seedance 2.5 foreground-isolation push-in: complete eight-reference silent request, exact `bytedance/seedance-2-5` route, successful 504-credit task, unheard background conversation and editorial inner-voice handoff](https://github.com/keys-exe/global-manual-ai/commit/85e798d0f75f69569f93b26f7dd384589db1fcf4) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/85e798d0f75f69569f93b26f7dd384589db1fcf4/builds/stryde-her-dad/hooks/SC01/new/n2fix/SC01-N2_v3.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/85e798d0f75f69569f93b26f7dd384589db1fcf4/builds/stryde-her-dad/hooks/SC01/new/n2fix/SC01-N2_v3.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/85e798d0f75f69569f93b26f7dd384589db1fcf4/builds/stryde-her-dad/hooks/SC01/new/n2fix/SC01-N2_v3.kie.log), [owner confirmation](https://github.com/keys-exe/global-manual-ai/blob/e7babaa4edcb6c4a49fb4d21c1308e5b13bfb48a/builds/stryde-her-dad/BUILD_NOTES.md#L268-L290))
 - [keys-exe / global-manual-ai — October 7, 2026 confirmed Seedance 2.5 first-step knee-failure rescue: complete nine-reference silent request, exact `bytedance/seedance-2-5` route, successful 378-credit task, externally edited knee cue and later owner confirmation of the assembled v13](https://github.com/keys-exe/global-manual-ai/commit/44cdafc6da33c904e753c1f828fac8080bbbaf78) ([exact request](https://github.com/keys-exe/global-manual-ai/blob/44cdafc6da33c904e753c1f828fac8080bbbaf78/builds/stryde-her-dad/hooks/SC01/new/fix12/wide.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/44cdafc6da33c904e753c1f828fac8080bbbaf78/builds/stryde-her-dad/hooks/SC01/new/fix12/wide.kie.log), [owner confirmation](https://github.com/keys-exe/global-manual-ai/blob/82d056c48478be4376351193d8713a242b2c4bca/builds/stryde-her-dad/BUILD_NOTES.md#L260-L274))
 - [keys-exe / global-manual-ai — October 7, 2026 Seedance 2.5 reference-ablation production record: remove a compressed prior clip, retain still continuity anchors, measure detail, then remove a composition-biased start frame while keeping the set sheet](https://github.com/keys-exe/global-manual-ai/commit/eb9319362e80445bb25b47c16e64062478d672be) ([video-off comparison](https://github.com/keys-exe/global-manual-ai/commit/fba26028733285d784cbdf536593cc8e296ac7ca), [complete exact-model request](https://github.com/keys-exe/global-manual-ai/blob/fba26028733285d784cbdf536593cc8e296ac7ca/builds/stryde-other-nana/film/SC05/SC05-T3.call.json), [successful final task receipt](https://github.com/keys-exe/global-manual-ai/blob/eb9319362e80445bb25b47c16e64062478d672be/builds/stryde-other-nana/film/SC05/SC05-T3.v5.kie.log))
 - [keys-exe / global-manual-ai — October 6, 2026 confirmed Seedance 2.5 eleven-take scene freeze and assembly: exact approved versions, whole-take picture joins, duration-matched native audio, ducked scene music, measured loudness and join-decode QC](https://github.com/keys-exe/global-manual-ai/commit/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963) ([assembly implementation](https://github.com/keys-exe/global-manual-ai/blob/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963/builds/stryde-her-dad/edit/build_scene.py), [scene mix specification](https://github.com/keys-exe/global-manual-ai/blob/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963/builds/stryde-her-dad/edit/SC05/SC05.scene.json), [representative exact Seedance call](https://github.com/keys-exe/global-manual-ai/blob/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963/builds/stryde-her-dad/body/SC05/SC05-T1.call.json))
