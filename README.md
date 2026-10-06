@@ -53979,8 +53979,94 @@ the version-labeled [project rules](https://github.com/yumeai-fantasy88/flova/bl
 and the immediately preceding
 [720p Seedance 2.0 production cuts](https://github.com/yumeai-fantasy88/flova/commit/65dba19fc262273342eee62084c702679ce5e28f).
 
+
+### Fine-performance pixel budget at 720p with one final upscale
+
+**Verified model:** Seedance 2.5 — the source's production call records
+`connector: seedance`, exact model label `seedance_2_5`, 720p output,
+native audio and a successful paid task. The same repository's October 6 rule
+applies the framing gate to its Seedance 2.5 stylized-feature workflow and
+implements the check in preflight code.
+
+**Evidence boundary:** this is a creator-observed and code-enforced failure-control
+rule introduced after soft, distorted stylized footage. The source proves the
+exact model version, a successful 720p generation path and the implemented gate,
+but does not yet publish an accepted before/after render made under the new
+rule. Treat the thresholds as a production heuristic, not a universal model
+benchmark.
+
+**Use case:** prevent small faces, fingers and subtle expressions from melting
+or drifting in 720p stylized 3D animation while avoiding cumulative detail loss
+during assembly  
+**Mode:** Seedance generation shot-size gate -> low-loss post pipeline -> one
+picture-locked final upscale
+
+```text
+MODEL AND SOURCE MASTER
+Generate every source take with Seedance 2.5 at 720p. Preserve the returned
+native-audio master. Do not ask the model to solve a fine facial or hand
+performance inside a frame where that feature occupies only a small pixel area.
+
+SHOT-SIZE GATE
+For each timeline beat, classify the visible action before generation.
+
+WIDE OR MEDIUM SHOT:
+Use for full-body blocking, geography, entrances, exits and large camera moves.
+Keep hands and faces readable but do not assign them the story-critical detail.
+
+MCU, CLOSE-UP OR INSERT:
+Required whenever the beat depends on a small hand action such as counting,
+pointing, pressing, pinching, writing, tying, tapping or holding a tiny object;
+or a small facial action such as wet eyes, a faint smile, tightened lips,
+a wink or a trembling jaw. State the acting detail and its endpoint explicitly.
+
+PREFLIGHT
+Reject any wide or medium timeline line that also contains a fine-hand or
+fine-face action. Rewrite that action as its own MCU, close-up or insert while
+preserving story order, identity, wardrobe, set axis, dialogue and sound.
+
+LOW-LOSS POST
+Keep each accepted 720p source as the generation master. For every trim, join,
+grade, transition or music pass:
+- stream-copy when the operation permits;
+- otherwise encode H.264 with a visually lossless working target such as
+  CRF 12, slow preset and the delivery pixel format;
+- preserve the accepted Seedance soundtrack unless the edit contract explicitly
+  changes it;
+- never repeatedly upscale intermediate clips.
+
+ONE FINAL UPSCALE
+After picture and sound are locked, upscale the complete film once to the
+delivery resolution, for example 1080x1920 from a 720x1280 vertical master.
+Restore the locked soundtrack unchanged. Compare the upscale against the 720p
+master for warped faces, hands, product edges and text. If it introduces damage,
+deliver the 720p master and log the failed upscale instead of regenerating.
+
+ACCEPTANCE GATE
+- every story-critical hand or face action has enough on-screen area to inspect;
+- no wide or medium shot carries a subtle finger or expression beat;
+- identity, anatomy, wardrobe and spatial continuity survive every cut;
+- no intermediate file has been repeatedly enlarged or heavily recompressed;
+- the final upscale is a single last-stage operation with an A/B check;
+- audio duration and synchronization match the locked Seedance master.
+```
+
+**Why it works:** prompt detail cannot recover pixels that a wide composition
+never allocated to a small hand or face. Moving the fine performance into a
+closer shot solves that constraint before generation; low-loss intermediates
+avoid compounding compression damage, and one final inspected upscale separates
+delivery sizing from the model's motion and identity work.
+
+Adapted and rewritten from keys-exe's October 6, 2026
+[sharp-720p production-rule commit](https://github.com/keys-exe/global-manual-ai/commit/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea),
+including the [complete rule and single-upscale contract](https://github.com/keys-exe/global-manual-ai/blob/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea/standards/AI_Prompt_Engineer_Global_Standards.md),
+the [automatic fine-hand and fine-face preflight](https://github.com/keys-exe/global-manual-ai/blob/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea/.claude/skills/ai-prompt-engineer/scripts/preflight.py),
+the [exact Seedance 2.5 720p production call](https://github.com/keys-exe/global-manual-ai/blob/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea/builds/stryde-anniversary-shoes/scenes/SC04/SC04-T1.call.json)
+and its [successful paid task receipt](https://github.com/keys-exe/global-manual-ai/blob/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea/builds/stryde-anniversary-shoes/scenes/SC04/SC04-T1.kie.json).
+
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 6, 2026 Seedance 2.5 720p fine-performance pixel-budget gate, low-loss assembly and single picture-locked final upscale](https://github.com/keys-exe/global-manual-ai/commit/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea) ([rule](https://github.com/keys-exe/global-manual-ai/blob/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea/standards/AI_Prompt_Engineer_Global_Standards.md), [preflight](https://github.com/keys-exe/global-manual-ai/blob/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea/.claude/skills/ai-prompt-engineer/scripts/preflight.py), [exact Seedance 2.5 call](https://github.com/keys-exe/global-manual-ai/blob/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea/builds/stryde-anniversary-shoes/scenes/SC04/SC04-T1.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea/builds/stryde-anniversary-shoes/scenes/SC04/SC04-T1.kie.json))
 - [ferrem01 / media-producer-mcp — October 6, 2026 Seedance 2.5 motion-ready cutaway in-point, immediate-action prompt and anchor-preserving same-slot retake](https://github.com/ferrem01/media-producer-mcp/commit/c44a45ce5833425d8a37a2242dd3947e61a2c23b) ([generation and timing path](https://github.com/ferrem01/media-producer-mcp/blob/c44a45ce5833425d8a37a2242dd3947e61a2c23b/src/core/scene-performance.ts), [source-time playback](https://github.com/ferrem01/media-producer-mcp/blob/c44a45ce5833425d8a37a2242dd3947e61a2c23b/src/components/media/video.component.html), [exact route and regression](https://github.com/ferrem01/media-producer-mcp/blob/c44a45ce5833425d8a37a2242dd3947e61a2c23b/test/scene-performance.test.ts))
 - [ferrem01 / media-producer-mcp — October 6, 2026 Seedance 2.5 per-scene native-audio slot assembly across rendered transitions, short/long stream normalization and frame-level sync regression](https://github.com/ferrem01/media-producer-mcp/commit/e42cdb5bf9b1faa4ffe3a50848baa6dc2d90fedf) ([slot implementation](https://github.com/ferrem01/media-producer-mcp/blob/e42cdb5bf9b1faa4ffe3a50848baa6dc2d90fedf/src/core/speaker-track.ts), [render integration](https://github.com/ferrem01/media-producer-mcp/blob/e42cdb5bf9b1faa4ffe3a50848baa6dc2d90fedf/src/core/render.ts), [sync regression](https://github.com/ferrem01/media-producer-mcp/blob/e42cdb5bf9b1faa4ffe3a50848baa6dc2d90fedf/test/speaker-slots.test.ts))
 - [@nawalsehar — October 5, 2026 Seedance 2.5 café action-comedy: complete 30-second prompt, attached result, contact-readable redirections and persistent chair/table/sofa state](https://x.com/nawalsehar/status/2106975147806576802)
