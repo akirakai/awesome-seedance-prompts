@@ -30521,6 +30521,122 @@ and [generated MP4](https://d8j0ntlcm91z4.cloudfront.net/user_3AViUeU5dIz6pgsjYs
 ## Reusable templates
 
 
+### A/B/A intervention proof with failure-signature return
+
+**Verified model:** Seedance 2.5, exact route
+`bytedance/seedance-2-5` — the creator submitted the complete 26-second
+reference-led request through Kie AI; task `48f57cd25d78827b363e8ca5161b2896`
+succeeded for 1,638 credits and returned a generated MP4  
+**Evidence boundary:** the technical generation completed and the board copy
+passed, but the result remains `To check`; this entry verifies the reusable
+test structure and request provenance, not final artistic acceptance or a
+medical/product-performance claim  
+**Use case:** product demonstrations, mobility aids, workflow tools, repaired
+mechanisms and other scenes where a benefit must be shown as a controlled
+on/off/on comparison instead of a vague before/after montage  
+**Mode:** reference-to-video, one environment and subject, three repeated trials
+inside a single multi-shot generation; native audio off when narration belongs
+to post
+
+```text
+REFERENCE ROLES
+@Image1 = SUBJECT_IDENTITY: face, age, hair and body proportions only.
+@Image2 = SUBJECT_WARDROBE: the exact clothes and footwear for every trial.
+@Image3 = OPTIONAL_WITNESS_IDENTITY: face, age and body proportions only.
+@Image4 = OPTIONAL_WITNESS_WARDROBE: exact clothes and persistent hand prop.
+@Image5 = TEST_ENVIRONMENT: architecture, route, dimensions, fixtures and light
+direction. It owns the geography, not anyone's pose or performance.
+
+TEST INTENTION
+Prove the effect of [INTERVENTION] by repeating the same measurable task in an
+A/B/A sequence:
+A1 = intervention present, target motion succeeds;
+B = intervention absent, the known failure signature returns;
+A2 = intervention restored, the successful signature returns.
+Change only intervention state. Do not disguise the comparison with a new
+location, wardrobe, camera axis, task, route, time of day or performer.
+
+FIXED TEST GEOMETRY
+Use one [ROUTE / MACHINE / WORKSTATION] with declared dimensions:
+[COUNT AND SIZE OF STEPS / DISTANCE BETWEEN MARKS / OBJECT SCALE / CONTACT
+POINTS]. SUBJECT begins every trial at [EXACT START MARK] and travels in
+[DIRECTION] to [EXACT END MARK]. Keep body and product at true scale against
+[ONE PERSISTENT SCALE WITNESS]. OPTIONAL_WITNESS remains at
+[FIXED BACKGROUND POSITION], observes silently and never assists.
+
+TIMELINE
+[0–3 s | setup]
+Wide or full shot on the fixed axis. Establish SUBJECT at START_MARK,
+INTERVENTION_STATE = ON, the complete route and the witness position. SUBJECT
+takes one preparatory breath or settles one hand on the normal support.
+
+[3–13 s | A1: intervention on]
+Show one uninterrupted trial. SUBJECT performs [TASK] with the success
+signature: [MEASURABLE CADENCE], [CONTACT RELEASE OR RANGE CHANGE],
+[EVEN WEIGHT TRANSFER] and [HANDS / TOOL / OUTPUT END STATE]. The intervention
+may stay hidden if that is how it is used; do not invent a visible device.
+End only when SUBJECT reaches END_MARK and the improvement is readable.
+
+[13–20 s | B: intervention off]
+After a clean cut, reset SUBJECT to the same START_MARK and repeat the same task
+without the intervention. Reproduce the established failure signature rather
+than inventing new danger: [HITCH / SUPPORT RE-GRIP / MISALIGNMENT / STALL /
+EXTRA STEP] at [SPECIFIC PHASE]. Keep the same pace scale, route, framing family
+and endpoint. No fall, injury, exaggeration or comic collapse.
+
+[20–26 s | A2: intervention restored]
+After another explicit reset cut, repeat the task once more with the
+intervention restored. The original success signature returns: [EVEN CADENCE],
+[FREE HAND / CORRECT CONTACT / STABLE OUTPUT] and completion at END_MARK.
+OPTIONAL_WITNESS remains in the fixed position and registers the result with
+one restrained visible gesture. Final frame: SUBJECT at END_MARK in the declared
+successful state; witness and environment still readable.
+
+MOTION CONTRACT
+For every trial specify actor, action, force level, timing, contact consequence
+and final state. Repeated action must not become a loop: each trial has one
+declared condition, one visible signature and one completed endpoint. Preserve
+gravity, friction, body load, foot/object contact and material deformation.
+Keep limbs and moving objects proportionate to the fixed geometry.
+
+CAMERA AND EDIT CONTRACT
+All shots stay on one side of the action line. Use locked full or medium-full
+coverage for comparison; allow only a small motivated pan or tilt to retain the
+subject. Cuts may reset the subject to START_MARK, but no position may jump
+within a trial. Do not use a transformation dissolve to change conditions; the
+condition changes only across the two declared reset cuts.
+
+SOUND
+If the proof will carry inner voice or explanatory narration in post, generate
+the comparison silent: no dialogue, music, humming or soundtrack. Preserve only
+production ambience and task-contact sounds if the active route requires an
+audio stream. Reserve exact narration windows before generation.
+
+FAILURE GATE
+Reject changed identity, wardrobe, footwear, route, geometry, camera side,
+lighting or witness position; intervention visible when it should be hidden;
+different task difficulty between trials; failure signature appearing during an
+ON trial; success signature persisting during the OFF trial; skipped reset;
+teleport within a trial; extra people; fall or injury; duplicated limbs or
+objects; floating contact; time-lapse; slow motion; score; captions; logo or
+watermark.
+```
+
+**Why it works:** ordinary before/after footage can attribute improvement to a
+changed angle, pace or performance. The A/B/A order makes the failure return
+under the control condition and makes the success return when the intervention
+is restored. Fixed geometry, matched endpoints and named motion signatures keep
+that comparison visible, while the second A condition reduces the chance that a
+single lucky take is mistaken for proof.
+
+Adapted and generalized from keys-exe's October 6, 2026
+[successful SC11-TB generation](https://github.com/keys-exe/global-manual-ai/commit/049f8116fe688bc25e28e3c52c5a07e8af464594),
+[complete request](https://github.com/keys-exe/global-manual-ai/blob/049f8116fe688bc25e28e3c52c5a07e8af464594/builds/stryde-the-impression/film/SC11/SC11-TB.call.json),
+[successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/049f8116fe688bc25e28e3c52c5a07e8af464594/builds/stryde-the-impression/film/SC11/SC11-TB.v1.kie.log)
+and [production notes](https://github.com/keys-exe/global-manual-ai/blob/049f8116fe688bc25e28e3c52c5a07e8af464594/builds/stryde-the-impression/BUILD_NOTES.md).
+
+
+
 ### Native-voice room-match audition before attachment
 
 **Verified model:** Seedance 2.5, exact route
@@ -54382,6 +54498,7 @@ and its [successful paid task receipt](https://github.com/keys-exe/global-manual
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 6, 2026 Kie AI Seedance 2.5 A/B/A intervention proof: complete five-reference 26-second request, matched on/off/on task trials, fixed test geometry, successful 1,638-credit task and explicit `To check` review boundary](https://github.com/keys-exe/global-manual-ai/commit/049f8116fe688bc25e28e3c52c5a07e8af464594) ([complete request](https://github.com/keys-exe/global-manual-ai/blob/049f8116fe688bc25e28e3c52c5a07e8af464594/builds/stryde-the-impression/film/SC11/SC11-TB.call.json), [successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/049f8116fe688bc25e28e3c52c5a07e8af464594/builds/stryde-the-impression/film/SC11/SC11-TB.v1.kie.log), [production notes](https://github.com/keys-exe/global-manual-ai/blob/049f8116fe688bc25e28e3c52c5a07e8af464594/builds/stryde-the-impression/BUILD_NOTES.md))
 - [keys-exe / global-manual-ai — October 6, 2026 Higgsfield Seedance 2.5 long-lens animated supermarket collision: complete five-image/two-voice prompt, exact `seedance_2_5` route, provider job and credit ledger, public generated MP4, non-destructive music removal and committed review limitation](https://github.com/keys-exe/global-manual-ai/commit/3c2b0f9d8a07e62b26e2c50d49ba63dfdb1db480) ([complete request](https://github.com/keys-exe/global-manual-ai/blob/3c2b0f9d8a07e62b26e2c50d49ba63dfdb1db480/builds/facelove-walmart/takes/SC01-T1.call.json), [result ledger and review](https://github.com/keys-exe/global-manual-ai/blob/3c2b0f9d8a07e62b26e2c50d49ba63dfdb1db480/builds/facelove-walmart/board/json/sc01_g3.json), [generated MP4](https://d8j0ntlcm91z4.cloudfront.net/user_3AViUeU5dIz6pgsjYszQ9iux9YN/hf_20261006_133013_9098202d-ed47-4cff-a984-cd3e892ff6dd.mp4))
 - [keys-exe / global-manual-ai — October 6, 2026 Seedance 2.5 coupled-scale wearable repair: complete prompt, exact `bytedance/seedance-2-5` request, successful 630-credit task, preserved-tail join and technical QC](https://github.com/keys-exe/global-manual-ai/commit/fae43702ded6991df2476983bab493e6375f166d) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/fae43702ded6991df2476983bab493e6375f166d/builds/stryde-the-impression/film/SC09/SC09-TD.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/fae43702ded6991df2476983bab493e6375f166d/builds/stryde-the-impression/film/SC09/SC09-TD.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/fae43702ded6991df2476983bab493e6375f166d/builds/stryde-the-impression/film/SC09/SC09-TD.g2part.kie.log), [review notes](https://github.com/keys-exe/global-manual-ai/blob/fae43702ded6991df2476983bab493e6375f166d/builds/stryde-the-impression/BUILD_NOTES.md))
 - [@ayzalnooor24521 — October 6, 2026 Seedance 2.0 playful basketball scene: complete prompt and result with an adult player, oversized dog mascot, one court and smooth wide-to-medium coverage](https://x.com/ayzalnooor24521/status/2107340030536741222) ([versioned gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=11984))
