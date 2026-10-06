@@ -482,6 +482,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Playful basketball mascot with a one-ball handoff ledger](#466-playful-basketball-mascot-with-a-one-ball-handoff-ledger)
   - [Cause-gated suburban lawn monster emergence](#467-cause-gated-suburban-lawn-monster-emergence)
   - [Long-lens animated supermarket collision](#468-long-lens-animated-supermarket-collision)
+  - [Vanity product purge with irreversible floor-state carryover](#469-vanity-product-purge-with-irreversible-floor-state-carryover)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -30518,6 +30519,114 @@ Adapted and rewritten from keys-exe's October 6, 2026 production record:
 [provider/model/result ledger](https://github.com/keys-exe/global-manual-ai/blob/3c2b0f9d8a07e62b26e2c50d49ba63dfdb1db480/builds/facelove-walmart/board/json/sc01_g3.json)
 and [generated MP4](https://d8j0ntlcm91z4.cloudfront.net/user_3AViUeU5dIz6pgsjYszQ9iux9YN/hf_20261006_133013_9098202d-ed47-4cff-a984-cd3e892ff6dd.mp4).
 
+
+### 469. Vanity product purge with irreversible floor-state carryover
+
+**Verified model:** Seedance 2.5, exact Higgsfield route identifier
+`seedance_2_5` — the committed result ledger identifies the raw generation,
+provider job `e6617901-44ce-4dfa-a10b-ec1a7386556c`, 112-credit charge and
+public MP4; the production notes record a clean 16.06-second landing and the
+source owner subsequently confirmed the edited take  
+**Use case:** animated emotional storytelling, destructive prop action,
+multi-shot state persistence, reference-locked wardrobe and native dialogue  
+**Mode:** three image references plus one voice reference; four-shot vertical
+sequence with generated dialogue and effects  
+**Suggested settings:** 16 seconds; 9:16; 720p; native audio; no music
+
+```text
+REFERENCES
+@Image1 = the adult woman's identity only: face, age, silver-streaked hair,
+build and body proportions. Animate a fresh performance; do not copy the
+reference pose or expression.
+@Image2 = the bedroom geography: cream bed on frame-left, white vanity and oval
+mirror right of centre, lilac stool, curtained window on frame-right.
+@Image3 = the starting product inventory only: roughly twelve plain,
+unlabelled bottles, pumps, droppers and silver-lidded jars. Do not transfer a
+hand, outfit, logo, pose or background from this crop.
+@Audio1 = the woman's speaking voice only.
+
+SCENE CONTRACT
+Create one warm 16-second polished 3D-animated drama in four connected shots.
+One morning, the woman searches the crowded vanity for something that might
+help, admits that none of it does, sweeps every container onto the floor, then
+sits in the quiet aftermath. The emotional arc is hope -> fatigue -> frustrated
+release -> resignation. Keep the same identity, room, wardrobe and object state
+through every cut.
+
+TIMELINE
+[0.0-4.0 s] Medium-full shot with a slow push. She sits on the lilac stool in a
+faded grey cotton robe over a pale nightdress, grey felt slippers visible. The
+complete product cluster from @Image3 is already on the vanity. She lifts one
+jar, studies it with raised brows, replaces it, then reaches for a second
+container. Using @Audio1, she says, "Every cream, every serum, every bottle on
+this shelf."
+
+[4.0-8.0 s] Close-up with a slow, restrained arc. She lowers the second
+container and studies her reflection. Hope leaves her eyes; her brows pinch
+upward and she gives one small tired shake of the head. Using @Audio1, she says,
+"I tried the expensive one and the pharmacy one, and none of them made me feel
+like myself."
+
+[8.0-12.0 s] Medium shot with a short pan following the action. Her lips press
+tight and her shoulders brace. With one complete arm sweep she pushes every
+bottle and jar off the vanity. Show the whole causal chain: hand contacts the
+cluster -> containers cross the edge -> they fall with gravity -> they bounce
+or roll across the floor -> they come to rest. Nothing breaks. Finish with the
+vanity top visibly bare and her shoulders sinking.
+
+[12.0-16.0 s] Wide shot, very slow crane upward. She leans back on the stool,
+hands folded in her lap and head lowered, surrounded by the same fallen
+containers in the positions established by shot 3. A small resigned smile
+appears. Final frame: bare vanity, all bottles and jars scattered around the
+stool, woman still in soft morning light.
+
+LOOK
+Glossy feature-animation finish with appealing age-appropriate design, large
+expressive eyes, soft facial lines, sculpted silver-streaked hair and fabric
+with weight. Use warm golden morning sunlight through the sheer curtains,
+peach, cream and restrained gold colour, soft shadows and readable eye light.
+Keep the grey robe, pale nightdress and grey slippers unchanged in every shot.
+
+SOUND
+Only the woman speaks, and only in shots 1 and 2. Use @Audio1 without another
+voice. No song, score or background music. Generate light glass clinks while
+she searches, one dense clatter as the containers hit the floor, several
+short rolling sounds, her breath and quiet bedroom room tone. Dialogue must
+finish inside its assigned window before the sweep begins.
+
+IRREVERSIBLE STATE LEDGER
+0.0-8.0: every container is upright on the vanity.
+8.0-10.0: her arm contacts the cluster and all containers leave the surface.
+10.0-12.0: they bounce and roll; the vanity is empty.
+12.0-16.0: the same containers remain scattered around the stool; none returns
+to the vanity, disappears, duplicates, floats or resets upright.
+
+CONTINUITY AND FAILURE GATE
+Keep one woman, one room, one stool and one product inventory. Preserve face,
+hair, age, robe, nightdress, slippers, room orientation, morning-light
+direction and off-lens mirror eyelines. Containers remain plain and unlabelled;
+hands have five fingers. Reject partial sweeps, unmotivated drawer actions,
+broken glass, a repopulated vanity, a neat reset floor, container
+multiplication, brand marks, text, captions, watermarks, extra people,
+overlapping speech, invented narration, music, wardrobe drift or flipped room
+geography.
+```
+
+**Why it works:** the prompt treats the prop purge as a measurable state
+transition instead of a vague angry gesture. The action is decomposed into
+contact, edge crossing, gravity, bounce and rest, while an explicit ledger
+carries the bare-vanity/scattered-floor result into the final shot. Reference
+authority stays narrow, the wardrobe is restated, and dialogue ends before the
+high-motion beat. The source owner's confirmation establishes creative
+acceptance; the source's automatic transcript uncertainty is avoided here by
+using generic product categories rather than brand names.
+
+Adapted and rewritten from keys-exe's October 6, 2026 production record:
+[final Seedance 2.5 generation and result commit](https://github.com/keys-exe/global-manual-ai/commit/36ad9360aae37315ff5563998a07c8d2b1379652),
+[complete prompt and result ledger](https://github.com/keys-exe/global-manual-ai/blob/2640c7de4262f8a4e00ff30a7a8cb83a00b03b54/builds/facelove-walmart/board/json/sc04_g4.json),
+[owner-confirmation commit and production notes](https://github.com/keys-exe/global-manual-ai/commit/2640c7de4262f8a4e00ff30a7a8cb83a00b03b54)
+and [generated MP4](https://d8j0ntlcm91z4.cloudfront.net/user_3AViUeU5dIz6pgsjYszQ9iux9YN/hf_20261006_160700_e6617901-44ce-4dfa-a10b-ec1a7386556c.mp4).
+
 ## Reusable templates
 
 
@@ -54608,6 +54717,7 @@ and the follow-up
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 6, 2026 confirmed Seedance 2.5 vanity product purge: complete 16-second reference request, exact `seedance_2_5` route, provider job and credit ledger, public generated MP4, clean-audio audit, irreversible scattered-floor state and explicit source-owner acceptance](https://github.com/keys-exe/global-manual-ai/commit/2640c7de4262f8a4e00ff30a7a8cb83a00b03b54) ([generation/result commit](https://github.com/keys-exe/global-manual-ai/commit/36ad9360aae37315ff5563998a07c8d2b1379652), [complete prompt and ledger](https://github.com/keys-exe/global-manual-ai/blob/2640c7de4262f8a4e00ff30a7a8cb83a00b03b54/builds/facelove-walmart/board/json/sc04_g4.json), [generated MP4](https://d8j0ntlcm91z4.cloudfront.net/user_3AViUeU5dIz6pgsjYszQ9iux9YN/hf_20261006_160700_e6617901-44ce-4dfa-a10b-ec1a7386556c.mp4))
 - [keys-exe / global-manual-ai — October 6, 2026 Seedance 2.5 state-preloaded prop pickup: complete 4-second reference-matched request, successful 252-credit Kie task, envelope-measured dialogue window and assembled-file read-back](https://github.com/keys-exe/global-manual-ai/commit/f2180f3a6c14e81dca5454c7f361165fd929a030) ([complete request](https://github.com/keys-exe/global-manual-ai/blob/f2180f3a6c14e81dca5454c7f361165fd929a030/builds/stryde-other-nana/film/SC01/SC01-T1-P1.call.json), [successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/f2180f3a6c14e81dca5454c7f361165fd929a030/builds/stryde-other-nana/film/SC01/SC01-T1-P1.kie.log), [final splice correction](https://github.com/keys-exe/global-manual-ai/commit/3ed0497670ef7c0cc566bc836fe377a3452d7ab9))
 - [keys-exe / global-manual-ai — October 6, 2026 Kie AI Seedance 2.5 A/B/A intervention proof: complete five-reference 26-second request, matched on/off/on task trials, fixed test geometry, successful 1,638-credit task and explicit `To check` review boundary](https://github.com/keys-exe/global-manual-ai/commit/049f8116fe688bc25e28e3c52c5a07e8af464594) ([complete request](https://github.com/keys-exe/global-manual-ai/blob/049f8116fe688bc25e28e3c52c5a07e8af464594/builds/stryde-the-impression/film/SC11/SC11-TB.call.json), [successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/049f8116fe688bc25e28e3c52c5a07e8af464594/builds/stryde-the-impression/film/SC11/SC11-TB.v1.kie.log), [production notes](https://github.com/keys-exe/global-manual-ai/blob/049f8116fe688bc25e28e3c52c5a07e8af464594/builds/stryde-the-impression/BUILD_NOTES.md))
 - [keys-exe / global-manual-ai — October 6, 2026 Higgsfield Seedance 2.5 long-lens animated supermarket collision: complete five-image/two-voice prompt, exact `seedance_2_5` route, provider job and credit ledger, public generated MP4, non-destructive music removal and committed review limitation](https://github.com/keys-exe/global-manual-ai/commit/3c2b0f9d8a07e62b26e2c50d49ba63dfdb1db480) ([complete request](https://github.com/keys-exe/global-manual-ai/blob/3c2b0f9d8a07e62b26e2c50d49ba63dfdb1db480/builds/facelove-walmart/takes/SC01-T1.call.json), [result ledger and review](https://github.com/keys-exe/global-manual-ai/blob/3c2b0f9d8a07e62b26e2c50d49ba63dfdb1db480/builds/facelove-walmart/board/json/sc01_g3.json), [generated MP4](https://d8j0ntlcm91z4.cloudfront.net/user_3AViUeU5dIz6pgsjYszQ9iux9YN/hf_20261006_133013_9098202d-ed47-4cff-a984-cd3e892ff6dd.mp4))
