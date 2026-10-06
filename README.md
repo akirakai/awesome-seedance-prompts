@@ -54841,6 +54841,129 @@ the [exact Seedance 2.5 720p production call](https://github.com/keys-exe/global
 and its [successful paid task receipt](https://github.com/keys-exe/global-manual-ai/blob/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea/builds/stryde-anniversary-shoes/scenes/SC04/SC04-T1.kie.json).
 
 
+### Reference-ablation ladder for compressed-continuation softness
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the production record contains complete 720p
+requests with empty video-reference arrays, successful paid generation, and a
+creator-run comparison against earlier takes that reused a compressed prior
+clip  
+**Evidence boundary:** removing the prior video improved the source's measured
+detail score by about 25% in this production, but the resulting takes remained
+`To check`. Treat that number as one project's diagnostic result, not a
+universal Seedance benchmark or artistic acceptance  
+**Use case:** a continuation or multi-take dialogue scene becomes visibly softer
+after the previous 720p take is fed back as a video reference, even though
+identity, set and endpoint continuity are still required  
+**Mode:** frozen baseline -> remove prior video -> retain still anchors -> score
+detail -> optionally remove biased start frame -> explicit fresh opening
+
+```text
+FREEZE THE CONTROL
+Choose one soft take and freeze:
+- exact Seedance route, resolution, duration, aspect ratio and audio setting;
+- prompt, dialogue, cast, wardrobe, location, shot sizes and camera motions;
+- identity images, outfit images, voice references and randomization policy;
+- one inspectable face/hand region per shot plus the full-frame master.
+
+Do not change several creative variables while testing reference transport.
+
+REFERENCE RESPONSIBILITIES
+@Image1..N = identity and wardrobe authorities.
+@SetSheet = current room geometry, fixed landmarks and broad production design.
+@LastFrame = optional start positions, screen direction and light at the handoff.
+@Audio1..N = each speaker's own voice and words.
+@PreviousVideo = motion continuity only; never make it the default carrier of
+identity, set detail or image sharpness.
+
+STAGE A — CURRENT BASELINE
+Render or retain the current request that includes @PreviousVideo. Record:
+- the exact uploaded clip hash, dimensions, bitrate and encode generation;
+- output task ID, output hash and settings;
+- face/hand detail measurements from the locked regions;
+- visible action order, dialogue completeness and continuity errors.
+
+STAGE B — VIDEO-OFF ABLATION
+Submit the same take without @PreviousVideo. Keep @SetSheet and @LastFrame.
+Restate only the continuity information the deleted clip used to carry:
+- exact starting body positions;
+- named set landmarks and screen sides;
+- current prop state;
+- one ordered action path and the required endpoint.
+
+Use the same duration, resolution, shot plan, dialogue, identity references and
+audio settings. Do not add an upscale, beauty pass or new camera move.
+
+PROMPT SKELETON
+REFERENCES
+[IDENTITY / WARDROBE IMAGES with one role each]
+@SetSheet — copy only the current room geometry and fixed landmark positions.
+@LastFrame — start positions, screen direction and light only.
+[AUDIO REFERENCES with one named speaker each]
+
+SHOT
+[GENRE AND ONE DRAMATIC PURPOSE]. One [DURATION]-second take of [N] shots.
+Frame 1: [EXACT SUBJECTS, BODY POSITIONS, PROP STATES AND FRAMING].
+Timeline:
+[TIME] [SHOT SIZE]: [SUBJECT ACTION with start, contact and endpoint].
+[TIME] [SHOT SIZE]: [NEXT ACTION / DIALOGUE / REACTION].
+Last frame: [INSPECTABLE END STATE].
+Keep faces [MCU / CU / INSERT when fine performance matters], motion restrained
+enough for the available pixels, dialogue once and in order, native room sound,
+no music unless requested. No previous video reference, no invented cutaway,
+identity drift, set relocation, state reset, extra speaker, text or watermark.
+
+READ-BACK
+Compare Stage A and B at matching frames and the same display scale:
+- face and hand edge/detail score in the frozen regions;
+- temporal texture stability during motion;
+- dialogue completeness and synchronization;
+- identity, wardrobe, room and prop continuity;
+- start-frame composition and endpoint accuracy.
+Archive both requests, task receipts and untouched outputs. A higher numeric
+detail score does not pass a take that fails story or continuity.
+
+STAGE C — START-FRAME ABLATION
+If Stage B is sharper but still inherits an unwanted wide angle or stale body
+position, remove @LastFrame in a second isolated test. Keep @SetSheet for room
+identity, then write Frame 1 completely in prose:
+- exact shot size and camera height;
+- who is visible and who is out of frame;
+- subject pose, support foot, hand contact and prop state;
+- set landmarks that must appear;
+- first motion and first spoken line.
+
+Do not call this a continuation in the payload if the opening must be rebuilt.
+Record `continues = null` and `positions = false` (or their provider-neutral
+equivalents) so hidden inheritance cannot override the written opening.
+
+DECISION
+- Keep Stage A when motion continuity materially improves and detail is usable.
+- Keep Stage B when still anchors preserve continuity and detail improves.
+- Keep Stage C when the endpoint frame itself is causing the wrong opening.
+- Reintroduce a video only for a named motion/camera responsibility and with the
+smallest useful, least-compressed interval.
+- Reject every branch that lacks a successful exact-model receipt or remains
+uninspectable at the story-critical scale.
+```
+
+**Why it works:** continuation references can carry both useful state and
+unwanted compression or composition bias. Removing them one class at a time
+reveals which asset owns the failure. The set sheet protects spatial identity,
+the optional endpoint still protects pose, and an explicit Frame 1 can replace
+that still when it imports the wrong shot size. Because prompt, route and output
+settings remain frozen, the comparison tests reference transport rather than a
+different creative treatment.
+
+Adapted and rewritten from keys-exe's October 7, 2026
+[merged reference-ablation production record](https://github.com/keys-exe/global-manual-ai/commit/eb9319362e80445bb25b47c16e64062478d672be),
+the [video-off comparison and measured-detail commit](https://github.com/keys-exe/global-manual-ai/commit/fba26028733285d784cbdf536593cc8e296ac7ca),
+the [complete Stage B Seedance 2.5 request](https://github.com/keys-exe/global-manual-ai/blob/fba26028733285d784cbdf536593cc8e296ac7ca/builds/stryde-other-nana/film/SC05/SC05-T3.call.json),
+the [Stage C request](https://github.com/keys-exe/global-manual-ai/blob/eb9319362e80445bb25b47c16e64062478d672be/builds/stryde-other-nana/film/SC05/SC05-T3.call.json),
+the [reference-selection implementation](https://github.com/keys-exe/global-manual-ai/blob/eb9319362e80445bb25b47c16e64062478d672be/builds/stryde-other-nana/film/build_take.py)
+and the [successful Stage C task receipt](https://github.com/keys-exe/global-manual-ai/blob/eb9319362e80445bb25b47c16e64062478d672be/builds/stryde-other-nana/film/SC05/SC05-T3.v5.kie.log).
+
+
 ### State-preloaded prop pickup with envelope-verified splice
 
 **Verified model:** Seedance 2.5, exact Kie AI route
@@ -54952,6 +55075,7 @@ and the follow-up
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 7, 2026 Seedance 2.5 reference-ablation production record: remove a compressed prior clip, retain still continuity anchors, measure detail, then remove a composition-biased start frame while keeping the set sheet](https://github.com/keys-exe/global-manual-ai/commit/eb9319362e80445bb25b47c16e64062478d672be) ([video-off comparison](https://github.com/keys-exe/global-manual-ai/commit/fba26028733285d784cbdf536593cc8e296ac7ca), [complete exact-model request](https://github.com/keys-exe/global-manual-ai/blob/fba26028733285d784cbdf536593cc8e296ac7ca/builds/stryde-other-nana/film/SC05/SC05-T3.call.json), [successful final task receipt](https://github.com/keys-exe/global-manual-ai/blob/eb9319362e80445bb25b47c16e64062478d672be/builds/stryde-other-nana/film/SC05/SC05-T3.v5.kie.log))
 - [keys-exe / global-manual-ai — October 6, 2026 confirmed Seedance 2.5 eleven-take scene freeze and assembly: exact approved versions, whole-take picture joins, duration-matched native audio, ducked scene music, measured loudness and join-decode QC](https://github.com/keys-exe/global-manual-ai/commit/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963) ([assembly implementation](https://github.com/keys-exe/global-manual-ai/blob/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963/builds/stryde-her-dad/edit/build_scene.py), [scene mix specification](https://github.com/keys-exe/global-manual-ai/blob/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963/builds/stryde-her-dad/edit/SC05/SC05.scene.json), [representative exact Seedance call](https://github.com/keys-exe/global-manual-ai/blob/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963/builds/stryde-her-dad/body/SC05/SC05-T1.call.json))
 - [keys-exe / global-manual-ai — October 6, 2026 confirmed Seedance 2.5 landmark-crossing mobility reveal: complete 16-second five-image/two-voice prompt, exact `bytedance/seedance-2-5` request, successful 1,008-credit task and explicit source-owner restoration of version 1](https://github.com/keys-exe/global-manual-ai/commit/4513065fec3c591ef65cf3f1cb478177e4db5ae4) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/4513065fec3c591ef65cf3f1cb478177e4db5ae4/builds/stryde-the-impression/film/SC12/SC12-T.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/4513065fec3c591ef65cf3f1cb478177e4db5ae4/builds/stryde-the-impression/film/SC12/SC12-T.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/4513065fec3c591ef65cf3f1cb478177e4db5ae4/builds/stryde-the-impression/film/SC12/SC12-T.v1.kie.log))
 - [keys-exe / global-manual-ai — October 6, 2026 confirmed Seedance 2.5 vanity product purge: complete 16-second reference request, exact `seedance_2_5` route, provider job and credit ledger, public generated MP4, clean-audio audit, irreversible scattered-floor state and explicit source-owner acceptance](https://github.com/keys-exe/global-manual-ai/commit/2640c7de4262f8a4e00ff30a7a8cb83a00b03b54) ([generation/result commit](https://github.com/keys-exe/global-manual-ai/commit/36ad9360aae37315ff5563998a07c8d2b1379652), [complete prompt and ledger](https://github.com/keys-exe/global-manual-ai/blob/2640c7de4262f8a4e00ff30a7a8cb83a00b03b54/builds/facelove-walmart/board/json/sc04_g4.json), [generated MP4](https://d8j0ntlcm91z4.cloudfront.net/user_3AViUeU5dIz6pgsjYszQ9iux9YN/hf_20261006_160700_e6617901-44ce-4dfa-a10b-ec1a7386556c.mp4))
