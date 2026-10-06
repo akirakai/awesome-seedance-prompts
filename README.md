@@ -484,6 +484,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Long-lens animated supermarket collision](#468-long-lens-animated-supermarket-collision)
   - [Vanity product purge with irreversible floor-state carryover](#469-vanity-product-purge-with-irreversible-floor-state-carryover)
   - [Landmark-crossing mobility reveal with two-speaker state handoff](#470-landmark-crossing-mobility-reveal-with-two-speaker-state-handoff)
+  - [First-step knee-failure rescue with anti-freeze aftermath](#471-first-step-knee-failure-rescue-with-anti-freeze-aftermath)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -30750,6 +30751,151 @@ Adapted and rewritten from keys-exe's October 6, 2026 production record:
 [successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/4513065fec3c591ef65cf3f1cb478177e4db5ae4/builds/stryde-the-impression/film/SC12/SC12-T.v1.kie.log)
 and [production notes](https://github.com/keys-exe/global-manual-ai/blob/4513065fec3c591ef65cf3f1cb478177e4db5ae4/builds/stryde-the-impression/BUILD_NOTES.md).
 
+### 471. First-step knee-failure rescue with anti-freeze aftermath
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the committed 720p request contains the complete
+prompt and reference manifest; task `0a5fa784c5f1a3684c84a530ab5d6b17`
+succeeded for 378 credits, and the source owner later marked the assembled v13
+containing this generated wide as confirmed  
+**Evidence boundary:** Seedance moved from the requested locked wide into a
+closer view after roughly the first second. The owner was told and accepted the
+assembled result, so this verifies the action/state method, not perfect
+wide-shot compliance or native sound generation; the knee impact sound was
+created separately and added in the edit  
+**Use case:** a crowded rescue beat where one character starts to intervene,
+suffers a physical failure on the first step, drops a prop, remains visibly
+alive in pain, and shares the frame with a second rescue action  
+**Mode:** nine-role image-reference package; one continuous vertical live-action
+take; silent generation for editorial sound design  
+**Verified settings:** 6 seconds; 9:16; 720p; reference-to-video; generated audio
+off
+
+```text
+REFERENCE AUTHORITY
+@Image1 = PLACEMENT: exact vehicle, storefront, actor starting positions and
+camera side. Use composition and blocking only.
+@Image2 = INCOMING_CONTINUITY: the preceding close shot's last frame. Preserve
+the older man's face, clothes, light and the pot still held in both hands.
+@Image3 = OUTGOING_ENDPOINT: the following shot's first frame. End with the
+woman beside the car's rear door and the young worker facing her with one hand
+on her upper arm.
+@Image4 = WOMAN_IDENTITY: face, age and hair only.
+@Image5 = OLDER_MAN_IDENTITY: face, age, hair, crooked nose and eyebrow scar
+only.
+@Image6 = WORKER_IDENTITY_AND_UNIFORM: face, age, build and green work uniform.
+@Image7 = PLACE_GEOMETRY: garden-centre glass front, wet parking lane, trolley
+shelter and the side of the action line from which the camera must remain.
+@Image8 = WOMAN_WARDROBE: navy quilted jacket open over a white T-shirt,
+light-wash jeans and white trainers; ignore card text and background.
+@Image9 = OLDER_MAN_WARDROBE: charcoal sweatshirt, full-length faded navy work
+trousers and worn tan boots; ignore card text and background.
+
+The references define identity, wardrobe, layout and the two cut boundaries.
+They are not shots to reproduce and no reference card, panel, caption or grey
+backdrop may appear.
+
+SCENE CONTRACT
+Create a restrained six-second British family-drama beat in one continuous
+take on a wet, overcast garden-centre car park. A silver five-door hatchback is
+side-on in front of the glass storefront, bonnet left and open boot right. A
+plain white van reverses in the lane toward the open boot. The older man stands
+beside the front bumper holding a potted plant; the woman is bent into the open
+boot; the young worker is beyond the boot. Keep the camera on the same side of
+the car and action line for the entire take.
+
+Frame 1 must match the placement and incoming-continuity references: the older
+man has just shouted a warning, the pot is still in both hands, the woman is at
+the boot and the van is moving toward her. No one has yet changed position.
+
+ACTION ORDER
+[0.0-1.2 s] The older man bursts forward from the front bumper to help the
+woman. He commits his weight and starts one urgent first step; do not let him
+walk calmly or take a second step.
+
+[1.2-2.4 s] On that first loaded step, his right knee fails. The failure starts
+in the supporting leg, folds his weight downward and pulls the torso after it.
+As he drops onto the right knee, the pot leaves his hands and strikes the wet
+tarmac beside him, cracking into a few hard pieces. The pot does not fall
+before his knee fails and nothing floats, bounces or plays in slow motion.
+
+[0.8-3.8 s, parallel action] The worker runs around the boot, takes the woman
+by the upper arm and pulls her around the boot's left corner for three quick
+steps. They finish halfway along the car's left side beside its rear door,
+fully clear of the van's path. Only after that space is empty does the van stop
+with a small jolt about one metre behind the open boot; its brake lights flare
+once. Nobody is struck and the van never touches the car.
+
+[2.4-6.0 s] The older man ends upright from the hips on one knee, never on all
+fours and never frozen. Keep a continuous low-amplitude pain-state sequence:
+his face tightens, his chest takes two hard breaths, his left hand grips the
+failed knee, his right palm plants on the tarmac, he tries once to push up, the
+knee refuses the load, he sinks back with a small weight settle, then raises
+his head to check the woman. His mouth stays closed. Each motion finishes
+before the next begins; do not loop the gestures or reset his pose.
+
+LAST FRAME
+Older man still down on his right knee by the front bumper, right hand on the
+wet ground, cracked pot and spilled soil beside him, looking toward the woman.
+The woman and worker are together by the rear door, matching @Image3; the
+worker's hand remains on her upper arm. The van is stopped behind the empty
+boot. All bodies, props and vehicles reach stable, inspectable endpoints.
+
+CAMERA, LIGHT AND PERFORMANCE
+Hold a wide eye-level tripod view matching @Image1. Permit only one late,
+operator-like pan or tilt of a few degrees if required to retain the action; no
+push-in, cut, reframe, axis crossing or handheld sway. Use 24 fps with natural
+180-degree-shutter motion blur. Flat grey sky is the single soft source from
+above and frame-left, around 6500K; wet tarmac and shallow puddles reflect it.
+Keep all three people and both vehicles readable with deep focus, real skin
+texture, restrained colour and no applied grade.
+
+The older man's response is urgent but physically weighted. The knee failure
+must interrupt intention, not resemble a staged kneel. The worker acts quickly
+without yanking the woman theatrically. The woman reacts after she is moved
+clear, never before the danger is visible. Nobody looks into the lens.
+
+PHYSICS AND CONTINUITY
+Weight transfers before every step; hips lead torso; hands arrive last and
+decelerate into contact. Loose cloth and hair lag the body and settle after it.
+Wet ground has friction: the planted palm and knee do not slide. Preserve the
+same identities, ages, full-length clothes, light direction, car orientation,
+van path, open-boot state and screen direction in every frame. Nothing resets
+between the incoming frame, the action and the required endpoint.
+
+SOUND
+Generate no dialogue, voice, music, ambience or effects. Treat the clip as a
+silent picture element. In the edit, add one externally produced grunt/knee
+impact/hissing-breath cue at the exact knee-contact frame; do not claim that
+sound as native model output.
+
+FAILURE GATE
+Reject any take with: a second step before the knee fails; pot release before
+leg failure; a calm walk; all-fours collapse; a complete stand-up; frozen
+post-fall acting; repeated push-up attempts; collision; anyone left in the
+van's path; worker or woman missing; wrong endpoint positions; an extra stand,
+post, trolley or sign behind the boot; axis crossing; van or car relocation;
+bare knees or shorts; mouth movement; tears; exaggerated grief; duplicate or
+merged people; floating contact; warped background; moving geometry; slow
+motion; phone-video processing; captions, logos, watermarks or generated audio.
+```
+
+**Why it works:** the prompt turns a complicated accident into a causal chain
+with explicit gates: urgent intention -> first loaded step -> knee failure ->
+prop release -> grounded contact -> one failed recovery -> visual check. A
+parallel rescue chain has its own dependency—move the woman clear before the
+van stops—so the two actions can share a wide without competing for chronology.
+The incoming and outgoing frames define both splice boundaries, while the
+anti-freeze micro-sequence gives the injured actor continuous, non-looping life
+after the main fall.
+
+Adapted and rewritten from keys-exe's October 7, 2026 production record:
+[complete generation and result commit](https://github.com/keys-exe/global-manual-ai/commit/44cdafc6da33c904e753c1f828fac8080bbbaf78),
+[exact Seedance 2.5 request](https://github.com/keys-exe/global-manual-ai/blob/44cdafc6da33c904e753c1f828fac8080bbbaf78/builds/stryde-her-dad/hooks/SC01/new/fix12/wide.call.json),
+[successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/44cdafc6da33c904e753c1f828fac8080bbbaf78/builds/stryde-her-dad/hooks/SC01/new/fix12/wide.kie.log)
+and the later [owner-confirmation record](https://github.com/keys-exe/global-manual-ai/blob/82d056c48478be4376351193d8713a242b2c4bca/builds/stryde-her-dad/BUILD_NOTES.md#L260-L274).
+
+
 ## Reusable templates
 
 
@@ -55075,6 +55221,7 @@ and the follow-up
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 7, 2026 confirmed Seedance 2.5 first-step knee-failure rescue: complete nine-reference silent request, exact `bytedance/seedance-2-5` route, successful 378-credit task, externally edited knee cue and later owner confirmation of the assembled v13](https://github.com/keys-exe/global-manual-ai/commit/44cdafc6da33c904e753c1f828fac8080bbbaf78) ([exact request](https://github.com/keys-exe/global-manual-ai/blob/44cdafc6da33c904e753c1f828fac8080bbbaf78/builds/stryde-her-dad/hooks/SC01/new/fix12/wide.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/44cdafc6da33c904e753c1f828fac8080bbbaf78/builds/stryde-her-dad/hooks/SC01/new/fix12/wide.kie.log), [owner confirmation](https://github.com/keys-exe/global-manual-ai/blob/82d056c48478be4376351193d8713a242b2c4bca/builds/stryde-her-dad/BUILD_NOTES.md#L260-L274))
 - [keys-exe / global-manual-ai — October 7, 2026 Seedance 2.5 reference-ablation production record: remove a compressed prior clip, retain still continuity anchors, measure detail, then remove a composition-biased start frame while keeping the set sheet](https://github.com/keys-exe/global-manual-ai/commit/eb9319362e80445bb25b47c16e64062478d672be) ([video-off comparison](https://github.com/keys-exe/global-manual-ai/commit/fba26028733285d784cbdf536593cc8e296ac7ca), [complete exact-model request](https://github.com/keys-exe/global-manual-ai/blob/fba26028733285d784cbdf536593cc8e296ac7ca/builds/stryde-other-nana/film/SC05/SC05-T3.call.json), [successful final task receipt](https://github.com/keys-exe/global-manual-ai/blob/eb9319362e80445bb25b47c16e64062478d672be/builds/stryde-other-nana/film/SC05/SC05-T3.v5.kie.log))
 - [keys-exe / global-manual-ai — October 6, 2026 confirmed Seedance 2.5 eleven-take scene freeze and assembly: exact approved versions, whole-take picture joins, duration-matched native audio, ducked scene music, measured loudness and join-decode QC](https://github.com/keys-exe/global-manual-ai/commit/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963) ([assembly implementation](https://github.com/keys-exe/global-manual-ai/blob/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963/builds/stryde-her-dad/edit/build_scene.py), [scene mix specification](https://github.com/keys-exe/global-manual-ai/blob/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963/builds/stryde-her-dad/edit/SC05/SC05.scene.json), [representative exact Seedance call](https://github.com/keys-exe/global-manual-ai/blob/6bb9cffe3dc9f0f3a19b362f49dec038ecba6963/builds/stryde-her-dad/body/SC05/SC05-T1.call.json))
 - [keys-exe / global-manual-ai — October 6, 2026 confirmed Seedance 2.5 landmark-crossing mobility reveal: complete 16-second five-image/two-voice prompt, exact `bytedance/seedance-2-5` request, successful 1,008-credit task and explicit source-owner restoration of version 1](https://github.com/keys-exe/global-manual-ai/commit/4513065fec3c591ef65cf3f1cb478177e4db5ae4) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/4513065fec3c591ef65cf3f1cb478177e4db5ae4/builds/stryde-the-impression/film/SC12/SC12-T.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/4513065fec3c591ef65cf3f1cb478177e4db5ae4/builds/stryde-the-impression/film/SC12/SC12-T.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/4513065fec3c591ef65cf3f1cb478177e4db5ae4/builds/stryde-the-impression/film/SC12/SC12-T.v1.kie.log))
