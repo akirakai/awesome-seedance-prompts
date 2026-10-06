@@ -48631,6 +48631,81 @@ Adapted and rewritten from Abdul Shakoor / @abxxai's October 3, 2026
 including the [complete four-reference video prompt](https://x.com/abxxai/status/2106036847470354881)
 and the creator's [three-rule failure-control summary](https://x.com/abxxai/status/2106036859357040922).
 
+
+### Decouple wearable and body scale with an adjacent-anatomy witness
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the original creator committed the complete repaired
+prompt, exact request, successful 630-credit provider receipt, assembled
+23.4-second result and QC notes. The retake and join passed technical checks, but
+the current board remains **To check**, so this verifies the production repair
+without claiming final artistic acceptance.
+
+Use this when a worn product and the body part beneath it both inflate, shrink or
+deform together because every size instruction is relational.
+
+```text
+REFERENCE ROLES
+@Image1 owns the subject's identity and healthy natural build only.
+@Image2 owns wardrobe only.
+@Image3 owns the wearable's canonical front geometry and materials.
+@Image4 owns its three-quarter depth and hardware placement.
+@Image5 is the accepted preceding frame and owns opening positions, light and
+screen direction. Do not cut to any reference image.
+
+RETAKE SCOPE
+Replace only the failed reveal beat. Preserve the accepted tail from its own
+existing cut point; do not regenerate dialogue reactions, coverage or endpoint
+that the correction does not name.
+
+DUAL-SCALE WITNESS
+Frame from lap to ankles at the body's real scale so both lower legs remain
+visible together. The untouched neighboring leg is the anatomy witness: both
+shins, calves and kneecaps must retain matching, healthy human proportions.
+Do not let the camera crop so tightly that the model can enlarge the target leg
+and the product as one coupled unit.
+
+PRODUCT SIZE AND PLANE
+State one absolute product size: [WIDTH] × [HEIGHT] cm.
+State one independent body ratio: approximately [RATIO] of the visible shin
+width.
+Keep the rigid shell on the front plane of the target leg only. Name which knee
+and which side of frame it occupies. Keep all fasteners, slides, peaks, seams and
+wordmark on their canonical faces; no hardware may migrate around the leg.
+
+CONTACT, NOT COMPRESSION
+The soft band is one narrow, closed loop lying flat and loose against the skin.
+It supports the product without cinching the limb. Preserve fine matte skin
+texture and the ordinary contour of shin, calf and kneecap. No skin bulge above
+or below the band, groove, swelling, waxy sheen or sleeve-like product growth.
+
+SHOT CONTRACT
+Use one locked medium close-up at the product's height. The subject performs one
+small reveal action and holds the garment clear. Keep the product front readable
+while the neighboring leg stays in frame as the scale check. End with the same
+product, leg proportions and contact state still visible.
+
+FAILURE GATE
+Reject joint rescaling of product and limb, product as wide as the whole leg,
+inflated or tubular anatomy, tight-cuff behavior, displaced hardware, product on
+the wrong knee, duplicate product, wardrobe reset, changed identity, camera
+reframe that removes the anatomy witness, repeated reveal, text mutation or
+watermark.
+```
+
+**Why it works:** an absolute centimetre size alone can still fail if the model
+silently enlarges the wearer to preserve a requested frame percentage. The
+unchanged second leg supplies an independent anatomical ruler; absolute product
+dimensions, a separate shin-width ratio and explicit no-compression contact
+constraints break the correlated-scale loophole. Limiting the retake to the
+failed beat also protects an already accepted tail.
+
+Adapted and rewritten from keys-exe's October 6, 2026 Seedance 2.5
+[successful repair and QC commit](https://github.com/keys-exe/global-manual-ai/commit/fae43702ded6991df2476983bab493e6375f166d),
+the [complete repaired prompt](https://github.com/keys-exe/global-manual-ai/blob/fae43702ded6991df2476983bab493e6375f166d/builds/stryde-the-impression/film/SC09/SC09-TD.prompt.txt),
+[exact request and preserved-tail ledger](https://github.com/keys-exe/global-manual-ai/blob/fae43702ded6991df2476983bab493e6375f166d/builds/stryde-the-impression/film/SC09/SC09-TD.call.json)
+and [successful provider receipt](https://github.com/keys-exe/global-manual-ai/blob/fae43702ded6991df2476983bab493e6375f166d/builds/stryde-the-impression/film/SC09/SC09-TD.g2part.kie.log).
+
 ## Camera language
 
 | Goal | Useful direction | Common failure to avoid |
@@ -54191,6 +54266,7 @@ and its [successful paid task receipt](https://github.com/keys-exe/global-manual
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 6, 2026 Seedance 2.5 coupled-scale wearable repair: complete prompt, exact `bytedance/seedance-2-5` request, successful 630-credit task, preserved-tail join and technical QC](https://github.com/keys-exe/global-manual-ai/commit/fae43702ded6991df2476983bab493e6375f166d) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/fae43702ded6991df2476983bab493e6375f166d/builds/stryde-the-impression/film/SC09/SC09-TD.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/fae43702ded6991df2476983bab493e6375f166d/builds/stryde-the-impression/film/SC09/SC09-TD.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/fae43702ded6991df2476983bab493e6375f166d/builds/stryde-the-impression/film/SC09/SC09-TD.g2part.kie.log), [review notes](https://github.com/keys-exe/global-manual-ai/blob/fae43702ded6991df2476983bab493e6375f166d/builds/stryde-the-impression/BUILD_NOTES.md))
 - [@ayzalnooor24521 — October 6, 2026 Seedance 2.0 playful basketball scene: complete prompt and result with an adult player, oversized dog mascot, one court and smooth wide-to-medium coverage](https://x.com/ayzalnooor24521/status/2107340030536741222) ([versioned gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=11984))
 - [@AIwithMinal — October 6, 2026 Seedance 2.0 suburban monster emergence: complete vertical VFX prompt and result with a glowing lawn trigger, fixed witness, house scale anchor and creature breach](https://x.com/AIwithMinal/status/2107333962402341067) ([versioned gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=11985))
 - [keys-exe / global-manual-ai — October 6, 2026 Seedance 2.5 720p fine-performance pixel-budget gate, low-loss assembly and single picture-locked final upscale](https://github.com/keys-exe/global-manual-ai/commit/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea) ([rule](https://github.com/keys-exe/global-manual-ai/blob/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea/standards/AI_Prompt_Engineer_Global_Standards.md), [preflight](https://github.com/keys-exe/global-manual-ai/blob/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea/.claude/skills/ai-prompt-engineer/scripts/preflight.py), [exact Seedance 2.5 call](https://github.com/keys-exe/global-manual-ai/blob/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea/builds/stryde-anniversary-shoes/scenes/SC04/SC04-T1.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/77cc02375b6b7a36a464c2f7bbcbb8a2b4376fea/builds/stryde-anniversary-shoes/scenes/SC04/SC04-T1.kie.json))
