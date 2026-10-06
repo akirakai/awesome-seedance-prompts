@@ -481,6 +481,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Era-locked Tokyo MiniDV gym-day continuity vlog](#465-era-locked-tokyo-minidv-gym-day-continuity-vlog)
   - [Playful basketball mascot with a one-ball handoff ledger](#466-playful-basketball-mascot-with-a-one-ball-handoff-ledger)
   - [Cause-gated suburban lawn monster emergence](#467-cause-gated-suburban-lawn-monster-emergence)
+  - [Long-lens animated supermarket collision](#468-long-lens-animated-supermarket-collision)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -30402,6 +30403,121 @@ Adapted and rewritten from @AIwithMinal's October 6, 2026
 [original creator post](https://x.com/AIwithMinal/status/2107333962402341067);
 [versioned Seedance 2.0 gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=11985).
 
+
+### 468. Long-lens animated supermarket collision
+
+**Verified model:** Seedance 2.5, exact Higgsfield route identifier
+`seedance_2_5` — the committed request, provider job, credit charge, generated
+MP4 URL and review record all identify the same third-generation render  
+**Use case:** animated narrative cold open, reference-locked characters,
+dialogue timing, expressive reaction coverage and visual-hook repair  
+**Mode:** multimodal reference-to-video with five image references and two voice
+references  
+**Suggested settings:** 22 seconds; vertical 9:16; 720p; native audio on; remove
+unwanted generated music non-destructively before laying locked narration in
+the edit
+
+```text
+REFERENCES
+@image1 = Michelle, 63: face, hair and body proportions only. Animate her
+performance; never copy the neutral expression of the sheet.
+@image2 = Peter, 65: face, hair and body proportions only.
+@image3 = Peter's companion, 41: face, hair and body proportions only.
+@image4 = the forward supermarket-aisle plate: paper products on the left,
+detergent on the right, blue end-cap at far right and a cross-aisle beyond.
+@image5 = the same aisle seen back from the cross-aisle. Use it only to preserve
+the reverse geography.
+@audio1 = Michelle's voice identity.
+@audio2 = Peter's voice identity.
+
+SCENE CONTRACT
+Create one 22-second, nine-shot 3D-animated supermarket encounter, framed like a
+live-action romantic-comedy collision. Peter is talking to his companion and
+does not see Michelle before their full-size carts hit. Three red apples spill.
+He recognizes Michelle, speaks in disbelief, the companion takes his arm,
+Michelle gives a four-word answer and glides away. Keep the aisle, identities,
+wardrobe and screen directions continuous through every cut.
+
+TIMELINE
+[0.0–2.0 s] Medium eye-level tracking shot, camera retreating in front of
+Michelle. She pushes toward the cross-aisle with chin raised and a private
+smile. Peter's cart noses around the end-cap ahead; he is turned toward his
+companion, laughing and never looking toward Michelle.
+
+[2.0–4.0 s] Low insert beside the carts with a fast crash zoom. The carts strike
+with visible weight; both people lurch and exactly three plain red apples bounce
+onto the polished floor.
+
+[4.0–6.0 s] Locked close-up. Peter crouches with knitted brows and picks up one
+apple beside Michelle's loafer.
+
+[6.0–9.0 s] Extreme close-up with a slow push. Peter looks upward; irritation
+drains from his face, his gaze travels to Michelle and his lips part.
+
+[9.0–14.0 s] Close-up on Peter with Michelle's hair soft in the foreground.
+Tilt with him as he rises. His eyes widen and his jaw drops. Using @audio2, he
+says naturally: "Michelle? Is that you? My God, what happened, did you get work
+done? You look so much more beautiful."
+
+[14.0–16.0 s] Locked extreme close-up on Michelle. She tilts her head, keeps
+steady eye contact and lets a calm, knowing smile arrive. Using @audio1, she
+answers: "It is just me."
+
+[16.0–18.0 s] Medium two-shot with a restrained pan. The companion steps beside
+Peter, closes one hand around his arm and watches Michelle with a tight jaw.
+
+[18.0–20.0 s] Full shot followed from behind. Michelle steers around Peter's
+cart and continues along the cross-aisle without looking back; her hair and
+clothes keep their established colour and design.
+
+[20.0–22.0 s] Close two-shot, gently pulling back. Peter turns to watch Michelle
+leave, one apple still in his hand and mouth open; the companion glares at him.
+End with Michelle gone from the cross-aisle and both carts still grounded at the
+end-cap.
+
+LOOK
+Big-studio 3D animation photographed like a live-action street encounter:
+eye-level long-lens coverage, large readable faces and two or three background
+shoppers passing as soft depth layers. Give the adults age-appropriate fine
+lines and specific brow, lid, eye and mouth changes on each beat. Use warm amber
+face light, restrained store whites, rich muted shelf colour, deep soft shadows
+and creamy ceiling-light bokeh. Wardrobe remains fixed: Michelle in a cream knit
+top, camel trousers and tan loafers; Peter in a navy quarter-zip and tan chinos;
+the companion in a camel cropped blazer, white top and black leggings.
+
+SOUND
+Only Peter speaks in shot 5 and only Michelle speaks in shot 6. All other mouths
+stay closed. Generate cart wheels, a metal cart impact, three apple thuds,
+footsteps and low store ambience. No song, score or background music. Reserve
+0.0–9.2 seconds and 16.1–22.0 seconds for narration added later in the edit; do
+not fabricate that narration during generation.
+
+CONTINUITY AND FAILURE GATE
+Keep the same three principal faces, hair colours, hairstyles, ages and clothes
+in every shot. Only they perform; passing shoppers remain soft and silent.
+Preserve the paper-shelf/detergent/end-cap map across forward and reverse angles.
+Use exactly three apples, unbranded carts and shelves, five fingers per hand,
+real impact weight and off-lens eyelines. Reject a pre-impact glance from Peter,
+swapped voices, overlapping dialogue, a fourth speaking person, flipped aisle,
+missing or multiplying apples, cart-size changes, drifting hair colour,
+identity/wardrobe resets, logos, legible packaging, captions or watermarks.
+```
+
+**Why it works:** the repair converts a vague "make it more cinematic" note
+into observable shot-level changes: Peter's pre-impact gaze is gated, reaction
+beats receive their own close-ups, the companion's arm contact is explicit and
+the departure has a final eyeline payoff. Separate forward/reverse location
+plates protect aisle geography, while speaker-to-audio assignments and silence
+windows protect the edit. The committed review still flags lighter-looking hair
+from behind, so hair colour is elevated to an explicit rejection gate here
+rather than hidden as a success.
+
+Adapted and rewritten from keys-exe's October 6, 2026 production record:
+[successful Seedance 2.5 generation and review commit](https://github.com/keys-exe/global-manual-ai/commit/3c2b0f9d8a07e62b26e2c50d49ba63dfdb1db480),
+[complete request](https://github.com/keys-exe/global-manual-ai/blob/3c2b0f9d8a07e62b26e2c50d49ba63dfdb1db480/builds/facelove-walmart/takes/SC01-T1.call.json),
+[provider/model/result ledger](https://github.com/keys-exe/global-manual-ai/blob/3c2b0f9d8a07e62b26e2c50d49ba63dfdb1db480/builds/facelove-walmart/board/json/sc01_g3.json)
+and [generated MP4](https://d8j0ntlcm91z4.cloudfront.net/user_3AViUeU5dIz6pgsjYszQ9iux9YN/hf_20261006_133013_9098202d-ed47-4cff-a984-cd3e892ff6dd.mp4).
+
 ## Reusable templates
 
 
@@ -54266,6 +54382,7 @@ and its [successful paid task receipt](https://github.com/keys-exe/global-manual
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 6, 2026 Higgsfield Seedance 2.5 long-lens animated supermarket collision: complete five-image/two-voice prompt, exact `seedance_2_5` route, provider job and credit ledger, public generated MP4, non-destructive music removal and committed review limitation](https://github.com/keys-exe/global-manual-ai/commit/3c2b0f9d8a07e62b26e2c50d49ba63dfdb1db480) ([complete request](https://github.com/keys-exe/global-manual-ai/blob/3c2b0f9d8a07e62b26e2c50d49ba63dfdb1db480/builds/facelove-walmart/takes/SC01-T1.call.json), [result ledger and review](https://github.com/keys-exe/global-manual-ai/blob/3c2b0f9d8a07e62b26e2c50d49ba63dfdb1db480/builds/facelove-walmart/board/json/sc01_g3.json), [generated MP4](https://d8j0ntlcm91z4.cloudfront.net/user_3AViUeU5dIz6pgsjYszQ9iux9YN/hf_20261006_133013_9098202d-ed47-4cff-a984-cd3e892ff6dd.mp4))
 - [keys-exe / global-manual-ai — October 6, 2026 Seedance 2.5 coupled-scale wearable repair: complete prompt, exact `bytedance/seedance-2-5` request, successful 630-credit task, preserved-tail join and technical QC](https://github.com/keys-exe/global-manual-ai/commit/fae43702ded6991df2476983bab493e6375f166d) ([prompt](https://github.com/keys-exe/global-manual-ai/blob/fae43702ded6991df2476983bab493e6375f166d/builds/stryde-the-impression/film/SC09/SC09-TD.prompt.txt), [request](https://github.com/keys-exe/global-manual-ai/blob/fae43702ded6991df2476983bab493e6375f166d/builds/stryde-the-impression/film/SC09/SC09-TD.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/fae43702ded6991df2476983bab493e6375f166d/builds/stryde-the-impression/film/SC09/SC09-TD.g2part.kie.log), [review notes](https://github.com/keys-exe/global-manual-ai/blob/fae43702ded6991df2476983bab493e6375f166d/builds/stryde-the-impression/BUILD_NOTES.md))
 - [@ayzalnooor24521 — October 6, 2026 Seedance 2.0 playful basketball scene: complete prompt and result with an adult player, oversized dog mascot, one court and smooth wide-to-medium coverage](https://x.com/ayzalnooor24521/status/2107340030536741222) ([versioned gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=11984))
 - [@AIwithMinal — October 6, 2026 Seedance 2.0 suburban monster emergence: complete vertical VFX prompt and result with a glowing lawn trigger, fixed witness, house scale anchor and creature breach](https://x.com/AIwithMinal/status/2107333962402341067) ([versioned gallery record](https://youmind.com/en-US/seedance-2-0-prompts?id=11985))
