@@ -486,6 +486,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Landmark-crossing mobility reveal with two-speaker state handoff](#470-landmark-crossing-mobility-reveal-with-two-speaker-state-handoff)
   - [First-step knee-failure rescue with anti-freeze aftermath](#471-first-step-knee-failure-rescue-with-anti-freeze-aftermath)
   - [Silent background conversation with foreground focus-isolation push-in](#472-silent-background-conversation-with-foreground-focus-isolation-push-in)
+  - [Dual-photo wearable reveal with placement and continuity locks](#473-dual-photo-wearable-reveal-with-placement-and-continuity-locks)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -31039,6 +31040,127 @@ Adapted and rewritten from keys-exe's October 7, 2026 production record:
 and the later [owner-confirmation and assembly record](https://github.com/keys-exe/global-manual-ai/blob/e7babaa4edcb6c4a49fb4d21c1308e5b13bfb48a/builds/stryde-her-dad/BUILD_NOTES.md#L268-L290).
 
 
+
+### 473. Dual-photo wearable reveal with placement and continuity locks
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the committed request contains the complete
+nine-image, two-voice prompt; task `a85abc77785011c42f8bafb601407519`
+succeeded for 756 credits  
+**Evidence boundary:** the source record says all four dialogue lines were read
+back once and the generated wearable matched the reference shape and placement,
+but the foot landed on a small wooden stool instead of the specified kitchen
+chair. The first generation remained `To check`; this entry preserves that
+known blocking deviation and does not claim final artistic approval  
+**Use case:** introduce an unfamiliar wearable product inside a continuing
+dialogue scene while keeping its exact silhouette, leg placement, room layout,
+character identities, voices and previous-shot blocking legible  
+**Mode:** nine-role image-reference package plus two speaker-specific voice
+references; one connected five-shot vertical take with native audio  
+**Verified settings:** 12 seconds; 9:16; 720p; reference-to-video; generated
+audio on
+
+```text
+REFERENCE AUTHORITY
+@Image1 = JOAN_IDENTITY: face, age, hair and build only.
+@Image2 = JOAN_WARDROBE: today's dress, cardigan, scarf and shoes only.
+@Image3 = LINDA_IDENTITY: face, age, hair and build only.
+@Image4 = LINDA_WARDROBE: today's roll-neck, trousers and boots only.
+@Image5 = PRODUCT_GEOMETRY: copy the wearable itself exactly—one rigid
+satin-black shell, two close rounded peaks rising from the top edge, a deep
+central U, one chrome adjuster at each end, one grey wordmark centred below the
+U and one closed black textile band. Do not borrow a body pose or background.
+@Image6 = PRODUCT_PLACEMENT: wear the same shell centred on the front of Joan's
+right leg immediately below the kneecap; the band closes around that leg.
+Use this image for location and orientation, not for identity or wardrobe.
+@Image7 = ROOM_MAP: kitchen-diner geometry only—patio doors left, sink below
+the rear window, dishwasher beside it, island in the middle, ovens and hall
+doorway right.
+@Image8 = LATEST_SET_STATE: the room as last filmed; keep furniture, props,
+light and working positions unchanged.
+@Image9 = CONTINUITY_FRAME: the previous accepted take's last frame. Everyone
+begins exactly where that take left them; inherit screen direction and prop
+state without replaying the previous action.
+@Audio1 = Joan's voice only.
+@Audio2 = Linda's voice only.
+
+No reference is a panel or a shot to reproduce. Exclude sheet borders, labels,
+captions, grey backdrops and source poses.
+
+SCENE CONTRACT
+A restrained British family-drama product reveal in the same kitchen. Joan
+ends the argument, raises her right foot onto the existing rust-red kitchen
+chair, lifts only enough of her hem to reveal the wearable below her kneecap,
+and lets Linda inspect it. One continuous 12-second take containing five
+distinct framings. Preserve the product as one object through every framing.
+
+TIMELINE
+[0.0-2.0 s] Locked eye-level medium close-up. Start at @Image9's positions:
+Joan stands at the island facing Linda. Joan releases one breath, gives a small
+nod and says, “Fine.”
+
+[2.0-6.0 s] Cut to a low medium shot and tilt with Joan's movement. She places
+her right foot on the already-present rust-red kitchen-chair seat, keeps the
+shoe planted and draws the hem upward in one controlled motion. The chair
+remains the same chair; no stool or replacement furniture appears.
+
+[6.0-8.0 s] Frontal product insert with a slow, short push. The hem clears the
+knee and stops. Reveal exactly one wearable immediately below the right
+kneecap: geometry from @Image5, position and orientation from @Image6, one
+closed band around the leg. Hold its silhouette and wordmark readable. Joan
+says, “Here.”
+
+[8.0-10.0 s] Eye-level close-up with a gentle creep toward Linda. Linda leans
+forward without touching the product and says, “That little thing?”
+
+[10.0-12.0 s] Breathing handheld medium close-up on Joan. She looks from the
+wearable back to Linda, lifts one hand slightly and says, “That's what I said.”
+After the line, preserve at least 0.6 seconds of silence and stillness. Final
+frame: Joan's right foot remains on the kitchen chair; Linda remains at the
+island end nearest the hall doorway; the wearable is still below the right
+kneecap.
+
+LOOK
+Large-screen British drama, anamorphic feel, 24 fps. Flat grey November daylight
+enters from the back window and patio doors; pendant practicals stay on. Soft
+key from frame-left leaves a natural shadow side on each face. Real skin, wool,
+leather and satin-black material response; restrained colour and performance.
+
+SOUND
+British English. Joan uses @Audio1; Linda uses @Audio2. Each written line is
+spoken once by its named speaker, in its assigned time block. No music. Keep
+only refrigerator hum, a slight chair scrape, cloth movement and faint football
+from the adjoining room. The final 0.6 seconds is silent.
+
+CONTINUITY AND FAILURE GATE
+Lock both identities, today's clothing, the latest room state, starting
+positions, screen direction and the final positions. Lock one product, right
+leg, below-kneecap placement, shell silhouette, two peaks, central U, two chrome
+adjusters, grey wordmark and one closed band.
+
+Reject: stool or substituted chair; product on the kneecap or left leg; thin
+generic strap; flattened or duplicated shell; open or doubled band; missing
+wordmark; hand covering the reveal; hem changing length; repeated or swapped
+dialogue; extra speaker; wardrobe or face drift; replayed prior action; moved
+island, doors or appliances; extra people; frozen faces before the final hold;
+text overlays, subtitles, watermark or native music.
+```
+
+**Why it works:** product identity is split into two independent, inspectable
+authorities: one reference owns shape and branding while another owns anatomical
+placement. The continuation frame and latest-set image likewise separate
+temporal blocking from room geometry. Naming those roles prevents a worn photo
+from overwriting character identity or pose, and the explicit “existing chair”
+plus rejection gate addresses the exact furniture substitution seen in the
+verified first result.
+
+Adapted and rewritten from keys-exe's October 7, 2026 production record:
+[generation commit](https://github.com/keys-exe/global-manual-ai/commit/7dfc7836d200bfe7786c5ee66692f5e2d5f44266),
+[complete prompt](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.prompt.txt),
+[exact Seedance 2.5 request](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.call.json),
+[successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.v1.kie.log)
+and the [source production notes](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/BUILD_NOTES.md#L199-L204).
+
 ## Reusable templates
 
 
@@ -55364,6 +55486,7 @@ and the follow-up
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 7, 2026 Seedance 2.5 dual-photo wearable reveal: complete nine-image/two-voice request, exact `bytedance/seedance-2-5` route, successful 756-credit task, geometry-versus-placement reference split and documented chair/stool deviation](https://github.com/keys-exe/global-manual-ai/commit/7dfc7836d200bfe7786c5ee66692f5e2d5f44266) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.v1.kie.log), [production notes](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/BUILD_NOTES.md#L199-L204))
 - [keys-exe / global-manual-ai — October 7, 2026 confirmed Seedance 2.5 foreground-isolation push-in: complete eight-reference silent request, exact `bytedance/seedance-2-5` route, successful 504-credit task, unheard background conversation and editorial inner-voice handoff](https://github.com/keys-exe/global-manual-ai/commit/85e798d0f75f69569f93b26f7dd384589db1fcf4) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/85e798d0f75f69569f93b26f7dd384589db1fcf4/builds/stryde-her-dad/hooks/SC01/new/n2fix/SC01-N2_v3.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/85e798d0f75f69569f93b26f7dd384589db1fcf4/builds/stryde-her-dad/hooks/SC01/new/n2fix/SC01-N2_v3.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/85e798d0f75f69569f93b26f7dd384589db1fcf4/builds/stryde-her-dad/hooks/SC01/new/n2fix/SC01-N2_v3.kie.log), [owner confirmation](https://github.com/keys-exe/global-manual-ai/blob/e7babaa4edcb6c4a49fb4d21c1308e5b13bfb48a/builds/stryde-her-dad/BUILD_NOTES.md#L268-L290))
 - [keys-exe / global-manual-ai — October 7, 2026 confirmed Seedance 2.5 first-step knee-failure rescue: complete nine-reference silent request, exact `bytedance/seedance-2-5` route, successful 378-credit task, externally edited knee cue and later owner confirmation of the assembled v13](https://github.com/keys-exe/global-manual-ai/commit/44cdafc6da33c904e753c1f828fac8080bbbaf78) ([exact request](https://github.com/keys-exe/global-manual-ai/blob/44cdafc6da33c904e753c1f828fac8080bbbaf78/builds/stryde-her-dad/hooks/SC01/new/fix12/wide.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/44cdafc6da33c904e753c1f828fac8080bbbaf78/builds/stryde-her-dad/hooks/SC01/new/fix12/wide.kie.log), [owner confirmation](https://github.com/keys-exe/global-manual-ai/blob/82d056c48478be4376351193d8713a242b2c4bca/builds/stryde-her-dad/BUILD_NOTES.md#L260-L274))
 - [keys-exe / global-manual-ai — October 7, 2026 Seedance 2.5 reference-ablation production record: remove a compressed prior clip, retain still continuity anchors, measure detail, then remove a composition-biased start frame while keeping the set sheet](https://github.com/keys-exe/global-manual-ai/commit/eb9319362e80445bb25b47c16e64062478d672be) ([video-off comparison](https://github.com/keys-exe/global-manual-ai/commit/fba26028733285d784cbdf536593cc8e296ac7ca), [complete exact-model request](https://github.com/keys-exe/global-manual-ai/blob/fba26028733285d784cbdf536593cc8e296ac7ca/builds/stryde-other-nana/film/SC05/SC05-T3.call.json), [successful final task receipt](https://github.com/keys-exe/global-manual-ai/blob/eb9319362e80445bb25b47c16e64062478d672be/builds/stryde-other-nana/film/SC05/SC05-T3.v5.kie.log))
