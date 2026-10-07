@@ -491,6 +491,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Passport-glam mismatch with irreversible makeup-state ledger](#475-passport-glam-mismatch-with-irreversible-makeup-state-ledger)
   - [Two-speed stair climb with a reaction-frame handoff](#476-two-speed-stair-climb-with-a-reaction-frame-handoff)
   - [Dual-ended complexion stick with an irreversible shade-conversion ledger](#477-dual-ended-complexion-stick-with-an-irreversible-shade-conversion-ledger)
+  - [Landmark-fixed floor kneel with speaker-owned voice references](#478-landmark-fixed-floor-kneel-with-speaker-owned-voice-references)
+  - [Hand-held stair descent with free-hand wall exclusion](#479-hand-held-stair-descent-with-free-hand-wall-exclusion)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -31632,6 +31634,190 @@ the [complete source prompt](https://github.com/keys-exe/global-manual-ai/blob/7
 [exact Higgsfield request](https://github.com/keys-exe/global-manual-ai/blob/7d9bbd62cde0c5a464740e346e3607bac555ef76/builds/facelove-j1212/body/SC05/SC05-T3.v2.call.json)
 and [landed-output audit with generated MP4](https://github.com/keys-exe/global-manual-ai/blob/7d9bbd62cde0c5a464740e346e3607bac555ef76/builds/facelove-j1212/body/SC05/SC05-T3_v2.land.json).
 
+### 478. Landmark-fixed floor kneel with speaker-owned voice references
+
+**Verified model:** Kie AI `bytedance/seedance-2-5` — the exact request records
+seven approved image ingredients, two voice references, a seventeen-second
+720p vertical generation and native audio; the provider receipt records a
+successful 1,071-credit task, and the owner explicitly confirmed version 1  
+**Evidence boundary:** the confirmed output let the older woman rest a hand on
+the armchair during the descent despite the source prompt's hands-free rule;
+its opening wide was also darker and more distant than intended. The clearer
+clearance corridor and closer opening below are editorial repairs and have not
+been separately rerendered  
+**Use case:** three-person family drama, floor-level blocking, native dialogue,
+fixed room geography and action-to-dialogue continuity  
+**Mode:** seven image ingredients plus two voice references  
+**Verified settings:** 17 seconds; 9:16; 720p; six shots; generated dialogue,
+Foley and room tone
+
+```text
+Create a seventeen-second vertical live-action family-drama scene on Christmas
+afternoon. An older woman lowers herself onto a rug beside a child, without
+using nearby furniture for support. A second adult watches from the sofa. Keep
+the action gentle, physically readable and emotionally restrained.
+
+REFERENCE AUTHORITY
+@Image1 owns only WATCHER's face, hair, age and build.
+@Image2 owns only WATCHER's clothing.
+@Image3 owns only CHILD's face, hair, age and build.
+@Image4 owns only CHILD's clothing.
+@Image5 owns only GRANDMOTHER's face, grey bob, age and build.
+@Image6 owns only GRANDMOTHER's clothing.
+@Image7 owns the room: lit tree in the back-left corner, presents beneath it,
+stone fireplace centered on the back wall, green armchair frame-left, floral
+sofa frame-right and patterned rug between them.
+@Audio1 owns only CHILD's voice. @Audio2 owns only GRANDMOTHER's voice.
+
+SPATIAL AND CONTACT CONTRACT
+CHILD remains on the rug beside the tree. WATCHER remains on the floral sofa.
+GRANDMOTHER starts standing one full forearm-width in front of and to the right
+of the green armchair, then ends kneeling beside CHILD. Preserve that empty gap
+throughout her descent. Neither hand, elbow nor shoulder may touch the chair,
+wall, sofa or floor before both knees reach the rug.
+
+TIMELINE
+[0.0-3.0 s] Medium-wide high angle, gentle jib down. Frame all three people at
+readable scale: CHILD shakes one wrapped present on the rug; GRANDMOTHER stands
+inside the marked clearance zone; WATCHER sits on the sofa. Fire and tree lights
+flicker softly. Do not begin with a distant ceiling-heavy wide.
+
+[3.0-7.0 s] Full eye-level view, one controlled tilt down. GRANDMOTHER bends,
+places one knee on the rug, then the second. Both hands stay visible beside her
+torso, palms relaxed, while the empty strip beside the armchair remains visible.
+Her weight transfers through hips and knees without a jump or hidden cut.
+
+[7.0-9.0 s] Medium close-up of WATCHER, slow creep forward. She leans slightly
+toward them; her lips part, but she does not speak.
+
+[9.0-11.5 s] Low medium on CHILD, locked camera. He raises the same present
+toward GRANDMOTHER and says once with @Audio1, "Nana. You're on the floor."
+
+[11.5-13.5 s] Close-up of GRANDMOTHER, restrained push-in. Still kneeling, she
+smiles, nods once and answers once with @Audio2, "I am."
+
+[13.5-17.0 s] Overhead insert with a short track across the rug. CHILD tears the
+same wrapping paper in two pulls while GRANDMOTHER stays beside him. End with
+WATCHER on the sofa, CHILD by the tree and GRANDMOTHER kneeling beside him.
+Hold the final arrangement still for the last second.
+
+LOOK AND SOUND
+British feature-drama restraint, natural 24 fps motion, honest skin texture and
+low-key illumination motivated only by the fireplace and tree lights. Preserve
+the established face, clothing and room side for every person. Use @Audio1 and
+@Audio2 only for their assigned lines, each spoken once. Add fire crackle,
+paper rustle, cloth movement and subtle room tone. No music.
+
+FAILURE GATE
+Reject chair contact, hand bracing, a hidden jump to the floor, reversed room
+sides, changed furniture, identity blend, role swap, duplicated present,
+speaker swap, repeated or extra dialogue, WATCHER speaking, cropped hands
+during the kneel, extra person, text, subtitle, logo or watermark.
+```
+
+**Why it works:** the floor transition is treated as a contact problem rather
+than the vague instruction “kneel down.” A visible clearance corridor makes the
+forbidden chair contact auditable, while the ordered knee sequence preserves
+weight. Landmark assignments keep all three performers in stable lanes, and
+voice references own one speaker each so the brief exchange cannot migrate.
+
+Adapted and rewritten from keys-exe's October 7, 2026
+[owner-confirmed Seedance 2.5 production record](https://github.com/keys-exe/global-manual-ai/commit/fc1221d381e4f94b89c8f76348b261c151459ccb),
+the [complete submitted prompt](https://github.com/keys-exe/global-manual-ai/blob/fc1221d381e4f94b89c8f76348b261c151459ccb/builds/stryde-other-nana/film/SC16/SC16-T1.prompt.txt),
+[exact request](https://github.com/keys-exe/global-manual-ai/blob/fc1221d381e4f94b89c8f76348b261c151459ccb/builds/stryde-other-nana/film/SC16/SC16-T1.call.json)
+and [successful provider receipt](https://github.com/keys-exe/global-manual-ai/blob/fc1221d381e4f94b89c8f76348b261c151459ccb/builds/stryde-other-nana/film/SC16/SC16-T1.v1.kie.log).
+
+
+### 479. Hand-held stair descent with free-hand wall exclusion
+
+**Verified model:** Kie AI `bytedance/seedance-2-5` — the exact request records
+seven approved image ingredients, a fourteen-second 720p vertical generation
+and native sound; the successful receipt records an 882-credit task, and the
+owner explicitly confirmed version 1  
+**Evidence boundary:** the confirmed result rendered the pair small in the
+opening wide and let the older woman's free hand trail close to the wall for
+part of the descent. The larger opening composition and measurable wall gap
+below are editorial repairs and have not been separately rerendered  
+**Use case:** silent family drama, adult-child stair blocking, no-rail geometry,
+hand-contact continuity, native Foley and reaction endpoint  
+**Mode:** seven image ingredients; no voice reference  
+**Verified settings:** 14 seconds; 9:16; 720p; five shots; silent performance
+with generated environmental sound
+
+```text
+Create a fourteen-second vertical live-action family-drama scene on a steep
+domestic staircase. An older woman and a small child descend hand in hand while
+an adult man waits at the foot. There is no handrail. The child runs through a
+kitchen doorway; the two adults finish on a quiet look.
+
+REFERENCE AUTHORITY
+@Image1 owns only MAN's face, hair, glasses, age and build.
+@Image2 owns only MAN's clothing.
+@Image3 owns only CHILD's face, hair, age and build.
+@Image4 owns only CHILD's clothing.
+@Image5 owns only WOMAN's face, grey bob, age and build.
+@Image6 owns only WOMAN's clothing.
+@Image7 owns the passage: one straight flight of eleven ordinary-height steps,
+worn red runner, cream walls on both sides, no rail, brass lamp above the foot,
+open white kitchen door frame-left and flagstones at the bottom.
+
+CONTACT, GEOMETRY AND POSITION CONTRACT
+WOMAN holds CHILD's near hand continuously from the first descending step until
+they reach the flagstones. Her other hand stays open and visible beside her hip,
+at least one hand-width from both walls. MAN remains on the flagstones at the
+foot and never enters the staircase. Preserve eleven steps, the runner, lamp,
+kitchen-door side and travel direction in every shot.
+
+TIMELINE
+[0.0-3.0 s] Medium-wide eye-level view from the lower passage, slow pan upward.
+Keep WOMAN and CHILD large enough to read at the top three steps, already hand
+in hand; MAN waits fully visible at the foot. Establish both blank walls and the
+absence of a rail without shrinking the people into the architecture.
+
+[3.0-7.0 s] Full frontal low angle, one downward tilt. WOMAN and CHILD descend
+step by step together. Their joined hands stay visible. WOMAN's free hand swings
+beside her hip inside a clear strip of air; it never grazes either wall. Show
+weighted footfalls and one step creak rather than floating or skipped treads.
+
+[7.0-9.0 s] Medium close-up on MAN at the foot, gentle push-in. His eyes follow
+their descent; he remains silent and still.
+
+[9.0-11.0 s] Locked profile insert of WOMAN's boots and CHILD's slippers on the
+same runner. Show two synchronized step contacts with believable compression.
+
+[11.0-14.0 s] Medium eye-level view, slow pan toward the kitchen. They step onto
+the flagstones before releasing hands. CHILD then lets go and runs once through
+the open kitchen door. WOMAN stops beside MAN; they exchange one restrained
+look. Hold the last second with CHILD gone, both adults on the flagstones and
+the staircase empty.
+
+LOOK AND SOUND
+Restrained British feature-drama photography, natural 24 fps motion and real
+skin texture. Motivate the low-key key light from the brass wall lamp; keep a
+soft shadow side on every face. Nobody speaks or mouths words. No music. Use
+only stair-runner footfalls, one wooden creak, slipper taps and faint kitchen
+voices behind the doorway.
+
+FAILURE GATE
+Reject a generated rail, wall contact, broken handhold before the flagstones,
+MAN changing position, CHILD vanishing before the doorway, reversed kitchen
+side, changed step count or runner, floating feet, skipped treads, identity or
+wardrobe swap, extra person, dialogue, lip movement, subtitle, logo or watermark.
+```
+
+**Why it works:** no-rail descent is defined by three simultaneous ledgers:
+joined-hand continuity, measurable free-hand clearance and fixed architectural
+landmarks. The insert proves actual foot contacts, while the final release is
+gated until both walkers reach the flagstones. The silent sound plan preserves
+dramatic restraint without discarding useful native Foley.
+
+Adapted and rewritten from keys-exe's October 7, 2026
+[owner-confirmed Seedance 2.5 production record](https://github.com/keys-exe/global-manual-ai/commit/a5c1c0a402993eaa945913cb98202d25bcefed4c),
+the [complete submitted prompt](https://github.com/keys-exe/global-manual-ai/blob/a5c1c0a402993eaa945913cb98202d25bcefed4c/builds/stryde-other-nana/film/SC17/SC17-T1.prompt.txt),
+[exact request](https://github.com/keys-exe/global-manual-ai/blob/a5c1c0a402993eaa945913cb98202d25bcefed4c/builds/stryde-other-nana/film/SC17/SC17-T1.call.json)
+and [successful provider receipt](https://github.com/keys-exe/global-manual-ai/blob/a5c1c0a402993eaa945913cb98202d25bcefed4c/builds/stryde-other-nana/film/SC17/SC17-T1.v1.kie.log).
+
+
 ## Reusable templates
 
 
@@ -56374,6 +56560,8 @@ requests, their successful provider receipts and the later
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 7, 2026 owner-confirmed Seedance 2.5 no-rail stair descent: complete seven-image silent prompt, exact `bytedance/seedance-2-5` request, successful 882-credit task, joined-hand continuity, fixed three-person landmarks, native stair Foley and documented wall-clearance/opening-scale deviations](https://github.com/keys-exe/global-manual-ai/commit/a5c1c0a402993eaa945913cb98202d25bcefed4c) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/a5c1c0a402993eaa945913cb98202d25bcefed4c/builds/stryde-other-nana/film/SC17/SC17-T1.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/a5c1c0a402993eaa945913cb98202d25bcefed4c/builds/stryde-other-nana/film/SC17/SC17-T1.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/a5c1c0a402993eaa945913cb98202d25bcefed4c/builds/stryde-other-nana/film/SC17/SC17-T1.v1.kie.log))
+- [keys-exe / global-manual-ai — October 7, 2026 owner-confirmed Seedance 2.5 landmark-fixed floor kneel: complete seven-image/two-voice prompt, exact `bytedance/seedance-2-5` request, successful 1,071-credit task, speaker-owned dialogue, three-person room geometry and documented chair-contact/opening-exposure deviations](https://github.com/keys-exe/global-manual-ai/commit/fc1221d381e4f94b89c8f76348b261c151459ccb) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/fc1221d381e4f94b89c8f76348b261c151459ccb/builds/stryde-other-nana/film/SC16/SC16-T1.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/fc1221d381e4f94b89c8f76348b261c151459ccb/builds/stryde-other-nana/film/SC16/SC16-T1.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/fc1221d381e4f94b89c8f76348b261c151459ccb/builds/stryde-other-nana/film/SC16/SC16-T1.v1.kie.log))
 - [keys-exe / global-manual-ai — October 7, 2026 owner-confirmed Seedance 2.5 multi-defect insert repair: four complete 4-second exact-model pickup requests, four successful 252-credit tasks, action-object correction, clock/plate disambiguation, bowl/bin content partition, one-phone geometry lock, measured splices and a final 26-second endpoint trim](https://github.com/keys-exe/global-manual-ai/commit/fec3f310e118740d70fa2534adea945996a42e63) ([generation record](https://github.com/keys-exe/global-manual-ai/commit/f0fdcd0014bcdea56230e0f9db3faa0bb9ea727b), [K1 request](https://github.com/keys-exe/global-manual-ai/blob/f0fdcd0014bcdea56230e0f9db3faa0bb9ea727b/builds/stryde-other-nana/film/SC13/SC13-T1-K1.call.json), [K2 request](https://github.com/keys-exe/global-manual-ai/blob/f0fdcd0014bcdea56230e0f9db3faa0bb9ea727b/builds/stryde-other-nana/film/SC13/SC13-T1-K2.call.json), [K3 request](https://github.com/keys-exe/global-manual-ai/blob/f0fdcd0014bcdea56230e0f9db3faa0bb9ea727b/builds/stryde-other-nana/film/SC13/SC13-T1-K3.call.json), [K4 request](https://github.com/keys-exe/global-manual-ai/blob/f0fdcd0014bcdea56230e0f9db3faa0bb9ea727b/builds/stryde-other-nana/film/SC13/SC13-T1-K4.call.json), [endpoint trim](https://github.com/keys-exe/global-manual-ai/commit/70593b61751dc225fcc16a8f2f8b4da5793bc911))
 - [keys-exe / global-manual-ai — October 7, 2026 Higgsfield Seedance 2.5 dual-ended complexion-stick repair: complete eight-image/one-voice prompt, exact `seedance_2_5` request, owner-directed full-shade revision, 113.4-credit generation, returned 18.08-second MP4, clean-music audit, dialogue read-back and explicit `To check` boundary](https://github.com/keys-exe/global-manual-ai/commit/7d9bbd62cde0c5a464740e346e3607bac555ef76) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/7d9bbd62cde0c5a464740e346e3607bac555ef76/builds/facelove-j1212/body/SC05/SC05-T3.v2.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/7d9bbd62cde0c5a464740e346e3607bac555ef76/builds/facelove-j1212/body/SC05/SC05-T3.v2.call.json), [landed output](https://github.com/keys-exe/global-manual-ai/blob/7d9bbd62cde0c5a464740e346e3607bac555ef76/builds/facelove-j1212/body/SC05/SC05-T3_v2.land.json))
 - [keys-exe / global-manual-ai — October 7, 2026 Kie AI Seedance 2.5 two-speed stair-climb hook: complete three-reference prompt, exact `bytedance/seedance-2-5` request, successful 504-credit task, generated MP4 and explicit `To check` artistic boundary](https://github.com/keys-exe/global-manual-ai/commit/762f7da13a5b95998a0bf59af4761a8d2136d452) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/762f7da13a5b95998a0bf59af4761a8d2136d452/builds/stryde-71-stairs-man/hooks/HK1.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/762f7da13a5b95998a0bf59af4761a8d2136d452/builds/stryde-71-stairs-man/hooks/HK1.call.json), [successful result](https://github.com/keys-exe/global-manual-ai/blob/762f7da13a5b95998a0bf59af4761a8d2136d452/builds/stryde-71-stairs-man/hooks/HK1_v1.result.json))
