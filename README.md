@@ -487,6 +487,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [First-step knee-failure rescue with anti-freeze aftermath](#471-first-step-knee-failure-rescue-with-anti-freeze-aftermath)
   - [Silent background conversation with foreground focus-isolation push-in](#472-silent-background-conversation-with-foreground-focus-isolation-push-in)
   - [Dual-photo wearable reveal with placement and continuity locks](#473-dual-photo-wearable-reveal-with-placement-and-continuity-locks)
+  - [Silent-handle flashback with off-screen social exclusion](#474-silent-handle-flashback-with-off-screen-social-exclusion)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -31050,8 +31051,10 @@ succeeded for 756 credits
 **Evidence boundary:** the source record says all four dialogue lines were read
 back once and the generated wearable matched the reference shape and placement,
 but the foot landed on a small wooden stool instead of the specified kitchen
-chair. The first generation remained `To check`; this entry preserves that
-known blocking deviation and does not claim final artistic approval  
+chair. A second generation corrected the chair and moved the shell higher; the
+owner explicitly restored and confirmed version 1, then proceeded to the next
+scene. This entry therefore preserves the approved version's known blocking
+deviation instead of silently substituting the rejected correction  
 **Use case:** introduce an unfamiliar wearable product inside a continuing
 dialogue scene while keeping its exact silhouette, leg placement, room layout,
 character identities, voices and previous-shot blocking legible  
@@ -31159,7 +31162,142 @@ Adapted and rewritten from keys-exe's October 7, 2026 production record:
 [complete prompt](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.prompt.txt),
 [exact Seedance 2.5 request](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.call.json),
 [successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.v1.kie.log)
-and the [source production notes](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/BUILD_NOTES.md#L199-L204).
+the [source production notes](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/BUILD_NOTES.md#L199-L204)
+and the later [owner-confirmation record](https://github.com/keys-exe/global-manual-ai/commit/9dba0fb90b2dc3cc8fc5a3b194e68203541726f2).
+
+
+### 474. Silent-handle flashback with off-screen social exclusion
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the committed request contains the complete
+three-image/one-voice prompt; task `6afe0a3fc4a6e5306b6b29b19fa38a41`
+succeeded for 882 credits, and the source owner explicitly confirmed the take
+before proceeding  
+**Evidence boundary:** the result spoke the single off-screen line once and kept
+the present-day wearable absent, as required. Its opening wide was photographed
+from outside the arched window looking inward rather than from the intended
+interior viewpoint; the owner nevertheless approved that version. This entry
+makes the intended camera side explicit while preserving the observed deviation
+in the evidence record  
+**Use case:** enter a memory at a completely new time and place, isolate one
+foreground character from a socially active group, assign dialogue to an
+off-screen speaker and leave clean transition handles for the editor  
+**Mode:** identity image + period wardrobe image + location plate + one
+speaker-specific voice reference; one connected five-shot vertical take with
+native audio  
+**Verified settings:** 14 seconds; 9:16; 720p; reference-to-video; generated
+audio on
+
+```text
+REFERENCE AUTHORITY
+@Image1 = LEAD_IDENTITY: Joan's face, apparent age, hair, body scale and
+distinctive facial features only.
+@Image2 = FLASHBACK_WARDROBE: cream cable-knit cardigan, muted red blouse,
+long grey wool skirt, black flats and one ring. Do not copy its pose, crop,
+background or captions.
+@Image3 = MEMORY_LOCATION: converted-mill flat at Christmas. It owns the room
+map only: tall arched iron window and green wing chair on the left; black iron
+column between chair and island; long white-topped island at centre; dark
+kitchen cabinets on the right wall; lit tree at back-right.
+@Audio1 = MICHAEL_VOICE: the off-screen man's approved voice only.
+
+This flashback is a new time and a new place. Do not attach or imitate the
+present-day set sheet, previous-take frame, present wardrobe or product
+reference. No reference is a visible panel; exclude borders, labels and source
+poses.
+
+SCENE CONTRACT
+Fourteen-second vertical British family-drama memory, told through five shots.
+Two Christmases earlier, Joan sits alone in the green chair beside the arched
+window with a steel bowl of potatoes on her knees. She keeps peeling while five
+adult relatives remain together around the island several metres behind her.
+Their warm group activity continues, but nobody crosses the room or joins her.
+Michael stays off camera at the island and speaks only once.
+
+EDITORIAL HANDLES
+Reserve the first 0.6 seconds and final 0.6 seconds as motionless, silent picture
+handles. The opening handle is for a dip from white into the memory; the ending
+handle is for the return transition. No speech, laughter, utensil noise or body
+movement enters either handle.
+
+TIMELINE
+[0.0-4.0 s] Interior wide from the room side of the arched window, high but not
+exterior, with a slow pull-back. Begin on the silent 0.6-second handle: Joan in
+the green chair, bowl on her knees; five relatives grouped at the island. After
+the handle, Joan draws the peeler down one potato and the group resumes a soft
+laugh. Keep Joan visually separate and nearest the window.
+
+[4.0-6.0 s] High-angle insert with one small tilt. Her left hand rotates the
+potato while the right hand completes one downward peel; the strip falls into
+the steel bowl. The bowl stays supported on both knees.
+
+[6.0-9.0 s] Eye-level profile medium close-up with a restrained creep toward
+Joan. She pauses her hands for a beat and lifts only her eyes toward the island.
+She does not turn to camera, speak or smile.
+
+[9.0-11.0 s] Medium view of the distant island group with one slow pan. A
+relative raises one glass; the five adults share a natural brief laugh. They
+remain at the island and do not look into lens or approach the chair.
+
+[11.0-14.0 s] Locked eye-level profile medium close-up on Joan. Her hands stop,
+then she resumes the same downward peeling motion without answering. From the
+island, Michael uses @Audio1 once: “You all right there, Mum? Want another
+bowl?” His body remains out of frame and Joan's mouth remains closed. After the
+line, enter the final 0.6-second silent, motionless handle. Final state: Joan in
+the chair with bowl on her knees; all five relatives still around the island.
+
+CAMERA AND TIME-SEPARATION CONTRACT
+Every camera position stays inside the flat. Keep the room landmarks and
+left/centre/right map from @Image3 through all cuts. Use the opening and ending
+silence—not a continuity frame—to mark entry to and exit from the past.
+Present-day objects, clothes and character positions do not carry into the
+memory.
+
+LOOK
+Large-screen British drama with anamorphic restraint at 24 fps. Grey winter
+daylight from the arched window is the soft key; warm tree bulbs and practical
+light stay behind the group. Preserve natural shadow sides, real skin, wool,
+steel and potato texture. The family wears deep red, green and navy festive
+knits or shirts with no readable graphics. Joan's performance is contained:
+one glance, one pause, one resumed task.
+
+SOUND
+British English. Michael's assigned line is the only intelligible speech and is
+heard from the island, never from Joan or a visible lip-syncing extra. Between
+the two silent handles, use peeler scrape, peel landing in steel, remote family
+laughter, one glass clink and a faint radiator tick. No music, narration,
+captions or transition sound baked into the take.
+
+CONTINUITY AND FAILURE GATE
+Lock Joan to the green chair, bowl to her knees, family of five to the island,
+Michael off screen, tree back-right, window and chair left, column between chair
+and island, and dark cabinets right. Keep exactly one potato in hand and one
+peeler; preserve handedness across the insert.
+
+Reject: exterior-through-window camera; family member approaching Joan; Joan
+joining the group, speaking Michael's line or moving her lips; visible Michael;
+extra or missing relative; product or knee strap from the present; present-day
+wardrobe; missing bowl; floating peel; repeated line; laughter during either
+silent handle; hard action before 0.6 seconds; motion after the ending handle;
+location drift; identity drift; extra limb or finger; text, logo, subtitle,
+watermark or native music.
+```
+
+**Why it works:** a flashback at a new place should reset time and staging
+without inheriting a prior frame merely because the surrounding film is
+continuous. The location plate owns geography, while identity and period
+wardrobe remain separate authorities. Silent handles give the editor measurable
+transition space; an off-screen voice contract lets the social group feel alive
+without stealing lip-sync ownership from the isolated lead. Explicitly fixing
+the camera to the room side of the window addresses the only documented
+framing deviation in the confirmed result.
+
+Adapted and rewritten from keys-exe's October 7, 2026 production record:
+[submission commit](https://github.com/keys-exe/global-manual-ai/commit/9dba0fb90b2dc3cc8fc5a3b194e68203541726f2),
+[complete prompt](https://github.com/keys-exe/global-manual-ai/blob/02fcc89638861e4e079cf6109aa1ebbe457b8b37/builds/stryde-other-nana/film/SC08/SC08-T1.prompt.txt),
+[exact Seedance 2.5 request](https://github.com/keys-exe/global-manual-ai/blob/02fcc89638861e4e079cf6109aa1ebbe457b8b37/builds/stryde-other-nana/film/SC08/SC08-T1.call.json),
+[successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/02fcc89638861e4e079cf6109aa1ebbe457b8b37/builds/stryde-other-nana/film/SC08/SC08-T1.v1.kie.log)
+and the [owner-confirmation record](https://github.com/keys-exe/global-manual-ai/commit/02fcc89638861e4e079cf6109aa1ebbe457b8b37).
 
 ## Reusable templates
 
@@ -55486,7 +55624,8 @@ and the follow-up
 
 ---
 ## Sources
-- [keys-exe / global-manual-ai — October 7, 2026 Seedance 2.5 dual-photo wearable reveal: complete nine-image/two-voice request, exact `bytedance/seedance-2-5` route, successful 756-credit task, geometry-versus-placement reference split and documented chair/stool deviation](https://github.com/keys-exe/global-manual-ai/commit/7dfc7836d200bfe7786c5ee66692f5e2d5f44266) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.v1.kie.log), [production notes](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/BUILD_NOTES.md#L199-L204))
+- [keys-exe / global-manual-ai — October 7, 2026 confirmed Seedance 2.5 silent-handle flashback: complete three-image/one-voice request, exact `bytedance/seedance-2-5` route, successful 882-credit task, off-screen speaker ownership, new-place reset and owner-confirmed exterior-window deviation](https://github.com/keys-exe/global-manual-ai/commit/02fcc89638861e4e079cf6109aa1ebbe457b8b37) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/02fcc89638861e4e079cf6109aa1ebbe457b8b37/builds/stryde-other-nana/film/SC08/SC08-T1.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/02fcc89638861e4e079cf6109aa1ebbe457b8b37/builds/stryde-other-nana/film/SC08/SC08-T1.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/02fcc89638861e4e079cf6109aa1ebbe457b8b37/builds/stryde-other-nana/film/SC08/SC08-T1.v1.kie.log), [submission record](https://github.com/keys-exe/global-manual-ai/commit/9dba0fb90b2dc3cc8fc5a3b194e68203541726f2))
+- [keys-exe / global-manual-ai — October 7, 2026 confirmed Seedance 2.5 dual-photo wearable reveal: complete nine-image/two-voice request, exact `bytedance/seedance-2-5` route, successful 756-credit task, geometry-versus-placement split, documented chair/stool deviation and explicit owner restoration of version 1](https://github.com/keys-exe/global-manual-ai/commit/9dba0fb90b2dc3cc8fc5a3b194e68203541726f2) ([original generation](https://github.com/keys-exe/global-manual-ai/commit/7dfc7836d200bfe7786c5ee66692f5e2d5f44266), [complete prompt](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.v1.kie.log))
 - [keys-exe / global-manual-ai — October 7, 2026 confirmed Seedance 2.5 foreground-isolation push-in: complete eight-reference silent request, exact `bytedance/seedance-2-5` route, successful 504-credit task, unheard background conversation and editorial inner-voice handoff](https://github.com/keys-exe/global-manual-ai/commit/85e798d0f75f69569f93b26f7dd384589db1fcf4) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/85e798d0f75f69569f93b26f7dd384589db1fcf4/builds/stryde-her-dad/hooks/SC01/new/n2fix/SC01-N2_v3.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/85e798d0f75f69569f93b26f7dd384589db1fcf4/builds/stryde-her-dad/hooks/SC01/new/n2fix/SC01-N2_v3.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/85e798d0f75f69569f93b26f7dd384589db1fcf4/builds/stryde-her-dad/hooks/SC01/new/n2fix/SC01-N2_v3.kie.log), [owner confirmation](https://github.com/keys-exe/global-manual-ai/blob/e7babaa4edcb6c4a49fb4d21c1308e5b13bfb48a/builds/stryde-her-dad/BUILD_NOTES.md#L268-L290))
 - [keys-exe / global-manual-ai — October 7, 2026 confirmed Seedance 2.5 first-step knee-failure rescue: complete nine-reference silent request, exact `bytedance/seedance-2-5` route, successful 378-credit task, externally edited knee cue and later owner confirmation of the assembled v13](https://github.com/keys-exe/global-manual-ai/commit/44cdafc6da33c904e753c1f828fac8080bbbaf78) ([exact request](https://github.com/keys-exe/global-manual-ai/blob/44cdafc6da33c904e753c1f828fac8080bbbaf78/builds/stryde-her-dad/hooks/SC01/new/fix12/wide.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/44cdafc6da33c904e753c1f828fac8080bbbaf78/builds/stryde-her-dad/hooks/SC01/new/fix12/wide.kie.log), [owner confirmation](https://github.com/keys-exe/global-manual-ai/blob/82d056c48478be4376351193d8713a242b2c4bca/builds/stryde-her-dad/BUILD_NOTES.md#L260-L274))
 - [keys-exe / global-manual-ai — October 7, 2026 Seedance 2.5 reference-ablation production record: remove a compressed prior clip, retain still continuity anchors, measure detail, then remove a composition-biased start frame while keeping the set sheet](https://github.com/keys-exe/global-manual-ai/commit/eb9319362e80445bb25b47c16e64062478d672be) ([video-off comparison](https://github.com/keys-exe/global-manual-ai/commit/fba26028733285d784cbdf536593cc8e296ac7ca), [complete exact-model request](https://github.com/keys-exe/global-manual-ai/blob/fba26028733285d784cbdf536593cc8e296ac7ca/builds/stryde-other-nana/film/SC05/SC05-T3.call.json), [successful final task receipt](https://github.com/keys-exe/global-manual-ai/blob/eb9319362e80445bb25b47c16e64062478d672be/builds/stryde-other-nana/film/SC05/SC05-T3.v5.kie.log))
