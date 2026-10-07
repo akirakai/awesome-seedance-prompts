@@ -31302,6 +31302,121 @@ and the [owner-confirmation record](https://github.com/keys-exe/global-manual-ai
 ## Reusable templates
 
 
+### Performance-overlapped dialogue pacing without dead-air holds
+
+**Verified model:** Seedance 2.5, exact Higgsfield model ID
+seedance_2_5 — two complete five-shot requests produced successful 21.06-second
+and 20.06-second takes; the production record marks both native-audio results
+clean with no music and every line played back to back, and the source owner
+later confirmed both versions for use  
+**Evidence boundary:** the single-speaker take reproduced its script word for
+word; the two-speaker take contracted “I do not know” to “I don't know.” This
+verifies the pacing structure, speaker ownership and selected performances,
+not absolute lexical fidelity for every render  
+**Use case:** dialogue scenes that feel slow because acting, reactions and
+blocking are placed in separate silent holds after each line  
+**Mode:** reference-to-video with identity/location images and assigned voices
+-> one dialogue turn plus simultaneous performance per 4–5-second shot ->
+transcript, silence and music read-back
+
+```text
+INPUT LEDGER
+EXACT_MODEL = Seedance 2.5
+DURATION_TARGET = [20–22 seconds]
+ASPECT_RATIO = [RATIO]
+SHOT_COUNT = 5
+SHOT_WINDOW = [4–5 seconds]
+IDENTITY_REFERENCES = [ACTOR A, ACTOR B]
+LOCATION_REFERENCE = [ROOM / SET / CONTINUITY PLATE]
+VOICE_A = [ASSIGNED SPEAKER A VOICE]
+VOICE_B = [ASSIGNED SPEAKER B VOICE OR NONE]
+
+DIALOGUE MAP
+Write the approved lines before describing camera or acting:
+- SHOT 1 / SPEAKER [A or B]: “[complete turn]”
+- SHOT 2 / SPEAKER [A or B]: “[complete turn]”
+- SHOT 3 / SPEAKER [A or B]: “[complete turn]”
+- SHOT 4 / SPEAKER [A or B]: “[complete turn]”
+- SHOT 5 / SPEAKER [A or B]: “[complete turn]”
+
+PACING CONTRACT
+- Give every shot exactly one complete spoken turn.
+- Start the line with the shot; do not add a silent pre-roll.
+- Perform the emotional or physical change while the line is spoken, not in a
+  separate “pause, then act” beat.
+- Let the listener react silently through eyes, brows, posture, hands or
+  movement during the assigned speaker's line.
+- Finish each turn inside its shot window. Permit only a natural breath at the
+  cut; do not invent a dramatic hold.
+- Keep all turns once, in order, with no paraphrase, repetition or spill into
+  the next shot.
+
+TIMELINE
+[0–4s] SHOT 1 · [size + one simple camera move]:
+[opening position and blocking]. While [SPEAKER] says the Shot 1 line,
+[SPEAKER performs one visible change] and [LISTENER performs one silent
+reaction].
+
+[4–8s] SHOT 2 · [size + one simple camera move]:
+[continuity action]. While [SPEAKER] says the Shot 2 line,
+[face/body performance lands on the key phrase]; [LISTENER reacts without
+speaking].
+
+[8–12s] SHOT 3 · [size + locked or restrained camera]:
+[turning-point blocking]. While [SPEAKER] says the Shot 3 line,
+[LISTENER's gaze/posture changes]. Nobody else speaks.
+
+[12–16s] SHOT 4 · [closer size + slow move]:
+[emotional emphasis]. [SPEAKER] says the Shot 4 line while
+[brows/eyes/mouth/body stress the decisive phrase].
+
+[16–20/22s] SHOT 5 · [two-shot or closing composition]:
+[final physical beat] occurs during the Shot 5 line. End on
+[explicit final positions and prop state], without an added silent tableau.
+
+LOOK AND CONTINUITY
+[STYLE, LIGHT, PALETTE]. Keep the same faces, hair, wardrobe, room geometry and
+prop count in every shot. Make expressions readable in brows, eyes, mouth and
+whole-body posture; avoid frozen listeners.
+
+SOUND
+Use VOICE_A only for Speaker A and VOICE_B only for Speaker B. Unassigned
+characters never speak. Preserve quiet location sounds and named prop sounds
+below the dialogue. No music, captions, logos or off-screen voices.
+
+FAILURE GATE
+Reject and regenerate if:
+- a line is missing, duplicated, paraphrased or crosses a shot boundary;
+- the voices swap or a silent listener speaks;
+- action waits until the line ends, creating serial “speak, then act” staging;
+- the listener freezes while the speaker talks;
+- an unrequested pause, silent pre-roll or post-roll appears;
+- music masks the transcript or appears despite the no-music instruction;
+- identity, wardrobe, location or prop continuity changes.
+
+READ-BACK
+1. Transcribe each shot and compare it with the DIALOGUE MAP.
+2. Record line onset and offset; confirm every turn fits its assigned window.
+3. Inspect whether the specified acting and listener reaction occur under the
+   line rather than after it.
+4. Confirm speaker ownership and that silent characters remain silent.
+5. Inspect the audio track for music and dialogue masking.
+6. Record exact model, task ID, duration, asset/version and owner decision.
+```
+
+**Why it works:** each short window carries both a complete dialogue turn and
+one visible performance change, so emotional acting replaces empty hold time
+instead of extending the scene. A separate dialogue map protects order and
+speaker ownership, while transcript and timing read-back catch the lexical
+drift that pacing success alone cannot rule out.
+
+Adapted and rewritten from keys-exe's October 6–7, 2026 paired production
+record: [landed Seedance 2.5 results](https://github.com/keys-exe/global-manual-ai/commit/8cb97a7e0ae4819ab62a863809ffab1bd1b4e8c7),
+[complete two-speaker request](https://github.com/keys-exe/global-manual-ai/blob/ce4a2f9f5d99756ffd955896552f59c70248aca6/builds/facelove-walmart/takes/SC05-T1.call.json),
+[complete single-speaker request](https://github.com/keys-exe/global-manual-ai/blob/ce4a2f9f5d99756ffd955896552f59c70248aca6/builds/facelove-walmart/takes/SC05-T2.call.json)
+and [owner confirmation](https://github.com/keys-exe/global-manual-ai/commit/ce4a2f9f5d99756ffd955896552f59c70248aca6).
+
+
 ### Confirmed-version scene freeze with whole-take native-audio assembly
 
 **Verified model:** Seedance 2.5, exact Kie AI route
@@ -55624,6 +55739,7 @@ and the follow-up
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 7, 2026 owner-confirmed Seedance 2.5 paired dialogue takes: exact Higgsfield `seedance_2_5` model, successful 21.06 s and 20.06 s native-audio outputs, one back-to-back turn plus simultaneous performance per 4–5 s shot, clean no-music read-back and one documented contraction deviation](https://github.com/keys-exe/global-manual-ai/commit/ce4a2f9f5d99756ffd955896552f59c70248aca6) ([landed results](https://github.com/keys-exe/global-manual-ai/commit/8cb97a7e0ae4819ab62a863809ffab1bd1b4e8c7), [two-speaker request](https://github.com/keys-exe/global-manual-ai/blob/ce4a2f9f5d99756ffd955896552f59c70248aca6/builds/facelove-walmart/takes/SC05-T1.call.json), [single-speaker request](https://github.com/keys-exe/global-manual-ai/blob/ce4a2f9f5d99756ffd955896552f59c70248aca6/builds/facelove-walmart/takes/SC05-T2.call.json))
 - [keys-exe / global-manual-ai — October 7, 2026 confirmed Seedance 2.5 silent-handle flashback: complete three-image/one-voice request, exact `bytedance/seedance-2-5` route, successful 882-credit task, off-screen speaker ownership, new-place reset and owner-confirmed exterior-window deviation](https://github.com/keys-exe/global-manual-ai/commit/02fcc89638861e4e079cf6109aa1ebbe457b8b37) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/02fcc89638861e4e079cf6109aa1ebbe457b8b37/builds/stryde-other-nana/film/SC08/SC08-T1.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/02fcc89638861e4e079cf6109aa1ebbe457b8b37/builds/stryde-other-nana/film/SC08/SC08-T1.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/02fcc89638861e4e079cf6109aa1ebbe457b8b37/builds/stryde-other-nana/film/SC08/SC08-T1.v1.kie.log), [submission record](https://github.com/keys-exe/global-manual-ai/commit/9dba0fb90b2dc3cc8fc5a3b194e68203541726f2))
 - [keys-exe / global-manual-ai — October 7, 2026 confirmed Seedance 2.5 dual-photo wearable reveal: complete nine-image/two-voice request, exact `bytedance/seedance-2-5` route, successful 756-credit task, geometry-versus-placement split, documented chair/stool deviation and explicit owner restoration of version 1](https://github.com/keys-exe/global-manual-ai/commit/9dba0fb90b2dc3cc8fc5a3b194e68203541726f2) ([original generation](https://github.com/keys-exe/global-manual-ai/commit/7dfc7836d200bfe7786c5ee66692f5e2d5f44266), [complete prompt](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.v1.kie.log))
 - [keys-exe / global-manual-ai — October 7, 2026 confirmed Seedance 2.5 foreground-isolation push-in: complete eight-reference silent request, exact `bytedance/seedance-2-5` route, successful 504-credit task, unheard background conversation and editorial inner-voice handoff](https://github.com/keys-exe/global-manual-ai/commit/85e798d0f75f69569f93b26f7dd384589db1fcf4) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/85e798d0f75f69569f93b26f7dd384589db1fcf4/builds/stryde-her-dad/hooks/SC01/new/n2fix/SC01-N2_v3.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/85e798d0f75f69569f93b26f7dd384589db1fcf4/builds/stryde-her-dad/hooks/SC01/new/n2fix/SC01-N2_v3.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/85e798d0f75f69569f93b26f7dd384589db1fcf4/builds/stryde-her-dad/hooks/SC01/new/n2fix/SC01-N2_v3.kie.log), [owner confirmation](https://github.com/keys-exe/global-manual-ai/blob/e7babaa4edcb6c4a49fb4d21c1308e5b13bfb48a/builds/stryde-her-dad/BUILD_NOTES.md#L268-L290))
