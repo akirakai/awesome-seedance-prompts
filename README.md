@@ -31420,6 +31420,101 @@ Adapted and rewritten from Elsa Ai's October 6, 2026 original X thread:
 [creator-confirmed Seedance 2.5 result](https://x.com/ElsaSofia__AI/status/2107290801017704458)
 and [complete prompt post](https://x.com/ElsaSofia__AI/status/2107290806747038029).
 
+
+### 476. Two-speed stair climb with a reaction-frame handoff
+
+**Verified model:** Kie AI `bytedance/seedance-2-5` — the versioned request
+publishes the complete prompt, three approved image ingredients, eight-second
+720p vertical settings and silent-generation flag; the provider result records
+successful task `4b6e2a2ea0b15c7cb2f06f1546ccf876`, a 504-credit charge and the
+returned MP4
+**Evidence boundary:** the references were owner-confirmed and the provider
+completed the generation, but the rendered take was still marked `To check` at
+publication. Count this as a complete generated scenario with pending artistic
+review, not an owner-approved visual-quality benchmark. The sharper
+performance-lane and continuity gates below are editorial adaptations and have
+not been separately rerendered
+**Use case:** vertical UGC hook, two-character physical contrast, multi-shot
+stair travel, clear reaction endpoint and silent B-roll for later voice-over
+**Mode:** three-image ingredient/reference mode; generated silent
+**Verified settings:** 8 seconds; 9:16; 720p; three shots; no generated audio
+
+```text
+Create an eight-second vertical live-action UGC hook. It should feel like a
+real, slightly imperfect phone recording on a Sunday afternoon, not a polished
+fitness advertisement. One older father climbs his own L-turn staircase with
+surprising ease while his adult son falls behind and stops in disbelief.
+
+REFERENCE AUTHORITY
+@Image1 owns only FATHER's face, age, hair, beard and build.
+@Image2 owns only SON's face, age, hair and build.
+@Image3 owns the living room, dark-oak lower flight, half landing, upper flight,
+photo wall, rail position and late-afternoon light.
+
+Do not copy clothing or framing from the identity references. Keep each face
+with its named body in every shot; never blend, swap or duplicate the men.
+
+WARDROBE AND START STATE
+FATHER wears a dove-grey three-piece suit, white shirt, mustard-gold tie and
+black oxfords. SON wears a heather-grey henley, dark jeans and brown work boots.
+Frame 1 begins in motion: FATHER is already on the third tread of the lower
+flight; SON is four treads behind at the bottom with one hand on the rail.
+
+PERFORMANCE LANES
+FATHER: brisk, balanced and economical. He takes two treads per stride, only
+brushes the rail and keeps an easy, even breath.
+SON: slower and effortful. He takes one tread at a time, pulls lightly on the
+rail, falls farther behind and breathes heavily.
+The men never exchange movement styles, positions or wardrobe.
+
+TIMELINE
+[0.0-3.0 s] Wide low angle from the living-room floor, one slow tilt upward.
+FATHER climbs the lower flight two treads at a stride. SON follows one tread at
+a time. Both travel toward the same half landing; every foot carries visible
+weight and the staircase remains unchanged.
+
+[3.0-5.0 s] Cut to a locked medium view from the half landing looking down.
+FATHER approaches the lens, reaches the landing, turns left and continues up
+the upper flight until he exits frame. SON remains visibly below, using the
+rail and losing distance. Preserve their order and the established stair axis.
+
+[5.0-8.0 s] Cut to a medium close-up from two treads above SON. He stops two
+treads below the half landing, one hand still on the rail, chest heaving. He
+looks up the now-empty upper flight, registers disbelief and gives one slow
+head shake. End with SON alone and stationary; hold that reaction long enough
+for an editorial cut to a talking head.
+
+CAMERA, LIGHT AND TEXTURE
+Use ordinary handheld-phone texture, true colour, natural motion blur and faint
+shadow grain. Camera movement is limited to the first shot's slow tilt and the
+final shot's very small push toward SON. Warm window light from frame-left lays
+stripes across the bottom steps; the upper flight stays softer. No orbit,
+camera-axis reversal, beauty lighting or commercial gloss.
+
+AUDIO CONTRACT
+Generate the picture silent. Add voice-over, footsteps, breathing and quiet
+room tone only in post. Nobody speaks or mouths words in the generated clip.
+
+FAILURE GATE
+Reject identity blending, father/son position swap, a third person, changed
+stairs or photo wall, reversed travel, weightless or skipped steps, floating
+feet, FATHER pulling on the rail, SON overtaking FATHER, either man looking into
+the lens, missing final stop, action continuing through the last frame, extra
+fingers, text, logo, subtitle, watermark or generated sound.
+```
+
+**Why it works:** the contrast is expressed as two simultaneous performance
+lanes rather than the vague instruction “one man is fitter.” Each lane owns a
+stride length, rail behavior, breathing state and terminal position. The three
+shots then hand off one simple state—FATHER ahead, SON behind—until FATHER exits
+and SON's held reaction becomes an editorial endpoint.
+
+Adapted and rewritten from keys-exe's October 7, 2026
+[Seedance 2.5 generation record](https://github.com/keys-exe/global-manual-ai/commit/762f7da13a5b95998a0bf59af4761a8d2136d452),
+the [complete submitted prompt](https://github.com/keys-exe/global-manual-ai/blob/762f7da13a5b95998a0bf59af4761a8d2136d452/builds/stryde-71-stairs-man/hooks/HK1.prompt.txt),
+[exact request](https://github.com/keys-exe/global-manual-ai/blob/762f7da13a5b95998a0bf59af4761a8d2136d452/builds/stryde-71-stairs-man/hooks/HK1.call.json)
+and [successful provider result](https://github.com/keys-exe/global-manual-ai/blob/762f7da13a5b95998a0bf59af4761a8d2136d452/builds/stryde-71-stairs-man/hooks/HK1_v1.result.json).
+
 ## Reusable templates
 
 
@@ -56053,6 +56148,7 @@ and the later [residual-frame trim](https://github.com/keys-exe/global-manual-ai
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 7, 2026 Kie AI Seedance 2.5 two-speed stair-climb hook: complete three-reference prompt, exact `bytedance/seedance-2-5` request, successful 504-credit task, generated MP4 and explicit `To check` artistic boundary](https://github.com/keys-exe/global-manual-ai/commit/762f7da13a5b95998a0bf59af4761a8d2136d452) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/762f7da13a5b95998a0bf59af4761a8d2136d452/builds/stryde-71-stairs-man/hooks/HK1.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/762f7da13a5b95998a0bf59af4761a8d2136d452/builds/stryde-71-stairs-man/hooks/HK1.call.json), [successful result](https://github.com/keys-exe/global-manual-ai/blob/762f7da13a5b95998a0bf59af4761a8d2136d452/builds/stryde-71-stairs-man/hooks/HK1_v1.result.json))
 - [keys-exe / global-manual-ai — October 7, 2026 owner-confirmed Seedance 2.5 wrong-direction repair: complete four-second pickup prompt, exact `bytedance/seedance-2-5` request, successful 252-credit task, destination-visible route lock, isolated splice, residual 0.17-second trim and confirmed composite](https://github.com/keys-exe/global-manual-ai/commit/496400fa52fadbd73b822dadd738793ebca6b9a3) ([pickup generation](https://github.com/keys-exe/global-manual-ai/commit/1123ab3ea500a681d39d63fd5cdaf1e592292615), [complete prompt](https://github.com/keys-exe/global-manual-ai/blob/1123ab3ea500a681d39d63fd5cdaf1e592292615/builds/stryde-other-nana/film/SC11/SC11-T1-P4.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/1123ab3ea500a681d39d63fd5cdaf1e592292615/builds/stryde-other-nana/film/SC11/SC11-T1-P4.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/1123ab3ea500a681d39d63fd5cdaf1e592292615/builds/stryde-other-nana/film/SC11/SC11-T1-P4.v1.kie.log), [residual-frame trim](https://github.com/keys-exe/global-manual-ai/blob/4f68fb63366409060a0025d90a64a1cf5c494685/builds/stryde-other-nana/film/SC11/splice_t1_v4.py))
 - [Elsa Ai — October 6, 2026 creator-confirmed Seedance 2.5 airport-immigration comedy: attached 30-second result plus complete twelve-shot prompt with global cast/location anchors, real-time motion, makeover beats and passport-prop inserts](https://x.com/ElsaSofia__AI/status/2107290801017704458) ([complete prompt](https://x.com/ElsaSofia__AI/status/2107290806747038029))
 - [hongvietdoan-byte / AI-video workflow — October 7, 2026 Seedance 2.5 fractional-onset failure: 0.3-second audio serialized into an integer zero-second dialogue window, measured 0.14-second mouth delay, one-second calibration lead, per-take offset persistence and legacy-timing regression](https://github.com/hongvietdoan-byte/Workflow-t-ng-h-a-quy-tr-nh-l-m-video-AI/commit/1ded677b750ebb7e99842f55fb70b5fd3645b2d5) ([whole-second lead and duration path](https://github.com/hongvietdoan-byte/Workflow-t-ng-h-a-quy-tr-nh-l-m-video-AI/blob/1ded677b750ebb7e99842f55fb70b5fd3645b2d5/core/voice.py), [offset persistence](https://github.com/hongvietdoan-byte/Workflow-t-ng-h-a-quy-tr-nh-l-m-video-AI/blob/1ded677b750ebb7e99842f55fb70b5fd3645b2d5/core/lipsync.py), [regression tests](https://github.com/hongvietdoan-byte/Workflow-t-ng-h-a-quy-tr-nh-l-m-video-AI/blob/1ded677b750ebb7e99842f55fb70b5fd3645b2d5/tests/test_lipsync.py))
