@@ -55943,8 +55943,117 @@ and the follow-up
 [envelope-measured, read-back-verified splice correction](https://github.com/keys-exe/global-manual-ai/commit/3ed0497670ef7c0cc566bc836fe377a3452d7ab9).
 
 
+### Destination-visible motion repair with a single-shot pickup
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — the creator published the complete four-second
+pickup prompt and request, successful 252-credit task and returned MP4. The
+pickup replaced only one wrong-direction interval inside an existing take; a
+subsequent 0.17-second trim removed the last residual frame of the rejected
+movement, and the source owner explicitly confirmed the assembled fourth
+version before proceeding.
+**Evidence boundary:** the owner confirmed the final composite, not a fresh
+single-pass regeneration of the whole scene. Count this as one reusable spatial
+repair template rather than a new complete scenario prompt.
+**Use case:** one otherwise usable take makes a subject walk away from a known
+destination, reverses screen-space intent or stops at the wrong landmark
+**Mode:** accepted master -> reference-matched Seedance pickup -> overlap-aware
+splice -> residual-frame trim -> owner-confirmed composite
+
+```text
+DEFECT LEDGER
+MASTER = [FILE / VERSION]
+FAILED_INTERVAL = [START–END]
+OBSERVED = SUBJECT walks [WRONG ROUTE] or stops at [WRONG LANDMARK].
+REQUIRED = SUBJECT travels from ORIGIN to DESTINATION and stops at END_MARK.
+PRESERVE = every accepted frame, native sound and continuity state outside the
+failed interval.
+
+PICKUP REFERENCE ROLES
+@Image1 = SUBJECT_IDENTITY: face, hair, age and build only.
+@Image2 = SUBJECT_WARDROBE: exact clothes and concealed-item state only.
+@Image3 = SET_GEOGRAPHY: ORIGIN, DESTINATION, route, fixed landmarks and light.
+@Image4 = NEXT-SHOT_LOCATION: copy the destination's place and light, not its
+camera framing or subject pose.
+
+DIRECTION-PROOF OPENING
+Use one continuous [DURATION]-second shot. Put the camera behind SUBJECT so
+DESTINATION is visibly ahead in Frame 1. State all three relationships:
+1. SUBJECT moves toward DESTINATION;
+2. SUBJECT moves away from the lens;
+3. SUBJECT follows the named route from ORIGIN to END_MARK.
+
+Do not rely on “goes over there,” “continues walking” or screen-left/right
+alone. Keep ORIGIN and DESTINATION readable in the same world geometry.
+
+PROMPT SKELETON
+REFERENCES
+[REFERENCE ROLES ABOVE]
+
+SHOT
+[GENRE AND PURPOSE]. SUBJECT moves from ORIGIN to DESTINATION. One continuous
+shot, no cuts, [ASPECT RATIO], [DURATION] seconds.
+
+TIMELINE
+[0–DURATION] Wide, eye level, behind SUBJECT, [LOCKED / SLOW PAN].
+Frame 1: SUBJECT at ORIGIN with their back to us; DESTINATION is visibly ahead.
+SUBJECT walks [COUNT] steps forward, toward DESTINATION and away from the lens,
+following [ROUTE]. The camera [HOLDS / PANS] without crossing the route.
+Last frame: SUBJECT stops at END_MARK, faces DESTINATION and still has their
+back to us.
+
+LOOK
+Match MASTER's lens feel, camera height, exposure, light direction, set
+materials, identity and wardrobe.
+
+SOUND
+[VISIBLE FOOTSTEPS / ROOM TONE]. Nobody speaks. No music.
+
+KEEP
+Only SUBJECT in shot; DESTINATION stays ahead; wardrobe and any concealed prop
+remain unchanged; no reverse walk, turn back, route swap, new person, text or
+watermark.
+
+PICKUP QC
+- Frame 1 visibly proves the route before motion begins.
+- Every step reduces the subject-to-destination distance.
+- Camera motion never makes forward travel read as retreat.
+- END_MARK is reached and held before the pickup ends.
+- Clothing, hidden props, light and set landmarks match the master on both cut
+  sides.
+
+SPLICE AND RESIDUAL-FRAME CHECK
+1. Cut MASTER before the first wrong-direction frame, not merely at the nearest
+   whole second.
+2. Insert only the pickup interval that completes ORIGIN -> END_MARK.
+3. Resume MASTER at the first accepted frame whose action follows END_MARK.
+4. Review the assembled cut frame by frame around both joins. If even a small
+   tail of the rejected movement remains, trim that tail and rebuild without
+   spending another generation.
+5. Verify total duration, native-audio continuity, exposure, screen direction,
+   endpoint state and downstream continuation from the rendered composite.
+```
+
+**Why it works:** “walk to the stairs” left the model free to choose a camera
+side and an apparent direction. The repair makes destination, lens and route
+agree in one view: the stairs are ahead, the subject's back faces camera and
+each step travels away from the lens toward a named stopping mark. Isolating
+that motion as a short pickup protects the accepted take, while frame-level
+splice review catches the subsecond remnants that a whole-second edit can miss.
+
+Adapted and generalized from keys-exe's October 7, 2026
+[owner-confirmed Seedance 2.5 composite](https://github.com/keys-exe/global-manual-ai/commit/496400fa52fadbd73b822dadd738793ebca6b9a3),
+the [pickup generation and repair record](https://github.com/keys-exe/global-manual-ai/commit/1123ab3ea500a681d39d63fd5cdaf1e592292615),
+[complete pickup prompt](https://github.com/keys-exe/global-manual-ai/blob/1123ab3ea500a681d39d63fd5cdaf1e592292615/builds/stryde-other-nana/film/SC11/SC11-T1-P4.prompt.txt),
+[exact request](https://github.com/keys-exe/global-manual-ai/blob/1123ab3ea500a681d39d63fd5cdaf1e592292615/builds/stryde-other-nana/film/SC11/SC11-T1-P4.call.json),
+[successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/1123ab3ea500a681d39d63fd5cdaf1e592292615/builds/stryde-other-nana/film/SC11/SC11-T1-P4.v1.kie.log),
+[pickup splice script](https://github.com/keys-exe/global-manual-ai/blob/1123ab3ea500a681d39d63fd5cdaf1e592292615/builds/stryde-other-nana/film/SC11/splice_t1_v3.py)
+and the later [residual-frame trim](https://github.com/keys-exe/global-manual-ai/blob/4f68fb63366409060a0025d90a64a1cf5c494685/builds/stryde-other-nana/film/SC11/splice_t1_v4.py).
+
+
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 7, 2026 owner-confirmed Seedance 2.5 wrong-direction repair: complete four-second pickup prompt, exact `bytedance/seedance-2-5` request, successful 252-credit task, destination-visible route lock, isolated splice, residual 0.17-second trim and confirmed composite](https://github.com/keys-exe/global-manual-ai/commit/496400fa52fadbd73b822dadd738793ebca6b9a3) ([pickup generation](https://github.com/keys-exe/global-manual-ai/commit/1123ab3ea500a681d39d63fd5cdaf1e592292615), [complete prompt](https://github.com/keys-exe/global-manual-ai/blob/1123ab3ea500a681d39d63fd5cdaf1e592292615/builds/stryde-other-nana/film/SC11/SC11-T1-P4.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/1123ab3ea500a681d39d63fd5cdaf1e592292615/builds/stryde-other-nana/film/SC11/SC11-T1-P4.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/1123ab3ea500a681d39d63fd5cdaf1e592292615/builds/stryde-other-nana/film/SC11/SC11-T1-P4.v1.kie.log), [residual-frame trim](https://github.com/keys-exe/global-manual-ai/blob/4f68fb63366409060a0025d90a64a1cf5c494685/builds/stryde-other-nana/film/SC11/splice_t1_v4.py))
 - [Elsa Ai — October 6, 2026 creator-confirmed Seedance 2.5 airport-immigration comedy: attached 30-second result plus complete twelve-shot prompt with global cast/location anchors, real-time motion, makeover beats and passport-prop inserts](https://x.com/ElsaSofia__AI/status/2107290801017704458) ([complete prompt](https://x.com/ElsaSofia__AI/status/2107290806747038029))
 - [hongvietdoan-byte / AI-video workflow — October 7, 2026 Seedance 2.5 fractional-onset failure: 0.3-second audio serialized into an integer zero-second dialogue window, measured 0.14-second mouth delay, one-second calibration lead, per-take offset persistence and legacy-timing regression](https://github.com/hongvietdoan-byte/Workflow-t-ng-h-a-quy-tr-nh-l-m-video-AI/commit/1ded677b750ebb7e99842f55fb70b5fd3645b2d5) ([whole-second lead and duration path](https://github.com/hongvietdoan-byte/Workflow-t-ng-h-a-quy-tr-nh-l-m-video-AI/blob/1ded677b750ebb7e99842f55fb70b5fd3645b2d5/core/voice.py), [offset persistence](https://github.com/hongvietdoan-byte/Workflow-t-ng-h-a-quy-tr-nh-l-m-video-AI/blob/1ded677b750ebb7e99842f55fb70b5fd3645b2d5/core/lipsync.py), [regression tests](https://github.com/hongvietdoan-byte/Workflow-t-ng-h-a-quy-tr-nh-l-m-video-AI/blob/1ded677b750ebb7e99842f55fb70b5fd3645b2d5/tests/test_lipsync.py))
 - [keys-exe / global-manual-ai — October 7, 2026 owner-confirmed Seedance 2.5 paired dialogue takes: exact Higgsfield `seedance_2_5` model, successful 21.06 s and 20.06 s native-audio outputs, one back-to-back turn plus simultaneous performance per 4–5 s shot, clean no-music read-back and one documented contraction deviation](https://github.com/keys-exe/global-manual-ai/commit/ce4a2f9f5d99756ffd955896552f59c70248aca6) ([landed results](https://github.com/keys-exe/global-manual-ai/commit/8cb97a7e0ae4819ab62a863809ffab1bd1b4e8c7), [two-speaker request](https://github.com/keys-exe/global-manual-ai/blob/ce4a2f9f5d99756ffd955896552f59c70248aca6/builds/facelove-walmart/takes/SC05-T1.call.json), [single-speaker request](https://github.com/keys-exe/global-manual-ai/blob/ce4a2f9f5d99756ffd955896552f59c70248aca6/builds/facelove-walmart/takes/SC05-T2.call.json))
