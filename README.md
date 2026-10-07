@@ -489,6 +489,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Dual-photo wearable reveal with placement and continuity locks](#473-dual-photo-wearable-reveal-with-placement-and-continuity-locks)
   - [Silent-handle flashback with off-screen social exclusion](#474-silent-handle-flashback-with-off-screen-social-exclusion)
   - [Passport-glam mismatch with irreversible makeup-state ledger](#475-passport-glam-mismatch-with-irreversible-makeup-state-ledger)
+  - [Two-speed stair climb with a reaction-frame handoff](#476-two-speed-stair-climb-with-a-reaction-frame-handoff)
+  - [Dual-ended complexion stick with an irreversible shade-conversion ledger](#477-dual-ended-complexion-stick-with-an-irreversible-shade-conversion-ledger)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -31515,6 +31517,121 @@ the [complete submitted prompt](https://github.com/keys-exe/global-manual-ai/blo
 [exact request](https://github.com/keys-exe/global-manual-ai/blob/762f7da13a5b95998a0bf59af4761a8d2136d452/builds/stryde-71-stairs-man/hooks/HK1.call.json)
 and [successful provider result](https://github.com/keys-exe/global-manual-ai/blob/762f7da13a5b95998a0bf59af4761a8d2136d452/builds/stryde-71-stairs-man/hooks/HK1_v1.result.json).
 
+
+### 477. Dual-ended complexion stick with an irreversible shade-conversion ledger
+
+**Verified model:** Higgsfield Seedance 2.5, exact route `seedance_2_5` — the
+versioned request identifies the model and eighteen-second native-audio job;
+the landed-output record publishes the returned MP4, measured 18.08-second
+duration, clean-music audit and dialogue read-back, while the production ledger
+records a 113.4-credit charge  \
+**Evidence boundary:** the source owner explicitly ordered the second-generation
+repair after the first take left thin white lines instead of showing the full
+shade change. The provider completed the replacement and the final film used
+it, but both the component and assembled film were still marked `To check` at
+publication. Count this as a verified generated scenario, not an
+owner-approved visual-quality benchmark. The shorter dialogue, state labels and
+failure gate below are editorial adaptations and have not been rerendered  \
+**Use case:** beauty-product demonstration, two-person native dialogue, precise
+small-prop scale, visible before-to-after proof and multi-shot continuity  \
+**Mode:** eight image references plus one voice reference; four-shot vertical
+sequence with generated audio  \
+**Verified settings:** 18 seconds; 9:16; 720p; 24 fps; four shots; native room
+sound and one referenced voice
+
+```text
+Create an eighteen-second vertical live-action beauty demonstration in one
+bedroom. A friend applies a dual-ended complexion stick to a seated woman's
+cheek: the balm first leaves two clearly visible pale bands, then the brush end
+blends both bands completely into the woman's natural tone. Treat the change as
+one irreversible on-screen process, not a jump cut or an off-camera makeover.
+
+REFERENCE AUTHORITY
+@Image1 owns only SUBJECT's face, hair, age and skin texture.
+@Image2 owns only FRIEND's face and hair. Never blend the two identities.
+@Image3 owns the bedroom, dressing table, mirror, stool, bed, window side and
+afternoon-light direction.
+@Image4 owns only the two women's carried positions at the end of the preceding
+take; it may not override the room architecture or camera plan.
+@Image5 owns the balm end of the stick.
+@Image6 owns the brush end of that same stick.
+@Image7 owns the closed-stick silhouette, casing colour and single wordmark.
+@Image8 owns true hand-relative scale. Keep that scale in every shot.
+@Audio1 owns only FRIEND's adult American voice, pace and timbre.
+
+PRODUCT AND STATE LEDGER
+There is exactly one short, thick, violet stick with two different ends. Only
+the active end is uncapped. The opposite end stays capped. The stick never
+duplicates, lengthens, changes colour or switches hands without visible motion.
+
+S0 = both cheek and applicator are clean; stick closed.
+S1 = balm end open; cheek still clean.
+S2 = exactly two broad pale bands are visible on one cheek.
+S3 = the same stick is turned to its brush end; both bands remain visible.
+S4 = circular brushing has absorbed both bands completely into SUBJECT's own
+tone; no pale residue returns after this point.
+
+TIMELINE
+[0.0-4.5 s] Medium close-up, three-quarter angle, one gentle tilt following the
+hand. SUBJECT sits at the mirror. FRIEND remains beside and slightly behind the
+stool, opens only the balm end and brings it toward the near cheek. FRIEND says,
+"This starts pale—watch the change." End in S1 with both faces stable and the
+stick still true to @Image8 scale.
+
+[4.5-7.5 s] Locked profile macro. In one continuous motion, the flat balm edge
+draws two separate creamy bands across the same cheekbone, each broad enough to
+read clearly. The applicator lifts away and both bands remain intact. End in S2;
+do not blend yet.
+
+[7.5-13.0 s] Front close-up with a very slow optical creep. FRIEND visibly
+turns the same object to its brush end, then blends in small circles. Show the
+conversion advancing behind the brush: pale product becomes SUBJECT's exact
+tone until neither band remains. FRIEND, off camera, says, "It warms to her tone
+as I blend." End unmistakably in S4 without smoothing away pores, fine lines or
+the woman's facial identity.
+
+[13.0-18.0 s] Three-quarter close-up, restrained push-in. SUBJECT examines the
+finished cheek in the mirror, registers quiet surprise and touches nothing.
+FRIEND stays in her established position holding the same stick and says,
+"Smooth over the fine lines; no dry finish." Hold the completed S4 cheek for
+the final second; the pale bands must not reappear.
+
+LOOK AND PERFORMANCE
+Use restrained feature-drama photography, natural 24 fps motion, shallow
+optical depth and warm daylight entering from the room's established window.
+Preserve honest skin texture. SUBJECT wears a faded navy sweatshirt and grey
+joggers; FRIEND wears an emerald blouse and dark jeans. Keep the acting small:
+steady application, attentive eye lines and one subtle reaction rather than a
+beauty-ad pose.
+
+SOUND
+Use @Audio1 for FRIEND's three short lines only. SUBJECT does not speak. Record
+quiet bedroom tone, one cap release, soft balm contact and a faint brush sound.
+No music. Keep dialogue sequential, never overlapped or reassigned.
+
+FAILURE GATE
+Reject any take with identity swap, duplicate person or stick, more or fewer
+than two bands, a band on the wrong cheek, product that disappears before the
+brush reaches it, residue returning after S4, instant shade change between
+cuts, erased pores or facial lines, altered room sides, wrong window direction,
+oversized applicator, two uncapped ends, fused fingers, extra hand, swapped
+speaker, repeated line, subtitle, logo or watermark.
+```
+
+**Why it works:** eight references are not treated as equal visual prompts.
+Identity, room geometry, prior blocking, product endpoints and real-world scale
+each receive one authority role. The S0–S4 ledger then makes the product claim
+auditable frame by frame: two bands must exist before brushing, the brush must
+physically cross them, and the finished shade cannot regress. That converts a
+vague “adaptive foundation” claim into a visible causal test while the single
+prop ledger prevents the dual-ended package from multiplying.
+
+Adapted and rewritten from keys-exe's October 7, 2026
+[owner-directed Seedance 2.5 repair and final-film record](https://github.com/keys-exe/global-manual-ai/commit/7d9bbd62cde0c5a464740e346e3607bac555ef76),
+the [complete source prompt](https://github.com/keys-exe/global-manual-ai/blob/7d9bbd62cde0c5a464740e346e3607bac555ef76/builds/facelove-j1212/body/SC05/SC05-T3.v2.prompt.txt),
+[exact Higgsfield request](https://github.com/keys-exe/global-manual-ai/blob/7d9bbd62cde0c5a464740e346e3607bac555ef76/builds/facelove-j1212/body/SC05/SC05-T3.v2.call.json)
+and [landed-output audit with generated MP4](https://github.com/keys-exe/global-manual-ai/blob/7d9bbd62cde0c5a464740e346e3607bac555ef76/builds/facelove-j1212/body/SC05/SC05-T3_v2.land.json).
+
 ## Reusable templates
 
 
@@ -56148,6 +56265,7 @@ and the later [residual-frame trim](https://github.com/keys-exe/global-manual-ai
 
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 7, 2026 Higgsfield Seedance 2.5 dual-ended complexion-stick repair: complete eight-image/one-voice prompt, exact `seedance_2_5` request, owner-directed full-shade revision, 113.4-credit generation, returned 18.08-second MP4, clean-music audit, dialogue read-back and explicit `To check` boundary](https://github.com/keys-exe/global-manual-ai/commit/7d9bbd62cde0c5a464740e346e3607bac555ef76) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/7d9bbd62cde0c5a464740e346e3607bac555ef76/builds/facelove-j1212/body/SC05/SC05-T3.v2.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/7d9bbd62cde0c5a464740e346e3607bac555ef76/builds/facelove-j1212/body/SC05/SC05-T3.v2.call.json), [landed output](https://github.com/keys-exe/global-manual-ai/blob/7d9bbd62cde0c5a464740e346e3607bac555ef76/builds/facelove-j1212/body/SC05/SC05-T3_v2.land.json))
 - [keys-exe / global-manual-ai — October 7, 2026 Kie AI Seedance 2.5 two-speed stair-climb hook: complete three-reference prompt, exact `bytedance/seedance-2-5` request, successful 504-credit task, generated MP4 and explicit `To check` artistic boundary](https://github.com/keys-exe/global-manual-ai/commit/762f7da13a5b95998a0bf59af4761a8d2136d452) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/762f7da13a5b95998a0bf59af4761a8d2136d452/builds/stryde-71-stairs-man/hooks/HK1.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/762f7da13a5b95998a0bf59af4761a8d2136d452/builds/stryde-71-stairs-man/hooks/HK1.call.json), [successful result](https://github.com/keys-exe/global-manual-ai/blob/762f7da13a5b95998a0bf59af4761a8d2136d452/builds/stryde-71-stairs-man/hooks/HK1_v1.result.json))
 - [keys-exe / global-manual-ai — October 7, 2026 owner-confirmed Seedance 2.5 wrong-direction repair: complete four-second pickup prompt, exact `bytedance/seedance-2-5` request, successful 252-credit task, destination-visible route lock, isolated splice, residual 0.17-second trim and confirmed composite](https://github.com/keys-exe/global-manual-ai/commit/496400fa52fadbd73b822dadd738793ebca6b9a3) ([pickup generation](https://github.com/keys-exe/global-manual-ai/commit/1123ab3ea500a681d39d63fd5cdaf1e592292615), [complete prompt](https://github.com/keys-exe/global-manual-ai/blob/1123ab3ea500a681d39d63fd5cdaf1e592292615/builds/stryde-other-nana/film/SC11/SC11-T1-P4.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/1123ab3ea500a681d39d63fd5cdaf1e592292615/builds/stryde-other-nana/film/SC11/SC11-T1-P4.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/1123ab3ea500a681d39d63fd5cdaf1e592292615/builds/stryde-other-nana/film/SC11/SC11-T1-P4.v1.kie.log), [residual-frame trim](https://github.com/keys-exe/global-manual-ai/blob/4f68fb63366409060a0025d90a64a1cf5c494685/builds/stryde-other-nana/film/SC11/splice_t1_v4.py))
 - [Elsa Ai — October 6, 2026 creator-confirmed Seedance 2.5 airport-immigration comedy: attached 30-second result plus complete twelve-shot prompt with global cast/location anchors, real-time motion, makeover beats and passport-prop inserts](https://x.com/ElsaSofia__AI/status/2107290801017704458) ([complete prompt](https://x.com/ElsaSofia__AI/status/2107290806747038029))
