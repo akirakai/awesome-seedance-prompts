@@ -56263,8 +56263,118 @@ the [pickup generation and repair record](https://github.com/keys-exe/global-man
 and the later [residual-frame trim](https://github.com/keys-exe/global-manual-ai/blob/4f68fb63366409060a0025d90a64a1cf5c494685/builds/stryde-other-nana/film/SC11/splice_t1_v4.py).
 
 
+### Fault-classed insert replacement with an object-partition ledger
+
+**Verified model:** Seedance 2.5, exact Kie AI route
+`bytedance/seedance-2-5` — four 4-second 720p vertical pickups each have a
+complete request and successful 252-credit task receipt. They replaced four
+failed inserts inside a 26-second Seedance scene; the source owner requested a
+final endpoint trim and then explicitly confirmed the repaired third version.
+**Evidence boundary:** the confirmed deliverable is a composite of retained
+master intervals and four Seedance pickups, not a fresh single-pass rerender.
+One requested round wall clock rendered with a square outer frame, so the
+method verifies selective semantic repair and assembly, not perfect shape
+fidelity. Count this as one reusable repair template, not a complete scenario.
+**Use case:** preserve a mostly usable long generation while repairing several
+independent insert failures such as the wrong action object, a lookalike prop,
+mixed container contents, unreadable small-object geometry or an overlong tail
+**Mode:** defect inventory -> one low-entropy Seedance pickup per fault class ->
+measured interval replacement -> endpoint trim -> owner-confirmed composite
+
+```text
+MASTER LEDGER
+MASTER = [FILE / VERSION / EXACT MODEL]
+TARGET_DURATION = [SECONDS]
+PRESERVE = every accepted master interval, its native dialogue, room tone,
+screen direction and downstream endpoint state.
+
+List each defect before generating anything:
+D1 [MASTER IN–OUT] EXPECTED [ACTION + OBJECT] / OBSERVED [WRONG ACTION OR OBJECT]
+D2 [MASTER IN–OUT] EXPECTED [PROP CLASS] / OBSERVED [LOOKALIKE PROP]
+D3 [MASTER IN–OUT] EXPECTED [CONTAINER A CONTENTS; CONTAINER B CONTENTS] /
+   OBSERVED [CONTENTS MIXED OR TELEPORTED]
+D4 [MASTER IN–OUT] EXPECTED [SMALL PROP GEOMETRY + HAND ACTION] /
+   OBSERVED [BENT, DOUBLED, TEXT-COVERED OR MISSING PROP]
+
+Do not combine unrelated defects into one replacement call merely because they
+occur in the same scene. Give each pickup one semantic job and one camera job.
+
+SHARED REFERENCE ROLES
+@Image1 = SUBJECT_IDENTITY: only the visible person's face, age, hair and hands.
+@Image2 = WARDROBE: exact clothes for this scene.
+@Image3 = SET_GEOGRAPHY: fixed room, furniture, landmarks and light direction.
+@Image4 = MASTER_MATCH_FRAME: exposure, camera height, screen direction and
+surrounding state only; it cannot override the written repair.
+
+PICKUP TEMPLATE
+Generate one continuous [DURATION]-second insert with no internal cut.
+Frame 1 explicitly inventories every visible object, its count, owner,
+container and state. Perform only [ONE REPAIR ACTION]. End on [CUTTABLE STATE]
+and hold it for [HANDLE] seconds. Match the master lens feel, light, wardrobe
+and set. Nobody speaks unless this defect specifically includes dialogue.
+
+OBJECT-PARTITION LEDGER
+CONTAINER_A owns only [CONTENTS_A].
+CONTAINER_B owns only [CONTENTS_B].
+HAND_LEFT owns [OBJECT / EMPTY]. HAND_RIGHT owns [OBJECT / EMPTY].
+PROP_COUNT = [COUNT] from first through last frame.
+State the forbidden exchange: no CONTENTS_A in CONTAINER_B, no duplicate prop,
+no object appearing without a visible transfer.
+
+FAULT-SPECIFIC CLAUSES
+- Wrong action object: name material, surface, held orientation and the visible
+  cause-and-effect action; exclude the mistaken object by class.
+- Lookalike prop: state function plus unmistakable parts. For a clock, require
+  one face, numerals and moving hands, and say it is not a plate or picture.
+- Mixed contents: keep waste and finished items in separate named containers;
+  show each transfer ending in its assigned destination.
+- Fragile small prop: use one ordinary object, true hand-relative scale, simple
+  silhouette and blank or hidden display. Avoid asking it to show legible UI.
+
+FAILURE GATE
+Reject a changed person, wardrobe or room; wrong object class; contents crossing
+containers; changed count; doubled or flexible phone; prop/hand fusion;
+unwritten text; extra dialogue; new music; camera-axis reversal; or an endpoint
+that cannot cut back to the master.
+
+ASSEMBLY
+1. For each defect, choose only the clean sub-interval of its pickup, retaining
+   short motion and room-tone handles.
+2. Replace MASTER at the first bad frame and resume at the first accepted frame;
+   do not round edit points to whole seconds.
+3. After all replacements, inspect every join frame by frame for a residual
+   flash of the rejected object or action.
+4. If the repaired cut exceeds TARGET_DURATION, trim only the documented tail
+   after the final story beat or last spoken word. Never trim a needed handoff.
+5. Verify the rendered composite: dialogue occurs once, prop/container states
+   remain coherent, exposure and screen direction survive every join, total
+   duration is exact, and the last frame still supports the next scene.
+6. Obtain review on the assembled version; successful pickup receipts alone do
+   not prove the film repair is accepted.
+```
+
+**Why it works:** the failed long take contained four different error classes,
+so a single broad “fix the scene” request would have re-exposed every accepted
+beat. Short calls reduced each repair to one observable action or prop identity,
+while the partition ledger made the potato, peel, bowl, bin and phone mutually
+exclusive states instead of a loose list of objects. Frame-accurate replacement
+preserved the dialogue and dramatic coverage that already worked; a separate
+tail trim enforced the intended 26-second endpoint without another paid call.
+
+Adapted and generalized from keys-exe's October 7, 2026
+[owner-confirmed Seedance 2.5 composite](https://github.com/keys-exe/global-manual-ai/commit/fec3f310e118740d70fa2534adea945996a42e63),
+the [four-pickup generation record](https://github.com/keys-exe/global-manual-ai/commit/f0fdcd0014bcdea56230e0f9db3faa0bb9ea727b),
+the complete [action-object](https://github.com/keys-exe/global-manual-ai/blob/f0fdcd0014bcdea56230e0f9db3faa0bb9ea727b/builds/stryde-other-nana/film/SC13/SC13-T1-K1.prompt.txt),
+[lookalike-prop](https://github.com/keys-exe/global-manual-ai/blob/f0fdcd0014bcdea56230e0f9db3faa0bb9ea727b/builds/stryde-other-nana/film/SC13/SC13-T1-K2.prompt.txt),
+[partitioned-container](https://github.com/keys-exe/global-manual-ai/blob/f0fdcd0014bcdea56230e0f9db3faa0bb9ea727b/builds/stryde-other-nana/film/SC13/SC13-T1-K3.prompt.txt)
+and [small-prop endpoint](https://github.com/keys-exe/global-manual-ai/blob/f0fdcd0014bcdea56230e0f9db3faa0bb9ea727b/builds/stryde-other-nana/film/SC13/SC13-T1-K4.prompt.txt)
+requests, their successful provider receipts and the later
+[26-second endpoint trim](https://github.com/keys-exe/global-manual-ai/commit/70593b61751dc225fcc16a8f2f8b4da5793bc911).
+
+
 ---
 ## Sources
+- [keys-exe / global-manual-ai — October 7, 2026 owner-confirmed Seedance 2.5 multi-defect insert repair: four complete 4-second exact-model pickup requests, four successful 252-credit tasks, action-object correction, clock/plate disambiguation, bowl/bin content partition, one-phone geometry lock, measured splices and a final 26-second endpoint trim](https://github.com/keys-exe/global-manual-ai/commit/fec3f310e118740d70fa2534adea945996a42e63) ([generation record](https://github.com/keys-exe/global-manual-ai/commit/f0fdcd0014bcdea56230e0f9db3faa0bb9ea727b), [K1 request](https://github.com/keys-exe/global-manual-ai/blob/f0fdcd0014bcdea56230e0f9db3faa0bb9ea727b/builds/stryde-other-nana/film/SC13/SC13-T1-K1.call.json), [K2 request](https://github.com/keys-exe/global-manual-ai/blob/f0fdcd0014bcdea56230e0f9db3faa0bb9ea727b/builds/stryde-other-nana/film/SC13/SC13-T1-K2.call.json), [K3 request](https://github.com/keys-exe/global-manual-ai/blob/f0fdcd0014bcdea56230e0f9db3faa0bb9ea727b/builds/stryde-other-nana/film/SC13/SC13-T1-K3.call.json), [K4 request](https://github.com/keys-exe/global-manual-ai/blob/f0fdcd0014bcdea56230e0f9db3faa0bb9ea727b/builds/stryde-other-nana/film/SC13/SC13-T1-K4.call.json), [endpoint trim](https://github.com/keys-exe/global-manual-ai/commit/70593b61751dc225fcc16a8f2f8b4da5793bc911))
 - [keys-exe / global-manual-ai — October 7, 2026 Higgsfield Seedance 2.5 dual-ended complexion-stick repair: complete eight-image/one-voice prompt, exact `seedance_2_5` request, owner-directed full-shade revision, 113.4-credit generation, returned 18.08-second MP4, clean-music audit, dialogue read-back and explicit `To check` boundary](https://github.com/keys-exe/global-manual-ai/commit/7d9bbd62cde0c5a464740e346e3607bac555ef76) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/7d9bbd62cde0c5a464740e346e3607bac555ef76/builds/facelove-j1212/body/SC05/SC05-T3.v2.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/7d9bbd62cde0c5a464740e346e3607bac555ef76/builds/facelove-j1212/body/SC05/SC05-T3.v2.call.json), [landed output](https://github.com/keys-exe/global-manual-ai/blob/7d9bbd62cde0c5a464740e346e3607bac555ef76/builds/facelove-j1212/body/SC05/SC05-T3_v2.land.json))
 - [keys-exe / global-manual-ai — October 7, 2026 Kie AI Seedance 2.5 two-speed stair-climb hook: complete three-reference prompt, exact `bytedance/seedance-2-5` request, successful 504-credit task, generated MP4 and explicit `To check` artistic boundary](https://github.com/keys-exe/global-manual-ai/commit/762f7da13a5b95998a0bf59af4761a8d2136d452) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/762f7da13a5b95998a0bf59af4761a8d2136d452/builds/stryde-71-stairs-man/hooks/HK1.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/762f7da13a5b95998a0bf59af4761a8d2136d452/builds/stryde-71-stairs-man/hooks/HK1.call.json), [successful result](https://github.com/keys-exe/global-manual-ai/blob/762f7da13a5b95998a0bf59af4761a8d2136d452/builds/stryde-71-stairs-man/hooks/HK1_v1.result.json))
 - [keys-exe / global-manual-ai — October 7, 2026 owner-confirmed Seedance 2.5 wrong-direction repair: complete four-second pickup prompt, exact `bytedance/seedance-2-5` request, successful 252-credit task, destination-visible route lock, isolated splice, residual 0.17-second trim and confirmed composite](https://github.com/keys-exe/global-manual-ai/commit/496400fa52fadbd73b822dadd738793ebca6b9a3) ([pickup generation](https://github.com/keys-exe/global-manual-ai/commit/1123ab3ea500a681d39d63fd5cdaf1e592292615), [complete prompt](https://github.com/keys-exe/global-manual-ai/blob/1123ab3ea500a681d39d63fd5cdaf1e592292615/builds/stryde-other-nana/film/SC11/SC11-T1-P4.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/1123ab3ea500a681d39d63fd5cdaf1e592292615/builds/stryde-other-nana/film/SC11/SC11-T1-P4.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/1123ab3ea500a681d39d63fd5cdaf1e592292615/builds/stryde-other-nana/film/SC11/SC11-T1-P4.v1.kie.log), [residual-frame trim](https://github.com/keys-exe/global-manual-ai/blob/4f68fb63366409060a0025d90a64a1cf5c494685/builds/stryde-other-nana/film/SC11/splice_t1_v4.py))
