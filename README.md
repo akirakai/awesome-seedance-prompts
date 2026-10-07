@@ -31302,6 +31302,91 @@ and the [owner-confirmation record](https://github.com/keys-exe/global-manual-ai
 ## Reusable templates
 
 
+### Whole-second dialogue onset with recorded-offset edit lock
+
+**Verified model:** Seedance 2.5 — the original creator's production commit
+explicitly identifies Seedance 2.5 and records one real spoken shot whose audio
+began at 0.3 seconds, was compiled as an integer `[00:00–00:03]` dialogue
+window and returned with the visible mouth 0.14 seconds late  
+**Evidence boundary:** the 1.0-second onset, stored-offset edit path and
+legacy-clip preservation are regression-tested in the published workflow; the
+source does not yet publish a controlled post-repair Seedance rerender, so this
+is a route-scoped failure-control structure rather than a universal claim that
+one second is optimal for every provider  
+**Use case:** native or reference-audio dialogue where fractional voice onset is
+collapsed into an integer prompt window and the edit later drifts because it
+recomputes timing from a newer default  
+**Mode:** prepare the voiced track -> serialize whole-second dialogue windows ->
+generate mouth and voice together -> persist the actual per-take offsets -> edit
+from the persisted ledger
+
+```text
+INPUT LEDGER
+EXACT_MODEL = Seedance 2.5
+ROUTE = [PROVIDER / SURFACE / MODE]
+DIALOGUE = [SPEAKER + VERBATIM LINE + LANGUAGE]
+VOICE_ASSET = [IMMUTABLE FILE / HASH]
+SPEECH_SECONDS = [MEASURED WAVEFORM DURATION]
+LIP_LEAD = 1.0 seconds for the first calibration pass
+TAIL = [0.4 seconds or a measured route value]
+LEGACY_TAKE_OFFSETS = [TAKE ID -> ACTUAL RECORDED FIRST-WORD OFFSET]
+
+WHOLE-SECOND PROMPT CONTRACT
+[00:00–00:01] Silent visual pre-roll. [SUBJECT] is already framed, breathes
+naturally and keeps the mouth closed. No spoken word, silent lip motion or cut.
+[00:01–00:END] [SPEAKER] says exactly: "[VERBATIM LINE]." Keep the mouth fully
+visible; performance and one restrained gesture may happen under the line.
+[END–CLIP END] Close the mouth and hold [EXPLICIT END STATE] for the tail.
+
+Do not write a fractional first boundary such as 00:00.3 when the route compiles
+prompt timecodes to whole seconds. Do not label a 0.3-second waveform onset as a
+`[00:00–...]` dialogue block and assume the model will infer the fraction.
+
+AUDIO-BED CONSTRUCTION
+1. Place the first waveform sample at exactly LIP_LEAD.
+2. Place each later line at prior line end + [MEASURED INTER-LINE GAP].
+3. Set requested duration = ceil(LIP_LEAD + all speech + gaps + TAIL).
+4. Save the offsets used to build this exact audio bed before submission.
+
+RETURNED-TAKE OFFSET LEDGER
+For every completed take retain:
+TAKE_ID | MODEL | ROUTE | PROMPT HASH | AUDIO HASH | REQUESTED OFFSETS |
+ACTUAL STORED OFFSETS | TASK ID | RESULT HASH | MOUTH/AUDIO LAG | VERDICT.
+
+The editor must read ACTUAL STORED OFFSETS for that take. Never reconstruct them
+from the current global default. A legacy clip made with a 0.3-second onset keeps
+0.3 seconds; a new 1.0-second calibration take keeps 1.0 second.
+
+MEASURED GATE
+- Transcribe the result and verify the exact line.
+- Compare first audible phoneme with first matching mouth movement.
+- Record signed lag and inspect onset, closures and visible plosives.
+- If lag is a stable constant, test one whole-frame correction on a derivative
+  and remeasure. If lag changes inside the line, regenerate; do not hide it with
+  one global shift.
+- Promote the 1.0-second lead only after a matched rerender beats the prior
+  take. Recalibrate after provider, model, duration or prompt-grammar changes.
+
+FAIL CLOSED
+Reject a take with clipped or invented words, speech during the pre-roll,
+visible mouth motion before the waveform, changing speaker, hidden mouth,
+unrecorded offset substitution or an edit that silently overwrites a legacy
+take's timing.
+```
+
+**Why it works:** it aligns three clocks that often drift apart: the audio file,
+the integer dialogue window shown to Seedance and the NLE placement after
+generation. Persisting each take's real offset prevents a global timing fix from
+breaking already rendered clips, while the evidence boundary keeps one observed
+0.14-second lag from becoming an unsupported cross-provider rule.
+
+Adapted and rewritten from hongvietdoan-byte's October 7, 2026
+[Seedance 2.5 timing-repair commit](https://github.com/hongvietdoan-byte/Workflow-t-ng-h-a-quy-tr-nh-l-m-video-AI/commit/1ded677b750ebb7e99842f55fb70b5fd3645b2d5),
+the [whole-second lead and duration path](https://github.com/hongvietdoan-byte/Workflow-t-ng-h-a-quy-tr-nh-l-m-video-AI/blob/1ded677b750ebb7e99842f55fb70b5fd3645b2d5/core/voice.py),
+the [per-take offset persistence](https://github.com/hongvietdoan-byte/Workflow-t-ng-h-a-quy-tr-nh-l-m-video-AI/blob/1ded677b750ebb7e99842f55fb70b5fd3645b2d5/core/lipsync.py)
+and the [legacy/new-offset regression](https://github.com/hongvietdoan-byte/Workflow-t-ng-h-a-quy-tr-nh-l-m-video-AI/blob/1ded677b750ebb7e99842f55fb70b5fd3645b2d5/tests/test_lipsync.py).
+
+
 ### Performance-overlapped dialogue pacing without dead-air holds
 
 **Verified model:** Seedance 2.5, exact Higgsfield model ID
@@ -55739,6 +55824,7 @@ and the follow-up
 
 ---
 ## Sources
+- [hongvietdoan-byte / AI-video workflow — October 7, 2026 Seedance 2.5 fractional-onset failure: 0.3-second audio serialized into an integer zero-second dialogue window, measured 0.14-second mouth delay, one-second calibration lead, per-take offset persistence and legacy-timing regression](https://github.com/hongvietdoan-byte/Workflow-t-ng-h-a-quy-tr-nh-l-m-video-AI/commit/1ded677b750ebb7e99842f55fb70b5fd3645b2d5) ([whole-second lead and duration path](https://github.com/hongvietdoan-byte/Workflow-t-ng-h-a-quy-tr-nh-l-m-video-AI/blob/1ded677b750ebb7e99842f55fb70b5fd3645b2d5/core/voice.py), [offset persistence](https://github.com/hongvietdoan-byte/Workflow-t-ng-h-a-quy-tr-nh-l-m-video-AI/blob/1ded677b750ebb7e99842f55fb70b5fd3645b2d5/core/lipsync.py), [regression tests](https://github.com/hongvietdoan-byte/Workflow-t-ng-h-a-quy-tr-nh-l-m-video-AI/blob/1ded677b750ebb7e99842f55fb70b5fd3645b2d5/tests/test_lipsync.py))
 - [keys-exe / global-manual-ai — October 7, 2026 owner-confirmed Seedance 2.5 paired dialogue takes: exact Higgsfield `seedance_2_5` model, successful 21.06 s and 20.06 s native-audio outputs, one back-to-back turn plus simultaneous performance per 4–5 s shot, clean no-music read-back and one documented contraction deviation](https://github.com/keys-exe/global-manual-ai/commit/ce4a2f9f5d99756ffd955896552f59c70248aca6) ([landed results](https://github.com/keys-exe/global-manual-ai/commit/8cb97a7e0ae4819ab62a863809ffab1bd1b4e8c7), [two-speaker request](https://github.com/keys-exe/global-manual-ai/blob/ce4a2f9f5d99756ffd955896552f59c70248aca6/builds/facelove-walmart/takes/SC05-T1.call.json), [single-speaker request](https://github.com/keys-exe/global-manual-ai/blob/ce4a2f9f5d99756ffd955896552f59c70248aca6/builds/facelove-walmart/takes/SC05-T2.call.json))
 - [keys-exe / global-manual-ai — October 7, 2026 confirmed Seedance 2.5 silent-handle flashback: complete three-image/one-voice request, exact `bytedance/seedance-2-5` route, successful 882-credit task, off-screen speaker ownership, new-place reset and owner-confirmed exterior-window deviation](https://github.com/keys-exe/global-manual-ai/commit/02fcc89638861e4e079cf6109aa1ebbe457b8b37) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/02fcc89638861e4e079cf6109aa1ebbe457b8b37/builds/stryde-other-nana/film/SC08/SC08-T1.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/02fcc89638861e4e079cf6109aa1ebbe457b8b37/builds/stryde-other-nana/film/SC08/SC08-T1.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/02fcc89638861e4e079cf6109aa1ebbe457b8b37/builds/stryde-other-nana/film/SC08/SC08-T1.v1.kie.log), [submission record](https://github.com/keys-exe/global-manual-ai/commit/9dba0fb90b2dc3cc8fc5a3b194e68203541726f2))
 - [keys-exe / global-manual-ai — October 7, 2026 confirmed Seedance 2.5 dual-photo wearable reveal: complete nine-image/two-voice request, exact `bytedance/seedance-2-5` route, successful 756-credit task, geometry-versus-placement split, documented chair/stool deviation and explicit owner restoration of version 1](https://github.com/keys-exe/global-manual-ai/commit/9dba0fb90b2dc3cc8fc5a3b194e68203541726f2) ([original generation](https://github.com/keys-exe/global-manual-ai/commit/7dfc7836d200bfe7786c5ee66692f5e2d5f44266), [complete prompt](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/7dfc7836d200bfe7786c5ee66692f5e2d5f44266/builds/stryde-other-nana/film/SC07/SC07-T1.v1.kie.log))
