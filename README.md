@@ -488,6 +488,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Silent background conversation with foreground focus-isolation push-in](#472-silent-background-conversation-with-foreground-focus-isolation-push-in)
   - [Dual-photo wearable reveal with placement and continuity locks](#473-dual-photo-wearable-reveal-with-placement-and-continuity-locks)
   - [Silent-handle flashback with off-screen social exclusion](#474-silent-handle-flashback-with-off-screen-social-exclusion)
+  - [Passport-glam mismatch with irreversible makeup-state ledger](#475-passport-glam-mismatch-with-irreversible-makeup-state-ledger)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -31299,6 +31300,126 @@ Adapted and rewritten from keys-exe's October 7, 2026 production record:
 [successful task receipt](https://github.com/keys-exe/global-manual-ai/blob/02fcc89638861e4e079cf6109aa1ebbe457b8b37/builds/stryde-other-nana/film/SC08/SC08-T1.v1.kie.log)
 and the [owner-confirmation record](https://github.com/keys-exe/global-manual-ai/commit/02fcc89638861e4e079cf6109aa1ebbe457b8b37).
 
+
+### 475. Passport-glam mismatch with irreversible makeup-state ledger
+
+**Verified model:** Seedance 2.5 — the original creator explicitly names the
+model beside an attached 30-second result and publishes the complete prompt in
+the same X thread  
+**Evidence boundary:** the public thread provides creator confirmation, a
+playable result and the complete prompt, but no provider route, request receipt
+or task ID. The source prompt restores full glam makeup in Shot 10 after showing
+its removal and schedules the last endpoint at 30.4 seconds. This adaptation
+instead keeps the bare-face state through the ending and closes at exactly
+30.0 seconds; those two repairs are editorial and have not been separately
+rendered  
+**Use case:** long-form multi-cut comedy, identity continuity across inserts,
+small prop handling, visible makeover causality and persistent state after a
+transformation  
+**Mode:** text-to-video; one twelve-shot sequence  
+**Verified settings:** 30 seconds; 16:9; live-action cinematic realism; all
+motion at normal speed
+
+```text
+GLOBAL CONTRACT
+Create one 30-second widescreen live-action airport comedy with twelve clean
+cuts. Play the situation seriously. All motion is real-time: no slow motion,
+speed ramp, freeze frame or repeated action. Preserve the same two adult faces,
+clothes, border desk and terminal geography across every shot.
+
+CAST AND PROP LOCKS
+TRAVELER: adult woman in her twenties with long wavy black hair. Opening state
+GLAM = gold eye makeup, long false lashes, pink blush and glossy rose lips. She
+wears a dark-brown mesh long-sleeve layer over an opaque black top, a denim
+skirt, black ankle boots and a thin gold crossbody strap; a pink rolling case
+belongs to her.
+OFFICER: adult woman in her forties with tightly tied dark hair, a calm strict
+face, navy uniform jacket and striped neck scarf.
+BOOKLET: one fictional dark-blue travel booklet. Its photo page contains the
+same traveler bare-faced and tired-looking, but no legible name, number,
+barcode, seal or real government mark.
+LOCATION: one modern international-arrivals hall. Keep polished pale floor,
+beige columns, round ceiling lights, blue wayfinding panels and soft background
+traveler traffic in stable positions.
+
+IRREVERSIBLE MAKEUP LEDGER
+Shots 1-6 begin in GLAM. Shot 7 visibly removes the eye makeup, lashes, blush and
+lip gloss and ends in BARE. Shots 8-12 remain BARE. Never restore glam after the
+wipe, duplicate the traveler or alter her facial identity.
+
+TIMELINE
+[0.0-2.2 s] Static eye-level medium wide. The traveler reaches into her bag,
+takes out the blue booklet and places it once on the desk. Her suitcase remains
+beside the same leg.
+
+[2.2-4.6 s] Over-desk close insert. The officer picks up the booklet, rotates it
+once and opens to the photo page with her thumb. Hold the bare-face portrait in
+focus; hands and page stay anatomically clean.
+
+[4.6-6.8 s] Over the officer's shoulder. She points from the portrait toward
+the traveler's face, comparing the two. The traveler tightens her expression
+but does not speak.
+
+[6.8-9.6 s] Locked extreme close-up. The traveler pinches one false lash,
+removes it in one continuous pull and holds it between two fingertips. Do not
+grow a replacement lash.
+
+[9.6-12.8 s] Tight two-shot across the desk. Officer and traveler sustain one
+awkward stare; the traveler presses her lips together. Keep the booklet in the
+officer's hand.
+
+[12.8-14.2 s] Close-up with terminal lights as soft bokeh. The traveler takes
+out one white makeup wipe and unfolds it once.
+
+[14.2-18.8 s] Continue the same close-up. She wipes both eyes, cheeks and lips,
+then lowers the cloth. End unmistakably BARE: no eye shimmer, false lashes,
+blush or gloss. Her hair, features and clothing do not change.
+
+[18.8-20.5 s] Medium close-up of the officer. She checks the booklet, looks back
+at the traveler and gives one small approving smile.
+
+[20.5-22.0 s] Desk insert. The officer presses one fictional red approval stamp
+onto a blank area of the open page and lifts it. The booklet does not move or
+multiply; show no readable personal data.
+
+[22.0-24.8 s] Return to the opening axis. The officer slides the booklet across
+the desk. Still BARE, the traveler picks it up with both hands and gives the
+officer a dry look.
+
+[24.8-27.1 s] Rear eye-level tracking shot. The traveler walks into the terminal
+pulling the pink suitcase; background travelers cross without colliding or
+blocking her for more than a beat.
+
+[27.1-30.0 s] Close view as she looks back over one shoulder, turns her face
+toward camera and settles into a restrained annoyed pout. Hold the BARE state
+and stable identity through the final frame.
+
+CAMERA, LOOK AND SOUND
+Use soft natural terminal light, shallow depth of field and a clean restrained
+commercial grade. Static inserts must remain static; only Shot 11 tracks. Keep
+background motion subtle enough that the face and booklet stay readable.
+Natural airport room tone, suitcase wheels, paper handling, wipe rustle and one
+rubber-stamp thump only. No dialogue, music, captions, logos or readable signage.
+
+FAILURE GATE
+Reject any take with a different face, restored glam after Shot 7, a second
+traveler, duplicate booklet or suitcase, real passport data, missing lash pull,
+instantaneous off-camera makeover, extra fingers, fused hands, floating wipe,
+unmotivated camera move, slow motion, shot replay, location drift, subtitle,
+watermark or an endpoint beyond 30.0 seconds.
+```
+
+**Why it works:** the source already separates global anchors from a timed
+twelve-shot plan, which gives a long single generation a stable cast, place and
+dramatic arc. The added state ledger converts makeup removal into a one-way
+event, so later shots cannot silently revert to the opening look. Exact shot
+boundaries, prop custody and single-action inserts reduce ambiguity without
+overloading any one beat.
+
+Adapted and rewritten from Elsa Ai's October 6, 2026 original X thread:
+[creator-confirmed Seedance 2.5 result](https://x.com/ElsaSofia__AI/status/2107290801017704458)
+and [complete prompt post](https://x.com/ElsaSofia__AI/status/2107290806747038029).
+
 ## Reusable templates
 
 
@@ -55824,6 +55945,7 @@ and the follow-up
 
 ---
 ## Sources
+- [Elsa Ai — October 6, 2026 creator-confirmed Seedance 2.5 airport-immigration comedy: attached 30-second result plus complete twelve-shot prompt with global cast/location anchors, real-time motion, makeover beats and passport-prop inserts](https://x.com/ElsaSofia__AI/status/2107290801017704458) ([complete prompt](https://x.com/ElsaSofia__AI/status/2107290806747038029))
 - [hongvietdoan-byte / AI-video workflow — October 7, 2026 Seedance 2.5 fractional-onset failure: 0.3-second audio serialized into an integer zero-second dialogue window, measured 0.14-second mouth delay, one-second calibration lead, per-take offset persistence and legacy-timing regression](https://github.com/hongvietdoan-byte/Workflow-t-ng-h-a-quy-tr-nh-l-m-video-AI/commit/1ded677b750ebb7e99842f55fb70b5fd3645b2d5) ([whole-second lead and duration path](https://github.com/hongvietdoan-byte/Workflow-t-ng-h-a-quy-tr-nh-l-m-video-AI/blob/1ded677b750ebb7e99842f55fb70b5fd3645b2d5/core/voice.py), [offset persistence](https://github.com/hongvietdoan-byte/Workflow-t-ng-h-a-quy-tr-nh-l-m-video-AI/blob/1ded677b750ebb7e99842f55fb70b5fd3645b2d5/core/lipsync.py), [regression tests](https://github.com/hongvietdoan-byte/Workflow-t-ng-h-a-quy-tr-nh-l-m-video-AI/blob/1ded677b750ebb7e99842f55fb70b5fd3645b2d5/tests/test_lipsync.py))
 - [keys-exe / global-manual-ai — October 7, 2026 owner-confirmed Seedance 2.5 paired dialogue takes: exact Higgsfield `seedance_2_5` model, successful 21.06 s and 20.06 s native-audio outputs, one back-to-back turn plus simultaneous performance per 4–5 s shot, clean no-music read-back and one documented contraction deviation](https://github.com/keys-exe/global-manual-ai/commit/ce4a2f9f5d99756ffd955896552f59c70248aca6) ([landed results](https://github.com/keys-exe/global-manual-ai/commit/8cb97a7e0ae4819ab62a863809ffab1bd1b4e8c7), [two-speaker request](https://github.com/keys-exe/global-manual-ai/blob/ce4a2f9f5d99756ffd955896552f59c70248aca6/builds/facelove-walmart/takes/SC05-T1.call.json), [single-speaker request](https://github.com/keys-exe/global-manual-ai/blob/ce4a2f9f5d99756ffd955896552f59c70248aca6/builds/facelove-walmart/takes/SC05-T2.call.json))
 - [keys-exe / global-manual-ai — October 7, 2026 confirmed Seedance 2.5 silent-handle flashback: complete three-image/one-voice request, exact `bytedance/seedance-2-5` route, successful 882-credit task, off-screen speaker ownership, new-place reset and owner-confirmed exterior-window deviation](https://github.com/keys-exe/global-manual-ai/commit/02fcc89638861e4e079cf6109aa1ebbe457b8b37) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/02fcc89638861e4e079cf6109aa1ebbe457b8b37/builds/stryde-other-nana/film/SC08/SC08-T1.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/02fcc89638861e4e079cf6109aa1ebbe457b8b37/builds/stryde-other-nana/film/SC08/SC08-T1.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/02fcc89638861e4e079cf6109aa1ebbe457b8b37/builds/stryde-other-nana/film/SC08/SC08-T1.v1.kie.log), [submission record](https://github.com/keys-exe/global-manual-ai/commit/9dba0fb90b2dc3cc8fc5a3b194e68203541726f2))
