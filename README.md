@@ -32477,6 +32477,84 @@ and the [exact prompt and request implementation](https://github.com/bshx2024/qw
 ## Reusable templates
 
 
+### Endpoint-conformed first/last-frame transition with measured retiming
+
+**Verified model:** Seedance 2.5 — the creator committed two new original
+generations, their exact opening/terminal stills and two published delivery
+edits for a production website hero  
+**Evidence boundary:** the public production record identifies the model,
+inputs, raw outputs and edit operations, but does not expose the original
+prompt text, provider route or task receipt. Count this as a verified
+post-generation control template, not as evidence for any one provider's
+prompt syntax  
+**Use case:** a short web, title or interface transition must retain continuous
+motion yet arrive on an already approved still without a visible jump  
+**Mode:** first/last-frame generation, followed by phase-specific retiming and
+an endpoint-conform edit
+
+```text
+GENERATION CONTRACT
+MODEL = Seedance 2.5
+@Image1 = exact opening frame. It owns composition, subject identity,
+background geometry, light direction and the first motion state.
+@Image2 = exact approved terminal frame. It owns final composition, subject
+pose, background geometry, color and the state inherited by the next clip.
+
+Generate one continuous [3-5]-second shot from @Image1 to @Image2.
+The subject follows one readable route:
+[OPENING STATE] -> [PRIMARY MOTION] -> [TRANSITION EVENT] -> [TERMINAL STATE].
+The camera follows [ONE CONTINUOUS PATH] and crosses [SURFACE / OCCLUDER /
+DEPTH PLANE] only once. Preserve subject identity, route direction, environment
+and light. No cut, duplicate subject, reverse travel, redesigned endpoint,
+extra hold, title, logo or generated text.
+
+RAW-OUTPUT ARCHIVE
+Keep the untouched model output beside both endpoint stills. Record duration,
+frame rate and the first frame where intended motion becomes visible.
+
+HEAD TRIM
+Remove only the empty or motionless lead-in before the first valid action
+frame. Do not shift the approved action order.
+
+PHASE RETIMING
+Divide the accepted action into observable phases and retime each separately:
+- [PHASE A / ENTRY]: [RATE OR FRAME-SKIP RULE]
+- [PHASE B / MAIN TRAVEL]: [RATE OR FRAME-SKIP RULE]
+- [PHASE C / CONTACT OR SURFACE CROSSING]: [RATE OR FRAME-SKIP RULE]
+- [PHASE D / TERMINAL SETTLE]: [RATE OR FRAME-SKIP RULE]
+Preserve the original order and screen direction. Never accelerate the contact
+phase so far that the physical event disappears.
+
+EIGHT-FRAME ENDPOINT CONFORM
+Across the final eight delivery frames, crossfade from the generated tail into
+the approved @Image2. Frame 8 must be @Image2 with no residual generated
+geometry. Inspect the blend for double contours, brightness pumping, scale
+change and background drift. If those appear, align/crop the generated tail
+before blending or shorten the blend; do not disguise a large mismatch with a
+long dissolve.
+
+HANDOFF AND FALLBACK
+Start the next generated clip from the same approved @Image2. For autoplay
+failure or reduced-motion delivery, show @Image2 as the fallback still. Verify
+the published encode, not only the raw generation: exact duration, endpoint,
+loop/continuation seam and mobile crop.
+```
+
+**Why it works:** Seedance supplies the difficult continuous motion while the
+approved still, rather than an unstable generated tail, owns the editorial
+handoff. Separating head trim, per-phase retiming and a short measured endpoint
+blend makes every correction auditable and prevents a long dissolve from
+concealing a failed trajectory.
+
+Adapted and rewritten from Brand-designer-pl's October 8, 2026
+[Seedance 2.5 production commit](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/commit/1bfc958b3393ea7ea373a96e9aa793f099d17cab),
+the [committed production record](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/AGENTS.md),
+the original [arrival](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/zrodla/wlot-3s-seedance-oryginal.mp4)
+and [dive-transition](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/zrodla/przejscie-3s-seedance-oryginal.mp4)
+generations, and their published [arrival](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/assets/zimorodek-wlot.mp4)
+and [dive](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/assets/zimorodek-nurek.mp4)
+edits.
+
 ### Character-only re-roll for reference-induced style collapse
 
 **Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`,
@@ -57384,6 +57462,7 @@ requests, their successful provider receipts and the later
 
 ---
 ## Sources
+- [Brand-designer-pl / Zimorodek — October 8, 2026 creator-documented Seedance 2.5 endpoint-conform workflow: two committed original generations, exact first/last still ownership, empty-head trimming, phase-specific frame skipping, eight-frame terminal crossfades, two published delivery edits and autoplay fallback verification](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/commit/1bfc958b3393ea7ea373a96e9aa793f099d17cab) ([production record](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/AGENTS.md), [raw arrival](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/zrodla/wlot-3s-seedance-oryginal.mp4), [raw dive transition](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/zrodla/przejscie-3s-seedance-oryginal.mp4), [published arrival](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/assets/zimorodek-wlot.mp4), [published dive](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/assets/zimorodek-nurek.mp4))
 - [bshx2024 / qwenimage-editor — October 8, 2026 Volcano Ark Seedance 2.5 vintage-barn character demo: exact compiled prompt, `doubao-seedance-2-5-260628` route, local reference conversion and two committed MP4 outputs](https://github.com/bshx2024/qwenimage-editor/commit/6b6b53bbaa74fd48e8b0c07539bfae0ee6d3e0ae) ([first real-demo commit](https://github.com/bshx2024/qwenimage-editor/commit/81a519ddbe08c59e92ad9febd1b6d5731aa93f15), [prompt implementation](https://github.com/bshx2024/qwenimage-editor/blob/6b6b53bbaa74fd48e8b0c07539bfae0ee6d3e0ae/src/app/%5Blocale%5D/blog/%5Bslug%5D/RumpelstiltskinBlogPostComponent.tsx))
 - [Alina (@Alina_with_Ai) — October 8, 2026 creator-published Seedance 2.5 corridor telekinesis sequence: complete 30-second prompt, 2.3:1 framing, six timed action blocks, gesture-owned impacts and stable dust-settle endpoint](https://x.com/Alina_with_Ai/status/2108018045910429795) ([complete-prompt transcription and directing breakdown](https://tau-home.com/en/post/seedance-2-5-cinematic-action-video-timecode-prompting/))
 - [Zoya (@Zoyavelle) — October 8, 2026 creator-confirmed Seedance 2.5 ceiling-fan fashion transition: complete prompt, fixed overhead camera, foreground motion-blur occlusion, ordered wardrobe states and pose/identity/environment invariants](https://x.com/Zoyavelle/status/2108060187840180394) ([complete-prompt transcription and camera breakdown](https://tau-home.com/en/post/seedance-2-5-topdown-ceiling-fan-cinematic-outfit-transition-prompt/))
