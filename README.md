@@ -493,6 +493,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Dual-ended complexion stick with an irreversible shade-conversion ledger](#477-dual-ended-complexion-stick-with-an-irreversible-shade-conversion-ledger)
   - [Landmark-fixed floor kneel with speaker-owned voice references](#478-landmark-fixed-floor-kneel-with-speaker-owned-voice-references)
   - [Hand-held stair descent with free-hand wall exclusion](#479-hand-held-stair-descent-with-free-hand-wall-exclusion)
+  - [Locked-phone group-chat UGC hook with immediate dialogue](#480-locked-phone-group-chat-ugc-hook-with-immediate-dialogue)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -31818,8 +31819,150 @@ the [complete submitted prompt](https://github.com/keys-exe/global-manual-ai/blo
 and [successful provider receipt](https://github.com/keys-exe/global-manual-ai/blob/a5c1c0a402993eaa945913cb98202d25bcefed4c/builds/stryde-other-nana/film/SC17/SC17-T1.v1.kie.log).
 
 
+### 480. Locked-phone group-chat UGC hook with immediate dialogue
+
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`,
+`omni_reference`) — the creator records the exact model, start image, 8-second
+9:16 draft, job `80b671df-444c-4052-9a7c-28fb74295a5b`, credit cost and
+committed generated MP4, then explicitly selects it over a matched Gemini run  
+**Evidence boundary:** the verified draft began speaking at 0.0 seconds and was
+steadier and more natural than the comparison, but it still showed a brief
+camera blip near 6.5 seconds and slight facial slimming. The stronger failure
+gate below is an editorial repair and has not been separately rerendered  
+**Use case:** authentic vertical UGC hook, native dialogue, static phone camera,
+underplayed product curiosity  
+**Mode:** one start image in omni-reference mode  
+**Verified settings:** 8 seconds; 9:16; 480p draft; generated dialogue
+
+```text
+Create one continuous eight-second vertical front-camera iPhone clip in a real
+home kitchen. @Image1 owns only the adult host's face, dark shoulder-length
+waves, gold hoops, grey sweatshirt, body proportions, kitchen layout and
+starting crop. Preserve that identity and room throughout.
+
+CAMERA CONTRACT
+The phone is propped on the counter. Lock its position, lens, horizon, crop and
+focus for the full clip: no zoom, push-in, pan, sway, drift or reframing. Do not
+simulate a hand-held camera. Keep the host at the same apparent scale from the
+first frame through the last.
+
+PERFORMANCE AND DIALOGUE
+The host is already wiping the counter when the clip begins. She glances up at
+the lens and says exactly once, beginning immediately:
+"My group chat will NOT stop talking about GLP1s. And I just figured it was,
+like... crazy expensive."
+
+Stress only “NOT.” Keep the delivery warm, candid and conversational, as if she
+has just remembered something worth mentioning—not polished, salesy or
+presenter-like. Body movement stays small; allow natural mouth motion, one soft
+brow reaction and direct eye contact. Finish on a quiet doubtful beat without a
+cut or added line.
+
+LOOK AND SOUND
+Ordinary consumer-phone exposure, honest skin texture, mild room noise and
+close native speech. No beauty filter, score, subtitle, caption, logo or product
+overlay.
+
+FAILURE GATE
+Reject delayed speech, missing or changed words, repeated dialogue, camera sway,
+the 6.5-second framing blip, face slimming or identity drift, exaggerated smile,
+commercial-presenter gestures, jump cut, invented person, text or watermark.
+```
+
+**Why it works:** the prompt separates the phone's physical state from the
+performer's micro-acting. Repeating the locked-camera rule across position,
+lens, horizon, crop, focus and scale makes drift observable, while immediate
+dialogue and one restrained brow beat preserve the creator's winning
+natural-delivery characteristics. The failure gate also records the two defects
+seen in the verified take instead of presenting the draft as flawless.
+
+Adapted and rewritten from David0524's October 8, 2026
+[Seedance-versus-Gemini A/B production commit](https://github.com/David0524/MyFastRX/commit/6608858628ce35b2d8b35831b728cfeb146ca78f),
+the [complete locked prompt and model decision](https://github.com/David0524/MyFastRX/blob/be8c4410823f7e5d672c4ff1eb6c510e14733f6e/ads/glp1-glass/STORYBOARD_UGC.md),
+[job and review ledger](https://github.com/David0524/MyFastRX/blob/6608858628ce35b2d8b35831b728cfeb146ca78f/ads/glp1-glass/footage/gen/README.md)
+and [committed Seedance 2.5 draft](https://github.com/David0524/MyFastRX/blob/6608858628ce35b2d8b35831b728cfeb146ca78f/ads/glp1-glass/footage/gen/ab_seedance25_draft480p.mp4).
+
 ## Reusable templates
 
+
+### Typed keyframe images plus audio-only speech-video reference
+
+**Verified model:** MuAPI Seedance 2.5 (`seedance-2.5-omni-reference`) — the
+creator publishes the complete tagged prompt builder and reports successful
+direct-provider runs on three different cartoon shots: continuous motion, the
+injected middle pose and speech audio all landed  
+**Evidence boundary:** the repository does not publish the three request IDs or
+generated MP4s. Treat this as a creator-verified, provider-specific structure,
+not proof that every Seedance gateway accepts the same typed arrays or tags  
+**Use case:** combine multiple ordered pose keyframes with an external speech
+track while preventing a video reference from leaking visual identity or
+framing  
+**Mode:** Seedance 2.5 omni-reference with `images_list`, `videos_list` and
+prompt-side `@ImageN` / `@VideoN` role tags
+
+```text
+INPUT CONTRACT
+MODEL = Seedance 2.5 omni-reference
+@Image1 ... @ImageN = ordered still keyframes of one shot.
+@Video1 = a neutral speech-reference video carrying the approved audio and
+timing. It owns no appearance, pose, framing, background or camera motion.
+ASPECT = [e.g. 3:4]
+DURATION = [measured speech duration plus a short closed-mouth tail]
+GENERATE_AUDIO = true
+
+REFERENCE LEDGER
+@Image1 at 0% = [OPENING POSE AND COMPOSITION].
+@Image2 at [PERCENT]% = [NEXT POSE].
+...
+@ImageK at [PERCENT]% = [INJECTED TARGET POSE].
+...
+@ImageN at 100% = [TERMINAL POSE AND COMPOSITION].
+
+Create one continuous fully animated [MEDIUM / STYLE] performance of
+[CHARACTER DESIGN LOCK]. Preserve the same identity, orientation, costume,
+proportions and background across every keyframe.
+
+@Video1 is the speech and lip-sync source only. The character says exactly,
+"[VERBATIM LINE]" once. Align mouth motion to the words at the exact instants
+they occur in @Video1's audio. After the final word, close the mouth cleanly and
+hold it closed. Take no visual property from @Video1.
+
+Take all appearance, pose, framing and camera information from @Image1 through
+@ImageN. Use them in numerical order at their declared timeline percentages.
+Move continuously and naturally between them; do not freeze on a keyframe,
+duplicate a pose, reorder the images or snap into @ImageK.
+
+CAMERA AND STYLE LOCK
+[FULL-BODY / CLOSE-UP] [SHOT SIZE] in a [ASPECT] frame. [BODY VISIBILITY AND
+MARGIN RULE]. Locked camera and one unchanged background. Preserve [LINE,
+PALETTE, MATERIAL, SHADING AND RENDERING RULES].
+
+FAILURE GATE
+Reject missing or repeated words, doubled syllables, lip-sync drift, visible
+inheritance from @Video1, keyframe reordering, skipped injected pose, held
+freeze, camera push, crop drift, identity change, background change or extra
+audio.
+
+SERIALIZATION CHECK BEFORE SPEND
+- Send stills only in images_list, in @Image1...@ImageN order.
+- Send the speech video only in videos_list as @Video1.
+- Verify every prompt tag resolves to exactly one serialized reference.
+- Record provider route, request ID, result URL and review verdict.
+- If one gateway blocks speech video plus multiple stills, test the same
+  authorized inputs on a direct Seedance 2.5 route before changing the prompt;
+  do not generalize one wrapper's moderation result to the base model.
+```
+
+**Why it works:** typed arrays establish modality, but prompt tags establish
+ownership. Giving the speech video only timing and audio prevents its blank or
+irrelevant visuals from competing with the pose images; percentage-addressed
+stills provide a deterministic motion skeleton. The preflight check catches the
+otherwise silent failure in which array order and prompt labels disagree.
+
+Adapted and rewritten from Wilmot Li's October 8, 2026
+[direct MuAPI Seedance 2.5 evaluation commit](https://github.com/wilmotli-maker/2d-animation-pipeline/commit/d7f419eb203fee38a5756704057774a8ee4d2df5),
+the [complete tagged prompt builder](https://github.com/wilmotli-maker/2d-animation-pipeline/blob/d7f419eb203fee38a5756704057774a8ee4d2df5/scripts/eval/video-editing/keyframe-edit-eval/config.mjs)
+and the [three-shot verification note](https://github.com/wilmotli-maker/2d-animation-pipeline/blob/d7f419eb203fee38a5756704057774a8ee4d2df5/scripts/eval/video-editing/keyframe-edit-eval/README.md).
 
 ### Whole-second dialogue onset with recorded-offset edit lock
 
@@ -58040,6 +58183,10 @@ Community examples and techniques referenced in this README:
 
 - [keys-exe / global-manual-ai — October 5, 2026 Kie AI Seedance 2.5 five-person dining-room take: top-down occupancy card, exact seven-chair topology, complete prompt, sixth-generation single-variable chair repair, successful task receipt and observed restored chair](https://github.com/keys-exe/global-manual-ai/commit/51eda7e1f16b5d30128d45add45ed99125424c24) ([submission and revised prompt](https://github.com/keys-exe/global-manual-ai/commit/e63ae2b87c87f02d473ef4cbd8f6c2b3d0c82e9b), [exact request](https://github.com/keys-exe/global-manual-ai/blob/51eda7e1f16b5d30128d45add45ed99125424c24/builds/stryde-the-impression/film/SC01/SC01-T2.call.json), [successful receipt](https://github.com/keys-exe/global-manual-ai/blob/51eda7e1f16b5d30128d45add45ed99125424c24/builds/stryde-the-impression/film/SC01/SC01-T2.v6.kie.log))
 
+
+- [David0524 / MyFastRX — October 8, 2026 Higgsfield Seedance 2.5 static-phone UGC hook: complete locked prompt, exact start image, 8-second 9:16 draft, job ID, cost, committed MP4 and matched-model A/B verdict](https://github.com/David0524/MyFastRX/commit/6608858628ce35b2d8b35831b728cfeb146ca78f) ([locked prompt and chosen model](https://github.com/David0524/MyFastRX/blob/be8c4410823f7e5d672c4ff1eb6c510e14733f6e/ads/glp1-glass/STORYBOARD_UGC.md), [result ledger](https://github.com/David0524/MyFastRX/blob/6608858628ce35b2d8b35831b728cfeb146ca78f/ads/glp1-glass/footage/gen/README.md), [generated MP4](https://github.com/David0524/MyFastRX/blob/6608858628ce35b2d8b35831b728cfeb146ca78f/ads/glp1-glass/footage/gen/ab_seedance25_draft480p.mp4))
+
+- [Wilmot Li / 2D Animation Pipeline — October 8, 2026 direct MuAPI Seedance 2.5 multi-keyframe plus speech-video evaluation: prompt-side typed-reference roles, percentage-addressed pose images, audio-only video ownership and three creator-confirmed successful shots](https://github.com/wilmotli-maker/2d-animation-pipeline/commit/d7f419eb203fee38a5756704057774a8ee4d2df5) ([complete tagged prompt builder](https://github.com/wilmotli-maker/2d-animation-pipeline/blob/d7f419eb203fee38a5756704057774a8ee4d2df5/scripts/eval/video-editing/keyframe-edit-eval/config.mjs), [verification note](https://github.com/wilmotli-maker/2d-animation-pipeline/blob/d7f419eb203fee38a5756704057774a8ee4d2df5/scripts/eval/video-editing/keyframe-edit-eval/README.md))
 
 Official model references:
 
