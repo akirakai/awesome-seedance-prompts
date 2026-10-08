@@ -494,6 +494,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Landmark-fixed floor kneel with speaker-owned voice references](#478-landmark-fixed-floor-kneel-with-speaker-owned-voice-references)
   - [Hand-held stair descent with free-hand wall exclusion](#479-hand-held-stair-descent-with-free-hand-wall-exclusion)
   - [Locked-phone group-chat UGC hook with immediate dialogue](#480-locked-phone-group-chat-ugc-hook-with-immediate-dialogue)
+  - [Composure-versus-chaos prop escalation with recovery windows](#481-composure-versus-chaos-prop-escalation-with-recovery-windows)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -31882,6 +31883,123 @@ the [complete locked prompt and model decision](https://github.com/David0524/MyF
 [job and review ledger](https://github.com/David0524/MyFastRX/blob/6608858628ce35b2d8b35831b728cfeb146ca78f/ads/glp1-glass/footage/gen/README.md)
 and [committed Seedance 2.5 draft](https://github.com/David0524/MyFastRX/blob/6608858628ce35b2d8b35831b728cfeb146ca78f/ads/glp1-glass/footage/gen/ab_seedance25_draft480p.mp4).
 
+### 481. Composure-versus-chaos prop escalation with recovery windows
+
+**Verified model:** Seedance 2.5 — the original creator published the attached
+result and a complete 20-second prompt explicitly labeled Seedance 2.5  
+**Evidence boundary:** the source demonstrates one creator-confirmed result; it
+does not publish the provider route, job receipt or repeated-take statistics.
+The generic cast and prop substitutions below are editorial adaptations and
+have not been separately rerendered  
+**Use case:** fast action comedy, contrasting performance lanes, escalating prop
+gags, anime fight choreography  
+**Mode:** image/reference-to-video with one identity sheet per adult performer  
+**Suggested settings:** 20 seconds; 16:9; cel-shaded 3D anime; generated score
+and effects
+
+```text
+Create one 20-second cinematic cel-shaded 3D-anime action comedy on a narrow,
+sunlit European side street. Keep the same two adult performers, street axis,
+parked car, shop window and lamp post throughout.
+
+CAST AND PERFORMANCE LANES
+@Image1 = the athletic fighter's identity, white training top, dark loose
+trousers and proportions only. He owns every attack. He moves urgently, commits
+fully, reacts clearly to each reversal and gets one short recovery window before
+the next attempt.
+@Image2 = the awkward clerk's identity, brown textured jacket, red tie and
+proportions only. He never attacks deliberately, never looks frightened and
+continues ordinary errands while accidental defenses emerge from his pockets.
+Do not blend faces, clothes, silhouettes or performance lanes.
+
+SPATIAL AND PROP LEDGER
+- marbles begin in the clerk's left pocket, scatter once and remain on the road;
+- one loose traffic cone begins beside the parked car and is used only by the
+  fighter;
+- one paper party horn begins in the clerk's inner pocket and is used once;
+- one folded newspaper bundle begins on the stand and is used only by the
+  fighter;
+- one padded grocery parcel begins under the clerk's arm and absorbs one strike;
+- one sprung clothes peg begins inside the jacket collar and snaps once;
+- one deflated foam mallet begins in the clerk's coat, inflates once and remains
+  inflated through the final overhead frame;
+- one small plush toy begins in his other pocket and ends on the fighter's chest.
+No duplicate prop, reset, teleport or object transfer between owners.
+
+TIMELINE
+[0.0–2.0 s | low lateral tracking]
+The fighter charges behind a round bin lid. Without looking back, the clerk
+drops the marbles. Both feet hit the rolling field; the fighter slides sideways
+and bumps shoulder-first into the parked car. Hold a readable half-beat on the
+impact and his recovery.
+
+[2.0–4.5 s | medium whip-pan]
+The fighter grabs the traffic cone and launches a rapid three-strike sequence.
+During the second strike, the clerk calmly unfolds the paper horn and blows it
+beside the fighter's ear. The final two strikes miss their paths. End with the
+fighter frozen wide-eyed and the clerk already putting the horn away.
+
+[4.5–7.0 s | wide street geography]
+The fighter swings around the fixed lamp post into one flying kick. At the exact
+commit point, the clerk steps ten centimetres toward the shop window to inspect
+the display. The kick passes behind him without contact. Preserve the same lamp,
+window and screen direction.
+
+[7.0–9.5 s | front three-quarter]
+The fighter charges with the folded newspaper bundle and throws a fast body
+combination. The clerk lifts the padded grocery parcel to check its label; every
+strike lands on the parcel instead. It compresses but never tears. Give the
+fighter one stunned reaction before the next beat.
+
+[9.5–11.5 s | tight hands and faces]
+The fighter seizes the clerk's lapels. The hidden clothes peg snaps onto two
+fingers. He releases immediately and shakes the hand in pain; the clerk merely
+straightens his tie. No injury, blood or broken anatomy.
+
+[11.5–15.5 s | measured push-in]
+The fighter commits to one final straight charge. The clerk extracts the
+deflated foam mallet and inflates it slowly. The attacker decelerates from sprint
+to puzzled stop as the mallet reaches full size. One weightless swing lands
+squarely; the fighter lifts briefly and falls flat on his back. Make the absurd
+soft impact physically readable, not violent.
+
+[15.5–18.5 s | close reaction]
+Hold on the fighter staring upward, shocked at losing to foam. The clerk kneels,
+places the plush toy gently on his chest, stands and adjusts his tie.
+
+[18.5–20.0 s | high wide payoff]
+The clerk walks away. The fighter remains supine with the plush toy centred on
+his chest; the marbles, inflated mallet and parked car preserve their final
+positions. End on a stable overhead tableau.
+
+CAMERA, LOOK AND SOUND
+Use a new motivated angle only at the declared beat boundaries; never cut during
+contact or erase a recovery window. Bright golden midday, hard-edged shadows,
+bold but controlled colour blocks, clean black contours, subtle film grain and
+readable street depth. The score alternates one action phrase with one comic
+answer per completed gag. Give every prop one distinct sound, culminating in a
+soft rubbery mallet thump. No dialogue, subtitle, caption, logo or watermark.
+
+FAILURE GATE
+Reject merged identities, swapped roles, nonstop attacking without reactions,
+early prop appearances, duplicated or vanished props, repeated impacts, contact
+hidden by a cut, serious injury, impossible anatomy, background reset, camera-
+axis reversal inside a beat or an unstable final tableau.
+```
+
+**Why it works:** the two performers follow opposite, non-overlapping behavior
+rules while every gag has a source prop, one causal action, one visible
+consequence and a recovery endpoint. The recovery windows keep the 20-second
+sequence readable; the terminal prop ledger prevents each cut from silently
+resetting the street.
+
+Adapted and rewritten from TechieSA's October 7, 2026
+[original Seedance 2.5 post, complete prompt and attached result](https://x.com/TechieBySA/status/2107794850187784450),
+with the prompt and direct source preserved in Seeora's October 8, 2026
+[versioned gallery commit](https://github.com/seeora/awesome-seedance-2-5-prompts/commit/88a87e6b6fff8861fc598cb74b1c1c5e099ac7da).
+
+
+
 ## Reusable templates
 
 
@@ -56792,6 +56910,7 @@ requests, their successful provider receipts and the later
 
 ---
 ## Sources
+- [TechieSA — October 7, 2026 Seedance 2.5 two-performer street-fight comedy: complete 20-second prompt, attached result, opposite performance lanes, six escalating prop reversals, attacker recovery windows and a stable overhead payoff](https://x.com/TechieBySA/status/2107794850187784450) ([versioned prompt and direct-source record](https://github.com/seeora/awesome-seedance-2-5-prompts/commit/88a87e6b6fff8861fc598cb74b1c1c5e099ac7da))
 - [keys-exe / global-manual-ai — October 7, 2026 owner-confirmed Seedance 2.5 no-rail stair descent: complete seven-image silent prompt, exact `bytedance/seedance-2-5` request, successful 882-credit task, joined-hand continuity, fixed three-person landmarks, native stair Foley and documented wall-clearance/opening-scale deviations](https://github.com/keys-exe/global-manual-ai/commit/a5c1c0a402993eaa945913cb98202d25bcefed4c) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/a5c1c0a402993eaa945913cb98202d25bcefed4c/builds/stryde-other-nana/film/SC17/SC17-T1.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/a5c1c0a402993eaa945913cb98202d25bcefed4c/builds/stryde-other-nana/film/SC17/SC17-T1.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/a5c1c0a402993eaa945913cb98202d25bcefed4c/builds/stryde-other-nana/film/SC17/SC17-T1.v1.kie.log))
 - [keys-exe / global-manual-ai — October 7, 2026 owner-confirmed Seedance 2.5 landmark-fixed floor kneel: complete seven-image/two-voice prompt, exact `bytedance/seedance-2-5` request, successful 1,071-credit task, speaker-owned dialogue, three-person room geometry and documented chair-contact/opening-exposure deviations](https://github.com/keys-exe/global-manual-ai/commit/fc1221d381e4f94b89c8f76348b261c151459ccb) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/fc1221d381e4f94b89c8f76348b261c151459ccb/builds/stryde-other-nana/film/SC16/SC16-T1.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/fc1221d381e4f94b89c8f76348b261c151459ccb/builds/stryde-other-nana/film/SC16/SC16-T1.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/fc1221d381e4f94b89c8f76348b261c151459ccb/builds/stryde-other-nana/film/SC16/SC16-T1.v1.kie.log))
 - [keys-exe / global-manual-ai — October 7, 2026 owner-confirmed Seedance 2.5 multi-defect insert repair: four complete 4-second exact-model pickup requests, four successful 252-credit tasks, action-object correction, clock/plate disambiguation, bowl/bin content partition, one-phone geometry lock, measured splices and a final 26-second endpoint trim](https://github.com/keys-exe/global-manual-ai/commit/fec3f310e118740d70fa2534adea945996a42e63) ([generation record](https://github.com/keys-exe/global-manual-ai/commit/f0fdcd0014bcdea56230e0f9db3faa0bb9ea727b), [K1 request](https://github.com/keys-exe/global-manual-ai/blob/f0fdcd0014bcdea56230e0f9db3faa0bb9ea727b/builds/stryde-other-nana/film/SC13/SC13-T1-K1.call.json), [K2 request](https://github.com/keys-exe/global-manual-ai/blob/f0fdcd0014bcdea56230e0f9db3faa0bb9ea727b/builds/stryde-other-nana/film/SC13/SC13-T1-K2.call.json), [K3 request](https://github.com/keys-exe/global-manual-ai/blob/f0fdcd0014bcdea56230e0f9db3faa0bb9ea727b/builds/stryde-other-nana/film/SC13/SC13-T1-K3.call.json), [K4 request](https://github.com/keys-exe/global-manual-ai/blob/f0fdcd0014bcdea56230e0f9db3faa0bb9ea727b/builds/stryde-other-nana/film/SC13/SC13-T1-K4.call.json), [endpoint trim](https://github.com/keys-exe/global-manual-ai/commit/70593b61751dc225fcc16a8f2f8b4da5793bc911))
