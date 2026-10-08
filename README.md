@@ -31885,6 +31885,95 @@ and [committed Seedance 2.5 draft](https://github.com/David0524/MyFastRX/blob/66
 ## Reusable templates
 
 
+### Character-only re-roll for reference-induced style collapse
+
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`,
+`omni_reference`) — the creator produced two variants of each shot, kept a
+four-second forge re-roll made without the flat backdrop reference, assembled
+it with a seven-second boss shot and committed the finished ten-second 1080p
+film  
+**Evidence boundary:** the production note explicitly says the flat game
+backdrop pulled the forge render toward flat 2D and that removing it restored
+the intended 3D-anime treatment. Its shot table nevertheless still lists a
+`bg_v3_lastStep` asset for the second shot, so the verified finding is limited
+to the matched forge repair; it is not evidence that every environment image
+should be removed  
+**Use case:** a style-critical reference-to-video shot turns flatter, more
+graphic or more literal after an environment plate is attached  
+**Mode:** diagnose one shot with a reference-isolation A/B, then preserve the
+accepted dimensional style through the sequence and finish transitions in post
+
+```text
+TARGET
+Create a [DURATION]-second [ASPECT] [3D-ANIME / PHOTOREAL / OTHER
+DIMENSIONAL STYLE] shot. The subject performs [ONE CAUSAL ACTION] and ends in
+[EXACT TERMINAL STATE]. Use one slow, readable camera move.
+
+REFERENCE OWNERSHIP
+@Image1 = CHARACTER ONLY: face, body, costume, materials and signature object.
+It does not own background flatness, illustration medium, framing or camera.
+
+@Image2 = OPTIONAL ENVIRONMENT TEST PLATE: layout and landmark placement only.
+It must not transfer its 2D medium, painted contour, fixed perspective or flat
+lighting into the subject. Do not include it in the isolation re-roll.
+
+WORD-DEFINED ENVIRONMENT
+[PLACE], [TIME], [LIGHT SOURCE], [DEPTH LAYERS], [FOG / VOLUMETRIC LIGHT],
+[GROUND MATERIAL] and [DISTANT LANDMARKS]. Preserve real foreground-middle-
+background separation, volumetric depth, rim light and material response.
+
+ACTION AND CAMERA
+[OPENING STATE] -> [PHYSICAL CHANGE WITH CAUSE] -> [TERMINAL STATE].
+Camera begins [POSITION / LENS], moves [ONE PATH] at [SPEED] and ends on
+[COMPOSITION]. Do not introduce a second move or cut inside the shot.
+
+DIMENSIONAL STYLE LOCK
+Render [SUBJECT] as [TOON-SHADED 3D / PHOTOREAL] with [MATERIAL RULES],
+volumetric light, spatial fog, depth-separated particles and readable parallax.
+Do not flatten the subject into a poster, card, cel, painted cutout or copied
+backdrop style. No visible reference border or static plate.
+
+CONTROLLED A/B
+A = submit the approved character reference plus the environment test plate.
+B = change one variable only: remove the environment plate, keep the character
+reference, and describe the same place in words above.
+
+Judge both at matched timestamps for:
+- identity and costume fidelity;
+- foreground/midground/background separation;
+- material volume and rim-light response;
+- camera parallax and particle depth;
+- action and endpoint completion.
+
+Keep B only if dimensionality improves without unacceptable layout loss. If B
+loses geography, rebuild a cleaner depth-oriented environment reference rather
+than restoring a flat art plate unchanged.
+
+SEQUENCE HANDOFF
+For a two-shot transformation, finish Shot A on [OUTGOING ENERGY / PARTICLE /
+LIGHT VECTOR]. Begin Shot B with the same vector entering from the same screen
+side. Join accepted plates with a measured [FLASH / OCCLUSION / MATCH CUT] in
+post, then trim to the exact delivery duration. Keep music, dialogue and impact
+effects on the editorial timeline rather than asking a repaired visual plate to
+recreate the entire soundtrack.
+
+ARCHIVE
+Record both requests, ordered references, exact model route, costs, output
+files, comparison frames, selected keeper, seam duration and final encode.
+```
+
+**Why it works:** the A/B changes only the suspected style-contaminating
+reference. Character identity remains anchored while prose carries the
+environment, making it possible to distinguish a reference-medium leak from a
+general model-style failure. The repair stays shot-local, and the handoff is
+evaluated after both plates succeed instead of hiding a failed generation with
+an editorial flash.
+
+Adapted and rewritten from dpeh001-x / Mojiworld's October 8, 2026
+[Seedance 2.5 production commit](https://github.com/dpeh001-x/Mojiworld/commit/d7c0c1d076b2e867490fac09ebcab3b24e7445e7),
+including the [complete picture, reference, edit, sound and delivery record](https://github.com/dpeh001-x/Mojiworld/blob/d7c0c1d076b2e867490fac09ebcab3b24e7445e7/steam/higgsfield/cinematics/clip_mira_ashes.SPEC.md)
+and [committed finished film](https://github.com/dpeh001-x/Mojiworld/blob/d7c0c1d076b2e867490fac09ebcab3b24e7445e7/steam/higgsfield/cinematics/clip_mira_ashes.mp4).
+
 ### Typed keyframe images plus audio-only speech-video reference
 
 **Verified model:** MuAPI Seedance 2.5 (`seedance-2.5-omni-reference`) — the
@@ -58187,6 +58276,8 @@ Community examples and techniques referenced in this README:
 - [David0524 / MyFastRX — October 8, 2026 Higgsfield Seedance 2.5 static-phone UGC hook: complete locked prompt, exact start image, 8-second 9:16 draft, job ID, cost, committed MP4 and matched-model A/B verdict](https://github.com/David0524/MyFastRX/commit/6608858628ce35b2d8b35831b728cfeb146ca78f) ([locked prompt and chosen model](https://github.com/David0524/MyFastRX/blob/be8c4410823f7e5d672c4ff1eb6c510e14733f6e/ads/glp1-glass/STORYBOARD_UGC.md), [result ledger](https://github.com/David0524/MyFastRX/blob/6608858628ce35b2d8b35831b728cfeb146ca78f/ads/glp1-glass/footage/gen/README.md), [generated MP4](https://github.com/David0524/MyFastRX/blob/6608858628ce35b2d8b35831b728cfeb146ca78f/ads/glp1-glass/footage/gen/ab_seedance25_draft480p.mp4))
 
 - [Wilmot Li / 2D Animation Pipeline — October 8, 2026 direct MuAPI Seedance 2.5 multi-keyframe plus speech-video evaluation: prompt-side typed-reference roles, percentage-addressed pose images, audio-only video ownership and three creator-confirmed successful shots](https://github.com/wilmotli-maker/2d-animation-pipeline/commit/d7f419eb203fee38a5756704057774a8ee4d2df5) ([complete tagged prompt builder](https://github.com/wilmotli-maker/2d-animation-pipeline/blob/d7f419eb203fee38a5756704057774a8ee4d2df5/scripts/eval/video-editing/keyframe-edit-eval/config.mjs), [verification note](https://github.com/wilmotli-maker/2d-animation-pipeline/blob/d7f419eb203fee38a5756704057774a8ee4d2df5/scripts/eval/video-editing/keyframe-edit-eval/README.md))
+
+- [dpeh001-x / Mojiworld — October 8, 2026 Higgsfield Seedance 2.5 two-shot 3D-anime boss transition: character-only forge re-roll after backdrop-induced style flattening, two variants per shot, measured flare handoff, post-owned soundtrack, committed ten-second 1080p master and encode audit](https://github.com/dpeh001-x/Mojiworld/commit/d7c0c1d076b2e867490fac09ebcab3b24e7445e7) ([complete production record](https://github.com/dpeh001-x/Mojiworld/blob/d7c0c1d076b2e867490fac09ebcab3b24e7445e7/steam/higgsfield/cinematics/clip_mira_ashes.SPEC.md), [finished MP4](https://github.com/dpeh001-x/Mojiworld/blob/d7c0c1d076b2e867490fac09ebcab3b24e7445e7/steam/higgsfield/cinematics/clip_mira_ashes.mp4))
 
 Official model references:
 
