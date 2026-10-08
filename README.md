@@ -497,6 +497,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Composure-versus-chaos prop escalation with recovery windows](#481-composure-versus-chaos-prop-escalation-with-recovery-windows)
   - [Face-anchored picanha cook-along with an irreversible recipe-state ledger](#482-face-anchored-picanha-cook-along-with-an-irreversible-recipe-state-ledger)
   - [Extension-chained showroom-to-aerial fly-through with a camera-as-vehicle lock](#483-extension-chained-showroom-to-aerial-fly-through-with-a-camera-as-vehicle-lock)
+  - [Fan-blade foreground occlusion with pose-locked outfit succession](#484-fan-blade-foreground-occlusion-with-pose-locked-outfit-succession)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -32252,6 +32253,73 @@ the [creator's generation and outcome record](https://github.com/drq4/hakauto-v2
 [Clip B](https://github.com/drq4/hakauto-v2/blob/206bfa7411483c08823b111f5d7a8933231f94a3/production/higgsfield-web-kit/04-prompt-clip-b.txt)
 and [Clip C](https://github.com/drq4/hakauto-v2/blob/206bfa7411483c08823b111f5d7a8933231f94a3/production/higgsfield-web-kit/05-prompt-clip-c.txt).
 
+
+### 484. Fan-blade foreground occlusion with pose-locked outfit succession
+
+**Verified model:** Seedance 2.5 — the original creator labels the published
+complete prompt “Made with seedance 2.5,” and the linked October 8 source
+records the exact prompt, camera configuration and attached fashion-video
+technique  \
+**Use case:** fashion lookbook, wardrobe progression, beauty editorial,
+overhead transformation and occlusion-led transition  \
+**Mode:** text-to-video, or image-to-video when the first outfit and room are
+already established  \
+**Suggested settings:** 16:9; fixed top-down camera; photorealistic cinematic
+fashion; slow fan motion; one ordered wardrobe change at a time
+
+```text
+FORMAT
+Create a photoreal cinematic fashion video in 16:9 from one fixed top-down
+overhead camera. The room, subject and camera remain spatially unchanged for
+the entire shot.
+
+BASE FRAME
+An adult Asian woman lies barefoot and relaxed on an ornate vintage Persian rug
+in a warm living room. Natural black hair, calm expression, realistic skin,
+wood floor, soft golden practical light and detailed carpet weave. Wooden
+ceiling-fan blades rotate slowly across the extreme foreground, slightly out of
+focus with natural motion blur. The fan must feel close to the lens while the
+woman and rug stay sharp below it.
+
+ORDERED WARDROBE STATES
+Begin with a simple black dress. Change only the clothing, one complete state
+at a time, in this exact order:
+1. soft pink cardigan over a white dress;
+2. red cardigan over a white top;
+3. brown textured dress.
+Let each finished outfit read clearly before beginning the next change. Use the
+passing fan blades as intermittent foreground occlusion, but keep the
+transformation smooth rather than cutting or flashing.
+
+INVARIANTS
+Across every wardrobe state, preserve the exact same face, hair, body,
+barefoot pose, limb placement, gaze, position on the rug, camera angle, crop,
+rug pattern, floorboards, furniture, lighting direction and room geometry.
+Only the garments may change. Keep realistic fabric weight, seams, folds and
+contact with the body.
+
+CAMERA AND FINISH
+No camera movement, zoom, roll or reframing. Slow, physically plausible fan
+rotation is the only continuous environmental motion. Warm cinematic grade,
+natural proportions, subtle depth of field, fine fabric detail and restrained
+motion blur.
+
+FAILURE CONTROL
+No facial drift, body morph, moving hands or feet, sliding subject, changing
+rug, warped floor, duplicated fan blade, clothing overlap, stray accessories,
+jump cut, white flash, text, subtitle or watermark.
+```
+
+**Why it works:** the fan supplies a repeating foreground wipe without asking
+the scene itself to move. An explicit wardrobe state order prevents blended
+garments, while the invariant ledger isolates the clothing as the sole mutable
+layer. This makes the technique reusable for a lookbook without sacrificing
+face, pose or room continuity.
+
+Adapted and rewritten from Zoya (@Zoyavelle)'s October 8, 2026
+[original Seedance 2.5 post](https://x.com/Zoyavelle/status/2108060187840180394)
+and the [traceable complete-prompt transcription and camera breakdown](https://tau-home.com/en/post/seedance-2-5-topdown-ceiling-fan-cinematic-outfit-transition-prompt/).
+
 ---
 ## Reusable templates
 
@@ -57163,6 +57231,7 @@ requests, their successful provider receipts and the later
 
 ---
 ## Sources
+- [Zoya (@Zoyavelle) — October 8, 2026 creator-confirmed Seedance 2.5 ceiling-fan fashion transition: complete prompt, fixed overhead camera, foreground motion-blur occlusion, ordered wardrobe states and pose/identity/environment invariants](https://x.com/Zoyavelle/status/2108060187840180394) ([complete-prompt transcription and camera breakdown](https://tau-home.com/en/post/seedance-2-5-topdown-ceiling-fan-cinematic-outfit-transition-prompt/))
 - [drq4 / HAK AUTO — October 8, 2026 Higgsfield Seedance 2.5 three-extension premises fly-through: exact three-part prompt kit, 90-credit generation record, 30.04-second master, 721 committed output frames, measured seams, scroll delivery and documented geometry/text failures](https://github.com/drq4/hakauto-v2/commit/206bfa7411483c08823b111f5d7a8933231f94a3) ([production record](https://github.com/drq4/hakauto-v2/blob/206bfa7411483c08823b111f5d7a8933231f94a3/production/PRODUCTION.md), [execution steps](https://github.com/drq4/hakauto-v2/blob/206bfa7411483c08823b111f5d7a8933231f94a3/production/higgsfield-web-kit/STEPS.md), [output manifest](https://github.com/drq4/hakauto-v2/blob/206bfa7411483c08823b111f5d7a8933231f94a3/site/media/flight/manifest.json))
 - [Cauhi / Cinema Receita — October 8, 2026 approved Higgsfield Seedance 2.5 picanha reel: complete 15-second vertical prompt, two-photo face anchoring, irreversible recipe order, eleven-shot food-commercial coverage, 480p draft to 1080p final and native cooking sound](https://github.com/pcauhi/cinema-receita/commit/b95b6cf13b40305a5971c00b71c117114a6768f5) ([complete public prompt](https://github.com/pcauhi/cinema-receita/blob/b95b6cf13b40305a5971c00b71c117114a6768f5/exemplos/picanha.md), [workflow](https://github.com/pcauhi/cinema-receita/blob/b95b6cf13b40305a5971c00b71c117114a6768f5/SKILL.md))
 - [TechieSA — October 7, 2026 Seedance 2.5 two-performer street-fight comedy: complete 20-second prompt, attached result, opposite performance lanes, six escalating prop reversals, attacker recovery windows and a stable overhead payoff](https://x.com/TechieBySA/status/2107794850187784450) ([versioned prompt and direct-source record](https://github.com/seeora/awesome-seedance-2-5-prompts/commit/88a87e6b6fff8861fc598cb74b1c1c5e099ac7da))
