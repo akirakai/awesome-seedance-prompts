@@ -498,6 +498,8 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Face-anchored picanha cook-along with an irreversible recipe-state ledger](#482-face-anchored-picanha-cook-along-with-an-irreversible-recipe-state-ledger)
   - [Extension-chained showroom-to-aerial fly-through with a camera-as-vehicle lock](#483-extension-chained-showroom-to-aerial-fly-through-with-a-camera-as-vehicle-lock)
   - [Fan-blade foreground occlusion with pose-locked outfit succession](#484-fan-blade-foreground-occlusion-with-pose-locked-outfit-succession)
+  - [Corridor telekinesis gauntlet with gesture-owned force and aftermath carryover](#485-corridor-telekinesis-gauntlet-with-gesture-owned-force-and-aftermath-carryover)
+  - [Reference-locked barn tiptoe with image-plane film defects](#486-reference-locked-barn-tiptoe-with-image-plane-film-defects)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -32320,6 +32322,157 @@ Adapted and rewritten from Zoya (@Zoyavelle)'s October 8, 2026
 [original Seedance 2.5 post](https://x.com/Zoyavelle/status/2108060187840180394)
 and the [traceable complete-prompt transcription and camera breakdown](https://tau-home.com/en/post/seedance-2-5-topdown-ceiling-fan-cinematic-outfit-transition-prompt/).
 
+
+### 485. Corridor telekinesis gauntlet with gesture-owned force and aftermath carryover
+
+**Verified model:** Seedance 2.5 — the original creator labels the complete
+30-second prompt with this exact model and publishes the generated action result
+in the linked October 8 post  \
+**Use case:** live-action supernatural combat, corridor geography, ensemble
+choreography, gesture-to-impact causality and stable aftermath  \
+**Mode:** text-to-video, or character-reference video when the lead's identity
+has already been approved  \
+**Suggested settings:** 30 seconds; 2.3:1 ultrawide; 24fps; grounded live action;
+native impact sound and restrained score
+
+```text
+FORMAT
+Create a 30-second live-action supernatural action scene in one continuous
+academy corridor. Use a 2.3:1 ultrawide frame at 24 fps, cool fluorescent light,
+natural skin, shallow depth of field and restrained film grain. Every performer
+is an adult stunt actor.
+
+CAST AND GEOGRAPHY LOCK
+The lead is one adult Korean woman with a short black bob and bangs, wearing one
+dark navy hanbok-inspired stunt uniform with red trim. Begin frightened and end
+focused without changing her face, hair or clothing. Four adult opponents wear
+distinct dark training uniforms. Assign the tall leader one orange chest tag.
+Keep the same beige lockers on both walls, white ceiling tubes, far windows and
+polished grey floor. No new corridor, doorway, opponent or costume.
+
+0–6 s — PRESSURE
+Close on the lead against the left-side lockers, eyes down. The four opponents
+approach from the far end in one visible group; the tagged leader moves one pace
+ahead. Dolly backward just enough to preserve their spacing. She looks up only
+after his final step.
+
+6–10 s — FIRST CAUSE
+The leader raises one fist but never lands the blow. She snaps her gaze to him
+and raises two fingers beside her face. A small air-pressure ripple begins at
+that gesture, arrests his fist, then throws only him backward onto the floor.
+Hold long enough to show the causal order: fingers move, air bends, body reacts,
+floor impact. Keep him down afterward; no blood.
+
+10–16 s — LANE-BY-LANE DEFENCE
+Cut wide along the corridor axis. Two opponents rush through separate lanes.
+One sharp finger point sends the left runner into the left lockers; one
+open-palm push drives the right runner across the floor. Follow each action with
+one short whip pan, then return to the lead. Lockers dent and dust releases only
+after contact. Do not move all opponents at once.
+
+16–22 s — AIRBORNE COUNTER
+Wall notices tear loose only after the next pressure wave. The remaining
+opponent leaps from the right lane; the lead settles into a low stance, rotates
+one forearm and finishes with a palm strike into empty air. The pressure front
+meets him at chest height and carries him backward into one already visible
+locker bank. Hair, skirt, paper and dust trail the same force direction. Preserve
+every previously fallen performer and dent.
+
+22–27 s — CORRIDOR-SCALE WAVE
+Over the blurred shoulder of the last standing opponent, frame the lead at the
+far end. She extends both palms once. A broad invisible pressure wave travels
+from her toward camera in readable sequence: nearest papers lift, locker doors
+rattle, dust advances, then the foreground opponent falls out of frame. Add a
+faint pink-violet refraction in the air, not a solid magic beam or explosion.
+
+27–30 s — AFTERMATH
+Dust briefly fills the lens, then clears to the same corridor. Papers drift
+down; all four opponents remain where they landed. The lead stands alone in the
+centre with both hands held in one controlled finger pose. Slow push in and hold
+while her hair settles.
+
+SOUND AND FAILURE CONTROL
+Use shoe scrapes, fabric movement, air displacement, locker impacts, paper
+flutter and a low restrained synth pulse. Each sound follows its visible cause.
+No dialogue, gore, subtitle, text or watermark. No duplicate opponent, body
+morph, costume swap, teleport, impact before gesture, reset dent, recovered
+fallen actor, corridor change, random explosion, weightless flight or camera
+crossing the corridor axis.
+```
+
+**Why it works:** every supernatural effect has a visible owner, a travel path
+and a delayed physical response. Distinct attack lanes keep the ensemble from
+collapsing into one mass, while dents, fallen bodies, paper and dust form an
+aftermath ledger that prevents the corridor from resetting between time blocks.
+
+Adapted and rewritten from @Alina_with_Ai's October 8, 2026
+[original Seedance 2.5 prompt and result](https://x.com/Alina_with_Ai/status/2108018045910429795)
+and the [traceable complete-prompt transcription and directing breakdown](https://tau-home.com/en/post/seedance-2-5-cinematic-action-video-timecode-prompting/).
+
+
+### 486. Reference-locked barn tiptoe with image-plane film defects
+
+**Verified model:** Volcano Ark Seedance 2.5
+(`doubao-seedance-2-5-260628`) — the source developer committed the exact
+compiled prompt, local character-reference path, official model ID and two MP4
+outputs, including a reference-consistent image-to-video revision  \
+**Evidence boundary:** the repository does not publish the Ark task ID or raw
+provider response. The creator's committed prompt, model route and output files
+verify the production record, but do not make the request independently
+replayable  \
+**Use case:** short character meme, vintage fantasy vignette, reference-led
+costume consistency and practical-effects texture  \
+**Mode:** image-to-video from one approved full-body character frame  \
+**Suggested settings:** 5 seconds; 16:9; 720p; fixed medium-wide camera; no
+dialogue
+
+```text
+REFERENCE CONTRACT
+@Image1 owns one original adult barn goblin's face, forehead, ears, body scale,
+black patterned velvet tailcoat, white shirt, black bow tie, dark trousers and
+curled black shoes. Preserve those exact features throughout. Transfer no
+background, lighting or pose from the reference unless already present below.
+
+SCENE
+Create a five-second 16:9 dark-fantasy vignette inside a candlelit timber barn.
+Frame a fixed medium-wide full-body view at knee height. Dry straw covers the
+floor; warm practical candles motivate the shadows. The character remains the
+only moving figure.
+
+ACTION
+He sneaks forward on exaggerated tiptoe steps: right knee high, curled shoe
+lands softly, left knee rises, then one final small celebratory hop with elbows
+bent and arms spread. His mischievous grin turns toward the camera only on the
+last landing. Keep real weight transfer, foot contact and a readable floor
+shadow. End balanced in a pose close enough to the opening stance for a clean
+short loop.
+
+PHOTOCHEMICAL LOOK
+Render as a photographed late-1970s practical-effects fantasy plate: soft
+Panavision-like optics, warm Eastman-style colour, organic moving grain, mild
+halation, tiny gate weave and restrained chromatic fringing. Film defects stay
+on the image plane; they never become floating dust, magical particles or
+three-dimensional objects. Keep foam, velvet, straw and timber tactile rather
+than glossy CGI.
+
+SOUND AND FAILURE CONTROL
+Use quiet barn room tone, cloth movement, straw crunch and two soft shoe taps;
+no speech or music. No identity drift, enlarged body, costume mutation, extra
+limb, duplicated shoe, sliding foot, weightless hop, green fringe, modern prop,
+camera move, new character, text, logo or watermark.
+```
+
+**Why it works:** the reference owns a finite identity-and-costume list while
+the prompt owns action, barn and capture process. Treating grain, halation and
+gate weave as image-plane acquisition defects prevents a vintage look from
+turning into animated debris, and the two-step choreography fits the five-second
+evidence clip instead of overloading it.
+
+Adapted and rewritten from bshx2024's October 8, 2026
+[Volcano Ark Seedance 2.5 production commit](https://github.com/bshx2024/qwenimage-editor/commit/81a519ddbe08c59e92ad9febd1b6d5731aa93f15),
+the [reference-consistent I2V revision and committed outputs](https://github.com/bshx2024/qwenimage-editor/commit/6b6b53bbaa74fd48e8b0c07539bfae0ee6d3e0ae)
+and the [exact prompt and request implementation](https://github.com/bshx2024/qwenimage-editor/blob/6b6b53bbaa74fd48e8b0c07539bfae0ee6d3e0ae/src/app/%5Blocale%5D/blog/%5Bslug%5D/RumpelstiltskinBlogPostComponent.tsx).
+
 ---
 ## Reusable templates
 
@@ -57231,6 +57384,8 @@ requests, their successful provider receipts and the later
 
 ---
 ## Sources
+- [bshx2024 / qwenimage-editor — October 8, 2026 Volcano Ark Seedance 2.5 vintage-barn character demo: exact compiled prompt, `doubao-seedance-2-5-260628` route, local reference conversion and two committed MP4 outputs](https://github.com/bshx2024/qwenimage-editor/commit/6b6b53bbaa74fd48e8b0c07539bfae0ee6d3e0ae) ([first real-demo commit](https://github.com/bshx2024/qwenimage-editor/commit/81a519ddbe08c59e92ad9febd1b6d5731aa93f15), [prompt implementation](https://github.com/bshx2024/qwenimage-editor/blob/6b6b53bbaa74fd48e8b0c07539bfae0ee6d3e0ae/src/app/%5Blocale%5D/blog/%5Bslug%5D/RumpelstiltskinBlogPostComponent.tsx))
+- [Alina (@Alina_with_Ai) — October 8, 2026 creator-published Seedance 2.5 corridor telekinesis sequence: complete 30-second prompt, 2.3:1 framing, six timed action blocks, gesture-owned impacts and stable dust-settle endpoint](https://x.com/Alina_with_Ai/status/2108018045910429795) ([complete-prompt transcription and directing breakdown](https://tau-home.com/en/post/seedance-2-5-cinematic-action-video-timecode-prompting/))
 - [Zoya (@Zoyavelle) — October 8, 2026 creator-confirmed Seedance 2.5 ceiling-fan fashion transition: complete prompt, fixed overhead camera, foreground motion-blur occlusion, ordered wardrobe states and pose/identity/environment invariants](https://x.com/Zoyavelle/status/2108060187840180394) ([complete-prompt transcription and camera breakdown](https://tau-home.com/en/post/seedance-2-5-topdown-ceiling-fan-cinematic-outfit-transition-prompt/))
 - [drq4 / HAK AUTO — October 8, 2026 Higgsfield Seedance 2.5 three-extension premises fly-through: exact three-part prompt kit, 90-credit generation record, 30.04-second master, 721 committed output frames, measured seams, scroll delivery and documented geometry/text failures](https://github.com/drq4/hakauto-v2/commit/206bfa7411483c08823b111f5d7a8933231f94a3) ([production record](https://github.com/drq4/hakauto-v2/blob/206bfa7411483c08823b111f5d7a8933231f94a3/production/PRODUCTION.md), [execution steps](https://github.com/drq4/hakauto-v2/blob/206bfa7411483c08823b111f5d7a8933231f94a3/production/higgsfield-web-kit/STEPS.md), [output manifest](https://github.com/drq4/hakauto-v2/blob/206bfa7411483c08823b111f5d7a8933231f94a3/site/media/flight/manifest.json))
 - [Cauhi / Cinema Receita — October 8, 2026 approved Higgsfield Seedance 2.5 picanha reel: complete 15-second vertical prompt, two-photo face anchoring, irreversible recipe order, eleven-shot food-commercial coverage, 480p draft to 1080p final and native cooking sound](https://github.com/pcauhi/cinema-receita/commit/b95b6cf13b40305a5971c00b71c117114a6768f5) ([complete public prompt](https://github.com/pcauhi/cinema-receita/blob/b95b6cf13b40305a5971c00b71c117114a6768f5/exemplos/picanha.md), [workflow](https://github.com/pcauhi/cinema-receita/blob/b95b6cf13b40305a5971c00b71c117114a6768f5/SKILL.md))
