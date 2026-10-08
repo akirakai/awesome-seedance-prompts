@@ -495,6 +495,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Hand-held stair descent with free-hand wall exclusion](#479-hand-held-stair-descent-with-free-hand-wall-exclusion)
   - [Locked-phone group-chat UGC hook with immediate dialogue](#480-locked-phone-group-chat-ugc-hook-with-immediate-dialogue)
   - [Composure-versus-chaos prop escalation with recovery windows](#481-composure-versus-chaos-prop-escalation-with-recovery-windows)
+  - [Face-anchored picanha cook-along with an irreversible recipe-state ledger](#482-face-anchored-picanha-cook-along-with-an-irreversible-recipe-state-ledger)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -32000,6 +32001,150 @@ with the prompt and direct source preserved in Seeora's October 8, 2026
 
 
 
+### 482. Face-anchored picanha cook-along with an irreversible recipe-state ledger
+
+**Verified model:** Higgsfield Seedance 2.5 in omni-reference mode — the
+original creator identifies the published example as a real approved result,
+records two identity photos, 9:16, 15 seconds, a 480p draft and a 1080p final,
+and publishes the complete public prompt and workflow  \
+**Evidence boundary:** the repository does not expose the provider task ID,
+request receipt or downloadable result. It also says the public prompt rewrites
+some headings and fixed phrases while preserving the scenes, face description
+and recipe. This entry therefore verifies the creator-confirmed production
+structure, not a byte-for-byte submission or independent quality benchmark  \
+**Use case:** personalized cooking reel, creator-led food commercial, recipe
+compression, multi-shot identity consistency and native food sound  \
+**Mode:** omni-reference generation with two face photos  \
+**Suggested settings:** 15 seconds; 9:16; draft at 480p, then rerun the accepted
+structure at 1080p; native audio on
+
+```text
+Create one 15-second vertical photoreal food film in a dark premium home
+kitchen. The same adult cook prepares Brazilian picanha with vinagrete and
+farofa in eleven fast, causally ordered shots. Use real-time action except for
+the two explicitly named accents. Keep real food physics and a polished,
+high-contrast food-commercial finish.
+
+REFERENCE OWNERSHIP
+@Image1 = the cook's frontal identity only.
+@Image2 = the same cook's three-quarter identity only.
+Together they own face shape, hairline, brows, eyes, nose, skin tone, facial
+hair and apparent age. They do not own their backgrounds, colored light,
+microphone, pose or clothing.
+
+Keep one recognizable face, one lean body and one black T-shirt with a dark
+canvas apron in every shot. The mouth stays naturally closed whenever visible;
+no speaking, broad grin or lip motion. Show the face clearly at the opening,
+during the transfer from griddle to board and in the final hold.
+
+KITCHEN AND TOOL LOCK
+One matte-black counter, one end-grain board, one chef's knife, one cast-iron
+griddle, one skillet and one pair of tongs persist throughout. The cook handles
+hot meat only with the tongs. Do not duplicate, replace, teleport or morph a
+tool between cuts.
+
+IRREVERSIBLE RECIPE STATE
+S0 — one raw picanha, whole tomato and onion, cold pans.
+S1 — thin picanha slices with a visible white fat edge; salt has been applied.
+S2 — tomato, onion and parsley are chopped into one chunky vinagrete.
+S3 — bacon and sausage fat is rendered; cassava flour becomes golden farofa.
+S4 — picanha slices are seared on the griddle and turned only with tongs.
+S5 — seared picanha, vinagrete and farofa are arranged on the final board.
+
+Advance S0 -> S1 -> S2 -> S3 -> S4 -> S5 once. Never show cooked meat before
+S4, raw meat after S4, a finished plate before S5, or a completed ingredient
+returning to an earlier state. Do not introduce bay leaves, rice, beans or any
+unlisted garnish.
+
+TIMELINE
+0.0–1.4 s | identity plus first action
+Eye-level close shot. Open mid-slice with the cook's face sharply visible above
+the board. He draws the knife through raw picanha to make one thin slice while
+the camera pushes from his focused face toward the blade. Real time.
+
+1.4–2.4 s | salt
+True 90-degree overhead. Thin raw slices fan across the board; coarse salt falls
+from one hand and bounces on contact. Use a very brief slow-motion accent, then
+return immediately to real time.
+
+2.4–3.8 s | vinagrete
+Low board-level close action. The knife dices tomato and onion; the cook sweeps
+them into one bowl with parsley, vinegar and olive oil. The mixture remains
+chunky and bright rather than watery. Hard cut only after the transfer finishes.
+
+3.8–5.1 s | render fat
+Wide shot. The cook crosses to the stove and tips bacon cubes and sausage slices
+into the skillet. They contact the hot surface before the first strong sizzle;
+steam rises while the vinagrete bowl remains in the foreground and his face is
+readable behind it.
+
+5.1–6.4 s | farofa toss
+He pours cassava flour into the rendered fat and snaps the skillet once. Golden
+crumbs rise as one coherent mass and land back in the same pan. Track the pan
+upward and use short slow motion only at the apex.
+
+6.4–7.2 s | texture proof
+Macro insert. The farofa browns in the skillet with visible bacon flecks and
+fine steam. Compress time slightly without reversing or multiplying crumbs.
+
+7.2–8.7 s | meat meets heat
+Low griddle angle. Using the same tongs, the cook lays the salted picanha slices
+onto the hot iron. Contact causes the sizzle and a restrained edge flare; meat
+remains visible and does not float through the flame.
+
+8.7–10.2 s | crust reveal
+Griddle-level close action. The same tongs turn each slice once, revealing a
+deep brown crust and rendered fat edge. Ease from a quick rhythm into the final
+turn; no bare hand touches the meat.
+
+10.2–11.7 s | identity re-anchor
+Front three-quarter close shot. The cook's face is sharp in warm side light as
+he transfers the seared slices from griddle to board with the tongs. Arc gently
+from his side to the front without crossing the action axis.
+
+11.7–13.2 s | final assembly
+True overhead. Arrange the picanha to reveal a pink centre beside one mound of
+golden farofa and one bowl of chunky vinagrete. A single spoonful lands beside
+the meat. This is the first fully assembled plate.
+
+13.2–15.0 s | delivery hold
+Medium portrait behind the finished board. The same cook settles, calm and
+satisfied, mouth closed. Steam rises naturally. Hold the face and complete dish
+stable through the last frame.
+
+LIGHT AND CAMERA
+Use one soft warm source from the side and slightly behind the counter, with a
+darker fill side. Preserve its direction across every cut. Let it catch steam,
+fat, the knife edge and facial planes without purple or blue contamination.
+Alternate close, overhead, macro and wide views; never repeat the same framing
+and movement twice in succession.
+
+AUDIO
+No dialogue, voice-over, music, subtitle or caption. Generate only sounds caused
+on screen: knife on board, salt crystals, chopping, liquid pour, bacon crackle,
+pan scrape, flour toss, griddle sizzle, restrained flame and tongs clicks. A
+sound begins only after its visible cause.
+
+FAILURE CONTROL
+No second cook, face drift, open-mouth performance, extra limb, unsafe hot-food
+handling, self-assembling dish, floating ingredient, reset recipe state,
+duplicate utensil, changing kitchen, invented text, logo, speed-ramp blur or
+glossy CGI food.
+```
+
+**Why it works:** the face is re-anchored at three editorially useful points
+instead of being left to survive eleven cuts implicitly. The irreversible
+S0–S5 ledger prevents the compressed recipe from jumping from cooked to raw or
+revealing the final plate too early, while tool custody and cause-before-sound
+rules keep fast food action physically legible.
+
+Adapted and rewritten from Cauhi's October 8, 2026
+[Cinema Receita production commit](https://github.com/pcauhi/cinema-receita/commit/b95b6cf13b40305a5971c00b71c117114a6768f5),
+the [creator-confirmed approved Seedance 2.5 picanha example and complete public prompt](https://github.com/pcauhi/cinema-receita/blob/b95b6cf13b40305a5971c00b71c117114a6768f5/exemplos/picanha.md)
+and the [recipe-to-shot selection and identity workflow](https://github.com/pcauhi/cinema-receita/blob/b95b6cf13b40305a5971c00b71c117114a6768f5/SKILL.md).
+
+
+
 ## Reusable templates
 
 
@@ -56910,6 +57055,7 @@ requests, their successful provider receipts and the later
 
 ---
 ## Sources
+- [Cauhi / Cinema Receita — October 8, 2026 approved Higgsfield Seedance 2.5 picanha reel: complete 15-second vertical prompt, two-photo face anchoring, irreversible recipe order, eleven-shot food-commercial coverage, 480p draft to 1080p final and native cooking sound](https://github.com/pcauhi/cinema-receita/commit/b95b6cf13b40305a5971c00b71c117114a6768f5) ([complete public prompt](https://github.com/pcauhi/cinema-receita/blob/b95b6cf13b40305a5971c00b71c117114a6768f5/exemplos/picanha.md), [workflow](https://github.com/pcauhi/cinema-receita/blob/b95b6cf13b40305a5971c00b71c117114a6768f5/SKILL.md))
 - [TechieSA — October 7, 2026 Seedance 2.5 two-performer street-fight comedy: complete 20-second prompt, attached result, opposite performance lanes, six escalating prop reversals, attacker recovery windows and a stable overhead payoff](https://x.com/TechieBySA/status/2107794850187784450) ([versioned prompt and direct-source record](https://github.com/seeora/awesome-seedance-2-5-prompts/commit/88a87e6b6fff8861fc598cb74b1c1c5e099ac7da))
 - [keys-exe / global-manual-ai — October 7, 2026 owner-confirmed Seedance 2.5 no-rail stair descent: complete seven-image silent prompt, exact `bytedance/seedance-2-5` request, successful 882-credit task, joined-hand continuity, fixed three-person landmarks, native stair Foley and documented wall-clearance/opening-scale deviations](https://github.com/keys-exe/global-manual-ai/commit/a5c1c0a402993eaa945913cb98202d25bcefed4c) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/a5c1c0a402993eaa945913cb98202d25bcefed4c/builds/stryde-other-nana/film/SC17/SC17-T1.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/a5c1c0a402993eaa945913cb98202d25bcefed4c/builds/stryde-other-nana/film/SC17/SC17-T1.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/a5c1c0a402993eaa945913cb98202d25bcefed4c/builds/stryde-other-nana/film/SC17/SC17-T1.v1.kie.log))
 - [keys-exe / global-manual-ai — October 7, 2026 owner-confirmed Seedance 2.5 landmark-fixed floor kneel: complete seven-image/two-voice prompt, exact `bytedance/seedance-2-5` request, successful 1,071-credit task, speaker-owned dialogue, three-person room geometry and documented chair-contact/opening-exposure deviations](https://github.com/keys-exe/global-manual-ai/commit/fc1221d381e4f94b89c8f76348b261c151459ccb) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/fc1221d381e4f94b89c8f76348b261c151459ccb/builds/stryde-other-nana/film/SC16/SC16-T1.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/fc1221d381e4f94b89c8f76348b261c151459ccb/builds/stryde-other-nana/film/SC16/SC16-T1.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/fc1221d381e4f94b89c8f76348b261c151459ccb/builds/stryde-other-nana/film/SC16/SC16-T1.v1.kie.log))
