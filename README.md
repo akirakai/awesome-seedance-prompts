@@ -496,6 +496,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Locked-phone group-chat UGC hook with immediate dialogue](#480-locked-phone-group-chat-ugc-hook-with-immediate-dialogue)
   - [Composure-versus-chaos prop escalation with recovery windows](#481-composure-versus-chaos-prop-escalation-with-recovery-windows)
   - [Face-anchored picanha cook-along with an irreversible recipe-state ledger](#482-face-anchored-picanha-cook-along-with-an-irreversible-recipe-state-ledger)
+  - [Extension-chained showroom-to-aerial fly-through with a camera-as-vehicle lock](#483-extension-chained-showroom-to-aerial-fly-through-with-a-camera-as-vehicle-lock)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -32145,6 +32146,113 @@ and the [recipe-to-shot selection and identity workflow](https://github.com/pcau
 
 
 
+### 483. Extension-chained showroom-to-aerial fly-through with a camera-as-vehicle lock
+
+**Verified model:** Higgsfield Seedance 2.5 — the original creator committed
+the exact three-part prompt kit and records three successful 10-second 480p
+generations made by hand on Higgsfield: one image-to-video opening plus two
+forward extensions, each charged 30 credits. The hard-concatenated master is
+30.04 seconds at 24 fps, and the repository publishes its 721 decoded output
+frames, poster, chapter stills and production manifest  \
+**Evidence boundary:** the raw Higgsfield MP4s and task receipts are deliberately
+excluded from the public repository. The committed decoded frames, exact prompt
+files, measured seam checks, costs and creator production note verify the
+completed workflow and visual result, but not an independently replayable API
+request  \
+**Use case:** scroll-driven website hero, automotive-property tour, long
+exterior-to-interior route, continuation chaining and aerial reveal  \
+**Mode:** approved first frame to image-to-video, followed by two forward
+extensions from the preceding clean tail  \
+**Suggested settings:** three 10-second clips; 16:9; 480p proof; 24 fps; audio
+off; inspect each tail before spending on the next extension
+
+```text
+PRODUCTION FORMAT
+Create one photoreal 30-second premises tour as three linked 10-second clips.
+Generate Clip A from @FirstFrame. Generate Clips B and C as forward extensions
+from the clean final frame of the accepted previous clip. The result must read
+as one unbroken route, not three adjacent shots.
+
+GLOBAL CAMERA CONTRACT
+The camera itself flies smoothly at about 1.5 metres above the ground with a
+realistic 24 mm field of view. Nothing carrying the camera is ever visible:
+no drone, cockpit, hull, pilot, shadow, instrument or HUD. Preserve the same
+lens, daylight direction, interior warmth, building geometry, door positions
+and vehicle layout across both continuation boundaries. No cut or transition
+effect. Audio off.
+
+CLIP A — FORECOURT TO RECEPTION
+0–2 s: glide across dry paving, pass one parked white hatchback and make one
+gentle correction toward the already-open glass entrance.
+2–3.5 s: accelerate through the doorway without touching the frame.
+3.5–7.5 s: slow inside the bright tiled showroom, bank along one silver SUV,
+then follow one readable S-curve between a dark estate car and a white
+hatchback. Keep every vehicle parked.
+7.5–10 s: turn toward the rear reception counter and settle with the same grey
+workshop door visible beside it. Finish on a clean forward-travel frame that
+can be extended.
+
+CLIP B — RECEPTION TO REAR YARD
+Continue at the same height, lens, direction and speed.
+0–2 s: arc around the front of the reception counter and line up with the same
+grey double door.
+2–3.5 s: one mechanic in dark navy overalls opens one door leaf and steps
+aside; only that assigned person moves.
+3.5–8 s: pass into the workshop, curve around one car on a two-post lift, dip
+briefly to reveal its underside, then pass one diagnostic trolley and one
+air-conditioning service machine. Preserve the grey floor and LED-strip light.
+8–10 s: accelerate toward the open rear roller door. Keep the yard, parked
+vans, fence, trees and grey sky visible beyond it for the next handoff.
+
+CLIP C — EXIT, YAW AND REVEAL
+Continue from Clip B without resetting the camera.
+0–2 s: exit through the roller door and pass one parked white van while
+retaining forward momentum.
+2–4 s: yaw smoothly through 180 degrees while still moving so the camera now
+faces the same rear wall and open roller door it just crossed.
+4–10 s: fly backward and climb at a steady rate. Reveal the complete premises,
+the glass-corner showroom at the far end, forecourt, road, neighbouring
+warehouses, trees and flat fields. End on a stable high three-quarter view.
+
+CONTINUITY AND FAILURE CONTROL
+Everything remains stationary unless a specific motion is assigned above.
+Nothing appears, disappears, duplicates or changes model. Keep only identity
+and signage already present in @FirstFrame; do not invent lettering, badges or
+logos on vehicles. No reshaped façade, added storey, room teleport, blocked
+route, warped doorway, changing weather, motionless moving camera, morph,
+speed ramp, visible rig, subtitle or watermark.
+
+TAIL GATE AND DELIVERY
+Inspect each accepted clip frame by frame before generating the next one. If a
+tail breaks geometry, trim back to the last clean frame and extend from there;
+never regenerate an accepted prefix. Hard-concatenate the three accepted
+plates, verify both seams numerically and visually, then decode the master at
+24 fps. For a scroll-controlled site, derive a per-beat portrait crop from the
+landscape master instead of stretching or asking the model for a second route.
+```
+
+**Why it works:** each paid generation owns one navigational problem, while
+the previous clean tail supplies the next clip's spatial state. Describing the
+camera as the vehicle removes the visual subject that the word “drone” can
+hallucinate; freezing unassigned cars and equipment reserves motion capacity
+for the route. The creator reports no detected cuts at either hard-concat seam
+(mean frame differences 6.1 and 10.9 out of 255), so the chained structure is
+field-tested rather than hypothetical.
+
+The same production note also records the limits: the result promoted a
+single-storey glass corner to two storeys, exposed one vehicle badge and
+generated garbled far-wall lettering. Treat façade height, badges and readable
+text as explicit QC gates; negative clauses did not guarantee them.
+
+Adapted and rewritten from drq4's October 8, 2026
+[HAK AUTO production commit](https://github.com/drq4/hakauto-v2/commit/206bfa7411483c08823b111f5d7a8933231f94a3),
+the [creator's generation and outcome record](https://github.com/drq4/hakauto-v2/blob/206bfa7411483c08823b111f5d7a8933231f94a3/production/PRODUCTION.md),
+[Higgsfield execution steps](https://github.com/drq4/hakauto-v2/blob/206bfa7411483c08823b111f5d7a8933231f94a3/production/higgsfield-web-kit/STEPS.md),
+[Clip A](https://github.com/drq4/hakauto-v2/blob/206bfa7411483c08823b111f5d7a8933231f94a3/production/higgsfield-web-kit/03-prompt-clip-a.txt),
+[Clip B](https://github.com/drq4/hakauto-v2/blob/206bfa7411483c08823b111f5d7a8933231f94a3/production/higgsfield-web-kit/04-prompt-clip-b.txt)
+and [Clip C](https://github.com/drq4/hakauto-v2/blob/206bfa7411483c08823b111f5d7a8933231f94a3/production/higgsfield-web-kit/05-prompt-clip-c.txt).
+
+---
 ## Reusable templates
 
 
@@ -57055,6 +57163,7 @@ requests, their successful provider receipts and the later
 
 ---
 ## Sources
+- [drq4 / HAK AUTO — October 8, 2026 Higgsfield Seedance 2.5 three-extension premises fly-through: exact three-part prompt kit, 90-credit generation record, 30.04-second master, 721 committed output frames, measured seams, scroll delivery and documented geometry/text failures](https://github.com/drq4/hakauto-v2/commit/206bfa7411483c08823b111f5d7a8933231f94a3) ([production record](https://github.com/drq4/hakauto-v2/blob/206bfa7411483c08823b111f5d7a8933231f94a3/production/PRODUCTION.md), [execution steps](https://github.com/drq4/hakauto-v2/blob/206bfa7411483c08823b111f5d7a8933231f94a3/production/higgsfield-web-kit/STEPS.md), [output manifest](https://github.com/drq4/hakauto-v2/blob/206bfa7411483c08823b111f5d7a8933231f94a3/site/media/flight/manifest.json))
 - [Cauhi / Cinema Receita — October 8, 2026 approved Higgsfield Seedance 2.5 picanha reel: complete 15-second vertical prompt, two-photo face anchoring, irreversible recipe order, eleven-shot food-commercial coverage, 480p draft to 1080p final and native cooking sound](https://github.com/pcauhi/cinema-receita/commit/b95b6cf13b40305a5971c00b71c117114a6768f5) ([complete public prompt](https://github.com/pcauhi/cinema-receita/blob/b95b6cf13b40305a5971c00b71c117114a6768f5/exemplos/picanha.md), [workflow](https://github.com/pcauhi/cinema-receita/blob/b95b6cf13b40305a5971c00b71c117114a6768f5/SKILL.md))
 - [TechieSA — October 7, 2026 Seedance 2.5 two-performer street-fight comedy: complete 20-second prompt, attached result, opposite performance lanes, six escalating prop reversals, attacker recovery windows and a stable overhead payoff](https://x.com/TechieBySA/status/2107794850187784450) ([versioned prompt and direct-source record](https://github.com/seeora/awesome-seedance-2-5-prompts/commit/88a87e6b6fff8861fc598cb74b1c1c5e099ac7da))
 - [keys-exe / global-manual-ai — October 7, 2026 owner-confirmed Seedance 2.5 no-rail stair descent: complete seven-image silent prompt, exact `bytedance/seedance-2-5` request, successful 882-credit task, joined-hand continuity, fixed three-person landmarks, native stair Foley and documented wall-clearance/opening-scale deviations](https://github.com/keys-exe/global-manual-ai/commit/a5c1c0a402993eaa945913cb98202d25bcefed4c) ([complete prompt](https://github.com/keys-exe/global-manual-ai/blob/a5c1c0a402993eaa945913cb98202d25bcefed4c/builds/stryde-other-nana/film/SC17/SC17-T1.prompt.txt), [exact request](https://github.com/keys-exe/global-manual-ai/blob/a5c1c0a402993eaa945913cb98202d25bcefed4c/builds/stryde-other-nana/film/SC17/SC17-T1.call.json), [successful task](https://github.com/keys-exe/global-manual-ai/blob/a5c1c0a402993eaa945913cb98202d25bcefed4c/builds/stryde-other-nana/film/SC17/SC17-T1.v1.kie.log))
