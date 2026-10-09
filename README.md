@@ -501,6 +501,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Corridor telekinesis gauntlet with gesture-owned force and aftermath carryover](#485-corridor-telekinesis-gauntlet-with-gesture-owned-force-and-aftermath-carryover)
   - [Reference-locked barn tiptoe with image-plane film defects](#486-reference-locked-barn-tiptoe-with-image-plane-film-defects)
   - [Desaturated motion-reference transfer with protected prop identity](#487-desaturated-motion-reference-transfer-with-protected-prop-identity)
+  - [Camera-custody gym vlog with beat-locked self-deprecating dialogue](#488-camera-custody-gym-vlog-with-beat-locked-self-deprecating-dialogue)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -32567,6 +32568,107 @@ the earlier [colour and grayscale requests](https://github.com/keys-exe/global-m
 and the final [blurred-grayscale request and result](https://github.com/keys-exe/global-manual-ai/blob/7c61f52309c301cd82cd01786edaf2b6d0ac1e7d/builds/uriserena-ultimo-giorno-v2/step7/fix_a2/B10.v30.sd25c.video.call.json).
 
 ---
+
+### 488. Camera-custody gym vlog with beat-locked self-deprecating dialogue
+
+**Verified model:** Seedance 2.5 — the original creator names the exact model,
+publishes the complete prompt with its generated result and states that the
+15-second clip is one native generation with no editing  \
+**Use case:** fitness UGC, comic performance, deliberately imperfect consumer
+video, short native dialogue and hidden-camera continuity  \
+**Mode:** text-to-video  \
+**Verified settings:** 15 seconds; vertical social framing; six hard-cut shots;
+handheld tape-camcorder look; English native dialogue; ordinary gym ambience
+
+```text
+Create one 15-second vertical gym diary featuring one clearly adult woman named
+Mila. She has a stable face, brunette high ponytail, cobalt-blue sports top and
+matching shorts, white ankle socks and no shoes. Keep her identity, age,
+hairstyle, clothing, body proportions, voice and the same evening mat area
+unchanged across all six shots. A mirror wall, one water bottle and distant gym
+equipment remain in fixed positions.
+
+CAMERA-CUSTODY LEDGER
+Only one small consumer camcorder exists, and it must never be visible. In
+shots 1–5 it is resting on the floor or mat at the stated height; in shot 6 Mila
+has physically picked up that same camera and holds it at arm's length. A
+propped shot may have slight settling vibration but cannot wander like an
+operator-held camera. The selfie shot may have tired arm drift but cannot cut
+to a third-person view. Do not invent a camera operator, reflection, second
+camera, phone or tripod.
+
+IMAGE CHARACTER
+Use believable early-2000s tape-camera defects: modest softness, faint chroma
+noise, delayed autofocus, small exposure pumps under fluorescent lights, muted
+contrast and lightly bloomed highlights. Imperfection must remain restrained
+and causal. No digital glitch overlay, beauty filter, polished gimbal move,
+cinematic slow motion or artificial film burn.
+
+TIMED PERFORMANCE
+0.0–2.4 s | floor-propped medium view
+Mila lies on the mat, rises onto both elbows, exhales and gives the lens a
+mock-serious look. She says, “Core day. Pray for me.” Hold long enough for her
+mouth to finish the line before cutting.
+
+2.4–4.8 s | low propped plank view
+Hard cut. She holds a correct forearm plank; shoulders, spine, hips and feet
+remain visible and aligned. Her arms begin to tremble naturally from effort.
+Through controlled strain she says, “Why am I shaking already?” Do not collapse
+the pose or move the camera.
+
+4.8–7.2 s | propped three-quarter crunch view
+Hard cut. She completes two readable crunch repetitions—shoulders lift, brief
+peak, shoulders return to the mat—without neck snapping or body teleportation.
+Between repetitions she says, “This looked way easier online.”
+
+7.2–9.0 s | quiet hand insert
+Hard cut to a close, shallow-focus detail of both hands gripping the same mat
+during the start of one leg raise. Keep wrists and fingers anatomically correct.
+Use breathing, fabric movement and room sound only; no dialogue and no unrelated
+body-part crop.
+
+9.0–12.0 s | medium-wide leg-raise finish
+Hard cut. Show one complete controlled leg raise from low hover to vertical and
+back to the mat. She then releases tension, drops her shoulders safely and
+laughs at herself: “Yep—my abs just quit.” The water bottle and mirror stay in
+their established places.
+
+12.0–15.0 s | camera pickup and selfie close
+Mila reaches toward the established camera position, creating a brief
+hand-caused occlusion, then the viewpoint rises into a tired arm's-length selfie
+while she remains lying on the mat. The camera itself stays outside the frame.
+She smiles, catches her breath and says, “Same time tomorrow? No promises.”
+Finish on the natural end of the sentence, not a freeze frame.
+
+DIALOGUE AND SOUND CONTRACT
+Mila alone speaks all five lines in the order above. Each line starts only after
+her face is visible in its assigned shot and ends before the next hard cut.
+Preserve one consistent English voice, strained breathing during exercise,
+subtle mat and fabric contact, distant equipment and low room tone. No narrator,
+music, subtitles, captions or off-screen reply.
+
+FAILURE GATE
+Reject a take if Mila changes face, outfit or voice; another person appears; the
+hidden camera becomes visible or gains an impossible operator; a propped shot
+floats; the pickup lacks a hand-caused transition; dialogue crosses a cut or
+moves to the wrong mouth; repetitions are incomplete; plank or leg-raise anatomy
+breaks; mirror content contradicts the room; the water bottle teleports; focus
+pumping hides an entire action; tape defects become a full-screen effect; or
+text, logo or watermark appears.
+```
+
+**Why it works:** the prompt treats camera ownership as a physical state rather
+than a general “handheld” style. Separating propped-camera behavior from the
+final pickup prevents an invisible operator from appearing, while the short
+dialogue ledger gives every line a visible speaker, performance cue and cut
+boundary. Exercise cycles and fixed background props provide additional
+continuity checks without polishing away the intentionally casual UGC look.
+
+Adapted and rewritten from u/Livid_Necessary_Real's October 9, 2026
+[complete Seedance 2.5 prompt and native unedited 15-second result](https://www.reddit.com/r/seedance2pro/comments/1x0smcl/how_to_create_a_realistic_ai_gym_vlog_with/).
+
+---
+
 ## Reusable templates
 
 
@@ -57555,6 +57657,7 @@ requests, their successful provider receipts and the later
 
 ---
 ## Sources
+- [u/Livid_Necessary_Real — October 9, 2026 creator-published Seedance 2.5 gym vlog: complete 15-second prompt and native unedited result, six floor-propped/selfie camera states, five beat-locked dialogue lines and restrained tape-camcorder defects](https://www.reddit.com/r/seedance2pro/comments/1x0smcl/how_to_create_a_realistic_ai_gym_vlog_with/)
 - [keys-exe / global-manual-ai — October 8, 2026 Higgsfield Seedance 2.5 motion-reference contamination A/B/C: three complete 5-second 1080p omni-reference requests with exact media roles and job IDs; colour-reference dollar leakage, residual orange-note failure after desaturation, then creator-checked multicolour euro recovery after Gaussian-blurring the motion carrier, narrowing appearance references and specifying denomination morphology](https://github.com/keys-exe/global-manual-ai/commit/7c61f52309c301cd82cd01786edaf2b6d0ac1e7d) ([earlier colour and grayscale requests](https://github.com/keys-exe/global-manual-ai/commit/13a60dd3b2ed419fb0e33a1342f6d58d812b9d29), [blurred-grayscale request and result](https://github.com/keys-exe/global-manual-ai/blob/7c61f52309c301cd82cd01786edaf2b6d0ac1e7d/builds/uriserena-ultimo-giorno-v2/step7/fix_a2/B10.v30.sd25c.video.call.json))
 - [Brand-designer-pl / Zimorodek — October 8, 2026 creator-documented Seedance 2.5 endpoint-conform workflow: two committed original generations, exact first/last still ownership, empty-head trimming, phase-specific frame skipping, eight-frame terminal crossfades, two published delivery edits and autoplay fallback verification](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/commit/1bfc958b3393ea7ea373a96e9aa793f099d17cab) ([production record](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/AGENTS.md), [raw arrival](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/zrodla/wlot-3s-seedance-oryginal.mp4), [raw dive transition](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/zrodla/przejscie-3s-seedance-oryginal.mp4), [published arrival](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/assets/zimorodek-wlot.mp4), [published dive](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/assets/zimorodek-nurek.mp4))
 - [bshx2024 / qwenimage-editor — October 8, 2026 Volcano Ark Seedance 2.5 vintage-barn character demo: exact compiled prompt, `doubao-seedance-2-5-260628` route, local reference conversion and two committed MP4 outputs](https://github.com/bshx2024/qwenimage-editor/commit/6b6b53bbaa74fd48e8b0c07539bfae0ee6d3e0ae) ([first real-demo commit](https://github.com/bshx2024/qwenimage-editor/commit/81a519ddbe08c59e92ad9febd1b6d5731aa93f15), [prompt implementation](https://github.com/bshx2024/qwenimage-editor/blob/6b6b53bbaa74fd48e8b0c07539bfae0ee6d3e0ae/src/app/%5Blocale%5D/blog/%5Bslug%5D/RumpelstiltskinBlogPostComponent.tsx))
