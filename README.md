@@ -502,6 +502,12 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Reference-locked barn tiptoe with image-plane film defects](#486-reference-locked-barn-tiptoe-with-image-plane-film-defects)
   - [Desaturated motion-reference transfer with protected prop identity](#487-desaturated-motion-reference-transfer-with-protected-prop-identity)
   - [Camera-custody gym vlog with beat-locked self-deprecating dialogue](#488-camera-custody-gym-vlog-with-beat-locked-self-deprecating-dialogue)
+  - [Illustrated-horizon-to-live-moorland threshold](#489-illustrated-horizon-to-live-moorland-threshold)
+  - [Continuous moor-to-woodland descent](#490-continuous-moor-to-woodland-descent)
+  - [Endpoint-pinned unbranded-wellington splash repair](#491-endpoint-pinned-unbranded-wellington-splash-repair)
+  - [Puddle-to-reservoir kayak surface transition](#492-puddle-to-reservoir-kayak-surface-transition)
+  - [First-and-last-frame kayak-to-campfire handoff](#493-first-and-last-frame-kayak-to-campfire-handoff)
+  - [Photo-anchored dusk crane with paced time transition](#494-photo-anchored-dusk-crane-with-paced-time-transition)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -32667,6 +32673,290 @@ continuity checks without polishing away the intentionally casual UGC look.
 Adapted and rewritten from u/Livid_Necessary_Real's October 9, 2026
 [complete Seedance 2.5 prompt and native unedited 15-second result](https://www.reddit.com/r/seedance2pro/comments/1x0smcl/how_to_create_a_realistic_ai_gym_vlog_with/).
 
+
+### 489. Illustrated-horizon-to-live-moorland threshold
+
+**Verified model:** Runway Seedance 2.5 — the creator published the exact
+five-second prompt, draft task 8d6ee239-168c-4427-aecd-215cef8b897d, approved
+1080p enhancement d76a3f99-1a1a-4b67-a6b0-66706a93b711 and final extracted
+frames  
+**Use case:** turning a designed illustration into live documentary footage
+without losing the composition used by a website or title card  
+**Mode:** image-to-video from an exact opening frame  
+**Verified settings:** 5 seconds; 16:9; silent generation; 480p draft promoted
+to 1080p while preserving prompt and frame lineage
+
+```text
+Create one continuous five-second 16:9 shot from @Image1.
+
+REFERENCE CONTRACT
+@Image1 is the exact illustrated opening frame. It owns the horizon height,
+left and right ridge silhouettes, central reservoir position, low sun, sky
+division and initial palette. Do not redraw, crop or recompose it.
+
+0–2 s — MATERIALIZATION IN PLACE
+Keep every boundary registered while flat colour regions acquire physical
+detail: paper-blue sky becomes real cloud depth, green hill shapes become
+wind-moved moor grass, the central blue shape becomes reflective reservoir
+water, and the low sun gains natural atmospheric glow. The change travels
+through the existing shapes rather than replacing them with a new landscape.
+
+2–5 s — LIVE LANDSCAPE
+Continue as photoreal South Pennine documentary footage. Make one slow, stable
+push toward the reservoir. Clouds drift gently and grass responds to a light
+breeze; ridge positions and water alignment remain unchanged. Use warm
+late-afternoon light, soft greens, pale blues and restrained natural contrast.
+
+No cut, wipe, split screen, zoom jump, new mountain, moving horizon, people,
+text, logo or watermark. End on a stable forward-looking valley composition
+that can seed the next shot.
+```
+
+**Why it works:** the reference owns geometry while the prompt assigns
+material changes to the same image regions. The verified take became real
+within roughly one second and retained its composition; the production then
+used a measured post grade rather than asking a re-roll to risk the exact
+opening match.
+
+Adapted and rewritten from the October 9, 2026 [Castleshaw production
+commit](https://github.com/jameswilliamgriffin-spec/castleshaw/commit/850cd7b0ebffb39ee9824827546e7d206f01468f), its [complete prompt, task and approval
+ledger](https://github.com/jameswilliamgriffin-spec/castleshaw/blob/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/PROMPTS.md) and the [committed final frame
+sequences](https://github.com/jameswilliamgriffin-spec/castleshaw/tree/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/frames).
+
+---
+
+### 490. Continuous moor-to-woodland descent
+
+**Verified model:** Runway Seedance 2.5 — draft task
+f09b39ef-51fb-43a9-ad5c-2b7c7f70a1d2 was accepted, enhanced as
+a34e520a-633e-4311-9772-4a4fac48913d and retained in the approved six-shot
+master  
+**Use case:** terrain-to-interior nature transition, location continuity and a
+clean endpoint for a chained generation  
+**Mode:** image-to-video from the prior clip's decoded last frame  
+**Verified settings:** 5 seconds; 16:9; no audio; one continuous camera path
+
+```text
+Generate one continuous five-second 16:9 documentary shot.
+
+@Image1 is the exact final frame of the preceding moorland clip. It owns the
+horizon, travel direction, afternoon light and opening camera height.
+
+The camera keeps moving forward, then gradually descends from the open
+hillside toward the nearest edge of a UK broadleaf wood. Cross the tree line
+once. Pass beneath oak and birch leaves without clipping trunks, then settle at
+human chest height above one narrow earth footpath winding between moss,
+bracken and damp roots.
+
+Preserve forward screen direction and make the flight path physically
+readable: open air first, canopy crossing second, path reveal last. Let warm
+sun filter through leaves in soft shafts and place dappled light on the same
+path. Keep speed slow and even, like a drone handoff becoming a stabilized
+gimbal move.
+
+No cut, teleport, reverse travel, sudden altitude jump, new weather, person,
+face, title, logo or watermark. End with the footpath centered and enough
+foreground ground visible to anchor a low tracking continuation.
+```
+
+**Why it works:** the route has one crossing and one terminal height, so the
+model does not have to choose among competing drone, crane and walking-camera
+instructions. The accepted result preserved a single move from moor to birch
+wood and arrived on a usable sunlit-path endpoint.
+
+Adapted and rewritten from the [creator's versioned production
+commit](https://github.com/jameswilliamgriffin-spec/castleshaw/commit/850cd7b0ebffb39ee9824827546e7d206f01468f), [prompt and successful-task
+record](https://github.com/jameswilliamgriffin-spec/castleshaw/blob/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/PROMPTS.md) and [six approved final
+posters](https://github.com/jameswilliamgriffin-spec/castleshaw/tree/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/posters).
+
+---
+
+### 491. Endpoint-pinned unbranded-wellington splash repair
+
+**Verified model:** Runway Seedance 2.5 — the first generated splash worked but
+invented a brand-like boot tag; the creator re-drafted with the same start and
+end frames, changed the footwear constraint, approved task
+c0692cab-e65f-4c57-9844-1d7448e12894 and enhanced it as
+ab4e48ac-d460-4491-b476-1d1499b87d66  
+**Use case:** repairing one local prop defect without breaking downstream
+continuity in a chained film  
+**Mode:** first-and-last-frame image-to-video repair  
+**Verified settings:** 5 seconds; 16:9; silent; endpoint-pinned re-roll
+
+```text
+Create a five-second 16:9 low tracking shot between @Image1 and @Image2.
+
+@Image1 is the approved woodland-path opening and owns camera direction,
+lighting and ground layout. @Image2 is the already accepted terminal frame and
+must be reached exactly so the next shot remains unchanged.
+
+0–1 s: Tilt down and lower smoothly until the lens is just above the wet path.
+1–4 s: Track forward beside one pair of plain, unbranded dark-green rubber
+wellington boots and red waterproof trouser legs, cropped at the knees. Show
+believable alternating steps and body weight. One boot contacts a shallow
+brown puddle; only after contact do droplets and mud rise, ripples expand and
+water fall under gravity.
+4–5 s: Continue the same direction and settle into @Image2 without a pause,
+jump or changed terrain.
+
+Keep moss, bracken, fallen leaves and dappled afternoon light consistent.
+There is only one walker. No label, tag, badge, lettering, logo, extra leg,
+floating boot, frozen splash, cut, slow-motion insert or camera reversal.
+```
+
+**Why it works:** the repair changes one variable—prop branding—while the two
+approved endpoints protect the edit chain. It is a concrete example of
+re-rolling a successful action locally instead of regenerating later shots or
+accepting an invented mark.
+
+Adapted and rewritten from the [Castleshaw client-approved production
+commit](https://github.com/jameswilliamgriffin-spec/castleshaw/commit/850cd7b0ebffb39ee9824827546e7d206f01468f), its [A-to-C repair and exact task
+lineage](https://github.com/jameswilliamgriffin-spec/castleshaw/blob/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/PROMPTS.md) and the [published final frame
+archive](https://github.com/jameswilliamgriffin-spec/castleshaw/tree/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/frames).
+
+---
+
+### 492. Puddle-to-reservoir kayak surface transition
+
+**Verified model:** Runway Seedance 2.5 — draft task
+78b9d1fd-4c31-460e-9f62-b8470634592 was accepted, enhanced as
+d1bdecaf-5bd6-4154-a059-b3de35aafd6f and preserved in the final master  
+**Use case:** motivated water-surface transition, ground-to-open-water reveal
+and object introduction without a hard cut  
+**Mode:** image-to-video from the prior splash clip's final frame  
+**Verified settings:** 5 seconds; 16:9; silent; continuous transition
+
+```text
+Generate one uninterrupted five-second 16:9 shot from @Image1.
+
+@Image1 is the exact final woodland-puddle frame. It owns the initial ripple,
+camera direction, colour temperature and nearby ground texture.
+
+Follow the expanding ripple and push the lens down toward the water until the
+reflective surface fills the frame. Cross that surface only once. The small
+reflection opens into the calm water of a real South Pennine reservoir while
+the same circular ripple continues at larger scale. Rise to a few centimetres
+above the new waterline beside the bow of one plain red sit-on kayak.
+
+In the final beat, one paddle blade enters the foreground, dips once and sends
+rings and bright droplets outward. Only the blade and the edge of one gloved
+hand may appear. Keep low moorland hills on the far shore beneath a soft blue
+sky, with natural afternoon light, cool water blues and quiet green slopes.
+
+No hard cut, tunnel, splash wipe, second kayak, face, full person, branded
+equipment, impossible reflection, reversed ripple, text, logo or watermark.
+End after the paddle contact with the bow and rings still readable.
+```
+
+**Why it works:** one physical carrier—the ripple—owns both sides of the
+transition. The accepted generation turned the puddle reflection into the
+kayak bow and completed the paddle dip, giving the next endpoint-controlled
+shot a concrete object and direction to inherit.
+
+Adapted and rewritten from the [October 9 production
+commit](https://github.com/jameswilliamgriffin-spec/castleshaw/commit/850cd7b0ebffb39ee9824827546e7d206f01468f), the [complete Seedance 2.5 prompt and task
+ledger](https://github.com/jameswilliamgriffin-spec/castleshaw/blob/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/PROMPTS.md) and the [committed final
+posters](https://github.com/jameswilliamgriffin-spec/castleshaw/tree/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/posters).
+
+---
+
+### 493. First-and-last-frame kayak-to-campfire handoff
+
+**Verified model:** Runway Seedance 2.5 — the creator published rejected task
+210d67e4-322f-4438-8413-8ed648aa72c6, accepted re-prompt task
+f3e6590a-b5a1-4cf1-9a36-475cebca6a79 and approved enhancement
+e265c54c-05b3-4082-af3d-af23f1ba115b  
+**Evidence boundary:** the first attempt produced an unwanted split-screen
+wipe. The accepted second take used a soft water-to-fire dissolve rather than
+the requested literal travel, but the client approved that transition and it
+landed on the supplied real photograph  
+**Use case:** connecting generated motion to an exact documentary photograph
+while rejecting conspicuous wipe artifacts  
+**Mode:** first-and-last-frame video generation  
+**Verified settings:** 5 seconds; 16:9; no audio; exact photographic endpoint
+
+```text
+Create one five-second 16:9 transition from @Image1 to @Image2.
+
+@Image1 is the exact kayak-and-paddle endpoint. It owns the opening waterline,
+travel direction, red bow, afternoon light and shoreline position.
+@Image2 is the centre's real overhead campfire photograph. It owns the final
+stove geometry, hands, sticks, marshmallows, grass, framing and colour.
+
+Begin at water level beside the kayak. Float forward over the bow, travel
+toward the grassy bank and rise just enough to clear it. While moving, tilt
+progressively downward until the camera looks straight onto one small round
+metal stove. Orange flames and embers remain contained. A few sparks rise;
+hands enter only from frame edges holding long hazel sticks with marshmallows.
+Only hands and boot edges are visible.
+
+Arrive exactly on @Image2 by the final frame and hold it cleanly. Prefer a
+single spatial move. If the model cannot preserve that route, one brief,
+centered water-to-fire dissolve is acceptable; a lateral wipe, split screen or
+picture-in-picture is not.
+
+No face, duplicate hand, extra fire, changing stove, title, logo or watermark.
+```
+
+**Why it works:** endpoint ownership is explicit and the fallback distinguishes
+a tolerable editorial dissolve from the failure that actually caused the
+re-roll. This keeps the real photograph authoritative without pretending the
+accepted result achieved a literal unbroken camera flight.
+
+Adapted and rewritten from the [original production
+commit](https://github.com/jameswilliamgriffin-spec/castleshaw/commit/850cd7b0ebffb39ee9824827546e7d206f01468f), its [two attempts, task IDs, result notes and client
+approval](https://github.com/jameswilliamgriffin-spec/castleshaw/blob/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/PROMPTS.md) and the [final fire
+poster](https://github.com/jameswilliamgriffin-spec/castleshaw/tree/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/posters).
+
+---
+
+### 494. Photo-anchored dusk crane with paced time transition
+
+**Verified model:** Runway Seedance 2.5 — draft task
+736c1a8d-901f-4908-b9b9-166201d0e4e7 was approved and enhanced as
+22dee24e-a0c4-4d6e-b559-c69128545596 for the final six-chapter film  
+**Evidence boundary:** the generated landscape, cottage, sparks and stars
+worked, but the draft changed day to night within roughly one second. The
+adaptation below preserves the verified shot design while turning that observed
+failure into an explicit pacing gate  
+**Use case:** continuing from a real photo, crane-up location reveal and
+controlled within-shot time passage  
+**Mode:** image-to-video from the previous clip's exact photographic endpoint  
+**Verified settings:** 5 seconds; 16:9; no audio; final 1080p enhancement
+
+```text
+Generate one continuous five-second 16:9 crane-up from @Image1.
+
+@Image1 is the exact overhead campfire photograph. It owns the stove, grass,
+hands, marshmallows, flame position, opening exposure and colour.
+
+0–1.5 s: Rise vertically from the small fire. Keep embers and sparks moving
+upward beneath the lens; do not replace the location.
+1.5–3.5 s: Tilt gradually from the fire toward the horizon while continuing
+the same crane move. Reveal one wide Pennine valley, dark rolling moorland, a
+reservoir holding the last pale light and a row of old gritstone cottages on
+the hillside.
+3.5–5 s: Complete the rise and settle on the wide valley. Cottage windows glow
+warm yellow. The sky progresses gradually from a soft orange horizon into deep
+blue, and only then do the first faint stars appear.
+
+The day-to-dusk change must occupy the full shot: no sudden night state before
+the midpoint, exposure snap, sky replacement or instant stars. No cut, new
+valley, face, crowd, extra fire, title, logo or watermark. End on a calm stable
+wide frame.
+```
+
+**Why it works:** the camera path and the light-state ledger are independent.
+The verified output proved the crane, valley and dusk imagery; the explicit
+midpoint gate addresses the only documented timing defect without changing the
+approved starting photograph or final composition.
+
+Adapted and rewritten from the [Castleshaw production
+commit](https://github.com/jameswilliamgriffin-spec/castleshaw/commit/850cd7b0ebffb39ee9824827546e7d206f01468f), its [complete prompt, result note, approved task and
+credit record](https://github.com/jameswilliamgriffin-spec/castleshaw/blob/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/PROMPTS.md), the [final frame
+sequences](https://github.com/jameswilliamgriffin-spec/castleshaw/tree/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/frames) and the [measured stitch-and-grade
+script](https://github.com/jameswilliamgriffin-spec/castleshaw/blob/850cd7b0ebffb39ee9824827546e7d206f01468f/v2/video-src/stitch.sh).
+
 ---
 
 ## Reusable templates
@@ -57657,6 +57947,7 @@ requests, their successful provider receipts and the later
 
 ---
 ## Sources
+- [James William Griffin / Castleshaw Centre — October 9, 2026 Runway Seedance 2.5 six-chapter location film: six complete five-second prompts, eight draft tasks, six client-approved 1080p enhancements, exact frame-chain lineage, one endpoint-pinned branding repair, two first/last-frame transitions, paired 361-frame desktop/mobile deliveries and measured stitching/grade controls](https://github.com/jameswilliamgriffin-spec/castleshaw/commit/850cd7b0ebffb39ee9824827546e7d206f01468f) ([complete prompt, task, result and approval ledger](https://github.com/jameswilliamgriffin-spec/castleshaw/blob/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/PROMPTS.md), [final frame sequences](https://github.com/jameswilliamgriffin-spec/castleshaw/tree/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/frames), [six chapter posters](https://github.com/jameswilliamgriffin-spec/castleshaw/tree/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/posters), [stitch-and-grade script](https://github.com/jameswilliamgriffin-spec/castleshaw/blob/850cd7b0ebffb39ee9824827546e7d206f01468f/v2/video-src/stitch.sh))
 - [u/Livid_Necessary_Real — October 9, 2026 creator-published Seedance 2.5 gym vlog: complete 15-second prompt and native unedited result, six floor-propped/selfie camera states, five beat-locked dialogue lines and restrained tape-camcorder defects](https://www.reddit.com/r/seedance2pro/comments/1x0smcl/how_to_create_a_realistic_ai_gym_vlog_with/)
 - [keys-exe / global-manual-ai — October 8, 2026 Higgsfield Seedance 2.5 motion-reference contamination A/B/C: three complete 5-second 1080p omni-reference requests with exact media roles and job IDs; colour-reference dollar leakage, residual orange-note failure after desaturation, then creator-checked multicolour euro recovery after Gaussian-blurring the motion carrier, narrowing appearance references and specifying denomination morphology](https://github.com/keys-exe/global-manual-ai/commit/7c61f52309c301cd82cd01786edaf2b6d0ac1e7d) ([earlier colour and grayscale requests](https://github.com/keys-exe/global-manual-ai/commit/13a60dd3b2ed419fb0e33a1342f6d58d812b9d29), [blurred-grayscale request and result](https://github.com/keys-exe/global-manual-ai/blob/7c61f52309c301cd82cd01786edaf2b6d0ac1e7d/builds/uriserena-ultimo-giorno-v2/step7/fix_a2/B10.v30.sd25c.video.call.json))
 - [Brand-designer-pl / Zimorodek — October 8, 2026 creator-documented Seedance 2.5 endpoint-conform workflow: two committed original generations, exact first/last still ownership, empty-head trimming, phase-specific frame skipping, eight-frame terminal crossfades, two published delivery edits and autoplay fallback verification](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/commit/1bfc958b3393ea7ea373a96e9aa793f099d17cab) ([production record](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/AGENTS.md), [raw arrival](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/zrodla/wlot-3s-seedance-oryginal.mp4), [raw dive transition](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/zrodla/przejscie-3s-seedance-oryginal.mp4), [published arrival](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/assets/zimorodek-wlot.mp4), [published dive](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/assets/zimorodek-nurek.mp4))
