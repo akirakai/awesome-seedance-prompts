@@ -32486,14 +32486,15 @@ and the [exact prompt and request implementation](https://github.com/bshx2024/qw
 ### 487. Desaturated motion-reference transfer with protected prop identity
 
 **Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`,
-`omni_reference`) — the production record preserves five complete requests,
+`omni_reference`) — the production record preserves six complete requests,
 their media-role tables and successful generation IDs
 `438f57e9-c472-44b6-a5c7-7b1fa1c877b9`,
 `f4feabee-2936-4fa3-ad9e-302a6401252a`,
 `0f02ab4f-585e-4f69-9d0f-305e3d54129a`,
-`1141b961-2454-4903-abd4-4439a2ddf750` and
-`7bcb332b-a85c-4447-87ce-b8f00ea891dc`  
-**Evidence boundary:** none of the five takes was ultimately owner-approved.
+`1141b961-2454-4903-abd4-4439a2ddf750`,
+`7bcb332b-a85c-4447-87ce-b8f00ea891dc` and
+`c8849a38-11dd-447a-8ab6-bc5cc403e2b0`  
+**Evidence boundary:** none of the six takes was ultimately owner-approved.
 The first copied US-dollar appearance from the colour motion reference; the
 grayscale rerun retained the counting action but rendered the euro notes too
 uniformly orange. The third run produced more distinct denomination colours
@@ -32503,8 +32504,12 @@ the start frame and using a motion carrier that already showed the target
 currency; the creator recorded real €50 notes throughout and a sharp bottle,
 then the owner rejected its focus and counting motion. The fifth restored the
 approved portrait blur and crisp bottle in a new start frame, then used the
-owner-selected counting take as motion; it also remained **To check**. Treat
-the sequence as verified failure-control evidence, not a delivery guarantee.
+owner-selected counting take as motion; it also remained **To check**. The
+sixth removed every approximate-note and swap clip from the reference set:
+start frame, two appearance images and the motion carrier all showed the exact
+€50. The creator recorded the correct note design throughout, blurred
+background and sharp bottle, but it likewise remained **To check**. Treat the
+sequence as verified failure-control evidence, not a delivery guarantee.
 One inherited `via` field in the earlier record names the preceding 2.0
 attempt, while every operative `hf_params.model`, engine pick and result
 record identifies Seedance 2.5  
@@ -32514,7 +32519,8 @@ small-prop identity protection and reference-contamination testing
 appearance authorities, plus one motion-only video in omni-reference mode  
 **Verified settings:** 5 seconds; 9:16; 1080p; one uncut phone close-up; audio
 generation disabled; tested first with a grayscale Gaussian-blurred carrier,
-then with target-prop-precomposed start frames and appearance-matched motion
+then with target-prop-precomposed start frames, appearance-matched motion and a
+reference-cleaning pass in which every input shows the exact target prop
 
 ```text
 REFERENCE CONTRACT
@@ -32596,9 +32602,12 @@ camera reframes.
 
 **Why it works:** the first repair gives motion, banknote appearance and product
 identity to separate assets, then strips both colour and fine spatial detail
-from the motion carrier. The five-run record shows the limit of that firewall:
+from the motion carrier. The six-run record shows the limit of that firewall:
 desaturation removed direct dollar copying, while blur and narrower appearance
 references improved denomination separation without guaranteeing exact print.
+The sixth pass adds a stronger rule: when the motion carrier itself contains
+an approximate substitute, remove it from the graph instead of asking prompt
+language to override it; every surviving input should agree on the target.
 The escalation stops asking the video model to redraw a precision prop in
 motion. It precomposes the accepted appearance into frame zero, keeps a separate
 product authority, and selects a motion carrier already closer to the target
@@ -32610,9 +32619,11 @@ printed detail must be exact in every frame.
 Adapted and rewritten from keys-exe's October 8–9, 2026
 [Seedance 2.5 A/B/C production record](https://github.com/keys-exe/global-manual-ai/commit/7c61f52309c301cd82cd01786edaf2b6d0ac1e7d),
 the earlier [colour and grayscale requests](https://github.com/keys-exe/global-manual-ai/commit/13a60dd3b2ed419fb0e33a1342f6d58d812b9d29),
-and the new [appearance-first D/E production record](https://github.com/keys-exe/global-manual-ai/commit/e06c6295373cf8fba7726f4d5886e2253717c32b)
+the [appearance-first D/E production record](https://github.com/keys-exe/global-manual-ai/commit/e06c6295373cf8fba7726f4d5886e2253717c32b)
 with its [precomposed-start request](https://github.com/keys-exe/global-manual-ai/blob/e06c6295373cf8fba7726f4d5886e2253717c32b/builds/uriserena-ultimo-giorno-v2/step7/fix_a2/B10.v34.sd25.video.call.json)
-and [focus-restored retry](https://github.com/keys-exe/global-manual-ai/blob/e06c6295373cf8fba7726f4d5886e2253717c32b/builds/uriserena-ultimo-giorno-v2/step7/fix_a2/B10.v36.sd25.video.call.json).
+and [focus-restored retry](https://github.com/keys-exe/global-manual-ai/blob/e06c6295373cf8fba7726f4d5886e2253717c32b/builds/uriserena-ultimo-giorno-v2/step7/fix_a2/B10.v36.sd25.video.call.json),
+and the [reference-cleaned F production record](https://github.com/keys-exe/global-manual-ai/commit/e89f8990f12cff405f5957834b63fd88dd1ebdab)
+with its [complete request and result ledger](https://github.com/keys-exe/global-manual-ai/blob/e89f8990f12cff405f5957834b63fd88dd1ebdab/builds/uriserena-ultimo-giorno-v2/step7/fix_a2/B10.v36b.sd25.video.call.json).
 
 ---
 
@@ -33061,6 +33072,79 @@ and the [regenerated desktop/mobile delivery commit](https://github.com/1Herman1
 ---
 ## Reusable templates
 
+
+### Motion-first product repair with surgical label replacement
+
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`,
+`omni_reference`) — the creator committed the exact 9-second 720p request,
+media-role table and successful job `03ff0f6d-ea20-4368-89da-6f32fc64b8e1`,
+then the product-replacement job `29c9014c-9420-4c47-a6d2-99a88285af79`
+and an owner-approved final
+**Evidence boundary:** the Seedance pass repaired the bottle lift and hand
+motion but copied the LOVY label from the motion carrier. The accepted result
+therefore combines Seedance motion with a second, product-only replacement;
+it does not demonstrate that Seedance preserved the final label by itself.
+Count this as a reusable editing and failure-routing template, not a separate
+complete Seedance prompt
+**Use case:** UGC testimonials and product ads where the gesture, grip and
+camera performance are good but a small printed label becomes blank, warped
+or contaminated by the motion reference
+**Mode:** start frame + product images + motion carrier -> Seedance motion
+master -> object-only replacement -> splice, lip-sync or delivery finishing
+
+```text
+PASS 1 — MOTION MASTER
+@Image1 owns the opening frame, person, room, crop, light and initial grip.
+@Image2 and @Image3 own the target package silhouette, cap, material, label
+zones and front-facing orientation.
+@Video1 owns only the original hand trajectory, lift timing, grip changes,
+body performance and camera cadence.
+
+Create one continuous [DURATION]-second vertical product-performance insert.
+Preserve @Image1's person and environment. Transfer @Video1's natural lift and
+hand mechanics while keeping one upright product at the same scale and depth.
+Hold its front panel toward the lens; no bottle collapse, hand intersection,
+extra fingers, camera reframe, invented prop or abrupt speed change.
+
+MOTION DECISION GATE
+- If the lift, grip or body performance is wrong, rerun the Seedance pass.
+- If motion and product identity both pass, finish normally.
+- If motion passes but fine label text is blank, warped or copied from
+  @Video1, freeze this take as the motion master. Do not sacrifice the
+  approved movement with another broad rerender; route only the product to
+  the surgical second pass.
+
+PASS 2 — SURGICAL PRODUCT REPLACEMENT
+Use the accepted Seedance master as the source clip. Replace only the named
+product with the approved package reference. Match the source object's exact
+size, position, perspective, motion path, occlusion and grip frame by frame.
+Keep the face, mouth, glasses, hands, room, lighting, camera and every other
+movement unchanged. The approved front label must remain readable and
+geometrically stable throughout; never replace the hand or redraw the scene.
+
+ASSEMBLY AND ACCEPTANCE
+Splice the repaired interval back at its original in-point without retiming.
+If the shot feeds lip-sync, run lip-sync after the final visual replacement so
+the last accepted picture owns the delivery. Apply the requested subtitle
+policy only at export.
+
+Pass only when motion is smooth; grip and occlusion remain physical; the
+package keeps one shape and scale; the correct label survives every frame;
+the person's identity and mouth do not change; the splice is invisible; and
+the final duration, audio and subtitle state match the delivery brief.
+```
+
+**Why it works:** motion and printed-product fidelity often fail for different
+reasons. This pattern lets Seedance solve the temporal problem once, then
+limits the precision repair to the one object that failed. The decision gate
+prevents repeated full-scene generations from destroying an already approved
+performance, while the final splice and lip-sync order keeps downstream edits
+attached to the actually delivered picture.
+
+Adapted and rewritten from keys-exe's October 9, 2026
+[approved two-pass testimonial repair](https://github.com/keys-exe/global-manual-ai/commit/3da0e2bbaaaae8d841265d3b4ca406c9d467dc59),
+its [exact Seedance 2.5 request](https://github.com/keys-exe/global-manual-ai/blob/3da0e2bbaaaae8d841265d3b4ca406c9d467dc59/builds/ama-pdp-testimonials/calls/FINAL-V1.sd25.call.json)
+and the [versioned product-repair ledger](https://github.com/keys-exe/global-manual-ai/blob/3da0e2bbaaaae8d841265d3b4ca406c9d467dc59/builds/ama-pdp-testimonials/board/BOTTLE-V1.json).
 
 ### Chroma-isolated in-place gait strip with measured one-cycle extraction
 
@@ -58232,7 +58316,8 @@ requests, their successful provider receipts and the later
 - [Zafer Dajani / HZD-99 — October 9, 2026 Higgsfield Seedance 2.5 in-place animal-gait study: four 4-second 720p locked-camera tasks, chroma-isolated start plates, walk/run contact sheets, measured one-stride periods, midpoint-sampled 8-cell/6-cell strips, silhouette-difference validation and a documented two-stride re-cut](https://github.com/zaferdajani/HZD-99/commit/ae47576b112ba664e2e0c10ad724ad7744b1784f) ([task IDs, settings and measurement record](https://github.com/zaferdajani/HZD-99/blob/ae47576b112ba664e2e0c10ad724ad7744b1784f/assets/source/README.md), [start frames and contact sheets](https://github.com/zaferdajani/HZD-99/tree/ae47576b112ba664e2e0c10ad724ad7744b1784f/assets/source/beasts/cycles), [delivered gait strips](https://github.com/zaferdajani/HZD-99/tree/ae47576b112ba664e2e0c10ad724ad7744b1784f/assets/characters/beasts))
 - [James William Griffin / Castleshaw Centre — October 9, 2026 Runway Seedance 2.5 six-chapter location film: six complete five-second prompts, eight draft tasks, six client-approved 1080p enhancements, exact frame-chain lineage, one endpoint-pinned branding repair, two first/last-frame transitions, paired 361-frame desktop/mobile deliveries and measured stitching/grade controls](https://github.com/jameswilliamgriffin-spec/castleshaw/commit/850cd7b0ebffb39ee9824827546e7d206f01468f) ([complete prompt, task, result and approval ledger](https://github.com/jameswilliamgriffin-spec/castleshaw/blob/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/PROMPTS.md), [final frame sequences](https://github.com/jameswilliamgriffin-spec/castleshaw/tree/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/frames), [six chapter posters](https://github.com/jameswilliamgriffin-spec/castleshaw/tree/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/posters), [stitch-and-grade script](https://github.com/jameswilliamgriffin-spec/castleshaw/blob/850cd7b0ebffb39ee9824827546e7d206f01468f/v2/video-src/stitch.sh))
 - [u/Livid_Necessary_Real — October 9, 2026 creator-published Seedance 2.5 gym vlog: complete 15-second prompt and native unedited result, six floor-propped/selfie camera states, five beat-locked dialogue lines and restrained tape-camcorder defects](https://www.reddit.com/r/seedance2pro/comments/1x0smcl/how_to_create_a_realistic_ai_gym_vlog_with/)
-- [keys-exe / global-manual-ai — October 8–9, 2026 Higgsfield Seedance 2.5 motion-reference contamination A/B/C/D/E: five complete 5-second 1080p omni-reference requests with media-role tables and generation IDs; dollar leakage, residual single-colour euro failure, blurred-carrier mitigation, then target-prop-precomposed start-frame repairs with appearance-matched and owner-selected motion carriers](https://github.com/keys-exe/global-manual-ai/commit/e06c6295373cf8fba7726f4d5886e2253717c32b) ([earlier A/B requests](https://github.com/keys-exe/global-manual-ai/commit/13a60dd3b2ed419fb0e33a1342f6d58d812b9d29), [blurred-carrier C request](https://github.com/keys-exe/global-manual-ai/commit/7c61f52309c301cd82cd01786edaf2b6d0ac1e7d), [precomposed-start D request](https://github.com/keys-exe/global-manual-ai/blob/e06c6295373cf8fba7726f4d5886e2253717c32b/builds/uriserena-ultimo-giorno-v2/step7/fix_a2/B10.v34.sd25.video.call.json), [focus-restored E request](https://github.com/keys-exe/global-manual-ai/blob/e06c6295373cf8fba7726f4d5886e2253717c32b/builds/uriserena-ultimo-giorno-v2/step7/fix_a2/B10.v36.sd25.video.call.json))
+- [keys-exe / global-manual-ai — October 8–9, 2026 Higgsfield Seedance 2.5 motion-reference contamination A/B/C/D/E/F: six complete 5-second 1080p omni-reference requests with media-role tables and generation IDs; dollar leakage, residual single-colour euro failure, blurred-carrier mitigation, target-prop-precomposed start frames, and a final reference-cleaning pass where every input shows the exact €50](https://github.com/keys-exe/global-manual-ai/commit/e89f8990f12cff405f5957834b63fd88dd1ebdab) ([earlier A/B requests](https://github.com/keys-exe/global-manual-ai/commit/13a60dd3b2ed419fb0e33a1342f6d58d812b9d29), [blurred-carrier C request](https://github.com/keys-exe/global-manual-ai/commit/7c61f52309c301cd82cd01786edaf2b6d0ac1e7d), [precomposed-start D and focus-restored E record](https://github.com/keys-exe/global-manual-ai/commit/e06c6295373cf8fba7726f4d5886e2253717c32b), [reference-cleaned F request](https://github.com/keys-exe/global-manual-ai/blob/e89f8990f12cff405f5957834b63fd88dd1ebdab/builds/uriserena-ultimo-giorno-v2/step7/fix_a2/B10.v36b.sd25.video.call.json))
+- [keys-exe / global-manual-ai — October 9, 2026 approved Higgsfield Seedance 2.5 UGC repair: exact 9-second omni-reference request and job, documented wrong-label contamination, surgical product-only replacement, final splice/lip-sync order and owner-approved delivery](https://github.com/keys-exe/global-manual-ai/commit/3da0e2bbaaaae8d841265d3b4ca406c9d467dc59) ([exact Seedance request](https://github.com/keys-exe/global-manual-ai/blob/3da0e2bbaaaae8d841265d3b4ca406c9d467dc59/builds/ama-pdp-testimonials/calls/FINAL-V1.sd25.call.json), [product-repair ledger](https://github.com/keys-exe/global-manual-ai/blob/3da0e2bbaaaae8d841265d3b4ca406c9d467dc59/builds/ama-pdp-testimonials/board/BOTTLE-V1.json), [production notes](https://github.com/keys-exe/global-manual-ai/blob/3da0e2bbaaaae8d841265d3b4ca406c9d467dc59/builds/ama-pdp-testimonials/BUILD_NOTES.md))
 - [Brand-designer-pl / Zimorodek — October 8, 2026 creator-documented Seedance 2.5 endpoint-conform workflow: two committed original generations, exact first/last still ownership, empty-head trimming, phase-specific frame skipping, eight-frame terminal crossfades, two published delivery edits and autoplay fallback verification](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/commit/1bfc958b3393ea7ea373a96e9aa793f099d17cab) ([production record](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/AGENTS.md), [raw arrival](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/zrodla/wlot-3s-seedance-oryginal.mp4), [raw dive transition](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/zrodla/przejscie-3s-seedance-oryginal.mp4), [published arrival](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/assets/zimorodek-wlot.mp4), [published dive](https://github.com/Brand-designer-pl/zimorodek-hero-aplikacje/blob/1bfc958b3393ea7ea373a96e9aa793f099d17cab/assets/zimorodek-nurek.mp4))
 - [bshx2024 / qwenimage-editor — October 8, 2026 Volcano Ark Seedance 2.5 vintage-barn character demo: exact compiled prompt, `doubao-seedance-2-5-260628` route, local reference conversion and two committed MP4 outputs](https://github.com/bshx2024/qwenimage-editor/commit/6b6b53bbaa74fd48e8b0c07539bfae0ee6d3e0ae) ([first real-demo commit](https://github.com/bshx2024/qwenimage-editor/commit/81a519ddbe08c59e92ad9febd1b6d5731aa93f15), [prompt implementation](https://github.com/bshx2024/qwenimage-editor/blob/6b6b53bbaa74fd48e8b0c07539bfae0ee6d3e0ae/src/app/%5Blocale%5D/blog/%5Bslug%5D/RumpelstiltskinBlogPostComponent.tsx))
 - [Alina (@Alina_with_Ai) — October 8, 2026 creator-published Seedance 2.5 corridor telekinesis sequence: complete 30-second prompt, 2.3:1 framing, six timed action blocks, gesture-owned impacts and stable dust-settle endpoint](https://x.com/Alina_with_Ai/status/2108018045910429795) ([complete-prompt transcription and directing breakdown](https://tau-home.com/en/post/seedance-2-5-cinematic-action-video-timecode-prompting/))
