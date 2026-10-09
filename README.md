@@ -33102,6 +33102,106 @@ and the delivered [wolf](https://github.com/zaferdajani/HZD-99/blob/ae47576b112b
 and [cheetah](https://github.com/zaferdajani/HZD-99/blob/ae47576b112ba664e2e0c10ad724ad7744b1784f/assets/characters/beasts/cheetah_run6.webp)
 motion strips.
 
+### State-specific motion-strip extraction for loops, impacts, and fliers
+
+**Verified model:** Higgsfield Seedance 2.5 — the creator's production commit
+explicitly identifies the animated-in-place model, records the generation task
+IDs and commits the chroma start plates, contact sheets and delivered strips  
+**Evidence boundary:** the original provider prompt strings and receipts are not
+public. Count this as a verified generation-plus-extraction technique, not as a
+verbatim provider recipe  
+**Use case:** derive production-ready looped, one-shot and airborne sprite motion
+from the same locked character identity without duplicate poses, impact holds,
+floor-line artifacts or clipped extremities  
+**Mode:** image-to-video from a chroma-isolated identity plate, followed by
+motion-class-specific sampling and measured rejection gates
+
+```text
+INPUT CONTRACT
+@Image1 = one approved character plate on a flat key field. It owns identity,
+silhouette, materials, markings, facing direction and scale. Re-plate every
+action from the same approved identity before animation; do not let a previous
+generated take become the next identity source.
+
+Choose exactly one MOTION CLASS:
+A. LOOP — walk, crawl, pant, hover or flap that must return to its start phase.
+B. ONE-SHOT — landing, recoil, collapse, rise or strike with a terminal state.
+C. FLOAT — a flying loop whose wings, tail or particles must never meet a floor
+   line or the crop edge.
+
+GENERATION CONTRACT
+Create one [DURATION]-second 720p locked-camera motion study from @Image1.
+The subject stays centered, at constant scale and orientation, and performs
+only [ACTION]. Preserve the approved body, costume and protected colors.
+Tripod camera, fixed focal length, constant exposure and flat key field.
+No screen travel, pan, zoom, orbit, yaw, cut, extra limb, identity change,
+background, cast shadow, text, logo or watermark.
+
+CLASS A — LOOP
+Describe one complete biomechanical cycle and its largest readable extremes.
+For a fatigue loop, require a visible drop, flank or chest expansion, recovery
+and return rather than a nearly static hold. Generate multiple cycles so the
+shortest clean period can be measured later.
+
+CLASS B — ONE-SHOT
+Write the action as ordered physical beats and name the first useful frame:
+[APPROACH / AIRBORNE] -> [CONTACT] -> [COMPRESSION] -> [LOWEST POINT] ->
+[PARTIAL RECOVERY / CUTTABLE END]. Do not hold the contact pose, repeat the
+impact, jump out of frame, flash the background or return to the start state.
+
+CLASS C — FLOAT
+Start from a plate framed small enough that the maximum upstroke and downstroke
+retain clear safety margins. Require one complete [WING / FIN / TAIL] cycle
+with the body centered and no forward travel. The key field contains no floor
+line, contact shadow, loose debris or shed flecks.
+
+EXTRACTION
+1. Preserve the raw take and its exact start plate.
+2. For a LOOP, measure the shortest genuine return period P and sample N cells
+   at phase midpoints: t(i) = t0 + (i + 0.5) * P / N. Never include both t0 and
+   t0+P.
+3. For a ONE-SHOT, do not sample evenly. Select frames at the named semantic
+   beats: first contact, fold, lowest point and partial recovery. Put the impact
+   in cell 1 when the animation must begin with contact.
+4. For a FLOAT, disable floor-based cropping. Retain the full extremity envelope
+   and remove only isolated keyed specks that are not attached to the subject.
+5. Pack cells in action order and record the chosen times, crop, baseline rule
+   and whether the strip loops or plays once.
+
+MEASURED REJECTION GATES
+- Compare every cell silhouette against its neighbors and, for loops, compare
+  the last cell with the first. Reject a strip whose cells are effectively the
+  same pose even if the video itself appears to move.
+- If motion is too gentle, regenerate with the largest body displacement stated
+  explicitly; do not manufacture amplitude by stretching duplicate cells.
+- If an extremity touches the frame edge, regenerate from a smaller-framed
+  identity plate. Cropping a clipped wing or tail cannot restore its motion.
+- If a one-shot spends several cells on a hold, replace equal-time sampling
+  with hand-picked action beats.
+- If a landing exits frame, specify a short controlled drop with the full body
+  visible through impact and recovery.
+- Reject new markings, altered anatomy, changed facing, key-field flashes,
+  floor-line clipping, detached particles and duplicate phases.
+- Archive the start plate, untouched take, contact sheet, selected timestamps,
+  silhouette-difference measurements and delivered strip beside the build.
+```
+
+**Why it works:** loops, impacts and flying cycles fail for different reasons.
+Midpoint phase sampling prevents duplicated loop endpoints; semantic beat
+sampling preserves a one-shot's contact and recovery; floor-free extraction and
+a smaller source plate protect airborne extremities. The source production
+documented all three correction paths: nearly identical panting cells were
+regenerated with stronger heave, an out-of-frame landing was re-fired as a short
+hop, and clipped cruise wings were re-fired from a smaller-framed start plate.
+
+Adapted and rewritten from Zafer Dajani's October 9, 2026
+[Seedance 2.5 production commit](https://github.com/zaferdajani/HZD-99/commit/277933919e3c94a08d586a4cb3196bb1e3921b8e),
+the [creator-authored task, failure and measurement record](https://github.com/zaferdajani/HZD-99/blob/277933919e3c94a08d586a4cb3196bb1e3921b8e/assets/source/README.md),
+the committed [beast](https://github.com/zaferdajani/HZD-99/tree/277933919e3c94a08d586a4cb3196bb1e3921b8e/assets/source/beasts/cycles),
+[roster](https://github.com/zaferdajani/HZD-99/tree/277933919e3c94a08d586a4cb3196bb1e3921b8e/assets/source/roster/cycles),
+[flight](https://github.com/zaferdajani/HZD-99/tree/277933919e3c94a08d586a4cb3196bb1e3921b8e/assets/source/talon)
+evidence and the [motion-class extraction implementation](https://github.com/zaferdajani/HZD-99/blob/277933919e3c94a08d586a4cb3196bb1e3921b8e/tools/vidstrip.cjs).
+
 ### Endpoint-conformed first/last-frame transition with measured retiming
 
 **Verified model:** Seedance 2.5 — the creator committed two new original
@@ -58088,6 +58188,7 @@ requests, their successful provider receipts and the later
 ---
 ## Sources
 - [Herman / Perfect Skin — October 9, 2026 Kie.ai ByteDance Seedance 2.0 first/last-frame skincare relay: complete four-second 720p prompt, desktop/mobile endpoint pairs, side-body jar grip, exact product placement, label-sharp lift constraints and four committed regenerated delivery encodes](https://github.com/1Herman1/Friday-claude/commit/2638d5634dd04e142772bfd8b93d2b98f7611759) ([prompt and generation-script commit](https://github.com/1Herman1/Friday-claude/commit/acccb5ea3b85ba37d1a50d1155785cc73fec04ee), [executable prompt and route](https://github.com/1Herman1/Friday-claude/blob/2638d5634dd04e142772bfd8b93d2b98f7611759/projects/perfect-skin/media-gen/bestsellers.sh), [Seedance 2.0 model mapping](https://github.com/1Herman1/Friday-claude/blob/2638d5634dd04e142772bfd8b93d2b98f7611759/tools/nullume/src/core/providers/kie/models.ts))
+- [Zafer Dajani / HZD-99 — October 9, 2026 Higgsfield Seedance 2.5 state-specific sprite-motion pass: creator-recorded chroma plates and task IDs for fatigue loops, one-shot landings, ground walks, flying chase/cruise/flap cycles and static recovery plates; semantic impact-frame sampling, floor-free flight extraction, measured cell-difference gates, stronger-motion retries and smaller-frame clipping recovery](https://github.com/zaferdajani/HZD-99/commit/277933919e3c94a08d586a4cb3196bb1e3921b8e) ([task, failure and measurement record](https://github.com/zaferdajani/HZD-99/blob/277933919e3c94a08d586a4cb3196bb1e3921b8e/assets/source/README.md), [source evidence](https://github.com/zaferdajani/HZD-99/tree/277933919e3c94a08d586a4cb3196bb1e3921b8e/assets/source), [extraction implementation](https://github.com/zaferdajani/HZD-99/blob/277933919e3c94a08d586a4cb3196bb1e3921b8e/tools/vidstrip.cjs))
 - [Zafer Dajani / HZD-99 — October 9, 2026 Higgsfield Seedance 2.5 in-place animal-gait study: four 4-second 720p locked-camera tasks, chroma-isolated start plates, walk/run contact sheets, measured one-stride periods, midpoint-sampled 8-cell/6-cell strips, silhouette-difference validation and a documented two-stride re-cut](https://github.com/zaferdajani/HZD-99/commit/ae47576b112ba664e2e0c10ad724ad7744b1784f) ([task IDs, settings and measurement record](https://github.com/zaferdajani/HZD-99/blob/ae47576b112ba664e2e0c10ad724ad7744b1784f/assets/source/README.md), [start frames and contact sheets](https://github.com/zaferdajani/HZD-99/tree/ae47576b112ba664e2e0c10ad724ad7744b1784f/assets/source/beasts/cycles), [delivered gait strips](https://github.com/zaferdajani/HZD-99/tree/ae47576b112ba664e2e0c10ad724ad7744b1784f/assets/characters/beasts))
 - [James William Griffin / Castleshaw Centre — October 9, 2026 Runway Seedance 2.5 six-chapter location film: six complete five-second prompts, eight draft tasks, six client-approved 1080p enhancements, exact frame-chain lineage, one endpoint-pinned branding repair, two first/last-frame transitions, paired 361-frame desktop/mobile deliveries and measured stitching/grade controls](https://github.com/jameswilliamgriffin-spec/castleshaw/commit/850cd7b0ebffb39ee9824827546e7d206f01468f) ([complete prompt, task, result and approval ledger](https://github.com/jameswilliamgriffin-spec/castleshaw/blob/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/PROMPTS.md), [final frame sequences](https://github.com/jameswilliamgriffin-spec/castleshaw/tree/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/frames), [six chapter posters](https://github.com/jameswilliamgriffin-spec/castleshaw/tree/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/posters), [stitch-and-grade script](https://github.com/jameswilliamgriffin-spec/castleshaw/blob/850cd7b0ebffb39ee9824827546e7d206f01468f/v2/video-src/stitch.sh))
 - [u/Livid_Necessary_Real — October 9, 2026 creator-published Seedance 2.5 gym vlog: complete 15-second prompt and native unedited result, six floor-propped/selfie camera states, five beat-locked dialogue lines and restrained tape-camcorder defects](https://www.reddit.com/r/seedance2pro/comments/1x0smcl/how_to_create_a_realistic_ai_gym_vlog_with/)
