@@ -33079,16 +33079,16 @@ and the [regenerated desktop/mobile delivery commit](https://github.com/1Herman1
 `omni_reference`) — the creator committed the exact 9-second 720p request,
 media-role table and successful job `03ff0f6d-ea20-4368-89da-6f32fc64b8e1`,
 then the product-replacement job `29c9014c-9420-4c47-a6d2-99a88285af79`
-and an owner-approved final
+and an owner-approved final  
 **Evidence boundary:** the Seedance pass repaired the bottle lift and hand
 motion but copied the LOVY label from the motion carrier. The accepted result
 therefore combines Seedance motion with a second, product-only replacement;
 it does not demonstrate that Seedance preserved the final label by itself.
 Count this as a reusable editing and failure-routing template, not a separate
-complete Seedance prompt
+complete Seedance prompt  
 **Use case:** UGC testimonials and product ads where the gesture, grip and
 camera performance are good but a small printed label becomes blank, warped
-or contaminated by the motion reference
+or contaminated by the motion reference  
 **Mode:** start frame + product images + motion carrier -> Seedance motion
 master -> object-only replacement -> splice, lip-sync or delivery finishing
 
