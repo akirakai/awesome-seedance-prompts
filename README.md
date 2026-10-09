@@ -508,6 +508,7 @@ A curated collection of production-ready prompts, reusable structures, and pract
   - [Puddle-to-reservoir kayak surface transition](#492-puddle-to-reservoir-kayak-surface-transition)
   - [First-and-last-frame kayak-to-campfire handoff](#493-first-and-last-frame-kayak-to-campfire-handoff)
   - [Photo-anchored dusk crane with paced time transition](#494-photo-anchored-dusk-crane-with-paced-time-transition)
+  - [Endpoint-locked skincare hand relay with label-sharp lift](#495-endpoint-locked-skincare-hand-relay-with-label-sharp-lift)
 - [Reusable templates](#reusable-templates)
 - [Camera language](#camera-language)
 - [Realism and consistency](#realism-and-consistency)
@@ -32959,6 +32960,65 @@ script](https://github.com/jameswilliamgriffin-spec/castleshaw/blob/850cd7b0ebff
 
 ---
 
+### 495. Endpoint-locked skincare hand relay with label-sharp lift
+
+**Verified model:** Kie.ai ByteDance Seedance 2.0
+(`bytedance/seedance-2`) — the production repository's versioned model schema
+identifies this route as Seedance 2.0; the creator committed the complete
+first/last-frame command and regenerated desktop and mobile delivery files  
+**Evidence boundary:** the repository does not expose the provider task receipt
+or job ID. Attribution rests on the executable generation script, its exact
+model route and the creator's subsequent commit of four regenerated delivery
+encodes with the label-stability result stated in the commit record  
+**Use case:** premium skincare product handoff, exact endpoint interpolation,
+controlled prop custody and small-label stability during a close product lift  
+**Mode:** first-and-last-frame image-to-video  
+**Verified settings:** 4 seconds; 720p; 16:9 desktop or 9:16 mobile; audio off
+
+```text
+Create one continuous four-second premium skincare commercial between
+@Image1 and @Image2.
+
+@Image1 is the exact opening frame. It owns the locked camera, warm studio
+light, table, every product's position and scale, the tall white bottle already
+in the hand, and all approved packaging text.
+@Image2 is the exact final frame. It owns the same set and product layout, with
+the short frosted-glass jar lifted a few centimetres, level and front-facing.
+
+0–1.2 s — With a short nude manicure, no jewellery and matte natural skin, one
+slender hand lowers the tall white bottle vertically onto its original table
+mark. The base makes clear contact before the fingers release it.
+1.2–2.1 s — The empty hand rises slightly, travels smoothly to the right and
+stays clear of every label and cap. The bottle remains planted and unchanged.
+2.1–3.0 s — The hand descends over the short frosted jar. Fingers close around
+the sides of the glass body, never the lid, and complete one visible secure
+grip before lifting.
+3.0–4.0 s — Lift the jar straight upward only a few centimetres, perfectly
+level, and settle exactly into @Image2. No rotation, tilt or lateral drift.
+
+Tripod camera, fixed framing and focal length, no zoom. Calm slow even motion.
+The jar label remains sharp, legible and steady through the entire grip and
+lift: no motion blur across the text, character substitution, letter warping,
+texture crawl or exposure flare. Every unhandled product keeps its exact
+position, size, orientation and crisp label.
+
+No cut, second attempt, hovering tremor, backtracking hand, lid grip, extra
+finger, extra hand, duplicate product, floating object, label rewrite, set
+change, title, subtitle, logo overlay or watermark.
+```
+
+**Why it works:** the motion is an explicit custody relay rather than one vague
+hand sweep: set down, release, travel empty, grip the body, then lift. Exact
+endpoint ownership fixes the final geometry, while the label receives its own
+motion-quality contract instead of relying on generic product consistency.
+
+Adapted and rewritten from the October 9, 2026
+[complete Seedance 2.0 generation-script commit](https://github.com/1Herman1/Friday-claude/commit/acccb5ea3b85ba37d1a50d1155785cc73fec04ee),
+the [versioned executable prompt and route](https://github.com/1Herman1/Friday-claude/blob/2638d5634dd04e142772bfd8b93d2b98f7611759/projects/perfect-skin/media-gen/bestsellers.sh),
+the [Kie model-schema mapping](https://github.com/1Herman1/Friday-claude/blob/2638d5634dd04e142772bfd8b93d2b98f7611759/tools/nullume/src/core/providers/kie/models.ts)
+and the [regenerated desktop/mobile delivery commit](https://github.com/1Herman1/Friday-claude/commit/2638d5634dd04e142772bfd8b93d2b98f7611759).
+
+---
 ## Reusable templates
 
 
@@ -58027,6 +58087,7 @@ requests, their successful provider receipts and the later
 
 ---
 ## Sources
+- [Herman / Perfect Skin — October 9, 2026 Kie.ai ByteDance Seedance 2.0 first/last-frame skincare relay: complete four-second 720p prompt, desktop/mobile endpoint pairs, side-body jar grip, exact product placement, label-sharp lift constraints and four committed regenerated delivery encodes](https://github.com/1Herman1/Friday-claude/commit/2638d5634dd04e142772bfd8b93d2b98f7611759) ([prompt and generation-script commit](https://github.com/1Herman1/Friday-claude/commit/acccb5ea3b85ba37d1a50d1155785cc73fec04ee), [executable prompt and route](https://github.com/1Herman1/Friday-claude/blob/2638d5634dd04e142772bfd8b93d2b98f7611759/projects/perfect-skin/media-gen/bestsellers.sh), [Seedance 2.0 model mapping](https://github.com/1Herman1/Friday-claude/blob/2638d5634dd04e142772bfd8b93d2b98f7611759/tools/nullume/src/core/providers/kie/models.ts))
 - [Zafer Dajani / HZD-99 — October 9, 2026 Higgsfield Seedance 2.5 in-place animal-gait study: four 4-second 720p locked-camera tasks, chroma-isolated start plates, walk/run contact sheets, measured one-stride periods, midpoint-sampled 8-cell/6-cell strips, silhouette-difference validation and a documented two-stride re-cut](https://github.com/zaferdajani/HZD-99/commit/ae47576b112ba664e2e0c10ad724ad7744b1784f) ([task IDs, settings and measurement record](https://github.com/zaferdajani/HZD-99/blob/ae47576b112ba664e2e0c10ad724ad7744b1784f/assets/source/README.md), [start frames and contact sheets](https://github.com/zaferdajani/HZD-99/tree/ae47576b112ba664e2e0c10ad724ad7744b1784f/assets/source/beasts/cycles), [delivered gait strips](https://github.com/zaferdajani/HZD-99/tree/ae47576b112ba664e2e0c10ad724ad7744b1784f/assets/characters/beasts))
 - [James William Griffin / Castleshaw Centre — October 9, 2026 Runway Seedance 2.5 six-chapter location film: six complete five-second prompts, eight draft tasks, six client-approved 1080p enhancements, exact frame-chain lineage, one endpoint-pinned branding repair, two first/last-frame transitions, paired 361-frame desktop/mobile deliveries and measured stitching/grade controls](https://github.com/jameswilliamgriffin-spec/castleshaw/commit/850cd7b0ebffb39ee9824827546e7d206f01468f) ([complete prompt, task, result and approval ledger](https://github.com/jameswilliamgriffin-spec/castleshaw/blob/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/PROMPTS.md), [final frame sequences](https://github.com/jameswilliamgriffin-spec/castleshaw/tree/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/frames), [six chapter posters](https://github.com/jameswilliamgriffin-spec/castleshaw/tree/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/posters), [stitch-and-grade script](https://github.com/jameswilliamgriffin-spec/castleshaw/blob/850cd7b0ebffb39ee9824827546e7d206f01468f/v2/video-src/stitch.sh))
 - [u/Livid_Necessary_Real — October 9, 2026 creator-published Seedance 2.5 gym vlog: complete 15-second prompt and native unedited result, six floor-propped/selfie camera states, five beat-locked dialogue lines and restrained tape-camcorder defects](https://www.reddit.com/r/seedance2pro/comments/1x0smcl/how_to_create_a_realistic_ai_gym_vlog_with/)
