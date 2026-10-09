@@ -32962,6 +32962,86 @@ script](https://github.com/jameswilliamgriffin-spec/castleshaw/blob/850cd7b0ebff
 ## Reusable templates
 
 
+### Chroma-isolated in-place gait strip with measured one-cycle extraction
+
+**Verified model:** Higgsfield Seedance 2.5 — four 4-second 720p
+locked-camera generations are identified by task IDs 234fd93b (wolf walk),
+78565285 (wolf run), 34083fbf (cheetah walk) and 6e273ec1 (cheetah run)  
+**Evidence boundary:** the creator committed the chroma start frames, contact
+sheets, extracted 8-cell walk and 6-cell run strips, task IDs, measured
+silhouette-difference floors and the failed first wolf-run cut. The original
+prompt text and provider receipts are not public, so count this as a verified
+generation-plus-extraction template rather than a verbatim provider recipe  
+**Use case:** turn one stable side-profile character plate into a loopable game
+or motion-design walk/run strip without sliding, endpoint duplication or a
+two-stride cycle hidden inside one export  
+**Mode:** image-to-video on a chroma-isolated identity plate, followed by
+silhouette-period measurement and deterministic midpoint sampling
+
+```text
+INPUT PLATE
+@Image1 = one clean side-profile identity plate on flat [CHROMA COLOR].
+It owns the subject's silhouette, proportions, markings, materials, facing
+direction and ground-contact height. The field owns no scenery, cast shadow,
+texture or lighting cue. Choose a key color that does not erase dark outlines
+or any protected subject color.
+
+GENERATION
+Create a 4-second 720p locked-camera motion study from @Image1.
+The subject stays centered, at constant scale and in exact side profile while
+performing repeated natural [WALK / RUN] strides IN PLACE. Complete every
+contact, loading, passing and suspension phase in order. All feet meet one
+fixed ground line; shoulders, spine, pelvis and tail react to the gait without
+changing the character design. Hold a steady tempo long enough to contain at
+least two complete strides.
+
+Tripod camera, fixed framing, fixed focal length, constant exposure and an
+unchanging flat chroma field. No pan, zoom, orbit, yaw, forward screen travel,
+depth travel, floor drift, cut, pose teleport, extra limb, silhouette morph,
+costume change, scenery, text, logo or watermark.
+
+MATTE AND PERIOD DETECTION
+Key only the flat field; preserve the subject's dark outline and internal
+details. From the keyed silhouettes, measure similarity across time and find
+the shortest stable interval P that returns the body and planted-foot phase to
+the same state. Verify visually that P contains exactly one complete stride,
+not two similar strides.
+
+ONE-CYCLE EXTRACTION
+Choose a clean cycle start t0 and extract exactly N frames at cell midpoints:
+t(i) = t0 + (i + 0.5) * P / N, for i = 0 ... N-1.
+Use N=8 for a readable walk or N=6 for a fast run unless delivery needs a
+different count. Do not include both t0 and t0+P; those are the same phase.
+Pack the cells in chronological order and keep every foot on one baseline.
+
+VALIDATION AND RE-CUT
+- Compare every neighboring silhouette and the last cell against the first.
+  Each pair must show a meaningful pose change while the loop seam stays
+  continuous.
+- If the first and last cells are effectively duplicates, shift midpoint
+  sampling or shorten P.
+- If the strip contains two repeated pose sequences, re-measure the shortest
+  period and re-cut; do not hide the duplicate with frame deletion.
+- If the matte removes outline ink or protected colors, re-plate onto a safer
+  chroma field and regenerate rather than repairing the whole contour by hand.
+- Archive the untouched take, start plate, contact sheet, P, t0, N and
+  silhouette-difference measurements beside the delivered strip.
+```
+
+**Why it works:** the model generates continuous biomechanics, but a measured
+silhouette period — not the nominal clip duration — owns the loop. Midpoint
+sampling avoids repeating the endpoint, and the shortest-period check catches
+the exact failure documented in the source: the first wolf-run cut held two
+strides and repeated a pose before it was re-cut to one.
+
+Adapted and rewritten from Zafer Dajani's October 9, 2026
+[Seedance 2.5 production commit](https://github.com/zaferdajani/HZD-99/commit/ae47576b112ba664e2e0c10ad724ad7744b1784f),
+the [task IDs, settings, period measurements and failure record](https://github.com/zaferdajani/HZD-99/blob/ae47576b112ba664e2e0c10ad724ad7744b1784f/assets/source/README.md),
+the [committed start frames and contact sheets](https://github.com/zaferdajani/HZD-99/tree/ae47576b112ba664e2e0c10ad724ad7744b1784f/assets/source/beasts/cycles)
+and the delivered [wolf](https://github.com/zaferdajani/HZD-99/blob/ae47576b112ba664e2e0c10ad724ad7744b1784f/assets/characters/beasts/wolf_walk8.webp)
+and [cheetah](https://github.com/zaferdajani/HZD-99/blob/ae47576b112ba664e2e0c10ad724ad7744b1784f/assets/characters/beasts/cheetah_run6.webp)
+motion strips.
+
 ### Endpoint-conformed first/last-frame transition with measured retiming
 
 **Verified model:** Seedance 2.5 — the creator committed two new original
@@ -57947,6 +58027,7 @@ requests, their successful provider receipts and the later
 
 ---
 ## Sources
+- [Zafer Dajani / HZD-99 — October 9, 2026 Higgsfield Seedance 2.5 in-place animal-gait study: four 4-second 720p locked-camera tasks, chroma-isolated start plates, walk/run contact sheets, measured one-stride periods, midpoint-sampled 8-cell/6-cell strips, silhouette-difference validation and a documented two-stride re-cut](https://github.com/zaferdajani/HZD-99/commit/ae47576b112ba664e2e0c10ad724ad7744b1784f) ([task IDs, settings and measurement record](https://github.com/zaferdajani/HZD-99/blob/ae47576b112ba664e2e0c10ad724ad7744b1784f/assets/source/README.md), [start frames and contact sheets](https://github.com/zaferdajani/HZD-99/tree/ae47576b112ba664e2e0c10ad724ad7744b1784f/assets/source/beasts/cycles), [delivered gait strips](https://github.com/zaferdajani/HZD-99/tree/ae47576b112ba664e2e0c10ad724ad7744b1784f/assets/characters/beasts))
 - [James William Griffin / Castleshaw Centre — October 9, 2026 Runway Seedance 2.5 six-chapter location film: six complete five-second prompts, eight draft tasks, six client-approved 1080p enhancements, exact frame-chain lineage, one endpoint-pinned branding repair, two first/last-frame transitions, paired 361-frame desktop/mobile deliveries and measured stitching/grade controls](https://github.com/jameswilliamgriffin-spec/castleshaw/commit/850cd7b0ebffb39ee9824827546e7d206f01468f) ([complete prompt, task, result and approval ledger](https://github.com/jameswilliamgriffin-spec/castleshaw/blob/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/PROMPTS.md), [final frame sequences](https://github.com/jameswilliamgriffin-spec/castleshaw/tree/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/frames), [six chapter posters](https://github.com/jameswilliamgriffin-spec/castleshaw/tree/850cd7b0ebffb39ee9824827546e7d206f01468f/public/v2/video/posters), [stitch-and-grade script](https://github.com/jameswilliamgriffin-spec/castleshaw/blob/850cd7b0ebffb39ee9824827546e7d206f01468f/v2/video-src/stitch.sh))
 - [u/Livid_Necessary_Real — October 9, 2026 creator-published Seedance 2.5 gym vlog: complete 15-second prompt and native unedited result, six floor-propped/selfie camera states, five beat-locked dialogue lines and restrained tape-camcorder defects](https://www.reddit.com/r/seedance2pro/comments/1x0smcl/how_to_create_a_realistic_ai_gym_vlog_with/)
 - [keys-exe / global-manual-ai — October 8, 2026 Higgsfield Seedance 2.5 motion-reference contamination A/B/C: three complete 5-second 1080p omni-reference requests with exact media roles and job IDs; colour-reference dollar leakage, residual orange-note failure after desaturation, then creator-checked multicolour euro recovery after Gaussian-blurring the motion carrier, narrowing appearance references and specifying denomination morphology](https://github.com/keys-exe/global-manual-ai/commit/7c61f52309c301cd82cd01786edaf2b6d0ac1e7d) ([earlier colour and grayscale requests](https://github.com/keys-exe/global-manual-ai/commit/13a60dd3b2ed419fb0e33a1342f6d58d812b9d29), [blurred-grayscale request and result](https://github.com/keys-exe/global-manual-ai/blob/7c61f52309c301cd82cd01786edaf2b6d0ac1e7d/builds/uriserena-ultimo-giorno-v2/step7/fix_a2/B10.v30.sd25c.video.call.json))
