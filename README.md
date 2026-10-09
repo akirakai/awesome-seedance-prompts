@@ -32485,14 +32485,14 @@ and the [exact prompt and request implementation](https://github.com/bshx2024/qw
 
 ### 487. Desaturated motion-reference transfer with protected prop identity
 
-**Verified model:** Higgsfield Seedance 2.5 (\`seedance_2_5\`,
-\`omni_reference\`) — the production record preserves five complete requests,
+**Verified model:** Higgsfield Seedance 2.5 (`seedance_2_5`,
+`omni_reference`) — the production record preserves five complete requests,
 their media-role tables and successful generation IDs
-\`438f57e9-c472-44b6-a5c7-7b1fa1c877b9\`,
-\`f4feabee-2936-4fa3-ad9e-302a6401252a\`,
-\`0f02ab4f-585e-4f69-9d0f-305e3d54129a\`,
-\`1141b961-2454-4903-abd4-4439a2ddf750\` and
-\`7bcb332b-a85c-4447-87ce-b8f00ea891dc\`  
+`438f57e9-c472-44b6-a5c7-7b1fa1c877b9`,
+`f4feabee-2936-4fa3-ad9e-302a6401252a`,
+`0f02ab4f-585e-4f69-9d0f-305e3d54129a`,
+`1141b961-2454-4903-abd4-4439a2ddf750` and
+`7bcb332b-a85c-4447-87ce-b8f00ea891dc`  
 **Evidence boundary:** none of the five takes was ultimately owner-approved.
 The first copied US-dollar appearance from the colour motion reference; the
 grayscale rerun retained the counting action but rendered the euro notes too
@@ -32505,8 +32505,8 @@ then the owner rejected its focus and counting motion. The fifth restored the
 approved portrait blur and crisp bottle in a new start frame, then used the
 owner-selected counting take as motion; it also remained **To check**. Treat
 the sequence as verified failure-control evidence, not a delivery guarantee.
-One inherited \`via\` field in the earlier record names the preceding 2.0
-attempt, while every operative \`hf_params.model\`, engine pick and result
+One inherited `via` field in the earlier record names the preceding 2.0
+attempt, while every operative `hf_params.model`, engine pick and result
 record identifies Seedance 2.5  
 **Use case:** product B-roll, video-to-video hand-action transfer, currency or
 small-prop identity protection and reference-contamination testing  
@@ -32516,7 +32516,7 @@ appearance authorities, plus one motion-only video in omni-reference mode
 generation disabled; tested first with a grayscale Gaussian-blurred carrier,
 then with target-prop-precomposed start frames and appearance-matched motion
 
-\`\`\`text
+```text
 REFERENCE CONTRACT
 @Image1 is the approved first frame and owns the actor, tabletop, composition,
 focus split, lighting and crop. Keep the bottle fixed on the right third with
@@ -32564,12 +32564,12 @@ the prop identity; denominations collapse into one colour or size; counting is
 fast, jerky or anatomically impossible; any note moves toward the bottle; table
 notes move; the bottle bends, duplicates or loses label clarity; a hand gains
 fingers; the camera reframes; or text, logo or watermark is invented.
-\`\`\`
+```
 
 If desaturation and blur still cannot protect an exact small printed prop,
 escalate appearance authority before another video retry:
 
-\`\`\`text
+```text
 APPEARANCE-FIRST ESCALATION
 @Image1 is a repaired start frame in which the exact target prop, hero product,
 composition, depth-of-field split and lighting are already correct. Treat it as
@@ -32592,7 +32592,7 @@ paper response. Reject if the prop changes design after frame one, the carrier
 replaces the product or background, focus migrates from the hero product,
 counting becomes faster than the reference, hands or fingers duplicate, or the
 camera reframes.
-\`\`\`
+```
 
 **Why it works:** the first repair gives motion, banknote appearance and product
 identity to separate assets, then strips both colour and fine spatial detail
